@@ -1,0 +1,115 @@
+{
+  "meta":{
+    "title": "Análisis de datos",
+    "description": "",
+    "keywords": ""
+  },
+  "sections":{
+    "head":{
+      "title": "Análisis de Datos",
+      "image": {
+        "alt": "imagen",
+        "src": "https://drive.google.com/uc?export=view&id=1G5cfpaPeUUL3xe4GKVp_AIYR9kfOVozF"
+      },
+      "description": "Duración aproximada: 18 horas\n\nPerfil del participante: Este curso está dirigido para aquellas personas que requieren contar con mejores herramientas que le permitan tomar decisiones fundamentadas en datos estadísticos.\n\nCarreras afines: Todas las áreas\n\nObjetivo: El participante aplicará modelos estadísticos y de probabilidad como elementos fundamentales para sustentar la toma de decisiones que impacten en su entorno laboral.\n\nTemas a abordar:\n1. Estadística Descriptiva\n2. Técnicas de Recolección de Información\n3. Muestreo Probabilístico y no Probabilístico\n4. Distribuciones de Probabilidad\n5. Pruebas de Hipótesis\n6. Asociación Lineal y Modelo Lineal\n7. Pronósticos para la Toma de Decisiones\n\nRecursos de aprendizaje:\n1. Vídeos explicativos\n2. Material interactivo\n\nEvaluación: La evaluación se realizará por medio de exámenes. Para acreditar debes tener cuando menos 70 de calificación.\n\n",
+      "price": "$1200.00*"
+    },
+    "relatedCourses":{
+      "title": "Cursos relacionados",
+      "courses": [
+        {
+          "id": "123",
+          "title": "Análisis de datos",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":"arrow_forward"
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        },
+        {
+          "id": "123",
+          "title": "Derecho de Autor y Propiedad Intelectual",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":""
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        },
+        {
+          "id": "123",
+          "title": "Estrategias de tiendas en línea",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":""
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        },
+        {
+          "id": "123",
+          "title": "Mega tendencias Globales",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":""
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        }
+      ]
+    }
+  }
+}

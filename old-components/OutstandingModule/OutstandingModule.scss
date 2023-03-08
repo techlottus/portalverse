@@ -1,0 +1,40 @@
+section {
+  lottus-outstanding-module-portalverse {
+    section {
+      div.outstandingmoduledescription {
+        color: white;
+        span {
+          font-family: Poppins !important;
+          font-size: 22px !important;
+          font-weight: 600 !important;
+          line-height: 28px !important;
+          @media (min-width: 600px) and (max-width: 1023px) {
+            font-size: 16px !important;
+            line-height: 20px !important;
+          }
+          @media (max-width: 599px) {
+            font-size: 16px !important;
+            line-height: 20px !important;
+          }
+        }
+        
+        markdown {
+          * {
+            font-family: Nunito Sans !important;
+            font-size: 16px !important;
+            font-weight: 400 !important;
+            @media (min-width: 600px) and (max-width: 1023px) {
+              font-size: 14px !important;
+              line-height: 17px !important;
+            }
+            
+            @media (max-width: 599px) {
+              font-size: 15px !important;
+              line-height: 18px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

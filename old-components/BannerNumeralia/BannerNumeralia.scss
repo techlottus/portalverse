@@ -1,0 +1,37 @@
+.numeralia {
+  div {
+    section {
+      lottus-numbers-portalverse {
+        div.container-numbers.-container {
+          background-color: transparent !important;
+          box-shadow: none !important;
+          div.content {
+            color: white !important;
+            padding: 0 !important;
+            .head {
+              * {
+                font-size: 40px !important;
+                @media (max-width: 599px) {
+                  font-size: 24px !important;
+                }
+              }
+              div.prefix {
+                span.material-icons {
+                  font-size: 40px !important;
+                  @media (max-width: 599px) {
+                    font-size: 24px !important;
+                  }
+                }
+              }
+            }
+            .body {
+              @media (max-width: 599px) {
+                font-size: 14px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

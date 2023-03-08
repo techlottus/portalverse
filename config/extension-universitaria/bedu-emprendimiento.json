@@ -1,0 +1,46 @@
+{
+  "meta":{
+    "title": "BEDU Curso en Emprendimiento",
+    "description": "",
+    "keywords": ""
+  },
+  "sections":{
+    "head":{
+      "title": "BEDU Curso en Emprendimiento",
+      "image": {
+        "alt": "imagen",
+        "src": "https://drive.google.com/uc?export=view&id=1prltlodD1kjA32Q_IGK3UACyMVzbUIww"
+      },
+      "description": "Duración aproximada: 40 horas sesiones remoto en vivo + 32 horas contenido online\n\nPerfil del participante: Dirigido a alumnos que tengan interés en emprender o una idea de negocio.\n\nCarreras afines: Todas las áreas\n\nObjetivo: Al finalizar el curso de Emprendimiento en BEDU, serás capaz de definir una propuesta de valor viable y rentable que te permita desarrollar un modelo de negocio que garantice el éxito del producto o servicio a ofrecer\n\nTemas a abordar:\n\nMódulo I Product Discovery Nivel introductorio<br/>Módulo II Business Model Design Nivel introductorio\n\nRecursos de aprendizaje:\n1. Contenido Online\n2. Sesiones remotas con expertos\n\nEvaluación:\nLa evaluación se realizará por medio de actividades y exámenes.",
+      "price": "$5,520*"
+    },
+    "relatedCourses":{
+      "title": "Cursos relacionados",
+      "courses": [
+        {
+          "id": "123",
+          "title": "Análisis de datos",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":"arrow_forward"
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        }
+      ]
+    }
+  }
+}

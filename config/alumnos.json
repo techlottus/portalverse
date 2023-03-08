@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "title": "Alumnos",
+    "description": "",
+    "keywords": ""
+  },
+  "sections": {
+    "head":{
+      "title": "Alumnos ¡Bienvenidos a la Universidad Americana del Noreste!",
+      "description": "Tenemos 48 años de experiencia en la formación de profesionistas que sí resuelven las necesidades de las empresas.\n\nAquí tendrás un progreso con educación continua y experiencias internacionales, a través de modalidades que te permitirán desarrollarte en todas las áreas de tu vida."
+    },
+    "accesos": [
+      { 
+        "image": "https://drive.google.com/uc?export=view&id=17IHKUeFZlozxvkt1GRKKU9CHkO_QBYJQ",
+        "subtitle": "",
+        "title": "SIUANE",
+        "text": "Portal para estudiantes: Aquí encontrarás información sobre tus materias, horarios, pagos, avisos y más.",
+        "border": true,
+        "allContent": true,
+        "height": "",
+        "isShowCardWebsiteContent": true,
+        "id": "",
+        "type": "vertical",
+        "isLink": true,
+        "background": false,
+        "link": {
+          "text": "Ver más",
+          "iconSecond": "chevron_right",
+          "isBold": true,
+          "size": "large",
+          "isUnderline": false,
+          "disabled": false,
+          "icon": ""
+        },
+        "redirect": "http://sistema.uane.edu.mx/siuane/login.aspx"
+      },
+      { 
+        "image": "https://drive.google.com/uc?export=view&id=1vN8A17tA73ECHhlapbvLgJVIo5ZW0sEa",
+        "subtitle": "",
+        "title": "AULA VIRTUAL MOODLE",
+        "text": "Hemos diseñado una plataforma de aprendizaje seguro para que aproveches tus clases virtuales al máximo.",
+        "border": true,
+        "allContent": true,
+        "height": "",
+        "isShowCardWebsiteContent": true,
+        "id": "",
+        "type": "vertical",
+        "isLink": true,
+        "background": false,
+        "link": {
+          "text": "Ver más",
+          "iconSecond": "chevron_right",
+          "isBold": true,
+          "size": "large",
+          "isUnderline": false,
+          "disabled": false,
+          "icon": "chevron_right"
+        },
+        "wrapper": true,
+        "redirect": "https://aula.uane.mx/my/"
+      },
+      { 
+        "image": "https://drive.google.com/uc?export=view&id=1D2BUw7hrBN6M_fVDEIO7lbYB25a_sQiT",
+        "subtitle": "",
+        "title": "ESPACIO DIGITAL CANVAS ",
+        "text": "Herramientas digitales que facilitan la enseñanza y aprendizaje. Accede a la información de manera simple.",
+        "border": true,
+        "allContent": true,
+        "height": "",
+        "isShowCardWebsiteContent": true,
+        "id": "",
+        "type": "vertical",
+        "isLink": true,
+        "background": false,
+        "link": {
+          "text": "Ver más",
+          "iconSecond": "chevron_right",
+          "isBold": true,
+          "size": "large",
+          "isUnderline": false,
+          "disabled": false,
+          "icon": ""
+        },
+        "wrapper": true,
+        "redirect": "https://uane.instructure.com/login/canvas"
+      }
+    ],
+    "calendario": {
+      "banner": {
+        "image": {
+          "desktop": "https://drive.google.com/uc?export=view&id=1T-W52yh4F3iGkl1u8sQrhM1ij-ctSnuw",
+          "mobile": "https://drive.google.com/uc?export=view&id=1oYRLmnAXdRUZ3i88SOblPkbWBdP78NIv",
+          "tablet": "https://drive.google.com/uc?export=view&id=1aEm5uY89FbvNcWOvJ1ayjLV0WZRuSZyF"
+        },
+        "font": "",
+        "title": "UANE Internacional",
+        "subtitle": "Agrega experiencias internacionales a tu educación",
+        "position": "",
+        "height": "200px",
+        "overlayWhite":false,
+        "overlayDak": false,
+        "button":{
+          "id": "",
+          "type": "outlined",
+          "title": "Conocer más",
+          "size": "small",
+          "icon": "",
+          "lyIcon": false,
+          "disabled": false,
+          "isExpand": false,
+          "tagOnClick": "",
+          "test": ""
+        },
+        "noAction": false,
+        "redirect": "/nosotros/internacionalizacion",
+        "visible": true
+      }
+    },
+    "directorio": [
+      {
+        "name": "Contacto universitario",
+        "description": "Todos los que integramos la universidad estamos para atenderte y escucharte, contacta a cualquier área de la universidad",
+        "contacts": [
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1e5UpQ17ZAUGw_0bb3I9tRz_dJmq8LNIn",
+            "name": "Contacto Central",
+            "email": "hola@uane.edu.mx",
+            "phone": "8008228263"
+          }
+        ]
+      }
+    ]
+  }
+}

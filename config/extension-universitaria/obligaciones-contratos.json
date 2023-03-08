@@ -1,0 +1,115 @@
+{
+  "meta":{
+    "title": "Obligaciones y Contratos",
+    "description": "",
+    "keywords": ""
+  },
+  "sections":{
+    "head":{
+      "title": "Obligaciones y Contratos",
+      "image": {
+        "alt": "imagen",
+        "src": "https://drive.google.com/uc?export=view&id=1QKS-W7fNxeHEEI4DZqzv8WUAK1cvqiQW"
+      },
+      "description": "Duración aproximada: 15 - 20 horas\n\nPerfil del participante: Este curso está dirigido para aquellas personas que quieren identificar la naturaleza de las obligaciones y contratos dentro del marco jurídico mexicano.\n\nCarreras afines: Negocios.\n\nObjetivo: El participante identificará los elementos de las obligaciones, sus fuentes, clasificación, cumplimiento y extinción, además del fundamento jurídico, origen, elementos y partes de los diferentes tipos de contratos, con base en la normatividad para su aplicación en el ámbito profesional y que dan origen a ciertas obligaciones.\n\nTemas a abordar:\n1. La Obligación en el Derecho\n2. Concepto de Obligación y sus Fuentes\n3. Modalidades de las Obligaciones Civiles\n4. Extinción de las Obligaciones\n5. Teoría General del Contrato\n6. Tipos de Contrato\n\nRecursos de aprendizaje:\n1. Vídeos explicativos\n2. Material interactivo \n\nEvaluación: La evaluación se realizará por medio de exámenes. Para acreditar debes tener cuando menos 70 de calificación.\n\n",
+      "price": "$1200.00*"
+    },
+    "relatedCourses":{
+      "title": "Cursos relacionados",
+      "courses": [
+        {
+          "id": "123",
+          "title": "Análisis de datos",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":"arrow_forward"
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        },
+        {
+          "id": "123",
+          "title": "Derecho de Autor y Propiedad Intelectual",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":""
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        },
+        {
+          "id": "123",
+          "title": "Estrategias de tiendas en línea",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":""
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        },
+        {
+          "id": "123",
+          "title": "Mega tendencias Globales",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":""
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        }
+      ]
+    }
+  }
+}

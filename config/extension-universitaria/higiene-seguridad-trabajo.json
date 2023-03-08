@@ -1,0 +1,115 @@
+{
+  "meta":{
+    "title": "Higiene y seguridad en el trabajo",
+    "description": "",
+    "keywords": ""
+  },
+  "sections":{
+    "head":{
+      "title": "Higiene y Seguridad en el Trabajo",
+      "image": {
+        "alt": "imagen",
+        "src": "https://drive.google.com/uc?export=view&id=1-oip47KlcHezczm8dcv6bZePkJtYkHYN"
+      },
+      "description": "Duración aproximada: 15 - 20 horas\n\nPerfil del participante: Este curso está dirigido para aquellas personas que comprender los conceptos de seguridad e higiene en el trabajo que garantizan un espacio laboral seguro y saludable.\n\nCarreras afines: Negocios\n\nObjetivo: El participante planeará alternativas de solución para la seguridad en las operaciones y el uso adecuado del equipo de protección personal, evaluando el marco conceptual y operativo que sustenta la prevención de riesgos de trabajo, centrado en el bienestar de los trabajadores y el desarrollo integral de las organizaciones.\n\nTemas a abordar:\n1. Generalidades de la Higiene y Seguridad Industrial\n2. Riesgos Profesionales en las Organizaciones\n3. Higiene Industrial\n4. Protección Personal\n5. Señalización de Seguridad y Salud en la Organización\n6. Diseño del Entorno de Trabajo\n7. Ergonomía en el Trabajo\n\nRecursos de aprendizaje:\n1. Vídeos explicativos\n2. Material interactivo \n\nEvaluación: La evaluación se realizará por medio de exámenes. Para acreditar debes tener cuando menos 70 de calificación.\n\n",
+      "price": "$1200.00*"
+    },
+    "relatedCourses":{
+      "title": "Cursos relacionados",
+      "courses": [
+        {
+          "id": "123",
+          "title": "Análisis de datos",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":"arrow_forward"
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        },
+        {
+          "id": "123",
+          "title": "Derecho de Autor y Propiedad Intelectual",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":""
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        },
+        {
+          "id": "123",
+          "title": "Estrategias de tiendas en línea",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":""
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        },
+        {
+          "id": "123",
+          "title": "Mega tendencias Globales",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":""
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,31 @@
+section.container-filter {
+  @include no-text-selection;
+  > div {
+    > * {
+      flex-grow: 1;
+    }
+    > span {
+      div.linkicons-content {
+        justify-content: flex-end;
+      }
+    }
+  }
+  > section {
+    > div {
+      flex-grow: 1;
+      > section.dropdown-list {
+        padding: pixeltorem(0) pixeltorem(4px);
+        display: flex;
+      }
+    }
+  }
+  > div:last-child {
+    > * {
+      flex-grow: 0;
+    }
+  }
+}
+  
+.lateral-borders {
+  border-right: pixeltorem(1px) solid map-get($palette-neutral, 'n20');
+}

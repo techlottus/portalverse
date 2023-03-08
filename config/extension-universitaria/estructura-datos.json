@@ -1,0 +1,115 @@
+{
+  "meta":{
+    "title": "Estructura de datos",
+    "description": "",
+    "keywords": ""
+  },
+  "sections":{
+    "head":{
+      "title": "Estructura de Datos",
+      "image": {
+        "alt": "imagen",
+        "src": "https://drive.google.com/uc?export=view&id=1qJ7-TOn5q7Qaq_se3hAipdtRYiqZUZZg"
+      },
+      "description": "Duración aproximada: 15 horas\n\nPerfil del participante: Este curso está dirigido para aquellas personas que comprender los principios fundamentales que rigen la programación que requiere la extracción de datos dentro de una base. \n\nCarreras afines: Sistemas\n\nObjetivo: El participante identificará las existentes estructuras de datos para el análisis y/o elaboración de programas que requieran la interacción con los datos almacenados, así como la implementación necesaria de acuerdo con las características de cada estructura, según lo requiera la naturaleza del problema.\n\nTemas a abordar:\n1. Introducción a las Estructuras de Datos\n2. Estructura de Datos Fundamentales\n3. Estructura de Datos Fundamentales: Colas y Listas\n4. Estructuras de Datos Avanzadas: Árboles\n5. Estructura de Datos Avanzadas: Grafos\n6. Métodos de Ordenamiento\n7. Métodos de Búsqueda\n\nRecursos de aprendizaje:\n1. Vídeos explicativos\n2. Material interactivo \n\nEvaluación: La evaluación se realizará por medio de exámenes. Para acreditar debes tener cuando menos 70 de calificación.\n\n",
+      "price": "$1200.00*"
+    },
+    "relatedCourses":{
+      "title": "Cursos relacionados",
+      "courses": [
+        {
+          "id": "123",
+          "title": "Análisis de datos",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":"arrow_forward"
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        },
+        {
+          "id": "123",
+          "title": "Derecho de Autor y Propiedad Intelectual",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":""
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        },
+        {
+          "id": "123",
+          "title": "Estrategias de tiendas en línea",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":""
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        },
+        {
+          "id": "123",
+          "title": "Mega tendencias Globales",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":""
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        }
+      ]
+    }
+  }
+}

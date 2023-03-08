@@ -1,0 +1,76 @@
+{
+  "banners":[
+    {
+      "font": "",
+      "type": "",
+      "title": "Voz UANE ayuda a difundir tus ideas",
+      "subtitle": "Si eres parte de la comunidad contacta al equipo. Te estamos buscando",
+      "state": "black",
+      "size": "medium",
+      "middle": false,
+      "center": false,
+      "bottom": false,
+      "left": false,
+      "urlImage": {
+        "mobile": "https://cdn.milenio.com/uploads/media/2020/01/31/reconocio-alumnos-obtuvieron-promedios-mayores.jpg",
+        "desktop": "https://cdn.milenio.com/uploads/media/2020/01/31/reconocio-alumnos-obtuvieron-promedios-mayores.jpg"
+      },
+      "overlay": "black",
+      "height": "",
+      "action": {
+        "id": "",
+        "type": "primary",
+        "title": "Contactar",
+        "size": "small",
+        "icon": "",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "",
+        "test": ""
+      },
+      "wrapper": true,
+      "redirect": "/voz-UANE"
+    },
+    {
+      "font": "light",
+      "type": "sm",
+      "title": "Escucha nuestro Podcast",
+      "subtitle": "Un episodio cada 2 semanas\n\nDisponible en spotify y youtube",
+      "state": "black",
+      "size": "medium",
+      "middle": false,
+      "center": false,
+      "bottom": false,
+      "left": false,
+      "urlImage": {
+        "mobile": "https://cdn.milenio.com/uploads/media/2020/01/31/reconocio-alumnos-obtuvieron-promedios-mayores.jpg",
+        "desktop": "https://cdn.milenio.com/uploads/media/2020/01/31/reconocio-alumnos-obtuvieron-promedios-mayores.jpg"
+      },
+      "overlay": "black",
+      "height": "",
+      "action": {
+        "id": "",
+        "type": "primary",
+        "title": "Ir a Podcast",
+        "size": "small",
+        "icon": "",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "",
+        "test": ""
+      },
+      "wrapper": true,
+      "redirect": "/podcast"
+    }
+  ],
+  "related_post_title": "Artículos relacionados",
+  "blog_section": {
+    "title": "Ver más Artículos",
+    "type": "primary",
+    "icon": "",
+    "isExpand": false,
+    "redirect": "/voz-uane/blog"
+  }
+}

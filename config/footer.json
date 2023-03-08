@@ -1,0 +1,90 @@
+{
+  "privacyLink": { "link": "/docs/Aviso_Privacidad.pdf", "label": "Aviso de privacidad" },
+  "certifications": { "title": "Certificaciones", "certificaciones":[
+      {
+        "src": "https://drive.google.com/uc?export=view&id=15fwTRfZJ6TrbgxyWjCPfCMsT2vVIXj0h",
+        "alt": "fimpes"
+      },
+      {
+        "src": "https://drive.google.com/uc?export=view&id=1jo0L9o-BFe9YCQTxAZ6WCZAG9FnJgd_1",
+        "alt": "queality-matters"
+      }
+    ]
+  },
+  "logotype": { "src":"/images/logotipo.png", "alt":"UANE-logotype" },
+  "social": [
+    { "name": "facebook", "link": "https://es-la.facebook.com/UANEOficial/" },
+    { "name": "twitter", "link": "https://mobile.twitter.com/uaneoficial" },
+    { "name": "instagram", "link": "https://www.instagram.com/uaneoficial/?hl=es" },
+    { "name": "youtube", "link": "https://www.youtube.com/channel/UCir4jyZ8CBUQ-MhUUxdUiHQ/videos?app=desktop" },
+    { "name": "tiktok", "link": "https://www.tiktok.com/@uaneoficial?lang=es" }
+  ],
+  "phone": "8008228263",
+  "directorio": {
+    "size": "small",
+    "isUnderline": false,
+    "isBold": false,
+    "disabled": false,
+    "id": "",
+    "iconFirst": "",
+    "text": "Directorio",
+    "iconSecond": "chevron_right",
+    "link": "/directorio"
+  },
+  "sections": [
+    [
+      [
+        { "label": "Estudiantes", "principal": true, "link": "", "external": false },
+        { "label": "SIUANE", "principal": false, "link": "https://sistema.uane.edu.mx/", "external": true },
+        { "label": "Aula virtual", "principal": false, "link": "https://aula.uane.mx/login/index.php", "external": true },
+        { "label": "Biblioteca digital", "principal": false, "link": "https://biblioteca.uane.edu.mx/", "external": true }
+      ],
+      [
+        { "label": "Exalumnos", "principal": true, "link": "", "external": false },
+        { "label": "Beneficios ExaUANE", "principal": false, "link": "/egresados", "external": false },
+        { "label": "SIUANE para egresados", "principal": false, "link": "https://sistema.uane.edu.mx/", "external": true }
+      ]
+    ],
+    [
+      [
+        { "label": "Admisiones", "principal": true, "link": "" },
+        { "label": "Solicita informes", "principal": false, "link": "/admisiones/pedir-informacion", "external": false },
+        { "label": "Becas para el estudiante", "principal": false, "link": "/admisiones/becas", "external": false }
+      ],
+      [
+        { "label": "Oferta educativa", "principal": true, "link": "/oferta-educativa", "external": false },
+        { "label": "Bachillerato", "principal": false, "link": "/oferta-educativa/bachillerato/bachillerato", "external": false },
+        { "label": "Licenciaturas", "principal": false, "link": "/oferta-educativa/licenciatura", "external": false },
+        { "label": "Maestrías", "principal": false, "link": "/oferta-educativa/maestria", "external": false },
+        { "label": "Especialidades", "principal": false, "link": "/oferta-educativa/especialidad", "external": false },
+        { "label": "Doctorados", "principal": false, "link": "/oferta-educativa/doctorado", "external": false },
+        { "label": "Extensión Universitaria", "principal": false, "link": "/extension-universitaria", "external": false }
+      ]
+    ],
+    [
+      [
+        { "label": "Nosotros", "principal": true, "link": "/nosotros", "external": false },
+        { "label": "Internacionalización", "principal": false, "link": "/nosotros/internacionalizacion", "external": false },
+        { "label": "Somos UANE", "principal": false, "link": "/nosotros", "external": false },
+        { "label": "Campus", "principal": false, "link": "/nosotros/campus", "external": false },
+        { "label": "Modelo educativo", "principal": false, "link": "/nosotros/modelo-educativo", "external": false },
+        { "label": "Empleabilidad", "principal": false, "link": "/nosotros/empleabilidad", "external": false },
+        { "label": "Conexión educativa", "principal": false, "link": "/nosotros/conexion-educativa", "external": false }
+
+      ]
+    ],
+    [
+      [
+        { "label": "Contacto", "principal": true, "link": "", "external": false },
+        { "label": "Línea segura", "principal": false, "link": "https://lineasegura.uane.edu.mx/", "external": true },
+        { "label": "Preguntas frecuentes", "principal": false, "link": "/contactanos/faq/general", "external": false },
+        { "label": "Envíanos un mensaje", "principal": false, "link": "/contactanos", "external": false }
+      ],
+      [
+        { "label": "Comunidad UANE", "principal": true, "link": "", "external": false },
+        { "label": "Voz UANE", "principal": false, "link": "/voz-uane", "external": false },
+        { "label": "Egresados Talento", "principal": false, "link": "/egresados/talento", "external": false }
+      ]
+    ]
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "title": "Empleabilidad",
+    "description": "",
+    "keywords": ""
+  },
+  "sections": {
+    "head": {
+      "banner":{
+        "title": "Bolsa de talento", 
+        "subtitle": "Estadísticas", 
+        "image": {
+          "desktop": "https://drive.google.com/uc?export=view&id=1tJlnnloEliErrTKQ1vyOuIDWRwzE8OKA",
+          "tablet": "https://drive.google.com/uc?export=view&id=1rMe3GSofFPVTorN9VI9Bvn9CUdtoygMc",
+          "mobile": "https://drive.google.com/uc?export=view&id=1lJ4sw-tmKdpTS3carQuLc-nLfEEXDOkk"
+        },
+        "statics": [
+          {"maxNumber": 383, "icon": "", "prefix": "", "suffix": "", "title": "", "body": "Vacantes enviadas en 2022", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
+          {"maxNumber": 4624, "icon": "", "prefix": "", "suffix": "", "title": "", "body": "Invitaciones a nuestro alumnado", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
+          {"maxNumber": 355, "icon": "", "prefix": "", "suffix": "", "title": "", "body": "Convenios con empresas", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
+          {"maxNumber": 3400, "icon": "", "prefix": "", "suffix": "", "title": "", "body": "Alumnos y egresados registrados", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false}
+        ]
+      }
+    },
+    "descripcion": {
+      "title": "Conoce nuestra bolsa de talento para una rápida inserción al mercado laboral",
+      "text": { 
+        "content": "La Universidad Americana del Noreste forma profesionistas competentes mediante la impartición de programas de calidad académica, con enfoque práctico y tecnología de vanguardia. Por el conocimiento de estas características, tenemos convenio con diversas empresas para elevar la empleabilidad de nuestros estudiantes y alumnos egresados del plantel."
+      }
+    },
+    "vacantes": {
+      "title": "Vacantes disponibles",
+      "carrousel": {}
+    },
+    "vinculacionEmpresas": {
+      "title": "Vinculación empresarial",
+      "description":{
+        "content": "UANE  y beWanted han llegado a un acuerdo pionero para que todos sus alumnos multipliquen sus opciones de acceder al mundo laboral. ¡Más de 3.000 empresas buscan talento junior en beWanted!\n\nPero eso no lo es todo, tenemos convenio con empresas importantes de diversos gremios que se ubican al noreste del país para facilitar tu acceso al mundo laboral. "
+      },
+      "image": {
+        "src": "https://drive.google.com/uc?export=view&id=1GGskkWqA-EP5yydh70Hqd76m4kpcYbZl",
+        "alt": "vinculación-empresarial"
+      }
+    },
+    "historiasExito": {
+      "title": "Casos de éxito",
+      "description": {
+        "content": "Nuestros alumnos y egresados nos cuentan cómo fue su experiencia en la búsqueda de empleo a través de nuestra bolsa de talento."
+      },
+      "video": {
+        "options": {
+          "id": "715hFNbPukw",
+          "type": "single",
+          "controls": true
+        },
+        "dimensions": {
+          "height": "500px"
+        }
+      }
+    },
+    "comoFunciona": {
+      "title": "¿Cómo funciona la plataforma?",
+      "description": {
+        "content": "Te proporcionaremos un excelente nivel de servicio en todas las áreas de la Universidad, incluyendo el de <b>bolsa de talento</b>, que en este caso se hace en colaboración con <b>beWanted</b>, la mejor plataforma de conexión con <b>más de 2,000 empresas buscando talento joven.\n\n¿Quieres hacerte visible a todas esas empresas?\n\n¡Fácil!</b> regístrate y completa al máximo tu perfil."
+      },
+      "video": {
+        "options": {
+          "id": "d6D_YCxh2Po",
+          "type": "single",
+          "controls": true
+        },
+        "dimensions": {
+          "height": "500px"
+        }
+      }
+    },
+    "eventos": {
+      "title": "Próximos eventos",
+      "carrousel": {}
+    },
+    "noticias": {
+      "title": "Noticias",
+      "news":[
+        { 
+          "urlImage": "https://image.shutterstock.com/image-photo/graduates-student-graduation-caps-thrown-260nw-1937758900.jpg",
+          "subtitle": "SUBTITULO",
+          "title": "Coursera y UANE se unen para ti",
+          "text": "Se firma una alianza con Coursera para acceder a contenidos que complementen la formación profesional de su comunidad educativa",
+          "border": true,
+          "allContent": true,
+          "height": "",
+          "isShowCardWebsiteContent": true,
+          "id": "",
+          "type": "vertical",
+          "link": true,
+          "background": false,
+          "linkText": {
+            "text": "Conocer más",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": "star"
+          },
+          "linkIcon": {
+            "text": "Ver más",
+            "iconSecond": "person",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": "person"
+          },
+          "wrapper": true
+        },
+        { 
+          "urlImage": "https://image.shutterstock.com/image-photo/graduates-student-graduation-caps-thrown-260nw-1937758900.jpg",
+          "subtitle": "SUBTITULO",
+          "title": "Coursera y UANE se unen para ti",
+          "text": "Se firma una alianza con Coursera para acceder a contenidos que complementen la formación profesional de su comunidad educativa",
+          "border": true,
+          "allContent": true,
+          "height": "",
+          "isShowCardWebsiteContent": true,
+          "id": "",
+          "type": "vertical",
+          "link": true,
+          "background": false,
+          "linkText": {
+            "text": "Conocer más",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": "star"
+          },
+          "linkIcon": {
+            "text": "Ver más",
+            "iconSecond": "person",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": "person"
+          },
+          "wrapper": true
+        }
+      ]
+    },
+    "contacto": {
+      "banner": {
+        "image": {
+          "desktop": "https://drive.google.com/uc?export=view&id=1CMGn_OTqeDX7L2tY33AK0lblyU5BQKuE",
+          "mobile": "https://drive.google.com/uc?export=view&id=1nwxt4q7ZFg35IWuZUbZbAjXXI6z46KyH"
+        },
+        "title": "¿Tienes dudas? Contáctanos",
+        "email": "empleabilidad@uane.edu.mx ",
+        "phone": ""
+      }
+    }
+  }
+}

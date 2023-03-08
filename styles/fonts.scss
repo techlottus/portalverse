@@ -1,0 +1,124 @@
+@layer components {
+  .ac-type-h1-bold-solid-poppins-desktop {
+    @apply font-Poppins font-bold text-[65px] leading-[81.25px] text-SC/Blackandgrey/B-100;
+  }
+  .ac-type-h1-negative-bold-solid-poppins-desktop {
+    @apply font-Poppins font-bold text-[65px] leading-[81.25px] text-white;
+  }
+  .ac-type-h1-bold-solid-poppins-tablet {
+    @apply font-Poppins font-bold text-[52px] leading-[65px] text-SC/Blackandgrey/B-100;
+  }
+  .ac-type-h1-negative-bold-solid-poppins-tablet {
+    @apply font-Poppins font-bold text-[52px] leading-[65px] text-white;
+  }
+  .ac-type-h1-negative-bold-solid-poppins-mobile {
+    @apply font-Poppins font-bold text-[34px] leading-[42.5px] text-white;
+  }
+
+  // Headings 
+  // h2
+  .ac-type-h2-bold-solid-poppins-desktop {
+    @apply font-Poppins font-bold text-[52px] leading-[60px] text-SC/Blackandgrey/B-100;
+  }
+  .ac-type-h2-negative-bold-solid-poppins-desktop {
+    @apply font-Poppins font-bold text-[52px] leading-[60px] text-white;
+  }
+  .ac-type-h2-bold-solid-poppins-tablet {
+    @apply font-Poppins font-bold text-[34px] leading-[37.74px] text-SC/Blackandgrey/B-100;
+  }
+  .ac-type-h2-negative-bold-solid-poppins-tablet {
+    @apply font-Poppins font-bold text-[34px] leading-[37.74px] text-white;
+  }
+  .ac-type-h2-bold-solid-poppins-mobile {
+    @apply font-Poppins font-bold text-[30px] leading-[37.5px] text-SC/Blackandgrey/B-100;
+  }
+  .ac-type-h2-negative-bold-solid-poppins-mobile {
+    @apply font-Poppins font-bold text-[30px] leading-[37.5px] text-white;
+  }
+  
+  // h3
+  .ac-type-h3-bold-solid-poppins-desktop {
+    @apply font-Poppins font-bold text-[40px] leading-[50px] text-SC/Blackandgrey/B-100;
+  }
+  .ac-type-h3-negative-bold-solid-poppins-desktop {
+    @apply font-Poppins font-bold text-[40px] leading-[50px] text-white;
+  }
+  .ac-type-h3-bold-solid-poppins-tabmob {
+    @apply font-Poppins font-bold text-[24px] leading-[30px] text-SC/Blackandgrey/B-100;
+  }
+  .ac-type-h3-negative-bold-solid-poppins-tabmob {
+    @apply font-Poppins font-bold text-[24px] leading-[30px] text-white;
+  }
+  
+  // h4
+  .ac-type-h4-bold-solid-poppins-desktop {
+    @apply font-Poppins font-bold text-[32px] leading-[40px] text-SC/Blackandgrey/B-100;
+  }
+  .ac-type-h4-negative-bold-solid-poppins-desktop {
+    @apply font-Poppins font-bold text-[32px] leading-[40px] text-white;
+  }
+  .ac-type-h4-bold-solid-poppins-tablet {
+    @apply font-Poppins font-bold text-[24px] leading-[30px] text-SC/Blackandgrey/B-100;
+  }
+  .ac-type-h4-negative-bold-solid-poppins-tablet {
+    @apply font-Poppins font-bold text-[24px] leading-[30px] text-white;
+  }
+  
+  // h5
+  .ac-type-h5-bold-solid-poppins-desktop {
+    @apply font-Poppins font-bold text-[22px] leading-[28.6px] text-SC/Blackandgrey/B-100;
+  }
+  .ac-type-h5-negative-bold-solid-poppins-desktop {
+    @apply font-Poppins font-bold text-[22px] leading-[28.6px] text-white;
+  }
+  .ac-type-h5-bold-solid-poppins-tablet {
+    @apply font-Poppins font-bold text-[16px] leading-[20.8px] text-SC/Blackandgrey/B-100;
+  }
+  .ac-type-h5-negative-bold-solid-poppins-tablet {
+    @apply font-Poppins font-bold text-[16px] leading-[20.8px] text-white;
+  }
+  
+  // h6
+  .ac-type-h6-bold-solid-poppins-desktop {
+    @apply font-Poppins font-bold text-[18px] leading-[22.5px] text-SC/Blackandgrey/B-100;
+  }
+  .ac-type-h6-negative-bold-solid-poppins-desktop {
+    @apply font-Poppins font-bold text-[18px] leading-[22.5px] text-white;
+  }
+  .ac-type-h6-bold-solid-poppins-tablet {
+    @apply font-Poppins font-bold text-[14px] leading-[17.5px] text-SC/Blackandgrey/B-100;
+  }
+  .ac-type-h6-white-bold-solid-poppins-tablet {
+    @apply font-Poppins font-bold text-[14px] leading-[17.5px] text-white;
+  }
+
+  // Bodies
+  // positive
+  .ac-type-body-positive-solid-nunitosans-desktop {
+    @apply font-Nunito-Sans font-normal text-base leading-5 text-SC/Blackandgrey/B-80;
+  }
+  .ac-type-body-negative-solid-nunitosans-desktop {
+    @apply font-Nunito-Sans font-normal text-base leading-5 text-white;
+  }
+  .ac-type-body-positive-solid-nunitosans-tabmob {
+    @apply font-Nunito-Sans font-normal text-sm leading-[17.5px] text-SC/Blackandgrey/B-80;
+  }
+  .ac-type-body-negative-solid-nunitosans-tabmob {
+    @apply font-Nunito-Sans font-normal text-sm leading-[17.5px] text-white;
+  }
+  
+  // negative
+  .ac-type-body-positive-solid-nunitosans-desktop {
+    @apply font-Nunito-Sans font-normal text-base leading-5 text-SC/Blackandgrey/B-80;
+  }
+  .ac-type-body-negative-solid-nunitosans-desktop {
+    @apply font-Nunito-Sans font-normal text-base leading-5 text-white;
+  }
+  .ac-type-body-positive-solid-nunitosans-tabmob {
+    @apply font-Nunito-Sans font-normal text-sm leading-[17.5px] text-SC/Blackandgrey/B-80;
+  }
+  .ac-type-body-negative-solid-nunitosans-tabmob {
+    @apply font-Nunito-Sans font-normal text-sm leading-[17.5px] text-white;
+  }
+
+}

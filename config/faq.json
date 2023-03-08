@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "title": "Preguntas Frecuentes",
+    "description": "",
+    "keywords": ""
+  },
+  "sections": {
+    "temas": [
+      {
+        "title": "Generales",
+        "icon": "border_color",
+        "questions": [
+          {
+            "title": "¿Qué requisitos solicitan para ingresar?",
+            "answer": "Tendrá la calidad de alumno de licenciatura en la Universidad, la persona que:\n- Presente y apruebe el examen de admisión.\n- Entregue la totalidad de la documentación requerida en la solicitud de admisión.\n- Sea admitido por la Subdirección de Documentación y Control Escolar del Campus correspondiente."
+          },
+          {
+            "title": "¿Cuentan con revalidaciones y equivalencias?",
+            "answer": "La Universidad podrá hacer equivalencias de los estudios cursados en otras instituciones que formen parte del Sistema Educativo Nacional, así como del propio Plantel. Acude a tu campus más cercano para analizar tu caso."
+          },
+          {
+            "title": "¿Tienen becas?",
+            "answer": "Los distintos tipos de beca que otorga la Universidad se orientan a satisfacer dos grandes propósitos: el primero, cuyo fin es apoyar económicamente a los alumnos que así lo requieran, y el segundo, para estimular a los alumnos que por su alto nivel de aprovechamiento o por sus actividades académicas o extra-académicas prestigien a la Universidad. Te sugerimos revisar directamente en campus las opciones correspondientes y los pasos a seguir para solicitarlas."
+          },
+          {
+            "title": "¿Cuentan con Bolsa de Trabajo?",
+            "answer": "Tenemos más de 790 acuerdos con empresas a nivel nacional para una rápida inserción laboral desde que se realizan las prácticas profesionales, bolsa de empleo, seminarios y conferencias con grandes ponencias de negocios e industria."
+          },
+          {
+            "title": "¿Hay opciones para irme de intercambio?",
+            "answer": "A través de UANE INTERNACIONAL puedes compartir tu desarrollo académico y profesional con maestros y compañeros de otros países del mundo.\nLas experiencias internacionales son clave para potencializar tus conocimientos y habilidades, además amplían tu visión personal y profesional; es por ello que UANE apuesta por una formación global, brindando la oportunidad de tener clases espejo, webinars internacionales, intercambios de materias y movilidad al extranjero, así como distintos proyectos en conjunto con las mejores universidades de Latinoamérica y Europa."
+          }
+        ],
+        "id": "general"
+      },
+      {
+        "title": "Modalidad Presencial",
+        "icon": "border_color",
+        "questions": [
+          {
+            "title": "¿Qué programas están vigentes en la modalidad presencial?",
+            "answer": "Contamos con 46 programas de alto nivel disponibles para ti, pregunta por la disponibilidad en cada campus.\n\nBachillerato tradicional y bachillerato modular bilingüe\n\n20 Licenciaturas\n\n3 Ingenierías\n\n17 Maestrías\n\n5 Especialidades\n\n2 Doctorados"
+          },
+          {
+            "title": "¿Qué beneficios académicos te ofrece nuestro sistema educativo?",
+            "answer": "• Retroalimentación Inmediata, los alumnos podrán comprobar la preparación que obtuvieron y compararla con sus intereses y capacidades.\n\n • Con la aplicación de exámenes al finalizar cada módulo se acostumbra al estudiante a obtener logros en condiciones bajo presión, lo que origina una satisfacción personal que estimula la concentración y entusiasmo.\n\n • Contacto diario en 30 sesiones que promueven la integración, el acercamiento y la identificación entre alumnos y catedráticos.\n\n • Este sistema permite la participación desde la enseñanza, de actores del ámbito político, empresarial o emprendimiento que compartan casos de éxito y que den cátedra a través de previo reclutamiento mediante el cual se privilegia el proceso de enseñanza – aprendizaje."
+          },
+          {
+            "title": "¿Cuáles son los fundamentos del modelo educativo modular?",
+            "answer": "Las materias por bloques permiten satisfacer los criterios de organización de acuerdo con:\n\n • La continuidad\n\n • La secuencia\n\n • La integración: Relación horizontal que permite experimentar los tres núcleos básicos de la organización en una sola clase (teórico, metodológico y práctico)\n\n • El estudiante dedica su atención y concentración a sólo dos materias por módulo.\n\n • Se tiene la oportunidad de aplicar a la vida diaria los conocimientos adquiridos; esto genera una retención mayor de la información a comparación de otros modelos educativos sin bloques.\n\n • Nuestros contenidos son importantes, válidos y coherentes; durante el proceso educativo preponderamos la participación, la capacidad crítica, la habilidad para resolver problemas, creatividad, autodisciplina, constancia y socialización."
+          }
+        ],
+        "id": "modalidad-presencial"
+      },
+      {
+        "title": "Modalidad Online",
+        "icon": "border_color",
+        "questions": [
+          {
+            "title": "¿Qué es una modalidad online de estudio?",
+            "answer": "También conocida como educación online, en línea o remota, se trata de una innovadora forma de aprender y enseñar que lleva la dinámica de una clase tradicional y presencial, al mundo digital. De esta manera, desde cualquier lugar del mundo, los alumnos y docentes podrán conectarse en un entorno virtual en sus computadoras a través de internet con el uso intensivo de las facilidades que proporcionan las nuevas tecnologías digitales."
+          },
+          {
+            "title": "¿Qué beneficios tiene estudiar online?",
+            "answer": "Flexibilidad: los estudiantes acceden a los contenidos y clases desde cualquier dispositivo, en cualquier lugar.\n\nAprendizaje colaborativo: los estudiantes aprenden tanto de sus profesores como de sus compañeros.\n\nAutonomía y responsabilidad: el alumno que cursa a distancia desarrolla la autonomía y responsabilidad ya que elige cómo estudiar y adapta sus tiempos según sus responsabilidades profesionales y requerimientos familiares.\n\nEnseñanza enfocada en los alumnos: los estudiantes son protagonistas de su educación en el marco de un aprendizaje activo y participativo."
+          },
+          {
+            "title": "¿Qué programas están vigentes en la modalidad online?",
+            "answer": "Contamos con 29 programas de alto nivel que incluyen:\n\n10 Licenciaturas\n\n5 Ingenierías\n\n11 Maestrías\n\n3 Especialidades"
+          },
+          {
+            "title": "¿Qué experiencias internacionales me ofrece la modalidad online?",
+            "answer": "Accede a experiencias internacionales como: Clases espejo, webinars, intercambio de materias y twin projects con las mejores universidades alrededor del mundo. Además puedes preguntar por los programas con opción a doble titulación con tu asesor."
+          },
+          {
+            "title": "¿Cómo se estudia a distancia?",
+            "answer": "Por medio de nuestra plataforma de última generación, con la que podrás lograr una organización intuitiva que facilita la navegación, con todo lo que necesitas para tu cumplir con tus metas educativas.\n\nEstudia 1 materia cada 4 semanas."
+          },
+          {
+            "title": "¿Qué es la doble titulación?",
+            "answer": "El modelo educativo UANE Online te ofrece opciones con acceso a doble titulación para completar en un lapso muy corto de tiempo, lo que te permitirá aumentar tus conocimientos y habilidades para alcanzar el éxito profesional para posicionarte en el empleo correcto de acuerdo con tu área de desarrollo. Al tener un doble título amplias tus conocimientos. Pregunta por los programas participantes."
+          }
+        ],
+        "id": "modalidad-online"
+      },
+      {
+        "title": "Modalidad UANE Flex (Híbrida)",
+        "icon": "border_color",
+        "questions": [
+          {
+            "title": "¿Por qué se dice que los programas UANE Flex son carreras ejecutivas?",
+            "answer": "Nuestros programas híbridos o semi presenciales son ideales para adultos trabajadores, lo que les permite estudiar sin descuidar sus actividades profesionales y personales."
+          },
+          {
+            "title": "¿Qué es una modalidad Flex (híbrida o semipresencial)?",
+            "answer": "La educación híbrida o semipresencial es un método instruccional que combina en el proceso de enseñanza-aprendizaje el modelo presencial con la educación en línea, brinda la oportunidad al alumno de acceder a la información de la mejor manera posible y le da una personalización a su aprendizaje, en nuestros programas asistes a Campus sólo los sábados con tus docentes y compañeros; y el resto de la semana llevas tu programa de manera online."
+          },
+          {
+            "title": "¿Qué programas están vigentes en la modalidad flex (híbrida)?",
+            "answer": "Contamos con 10 programas de alto nivel en modalidad híbrida\n\n7 Licenciaturas\n\n2 Ingenierías\n\nMáster"
+          },
+          {
+            "title": "¿Qué experiencias internacionales me ofrece la modalidad Flex (híbrida)?",
+            "answer": "Accede a experiencias internacionales como: Clases espejo, webinars, intercambio de materias y twin projects con las mejores universidades alrededor del mundo."
+          },
+          {
+            "title": "¿Cuál es la duración de los programas de licenciaturas e ingenierías Flex (híbridos)?",
+            "answer": "Licenciaturas e Ingenierías: 36 asignaturas, que se cursan en 3 años.\n\nEstudia 1 materia cada 4 semanas.\n\n*No aplica para la Licenciatura en Psicología."
+          },
+          {
+            "title": "¿Cómo se lleva a cabo el estudio en Flex?",
+            "answer": "Por medio de nuestra plataforma de última generación, con la que podrás lograr una organización intuitiva que facilita la navegación, con todo lo que necesitas para tu cumplir con tus metas educativas y asistes sólo los sábados a tu campus más cercano."
+          },
+          {
+            "title": "¿Qué es la doble titulación?",
+            "answer": "El modelo educativo UANE Online te ofrece opciones con acceso a doble titulación para completar en un lapso muy corto de tiempo, lo que te permitirá aumentar tus conocimientos y habilidades para alcanzar el éxito profesional para posicionarte en el empleo correcto de acuerdo a tu área de desarrollo. Al tener un doble título extiendes tus conocimientos. Pregunta por los programas participantes."
+          }
+        ],
+        "id": "modalidad-flex"
+      }
+    ],
+    "head":{
+      "title": "Preguntas frecuentes",
+      "subtitle": "Elige una sección:"
+    },
+    "banner": {
+      "title": "UANE Internacional",
+      "subtitle": "Internacionalízate agrega experiencias internacionales a tu educación",
+      "state": "black",
+      "size": "medium",
+      "middle": false,
+      "center": false,
+      "bottom": false,
+      "left": false,
+      "urlImage": {
+        "mobile": "https://drive.google.com/uc?export=view&id=18yIHL-H5UazsvIqib9qLInFgda41Eaqz",
+        "desktop": "https://drive.google.com/uc?export=view&id=1-oMRKt_jawT7t2F8zEybhaEIdlz0d89W"
+      },
+      "overlay": "black",
+      "height": "212px",
+      "action": {
+        "id": "",
+        "type": "outlined",
+        "title": "Conocer más",
+        "size": "small",
+        "icon": "",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "",
+        "test": ""
+      },
+      "wrapper": true,
+      "redirect": "/nosotros/internacionalizacion"
+    }
+  }
+}

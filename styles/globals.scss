@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&family=Nunito:wght@400&family=Poppins:wght@400;600;700&display=swap');
+@import './fonts.defaults.Nunito.scss';
+@import './fonts.defaults.NunitoSans.scss';
+@import './fonts.defaults.Poppins.scss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './utils.scss';
+@import './fonts.scss';
+
+// TODO: Delete "old-components" import when components migration is completed
+@import '../old-components/index.scss';
+@import '../components/index.scss';
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}

@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "title": "Tu oportunidad está en UANE",
+    "description": "",
+    "keywords": ""
+  },
+  "sections": {
+    "head": {
+      "title": "Somos tu mejor opción para convertirte en un profesional",
+      "description": "Únete a la familia UANE y forma parte de nuestras historias de éxito y deja huella en cada paso que das con nuestra excelencia educativa."
+    },
+    "video": {
+      "options": {
+        "id": "DxJpI7jdB9Q",
+        "type": "single",
+        "controls": true
+      },
+      "dimensions": {
+        "height": "500px"
+      }
+    },
+    "form": {
+      "title": "¿Necesitas más información?",
+      "description": "Por favor llena el siguiente formulario y uno de nuestros asesores universitarios se pondrá en contacto contigo a la brevedad."
+    }
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "meta":{
+    "title": "Conexión Educativa",
+    "description": "",
+    "keywords": "",
+    "hidden": false
+  },
+  "sections":{
+    "head": {
+      "title": "Vinculación empresarial",
+      "subtitle": "",
+      "description": "UANE  y beWanted han llegado a un acuerdo pionero para que todos sus alumnos multipliquen sus opciones de acceder al mundo laboral.\n\n ¡Más de 3.000 empresas buscan talento junior en beWanted!",
+      "contactText": "",
+      "contactLink": "",
+      "image": {
+        "desk": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1-PJN5Uh8k5JEeoTZ1FHZXl5OKav2ADdD"
+        },
+        "mobile": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1yVLpuzyMTlGRWa-uT_AikXPW_mCtv03f"
+        }
+      },
+      "feedback": {
+        "left": {
+          "name": "info",
+          "status": "normal"
+        },
+        "right": {
+          "name": ""
+        },
+        "type": "alert",
+        "isTextEvent": false,
+        "textEvent": "Dismiss",
+        "tagOnRight": "testOnRight",
+        "title": "Convenio",
+        "text": "A través del convenio, podrás ofrecer a tus colaboradores y a su familia directa (esposo o esposa e hijos) becas para estudiar programas presenciales o en la modalidad online.\n\nSi deseas más información envía un correo a:",
+        "contact": "vinculación@uane.edu.mx"
+      }
+    },
+    "alliances": {
+      "title": "Nuestras alianzas",
+      "carrousel": [
+        {
+          "desk": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=13DgmchmaNtN9njb12U5lnREzfLazm-Jl"
+          }
+        },
+        {
+          "desk": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1j91hsQpLxTpD1owVhX1A6my729-Gx1SO"
+          }
+        },
+        {
+          "desk": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1FArwjQx-NX1rtPdlf-EKZ0ywT2T3cmHb"
+          }
+        },
+        {
+          "desk": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1gutk5QA3RX6l482uQWuzdawaF14xm7p5"
+          }
+        }
+      ],
+      "button": {
+          "title": "Ver todos los convenios",
+          "type": "outlined",
+          "icon": "download",
+          "isExpand": false
+        }
+    },
+    "socialService": {
+      "tabs": {
+        "items": [
+          {
+            "label": "Servicio social", "icons": { "primary": "", "duplicate": true }, "disabled": false, "id": "servicio-social",
+            "content": {
+              "image": {
+                "alt": "imagen",
+                "src": "https://drive.google.com/uc?export=view&id=1yWwscqHR-_XtxVu6tB87BXwojRnl9jho"
+              },
+              "content": {
+                "title": "¿Por qué hacer servicio social?",
+                "description": "El servicio social es un requisito indispensable que <b> ayuda a formar en los estudiantes habilidades nuevas </b> y es un espacio ideal para que puedan poner en práctica los conocimientos adquiridos a lo largo de la licenciatura."
+              },
+              "process": {
+                "title": "Proceso servicio social",
+                "description": "1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit nunc, facilisis tincidunt id faucibus parturient ornare hendrerit.\n2. At et elit duis nibh ornare in pulvinar id proin. Interdum pellentesque rhoncus, nunc, tincidunt vulputate sed cursus lorem sollicitudin.\n3. Mattis volutpat ac nunc, sit ut vitae urna ornare aliquam. Mattis phasellus cursus viverra faucibus tristique amet, cursus eget.\n4.Tellus sem ac pellentesque volutpat vitae augue faucibus purus habitant.",
+                "download": {
+                  "title": "Descargar listado de empresas con convenio",
+                  "link": ""
+                }
+              }
+            }
+          },
+          {
+            "label": "Prácticas profesionales", "icons": { "primary": "", "duplicate": true }, "disabled": false, "id": "practicas-profesionales",
+            "content": {
+              "image": {
+                "alt": "imagen",
+                "src": "https://drive.google.com/uc?export=view&id=1M0m_XSG1KGSJLEZlgzKS-VwerD5uy5He"
+              },
+              "content": {
+                "title": "¿Por qué hacer prácticas profesionales?",
+                "description": "Contamos con más de 790 convenios con empresas a nivel nacional para una rápida inserción laboral, desde que se realizan las prácticas profesionales, bolsa de empleo, seminarios y conferencias con grandes ponencias de industria y negocios."
+              },
+              "process": {
+                "title": "Proceso practicas profesionales",
+                "description": "1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit nunc, facilisis tincidunt id faucibus parturient ornare hendrerit.\n2. At et elit duis nibh ornare in pulvinar id proin. Interdum pellentesque rhoncus, nunc, tincidunt vulputate sed cursus lorem sollicitudin.\n3. Mattis volutpat ac nunc, sit ut vitae urna ornare aliquam. Mattis phasellus cursus viverra faucibus tristique amet, cursus eget.\n4.Tellus sem ac pellentesque volutpat vitae augue faucibus purus habitant.",
+                "download": {
+                  "title": "Descargar listado de empresas con convenio",
+                  "link": ""
+                }
+              }
+            }
+          }
+        ],
+        "size": "medium"
+      }
+    },
+    "experiences": {
+      "title": "Experiencias UANE",
+      "images": {"images": [{"id": "1", "image": "https://drive.google.com/uc?export=view&id=1NaTkEjWZN2O-ufdoiMic1mYs6KFtDdAX", "icon": "zoom_out_map" }, {"id": "2", "image": "https://drive.google.com/uc?export=view&id=1y4dwIkZ8xf5I93OOISJbDYIzY0E3z85F", "icon": "zoom_out_map" }, {"id": "3", "image": "https://drive.google.com/uc?export=view&id=1fun0SHwAzQpi9iGvmSpLsi-umB-yjPbe", "icon": "zoom_out_map"}, {"id": "4", "image": "https://drive.google.com/uc?export=view&id=1Ssn--66KYAAthWRMTHryb0rRuoXPL6ni", "icon": "zoom_out_map"},{"id": "5", "image": "https://drive.google.com/uc?export=view&id=1E1uOwF3RADySl8H_WO_N8nyBsk_TQ_aj", "icon": "zoom_out_map"}, {"id": "6", "image": "https://drive.google.com/uc?export=view&id=1CyTXqPEg90UD5JGBDxfwW-sy6R_Mw9wf", "icon": "zoom_out_map" }, {"id": "7", "image": "https://drive.google.com/uc?export=view&id=1De_PlYAJA4y82HKOV2Udph2V0VgkriHL", "icon": "zoom_out_map"}, {"id": "8", "image": "https://drive.google.com/uc?export=view&id=19_C3X2-86268UQCZY6aZouyKNIQFW8Ev", "icon": "zoom_out_map"}, {"id": "9", "image": "https://drive.google.com/uc?export=view&id=1PuCzna70a8TDiWIaPH3POL2w3rhz37ay", "icon": "zoom_out_map"}, {"id": "10", "image": "https://drive.google.com/uc?export=view&id=1cGsfKZo4C5YOWaROBP2t8j9HEg0Mn3fH", "icon": "zoom_out_map"}, {"id": "11", "image": "https://drive.google.com/uc?export=view&id=1PBNWit8K484E-HFvaWGGeXiTViCKwEPV", "icon": "zoom_out_map"}, {"id": "12", "image": "https://drive.google.com/uc?export=view&id=1CulfV4b9BwrzgmqFSmwbExYDT_pmsZ6F", "icon": "zoom_out_map"}]}
+    },
+    "descriptionSection": {
+      "title":"Ventajas de realizar prácticas profesionales",
+      "textIcons":[
+        {
+          "icon": "https://drive.google.com/uc?export=view&id=1T0zh7_wWn_U7vC8Ghb1OnvK9Vf_iw8RI",
+          "name": "nuevascompetencias", 
+          "text": "<b>Adquieres nuevas competencias:</b>\n\nEn la universidad conoces la teoría, pero en el mundo laboral adquieres conocimientos prácticos, destrezas y habilidades."
+        },
+        {
+          "icon": "https://drive.google.com/uc?export=view&id=1zMwTLnS12WxMDnzO7oUt1MhUZYKtaqIv",
+          "name": "buscarempleo", 
+          "text": "<b>Aprendes a buscar trabajo:</b>\n\nBuscar prácticas profesionales sirve de entrenamiento para buscar empleo. Redactar un cv atractivo será una tarea más sencilla para ti."
+        },
+        {
+          "icon": "https://drive.google.com/uc?export=view&id=1oxx9Lwrg7_C5nnNGnqYIsU7Y4QmDbTgM",
+          "name": "hacercontactos", 
+          "text": "<b>Hacer contactos:</b>\n\nLas prácticas te permitirán establecer contactos con profesionales del sector y pueden ser una excelente carta de recomendación."
+        },
+        {
+          "icon": "https://drive.google.com/uc?export=view&id=1rJEHj6oYdFn3DI0k8-AJyKJEwPZ8vlxk",
+          "name": "conseguirempleto", 
+          "text": "<b>Posibilidad de conseguir un empleo:</b>\n\nLas prácticas te permitirán establecer contactos con profesionales del sector y pueden ser una excelente carta de recomendación."
+        },
+        {
+          "icon": "https://drive.google.com/uc?export=view&id=1rJEHj6oYdFn3DI0k8-AJyKJEwPZ8vlxk",
+          "name": "mejorarcurriculim", 
+          "text": "<b>Mejorar  el currículum:</b>\n\nLa realización de prácticas permite ampliar tu CV y demuestra tu interés por incorporarte al mundo laboral."
+        }
+      ],
+      "button": {"id":"123","title": "Quiero más información", "type": "primary", "icon": "", "isExpand": false, "size":"small"},
+      "image": {
+        "desk": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1NquBLD5HwafKLfWpn8J8fYBcCLdxh9mH"
+        },
+        "tablet": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1OhAFE6UMrVu7P-b1C6h59XODA31K4lcA"
+        },
+        "mobile": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=10fxtqvc-Dg0XvMAyFAzslPn0_rdVwGju"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+section {
+  lottus-modal {
+    &:root(.content) {
+      @media (max-width: 599px) {
+        max-height: 90% !important;
+        overflow-y: scroll;
+      }
+    }
+  }
+}

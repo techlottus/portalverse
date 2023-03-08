@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "title": "Maestría en Mercadotecnia Digital",
+    "description": "",
+    "keywords": ""
+  },
+  "config": {
+    "title": "Maestría en Mercadotecnia Digital",
+    "config": {
+      "nombre": "Maestría en Mercadotecnia Digital",
+      "modalidad": ["Online"],
+      "areaConocimiento": ["Económico - Administrativo"],
+      "campus": [],
+      "nivel": ["Posgrado"],
+      "image": {
+        "src": "https://drive.google.com/uc?export=view&id=12pviq77OJ8d5Mx3J6TFVNBH3CR7OWD6n",
+        "alt": "maestria"
+      },
+      "curriculum": {
+        "Online": "1gZIE7lYK1Eq8kl62XpNzJYSJpRFL4q1f"
+      }
+    }
+  },
+  "sections": {
+    "head": {
+      "title": "Maestría en Mercadotecnia Digital",
+      "description": "Desarrolla estrategias comerciales y gestiona recursos con herramientas globales y tecnológicas, además, optimiza técnicas publicitarias y de mercadotecnia a fin de generar un nuevo enfoque de la mercadotecnia en un entorno multimedia con visión interdisciplinar.",
+      "image": {
+        "src": "https://drive.google.com/uc?export=view&id=12pviq77OJ8d5Mx3J6TFVNBH3CR7OWD6n",
+        "alt": "maestria"
+      }
+    },
+    "modalities": {
+      "title": "Modalidades disponibles en esta maestría:",
+      "tabs": {
+        "items": [
+          {
+            "label": "Modalidad Online", "icons": { "primary": "", "duplicate": false}, "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
+                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "Este programa está dirigido a egresados del área de Ciencias Sociales y Administrativas, así como a profesionales que se desempeñan en departamentos de mercadotecnia, ventas, diseño gráfico, agencias de investigación de mercados y publicidad.",
+                  "backgroundColor": "#8B9BA3"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "El profesionista deberá de ser capaz de auditar y evaluar una empresa para que a través de las estrategias y tácticas aprendidas en el programa; pueda crear, implementar y gestionar un plan de marketing y así desarrollarse como ejecutivo en su compañía y aportar valor a la organización.\nSer capaz de analizar los efectos de las tendencias a nivel local y nacional para la implementación de estrategias en la empresa y así poder medir su mejora correspondiente.\nSer capaz de gestionar los indicadores más importantes en la empresa siguiendo procedimientos y metodologías comprendidas en el programa para poder impactar de manera positiva en los objetivos de su organización.\nSer capaz de planear y dirigir campañas de promoción y publicidad con base a un plan de marketing estructurado, aplicando técnicas de comunicación integrada para proyectar una imagen consistente y de calidad mundial.",
+                  "backgroundColor": "#B0003C"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "El egresado de la Maestría en Marketing Digital se convierte en un especialista de social media que  utiliza herramientas de análisis web para monitorear el tráfico del sitio web, con las que se pueden optimizar las actividades de marketing, incluyendo el mailing, las redes sociales y la publicidad digital.",
+                  "backgroundColor": "#E84537"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "\n\n• Acta de nacimiento original del cajero reciente y 2 copias\n\n• Copia fiel del título (Constancia de trámite en caso de aún no tener el título)\n\n• Copia de cédula (traer original para copia)\n\n• Impresión de CURP directo de intenet sin ampliación\n\n• CV y Constancia laboral\n\n• Fotografías (Preguntar por especificaciones)\n\n• Solicitud de Admisión",
+                  "backgroundColor": "#00BEB4"
+                }
+              ],
+              "wrapper": false
+            }
+          }
+        ],
+        "size": "medium"
+      }
+    },
+    "descarga": {
+      "id": "program_maestria",
+      "type": "primary",
+      "title": "Descarga el plan de estudios",
+      "size": "small",
+      "icon": "download",
+      "lyIcon": false,
+      "disabled": false,
+      "isExpand": false,
+      "tagOnClick": "testClick",
+      "test": ""
+    }
+  },
+  "form": {
+    "config": {
+      "level": { "hidden": true, "value": "maestria" },
+      "program": { "hidden": false, "value": "Mercadotecnia Digital" },
+      "modality": { "hidden": false },
+      "campus": { "hidden": false }
+    },
+    "copies": {
+      "stepone": {
+        "title": "Obtén informes sobre tu programa",
+        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+      }
+    }
+  }
+}

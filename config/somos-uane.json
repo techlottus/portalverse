@@ -1,0 +1,481 @@
+{
+  "meta": {
+    "title": "Somos UANE",
+    "description": "",
+    "keywords": ""
+  },
+  "sections":{
+    "head":{
+      "title": "Somos UANE",
+      "subtitle": "48 años transformando vidas",
+      "description": "UANE es una Universidad con más de 14,500 estudiantes, más de 50,000 egresados en los niveles de bachillerato, licenciatura y posgrado, además de 8 campus en 3 estados de la República Mexicana.",
+      "image": {
+        "desk": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1hIOTP0dcbGsZFQmao7AsZ8TeD6iyBR7v"
+        },
+        "mobile": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1uNn6aGeMZV1RydwpnKJ8zlPZCzk5Cloq"
+        }
+      }
+    },
+    "history": {
+      "title": "Nuestra historia",
+      "description": "¡Han pasado 48 años!\n\nTodas las experiencias educativas que se han generado en UANE nacieron por la visión de un compromiso social centrado en ofertar oportunidades de crecimiento a través de una educación superior de calidad.\n\n El desarrollo se dió de manera acelerada a partir de las primeras clases gracias a que la gente que sí aspira a elevar su calidad de vida laboral y personal se acercó al plantel para descubrir todas las posibilidades y las puertas que se abren cuando se satisfacen las necesidades del ambiente empresarial, gracias a la constante preparación.",
+      "image": {
+        "desk": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1xEZ3N3MXc8TiMaRSHuM5t_rg5XDg6mPs"
+        },
+        "mobile": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1TsYMeaYWFw3oQLZYkrGxL_e2ryYKJUF0"
+        }
+      }
+    },
+    "missionAndVission": {
+      "title": "Misión y Visión",
+      "description": "<b>MISIÓN</b>\n\n Generar oportunidades para desarrollar personas ejemplares, comprometidas con su futuro.\n\n<b>VISIÓN</b>\n\n Estar entre las 10 mejores universidades particulares de México y lograr un crecimiento anual de alumnos de al menos un 30%",
+      "image": {
+        "desk": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1JLXy9081XIyfCWRinGu-OGnZ_4bsHa_P"
+        },
+        "mobile": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1LzIXE18-Ig2LNXHo9ScLzPauuNxF0b5J"
+        }
+      }
+    },
+    "ourValues":{
+      "title": "Nuestros valores ",
+      "values": [
+        { 
+          "urlImage": "https://drive.google.com/uc?export=view&id=1xrgMHtJ4hqdWd_-ZqJKCauxsZDwejJmp",
+          "subtitle": "",
+          "title": "HONESTIDAD",
+          "text": "Actuamos con integridad, congruencia y rectitud en nuestro que hacer cotidiano y nos conducimos con apego a la verdad.",
+          "border": true,
+          "allContent": true,
+          "height": "",
+          "isShowCardWebsiteContent": true,
+          "id": "",
+          "type": "small",
+          "link": true,
+          "background": false,
+          "linkText": {
+            "text": "",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": "visibility"
+          },
+          "linkIcon": {
+            "text": "",
+            "iconSecond": "play_circle",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": ""
+          },
+          "wrapper": true
+        },
+        { 
+          "urlImage": "https://drive.google.com/uc?export=view&id=1zYjSdNKfUIiOKpe5ueSv7LpSlA4YRONN",
+          "subtitle": "",
+          "title": "RESPONSABILIDAD",
+          "text": "Estamos comprometidos con la comunidad universitaria y con la sociedad, con esto desempeñamos nuestro trabajo con exigencia y profesionalismo.",
+          "border": true,
+          "allContent": true,
+          "height": "",
+          "isShowCardWebsiteContent": true,
+          "id": "",
+          "type": "small",
+          "link": true,
+          "background": false,
+          "linkText": {
+            "text": "",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": "star"
+          },
+          "linkIcon": {
+            "text": "",
+            "iconSecond": "",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": ""
+          },
+          "wrapper": true,
+          "video": "8LDTk1DLg4M"
+        },
+        { 
+          "urlImage": "https://drive.google.com/uc?export=view&id=1SE81Yt66JKuAESXZQ5wcrNaq8bCaHxmI",
+          "subtitle": "",
+          "title": "DESARROLLO HUMANO",
+          "text": "Construimos un ambiente de oportunidades, respeto y confianza para motivar a la pasión por el aprendizaje y la superación permanentes.",
+          "border": true,
+          "allContent": true,
+          "height": "",
+          "isShowCardWebsiteContent": true,
+          "id": "",
+          "type": "small",
+          "link": true,
+          "background": false,
+          "linkText": {
+            "text": "",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": "star"
+          },
+          "linkIcon": {
+            "text": "",
+            "iconSecond": "arrow_right",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": ""
+          },
+          "wrapper": true
+        },
+        { 
+          "urlImage": "https://drive.google.com/uc?export=view&id=1T9gYMUSt1cni7mvCn6QPC7WBKZEAsNka",
+          "subtitle": "",
+          "title": "SERVICIO",
+          "text": "Nos vinculamos permanentemente con nuestro entorno para satisfacer sus necesidades con calidad, oportunidad y trato amable.",
+          "border": true,
+          "allContent": true,
+          "height": "",
+          "isShowCardWebsiteContent": true,
+          "id": "",
+          "type": "small",
+          "link": true,
+          "background": false,
+          "linkText": {
+            "text": "",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": "star"
+          },
+          "linkIcon": {
+            "text": "",
+            "iconSecond": "arrow_right",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": ""
+          },
+          "wrapper": true
+        }
+      ],
+      "numbers":[
+        {"maxNumber": 14500, "icon": "", "prefix": "+", "suffix": "", "title": "ESTUDIANTES", "body": "", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": true},
+        {"maxNumber": 80, "icon": "", "prefix": "+", "suffix": "", "title": "PROGRAMAS", "body": "", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "red-pastel-right", "boxShadow": true},
+        {"maxNumber": 8, "icon": "", "prefix": "+", "suffix": "", "title": "CAMPUS", "body": "", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "gray-pastel-right", "boxShadow": true},
+        {"maxNumber": 760, "icon": "", "prefix": "+", "suffix": "", "title": "CONVENIOS", "body": "", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "yellow-pastel-right", "boxShadow": true}
+      ]
+    },
+    "community": {
+      "title": "Comunidad UANE",
+      "links": [
+        {
+          "urlImage": {
+            "mobile": "https://drive.google.com/uc?export=view&id=1Cb6y0bYBWk1bXOH-FDC-lDgWGPW4uA1A",
+            "desktop": "https://drive.google.com/uc?export=view&id=1x68sbJ--6tPrU_nK-oZOBSWTkS672rqw"
+          },
+          "text": "Voz UANE",
+          "icon": "arrow_forward",
+          "color": "red",
+          "opacity": "multiply",
+          "height": "282px",
+          "enable": true,
+          "nobackground": false,
+          "redirect": "/voz-uane"
+        },
+        {
+          "urlImage": {
+            "mobile": "https://drive.google.com/uc?export=view&id=1uEPDiRVHPmgivz9fOwta_AoBIAWdIrJh",
+            "desktop": "https://drive.google.com/uc?export=view&id=1C1FnVf3M17QQ9uu0go11g1EswRqQ5XEJ"
+          },
+          "text": "Internacionalización",
+          "icon": "arrow_forward",
+          "color": "#FADB62",
+          "opacity": "multiply",
+          "height": "282px",
+          "enable": true,
+          "nobackground": false,
+          "redirect": "internacionalizacion"
+        },{
+          "urlImage": {
+            "mobile": "https://drive.google.com/uc?export=view&id=1P_Bp9khNcHT3VTXsUi12JCVYjuRVJ6yL",
+            "desktop": "https://drive.google.com/uc?export=view&id=1O0u7VUmPSYAOa6XIVNVaAo3kuP2IceTh"
+          },
+          "text": "Podcast",
+          "icon": "arrow_forward",
+          "color": "#7DF1ED",
+          "opacity": "multiply",
+          "height": "282px",
+          "enable": true,
+          "nobackground": false,
+          "redirect": "/voz-uane/podcast"
+        } 
+      ]
+    },
+    "experiences": {
+      "title": "Experiencias UANE",
+      "images": {"images": [{"id": "1", "image": "https://drive.google.com/uc?export=view&id=12v7l9rn64PETJYeeTMhYg7JoGFREX7-p", "icon": "zoom_out_map" }, {"id": "2", "image": "https://drive.google.com/uc?export=view&id=1C1Xiqumw-kRaSbbNiCGk1ZWnyHJ6uXgN", "icon": "zoom_out_map" }, {"id": "3", "image": "https://drive.google.com/uc?export=view&id=16KtXgv4zuJ4423dSrBmO3I5cD1qXg3mi", "icon": "zoom_out_map"}, {"id": "4", "image": "https://drive.google.com/uc?export=view&id=1rRSzBHWT2PwvFMqggNpTJjmLz04HUnit", "icon": "zoom_out_map"},{"id": "5", "image": "https://drive.google.com/uc?export=view&id=10TOGohJ27oqsXsNy2rzDJzzNvlKOC3IM", "icon": "zoom_out_map"}, {"id": "6", "image": "https://drive.google.com/uc?export=view&id=13S2GtDhvgNd4tt7o6wV7e9dlGwGXjDyn", "icon": "zoom_out_map" }, {"id": "7", "image": "https://drive.google.com/uc?export=view&id=1Oq5BTSdHGuw9U2P4Yxi1CZ_zeEZGoeFr", "icon": "zoom_out_map"}, {"id": "8", "image": "https://drive.google.com/uc?export=view&id=1X4ej9Fm8gVQHVZXOFNPEptGAFkjhdVTs", "icon": "zoom_out_map"},{"id": "9", "image": "https://drive.google.com/uc?export=view&id=13KdROPNSn_ActM4uz1cDXXAHmQwrGxRn", "icon": "zoom_out_map"}, {"id": "10", "image": "https://drive.google.com/uc?export=view&id=1Eg1G56AZCzE_ewKQ-zGrY2HCO2ziFeKT", "icon": "zoom_out_map"},{"id": "11", "image": "https://drive.google.com/uc?export=view&id=1xN4Tuo5Yl5QZmcTdiayRZYeeqLjAcrf6", "icon": "zoom_out_map"}, {"id": "12", "image": "https://drive.google.com/uc?export=view&id=1-Fskro3alFbg5A2hZOFipGG7nZ9qZxgU", "icon": "zoom_out_map"}]}
+    },
+    "ourScholarships": {
+      "title": "Contamos con becas para apoyar a nuestros estudiantes",
+      "scholarships": [
+        {
+          "urlImage": {
+            "mobile": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms=",
+            "desktop": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms="
+          },
+          "text": "Beca Servicio",
+          "icon": "arrow_forward",
+          "color": "red",
+          "opacity": "multiply",
+          "height": "84px",
+          "enable": true,
+          "nobackground": true,
+          "redirect": "/admisiones/becas",
+          "isShadowColor": true,
+          "shadowColor": "blue-left",
+          "param": "beca-servicio" 
+        },
+        {
+          "urlImage": {
+            "mobile": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms=",
+            "desktop": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms="
+          },
+          "text": "Beca Excelencia",
+          "icon": "arrow_forward",
+          "color": "#FADB62",
+          "opacity": "multiply",
+          "height": "84px",
+          "enable": true,
+          "nobackground": true,
+          "redirect": "/admisiones/becas",
+          "isShadowColor": true,
+          "shadowColor": "blue-left",
+          "param": "beca-excelencia" 
+
+        },
+        {
+          "urlImage": {
+            "mobile": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms=",
+            "desktop": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms="
+          },
+          "text": "Beca Convenio",
+          "icon": "arrow_forward",
+          "color": "#7DF1ED",
+          "opacity": "multiply",
+          "height": "84px",
+          "enable": true,
+          "nobackground": true,
+          "redirect": "/admisiones/becas",
+          "isShadowColor": true,
+          "shadowColor": "blue-left",
+          "param": "beca-convenio" 
+        },
+        {
+          "urlImage": {
+            "mobile": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms=",
+            "desktop": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms="
+          },
+          "text": "Beca al Mérito Académico",
+          "icon": "arrow_forward",
+          "color": "#7DF1ED",
+          "opacity": "multiply",
+          "height": "84px",
+          "enable": true,
+          "nobackground": true,
+          "redirect": "/admisiones/becas",
+          "isShadowColor": true,
+          "shadowColor": "blue-left",
+          "param": "beca-merito-academico" 
+
+        } 
+      ],
+      "link":{
+        "text": "Ver todas las becas",
+        "size": "large",
+        "isUnderline": false,
+        "isBold": true,
+        "disabled": false,
+        "id": "",
+        "iconFirst": "",
+        "iconSecond": "arrow_right_ios",
+        "redirect": "/admisiones/becas"
+      }
+    },
+    "ourConventions": {
+      "title": "Más de 700 convenios",
+      "conventions": [
+        { 
+          "urlImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr1mAjk7blwP1jGnU45XfcCeicbVRJ9rE-FdQFTovdoeEnMYonChejcOeEYtHwkGHJjlk&usqp=CAU",
+          "subtitle": "",
+          "title": "Espacio universitario internacionalizacion en la UNAE",
+          "text": "Realiza tus pagos, solicita o consulta tus trámites y lleva registro de tus actividades escolares.",
+          "border": true,
+          "allContent": true,
+          "height": "",
+          "isShowCardWebsiteContent": true,
+          "id": "",
+          "type": "vertical",
+          "link": true,
+          "background": false,
+          "linkText": {
+            "text": "Ver video",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": "visibility"
+          },
+          "linkIcon": {
+            "text": "Ver video",
+            "iconSecond": "play_circle",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": ""
+          },
+          "wrapper": true
+        },
+        { 
+          "urlImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn8fPWgJJCI7-bEpXSg6DJa909NOPr0W7hTWMTMyS36eTZpq96SyjbvGNDvoscxlLhjS0&usqp=CAU",
+          "subtitle": "",
+          "title": "Aula virtual",
+          "text": "Accede a tus clases y actividades de cada materia, entrega tus trabajos o realiza tus ejercicios y evaluaciones.",
+          "border": true,
+          "allContent": true,
+          "height": "",
+          "isShowCardWebsiteContent": true,
+          "id": "",
+          "type": "vertical",
+          "link": true,
+          "background": false,
+          "linkText": {
+            "text": "Conocer más",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": "star"
+          },
+          "linkIcon": {
+            "text": "Ver más",
+            "iconSecond": "",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": ""
+          },
+          "wrapper": true,
+          "video": "8LDTk1DLg4M"
+        },
+        { 
+          "urlImage": "https://pcredcom.com/blog/wp-content/uploads/2020/06/tipos-de-computadoras.jpg",
+          "subtitle": "",
+          "title": "Biblioteca virtual",
+          "text": "Explora nuestras colecciones y consulta dentro del acervo bibliográfico que ponemos a tu alcance.",
+          "border": true,
+          "allContent": true,
+          "height": "",
+          "isShowCardWebsiteContent": true,
+          "id": "",
+          "type": "vertical",
+          "link": true,
+          "background": false,
+          "linkText": {
+            "text": "Conocer más",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": "star"
+          },
+          "linkIcon": {
+            "text": "Ver más",
+            "iconSecond": "arrow_right",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": ""
+          },
+          "wrapper": true
+        }
+      ]
+    },
+    "ourCertifications": {
+      "title": "Certificaciones",
+      "description": "Poseemos el máximo reconocimiento de calidad de la federación más importante del sector particular de la educación en México. Se trata de la acreditación Lisa y Llana que otorga la Federación de Instituciones Mexicanas Particulares de Educación Superior (<b>FIMPES</b>).\n\n Quality Matters es la organización global líder en garantía de calidad en la enseñanza y el aprendizaje digitales innovadores y en línea. La Universidad Americana del Noreste es la segunda casa de estudios que obtiene una certificación en todo América Latina por Quality Matters.",
+      "id": "certificaciones",
+      "certifications": [
+        { 
+          "urlImage": "https://drive.google.com/uc?export=view&id=1j0ZjWKgDoRBr06ZmhzV286dqdioFzSFp",
+          "subtitle": "",
+          "title": "FIMPES",
+          "text": "<p></p>Federación de Instituciones Mexicanas Particulares<p></p>",
+          "border": true,
+          "allContent": true,
+          "height": "",
+          "isShowCardWebsiteContent": true,
+          "id": "",
+          "type": "small",
+          "link": true,
+          "background": false,
+          "wrapper": true
+        },
+        { 
+          "urlImage": "https://drive.google.com/uc?export=view&id=125U6n0Zdk556KYbA1xxDSKl8q39pSY-M",
+          "subtitle": "",
+          "title": "Quality Matters Higher Education",
+          "text": "Organización global líder en garantía de calidad en la enseñanza y el aprendizaje digitales innovadores y en línea",
+          "border": true,
+          "allContent": true,
+          "height": "",
+          "isShowCardWebsiteContent": true,
+          "id": "",
+          "type": "small",
+          "link": true,
+          "background": false,
+          "wrapper": true
+        }
+      ]
+    },
+    "meetYourRector": {
+      "title": "Conoce a tu Rectora",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci sagittis eu volutpat odio facilisis mauris sit A\n\nmet massa vitae tortor condimentum lacinia quis vel eros donec ac odio tempor orci dapibus ultrices in iaculis nunc sed augue lacus, viverra vitae congue eu, consequat ac felis donec et odio pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus",
+      "video": {
+        "options": {
+          "id": "Ae84Xfec1HM",
+          "type": "single",
+          "controls": true
+        },
+        "dimensions": {
+          "height": "500px"
+        }
+      }
+    }
+  }
+}

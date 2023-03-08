@@ -1,0 +1,244 @@
+{
+  "meta": {
+    "title": "Egresados",
+    "description": "",
+    "keywords": ""
+  },
+  "sections": {
+    "head": {
+      "banner": {
+        "title": "ExaUANE", 
+        "subtitle": "Estadísticas", 
+        "image": {
+          "desktop": "https://drive.google.com/uc?export=view&id=1pLqo240d_ACAIP_mIU57CAep_Asd_nSa",
+          "tablet": "https://drive.google.com/uc?export=view&id=1rMe3GSofFPVTorN9VI9Bvn9CUdtoygMc",
+          "mobile": "https://drive.google.com/uc?export=view&id=1lJ4sw-tmKdpTS3carQuLc-nLfEEXDOkk"
+        },
+        "statics": [
+          {"maxNumber": 50, "icon": "", "prefix": "", "suffix": "mil", "title": "ESTUDIANTES", "body": "egresados de UANE", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
+          {"maxNumber": 50, "icon": "", "prefix": "", "suffix": "%", "title": "ESTUDIANTES", "body": "a nivel licenciatura", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false}
+        ]
+      }
+    },
+    "introduccion": {
+      "title": "¡Bienvenido!",
+      "descripcion": "¡Querido ExaUANE! Este espacio está hecho para ti, estamos comprometidos en apoyarte a generar oportunidades para desarrollar tu potencial y actualización constante. Somos una comunidad de más de 45mil egresados y queremos mantenernos en contacto contigo, que participes en las actividades que realiza tu universidad y continúes formando parte de ella."
+    },
+    "video": {
+      "title": "Conoce a nuestro Talento Exa UANE",
+      "descripcion": "El objetivo de este programa es destacar la labor de los ex alumnos que han dejado huella en los campos académico, laboral, empresarial y/o social. Buscamos hacer un reconocimiento público a nuestro «Talento ExaUANE» (ex alumnos de licenciatura y/o maestría) que tengan logros profesionales detacables y que sirvan de inspiración a toda la comunidad UANE.",
+      "accion": {
+        "title": "Saber más",
+        "type": "primary",
+        "icon": "",
+        "isExpand": false
+      },
+      "video": {
+        "options": {
+          "id": "AIgIgANXCx0",
+          "type": "single",
+          "controls": true
+        },
+        "dimensions": {
+          "height": "334px"
+        }
+      } 
+    },
+    "bannerEmpleabilidad": {
+      "image": {
+        "desktop": "https://drive.google.com/uc?export=view&id=1idUUed8QBG8hf9qbpWqm00PmVs-JbGMw",
+        "mobile": "https://drive.google.com/uc?export=view&id=1AouSIC5-YJc0Js1LIRHRxRf03n5ibngx",
+        "tablet": "https://drive.google.com/uc?export=view&id=16G9jZNK2fS1E5tl5pDA-EmB3RVfOi5hr"
+      },
+      "font": "",
+      "title": "Empleabilidad en UANE",
+      "subtitle": "Inscríbete en nuestra Bolsa de Trabajo y encuentra empleo",
+      "position": "right",
+      "height": "350px",
+      "overlayWhite":true,
+      "overlayDak": false,
+      "button":{
+        "id": "",
+        "type": "outlined",
+        "title": "Continuar",
+        "size": "small",
+        "icon": "",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "",
+        "test": ""
+      },
+      "noAction": false,
+      "redirect": "/nosotros/empleabilidad"
+    },
+    "bannerOfertaEducativa": {
+      "image": {
+        "desktop": "https://drive.google.com/uc?export=view&id=1ublCyobsLlz7uKehh34mAfdpQ1or4eYv",
+        "mobile": "https://drive.google.com/uc?export=view&id=190CNvADpywpMXK_QVM6udMb2GsV4HsMt",
+        "tablet": "https://drive.google.com/uc?export=view&id=1-dKm6LNGLTiYVh4bFNe5SFxc1mPffLF9"
+      },
+      "font": "light",
+      "title": "Oferta educativa de egresados",
+      "subtitle": "UANE te ofrece opciones preferenciales para continuar con tu opreparación profesional",
+      "position": "right",
+      "height": "350px",
+      "overlayWhite":false,
+      "overlayDak": false,
+      "button":{
+        "id": "",
+        "type": "outlined",
+        "title": "Ver oferta educativa",
+        "size": "small",
+        "icon": "",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "",
+        "test": ""
+      },
+      "noAction": false,
+      "redirect": "/oferta-educativa"
+    },
+    "banner-tramites": {
+      "title": "Trámites de egresados",
+      "subtitle":"Entra al sistema de la universidad y revisa el estatus o solicita algún trámite nuevo",
+      "state": "black",
+      "size": "medium",
+      "middle": false,
+      "center": false,
+      "bottom": false,
+      "left": false,
+      "urlImage": {
+        "mobile": "https://drive.google.com/uc?export=view&id=1cXj_pPf0OvVkA7ew-UF--T-L-20FPoOl",
+        "desktop": "https://drive.google.com/uc?export=view&id=1lymiihfxStWQNox-uD9mvh2Ln6GEuUjU"
+      },
+      "overlay": "black",
+      "height": "",
+      "action": {
+        "id": "",
+        "type": "outlined",
+        "title": "Entra a SIUANE",
+        "size": "small",
+        "icon": "",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "testClick",
+        "test": ""
+      },
+      "wrapper": true
+    },
+    "bannerTramites": {
+      "image": {
+        "desktop": "https://drive.google.com/uc?export=view&id=1lymiihfxStWQNox-uD9mvh2Ln6GEuUjU",
+        "mobile": "https://drive.google.com/uc?export=view&id=1cXj_pPf0OvVkA7ew-UF--T-L-20FPoOl",
+        "tablet": "https://drive.google.com/uc?export=view&id=1yYRKBIWFTDeyIKXur1aOKx1mPgq3DDDo"
+      },
+      "font": "",
+      "title": "Trámites de egresados",
+      "subtitle": "Entra al sistema de la universidad y revisa el estatus o solicita algún trámite nuevo",
+      "position": "light",
+      "height": "350px",
+      "overlayWhite":false,
+      "overlayDak": false,
+      "button":{
+        "id": "",
+        "type": "outlined",
+        "title": "Entra a SIUANE",
+        "size": "small",
+        "icon": "",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "",
+        "test": ""
+      },
+      "noAction": false,
+      "redirect": "http://sistema.uane.edu.mx/siuane/login.aspx"
+    },
+    "noticias": {
+      "title": "Noticias",
+      "news": [
+        { 
+          "urlImage": "https://drive.google.com/uc?export=view&id=17DFc4e-VEJry-I3puVquu4wxR0m6J6Rw",
+          "subtitle": "SUBTITULO",
+          "title": "Coursera y UANE se unen para ti",
+          "text": "Se firma una alianza con Coursera para acceder a contenidos que complementen la formación profesional de su comunidad educativa",
+          "border": true,
+          "allContent": true,
+          "height": "",
+          "isShowCardWebsiteContent": true,
+          "id": "",
+          "type": "vertical",
+          "link": true,
+          "background": false,
+          "linkText": {
+            "text": "Conocer más",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": "star"
+          },
+          "linkIcon": {
+            "text": "vvv",
+            "iconSecond": "person",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": "person"
+          },
+          "wrapper": true
+        },
+        { 
+          "urlImage": "https://drive.google.com/uc?export=view&id=1DlQof6MOk9PQgJtcad50-gb5K3l7WHL_",
+          "subtitle": "SUBTITULO",
+          "title": "Coursera y UANE se unen para ti",
+          "text": "Se firma una alianza con Coursera para acceder a contenidos que complementen la formación profesional de su comunidad educativa",
+          "border": true,
+          "allContent": true,
+          "height": "",
+          "isShowCardWebsiteContent": true,
+          "id": "",
+          "type": "vertical",
+          "link": true,
+          "background": false,
+          "linkText": {
+            "text": "Conocer más",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": "star"
+          },
+          "linkIcon": {
+            "text": "vvv",
+            "iconSecond": "person",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": "person"
+          },
+          "wrapper": true
+        }
+      ]
+    },
+    "dudas": {
+      "banner":{
+        "image": {
+          "desktop": "https://drive.google.com/uc?export=view&id=1jYKPrTuBTGJ1VrYVGhpD7IDeIihrE9SL",
+          "mobile": "https://drive.google.com/uc?export=view&id=1JqS9W5d0AKqVOPSVjti6C1hgJMkysgvf"
+        },
+        "title": "¿Tienes dudas? Contáctanos",
+        "subtitle": "Mándanos un mensaje de WhatsApp",
+        "email": "egresados@uane.edu.mx",
+        "phone": "5519596979",
+        "whatsApp": "5519596979"
+
+      }
+    }
+  }
+}

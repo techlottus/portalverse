@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "title": "Becas",
+    "description": "",
+    "keywords": ""
+  },
+  "sections": {
+    "head": {
+      "title": "Becas bachillerato y licenciatura",
+      "subtitle": "El 80% del alumando tiene algún tipo de beca",
+      "description": "Consulta las becas que ofrecemos y elige qué tipo de apoyo se adapta a tus necesidades.\n\nUANE, es sinónimo de servicio, oportunidades y trascendencia.\n\nPocas Universidades en el país pueden expresar que el 80% de su alumnado es apoyado con algún tipo de beca. Eso y más, es UANE, algunas de nuestras becas llegan a cubrir el 100% de la colegiatura",
+      "image": {
+        "desk": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1KUZbjSo1b_7q5U6UZoain-QVcS1H_Pt-"
+        },
+        "mobile": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1I4ku9VpOema24_j8rcbJ90A2ji77oMKE"
+        }
+      }
+    },
+    "estadisticas": [
+      {"maxNumber": 30, "icon": "group", "prefix": "", "suffix": "%", "title": "De los alumnos tienen la beca servicio", "body": "", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
+      {"maxNumber": 10, "icon": "group", "prefix": "", "suffix": "%", "title": "De nuestros estudiantes cuantan con beca de excelencia", "body": "", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
+      {"maxNumber": 40, "icon": "group", "prefix": "", "suffix": "%", "title": "De la matrícula tiene beca de convenio", "body": "", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
+      {"maxNumber": 2, "icon": "group", "prefix": "", "suffix": "%", "title": "De los estudiantes tienen beca al mérito académico", "body": "", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false}
+    ],
+    "becas": {
+      "tabs": {
+        "items": [
+          {
+            "label": "Beca Servicio", "icons": { "primary": "", "duplicate": true }, "disabled": false, "id": "beca-servicio",
+            "content": {
+              "image": {
+                "alt": "imagen",
+                "src": "https://drive.google.com/uc?export=view&id=1sofLFjS7NfKQCrlDJosrTWZIxQpMcGQ5"
+              },
+              "content": {
+                "title": "Características",
+                "description": "La Beca Servicio se otorga en pesos y el monto autorizado aplica exclusivamente al costo de la colegiatura.\n\n Se concede a estudiantes de escasos recursos económicos con promedio de aprovechamiento académico de 80 y buena conducta. \n\nEs retribuida mediante actividades de servicio, ya sea en beneficio de la universidad o de la comunidad.\n\nAplica para: bachillerato, licenciatura y posgrado",
+                "action": {"title": "Solicita tu beca servicio", "type": "primary", "icon": "", "isExpand": false, "route": "http://sistema.uane.edu.mx/BecasUANE/"}
+              }
+            }
+          },
+          {
+            "label": "Beca Convenio", "icons": { "primary": "", "duplicate": true }, "disabled": false, "id": "beca-convenio",
+            "content": {
+              "image": {
+                "alt": "imagen",
+                "src": "https://drive.google.com/uc?export=view&id=1Y7yOYWrd_BeYmX7lrfE0_JmfLiPIL13j"
+              },
+              "content": {
+                "title": "Características",
+                "description": "Si el alumno, sus padres o cónyuge laboran en una empresa que cuenta con convenio con UANE, éste podrá obtener una beca del 30%.\n\n*Aplican restricciones.\n\n*Todas las becas se aplican exclusivamente al costo de las colegiaturas.\n\nAplica para: bachillerato, licenciatura y posgrado"
+              }
+            }
+          },
+          {
+            "label": "Beca Excelencia", "icons": {"primary": "", "duplicate": true }, "disabled": false, "id": "beca-excelencia", 
+            "content": {
+              "image": {
+                "alt": "imagen",
+                "src": "https://drive.google.com/uc?export=view&id=1a55b-aq6S5ViPQJxnbz8GJoQWVwXn0w2"
+              },
+              "content": {
+                "title": "Características",
+                "description": "Para licenciaturas, la Beca Excelencia cubre el 50% del monto total de la colegiatura y se otorga a los alumnos egresados del bachillerato UANE y otras instituciones que cuentan con un promedio de aprovechamiento académico mínimo de 95.\n\n*Pregunta por las opciones de Beca de Excelencia para bachillerato.\n\nAplica para: bachillerato y licenciatura"              }
+            }
+          }
+        ],
+        "size": "medium"
+      }
+    },
+    "feedback": {
+      "feedback": {
+        "left": {
+          "name": "info",
+          "status": "normal"
+        },
+        "right": {
+          "name": ""
+        },
+        "type": "alert",
+        "isTextEvent": false,
+        "textEvent": "Dismiss",
+        "tagOnRight": "testOnRight"
+      },
+      "text": "Las becas mencionadas tienen efecto única y exclusivamente sobre el monto de las colegiaturas",
+      "title": "No aplica sobre inscripción"
+    },
+    "llamanos": {
+      "title": "¿Tienes dudas? llámanos",
+      "card": { 
+        "image": "https://drive.google.com/uc?export=view&id=1S1dJyvzulBkHkDD-I0pDIL7yXoe75N7J",
+        "subtitle": "",
+        "title": "Oficinas de servicios estudiantiles y Centros de admisión",
+        "text": "Nuestros asesores expertos te brindarán apoyo de lunes a viernes de 7:00 a 20:00 horas y sábados de 9:00 a 14:00 horas.\n\n8008228263\n\nCorreo: hola@uane.edu.mx",
+        "border": true,
+        "type": "vertical",
+        "background": false,
+        "link": {
+          "text": "",
+          "size": "",
+          "disabled": false,
+          "isUnderline": false,
+          "isBold": false,
+          "iconFirst": "person",
+          "iconSecond": "person"
+        }
+      }
+    }
+  }
+}

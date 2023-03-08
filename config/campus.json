@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "title": "Campus",
+    "description": "",
+    "keywords": ""
+  },
+  "sections": {
+    "campus": [
+      {
+        "images": [
+          {
+            "src": "https://drive.google.com/uc?export=view&id=1yiUtT-a8G6MK8lgNi7-Zx4bx9kG4OUS0",
+            "alt": "image-1"
+          }
+        ],
+        "coords": ["25.4551028", "-100.9690094"],
+        "description": {
+          "state": "Coahuila",
+          "name": "Campus Saltillo",
+          "address": "Blvd. José Musa de León #944, Col. Los Pinos, Saltillo, Coahuila, C.P. 25204",
+          "phone": "",
+          "email": ""
+        }
+      },
+      {
+        "images": [
+          {
+            "src": "https://drive.google.com/uc?export=view&id=1GhO4avVMRLf6T9YIYm9vjnFp-ICQ8_Lh",
+            "alt": "image-1"
+          }
+        ],
+        "coords": ["25.5770235", "-103.4519563"],
+        "description": {
+          "state": "Coahuila",
+          "name": "Campus Torreón",
+          "address": "Periférico Raúl López Sánchez # 13, Col. El Roble II, Torreón, Coah., C.P. 27119",
+          "phone": "",
+          "email": ""
+        }
+      },
+      {
+        "images": [
+          {
+            "src": "https://drive.google.com/uc?export=view&id=1VIXRq0R8DSqGLSTkIoLjXWfDGVKzhFgX",
+            "alt": "image-1"
+          }
+        ],
+        "coords": ["26.9017234", "-101.4222771"],
+        "description": {
+          "state": "Coahuila",
+          "name": "Campus Monclova",
+          "address": "Miguel Blanco Num. 140, Colonina Zona Centro, Monclova, Coahuila, C.P. 25700",
+          "phone": "",
+          "email": ""
+        }
+      },
+      {
+        "images": [
+          {
+            "src": "https://drive.google.com/uc?export=view&id=1Z2Avqg7iUdk6SVvHMNv4DYDQTt4uaf_6",
+            "alt": "image-1"
+          }
+        ],
+        "coords": ["27.8739617", "-101.1280291"],
+        "description": {
+          "state": "Coahuila",
+          "name": "Campus Sabinas",
+          "address": "Calle Cuauhtémoc #2552, Col. Prolongación Fundadores,Sabinas, Coah. C.P. 26740",
+          "phone": "",
+          "email": ""
+        }
+      },
+      {
+        "images": [
+          {
+            "src": "https://drive.google.com/uc?export=view&id=1MiD841KwsZduQgnqrzeptukHp-ifk_6I",
+            "alt": "image-1"
+          }
+        ],
+        "coords": ["28.6791114", "-100.5440673"],
+        "description": {
+          "state": "Coahuila",
+          "name": "Campus Piedras Negras",
+          "address": "Arq. Germán Robles Gil Maza #310 Fracc, S. Felipe, Sur, 26070 Piedras Negras, Coah.",
+          "phone": "",
+          "email": ""
+        }
+      },
+      {
+        "images": [
+          {
+            "src": "https://drive.google.com/uc?export=view&id=1qD8W1RchHgbSdQWGP3aVUWPODWr8cj6u",
+            "alt": "image-1"
+          }
+        ],
+        "coords": ["25.680335", "-100.318919"],
+        "description": {
+          "state": "Nuevo León",
+          "name": "Campus Monterrey",
+          "address": "José Ma. Pino Suarez #506, Zona Centro, Monterrey, N.L., C.P. 64000",
+          "phone": "",
+          "email": ""
+        }
+      },
+      {
+        "images": [
+          {
+            "src": "https://drive.google.com/uc?export=view&id=1cAhBj2gFpePtlId5yrSmXVhcLi45RYse",
+            "alt": "image-1"
+          }
+        ],
+        "coords": ["26.066566", "-98.335228"],
+        "description": {
+          "state": "Tamaulipas",
+          "name": "Campus Reynosa",
+          "address": "Avenida Paraíso N°102, Fraccionamiento, Casa Bella, Reynosa, Tamaulipas, C.P. 88747",
+          "phone": "",
+          "email": ""
+        }
+      },
+      {
+        "images": [
+          {
+            "src": "https://drive.google.com/uc?export=view&id=1TMcVkF-gZrNf-UDzY9ZWPRCLn5tLGCzq",
+            "alt": "image-1"
+          }
+        ],
+        "coords": ["25.8874448", "-97.5645895"],
+        "description": {
+          "state": "Tamaulipas",
+          "name": "Campus Matamoros",
+          "address": "PROLONGACIÓN CONSTITUYENTES NÚMERO 1002 COL. LAS RUSIAS CP 87560",
+          "phone": "",
+          "email": ""
+        }
+      }
+    ],
+    "head": {
+      "banner": {
+        "image": {
+          "desktop": "https://drive.google.com/uc?export=view&id=1DivAOO2be095H1sknR5NPaO-FveClU9C",
+          "mobile": "https://drive.google.com/uc?export=view&id=1xGozyNf783hDUdWKMl-YYAVfCCYucLXJ",
+          "tablet": "https://drive.google.com/uc?export=view&id=1aIRuW4hEKrgtfPwM01N2PJQRP2sn5KhE"
+        },
+        "title": "Nuestros Campus",
+        "subtitle": "Agrega experiencias internacionales a tus estudios",
+        "position": "middle-center",
+        "height": "350px",
+        "overlayWhite":true,
+        "overlayDak": false,
+        "button":{
+          "id": "",
+          "type": "outlined",
+          "title": "Conocer más",
+          "size": "small",
+          "icon": "",
+          "lyIcon": false,
+          "disabled": false,
+          "isExpand": false,
+          "tagOnClick": "",
+          "test": ""
+        },
+        "noAction": true,
+        "redirect": "/internacionalizacion"
+      }
+    },
+    "banner": {
+      "title": "Agenda una visita",
+      "subtitle": "internacionalízate agrega experiencias internacionales a tu educación",
+      "image": {
+        "desktop":  "https://drive.google.com/uc?export=view&id=1nthjOTHZE1eFY0WLGgV7uhP8sguiWmgn",
+        "tablet":  "https://drive.google.com/uc?export=view&id=1gFcEfNPgIYgUHsnb356rgEm029xAbTEG",
+        "mobile":  "https://drive.google.com/uc?export=view&id=1wiAtu6gzutmc1iccoJPD_LOoh5keaWH4"
+      },
+      "email": "hola@uane.edu.mx",
+      "phone": "8008228263"
+    }
+  }
+}

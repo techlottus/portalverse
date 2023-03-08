@@ -1,0 +1,62 @@
+div {
+  &.dark {
+    > lottus-rich-text {
+      > markdown{
+        * {
+          color: white;
+          @apply font-Nunito-Sans font-normal;
+        }
+
+        p {
+          margin-bottom: .5rem;
+          b {
+            font-weight: 700;
+          }
+        }
+        ul {
+          list-style-type: circle;
+        }
+      }
+    }
+  }
+  &.light {
+    > lottus-rich-text {
+      > markdown{
+        * {
+          color: black;
+          @apply font-Nunito-Sans font-normal;
+        }
+
+        p {
+          margin-bottom: .5rem;
+          b {
+            font-weight: 700;
+          }
+        }
+        ul {
+          list-style-type: circle;
+        }
+      }
+    }
+  }
+  &.transparent {
+    > lottus-rich-text {
+      > markdown{
+        * {
+          color: black;
+          @apply font-Nunito-Sans font-normal;
+        }
+
+        p {
+          margin-bottom: .5rem;
+          b {
+            font-weight: 700;
+          }
+        }
+        ul {
+          list-style-type: circle;
+        }
+      }
+    }
+  }
+}

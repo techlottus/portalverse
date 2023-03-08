@@ -1,0 +1,46 @@
+{
+  "meta":{
+    "title": "Cursos Inglés Pearson Nivel A1",
+    "description": "",
+    "keywords": ""
+  },
+  "sections":{
+    "head":{
+      "title": "Cursos Inglés Pearson Nivel A1",
+      "image": {
+        "alt": "imagen",
+        "src": "https://drive.google.com/uc?export=view&id=10d8ZaxU1JcBJkctI2oQlT080SzD9COKn"
+      },
+      "description": "Duración aproximada: 80 horas\n\nPerfil del participante: Estudiantes de bachillerato y/o licenciatura, graduados universitarios y/o profesionales que quieran aprender el idioma inglés o perfeccionar su conocimiento en el idioma. Que tenga conocimiento en el uso de tecnología y plataformas. Que sepa trabajar de forma autodidacta.\n\nCarreras afines: Todas las áreas\n\nObjetivo: Que el alumno adquiera y desarrolle las habilidades de gramática, escucha, habla, vocabulario y lectura en el idioma inglés según cada nivel y que sea capaz de poderse comunicar de manera fluida y efectiva en el idioma con gente nativa.\n\nTemas a abordar:\nEn estos niveles se manejan temas actuales y de interés relacionados al aprendizaje y desarrollo de habilidades en inglés. Las habilidades a desarrolllar son gramática, habla, escucha, vocabulario y escritura. Los temas van de nivel básico (A1 y A2)  e Intermedio (B1 y B2).\n\nRecursos de aprendizaje:\nPlataforma MEL de Pearson / Apoyo de un tutor\n\nEvaluación:\nActividades en plataforma / Exámenes de unidad y Final en plataforma\n\n*Los cursos incluyen: examen de ubicación, inscripción, licencia del nivel y examen de certificacion de nivel.",
+      "price": "$1499.00*"
+    },
+    "relatedCourses":{
+      "title": "Cursos relacionados",
+      "courses": [
+        {
+          "id": "123",
+          "title": "Análisis de datos",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":"arrow_forward"
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "meta": {
+    "title": "Oferta Educativa",
+    "description": "",
+    "keywords": ""
+  },
+  "sections":{
+    "head": {
+      "title": "Oferta Educativa",
+      "description": "Encuentra en UANE la licenciatura, ingeniería o posgrado que estás buscando y estudia con el respaldo y prestigio de una de las mejores universidades del país."
+    },
+    "offers": {
+      "title": "Busca tu nivel educativo"
+    },
+    "modalities": {
+      "title": "Estudia en la modalidad que más te convenga",
+      "modalities": [
+        { 
+          "urlImage": "https://drive.google.com/uc?export=view&id=1LQ5gMlzjBHJRt_LD24p8rHzHxMb_bYzP",
+          "subtitle": "",
+          "title": "Presencial",
+          "text": "Asiste a clases y relaciónate en persona con profesores y alumnos en cualquiera de nuestros campus",
+          "border": true,
+          "allContent": true,
+          "height": "",
+          "isShowCardWebsiteContent": true,
+          "id": "",
+          "type": "vertical",
+          "link": true,
+          "background": false,
+          "wrapper": true
+        },
+        { 
+          "urlImage": "https://drive.google.com/uc?export=view&id=1s_95yEEf8AtHRcvciNowBl5nIBwQZ7Ui",
+          "subtitle": "",
+          "title": "Flex",
+          "text": "Estudia en una modalidad híbrida, con clases remotas y presenciales",
+          "border": true,
+          "allContent": true,
+          "height": "",
+          "isShowCardWebsiteContent": true,
+          "id": "",
+          "type": "vertical",
+          "link": true,
+          "background": false,
+          "wrapper": true
+        },
+        { 
+          "urlImage": "https://drive.google.com/uc?export=view&id=1_m_d-VlFYnVRS9wgVpi3d_tZY15ZOwK4",
+          "subtitle": "",
+          "title": "En línea",
+          "text": "Aprovecha tu tiempo al máximo y obtén tu título estudiando desde nuestra plataforma",
+          "border": true,
+          "allContent": true,
+          "height": "",
+          "isShowCardWebsiteContent": true,
+          "id": "",
+          "type": "vertical",
+          "link": true,
+          "background": false,
+          "wrapper": true
+        }
+      ]
+    },
+    "knowledges":{
+      "title": "Áreas de conocimiento",
+      "knowledges": [
+        {
+          "urlImage": {
+            "mobile": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms=",
+            "desktop": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms="
+          },
+          "text": "Negocios",
+          "icon": "",
+          "color": "red",
+          "opacity": "multiply",
+          "height": "84px",
+          "enable": true,
+          "nobackground": true,
+          "redirect": "",
+          "isShadowColor": true,
+          "shadowColor": "blue-left"
+        },
+        {
+          "urlImage": {
+            "mobile": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms=",
+            "desktop": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms="
+          },
+          "text": "Ingeniería",
+          "icon": "",
+          "color": "#FADB62",
+          "opacity": "multiply",
+          "height": "84px",
+          "enable": true,
+          "nobackground": true,
+          "redirect": "",
+          "isShadowColor": true,
+          "shadowColor": "blue-left"
+        },
+        {
+          "urlImage": {
+            "mobile": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms=",
+            "desktop": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms="
+          },
+          "text": "Ciencias Sociales",
+          "icon": "",
+          "color": "#7DF1ED",
+          "opacity": "multiply",
+          "height": "84px",
+          "enable": true,
+          "nobackground": true,
+          "redirect": "",
+          "isShadowColor": true,
+          "shadowColor": "blue-left"
+        },
+        {
+          "urlImage": {
+            "mobile": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms=",
+            "desktop": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms="
+          },
+          "text": "Comunicación y diseño",
+          "icon": "",
+          "color": "#7DF1ED",
+          "opacity": "multiply",
+          "height": "84px",
+          "enable": true,
+          "nobackground": true,
+          "redirect": "",
+          "isShadowColor": true,
+          "shadowColor": "blue-left"
+        },
+        {
+          "urlImage": {
+            "mobile": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms=",
+            "desktop": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms="
+          },
+          "text": "Ciencias de la salud",
+          "icon": "",
+          "color": "#7DF1ED",
+          "opacity": "multiply",
+          "height": "84px",
+          "enable": true,
+          "nobackground": true,
+          "redirect": "",
+          "isShadowColor": true,
+          "shadowColor": "blue-left"
+        },
+        {
+          "urlImage": {
+            "mobile": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms=",
+            "desktop": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms="
+          },
+          "text": "Humanidades",
+          "icon": "",
+          "color": "#7DF1ED",
+          "opacity": "multiply",
+          "height": "84px",
+          "enable": true,
+          "nobackground": true,
+          "redirect": "",
+          "isShadowColor": true,
+          "shadowColor": "blue-left"
+        } 
+      ]
+    },
+    "bannerTest":{
+      "banner": {
+        "image": {
+          "desktop": "https://drive.google.com/uc?export=view&id=1Y-NyCheOPilvlVa45pHQQ97mp-a-rQGy",
+          "mobile": "https://drive.google.com/uc?export=view&id=1XFnp_Ufc-rAqZxZ2KM60ogWyuS2vdOOi",
+          "tablet": "https://drive.google.com/uc?export=view&id=1x00pvwXu6r5KQjR5-zEuV3rbhsaboDFl"
+        },
+        "title": "¿Aún no decides qué estudiar?",
+        "subtitle": "Te ayudamos a decidir qué rumbo profesional tomar",
+        "position": "",
+        "height": "350px",
+        "overlayWhite":false,
+        "overlayDak": true,
+        "button":{
+          "id": "",
+          "type": "primary",
+          "title": "Conocer más",
+          "size": "small",
+          "icon": "",
+          "lyIcon": false,
+          "disabled": false,
+          "isExpand": false,
+          "tagOnClick": "",
+          "test": ""
+        },
+        "noAction": false,
+        "redirect": "https://www.uane.edu.mx/"
+      }
+    },
+    "bannerInternacionalizacion": {
+      "banner": {
+        "image": {
+          "desktop": "https://drive.google.com/uc?export=view&id=1Y_edCTwyeAXRGkcjqf5V2S8QEyVYaENW",
+          "mobile": "https://drive.google.com/uc?export=view&id=1PZURny8POJsMYHamJycNKgM3LmxoMUiK",
+          "tablet": "https://drive.google.com/uc?export=view&id=1TpgDT_hQIJ0hew0WPp40M21oURKnD9B_"
+        },
+        "title": "UANE  Internacional",
+        "subtitle": "Agrega experiencias internacionales a tus estudios",
+        "position": "left-bottom",
+        "height": "350px",
+        "overlayWhite":false,
+        "overlayDak": false,
+        "button":{
+          "id": "",
+          "type": "outlined",
+          "title": "Continuar",
+          "size": "small",
+          "icon": "",
+          "lyIcon": false,
+          "disabled": false,
+          "isExpand": false,
+          "tagOnClick": "",
+          "test": ""
+        },
+        "wrapper": true,
+        "redirect": "nosotros/internacionalizacion"
+      }
+    },
+    "areasConocimiento": [
+      {
+        "title": "Económico - Administrativo"
+      },
+      {
+        "title": "Humanidades"
+      },
+      {
+        "title": "Ciencias Sociales"
+      },
+      {
+        "title": "Ciencias Exactas"
+      },
+      {
+        "title": "Ciencias Biológicas"
+      },
+      {
+        "title": "Ciencias de la Salud"
+      }
+    ],
+    "bannerParche": {
+      "image": {
+        "desktop": "https://drive.google.com/uc?export=view&id=1lmzq0OxTZmK_Ukzq0s0dDsyvUGKwrvFX",
+        "mobile": "https://drive.google.com/uc?export=view&id=1lmzq0OxTZmK_Ukzq0s0dDsyvUGKwrvFX",
+        "tablet": "https://drive.google.com/uc?export=view&id=1lmzq0OxTZmK_Ukzq0s0dDsyvUGKwrvFX"
+      },
+      "title": " ¡La experiencia educativa que transforma!",
+      "subtitle": "",
+      "position": "middle",
+      "height": "350px",
+      "overlayWhite":false,
+      "overlayDak": false,
+      "button":{
+        "id": "",
+        "type": "outlined",
+        "title": "Contacta a un asesor",
+        "size": "small",
+        "icon": "",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "",
+        "test": ""
+      },
+      "wrapper": true,
+      "redirect": "admisiones/pedir-informacion"
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "meta":{
+    "title": "Mercadotecnia Aplicada a Entornos Virtuales",
+    "description": "",
+    "keywords": ""
+  },
+  "sections":{
+    "head":{
+      "title": "Mercadotecnia Aplicada a Entornos Virtuales",
+      "image": {
+        "alt": "imagen",
+        "src": "https://drive.google.com/uc?export=view&id=1hi1mrvPFAAVz_SDS9iIDVo82uRZt4h5X"
+      },
+      "description": "Duración aproximada: 15 horas\n\nPerfil del participante: Este curso está dirigido para aquellas personas que quieren generar planes de mercadotecnia en diferentes entornos digitales que permitan generar estrategias para ingresar al mercado digital.\n\nCarreras afines: Negocios, Mercadotecnia, Comunicación\n\nObjetivo: El participante analizará los elementos esenciales de la mercadotecnia aplicada a los entornos virtuales, así como las estrategias y herramientas que vinculan al consumidor digital con las empresas y en el reconocimiento de las marcas, aumento en ventas y cuota de mercado con el objetivo de tomar decisiones adecuadas en los sistemas comerciales digitales de productos y servicios para las organizaciones y lograr la fidelización de los mercados.\n\nTemas a abordar:\n1. Mercadotecnia Virtual\n2. las 4 P's de la Mercadotecnia Digital\n3. Logística y Entrega en Sistemas Virtuales\n4. Consumidor Digital\n5. Investigación de Mercados Virtuales\n6. Publicidad en Línea\n7. Plan de Mercadotecnia Digital\n\nRecursos de aprendizaje:\n1. Vídeos explicativos\n2. Material interactivo\n\nEvaluación: La evaluación se realizará por medio de exámenes. Para acreditar debes tener cuando menos 70 de calificación.\n\n",
+      "price": "$1200.00*"
+    },
+    "relatedCourses":{
+      "title": "Cursos relacionados",
+      "courses": [
+        {
+          "id": "123",
+          "title": "Análisis de datos",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":"arrow_forward"
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        },
+        {
+          "id": "123",
+          "title": "Derecho de Autor y Propiedad Intelectual",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":""
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        },
+        {
+          "id": "123",
+          "title": "Estrategias de tiendas en línea",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":""
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        },
+        {
+          "id": "123",
+          "title": "Mega tendencias Globales",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":""
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        }
+      ]
+    }
+  }
+}

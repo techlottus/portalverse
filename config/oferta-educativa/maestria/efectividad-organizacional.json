@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "title": "Maestría en Efectividad Organizacional",
+    "description": "",
+    "keywords": ""
+  },
+  "config": {
+    "title": "Maestría en Efectividad Organizacional",
+    "config": {
+      "nombre": "Maestría en Efectividad Organizacional",
+      "modalidad": ["Presencial"],
+      "areaConocimiento": ["Económico - Administrativo"],
+      "campus": ["Saltillo", "Torreón", "Piedras Negras", "Matamoros"],
+      "nivel": ["Posgrado"],
+      "image": {
+        "src": "https://drive.google.com/uc?export=view&id=1G3XHRKVQaH1Xzep9vdwFgpLbXAKedh3k",
+        "alt": "maestria"
+      },
+      "curriculum": {
+        "Presencial": {
+          "Saltillo": "1EoTCw-7Wt0_wBygRRDbg4RxXZ8uL-NN7",
+          "Torreón": "1PbbV8iNAGgF_rU55oP9VJv6IIclL28ZM",
+          "Piedras Negras": "1UemJlQoNeBJJiHxw38CfudcULcPDIbz2",
+          "Monclova": "1A-7twoxHce2jaKs12lWq2NOhpQ1PZThY"
+        }
+      }
+    }
+  },
+  "sections": {
+    "head": {
+      "title": "Maestría en Efectividad Organizacional",
+      "description": "Detecta y analiza problemas organizacionales en áreas de planeación, administración y desarrollo de recursos humanos. ",
+      "image": {
+        "src": "https://drive.google.com/uc?export=view&id=1G3XHRKVQaH1Xzep9vdwFgpLbXAKedh3k",
+        "alt": "maestria"
+      }
+    },
+    "modalities": {
+      "title": "Modalidades disponibles en esta maestría:",
+      "tabs": {
+        "items": [
+          {
+            "label": "Modalidad Presencial", "icons": { "primary": "", "duplicate": false}, "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
+                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "El aspirante a la Maestria en Efectividad Organizacional deberá contar con conocimientos previos en el sector y experiencia en organizaciones.  Debe tener interés por revisar los niveles de efectividad de su organización enfocados en el control de recursos externos, la innovación y la eficiencia técnica. Busca alcanzar conocimientos avanzados  para responder a las expectativas de todos sus stakeholders en forma consistente y sostenible, mejor que sus competidores.",
+                  "backgroundColor": "#8B9BA3"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
+                  "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "La Maestría en Efectividad Organizacional formará profesionistas capaces de detectar, analizar y evaluar problemas organizacionales en las áreas de planeación, administración y desarrollo del recurso humano para el mejoramiento de la efectividad organizacional. Así mismo, se incrementarán sus competencias con un perfil de consultor y especialista en desarrollo humano y organizacional, que le permita destacar en la dirección de equipos de trabajo en el logro de los resultados organizacionales y productivos, dentro de un ambiente de trabajo de satisfacción.",
+                  "backgroundColor": "#B0003C"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "El egresado de la Maestría en Efectividad Organizacional de UANE podrá ejercer en\n\n• Instituciones públicas y privadas\n\n• Manufactura y servicios\n\n• Creación, desarrollo, análisis de estrategias y proyectos\n\n• Consultoría independiente",
+                  "backgroundColor": "#E84537"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "\n\n• Acta de nacimiento original del cajero reciente y 2 copias\n\n• Copia fiel del título (Constancia de trámite en caso de aún no tener el título)\n\n• Copia de cédula (traer original para copia)\n\n• Impresión de CURP directo de intenet sin ampliación\n\n• CV y Constancia laboral\n\n• Fotografías (Preguntar por especificaciones)\n\n• Solicitud de Admisión",
+                  "backgroundColor": "#00BEB4"
+                }
+              ],
+              "wrapper": false
+            }
+          }
+        ],
+        "size": "medium"
+      }
+    },
+    "descarga": {
+      "id": "program_maestria",
+      "type": "primary",
+      "title": "Descarga el plan de estudios",
+      "size": "small",
+      "icon": "download",
+      "lyIcon": false,
+      "disabled": false,
+      "isExpand": false,
+      "tagOnClick": "testClick",
+      "test": ""
+    }
+  },
+  "form": {
+    "config": {
+      "level": { "hidden": true, "value": "maestria" },
+      "program": { "hidden": false, "value": "Efectividad Organizacional" },
+      "modality": { "hidden": false },
+      "campus": { "hidden": false }
+    },
+    "copies": {
+      "stepone": {
+        "title": "Obtén informes sobre tu programa",
+        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+      }
+    }
+  }
+}

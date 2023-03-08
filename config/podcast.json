@@ -1,0 +1,103 @@
+{
+    "meta": {
+      "title": "Podcast",
+      "description": "",
+      "keywords": ""
+    },
+    "sections": {
+      "head": {
+        "banner": {
+          "image": {
+            "desktop": "https://drive.google.com/uc?export=view&id=1We_A9VCsxSV9buE8TMHKqyqI5HyqPguN",
+            "mobile": "https://drive.google.com/uc?export=view&id=1MI62tyuUxu71bBCDfRUz1NHxUhmHeJF0",
+            "tablet": "https://drive.google.com/uc?export=view&id=1Mz2X9iO44qaoaabLE4ACYpLfNtkkFoIK"
+          },
+          "title": "Voz UANE",
+          "font": "light",
+          "subtitle": "Un episodio nuevo cada dos semanas.\nSíguenos a través de spotify",
+          "position": "right-bottom",
+          "height": "350px",
+          "overlayWhite":false,
+          "overlayDak": false,
+          "button":{
+            "id": "",
+            "type": "outlined",
+            "title": "Ir a Spotify",
+            "size": "small",
+            "icon": "",
+            "lyIcon": false,
+            "disabled": false,
+            "isExpand": false,
+            "tagOnClick": "",
+            "test": ""
+          },
+          "noAction": false,
+          "redirect": "https://open.spotify.com/show/3SFBU6jloBsm14qKrz0asZ"
+        }
+      },
+      "lastPodcast":{
+        "title": "Último Podcast",
+        "podcast": { "config": { "type": "episode", "format": "normal", "id": "4Ye5BzFTgw43A9KvbItiJF"}}
+      },
+      "allPodcast":{
+        "title": "Todos los Podcast",
+        "items": [
+          { "config": { "type": "episode", "format": "compact", "id": "4Ye5BzFTgw43A9KvbItiJF"}},
+          { "config": { "type": "episode", "format": "compact", "id": "6JLMgQXVdGRwBXaj31IWTA"}},
+          { "config": { "type": "episode", "format": "compact", "id": "3G2bj1XkFhIgYzM4ntSsk4"}},
+          { "config": { "type": "episode", "format": "compact", "id": "4WDCSeN6rq3kNFF1kBJbWS"}},
+          { "config": { "type": "episode", "format": "compact", "id": "18rjcSalPh5DvpXBjA3Iku"}},
+          { "config": { "type": "episode", "format": "compact", "id": "1F88VCcdwJvZuanJp6pekL"}},
+          { "config": { "type": "episode", "format": "compact", "id": "6mOaHQjv6G3AglCYbKzWlG"}},
+          { "config": { "type": "episode", "format": "compact", "id": "3dxv83ODoqcs9a5tB6ulad"}},
+          { "config": { "type": "episode", "format": "compact", "id": "4RzjSXiM0XpZt50yPe7zyj"}},
+          { "config": { "type": "episode", "format": "compact", "id": "2nmmTV1VhQPD2poO9XWZGx"}},
+          { "config": { "type": "episode", "format": "compact", "id": "3RSNp3MkHT9PbmR6mToU9V"}},
+          { "config": { "type": "episode", "format": "compact", "id": "3tckGbSPvOlM82lxvsVh0e"}},
+          { "config": { "type": "episode", "format": "compact", "id": "6CxGdBizNwjaMNU0t8e1B5"}},
+          { "config": { "type": "episode", "format": "compact", "id": "1S3nYBf1VhO6BUpAkZyBrb"}},
+          { "config": { "type": "episode", "format": "compact", "id": "4Q3COHGOTwTeqdiiYSSFpC"}},
+          { "config": { "type": "episode", "format": "compact", "id": "6E3qgLYzwSruNHsQMtHCNe"}},
+          { "config": { "type": "episode", "format": "compact", "id": "7pUqTnnFDPeSoLfaF9F6Yh"}},
+          { "config": { "type": "episode", "format": "compact", "id": "24n5lGIPbINTVe75LNR6QJ"}},
+          { "config": { "type": "episode", "format": "compact", "id": "5JTCfex5rkwEGzbwVDpccn"}},
+          { "config": { "type": "episode", "format": "compact", "id": "4k83TzDQSGnWGoVtUhKzAX"}},
+          { "config": { "type": "episode", "format": "compact", "id": "73hqofT2JPKVr5vWssh88D"}},
+          { "config": { "type": "episode", "format": "compact", "id": "5sj4m2V2xzoQKqWdVeGfKS"}},
+          { "config": { "type": "episode", "format": "compact", "id": "4ZGl9YC5njQ8fxn5oqk2JQ"}},
+          { "config": { "type": "episode", "format": "compact", "id": "2XqIddrF4rg5te4VgHUgWY"}}
+        ],
+        "paginator": { "iconPrevious": "arrow_back_ios", "iconNext": "arrow_forward_ios", "size": "small", "maxNumbers": 10}
+      },
+      "vozUane": {
+        "banner": {
+          "image": {
+            "desktop": "https://drive.google.com/uc?export=view&id=1_cUI-wPs5OJJucnW1w2OhXxVtAnyU90B",
+            "mobile": "https://drive.google.com/uc?export=view&id=1BBHm3qD0hUf27eIRfpw8t3NQQoWVyJED",
+            "tablet": "https://drive.google.com/uc?export=view&id=1lrPOMrka9L0994d6uZKYfNCSmaPF47-G"
+          },
+          "title": "Voz UANE ayuda a difundir tus ideas.",
+          "font": "light",
+          "subtitle": "Si eres parte de la comunidad contacta al equipo: hola@uane.edu.mx",
+          "position": "",
+          "height": "350px",
+          "overlayWhite":false,
+          "overlayDak": true,
+          "button":{
+            "id": "",
+            "type": "outlined",
+            "title": "Contactar",
+            "size": "small",
+            "icon": "",
+            "lyIcon": false,
+            "disabled": false,
+            "isExpand": false,
+            "tagOnClick": "",
+            "test": ""
+          },
+          "noAction": false,
+          "redirect": "/voz-uane"
+        }
+      }
+    }
+  }

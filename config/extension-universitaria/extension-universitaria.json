@@ -1,0 +1,1221 @@
+{
+  "meta":{
+    "title":"Extensión universitaria",
+    "description": "",
+    "keywords":""
+  },
+  "sections": {
+    "head": {
+      "title": "Extensión universitaria",
+      "subtitle": "En UANE sabemos que los profesionistas requieren de actualizarse y reforzar sus habilidades y conocimientos. ",
+      "description": "Por eso tenemos a tu disposición diversos programas que te permitirán enriquecer tu currículum, habilidades y destrezas para satisfacer a las necesidades cambiantes del ambiente laboral.\n\n ¡Ponte a la vanguardia dentro de tu campo de trabajo de manera constante y actualízate para ser el mejor candidato de las organizaciones!",
+      "image": {
+        "desk": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1Uiino6zUW6GrzgFokICHGxisBmCLPLlb"
+        },
+        "mobile": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1Uiino6zUW6GrzgFokICHGxisBmCLPLlb"
+        }
+      }
+    },
+    "nextCourses":{
+      "title": "Próximos cursos",
+      "nextCourses":[
+        {
+          "id": "123",
+          "title": "Adobe Photoshop",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":"arrow_forward"
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "adobe-photoshop"
+        },
+        {
+          "id": "123",
+          "title": "Politicas Publicas en Gobernanza",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":"arrow_forward"
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "politicas-publicas-gobernanza"
+        },
+        {
+          "id": "123",
+          "title": "Análisis de Datos",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":"arrow_forward"
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        }
+      ]
+    },
+    "oferta": {
+      "title": "¿Qué me ofrece UANE para estudiar?",
+      "levels": [
+        {
+          "level": "/oferta-educativa/bachillerato/bachillerato",
+          "title": "Bachillerato",
+          "promo": {
+            "urlImage": {
+              "mobile": "https://image.shutterstock.com/image-photo/young-student-woman-isolated-on-260nw-1932261476.jpg",
+              "desktop": "https://image.shutterstock.com/image-photo/young-student-woman-isolated-on-260nw-1932261476.jpg"
+            },
+            "text": "Bachillerato",
+            "icon": "arrow_forward",
+            "color": "#D5583E",
+            "opacity": "multiply",
+            "height": "282px",
+            "enable": true,
+            "nobackground": false
+          }
+        },
+        {
+          "level": "/oferta-educativa/licenciatura",
+          "title": "Licenciaturas",
+          "promo": {
+            "urlImage": {
+              "mobile": "https://image.shutterstock.com/image-photo/young-student-woman-isolated-on-260nw-1932261476.jpg",
+              "desktop": "https://image.shutterstock.com/image-photo/young-student-woman-isolated-on-260nw-1932261476.jpg"
+            },
+            "text": "Licenciaturas",
+            "icon": "arrow_forward",
+            "color": "#42C1A6",
+            "opacity": "multiply",
+            "height": "282px",
+            "enable": true,
+            "nobackground": false
+          }
+        },
+        {
+          "level": "/oferta-educativa/especialidad",
+          "title": "Especialidades",
+          "promo": {
+            "urlImage": {
+              "mobile": "https://image.shutterstock.com/image-photo/young-student-woman-isolated-on-260nw-1932261476.jpg",
+              "desktop": "https://image.shutterstock.com/image-photo/young-student-woman-isolated-on-260nw-1932261476.jpg"
+            },
+            "text": "Especialidades",
+            "icon": "arrow_forward",
+            "color": "#9E5ED3",
+            "opacity": "multiply",
+            "height": "282px",
+            "enable": true,
+            "nobackground": false
+          }
+        },
+        {
+          "level": "/oferta-educativa/maestria",
+          "title": "Maestrias",
+          "promo": {
+            "urlImage": {
+              "mobile": "https://image.shutterstock.com/image-photo/young-student-woman-isolated-on-260nw-1932261476.jpg",
+              "desktop": "https://image.shutterstock.com/image-photo/young-student-woman-isolated-on-260nw-1932261476.jpg"
+            },
+            "text": "Maestrias",
+            "icon": "arrow_forward",
+            "color": "#5ED365",
+            "opacity": "multiply",
+            "height": "282px",
+            "enable": true,
+            "nobackground": false
+          }
+        },
+        {
+          "level": "/oferta-educativa/doctorado",
+          "title": "Doctorado",
+          "promo": {
+            "urlImage": {
+              "mobile": "https://image.shutterstock.com/image-photo/young-student-woman-isolated-on-260nw-1932261476.jpg",
+              "desktop": "https://image.shutterstock.com/image-photo/young-student-woman-isolated-on-260nw-1932261476.jpg"
+            },
+            "text": "Doctorado",
+            "icon": "arrow_forward",
+            "color": "#D35EA3",
+            "opacity": "multiply",
+            "height": "282px",
+            "enable": true,
+            "nobackground": false
+          }
+        }
+      ]
+    },
+    "extension": {
+      "sections": [
+        {
+          "title": "Centro de Idiomas",
+          "cursos": [
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Cursos Inglés Pearson Nivel A1",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=10d8ZaxU1JcBJkctI2oQlT080SzD9COKn"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=10d8ZaxU1JcBJkctI2oQlT080SzD9COKn"
+                }
+              },
+              "redirect": "ingles-pearson-a1"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Cursos Inglés Pearson Nivel A2",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=10d8ZaxU1JcBJkctI2oQlT080SzD9COKn"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=10d8ZaxU1JcBJkctI2oQlT080SzD9COKn"
+                }
+              },
+              "redirect": "ingles-pearson-a2"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Cursos Inglés Pearson Nivel B1",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=10d8ZaxU1JcBJkctI2oQlT080SzD9COKn"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=10d8ZaxU1JcBJkctI2oQlT080SzD9COKn"
+                }
+              },
+              "redirect": "ingles-pearson-b1"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Cursos Inglés Pearson Nivel B2",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=10d8ZaxU1JcBJkctI2oQlT080SzD9COKn"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=10d8ZaxU1JcBJkctI2oQlT080SzD9COKn"
+                }
+              },
+              "redirect": "ingles-pearson-b2"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Cursos Inglés Pearson Nivel C1",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=10d8ZaxU1JcBJkctI2oQlT080SzD9COKn"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=10d8ZaxU1JcBJkctI2oQlT080SzD9COKn"
+                }
+              },
+              "redirect": "ingles-pearson-c1"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Cursos Inglés Pearson Nivel C1+",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=10d8ZaxU1JcBJkctI2oQlT080SzD9COKn"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=10d8ZaxU1JcBJkctI2oQlT080SzD9COKn"
+                }
+              },
+              "redirect": "ingles-pearson-c1+"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Examenes Diagnóstico Inglés",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1QKW-gxED_KheL352ZjiiW7XgFKMHkpVv"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1QKW-gxED_KheL352ZjiiW7XgFKMHkpVv"
+                }
+              },
+              "redirect": "examen-diagnostico-ingles"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Certificacion Internacional (Nivel 1) Papel",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1--1We_pgIEioFqbeVXR23EsnOzVNDkhe"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1--1We_pgIEioFqbeVXR23EsnOzVNDkhe"
+                }
+              },
+              "redirect": "certificacion-internacional-1"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Certificacion Internacional (Nivel 2) Papel",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1--1We_pgIEioFqbeVXR23EsnOzVNDkhe"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1--1We_pgIEioFqbeVXR23EsnOzVNDkhe"
+                }
+              },
+              "redirect": "certificacion-internacional-2"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Certificacion Internacional (Nivel 3) Papel",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1--1We_pgIEioFqbeVXR23EsnOzVNDkhe"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1--1We_pgIEioFqbeVXR23EsnOzVNDkhe"
+                }
+              },
+              "redirect": "certificacion-internacional-3"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Certificacion Internacional (Nivel 4) Papel",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1--1We_pgIEioFqbeVXR23EsnOzVNDkhe"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1--1We_pgIEioFqbeVXR23EsnOzVNDkhe"
+                }
+              },
+              "redirect": "certificacion-internacional-4"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Certificacion Internacional (Nivel 5) Papel",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1--1We_pgIEioFqbeVXR23EsnOzVNDkhe"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1--1We_pgIEioFqbeVXR23EsnOzVNDkhe"
+                }
+              },
+              "redirect": "certificacion-internacional-5"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Certificacion Internacional (Nivel A1) Online",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1--1We_pgIEioFqbeVXR23EsnOzVNDkhe"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1--1We_pgIEioFqbeVXR23EsnOzVNDkhe"
+                }
+              },
+              "redirect": "certificacion-internacional-a1"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Certificacion Internacional (Nivel A2) Online",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1--1We_pgIEioFqbeVXR23EsnOzVNDkhe"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1--1We_pgIEioFqbeVXR23EsnOzVNDkhe"
+                }
+              },
+              "redirect": "certificacion-internacional-a2"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Certificacion Internacional (Nivel B1) Online",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1--1We_pgIEioFqbeVXR23EsnOzVNDkhe"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1--1We_pgIEioFqbeVXR23EsnOzVNDkhe"
+                }
+              },
+              "redirect": "certificacion-internacional-b1"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Certificacion Internacional (Nivel B2) Online",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1--1We_pgIEioFqbeVXR23EsnOzVNDkhe"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1--1We_pgIEioFqbeVXR23EsnOzVNDkhe"
+                }
+              },
+              "redirect": "certificacion-internacional-b2"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Certificacion Internacional (Nivel C1) Online",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1--1We_pgIEioFqbeVXR23EsnOzVNDkhe"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1--1We_pgIEioFqbeVXR23EsnOzVNDkhe"
+                }
+              },
+              "redirect": "certificacion-internacional-c1"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Certificacion Internacional (Nivel C2) Online",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1--1We_pgIEioFqbeVXR23EsnOzVNDkhe"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1--1We_pgIEioFqbeVXR23EsnOzVNDkhe"
+                }
+              },
+              "redirect": "certificacion-internacional-c2"
+            }
+          ]
+        },
+        {
+          "title": "Bedu",
+          "cursos": [
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "BEDU Curso en Emprendimiento",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1rvzYMsZYxA9_3FCqAciMkm6c-B66W5P-"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1rvzYMsZYxA9_3FCqAciMkm6c-B66W5P-"
+                }
+              },
+              "redirect": "bedu-emprendimiento"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "BEDU Curso en Diseño de Productos Digitales",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1EFKsCCvIjbou57Dm2XfDZqAPINUl9qmZ"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1EFKsCCvIjbou57Dm2XfDZqAPINUl9qmZ"
+                }
+              },
+              "redirect": "bedu-productos-digitales"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "BEDU Diplomado en Ciencia de Datos",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1mYF6UB3LVLkKv4dtPnbiF-T4uNWUQskL"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1mYF6UB3LVLkKv4dtPnbiF-T4uNWUQskL"
+                }
+              },
+              "redirect": "bedu-ciencia-de-datos"
+            }
+          ]
+        },
+        {
+          "title": "Diplomados UANE",
+          "cursos": [
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Diplomado en Innovación y Control de Calidad",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1HwrrbnGAECa0mN_0Yqhj_S6HoEILT6wA"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1HwrrbnGAECa0mN_0Yqhj_S6HoEILT6wA"
+                }
+              },
+              "redirect": "diplomado-innovacion-y-control"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Diplomado en Docencia en Linea",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1kmEZ_bmJeNKvNp08W3oc0nEno71vqqfK"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1kmEZ_bmJeNKvNp08W3oc0nEno71vqqfK"
+                }
+              },
+              "redirect": "diplomado-docencia-online"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Diplomado en Globalización",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=15mY-Fn6p86EMFx2bMecCY2QZ5JSun5DE"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=15mY-Fn6p86EMFx2bMecCY2QZ5JSun5DE"
+                }
+              },
+              "redirect": "diplomado-globalizacion"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Diplomado en Desarrollo del Talento Humano",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1sPLyzrm6c17l8dBf7daMbh4xa54ZvpQp"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1sPLyzrm6c17l8dBf7daMbh4xa54ZvpQp"
+                }
+              },
+              "redirect": "diplomado-desarrollo-talento"
+            }
+          ]
+        },
+        {
+          "title": "Cursos Cortos",
+          "cursos": [
+            {
+              "hidden": true,
+              "id": "123",
+              "title": "Certificación Oficial Adobe After Effects",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1TRXplcP8ISBVtj1xGHY3a8e-Dp0ZuYUE"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1TRXplcP8ISBVtj1xGHY3a8e-Dp0ZuYUE"
+                }
+              },
+              "redirect": "adobe-after-effects"
+            },
+            {
+              "hidden": true,
+              "id": "123",
+              "title": "Certificación Oficial Adobe Photoshop",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1cnEGJSkqGrixFE_LnEuAq_-Dh-_4k4Zc"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1cnEGJSkqGrixFE_LnEuAq_-Dh-_4k4Zc"
+                }
+              },
+              "redirect": "adobe-photoshop"
+            },
+            {
+              "hidden": true,
+              "id": "123",
+              "title": "Análisis de Datos",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1G5cfpaPeUUL3xe4GKVp_AIYR9kfOVozF"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1G5cfpaPeUUL3xe4GKVp_AIYR9kfOVozF"
+                }
+              },
+              "redirect": "analisis-de-datos"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Comunicación Publica y Gestión de la Reputación",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1Eeqy3AX6Hvv7m6DnDEdve_8rB2JQwQzZ"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1Eeqy3AX6Hvv7m6DnDEdve_8rB2JQwQzZ"
+                }
+              },
+              "redirect": "comunicacion-publica-gestion-reputacion"
+            },
+            {
+              "hidden": true,
+              "id": "123",
+              "title": "Derecho de Autor y Propiedad Intelectual",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1Ku6pYYkERDFRmUMDbZrihCrzNTCWfxtR"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1Ku6pYYkERDFRmUMDbZrihCrzNTCWfxtR"
+                }
+              },
+              "redirect": "derecho-autor-propiedad-intelectual"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Derechos Humanos y Sostenibilidad",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=15iu-kSWLefanbK00jWtYM8aMruBWouJI"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=15iu-kSWLefanbK00jWtYM8aMruBWouJI"
+                }
+              },
+              "redirect": "derechos-humanos-sostenibilidad"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Estrategias de Tiendas en Línea",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=11wfyqAaSxa5NOWqNRT_aHkdcCd1CgIUM"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=11wfyqAaSxa5NOWqNRT_aHkdcCd1CgIUM"
+                }
+              },
+              "redirect": "estrategias-tiendas-en-linea"
+            },
+            {
+              "hidden": true,
+              "id": "123",
+              "title": "Estructura de Datos",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1qJ7-TOn5q7Qaq_se3hAipdtRYiqZUZZg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1qJ7-TOn5q7Qaq_se3hAipdtRYiqZUZZg"
+                }
+              },
+              "redirect": "estructura-datos"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Gerencia y Gestión Deportiva",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1Z4JRJl4HX2XibflvSCdyKlEaIwDHK_8h"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1Z4JRJl4HX2XibflvSCdyKlEaIwDHK_8h"
+                }
+              },
+              "redirect": "gerencia-gestion-deportiva"
+            },
+            {
+              "hidden": true,
+              "id": "123",
+              "title": "Higiene y Seguridad en el Trabajo",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1-oip47KlcHezczm8dcv6bZePkJtYkHYN"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1-oip47KlcHezczm8dcv6bZePkJtYkHYN"
+                }
+              },
+              "redirect": "higiene-seguridad-trabajo"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Liderazgo y Trabajo en Equipo",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1eWwamUetRKuLV7tqve0poL-1OjAUcdag"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1eWwamUetRKuLV7tqve0poL-1OjAUcdag"
+                }
+              },
+              "redirect": "liderazgo-trabajo-equipo"
+            },
+            {
+              "hidden": true,
+              "id": "123",
+              "title": "Mega Tendencias Globales",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1V0_dLRrdEq4MgWYv50yDRpQ_2VUd_fIv"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1V0_dLRrdEq4MgWYv50yDRpQ_2VUd_fIv"
+                }
+              },
+              "redirect": "mega-tendencias-globales"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Mercadotecnia Aplicada a Entornos Virtuales",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1hi1mrvPFAAVz_SDS9iIDVo82uRZt4h5X"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1hi1mrvPFAAVz_SDS9iIDVo82uRZt4h5X"
+                }
+              },
+              "redirect": "mercadotecnia-entornos-virtuales"
+            },
+            {
+              "hidden": true,
+              "id": "123",
+              "title": "Obligaciones y Contratos",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1QKS-W7fNxeHEEI4DZqzv8WUAK1cvqiQW"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1QKS-W7fNxeHEEI4DZqzv8WUAK1cvqiQW"
+                }
+              },
+              "redirect": "obligaciones-contratos"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Políticas Públicas en Gobernanza",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=11jtwA0pka49L_8w5OSRRhzXXqnnoFMsB"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=11jtwA0pka49L_8w5OSRRhzXXqnnoFMsB"
+                }
+              },
+              "redirect": "politicas-publicas-gobernanza"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Psicología y Comunicación",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1zW5f1MOdWG4vl4HXr3rpQYWr3aYxpSQh"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1zW5f1MOdWG4vl4HXr3rpQYWr3aYxpSQh"
+                }
+              },
+              "redirect": "psicologia-comunicacion"
+            },
+            {
+              "hidden": true,
+              "id": "123",
+              "title": "Psicología del Consumidor",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1NViTgtihUNLX9h5TYfSxEFJNI4_yWS_3"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1NViTgtihUNLX9h5TYfSxEFJNI4_yWS_3"
+                }
+              },
+              "redirect": "psicologia-consumidor"
+            }
+          ]
+        }
+      ]
+    }
+
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "meta":{
+    "title": "Vida Estudiantil",
+    "description": "",
+    "keywords": ""
+  },
+  "sections": {
+    "head": {
+      "title": "Vida estudiantil",
+      "subtitle": "",
+      "description": "La universidad no es solamente un lugar para atender a clases; la experiencia y aprendizaje de convivir con distintas formas de pensamiento y participar en sus actividades de integración y recreación, contribuye al desarrollo integral de la comunidad universitaria.\n\n Viajes académicos y culturales, visitas empresariales, bici tours, un cineclub, organizaciones estudiantiles. La UDLAP ofrece una gran variedad de actividades caracterizadas por su diversidad temática.\n\n ¡Te invitamos a explorar nuestra vida universitaria!",
+      "image": {
+        "desk": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1qtkEi-n689eoCm7o5pGxQeoRkmiAcN7U"
+        },
+        "mobile": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1E5_6re4V8sEIrG7K5w0BJp5McjKTjXdo"
+        }
+      }
+    },
+    "sportActivities": {
+      "title": "Actividades deportivas",
+      "description": "¡Por actividades deportivas no paramos! \n\n No sólo porque contamos con varias disciplinas deportivas que te harán más responsable, un mejor estudiante y ser humano; sino porque tenemos el evento INTER UANE que se convierte en algo inolvidable año con año.",
+      "moreInformation": "¿Quiere ser un oso UANE?",
+      "moreInformationLink": "hola@uane.edu.mx",
+      "video": {
+        "options": {
+          "id": "c6eT6nLYGO4",
+          "type": "single",
+          "controls": true
+        },
+        "dimensions": {
+          "height": "330px"
+        }
+      }
+    },
+    "culturalActivities": {
+      "title": "Actividades Culturales",
+      "description": "- Cine\n\n - Jazz\n\n - Hip-Hop\n\n - Ritmos latinos\n\n - Canto\n\n - Comedia Musical",
+      "moreInformation": "¿Quieres ser un oso UANE?",
+      "moreInformationLink": "hola@uane.edu.mx",
+      "video": {
+        "options": {
+          "id": "61X0lE23eY0",
+          "type": "single",
+          "controls": true
+        },
+        "dimensions": {
+          "height": "330px"
+        }
+      }
+    },
+    "lifeUANE": {
+      "title": "La vida en UANE",
+      "images": {"images": [{"id": "1", "image": "https://drive.google.com/uc?export=view&id=1qvfZZMQy0cUiux_SEidrjfz7k8L9xKnX", "icon": "zoom_out_map" }, {"id": "2", "image": "https://drive.google.com/uc?export=view&id=15ai6Kdi1ZrzR0fsSdjQfvJYmx-OAGNpj", "icon": "zoom_out_map" }, {"id": "3", "image": "https://drive.google.com/uc?export=view&id=19SHJznLzkqimZg9gUFGwGH2c8fdw9fqT", "icon": "zoom_out_map"}, {"id": "4", "image": "https://drive.google.com/uc?export=view&id=1x0P7sQCuO1PbyEUb-ozK_G_03qrs_3LT", "icon": "zoom_out_map"},{"id": "5", "image": "https://drive.google.com/uc?export=view&id=1YDEzMKH5qpxOuE1khAimLyQc4TCGqKue", "icon": "zoom_out_map"}, {"id": "6", "image": "https://drive.google.com/uc?export=view&id=1bJwIjf41GECmkQNnbwUpXJxXwx4OHA8q", "icon": "zoom_out_map" }, {"id": "7", "image": "https://drive.google.com/uc?export=view&id=1j6jkoWBs0KIRItxWBL-NoRObJZjm3okg", "icon": "zoom_out_map"}, {"id": "8", "image": "https://drive.google.com/uc?export=view&id=1QQqrxbT8cdt5EH_L-BiP_m4aidlLaqpZ", "icon": "zoom_out_map"}, {"id": "9", "image": "https://drive.google.com/uc?export=view&id=1U6UZeS0-8cM5vKYDKLhWqUqAnWKeLJCx", "icon": "zoom_out_map"}, {"id": "10", "image": "https://drive.google.com/uc?export=view&id=1U64hNXjuLlKi_PikBmzgDQNIXBbldjeN", "icon": "zoom_out_map"}, {"id": "11", "image": "https://drive.google.com/uc?export=view&id=1JOlP0twXTmFzgUB1ysJ_Bn3xXOQRAW4s", "icon": "zoom_out_map"}, {"id": "12", "image": "https://drive.google.com/uc?export=view&id=104DHiqgxZD_dJ497xOlcbcYgMOZHCV3_", "icon": "zoom_out_map"}]}
+    },
+    "lifeUANEarticles": {
+      "title": "Artículos sobre la vida estudiantil en UANE",
+      "articles": [
+        { 
+          "urlImage": "https://image.shutterstock.com/image-photo/graduates-student-graduation-caps-thrown-260nw-1937758900.jpg",
+          "subtitle": "SUBTITULO",
+          "title": "Coursera y UANE se unen para ti",
+          "text": "Se firma una alianza con Coursera para acceder a contenidos que complementen la formación profesional de su comunidad educativa",
+          "border": true,
+          "allContent": true,
+          "height": "",
+          "isShowCardWebsiteContent": true,
+          "id": "",
+          "type": "vertical",
+          "link": true,
+          "background": false,
+          "linkText": {
+            "text": "Conocer más",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": "star"
+          },
+          "linkIcon": {
+            "text": "Ver más",
+            "iconSecond": "person",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": "person"
+          },
+          "wrapper": true,
+          "redirect": "/convocatoria-investigacion-1"
+        },
+        { 
+          "urlImage": "https://image.shutterstock.com/image-photo/graduates-student-graduation-caps-thrown-260nw-1937758900.jpg",
+          "subtitle": "SUBTITULO",
+          "title": "Coursera y UANE se unen para ti",
+          "text": "Se firma una alianza con Coursera para acceder a contenidos que complementen la formación profesional de su comunidad educativa",
+          "border": true,
+          "allContent": true,
+          "height": "",
+          "isShowCardWebsiteContent": true,
+          "id": "",
+          "type": "vertical",
+          "link": true,
+          "background": false,
+          "linkText": {
+            "text": "Conocer más",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": "star"
+          },
+          "linkIcon": {
+            "text": "Ver más",
+            "iconSecond": "person",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": "person"
+          },
+          "wrapper": true,
+          "redirect": "/convocatoria-investigacion-1"
+        }
+      ]
+    }
+  }
+}

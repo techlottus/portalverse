@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "title": "Talento",
+    "description": "",
+    "keywords": ""
+  },
+  "sections": {
+    "head": {
+      "title": "Egresados talento",
+      "description": "<b>En estos 48 años de historia y experiencia hemos formando profesionales que han contribuido y dejado huella en nuestra sociedad. Nuestros egresados trabajan en empresas e instituciones de muy diversos sectores, tanto de la región como nacionales e internacionales,</b> y se han convertido en un engranaje clave. Estamos orgullosos de todos y cada uno de los miles de titulados que han egresado de la Universidad Americana del Noreste."
+    },
+    "experiencias": {
+      "cards": [
+        { 
+          "image": "https://drive.google.com/uc?export=view&id=1aUcuNe6I1zMp2-gYwbK7wO9FFTINPQ-T",
+          "subtitle": "DISEÑO GRÁFICO",
+          "title": "Noé Silva",
+          "text": "Noé ha logrado dejar huella con su trabajo en todo el país. Gracias a su único estilo, desde la imagen de una edición especial de la cerveza Indio, hasta el diseño del Quetzalcoatl de la imagen conmemorativa del aniversario de la independencia de México en 2021.",
+          "border": true,
+          "type": "vertical",
+          "background": false,
+          "isLink": true,
+          "link": {
+            "text": "Ver video",
+            "size": "",
+            "disabled": false,
+            "isUnderline": false,
+            "isBold": false,
+            "iconFirst": "play_circle",
+            "iconSecond": ""
+          },
+          "video": "GMtcxjuvBHc"
+        },
+        { 
+          "image": "https://drive.google.com/uc?export=view&id=1lsuR-ejEiIq7GaFf5V3pHJ3zkIY6tlt8",
+          "subtitle": "RECURSOS HUMANOS",
+          "title": "Martha Rodríguez",
+          "text": "Después de concluir su Licenciatura, Martha continúa su crecimiento académico y profesional con una Maestría en Administración y Liderazgo en UANE. Hoy se desempeña como Gerente Administrativa.",
+          "border": true,
+          "type": "vertical",
+          "background": false,
+          "isLink": true,
+          "link": {
+            "text": "Ver video",
+            "size": "",
+            "disabled": false,
+            "isUnderline": false,
+            "isBold": false,
+            "iconFirst": "play_circle",
+            "iconSecond": ""
+          },
+          "video": "RRd5gA6AVDY"
+        },
+        { 
+          "image": "https://drive.google.com/uc?export=view&id=1aMNri-Z6QO84SDIlX_LnlYW3goXelTXy",
+          "subtitle": "COMUNICACIÓN",
+          "title": "Nidia Orozco",
+          "text": "Nidia se consolidó en los medios de comunicación en Piedras Negras Coahuila, pero continúo su formación y hoy tiene su propio negocio.",
+          "border": true,
+          "type": "vertical",
+          "background": false,
+          "isLink": true,
+          "link": {
+            "text": "Ver video",
+            "size": "",
+            "disabled": false,
+            "isUnderline": false,
+            "isBold": false,
+            "iconFirst": "play_circle",
+            "iconSecond": ""
+          },
+          "video": "rDfCvp0UrKg"
+        },
+        { 
+          "image": "https://drive.google.com/uc?export=view&id=1Dgn8f02hCN5rU7xsGQKG64BUlaNgatAT",
+          "subtitle": "MERCADOTECNIA INTERNACIONAL",
+          "title": "Luis Cruz Brito",
+          "text": "Conoce la trayectoria de Luis quien hoy se desempeña como Gerente General Regional de Televisa Piedras Negras, Coahuila.",
+          "border": true,
+          "type": "vertical",
+          "background": false,
+          "isLink": true,
+          "link": {
+            "text": "Ver video",
+            "size": "",
+            "disabled": false,
+            "isUnderline": false,
+            "isBold": false,
+            "iconFirst": "play_circle",
+            "iconSecond": ""
+          },
+          "video": "0bq-GyBddBo"
+        },
+        { 
+          "image": "https://drive.google.com/uc?export=view&id=1VzrgljQOc90V6KMGAG6SBNtX4iwYYqR1",
+          "subtitle": "DISEÑO GRÁFICO",
+          "title": "Ángel Treviño",
+          "text": "Gracias a su excepcional trabajo como diseñador, Ángel ha logrado trabajar para artistas de alto nivel como Shakira o su más reciente colaboración con Gloria Trevi.",
+          "border": true,
+          "type": "vertical",
+          "background": false,
+          "isLink": true,
+          "link": {
+            "text": "Ver video",
+            "size": "",
+            "disabled": false,
+            "isUnderline": false,
+            "isBold": false,
+            "iconFirst": "play_circle",
+            "iconSecond": ""
+          },
+          "video": "JSlK3lrUYY8"
+        },
+        { 
+          "image": "https://drive.google.com/uc?export=view&id=1od1pDMWv3auv2Vt2XTjlqSQl2EyYFcI7",
+          "subtitle": "PSICOLOGÍA",
+          "title": "FIDENCIO GONZÁLEZ",
+          "text": "Ganador de la medalla de oro de los Juegos Panamericanos de Lima en 2019, Fidencio es Atleta de la Selección Mexicana de Tiro Deportivo y nos cuenta su paso por UANE Monterrey.",
+          "border": true,
+          "type": "vertical",
+          "background": false,
+          "isLink": true,
+          "link": {
+            "text": "Ver video",
+            "size": "",
+            "disabled": false,
+            "isUnderline": false,
+            "isBold": false,
+            "iconFirst": "play_circle",
+            "iconSecond": ""
+          },
+          "video": "_-j9GOu_C-M"
+        }
+      ]
+    },
+    "aplica": {
+      "banner":{
+        "image": {
+          "desktop": "https://drive.google.com/uc?export=view&id=1bAZaQJAenCjvL_3Yw2Mj_50G3h-tB3gV",
+          "mobile": "https://drive.google.com/uc?export=view&id=1wSC-z_Mzco940OwZ1jKjqnv9c0wTUPx9"
+        },
+        "title": "¿Quieres postularte?",
+        "subtitle": "",
+        "email": "egresados@uane.edu.mx",
+        "phone": "55-1224-2345"
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "meta":{
+    "title": "Certificacion Internacional (Nivel C2) Online",
+    "description": "",
+    "keywords": ""
+  },
+  "sections":{
+    "head":{
+      "title": "Certificacion Internacional (Nivel C2) Online",
+      "image": {
+        "alt": "imagen",
+        "src": "https://drive.google.com/uc?export=view&id=1--1We_pgIEioFqbeVXR23EsnOzVNDkhe"
+      },
+      "description": "Duración aproximada: 1 hora 55 minutos\n\nPerfil del participante: Aquella persona que necesite un certificado de su nivel del idioma inglés. Es una certificacion con valor internacional. \n\nCarreras afines: Todas las áreas\n\nObjetivo: Que el aplicante conozca su nivel de inglés y que obtenga con esto una certificación de variedad internacional respaldado por Pearson.\n\nTemas a abordar:\nTemas  y reactivos según el nivel y examen solicitado para poder conocer el nivel del aspirante según el MCER (Marco Común Europeo de Referencia de las Lenguas)\n\nRecursos de aprendizaje:\nOnline\n\nEvaluación:\nAutomática mediante Inteligencia Artificial Pearson English, resultados en 2 semanas.",
+      "price": "$5546.97*"
+    },
+    "relatedCourses":{
+      "title": "Cursos relacionados",
+      "courses": [
+        {
+          "id": "123",
+          "title": "Análisis de datos",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":"arrow_forward"
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,385 @@
+{
+  "meta": {
+    "title": "Directorio",
+    "description": "",
+    "keywords": "",
+    "hidden": true
+  },
+  "sections": {
+    "head": {
+      "title": "Contacto general",
+      "description": ""
+    },
+    "areas": [
+      {
+        "name": "Servicios escolares",
+        "contacts": [
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1Un7BM2AYlEYt9M4nI6UqV_2OO_QQyjP8",
+            "name": "Servicios escolares",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1zbUUHzk5bsUQ_i2fraA2n5MA-o9L_KrV",
+            "name": "Dirección general",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1dD23vU3QzocXTjGw6IuFDd8tO3IwW0wF",
+            "name": "Coordinación educativa",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=15JnGsqUqVU9Bb3uZ5LJS7Ft_RzJAfEyn",
+            "name": "Biblioteca",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1JqyX7qw9vaAY5yeq2Y2hhKQX5750Z_ba",
+            "name": "Línea segura",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1udqbm8jWNDSXZGMiaKfSTmJzGHZsT9YB",
+            "name": "Soporte técnico",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          }
+        ]
+      },
+      {
+        "name": "Campus Hermosillo",
+        "contacts": [
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1Un7BM2AYlEYt9M4nI6UqV_2OO_QQyjP8",
+            "name": "Servicios escolares",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1zbUUHzk5bsUQ_i2fraA2n5MA-o9L_KrV",
+            "name": "Dirección general",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1dD23vU3QzocXTjGw6IuFDd8tO3IwW0wF",
+            "name": "Coordinación educativa",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=15JnGsqUqVU9Bb3uZ5LJS7Ft_RzJAfEyn",
+            "name": "Biblioteca",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1JqyX7qw9vaAY5yeq2Y2hhKQX5750Z_ba",
+            "name": "Línea segura",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1udqbm8jWNDSXZGMiaKfSTmJzGHZsT9YB",
+            "name": "Soporte técnico",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          }
+        ]
+      },
+      {
+        "name": "Campus Saltillo",
+        "contacts": [
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1Un7BM2AYlEYt9M4nI6UqV_2OO_QQyjP8",
+            "name": "Servicios escolares",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1zbUUHzk5bsUQ_i2fraA2n5MA-o9L_KrV",
+            "name": "Dirección general",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1dD23vU3QzocXTjGw6IuFDd8tO3IwW0wF",
+            "name": "Coordinación educativa",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=15JnGsqUqVU9Bb3uZ5LJS7Ft_RzJAfEyn",
+            "name": "Biblioteca",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1JqyX7qw9vaAY5yeq2Y2hhKQX5750Z_ba",
+            "name": "Línea segura",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1udqbm8jWNDSXZGMiaKfSTmJzGHZsT9YB",
+            "name": "Soporte técnico",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          }
+        ]
+      },
+      {
+        "name": "Campus Monterrey",
+        "contacts": [
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1Un7BM2AYlEYt9M4nI6UqV_2OO_QQyjP8",
+            "name": "Servicios escolares",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1zbUUHzk5bsUQ_i2fraA2n5MA-o9L_KrV",
+            "name": "Dirección general",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1dD23vU3QzocXTjGw6IuFDd8tO3IwW0wF",
+            "name": "Coordinación educativa",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=15JnGsqUqVU9Bb3uZ5LJS7Ft_RzJAfEyn",
+            "name": "Biblioteca",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1JqyX7qw9vaAY5yeq2Y2hhKQX5750Z_ba",
+            "name": "Línea segura",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1udqbm8jWNDSXZGMiaKfSTmJzGHZsT9YB",
+            "name": "Soporte técnico",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          }
+        ]
+      },
+      {
+        "name": "Campus Torreón",
+        "contacts": [
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1Un7BM2AYlEYt9M4nI6UqV_2OO_QQyjP8",
+            "name": "Servicios escolares",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1zbUUHzk5bsUQ_i2fraA2n5MA-o9L_KrV",
+            "name": "Dirección general",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1dD23vU3QzocXTjGw6IuFDd8tO3IwW0wF",
+            "name": "Coordinación educativa",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=15JnGsqUqVU9Bb3uZ5LJS7Ft_RzJAfEyn",
+            "name": "Biblioteca",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1JqyX7qw9vaAY5yeq2Y2hhKQX5750Z_ba",
+            "name": "Línea segura",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1udqbm8jWNDSXZGMiaKfSTmJzGHZsT9YB",
+            "name": "Soporte técnico",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          }
+        ]
+      },
+      {
+        "name": "Campus Monclova",
+        "contacts": [
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1Un7BM2AYlEYt9M4nI6UqV_2OO_QQyjP8",
+            "name": "Servicios escolares",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1zbUUHzk5bsUQ_i2fraA2n5MA-o9L_KrV",
+            "name": "Dirección general",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1dD23vU3QzocXTjGw6IuFDd8tO3IwW0wF",
+            "name": "Coordinación educativa",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=15JnGsqUqVU9Bb3uZ5LJS7Ft_RzJAfEyn",
+            "name": "Biblioteca",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1JqyX7qw9vaAY5yeq2Y2hhKQX5750Z_ba",
+            "name": "Línea segura",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1udqbm8jWNDSXZGMiaKfSTmJzGHZsT9YB",
+            "name": "Soporte técnico",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          }
+        ]
+      },
+      {
+        "name": "Campus Piedras Negras",
+        "contacts": [
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1Un7BM2AYlEYt9M4nI6UqV_2OO_QQyjP8",
+            "name": "Servicios escolares",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1zbUUHzk5bsUQ_i2fraA2n5MA-o9L_KrV",
+            "name": "Dirección general",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1dD23vU3QzocXTjGw6IuFDd8tO3IwW0wF",
+            "name": "Coordinación educativa",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=15JnGsqUqVU9Bb3uZ5LJS7Ft_RzJAfEyn",
+            "name": "Biblioteca",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1JqyX7qw9vaAY5yeq2Y2hhKQX5750Z_ba",
+            "name": "Línea segura",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1udqbm8jWNDSXZGMiaKfSTmJzGHZsT9YB",
+            "name": "Soporte técnico",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          }
+        ]
+      },
+      {
+        "name": "Campus Reynosa",
+        "contacts": [
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1Un7BM2AYlEYt9M4nI6UqV_2OO_QQyjP8",
+            "name": "Servicios escolares",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1zbUUHzk5bsUQ_i2fraA2n5MA-o9L_KrV",
+            "name": "Dirección general",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1dD23vU3QzocXTjGw6IuFDd8tO3IwW0wF",
+            "name": "Coordinación educativa",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=15JnGsqUqVU9Bb3uZ5LJS7Ft_RzJAfEyn",
+            "name": "Biblioteca",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1JqyX7qw9vaAY5yeq2Y2hhKQX5750Z_ba",
+            "name": "Línea segura",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1udqbm8jWNDSXZGMiaKfSTmJzGHZsT9YB",
+            "name": "Soporte técnico",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          }
+        ]
+      },
+      {
+        "name": "Campus Sabinos",
+        "contacts": [
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1Un7BM2AYlEYt9M4nI6UqV_2OO_QQyjP8",
+            "name": "Servicios escolares",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1zbUUHzk5bsUQ_i2fraA2n5MA-o9L_KrV",
+            "name": "Dirección general",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1dD23vU3QzocXTjGw6IuFDd8tO3IwW0wF",
+            "name": "Coordinación educativa",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=15JnGsqUqVU9Bb3uZ5LJS7Ft_RzJAfEyn",
+            "name": "Biblioteca",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1JqyX7qw9vaAY5yeq2Y2hhKQX5750Z_ba",
+            "name": "Línea segura",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          },
+          {
+            "image": "https://drive.google.com/uc?export=view&id=1udqbm8jWNDSXZGMiaKfSTmJzGHZsT9YB",
+            "name": "Soporte técnico",
+            "email": "email@uane.com",
+            "phone": "55 10 50 27 07"
+          }
+        ]
+      }
+    ]
+  }
+}

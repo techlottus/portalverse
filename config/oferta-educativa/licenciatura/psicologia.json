@@ -1,0 +1,211 @@
+{
+  "meta": {
+    "title": "Licenciatura en Psicología",
+    "description": "",
+    "keywords": ""
+  },
+  "config": {
+    "title": "Licenciatura en Psicología",
+    "config": {
+      "nombre": "Licenciatura en Psicología",
+      "modalidad": ["Presencial", "Online", "Flex"],
+      "areaConocimiento": ["Ciencias de la Salud", "Ciencias Sociales"],
+      "campus": [ "Saltillo", "Monterrey" , "Matamoros", "Torreón", "Piedras Negras", "Sabinas", "Reynosa", "Monclova" ],
+      "nivel": ["Licenciatura"],
+      "image": {
+        "src": "https://drive.google.com/uc?export=view&id=1mcSvxgwuT1q2IZU_ZNbQFUKeF_s-W9iJ",
+        "alt": "licenciatura"
+      },
+      "curriculum": {
+        "Presencial": {
+          "Saltillo": "1IyRB9sRFHBn1JbEAdxCQ0Vc-w3NHv1JA",
+          "Monterrey": "1DIbnCHKGLYBtHVdWLogiUc2rRba4WJ8r",
+          "Matamoros": "1QQD1i_1EEOEl0kIYc4gRWQQpQ7qPHlYX",
+          "Torreón": "1QITOLsbvcmI8PkA-iRofCLDZjTZJ-5XJ",
+          "Piedras Negras": "1f75-kxsLPi2_GVMDBUQPpN0cz2mofCyN",
+          "Sabinas": "1cP3064cAw3OVyN-ZO_VFMkkdK9ygBqww",
+          "Reynosa": "1E8wpoKqSbNTW-MsYB4Sae8fRwpdMb20Q",
+          "Monclova": "1vntzenIE1ombyo9bYgCwR0gmSZ8pR6L5"
+        },
+        "Online": "1ZHOOcVeBfX3DUh7Mfe1kGvkUMynVLO6e",
+        "Flex" : "1QKr3InMPawHJrzT0XaNhNv3OSzon524p"
+      }
+    }
+  },
+  "sections": {
+    "head": {
+      "title": "Licenciatura en Psicología",
+      "description": "Interviene en áreas clínicas, sociales o educativas y desarrolla estrategias a beneficio de la salud mental. Escucha, analiza y evalúa la conducta. Motiva al cambio.",
+      "image": {
+        "src": "https://drive.google.com/uc?export=view&id=1mcSvxgwuT1q2IZU_ZNbQFUKeF_s-W9iJ",
+        "alt": "licenciatura"
+      }
+    },
+    "modalities": {
+      "title": "Modalidades disponibles en esta licenciatura:",
+      "tabs": {
+        "items": [
+          {
+            "label": "Modalidad Presencial", "icons": { "primary": "", "duplicate": false}, "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
+                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "El aspirante a la Licenciatura en Psicología deberá contar con habilidad de comunicación e interacción para trabajar en equipo. Gusto por la escucha activa. Capacidad manifiesta por la lectura y el análisis de texto como una disciplina y como una forma de desarrollo personal y profesional.",
+                  "backgroundColor": "#8B9BA3"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "La Licenciatura en Psicología te dará las herramientas para realizar intervenciones en las áreas clínica, social, educativa e industrial para promover el bienestar integral de los individuos, grupos y sociedad. Además, desarrollarás estrategias para la prevención y promoción de la salud mental.",
+                  "backgroundColor": "#B0003C"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "Como egresado de la Licenciatura en Psicología, podrás desempeñar tus conocimientos en el sector público como clínicas, instituciones de apoyo psicológico, oficinas o áreas de atención familiar, así como escuelas entre los que se incluyen gabinetes de orientación psicológica y educativa, así como en empresas del sector privado o como independiente desarrollando tu propio consultorio.",
+                  "backgroundColor": "#E84537"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "\n\n• Acta de nacimiento reciente, original del cajero y 2 copias.\\n\n• Certificado de secundaria legalizado original y dos copias.\n\n• Certificado de preparatoria legalizado original y 2 copias con su carta de autenticidad. (En caso de no contar con original, presentar constancia de que está en trámite).\n\n• CURP copia.\n\nEn caso de equivalencia\n\n• Certificado parcial de estudios legalizado original con 2 copias y carta de autenticidad.\n\n• 4 fotografías tamaño infantil y 4 tamaño credencial, ambas blanco y negro, papel mate no instantáneas.\n\n• Carta de buena salud expedida por institución pública o privada.",
+                  "backgroundColor": "#00BEB4"
+                }
+              ],
+              "wrapper": false
+            }
+          },
+          {
+            "label": "Modalidad Online", "icons": { "primary": "", "duplicate": false}, "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
+                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "\n\n• Disposición y empatía para las relaciones interpersonales.\n\n• Capacidad de reflexión e interpretación.\n\n• Habilidad para la expresión oral y escrita.\n\n• Sensibilidad para comprender la diversidad cultural y conductual.\n\n• Trabajo en equipo.\n\n• Habilidad para intervenir en la resolución de problemas.",
+                  "backgroundColor": "#8B9BA3"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "\n\n• Analizar los fenómenos vinculados al comportamiento humano así como generar y aplicar soluciones a problemáticas individuales y grupales relacionadas con éste, sobre diversos entornos: educativo, laboral, familiar o clínico.\n\n• Realizar diagnósticos certeros con base en los resultados de evaluación a partir de pruebas, técnicas de observación y/o instrumentos especializados.\n\n• Elaborar y aplicar o canalizar planes de intervención psicológica acorde al objetivo, tratamiento, rehabilitación, inserción y acompañamiento, entre otros.\n\n• Tomar decisiones con base en evidencia científica y construir informes y escritos académicos a partir de las reglas de la comunicación efectiva.",
+                  "backgroundColor": "#B0003C"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "Ejerce de manera individual o en equipos multidisciplinarios, como psicólogo, terapeuta, docente, investigador o bien, asesor de procesos conductuales, en instituciones educativas, orientación vocacional o psicológica; en instituciones de salud, públicas o privadas, en dependencias gubernamentales o empresas de todo tipo, sobre todo en las áreas de recursos humanos.",
+                  "backgroundColor": "#E84537"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "\n\n• Acta de nacimiento reciente, original del cajero y 2 copias.\\n\n• Certificado de secundaria legalizado original y dos copias.\n\n• Certificado de preparatoria legalizado original y 2 copias con su carta de autenticidad. (En caso de no contar con original, presentar constancia de que está en trámite).\n\n• CURP copia.\n\nEn caso de equivalencia\n\n• Certificado parcial de estudios legalizado original con 2 copias y carta de autenticidad.\n\n• 4 fotografías tamaño infantil y 4 tamaño credencial, ambas blanco y negro, papel mate no instantáneas.\n\n• Carta de buena salud expedida por institución pública o privada.",
+                  "backgroundColor": "#00BEB4"
+                }
+              ],
+              "wrapper": false
+            }
+          },
+          {
+            "label": "Modalidad flex", "icons": { "primary": "", "duplicate": false}, "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
+                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "Si te intriga la mente humana, te gusta organizar grupos y hacerlos funcionar óptimamente y estás de acuerdo en que las personas son el alma de las empresas, eres un excelente candidato para estudiar la Licenciatura en Psicología en la Universidad Latinoamericana.",
+                  "backgroundColor": "#8B9BA3"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "Como graduado en psicología de la Universidad Latinoamericana te podrás desenvolver en las empresas privadas y en dependencias públicas, especialmente en el área de relaciones humanas, donde se te apreciará por tu desempeño en psicología laboral, capacitación y manejo de recursos humanos.",
+                  "backgroundColor": "#B0003C"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "Ejerce de manera individual o en equipos multidisciplinarios, como psicólogo, terapeuta, docente, investigador o bien, asesor de procesos conductuales, en instituciones educativas, orientación vocacional o psicológica; en instituciones de salud, públicas o privadas, en dependencias gubernamentales o empresas de todo tipo, sobre todo en las áreas de recursos humanos.",
+                  "backgroundColor": "#E84537"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "\n\n• Acta de nacimiento reciente, original del cajero y 2 copias.\\n\n• Certificado de secundaria legalizado original y dos copias.\n\n• Certificado de preparatoria legalizado original y 2 copias con su carta de autenticidad. (En caso de no contar con original, presentar constancia de que está en trámite).\n\n• CURP copia.\n\nEn caso de equivalencia\n\n• Certificado parcial de estudios legalizado original con 2 copias y carta de autenticidad.\n\n• 4 fotografías tamaño infantil y 4 tamaño credencial, ambas blanco y negro, papel mate no instantáneas.\n\n• Carta de buena salud expedida por institución pública o privada.",
+                  "backgroundColor": "#00BEB4"
+                }
+              ],
+              "wrapper": false
+            }
+          }
+        ],
+        "size": "medium"
+      }
+    },
+    "descarga": {
+      "id": "program_licenciatura",
+      "type": "primary",
+      "title": "Descarga el plan de estudios",
+      "size": "small",
+      "icon": "download",
+      "lyIcon": false,
+      "disabled": false,
+      "isExpand": false,
+      "tagOnClick": "testClick",
+      "test": ""
+    }
+  },
+  "form": {
+    "config": {
+      "level": { "hidden": true, "value": "licenciatura" },
+      "program": { "hidden": false, "value": "Psicología" },
+      "modality": { "hidden": false },
+      "campus": { "hidden": false }
+    },
+    "copies": {
+      "stepone": {
+        "title": "Obtén informes sobre tu programa",
+        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+      }
+    }
+  }
+}

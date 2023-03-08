@@ -1,0 +1,37 @@
+$base-size: 16px;
+
+@mixin no-text-selection {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+@function pixeltorem($size) {
+  $remSize: 0;
+
+  @if $size == 0 {
+    $remSize: 0;
+  }
+
+  @else {
+    $remSize: $size / $base-size;
+  }
+
+  @return #{$remSize}rem;
+}
+
+$palette-neutral: (
+  n00: #fff,
+  n05: #f2f2f2,
+  n10: #e6e6e6,
+  n20: #cdcdcd,
+  n40: #9a9a9a,
+  n60: #686868,
+  n70: #818181,
+  n80: #282828,
+  n90: #868686,
+  sc-ev-15: rgba(0, 0, 0, 0.15),
+  sc-ev-30: rgba(0, 0, 0, 0.15),
+  sc-ev-60:  rgba(0, 0, 0, 0.15),
+);

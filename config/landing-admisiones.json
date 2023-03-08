@@ -1,0 +1,499 @@
+{
+  "meta": {
+    "title": "Admisiones UANE",
+    "description": "",
+    "keywords": ""
+  },
+  "sections": {
+    "head": {
+      "title":"Inscríbete en UANE",
+      "textIcons":[
+        {
+          "icon": "https://drive.google.com/uc?export=view&id=1T0zh7_wWn_U7vC8Ghb1OnvK9Vf_iw8RI",
+          "name": "trophy", 
+          "text": "48 años nos respaldan"
+        },
+        {
+          "icon": "https://drive.google.com/uc?export=view&id=1zMwTLnS12WxMDnzO7oUt1MhUZYKtaqIv",
+          "name": "studentIcon",
+          "text": "+13,500 alumnos en todas nuestras modalidades"
+        },
+        {
+          "icon": "https://drive.google.com/uc?export=view&id=1oxx9Lwrg7_C5nnNGnqYIsU7Y4QmDbTgM",
+          "name": "graduateIcon",
+          "text": "+50,000 egresados"
+        },
+        {
+          "icon": "https://drive.google.com/uc?export=view&id=1rJEHj6oYdFn3DI0k8-AJyKJEwPZ8vlxk",
+          "name": "workIcon",
+          "text": "+760 convenios empresariales para una acelerada inserción laboral"
+        }
+      ],
+      "button": {"id":"123","title": "Quiero más información", "type": "primary", "icon": "", "isExpand": false, "size":"small"},
+      "image": {
+        "desk": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1zUHr9b2_nXj94EcxJStO0PM5djT3HnjW"
+        },
+        "mobile": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1CUn9n-9_pAb964N6v1YuG0xaHLLeieRZ"
+        }
+      }
+    },
+    "requirements": {
+      "title": "Requisitos de admisión",
+      "tabs": {
+        "items":[
+          {
+            "label": "Bachillerato", "icons": { "primary": "", "duplicate": true }, "disabled": false,
+            "content": {
+              "image": {
+                "alt": "imagen",
+                "src": "https://drive.google.com/uc?export=view&id=1PET9mqMDMaVdRgT45CA-aGxRTTJwIsGO"
+              },
+              "content": {
+                "title": "",
+                "description": "\n\n• Acta de nacimiento reciente, original del cajero y 2 copias.\n\n• Certificado de secundaria original y 2 copias.\n\n En caso de equivalencia presentar certificado parcial original legalizado con carta de autenticidad. (Si aún no cuenta traer constancia de trámite)\n\n• CURP copia.\n\n• 4 fotografías tamaño infantil y 4 tamaño credencial, ambas blanco y negro, papel mate no instantáneas.\n\n• Constancia de calificaciones si aún no gradúan de secundaria.\n\n• Carta de buena salud expedida por institución pública o privada.",
+                "action": {"title": "Explora los programas", "type": "primary", "icon": "", "isExpand": false, "route": "/oferta-educativa/bachillerato"}
+              },
+              "cards": [
+                { 
+                  "image": "https://drive.google.com/uc?export=view&id=1E3aYNZfcCA4rH3VFUwpxo79NiyTdS66L",
+                  "subtitle": "",
+                  "title": "Presencial",
+                  "text": "¡Vive la experiencia educativa en el campus! Asiste de manera tradicional a clases con el mejor ambiente estudiantil",
+                  "border": true,
+                  "allContent": true,
+                  "height": "",
+                  "isShowCardWebsiteContent": true,
+                  "id": "",
+                  "type": "horizontal",
+                  "link": true,
+                  "background": false,
+                  "wrapper": true
+                },
+                { 
+                  "image": "https://drive.google.com/uc?export=view&id=1FpIUYqbMOhqQL3r_lPftk7SEmjjM0UiE",
+                  "subtitle": "",
+                  "title": "UANE Online",
+                  "text": "Si buscas estudiar desde cualquier lugar, sin descuidar tu trabajo o estilo de vida, este sistema es para ti, gracias a nuestra plataforma virtual.",
+                  "border": true,
+                  "allContent": true,
+                  "height": "",
+                  "isShowCardWebsiteContent": true,
+                  "id": "",
+                  "type": "horizontal",
+                  "link": true,
+                  "background": false,
+                  "wrapper": true
+                },
+                { 
+                  "image": "https://drive.google.com/uc?export=view&id=1qqftwM5Pp54WBR56-jo6ecctiK-tH3-D",
+                  "subtitle": "",
+                  "title": "UANE Flex (Híbrido)",
+                  "text": "¡Combina lo mejor de dos mundos! Asiste todos los sábados al campus con tus maestros y el resto de la semana lleva tus materias de manera virtual.",
+                  "border": true,
+                  "allContent": true,
+                  "height": "",
+                  "isShowCardWebsiteContent": true,
+                  "id": "",
+                  "type": "horizontal",
+                  "link": true,
+                  "background": false,
+                  "wrapper": true
+                }
+              ]
+            }
+          },
+          {
+            "label": "Licenciatura", "icons": { "primary": "", "duplicate": true }, "disabled": false,
+            "content": {
+              "image": {
+                "alt": "imagen",
+                "src": "https://drive.google.com/uc?export=view&id=1PET9mqMDMaVdRgT45CA-aGxRTTJwIsGO"
+              },
+              "content": {
+                "title": "",
+                "description": "\n\n• Acta de nacimiento reciente, original del cajero y dos copias.\n\n• Certificado de secundaria legalizado original y dos copias.\n\n• Certificado de preparatoria legalizado original y dos copias con su carta de autenticidad. (En caso de no contar con original, presentar constancia de que está en trámite).\n\n• CURP copia.\n\nEn caso de equivalencia\n\n• Certificado parcial de estudios legalizado original con dos copias y carta de autenticidad.\n\n• Cuatro fotografías tamaño infantil y cuatro tamaño credencial, ambas blanco y negro, papel mate no instantáneas.\n\n• Carta de buena salud expedida por institución pública o privada.",
+                "action": {"title": "Explora los programas", "type": "primary", "icon": "", "isExpand": false, "route": "/oferta-educativa/licenciatura"}
+              },
+              "cards": [
+                { 
+                  "urlImage": "https://drive.google.com/uc?export=view&id=1E3aYNZfcCA4rH3VFUwpxo79NiyTdS66L",
+                  "subtitle": "",
+                  "title": "Presencial",
+                  "text": "¡Vive la experiencia educativa en el campus! Asiste de manera tradicional a clases con el mejor ambiente estudiantil",
+                  "border": true,
+                  "allContent": true,
+                  "height": "",
+                  "isShowCardWebsiteContent": true,
+                  "id": "",
+                  "type": "",
+                  "link": true,
+                  "background": false,
+                  "wrapper": true
+                },
+                { 
+                  "urlImage": "https://drive.google.com/uc?export=view&id=1FpIUYqbMOhqQL3r_lPftk7SEmjjM0UiE",
+                  "subtitle": "",
+                  "title": "UANE Online",
+                  "text": "Si buscas estudiar desde cualquier lugar, sin descuidar tu trabajo o estilo de vida, este sistema es para ti, gracias a nuestra plataforma virtual.",
+                  "border": true,
+                  "allContent": true,
+                  "height": "",
+                  "isShowCardWebsiteContent": true,
+                  "id": "",
+                  "type": "",
+                  "link": true,
+                  "background": false,
+                  "wrapper": true
+                },
+                { 
+                  "urlImage": "https://drive.google.com/uc?export=view&id=1qqftwM5Pp54WBR56-jo6ecctiK-tH3-D",
+                  "subtitle": "",
+                  "title": "UANE Flex (Híbrido)",
+                  "text": "¡Combina lo mejor de dos mundos! Asiste todos los sábados al campus con tus maestros y el resto de la semana lleva tus materias de manera virtual.",
+                  "border": true,
+                  "allContent": true,
+                  "height": "",
+                  "isShowCardWebsiteContent": true,
+                  "id": "",
+                  "type": "",
+                  "link": true,
+                  "background": false,
+                  "wrapper": true
+                }
+              ]
+              }
+          },
+          {
+            "label": "Maestría", "icons": { "primary": "", "duplicate": true }, "disabled": false,
+            "content": {
+              "image": {
+                "alt": "imagen",
+                "src": "https://drive.google.com/uc?export=view&id=1PET9mqMDMaVdRgT45CA-aGxRTTJwIsGO"
+              },
+              "content": {
+                "title": "",
+                "description": "\n\n• Acta de nacimiento original del cajero reciente y dos copias\n\n• Copia fiel del título (Constancia de trámite en caso de aún no tener el título)\n\n• Copia de cédula (traer original para copia)\n\n• Impresión de CURP directo de intenet sin ampliación\n\n• CV y Constancia laboral\n\n• Fotografías (Preguntar por especificaciones)\n\n• Solicitud de Admisión",
+                "action": {"title": "Explora los programas", "type": "primary", "icon": "", "isExpand": false, "route": "/oferta-educativa/maestria"}
+              },
+              "cards": [
+                { 
+                  "urlImage": "https://drive.google.com/uc?export=view&id=1E3aYNZfcCA4rH3VFUwpxo79NiyTdS66L",
+                  "subtitle": "",
+                  "title": "Presencial",
+                  "text": "¡Vive la experiencia educativa en el campus! Asiste de manera tradicional a clases con el mejor ambiente estudiantil",
+                  "border": true,
+                  "allContent": true,
+                  "height": "",
+                  "isShowCardWebsiteContent": true,
+                  "id": "",
+                  "type": "",
+                  "link": true,
+                  "background": false,
+                  "wrapper": true
+                },
+                { 
+                  "urlImage": "https://drive.google.com/uc?export=view&id=1FpIUYqbMOhqQL3r_lPftk7SEmjjM0UiE",
+                  "subtitle": "",
+                  "title": "UANE Online",
+                  "text": "Si buscas estudiar desde cualquier lugar, sin descuidar tu trabajo o estilo de vida, este sistema es para ti, gracias a nuestra plataforma virtual.",
+                  "border": true,
+                  "allContent": true,
+                  "height": "",
+                  "isShowCardWebsiteContent": true,
+                  "id": "",
+                  "type": "",
+                  "link": true,
+                  "background": false,
+                  "wrapper": true
+                },
+                { 
+                  "urlImage": "https://drive.google.com/uc?export=view&id=1qqftwM5Pp54WBR56-jo6ecctiK-tH3-D",
+                  "subtitle": "",
+                  "title": "UANE Flex (Híbrido)",
+                  "text": "¡Combina lo mejor de dos mundos! Asiste todos los sábados al campus con tus maestros y el resto de la semana lleva tus materias de manera virtual.",
+                  "border": true,
+                  "allContent": true,
+                  "height": "",
+                  "isShowCardWebsiteContent": true,
+                  "id": "",
+                  "type": "",
+                  "link": true,
+                  "background": false,
+                  "wrapper": true
+                }
+              ]
+              }
+          },
+          {
+            "label": "Especialidad", "icons": { "primary": "", "duplicate": true }, "disabled": false,
+            "content": {
+              "image": {
+                "alt": "imagen",
+                "src": "https://drive.google.com/uc?export=view&id=1PET9mqMDMaVdRgT45CA-aGxRTTJwIsGO"
+              },
+              "content": {
+                "title": "",
+                "description": "\n\n• Acta de nacimiento original del cajero reciente y dos copias\n\n• Copia fiel del título (Constancia de trámite en caso de aún no tener el título)\n\n• Copia de cédula (traer original para copia)\n\n• Impresión de CURP directo de intenet sin ampliación\n\n• CV y Constancia laboral\n\n• Fotografías (Preguntar por especificaciones)\n\n• Solicitud de Admisión",
+                "action": {"title": "Explora los programas", "type": "primary", "icon": "", "isExpand": false, "route": "/oferta-educativa/especialidad"}
+              },
+              "cards": [
+                { 
+                  "urlImage": "https://drive.google.com/uc?export=view&id=1E3aYNZfcCA4rH3VFUwpxo79NiyTdS66L",
+                  "subtitle": "",
+                  "title": "Presencial",
+                  "text": "¡Vive la experiencia educativa en el campus! Asiste de manera tradicional a clases con el mejor ambiente estudiantil",
+                  "border": true,
+                  "allContent": true,
+                  "height": "",
+                  "isShowCardWebsiteContent": true,
+                  "id": "",
+                  "type": "",
+                  "link": true,
+                  "background": false,
+                  "wrapper": true
+                },
+                { 
+                  "urlImage": "https://drive.google.com/uc?export=view&id=1FpIUYqbMOhqQL3r_lPftk7SEmjjM0UiE",
+                  "subtitle": "",
+                  "title": "UANE Online",
+                  "text": "Si buscas estudiar desde cualquier lugar, sin descuidar tu trabajo o estilo de vida, este sistema es para ti, gracias a nuestra plataforma virtual.",
+                  "border": true,
+                  "allContent": true,
+                  "height": "",
+                  "isShowCardWebsiteContent": true,
+                  "id": "",
+                  "type": "",
+                  "link": true,
+                  "background": false,
+                  "wrapper": true
+                },
+                { 
+                  "urlImage": "https://drive.google.com/uc?export=view&id=1qqftwM5Pp54WBR56-jo6ecctiK-tH3-D",
+                  "subtitle": "",
+                  "title": "UANE Flex (Híbrido)",
+                  "text": "¡Combina lo mejor de dos mundos! Asiste todos los sábados al campus con tus maestros y el resto de la semana lleva tus materias de manera virtual.",
+                  "border": true,
+                  "allContent": true,
+                  "height": "",
+                  "isShowCardWebsiteContent": true,
+                  "id": "",
+                  "type": "",
+                  "link": true,
+                  "background": false,
+                  "wrapper": true
+                }
+              ]
+              }
+          },
+          {
+            "label": "Doctorado", "icons": { "primary": "", "duplicate": true }, "disabled": false,
+            "content": {
+              "image": {
+                "alt": "imagen",
+                "src": "https://drive.google.com/uc?export=view&id=1PET9mqMDMaVdRgT45CA-aGxRTTJwIsGO"
+              },
+              "content": {
+                "title": "",
+                "description": "\n\n• Acta de nacimiento original del cajero reciente y dos copias\n\n• Copia fiel del título (Constancia de trámite en caso de aún no tener el título)\n\n• Copia de cédula (traer original para copia)\n\n• Impresión de CURP directo de intenet sin ampliación\n\n• CV y Constancia laboral\n\n• Fotografías (Preguntar por especificaciones)\n\n• Solicitud de Admisión",
+                "action": {"title": "Explora los programas", "type": "primary", "icon": "", "isExpand": false, "route": "/oferta-educativa/doctorado"}
+              },
+              "cards": [
+                { 
+                  "urlImage": "https://drive.google.com/uc?export=view&id=1E3aYNZfcCA4rH3VFUwpxo79NiyTdS66L",
+                  "subtitle": "",
+                  "title": "Presencial",
+                  "text": "¡Vive la experiencia educativa en el campus! Asiste de manera tradicional a clases con el mejor ambiente estudiantil",
+                  "border": true,
+                  "allContent": true,
+                  "height": "",
+                  "isShowCardWebsiteContent": true,
+                  "id": "",
+                  "type": "",
+                  "link": true,
+                  "background": false,
+                  "wrapper": true
+                },
+                { 
+                  "urlImage": "https://drive.google.com/uc?export=view&id=1FpIUYqbMOhqQL3r_lPftk7SEmjjM0UiE",
+                  "subtitle": "",
+                  "title": "UANE Online",
+                  "text": "Si buscas estudiar desde cualquier lugar, sin descuidar tu trabajo o estilo de vida, este sistema es para ti, gracias a nuestra plataforma virtual.",
+                  "border": true,
+                  "allContent": true,
+                  "height": "",
+                  "isShowCardWebsiteContent": true,
+                  "id": "",
+                  "type": "",
+                  "link": true,
+                  "background": false,
+                  "wrapper": true
+                },
+                { 
+                  "urlImage": "https://drive.google.com/uc?export=view&id=1qqftwM5Pp54WBR56-jo6ecctiK-tH3-D",
+                  "subtitle": "",
+                  "title": "UANE Flex (Híbrido)",
+                  "text": "¡Combina lo mejor de dos mundos! Asiste todos los sábados al campus con tus maestros y el resto de la semana lleva tus materias de manera virtual.",
+                  "border": true,
+                  "allContent": true,
+                  "height": "",
+                  "isShowCardWebsiteContent": true,
+                  "id": "",
+                  "type": "",
+                  "link": true,
+                  "background": false,
+                  "wrapper": true
+                }
+              ]
+              }
+          }
+        ],
+        "size": "medium"
+      }
+    },
+    "internacionalizacion": {
+      "banner": {
+        "image": {
+          "desktop": "https://drive.google.com/uc?export=view&id=1Y_edCTwyeAXRGkcjqf5V2S8QEyVYaENW",
+          "mobile": "https://drive.google.com/uc?export=view&id=1PZURny8POJsMYHamJycNKgM3LmxoMUiK",
+          "tablet": "https://drive.google.com/uc?export=view&id=1TpgDT_hQIJ0hew0WPp40M21oURKnD9B_"
+        },
+        "title": "UANE Internacional",
+        "subtitle": "Internacionalízate agrega experiencias internacionales a tu educación",
+        "position": "left-bottom",
+        "height": "300px",
+        "overlayWhite":false,
+        "overlayDak": false,
+        "button":{
+          "id": "",
+          "type": "outlined",
+          "title": "Conocer más",
+          "size": "small",
+          "icon": "",
+          "lyIcon": false,
+          "disabled": false,
+          "isExpand": false,
+          "tagOnClick": "",
+          "test": ""
+        },
+        "noAction": false,
+        "redirect": "/nosotros/internacionalizacion"
+      }
+    },
+    "empleabilidad": {
+      "banner":{
+        "image": {
+          "desktop": "https://drive.google.com/uc?export=view&id=1EFLlkdIgmmhEjT9MhRsMV95VOLJWiGLd",
+          "mobile": "https://drive.google.com/uc?export=view&id=1ZUOdTVdzIjtW5zxjAt0P1plB4wEeexl4",
+          "tablet": "https://drive.google.com/uc?export=view&id=1Pbqg2oRfuFjD4wnVYSRlYBWQK0cIu9qT"
+        },
+        "title": "Empleabilidad en UANE",
+        "subtitle": "Inscríbete en nuestra Bolsa de Trabajo y encuentra empleo",
+        "position": "right-bottom",
+        "height": "350px",
+        "overlayWhite":false,
+        "overlayDak": true,
+        "button":{
+          "id": "",
+          "type": "outlined",
+          "title": "Conocer más",
+          "size": "small",
+          "icon": "",
+          "lyIcon": false,
+          "disabled": false,
+          "isExpand": false,
+          "tagOnClick": "",
+          "test": ""
+        },
+        "noAction": false,
+        "redirect": "/nosotros/empleabilidad"
+      }
+    },
+    "becas": {
+      "banner":{
+        "image": {
+          "desktop": "https://drive.google.com/uc?export=view&id=1I81w0SvSs7u-tr-qC_GMLXtS6rrh9G6I",
+          "mobile": "https://drive.google.com/uc?export=view&id=1eNqySRZqOi0naAcqYMRGw0Jq2h6ZGNfW",
+          "tablet": "https://drive.google.com/uc?export=view&id=1I81w0SvSs7u-tr-qC_GMLXtS6rrh9G6I"
+        },
+        "title": "Conoce las becas que tenemos para ti",
+        "subtitle": "Mira sus experiencias.",
+        "position": "",
+        "height": "350px",
+        "overlayWhite":false,
+        "overlayDak": true,
+        "button":{
+          "id": "",
+          "type": "outlined",
+          "title": "Conocer más",
+          "size": "small",
+          "icon": "",
+          "lyIcon": false,
+          "disabled": false,
+          "isExpand": false,
+          "tagOnClick": "",
+          "test": ""
+        },
+        "noAction": false,
+        "redirect": "/admisiones/becas"
+      }
+    },
+    "egresados":{
+      "title": "Los egresados de UANE nos cuentan sus historias",
+      "description": "En UANE dejamos huella de oso en cada paso que damos, piensa y estudia en grande.",
+      "cards": [
+        { 
+          "image": "https://drive.google.com/uc?export=view&id=1dUsNbdPsO41DxKvGxCixRy3Kh4SxEgiu",    
+          "subtitle": "Alumna, en Psicología",
+          "title": "María Torres",
+          "text": "\"Estudiar en UANE hace que me sienta como en casa, soy parte de una familia.\"",
+          "border": true,
+          "type": "vertical",
+          "islink": false,
+          "background": true
+        },
+        { 
+          "image": "https://drive.google.com/uc?export=view&id=1zS4Yaux64foY96PUFyFulCV8c50Brbbb",
+          "subtitle": "Egresado, Lic. en Mercadotecnia Internacional",
+          "title": "Erick Santoyo",
+          "text": "\"UANE ha transformado mis experiencias laborales permitiendo crecer con todas las herramientas y conocimientos que adquirí durante mi carrera profesional\"",
+          "border": true,
+          "type": "vertical",
+          "islink": false,
+          "background": true
+        }
+      ],
+      "button":{"title": "Quiero más información", "type": "primary", "icon": "", "isExpand": false, "redirect": "egresados/talento"},
+      "video": {"options": { "id": "AIgIgANXCx0", "type": "single", "controls": true}, "dimensions": { "height": "400px"} }
+    },
+    "FAQ":{
+      "title": "Preguntas frecuentes",
+      "questions": [
+        {
+          "title": "¿Qué requisitos solicitan para ingresar?",
+          "answer": "Tendrá la calidad de alumno de licenciatura en la Universidad, la persona que:\n- Presente y apruebe el examen de admisión.\n- Entregue la totalidad de la documentación requerida en la solicitud de admisión.\n- Sea admitido por la Subdirección de Documentación y Control Escolar del Campus correspondiente."
+        },
+        {
+          "title": "¿Cuentan con revalidaciones y equivalencias?",
+          "answer": "La Universidad podrá hacer equivalencias de los estudios cursados en otras instituciones que formen parte del Sistema Educativo Nacional así como de la propia universidad. La revalidación de los estudios hechos en planteles oficiales o privados de otros países, deberá tramitarse ante la Dirección de Incorporación y Revalidación de la Secretaría de Educación Pública en México. Acude a tu campus más cercano para analizar tu caso."
+        },
+        {
+          "title": "¿Tienen becas?",
+          "answer": "Los distintos tipos de beca que otorga la Universidad se orientan a satisfacer dos grandes propósitos: el primero, cuyo fin es apoyar económicamente a los alumnos que así lo requieran, y el segundo, para estimular a los alumnos que por su alto nivel de aprovechamiento o por sus actividades académicas o extra-académicas prestigien a la Universidad. Te sugerimos revisar directamente en campus las opciones correspondientes y los pasos a seguir para solicitarlas."
+        },
+        {
+          "title": "¿Cuentan con Bolsa de Trabajo?",
+          "answer": "Contamos con más de 790 convenios con empresas a nivel nacional para una rápida inserción laboral, desde que se realizan las practicas profesionales, bolsa de empleo y seminarios y conferencias con grandes ponencias de negocios e industria."
+        },
+        {
+          "title": "¿Hay opciones para irme de intercambio?",
+          "answer": "A través de UANE INTERNACIONAL puedes compartir tu desarrollo académico y profesional con maestros y compañeros de otros países del mundo.\nLas experiencias internacionales son clave para potencializar tus conocimientos y habilidades, además amplían tu visión personal y profesional; es por ello que UANE apuesta por una formación global, brindando la oportunidad de tener clases espejo, webinars internacionales, intercambios de materias y movilidad al extranjero, así como distintos proyectos en conjunto con las mejores universidades de Latinoamérica y Europa."
+        }
+      ],
+      "button":{"title": "Ver más preguntas", "type": "outlined", "icon": "", "isExpand": false, "redirect":"/contactanos/faq/general"}
+    }
+  }
+}

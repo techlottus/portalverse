@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "title": "Maestría en Comunicación Empresarial",
+    "description": "",
+    "keywords": ""
+  },
+  "config": {
+    "title": "Maestría en Comunicación Empresarial",
+    "config": {
+      "nombre": "Maestría en Comunicación Empresarial",
+      "modalidad": ["Online"],
+      "areaConocimiento": ["Ciencias Sociales"],
+      "campus": [],
+      "nivel": ["Posgrado"],
+      "image": {
+        "src": "https://drive.google.com/uc?export=view&id=1UqcZBJzb0vCJT1m4kLcxT7KFYcLFolEEI",
+        "alt": "maestria"
+      },
+      "curriculum": {
+        "Online": "1GEvzaoG8mhEsG39uEuWw-QuDEMYEYWl3"
+      }
+    }
+  },
+  "sections": {
+    "head": {
+      "title": "Maestría en Comunicación Empresarial",
+      "description": "Desarrolla planes estratégicos dentro del entorno empresarial a través de recursos comunicativos y publicitarios para mejorar la Responsabilidad Social Corporativa.",
+      "image": {
+        "src": "https://drive.google.com/uc?export=view&id=1UqcZBJzb0vCJT1m4kLcxT7KFYcLFolEE",
+        "alt": "maestria"
+      }
+    },
+    "modalities": {
+      "title": "Modalidades disponibles en esta maestría:",
+      "tabs": {
+        "items": [
+          {
+            "label": "Modalidad Online", "icons": { "primary": "", "duplicate": false}, "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
+                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "El aspirante a ingresar a la Maestría en Comunicación Empresarial, deberá contar con los siguientes conocimientos:\n\n • La expresión oral y escrita.\n\n • La investigación y redacción de documentos.\n\n • Manejo de relaciones interpersonales.\n\n • El análisis de problemas públicos.\n\n • Diseñar estrategias.\n\n • Transferencia de información al contexto empresarial.\n\n • Realizar operaciones numéricas y saber estimar cantidades y lectura de las mismas en aspectos contables.\n\n • Interpretar cifras y resolver problemas cuantificables.",
+                  "backgroundColor": "#8B9BA3"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "El aspirante a ingresar a la Maestría en Comunicación Empresarial, deberá contar con los siguientes conocimientos:\n- La expresión oral y escrita.\n- La investigación y redacción de documentos.\n- Manejo de relaciones interpersonales.\n- El análisis de problemas públicos.\n- Diseñar estrategias.\n- Transferencia de información al contexto empresarial.\n- Realizar operaciones numéricas y saber estimar cantidades y lectura de las mismas en aspectos contables.\n- Interpretar cifras y resolver problemas cuantificables.",
+                  "backgroundColor": "#B0003C"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "El egresado de la maestria en Comunicación Empresarial genera, desarrolla e implanta estrategias de comunicación que apoyen y respalden los objetivos de la empresa, ofrece cambios, integración y refuerzo de personal, productividad y alcance de metas, puede desempeñarse en el sector público, privado o como independiente.",
+                  "backgroundColor": "#E84537"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "\n\n• Acta de nacimiento original del cajero reciente y 2 copias\n\n• Copia fiel del título (Constancia de trámite en caso de aún no tener el título)\n\n• Copia de cédula (traer original para copia)\n\n• Impresión de CURP directo de intenet sin ampliación\n\n• CV y Constancia laboral\n\n• Fotografías (Preguntar por especificaciones)\n\n• Solicitud de Admisión",
+                  "backgroundColor": "#00BEB4"
+                }
+              ],
+              "wrapper": false
+            }
+          }
+        ],
+        "size": "medium"
+      }
+    },
+    "descarga": {
+      "id": "program_maestria",
+      "type": "primary",
+      "title": "Descarga el plan de estudios",
+      "size": "small",
+      "icon": "download",
+      "lyIcon": false,
+      "disabled": false,
+      "isExpand": false,
+      "tagOnClick": "testClick",
+      "test": ""
+    }
+  },
+  "form": {
+    "config": {
+      "level": { "hidden": true, "value": "maestria" },
+      "program": { "hidden": false, "value": "Comunicación Empresarial" },
+      "modality": { "hidden": false },
+      "campus": { "hidden": false }
+    },
+    "copies": {
+      "stepone": {
+        "title": "Obtén informes sobre tu programa",
+        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+      }
+    }
+  }
+}

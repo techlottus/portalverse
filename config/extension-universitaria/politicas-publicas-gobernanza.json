@@ -1,0 +1,115 @@
+{
+  "meta":{
+    "title": "Políticas Públicas en Gobernanza",
+    "description": "",
+    "keywords": ""
+  },
+  "sections":{
+    "head":{
+      "title": "Políticas Públicas en Gobernanza",
+      "image": {
+        "alt": "imagen",
+        "src": "https://drive.google.com/uc?export=view&id=11jtwA0pka49L_8w5OSRRhzXXqnnoFMsB"
+      },
+      "description": "Duración aproximada: 120 horas\n\nPerfil del participante: Estudiantes, graduados universitarios y a profesionales que operan dentro o en relación con el sector público, ofrece la posibilidad de conocer, con una visión de conjunto las diferentes técnicas y herramientas para hacer que las políticas públicas cumplan con el valor efectivo e innovador de transformación social en el que deben estar inspiradas.\n\nCarreras afines: Todas las áreas\n\nObjetivo: Conocer una visión de conjunto las diferentes técnicas y herramientas para hacer que las políticas públicas cumplan con el valor efectivo e innovador de transformación social en el que deben estar inspiradas.\n\nTemas a abordar:\n1. Problemas Públicos, Análisis del Entorno y Toma de Decisiones.\n2. Implementación Responsable e Innovadora de Iolíticas.\n3. Mapa de Actores y Juego de Influencias en la Agenda Pública.\n4. Evaluación de Impacto y Transformación Pública.\n\nRecursos de aprendizaje:\n1. Campus Online \n\nEvaluación: La evaluación se realizará por medio de actividades y exámenes.\n\n*SKR internacional<br/>Universidad Europea del Atlántico",
+      "price": "$8000.00*"
+    },
+    "relatedCourses":{
+      "title": "Cursos relacionados",
+      "courses": [
+        {
+          "id": "123",
+          "title": "Análisis de datos",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":"arrow_forward"
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        },
+        {
+          "id": "123",
+          "title": "Derecho de Autor y Propiedad Intelectual",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":""
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        },
+        {
+          "id": "123",
+          "title": "Estrategias de tiendas en línea",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":""
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        },
+        {
+          "id": "123",
+          "title": "Mega tendencias Globales",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":""
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        }
+      ]
+    }
+  }
+}

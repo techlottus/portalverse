@@ -1,0 +1,61 @@
+.dropdown {
+  @include no-text-selection;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  padding: pixeltorem(12px) pixeltorem(8px);
+  cursor: pointer;
+
+  p {
+    flex-grow: 1;
+    font-size: pixeltorem(16px);
+    line-height: pixeltorem(20px);
+    font-weight: bold;
+  }
+
+  span.icon {
+    font-size: pixeltorem(20px);
+  }
+
+  span:nth-child(1) {
+    margin-right: pixeltorem(8px);
+  }
+
+  span:nth-child(3) {
+    margin-left: pixeltorem(8px);
+    font-weight: bold;
+  }
+}
+
+.dropdown-list {
+  @include no-text-selection;
+
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  div {
+    border-top: pixeltorem(1px) solid map-get($palette-neutral, 'n20');
+
+    &:hover {
+      background-color: map-get($palette-neutral, 'n20');
+    }
+
+    ::ng-deep lottus-checkbox {
+      div {
+        label {
+          padding: pixeltorem(12px) pixeltorem(8px);
+        }
+      }
+    }
+  }
+
+  div:last-child {
+    padding: pixeltorem(8px);
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

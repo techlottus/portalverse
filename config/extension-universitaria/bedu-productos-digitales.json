@@ -1,0 +1,46 @@
+{
+  "meta":{
+    "title": "BEDU Curso en Diseño de Productos Digitales",
+    "description": "",
+    "keywords": ""
+  },
+  "sections":{
+    "head":{
+      "title": "BEDU Curso en Diseño de Productos Digitales",
+      "image": {
+        "alt": "imagen",
+        "src": "https://drive.google.com/uc?export=view&id=1kRqtoSeQEDUp7RgrQlI9TEJzwr7mJsEV"
+      },
+      "description": "Duración aproximada: 60 horas remoto en vivo + 48 horas contenido online\n\nPerfil del participante: Dirigido a alumnos que tengan interés en diseñar productos digitales principales.\n\nCarreras afines: Todas las áreas\n\nObjetivo: Al finalizar el curso de Diseño de productos digitales en BEDU, serás capaz de proponer soluciones centradas en personas basadas en investigación, pruebas con usuarios y metodologías innovadoras garantizando la optimización de la experiencia.\n\nTemas a abordar:\n\nMódulo I Fundamentos de diseño de Experiencia de Usuario Nivel introductorio<br/>Módulo II Diseño de Experiencia de Usuario Intermedio Nivel introductorio\n\nRecursos de aprendizaje:\n1. Contenido Online\n2. Sesiones remotas con expertos\n\nEvaluación:\nLa evaluación se realizará por medio de actividades y exámenes.",
+      "price": "$5,520*"
+    },
+    "relatedCourses":{
+      "title": "Cursos relacionados",
+      "courses": [
+        {
+          "id": "123",
+          "title": "Análisis de datos",
+          "link":{
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id":"",
+            "icon":"arrow_forward"
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        }
+      ]
+    }
+  }
+}

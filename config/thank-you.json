@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "title": "Gracias",
+    "description": "",
+    "keywords": ""
+  },
+  "sections": {
+    "agradecimiento": {
+      "socialMediaTitle": "Síguenos en redes sociales",
+      "social": [
+        { "name": "facebook", "link": "https://es-la.facebook.com/UANEOficial/" },
+        { "name": "instagram", "link": "https://www.instagram.com/uaneoficial/?hl=es" },
+        { "name": "tiktok", "link": "https://www.youtube.com/channel/UCir4jyZ8CBUQ-MhUUxdUiHQ/videos?app=desktop" },
+        { "name": "youtube", "link": "https://www.tiktok.com/@uaneoficial?lang=es" }
+      ]
+    },
+    "video": {
+      "options": {
+        "id": "DxJpI7jdB9Q",
+        "type": "single",
+        "controls": true
+      },
+      "dimensions": {
+        "height": "500px"
+      }
+    }
+  }
+}

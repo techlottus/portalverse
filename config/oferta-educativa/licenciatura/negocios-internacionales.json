@@ -1,0 +1,157 @@
+{
+    "meta": {
+      "title": "Licenciatura en Negocios Internacionales",
+      "description": "",
+      "keywords": ""
+    },
+    "config": {
+      "title": "Licenciatura en Negocios Internacionales",
+      "config": {
+        "nombre": "Licenciatura en Negocios Internacionales",
+        "modalidad": ["Online", "Flex"],
+        "areaConocimiento": ["Económico - Adminstrativo"],
+        "campus": [ "Saltillo", "Piedras Negras", "Monterrey", "Matamoros", "Torreón" ],
+        "nivel": ["Licenciatura"],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=10LllvEL2GU4OeedbAnYx5ZFpI_E6pljm",
+          "alt": "licenciatura"
+        },
+        "curriculum": {
+          "Flex": "1AsCO1TnA9_SRW0a-txtHhgu3fUYg10Sj",
+          "Online": "1UpvgY49JIzS-FhmlWAn9TdIAdqYktL0E"
+        }
+      }
+    },
+    "sections": {
+      "head": {
+        "title": "Licenciatura en Negocios Internacionales",
+        "description": "Diseña modelos de negocios y genera soluciones creativas a las necesidades del mercado mundial, así promueve estrategias para el logro de objetivos en organizaciones públicas y privadas basados en un dominio de los conocimientos, habilidades y actitudes que la competencia internacional exige, todo ello en términos de proporcionar una ventaja competitiva.",
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=10LllvEL2GU4OeedbAnYx5ZFpI_E6pljm",
+          "alt": "Contaduría"
+        }
+      },
+      "modalities": {
+        "title": "Modalidades disponibles en esta licenciatura:",
+        "tabs": {
+          "items": [
+            {
+              "label": "Modalidad Online", "icons": { "primary": "", "duplicate": false}, "disabled": false,
+              "content": {
+                "cards": [
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
+                      "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
+                    },
+                    "title": "Perfil de ingreso",
+                    "text": "El aspirante a ingresar a la Licenciatura en Negocios Internacionales deberá contar con los siguientes conocimientos:\n\nSensibilidad a las necesidades sociales; expresión oral / escrita, investigación, comunicación efectiva y liderazgo de grupos de trabajo; evaluación fortalezas y debilidades de los equipos de trabajo; razonamiento lógico; solución de problemas con base en principios, leyes y conceptos; y desarrollo de pensamiento crítico y constructivo.",
+                    "backgroundColor": "#8B9BA3"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
+                    },
+                    "title": "Perfil de egreso",
+                    "text": "Conocerá las estrategias financieras y económicas para la evaluación de viabilidad y factibilidad de un negocio.\n\nEjecutará procesos administrativos sobre empresas internacionales y análisis micro y macroeconómico mundial.\n\nDirigirá al capital humano en el ámbito internacional, considerando el factor multicultural.\n\nAplicará conceptos jurídicos, económicos, administrativos y de mercado.\n\nDiseñará modelos de negocios y estrategias comerciales internacionales que permitan obtener una ventaja competitiva.",
+                    "backgroundColor": "#B0003C"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
+                    },
+                    "title": "Campo Laboral",
+                    "text": "Como egresado de la Licenciatura de Negocios Internacionales podrás desarrollarte en industrias del sector público y privado que realicen importación y exportación de productos, empresas transportistas, agencias aduanales, instituciones financieras y dependencias del gobierno.\n\nAdemás, tienes la oportunidad de administrar una agencia aduanal y/o ser consultor de comercio internacional. Desenvuélvete en paqueterías internacionales o agencias de carga internacional; verifica la mercancía a exportar. ",
+                    "backgroundColor": "#E84537"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
+                    },
+                    "title": "Requisitos de admisión",
+                    "text": "\n\n• Acta de nacimiento reciente, original del cajero y 2 copias.\n\n• Certificado de secundaria legalizado original y dos copias.\n\n• Certificado de preparatoria legalizado original y 2 copias con su carta de autenticidad. (En caso de no contar con original, presentar constancia de que está en trámite).\n\n• CURP copia.\n\nEn caso de equivalencia\n\n• Certificado parcial de estudios legalizado original con 2 copias y carta de autenticidad.\n\n• 4 fotografías tamaño infantil y 4 tamaño credencial, ambas blanco y negro, papel mate no instantáneas.\n\n• Carta de buena salud expedida por institución pública o privada.",
+                    "backgroundColor": "#00BEB4"
+                  }
+                ],
+                "wrapper": false
+              }
+            },
+            {
+              "label": "Modalidad Flex", "icons": { "primary": "", "duplicate": false}, "disabled": false,
+              "content": {
+                "cards": [
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
+                      "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
+                    },
+                    "title": "Perfil de ingreso",
+                    "text": "El aspirante a ingresar a la Licenciatura en Negocios Internacionales deberá contar con los siguientes conocimientos:\n\nSensibilidad a las necesidades sociales; expresión oral / escrita, investigación, comunicación efectiva y liderazgo de grupos de trabajo; evaluación fortalezas y debilidades de los equipos de trabajo; razonamiento lógico; solución de problemas con base en principios, leyes y conceptos; y desarrollo de pensamiento crítico y constructivo.",
+                    "backgroundColor": "#8B9BA3"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
+                    },
+                    "title": "Perfil de egreso",
+                    "text": "Conocerá las estrategias financieras y económicas para la evaluación de viabilidad y factibilidad de un negocio.\n\nEjecutará procesos administrativos sobre empresas internacionales y análisis micro y macroeconómico mundial.\n\nDirigirá al capital humano en el ámbito internacional, considerando el factor multicultural.\n\nAplicará conceptos jurídicos, económicos, administrativos y de mercado.\n\nDiseñará modelos de negocios y estrategias comerciales internacionales que permitan obtener una ventaja competitiva.",
+                    "backgroundColor": "#B0003C"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
+                    },
+                    "title": "Campo Laboral",
+                    "text": "Como egresado de la Licenciatura de Negocios Internacionales podrás desarrollarte en industrias del sector público y privado que realicen importación y exportación de productos, empresas transportistas, agencias aduanales, instituciones financieras y dependencias del gobierno.\n\nAdemás, tienes la oportunidad de administrar una agencia aduanal y/o ser consultor de comercio internacional. Desenvuélvete en paqueterías internacionales o agencias de carga internacional; verifica la mercancía a exportar.",
+                    "backgroundColor": "#E84537"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
+                    },
+                    "title": "Requisitos de admisión",
+                    "text": "\n\n• Acta de nacimiento reciente, original del cajero y 2 copias.\n\n• Certificado de secundaria legalizado original y dos copias.\n\n• Certificado de preparatoria legalizado original y 2 copias con su carta de autenticidad. (En caso de no contar con original, presentar constancia de que está en trámite).\n\n• CURP copia.\n\nEn caso de equivalencia\n\n• Certificado parcial de estudios legalizado original con 2 copias y carta de autenticidad.\n\n• 4 fotografías tamaño infantil y 4 tamaño credencial, ambas blanco y negro, papel mate no instantáneas.\n\n• Carta de buena salud expedida por institución pública o privada.",
+                    "backgroundColor": "#00BEB4"
+                  }
+                ],
+                "wrapper": false
+              }
+            }
+          ],
+          "size": "medium"
+        }
+      },
+      "descarga": {
+        "id": "program_licenciatura",
+        "type": "primary",
+        "title": "Descarga el plan de estudios",
+        "size": "small",
+        "icon": "download",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "testClick",
+        "test": ""
+      }
+    },
+    "form": {
+      "config": {
+        "level": { "hidden": true, "value": "licenciatura" },
+        "program": { "hidden": false, "value": "Contaduría" },
+        "modality": { "hidden": false },
+        "campus": { "hidden": false }
+      },
+      "copies": {
+        "stepone": {
+          "title": "Obtén informes sobre tu programa",
+          "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+        }
+      }
+    }
+  }
