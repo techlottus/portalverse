@@ -25,10 +25,11 @@ export async function fetchStrapiGraphQL<DataType> (
   return data;
 };
 
-export const replaceURL = (image: any, format?: string) => {
-  let urlImage = format 
-    ? image.data.attributes.formats[format].url
-    : image.data.attributes.url
-  urlImage.replace(env.NEXT_PUBLIC_IMAGE_URL, env.NEXT_PUBLIC_ASSETS_URL)
-  return urlImage
+export const replaceURL = (image: any, format: string = "small") => {
+
+  const imageData = image?.data?.attributes;
+
+  const urlImage = imageData?.formats?.[format]?.url || imageData?.url || "";
+
+  return urlImage?.replace(env.NEXT_PUBLIC_IMAGE_URL, env.NEXT_PUBLIC_ASSETS_URL);
 }
