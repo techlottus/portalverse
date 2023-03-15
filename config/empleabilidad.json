@@ -35,7 +35,7 @@
     "vinculacionEmpresas": {
       "title": "Vinculación empresarial",
       "description":{
-        "content": "<p>Para nuestra Universidad es primordial generar alianzas con las empresas de nuestra región y el del país; buscamos sumarnos a los beneficios que ofrecen a sus colaboradores y lograr una estrecha relación que les permita, a través de nuestra oferta educativa, desarrollar personal mejor capacitado, preparado y actualizado.</p><p>Además, ponemos a su alcance a nuestros alumnos para cubrir las necesidades de prácticas profesionales y a nuestros egresados para cubrir sus vacantes laborales.</p><p>Súmate a las empresas que ya han confiado en nosotros a través de un convenio de colaboración.</p>"
+        "content": "<p>Para nuestra Universidad es primordial generar alianzas con las empresas de nuestra región y del país; buscamos sumarnos a los beneficios que ofrecen a sus colaboradores y lograr una estrecha relación que les permita, a través de nuestra oferta educativa, desarrollar personal mejor capacitado, preparado y actualizado.</p><p>Además, ponemos a su alcance a nuestros alumnos para cubrir las necesidades de prácticas profesionales y a nuestros egresados para cubrir sus vacantes laborales.</p><p>Súmate a las empresas que ya han confiado en nosotros a través de un convenio de colaboración.</p>"
       },
       "image": {
         "src": "https://drive.google.com/uc?export=view&id=1X9MBL40qgt6Y1zuX2XSfZfwHEucEwaFp",
@@ -45,7 +45,7 @@
     "historiasExito": {
       "title": "Casos de éxito",
       "description": {
-        "content": "<p>Nuestros alumnos y egresados nos cuentan cómo fue ha sido su experiencia en la búsqueda de empleo a través de nuestra bolsa de talento.</p><p>Jacobo Rodríguez Egresado de la Licenciatura en Mercadotecnia nos cuenta cómo la Bolsa de Talento UTEG le ayudo a lograr su más reciente reto profesional.</p>"
+        "content": "<p>Nuestros alumnos y egresados nos cuentan cómo ha sido su experiencia en la búsqueda de empleo a través de nuestra bolsa de talento.</p><p>Jacobo Rodríguez, egresado de la Licenciatura en Mercadotecnia, nos cuenta cómo la Bolsa de Talento UTEG le ayudó a lograr su más reciente reto profesional.</p>"
       },
       "video": {
         "options": {
@@ -61,7 +61,7 @@
     "comoFunciona": {
       "title": "¿Cómo funciona la plataforma?",
       "description": {
-        "content": "Encontrar trabajo nunca fue tan fácil, la bolsa de talento UTEG se da a través de la sinergia con beWanted, plataforma que esta diseñada para estudiantes y egresados de con un sistema de “Match Job” donde las empresas son quienes te invitan a participar en sus procesos de selección a traves de la plataforma y con un correo electrónico, lo que hace a nuestra bolsa diferente al resto."
+        "content": "Encontrar trabajo nunca fue tan fácil. La bolsa de talento UTEG se da a través de la sinergia con beWanted, plataforma que está diseñada para estudiantes y egresados con un sistema de “Match Job” donde las empresas son quienes te invitan a participar en sus procesos de selección a través de la plataforma y con un correo electrónico, lo que hace a nuestra bolsa diferente al resto."
       },
       "video": {
         "options": {
