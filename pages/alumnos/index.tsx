@@ -11,12 +11,14 @@ import BannerPortalverse from "@/old-components/BannerPortalverse"
 import CardWebsitePortalverse from "@/old-components/CardWebsitePortalverse"
 
 const Alumnos: NextPageWithLayout = ({ sections, meta }: any) => {
+
   const downloadFile = () => {
     const file = document.createElement('a');
     file.target = '__blank';
     file.href = sections.calendario.banner.file;
     file.click();
   }
+  
   return <>
     <Head>
       <title>{ meta.title }</title>
