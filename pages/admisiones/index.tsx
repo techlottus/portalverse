@@ -85,7 +85,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
                   descriptionStyles="col-start-2 col-end-7 w-t:col-end-8"
                   action={
                     <div slot="actionDescription" className="w-t:hidden w-p:hidden">
-                      <Button onClick={() => navigate(action.route)} data={action} />
+                      <Button dark onClick={() => navigate(action.route)} data={action} />
                     </div>
                   }
                 />
@@ -166,7 +166,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
           }
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center">
-          <Button data={sections.FAQ.button}
+          <Button dark data={sections.FAQ.button}
             onClick={() => {
               router.push(sections.FAQ.button.redirect)
             }}
