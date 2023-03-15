@@ -1,43 +1,51 @@
 {
   "meta": {
-    "title": "Admisiones UANE",
+    "title": "Admisiones UTEG",
     "description": "",
     "keywords": ""
   },
   "sections": {
     "head": {
-      "title":"Inscríbete en UANE",
+      "title":"Inscríbete en UTEG",
       "textIcons":[
         {
-          "icon": "https://drive.google.com/uc?export=view&id=1T0zh7_wWn_U7vC8Ghb1OnvK9Vf_iw8RI",
-          "name": "trophy", 
-          "text": "48 años nos respaldan"
+          "icon": "https://drive.google.com/uc?export=view&id=1hJimBZzdCoQ-JKvUMo5zn2gaNhIZ-vc4",
+          "name": "aniversario55", 
+          "text": "Somos una universidad con 55 años de experiencia"
         },
         {
-          "icon": "https://drive.google.com/uc?export=view&id=1zMwTLnS12WxMDnzO7oUt1MhUZYKtaqIv",
-          "name": "studentIcon",
-          "text": "+13,500 alumnos en todas nuestras modalidades"
+          "icon": "https://drive.google.com/uc?export=view&id=1_G9FmBTMdRHMyx2_XpJsluW-qc98RtoW",
+          "name": "udg",
+          "text": "+ de 21 programas de Licenciatura incorprados a UDG"
         },
         {
-          "icon": "https://drive.google.com/uc?export=view&id=1oxx9Lwrg7_C5nnNGnqYIsU7Y4QmDbTgM",
-          "name": "graduateIcon",
-          "text": "+50,000 egresados"
+          "icon": "https://drive.google.com/uc?export=view&id=1qdcp8gJkzH3BrJ_bw1c3JLh5nFtSi6Ks",
+          "name": "egresados",
+          "text": "+45,000 egresados"
         },
         {
-          "icon": "https://drive.google.com/uc?export=view&id=1rJEHj6oYdFn3DI0k8-AJyKJEwPZ8vlxk",
-          "name": "workIcon",
-          "text": "+760 convenios empresariales para una acelerada inserción laboral"
+          "icon": "https://drive.google.com/uc?export=view&id=1poC-ntONnltusWtHuxkiYuvesz3yVyCE",
+          "name": "internacionalizacion",
+          "text": "+ de 10 tipos de internacionalización "
         }
       ],
-      "button": {"id":"123","title": "Quiero más información", "type": "primary", "icon": "", "isExpand": false, "size":"small"},
+      "button": {
+        "id": "123",
+        "title": "Quiero más información",
+        "type": "primary",
+        "icon": "",
+        "isExpand": false,
+        "size":"small",
+        "redirect": "/admisiones/pedir-informacion"
+      },
       "image": {
         "desk": {
           "alt": "imagen",
-          "src": "https://drive.google.com/uc?export=view&id=1zUHr9b2_nXj94EcxJStO0PM5djT3HnjW"
+          "src": "https://drive.google.com/uc?export=view&id=12zep5-S5ab8Y_T2xsoVRfQSba39qf7f4"
         },
         "mobile": {
           "alt": "imagen",
-          "src": "https://drive.google.com/uc?export=view&id=1CUn9n-9_pAb964N6v1YuG0xaHLLeieRZ"
+          "src": "https://drive.google.com/uc?export=view&id=19s7--hBNLiFNqupIoA0dMwkFRy46Q7Ro"
         }
       }
     },
@@ -46,23 +54,29 @@
       "tabs": {
         "items":[
           {
-            "label": "Bachillerato", "icons": { "primary": "", "duplicate": true }, "disabled": false,
+            "label": "Bachillerato BIS", "icons": { "primary": "", "duplicate": true }, "disabled": false,
             "content": {
               "image": {
                 "alt": "imagen",
-                "src": "https://drive.google.com/uc?export=view&id=1PET9mqMDMaVdRgT45CA-aGxRTTJwIsGO"
+                "src": "https://drive.google.com/uc?export=view&id=12xntSA2bHQXmfCvFx3_w-II0SOw7Pf5z"
               },
               "content": {
                 "title": "",
-                "description": "\n\n• Acta de nacimiento reciente, original del cajero y 2 copias.\n\n• Certificado de secundaria original y 2 copias.\n\n En caso de equivalencia presentar certificado parcial original legalizado con carta de autenticidad. (Si aún no cuenta traer constancia de trámite)\n\n• CURP copia.\n\n• 4 fotografías tamaño infantil y 4 tamaño credencial, ambas blanco y negro, papel mate no instantáneas.\n\n• Constancia de calificaciones si aún no gradúan de secundaria.\n\n• Carta de buena salud expedida por institución pública o privada.",
-                "action": {"title": "Explora los programas", "type": "primary", "icon": "", "isExpand": false, "route": "/oferta-educativa/bachillerato"}
+                "description": "Bachillerato Intensivo Semiescolarizado (BIS) incorporado SEJ:\n\n• Acta de nacimiento original y 1 copia (ambos documentos deben estar en buen estado).\n\n• Certificado de Secundaria (original y 3 copias por ambos lados).\n\n• 1 copia de la Clave Única de Registro de Población (CURP).\n\n• 2 copias de Credencial Oficial IFE/INE o Pasaporte para mayores de edad.\n\n• 2 copias de Credencial Oficial IFE/INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n• 2 fotografías tamaño infantil, blanco y negro o a color, de estudio o instantáneas. \n\n• Para grado superior deberá cumplir con los referidos en el P-AB-10 Inscripción de Aspirantes a Grado Superior BIS",
+                "action": {
+                  "title": "Explora los programas",
+                  "type": "outlined",
+                  "icon": "",
+                  "isExpand": false,
+                  "route": "/oferta-educativa/bachillerato"
+                }
               },
               "cards": [
                 { 
-                  "image": "https://drive.google.com/uc?export=view&id=1E3aYNZfcCA4rH3VFUwpxo79NiyTdS66L",
+                  "image": "https://drive.google.com/uc?export=view&id=11LMHqW1q7HZsva3wIb8OiXCnRJ3O_ANV",
                   "subtitle": "",
                   "title": "Presencial",
-                  "text": "¡Vive la experiencia educativa en el campus! Asiste de manera tradicional a clases con el mejor ambiente estudiantil",
+                  "text": "Contamos con 31 programas de licenciatura, 21 de ellos con incorporación a la Universidad de Guadalajara.",
                   "border": true,
                   "allContent": true,
                   "height": "",
@@ -74,10 +88,10 @@
                   "wrapper": true
                 },
                 { 
-                  "image": "https://drive.google.com/uc?export=view&id=1FpIUYqbMOhqQL3r_lPftk7SEmjjM0UiE",
+                  "image": "https://drive.google.com/uc?export=view&id=17S8occhNQCayN1RkPv6qRDJGFZCA1moc",
                   "subtitle": "",
-                  "title": "UANE Online",
-                  "text": "Si buscas estudiar desde cualquier lugar, sin descuidar tu trabajo o estilo de vida, este sistema es para ti, gracias a nuestra plataforma virtual.",
+                  "title": "UTEG Flex",
+                  "text": "Con esta modalidad de estudios semi-presencial, los sábados, puedes estudiar aún cuando, por cualquier motivo, no puedas asistir regularmente a un plantel.",
                   "border": true,
                   "allContent": true,
                   "height": "",
@@ -89,10 +103,10 @@
                   "wrapper": true
                 },
                 { 
-                  "image": "https://drive.google.com/uc?export=view&id=1qqftwM5Pp54WBR56-jo6ecctiK-tH3-D",
+                  "image": "https://drive.google.com/uc?export=view&id=1FzfYUz8FSS1Ro9oxnZiLvLqYvzaHQ-RB",
                   "subtitle": "",
-                  "title": "UANE Flex (Híbrido)",
-                  "text": "¡Combina lo mejor de dos mundos! Asiste todos los sábados al campus con tus maestros y el resto de la semana lleva tus materias de manera virtual.",
+                  "title": "UTEG Online",
+                  "text": "Vive las experiencias de aprendizaje sin barreras de tiempo y espacio gracias a las plataformas tecnológicas. Interactúa con docentes experimentados y accede a los conocimientos más actualizados.",
                   "border": true,
                   "allContent": true,
                   "height": "",
@@ -107,248 +121,370 @@
             }
           },
           {
-            "label": "Licenciatura", "icons": { "primary": "", "duplicate": true }, "disabled": false,
+            "label": "Bachillerato BGC", "icons": { "primary": "", "duplicate": true }, "disabled": false,
             "content": {
               "image": {
                 "alt": "imagen",
-                "src": "https://drive.google.com/uc?export=view&id=1PET9mqMDMaVdRgT45CA-aGxRTTJwIsGO"
+                "src": "https://drive.google.com/uc?export=view&id=12xntSA2bHQXmfCvFx3_w-II0SOw7Pf5z"
               },
               "content": {
                 "title": "",
-                "description": "\n\n• Acta de nacimiento reciente, original del cajero y dos copias.\n\n• Certificado de secundaria legalizado original y dos copias.\n\n• Certificado de preparatoria legalizado original y dos copias con su carta de autenticidad. (En caso de no contar con original, presentar constancia de que está en trámite).\n\n• CURP copia.\n\nEn caso de equivalencia\n\n• Certificado parcial de estudios legalizado original con dos copias y carta de autenticidad.\n\n• Cuatro fotografías tamaño infantil y cuatro tamaño credencial, ambas blanco y negro, papel mate no instantáneas.\n\n• Carta de buena salud expedida por institución pública o privada.",
-                "action": {"title": "Explora los programas", "type": "primary", "icon": "", "isExpand": false, "route": "/oferta-educativa/licenciatura"}
+                "description": "Bachillerato General por Competencias\n\nRequisitos para el primer ingreso Bachillerato General por Competencias (BGC) incorporado a la UDG:\n\n• Acta de nacimiento original y 1 copia (ambos documentos deben estar en buen estado).\n\n• Certificado de Secundaria (original y 3 copias por ambos lados).\n\n• 1 copia de la Clave Única de Registro de Población (CURP).\n\n• 2 copias de Credencial Oficial IFE/INE o Pasaporte para mayores de edad.\n\n• 2 copias de Credencial Oficial IFE/INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n• 2 fotografías tamaño infantil, blanco y negro o a color, de estudio o instantáneas. \n\n• Para grado superior deberá cumplir con los referidos en el P-CE-21 Procemiento de inscripción de Aspirantes a Grado Superior.\n\n• Kardex firmado y sellado por el centro universitario donde cursó el bachillerato. El documento debe mencionar que su situación actual es baja (grado superior).",
+                "action": {"title": "Explora los programas", "type": "outlined", "icon": "", "isExpand": false, "route": "/oferta-educativa/bachillerato"}
               },
               "cards": [
                 { 
-                  "urlImage": "https://drive.google.com/uc?export=view&id=1E3aYNZfcCA4rH3VFUwpxo79NiyTdS66L",
+                  "image": "https://drive.google.com/uc?export=view&id=11LMHqW1q7HZsva3wIb8OiXCnRJ3O_ANV",
                   "subtitle": "",
                   "title": "Presencial",
-                  "text": "¡Vive la experiencia educativa en el campus! Asiste de manera tradicional a clases con el mejor ambiente estudiantil",
+                  "text": "Contamos con 31 programas de licenciatura, 21 de ellos con incorporación a la Universidad de Guadalajara.",
                   "border": true,
                   "allContent": true,
                   "height": "",
                   "isShowCardWebsiteContent": true,
                   "id": "",
-                  "type": "",
+                  "type": "horizontal",
                   "link": true,
                   "background": false,
                   "wrapper": true
                 },
                 { 
-                  "urlImage": "https://drive.google.com/uc?export=view&id=1FpIUYqbMOhqQL3r_lPftk7SEmjjM0UiE",
+                  "image": "https://drive.google.com/uc?export=view&id=17S8occhNQCayN1RkPv6qRDJGFZCA1moc",
                   "subtitle": "",
-                  "title": "UANE Online",
-                  "text": "Si buscas estudiar desde cualquier lugar, sin descuidar tu trabajo o estilo de vida, este sistema es para ti, gracias a nuestra plataforma virtual.",
+                  "title": "UTEG Flex",
+                  "text": "Con esta modalidad de estudios semi-presencial, los sábados, puedes estudiar aún cuando, por cualquier motivo, no puedas asistir regularmente a un plantel.",
                   "border": true,
                   "allContent": true,
                   "height": "",
                   "isShowCardWebsiteContent": true,
                   "id": "",
-                  "type": "",
+                  "type": "horizontal",
                   "link": true,
                   "background": false,
                   "wrapper": true
                 },
                 { 
-                  "urlImage": "https://drive.google.com/uc?export=view&id=1qqftwM5Pp54WBR56-jo6ecctiK-tH3-D",
+                  "image": "https://drive.google.com/uc?export=view&id=1FzfYUz8FSS1Ro9oxnZiLvLqYvzaHQ-RB",
                   "subtitle": "",
-                  "title": "UANE Flex (Híbrido)",
-                  "text": "¡Combina lo mejor de dos mundos! Asiste todos los sábados al campus con tus maestros y el resto de la semana lleva tus materias de manera virtual.",
+                  "title": "UTEG Online",
+                  "text": "Vive las experiencias de aprendizaje sin barreras de tiempo y espacio gracias a las plataformas tecnológicas. Interactúa con docentes experimentados y accede a los conocimientos más actualizados.",
                   "border": true,
                   "allContent": true,
                   "height": "",
                   "isShowCardWebsiteContent": true,
                   "id": "",
-                  "type": "",
+                  "type": "horizontal",
                   "link": true,
                   "background": false,
                   "wrapper": true
                 }
               ]
-              }
+            }
           },
           {
-            "label": "Maestría", "icons": { "primary": "", "duplicate": true }, "disabled": false,
+            "label": "Lic. Semestrales", "icons": { "primary": "", "duplicate": true }, "disabled": false,
             "content": {
               "image": {
                 "alt": "imagen",
-                "src": "https://drive.google.com/uc?export=view&id=1PET9mqMDMaVdRgT45CA-aGxRTTJwIsGO"
+                "src": "https://drive.google.com/uc?export=view&id=1NhOKKFYAE6hZoNuZQPGpnlvj7MWyGDv6"
               },
               "content": {
                 "title": "",
-                "description": "\n\n• Acta de nacimiento original del cajero reciente y dos copias\n\n• Copia fiel del título (Constancia de trámite en caso de aún no tener el título)\n\n• Copia de cédula (traer original para copia)\n\n• Impresión de CURP directo de intenet sin ampliación\n\n• CV y Constancia laboral\n\n• Fotografías (Preguntar por especificaciones)\n\n• Solicitud de Admisión",
-                "action": {"title": "Explora los programas", "type": "primary", "icon": "", "isExpand": false, "route": "/oferta-educativa/maestria"}
+                "description": "Para Licenciaturas incorporadas UDG o semestrales\n\n• Acta de nacimiento original y 1 copia (ambos documentos deben estar en buen estado).\n\n• Certificado de Bachillerato original, en buen estado, y 1 copia por ambos lados\n\n• 1 copia de la Clave Única de Registro de Población (CURP).\n\n• 2 copias de Credencial Oficial IFE/INE o Pasaporte para mayores de edad.\n\n• 2 copias de Credencial Oficial IFE/INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n• 2 fotografías tamaño infantil, blanco y negro o a color, de estudio o instantáneas. \n\n• Para grado superior deberá cumplir con los referidos en el P-CE-21 Procedimiento de inscripción de aspirantes a grado superior.",
+                "action": {"title": "Explora los programas", "type": "outlined", "icon": "", "isExpand": false, "route": "/oferta-educativa/bachillerato"}
               },
               "cards": [
                 { 
-                  "urlImage": "https://drive.google.com/uc?export=view&id=1E3aYNZfcCA4rH3VFUwpxo79NiyTdS66L",
+                  "image": "https://drive.google.com/uc?export=view&id=11LMHqW1q7HZsva3wIb8OiXCnRJ3O_ANV",
                   "subtitle": "",
                   "title": "Presencial",
-                  "text": "¡Vive la experiencia educativa en el campus! Asiste de manera tradicional a clases con el mejor ambiente estudiantil",
+                  "text": "Contamos con 31 programas de licenciatura, 21 de ellos con incorporación a la Universidad de Guadalajara.",
                   "border": true,
                   "allContent": true,
                   "height": "",
                   "isShowCardWebsiteContent": true,
                   "id": "",
-                  "type": "",
+                  "type": "horizontal",
                   "link": true,
                   "background": false,
                   "wrapper": true
                 },
                 { 
-                  "urlImage": "https://drive.google.com/uc?export=view&id=1FpIUYqbMOhqQL3r_lPftk7SEmjjM0UiE",
+                  "image": "https://drive.google.com/uc?export=view&id=17S8occhNQCayN1RkPv6qRDJGFZCA1moc",
                   "subtitle": "",
-                  "title": "UANE Online",
-                  "text": "Si buscas estudiar desde cualquier lugar, sin descuidar tu trabajo o estilo de vida, este sistema es para ti, gracias a nuestra plataforma virtual.",
+                  "title": "UTEG Flex",
+                  "text": "Con esta modalidad de estudios semi-presencial, los sábados, puedes estudiar aún cuando, por cualquier motivo, no puedas asistir regularmente a un plantel.",
                   "border": true,
                   "allContent": true,
                   "height": "",
                   "isShowCardWebsiteContent": true,
                   "id": "",
-                  "type": "",
+                  "type": "horizontal",
                   "link": true,
                   "background": false,
                   "wrapper": true
                 },
                 { 
-                  "urlImage": "https://drive.google.com/uc?export=view&id=1qqftwM5Pp54WBR56-jo6ecctiK-tH3-D",
+                  "image": "https://drive.google.com/uc?export=view&id=1FzfYUz8FSS1Ro9oxnZiLvLqYvzaHQ-RB",
                   "subtitle": "",
-                  "title": "UANE Flex (Híbrido)",
-                  "text": "¡Combina lo mejor de dos mundos! Asiste todos los sábados al campus con tus maestros y el resto de la semana lleva tus materias de manera virtual.",
+                  "title": "UTEG Online",
+                  "text": "Vive las experiencias de aprendizaje sin barreras de tiempo y espacio gracias a las plataformas tecnológicas. Interactúa con docentes experimentados y accede a los conocimientos más actualizados.",
                   "border": true,
                   "allContent": true,
                   "height": "",
                   "isShowCardWebsiteContent": true,
                   "id": "",
-                  "type": "",
+                  "type": "horizontal",
                   "link": true,
                   "background": false,
                   "wrapper": true
                 }
               ]
-              }
+            }
           },
           {
-            "label": "Especialidad", "icons": { "primary": "", "duplicate": true }, "disabled": false,
+            "label": "Lic. Cuatrimestrales", "icons": { "primary": "", "duplicate": true }, "disabled": false,
             "content": {
               "image": {
                 "alt": "imagen",
-                "src": "https://drive.google.com/uc?export=view&id=1PET9mqMDMaVdRgT45CA-aGxRTTJwIsGO"
+                "src": "https://drive.google.com/uc?export=view&id=1NhOKKFYAE6hZoNuZQPGpnlvj7MWyGDv6"
               },
               "content": {
                 "title": "",
-                "description": "\n\n• Acta de nacimiento original del cajero reciente y dos copias\n\n• Copia fiel del título (Constancia de trámite en caso de aún no tener el título)\n\n• Copia de cédula (traer original para copia)\n\n• Impresión de CURP directo de intenet sin ampliación\n\n• CV y Constancia laboral\n\n• Fotografías (Preguntar por especificaciones)\n\n• Solicitud de Admisión",
-                "action": {"title": "Explora los programas", "type": "primary", "icon": "", "isExpand": false, "route": "/oferta-educativa/especialidad"}
+                "description": "Para Licenciaturas SICyT o cuatrimestrales:\n\n• Acta de nacimiento original y 1 copia (ambos documentos deben estar en buen estado).\n\n• Certificado de Bachillerato (original y 3 copias por ambos lados).\n\n• 1 copia de la Clave Única de Registro de Población (CURP).\n\n• 2 copias de Credencial Oficial IFE/INE o Pasaporte para mayores de edad.\n\n• 2 copias de Credencial Oficial IFE/INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n• 2 fotografías tamaño infantil, blanco y negro o a color, de estudio o instantáneas. \n\n• Para grado superior deberá cumplir con los referidos en el P-ML-10 para SEP/P-ML-11 para SICyT. Procedimiento de inscripción de aspirantes a grado superior.",
+                "action": {"title": "Explora los programas", "type": "outlined", "icon": "", "isExpand": false, "route": "/oferta-educativa/bachillerato"}
               },
               "cards": [
                 { 
-                  "urlImage": "https://drive.google.com/uc?export=view&id=1E3aYNZfcCA4rH3VFUwpxo79NiyTdS66L",
+                  "image": "https://drive.google.com/uc?export=view&id=11LMHqW1q7HZsva3wIb8OiXCnRJ3O_ANV",
                   "subtitle": "",
                   "title": "Presencial",
-                  "text": "¡Vive la experiencia educativa en el campus! Asiste de manera tradicional a clases con el mejor ambiente estudiantil",
+                  "text": "Contamos con 31 programas de licenciatura, 21 de ellos con incorporación a la Universidad de Guadalajara.",
                   "border": true,
                   "allContent": true,
                   "height": "",
                   "isShowCardWebsiteContent": true,
                   "id": "",
-                  "type": "",
+                  "type": "horizontal",
                   "link": true,
                   "background": false,
                   "wrapper": true
                 },
                 { 
-                  "urlImage": "https://drive.google.com/uc?export=view&id=1FpIUYqbMOhqQL3r_lPftk7SEmjjM0UiE",
+                  "image": "https://drive.google.com/uc?export=view&id=17S8occhNQCayN1RkPv6qRDJGFZCA1moc",
                   "subtitle": "",
-                  "title": "UANE Online",
-                  "text": "Si buscas estudiar desde cualquier lugar, sin descuidar tu trabajo o estilo de vida, este sistema es para ti, gracias a nuestra plataforma virtual.",
+                  "title": "UTEG Flex",
+                  "text": "Con esta modalidad de estudios semi-presencial, los sábados, puedes estudiar aún cuando, por cualquier motivo, no puedas asistir regularmente a un plantel.",
                   "border": true,
                   "allContent": true,
                   "height": "",
                   "isShowCardWebsiteContent": true,
                   "id": "",
-                  "type": "",
+                  "type": "horizontal",
                   "link": true,
                   "background": false,
                   "wrapper": true
                 },
                 { 
-                  "urlImage": "https://drive.google.com/uc?export=view&id=1qqftwM5Pp54WBR56-jo6ecctiK-tH3-D",
+                  "image": "https://drive.google.com/uc?export=view&id=1FzfYUz8FSS1Ro9oxnZiLvLqYvzaHQ-RB",
                   "subtitle": "",
-                  "title": "UANE Flex (Híbrido)",
-                  "text": "¡Combina lo mejor de dos mundos! Asiste todos los sábados al campus con tus maestros y el resto de la semana lleva tus materias de manera virtual.",
+                  "title": "UTEG Online",
+                  "text": "Vive las experiencias de aprendizaje sin barreras de tiempo y espacio gracias a las plataformas tecnológicas. Interactúa con docentes experimentados y accede a los conocimientos más actualizados.",
                   "border": true,
                   "allContent": true,
                   "height": "",
                   "isShowCardWebsiteContent": true,
                   "id": "",
-                  "type": "",
+                  "type": "horizontal",
                   "link": true,
                   "background": false,
                   "wrapper": true
                 }
               ]
-              }
+            }
           },
           {
-            "label": "Doctorado", "icons": { "primary": "", "duplicate": true }, "disabled": false,
+            "label": "Maestrías", "icons": { "primary": "", "duplicate": true }, "disabled": false,
             "content": {
               "image": {
                 "alt": "imagen",
-                "src": "https://drive.google.com/uc?export=view&id=1PET9mqMDMaVdRgT45CA-aGxRTTJwIsGO"
+                "src": "https://drive.google.com/uc?export=view&id=19pd8ekA_qULOr1J1inn4PKjxytTRXrL_"
               },
               "content": {
                 "title": "",
-                "description": "\n\n• Acta de nacimiento original del cajero reciente y dos copias\n\n• Copia fiel del título (Constancia de trámite en caso de aún no tener el título)\n\n• Copia de cédula (traer original para copia)\n\n• Impresión de CURP directo de intenet sin ampliación\n\n• CV y Constancia laboral\n\n• Fotografías (Preguntar por especificaciones)\n\n• Solicitud de Admisión",
-                "action": {"title": "Explora los programas", "type": "primary", "icon": "", "isExpand": false, "route": "/oferta-educativa/doctorado"}
+                "description": "• Acta de nacimiento original y 2 copias (ambos documentos deben estar en buen estado).\n\n• Certificado de licenciatura original y 3 copias (en buen estado).\n\n• Para maestría cuatrimestral SEP, en caso de que se encuentre en trámite el certificado de licenciatura, pero cuente con el título o acta de titulación se recibirá la copia del certificado junto con la carta de compromiso en la cual se mencione que en un lapso de 6 meses se entregará el documento original, de lo contrario se le dará de baja sin responsabilidad de la institución.\n\n• 3 copias del Título y acta de titulación no mayor a 1 año.\n\n• 2 fotografías tamaño infantil, blanco y negro o a color, de estudio o instantáneas.\n\n• 2 copias de la Clave Única de Registro de Población (CURP).\n\n• 2 copias de Credencial Oficial IFE/INE o Pasaporte.\n\n• En caso de titularse de la licenciatura por créditos de maestría se solicitará la carta de créditos (original y 2 copias) del oficio de aceptación para titularse por dicha modalidad (aplica para cuatrimestral o semestral).",
+                "action": {"title": "Explora los programas", "type": "outlined", "icon": "", "isExpand": false, "route": "/oferta-educativa/bachillerato"}
               },
               "cards": [
                 { 
-                  "urlImage": "https://drive.google.com/uc?export=view&id=1E3aYNZfcCA4rH3VFUwpxo79NiyTdS66L",
+                  "image": "https://drive.google.com/uc?export=view&id=11LMHqW1q7HZsva3wIb8OiXCnRJ3O_ANV",
                   "subtitle": "",
                   "title": "Presencial",
-                  "text": "¡Vive la experiencia educativa en el campus! Asiste de manera tradicional a clases con el mejor ambiente estudiantil",
+                  "text": "Contamos con 31 programas de licenciatura, 21 de ellos con incorporación a la Universidad de Guadalajara.",
                   "border": true,
                   "allContent": true,
                   "height": "",
                   "isShowCardWebsiteContent": true,
                   "id": "",
-                  "type": "",
+                  "type": "horizontal",
                   "link": true,
                   "background": false,
                   "wrapper": true
                 },
                 { 
-                  "urlImage": "https://drive.google.com/uc?export=view&id=1FpIUYqbMOhqQL3r_lPftk7SEmjjM0UiE",
+                  "image": "https://drive.google.com/uc?export=view&id=17S8occhNQCayN1RkPv6qRDJGFZCA1moc",
                   "subtitle": "",
-                  "title": "UANE Online",
-                  "text": "Si buscas estudiar desde cualquier lugar, sin descuidar tu trabajo o estilo de vida, este sistema es para ti, gracias a nuestra plataforma virtual.",
+                  "title": "UTEG Flex",
+                  "text": "Con esta modalidad de estudios semi-presencial, los sábados, puedes estudiar aún cuando, por cualquier motivo, no puedas asistir regularmente a un plantel.",
                   "border": true,
                   "allContent": true,
                   "height": "",
                   "isShowCardWebsiteContent": true,
                   "id": "",
-                  "type": "",
+                  "type": "horizontal",
                   "link": true,
                   "background": false,
                   "wrapper": true
                 },
                 { 
-                  "urlImage": "https://drive.google.com/uc?export=view&id=1qqftwM5Pp54WBR56-jo6ecctiK-tH3-D",
+                  "image": "https://drive.google.com/uc?export=view&id=1FzfYUz8FSS1Ro9oxnZiLvLqYvzaHQ-RB",
                   "subtitle": "",
-                  "title": "UANE Flex (Híbrido)",
-                  "text": "¡Combina lo mejor de dos mundos! Asiste todos los sábados al campus con tus maestros y el resto de la semana lleva tus materias de manera virtual.",
+                  "title": "UTEG Online",
+                  "text": "Vive las experiencias de aprendizaje sin barreras de tiempo y espacio gracias a las plataformas tecnológicas. Interactúa con docentes experimentados y accede a los conocimientos más actualizados.",
                   "border": true,
                   "allContent": true,
                   "height": "",
                   "isShowCardWebsiteContent": true,
                   "id": "",
-                  "type": "",
+                  "type": "horizontal",
                   "link": true,
                   "background": false,
                   "wrapper": true
                 }
               ]
-              }
+            }
+          },
+          {
+            "label": "UTEG Flex", "icons": { "primary": "", "duplicate": true }, "disabled": false,
+            "content": {
+              "image": {
+                "alt": "imagen",
+                "src": "https://drive.google.com/uc?export=view&id=19pd8ekA_qULOr1J1inn4PKjxytTRXrL_"
+              },
+              "content": {
+                "title": "",
+                "description": "• Acta de nacimiento original y 1 copia (ambos documentos deben estar en buen estado).\n\n• Certificado de Bachillerato (original y 3 copias por ambos lados).\n\n• 1 copia de la Clave Única de Registro de Población (CURP).\n\n• 2 copias de Credencial Oficial IFE/INE o Pasaporte. \n\n• 2 fotografías tamaño infantil, blanco y negro o a color, de estudio o instantáneas.",
+                "action": {"title": "Explora los programas", "type": "outlined", "icon": "", "isExpand": false, "route": "/oferta-educativa/bachillerato"}
+              },
+              "cards": [
+                { 
+                  "image": "https://drive.google.com/uc?export=view&id=11LMHqW1q7HZsva3wIb8OiXCnRJ3O_ANV",
+                  "subtitle": "",
+                  "title": "Presencial",
+                  "text": "Contamos con 31 programas de licenciatura, 21 de ellos con incorporación a la Universidad de Guadalajara.",
+                  "border": true,
+                  "allContent": true,
+                  "height": "",
+                  "isShowCardWebsiteContent": true,
+                  "id": "",
+                  "type": "horizontal",
+                  "link": true,
+                  "background": false,
+                  "wrapper": true
+                },
+                { 
+                  "image": "https://drive.google.com/uc?export=view&id=17S8occhNQCayN1RkPv6qRDJGFZCA1moc",
+                  "subtitle": "",
+                  "title": "UTEG Flex",
+                  "text": "Con esta modalidad de estudios semi-presencial, los sábados, puedes estudiar aún cuando, por cualquier motivo, no puedas asistir regularmente a un plantel.",
+                  "border": true,
+                  "allContent": true,
+                  "height": "",
+                  "isShowCardWebsiteContent": true,
+                  "id": "",
+                  "type": "horizontal",
+                  "link": true,
+                  "background": false,
+                  "wrapper": true
+                },
+                { 
+                  "image": "https://drive.google.com/uc?export=view&id=1FzfYUz8FSS1Ro9oxnZiLvLqYvzaHQ-RB",
+                  "subtitle": "",
+                  "title": "UTEG Online",
+                  "text": "Vive las experiencias de aprendizaje sin barreras de tiempo y espacio gracias a las plataformas tecnológicas. Interactúa con docentes experimentados y accede a los conocimientos más actualizados.",
+                  "border": true,
+                  "allContent": true,
+                  "height": "",
+                  "isShowCardWebsiteContent": true,
+                  "id": "",
+                  "type": "horizontal",
+                  "link": true,
+                  "background": false,
+                  "wrapper": true
+                }
+              ]
+            }
+          },
+          {
+            "label": "UTEG Online", "icons": { "primary": "", "duplicate": true }, "disabled": false,
+            "content": {
+              "image": {
+                "alt": "imagen",
+                "src": "https://drive.google.com/uc?export=view&id=19pd8ekA_qULOr1J1inn4PKjxytTRXrL_"
+              },
+              "content": {
+                "title": "",
+                "description": "• Acta de nacimiento original y 1 copia (ambos documentos deben estar en buen estado).\n\n• Certificado de Bachillerato (original y 3 copias por ambos lados).\n\n• 1 copia de la Clave Única de Registro de Población (CURP).\n\n• 2 copias de Credencial Oficial IFE/INE o Pasaporte. \n\n• 2 fotografías tamaño infantil, blanco y negro o a color, de estudio o instantáneas.",
+                "action": {"title": "Explora los programas", "type": "outlined", "icon": "", "isExpand": false, "route": "/oferta-educativa/bachillerato"}
+              },
+              "cards": [
+                { 
+                  "image": "https://drive.google.com/uc?export=view&id=11LMHqW1q7HZsva3wIb8OiXCnRJ3O_ANV",
+                  "subtitle": "",
+                  "title": "Presencial",
+                  "text": "Contamos con 31 programas de licenciatura, 21 de ellos con incorporación a la Universidad de Guadalajara.",
+                  "border": true,
+                  "allContent": true,
+                  "height": "",
+                  "isShowCardWebsiteContent": true,
+                  "id": "",
+                  "type": "horizontal",
+                  "link": true,
+                  "background": false,
+                  "wrapper": true
+                },
+                { 
+                  "image": "https://drive.google.com/uc?export=view&id=17S8occhNQCayN1RkPv6qRDJGFZCA1moc",
+                  "subtitle": "",
+                  "title": "UTEG Flex",
+                  "text": "Con esta modalidad de estudios semi-presencial, los sábados, puedes estudiar aún cuando, por cualquier motivo, no puedas asistir regularmente a un plantel.",
+                  "border": true,
+                  "allContent": true,
+                  "height": "",
+                  "isShowCardWebsiteContent": true,
+                  "id": "",
+                  "type": "horizontal",
+                  "link": true,
+                  "background": false,
+                  "wrapper": true
+                },
+                { 
+                  "image": "https://drive.google.com/uc?export=view&id=1FzfYUz8FSS1Ro9oxnZiLvLqYvzaHQ-RB",
+                  "subtitle": "",
+                  "title": "UTEG Online",
+                  "text": "Vive las experiencias de aprendizaje sin barreras de tiempo y espacio gracias a las plataformas tecnológicas. Interactúa con docentes experimentados y accede a los conocimientos más actualizados.",
+                  "border": true,
+                  "allContent": true,
+                  "height": "",
+                  "isShowCardWebsiteContent": true,
+                  "id": "",
+                  "type": "horizontal",
+                  "link": true,
+                  "background": false,
+                  "wrapper": true
+                }
+              ]
+            }
           }
         ],
         "size": "medium"
@@ -357,20 +493,21 @@
     "internacionalizacion": {
       "banner": {
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1Y_edCTwyeAXRGkcjqf5V2S8QEyVYaENW",
-          "mobile": "https://drive.google.com/uc?export=view&id=1PZURny8POJsMYHamJycNKgM3LmxoMUiK",
-          "tablet": "https://drive.google.com/uc?export=view&id=1TpgDT_hQIJ0hew0WPp40M21oURKnD9B_"
+          "desktop": "https://drive.google.com/uc?export=view&id=1Lu7xscpEX175YSluqf3RorHOvBZEjPwS",
+          "mobile": "https://drive.google.com/uc?export=view&id=1pPFYqosqomNRrh0uli7OdRuIH6fSSADu",
+          "tablet": "https://drive.google.com/uc?export=view&id=16svGkFJxSU2A-Qj_54pOm8HhZA9vvxUB"
         },
-        "title": "UANE Internacional",
-        "subtitle": "Internacionalízate agrega experiencias internacionales a tu educación",
-        "position": "left-bottom",
-        "height": "300px",
+        "title": "UTEG 360",
+        "subtitle": "Vive con nosotros la experiencia internacional de tu profesión. ",
+        "position": "left-top",
+        "height": "342px",
         "overlayWhite":false,
         "overlayDak": false,
+        "font": "light",
         "button":{
           "id": "",
           "type": "outlined",
-          "title": "Conocer más",
+          "title": "Continuar",
           "size": "small",
           "icon": "",
           "lyIcon": false,
@@ -386,20 +523,22 @@
     "empleabilidad": {
       "banner":{
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1EFLlkdIgmmhEjT9MhRsMV95VOLJWiGLd",
-          "mobile": "https://drive.google.com/uc?export=view&id=1ZUOdTVdzIjtW5zxjAt0P1plB4wEeexl4",
-          "tablet": "https://drive.google.com/uc?export=view&id=1Pbqg2oRfuFjD4wnVYSRlYBWQK0cIu9qT"
+          "desktop": "https://drive.google.com/uc?export=view&id=1U3unSJTWkRCILKzf2Dgueck5CjAp9fox",
+          "mobile": "https://drive.google.com/uc?export=view&id=1Fy4n36vWxJipGKqUUowQsHuzSNg7K0tm",
+          "tablet": "https://drive.google.com/uc?export=view&id=1YuodH2RuroieCX1ztfqFCk97BAFhYBxW"
         },
-        "title": "Empleabilidad en UANE",
-        "subtitle": "Inscríbete en nuestra Bolsa de Trabajo y encuentra empleo",
-        "position": "right-bottom",
-        "height": "350px",
+        "title": "Empleabilidad en UTEG",
+        "subtitle": "¿Buscas empleo? Inscríbete en nuestra Bolsa de Trabajo.",
+        "position": "right-top",
+        "textPosition": "right_top",
+        "height": "294px",
         "overlayWhite":false,
-        "overlayDak": true,
+        "overlayDak": false,
+        "font": "light",
         "button":{
           "id": "",
           "type": "outlined",
-          "title": "Conocer más",
+          "title": "Continuar",
           "size": "small",
           "icon": "",
           "lyIcon": false,
@@ -415,20 +554,21 @@
     "becas": {
       "banner":{
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1I81w0SvSs7u-tr-qC_GMLXtS6rrh9G6I",
-          "mobile": "https://drive.google.com/uc?export=view&id=1eNqySRZqOi0naAcqYMRGw0Jq2h6ZGNfW",
-          "tablet": "https://drive.google.com/uc?export=view&id=1I81w0SvSs7u-tr-qC_GMLXtS6rrh9G6I"
+          "desktop": "https://drive.google.com/uc?export=view&id=12zep5-S5ab8Y_T2xsoVRfQSba39qf7f4",
+          "mobile": "https://drive.google.com/uc?export=view&id=1hbzZIAxV-coI3F62YjAMEZmOj6z76aia",
+          "tablet": "https://drive.google.com/uc?export=view&id=19s7--hBNLiFNqupIoA0dMwkFRy46Q7Ro"
         },
-        "title": "Conoce las becas que tenemos para ti",
-        "subtitle": "Mira sus experiencias.",
-        "position": "",
-        "height": "350px",
+        "title": "Becas y programas de apoyo económico",
+        "subtitle": "Conoce más sobre las opciones de ayuda que te ofrece UTEG para realizar tus estudios.",
+        "position": "left-top",
+        "height": "294px",
         "overlayWhite":false,
-        "overlayDak": true,
+        "overlayDak": false,
+        "font": "light",
         "button":{
           "id": "",
           "type": "outlined",
-          "title": "Conocer más",
+          "title": "Continuar",
           "size": "small",
           "icon": "",
           "lyIcon": false,
@@ -442,55 +582,59 @@
       }
     },
     "egresados":{
-      "title": "Los egresados de UANE nos cuentan sus historias",
-      "description": "En UANE dejamos huella de oso en cada paso que damos, piensa y estudia en grande.",
+      "title": "Historias de Vida en UTEG",
+      "description": "Descubre las historias de vida de quienes, como tú, viven o vivieron en UTEG la experiencia de cumplir sus sueños.  ",
       "cards": [
         { 
-          "image": "https://drive.google.com/uc?export=view&id=1dUsNbdPsO41DxKvGxCixRy3Kh4SxEgiu",    
-          "subtitle": "Alumna, en Psicología",
-          "title": "María Torres",
-          "text": "\"Estudiar en UANE hace que me sienta como en casa, soy parte de una familia.\"",
+          "image": "https://drive.google.com/uc?export=view&id=1EcSyyyjEHZGDnAURl74tTUwhm2gC9bgY",    
+          "subtitle": "ALUMNO EN DISEÑO DE MODAS",
+          "title": "Adrián Flores",
+          "text": "\"Gracias a UTEG, pude participar en el concurso Pierre Cardin Young Designers en México. Conocí muchas personas importantes y originales, y creo que ese fue otro de los regalos que tuve al participar en el concurso.\"",
           "border": true,
           "type": "vertical",
           "islink": false,
           "background": true
         },
         { 
-          "image": "https://drive.google.com/uc?export=view&id=1zS4Yaux64foY96PUFyFulCV8c50Brbbb",
-          "subtitle": "Egresado, Lic. en Mercadotecnia Internacional",
-          "title": "Erick Santoyo",
-          "text": "\"UANE ha transformado mis experiencias laborales permitiendo crecer con todas las herramientas y conocimientos que adquirí durante mi carrera profesional\"",
+          "image": "https://drive.google.com/uc?export=view&id=1-mAyUaeo08gTIB-N-FgBg0pzuPzL5S2u",
+          "subtitle": "LIC. EN NUTRICIÓN",
+          "title": "Uriel Montes",
+          "text": "Como nutriólogo de los Los Astros de Jalisco, Uriel se encarga de que la “maquinaria” del básquet tapatío esté a punto para la victoria.",
           "border": true,
           "type": "vertical",
           "islink": false,
           "background": true
         }
       ],
-      "button":{"title": "Quiero más información", "type": "primary", "icon": "", "isExpand": false, "redirect": "egresados/talento"},
-      "video": {"options": { "id": "AIgIgANXCx0", "type": "single", "controls": true}, "dimensions": { "height": "400px"} }
+      "button":{"title": "Descubre aquí más historias", "type": "primary", "icon": "", "isExpand": false, "redirect": "egresados/talento"},
+      "video": {"options": { "id": "75aA5Eo39og", "type": "single", "controls": true}, "dimensions": { "height": "400px"} }
     },
     "FAQ":{
       "title": "Preguntas frecuentes",
       "questions": [
         {
-          "title": "¿Qué requisitos solicitan para ingresar?",
-          "answer": "Tendrá la calidad de alumno de licenciatura en la Universidad, la persona que:\n- Presente y apruebe el examen de admisión.\n- Entregue la totalidad de la documentación requerida en la solicitud de admisión.\n- Sea admitido por la Subdirección de Documentación y Control Escolar del Campus correspondiente."
+          "title": "¿Hay examen de admisión?",
+          "answer": "Consideramos que todo aquél o aquella que haya terminado con éxito sus estudios de educación media superior, tiene derecho a acceder a la educación superior, por lo cual no realizamos exámenes de admisión. Sin embargo, todos los alumnos de nuevo ingreso deben realizar una evaluación diagnóstica. Este diagnóstico nos permite identificar las áreas de oportunidad en los ámbitos de la lógica matemática y en español. Una vez que el alumno logra la permanencia en nuestro centro participa en cursos de nivelación para cada área de oportunidad."
         },
         {
           "title": "¿Cuentan con revalidaciones y equivalencias?",
-          "answer": "La Universidad podrá hacer equivalencias de los estudios cursados en otras instituciones que formen parte del Sistema Educativo Nacional así como de la propia universidad. La revalidación de los estudios hechos en planteles oficiales o privados de otros países, deberá tramitarse ante la Dirección de Incorporación y Revalidación de la Secretaría de Educación Pública en México. Acude a tu campus más cercano para analizar tu caso."
+          "answer": "Contamos con revalidación de materias. Para este proceso es importante presentar un kardex en físico en el área de Control Escolar de la licenciatura y el plantel de su interés."
+        },
+        {
+          "title": "¿Cuáles carreras están incorporadas a la Udg?",
+          "answer": "Contamos más de 21 licenciaturas con incorporación a la Universidad de Guadalajara, entre ellas:\n\n\n• Administración\n\n• Contaduría Pública\n\n• Arquitectura\n\n• Diseño de Interiores y Ambientación\n\n• Diseño para la Comunicación Gráfica\n\n• Diseño de Modas\n\n• Químico Farmacéutico Biólogo\n\n• Psicología\n\n• Cultura Física y Deportes\n\n• Nutrición\n\n• Ingeniería Civil\n\n• Ingeniería Industrial\n\n• Ingeniería en Computación\n\n• Ingeniería en icaciones y Electrónica\n\n• Trabajo Socialarrera de Abogado"
         },
         {
           "title": "¿Tienen becas?",
-          "answer": "Los distintos tipos de beca que otorga la Universidad se orientan a satisfacer dos grandes propósitos: el primero, cuyo fin es apoyar económicamente a los alumnos que así lo requieran, y el segundo, para estimular a los alumnos que por su alto nivel de aprovechamiento o por sus actividades académicas o extra-académicas prestigien a la Universidad. Te sugerimos revisar directamente en campus las opciones correspondientes y los pasos a seguir para solicitarlas."
+          "answer": "En UTEG puedes obtener una beca directa en turno vespertino del 20% o bien puedes obtener una beca por parte de la incorporación a tu licenciatura o bachillerato desde el 25% hasta el 100%."
         },
         {
-          "title": "¿Cuentan con Bolsa de Trabajo?",
-          "answer": "Contamos con más de 790 convenios con empresas a nivel nacional para una rápida inserción laboral, desde que se realizan las practicas profesionales, bolsa de empleo y seminarios y conferencias con grandes ponencias de negocios e industria."
+          "title": "¿Qué significa, y cómo me beneficia, que una licenciatura sea “incorporada a la UDG”?",
+          "answer": "Las licenciaturas incorporadas UDG son aquellas que cuentan con el Reconocimiento de Validez Oficial (RVOE) de la Universidad de Guadalajara. Como universidad privada, UTEG tiene la autorización para ofrecer y formar a sus alumnos, en esa carrera, con los mismos planes y programas de estudios que se ofertan en la UDG. El programa de estudios de cada una de esas carreras es exactamente igual a los que ofrece UDG.\n\nCada RVOE es el documento que da el poder de otorgar un certificado de titulación y constancias a los alumnos de sus calificaciones y de sus estudios.\n\nAsí garantizamos a los licenciados formados en UTEG el valor de sus títulos en el mundo laboral."
         },
         {
-          "title": "¿Hay opciones para irme de intercambio?",
-          "answer": "A través de UANE INTERNACIONAL puedes compartir tu desarrollo académico y profesional con maestros y compañeros de otros países del mundo.\nLas experiencias internacionales son clave para potencializar tus conocimientos y habilidades, además amplían tu visión personal y profesional; es por ello que UANE apuesta por una formación global, brindando la oportunidad de tener clases espejo, webinars internacionales, intercambios de materias y movilidad al extranjero, así como distintos proyectos en conjunto con las mejores universidades de Latinoamérica y Europa."
+          "title": "¿Puedo realizar mi proceso de admisión en línea?",
+          "answer": "Sí, puedes realizar tu proceso de admisión en línea. Puede ser por WhatsApp o por medio de correo electrónico con alguno de los asesores. Te solicitarán tu nombre completo, fecha de nacimiento. Se te enviará la ficha de pago, enviar el comprobante de pago y luego se agendará una cita para la entrega de los documentos en el Campus ubicado en Héroes Ferrocarrileros 1325, Col. La Aurora, C.P. 44460, Guadalajara, Jalisco."
         }
       ],
       "button":{"title": "Ver más preguntas", "type": "outlined", "icon": "", "isExpand": false, "redirect":"/contactanos/faq/general"}
