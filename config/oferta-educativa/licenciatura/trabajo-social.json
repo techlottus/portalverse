@@ -1,35 +1,34 @@
 {
     "meta": {
-      "title": "Licenciatura Gastronomía",
+      "title": "Licenciatura Trabajo Social",
       "description": "",
       "keywords": ""
     },
     "config": {
-      "title": "Licenciatura Gastronomía",
+      "title": "Licenciatura Trabajo Social",
       "config": {
-        "nombre": "Licenciatura Gastronomía",
+        "nombre": "Licenciatura Trabajo Social",
         "modalidad": ["Presencial"],
-        "areaConocimiento": ["Negocios y Empresariales"],
-        "campus": ["Américas", "Pedro Moreno"],
+        "areaConocimiento": ["Jurídicas y Sociales"],
+        "campus": ["Pedro Moreno"],
         "nivel": ["Licenciatura"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1lqXlsBYOO4YcAwQv-9cofFrr8cTyRSy3",
+          "src": "https://drive.google.com/uc?export=view&id=1ogk8vW9e28Z3uceDaIbXqdl2n-jSW2nZ",
           "alt": "licenciatura"
         },
         "curriculum": {
           "Presencial": {
-            "Américas": "1kbNoeqIgC2YA2SAQvr-HK3q8UjjLEMva",
-            "Pedro Moreno": "1kbNoeqIgC2YA2SAQvr-HK3q8UjjLEMva"
+            "Pedro Moreno": "1vrngvN0OmtjzIqAdgwLwSKg5vZFyee8x"
           }
         }
       }
     },
     "sections": {
       "head": {
-        "title": "Licenciatura Gastronomía",
-        "description": "Formar profesionistas con conocimientos teóricos, prácticos y metodológicos, capaces de prevenir y solucionar los problemas gastronómicos  que enfrenten en la industria alimenticia y restaurantera. Promover la innovación culinaria y ejecutando la organización de instituciones gastronómicas, promoviendo una actitud de servicio y responsabilidad social.",
+        "title": "Licenciatura Trabajo Social",
+        "description": "La Licenciatura en Trabajo Social forma profesionales del Trabajo Social, comprometidos con la sociedad, capaces de analizar y comprender la realidad social a partir del conocimiento de teorías; capaces en el diseño e implementación de modelos de intervención social con sujetos individuales y colectivos  y, fomentando actitudes y valores éticos.",
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1lqXlsBYOO4YcAwQv-9cofFrr8cTyRSy3",
+          "src": "https://drive.google.com/uc?export=view&id=1ogk8vW9e28Z3uceDaIbXqdl2n-jSW2nZ",
           "alt": "licenciatura"
         }
       },
@@ -49,7 +48,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
                     },
                     "title": "Perfil de ingreso",
-                    "text": "1.- Básico de química\n\n 2.- Conocimiento básico de un segundo idioma\n\n 3.- Principios de matemáticas",
+                    "text": "Para estudiar trabajo social debes tener intereses en la investigación, el cambio social, el hombre, la conducta y sus manifestaciones, en la comunicación en sus diversas modalidades, empatía, iniciativa y creatividad.",
                     "backgroundColor": "#1B2D68"
                   },
                   {
@@ -58,7 +57,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
                     },
                     "title": "Perfil de egreso",
-                    "text": "1.- Diseñar y planear cartas y menús tomando en cuenta las reglas gastronómicas \n\n 2.- Conocimiento de las normas de higiene y seguridad de nuestro país, así como la aplicación en el campo gastronómico\n\n 3.- Conocimientos de computación para manejar óptimamente cualquier empresa gastronómica nacional e internacional.\n\n 4.- Capacidad para generar e innovar productos gastronómicos, promocionar y conservar el patrimonio local regional y nacional\n\n 5.- Conocer la composición química de los alimentos para su aplicación en la conservación, manejo higiénico y nutricional.\n\n 6.- Nociones del idioma francés",
+                    "text": "El egresado de la licenciatura en Trabajo social será un profesionista con una sólida formación en el conocimiento y comprensión de la sociedad contemporánea, promotor de la participación, la ciudadanía, la justicia social y los derechos humanos; poseedor de una gran capacidad para aplicar la mediación como estrategia de intervención destinada a la resolución alternativa de conflictos;  hábil para la gestión social y para generar propuestas innovadoras de intervención social en realidades complejas con sujetos individuales y colectivos.",
                     "backgroundColor": "#C31433"
                   },
                   {
@@ -67,7 +66,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
                     },
                     "title": "Campo Laboral",
-                    "text": "",
+                    "text": "El Trabajador Social se puede desarrollar tanto en organismos e instituciones nacionales como internacionales, públicas y privadas, en la administración pública, en el ámbito educativo en todos los niveles, empresas privadas. En el marco del tercer sector: asociaciones, fundaciones, federaciones u otras organizaciones sociales en distintos campos de acción, salud, educación, readaptación social, protección civil, desarrollo sustentable, impartición de justicia, seguridad social, vivienda, trabajo, alimentación e industria.",
                     "backgroundColor": "#4470B1"
                   },
                   {
@@ -76,7 +75,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
                     },
                     "title": "Requisitos de admisión",
-                    "text": "a) Acta de nacimiento original y 2 copias para SICyT y 1 copia para SEP, (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de bachillerato original, en buen estado con tres copias.\n\n c) 2 copia de la CURP para SICyT\n\n d) 1 copia de la CURP para SEP.\n\n e) 2 copias de Credencial Oficial IFE / INE, o pasaporte.\n\n f) 2 copias de Credencial Oficial IFE / INE, o Pasaporte del padre de familia o tutor (para menores de edad).\n\n g) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n Estudiantes extranjeros deben solicitar con el personal de inscripciones la información completa.",
+                    "text": "Para inscribirse a las licenciaturas semestrales es necesario tener un promedio mínimo de 70, de no ser así, se requiere autorización por escrito del coordinador académico.",
                     "backgroundColor": "#EEAA01"
                   }
                 ],
@@ -103,7 +102,7 @@
     "form": {
       "config": {
         "level": { "hidden": true, "value": "licenciatura" },
-        "program": { "hidden": false, "value": "Licenciatura Gastronomía" },
+        "program": { "hidden": false, "value": "Licenciatura Trabajo Social" },
         "modality": { "hidden": false },
         "campus": { "hidden": false }
       },

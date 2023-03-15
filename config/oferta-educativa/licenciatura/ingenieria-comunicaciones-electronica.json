@@ -1,35 +1,34 @@
 {
     "meta": {
-      "title": "Licenciatura Gastronomía",
+      "title": "Ingeniería Comunicaciones y Electrónica",
       "description": "",
       "keywords": ""
     },
     "config": {
-      "title": "Licenciatura Gastronomía",
+      "title": "Ingeniería Comunicaciones y Electrónica",
       "config": {
-        "nombre": "Licenciatura Gastronomía",
+        "nombre": "Ingeniería Comunicaciones y Electrónica",
         "modalidad": ["Presencial"],
-        "areaConocimiento": ["Negocios y Empresariales"],
-        "campus": ["Américas", "Pedro Moreno"],
+        "areaConocimiento": ["Ingenierías y Tecnología"],
+        "campus": ["Olímpica"],
         "nivel": ["Licenciatura"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1lqXlsBYOO4YcAwQv-9cofFrr8cTyRSy3",
+          "src": "https://drive.google.com/uc?export=view&id=1L1GKi6XqnYU-Pns6TQ1jba5vshI3sF_f",
           "alt": "licenciatura"
         },
         "curriculum": {
           "Presencial": {
-            "Américas": "1kbNoeqIgC2YA2SAQvr-HK3q8UjjLEMva",
-            "Pedro Moreno": "1kbNoeqIgC2YA2SAQvr-HK3q8UjjLEMva"
+            "Olímpica": "186zfpeXz1IxiM_c-WlwO9LJEvD4HHdkN"
           }
         }
       }
     },
     "sections": {
       "head": {
-        "title": "Licenciatura Gastronomía",
-        "description": "Formar profesionistas con conocimientos teóricos, prácticos y metodológicos, capaces de prevenir y solucionar los problemas gastronómicos  que enfrenten en la industria alimenticia y restaurantera. Promover la innovación culinaria y ejecutando la organización de instituciones gastronómicas, promoviendo una actitud de servicio y responsabilidad social.",
+        "title": "Ingeniería Comunicaciones y Electrónica",
+        "description": "El Ingeniero en Comunicaciones y Electrónica es el profesionista que se encarga del análisis, diseño, implementación y mantenimiento de sistemas electrónicos para dar solución a problemáticas en el ámbito de la industria o de los diversos sectores de la sociedad, implementando estrategias innovadoras y actuales para el mundo moderno.",
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1lqXlsBYOO4YcAwQv-9cofFrr8cTyRSy3",
+          "src": "https://drive.google.com/uc?export=view&id=1L1GKi6XqnYU-Pns6TQ1jba5vshI3sF_f",
           "alt": "licenciatura"
         }
       },
@@ -49,7 +48,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
                     },
                     "title": "Perfil de ingreso",
-                    "text": "1.- Básico de química\n\n 2.- Conocimiento básico de un segundo idioma\n\n 3.- Principios de matemáticas",
+                    "text": "El aspirante deberá contar con:\n\n 1.- Conocimientos básicos de cómputo, física y cálculo.\n\n 2.- Orientación al trabajo en equipo.\n\n 3.- Organización.\n\n 4.-Gusto por la innovación tecnológica.\n\n 5.-Habilidades de análisis crítico del entorno.",
                     "backgroundColor": "#1B2D68"
                   },
                   {
@@ -58,7 +57,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
                     },
                     "title": "Perfil de egreso",
-                    "text": "1.- Diseñar y planear cartas y menús tomando en cuenta las reglas gastronómicas \n\n 2.- Conocimiento de las normas de higiene y seguridad de nuestro país, así como la aplicación en el campo gastronómico\n\n 3.- Conocimientos de computación para manejar óptimamente cualquier empresa gastronómica nacional e internacional.\n\n 4.- Capacidad para generar e innovar productos gastronómicos, promocionar y conservar el patrimonio local regional y nacional\n\n 5.- Conocer la composición química de los alimentos para su aplicación en la conservación, manejo higiénico y nutricional.\n\n 6.- Nociones del idioma francés",
+                    "text": "El egresado de Ingeniería en Comunicaciones y electrónica será capaz de analizar sistemas de su entorno para proponer mejoras basadas en aprovechamiento de tecnología de telecomunicaciones y electrónica sustentable y optimizada al máximo.",
                     "backgroundColor": "#C31433"
                   },
                   {
@@ -67,7 +66,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
                     },
                     "title": "Campo Laboral",
-                    "text": "",
+                    "text": "El campo laboral se extiende a empresas de telecomunicaciones, automatización, diseño electrónico y sistemas embebidos, así como la administración de tecnologías de la información, procesos de manufactura e incluso consultoría privada e investigación para el desarrollo de nuevas tecnologías.",
                     "backgroundColor": "#4470B1"
                   },
                   {
@@ -76,7 +75,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
                     },
                     "title": "Requisitos de admisión",
-                    "text": "a) Acta de nacimiento original y 2 copias para SICyT y 1 copia para SEP, (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de bachillerato original, en buen estado con tres copias.\n\n c) 2 copia de la CURP para SICyT\n\n d) 1 copia de la CURP para SEP.\n\n e) 2 copias de Credencial Oficial IFE / INE, o pasaporte.\n\n f) 2 copias de Credencial Oficial IFE / INE, o Pasaporte del padre de familia o tutor (para menores de edad).\n\n g) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n Estudiantes extranjeros deben solicitar con el personal de inscripciones la información completa.",
+                    "text": "a) Acta de nacimiento original y 1 copias (se puede recibir de cualquier año siempre y cuando se encuentre en buen est\n\n b) Certificado de bachillerato original, en buen estado y 1 copia por ambos l\n\n c) 1 copia de la \n\n d) 2 copias de Credencial Oficial IFE / INE o Pasa\n\n e) 2 copias de Credencial Oficial IFE / INE o Pasaporte del padre de familia o tutor (para menores de e\n\n f) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantá\n\n De contar ya con una licenciatura por parte de UdeG y estar titulado, se aceptan copias certificadas expedidas por UdeG del certificado de bachillerato de no más de un mes al día que lo esté entregando y copia simple del título. (Más todos los documentos de nuevo ingreso En caso de no estar titulado, debe entregar en original todos los documentos. (Todos los documentos de nuevo ingreso).\n\n Nota: Si realizó los estudios de bachillerato en otro estado de la república, el certificado debe tener la legalización por parte de Secretaría de Gobernación del estado donde realizaron los estu\n\n Si el certificado es de UNAM, Secretaría de la Defensa Nacional (SEDENA), Sistema Educativo Nacional (en el encabezado del documento) y Colegios de Bachilleres, estos no requieren del trámite de legaliza\n\n Extranjeros solicitar informes completos con personal de inscripciones.",
                     "backgroundColor": "#EEAA01"
                   }
                 ],
@@ -103,7 +102,7 @@
     "form": {
       "config": {
         "level": { "hidden": true, "value": "licenciatura" },
-        "program": { "hidden": false, "value": "Licenciatura Gastronomía" },
+        "program": { "hidden": false, "value": "Ingeniería Comunicaciones y Electrónica" },
         "modality": { "hidden": false },
         "campus": { "hidden": false }
       },

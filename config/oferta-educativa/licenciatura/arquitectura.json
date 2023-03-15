@@ -1,117 +1,117 @@
 {
-  "meta": {
-    "title": "Licenciatura en Arquitectura",
-    "description": "",
-    "keywords": ""
-  },
-  "config": {
-    "title": "Licenciatura en Arquitectura",
+    "meta": {
+      "title": "Licenciatura Arquitectura",
+      "description": "",
+      "keywords": ""
+    },
     "config": {
-      "nombre": "Licenciatura en Arquitectura",
-      "modalidad": ["Presencial"],
-      "areaConocimiento": ["Ciencias Sociales"],
-      "campus": [ "Saltillo", "Monclova", "Monterrey", "Torreón" ],
-      "nivel": ["Licenciatura"],
-      "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1XsYl_oQybO6fUDX5Agi8bfUalpwPsOhv",
-        "alt": "licenciatura"
+      "title": "Licenciatura Arquitectura",
+      "config": {
+        "nombre": "Licenciatura Arquitectura",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Arquitectura y Diseño"],
+        "campus": ["Américas"],
+        "nivel": ["Licenciatura"],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1Y3D2ZDxoHjLpxCFX2FQJQF0Cx8-cPXXa",
+          "alt": "licenciatura"
+        },
+        "curriculum": {
+          "Presencial": {
+            "Américas": "1Aw8otnzxEvR7gElrSjQv8-4UNRfC-Pb7"
+          }
+        }
+      }
+    },
+    "sections": {
+      "head": {
+        "title": "Licenciatura Arquitectura",
+        "description": "Licenciatura en Arquitectura es la carrera donde se forman profesionistas para crear, diseñar, comprender y ejecutar el acto de ordenar y construir el espacio habitable sustentable,  con responsabilidad de integración al contexto urbano, equilibrando emoción, razón e intuición, y dando forma física a las necesidades de la sociedad y el individuo.",
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1Y3D2ZDxoHjLpxCFX2FQJQF0Cx8-cPXXa",
+          "alt": "licenciatura"
+        }
       },
-      "curriculum": {
-        "Presencial": {
-          "Saltillo": "1TQWzkTHuINFqqY9WVegaHDFxjaxJPpZU",
-          "Monclova": "1nLspEW0ALDqFcbz1X7CpedhA519g_KbF",
-          "Monterrey": "1lAunMk54QbmzdnhIpQgcgQaYmc-INCIo",
-          "Torreón": "1gZ_F0OxyR9NRarQ3DebrWMwTnSuXL6XL"
+      "modalities": {
+        "title": "Modalidades disponibles en esta licenciatura:",
+        "tabs": {
+          "items": [
+            {
+              "label": "Modalidad Presencial",
+              "icons": { "primary": "", "duplicate": false },
+              "disabled": false,
+              "content": {
+                "cards": [
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    },
+                    "title": "Perfil de ingreso",
+                    "text": "El aspirante debe contar preferentemente con:\n\n INTERESES: humanistas y artísticos en la técnica administrativa, científica y sistemática, por el cálculo y la técnica, por el bienestar social.\n\nAPTITUDES. Habilidad para el dibujo, para captar y representar formas y partes, capacidad de análisis y síntesis, facilidad para el cálculo matemático y la física, imaginación e inventiva plástica, que se hábil para presentar objetos arquitectónicos verbal y gráficamente, con capacidad de mando y persuasión y capaz de trabajar en equipo.\n\nACTITUDES. Observador, perceptivo de su entorno, interesado por los detalles y por la precisión, organizado, eficiente, con vocación de servicio, abierto a las aplicaciones de las nuevas tecnologías, disciplinado, responsable de su aprendizaje, consciente y respetuoso del patrimonio cultural, estable desde el punto de vista emocional, sociable.",
+                    "backgroundColor": "#1B2D68"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    },
+                    "title": "Perfil de egreso",
+                    "text": "Será un profesionista que investiga las variables del objeto arquitectónico con conocimientos teóricos e históricos, que conoce la problemática urbana, que proyecta con sentido técnico y estético espacios habitables, que representa conceptos de diseño arquitectónico y urbano, que edifica proyectos, aplicando con creatividad diversas técnicas y sistemas constructivos, que gestiona y administra el proyecto y la construcción, adaptándolo a su contexto, con criterios de sustentabilidad, sentido ético y responsabilidad social.",
+                    "backgroundColor": "#C31433"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    },
+                    "title": "Campo Laboral",
+                    "text": "El profesional de la arquitectura deberá involucrarse en las áreas productivas orientadas a los requerimientos de vivienda, en las cuales tendrá una intervención de orientación y participación directa para  la creación de los espacios arquitectónicos.\n\n El arquitecto podrá contribuir a la resolución de problemas referidos a los espacios habitables de vivienda, de trabajo, cultura, educación y recreativos, incorporando los nuevos materiales de la industria de la construcción, así como todas aquellas técnicas alternativas que favorezcan la protección y mejora del medio ambiente\n\n El arquitecto podrá coadyuvar a resolver problemas de los espacios para diversos usos, utilizando materiales tanto naturales como artificiales, usando las nuevas tecnologías convenientes según el problema a resolver, utilizando al medio ambiente como factor importante a considerar en su proyecto arquitectónico.\n\n También podrá ayudar a resolver problemas tales como: los de la calidad del medio ambiente, el de la conservación del patrimonio arquitectónico edificado, y la proyección de espacios que sean congruentes con el desarrollo sustentable.",
+                    "backgroundColor": "#4470B1"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    },
+                    "title": "Requisitos de admisión",
+                    "text": "Para inscribirse a las licenciaturas semestrales es necesario tener un promedio mínimo de 70, de no ser así, se requiere autorización por escrito del director académico.\n\n a) Acta de nacimiento original y 1 copias (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.\n\n c) 1 copia de la CURP.\n\n d) 2 copias de Credencial Oficial IFE / INE o Pasaporte\n\n e) 2 copias de Credencial Oficial IFE / INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n f) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n De contar ya con una licenciatura por parte de UdeG y estar titulado, se aceptan copias certificadas expedidas por UdeG del certificado de bachillerato de no más de un mes al día que lo esté entregando y copia simple del título. (Más todos los documentos de nuevo ingreso).\n\n En caso de no estar titulado, debe entregar en original todos los documentos. (Todos los documentos de nuevo ingreso).\n\n Nota: Si realizó los estudios de bachillerato en otro estado de la república, el certificado debe tener la legalización por parte de Secretaría de Gobernación del estado donde realizaron los estudios.\n\n Si el certificado es de UNAM, Secretaría de la Defensa Nacional (SEDENA), Sistema Educativo Nacional (en el encabezado del documento) y Colegios de Bachilleres, estos no requieren del trámite de legalización.\n\n EXTRANJEROS a cualquier modalidad de licenciatura\n\n Acta de nacimiento reciente. del año en curso (original y una copia). Si son extranjeros se recibe sólo el acta original de su país de origen (no se acepta copia certificada por notario). El acta puede ser traducida al español por un perito oficial con firma y sello.\n\n Copia de la CURP (deben de tramitar la CURP mexicana).\n\n Certificado de bachillerato (original en buen estado y tres copias) esto si el aspirante realizó sus estudios dentro del país.\n\n Si realizó estudios de bachillerato en el extranjero, debe presentar la equivalencia por parte de la SEP (el trámite se realiza en Av. Prolongación Alcalde No. 1351, Edif. «B», Torre de Educación, 7º Piso, Col. Miraflores).\n\n Si pretenden realizar sus estudios de licenciatura dentro de la institución y son extranjeros deberán de presentar la FM3 reciente (forma migratoria número tres) permiso de migración para estudiar en el país a nombre del Centro Universitario UTEG).\n\n 2 fotografías tamaño infantil blanco y negro o a color",
+                    "backgroundColor": "#EEAA01"
+                  }
+                ],
+                "wrapper": false
+              }
+            }
+          ],
+          "size": "medium"
+        }
+      },
+      "descarga": {
+        "id": "program_licenciatura",
+        "type": "primary",
+        "title": "Descarga el plan de estudios",
+        "size": "small",
+        "icon": "download",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "testClick",
+        "test": ""
+      }
+    },
+    "form": {
+      "config": {
+        "level": { "hidden": true, "value": "licenciatura" },
+        "program": { "hidden": false, "value": "Licenciatura Arquitectura" },
+        "modality": { "hidden": false },
+        "campus": { "hidden": false }
+      },
+      "copies": {
+        "stepone": {
+          "title": "Obtén informes sobre tu programa",
+          "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
         }
       }
     }
-  },
-  "sections": {
-    "head": {
-      "title": "Arquitectura",
-      "description": "Diseña y dirige o supervisa espacios arquitectónicos que cumplan las necesidades de la sociedad, proporciona  construcciones que sean estéticas, funcionales y sustentables.",
-      "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1XsYl_oQybO6fUDX5Agi8bfUalpwPsOhv",
-        "alt": "licenciatura"
-      }
-    },
-    "modalities": {
-      "title": "Modalidades disponibles en esta licenciatura:",
-      "tabs": {
-        "items": [
-          {
-            "label": "Modalidad Presencial", "icons": { "primary": "", "duplicate": false}, "disabled": false,
-            "content": {
-              "cards": [
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
-                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
-                  },
-                  "title": "Perfil de ingreso",
-                  "text": "Los aspirantes a ingresar al programa de Arquitectura preferentemente deberán mostrar una inclinación a las ciencias físico-matemáticas y humanidades, contar con capacidad analítica y deductiva, gran interés por el arte y la cultura, así como comprensión y visualización espacial, capacidad de síntesis y concretar pensamientos abstractos, interés por la ecología y la sustentabilidad, conocimientos elementales sobre representación gráfica, habilidad numérica y conocimientos de inglés.",
-                  "backgroundColor": "#8B9BA3"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
-                  },
-                  "title": "Perfil de egreso",
-                  "text": "Tendrás la capacidad y habilidad para diseñar, supervisar, dirigir y administrar espacios arquitectónicos que cumplan las necesidades de la sociedad, con el uso de los avances tecnológicos y las diferentes tendencias en diseño y arquitectura para proporcionar construcciones que sean estéticas, funcionales y sustentables",
-                  "backgroundColor": "#B0003C"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
-                  },
-                  "title": "Campo Laboral",
-                  "text": "El Arquitecto egresado de UANE podrá trabajar en:\nDespachos de arquitectos realizando:\n\n• Representaciones gráficas y digitales de proyectos arquitectónicos.\n\n•  Supervisión de construcción.\n\n• Admistración de la construcción.\n\n• Diseño de la construcción.",
-                  "backgroundColor": "#E84537"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
-                  },
-                  "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento reciente, original del cajero y 2 copias.\n\n• Certificado de secundaria legalizado original y dos copias.\n\n• Certificado de preparatoria legalizado original y 2 copias con su carta de autenticidad. (En caso de no contar con original, presentar constancia de que está en trámite).\n\n• CURP copia.\n\nEn caso de equivalencia\n\n• Certificado parcial de estudios legalizado original con 2 copias y carta de autenticidad.\n\n• 4 fotografías tamaño infantil y 4 tamaño credencial, ambas blanco y negro, papel mate no instantáneas.\n\n• Carta de buena salud expedida por institución pública o privada.",
-                  "backgroundColor": "#00BEB4"
-                }
-              ],
-              "wrapper": false
-            }
-          }
-        ],
-        "size": "medium"
-      }
-    },
-    "descarga": {
-      "id": "program_licenciatura",
-      "type": "primary",
-      "title": "Descarga el plan de estudios",
-      "size": "small",
-      "icon": "download",
-      "lyIcon": false,
-      "disabled": false,
-      "isExpand": false,
-      "tagOnClick": "testClick",
-      "test": ""
-    }
-  },
-  "form": {
-    "config": {
-      "level": { "hidden": true, "value": "licenciatura" },
-      "program": { "hidden": false, "value": "Arquitectura" },
-      "modality": { "hidden": false },
-      "campus": { "hidden": false }
-    },
-    "copies": {
-      "stepone": {
-        "title": "Obtén informes sobre tu programa",
-        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
-      }
-    }
   }
-}
+  

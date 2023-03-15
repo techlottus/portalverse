@@ -1,35 +1,32 @@
 {
     "meta": {
-      "title": "Licenciatura Gastronomía",
+      "title": "Licenciatura en Turismo",
       "description": "",
       "keywords": ""
     },
     "config": {
-      "title": "Licenciatura Gastronomía",
+      "title": "Licenciatura en Turismo",
       "config": {
-        "nombre": "Licenciatura Gastronomía",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Negocios y Empresariales"],
-        "campus": ["Américas", "Pedro Moreno"],
+        "nombre": "Licenciatura en Turismo",
+        "modalidad": ["Online"],
+        "areaConocimiento": ["Ciencias Sociales"],
+        "campus": [""],
         "nivel": ["Licenciatura"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1lqXlsBYOO4YcAwQv-9cofFrr8cTyRSy3",
+          "src": "https://drive.google.com/uc?export=view&id=",
           "alt": "licenciatura"
         },
         "curriculum": {
-          "Presencial": {
-            "Américas": "1kbNoeqIgC2YA2SAQvr-HK3q8UjjLEMva",
-            "Pedro Moreno": "1kbNoeqIgC2YA2SAQvr-HK3q8UjjLEMva"
-          }
+          "Online": "1OMTGAn4oEMinUXaaIqs4Hd1N53qKSoFe"
         }
       }
     },
     "sections": {
       "head": {
-        "title": "Licenciatura Gastronomía",
-        "description": "Formar profesionistas con conocimientos teóricos, prácticos y metodológicos, capaces de prevenir y solucionar los problemas gastronómicos  que enfrenten en la industria alimenticia y restaurantera. Promover la innovación culinaria y ejecutando la organización de instituciones gastronómicas, promoviendo una actitud de servicio y responsabilidad social.",
+        "title": "Licenciatura en Turismo",
+        "description": "Desarrolla habilidades, conocimientos y técnicas para planea, diseñar y ejecutar modelos de atracción turística de algún destino local o internacional, tomando como base la cultura, economía, así como estrategías de crecimiento en sistemas hoteleros. Serás capaz de desarrollar la logística e identificar los nuevos retos de oportunidad turística. ",
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1lqXlsBYOO4YcAwQv-9cofFrr8cTyRSy3",
+          "src": "https://drive.google.com/uc?export=view&id=",
           "alt": "licenciatura"
         }
       },
@@ -49,7 +46,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
                     },
                     "title": "Perfil de ingreso",
-                    "text": "1.- Básico de química\n\n 2.- Conocimiento básico de un segundo idioma\n\n 3.- Principios de matemáticas",
+                    "text": "El aspirante a estudiar la Licenciatura en Turismo deberá poseer un buen manejo del idioma español, una correcta expresión oral y escrita, ser hábil en el manejo de TIC´s e interesarse por los problemas sociales tanto en el país como en el mundo",
                     "backgroundColor": "#1B2D68"
                   },
                   {
@@ -58,7 +55,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
                     },
                     "title": "Perfil de egreso",
-                    "text": "1.- Diseñar y planear cartas y menús tomando en cuenta las reglas gastronómicas \n\n 2.- Conocimiento de las normas de higiene y seguridad de nuestro país, así como la aplicación en el campo gastronómico\n\n 3.- Conocimientos de computación para manejar óptimamente cualquier empresa gastronómica nacional e internacional.\n\n 4.- Capacidad para generar e innovar productos gastronómicos, promocionar y conservar el patrimonio local regional y nacional\n\n 5.- Conocer la composición química de los alimentos para su aplicación en la conservación, manejo higiénico y nutricional.\n\n 6.- Nociones del idioma francés",
+                    "text": "Los egresados de esta licenciatura poseerán conocimientos sobre las disposiciones legales que garantizan el desarrollo y operación de las actividades turísticas, principios matemáticos y fundamentos estadísticos, microeconómicos y macroeconómicos aplicados al sector turístico. Conocerán los criterios y estándares de servicio al cliente y el manejo de los alimentos y bebidas con respecto a normas nacionales e internacionales, serán especialistas en el patrimonio turístico nacional e internacional para su manejo y protección. Serán capaces de desarrollar y operar proyectos turísticos, bares, centros de entretenimiento, hoteles, restaurantes, etc.",
                     "backgroundColor": "#C31433"
                   },
                   {
@@ -76,7 +73,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
                     },
                     "title": "Requisitos de admisión",
-                    "text": "a) Acta de nacimiento original y 2 copias para SICyT y 1 copia para SEP, (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de bachillerato original, en buen estado con tres copias.\n\n c) 2 copia de la CURP para SICyT\n\n d) 1 copia de la CURP para SEP.\n\n e) 2 copias de Credencial Oficial IFE / INE, o pasaporte.\n\n f) 2 copias de Credencial Oficial IFE / INE, o Pasaporte del padre de familia o tutor (para menores de edad).\n\n g) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n Estudiantes extranjeros deben solicitar con el personal de inscripciones la información completa.",
+                    "text": "",
                     "backgroundColor": "#EEAA01"
                   }
                 ],
@@ -103,7 +100,7 @@
     "form": {
       "config": {
         "level": { "hidden": true, "value": "licenciatura" },
-        "program": { "hidden": false, "value": "Licenciatura Gastronomía" },
+        "program": { "hidden": false, "value": "Licenciatura en Turismo" },
         "modality": { "hidden": false },
         "campus": { "hidden": false }
       },

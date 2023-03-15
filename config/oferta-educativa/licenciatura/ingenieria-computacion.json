@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "title": "Ingeniería en Computacion",
+    "description": "",
+    "keywords": ""
+  },
+  "config": {
+    "title": "Ingeniería en Computacion",
+    "config": {
+      "nombre": "Ingeniería en Computacion",
+      "modalidad": ["PresencialSemestral", "PresencialCuatrimestral"],
+      "areaConocimiento": ["Ingenierías y Tecnología"],
+      "campus": ["Olímpica"],
+      "nivel": ["Licenciatura"],
+      "image": {
+        "src": "https://drive.google.com/uc?export=view&id=1YpfA_xD45GHY0oEyUQEdLjJeeVSV1MPG",
+        "alt": "licenciatura"
+      },
+      "curriculum": {
+        "PresencialSemestral": {
+            "Olímpica": "1xKVs0A4bh9mUWjwjfhp56eqZL-zGiB7f"
+        },
+        "PresencialCuatrimestral": {
+            "Olímpica": "1OpCN1WskHAce0Ws8_034iv5YbpTi98em"
+        }
+      }
+    }
+  },
+  "sections": {
+    "head": {
+      "title": "Ingeniería en Computacion",
+      "description": "Los avances en las Tecnologías de la Información y la Comunicación implican una notoria capacidad para modelar digitalmente fenómenos y actividades cotidianas de la sociedad. Por lo que el desafío de un estudioso de la computación ha sido, es y será, encontrar la representación computable de toda clase de fenómenos manifestados en la realidad.",
+      "image": {
+        "src": "https://drive.google.com/uc?export=view&id=1YpfA_xD45GHY0oEyUQEdLjJeeVSV1MPG",
+        "alt": "licenciatura"
+      }
+    },
+    "modalities": {
+      "title": "Modalidades disponibles en esta licenciatura:",
+      "tabs": {
+        "items": [
+          {
+            "label": "Modalidad Presencial Semestral",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "1.- Gusto por el trabajo con máquinas y herramientas.\n\n 2.- Interés por las ciencias exactas, las dimensiones y representaciones gráficas, inclinación por el conocimiento técnico.\n\n 3.- Capacidad de análisis y síntesis.\n\n 4.- Creatividad.\n\n 5.- Criterio y razonamiento lógico.\n\n 6.- Tendencia por la investigación científica.",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "Nuestros egresados son capaces de diseñar, construir y operar sistemas digitales para el desarrollo y avance de la tecnología computacional que satisfagan las necesidades empresariales y particulares. Son capaces de desarrollar, actualizar y evaluar sistemas de software que contribuyen con la capacitación, almacenamiento y administración de la información de todo tipo de organizaciones. A su vez, están calificados para diseñar y proveer redes de cómputo en cualquier rubro que puedan existir, así como gestionar el buen funcionamiento entre los sistemas de comunicación de los dispositivos electrónicos.\n\n Los profesionales de la licenciatura en Ingeniería computacional son hábiles diseñadores, productores y operadores de los diferentes sistemas y componentes computacionales, a su vez, aseguran el funcionamiento y manejo de páginas web, software y hardware. Nuestros egresados son apreciados por su capacidad creativa de modelos matemáticos, estadísticos, de simulación y programación de dispositivos de control digital. Pueden integrarse con facilidad a equipos multidisciplinarios en los sectores privado, público, científico y comercial. ",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "Ante la centralidad que las computadoras, los programas y las apps tienen en la vida contemporánea y su carácter de extensión del cuerpo y la capacidad humanos, nuestros egresados y egresadas en la Licenciatura en Ingeniería en Computación no sólo son hábiles diseñadores, productores y operadores de los diferentes sistemas y componentes computacionales, sino que aseguran el hardware y ofrecen soluciones a problemas que detectan en sus áreas de trabajo.\n\n Los ingenieros en computación graduados en el centro universitario UTEG son apreciados por su capacidad para participar en la creación de modelos matemáticos, estadísticos, de simulación y programación de dispositivos de control digital. En la evaluación , selección e instalación de equipos de cómputo, así como la integración de equipos multidisciplinarios en los sectores privado, público, científico , comercial, etc.",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "a) Acta de nacimiento original y 1 copia (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.\n\n c) 1 copia de la CURP.\n\n d) 2 copias de Credencial Oficial IFE / INE o Pasaporte\n\n e) 2 copias de Credencial Oficial IFE / INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n f) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n De contar ya con una licenciatura por parte de UdeG y estar titulado, se aceptan copias certificadas expedidas por UdeG del certificado de bachillerato de no más de un mes al día que lo esté entregando y copia simple del título. (Más todos los documentos de nuevo ingreso).\n\n En caso de no estar titulado, debe entregar en original todos los documentos. (Todos los documentos de nuevo ingreso).\n\n Nota: Si realizó los estudios de bachillerato en otro estado de la república, el certificado debe tener la legalización por parte de la Secretaría de Gobernación del estado donde realizaron los estudios.\n\n Si el certificado es de UNAM, Secretaría de la Defensa Nacional (SEDENA), Sistema Educativo Nacional (en el encabezado del documento) y Colegios de Bachilleres, estos no requieren del trámite de legalización.\n\n Estudiantes extranjeros deben solicitar con personal de inscripciones la información completa.",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          },
+          {
+            "label": "Modalidad Presencial Cuatrimestral",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "1.- Gusto por el trabajo con máquinas y herramientas.\n\n 2.- Interés por las ciencias exactas, las dimensiones y representaciones gráficas, inclinación por el conocimiento técnico.\n\n 3.- Capacidad de análisis y síntesis.\n\n 4.- Creatividad.\n\n 5.- Criterio y razonamiento lógico.\n\n 6.- Tendencia por la investigación científica.",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "Los egresados de esta licenciatura son capaces de diseñar, construir y operar sistemas digitales para el desarrollo y avance de la tecnología computacional que satisfagan las necesidades empresariales y particulares. Son capaces de desarrollar, actualizar y evaluar sistemas de software que contribuyen con la capacitación, almacenamiento y administración de la información de todo tipo de organizaciones. A su vez, están calificados para diseñar y proveer redes de cómputo en cualquier rubro que puedan existir, así como gestionar el buen funcionamiento entre los sistemas de comunicación de los dispositivos electrónicos.",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "Nuestros egresados son apreciados por su capacidad creativa de modelos matemáticos, estadísticos, de simulación y programación de dispositivos de control digital. Pueden integrarse con facilidad a equipos multidisciplinarios en los sectores privado, público, científico y comercial.",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "a) Acta de nacimiento original y 2 copias para SICyT y 1 copia para SEP, (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de bachillerato original, en buen estado con tres copias.\n\n c) 2 copia de la CURP para SICyT\n\n d) 1 copia de la CURP para SEP.\n\n e) 2 copias de Credencial Oficial IFE / INE, o pasaporte.\n\n f) 2 copias de Credencial Oficial IFE / INE, o Pasaporte del padre de familia o tutor (para menores de edad).\n\n g) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n Estudiantes extranjeros deben solicitar con el personal de inscripciones la información completa.",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          }
+        ],
+        "size": "medium"
+      }
+    },
+    "descarga": {
+      "id": "program_licenciatura",
+      "type": "primary",
+      "title": "Descarga el plan de estudios",
+      "size": "small",
+      "icon": "download",
+      "lyIcon": false,
+      "disabled": false,
+      "isExpand": false,
+      "tagOnClick": "testClick",
+      "test": ""
+    }
+  },
+  "form": {
+    "config": {
+      "level": { "hidden": true, "value": "licenciatura" },
+      "program": { "hidden": false, "value": "Ingeniería en Computacion" },
+      "modality": { "hidden": false },
+      "campus": { "hidden": false }
+    },
+    "copies": {
+      "stepone": {
+        "title": "Obtén informes sobre tu programa",
+        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+      }
+    }
+  }
+}

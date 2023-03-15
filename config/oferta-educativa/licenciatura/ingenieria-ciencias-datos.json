@@ -1,35 +1,32 @@
 {
     "meta": {
-      "title": "Licenciatura Gastronomía",
+      "title": "Ingenieria en Ciencia de Datos",
       "description": "",
       "keywords": ""
     },
     "config": {
-      "title": "Licenciatura Gastronomía",
+      "title": "Ingenieria en Ciencia de Datos",
       "config": {
-        "nombre": "Licenciatura Gastronomía",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Negocios y Empresariales"],
-        "campus": ["Américas", "Pedro Moreno"],
+        "nombre": "Ingenieria en Ciencia de Datos",
+        "modalidad": ["Online"],
+        "areaConocimiento": ["Económico - Administrativo"],
+        "campus": [""],
         "nivel": ["Licenciatura"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1lqXlsBYOO4YcAwQv-9cofFrr8cTyRSy3",
+          "src": "https://drive.google.com/uc?export=view&id=1yZ_pg6ZDGwQAzjJrZQxWqfDyfyJdp1WV",
           "alt": "licenciatura"
         },
         "curriculum": {
-          "Presencial": {
-            "Américas": "1kbNoeqIgC2YA2SAQvr-HK3q8UjjLEMva",
-            "Pedro Moreno": "1kbNoeqIgC2YA2SAQvr-HK3q8UjjLEMva"
-          }
+          "Online": "1-DVV9By7bx4n_7NZZuRARAd0WD2qAa07"
         }
       }
     },
     "sections": {
       "head": {
-        "title": "Licenciatura Gastronomía",
-        "description": "Formar profesionistas con conocimientos teóricos, prácticos y metodológicos, capaces de prevenir y solucionar los problemas gastronómicos  que enfrenten en la industria alimenticia y restaurantera. Promover la innovación culinaria y ejecutando la organización de instituciones gastronómicas, promoviendo una actitud de servicio y responsabilidad social.",
+        "title": "Ingenieria en Ciencia de Datos",
+        "description": "Analiza y procesa datos estructurados y no estructurados empleando métodos matemáticos, estadísticos, de inteligencia artificial y técnicas acordes a la ciencia de datos.  Diseña nuevos modelos para el análisis de gran cantidad de datos para cualquier tipo de organización; propone y genera soluciones orientadas a problemas de este tipo de información.",
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1lqXlsBYOO4YcAwQv-9cofFrr8cTyRSy3",
+          "src": "https://drive.google.com/uc?export=view&id=1yZ_pg6ZDGwQAzjJrZQxWqfDyfyJdp1WV",
           "alt": "licenciatura"
         }
       },
@@ -38,7 +35,7 @@
         "tabs": {
           "items": [
             {
-              "label": "Modalidad Presencial",
+              "label": "Modalidad Online",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {
@@ -49,7 +46,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
                     },
                     "title": "Perfil de ingreso",
-                    "text": "1.- Básico de química\n\n 2.- Conocimiento básico de un segundo idioma\n\n 3.- Principios de matemáticas",
+                    "text": "El aspirante para ingresar a la Licenciatura en Ingeniería en Ciencias de Datos deberá contar con los siguientes conocimientos:\n\n• Método científico y problemas sociales.\n\n• Uso de tecnologías de la información y la comunicación, así como manejo de equipos de cómputo y electrónicos.\n\n• Expresión oral / escrita, investigación, comunicación efectiva y liderazgo de grupos de trabajo.\n\n• Razonamiento lógico, solución de problemas con base en principios, leyes y conceptos.\n\n• Desarrollo de pensamiento crítico y constructivo.",
                     "backgroundColor": "#1B2D68"
                   },
                   {
@@ -58,7 +55,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
                     },
                     "title": "Perfil de egreso",
-                    "text": "1.- Diseñar y planear cartas y menús tomando en cuenta las reglas gastronómicas \n\n 2.- Conocimiento de las normas de higiene y seguridad de nuestro país, así como la aplicación en el campo gastronómico\n\n 3.- Conocimientos de computación para manejar óptimamente cualquier empresa gastronómica nacional e internacional.\n\n 4.- Capacidad para generar e innovar productos gastronómicos, promocionar y conservar el patrimonio local regional y nacional\n\n 5.- Conocer la composición química de los alimentos para su aplicación en la conservación, manejo higiénico y nutricional.\n\n 6.- Nociones del idioma francés",
+                    "text": "La Licenciatura en Ingeniería Ciencia de Datos te permite administrar y analizar datos a través de métodos de inteligencia artificial, estadística, aprendizaje de máquina, sistemas de bases de datos y modelos matemáticos para participar en la toma de decisiones y resolver problemas en ámbitos relacionados con la economía y negocios con el fin de tener un impacto positivo en la sociedad actual.",
                     "backgroundColor": "#C31433"
                   },
                   {
@@ -67,7 +64,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
                     },
                     "title": "Campo Laboral",
-                    "text": "",
+                    "text": "Los expertos en ciencias de datos se dedican a emplear técnicas de programación y estadística para extraer y analizar datos y generar conocimientos valiosos. \n\n Esta disciplina novedosa puede ser aplicada en casi todos los ámbitos laborales. Es por este motivo que los profesionales dedicados al big data son altamente demandados en el mercado laboral de México.",
                     "backgroundColor": "#4470B1"
                   },
                   {
@@ -76,7 +73,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
                     },
                     "title": "Requisitos de admisión",
-                    "text": "a) Acta de nacimiento original y 2 copias para SICyT y 1 copia para SEP, (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de bachillerato original, en buen estado con tres copias.\n\n c) 2 copia de la CURP para SICyT\n\n d) 1 copia de la CURP para SEP.\n\n e) 2 copias de Credencial Oficial IFE / INE, o pasaporte.\n\n f) 2 copias de Credencial Oficial IFE / INE, o Pasaporte del padre de familia o tutor (para menores de edad).\n\n g) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n Estudiantes extranjeros deben solicitar con el personal de inscripciones la información completa.",
+                    "text": "",
                     "backgroundColor": "#EEAA01"
                   }
                 ],
@@ -103,7 +100,7 @@
     "form": {
       "config": {
         "level": { "hidden": true, "value": "licenciatura" },
-        "program": { "hidden": false, "value": "Licenciatura Gastronomía" },
+        "program": { "hidden": false, "value": "Ingenieria en Ciencia de Datos" },
         "modality": { "hidden": false },
         "campus": { "hidden": false }
       },

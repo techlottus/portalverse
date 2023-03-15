@@ -14,12 +14,12 @@
         },
         "description": {
           "title": "Licenciaturas",
-          "subtitle": "Los mejores programas educativos de alto nivel, con experiencias y planes de estudio internacionales, por un sistema modular que te permitirá aprovechar el conocimiento y aprendizaje al máximo."
+          "subtitle": "Conoce más sobre las licenciaturas que puedes estudiar en UTEG. Elije una entre las que conforman nuestra oferta académica de acuerdo al área de conocimiento, modalidad y plantel de tu interés. "
         }
       },
       "banner1" :{
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1kVvyHmdlUY2Tugvlu2Jywkhpz2lQGJj5",
+          "desktop": "https://drive.google.com/uc?export=view&id=11W0RGhdLOmICd-qtJFBhTCC3IPpEw-Z4",
           "mobile": "https://drive.google.com/uc?export=view&id=1yd6VKxdKPQTAyRJT0YegLihHyzbESFIL",
           "tablet": "https://drive.google.com/uc?export=view&id=1IlM4lTIJJHL25xtsHkMalPKiJ8C3dUz1"
         },
@@ -47,446 +47,303 @@
     },
     "introduction": {
       "title": "Licenciaturas",
-      "description": "Los mejores programas educativos con experiencias y planes de estudio internacionales y un sistema modular que te permitirá aprovechar el conocimiento al máximo."
+      "description": "Conoce más sobre las licenciaturas que puedes estudiar en UTEG. Elije una entre las que conforman nuestra oferta académica de acuerdo al área de conocimiento, modalidad y plantel de tu interés. "
     }
   },
   "programs": [
     {
-      "title": "Licenciatura en Administración de Empresas",
+      "title": "Cirujano Dentista",
       "config": {
-        "nombre": "Licenciatura en Administración de Empresas",
+        "nombre": "Cirujano Dentista",
         "modalidad": ["Presencial"],
-        "areaConocimiento": ["Económico - Administrativo"],
-        "campus": ["Saltillo", "Matamoros", "Torreón", "Piedras Negras", "Sabinas", "Reynosa", "Monclova"],
-        "nivel": ["Licenciatura"],
+        "areaConocimiento": ["Salud"],
+        "campus": ["Campus Washington"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1Sb3r92gDYkX9h3ZVXXdw04itRVmUg7sH",
-          "alt": "especilidad"
+          "src": "https://drive.google.com/uc?export=view&id=1hDdotoKywIc4Lbj0PhV-09reK7PWvO51",
+          "alt": "licenciatura"
         }
       },
-      "route": "administracion-empresas"
+      "route": "cirujano-dentista"
     },
     {
-      "title": "Licenciatura en Idiomas",
+      "title": "Licenciatura en Enfermeria",
       "config": {
-        "nombre": "Licenciatura en Idiomas",
+        "nombre": "Licenciatura en Enfermeria",
         "modalidad": ["Presencial"],
-        "areaConocimiento": ["Humanidades"],
-        "campus": ["Saltillo", "Torreón", "Piedras Negras"],
-        "nivel": ["Licenciatura"],
+        "areaConocimiento": ["Salud"],
+        "campus": ["Campus Washington"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=19wr68tsR7OEsvbnzWY5xXpYgpYQqkYdS",
+          "src": "https://drive.google.com/uc?export=view&id=1qiv3nTpIEBc_eHR22VKnjJOdMPd36QYD",
           "alt": "licenciatura"
         }
       },
-      "route": "idiomas"
+      "route": "enfermeria"
     },
     {
-      "title": "Licenciatura en Diseño Gráfico",
+      "title": "Carrera de Abogado",
       "config": {
-        "nombre": "Diseño Gráfico",
-        "modalidad": ["Presencial", "Flex"],
-        "areaConocimiento": ["Ciencias Sociales", "Humanidades"],
-        "campus": ["Saltillo", "Matamoros", "Torreón", "Monclova", "Monterrey", "Piedras Negras"],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1pcSuQipeNpn8hQT2axqtZ9OuMineeoC9",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "diseno-grafico"
-    },
-    {
-      "title": "Licenciatura en Gastronomía",
-      "config": {
-        "nombre": "Licenciatura en Gastronomía",
+        "nombre": "Carrera de Abogado",
         "modalidad": ["Presencial"],
-        "areaConocimiento": ["Ciencias Sociales y Administrativas"],
-        "campus": ["Saltillo", "Torreón"],
-        "nivel": ["Licenciatura"],
+        "areaConocimiento": ["Jurídicas y Sociales"],
+        "campus": ["Américas", "Lázaro Cárdenas", "Zapopan"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1Yr8Kk57j3iGB8yrgbEBWOh7LGWwxBoRT",
+          "src": "https://drive.google.com/uc?export=view&id=1xAx-tPvYzuTEpb7GmHZiC9UYA-GFOAz1",
           "alt": "licenciatura"
         }
       },
-      "route": "gastronomia"
+      "route": "carrera-abogado"
     },
     {
-      "title": "Licenciatura en Comercio Internacional",
+      "title": "Licenciatura Arquitectura",
       "config": {
-        "nombre": "Licenciatura en Comercio Internacional",
+        "nombre": "Licenciatura Arquitectura",
         "modalidad": ["Presencial"],
-        "areaConocimiento": ["Económico - Administrativo"],
-        "campus": [ "Saltillo", "Monterrey",  "Matamoros", "Torreón", "Piedras Negras", "Reynosa", "Monclova" ],
-        "nivel": ["Licenciatura"],
+        "areaConocimiento": ["Arquitectura y Diseño"],
+        "campus": ["Américas"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1QjAGs7uqe1J88h2dA3weRoNOMAg5ZGhb",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "comercio-internacional"
-    },
-    {
-      "title": "Licenciatura en Derecho con Acentuación en Negocios Internacionales",
-      "config": {
-        "nombre": "Licenciatura en Derecho con Acentuación en Negocios Internacionales",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Ciencias Sociales"],
-        "campus": [ "Monterrey", "Matamoros", "Reynosa" ],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1fxU5qQvmvjtXd3M4ggcoGFH7a_tEBHFC",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "derecho-acentuacion-negocios-internacionales"
-    },
-    {
-      "title": "Licenciatura en Psicología",
-      "config": {
-        "nombre": "Licenciatura en Psicología",
-        "modalidad": ["Presencial", "Online", "Flex"],
-        "areaConocimiento": ["Ciencias de la Salud", "Ciencias Sociales"],
-        "campus": ["Saltillo", "Monterrey" , "Matamoros", "Torreón", "Piedras Negras", "Sabinas", "Reynosa", "Monclova"],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1YxjRkrGXP14MaiZRSy9CNqVd-ltFVMCJ",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "psicologia"
-    },
-    {
-      "title": "Licenciatura en Administración de Empresas Turísticas",
-      "config": {
-        "nombre": "Licenciatura en Administración de Empresas Turísticas",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Económico - Administrativo"],
-        "campus": [ "Saltillo", "Torreón" ],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1y6BzlxIr6Zi_sV9uNgq3PeCxtqZhLIeu",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "administracion-empresas-turisticas"
-    },
-    {
-      "title": "Ingeniería Industrial y de Sistemas",
-      "config": {
-        "nombre": "Ingeniería Industrial y de Sistemas",
-        "modalidad": ["Presencial", "Online", "Flex"],
-        "areaConocimiento": ["Ciencias Exactas"],
-        "campus": [ "Saltillo", "Monterrey", "Matamoros", "Torreón", "Piedras Negras", "Monclova" ],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1txiRradR7dgMBlxeIJVCRhNoDA5DV_jR",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "ingenieria-industrial-sistemas"
-    },
-    {
-      "title": "Licenciatura en Ciencias de la Educación",
-      "config": {
-        "nombre": "Licenciatura en Ciencias de la Educación",
-        "modalidad": ["Presencial", "Online"],
-        "areaConocimiento": ["Ciencias Sociales"],
-        "campus": [ "Saltillo", "Matamoros", "Torreón", "Piedras Negras", "Sabinas", "Reynosa", "Monclova" ],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1jrKgLYJoy9oX14IF6vqsEX_R-zX9cOaY",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "ciencias-educacion"
-    },
-    {
-      "title": "Licenciatura en Nutrición",
-      "config": {
-        "nombre": "Licenciatura en Nutrición",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Ciencias Biologicas"],
-        "campus": [ "Saltillo", "Monterrey", "Torreón", "Monclova" ],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1kyJT49LV6EcSA65HNK7IJKw3IKj4V7PJ",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "nutricion"
-    },
-    {
-      "title": "Licenciatura en Derecho",
-      "config": {
-        "nombre": "Licenciatura en Derecho",
-        "modalidad": ["Presencial", "Online", "Flex"],
-        "areaConocimiento": ["Ciencias Sociales", "Humanidades"],
-        "campus": [ "Saltillo", "Torreón", "Piedras Negras", "Sabinas", "Monclova", "Monterrey" ],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1fkHschHQn87_ISClxQ3JrxbTSYmFMjCH",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "derecho"
-    },
-    {
-      "title": "Licenciatura en Administración de Recursos Humanos",
-      "config": {
-        "nombre": "Licenciatura en Administración de Recursos Humanos",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Ciencias Sociales"],
-        "campus": [ "Saltillo", "Sabinas", "Torreón", "Piedras Negras", "Monclova" ],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1947RsnMuQbrbSemz26C_eA93kabKyP8a",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "administracion-recursos-humanos"
-    },
-    {
-      "title": "Licenciatura en Arquitectura",
-      "config": {
-        "nombre": "Licenciatura en Arquitectura",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Ciencias Sociales"],
-        "campus": [ "Saltillo", "Monclova", "Monterrey", "Torreón" ],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=140DMD5weJlXIItPXz9OndgRL3AvyLsGi",
+          "src": "https://drive.google.com/uc?export=view&id=1CtuuEDnJCfGCqxt-XcrgPFl_deE7eGdL",
           "alt": "licenciatura"
         }
       },
       "route": "arquitectura"
     },
     {
-      "title": "Licenciatura en Contador Público",
+      "title": "Licenciatura Diseño de Interiores",
       "config": {
-        "nombre": "Licenciatura en Contador Público",
-        "modalidad": ["Presencial", "Online", "Flex"],
-        "areaConocimiento": ["Económico - Administrativo"],
-        "campus": [ "Matamoros", "Monterrey", "Reynosa", "Sabinas", "Saltillo", "Torreón", "Piedras Negras" ],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=15AwG8zlwoiekeC8ZiBjUSom7SGgIHqTH",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "contador-publico"
-    },
-    {
-      "title": "Licenciatura en Comunicación",
-      "config": {
-        "nombre": "Licenciatura en Comunicación",
-        "modalidad": ["Presencial", "Online"],
-        "areaConocimiento": ["Ciencias Sociales"],
-        "campus": [ "Saltillo", "Torreón", "Monclova", "Piedras Negras" ],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1Stw3--PtA0_0qK13VxwxPwrweM4IlfLZ",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "comunicacion"
-    },
-    {
-      "title": "Ingeniería en Sistemas y Productividad Industrial",
-      "config": {
-        "nombre": "Ingeniería en Sistemas y Productividad Industrial",
+        "nombre": "Licenciatura Diseño de Interiores",
         "modalidad": ["Presencial"],
-        "areaConocimiento": ["Ciencias Exactas"],
-        "campus": [ "Saltillo", "Reynosa" ],
-        "nivel": ["Licenciatura"],
+        "areaConocimiento": ["Arquitectura y Diseño"],
+        "campus": ["Américas"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1LWTwinSoVElzup0ONvuV_YMioVNzUmfL",
+          "src": "https://drive.google.com/uc?export=view&id=1UjYu4TL8kBl5A8CcftkmHjWU_TLmE67C",
           "alt": "licenciatura"
         }
       },
-      "route": "sistemas-productividad-industrial"
+      "route": "diseno-interiores"
     },
     {
-      "title": "Licenciatura en Mercadotecnia",
+      "title": "Ingeniería Comunicaciones y Electrónica",
       "config": {
-        "nombre": "Licenciatura en Mercadotecnia",
-        "modalidad": ["Presencial", "Online"],
-        "areaConocimiento": ["Económico - Administrativo"],
-        "campus": [ "Reynosa" ],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1SlyD0RBk6qwgjGE8FLl3w9p4LTLrG3GE",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "mercadotecnia"
-    },
-    {
-      "title": "Licenciatura en Administración Estratégica de Negocios",
-      "config": {
-        "nombre": "Licenciatura en Administración Estratégica de Negocios",
+        "nombre": "Ingeniería Comunicaciones y Electrónica",
         "modalidad": ["Presencial"],
-        "areaConocimiento": ["Económico - Administrativo"],
-        "campus": [ "Monterrey" ],
-        "nivel": ["Licenciatura"],
+        "areaConocimiento": ["Ingenierías y Tecnología"],
+        "campus": ["Olímpica"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=19vFuL48Tc5YTDXAIBvonJ-XL23DcIUSK",
+          "src": "https://drive.google.com/uc?export=view&id=1MaYPdS7AQLqAIigltmhx6vMG7G2wtzaY",
           "alt": "licenciatura"
         }
       },
-      "route": "administracion-estrategia-negocios"
+      "route": "ingenieria-comunicaciones-electronica"
     },
     {
-      "title": "Ingeniería en Desarrollo de Software",
+      "title": "Licenciatura Gastronomía",
       "config": {
-        "nombre": "Ingeniería en Desarrollo de Software",
-        "modalidad": ["Online", "Flex"],
-        "areaConocimiento": ["Ciencias Exactas"],
-        "campus": ["Saltillo", "Monterrey", "Piedras Negras", "Torreón", "Matamoros"],
-        "nivel": ["Licenciatura"],
+        "nombre": "Licenciatura Gastronomía",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Negocios y Empresariales"],
+        "campus": ["Américas", "Pedro Moreno"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1hPGAnoL1QoExyzS6aOGkRBYXSk351GM1",
+          "src": "https://drive.google.com/uc?export=view&id=1178Zx6YhLUR9ildkUzdh51cUbpZ-dLGD",
           "alt": "licenciatura"
         }
       },
-      "route": "desarrollo-software"
+      "route": "gastronomia"
     },
     {
-      "title": "Ingeniería en Sistemas",
+      "title": "Licenciatura Diseño de Modas",
       "config": {
-        "hidden": true,
-        "nombre": "Ingeniería en Sistemas",
-        "modalidad": ["Online", "Flex"],
-        "areaConocimiento": ["Ciencias Exactas"],
-        "campus": [ "Saltillo", "Monterrey", "Piedras Negras", "Torreón", "Matamoros"],
-        "nivel": ["Licenciatura"],
+        "nombre": "Licenciatura Diseño de Modas",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Arquitectura y Diseño"],
+        "campus": ["Américas"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1bBv99_xuMk_M2DhAwzDc0WxaQtGKs9WW",
+          "src": "https://drive.google.com/uc?export=view&id=1ogSyMaQ9cVAPOVtzcnY2b7tRmVXOMNQu",
           "alt": "licenciatura"
         }
       },
-      "route": "ingenieria-sistemas"
+      "route": "diseno-modas"
     },
     {
-      "title": "Ingeniería Industrial en Producción",
+      "title": "Licenciatura Trabajo Social",
       "config": {
-        "nombre": "Ingeniería Industrial en Producción",
-        "modalidad": ["Online"],
-        "areaConocimiento": ["Ciencias Exactas"],
-        "campus": [],
-        "nivel": ["Licenciatura"],
+        "nombre": "Licenciatura Trabajo Social",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Jurídicas y Sociales"],
+        "campus": ["Pedro Moreno"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1NMLlLwRog1Dvaoc4gCZG6neGsJFIlc57",
+          "src": "https://drive.google.com/uc?export=view&id=14Pq0T8uYn62Cbq26T7dLfZYw1PJ9Irt9",
           "alt": "licenciatura"
         }
       },
-      "route": "ingenieria-industrial-produccion"
+      "route": "trabajo-social"
     },
     {
-      "title": "Licenciatura en Administración y Liderazgo Empresarial",
+      "title": "Licenciatura en Administracion",
       "config": {
-        "nombre": "Licenciatura en Administración y Liderazgo Empresarial",
-        "modalidad": ["Online", "Flex"],
-        "areaConocimiento": ["Económico - Administrativo"],
-        "campus": [ "Saltillo", "Monterrey", "Piedras Negras", "Torreón", "Matamoros"],
-        "nivel": ["Licenciatura"],
+        "nombre": "Licenciatura en Administracion",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Negocios y Empresariales"],
+        "campus": ["Américas", "Campus Washington", "Río Nilo", "Tlajomulco", "Zapopan"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1SoA5ssMvmxkcxky4xmh_k08qGMxcguIT",
+          "src": "https://drive.google.com/uc?export=view&id=1gtvo-I_IKrSjh8tDMaPF00vni0PZWq4P",
           "alt": "licenciatura"
         }
       },
-      "route": "administracion-liderazgo-empresarial"
-    },
-    {
-      "title": "Licenciatura en Contaduría",
-      "config": {
-        "hidden": true,
-        "nombre": "Licenciatura en Contaduría",
-        "modalidad": ["Online", "Flex"],
-        "areaConocimiento": ["Económico - Administrativo"],
-        "campus": [ "Saltillo", "Monterrey", "Piedras Negras", "Torreón", "Matamoros" ],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=15AwG8zlwoiekeC8ZiBjUSom7SGgIHqTH",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "contaduria"
-    },
-    {
-      "title": "Licenciatura en Gestión Deportiva",
-      "config": {
-        "nombre": "Licenciatura en Gestión Deportiva",
-        "modalidad": ["Online", "Flex"],
-        "areaConocimiento": ["Ciencias Sociales y Administrativas"],
-        "campus": [ "Saltillo", "Monterrey", "Piedras Negras", "Torreón", "Matamoros"],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1iWJf1IJ_ew8fwl7Ibr2j7gTjKGZoqAx8",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "gestion-deportiva"
-    },
-    {
-      "title": "Ingeniería Mecánica en Procesos de Inyección",
-      "config": {
-        "nombre": "Ingeniería Mecánica en Procesos de Inyección",
-        "modalidad": ["Presencial", "Online"],
-        "areaConocimiento": ["Ciencias Exactas", "Ciencias Sociales"],
-        "campus": [ "Saltillo", "Monterrey"],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1w0UVDGgpcJ9-LPVD2x99zfIupjeqyoJJ",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "mecanica-procesos-inyeccion"
-    },
-    {
-      "title": "Licenciatura en Negocios Digitales",
-      "config": {
-        "nombre": "Licenciatura en negocios digitales",
-        "modalidad": ["Online"],
-        "areaConocimiento": ["Económico - Administrativo"],
-        "campus": [],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1u5C7cOsjHiY96xDGAtmL80MdONHTJRhP",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "negocios-digitales"
+      "route": "administracion"
     },
     {
       "title": "Licenciatura en Negocios Internacionales",
       "config": {
-        "nombre": "Licenciatura en negocios internacionales",
-        "modalidad": ["Online", "Flex"],
-        "areaConocimiento": ["Económico - Administrativo"],
-        "campus": [ "Saltillo", "Piedras Negras", "Monterrey", "Matamoros", "Torreón"],
-        "nivel": ["Licenciatura"],
+        "nombre": "Licenciatura en Negocios Internacionales",
+        "modalidad": ["Presencial", "Online", "Flex"],
+        "areaConocimiento": ["Negocios y Empresariales", "Económico - Administrativo"],
+        "campus": ["Américas", "Campus Washington", "Río Nilo", "Tlajomulco", "Zapopan"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1bY5_8INHrJMAVRNWVxO7jr9kXlO23Fz-",
+          "src": "https://drive.google.com/uc?export=view&id=1m-W5_0aGQZnepR_Qa4VRj5hJbTIbPjqB",
           "alt": "licenciatura"
         }
       },
       "route": "negocios-internacionales"
     },
     {
-      "title": "Ingeniería en Ciencias de Datos",
+      "title": "Licenciatura en Mercadotecnia",
       "config": {
-        "nombre": "Ingenieria en Ciencias de Datos",
-        "modalidad": ["Online"],
-        "areaConocimiento": ["Económico - Administrativo"],
-        "campus": [],
-        "nivel": ["Licenciatura"],
+        "nombre": "Licenciatura en Mercadotecnia",
+        "modalidad": ["Presencial", "Online"],
+        "areaConocimiento": ["Negocios y Empresariales", "Económico - Administrativo"],
+        "campus": ["Américas", "Campus Washington", "Río Nilo", "Tlajomulco", "Zapopan"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=17KoWteVG1PLUT3BSJai2wSN-KUtBS-Il",
+          "src": "https://drive.google.com/uc?export=view&id=1IVXmQY-GVB1sKSIKgLKICGwuVD-BMPpD",
           "alt": "licenciatura"
         }
       },
-      "route": "ingenieria-ciencia-datos"
+      "route": "mercadotecnia"
+    },
+    {
+      "title": "Licenciatura en Psicología",
+      "config": {
+        "nombre": "Licenciatura en Psicología",
+        "modalidad": ["Presencial", "Online", "Flex"],
+        "areaConocimiento": ["Salud", "Ciencias sociales"],
+        "campus": ["Campus Washington", "Plantel Zapopan", "Tlajomulco"],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1HMK3_HRSTAp0BLnZuynVJRXA-Z2WntR0",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "psicologia"
+    },
+    {
+      "title": "Licenciatura en Nutrición",
+      "config": {
+        "nombre": "Licenciatura en Nutrición",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Salud"],
+        "campus": ["Campus Washington"],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1QlX9k-z4MVDzyq8DrHAZzKx2XPGCqeEZ",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "nutricion"
+    },
+    {
+      "title": "Licenciatura en Cultura Física y Deportes",
+      "config": {
+        "nombre": "Licenciatura en Cultura Física y Deportes",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Salud"],
+        "campus": ["Campus Washington"],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1iB_wM3LV78YRm3mhIo-hEeQ8zocMp5JY",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "cultura-fisica-deportes"
+    },
+    {
+      "title": "Licenciatura en Químico Farmacéutico Biólogo",
+      "config": {
+        "nombre": "Licenciatura en Químico Farmacéutico Biólogo",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Salud"],
+        "campus": ["Campus Washington"],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1dImSOs33oDQJZD84IXf5IrfZ9XNHYlF5",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "quimico-farmaceutico-biologo"
+    },
+    {
+      "title": "Licenciatura en Diseño para la Comunicación Gráfica",
+      "config": {
+        "nombre": "Licenciatura en Diseño para la Comunicación Gráfica",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Arquitectura y Diseño"],
+        "campus": ["Américas"],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "diseno-comunicacion-grafica"
+    },
+    {
+      "title": "Ingeniería en Computación",
+      "config": {
+        "nombre": "Ingeniería en Computación",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Ingenierías y Tecnología"],
+        "campus": ["Olímpica"],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1MGmIkTbjGW0JfiEUyGuddGY_V8-cGGVO",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "ingenieria-computacion"
+    },
+    {
+      "title": "Licenciatura en Negocios Digitales",
+      "config": {
+        "nombre": "Licenciatura en Negocios Digitales",
+        "modalidad": ["Online"],
+        "areaConocimiento": ["Económico - Administrativo"],
+        "campus": [""],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1lf1Ggy3coet6vSnv1PDDbMrW5MyaCgkg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "negocios-digitales"
+    },
+    {
+      "title": "Ingenieria en Ciencia de Datos",
+      "config": {
+        "nombre": "Ingenieria en Ciencia de Datos",
+        "modalidad": ["Online"],
+        "areaConocimiento": ["Económico - Administrativo"],
+        "campus": [""],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1v5fhe1LZL825tt6WRc14dlF9cSVSmwOX",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "ingenieria-ciencias-datos"
+    },
+    {
+      "title": "Licenciatura en Turismo",
+      "config": {
+        "nombre": "Licenciatura en Turismo",
+        "modalidad": ["Online"],
+        "areaConocimiento": ["Económico - Administrativo"],
+        "campus": [""],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=15iMG8von_UvJyMB52sHbuS4arBT_b8re",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "turismo"
     }
   ]
 }
