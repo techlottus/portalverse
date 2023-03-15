@@ -7,24 +7,24 @@
   "sections": {
     "head": {
       "title": "Becas bachillerato y licenciatura",
-      "subtitle": "El 80% del alumando tiene algún tipo de beca",
-      "description": "Consulta las becas que ofrecemos y elige qué tipo de apoyo se adapta a tus necesidades.\n\nUANE, es sinónimo de servicio, oportunidades y trascendencia.\n\nPocas Universidades en el país pueden expresar que el 80% de su alumnado es apoyado con algún tipo de beca. Eso y más, es UANE, algunas de nuestras becas llegan a cubrir el 100% de la colegiatura",
+      "subtitle": "En UTEG destinamos mas de 50 millones en recursos para becas",
+      "description": "El Centro Universitario UTEG otorga a sus estudiantes becas y múltiples opciones para concluir su preparación académica. De este modo cumple con la responsabilidad educativa de formar profesionales con los más altos estándares de calidad. Los programas de estudio con los que cuenta esta casa de estudios se encuentran acreditados por organismos externos, certificados por normas internacionales que garantizan el desarrollo y la formación integral de sus estudiantes.",
       "image": {
         "desk": {
           "alt": "imagen",
-          "src": "https://drive.google.com/uc?export=view&id=1KUZbjSo1b_7q5U6UZoain-QVcS1H_Pt-"
+          "src": "https://drive.google.com/uc?export=view&id=1q0mQG6nWxqOEQuE2fLng49Sgnrk_hxVk"
         },
         "mobile": {
           "alt": "imagen",
-          "src": "https://drive.google.com/uc?export=view&id=1I4ku9VpOema24_j8rcbJ90A2ji77oMKE"
+          "src": "https://drive.google.com/uc?export=view&id=1q0mQG6nWxqOEQuE2fLng49Sgnrk_hxVk"
         }
       }
     },
     "estadisticas": [
-      {"maxNumber": 30, "icon": "group", "prefix": "", "suffix": "%", "title": "De los alumnos tienen la beca servicio", "body": "", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
-      {"maxNumber": 10, "icon": "group", "prefix": "", "suffix": "%", "title": "De nuestros estudiantes cuantan con beca de excelencia", "body": "", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
-      {"maxNumber": 40, "icon": "group", "prefix": "", "suffix": "%", "title": "De la matrícula tiene beca de convenio", "body": "", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
-      {"maxNumber": 2, "icon": "group", "prefix": "", "suffix": "%", "title": "De los estudiantes tienen beca al mérito académico", "body": "", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false}
+      {"maxNumber": 52.9, "icon": "diversity_3", "prefix": "", "suffix": "%", "title": "De alumnos becados", "body": "", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
+      {"maxNumber": 12, "icon": "school", "prefix": "", "suffix": "%", "title": "De colaboradores con beca para sus familiares", "body": "", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
+      {"maxNumber": 20, "icon": "book", "prefix": "", "suffix": "%", "title": "De alumnos con Beca Institucional", "body": "", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
+      {"maxNumber": 8, "icon": "card_membership", "prefix": "", "suffix": "%", "title": "De alumnos con Beca por Promoción de Mercadotecnia", "body": "", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false}
     ],
     "becas": {
       "tabs": {
@@ -86,16 +86,16 @@
         "textEvent": "Dismiss",
         "tagOnRight": "testOnRight"
       },
-      "text": "Las becas mencionadas tienen efecto única y exclusivamente sobre el monto de las colegiaturas",
-      "title": "No aplica sobre inscripción"
+      "text": "Las becas mencionadas tienen efecto única y exclusivamente sobre el monto de las colegiaturas. El porcentaje de beca no se podrá acumular al descuento del ciclo completo que está vigente durante los primeros 15 días hábiles de inicio de clases de cada ciclo escolar ni al beneficio de pago por pago.",
+      "title": "No aplica sobre inscripción / reinscripción"
     },
     "llamanos": {
       "title": "¿Tienes dudas? llámanos",
       "card": { 
-        "image": "https://drive.google.com/uc?export=view&id=1S1dJyvzulBkHkDD-I0pDIL7yXoe75N7J",
+        "image": "https://drive.google.com/uc?export=view&id=1yLJVU_hAj3OQz36XtfmcAEzeXVKAaKQa",
         "subtitle": "",
-        "title": "Oficinas de servicios estudiantiles y Centros de admisión",
-        "text": "Nuestros asesores expertos te brindarán apoyo de lunes a viernes de 7:00 a 20:00 horas y sábados de 9:00 a 14:00 horas.\n\n8008228263\n\nCorreo: hola@uane.edu.mx",
+        "title": "Oficinas de servicios escolares ",
+        "text": "Nuestros asesores expertos te brindarán apoyo de lunes a viernes de 08:00 a 21:00 horas en el teléfono: 33 10 78 80 00\n\nservicios.campus@uteg.edu.mx\n\nservicios.olimpica@uteg.edu.mx\n\nservicios.americas@uteg.edu.mx\n\nservicios.lzc@uteg.edu.mx\n\nservicios.zapopan@uteg.edu.mx\n\nservicios.rionilo@uteg.edu.mx\n\nservicios.pm@uteg.edu.mx\n\nservicios.tlajomulco@uteg.edu.mx",
         "border": true,
         "type": "vertical",
         "background": false,
