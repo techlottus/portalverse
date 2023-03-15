@@ -20,7 +20,7 @@ const BreadcrumbsLabels: any = {
   "somos-UANE": "Somos UANE",
   "campus": "Campus",
   "modelo-educativo": "Modelo Educativa",
-  "empleabilidad": "Empleabilidad",
+  "bolsa-de-talento": "Bolsa de Talento",
   "conexion-educativa": "Conexión Educativa",
   "faq": "Preguntas Frecuentes",
   "general": "General",
