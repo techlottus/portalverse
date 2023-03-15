@@ -8,6 +8,7 @@ export type CintilloData = {
   phone: string;
   classNames?: string;
   whatsApp?: string;
+  contentVariant?: "light" | "dark";
 }
 
 export default CintilloData
