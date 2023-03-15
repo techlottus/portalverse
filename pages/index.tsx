@@ -96,14 +96,6 @@ const Home: NextPageWithLayout = ({ data: { sections, meta, strapi } }: any) => 
           }
         </div>
       </ContentLayout>
-      {/* <ContentFullLayout>
-        <section className="w-d:grid-cols-12 w-t:grid-cols-8 w-p:grid-cols-4 bg-[#F4F4F4] px-[84px] w-p:pl-6 w-p:pr-0 pt-12">
-          <CarouselCards data={sections.campus} />
-          <section className="flex justify-center mt-6 pb-8">
-            <Button dark data={{...sections.campus.button}} onClick={() => handleRedirectCampus(sections.campus.button.redirect) }/> 
-          </section>
-        </section>
-      </ContentFullLayout> */}
       <ContentLayout>
         <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mt-[72px] mt-[72px]">
           <p className="ac-type-h3-bold-solid-poppins-desktop w-p:ac-type-h3-bold-solid-poppins-tabmob">{ blogListConfig?.title }</p>
