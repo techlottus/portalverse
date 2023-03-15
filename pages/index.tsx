@@ -21,8 +21,8 @@ import getBlogPosts, { BlogPostsData } from "@/utils/getBlogPosts"
 import { findSection, findSections } from "@/utils/strapi"
 import SliderPortalverseWrapper from "@/components/SliderPortalverseWrapper"
 import OfertaEducativaWrapper from "@/components/OfertaEducativaWrapper"
-import NumbersPortalverseWrapper from "@/components/NumbersPortalverseWrapper"
 import BlogPostCardWrapper from "@/components/BlogPostCardWrapper"
+import NumbersPortalverse from "@/old-components/NumbersPortalverse/NumbersPortalverse"
 
 const Home: NextPageWithLayout = ({ data: { sections, meta, strapi } }: any) => {
   const router = useRouter();
@@ -48,13 +48,14 @@ const Home: NextPageWithLayout = ({ data: { sections, meta, strapi } }: any) => 
     strapiSections,
     "ComponentSectionsBanner"
   );
-  const internationalizationBanner = banners[0];
-  const podcastBanner = banners[1];
+  const banner1 = banners[0];
+  const banner2 = banners[1];
 
-  const statisticsCardsSection = findSection<StatisticsCardListSection>(
-    strapiSections,
-    "ComponentSectionsStatisticsCardList"
-  );
+  // TODO: Uncomment when Strapi support for custom statistics card color is added.
+  // const statisticsCardsSection = findSection<StatisticsCardListSection>(
+  //   strapiSections,
+  //   "ComponentSectionsStatisticsCardList"
+  // );
 
   return <>
     <Head>
@@ -80,18 +81,24 @@ const Home: NextPageWithLayout = ({ data: { sections, meta, strapi } }: any) => 
       <ContentFullLayout classNames="w-d:hidden w-p:hidden my-6">
         <ContentInsideLayout classNames="gap-6">
         <div className="col-span-8">
-          <BannerPortalverseWrapper data={{...internationalizationBanner, height: "300px"}} onClick={ () => router.push(`${internationalizationBanner?.ctaUrl}`)}/>
+          <BannerPortalverseWrapper data={{...banner1, height: "300px"}} onClick={ () => router.push(`${banner1?.ctaUrl}`)}/>
         </div>
         </ContentInsideLayout>
       </ContentFullLayout>
       <ContentLayout classNames="">
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:hidden">
-          <BannerPortalverseWrapper data={{...internationalizationBanner, height: "300px"}} onClick={ () => router.push(`${podcastBanner?.ctaUrl}`)}/>
+          <BannerPortalverseWrapper data={{...banner1, height: "300px"}} onClick={ () => router.push(`${banner1?.ctaUrl}`)}/>
         </div>
         <div className="w-d:col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 w-d:mt-8 ">
-          {
+          {/* Use data from JSON */}
+          {/* {
             statisticsCardsSection?.cards?.map((item, i:number) => <section key={`section-numbers-${i}`}>
               <NumbersPortalverseWrapper data={item}/>
+            </section>)
+          } */}
+          {
+            sections.numbers.map((item:any, i:number) => <section key={`section-numbers-${i}`}>
+              <NumbersPortalverse data={item}/>
             </section>)
           }
         </div>
@@ -111,13 +118,13 @@ const Home: NextPageWithLayout = ({ data: { sections, meta, strapi } }: any) => 
       <ContentFullLayout classNames="w-d:hidden w-p:hidden gap-6 my-6">
         <ContentInsideLayout classNames="gap-6">
         <div className="w-t:col-span-8 w-p:col-span-4">
-          <BannerPortalverseWrapper data={{...podcastBanner, height: "300px"}} onClick={ () => router.push(`${podcastBanner?.ctaUrl}`)}/>
+          <BannerPortalverseWrapper data={{...banner2, height: "300px"}} onClick={ () => router.push(`${banner2?.ctaUrl}`)}/>
         </div>
         </ContentInsideLayout>
       </ContentFullLayout>
       <ContentLayout classNames="w-t:hidden my-6">
         <div className="col-span-12 w-p:col-span-4">
-          <BannerPortalverseWrapper data={{...podcastBanner, height: "300px"}} onClick={ () => router.push(`${podcastBanner?.ctaUrl}`)}/>
+          <BannerPortalverseWrapper data={{...banner2, height: "300px"}} onClick={ () => router.push(`${banner2?.ctaUrl}`)}/>
         </div>
       </ContentLayout>
       <ContentLayout>
@@ -168,4 +175,4 @@ export async function getStaticProps(context: any) {
   };
 }
 
-export default Home
+export default Home;
