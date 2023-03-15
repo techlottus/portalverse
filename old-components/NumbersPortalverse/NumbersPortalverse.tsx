@@ -9,20 +9,25 @@ const NumbersPortalverse: FC<NumbersPortalverseData> = memo(({data, classNames}:
 
   const [ finishedCount, setFinishedCount ] = useState<boolean>(false);
 
+  const customStyles = {
+    boxShadow: `5px 5px 0px 0px ${data?.typeShadowColor}`,
+  };
+
   return <>
-    <div className={cn("wrapperNumbers", classNames, {
+    <div style={customStyles} className={cn("wrapperNumbers", classNames, {
       "shadow-30 rounded-lg bg-white": data.boxShadow,
       "border border-[#CDCDCD]": data.bordered,
-      "shadow-pastelBlueShadowLeft rounded-lg": data.isShadowColor === true && data.typeShadowColor === 'blue-pastel-left',
-      "shadow-pastelYellowShadowLeft rounded-lg": data.isShadowColor === true && data.typeShadowColor === 'yellow-pastel-left',
-      "shadow-pastelRedShadowLeft rounded-lg": data.isShadowColor === true && data.typeShadowColor === 'red-pastel-left',
-      "shadow-pastelGrayShadowLeft rounded-lg": data.isShadowColor === true && data.typeShadowColor === 'gray-pastel-left',
-      "shadow-blueShadowLeft rounded-lg": data.isShadowColor === true && data.typeShadowColor === 'blue-left',
-      "shadow-pastelBlueShadowRight rounded-lg": data.isShadowColor === true && data.typeShadowColor === 'blue-pastel-right',
-      "shadow-pastelYellowShadowRight rounded-lg": data.isShadowColor === true && data.typeShadowColor === 'yellow-pastel-right',
-      "shadow-pastelRedShadowRight rounded-lg": data.isShadowColor === true && data.typeShadowColor === 'red-pastel-right',
-      "shadow-pastelGrayShadowRight rounded-lg": data.isShadowColor === true && data.typeShadowColor === 'gray-pastel-right',
-      "shadow-blueShadowRight rounded-lg": data.isShadowColor === true && data.typeShadowColor === 'blue-right'
+      "rounded-lg": !!data?.isShadowColor,
+      "shadow-pastelBlueShadowLeft": data.isShadowColor === true && data.typeShadowColor === 'blue-pastel-left',
+      "shadow-pastelYellowShadowLeft": data.isShadowColor === true && data.typeShadowColor === 'yellow-pastel-left',
+      "shadow-pastelRedShadowLeft": data.isShadowColor === true && data.typeShadowColor === 'red-pastel-left',
+      "shadow-pastelGrayShadowLeft": data.isShadowColor === true && data.typeShadowColor === 'gray-pastel-left',
+      "shadow-blueShadowLeft": data.isShadowColor === true && data.typeShadowColor === 'blue-left',
+      "shadow-pastelBlueShadowRight": data.isShadowColor === true && data.typeShadowColor === 'blue-pastel-right',
+      "shadow-pastelYellowShadowRight": data.isShadowColor === true && data.typeShadowColor === 'yellow-pastel-right',
+      "shadow-pastelRedShadowRight": data.isShadowColor === true && data.typeShadowColor === 'red-pastel-right',
+      "shadow-pastelGrayShadowRight": data.isShadowColor === true && data.typeShadowColor === 'gray-pastel-right',
+      "shadow-blueShadowRight": data.isShadowColor === true && data.typeShadowColor === 'blue-right'
     })}>
       <div className= {cn("content-number flex justify-center items-center px-4 pt-4 wrapperNumbers", classNames, {
         "pt-0 px-0" : data.isShadowColor === false && data.container === false && data.bordered === false && data.boxShadow === false
