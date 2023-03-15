@@ -26,6 +26,7 @@ const BreadcrumbsLabels: any = {
   "general": "General",
   "voz-uane": "Voz UANE",
   "pedir-informacion": "Solicita Informes",
+  "alumnos": "Alumnos",
   ...Routes["oferta-educativa"].reduce((prev: any, value: any) => {
     const {params: {programs}} = value
     const programList = programs.reduce((p:any, c:any) => {

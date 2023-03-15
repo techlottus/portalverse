@@ -1,9 +1,7 @@
 import Head from "next/head"
-import { useRouter } from "next/router"
 import ContentLayout from "@/layouts/Content.layout"
 import HeaderFooterLayout from "@/layouts/HeaderFooter.layout"
 import NextPageWithLayout from "@/types/Layout.types"
-import CardWebsite from "@/old-components/CardWebsite"
 import { ContactData, SectionData } from "@/types/Directorio.types"
 import ContentInsideLayout from "@/layouts/ContentInside.layout"
 import ContactTarget from "@/old-components/ContactTarget"
@@ -13,14 +11,21 @@ import BannerPortalverse from "@/old-components/BannerPortalverse"
 import CardWebsitePortalverse from "@/old-components/CardWebsitePortalverse"
 
 const Alumnos: NextPageWithLayout = ({ sections, meta }: any) => {
-  const router = useRouter();
+
+  const downloadFile = () => {
+    const file = document.createElement('a');
+    file.target = '__blank';
+    file.href = sections.calendario.banner.file;
+    file.click();
+  }
+  
   return <>
     <Head>
       <title>{ meta.title }</title>
     </Head>
     <HeaderFooterLayout>
       <ContentLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-12">
+        <div className="col-span-6 w-p:col-span-4 mb-12">
           <p className="font-Poppins font-bold text-[52px] w-t:text-8.5 w-p:text-7.5 leading-13 w-t:leading-[111%] w-p:leading-[125%] mb-6">{ sections.head.title }</p>
           <RichtText data={{
             content: sections.head.description
@@ -42,8 +47,8 @@ const Alumnos: NextPageWithLayout = ({ sections, meta }: any) => {
               </ContentInsideLayout>
               <ContentInsideLayout classNames="mt-6 gap-6">
                 {
-                  contacts.map(({ name, email, phone, image = '' }: ContactData, j: number) =>
-                    <ContactTarget key={`card-item-${j}`} image={image} name={name} email={email} phone={phone} /> 
+                  contacts.map(({ name, email, phone, link = '', image = '' }: ContactData, j: number) =>
+                    <ContactTarget key={`card-item-${j}`} image={image} name={name} email={email} phone={phone} link={link} /> 
                   )
                 }
               </ContentInsideLayout>
@@ -56,9 +61,7 @@ const Alumnos: NextPageWithLayout = ({ sections, meta }: any) => {
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
             <BannerPortalverse
             data={sections.calendario.banner}
-            onClick={ ()=> {
-              router.push(sections.calendario.banner.redirect)
-            }}/>
+            onClick={downloadFile}/>
           </div>
           : null
         }

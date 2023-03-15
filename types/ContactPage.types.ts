@@ -4,6 +4,7 @@ type ContactTargetComponentData = {
   name: string;
   email: string;
   phone: string;
+  link?: string;
   classNames?: string;
 }
 
