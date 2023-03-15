@@ -25,7 +25,7 @@ const Alumnos: NextPageWithLayout = ({ sections, meta }: any) => {
     </Head>
     <HeaderFooterLayout>
       <ContentLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-12">
+        <div className="col-span-6 w-p:col-span-4 mb-12">
           <p className="font-Poppins font-bold text-[52px] w-t:text-8.5 w-p:text-7.5 leading-13 w-t:leading-[111%] w-p:leading-[125%] mb-6">{ sections.head.title }</p>
           <RichtText data={{
             content: sections.head.description
