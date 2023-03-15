@@ -25,7 +25,8 @@ const BannerPortalverse: FC<BannerPortalverseComponentData> = memo(({ data, clas
           "justify-center items-center text-center": data.position === "middle-center",
           "justify-start items-end": data.position === "left-bottom",
           "justify-center items-end text-center": data.position ==="center-bottom",
-          "justify-end items-end text-end": data.position === "right-bottom"
+          "justify-end items-end text-end": data.position === "right-bottom",
+          "justify-end items-start text-end": data.position === "right-top",
           })}
           >
           <div className="p-10">
@@ -40,7 +41,8 @@ const BannerPortalverse: FC<BannerPortalverseComponentData> = memo(({ data, clas
                 "items-center justify-end": data.position === "middle-right",
                 "items-end" : data.position === "left-bottom",
                 "items-end justify-center": data.position === "center-bottom",
-                "items-end justify-end": data.position === "right-bottom"
+                "items-end justify-end": data.position === "right-bottom",
+                "items-start justify-end": data.position === "right-top"
                 })}>
                   <Button darkOutlined data={data?.button} onClick={onClick}/>
                 </div>
@@ -52,7 +54,8 @@ const BannerPortalverse: FC<BannerPortalverseComponentData> = memo(({ data, clas
                 "items-center justify-end": data.position === "middle-right",
                 "items-end" : data.position === "left-bottom",
                 "items-end justify-center": data.position === "center-bottom",
-                "items-end justify-end": data.position === "right-bottom"
+                "items-end justify-end": data.position === "right-bottom",
+                "items-start justify-end": data.position === "right-top"
                 })}><Button dark data={data.button} onClick={onClick}/></div>
               : !data.noAction && data.font === "light"
               ? <div className={cn("mt-2 flex", classNames, {
@@ -62,7 +65,8 @@ const BannerPortalverse: FC<BannerPortalverseComponentData> = memo(({ data, clas
                 "items-center justify-end": data.position === "middle-right",
                 "items-end" : data.position === "left-bottom",
                 "items-end justify-center": data.position === "center-bottom",
-                "items-end justify-end": data.position === "right-bottom"
+                "items-end justify-end": data.position === "right-bottom",
+                "items-start justify-end": data.position === "right-top"
                 })}><Button darkOutlined data={data?.button} onClick={onClick}/></div>
               : data.noAction
               ? null : <div className={cn("mt-2 flex", classNames, {
@@ -72,7 +76,8 @@ const BannerPortalverse: FC<BannerPortalverseComponentData> = memo(({ data, clas
                 "items-center justify-end": data.position === "middle-right",
                 "items-end" : data.position === "left-bottom",
                 "items-end justify-center": data.position === "center-bottom",
-                "items-end justify-end": data.position === "right-bottom"
+                "items-end justify-end": data.position === "right-bottom",
+                "items-start justify-end": data.position === "right-top"
                 })}><Button dark data={data?.button} onClick={onClick}/></div>
             }
           </div>
@@ -97,7 +102,8 @@ const BannerPortalverse: FC<BannerPortalverseComponentData> = memo(({ data, clas
           "justify-center items-center text-center": data.position === "middle-center",
           "justify-start items-end": data.position === "left-bottom",
           "justify-center items-end text-center": data.position ==="center-bottom",
-          "justify-end items-end text-end": data.position === "right-bottom"
+          "justify-end items-end text-end": data.position === "right-bottom",
+          "justify-start items-end text-end": data.position === "right-top",
           })}
           >
           <div className="p-10">
