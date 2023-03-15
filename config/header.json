@@ -15,7 +15,7 @@
       { "label": "Campus", "route": "/nosotros/campus" },
       { "label": "Modelo Educativo", "route": "/nosotros/modelo-educativo" },
       { "label": "Internacionalización", "route": "/nosotros/internacionalizacion" },
-      { "label": "Empleabilidad", "route": "/nosotros/bolsa-de-talento" }
+      { "label": "Bolsa de Talento", "route": "/nosotros/bolsa-de-talento" }
 
       ]
     },
