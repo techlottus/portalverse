@@ -157,12 +157,14 @@ const handleTouchStart = (evt: any) => {
         slides.map((item: any, i: number) => <div key={`slide-item-${i}`} style={{ "transition": "left 0.5s ease-out", "left": `${active === 0 ? 0 : `-${active*100}%`}` }} className={cn("w-full h-full relative flex flex-col grow aspect-2/1")}>
           <Image classNames="w-t:hidden w-full h-full absolute z-1 aspect-2/1" src={item.urlImage.desktop} alt="image" />
           <Image classNames="w-d:hidden w-full h-full absolute z-1 aspect-2/1" src={item.urlImage.tablet} alt="image" />
-          <div className="absolute z-10 w-full h-full pt-10 px-40">
+          <div className={cn("absolute z-10 w-full h-full pt-10 px-40", {
+            "text-white": item?.contentVariant === "light"
+          })}>
             <h2 className="font-Poppins font-bold text-center w-d:text-[65px] w-d:leading-[80px] w-t:text-[30px]">{ item.title }</h2>
             <p className="font-Poppins font-semibold text-center w-d:text-[24px] w-d:leading-[30px] w-t:text-base">{ item.text }</p>
             {
-              !!item.action
-                ? <div className="flex justify-center"><Button data={{...item.action}} onClick={()=> router.push(`${item.action.redirect}`)}/></div>
+              !!item?.action?.title
+                ? <div className="flex justify-center"><Button darkOutlined={item?.contentVariant === "light"} dark={item?.contentVariant === "dark"} data={{...item.action}} onClick={()=> router.push(`${item.action.redirect}`)}/></div>
                 : null
             }
           </div>
@@ -194,7 +196,7 @@ const handleTouchStart = (evt: any) => {
             <h2 className="font-Poppins font-normal text-[32px] leading-10">{ item.title }</h2>
             <p className="font-Nunito-Sans font-normal text-base leading-5">{ item.text }</p>
             {
-              !!item.action
+              !!item?.action?.title
                 ? <div className="flex justify-center"><Button data={{...item.action, isExpand: true}} onClick={()=> router.push(`${item.action.redirect}`)}/></div>
                 : null
             }
@@ -211,4 +213,4 @@ const handleTouchStart = (evt: any) => {
   </section>
 }
 
-export default SliderPortalverse
+export default SliderPortalverse;
