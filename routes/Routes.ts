@@ -335,9 +335,8 @@ const Routes: any = {
   },
   "faq": [
     { params: { "section": "general" } },
-    { params: { "section": "modalidad-presencial" } },
-    { params: { "section": "modalidad-online" } },
-    { params: { "section": "modalidad-flex" } },
+    { params: { "section": "becas" } },
+    { params: { "section": "finanzas" } },
   ],
   "blog": [
     { params:
