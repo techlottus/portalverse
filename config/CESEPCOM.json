@@ -1,0 +1,82 @@
+{
+    "meta": {
+      "title": "CESEPCOM",
+      "description": "",
+      "keywords": ""
+    },
+    "sections": {
+      "head": {
+        "title":"CESEPCOM"
+      },
+      "Acordion":{
+        "title": "Centro de Servicios Profesionales para la Comunidad",
+        "subtitle": "Preguntas frecuentes",
+        "items": [
+          {
+            "title": "Asesoría Piscológica",
+            "answer": "Orientación profesional de nuestros especialistas. Consejos y recomendaciones para ayudar y apoyar a personas, familias o grupos a mejorar su salud mental a través del reconocimiento y solución de circunstancias adversas y dificultades. \n\n Cuota de Recuperación: $40.00\n\n Costos:\n\n• Asesoría Psicológica (individual interna) $35.00\n\n• Asesoría Psicológica (individual externa) $55.00\n\n• Asesoría Psicológica pareja (individual interna) $70.00\n\n• Asesoría Psicológica pareja(individual externa) $110.00\n\n• Asesoría Psicológica familiar (individual interna) $110.00\n\n• Asesoría Psicológica familiar(individual externa) $160.00\n\n Horario: De lunes a viernes de 09:00 a.m. a 20:00 p.m. Previa Cita  "
+          },
+          {
+            "title": "Asesoría Nutricional",
+            "answer": "Consejo profesional para informar y orientar al paciente sobre hábitos adecuados de alimentación y brindar ayuda en la ejecución de estrategias que promuevan una dieta saludable.\n\nServicios que se ofertan: \n\n• Diseño de menú\n\n• Control del peso\n\n• Análisis Nutricional \n\n• Dietas \n\nCuota de Recuperación: \n\n• Asesoría Nutricional (interno) $40.00\n\n• Asesoría Nutricional externo) $60.00\n\nHorario: De lunes a viernes de 09:00 a.m. a 20:00 p.m. Previa Cita "
+          },
+          {
+            "title": "Asesoría Contable",
+            "answer": "Recomendaciones a ciudadanos, empresas y PyMES para el manejo de sus recursos con el fin de lograr una mayor rentabilidad en sus negocios y el cumplimiento de sus obligaciones fiscales.\n\n Servicios que se ofertan:\n\n• Servicio de Contabilidad\n\n• Servicio de Presentación de Declaración\n\n• Servicio de Asesoría\n\n Cuota de Recuperación:\n\n• Presentación de Declaración Bimestral $365.00\n\n• Asesoría Simple $100.00\n\n Horario: De lunes a viernes de 09:00 a.m. a 20:00 p.m."
+          },
+          {
+            "title": "Asesoría Jurídica",
+            "answer": "Información adecuada y ayuda en la solución de problemas legales. Ofrecemos respuesta a temas relacionados con la aplicación de normativas, leyes y reglamentos en materia de derecho.\n\n Áreas de intervención: \n\n• Mercantil\n\n• Civil\n\n• Familiar\n\n• Laboral\n\n Cuota de recuperación:\n\n• Asesoría jurídica (interna) $25.00\n\n• Asesoría jurídica (externa) $45.00\n\n Horario: De Lunes a Viernes de 09:00 a.m. a 19:00 p.m. Previa Cita"
+          },
+          {
+            "title": "Asesoría en Salud Sexual y Reproductiva ",
+            "answer": "Espacio de asesoramiento personalizado, por nuestros especialistas, para contribuir al desarrollo integral de la sexualidad de las personas, brindándoles la información para la toma de decisiones autónomas sobre su salud sexual y reproductiva.\n\nServicios que se ofertan:\n\n• Educación Sexual\n\n• Planificación Familiar\n\n• Entrega de preservativos.\n\n• Pruebas rápidas de VIH.\n\nServicio Gratuito\n\nHorarios: lunes a viernes de 09:00 a.m. a 14:00 Hrs y de 15:00 p.m. a 19:00 p.m. Previa cita."
+          },
+          {
+            "title": "Evaluaciones Psicométricas",
+            "answer": "Pruebas o test psicológicos para evaluar el desempeño de un individuo, sus habilidades, conocimientos, comportamientos, rasgos de la  personalidad y capacidades.\n\n Cuotas de recuperación:\n\n Niños $60.00\n\n Adultos $55.00\n\n Resultados $150.00\n\n Horarios: Lunes a viernes de 10:00 a.m. a 17:00 p.m. Previa cita. "
+          },
+          {
+            "title": "Orientación vocacional",
+            "answer": "Pruebas o test psicológicos para evaluar el desempeño de un individuo, sus habilidades, conocimientos, comportamientos, rasgos de la  personalidad y capacidades.\n\n Servicios que se ofertan:\n\n• Aplicación de pruebas de orientación vocacional.\n\n• Orientación para el diseño y plan de vida.\n\n• Atención Personalizada.\n\n• Taller de orientación vocacional.\n\n Servicio Gratuito\n\n Horarios: Lunes a viernes de 09:00 a.m. a 18:00 p.m. Previa cita. "
+          },
+          {
+            "title": "Área de Estudios Socioeconómicos ",
+            "answer": "Clasificación de un grupo familiar a partir de sus ingresos económicos, nivel educativo, ocupación de sus miembros, gastos y capacidad de ahorro como fundamento para determinar el apoyo financiero que el solicitante requiere para realizar sus estudios u otra actividad relacionada con su economía.\n\nServicios que se oferta\n\n• Estudio socioeconómico para contratación de personal\n\n• Estudio socioeconómico para otorgamientos de becas escolares\n\n Cuota de recuperación:\n\n• Estudio Socioeconómico Simple (en oficina) $150\n\n• Estudio Socioeconómico Completo (Incluye visita a domicilio) $200\n\n Horario: Lunes a viernes de 10:00 a.m. a 17:00 p.m. Previa Cita"
+          },
+          {
+            "title": "Área de Estudios Terapeúticos",
+            "answer": "Atención especializada para prevenir o corregir alteraciones físicas, lesiones, mejorar o recuperar la salud física a través planes de ejercicios. \n\n Servicios que se ofertan:\n\n• 1 Zona internos $55.00\n\n• 1 zona externos $65.00\n\n• 2 zonas internos $100.00\n\n• 2 zonas externos $120.00\n\n• Prescripción del Ejercicio internos $45.00\n\n• Prescripción del Ejercicio Externos $55.00\n\n Horarios: Lunes a viernes de 09:00 a.m. a 18:00 p.m. Previa Cita."
+          }
+        ],
+        "button":{"title": "Ver más preguntas", "type": "outlined", "icon": "", "isExpand": false, "redirect":"/contactanos/faq/general"}
+      },
+      "bannerInternacional": {
+        "image": {
+          "desktop": "https://drive.google.com/uc?export=view&id=1Y_edCTwyeAXRGkcjqf5V2S8QEyVYaENW",
+          "mobile": "https://drive.google.com/uc?export=view&id=1PZURny8POJsMYHamJycNKgM3LmxoMUiK",
+          "tablet": "https://drive.google.com/uc?export=view&id=1TpgDT_hQIJ0hew0WPp40M21oURKnD9B_"
+        },
+        "title": "Conoce más sobre tu Universidad ",
+        "subtitle": "",
+        "position": "",
+        "height": "300px",
+        "overlayWhite":false,
+        "overlayDak": true,
+        "button":{
+          "id": "",
+          "type": "outlined",
+          "title": "Somos UTEG",
+          "size": "small",
+          "icon": "",
+          "lyIcon": false,
+          "disabled": false,
+          "isExpand": false,
+          "tagOnClick": "",
+          "test": ""
+        },
+        "noAction": false,
+        "redirect": "/nosotros"
+      }
+    }
+  }
