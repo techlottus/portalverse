@@ -74,7 +74,7 @@ export const action = [
     name: "Empleabilidad",
     shortcut: ["e", "em", "bol", "emple", "Em"],
     keywords: "empleabilidad",
-    perform: () => (window.location.pathname = "nosotros/empleabilidad")
+    perform: () => (window.location.pathname = "nosotros/bolsa-de-talento")
   },
   {
     id: "internacionalizacion",
