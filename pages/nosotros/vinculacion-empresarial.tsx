@@ -149,10 +149,10 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
               <p className="font-normal font-Nunito text-base mb-6">{sections.head.feedback.title}</p>
               <RichtText data={{
                 content: sections.head.feedback.text
-              }} />
+              }} classNames="mb-4" />
               <div className="flex align-middle items-center">
                 <span className="material-icons text-SC/Blackandgrey/B-60 mr-2">mail</span>
-                <LinkContactTarget type={"email"} info={sections.head.feedback.contact} />
+                <LinkContactTarget classNames="!font-bold underline" type={"email"} info={sections.head.feedback.contact} />
               </div>
             </div>
           </Feedback>
