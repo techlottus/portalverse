@@ -35,8 +35,8 @@
         "textEvent": "Dismiss",
         "tagOnRight": "testOnRight",
         "title": "Contacto",
-        "text": "A través del correo podremos resolver totdas tus dudas oportunamente. Si deseas más información contáctanos vía:",
-        "contact": "vinculación@uteg.edu.mx"
+        "text": "A través del correo podremos resolver todas tus dudas oportunamente. Si deseas más información contáctanos vía:",
+        "contact": "vinculacion@uteg.edu.mx"
       }
     },
     "alliances": {
@@ -208,7 +208,7 @@
         {
           "icon": "https://drive.google.com/uc?export=view&id=1zlnIUfx2W6yE2y3PtGsoS-s76gnGFoIs",
           "name": "mailuteg",
-          "text": "<b>Contactar al área de vinculación a través del correo</b>:\n\nvinculación@uteg.edu.mx"
+          "text": "<b>Contactar al área de vinculación a través del correo</b>:\n\nvinculacion@uteg.edu.mx"
         },
         {
           "icon": "https://drive.google.com/uc?export=view&id=1ZaMyv4Ea7nqs4FiAlSmbr4YPgu0kIBFn",
