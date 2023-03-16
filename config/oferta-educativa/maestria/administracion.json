@@ -1,112 +1,112 @@
 {
-  "meta": {
-    "title": "Maestría en Administración",
-    "description": "",
-    "keywords": ""
-  },
-  "config": {
-    "title": "Maestría en Administración",
-    "config": {
-      "nombre": "Maestría en Administración",
-      "modalidad": ["Online"],
-      "areaConocimiento": ["Económico - Administrativo"],
-      "campus": [],
-      "nivel": ["Posgrado"],
-      "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1aR8dcm_IxAIrRTL-gjHxfd2uax7nS5Ya",
-        "alt": "maestria"
-      },
-      "curriculum": {
-        "Online": "13mUZq-ymxvjOC_MxhepO39QmkoR6OYSR"
-      }
-    }
-  },
-  "sections": {
-    "head": {
+    "meta": {
       "title": "Maestría en Administración",
-      "description": "Fortalece tus habilidades para la estrategia y dirección de negocios y empresas desde una perspectiva integral que sí se adapte a entornos multifacéticos y globales.",
-      "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1aR8dcm_IxAIrRTL-gjHxfd2uax7nS5Ya",
-        "alt": "maestria"
-      }
+      "description": "",
+      "keywords": ""
     },
-    "modalities": {
-      "title": "Modalidades disponibles en esta maestría:",
-      "tabs": {
-        "items": [
-          {
-            "label": "Modalidad Online", "icons": { "primary": "", "duplicate": false}, "disabled": false,
-            "content": {
-              "cards": [
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
-                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
-                  },
-                  "title": "Perfil de ingreso",
-                  "text": "El aspirante a ingresar a la Maestría en Administración deberá contar con los siguientes conocimientos:\n\n • La expresión oral y escrita.\n\n • La investigación y redacción de documentos.\n\n • Manejo de relaciones interpersonales.\n\n • El análisis de problemas públicos.\n\n • Diseñar estrategias.\n\n • Transferencia de información al contexto empresarial.\n\n • Realizar operaciones numéricas y saber estimar cantidades y lectura de las mismas en aspectos contables.\n\n • Interpretar cifras y resolver problemas cuantificables.",
-                  "backgroundColor": "#8B9BA3"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
-                  },
-                  "title": "Perfil de egreso",
-                  "text": "El egresado será capaz de:\n\n • Diseñar planes de acción para mejorar la planeación estratégica y la estructura administrativa en las áreas funcionales de la organización. \n\n • Conducir los procesos de desarrollo y alinear con habilidades de liderazgo a los colaboradores",
-                  "backgroundColor": "#B0003C"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
-                  },
-                  "title": "Campo Laboral",
-                  "text": "El egresado de la maestría en Administración es quien posee la visión y el análisis para la organización y dirección de un negocio. Tiene el conocimiento y las habilidades para lograr el aprovechamiento eficiente de los recursos económicos que posee una empresa, así como de verificar la productividad y guiar al negocio. Puede desarollarse en el sector público, privado o como consultor.",
-                  "backgroundColor": "#E84537"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
-                  },
-                  "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento original del cajero reciente y 2 copias\n\n• Copia fiel del título (Constancia de trámite en caso de aún no tener el título)\n\n• Copia de cédula (traer original para copia)\n\n• Impresión de CURP directo de intenet sin ampliación\n\n• CV y Constancia laboral\n\n• Fotografías (Preguntar por especificaciones)\n\n• Solicitud de Admisión",
-                  "backgroundColor": "#00BEB4"
-                }
-              ],
-              "wrapper": false
-            }
-          }
-        ],
-        "size": "medium"
-      }
-    },
-    "descarga": {
-      "id": "program_maestria",
-      "type": "primary",
-      "title": "Descarga el plan de estudios",
-      "size": "small",
-      "icon": "download",
-      "lyIcon": false,
-      "disabled": false,
-      "isExpand": false,
-      "tagOnClick": "testClick",
-      "test": ""
-    }
-  },
-  "form": {
     "config": {
-      "level": { "hidden": true, "value": "maestria" },
-      "program": { "hidden": false, "value": "Administración" },
-      "modality": { "hidden": false },
-      "campus": { "hidden": false }
+      "title": "Maestría en Administración",
+      "config": {
+        "nombre": "Maestría en Administración",
+        "modalidad": ["Online"],
+        "areaConocimiento": ["Económico - Administrativas"],
+        "campus": [],
+        "nivel": ["Posgrado"],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=19eXFsOEXSRFBxZrnLraVhfpTV4kyEE22",
+          "alt": "maestria"
+        },
+        "curriculum": {
+          "Online": ""
+        }
+      }
     },
-    "copies": {
-      "stepone": {
-        "title": "Obtén informes sobre tu programa",
-        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+    "sections": {
+      "head": {
+        "title": "Maestría en Administración",
+        "description": "Fortalece tus habilidades para la estrategia y dirección de negocios y empresas desde una perspectiva integral que sí se adapte a entornos  multifacéticos y globales, innovando los procesos operativos de la organización, desarrollando y coordinar planes de negocios estratégicos fundamentales para el éxito empresarial.",
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=19eXFsOEXSRFBxZrnLraVhfpTV4kyEE22",
+          "alt": "maestria"
+        }
+      },
+      "modalities": {
+        "title": "Modalidades disponibles en esta maestría:",
+        "tabs": {
+          "items": [
+            {
+              "label": "Modalidad Online", "icons": { "primary": "", "duplicate": false}, "disabled": false,
+              "content": {
+                "cards": [
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1evRDmArAV5DLLoIN0YQay-rc_YghOakJ",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1evRDmArAV5DLLoIN0YQay-rc_YghOakJ"
+                    },
+                    "title": "Perfil de ingreso",
+                    "text": "El aspirante a ingresar a la Maestría en Administración deberá contar con los siguientes conocimientos:\n\n• La expresión oral y escrita.\n\n• La investigación y redacción de documentos.\n\n• Manejo de relaciones interpersonales.\n\n• El análisis de problemas públicos.\n\n• Diseñar estrategias.\n\n• Transferencia de información al contexto empresarial.\n\n• Realizar operaciones numéricas y saber estimar cantidades y lectura de las mismas en aspectos contables.\n\n• Interpretar cifras y resolver problemas cuantificables.",
+                    "backgroundColor": "#1B2D68"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1iemzpeGBJ6WcMyBTfFhMclNHU0xiyX03",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1iemzpeGBJ6WcMyBTfFhMclNHU0xiyX03"
+                    },
+                    "title": "Perfil de egreso",
+                    "text": "El egresado será capaz de: \n\n• Diseñar planes de acción para mejorar la planeación estratégica y la estructura administrativa en las áreas funcionales de la organización.\n\n• Conducir los procesos de desarrollo y alinear con habilidades de liderazgo a los colaboradores en los procesos de cambio de la organización.\n\n• Implementar estrategias que le permitan competir con productos y servicios de calidad y satisfacción de los consumidores.\n\n• Analizar el impacto en la rentabilidad de la empresa y servicio al cliente de las estrategias en las operaciones de manufactura y logística.\n\n • Analizar financieramente los estados de gestión económica para optimizar los costos y recursos operativos y de futuras inversiones.",
+                    "backgroundColor": "#C31433"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1iUw_Me9RaeUp-onOlNWF_uDwKPc683Ma",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1iUw_Me9RaeUp-onOlNWF_uDwKPc683Ma"
+                    },
+                    "title": "Campo Laboral",
+                    "text": "El egresado de la maestría en Administración es quien posee la visión y el análisis para la organización y dirección de un negocio. Tiene el conocimiento y las habilidades para lograr el aprovechamiento eficiente de los recursos económicos que posee una empresa, así como de verificar la productividad y guiar al negocio. Puede desarrollarse en el sector público, privado o como consultor.",
+                    "backgroundColor": "#4470B1"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1EqRAwPumEIMpZ6c_NNacezmBbTo87STw",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1EqRAwPumEIMpZ6c_NNacezmBbTo87STw"
+                    },
+                    "title": "Requisitos de admisión",
+                    "text": "",
+                    "backgroundColor": "#EEAA01"
+                  }
+                ],
+                "wrapper": false
+              }
+            }
+          ],
+          "size": "medium"
+        }
+      },
+      "descarga": {
+        "id": "program_maestria",
+        "type": "primary",
+        "title": "Descarga el plan de estudios",
+        "size": "small",
+        "icon": "download",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "testClick",
+        "test": ""
+      }
+    },
+    "form": {
+      "config": {
+        "level": { "hidden": true, "value": "maestria" },
+        "program": { "hidden": false, "value": "Administración" },
+        "modality": { "hidden": false },
+        "campus": { "hidden": false }
+      },
+      "copies": {
+        "stepone": {
+          "title": "Obtén informes sobre tu programa",
+          "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+        }
       }
     }
   }
-}

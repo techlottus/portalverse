@@ -1,34 +1,32 @@
 {
   "meta": {
-    "title": "Maestría en Docencia",
+    "title": "Master en Gobierno y Estrategia",
     "description": "",
     "keywords": ""
   },
   "config": {
-    "title": "Maestría en Docencia",
+    "title": "Master en Gobierno y Estrategia",
     "config": {
-      "nombre": "Maestría en Docencia",
-      "modalidad": ["Presencial"],
-        "areaConocimiento": ["Jurídicas y Sociales"],
-        "campus": ["Américas"],
+      "nombre": "Master en Gobierno y Estrategia",
+      "modalidad": ["Online"],
+      "areaConocimiento": ["Ciencias Sociales"],
+      "campus": [],
       "nivel": ["Posgrado"],
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=",
+        "src": "https://drive.google.com/uc?export=view&id=1njdrpQoxfsFwvfG2gj2kWno7mBcEhCJH",
         "alt": "maestria"
       },
       "curriculum": {
-        "Presencial": {
-            "Américas": ""
-        }
+        "Online": ""
       }
     }
   },
   "sections": {
     "head": {
-      "title": "Maestría en Docencia",
-      "description": "Desarrollarás las competencias para el desarrollo de propuestas innovadoras en el contexto educativo tomando de referencia las nuevas tendencias en la educación. Tendrás las habilidades y destrezas necesarias para los retos con los que se enfrenta el docente del siglo XXI, con el uso de herramientas tecnológicas.",
+      "title": "Master en Gobierno y Estrategia",
+      "description": "Diagnostica problemas y diseña e implementa las políticas públicas mediante la investigación y evaluación sistemática del proceso de toma de decisiones en entornos de máxima complejidad y en escenarios siempre cambiantes; donde la gobernanza y la participación de la ciudadanía, sirvan al objetivo global del bienestar de la sociedad civil.",
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=",
+        "src": "https://drive.google.com/uc?export=view&id=1njdrpQoxfsFwvfG2gj2kWno7mBcEhCJH",
         "alt": "maestria"
       }
     },
@@ -48,7 +46,7 @@
                     "mobile": "https://drive.google.com/uc?export=view&id=1evRDmArAV5DLLoIN0YQay-rc_YghOakJ"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "Dirigido a profesores de nivel medio superior o superior preferentemente en ejercicio y para quienes poseen un título de licenciatura y vocación hacia la docencia.",
+                  "text": "El Máster Internacional en Gobierno y Estrategia Pública está destinado a aquellas personas que, por su formación académica o experiencia profesional, desean obtener una visión actualizada y multidisciplinar sobre los elementos, estructura y recursos necesarios en la acción pública.\n\n Personas interesadas en gestionar acciones que redunden en el desarrollo integral de una sociedad, a través de la participación ciudadana que se genera con la cercanía y las plataformas adecuadas en todos los medios. ",
                   "backgroundColor": "#1B2D68"
                 },
                 {
@@ -57,7 +55,7 @@
                     "mobile": "https://drive.google.com/uc?export=view&id=1iemzpeGBJ6WcMyBTfFhMclNHU0xiyX03"
                   },
                   "title": "Perfil de egreso",
-                  "text": "Los egresados /as de la Maestría en Docencia podrán desempeñarse en las funciones sustantivas de la docencia, investigación y extensión.",
+                  "text": "Comprender el entorno actual mediante la adquisición de los conocimientos y herramientas para liderar la toma de decisiones estratégicas en entornos poliédricos.\n\n Aplicar una visión holística a los problemas para una toma de decisiones que conjugue la complejidad de los mismos con la adopción de soluciones globales, ágiles y flexibles; a partir de las consignas del Buen Gobierno, sensible a los intereses de la sociedad con la responsabilidad de los decisores y la eficiencia en la asignación de los recursos.",
                   "backgroundColor": "#C31433"
                 },
                 {
@@ -66,7 +64,7 @@
                     "mobile": "https://drive.google.com/uc?export=view&id=1iUw_Me9RaeUp-onOlNWF_uDwKPc683Ma"
                   },
                   "title": "Campo Laboral",
-                  "text": "Al egreso del programa tendrás competencias para incidir en las funciones sustantivas de la universidad. En cuanto a lo docente, tendrás conocimientos sobre opciones innovadoras para el desarrollo de su práctica cotidiana y como filosofía de trabajo poseerás una tendencia hacia el uso de nuevas tecnologías como recurso cotidiano. La experiencia que se derivará del uso de internet y otros medios, le será de gran utilidad a este aspecto. \n\n Ligada a la anterior, la función de investigación será incluida desde el momento en que un aspirante ingrese a la maestría, de manera que pueda formar una visión crítica para identificar los problemas en la enseñanza y el aprendizaje en su entorno, tanto mediante experimentación personal en el aula, como en el planteamiento y el desarrollo de un proyecto de investigación educativa. ",
+                  "text": "El egresado de la Maestría en Gobierno y Estrategia podrá poner en marcha sus conocimientos desde la administración pública en cualquier eslabón de la cadena jerárquica ya que en ese ámbito es oportuno y bien visto la constante implementación de ideas para generar un mejor desempeño gubernamental. También como asesor de gobiernos y generación de mensajes para campañas políticas rumbo a la toma del poder.",
                   "backgroundColor": "#4470B1"
                 },
                 {
@@ -75,7 +73,7 @@
                     "mobile": "https://drive.google.com/uc?export=view&id=1EqRAwPumEIMpZ6c_NNacezmBbTo87STw"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "a) Acta de nacimiento original y 2 copias (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de licenciatura en buen estado original y tres copias. (Maestrías SICYT).\n\n c) 3 copias del Título o acta de titulación no mayor a 1 año. (Maestrías SICYT).\n\n d) Copia de certificado total de licenciatura, o copia de Título o copia de acta de titulación no mayor a 1 año. (Maestrías SEP).\n\n e) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas\n\n f) 2 copia de la CURP.\n\n g) 2 copia Credencial Oficial IFE o INE, o pasaporte\n\n h) Copia del Comprobante aspirante seleccionado Maestría (F-DA-82).",
+                  "text": "",
                   "backgroundColor": "#EEAA01"
                 }
               ],

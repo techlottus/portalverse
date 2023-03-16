@@ -1,19 +1,19 @@
 {
   "meta": {
-    "title": "Maestría en Docencia",
+    "title": "Maestría en Alta Dirección",
     "description": "",
     "keywords": ""
   },
   "config": {
-    "title": "Maestría en Docencia",
+    "title": "Maestría en Alta Dirección",
     "config": {
-      "nombre": "Maestría en Docencia",
+      "nombre": "Maestría en Alta Dirección",
       "modalidad": ["Presencial"],
-        "areaConocimiento": ["Jurídicas y Sociales"],
-        "campus": ["Américas"],
+      "areaConocimiento": [""],
+      "campus": [],
       "nivel": ["Posgrado"],
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=",
+        "src": "https://drive.google.com/uc?export=view&id=19TpLa_KCv3PpDW0skJBM_O2tVMIwp9Kq",
         "alt": "maestria"
       },
       "curriculum": {
@@ -25,10 +25,10 @@
   },
   "sections": {
     "head": {
-      "title": "Maestría en Docencia",
-      "description": "Desarrollarás las competencias para el desarrollo de propuestas innovadoras en el contexto educativo tomando de referencia las nuevas tendencias en la educación. Tendrás las habilidades y destrezas necesarias para los retos con los que se enfrenta el docente del siglo XXI, con el uso de herramientas tecnológicas.",
+      "title": "Maestría en Alta Dirección",
+      "description": "Desarrollarás conocimientos, habilidades y actitudes para la toma de decisiones de alto nivel dentro de una organización diseñando, aplicando y generando estrategias de venta y comercialización para el manejo eficaz del presupuesto, así como la actitud de responsabilidad en el manejo de ejercer un liderazgo procurando el desarrollo humano.",
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=",
+        "src": "https://drive.google.com/uc?export=view&id=19TpLa_KCv3PpDW0skJBM_O2tVMIwp9Kq",
         "alt": "maestria"
       }
     },
@@ -37,7 +37,7 @@
       "tabs": {
         "items": [
           {
-            "label": "Modalidad Online",
+            "label": "Modalidad Presencial",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {
@@ -48,7 +48,7 @@
                     "mobile": "https://drive.google.com/uc?export=view&id=1evRDmArAV5DLLoIN0YQay-rc_YghOakJ"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "Dirigido a profesores de nivel medio superior o superior preferentemente en ejercicio y para quienes poseen un título de licenciatura y vocación hacia la docencia.",
+                  "text": "Dirigido a Licenciados /as en Administración, Administración de Instituciones Educativas, Administración de empresas Turísticas, Mercadotecnia, Finanzas, Informática Administrativa, Contaduría, Psicología.",
                   "backgroundColor": "#1B2D68"
                 },
                 {
@@ -57,7 +57,7 @@
                     "mobile": "https://drive.google.com/uc?export=view&id=1iemzpeGBJ6WcMyBTfFhMclNHU0xiyX03"
                   },
                   "title": "Perfil de egreso",
-                  "text": "Los egresados /as de la Maestría en Docencia podrán desempeñarse en las funciones sustantivas de la docencia, investigación y extensión.",
+                  "text": "El egresado /a de la Maestría en Alta Dirección deberá poseer los conocimientos, habilidades y actitudes de la política y organización empresarial, técnicas y ventajas del trabajo colaborativo, así como el manejo de los modelos y enfoques financieros corporativos para su aplicación en la toma de decisiones en la alta dirección de empresas, diseñar, aplicar y generar estrategias de venta y comercialización para el manejo eficaz del presupuesto, así como la actitud de responsabilidad en el manejo de ejercer un liderazgo procurando el desarrollo humano.",
                   "backgroundColor": "#C31433"
                 },
                 {
@@ -66,7 +66,7 @@
                     "mobile": "https://drive.google.com/uc?export=view&id=1iUw_Me9RaeUp-onOlNWF_uDwKPc683Ma"
                   },
                   "title": "Campo Laboral",
-                  "text": "Al egreso del programa tendrás competencias para incidir en las funciones sustantivas de la universidad. En cuanto a lo docente, tendrás conocimientos sobre opciones innovadoras para el desarrollo de su práctica cotidiana y como filosofía de trabajo poseerás una tendencia hacia el uso de nuevas tecnologías como recurso cotidiano. La experiencia que se derivará del uso de internet y otros medios, le será de gran utilidad a este aspecto. \n\n Ligada a la anterior, la función de investigación será incluida desde el momento en que un aspirante ingrese a la maestría, de manera que pueda formar una visión crítica para identificar los problemas en la enseñanza y el aprendizaje en su entorno, tanto mediante experimentación personal en el aula, como en el planteamiento y el desarrollo de un proyecto de investigación educativa. ",
+                  "text": "Al egreso de la Maestría en Alta Dirección podrás desempeñarte en empresas públicas y privadas aplicando el emprendedurismo y la innovación de la nueva administración con un sentido generador y aplicación de diversos programas; proyectos para la toma de decisiones y la resolución de problemas con una actitud de responsabilidad social basado en el ejercicio del liderazgo y el desarrollo potencial del recurso humano. ",
                   "backgroundColor": "#4470B1"
                 },
                 {

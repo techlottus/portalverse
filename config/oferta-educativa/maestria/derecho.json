@@ -1,112 +1,112 @@
 {
-  "meta": {
-    "title": "Maestría en Derecho",
-    "description": "",
-    "keywords": ""
-  },
-  "config": {
-    "title": "Maestría en Derecho",
-    "config": {
-      "nombre": "Maestría en Derecho",
-      "modalidad": ["Online"],
-      "areaConocimiento": ["Ciencias Sociales"],
-      "campus": [],
-      "nivel": ["Posgrado"],
-      "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1HtPgTXcDaNxtFsN_Q4Xgc7AkndlJFpFC",
-        "alt": "maestria"
-      },
-      "curriculum": {
-        "Online": "1hrQwgIh8NnnWPJlQt2-Z_ZSL1XYUd5kp"
-      }
-    }
-  },
-  "sections": {
-    "head": {
+    "meta": {
       "title": "Maestría en Derecho",
-      "description": "Colabora en actividades jurídicas de investigación a través de estrategias de cumplimiento de obligaciones fiscales y del marco regulatorio.",
-      "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1HtPgTXcDaNxtFsN_Q4Xgc7AkndlJFpFC",
-        "alt": "maestria"
-      }
+      "description": "",
+      "keywords": ""
     },
-    "modalities": {
-      "title": "Modalidades disponibles en esta maestría:",
-      "tabs": {
-        "items": [
-          {
-            "label": "Modalidad Online", "icons": { "primary": "", "duplicate": false}, "disabled": false,
-            "content": {
-              "cards": [
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
-                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
-                  },
-                  "title": "Perfil de ingreso",
-                  "text": "Este programa está dirigido a cualquier profesional que se dedique al derecho.",
-                  "backgroundColor": "#8B9BA3"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
-                  },
-                  "title": "Perfil de egreso",
-                  "text": "Al concluir sus estudios, el egresado de la Maestría será capaz de:\n\n • Conocimientos Fundamentales: Analizar el marco jurídico en materia laboral para su adecuada aplicación.\n\n • Jurídico Sustantivo: Distinguir los elementos constitutivos de las relaciones individuales y colectivas del trabajo para precisar la norma que es aplicable de acuerdo al caso concreto.\n\n • Examinar la normatividad laboral de carácter internacional con el objeto de implementarla en asuntos de carácter local e internacional\n\n • Determinar los elementos especiales que constituyen el régimen laboral de los servidores públicos para distinguir las diferencias que existen con respecto a los otros regímenes.\n\n • Analizar los derechos humanos relacionados con el derecho laboral para hacerlos cumplir dentro del marco del Estado de Derecho Constitucional\n\n • Administración de Recursos Humanos:Implementar técnicas de negociación que permitan evitar conflictos jurídico-contenciosos de carácter laboral\n\n • Identificar los diferentes lineamientos requeridos para una administración óptima de las relaciones laborales.\n\n • Jurídico Procesal: Intervenir en procesos laborales de carácter individual y colectivo para obtener resoluciones favorables para el representado.",
-                  "backgroundColor": "#B0003C"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
-                  },
-                  "title": "Campo Laboral",
-                  "text": "El egresado de la maestría en Derecho puede ejercer en el sector privado como litigante o asesor jurídico, en despachos o bufetes jurídicos y en departamentos legales de empresas comerciales, empresas industriales, empresas de servicio entre otros. Como árbitro mediador o negociador dentro de los procedimientos de resolución alterna de controversias.",
-                  "backgroundColor": "#E84537"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
-                  },
-                  "title": "Requisitos de admisión",
-                  "text": "Los aspirantes a cursar la Maestría deberán cubrir los siguientes requisitos:\n\n• Tener experiencia mínimo de dos años en su área de expertis.\n\n• Título profesional, carta de pasante o documento afín.\n\n• Aprobar la entrevista en el departamento de postgrado.\n\n• Acreditar la documentación y pagos correspondientes.\n\n• Entregar la documentación siguiente:\n\na) Solicitud de Admisión.\n\nb) Acta de Nacimiento Original.\n\nc) Copia notariada del título profesional y una copia simple.\n\nd) Copia notariada de la cédula profesional y una copia.\n\ne) 8 fotografías tamaño credencial en blanco y negro no instantáneas en papel mate.\n\nf) 6 fotografías de tamaño infantil en blanco y negro no instantáneas en papel mate.\n\ng) Copia del CURP y una copia simple. ",
-                  "backgroundColor": "#00BEB4"
-                }
-              ],
-              "wrapper": false
-            }
-          }
-        ],
-        "size": "medium"
-      }
-    },
-    "descarga": {
-      "id": "program_maestria",
-      "type": "primary",
-      "title": "Descarga el plan de estudios",
-      "size": "small",
-      "icon": "download",
-      "lyIcon": false,
-      "disabled": false,
-      "isExpand": false,
-      "tagOnClick": "testClick",
-      "test": ""
-    }
-  },
-  "form": {
     "config": {
-      "level": { "hidden": true, "value": "maestria" },
-      "program": { "hidden": false, "value": "Derecho" },
-      "modality": { "hidden": false },
-      "campus": { "hidden": false }
+      "title": "Maestría en Derecho",
+      "config": {
+        "nombre": "Maestría en Derecho",
+        "modalidad": ["Online"],
+        "areaConocimiento": [""],
+        "campus": [],
+        "nivel": ["Posgrado"],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1r1Ps8zg94x-E8fsfc4KLrMSv3HY_WToa",
+          "alt": "maestria"
+        },
+        "curriculum": {
+          "Online": ""
+        }
+      }
     },
-    "copies": {
-      "stepone": {
-        "title": "Obtén informes sobre tu programa",
-        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+    "sections": {
+      "head": {
+        "title": "Maestría en Derecho",
+        "description": "Colabora en actividades jurídicas de investigación a través de estrategias de cumplimiento de obligaciones fiscales y del marco regulatorio. Serás un estratega corporativo que aplicará la legislación que permite el funcionamiento de la empresa, así como asesorará a una empresa en el registro de patentes de invención, marca, nombre comercial y secreto industrial.",
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1r1Ps8zg94x-E8fsfc4KLrMSv3HY_WToa",
+          "alt": "maestria"
+        }
+      },
+      "modalities": {
+        "title": "Modalidades disponibles en esta maestría:",
+        "tabs": {
+          "items": [
+            {
+              "label": "Modalidad Online", "icons": { "primary": "", "duplicate": false}, "disabled": false,
+              "content": {
+                "cards": [
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1evRDmArAV5DLLoIN0YQay-rc_YghOakJ",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1evRDmArAV5DLLoIN0YQay-rc_YghOakJ"
+                    },
+                    "title": "Perfil de ingreso",
+                    "text": "Este programa está dirigido a cualquier profesional que se dedique al derecho.\n\n Los aspirantes a cursar la Maestría deberán cubrir los siguientes requisitos:\n\n • Tener experiencia mínimo de dos años en su área de expertis.\n\n • Título profesional, carta de pasante o documento afín.\n\n • Aprobar la entrevista en el departamento de postgrado.\n\n • Acreditar la documentación y pagos correspondientes.\n\n • Entregar la documentación siguiente:\n\n a) Solicitud de Admisión.\n\n b) Acta de Nacimiento Original.\n\n c) Copia notariada del título profesional y una copia simple.\n\n d) Copia notariada de la cédula profesional y una copia.\n\n e) 8 fotografías tamaño credencial en blanco y negro no instantáneas en papel mate.\n\n f) 6 fotografías de tamaño infantil en blanco y negro no instantáneas en papel mate.\n\n g) Copia del CURP y una copia simple.",
+                    "backgroundColor": "#1B2D68"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1iemzpeGBJ6WcMyBTfFhMclNHU0xiyX03",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1iemzpeGBJ6WcMyBTfFhMclNHU0xiyX03"
+                    },
+                    "title": "Perfil de egreso",
+                    "text": "Al concluir sus estudios, el egresado de la Maestría será capaz de: \n\n Conocimientos Fundamentales: \n\n • Analizar el marco jurídico en materia laboral para su adecuada aplicación. \n\n Jurídico Sustantivo: \n\n • Distinguir los elementos constitutivos de las relaciones individuales y colectivas del trabajo para precisar la norma que es aplicable de acuerdo al caso concreto. \n\n • Examinar la normatividad laboral de carácter internacional con el objeto de implementarla en asuntos de carácter local e internacional \n\n • Determinar los elementos especiales que constituyen el régimen laboral de los servidores públicos para distinguir las diferencias que existen con respecto a los otros regímenes. \n\n • Analizar los derechos humanos relacionados con el derecho laboral para hacerlos cumplir dentro del marco del Estado de Derecho Constitucional \n\n Administración de Recursos Humanos: \n\n • Implementar técnicas de negociación que permitan evitar conflictos jurídico-contenciosos de carácter laboral \n\n • Identificar los diferentes lineamientos requeridos para una administración óptima de las relaciones laborales. \n\n Jurídico Procesal: \n\n • Intervenir en procesos laborales de carácter individual y colectivo para obtener resoluciones favorables para el representado. ",
+                    "backgroundColor": "#C31433"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1iUw_Me9RaeUp-onOlNWF_uDwKPc683Ma",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1iUw_Me9RaeUp-onOlNWF_uDwKPc683Ma"
+                    },
+                    "title": "Campo Laboral",
+                    "text": "El egresado de la maestría en Derecho puede ejercer en el sector privado como litigante o asesor jurídico, en despachos o bufetes jurídicos y en departamentos legales de empresas comerciales, empresas industriales, empresas de servicio entre otros. Como árbitro mediador o negociador dentro de los procedimientos de resolución alterna de controversias.",
+                    "backgroundColor": "#4470B1"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1EqRAwPumEIMpZ6c_NNacezmBbTo87STw",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1EqRAwPumEIMpZ6c_NNacezmBbTo87STw"
+                    },
+                    "title": "Requisitos de admisión",
+                    "text": "",
+                    "backgroundColor": "#EEAA01"
+                  }
+                ],
+                "wrapper": false
+              }
+            }
+          ],
+          "size": "medium"
+        }
+      },
+      "descarga": {
+        "id": "program_maestria",
+        "type": "primary",
+        "title": "Descarga el plan de estudios",
+        "size": "small",
+        "icon": "download",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "testClick",
+        "test": ""
+      }
+    },
+    "form": {
+      "config": {
+        "level": { "hidden": true, "value": "maestria" },
+        "program": { "hidden": false, "value": "Administración" },
+        "modality": { "hidden": false },
+        "campus": { "hidden": false }
+      },
+      "copies": {
+        "stepone": {
+          "title": "Obtén informes sobre tu programa",
+          "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+        }
       }
     }
   }
-}
