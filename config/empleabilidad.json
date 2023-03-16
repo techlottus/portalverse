@@ -45,7 +45,7 @@
     "historiasExito": {
       "title": "Casos de éxito",
       "description": {
-        "content": "<p>Nuestros alumnos y egresados nos cuentan cómo ha sido su experiencia en la búsqueda de empleo a través de nuestra bolsa de talento.</p><p>Jacobo Rodríguez, egresado de la Licenciatura en Mercadotecnia, nos cuenta cómo la Bolsa de Talento UTEG le ayudó a lograr su más reciente reto profesional.</p>"
+        "content": "<p>Nuestros alumnos y egresados nos cuentan cómo ha sido su experiencia en la búsqueda de empleo a través de nuestra bolsa de talento.</p><p>Jacobo Rodríguez, egresado de la Licenciatura en Mercadotecnia, nos cuenta cómo la <u>Bolsa de Talento UTEG</u> le ayudó a lograr su más reciente reto profesional.</p>"
       },
       "video": {
         "options": {
