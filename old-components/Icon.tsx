@@ -31,6 +31,11 @@ import Aniversario55 from "@/icons/55_aniversario.svg";
 import Egresados from "@/icons/egresados.svg";
 import Internacionalizacion from "@/icons/internacionaizacion.svg";
 import Udg from "@/icons/udg.svg";
+import MailUteg from "@/icons/icono-mail.svg";
+import Convenio from "@/icons/icono-convenio.svg";
+import PersonaFirma from "@/icons/icono-persona-que-firma.svg";
+import FirmaUteg from "@/icons/icono-firma.svg";
+import DocumentoFirma from "@/icons/documento-firma-uteg.svg";
 
 const iconTypes: any = {
   search: SearchIcon,
@@ -64,6 +69,11 @@ const iconTypes: any = {
   egresados: Egresados,
   internacionalizacion: Internacionalizacion,
   udg: Udg,
+  mailuteg: MailUteg,
+  convenio: Convenio,
+  personafirma: PersonaFirma,
+  firmauteg: FirmaUteg,
+  documentofirma: DocumentoFirma,
 };
 
 const IconComponent: FC<any> = memo(({ name, ...props }: any) => {
