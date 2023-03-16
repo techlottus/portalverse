@@ -1,0 +1,258 @@
+{
+  "meta": {
+    "title": "Vinculación empresarial",
+    "description": "",
+    "keywords": "",
+    "hidden": false
+  },
+  "sections": {
+    "head": {
+      "title": "Vinculación empresarial",
+      "subtitle": "",
+      "description": "Para la Universidad es primordial generar <b>Alianzas</b> con las empresas de la región y del país; buscamos <b>sumarnos a los beneficios que ofrecen a sus colaboradores</b> y lograr una estrecha relación que les permita, a través de nuestra oferta educativa, <b>desarrollar personal mejor capacitado, preparado y actualizado</b>.\n\nAdemás, ponemos a su alcance a nuestros alumnos para cubrir las necesidades de <b>prácticas profesionales</b> y a nuestros egresados para cubrir sus <b>vacantes laborales</b>. Súmate a las empresas que ya han confiado en nosotros a través de un <b>convenio de colaboración</b>.",
+      "contactText": "¿Eres empresa? ¡Contáctanos!",
+      "contactLink": "iciar.azanzag@uteg.edu.mx",
+      "image": {
+        "desk": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1ggtpqEA5GQr1v-iEjO0aRAAGNiJZONc2"
+        },
+        "mobile": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1ggtpqEA5GQr1v-iEjO0aRAAGNiJZONc2"
+        }
+      },
+      "feedback": {
+        "left": {
+          "name": "info",
+          "status": "normal"
+        },
+        "right": {
+          "name": ""
+        },
+        "type": "alert",
+        "isTextEvent": false,
+        "textEvent": "Dismiss",
+        "tagOnRight": "testOnRight",
+        "title": "Contacto",
+        "text": "A través del correo podremos resolver todas tus dudas oportunamente. Si deseas más información contáctanos vía:",
+        "contact": "vinculacion@uteg.edu.mx"
+      }
+    },
+    "alliances": {
+      "title": "Nuestras alianzas",
+      "carrousel": [
+        {
+          "desk": {
+            "alt": "imagen",
+            "src": "https://drive.google.com/uc?export=view&id=1LxGC_PinGps5x3NVPf1CHQKzFqfX8V6d"
+          }
+        },
+        {
+          "desk": {
+            "alt": "imagen",
+            "src": "https://drive.google.com/uc?export=view&id=1Zyj90LxTmCObuhyIPkzdOdbfUrSIOhVS"
+          }
+        },
+        {
+          "desk": {
+            "alt": "imagen",
+            "src": "https://drive.google.com/uc?export=view&id=10ipE57oxLuD3oX9nyCsM5B1CcRS5FYlD"
+          }
+        },
+        {
+          "desk": {
+            "alt": "imagen",
+            "src": "https://drive.google.com/uc?export=view&id=1ud80hymBnxXEfC-h11pYCTjC_Ao878IQ"
+          }
+        }
+      ],
+      "button": {
+        "title": "Ver todos los convenios",
+        "type": "outlined",
+        "icon": "download",
+        "isExpand": false
+      }
+    },
+    "socialService": {
+      "tabs": {
+        "items": [
+          {
+            "label": "Beneficios del Convenio",
+            "icons": {
+              "primary": "",
+              "duplicate": true
+            },
+            "disabled": false,
+            "id": "servicio-social",
+            "content": {
+              "image": {
+                "alt": "imagen",
+                "src": "https://drive.google.com/uc?export=view&id=1tktLlXsJiEC-M8YYtiizemvYaohi9ESv"
+              },
+              "content": {
+                "title": "A través del convenio, podrás ofrecer",
+                "description": "a tus colaboradores y a su familia directa (esposo o esposa e hijos) BECAS para estudiar programas presenciales o en la modalidad online."
+              },
+              "process": {
+                "title": "Proceso servicio social",
+                "description": "1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit nunc, facilisis tincidunt id faucibus parturient ornare hendrerit.\n2. At et elit duis nibh ornare in pulvinar id proin. Interdum pellentesque rhoncus, nunc, tincidunt vulputate sed cursus lorem sollicitudin.\n3. Mattis volutpat ac nunc, sit ut vitae urna ornare aliquam. Mattis phasellus cursus viverra faucibus tristique amet, cursus eget.\n4.Tellus sem ac pellentesque volutpat vitae augue faucibus purus habitant.",
+                "download": {
+                  "title": "Descargar listado de empresas con convenio",
+                  "link": ""
+                }
+              }
+            }
+          },
+          {
+            "label": "Beca Convenio",
+            "icons": {
+              "primary": "",
+              "duplicate": true
+            },
+            "disabled": false,
+            "id": "practicas-profesionales",
+            "content": {
+              "image": {
+                "alt": "imagen",
+                "src": "https://drive.google.com/uc?export=view&id=1sDCyd3IdIN-FHtGbi8WTKnqIfuUhSS_h"
+              },
+              "content": {
+                "title": "Tenemos para ti:",
+                "description": "30% de descuento en las mensualidades de los programas presenciales de Bachillerato hasta Doctorado.\n\n\n20% de descuento en las mensualidades de los programas online de Bachillerato hasta Maestría.\n\n\nAplican restricciones."
+              },
+              "process": {
+                "title": "Proceso practicas profesionales",
+                "description": "1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit nunc, facilisis tincidunt id faucibus parturient ornare hendrerit.\n2. At et elit duis nibh ornare in pulvinar id proin. Interdum pellentesque rhoncus, nunc, tincidunt vulputate sed cursus lorem sollicitudin.\n3. Mattis volutpat ac nunc, sit ut vitae urna ornare aliquam. Mattis phasellus cursus viverra faucibus tristique amet, cursus eget.\n4.Tellus sem ac pellentesque volutpat vitae augue faucibus purus habitant.",
+                "download": {
+                  "title": "Descargar listado de empresas con convenio",
+                  "link": ""
+                }
+              }
+            }
+          }
+        ],
+        "size": "medium"
+      }
+    },
+    "experiences": {
+      "title": "Experiencias UTEG",
+      "images": {
+        "images": [
+          {
+            "id": "1",
+            "image": "https://drive.google.com/uc?export=view&id=1R27supYopgBCyL-D4k_UsL4S9WkcevPt",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "2",
+            "image": "https://drive.google.com/uc?export=view&id=1ORX41DlGkKDlEp-LWBRqCszfm--PqSLv",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "3",
+            "image": "https://drive.google.com/uc?export=view&id=1XPZVcJfpl1Ap4QbDgv3tXNgKVG81U3Uv",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "4",
+            "image": "https://drive.google.com/uc?export=view&id=1MjcWyd0EYQYVVLQbf6HJN2OoNfUFphfU",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "5",
+            "image": "https://drive.google.com/uc?export=view&id=1qERPgQ-GfpMgF4iysN9kaKgPYI5Ku1as",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "6",
+            "image": "https://drive.google.com/uc?export=view&id=14ofWgX5X18dLMoRRlqswHU2BQIXQoYtw",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "7",
+            "image": "https://drive.google.com/uc?export=view&id=1Yb7ayYFbzpQw1paIQaeQSLMvAylqoa1L",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "8",
+            "image": "https://drive.google.com/uc?export=view&id=1Pyic6w3BWdewt7JzZ3Vdtw0pc7S4s2k9",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "9",
+            "image": "https://drive.google.com/uc?export=view&id=1hlfOBrli_HLC7hSPcJbNSOsf9V8w220n",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "10",
+            "image": "https://drive.google.com/uc?export=view&id=1HcXOqm_5DNbjmjydNlnM6_c3ZqUCNAA2",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "11",
+            "image": "https://drive.google.com/uc?export=view&id=1f-JPXOgYKDXD6u5YqB1cGFtHjre7PlB9",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "12",
+            "image": "https://drive.google.com/uc?export=view&id=1fk1mmfR15kbCL3G0lIT4PLm1TvDRlU0z",
+            "icon": "zoom_out_map"
+          }
+        ]
+      }
+    },
+    "descriptionSection": {
+      "title": "Pasos para generar un convenio",
+      "textIcons": [
+        {
+          "icon": "https://drive.google.com/uc?export=view&id=1zlnIUfx2W6yE2y3PtGsoS-s76gnGFoIs",
+          "name": "mailuteg",
+          "text": "<b>Contactar al área de vinculación a través del correo</b>:\n\nvinculacion@uteg.edu.mx"
+        },
+        {
+          "icon": "https://drive.google.com/uc?export=view&id=1ZaMyv4Ea7nqs4FiAlSmbr4YPgu0kIBFn",
+          "name": "convenio",
+          "text": "Revisar el formato de convenio que UTEG compartirá"
+        },
+        {
+          "icon": "https://drive.google.com/uc?export=view&id=1vKL7qfCYkyJylO7D6x--ddh25s6sMjcn",
+          "name": "personafirma",
+          "text": "<b>Llenarlo con los datos correspondientes de la persona que firmará</b>:\n\nNombre, puesto, empresa, fecha"
+        },
+        {
+          "icon": "https://drive.google.com/uc?export=view&id=1cCMxEUuFkVqkgUkWQxwjdPgvsmXlMQjQ",
+          "name": "firmauteg",
+          "text": "<b>Firmarlo y enviar el documento completo en PDF</b>"
+        },
+        {
+          "icon": "https://drive.google.com/uc?export=view&id=18yUaZf00822qhqxbvpO0H4mFgNrfNnIf",
+          "name": "documentofirma",
+          "text": "<b>Recibir de Vinculación el documento firmado por parte de UTEG</b> y una cita para platicar de los beneficios exclusivos por generar el convenio."
+        }
+      ],
+      "button": {
+        "id": "123",
+        "title": "Quiero más información",
+        "type": "primary",
+        "icon": "",
+        "isExpand": false,
+        "size": "small"
+      },
+      "image": {
+        "desk": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1aAJMZC2hPUiixP8RpZXnh6PpxXi0GUFY"
+        },
+        "tablet": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1r-v9SpdvSSNHPcAh1tJ5PnmDsD0P2XBo"
+        },
+        "mobile": {
+          "alt": "imagen",
+          "src": "https://drive.google.com/uc?export=view&id=1ZgY_Y4J55T29vuqmljsHGynhFoH0IcPW"
+        }
+      }
+    }
+  }
+}

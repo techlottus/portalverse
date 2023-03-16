@@ -21,7 +21,7 @@ const BreadcrumbsLabels: any = {
   "campus": "Campus",
   "modelo-educativo": "Modelo Educativa",
   "bolsa-de-talento": "Bolsa de Talento",
-  "conexion-educativa": "Conexión Educativa",
+  "vinculacion-empresarial": "Vinculación empresarial",
   "faq": "Preguntas Frecuentes",
   "general": "General",
   "voz-uane": "Voz UANE",

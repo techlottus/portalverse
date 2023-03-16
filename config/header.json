@@ -68,7 +68,7 @@
         { "label": "Campus", "principal": false, "route": "/nosotros/campus", "external": false },
         { "label": "Modelo educativo", "principal": false, "route": "/nosotros/modelo-educativo", "external": false },
         { "label": "Empleabilidad", "principal": false, "route": "/nosotros/bolsa-de-talento", "external": false },
-        { "label": "Conexión Educativa", "principal": false, "route": "/nosotros/conexion-educativa", "external": false }
+        { "label": "Vinculación empresarial", "principal": false, "route": "/nosotros/vinculacion-empresarial", "external": false }
       ]
     },
     {

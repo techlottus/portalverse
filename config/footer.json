@@ -69,7 +69,7 @@
         { "label": "Campus", "principal": false, "link": "/nosotros/campus", "external": false },
         { "label": "Modelo educativo", "principal": false, "link": "/nosotros/modelo-educativo", "external": false },
         { "label": "Empleabilidad", "principal": false, "link": "/nosotros/bolsa-de-talento", "external": false },
-        { "label": "Conexión educativa", "principal": false, "link": "/nosotros/conexion-educativa", "external": false }
+        { "label": "Vinculación empresarial", "principal": false, "link": "/nosotros/vinculacion-empresarial", "external": false }
 
       ]
     ],
