@@ -15,12 +15,12 @@
         "overlayDak": false,
         "slides": [
           {
-            "title": "¡Transforma tu experiencia!", 
-            "text": "Con actividades internacionales ve con todo hacia el mundo laboral",
+            "title": "Conviértete en profesional global", 
+            "text": "Aprovecha la flexibilidad de estudiar una carrera profesional a tu propio ritmo y horario. Crea tu futuro con el control en tus manos.",
             "urlImage": {
-              "mobile": "https://drive.google.com/uc?export=view&id=1kQunkEQ9c-pj2f5T6Udk2a2nbvm32CX2",
-              "tablet": "https://drive.google.com/uc?export=view&id=159EansB3GxH1YuKEWo7MKaoRdJJeDPKT",
-              "desktop": "https://drive.google.com/uc?export=view&id=159EansB3GxH1YuKEWo7MKaoRdJJeDPKT"
+              "mobile": "https://drive.google.com/uc?export=view&id=1evmNAuF1cIhkGmNak9_fy8bSfiwpnNe9",
+              "tablet": "https://drive.google.com/uc?export=view&id=1eEHLy3HIKEvW7ca6hOoPMDrrFeqkg30X",
+              "desktop": "https://drive.google.com/uc?export=view&id=1ogArPh0MhBVBSV55hb4rVj7QZAVQYl2Q"
             },
             "center": true,
             "left": false,
@@ -30,12 +30,12 @@
             "overlayDak": false
           },
           {
-            "title": "¡Participa en más de 10 tipos de experiencias sin salir de casa!", 
-            "text": "",
+            "title": "¡Transforma tu experiencia!", 
+            "text": "Con actividades internacionales ve con todo hacia el mundo laboral",
             "urlImage": {
-              "mobile": "https://drive.google.com/uc?export=view&id=1gLfKQDGUCr6ooW-4U8Vi4Aa5Yy4eajYl",
-              "tablet": "https://drive.google.com/uc?export=view&id=1W2p35FQwow7Mb-17jk1qfCuj6NomVW-M",
-              "desktop": "https://drive.google.com/uc?export=view&id=1W2p35FQwow7Mb-17jk1qfCuj6NomVW-M"
+              "mobile": "https://drive.google.com/uc?export=view&id=1PlLasXVZeBuJx-PNvF_nUbgBPtPNMsE-",
+              "tablet": "https://drive.google.com/uc?export=view&id=1xk3c_pd-UdtVDF44e7vQ_TfGBZg0ojb1",
+              "desktop": "https://drive.google.com/uc?export=view&id=1_PhvR9z27zS0b8-vOR4jm4nhx_8OQ4Tb"
             },
             "center": true,
             "left": false,
@@ -46,9 +46,9 @@
           }
         ]
       },
-      "title": "UANE Internacional",
+      "title": "UTEG Internacional",
       "subtitle": "Formación global",
-      "description": "Las experiencias internacionales son clave para potenciar tus conocimientos y habilidades, además amplían tu visión personal y profesional; es por ello que UANE apuesta por una formación global, brindando la oportunidad de tener clases espejo, webinars internacionales, intercambios de materias y movilidad al extranjero, así como distintos proyectos en conjunto con las mejores universidades de Latinoamérica y Europa."
+      "description": "Las experiencias internacionales son clave para potencializar tus conocimientos y habilidades, además amplían tu visión personal y profesional; es por ello que UTEG apuesta por una formación global, brindando la oportunidad de tener clases espejo, webinars internacionales, intercambios de materias y movilidad al extranjero, así como distintos proyectos en conjunto con las mejores universidades de Latinoamérica y Europa."
     },
     "modes": {
       "title": "Modos de internacionalización",
@@ -59,8 +59,183 @@
       "alliances": [
         {
           "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1XWvFYPU9rFoqxbEOUHktH4BGoLXWg3Sy",
-            "desktop": "https://drive.google.com/uc?export=view&id=1XWvFYPU9rFoqxbEOUHktH4BGoLXWg3Sy"
+            "mobile": "https://drive.google.com/uc?export=view&id=1y4GfgmVSE1sdZHRas01eUWTkDldNqCKH",
+            "desktop": "https://drive.google.com/uc?export=view&id=1y4GfgmVSE1sdZHRas01eUWTkDldNqCKH"
+          },
+          "text": "Universidad del Atlántico",
+          "icon": "arrow_forward",
+          "color": "#A2AFB5",
+          "opacity": "multiply",
+          "height": "282px",
+          "enable": true,
+          "nobackground": false,
+          "content": {
+            "title": {
+              "title": "Universidad del Atlántico"
+            },
+            "description": {
+              "content": "<p><b>Alcances:</b><br />Con el objetivo de enriquecer la experiencia educativa de la comunidad estudiantil y para aumentar sus facilidades de inserci&oacute;n laboral, ofrecemos lo siguiente:<br />Intercambio de personal docentes, investigadores y de estudiantes ya sea mediante movilidad presencial o en l&iacute;nea.<br />Desarrollar proyectos de investigaci&oacute;n individual y en conjunto.<br />Desarrollar cursos, conferencias, simposios, webinars.<br />Llevar a cao clases espejo, twin projects as&iacute; como dobles titulaciones para gastronom&iacute;a y nutrici&oacute;n.<br />Eventos como webinars, ciclos, simposios, seminarios y cursos.<br />Los alumnos podr&aacute;n participar en clases espejo y twin projects con esta instituci&oacute;n.<br />Apoyo de expertos en diversos temas para enriquecer la experiencia y conocimiento de los estudiantes.<br /><br /><b>&iquest;En qu&eacute; te beneficia?</b><br />&bull; Conoces y aprendes sobre otras culturas.<br />&bull; Ganas experiencias acad&eacute;micas y de vida.<br />&bull; Creces personal y profesionalmente.<br />&bull; Aprendes o mejoras el conocimiento de un idioma distinto.<br />&bull; Creas una red de contactos alrededor del mundo.<br />&bull; Adquieres independencia.<br />&bull; Enriqueces tu curriculum.</p>"
+            },
+            "redirect": {
+              "label": "Conoce más",
+              "link": "https://uda.edu.mx/"
+            }
+          }
+        },
+        {
+          "urlImage": {
+            "mobile": "https://drive.google.com/uc?export=view&id=1bYClwX93DeXfrAGFsZaDy7rLw463IRQx",
+            "desktop": "https://drive.google.com/uc?export=view&id=1bYClwX93DeXfrAGFsZaDy7rLw463IRQx"
+          },
+          "text": "UniCatólica, Colombia",
+          "icon": "arrow_forward",
+          "color": "#A2AFB5",
+          "opacity": "multiply",
+          "height": "282px",
+          "enable": true,
+          "nobackground": false,
+          "content": {
+            "title": {
+              "title": "UniCatólica, Colombia"
+            },
+            "description": {
+              "content": "<p><b>Alcances:</b><br />Con el objetivo de enriquecer la experiencia educativa de la comunidad estudiantil y para aumentar sus facilidades de inserci&oacute;n laboral, ofrecemos lo siguiente:<br />Contamos con acuerdos de intercambios tanto presenciales como en l&iacute;nea.<br />As&iacute; mismo se colabora en proyectos de investigaci&oacute;n e internacionalizaci&oacute;n de manera mutua.<br />Eventos como webinars, ciclos, simposios, seminarios y cursos.<br />Los alumnos podr&aacute;n participar en clases espejo y twin projects con esta instituci&oacute;n.<br />Apoyo de expertos en diversos temas para enriquecer la experiencia y conocimiento de los estudiantes de ambas instituciones educativas.<br /><br /><b>&iquest;En qu&eacute; te beneficia?</b><br />&bull; Conoces y aprendes sobre otras culturas.<br />&bull; Ganas experiencias acad&eacute;micas y de vida.<br />&bull; Creces personal y profesionalmente.<br />&bull; Aprendes o mejoras el conocimiento de un idioma distinto.<br />&bull; Creas una red de contactos alrededor del mundo.<br />&bull; Adquieres independencia.<br />&bull; Enriqueces tu curriculum.</p>"
+            },
+            "redirect": {
+              "label": "Conoce más",
+              "link": "https://www.unicatolica.edu.co/"
+            }
+          }
+        },
+        {
+          "urlImage": {
+            "mobile": "https://drive.google.com/uc?export=view&id=1UsPhr0-uGFFFDb6ImLESNMaYxrPqKqWK",
+            "desktop": "https://drive.google.com/uc?export=view&id=1UsPhr0-uGFFFDb6ImLESNMaYxrPqKqWK"
+          },
+          "text": "UniRemington, Colombia",
+          "icon": "arrow_forward",
+          "color": "#A2AFB5",
+          "opacity": "multiply",
+          "height": "282px",
+          "enable": true,
+          "nobackground": false,
+          "content": {
+            "title": {
+              "title": "UniRemington, Colombia"
+            },
+            "description": {
+              "content": "<p><b>Alcances:</b><br />Con el objetivo de enriquecer la experiencia educativa de la comunidad estudiantil y para aumentar sus facilidades de inserci&oacute;n laboral, ofrecemos lo siguiente:<br />Contamos con opci&oacute;n de intercambio ya sea virtual o presencial para toda la comunidad estudiantil, equipo de investigadores y docentes.<br />Colaboraciones acad&eacute;micas en proyectos internacionales de investigaci&oacute;n as&iacute; como publicaciones y eventos de divulgaci&oacute;n cient&iacute;fica.<br />Colaboraciones como clases espejo y twin projects as&iacute; como participaci&oacute;n en festivales deportivos, culturales y de diferentes &aacute;mbitos representando su naci&oacute;n y compartiendo su cultura, gastronom&iacute;a y baile.<br /><br /><b>&iquest;En qu&eacute; te beneficia?</b><br />&bull; Conoces y aprendes sobre otras culturas.<br />&bull; Ganas experiencias acad&eacute;micas y de vida.<br />&bull; Creces personal y profesionalmente.<br />&bull; Aprendes o mejoras el conocimiento de un idioma distinto.<br />&bull; Creas una red de contactos alrededor del mundo.<br />&bull; Adquieres independencia.<br />&bull; Enriqueces tu curriculum.</p>"
+            },
+            "redirect": {
+              "label": "Conoce más",
+              "link": "https://www.uniremington.edu.co/"
+            }
+          }
+        },               
+        {
+          "urlImage": {
+            "mobile": "https://drive.google.com/uc?export=view&id=1M_pGPCF3Ps_wOUj_9YuWGcxTjhu0vqG-",
+            "desktop": "https://drive.google.com/uc?export=view&id=1M_pGPCF3Ps_wOUj_9YuWGcxTjhu0vqG-"
+          },
+          "text": "Corporación Universitaria Rafael Núñez",
+          "icon": "arrow_forward",
+          "color": "#A2AFB5",
+          "opacity": "multiply",
+          "height": "282px",
+          "enable": true,
+          "nobackground": false,
+          "content": {
+            "title": {
+              "title": "Corporación Universitaria Rafael Núñez"
+            },
+            "description": {
+              "content": "<p><b>Alcances:</b><br />Con el objetivo de enriquecer la experiencia educativa de la comunidad estudiantil y para aumentar sus facilidades de inserci&oacute;n laboral, ofrecemos lo siguiente:<br />Contamos con posibilidad de intercambios estudiantiles, de investigaci&oacute;n o del cuerpo docente de las instituciones en diferentes &aacute;mbitos del conocimiento, as&iacute; como el cient&iacute;fico, tecnol&oacute;gico, cultural o estudiantil.<br />Los alumnos podr&aacute;n participar en clases espejo y twin projects con esta instituci&oacute;n.<br /><br /><b>&iquest;En qu&eacute; te beneficia?</b><br />&bull; Conoces y aprendes sobre otras culturas.<br />&bull; Ganas experiencias acad&eacute;micas y de vida.<br />&bull; Creces personal y profesionalmente.<br />&bull; Aprendes o mejoras el conocimiento de un idioma distinto.<br />&bull; Creas una red de contactos alrededor del mundo.<br />&bull; Adquieres independencia.<br />&bull; Enriqueces tu curriculum.</p>"
+            },
+            "redirect": {
+              "label": "Conoce más",
+              "link": "https://www.curn.edu.co/"
+            }
+          }
+        },   
+        {
+          "urlImage": {
+            "mobile": "https://drive.google.com/uc?export=view&id=1abFyANjgT42zABIxtomJkNgpZpDDIrrK",
+            "desktop": "https://drive.google.com/uc?export=view&id=1abFyANjgT42zABIxtomJkNgpZpDDIrrK"
+          },
+          "text": "Universidad de Mendoza, Argentina",
+          "icon": "arrow_forward",
+          "color": "#A2AFB5",
+          "opacity": "multiply",
+          "height": "282px",
+          "enable": true,
+          "nobackground": false,
+          "content": {
+            "title": {
+              "title": "Universidad de Mendoza, Argentina"
+            },
+            "description": {
+              "content": "<p><b>Alcances:</b><br />Con el objetivo de enriquecer la experiencia educativa de la comunidad estudiantil y para aumentar sus facilidades de inserci&oacute;n laboral, ofrecemos lo siguiente:<br />Contamos con posibilidad de intercambios estudiantiles, de investigaci&oacute;n o del cuerpo docente de las instituciones en diferentes &aacute;mbitos del conocimiento, as&iacute; como el cient&iacute;fico, tecnol&oacute;gico, cultural o estudiantil.<br />Los alumnos podr&aacute;n participar en clases espejo y twin projects con esta instituci&oacute;n.<br /><br /><b>&iquest;En qu&eacute; te beneficia?</b><br />&bull; Conoces y aprendes sobre otras culturas.<br />&bull; Ganas experiencias acad&eacute;micas y de vida.<br />&bull; Creces personal y profesionalmente.<br />&bull; Aprendes o mejoras el conocimiento de un idioma distinto.<br />&bull; Creas una red de contactos alrededor del mundo.<br />&bull; Adquieres independencia.<br />&bull; Enriqueces tu curriculum.</p>"
+            },
+            "redirect": {
+              "label": "Conoce más",
+              "link": "https://um.edu.ar/"
+            }
+          }
+        },   
+        {
+          "urlImage": {
+            "mobile": "https://drive.google.com/uc?export=view&id=1l5s4K_ohiJvp7YFqFUfpCn9flyHxkw-F",
+            "desktop": "https://drive.google.com/uc?export=view&id=1l5s4K_ohiJvp7YFqFUfpCn9flyHxkw-F"
+          },
+          "text": "CERCY PARIS",
+          "icon": "arrow_forward",
+          "color": "#A2AFB5",
+          "opacity": "multiply",
+          "height": "282px",
+          "enable": true,
+          "nobackground": false,
+          "content": {
+            "title": {
+              "title": "Cergy Paris Université"
+            },
+            "description": {
+              "content": "<p><b>Alcances:</b><br />Con el objetivo de enriquecer la experiencia educativa de la comunidad estudiantil y para aumentar sus facilidades de inserci&oacute;n laboral, ofrecemos lo siguiente:<br />Programa espec&iacute;fico de la Licenciatura Profesional &ldquo;Oficios de las Artes Culinarias y Artes de la Mesa&rdquo;, abierto a los estudiantes extranjeros en los &aacute;mbitos de la cultura gastron&oacute;mica francesa y europea.<br />Contamos con programas de pr&aacute;cticas, intercambios estudiantiles, de investigaci&oacute;n.<br /><br />Los cursos te&oacute;ricos y pr&aacute;cticos se efectuar&aacute;n en los locales de CY Cergy Paris Universit&eacute;, sitio universitario de Gennevilliers (avenida Marcelo-Paul, 92230 Gennevilliers) mientras que los cursos relacionados con el UE8 &ldquo;Pilotar un restaurante, animaci&oacute;n comercial, producci&oacute;n y gesti&oacute;n&rdquo; se efectuar&aacute;n en los talleres de producci&oacute;n culinaria y en las salas de curso de la Escuela Hotelera de Par&iacute;s - Liceo Jean Drouant al 20, rue M&eacute;d&eacute;ric, 75017 Par&iacute;s.<br />Los estudiantes deber&aacute;n poseer un nivel de franc&eacute;s equivalente a B1 al inicio del a&ntilde;o universitario de septiembre.<br /><br /><b>&iquest;En qu&eacute; te beneficia?</b><br />&bull; Conoces y aprendes sobre otras culturas.<br />&bull; Ganas experiencias acad&eacute;micas y de vida.<br />&bull; Creces personal y profesionalmente.<br />&bull; Aprendes o mejoras el conocimiento de un idioma distinto.<br />&bull; Creas una red de contactos alrededor del mundo.<br />&bull; Adquieres independencia.<br />&bull; Enriqueces tu curriculum.</p>"
+            },
+            "redirect": {
+              "label": "Conoce más",
+              "link": "https://www.cyu.fr/"
+            }
+          }
+        },   
+        {
+          "urlImage": {
+            "mobile": "https://drive.google.com/uc?export=view&id=1moXoXJYXdqkHuBCG-l1PEiPzaX7cX7k0",
+            "desktop": "https://drive.google.com/uc?export=view&id=1moXoXJYXdqkHuBCG-l1PEiPzaX7cX7k0"
+          },
+          "text": "Universidad Comunera",
+          "icon": "arrow_forward",
+          "color": "#A2AFB5",
+          "opacity": "multiply",
+          "height": "282px",
+          "enable": true,
+          "nobackground": false,
+          "content": {
+            "title": {
+              "title": "Ucom Universidad Comunera"
+            },
+            "description": {
+              "content": "<p><b>Alcances:</b><br />Con el objetivo de enriquecer la experiencia educativa de la comunidad estudiantil y para aumentar sus facilidades de inserci&oacute;n laboral, ofrecemos lo siguiente:<br />Contamos con acuerdos de intercambios tanto presenciales como en l&iacute;nea.<br />As&iacute; mismo se colabora en proyectos de investigaci&oacute;n e internacionalizaci&oacute;n de manera mutua.<br />Eventos como webinars, ciclos, simposios, seminarios y cursos.<br />Los alumnos podr&aacute;n participar en Clases Espejo y Twin Projects con esta instituci&oacute;n.<br />Apoyo de expertos en diversos temas para enriquecer la experiencia y conocimiento de los estudiantes de ambas instituciones educativas<br /><br /><b>&iquest;En qu&eacute; te beneficia?</b><br />&bull; Conoces y aprendes sobre otras culturas.<br />&bull; Ganas experiencias acad&eacute;micas y de vida.<br />&bull; Creces personal y profesionalmente.<br />&bull; Aprendes o mejoras el conocimiento de un idioma distinto.<br />&bull; Creas una red de contactos alrededor del mundo.<br />&bull; Adquieres independencia.<br />&bull; Enriqueces tu curriculum.</p>"
+            },
+            "redirect": {
+              "label": "Conoce más",
+              "link": "https://ucom.edu.py/"
+            }
+          }
+        },   
+        {
+          "urlImage": {
+            "mobile": "https://drive.google.com/uc?export=view&id=1k-W759cJfFQtU2vQ1ZXxsl1SBopZXf6V",
+            "desktop": "https://drive.google.com/uc?export=view&id=1k-W759cJfFQtU2vQ1ZXxsl1SBopZXf6V"
           },
           "text": "Universidad ISEP",
           "icon": "arrow_forward",
@@ -71,21 +246,21 @@
           "nobackground": false,
           "content": {
             "title": {
-              "title": "ISEP"
+              "title": "Universidad ISEP"
             },
             "description": {
-              "content": "El ISEP es una institución privada española enfocada en la intervención clínica, investigación y formación post universitaria, especializada en el ámbito de la Psicología Clínica, Neuropsicología, la Educación y la Logopedia.\n\n Alcances del convenio:\n\n El convenio está enfocado en la colaboración académica, científica y cultural a través de programas anuales que comprenden, entre otros proyectos, el desarrollo de investigaciones conjuntas, programas de postgrado, intercambio de profesores, investigadores y estudiantes. Además de intercambios virtuales y descuentos en programas específicos de ISEP."
+              "content": "<p><b>Alcances:</b><br />Con el objetivo de enriquecer la experiencia educativa de la comunidad estudiantil y para aumentar sus facilidades de inserci&oacute;n laboral, ofrecemos lo siguiente:<br />Contamos con acuerdos de intercambios tanto presenciales como en l&iacute;nea.<br />As&iacute; mismo se colabora en proyectos de investigaci&oacute;n e internacionalizaci&oacute;n de manera mutua.<br />Eventos como webinars, ciclos, simposios, seminarios y cursos.<br /><br /><b>&iquest;En qu&eacute; te beneficia?</b><br />&bull; Conoces y aprendes sobre otras culturas.<br />&bull; Ganas experiencias acad&eacute;micas y de vida.<br />&bull; Creces personal y profesionalmente.<br />&bull; Aprendes o mejoras el conocimiento de un idioma distinto.<br />&bull; Creas una red de contactos alrededor del mundo.<br />&bull; Adquieres independencia.<br />&bull; Enriqueces tu curriculum.</p>"
             },
             "redirect": {
               "label": "Conoce más",
-              "link": "https://www.isep.com/mx/"
+              "link": "https://universidadisep.com/mx/"
             }
           }
-        },
+        },   
         {
           "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1m-J6yixFZlbGoQ7MNiazPzAGSPpdkEhW",
-            "desktop": "https://drive.google.com/uc?export=view&id=1m-J6yixFZlbGoQ7MNiazPzAGSPpdkEhW"
+            "mobile": "https://drive.google.com/uc?export=view&id=1XiZTu1ryjGJvE3mYHI21DMWYe9mdtoFR",
+            "desktop": "https://drive.google.com/uc?export=view&id=1XiZTu1ryjGJvE3mYHI21DMWYe9mdtoFR"
           },
           "text": "Politécnico Gran Colombiano",
           "icon": "arrow_forward",
@@ -96,23 +271,23 @@
           "nobackground": false,
           "content": {
             "title": {
-              "title": "Politécnico Grancolombiano"
+              "title": "Universidad Politécnico Gran Colombiano"
             },
             "description": {
-              "content": "El Poli Grancolombiano es una institución universitaria privada, ubicada en las montañas de Bogotá, Colombia.\n\n Alcances del convenio:\n\n Dentro de los acuerdos a los que se ha llegado con esta Universidad, se encuentra el intercambio de talento, tanto de alumnos como profesores, la posibilidad de crear cursos en conjunto y el impulso de experiencias internacionales paralelas como clases espejo, twin projects y webinars."
+              "content": "<p><b>Alcances:</b><br />Con el objetivo de enriquecer la experiencia educativa de la comunidad estudiantil y para aumentar sus facilidades de inserci&oacute;n laboral, ofrecemos lo siguiente:<br />Contamos con acuerdos de intercambios tanto presenciales como en l&iacute;nea.<br />As&iacute; mismo se colabora en proyectos de investigaci&oacute;n e internacionalizaci&oacute;n de manera mutua.<br />Eventos como webinars, ciclos, simposios, seminarios y cursos.<br />Los alumnos podr&aacute;n participar en clases espejo y twin projects con esta instituci&oacute;n.<br /><br />Apoyo de expertos en diversos temas para enriquecer la experiencia y conocimiento de los estudiantes de ambas instituciones educativas<br /><br /><b>&iquest;En qu&eacute; te beneficia?</b><br />&bull; Conoces y aprendes sobre otras culturas.<br />&bull; Ganas experiencias acad&eacute;micas y de vida.<br />&bull; Creces personal y profesionalmente.<br />&bull; Aprendes o mejoras el conocimiento de un idioma distinto.<br />&bull; Creas una red de contactos alrededor del mundo.<br />&bull; Adquieres independencia.<br />&bull; Enriqueces tu curriculum.</p>"
             },
             "redirect": {
-              "label": "Conoce más",
+              "label":"Conoce más",
               "link": "https://www.poli.edu.co/"
             }
           }
         },
         {
           "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1PI2Y6G40m6qBrmySKkX81rSfw0FCdQTS",
-            "desktop": "https://drive.google.com/uc?export=view&id=1PI2Y6G40m6qBrmySKkX81rSfw0FCdQTS"
+            "mobile": "https://drive.google.com/uc?export=view&id=1sIP_Tvk7jfD5HVy_QjeuG8qgT5Fv3Ar5",
+            "desktop": "https://drive.google.com/uc?export=view&id=1sIP_Tvk7jfD5HVy_QjeuG8qgT5Fv3Ar5"
           },
-          "text": "Ibero de Colombia",
+          "text": "Iberoamericana corporación univeristaria",
           "icon": "arrow_forward",
           "color": "#A2AFB5",
           "opacity": "multiply",
@@ -121,47 +296,46 @@
           "nobackground": false,
           "content": {
             "title": {
-              "title": "Ibero"
+              "title": "Iberoamericana (Colombia)"
             },
             "description": {
-              "content": "La Corporación Universitaria Iberoamericana, que tiene su sede principal en Bogotá y alcance en buena parte del territorio nacional con educación virtual, es parte de Planeta Formación y Universidades, una red internacional con veinte instituciones educativas de Europa, América y norte de África. Cada año, más de 100.000 estudiantes de más de 110 nacionalidades se forman a través de sus escuelas de negocios, universidades, escuelas superiores especializadas y centros de formación profesional y continua.\n\n Alcances del convenio:\n\n El propósito fundamental del acuerdo es establecer programas de cooperación académica interinstitucional, unir esfuerzos y recursos, así como compartir conocimientos e información."
+              "content": "<p><b>Alcances:</b><br />Con el objetivo de enriquecer la experiencia educativa de la comunidad estudiantil y para aumentar sus facilidades de inserci&oacute;n laboral, ofrecemos lo siguiente:<br />Contamos con acuerdos de intercambios tanto presenciales como en l&iacute;nea.<br />As&iacute; mismo se colabora en proyectos de investigaci&oacute;n e internacionalizaci&oacute;n de manera mutua.<br />Eventos como webinars, ciclos, simposios, seminarios y cursos.<br />Los alumnos podr&aacute;n participar en clases espejo y twin projects con esta instituci&oacute;n.<br />Apoyo de expertos en diversos temas para enriquecer la experiencia y conocimiento de los estudiantes de ambas instituciones educativas.<br /><br /><b>&iquest;En qu&eacute; te beneficia?</b><br />&bull; Conoces y aprendes sobre otras culturas.<br />&bull; Ganas experiencias acad&eacute;micas y de vida.<br />&bull; Creces personal y profesionalmente.<br />&bull; Aprendes o mejoras el conocimiento de un idioma distinto.<br />&bull; Creas una red de contactos alrededor del mundo.<br />&bull; Adquieres independencia.<br />&bull; Enriqueces tu curriculum.</p>"
             },
             "redirect": {
-              "label": "Conoce más",
+              "label":"Conoce más",
               "link": "https://www.ibero.edu.co/"
             }
           }
-        },               
+        },
         {
           "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1EPzQyhdU2VhxpNcEO-RWPvOw71MJOlsz",
-            "desktop": "https://drive.google.com/uc?export=view&id=1EPzQyhdU2VhxpNcEO-RWPvOw71MJOlsz"
+            "mobile": "https://drive.google.com/uc?export=view&id=1CkWnZkemGdTkCv2KqurvNhgiFIM2KLoF",
+            "desktop": "https://drive.google.com/uc?export=view&id=1CkWnZkemGdTkCv2KqurvNhgiFIM2KLoF"
           },
-          "text": "Universidad De Sevilla",
+          "text": "Grupo Planeta Formación y Universidades",
           "icon": "arrow_forward",
           "color": "#A2AFB5",
           "opacity": "multiply",
           "height": "282px",
           "enable": true,
           "nobackground": false,
-          "redirect": "https://www.us.es/",
           "content": {
             "title": {
-              "title": "Universidad De Sevilla"
+              "title": "Planeta Formación y Universidades"
             },
             "description": {
-              "content": "Gracias a su trayectoria, a su estructura y al equipo humano que le da alma, la Universidad de Sevilla es hoy una referencia en el sistema universitario español y europeo. Los más de 70.000 alumnos matriculados el último curso así lo corroboran, convirtiéndola en la segunda universidad española y la primera andaluza en número de matriculaciones en su centenar de grados y más de 160 másteres. Su compromiso con el conocimiento y la contribución al progreso la hacen destacar también en la generación de patentes, área en el que ostenta el segundo puesto a nivel nacional."
+              "content": "<p><b>Alcances:</b><br />Con el objetivo de enriquecer la experiencia educativa de la comunidad estudiantil y para aumentar sus facilidades de inserci&oacute;n laboral, ofrecemos lo siguiente:<br />Contamos con acuerdos de intercambios tanto presenciales como en l&iacute;nea.<br />As&iacute; mismo se colabora en proyectos de investigaci&oacute;n e internacionalizaci&oacute;n de manera mutua.<br />Eventos como webinars, ciclos, simposios, seminarios y cursos.<br />Los alumnos podr&aacute;n participar en clases espejo y twin projects con esta instituci&oacute;n.<br />Apoyo de expertos en diversos temas para enriquecer la experiencia y conocimiento de los estudiantes de ambas instituciones educativas<br /><br /><b>&iquest;En qu&eacute; te beneficia?</b><br />&bull; Conoces y aprendes sobre otras culturas.<br />&bull; Ganas experiencias acad&eacute;micas y de vida.<br />&bull; Creces personal y profesionalmente.<br />&bull; Aprendes o mejoras el conocimiento de un idioma distinto.<br />&bull; Creas una red de contactos alrededor del mundo.<br />&bull; Adquieres independencia.<br />&bull; Enriqueces tu curriculum.</p>"
             },
             "redirect": {
               "label": "Conoce más",
-              "link": "https://www.us.es/"
+              "link": "https://www.planetaformacion.com/"
             }
           }
-        },   
+        },
         {
           "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1Mr0bpirsN1luZPC4cHvTIM6Av1po8JhL",
-            "desktop": "https://drive.google.com/uc?export=view&id=1Mr0bpirsN1luZPC4cHvTIM6Av1po8JhL"
+            "mobile": "https://drive.google.com/uc?export=view&id=1dQVz7ggB4FYLGK6DfdgjDykdkWBgilVf",
+            "desktop": "https://drive.google.com/uc?export=view&id=1dQVz7ggB4FYLGK6DfdgjDykdkWBgilVf"
           },
           "text": "Universidad Católica San Antonio de Murcia",
           "icon": "arrow_forward",
@@ -172,23 +346,23 @@
           "nobackground": false,
           "content": {
             "title": {
-              "title": "Universidad Católica San Antonio de Murcia"
+              "title": "UCAM Universidad Católica de Murcía"
             },
             "description": {
-              "content": "La Universidad Católica San Antonio de Murcia es una institución privada, ubicada en Murcia, España, con una amplia oferta académica y puntera en el área deportiva.\n\nAlcances del Convenio:\n\nEste acuerdo contempla que los alumnos de ULA puedan cursar un semestre en esa Universidad española, además de que se ampliarán las vías de colaboración para que existan dobles titulaciones y programas específicos. Este convenio también permitirá que alumnos españoles puedan cursar estudios en nuestra Universidad."
+              "content": "<p><b>Alcances:</b><br />Con el objetivo de enriquecer la experiencia educativa de la comunidad estudiantil y para aumentar sus facilidades de inserci&oacute;n laboral, ofrecemos lo siguiente:<br />Contamos con acuerdos de intercambios tanto presenciales como en l&iacute;nea.<br />As&iacute; mismo se colabora en proyectos de investigaci&oacute;n e internacionalizaci&oacute;n de manera mutua.<br />Eventos como webinars, ciclos, simposios, seminarios y cursos.<br />Los alumnos podr&aacute;n participar en clases espejo y twin projects con esta instituci&oacute;n.<br />Apoyo de expertos en diversos temas para enriquecer la experiencia y conocimiento de los estudiantes de ambas instituciones educativas<br /><br /><b>&iquest;En qu&eacute; te beneficia?</b><br />&bull; Conoces y aprendes sobre otras culturas.<br />&bull; Ganas experiencias acad&eacute;micas y de vida.<br />&bull; Creces personal y profesionalmente.<br />&bull; Aprendes o mejoras el conocimiento de un idioma distinto.<br />&bull; Creas una red de contactos alrededor del mundo.<br />&bull; Adquieres independencia.<br />&bull; Enriqueces tu curriculum.</p>"
             },
             "redirect": {
               "label": "Conoce más",
               "link": "https://www.ucam.edu/"
             }
           }
-        },   
+        },
         {
           "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1o3eQ4V_-xhwkkn9-XiqiY-hFJ9Ddmbtp",
-            "desktop": "https://drive.google.com/uc?export=view&id=1o3eQ4V_-xhwkkn9-XiqiY-hFJ9Ddmbtp"
+            "mobile": "https://drive.google.com/uc?export=view&id=1DTcayWBn0Zghvqsv8BuBeSSsI9vKzaIp",
+            "desktop": "https://drive.google.com/uc?export=view&id=1DTcayWBn0Zghvqsv8BuBeSSsI9vKzaIp"
           },
-          "text": "Universidad Europea del Atlántico",
+          "text": "Programa Delfín",
           "icon": "arrow_forward",
           "color": "#A2AFB5",
           "opacity": "multiply",
@@ -197,21 +371,46 @@
           "nobackground": false,
           "content": {
             "title": {
-              "title": "Universidad Europea del Atlántico"
+              "title": "Delfín"
             },
             "description": {
-              "content": "La Universidad Europea del Atlántico es una universidad privada española, situada en el Parque Científico y Tecnológico de Cantabria, en la ciudad de Santander.\n\n Alcances del convenio:\n\nEste convenio se basa en el desarrollo de estudios y proyectos de investigación y de cooperación internacional, la difusión de conocimientos mediante la organización de conferencias, reuniones, cursos, etc., el intercambio de sus profesores e investigadores, así como de estudiantes de Licenciatura y de Postgrado con el objeto de que cursen estudios del nivel correspondiente con elreconocimiento de los créditos conseguidos en la otra institución, en las áreas de Ciencias de la Salud, Sociales y Humanidades."
+              "content": "<p><b>Alcances:</b><br />Con el objetivo de enriquecer la experiencia educativa de la comunidad estudiantil y para aumentar sus facilidades de inserci&oacute;n laboral, ofrecemos lo siguiente:<br />Contamos con acuerdos de intercambios tanto presenciales como en l&iacute;nea.<br />As&iacute; mismo se colabora en proyectos de investigaci&oacute;n e internacionalizaci&oacute;n de manera mutua.<br />Eventos como webinars, ciclos, simposios, seminarios y cursos.<br />Los alumnos podr&aacute;n participar en clases espejo y twin projects con esta instituci&oacute;n.<br />Apoyo de expertos en diversos temas para enriquecer la experiencia y conocimiento de los estudiantes de ambas instituciones educativas<br /><br /><b>&iquest;En qu&eacute; te beneficia?</b><br />&bull; Conoces y aprendes sobre otras culturas.<br />&bull; Ganas experiencias acad&eacute;micas y de vida.<br />&bull; Creces personal y profesionalmente.<br />&bull; Aprendes o mejoras el conocimiento de un idioma distinto.<br />&bull; Creas una red de contactos alrededor del mundo.<br />&bull; Adquieres independencia.<br />&bull; Enriqueces tu curriculum.</p>"
             },
             "redirect": {
               "label": "Conoce más",
-              "link": "https://www.uneatlantico.mx/"
+              "link": "https://www.programadelfin.org.mx/"
             }
           }
-        },   
+        },
         {
           "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1qe2l8dUbMixVZAL6UpL-jwbfhfHHwR-f",
-            "desktop": "https://drive.google.com/uc?export=view&id=1qe2l8dUbMixVZAL6UpL-jwbfhfHHwR-f"
+            "mobile": "https://drive.google.com/uc?export=view&id=11_HiLp2S1_CujZRXLzV5ht5PdzDipPpd",
+            "desktop": "https://drive.google.com/uc?export=view&id=11_HiLp2S1_CujZRXLzV5ht5PdzDipPpd"
+          },
+          "text": "Universidad de Ciego de Ávila Máximo Gómez Báez",
+          "icon": "arrow_forward",
+          "color": "#A2AFB5",
+          "opacity": "multiply",
+          "height": "282px",
+          "enable": true,
+          "nobackground": false,
+          "content": {
+            "title": {
+              "title": "UNICA Universidad de Ciego de Ávila Máximo Gómez Báez"
+            },
+            "description": {
+              "content": "<p><b>Alcances:</b><br />Con el objetivo de enriquecer la experiencia educativa de la comunidad estudiantil y para aumentar sus facilidades de inserci&oacute;n laboral, ofrecemos lo siguiente:<br />Contamos con acuerdos de intercambios tanto presenciales como en l&iacute;nea.<br />As&iacute; mismo se colabora en proyectos de investigaci&oacute;n e internacionalizaci&oacute;n de manera mutua.<br />Eventos como webinars, ciclos, simposios, seminarios y cursos.<br />Los alumnos podr&aacute;n participar en clases espejo y twin projects con esta instituci&oacute;n.<br />Apoyo de expertos en diversos temas para enriquecer la experiencia y conocimiento de los estudiantes de ambas instituciones educativas<br /><br /><b>&iquest;En qu&eacute; te beneficia?</b><br />&bull; Conoces y aprendes sobre otras culturas.<br />&bull; Ganas experiencias acad&eacute;micas y de vida.<br />&bull; Creces personal y profesionalmente.<br />&bull; Aprendes o mejoras el conocimiento de un idioma distinto.<br />&bull; Creas una red de contactos alrededor del mundo.<br />&bull; Adquieres independencia.<br />&bull; Enriqueces tu curriculum.</p>"
+            },
+            "redirect": {
+              "label": "Conoce más",
+              "link": "https://www.unica.cu/"
+            }
+          }
+        },
+        {
+          "urlImage": {
+            "mobile": "https://drive.google.com/uc?export=view&id=1Jg0dmTavlOC7anwy4JXkESswbaW0Ca3h",
+            "desktop": "https://drive.google.com/uc?export=view&id=1Jg0dmTavlOC7anwy4JXkESswbaW0Ca3h"
           },
           "text": "Universidad Complutense Madrid",
           "icon": "arrow_forward",
@@ -222,277 +421,42 @@
           "nobackground": false,
           "content": {
             "title": {
-              "title": "Universidad Complutense"
+              "title": "Universidad Complutense de Madrid"
             },
             "description": {
-              "content": "El convenio deja la puerta abierta a otras colaboraciones que puedan surgir en el futuro a raíz de las experiencias compartidas, como la organización y promoción de programas culturales, conferencias, congresos, seminarios y programas de formación.\n\n El presente protocolo sirve de marco general y se desarrollará mediante convenios de colaboración específicos entre las partes firmantes. En dichos acuerdos específicos se concretarán los aspectos jurídicos, técnicos y económicos de la actuación que se pretenda llevar a cabo, así como las obligaciones que cada una de las partes asumirá para la consecución de lo pactado."
+              "content": "<p><b>Alcances:</b><br />Con el objetivo de enriquecer la experiencia educativa de la comunidad estudiantil y para aumentar sus facilidades de inserci&oacute;n laboral, ofrecemos lo siguiente:<br />Contamos con acuerdos de intercambios tanto presenciales como en l&iacute;nea.<br />As&iacute; mismo se colabora en proyectos de investigaci&oacute;n e internacionalizaci&oacute;n de manera mutua.<br />Eventos como webinars, ciclos, simposios, seminarios y cursos.<br />Los alumnos podr&aacute;n participar en clases espejo y twin projects con esta instituci&oacute;n.<br />Apoyo de expertos en diversos temas para enriquecer la experiencia y conocimiento de los estudiantes de ambas instituciones educativas<br /><br /><b>&iquest;En qu&eacute; te beneficia?</b><br />&bull; Conoces y aprendes sobre otras culturas.<br />&bull; Ganas experiencias acad&eacute;micas y de vida.<br />&bull; Creces personal y profesionalmente.<br />&bull; Aprendes o mejoras el conocimiento de un idioma distinto.<br />&bull; Creas una red de contactos alrededor del mundo.<br />&bull; Adquieres independencia.<br />&bull; Enriqueces tu curriculum.</p>"
             },
             "redirect": {
               "label": "Conoce más",
               "link": "https://www.ucm.es/"
             }
           }
-        },   
-        {
-          "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1TsKiNc4OJ-orBPGBxL-pAuz1jJhS8TwI",
-            "desktop": "https://drive.google.com/uc?export=view&id=1TsKiNc4OJ-orBPGBxL-pAuz1jJhS8TwI"
-          },
-          "text": "Grupo Planeta Formación y Universidades",
-          "icon": "arrow_forward",
-          "color": "#A2AFB5",
-          "opacity": "multiply",
-          "height": "282px",
-          "enable": true,
-          "nobackground": false,
-          "redirect": "https://www.planetaformacion.com/",
-          "content": {
-            "title": {
-              "title": "Planeta Formación y Universidades"
-            },
-            "description": {
-              "content": "Conectar a las personas con el talento y el conocimiento. Esa es la base sobre la que se asienta un modelo que abarca todos los niveles para dar respuesta a las necesidades formativas en cada momento de la vida. Una conexión esencial que alimenta las sociedades y comunidades donde actuamos. Un compromiso de respeto y servicio hacia el individuo pero también hacia las empresas y organizaciones que reclaman de las instituciones educativas una mayor responsabilidad en la formación eficaz de los profesionales.\n\n Personas, cultura y transformación."
-            },
-            "redirect": {
-              "label": "Conoce más",
-              "link": "https://www.planetaformacion.com/"
-            }
-          }
-        },   
-        {
-          "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1T1o0D1s8MQ2jDqolnhKTofE70wMnoPRl",
-            "desktop": "https://drive.google.com/uc?export=view&id=1T1o0D1s8MQ2jDqolnhKTofE70wMnoPRl"
-          },
-          "text": "Universidad Alfonso X el Sabio",
-          "icon": "arrow_forward",
-          "color": "#A2AFB5",
-          "opacity": "multiply",
-          "height": "282px",
-          "enable": true,
-          "nobackground": false,
-          "redirect": "https://conahec.org/es/",
-          "content": {
-            "title": {
-              "title": "Universidad Alfonso X el Sabio"
-            },
-            "description": {
-              "content": "La Universidad Alfonso X el Sabio es una universidad privada situada en Madrid, España.\n\n Alcances del convenio:\n\n La ULA ha unido esfuerzos con la UAX para propiciar el intercambio de estudiantes y la elaboración conjunta de planes de estudio y programas académicos. Además de acuerdos específicos como el que permite realizar cursos de verano en el área de la salud, en uno de los mejores hospitales virtuales de Europa. Otro de los acuerdos establece un itinerario académico para los alumnos de ULA sobre dos Títulos Propios de Experto, de la Universidad UAX en modalidad online, en las áreas de la Estética y Dietética. El convenio también contempla la posibilidad de dobles titulaciones en Maestría, por lo que, cursando un semestre en la UAX podrían obtener un título propio de la UAX, además del título que otorga la ULA."
-            },
-            "redirect": {
-              "label":"Conoce más",
-              "link": "https://www.uax.com/"
-            }
-          }
         },
         {
           "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1ig0gNvU1CMW-Pa80rLyOdQP9xrI9Wsfv",
-            "desktop": "https://drive.google.com/uc?export=view&id=1ig0gNvU1CMW-Pa80rLyOdQP9xrI9Wsfv"
+            "mobile": "https://drive.google.com/uc?export=view&id=1-wNCT32B7l0zNXNfn7BJeLdOvYhzO-GV",
+            "desktop": "https://drive.google.com/uc?export=view&id=1-wNCT32B7l0zNXNfn7BJeLdOvYhzO-GV"
           },
-          "text": "Universidad Carlos III de Madrid",
+          "text": "Pere Tarrés",
           "icon": "arrow_forward",
           "color": "#A2AFB5",
           "opacity": "multiply",
           "height": "282px",
           "enable": true,
           "nobackground": false,
-          "redirect": "https://conahec.org/es/",
           "content": {
             "title": {
-              "title": "Universidad Carlos III de Madrid"
+              "title": "Fundación Pere Tarrés"
             },
             "description": {
-              "content": "La Universidad Carlos III de Madrid es una de las mejores y más reconocidas universidades públicas de España. Es la primera universidad española y la 22 del mundo en la clasificación mundial de universidades QS de las 50 mejores universidades del mundo con menos de 50 años.\n\n Alcances del convenio:\n\n En este acuerdo marco de colaboración se pretende impulsar el intercambio académico, de profesores y de conocimiento, titulaciones conjuntas, cursos de verano e incluso cursos a medida, programas intensivos y otras actividades específicas. Los alumnos de ULA podrán cursar distintos programas virtuales y presenciales en una de las mejores universidades de España."
-            },
-            "redirect": {
-              "label":"Conoce más",
-              "link": "https://www.uc3m.es/Inicio"
-            }
-          }
-        },
-        {
-          "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1B5otH-3aVwgPGSi7MGD-GD6q6wXa2_p3",
-            "desktop": "https://drive.google.com/uc?export=view&id=1B5otH-3aVwgPGSi7MGD-GD6q6wXa2_p3"
-          },
-          "text": "Universidad Internacional de Valencia",
-          "icon": "arrow_forward",
-          "color": "#A2AFB5",
-          "opacity": "multiply",
-          "height": "282px",
-          "enable": true,
-          "nobackground": false,
-          "redirect": "https://conahec.org/es/",
-          "content": {
-            "title": {
-              "title": "Universidad Internacional de Valencia"
-            },
-            "description": {
-              "content": "La Universidad Internacional de Valencia es una de las principales universidades online del mundo hispanohablante. Su sistema de Garantía Interna de Calidad está establecido según los principios expuestos en el Programa AUDIT de la Agencia Nacional de Evaluación de la Calidad y Acreditación (ANECA), que están alineados con los criterios y directrices del Espacio Europeo de Educación Superior.\n\n Alcances del convenio:\n\n En este convenio marco con VIU se busca la colaboración en el ámbito de intercambios de estudiantes, profesores y el desarrollo de proyectos de investigación en conjunto."
+              "content": "<p><b>Alcances:</b><br />Con el objetivo de enriquecer la experiencia educativa de la comunidad estudiantil y para aumentar sus facilidades de inserci&oacute;n laboral, ofrecemos lo siguiente:<br />Contamos con acuerdos de intercambios tanto presenciales como en l&iacute;nea.<br />As&iacute; mismo se colabora en proyectos de investigaci&oacute;n e internacionalizaci&oacute;n de manera mutua.<br />Eventos como webinars, ciclos, simposios, seminarios y cursos.<br />Los alumnos podr&aacute;n participar en clases espejo y twin projects con esta instituci&oacute;n.<br />Apoyo de expertos en diversos temas para enriquecer la experiencia y conocimiento de los estudiantes de ambas instituciones educativas<br /><br /><b>&iquest;En qu&eacute; te beneficia?</b><br />&bull; Conoces y aprendes sobre otras culturas.<br />&bull; Ganas experiencias acad&eacute;micas y de vida.<br />&bull; Creces personal y profesionalmente.<br />&bull; Aprendes o mejoras el conocimiento de un idioma distinto.<br />&bull; Creas una red de contactos alrededor del mundo.<br />&bull; Adquieres independencia.<br />&bull; Enriqueces tu curriculum.</p>"
             },
             "redirect": {
               "label": "Conoce más",
-              "link": "https://www.universidadviu.com/"
+              "link": "https://www.peretarres.org/es"
             }
           }
-        },
-        {
-          "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1ecxNFnzJ_AKClE3qP1RO-0X2EgXwr5Ez",
-            "desktop": "https://drive.google.com/uc?export=view&id=1ecxNFnzJ_AKClE3qP1RO-0X2EgXwr5Ez"
-          },
-          "text": "Escuela de Gobierno y Transformación Pública",
-          "icon": "arrow_forward",
-          "color": "#A2AFB5",
-          "opacity": "multiply",
-          "height": "282px",
-          "enable": true,
-          "nobackground": false,
-          "redirect": "https://conahec.org/es/",
-          "content": {
-            "title": {
-              "title": "Escuela de Gobierno y transformación pública"
-            },
-            "description": {
-              "content": "La Escuela de Gobierno y Transformación Pública es un Centro de Innovación e Investigación en España, destinado a promover la excelencia en la Dirección Pública, la consolidación de los Valores Democráticos, del Estado de Derecho, los Derechos Humanos y el fortalecimiento, modernización y transformación de las Instituciones al servicio del ciudadano. Este innovador centro educativo nace de un ambicioso proyecto entre SKR y la Universidad Alfonso X el Sabio como resultado de su vocación compartida de ofrecer a los futuros líderes oportunidades de formación de calidad.\n\n Alcances del convenio:\n\n El convenio de colaboración se centra en la realización conjunta de programas académicos, proyectos de investigación, actividades culturales, programas de extensión, intercambios de talento y la posibilidad de realizar prácticas profesionales."
-            },
-            "redirect": {
-              "label": "Conoce más",
-              "link": "https://skr.es/"
-            }
-          }
-        },
-        {
-          "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1KECHLYBujZ8FV_FaAjfRq95XTbb2y5P1",
-            "desktop": "https://drive.google.com/uc?export=view&id=1KECHLYBujZ8FV_FaAjfRq95XTbb2y5P1"
-          },
-          "text": "UNICOC Institución Universitaria Colegios de Colombia ",
-          "icon": "arrow_forward",
-          "color": "#A2AFB5",
-          "opacity": "multiply",
-          "height": "282px",
-          "enable": true,
-          "nobackground": false,
-          "redirect": "https://conahec.org/es/",
-          "content": {
-            "title": {
-              "title": "UNICOC Institución Universitaria Colegios de Colombia"
-            },
-            "description": {
-              "content": "La Institución Universitaria Colegios de Colombia - Unicoc es una Institución de Educación Superior de docencia, responsable social y ambiental, que forma profesionales idóneos, integrales, con disciplina, ética y trabajo, emprendedores, con conciencia social y de apertura multicultural, a través de la implementación de estrategias que promueven una relación armónica entre la teoría y la práctica, soportadas en una planta docente altamente cualificada, que se actualiza permanentemente, constituyéndose en agente de transformación de la sociedad y factor de desarrollo cultural, económico y político a nivel local, regional, nacional e internacional.\n\n Unicoc promueve la práctica profesional basada en la evidencia, el desarrollo de procesos investigativos pertinentes que generen nuevo conocimiento y la cultura de autoevaluación, a partir de consolidación de su sistema de aseguramiento de la calidad."
-            },
-            "redirect": {
-              "label": "Conoce más",
-              "link": "https://www.unicoc.edu.co/"
-            }
-          }
-        },
-        {
-          "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1J0wVLKhMgQcGY_GS68mK-IrI9yxUe5KP",
-            "desktop": "https://drive.google.com/uc?export=view&id=1J0wVLKhMgQcGY_GS68mK-IrI9yxUe5KP"
-          },
-          "text": "Universidad El Bosque",
-          "icon": "arrow_forward",
-          "color": "#A2AFB5",
-          "opacity": "multiply",
-          "height": "282px",
-          "enable": true,
-          "nobackground": false,
-          "redirect": "https://conahec.org/es/",
-          "content": {
-            "title": {
-              "title": "Universidad El Bosque"
-            },
-            "description": {
-              "content": "El Bosque se consolida como una Universidad de formación, multidisciplinaria, con un foco que articula su desarrollo (en formación, investigación, transferencia y servicio) en la Salud y Calidad de Vida. Insertada en el entorno global, comprometida con las necesidades y oportunidades locales, regionales y nacionales.\n\n Orienta la relación con el entorno, el desarrollo académico, la oferta formativa, las actividades de investigación y transferencia, las mejoras de la oferta académica, la relación con los usuarios, la composición y desarrollo del talento humano, el desarrollo del campus, los recursos y los servicios.\n\n Alcances del convenio:\n\n Con el objetivo de profundizar los lazos de cooperación entre la Universidad Latinoamericana (ULA) y la Universidad El Bosque (UEB) y apoyar el enriquecimiento de sus estudiantes, ambas instituciones firman el Convenio Específico de Movilidad.\n\n El convenio prevé también la posibilidad de intercambiar personal docente y administrativo, aunque el propio texto estipula que los términos y condiciones se negociarán más adelante."
-            },
-            "redirect": {
-              "label": "Conoce más",
-              "link": "https://www.unbosque.edu.co/"
-            }
-          }
-        },
-        {
-          "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=112i71-eqdE_EWzOKNE49bCMoTghktt7s",
-            "desktop": "https://drive.google.com/uc?export=view&id=112i71-eqdE_EWzOKNE49bCMoTghktt7s"
-          },
-          "text": "Universidad del Itsmo",
-          "icon": "arrow_forward",
-          "color": "#A2AFB5",
-          "opacity": "multiply",
-          "height": "282px",
-          "enable": true,
-          "nobackground": false,
-          "redirect": "https://conahec.org/es/",
-          "content": {
-            "title": {
-              "title": "Universidad del Itsmo"
-            },
-            "description": {
-              "content": "Con más de 25 años de tradición, se posiciona entre las mejores del país. Mantenemos nuestro compromiso de formar profesionales capaces de desenvolverse con responsabilidad y eficiencia en su vida productiva, social y familiar promoviendo los valores educativos y morales en beneficio de nuestra sociedad. Nuestra Sede Principal en la Ciudad de Panamá, te brinda un ambiente acogedor, y las sedes regionales en David, La Chorrera, Los Pueblos, Santiago, Colón, Chitré, Penonomé, y Changuinola, con moderna infraestructura e impecable organización, son una prueba más, de nuestra solidez y proyección."
-            },
-            "redirect": {
-              "label": "Conoce más",
-              "link": "https://www.udelistmo.edu/"
-            }
-          }
-        },
-        {
-          "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1_yFT_avyc70fBfxtySpQBCIE7zXW6e_w",
-            "desktop": "https://drive.google.com/uc?export=view&id=1_yFT_avyc70fBfxtySpQBCIE7zXW6e_w"
-          },
-          "text": "Universidad de San Marcos",
-          "icon": "arrow_forward",
-          "color": "#A2AFB5",
-          "opacity": "multiply",
-          "height": "282px",
-          "enable": true,
-          "nobackground": false,
-          "redirect": "https://conahec.org/es/",
-          "content": {
-            "title": {
-              "title": "Universidad de San Marcos"
-            },
-            "description": {
-              "content": "La Universidad San Marcos, tiene sus orígenes en la primera escuela comercial que se estableció en Costa Rica en el año 1922, bajo el nombre de Escuela de Comercio Manuel Aragón, especializada en la enseñanza de la Contabilidad y el Comercio, nombre que permaneció vigente durante muchos años."
-            },
-            "redirect": {
-              "label": "Conoce más",
-              "link": "https://usam.edu.mx/"
-            }
-          }
-        },
-        {
-          "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1uTwMd43E347cgBgWa-bQAVzEoa6FAaim",
-            "desktop": "https://drive.google.com/uc?export=view&id=1uTwMd43E347cgBgWa-bQAVzEoa6FAaim"
-          },
-          "text": "Universidad Isabel I",
-          "icon": "arrow_forward",
-          "color": "#A2AFB5",
-          "opacity": "multiply",
-          "height": "282px",
-          "enable": true,
-          "nobackground": false,
-          "redirect": "https://conahec.org/es/",
-          "content": {
-            "title": {
-              "title": "Universidad Isabel I"
-            },
-            "description": {
-              "content": "Este acuerdo beneficiará a los alumnos y personal docente de UANE que entablarán una colaboración científica, tecnológica y académica con proyección internacional que se va a materializar con el fomento a la investigación, la formación académica y la difusión de la cultura entre ambas partes. De esta manera, nuestros universitarios y catedráticos podrán compartir experiencias a través de intercambios virtuales, seminarios en línea y masterclass y la posibilidad de tener dobles titulaciones que se podrán concretar en acuerdos específicos, por mencionar algunos ejemplos."
-            },
-            "redirect": {
-              "label": "Conoce más",
-              "link": "https://www.ui1.es/"
-            }
-          }
-        }       
+        }    
       ]
     },
     "articles": {
@@ -570,29 +534,29 @@
       "title": "Modos de internacionalización",
       "sections": [
         {
-          "color": "#E84537", "sections": [
-            { "title": "Clases Espejo | Global Classroom", "description": "Sesiones virtuales de 45 a 60 minutos, con temáticas incluidas en los planes de estudio por carrera, impartidas por profesores de las universidades asociadas.", "image": { "src": "https://drive.google.com/uc?export=view&id=1fwHcsFIBNdKFZt0Xl5fvIUVg-ObCYsYu", "alt": "imagen-item" } },
-            { "title": "Intercambio de Materias Virtual", "description": "Posibilidad de cursar una materia completa en línea, en alguna universidad extranjera asociada. Créditos revalidados por UANE.", "image": { "src": "https://drive.google.com/uc?export=view&id=1fjPHVnTGD9JYk3G4tHuDDSezns3vK3jE", "alt": "imagen-item" } },
-            { "title": "Semestre | Año Study Abroad", "description": "En esta modalidad podrás cursar, de forma presencial, un semestre o año completo en alguna universidad en el extranjero. Deberás revisar los planes de estudios y consultar con Academia para saber cuáles son las materias que se revalidan.", "image": { "src": "https://drive.google.com/uc?export=view&id=1uupVvb87v9z0z64KFmYwJiAav9sHGfRy", "alt": "imagen-item" } }
+          "color": "#1B2D68", "sections": [
+            { "title": "Clases Espejo | Global Classroom", "description": "Sesiones virtuales de 45 a 60 minutos, de temáticas incluidas en los planes de estudio, por carrera, impartidas por profesores de las Universidades con convenio.", "image": { "src": "https://drive.google.com/uc?export=view&id=1_av2ueQF9Ovu5VstV41l_RnG5I7OLlQH", "alt": "imagen-item" } },
+            { "title": "Intercambio de materias (virtual)", "description": "Posibilidad de cursar una materia completa, en formato online, en alguna universidad extranjera con convenio. Créditos revalidados por UTEG.", "image": { "src": "https://drive.google.com/uc?export=view&id=1FEKFVOdsozxZ_BDNTM-KidlNSYnYzvdS", "alt": "imagen-item" } },
+            { "title": "Semestre | Año Study Abroad", "description": "En esta modalidad podrás cursar, de forma presencial, un semestre o año completo en alguna universidad en el extranjero. Deberás revisar los planes de estudios y consultar con Academia para saber cuáles son las materias que se revalidan.", "image": { "src": "https://drive.google.com/uc?export=view&id=1B7rVHOue61YAOYKI1SuONlY8IDTKb0Xs", "alt": "imagen-item" } }
           ]
         },
         {
-          "color": "#B0003C", "sections": [
-            { "title": "Webinar | Profesores internacionales", "description": "Masterclasses impartidas por profesores o especialistas internacionales, de temáticas de interés para cada carrera. Con certificado internacional de participación.", "image": { "src": "https://drive.google.com/uc?export=view&id=1UJRoPYWP8iiQ33IXC74zNJIhTSLZj8If", "alt": "imagen-item" } },
-            { "title": "Campus de Verano", "description": "Se trata de una actividad internacional a través de la cual alumnos de UANE podrán tener una experiencia en un campus de verano, con nuestros aliados internacionales, y podrán revalidar algunas de las materias al tiempo que tiene una experiencia internacional inolvidable.", "image": { "src": "https://drive.google.com/uc?export=view&id=1c2l1wYsR1w3uaISM1XGdxCAOdSFNxvIP", "alt": "imagen-item" } },
-            { "title": "Twin Projects", "description": "Sesiones virtuales de 45 a 60 minutos con temáticas incluidas en los planes de estudio por carrera, impartidas por profesores de las universidades asociadas.", "image": { "src": "https://drive.google.com/uc?export=view&id=1kcG8szhq6JYNiNcqkEz0mEf4KMookVIg", "alt": "imagen-item" } }
+          "color": "#C31433", "sections": [
+            { "title": "WWebinar | Profesores internacionales", "description": "Masterclasses impartidas por profesores o especialistas internacionales, de temáticas de interés para cada carrera. Con certificado internacional de participación.", "image": { "src": "https://drive.google.com/uc?export=view&id=1qoqxVH1dAHDvqyV1M4fU_r74TP5C5Dpg", "alt": "imagen-item" } },
+            { "title": "Campus de Verano", "description": "Se trata de una actividad internacional a través de la cual alumnos de UTEG podrán tener una experiencia en un campus de verano, con nuestros aliados internacionales, y podrán revalidar algunas de las materias al tiempo que tiene una experiencia internacional inolvidable.", "image": { "src": "https://drive.google.com/uc?export=view&id=1zLXfXwiFAvDEoJlgIY56vc5HrOOq4Ooc", "alt": "imagen-item" } },
+            { "title": "Twin Projects", "description": "Sesiones virtuales de 45 a 60 minutos, de temáticas incluidas en los planes de estudio, por carrera, impartidas por profesores de las Universidades con convenio.", "image": { "src": "https://drive.google.com/uc?export=view&id=1ojxf0XoGFXYJNFfdXyuRaRwmZUsPTI4K", "alt": "imagen-item" } }
           ]
         },
         {
-          "color": "#00BEB4", "sections": [
-            { "title": "Prácticas Internacionales", "description": "A través de diversos programas, los alumnos de UANE podrán tener acceso al desarrollo de prácticas profesionales internacionales en sus áreas de conocimiento.", "image": { "src": "https://drive.google.com/uc?export=view&id=1c3k_sxtmrpHPi-eSSFizMZNwdk1-EKZR", "alt": "imagen-item" } },
-            { "title": "Dobles Títulos", "description": "Dentro de los esfuerzos de internacionalización de UANE se encuentra esta modalidad, por la que podrás cursar un semestre de tu carrera en alguna de las universidades internacionales de convenio y obtener, además del título de UANE, el título extranjero de la carrera que estés cursando.", "image": { "src": "https://drive.google.com/uc?export=view&id=1LdRAeeA-iPHT_lbWEWB2nxFM38tQoHbg", "alt": "imagen-item" } },
-            { "title": "Materias de Contenidos Internacionales", "description": "La UANE cuenta, a través de sus convenios, con materias elaboradas junto con las mejores universidades internacionales. De esta forma podrás tener una experiencia internacional en el marco de su propio itinerario académico y contar con diversos certificados internacionales.", "image": { "src": "https://drive.google.com/uc?export=view&id=1XGXWXBTRCiE0VQ9UUSn_FNEkyMRIDeCC", "alt": "imagen-item" } }
+          "color": "#4470B1", "sections": [
+            { "title": "Prácticas Internacionales", "description": "A través de diversos programas, los alumnos de UTEG podrán tener acceso al desarrollo de prácticas profesionales internacionales en sus áreas de conocimiento.", "image": { "src": "https://drive.google.com/uc?export=view&id=10IRIbI_gFi9Y0BkX8eLE1TlxDx_jzgOW", "alt": "imagen-item" } },
+            { "title": "Dobles títulos", "description": "Dentro de los esfuerzos de internacionalización de UTEG se encuentra esta modalidad, por la que podrás cursar un semestre de tu carrera en alguna de las universidades internacionales de convenio y obtener, además del título de UTEG, el título extranjero de la carrera que estés cursando.", "image": { "src": "https://drive.google.com/uc?export=view&id=1YWuA2F9WKY7S-LWHw1m0GEaW6UED0_Lo", "alt": "imagen-item" } },
+            { "title": "Materias con contenidos internacionales", "description": "La UTEG cuenta, a través de sus convenios, con materias elaboradas juntamente con las mejores Universidades internacionales. De esta forma podrás tener una experiencia internacional en el marco de su propio itinerario académico y contar con diversos certificados internacionales.", "image": { "src": "https://drive.google.com/uc?export=view&id=1xkFShXa5bKQBe7c0kEPC9_QDc6__HGmJ", "alt": "imagen-item" } }
           ]
         },
         {
-          "color": "#8B9BA3", "sections": [
-            { "title": "Seminarios Internacionales de Titulación", "description": "Esta novedosa experiencia internacional te permitirá cursar un programa académico y cultural en España. Durante una semana tendrás un completo itinerario en el Campus Lottus Internacional, de acuerdo con tu carrera, con masterclasses en sitios emblemáticos de Madrid y, además, al cursar este programa, podrás cubrir el requisito de seminario de titulación para culminar tu licenciatura en UANE.", "image": { "src": "https://drive.google.com/uc?export=view&id=14YULi4_jvgbWZxba1G3vBY5iy4WNDNNc", "alt": "imagen-item" } }
+          "color": "#EEAA01", "sections": [
+            { "title": "Seminarios Internacionales de Titulación", "description": "Esta novedosa experiencia internacional te permitirá cursar un programa académico y cultural en España. Durante una semana tendrás un completo itinerario en el Campus Lottus Internacional, de acuerdo con tu carrera, con masterclasses en sitios emblemáticos de Madrid y, además, al cursar este programa, podrás cubrir el requisito de seminario de titulación para culminar tu Licenciatura en UTEG.", "image": { "src": "https://drive.google.com/uc?export=view&id=174QwyGIvJgoLC3Pzj002CI0amaDcGJ5t", "alt": "imagen-item" } }
           ]
         }
       ]

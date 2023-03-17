@@ -15,7 +15,7 @@
       { "label": "Campus", "route": "/nosotros/campus" },
       { "label": "Modelo Educativo", "route": "/nosotros/modelo-educativo" },
       { "label": "Internacionalización", "route": "/nosotros/internacionalizacion" },
-      { "label": "Empleabilidad", "route": "/nosotros/empleabilidad" }
+      { "label": "Bolsa de Talento", "route": "/nosotros/bolsa-de-talento" }
 
       ]
     },
@@ -45,7 +45,7 @@
     {
       "label": "Admisiones", "principal": true, "route": "/admisiones",
       "children": [
-        { "label": "Solicita Informes", "principal": false, "route": "/admisiones/pedir-informacion", "external": false },
+        { "label": "Contacto", "principal": false, "route": "/admisiones/pedir-informacion", "external": false },
         { "label": "Becas para el Estudiante", "principal": false, "route": "/admisiones/becas", "external": false }
       ]
     },
@@ -67,8 +67,8 @@
         { "label": "Somos UANE", "principal": false, "route": "/nosotros", "external": false },
         { "label": "Campus", "principal": false, "route": "/nosotros/campus", "external": false },
         { "label": "Modelo educativo", "principal": false, "route": "/nosotros/modelo-educativo", "external": false },
-        { "label": "Empleabilidad", "principal": false, "route": "/nosotros/empleabilidad", "external": false },
-        { "label": "Conexión Educativa", "principal": false, "route": "/nosotros/conexion-educativa", "external": false }
+        { "label": "Empleabilidad", "principal": false, "route": "/nosotros/bolsa-de-talento", "external": false },
+        { "label": "Vinculación empresarial", "principal": false, "route": "/nosotros/vinculacion-empresarial", "external": false }
       ]
     },
     {

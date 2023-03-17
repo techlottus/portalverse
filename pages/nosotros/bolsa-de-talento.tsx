@@ -66,15 +66,15 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-4 w-d:hidden">
             <p className="font-Poppins text-white font-bold leading-[125%] text-6.5 w-t:text-6 w-p:text-6">{ sections.historiasExito.title }</p>
           </div>
-          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mt-6 mb-6">
-            <Video dimensions={["400px", "350px", "200px"]} data={ sections.historiasExito.video }/>
-          </div>
           <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mt-auto mb-auto w-t:hidden w-p:hidden">
             <p className="font-Poppins text-white font-bold leading-[125%] text-6.5 w-t:text-6 w-p:text-6 mb-6">{ sections.historiasExito.title }</p>
             <RichtText font="dark" data={{content: sections.historiasExito.description.content}}/>
           </div>
           <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mb-6 w-d:hidden">
             <RichtText font="dark" data={{content: sections.historiasExito.description.content}}/>
+          </div>
+          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mt-6 mb-6">
+            <Video dimensions={["400px", "350px", "200px"]} data={ sections.historiasExito.video }/>
           </div>
         </ContentLayout>
       </ContentFullLayout>
@@ -94,12 +94,12 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
       </ContentFullLayout>
       <ContentLayout classNames="w-t:hidden mb-12 w-t:mb-6 w-p:mb-6 mt-[72px]">
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 border-solid border-2">
-          <Cintillo classNames="h-[200px]" image={sections.contacto.banner.image} title={sections.contacto.banner.title} subtitle={sections.contacto.banner.subtitle} phone={sections.contacto.banner.phone} email={sections.contacto.banner.email}/>
+          <Cintillo classNames="h-[200px]" contentVariant={sections.contacto.banner.contentVariant} image={sections.contacto.banner.image} title={sections.contacto.banner.title} subtitle={sections.contacto.banner.subtitle} phone={sections.contacto.banner.phone} email={sections.contacto.banner.email}/>
         </div>
       </ContentLayout>
       <ContentFullLayout classNames="w-d:hidden w-p:hidden mb-12 w-t:mb-6 w-p:mb-6 mt-[72px]">
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 border-solid border-2 mt-12">
-          <Cintillo classNames="h-[200px]" image={sections.contacto.banner.image} title={sections.contacto.banner.title} subtitle={sections.contacto.banner.subtitle} phone={sections.contacto.banner.phone} email={sections.contacto.banner.email}/>
+          <Cintillo classNames="h-[200px]" contentVariant={sections.contacto.banner.contentVariant} image={sections.contacto.banner.image} title={sections.contacto.banner.title} subtitle={sections.contacto.banner.subtitle} phone={sections.contacto.banner.phone} email={sections.contacto.banner.email}/>
         </div>
       </ContentFullLayout>
     </HeaderFooterLayout>

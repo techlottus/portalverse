@@ -1,31 +1,31 @@
 {
   "meta": {
-    "title": "Empleabilidad",
+    "title": "Bolsa de talento",
     "description": "",
     "keywords": ""
   },
   "sections": {
     "head": {
       "banner":{
-        "title": "Bolsa de talento", 
+        "title": "Bolsa de Talento", 
         "subtitle": "Estadísticas", 
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1tJlnnloEliErrTKQ1vyOuIDWRwzE8OKA",
-          "tablet": "https://drive.google.com/uc?export=view&id=1rMe3GSofFPVTorN9VI9Bvn9CUdtoygMc",
-          "mobile": "https://drive.google.com/uc?export=view&id=1lJ4sw-tmKdpTS3carQuLc-nLfEEXDOkk"
+          "desktop": "https://drive.google.com/uc?export=view&id=1pRGN-OE45Hbj7Vl_TfLZ_jhektID8dRN",
+          "tablet": "https://drive.google.com/uc?export=view&id=1cpWOBYJCTYoeCPe74eTwNXl1_SVD_RM-",
+          "mobile": "https://drive.google.com/uc?export=view&id=1Jpmo-B4H08HGu7fVgm6mlviuTkandw-J"
         },
         "statics": [
-          {"maxNumber": 383, "icon": "", "prefix": "", "suffix": "", "title": "", "body": "Vacantes enviadas en 2022", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
-          {"maxNumber": 4624, "icon": "", "prefix": "", "suffix": "", "title": "", "body": "Invitaciones a nuestro alumnado", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
-          {"maxNumber": 355, "icon": "", "prefix": "", "suffix": "", "title": "", "body": "Convenios con empresas", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
-          {"maxNumber": 3400, "icon": "", "prefix": "", "suffix": "", "title": "", "body": "Alumnos y egresados registrados", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false}
+          {"maxNumber": 988, "icon": "", "prefix": "+", "suffix": "", "title": "", "body": "Vacantes publicadas en 2022 - 2023", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
+          {"maxNumber": 11250, "icon": "", "prefix": "+", "suffix": "", "title": "", "body": "Invitaciones enviadas a nuestros alumnos y egresados", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
+          {"maxNumber": 1100, "icon": "", "prefix": "+", "suffix": "", "title": "", "body": "Convenios con empresas firmados", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
+          {"maxNumber": 4837, "icon": "", "prefix": "+", "suffix": "", "title": "", "body": "Alumnos y egresados registrados", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false}
         ]
       }
     },
     "descripcion": {
-      "title": "Conoce nuestra bolsa de talento para una rápida inserción al mercado laboral",
+      "title": "¡Únete a la bolsa de talento de UTEG!",
       "text": { 
-        "content": "La Universidad Americana del Noreste forma profesionistas competentes mediante la impartición de programas de calidad académica, con enfoque práctico y tecnología de vanguardia. Por el conocimiento de estas características, tenemos convenio con diversas empresas para elevar la empleabilidad de nuestros estudiantes y alumnos egresados del plantel."
+        "content": "El Centro Universitario UTEG forma profesionistas competentes mediante la impartición de programas de calidad académica, con enfoque práctico y tecnología de vanguardia. Por el conocimiento de estas características, tenemos convenio con diversas empresas para elevar <b>la empleabilidad de nuestros estudiantes y egresados de la Universidad</b>."
       }
     },
     "vacantes": {
@@ -35,21 +35,21 @@
     "vinculacionEmpresas": {
       "title": "Vinculación empresarial",
       "description":{
-        "content": "UANE  y beWanted han llegado a un acuerdo pionero para que todos sus alumnos multipliquen sus opciones de acceder al mundo laboral. ¡Más de 3.000 empresas buscan talento junior en beWanted!\n\nPero eso no lo es todo, tenemos convenio con empresas importantes de diversos gremios que se ubican al noreste del país para facilitar tu acceso al mundo laboral. "
+        "content": "<p>Para nuestra Universidad es primordial generar alianzas con las empresas de nuestra región y del país; buscamos sumarnos a los beneficios que ofrecen a sus colaboradores y lograr una estrecha relación que les permita, a través de nuestra oferta educativa, desarrollar personal mejor capacitado, preparado y actualizado.</p><p>Además, ponemos a su alcance a nuestros alumnos para cubrir las necesidades de prácticas profesionales y a nuestros egresados para cubrir sus vacantes laborales.</p><p>Súmate a las empresas que ya han confiado en nosotros a través de un convenio de colaboración.</p>"
       },
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1GGskkWqA-EP5yydh70Hqd76m4kpcYbZl",
+        "src": "https://drive.google.com/uc?export=view&id=1X9MBL40qgt6Y1zuX2XSfZfwHEucEwaFp",
         "alt": "vinculación-empresarial"
       }
     },
     "historiasExito": {
       "title": "Casos de éxito",
       "description": {
-        "content": "Nuestros alumnos y egresados nos cuentan cómo fue su experiencia en la búsqueda de empleo a través de nuestra bolsa de talento."
+        "content": "<p>Nuestros alumnos y egresados nos cuentan cómo ha sido su experiencia en la búsqueda de empleo a través de nuestra bolsa de talento.</p><p>Jacobo Rodríguez, egresado de la Licenciatura en Mercadotecnia, nos cuenta cómo la <a href='https://www.youtube.com/results?search_query=%23bolsadetalentouteg' target='_blank'>Bolsa de Talento UTEG</a> le ayudó a lograr su más reciente reto profesional.</p>"
       },
       "video": {
         "options": {
-          "id": "715hFNbPukw",
+          "id": "_7O8lwJxI4E",
           "type": "single",
           "controls": true
         },
@@ -61,11 +61,11 @@
     "comoFunciona": {
       "title": "¿Cómo funciona la plataforma?",
       "description": {
-        "content": "Te proporcionaremos un excelente nivel de servicio en todas las áreas de la Universidad, incluyendo el de <b>bolsa de talento</b>, que en este caso se hace en colaboración con <b>beWanted</b>, la mejor plataforma de conexión con <b>más de 2,000 empresas buscando talento joven.\n\n¿Quieres hacerte visible a todas esas empresas?\n\n¡Fácil!</b> regístrate y completa al máximo tu perfil."
+        "content": "Encontrar trabajo nunca fue tan fácil. La bolsa de talento UTEG se da a través de la sinergia con beWanted, plataforma que está diseñada para estudiantes y egresados con un sistema de “Match Job” donde las empresas son quienes te invitan a participar en sus procesos de selección a través de la plataforma y con un correo electrónico, lo que hace a nuestra bolsa diferente al resto."
       },
       "video": {
         "options": {
-          "id": "d6D_YCxh2Po",
+          "id": "tddLp1TgFtc",
           "type": "single",
           "controls": true
         },
@@ -150,12 +150,13 @@
     "contacto": {
       "banner": {
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1CMGn_OTqeDX7L2tY33AK0lblyU5BQKuE",
-          "mobile": "https://drive.google.com/uc?export=view&id=1nwxt4q7ZFg35IWuZUbZbAjXXI6z46KyH"
+          "desktop": "https://drive.google.com/uc?export=view&id=1qW75lweCcDj_dnBUPbypO0fO3VpK5Mbs",
+          "mobile": "https://drive.google.com/uc?export=view&id=1cGdxuOmKwB0ZetyPXUAG4sg6d_g7bOUA"
         },
         "title": "¿Tienes dudas? Contáctanos",
-        "email": "empleabilidad@uane.edu.mx ",
-        "phone": ""
+        "email": "empleabilidad@uteg.edu.mx",
+        "phone": "33 1078 8000",
+        "contentVariant": "light"
       }
     }
   }

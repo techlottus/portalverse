@@ -10,6 +10,7 @@ const defaultSliderData = {
   iconright: "arrow_forward_ios",
   slides: [
     {
+      contentVariant: "dark",
       title: "",
       text: "",
       urlImage: {
@@ -55,6 +56,7 @@ const formatSlides = (slides: Array<Slide>): Array<SlideConfig> => {
   const formattedSlides = slides.map((slide) => {
     // Create new object with default data
     const formattedSlideData: SlideConfig = JSON.parse(JSON.stringify(defaultSliderData.slides[0]));
+    formattedSlideData.contentVariant = slide?.contentVariant
     formattedSlideData.title = slide?.title
     formattedSlideData.text = slide?.subtitle
     formattedSlideData.urlImage = {
