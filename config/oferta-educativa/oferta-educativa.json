@@ -195,14 +195,14 @@
     "bannerInternacionalizacion": {
       "banner": {
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1B9CecXHVoE9DotHbCIx8_9_CeTdN1ZSW",
-          "mobile": "https://drive.google.com/uc?export=view&id=1PZURny8POJsMYHamJycNKgM3LmxoMUiK",
-          "tablet": "https://drive.google.com/uc?export=view&id=1TpgDT_hQIJ0hew0WPp40M21oURKnD9B_"
+          "desktop": "https://drive.google.com/uc?export=view&id=1R3MzEA-eiBR9V5WD8tFOJq09Q8ulv6IR",
+          "mobile": "https://drive.google.com/uc?export=view&id=1qtf3AwHBLQyLs6xS0dtm4CW5gbYWXz91",
+          "tablet": "https://drive.google.com/uc?export=view&id=1R3MzEA-eiBR9V5WD8tFOJq09Q8ulv6IR"
         },
         "font": "light",
         "title": "UTEG 360",
         "subtitle": "Vive con nosotros la experiencia internacional de tu profesión",
-        "position": "left-bottom",
+        "position": "",
         "height": "350px",
         "overlayWhite":false,
         "overlayDak": false,
