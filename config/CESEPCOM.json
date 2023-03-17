@@ -53,16 +53,17 @@
       },
       "bannerInternacional": {
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1Y_edCTwyeAXRGkcjqf5V2S8QEyVYaENW",
-          "mobile": "https://drive.google.com/uc?export=view&id=1PZURny8POJsMYHamJycNKgM3LmxoMUiK",
-          "tablet": "https://drive.google.com/uc?export=view&id=1TpgDT_hQIJ0hew0WPp40M21oURKnD9B_"
+          "desktop": "https://drive.google.com/uc?export=view&id=1a9FyRf0dF-vk85R2L4e6MKnApfkXfTEi",
+          "mobile": "https://drive.google.com/uc?export=view&id=1EtrCkyOGocvglCuX7p3AfGFEd0d7jyp9",
+          "tablet": "https://drive.google.com/uc?export=view&id=1w043hx80qCXb1LJ_2HungcfVOXKYrIS-"
         },
+        "font": "light",
         "title": "Conoce más sobre tu Universidad ",
         "subtitle": "",
         "position": "",
         "height": "300px",
         "overlayWhite":false,
-        "overlayDak": true,
+        "overlayDak": false,
         "button":{
           "id": "",
           "type": "outlined",
