@@ -8,7 +8,7 @@
     "temas": [
       {
         "title": "Generales",
-        "icon": "border_color",
+        "icon": "question_mark",
         "questions": [
           {
             "title": "¿Hay examen de admisión?",
@@ -59,7 +59,7 @@
       },
       {
         "title": "Becas",
-        "icon": "border_color",
+        "icon": "school",
         "questions": [
           {
             "title": "¿Cuentan con becas?",
@@ -86,7 +86,7 @@
       },
       {
         "title": "Finanzas",
-        "icon": "border_color",
+        "icon": "description",
         "questions": [
           {
             "title": "Quiero generar la referencia de pago de reinscripción al siguiente ciclo pero me aparece una leyenda que dice “Bloqueo por Finanzas”. ¿A qué se debe?",
