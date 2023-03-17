@@ -21,56 +21,378 @@
       }
     },
     "estadisticas": [
-      {"maxNumber": 52.9, "icon": "diversity_3", "prefix": "", "suffix": "%", "title": "De alumnos becados", "body": "", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
-      {"maxNumber": 12, "icon": "school", "prefix": "", "suffix": "%", "title": "De colaboradores con beca para sus familiares", "body": "", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
-      {"maxNumber": 20, "icon": "book", "prefix": "", "suffix": "%", "title": "De alumnos con Beca Institucional", "body": "", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
-      {"maxNumber": 8, "icon": "card_membership", "prefix": "", "suffix": "%", "title": "De alumnos con Beca por Promoción de Mercadotecnia", "body": "", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false}
+      {
+        "maxNumber": 52.9,
+        "icon": "diversity_3",
+        "prefix": "",
+        "suffix": "%",
+        "title": "De alumnos becados",
+        "body": "",
+        "container": false,
+        "isShadowColor": false,
+        "bordered": false,
+        "typeShadowColor": "blue-pastel-right",
+        "boxShadow": false
+      },
+      {
+        "maxNumber": 12,
+        "icon": "school",
+        "prefix": "",
+        "suffix": "%",
+        "title": "De colaboradores con beca para sus familiares",
+        "body": "",
+        "container": false,
+        "isShadowColor": false,
+        "bordered": false,
+        "typeShadowColor": "blue-pastel-right",
+        "boxShadow": false
+      },
+      {
+        "maxNumber": 20,
+        "icon": "book",
+        "prefix": "",
+        "suffix": "%",
+        "title": "De alumnos con Beca Institucional",
+        "body": "",
+        "container": false,
+        "isShadowColor": false,
+        "bordered": false,
+        "typeShadowColor": "blue-pastel-right",
+        "boxShadow": false
+      },
+      {
+        "maxNumber": 8,
+        "icon": "card_membership",
+        "prefix": "",
+        "suffix": "%",
+        "title": "De alumnos con Beca por Promoción de Mercadotecnia",
+        "body": "",
+        "container": false,
+        "isShadowColor": false,
+        "bordered": false,
+        "typeShadowColor": "blue-pastel-right",
+        "boxShadow": false
+      }
     ],
     "becas": {
-      "tabs": {
-        "items": [
-          {
-            "label": "Beca Servicio", "icons": { "primary": "", "duplicate": true }, "disabled": false, "id": "beca-servicio",
-            "content": {
-              "image": {
-                "alt": "imagen",
-                "src": "https://drive.google.com/uc?export=view&id=1sofLFjS7NfKQCrlDJosrTWZIxQpMcGQ5"
+      "title": "Becas/PEBIE UTEG",
+      "scholarships": [
+        {
+          "text": "PEBIE",
+          "icon": "arrow_forward",
+          "height": "100px",
+          "enable": true,
+          "nobackground": true,
+          "isShadowColor": true,
+          "shadowColor": "#1B2D68",
+          "content": {
+            "title": {
+              "title": "PEBIE"
+            },
+            "description": {
+              "content": "<b>PEBIE</b>\n\nEl Centro Universitario UTEG ha estado comprometido con el íntegro desarrollo de sus alumnos (as) y es consciente de los elementos necesarios para lograr la excelencia educativa a la que aspira su comunidad estudiantil.\n\nDe ese sentido consciente por parte de la institución surge la necesidad de crear el Programa Extraordinario de Apoyo Económico de Estudios, teniendo como finalidad principal la conclusión de estudios de los alumnos que por su situación actual así lo requieran y cumplan con los requisitos establecidos en el programa, impulsando de esta manera el logro del objetivo 2.1 del Plan de Desarrollo Institucional (PDI/2025)donde se establece el compromiso por brindar los apoyos necesarios para que el alumnado concluya sus estudios. \n\nEntendiendo que, el día a día presenta retos de todo tipo, el Centro Universitario UTEG atiende al apoyo adicional que estos obstáculos requieren para ser superados por lo que pone al alcance de sus alumnos los medios para que estos continúen con sus estudios a través del otorgamiento de más de 8 tipos de apoyos a los cuales los alumnos activos pueden aspirar y así continúen con sus estudios."
+            },
+            "redirectLabel": "Descargas:",
+            "redirects": [
+              {
+                "label": "Programa Extraordinario de Becas",
+                "link": "https://drive.google.com/uc?export=view&id=1CbP7zoqc6Wf4yQ5QyGvr1qg5GQpdaIl2"
               },
-              "content": {
-                "title": "Características",
-                "description": "La Beca Servicio se otorga en pesos y el monto autorizado aplica exclusivamente al costo de la colegiatura.\n\n Se concede a estudiantes de escasos recursos económicos con promedio de aprovechamiento académico de 80 y buena conducta. \n\nEs retribuida mediante actividades de servicio, ya sea en beneficio de la universidad o de la comunidad.\n\nAplica para: bachillerato, licenciatura y posgrado",
-                "action": {"title": "Solicita tu beca servicio", "type": "primary", "icon": "", "isExpand": false, "route": "http://sistema.uane.edu.mx/BecasUANE/"}
+              {
+                "label": "Institucionales para el Estudio Centro Universitario UTEG",
+                "link": ""
               }
-            }
-          },
-          {
-            "label": "Beca Convenio", "icons": { "primary": "", "duplicate": true }, "disabled": false, "id": "beca-convenio",
-            "content": {
-              "image": {
-                "alt": "imagen",
-                "src": "https://drive.google.com/uc?export=view&id=1Y7yOYWrd_BeYmX7lrfE0_JmfLiPIL13j"
-              },
-              "content": {
-                "title": "Características",
-                "description": "Si el alumno, sus padres o cónyuge laboran en una empresa que cuenta con convenio con UANE, éste podrá obtener una beca del 30%.\n\n*Aplican restricciones.\n\n*Todas las becas se aplican exclusivamente al costo de las colegiaturas.\n\nAplica para: bachillerato, licenciatura y posgrado"
-              }
-            }
-          },
-          {
-            "label": "Beca Excelencia", "icons": {"primary": "", "duplicate": true }, "disabled": false, "id": "beca-excelencia", 
-            "content": {
-              "image": {
-                "alt": "imagen",
-                "src": "https://drive.google.com/uc?export=view&id=1a55b-aq6S5ViPQJxnbz8GJoQWVwXn0w2"
-              },
-              "content": {
-                "title": "Características",
-                "description": "Para licenciaturas, la Beca Excelencia cubre el 50% del monto total de la colegiatura y se otorga a los alumnos egresados del bachillerato UANE y otras instituciones que cuentan con un promedio de aprovechamiento académico mínimo de 95.\n\n*Pregunta por las opciones de Beca de Excelencia para bachillerato.\n\nAplica para: bachillerato y licenciatura"              }
-            }
+            ]
           }
-        ],
-        "size": "medium"
-      }
+        },
+        {
+          "text": "Convenios Empresariales",
+          "icon": "arrow_forward",
+          "height": "100px",
+          "enable": true,
+          "nobackground": true,
+          "isShadowColor": true,
+          "shadowColor": "#C31433",
+          "content": {
+            "title": {
+              "title": "Convenios empresariales"
+            },
+            "description": {
+              "content": "<b>Convenios Empresariales</b>\n\nEs un beneficio que se tiene con varias instituciones y empresas del sector público y privado.\n\nSe anexa en esta sección el listado de general de los convenios en materia educativa, empresarial e institucional. En este sentido podrás descargarlos en los adjuntos que se anexan en formato PDF."
+            },
+            "redirectLabel": "Descargas:",
+            "redirects": [
+              {
+                "label": "Convenios empresariales",
+                "link": ""
+              },
+              {
+                "label": "Convenios institucionales",
+                "link": ""
+              }
+            ]
+          }
+        },
+        {
+          "text": "Convocatoria Cuatrimestral",
+          "icon": "arrow_forward",
+          "height": "100px",
+          "enable": true,
+          "nobackground": true,
+          "isShadowColor": true,
+          "shadowColor": "#4470B1",
+          "content": {
+            "title": {
+              "title": "Becas Convocatoria Cuatrimestral"
+            },
+            "description": {
+              "content": "<b>Becas Convocatoria Cuatrimestral</b>\n\nEl Centro Universitario UTEG convoca a toda la comunidad Estudiantil de Licenciaturas cuatrimestrales a realizar el trámite o renovación de Becas Institucionales.\n\nConsulta aquí la convocatoria para trámite o renovación de becas Institucionales.\n\nLa entrega de documentos se realizará en el Portal de Alumno, menú de Finanzas opción Becas."
+            },
+            "redirectLabel": "Descargas:",
+            "redirects": [
+              {
+                "label": "Convocatoria cuatrimestral",
+                "link": "https://drive.google.com/uc?export=view&id=1pUcpi9INWvQB5nEsmA2_QLB7eNlu4Qdu"
+              },
+              {
+                "label": "Manual trámite de becas",
+                "link": "https://drive.google.com/uc?export=view&id=1FZRSMwfN89io4UBZ-BH5lWXHhqVW7KV5"
+              }
+            ]
+          }
+        },
+        {
+          "text": "Convocatoria Semestral",
+          "icon": "arrow_forward",
+          "height": "100px",
+          "enable": true,
+          "nobackground": true,
+          "isShadowColor": true,
+          "shadowColor": "#F8A600",
+          "content": {
+            "title": {
+              "title": "Becas Convocatoria Semestral"
+            },
+            "description": {
+              "content": "<b>Becas Convocatoria Semestral</b>\n\nEl Centro Universitario UTEG convoca a toda la comunidad Estudiantil de Licenciaturas incorporadas a U de G y de Bachillerato General por Competencias (BGC) a realizar el trámite o renovación de Becas Institucionales.\n\nConsulta aquí las convocatorias para trámite o renovación de becas, correspondientes a modalidad semestral.\n\nLa entrega de documentos se realizará en el Portal de Alumno, menú de Finanzas opción Becas."
+            },
+            "redirectLabel": "Descargas:",
+            "redirects": [
+              {
+                "label": "Convocatoria Lic. semestrales",
+                "link": "https://drive.google.com/uc?export=view&id=15qdVLwhUhFXAAXLsxQBNl9aWaFtyrFvp"
+              },
+              {
+                "label": "Convocatoria BGC",
+                "link": "https://drive.google.com/uc?export=view&id=1TMtSmGazYEvIi6_3qIQqNUMh8z9lBmWB"
+              },
+              {
+                "label": "Manual trámite de beca",
+                "link": "https://drive.google.com/uc?export=view&id=15DM88sXJSoZQoAl52yHT1HZeQWKEFcLY"
+              }
+            ]
+          }
+        },
+        {
+          "text": "Becas Solicitudes de Apoyo",
+          "icon": "arrow_forward",
+          "height": "100px",
+          "enable": true,
+          "nobackground": true,
+          "isShadowColor": true,
+          "shadowColor": "#C31433",
+          "content": {
+            "title": {
+              "title": "Solicitudes de Becas"
+            },
+            "description": {
+              "content": "<b>Solicitudes de becas</b>\n\nDescarga aquí las solicitudes para trámite o renovación de becas.\n\n<b>Lorem ipsum dolor sit amet, consectetur</b>\n\nhttps://www.youtube.com/watch?v=6wqM0wznRsU\n\n<b>Lorem ipsum dolor sit amet, consectetur</b>\n\nhttps://www.youtube.com/watch?v=NIs0zCP0hto"
+            },
+            "redirectLabel": "Descargas:",
+            "redirects": [
+              {
+                "label": "Promoción de Mercadotecnia",
+                "link": "https://drive.google.com/uc?export=view&id=1LWihKfuIzz7b1UUQmDk2w9zcoigG3iJy"
+              },
+              {
+                "label": "Fidelidad",
+                "link": "https://drive.google.com/uc?export=view&id=11BKZ6tkdioqhmQ2KoClji6y_PN8WdZG-"
+              },
+              {
+                "label": "Deportiva",
+                "link": "https://drive.google.com/uc?export=view&id=1WzzyWT72P5WAgvNzHcQQWuLmYhcrUK6k"
+              },
+              {
+                "label": "Convenio Empresarial",
+                "link": "https://drive.google.com/uc?export=view&id=1Chb9z0k7LEvvgIqfrdOR5fMLF1Gxl0WS"
+              },
+              {
+                "label": "Laboral",
+                "link": "https://drive.google.com/uc?export=view&id=1279wb6BhMUN7R8yie8C6hcfWdRO4Aris"
+              },
+              {
+                "label": "Interferencia Laboral",
+                "link": "https://drive.google.com/uc?export=view&id=1SO9Vl06i7h7485iL2m381IQIJL3gPgVT"
+              },
+              {
+                "label": "Interferencia de hermanos",
+                "link": "https://drive.google.com/uc?export=view&id=1_Ccdk5IsbVUh-eBr7bgXTNDqXGYe_yiX"
+              },
+              {
+                "label": "Interferencia familiar",
+                "link": "https://drive.google.com/uc?export=view&id=1zTsqSEFGmDB_e-7m8A0aTYq3Mn5hrDN-"
+              },
+              {
+                "label": "Maestría Colaboradores",
+                "link": "https://drive.google.com/uc?export=view&id=1JOpKy69YVZF-B_JfiBnREYu_iyYyNEex"
+              },
+              {
+                "label": "Becario",
+                "link": "https://drive.google.com/uc?export=view&id=1_8UDiQoTtYbn1cr2ApZInY-ptkW_Aj3h"
+              }
+            ]
+          }
+        },
+        {
+          "text": "Solicitud de Reembolso",
+          "icon": "arrow_forward",
+          "height": "100px",
+          "enable": true,
+          "nobackground": true,
+          "isShadowColor": true,
+          "shadowColor": "#4470B1",
+          "content": {
+            "title": {
+              "title": "Solicitud de Reembolso"
+            },
+            "description": {
+              "content": "<b>Solicitud de reembolso</b>\n\nSi eres acreedor a un trámite de reembolso por becas, apoyos, promociones o por alguna otra circunstancia, descarga aquí la solicitud de reembolso."
+            },
+            "redirectLabel": "Descargas:",
+            "redirects": [
+              {
+                "label": "Solicitud de reembolso",
+                "link": "https://drive.google.com/uc?export=view&id=11TBn-vOPZ9jve4yHNu3Omr79VcM9H7fS"
+              }
+            ]
+          }
+        },
+        {
+          "text": "Beca SEJ BIS",
+          "icon": "arrow_forward",
+          "height": "100px",
+          "enable": true,
+          "nobackground": true,
+          "isShadowColor": true,
+          "shadowColor": "#F8A600",
+          "content": {
+            "title": {
+              "title": "Beca SEJ BIS"
+            },
+            "description": {
+              "content": "<b>Convocatoria Beca SEJ/BIS</b>\n\nEl Centro Universitario UTEG convoca a toda la comunidad Estudiantil que cursan Bachillerato Semiescolarizado (BIS) y que ya cursaron por lo menos un ciclo escolar,  a que participe o realice el trámite de renovación para obtener beca por parte de Secretaria de Educación Jalisco, la cual se tramitará en el área de Servicios Escolares.\n\nConsulta aquí la convocatoria para trámite o renovación de Beca SEJ BIS."
+            },
+            "redirectLabel": "Descargas:",
+            "redirects": [
+              {
+                "label": "Convocatoria Beca SEJ BIS",
+                "link": "https://drive.google.com/uc?export=view&id=1F-0rgTlX-5_ocEP7i2VcLcidlxbvmktg"
+              },
+              {
+                "label": "Solicitud de beca nueva y refrendo",
+                "link": "https://drive.google.com/uc?export=view&id=1Es4WfmZsUUxVjtI3t03C6nIeoQbP96vQ"
+              },
+              {
+                "label": "Estudio socioeconómico",
+                "link": "https://drive.google.com/uc?export=view&id=1cSxwh2Y9N-V-K0aRNF-D92kCrS7QaNHG"
+              }
+            ]
+          }
+        },
+        {
+          "text": "Convocatoria Beca SEJ-SICYT Licenciaturas / Posgrados",
+          "icon": "arrow_forward",
+          "height": "100px",
+          "enable": true,
+          "nobackground": true,
+          "isShadowColor": true,
+          "shadowColor": "#1B2D68",
+          "content": {
+            "title": {
+              "title": "Convocatoria Beca SEJ-SICYT Licenciaturas / Posgrados"
+            },
+            "description": {
+              "content": ""
+            },
+            "redirectLabel": "",
+            "redirects": []
+          }
+        },
+        {
+          "text": "Convocatoria Beca SICYT Licenciaturas / Posgrados",
+          "icon": "arrow_forward",
+          "height": "128px",
+          "enable": true,
+          "nobackground": true,
+          "isShadowColor": true,
+          "shadowColor": "#4470B1",
+          "content": {
+            "title": {
+              "title": "Convocatoria Beca SICYT Licenciaturas / Posgrados"
+            },
+            "description": {
+              "content": "<b>Convocatoria Beca SICYT Licenciaturas / Posgrados</b>\n\nEl Centro Universitario UTEG convoca a toda la comunidad Estudiantil de las Licenciaturas / Posgrados con incorporación SICYT a que participe o realice el trámite de renovación de Beca SICYT.\n\nConsulta aquí la convocatoria para trámite o renovación de Beca SICYT.\n\nLa entrega de documentos se realizará en el Portal de Alumno, menú de Finanzas opción Becas."
+            },
+            "redirectLabel": "Descargas:",
+            "redirects": [
+              {
+                "label": "Convocatoria Beca SICYT",
+                "link": ""
+              },
+              {
+                "label": "Carta compromiso",
+                "link": ""
+              },
+              {
+                "label": "Solicitud de beca Nueva y Refrendo",
+                "link": ""
+              },
+              {
+                "label": "Formato de información socieconómica",
+                "link": ""
+              },
+              {
+                "label": "Manual trámite de beca",
+                "link": ""
+              }
+            ]
+          }
+        },
+        {
+          "text": "Dictamen Refrendo de Becas SICYT Licenciaturas / Posgrados",
+          "icon": "arrow_forward",
+          "height": "128px",
+          "enable": true,
+          "nobackground": true,
+          "isShadowColor": true,
+          "shadowColor": "#C31433",
+          "content": {
+            "title": {
+              "title": "Dictamen Refrendo de Becas SICYT Licenciaturas / Posgrados"
+            },
+            "description": {
+              "content": "<b>Dictamen Refrendo de Becas SICYT Licenciaturas / Posgrados</b>\n\nA todos los alumnos y las alumnas que tramitaron por primera vez o el refrendo de beca por parte de la Secretaria de Innovación Ciencia y Tecnología (SICYT) se les invita a consultar el resultado en el Portal de Alumno, menú de Finanzas opción Becas: SEGUIMIENTO.\n\nDar click en “Dictamen SICYT”."
+            },
+            "redirectLabel": "¿Quieres consultar el dictamen?Entra a:",
+            "redirects": [
+              {
+                "label": "Portal de Alumno",
+                "link": "https://portal.uteg.edu.mx/Alumnos/"
+              }
+            ]
+          }
+        }
+      ]
     },
     "feedback": {
       "feedback": {
@@ -91,7 +413,7 @@
     },
     "llamanos": {
       "title": "¿Tienes dudas? llámanos",
-      "card": { 
+      "card": {
         "image": "https://drive.google.com/uc?export=view&id=1yLJVU_hAj3OQz36XtfmcAEzeXVKAaKQa",
         "subtitle": "",
         "title": "Oficinas de servicios escolares ",
