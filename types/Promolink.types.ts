@@ -43,5 +43,6 @@ export type PromoLinkData = {
   data: PromoLinkConfig;
   classNames?: string;
   typeShadowColor?: string;
+  shadowColor?: string | null;
   onClick?: () => void;
 }

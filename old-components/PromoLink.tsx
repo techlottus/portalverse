@@ -1,8 +1,7 @@
 import { createRef, FC, memo, useEffect } from "react"
 import cn from "classnames"
 import { PromoLinkData } from "@/types/Promolink.types"
-
-const PromoLink: FC<PromoLinkData> = memo(({ data, classNames, typeShadowColor="",  onClick } : PromoLinkData) => {
+const PromoLink: FC<PromoLinkData> = memo(({ data, classNames, typeShadowColor="", shadowColor = null, onClick } : PromoLinkData) => {
   const promoLinkPortalverseRef = createRef();
 
   useEffect(() => {
@@ -36,6 +35,10 @@ const PromoLink: FC<PromoLinkData> = memo(({ data, classNames, typeShadowColor="
     }
   }, [onClick]);// eslint-disable-line react-hooks/exhaustive-deps
 
+  const customStyles = {
+    boxShadow: `-5px 6px 0px 0px ${shadowColor}`
+  };
+
   return <>
     <div className={cn(classNames, {
       "shadow-pastelBlueShadowLeft rounded": data.isShadowColor === true && typeShadowColor === 'blue-pastel-left',
@@ -47,8 +50,10 @@ const PromoLink: FC<PromoLinkData> = memo(({ data, classNames, typeShadowColor="
       "shadow-pastelYellowShadowRight rounded": data.isShadowColor === true && typeShadowColor === 'yellow-pastel-right',
       "shadow-pastelRedShadowRight rounded": data.isShadowColor === true && typeShadowColor === 'red-pastel-right',
       "shadow-pastelGrayShadowRight rounded": data.isShadowColor === true && typeShadowColor === 'gray-pastel-right',
-      "shadow-blueShadowRight rounded": data.isShadowColor === true && typeShadowColor === 'blue-right'
-      })}>
+      "shadow-blueShadowRight rounded": data.isShadowColor === true && typeShadowColor === 'blue-right',
+      "rounded": shadowColor && data?.isShadowColor})}
+      style={shadowColor ? customStyles : {}}
+    >
       <lottus-promo-link-portalverse ref={promoLinkPortalverseRef}></lottus-promo-link-portalverse>
     </div>
   </>
