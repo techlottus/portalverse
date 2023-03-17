@@ -114,7 +114,7 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
       </ContentFullLayout> */}
       <ContentLayout classNames="mt-[72px] w-t:my-6 w-p:my-6">
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <Cintillo classNames="h-[200px]" image={sections.dudas.banner.image} title={sections.dudas.banner.title} subtitle={sections.dudas.banner.subtitle} whatsApp={sections.dudas.banner.whatsApp} email={sections.dudas.banner.email} phone={""}/>
+          <Cintillo classNames="h-[200px]" image={sections.dudas.banner.image} title={sections.dudas.banner.title} subtitle={sections.dudas.banner.subtitle} whatsApp={sections.dudas.banner.whatsApp} email={sections.dudas.banner.email} phone={sections.dudas.banner.phone} contentVariant={sections.dudas.banner.font}/>
         </div>
       </ContentLayout>
     </HeaderFooterLayout>
