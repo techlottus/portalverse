@@ -102,6 +102,14 @@ const Routes: any = {
           { params: { "program": "gestion-deportiva", "nameProgram": "Licenciatura en Gestión Deportiva" } },
           { params: { "program": "diseno-grafico", "nameProgram": "Licenciatura en Diseño Gráfico" } },
           { params: { "program": "relaciones-internacionales", "nameProgram": "Licenciatura en Relaciones Internacionales" } },
+          { params: { "program": "ingenieria-civil", "nameProgram": "Ingeniería Civil" } },
+          { params: { "program": "ingenieria-civil-proulex", "nameProgram": "Ingeniería Civil con Certificación en Inglés Proulex" } },
+          { params: { "program": "ingenieria-industrial", "nameProgram": "Ingeniería Industrial" } },
+          { params: { "program": "ingenieria-industrial-proulex", "nameProgram": "Ingeniería Industrial con Certificación en Inglés Proulex" } },
+          { params: { "program": "administracion-proulex", "nameProgram": "Licenciatura en Administración con Certificación en Inglés Proulex" } },
+          { params: { "program": "contaduria-publica", "nameProgram": "Licenciatura en Contaduría Pública" } },
+          { params: { "program": "contaduria-publica-proulex", "nameProgram": "Licenciatura en contaduría Púbica con Certificación en Inglés Proulex" } },
+          { params: { "program": "derecho", "nameProgram": "Licenciatura en Derecho" } },
         ]
       }
     },

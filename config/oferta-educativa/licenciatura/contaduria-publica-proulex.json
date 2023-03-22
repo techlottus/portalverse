@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "title": "Licenciatura en contaduría Púbica con Certificación en Inglés Proulex",
+    "description": "",
+    "keywords": ""
+  },
+  "config": {
+    "title": "Licenciatura en contaduría Púbica con Certificación en Inglés Proulex",
+    "config": {
+      "nombre": "Licenciatura en contaduría Púbica con Certificación en Inglés Proulex",
+      "modalidad": ["Presencial"],
+      "areaConocimiento": ["Negocios y Empresariales"],
+      "campus": ["Campus Washington"],
+      "nivel": ["Licenciatura"],
+      "image": {
+        "src": "https://assets.staging.bedu.org/UTEG/card_contaduria_interna_dbc125d6ae.jpg",
+        "alt": "licenciatura"
+      },
+      "curriculum": {
+        "Presencial": {
+          "Campus Washington": ""
+        }
+      }
+    }
+  },
+  "sections": {
+    "head": {
+      "title": "Licenciatura en contaduría Púbica con Certificación en Inglés Proulex",
+      "description": "Licenciatura en Contaduría Pública con certificación en Inglés Proulex. Ofrecemos el dominio de una segunda lengua bajo un modelo especial.",
+      "image": {
+        "src": "https://assets.staging.bedu.org/UTEG/card_contaduria_interna_dbc125d6ae.jpg",
+        "alt": "licenciatura"
+      }
+    },
+    "modalities": {
+      "title": "Modalidades disponibles en esta licenciatura:",
+      "tabs": {
+        "items": [
+          {
+            "label": "Presencial",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "Para estudiar Contaduría Pública debes tener intereses académicos por las técnicas administrativas y contables, leyes y normas que las rigen, además de un razonamiento abstracto, aptitudes aritméticas, capacidad de concentración y gusto por diagnosticar, auditar y optimizar recursos.",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                  },
+                  "title": "Perfil de egreso",
+
+                  "text": "El egresado /a será capaz de analizar e interpretar los estados financieros y contables de manera responsable, honesta, observando los principios éticos profesionales adquiridos, mediante la aplicación de los conocimientos y habilidades contables, fiscales y financieras, que permitan satisfacer las necesidades de las empresas públicas y privadas.",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "El profesional en Contaduría Pública puede desempeñarse en cualquier tipo de organización, tanto pública como privada, a nivel de mandos intermedios, gerencia o dirección de alguna de las áreas funcionales como: producción (costos), finanzas, recursos humanos, compras, tesorería, contraloría y planeación estratégica fiscal.\n\n En forma independiente podrá realizar actividades de consultoría y asesoría de negocios. Investigación y desarrollo de nuevas tecnologías contables, tanto en el ámbito académico como empresarial e instituciona",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "a) Acta de nacimiento original y 1 copia (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.\n\n c) 1 copia de la CURP.\n\n d) 2 copias de Credencial Oficial IFE / INE o Pasaporte\n\n e) 2 copias de Credencial Oficial IFE / INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n f) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n De contar ya con una licenciatura por parte de UdeG y estar titulado, se aceptan copias certificadas expedidas por UdeG del certificado de bachillerato de no más de un mes al día que lo esté entregando y copia simple del título. (Más todos los documentos de nuevo ingreso).\n\n En caso de no estar titulado, debe entregar en original todos los documentos. (Todos los documentos de nuevo ingreso).\n\n Nota: Si realizó los estudios de bachillerato en otro estado de la república, el certificado debe tener la legalización por parte de Secretaría de Gobernación del estado donde realizaron los estudios.\n\n Si el certificado es de UNAM, Secretaría de la Defensa Nacional (SEDENA), Sistema Educativo Nacional (en el encabezado del documento) y Colegios de Bachilleres, estos no requieren del trámite de legalización.",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          }
+        ],
+        "size": "medium"
+      }
+    },
+    "descarga": {
+      "id": "program_licenciatura",
+      "type": "primary",
+      "title": "Descarga el plan de estudios",
+      "size": "small",
+      "icon": "download",
+      "lyIcon": false,
+      "disabled": false,
+      "isExpand": false,
+      "tagOnClick": "testClick",
+      "test": ""
+    }
+  },
+  "form": {
+    "config": {
+      "level": { "hidden": true, "value": "licenciatura" },
+      "program": {
+        "hidden": false,
+        "value": "Licenciatura en contaduría Púbica con Certificación en Inglés Proulexa"
+      },
+      "modality": { "hidden": false },
+      "campus": { "hidden": false }
+    },
+    "copies": {
+      "stepone": {
+        "title": "Obtén informes sobre tu programa",
+        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+      }
+    }
+  }
+}

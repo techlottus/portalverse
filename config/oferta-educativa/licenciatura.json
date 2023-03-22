@@ -185,7 +185,7 @@
         "areaConocimiento": ["Negocios y Empresariales"],
         "campus": ["Américas", "Campus Washington", "Río Nilo", "Tlajomulco", "Zapopan"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1gtvo-I_IKrSjh8tDMaPF00vni0PZWq4P",
+          "src": "https://assets.staging.bedu.org/UTEG/card_administracion_943a10dcd4.jpg",
           "alt": "licenciatura"
         }
       },
@@ -309,7 +309,7 @@
         "nombre": "Licenciatura en Negocios Digitales",
         "modalidad": ["Online"],
         "areaConocimiento": ["Económico - Administrativo"],
-        "campus": [""],
+        "campus": [],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1lf1Ggy3coet6vSnv1PDDbMrW5MyaCgkg",
           "alt": "licenciatura"
@@ -323,7 +323,7 @@
         "nombre": "Ingenieria en Ciencia de Datos",
         "modalidad": ["Online"],
         "areaConocimiento": ["Económico - Administrativo"],
-        "campus": [""],
+        "campus": [],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1v5fhe1LZL825tt6WRc14dlF9cSVSmwOX",
           "alt": "licenciatura"
@@ -337,7 +337,7 @@
         "nombre": "Licenciatura en Turismo",
         "modalidad": ["Online"],
         "areaConocimiento": ["Económico - Administrativo"],
-        "campus": [""],
+        "campus": [],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=15iMG8von_UvJyMB52sHbuS4arBT_b8re",
           "alt": "licenciatura"
@@ -442,6 +442,118 @@
         }
       },
       "route": "relaciones-internacionales"
+    },
+    {
+      "title": "Ingeniería Civil",
+      "config": {
+        "nombre": "Ingeniería Civil",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Ingenierías y Tecnología"],
+        "campus": ["Olímpica"],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=13U-D4vbyjDjvZxmOe_T95xzAcPD80Jvi",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "ingenieria-civil"
+    },
+    {
+      "title": "Ingeniería Civil con Certificación en Inglés Proulex",
+      "config": {
+        "nombre": "Ingeniería Civil con Certificación en Inglés Proulex",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Ingenierías y Tecnología"],
+        "campus": ["Olímpica"],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=13U-D4vbyjDjvZxmOe_T95xzAcPD80Jvi",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "ingenieria-civil-proulex"
+    },
+    {
+      "title": "Ingeniería Industrial",
+      "config": {
+        "nombre": "Ingeniería Industrial",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Ingenierías y Tecnología"],
+        "campus": ["Olímpica"],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_industrial_5e4767fc98.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "ingenieria-industrial"
+    },
+    {
+      "title": "Ingeniería Industrial con Certificación en Inglés Proulex",
+      "config": {
+        "nombre": "Ingeniería Industrial con Certificación en Inglés Proulex",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Ingenierías y Tecnología"],
+        "campus": ["Olímpica"],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_industrial_5e4767fc98.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "ingenieria-industrial-proulex"
+    },
+    {
+      "title": "Licenciatura en Administración con Certificación en Inglés Proulex",
+      "config": {
+        "nombre": "Licenciatura en Administración con Certificación en Inglés Proulex",
+        "modalidad": ["Presencial", "Online", "Flex"],
+      "areaConocimiento": ["Negocios y Empresariales"],
+      "campus": ["Campus Washington", "Tlajomulco", "Zapopan", "Américas", "Río Nilo"],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_administracion_943a10dcd4.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "administracion-proulex"
+    },
+    {
+      "title": "Licenciatura en Contaduría Pública",
+      "config": {
+        "nombre": "Licenciatura en Contaduría Pública",
+        "modalidad": ["Presencial", "Online", "Flex"],
+        "areaConocimiento": ["Negocios y Empresariales"],
+        "campus": ["Campus Washington", "Tlajomulco", "Zapopan", "Américas", "Río Nilo"],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_contaduria_c0cc41ade5.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "contaduria-publica"
+    },
+    {
+      "title": "Licenciatura en Contaduría Púbica con Certificación en Inglés Proulex",
+      "config": {
+        "nombre": "Licenciatura en Contaduría Púbica con Certificación en Inglés Proulex",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Negocios y Empresariales"],
+        "campus": ["Campus Washington"],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_contaduria_c0cc41ade5.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "contaduria-publica-proulex"
+    },
+    {
+      "title": "Licenciatura en Derecho",
+      "config": {
+        "nombre": "Licenciatura en Derecho",
+        "modalidad": ["Presencial", "Online", "Flex"],
+        "areaConocimiento": ["Negocios y Empresariales"],
+        "campus": ["Américas", "Campus Washington", "Río Nilo", "Tlajomulco", "Zapopan"],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_derecho_86e1606b34.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "derecho"
     }
   ]
 }

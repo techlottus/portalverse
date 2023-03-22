@@ -8,7 +8,7 @@
       "title": "Licenciatura en Administración",
       "config": {
         "nombre": "Licenciatura en Administración",
-        "modalidad": ["Presencial"],
+        "modalidad": ["PresencialSemestral", "PresencialCuatrimestral"],
         "areaConocimiento": ["Negocios y Empresariales"],
         "campus": ["Américas", "Campus Washington", "Río Nilo", "Tlajomulco", "Zapopan"],
         "nivel": ["Licenciatura"],
@@ -17,12 +17,17 @@
           "alt": "licenciatura"
         },
         "curriculum": {
-          "Presencial": {
-            "Américas": "1uU1S999Ti1uCzLZ3vupwg0KPIl_iZ3wM",
-            "Campus Washington": "1uU1S999Ti1uCzLZ3vupwg0KPIl_iZ3wM",
-            "Río Nilo": "1uU1S999Ti1uCzLZ3vupwg0KPIl_iZ3wM",
+          "PresencialSemestral": {
             "Tlajomulco": "1uU1S999Ti1uCzLZ3vupwg0KPIl_iZ3wM",
-            "Zapopan": "1uU1S999Ti1uCzLZ3vupwg0KPIl_iZ3wM"
+            "Zapopan": "1uU1S999Ti1uCzLZ3vupwg0KPIl_iZ3wM",
+            "Campus Washington": "1uU1S999Ti1uCzLZ3vupwg0KPIl_iZ3wM"
+          },
+          "PresencialCuatrimestral": {
+            "Américas": "1eodl4Un5BvWmyHzQ_Y1AD6YJTylE3j-H",
+            "Campus Washington": "1eodl4Un5BvWmyHzQ_Y1AD6YJTylE3j-H",
+            "Río Nilo": "1eodl4Un5BvWmyHzQ_Y1AD6YJTylE3j-H",
+            "Tlajomulco": "1eodl4Un5BvWmyHzQ_Y1AD6YJTylE3j-H",
+            "Zapopan": "1eodl4Un5BvWmyHzQ_Y1AD6YJTylE3j-H"
           }
         }
       }
@@ -41,7 +46,54 @@
         "tabs": {
           "items": [
             {
-              "label": "Modalidad Presencial",
+              "label": "Presencial Semestral",
+              "icons": { "primary": "", "duplicate": false },
+              "disabled": false,
+              "content": {
+                "cards": [
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    },
+                    "title": "Perfil de ingreso",
+                    "text": "El aspirante a cursar esta licenciatura deberá haber acreditado en su totalidad el nivel académico de bachillerato o equivalente, considerando los siguientes intereses: intención de desempeñarse en las áreas económico-administrativas de las organizaciones. Conocer cómo contribuye en el proceso administrativo a la efectividad de las organizaciones. Interactuar con equipos de trabajo para la obtención de logros concretos a través del proceso administrativo. Conocimientos: fundamentos matemáticos (suma, resta, multiplicación, división), fundamentos ortográficos, fundamentos computacionales (procesador de texto, hoja de cálculo), habilidades: observación, concentración, análisis, síntesis, redacción, exposición y evaluación de ideas.",
+                    "backgroundColor": "#1B2D68"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    },
+                    "title": "Perfil de egreso",
+                    
+                    "text": "El egresado /a en la Licenciatura en Administración será capaz de planear, organizar, dirigir y controlar el desarrollo y funcionamiento de varias organizaciones, en la áreas comerciales, financieras, tecnológicas y de personal, aportando soluciones por medio de análisis, diseño, implementación y mejora de estrategias que permitan mejorar su rentabilidad, con base a lo siguiente: conocimientos: Análisis de entornos políticos, económicos, socioculturales y tecnológicos para la toma de decisiones. Diseño e implementación de estrategias competitivas de una organización. Formulación e implementación de estrategias de comunicación corporativa. Identificación y análisis de las oportunidades en el mercado para la organización. Diseño de estrategias comerciales. Diseño y desarrollo para el plan de vida y carrera profesional de una organización, gestión, desarrollo, y evaluación de desempeño humano dentro del contexto diverso. Establecimiento de modelos de cambio educativo planeado en una organización. Identificación y mejora de operaciones clave de una organización. Establecimiento de los modelos de aprovechamiento del capital de trabajo. Establecimiento de los modelos para maximizar la rentabilidad de una organización. Marco legal aplicable en los ámbitos laborales y fiscales.",
+                    "backgroundColor": "#C31433"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    },
+                    "title": "Campo Laboral",
+                    "text": "El campo laboral y el ejercicio profesional de la Licenciatura en Administración del Centro Universitario UTEG, consideran su colaboración en empresas de servicios, comerciales o industriales; casas de bolsas o aseguradoras; arrendadoras, instituciones bancarias, empresas públicas y privadas; en despacho como asesor, consultor independiente, organismos descentralizados; docentes o investigadores en universidades e instituciones públicas o privadas.",
+                    "backgroundColor": "#4470B1"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    },
+                    "title": "Requisitos de admisión",
+                    "text": "a) Acta de nacimiento original y 1 copia (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.\n\n c) 1 copia de la CURP.\n\n d) 2 copias de Credencial Oficial IFE / INE o Pasaporte\n\n e) 2 copias de Credencial Oficial IFE / INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n f) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n De contar ya con una licenciatura por parte de UdeG y estar titulado, se aceptan copias certificadas expedidas por UdeG del certificado de bachillerato de no más de un mes al día que lo esté entregando y copia simple del título. (Más todos los documentos de nuevo ingreso).\n\n En caso de no estar titulado, debe entregar en original todos los documentos. (Todos los documentos de nuevo ingreso).\n\n Nota: Si realizó los estudios de bachillerato en otro estado de la república, el certificado debe tener la legalización por parte de Secretaría de Gobernación del estado donde realizaron los estudios.\n\n Si el certificado es de UNAM, Secretaría de la Defensa Nacional (SEDENA), Sistema Educativo Nacional (en el encabezado del documento) y Colegios de Bachilleres, estos no requieren del trámite de legalización.",
+                    "backgroundColor": "#EEAA01"
+                  }
+                ],
+                "wrapper": false
+              }
+            },
+            {
+              "label": "Presencial Cuatrimestral",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {
