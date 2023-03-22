@@ -17,11 +17,11 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
   const [messages] = useState<any>({
     egresados:{
       title: "Gracias por actualizar tus datos",
-      subtitle: 'Ahora estás en contacto con toda la información de tu universidad.',
+      subtitle: 'Ya puedes acceder a toda la información de tu universidad.',
     }, 
     gral:{
       title: "Gracias por tu interés",
-      subtitle: 'Nuestro equipo se pondrá en contacto pronto, Te invitamos a seguirnos en redes sociales para mantenerte enterado del mundo UANE.',
+      subtitle: 'Nuestro equipo se pondrá en contacto contigo muy pronto. También puedes encontrar más información sobre UTEG  en nuestras redes sociales.',
     }
   })
 
@@ -34,8 +34,7 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
       return
     }
     setFlow('gral')
-  }, [router])
-
+  }, [router, flow])
   return <>
     <script dangerouslySetInnerHTML={{ __html : `fbq('track', 'CompleteRegistration');`}}></script>
     <Head>
@@ -61,7 +60,7 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
             </ContentInsideLayout>
           </div>
           <div className="col-span-7 w-t:col-span-12 w-p:col-span-12">
-            <Video dimensions={["500px", "430px", "200px"]} data={ sections.video} />
+            <Video dimensions={["500px", "430px", "200px"]} data={ sections.video } />
           </div>
         </ContentInsideLayout>
       </ContentFullLayout>
