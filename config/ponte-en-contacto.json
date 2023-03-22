@@ -11,19 +11,19 @@
     "medios": [
       {
         "icon": "phone",
-        "text": "8008228263"
+        "text": "33 1078 8000"
       },
       {
         "icon": "mail",
-        "text": "hola@uane.edu.mx"
+        "text": "informacion@uteg.edu.mx"
       },
       {
         "icon": "schedule",
-        "text": "L-V de 9:00-18:00 Hrs"
+        "text": "L-V de 09:00 - 18:00 Hrs"
       }
     ],
     "campus": {
-      "title": "Visítanos en nuestros campus",
+      "title": "Conoce nuestros planteles",
       "button": {
         "id": "",
         "type": "outlined",
@@ -35,37 +35,37 @@
         "isExpand": false,
         "tagOnClick": "testClick", 
         "test": "",
-        "redirect": "/nosotros/campus"
+        "redirect": "/nosotros/planteles"
       }
     },
     "sociales": [
       {
         "icon": "instagram",
-        "link": "https://www.instagram.com/uaneoficial/?hl=es"
+        "link": "https://www.instagram.com/utegoficial/?hl=es"
       },
       {
         "icon": "facebook",
-        "link": "https://es-la.facebook.com/UANEOficial/"
+        "link": "https://www.facebook.com/UtegOficial"
       },
       {
         "icon": "youtube",
-        "link": "https://www.youtube.com/channel/UCir4jyZ8CBUQ-MhUUxdUiHQ"
+        "link": "https://www.youtube.com/@utegoficial"
       },
       {
-        "icon": "twitter",
-        "link": "https://mobile.twitter.com/uaneoficial"
+        "icon": "tiktok",
+        "link": "https://www.tiktok.com/@utegoficial?lang=es"
       }
     ],
     "banner": {
       "image": {
-        "desktop": "https://drive.google.com/uc?export=view&id=1Y_edCTwyeAXRGkcjqf5V2S8QEyVYaENW",
-        "mobile": "https://drive.google.com/uc?export=view&id=1PZURny8POJsMYHamJycNKgM3LmxoMUiK",
-        "tablet": "https://drive.google.com/uc?export=view&id=1TpgDT_hQIJ0hew0WPp40M21oURKnD9B_"
+        "desktop": "https://drive.google.com/uc?export=view&id=1lYG3lNwv0p-UCz1YiImBDjWzPlFLZ4_L",
+        "mobile": "https://drive.google.com/uc?export=view&id=1mgPz8G2KS-GmNs-Eu3fvC-m2QytmQpY1",
+        "tablet": "https://drive.google.com/uc?export=view&id=1y0HAt8Fmj8bbJiOW79sUGWaKDJac_opQ"
       },
-      "title": "UANE Internacional",
-      "subtitle": "Internacionalízate agrega experiencias internacionales a tu educación",
+      "title": "UTEG 360",
+      "subtitle": "Vive con nosotros la experiencia internacional de tu profesión.",
       "position": "left-bottom",
-      "height": "300px",
+      "height": "342px",
       "overlayWhite":false,
       "overlayDak": false,
       "button":{
@@ -81,7 +81,8 @@
         "test": ""
       },
       "noAction": false,
-      "redirect": "/nosotros/internacionalizacion"
+      "redirect": "/nosotros/internacionalizacion",
+      "font": "light"
     }
   }
 }
