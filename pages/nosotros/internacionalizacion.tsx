@@ -14,6 +14,7 @@ import { getDataPageFromJSON } from "@/utils/getDataPage"
 import Rainbow from "@/old-components/Rainbow"
 import Modal from "@/old-components/Modal/Modal"
 import ContentInsideLayout from "@/layouts/ContentInside.layout"
+import cn from "classnames"
 
 
 const Internacionalizacion: NextPageWithLayout = ({ sections, meta }: any) => {
@@ -38,15 +39,69 @@ const Internacionalizacion: NextPageWithLayout = ({ sections, meta }: any) => {
       <section slot="areaModalContent" className="flex w-t:flex-col w-p:flex-col w-full h-auto">
       <ContentInsideLayout classNames="gap-6">
           <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 bg-[#2B2C34] p-6">
-            <p className="text-white font-Poppins font-bold text-6 break-normal">{infoModal?.title?.title}</p>
-            {
-              !!infoModal?.redirect?.link  
-              ? <div className="flex items-center text-white mt-16">
-                <Link passHref legacyBehavior href={infoModal?.redirect?.link} ><a className="font-Poppins font-normal hover:underline hover:underline-offset-8" target="_blank">{infoModal?.redirect?.label}</a></Link> 
-                <span className="material-icons">chevron_right</span>
-              </div>
-              : null
-            }
+            <p className="text-white font-Poppins font-bold text-6 break-normal mb-16">{infoModal?.title?.title}</p>
+            <div className="flex flex-col space-y-12">
+              {
+                infoModal?.downloadables?.length > 0
+                  ? <div>
+                      <span className="font-Poppins font-normal text-white mb-6">Descargas</span>
+                      {
+                        (infoModal?.downloadables as Array<{ label: string; link: string; }>)?.map((redirect, index) => {
+                          const children = (
+                            <>
+                              <span className="font-Nunito-Sans font-normal underline underline-offset-4 mr-auto">{redirect?.label}</span>
+                              <span className="material-icons ml-3 mt-1">download</span>
+                            </>
+                          );
+
+                          if (redirect?.link) {
+                            return (
+                              <a
+                                key={index}
+                                href={redirect?.link}
+                                rel="noreferrer noopener"
+                                target="_blank"
+                                className={
+                                  cn("flex items-center text-white mt-6")
+                                }
+                              >
+                                {children}
+                              </a>
+                            )
+                          } else {
+                            return (
+                              <div
+                                key={index}
+                                className="flex items-center mt-6 text-SC/Blackandgrey/B-60 cursor-not-allowed"
+                              >
+                                {children}
+                              </div>
+                            )
+                          }
+                        })
+                      }
+                    </div>
+                  : null
+              }
+              {
+                infoModal?.redirect?.link  
+                ? <div>
+                    <span className="font-Poppins font-normal text-white mb-6">Visita el sitio de la universidad</span>
+                      <a
+                        href={infoModal?.redirect?.link}
+                        rel="noreferrer noopener"
+                        target="_blank"
+                        className={
+                          cn("flex items-center text-white mt-6")
+                        }
+                      >
+                        <span className="font-Nunito-Sans font-normal underline underline-offset-4 mr-auto">{infoModal?.redirect?.link}</span>
+                        <span className="material-icons ml-3 mt-1">chevron_right</span>
+                      </a>
+                  </div>
+                : null
+              }
+            </div>
           </div>
           <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 bg-white overflow-y-auto">
             <RichtText data={{
