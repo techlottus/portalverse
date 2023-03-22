@@ -44,6 +44,7 @@ module.exports = {
         6: "1.5rem",
         "6.5": "2rem",
         "7.5": "1.875rem",
+        "8": "2rem",
         "8.5": "2.125rem",
         10: "2.5rem",
         13: "3.25rem",
@@ -57,6 +58,7 @@ module.exports = {
         "8.6": "2.172rem",
         "9.375": "2.344rem",
         "9.435": "2.359rem",
+        "12": "3rem",
         "12.5": "3.125rem",
         "13": "3.75rem",
         "16.25": "4.063rem",
@@ -70,7 +72,8 @@ module.exports = {
         "SC/Blackandgrey/B-80": "#282828",
         "darkBlue": "#2B2C34;",
         "SC/Actions/AC-300": "#E6E6E6",
-        "SC/Blackandgrey/B-100": "#000000"
+        "SC/Blackandgrey/B-100": "#000000",
+        "UTEG/blue_bandbook": "#1B2D68",
       },
       fontFamily: {
         "Nunito": ["Nunito"],
@@ -108,7 +111,7 @@ module.exports = {
         "pastelYellowShadowRight": '5px 5px 0px 0px #FFD033',
         "pastelRedShadowRight": '5px 5px 0px 0px #ED6A5F',
         "pastelGrayShadowRight": '5px 5px 0px 0px #A2AFB5',
-        "blueShadowRight": "5px 5px 0px 0px #00BEB4"
+        "blueShadowRight": "5px 5px 0px 0px #00BEB4",
       }
     },
   },

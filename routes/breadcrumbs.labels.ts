@@ -18,7 +18,7 @@ const BreadcrumbsLabels: any = {
   "nosotros": "Nosotros",
   "internacionalizacion": "Internacionalización",
   "somos-UANE": "Somos UANE",
-  "campus": "Campus",
+  "planteles": "Planteles",
   "modelo-educativo": "Modelo Educativa",
   "bolsa-de-talento": "Bolsa de Talento",
   "vinculacion-empresarial": "Vinculación empresarial",
@@ -26,6 +26,7 @@ const BreadcrumbsLabels: any = {
   "general": "General",
   "voz-uane": "Voz UANE",
   "pedir-informacion": "Contacto",
+  "vida-estudiantil": "Vida Estudiantil",
   "alumnos": "Alumnos",
   "accesos-colaboradores": "Acceso para Colaboradores",
   ...Routes["oferta-educativa"].reduce((prev: any, value: any) => {
