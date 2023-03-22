@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "title": "Master en Gobierno y Estrategia",
+    "description": "",
+    "keywords": ""
+  },
+  "config": {
+    "title": "Master en Gobierno y Estrategia",
+    "config": {
+      "nombre": "Master en Gobierno y Estrategia",
+      "modalidad": ["Online"],
+      "areaConocimiento": ["Ciencias Sociales"],
+      "campus": [],
+      "nivel": ["Posgrado"],
+      "image": {
+        "src": "https://drive.google.com/uc?export=view&id=1njdrpQoxfsFwvfG2gj2kWno7mBcEhCJH",
+        "alt": "maestria"
+      },
+      "curriculum": {
+        "Online": "1qjAKOmXXEnCgmStzDt59snQ7X3q1y5ZH"
+      }
+    }
+  },
+  "sections": {
+    "head": {
+      "title": "Master en Gobierno y Estrategia",
+      "description": "Diagnostica problemas y diseña e implementa las políticas públicas mediante la investigación y evaluación sistemática del proceso de toma de decisiones en entornos de máxima complejidad y en escenarios siempre cambiantes; donde la gobernanza y la participación de la ciudadanía, sirvan al objetivo global del bienestar de la sociedad civil.",
+      "image": {
+        "src": "https://drive.google.com/uc?export=view&id=1njdrpQoxfsFwvfG2gj2kWno7mBcEhCJH",
+        "alt": "maestria"
+      }
+    },
+    "modalities": {
+      "title": "Modalidades disponibles en esta maestría:",
+      "tabs": {
+        "items": [
+          {
+            "label": "Modalidad Online",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1evRDmArAV5DLLoIN0YQay-rc_YghOakJ",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1evRDmArAV5DLLoIN0YQay-rc_YghOakJ"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "El Máster Internacional en Gobierno y Estrategia Pública está destinado a aquellas personas que, por su formación académica o experiencia profesional, desean obtener una visión actualizada y multidisciplinar sobre los elementos, estructura y recursos necesarios en la acción pública.\n\n Personas interesadas en gestionar acciones que redunden en el desarrollo integral de una sociedad, a través de la participación ciudadana que se genera con la cercanía y las plataformas adecuadas en todos los medios. ",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1iemzpeGBJ6WcMyBTfFhMclNHU0xiyX03",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1iemzpeGBJ6WcMyBTfFhMclNHU0xiyX03"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "Comprender el entorno actual mediante la adquisición de los conocimientos y herramientas para liderar la toma de decisiones estratégicas en entornos poliédricos.\n\n Aplicar una visión holística a los problemas para una toma de decisiones que conjugue la complejidad de los mismos con la adopción de soluciones globales, ágiles y flexibles; a partir de las consignas del Buen Gobierno, sensible a los intereses de la sociedad con la responsabilidad de los decisores y la eficiencia en la asignación de los recursos.",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1iUw_Me9RaeUp-onOlNWF_uDwKPc683Ma",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1iUw_Me9RaeUp-onOlNWF_uDwKPc683Ma"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "El egresado de la Maestría en Gobierno y Estrategia podrá poner en marcha sus conocimientos desde la administración pública en cualquier eslabón de la cadena jerárquica ya que en ese ámbito es oportuno y bien visto la constante implementación de ideas para generar un mejor desempeño gubernamental. También como asesor de gobiernos y generación de mensajes para campañas políticas rumbo a la toma del poder.",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1EqRAwPumEIMpZ6c_NNacezmBbTo87STw",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1EqRAwPumEIMpZ6c_NNacezmBbTo87STw"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• Ine\n\n• Comprobante de domicilio\n\n• Título",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          }
+        ],
+        "size": "medium"
+      }
+    },
+    "descarga": {
+      "id": "program_maestria",
+      "type": "primary",
+      "title": "Descarga el plan de estudios",
+      "size": "small",
+      "icon": "download",
+      "lyIcon": false,
+      "disabled": false,
+      "isExpand": false,
+      "tagOnClick": "testClick",
+      "test": ""
+    }
+  },
+  "form": {
+    "config": {
+      "level": { "hidden": true, "value": "maestria" },
+      "program": { "hidden": false, "value": "Administración" },
+      "modality": { "hidden": false },
+      "campus": { "hidden": false }
+    },
+    "copies": {
+      "stepone": {
+        "title": "Obtén informes sobre tu programa",
+        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+      }
+    }
+  }
+}

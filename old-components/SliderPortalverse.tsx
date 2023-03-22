@@ -163,7 +163,7 @@ const handleTouchStart = (evt: any) => {
             <h2 className="font-Poppins font-bold text-center w-d:text-[65px] w-d:leading-[80px] w-t:text-[30px]">{ item.title }</h2>
             <p className="font-Poppins font-semibold text-center w-d:text-[24px] w-d:leading-[30px] w-t:text-base">{ item.text }</p>
             {
-              !!item.action
+              !!item?.action?.title
                 ? <div className="flex justify-center"><Button darkOutlined={item?.contentVariant === "light"} dark={item?.contentVariant === "dark"} data={{...item.action}} onClick={()=> router.push(`${item.action.redirect}`)}/></div>
                 : null
             }
@@ -196,7 +196,7 @@ const handleTouchStart = (evt: any) => {
             <h2 className="font-Poppins font-normal text-[32px] leading-10">{ item.title }</h2>
             <p className="font-Nunito-Sans font-normal text-base leading-5">{ item.text }</p>
             {
-              !!item.action
+              !!item?.action?.title
                 ? <div className="flex justify-center"><Button data={{...item.action, isExpand: true}} onClick={()=> router.push(`${item.action.redirect}`)}/></div>
                 : null
             }

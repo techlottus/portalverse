@@ -5,6 +5,7 @@ export type ContactData = {
   name: string;
   email: string;
   phone: string;
+  link?: string;
 };
 
 export type SectionData = {

@@ -9,18 +9,16 @@
     "config": {
       "nombre": "Maestría en Docencia",
       "modalidad": ["Presencial"],
-      "areaConocimiento": ["Ciencias Sociales"],
-      "campus": ["Saltillo", "Piedras Negras", "Torreón"],
+        "areaConocimiento": ["Jurídicas y Sociales"],
+        "campus": ["Américas"],
       "nivel": ["Posgrado"],
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1qd2xPLTXKkhCPofxw3o1h1Fg1pCVViuq",
+        "src": "https://drive.google.com/uc?export=view&id=",
         "alt": "maestria"
       },
       "curriculum": {
         "Presencial": {
-          "Piedras Negras": "1Z5Q__hqpeHGsBI4ZcbMnGH1FDEClKjIO",
-          "Saltillo": "1OfYnyuM_Ikpa0HolEEpm0LPll4zl47p1",
-          "Torreón": "1pHEKkZWB1vfLIxUmbA94u3TO1cG90ETv"
+            "Américas": "1uQ2YzKw5FGlsBffi07NU4o23gRaow-rs"
         }
       }
     }
@@ -28,9 +26,9 @@
   "sections": {
     "head": {
       "title": "Maestría en Docencia",
-      "description": "La Maestría en Docencia permite a nuestros aspirantes que transmitan conocimientos, construyan valores, vivan el crecimiento, desarrollen la personalidad y la capacidad para tomar decisiones. Plantean retos y desafíos. La vocación es la base que necesita todo aquel que quiere dedicarse a la docencia.",
+      "description": "Desarrollarás las competencias para el desarrollo de propuestas innovadoras en el contexto educativo tomando de referencia las nuevas tendencias en la educación. Tendrás las habilidades y destrezas necesarias para los retos con los que se enfrenta el docente del siglo XXI, con el uso de herramientas tecnológicas.",
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1qd2xPLTXKkhCPofxw3o1h1Fg1pCVViuq",
+        "src": "https://drive.google.com/uc?export=view&id=",
         "alt": "maestria"
       }
     },
@@ -39,44 +37,46 @@
       "tabs": {
         "items": [
           {
-            "label": "Modalidad Presencial", "icons": { "primary": "", "duplicate": false}, "disabled": false,
+            "label": "Modalidad Online",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
             "content": {
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
-                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
+                    "desktop": "https://drive.google.com/uc?export=view&id=1evRDmArAV5DLLoIN0YQay-rc_YghOakJ",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1evRDmArAV5DLLoIN0YQay-rc_YghOakJ"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "Este programa está dirigido a cualquier profesional que se dedique a la Docencia.\n\nRequisitos de ingreso: \n\n• Los aspirantes a cursar la Maestría deberán cubrir los siguientes requisitos:\n\n• Tener experiencia mínima de dos años en Docencia.\n\n• Título profesional, carta de pasante o documento afín.\n\n• Aprobar la entrevista en el departamento de postgrado.\n\n• Acreditar la documentación y pagos correspondientes.",
-                  "backgroundColor": "#8B9BA3"
+                  "text": "Dirigido a profesores de nivel medio superior o superior preferentemente en ejercicio y para quienes poseen un título de licenciatura y vocación hacia la docencia.",
+                  "backgroundColor": "#1B2D68"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
-                  "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
+                    "desktop": "https://drive.google.com/uc?export=view&id=1iemzpeGBJ6WcMyBTfFhMclNHU0xiyX03",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1iemzpeGBJ6WcMyBTfFhMclNHU0xiyX03"
                   },
                   "title": "Perfil de egreso",
-                  "text": "El egresado de este programa podrá ser capaz de aplicar estrategias didácticas y educativas para lograr el aprendizaje significativo de los estudiantes, a través del diseño y planeación de programas académicos, evaluación del conocimiento o desempeño del estudiante, así como la oportunidad de desarrollar proyectos de investigación educativa para la mejora continua del docente",
-                  "backgroundColor": "#B0003C"
+                  "text": "Los egresados /as de la Maestría en Docencia podrán desempeñarse en las funciones sustantivas de la docencia, investigación y extensión.",
+                  "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
+                    "desktop": "https://drive.google.com/uc?export=view&id=1iUw_Me9RaeUp-onOlNWF_uDwKPc683Ma",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1iUw_Me9RaeUp-onOlNWF_uDwKPc683Ma"
                   },
                   "title": "Campo Laboral",
-                  "text": "El egresado de la Maestría en Salud Ocupacional de UANE podrá ejercer en:\n\n • Organizaciones públicas como instituciones de salud \n\n • Organizaciones privadas como la industria alimentaria, minería, automotriz, agrícola, etc.",
-                  "backgroundColor": "#E84537"
+                  "text": "Al egreso del programa tendrás competencias para incidir en las funciones sustantivas de la universidad. En cuanto a lo docente, tendrás conocimientos sobre opciones innovadoras para el desarrollo de su práctica cotidiana y como filosofía de trabajo poseerás una tendencia hacia el uso de nuevas tecnologías como recurso cotidiano. La experiencia que se derivará del uso de internet y otros medios, le será de gran utilidad a este aspecto. \n\n Ligada a la anterior, la función de investigación será incluida desde el momento en que un aspirante ingrese a la maestría, de manera que pueda formar una visión crítica para identificar los problemas en la enseñanza y el aprendizaje en su entorno, tanto mediante experimentación personal en el aula, como en el planteamiento y el desarrollo de un proyecto de investigación educativa. ",
+                  "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
+                    "desktop": "https://drive.google.com/uc?export=view&id=1EqRAwPumEIMpZ6c_NNacezmBbTo87STw",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1EqRAwPumEIMpZ6c_NNacezmBbTo87STw"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento original del cajero reciente y 2 copias\n\n• Copia fiel del título (Constancia de trámite en caso de aún no tener el título)\n\n• Copia de cédula (traer original para copia)\n\n• Impresión de CURP directo de intenet sin ampliación\n\n• CV y Constancia laboral\n\n• Fotografías (Preguntar por especificaciones)\n\n• Solicitud de Admisión",
-                  "backgroundColor": "#00BEB4"
+                  "text": "a) Acta de nacimiento original y 2 copias (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de licenciatura en buen estado original y tres copias. (Maestrías SICYT).\n\n c) 3 copias del Título o acta de titulación no mayor a 1 año. (Maestrías SICYT).\n\n d) Copia de certificado total de licenciatura, o copia de Título o copia de acta de titulación no mayor a 1 año. (Maestrías SEP).\n\n e) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas\n\n f) 2 copia de la CURP.\n\n g) 2 copia Credencial Oficial IFE o INE, o pasaporte\n\n h) Copia del Comprobante aspirante seleccionado Maestría (F-DA-82).",
+                  "backgroundColor": "#EEAA01"
                 }
               ],
               "wrapper": false
@@ -102,7 +102,7 @@
   "form": {
     "config": {
       "level": { "hidden": true, "value": "maestria" },
-      "program": { "hidden": false, "value": "Docencia" },
+      "program": { "hidden": false, "value": "Administración" },
       "modality": { "hidden": false },
       "campus": { "hidden": false }
     },

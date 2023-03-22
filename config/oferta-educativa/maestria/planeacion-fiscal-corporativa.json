@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "title": "Maestría en Planeación Fiscal Corporativa",
+    "description": "",
+    "keywords": ""
+  },
+  "config": {
+    "title": "Maestría en Planeación Fiscal Corporativa",
+    "config": {
+      "nombre": "Maestría en Planeación Fiscal Corporativa",
+      "modalidad": ["Presencial"],
+      "areaConocimiento": ["Negocios y Empresariales"],
+      "campus": ["Américas"],
+      "nivel": ["Posgrado"],
+      "image": {
+        "src": "https://drive.google.com/uc?export=view&id=1a2RMTG-7g-loXhNK8MXu4TDdMeu4xMVL",
+        "alt": "maestria"
+      },
+      "curriculum": {
+        "Presencial": {
+            "Américas": "1jctFusMHbuIjFDJD4v_2Q8lZ7YkgZ8gf"
+        }
+      }
+    }
+  },
+  "sections": {
+    "head": {
+      "title": "Maestría en Planeación Fiscal Corporativa",
+      "description": "Propondrás soluciones confiables en un entorno organizacional por medio de técnicas contables, económicas o financieras para todos los procesos administrativos y jurídicos en la organización. Podrás funcionar como un asesor dentro de la organización para desarrollar estrategias y proponer alternativas para el desarrollo de políticas.",
+      "image": {
+        "src": "https://drive.google.com/uc?export=view&id=1a2RMTG-7g-loXhNK8MXu4TDdMeu4xMVL",
+        "alt": "maestria"
+      }
+    },
+    "modalities": {
+      "title": "Modalidades disponibles en esta maestría:",
+      "tabs": {
+        "items": [
+          {
+            "label": "Modalidad Presencial",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1evRDmArAV5DLLoIN0YQay-rc_YghOakJ",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1evRDmArAV5DLLoIN0YQay-rc_YghOakJ"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "Licenciatura en Abogado, Derecho, Administración, Mercadotecnia, Finanzas, Informática Administrativa, Contaduría Pública, Estudios Políticos y Gobierno, Administración Gubernamental y Políticas Públicas, Economía, Administración de Instituciones Educativas, Administración de Empresas Turísticas, Negocios Internacionales y áreas afines. ",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1iemzpeGBJ6WcMyBTfFhMclNHU0xiyX03",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1iemzpeGBJ6WcMyBTfFhMclNHU0xiyX03"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "Al egresar de la Maestría en Planeación Fiscal Corporativa, tendrán las competencias profesionales y disciplinares de la técnica contable que les permita implementar registros y procesos administrativos, jurídicos y de costos, facilitándoles el análisis y la solución de problemas financieros, capaces de diseñar e implementar estrategias y planeaciones fiscales corporativas para la toma de decisiones eficientes en las distintas organizaciones públicas y privadas nacionales y extranjeras.",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1iUw_Me9RaeUp-onOlNWF_uDwKPc683Ma",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1iUw_Me9RaeUp-onOlNWF_uDwKPc683Ma"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "Contable, legal, financiero y fiscal corporativo, con ventajas competitivas en el diseño e implementación de estrategias, planeaciones y toma de decisiones en ámbitos contables, legales, financieros y fiscales.",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1EqRAwPumEIMpZ6c_NNacezmBbTo87STw",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1EqRAwPumEIMpZ6c_NNacezmBbTo87STw"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "a) Acta de nacimiento original y 2 copias (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de licenciatura en buen estado original y tres copias. (Maestrías SICYT).\n\n c) 3 copias del Título o acta de titulación no mayor a 1 año. (Maestrías SICYT).\n\n d) Copia de certificado total de licenciatura, o copia de Título o copia de acta de titulación no mayor a 1 año. (Maestrías SEP).\n\n e) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas\n\n f) 2 copia de la CURP.\n\n g) 2 copia Credencial Oficial IFE o INE, o pasaporte\n\n h) Copia del Comprobante aspirante seleccionado Maestría (F-DA-82).",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          }
+        ],
+        "size": "medium"
+      }
+    },
+    "descarga": {
+      "id": "program_maestria",
+      "type": "primary",
+      "title": "Descarga el plan de estudios",
+      "size": "small",
+      "icon": "download",
+      "lyIcon": false,
+      "disabled": false,
+      "isExpand": false,
+      "tagOnClick": "testClick",
+      "test": ""
+    }
+  },
+  "form": {
+    "config": {
+      "level": { "hidden": true, "value": "maestria" },
+      "program": { "hidden": false, "value": "Administración" },
+      "modality": { "hidden": false },
+      "campus": { "hidden": false }
+    },
+    "copies": {
+      "stepone": {
+        "title": "Obtén informes sobre tu programa",
+        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+      }
+    }
+  }
+}

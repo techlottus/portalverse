@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "title": "Maestría en Alta Dirección",
+    "description": "",
+    "keywords": ""
+  },
+  "config": {
+    "title": "Maestría en Alta Dirección",
+    "config": {
+      "nombre": "Maestría en Alta Dirección",
+      "modalidad": ["Presencial"],
+      "areaConocimiento": [""],
+      "campus": [],
+      "nivel": ["Posgrado"],
+      "image": {
+        "src": "https://drive.google.com/uc?export=view&id=19TpLa_KCv3PpDW0skJBM_O2tVMIwp9Kq",
+        "alt": "maestria"
+      },
+      "curriculum": {
+        "Presencial": {
+            "Américas": "1rK-XyHa4ZaONg-c2pVZvZL1QROGw5w-Y"
+        }
+      }
+    }
+  },
+  "sections": {
+    "head": {
+      "title": "Maestría en Alta Dirección",
+      "description": "Desarrollarás conocimientos, habilidades y actitudes para la toma de decisiones de alto nivel dentro de una organización diseñando, aplicando y generando estrategias de venta y comercialización para el manejo eficaz del presupuesto, así como la actitud de responsabilidad en el manejo de ejercer un liderazgo procurando el desarrollo humano.",
+      "image": {
+        "src": "https://drive.google.com/uc?export=view&id=19TpLa_KCv3PpDW0skJBM_O2tVMIwp9Kq",
+        "alt": "maestria"
+      }
+    },
+    "modalities": {
+      "title": "Modalidades disponibles en esta maestría:",
+      "tabs": {
+        "items": [
+          {
+            "label": "Modalidad Presencial",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1evRDmArAV5DLLoIN0YQay-rc_YghOakJ",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1evRDmArAV5DLLoIN0YQay-rc_YghOakJ"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "Dirigido a Licenciados /as en Administración, Administración de Instituciones Educativas, Administración de empresas Turísticas, Mercadotecnia, Finanzas, Informática Administrativa, Contaduría, Psicología.",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1iemzpeGBJ6WcMyBTfFhMclNHU0xiyX03",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1iemzpeGBJ6WcMyBTfFhMclNHU0xiyX03"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "El egresado /a de la Maestría en Alta Dirección deberá poseer los conocimientos, habilidades y actitudes de la política y organización empresarial, técnicas y ventajas del trabajo colaborativo, así como el manejo de los modelos y enfoques financieros corporativos para su aplicación en la toma de decisiones en la alta dirección de empresas, diseñar, aplicar y generar estrategias de venta y comercialización para el manejo eficaz del presupuesto, así como la actitud de responsabilidad en el manejo de ejercer un liderazgo procurando el desarrollo humano.",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1iUw_Me9RaeUp-onOlNWF_uDwKPc683Ma",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1iUw_Me9RaeUp-onOlNWF_uDwKPc683Ma"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "Al egreso de la Maestría en Alta Dirección podrás desempeñarte en empresas públicas y privadas aplicando el emprendedurismo y la innovación de la nueva administración con un sentido generador y aplicación de diversos programas; proyectos para la toma de decisiones y la resolución de problemas con una actitud de responsabilidad social basado en el ejercicio del liderazgo y el desarrollo potencial del recurso humano. ",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1EqRAwPumEIMpZ6c_NNacezmBbTo87STw",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1EqRAwPumEIMpZ6c_NNacezmBbTo87STw"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "a) Acta de nacimiento original y 2 copias (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de licenciatura en buen estado original y tres copias. (Maestrías SICYT).\n\n c) 3 copias del Título o acta de titulación no mayor a 1 año. (Maestrías SICYT).\n\n d) Copia de certificado total de licenciatura, o copia de Título o copia de acta de titulación no mayor a 1 año. (Maestrías SEP).\n\n e) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas\n\n f) 2 copia de la CURP.\n\n g) 2 copia Credencial Oficial IFE o INE, o pasaporte\n\n h) Copia del Comprobante aspirante seleccionado Maestría (F-DA-82).",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          }
+        ],
+        "size": "medium"
+      }
+    },
+    "descarga": {
+      "id": "program_maestria",
+      "type": "primary",
+      "title": "Descarga el plan de estudios",
+      "size": "small",
+      "icon": "download",
+      "lyIcon": false,
+      "disabled": false,
+      "isExpand": false,
+      "tagOnClick": "testClick",
+      "test": ""
+    }
+  },
+  "form": {
+    "config": {
+      "level": { "hidden": true, "value": "maestria" },
+      "program": { "hidden": false, "value": "Administración" },
+      "modality": { "hidden": false },
+      "campus": { "hidden": false }
+    },
+    "copies": {
+      "stepone": {
+        "title": "Obtén informes sobre tu programa",
+        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+      }
+    }
+  }
+}

@@ -63,18 +63,18 @@ export const action = [
     perform: () => (window.location.pathname = "nosotros/campus")
   },
   {
-    id: "conexion-educativa",
-    name: "Conexión Educativa",
-    shortcut: ["c", "con", "Con", "Co", "C"],
+    id: "vinculacion-empresarial",
+    name: "Vinculación empresarial",
+    shortcut: ["v", "vin", "Vin", "Vi", "V"],
     keywords: "conexión",
-    perform: () => (window.location.pathname = "nosotros/conexión-educativa")
+    perform: () => (window.location.pathname = "nosotros/vinculacion-empresarial")
   },
   {
     id: "empleabilidad",
     name: "Empleabilidad",
     shortcut: ["e", "em", "bol", "emple", "Em"],
     keywords: "empleabilidad",
-    perform: () => (window.location.pathname = "nosotros/empleabilidad")
+    perform: () => (window.location.pathname = "nosotros/bolsa-de-talento")
   },
   {
     id: "internacionalizacion",
@@ -91,11 +91,11 @@ export const action = [
     perform: () => (window.location.pathname = "nosotros/modelo-educativo")
   },
   {
-    id: "somos-uane",
-    name: "Somos UANE",
-    shortcut: ["s", "S", "so", "So", "U", "u", "UA", "ua"],
+    id: "somos-uteg",
+    name: "Somos UTEG",
+    shortcut: ["s", "S", "so", "So", "U", "u", "UT", "ut"],
     keywords: "somos",
-    perform: () => (window.location.pathname = "nosotros/somos-uane")
+    perform: () => (window.location.pathname = "nosotros/somos-uteg")
   },
   {
     id: "oferta-educativa",
