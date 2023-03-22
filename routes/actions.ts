@@ -56,11 +56,11 @@ export const action = [
     perform: () => (window.location.pathname = "extension-universitaria")
   },  
   {
-    id: "campus",
-    name: "Campus",
-    shortcut: ["c", "cam", "C", "Cam"],
-    keywords: "campus",
-    perform: () => (window.location.pathname = "nosotros/campus")
+    id: "planteles",
+    name: "Planteles",
+    shortcut: ["p", "pla", "P", "Pla"],
+    keywords: "planteles",
+    perform: () => (window.location.pathname = "nosotros/planteles")
   },
   {
     id: "vinculacion-empresarial",

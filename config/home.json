@@ -514,7 +514,7 @@
       "button": {
         "id": "",
         "type": "",
-        "title": "Campus",
+        "title": "Planteles",
         "size": "small",
         "icon": "",
         "lyIcon": false,
@@ -522,7 +522,7 @@
         "isExpand": false,
         "tagOnClick": "",
         "test": "",
-        "redirect": "/nosotros/campus"
+        "redirect": "/nosotros/planteles"
       }
     }
   }
