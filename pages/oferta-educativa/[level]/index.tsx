@@ -38,7 +38,7 @@ const Level: NextPageWithLayout<any> = ({ meta, filtro, programs, sections, leve
 
     const allFilter = {
       modalidad: { options: [ ...modalidades ], config: { label: "Modalidades", icon: "edit_note" } },
-      campus: { options: [ ...campus ], config: { label: "Campus", icon: "apartment" } },
+      campus: { options: [ ...campus ], config: { label: "Planteles", icon: "apartment" } },
       areaConocimiento: { options: [ ...conocimiento ], config: { label: "Áreas de Conocimiento", icon: "school" } }
     };
     setFilterConfig({ ...allFilter });
