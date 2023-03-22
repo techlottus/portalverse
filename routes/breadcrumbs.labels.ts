@@ -17,7 +17,7 @@ const BreadcrumbsLabels: any = {
   "blog": "Blog",
   "nosotros": "Nosotros",
   "internacionalizacion": "Internacionalización",
-  "somos-UANE": "Somos UANE",
+  "somos-UTEG": "Somos UTEG",
   "planteles": "Planteles",
   "modelo-educativo": "Modelo Educativa",
   "bolsa-de-talento": "Bolsa de Talento",
