@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "title": "Planteles",
+    "description": "",
+    "keywords": ""
+  },
+  "sections": {
+    "campus": [
+      {
+        "images": [
+          {
+            "src": "https://drive.google.com/uc?export=view&id=1_gqM74MVuxMHY2vYqlGXoATnaXBiYljJ",
+            "alt": "image-1"
+          }
+        ],
+        "coords": ["20.653994872558478", "-103.3461740725978"],
+        "description": {
+          "state": "Guadalajara",
+          "name": "Campus UTEG",
+          "address": "Héroes Ferrocarrileros No. 1325, entre Washington y Dr. R. Michel, Col. La Aurora, Guadalajara, Jalisco.",
+          "phone": "33 1078-8000",
+          "email": ""
+        }
+      },
+      {
+        "images": [
+          {
+            "src": "https://drive.google.com/uc?export=view&id=1hS1T-7w6JeeOXxA1pJ3w0GU1uw2rgry_",
+            "alt": "image-1"
+          }
+        ],
+        "coords": ["20.684970581789067", "-103.3741790732096"],
+        "description": {
+          "state": "Guadalajara",
+          "name": "Américas",
+          "address": "Av. Américas No. 425, esq. Manuel Acuña, Col. Ladrón de Guevara, Guadalajara, Jalisco.",
+          "phone": "33 3898-8600",
+          "email": ""
+        }
+      },
+      {
+        "images": [
+          {
+            "src": "https://drive.google.com/uc?export=view&id=1D_KyNiRA72hFQuQqtdpz8jzNqMuIYrCQ",
+            "alt": "image-1"
+          }
+        ],
+        "coords": ["20.65261255552915", "-103.32606147270435"],
+        "description": {
+          "state": "Guadalajara",
+          "name": "Olímpica",
+          "address": "Blvd. Gral. Marcelino García Barragán No. 1610, esq. Olímpica y Río Pánuco, Col. Atlas, Guadalajara, Jalisco.",
+          "phone": "33 3658-2808; 33 1598-8400; 33 1200-3065",
+          "email": ""
+        }
+      },
+      {
+        "images": [
+          {
+            "src": "https://drive.google.com/uc?export=view&id=1M1OXAcCuNUCNnDr6DBea2EJatMRKhWGX",
+            "alt": "image-1"
+          }
+        ],
+        "coords": ["20.67541955448428", "-103.35973125898032"],
+        "description": {
+          "state": "Guadalajara",
+          "name": "Pedro Moreno",
+          "address": "Av. Enrique Díaz de León No. 80, esq. Pedro Moreno, Col. Americana, Guadalajara, Jalisco.",
+          "phone": "33 3070-2279",
+          "email": ""
+        }
+      },
+      {
+        "images": [
+          {
+            "src": "https://drive.google.com/uc?export=view&id=1UP4lnNEj_IyBHYf3vJrAEcEDwl3P2Y3o",
+            "alt": "image-1"
+          }
+        ],
+        "coords": ["20.65637964710611", "-103.37914132307792"],
+        "description": {
+          "state": "Guadalajara",
+          "name": "Lázaro Cárdenas",
+          "address": "Av. Lázaro Cárdenas No. 2351, Col. Abastos, Guadalajara, Jalisco.",
+          "phone": "33 1454-9350",
+          "email": ""
+        }
+      },
+      {
+        "images": [
+          {
+            "src": "https://drive.google.com/uc?export=view&id=1Oo0Ro9Ctqi5Ud2Q_17eSTfr9aapfYa0H",
+            "alt": "image-1"
+          }
+        ],
+        "coords": ["20.63364151623912", "-103.27231117142478"],
+        "description": {
+          "state": "Tonalá",
+          "name": "Río Nilo",
+          "address": "Av. Río Nilo No. 7546, Col. Flores Magón, Tonalá, Jalisco.",
+          "phone": "33 1454-9300",
+          "email": ""
+        }
+      },
+      {
+        "images": [
+          {
+            "src": "https://drive.google.com/uc?export=view&id=1qwMbQFW-9UNz2G7284O1cp7ntW5xG0pl",
+            "alt": "image-1"
+          }
+        ],
+        "coords": ["20.547807250498135", "-103.35683078855385"],
+        "description": {
+          "state": "Tlajomulco",
+          "name": "Tlajomulco",
+          "address": "Prol. 1º de Mayo No. 1355, esq. Av. Concepción, Tlajomulco de Zúñiga, Jalisco.",
+          "phone": "33 1454-9380",
+          "email": ""
+        }
+      },
+      {
+        "images": [
+          {
+            "src": "https://drive.google.com/uc?export=view&id=1siVJURjybsRyFsS00Jf1ePweurehoeIX",
+            "alt": "image-1"
+          }
+        ],
+        "coords": ["20.729924486037913", "-103.38849174626505"],
+        "description": {
+          "state": "Zapopan",
+          "name": "Zapopan",
+          "address": "Av. Parres Arias No. 145, entre Av. Laureles y Prolongación López Cotilla, Col. Centro, Zapopan, Jalisco.",
+          "phone": "33 3898-8700",
+          "email": ""
+        }
+      }
+    ],
+    "head": {
+      "banner": {
+        "image": {
+          "desktop": "https://drive.google.com/uc?export=view&id=1ci78QhldvqocaIf4RJBJe5lHOBZo1cC9",
+          "tablet": "https://drive.google.com/uc?export=view&id=1YnIE2Z9kKffx97jpxoxeJhDAGWh-V5JA",
+          "mobile": "https://drive.google.com/uc?export=view&id=1fN7r0zEFigErLQpgZBwGn0GYn4l-luJq"
+        },
+        "title": "Conoce nuestros planteles",
+        "subtitle": "¿Dónde están y cómo se ven tus espacios físicos de aprendizaje?",
+        "position": "middle-center",
+        "height": "350px",
+        "overlayWhite":false,
+        "overlayDak": false,
+        "font": "light",
+        "button":{
+          "id": "",
+          "type": "outlined",
+          "title": "Conocer más",
+          "size": "small",
+          "icon": "",
+          "lyIcon": false,
+          "disabled": false,
+          "isExpand": false,
+          "tagOnClick": "",
+          "test": ""
+        },
+        "noAction": true,
+        "redirect": "/internacionalizacion"
+      }
+    },
+    "banner": {
+      "title": "Organiza una visita",
+      "subtitle": "internacionalízate agrega experiencias internacionales a tu educación",
+      "contentVariant": "light",
+      "image": {
+        "desktop":  "https://drive.google.com/uc?export=view&id=1Vi7FMdSqWk_EHFvWZiRF8dG67U-CDPNO",
+        "tablet":  "https://drive.google.com/uc?export=view&id=1HyN3W_v2c-K0dqn7b_INsudUkuv-5zhz",
+        "mobile":  "https://drive.google.com/uc?export=view&id=1RnS27zhUCNTWYpZfYrmYVGtvpfzWRdP6"
+      },
+      "email": "egresados@uteg.edu.mx",
+      "phone": "5555012672"
+    }
+  }
+}
