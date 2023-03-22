@@ -1,4 +1,5 @@
 import Head from "next/head"
+import { useRouter } from "next/router"
 import HeaderFooterLayout from "@/layouts/HeaderFooter.layout"
 import NextPageWithLayout from "@/types/Layout.types"
 import ContentLayout from "@/layouts/Content.layout"
@@ -7,6 +8,8 @@ import RichtText from "@/old-components/Richtext/Richtext"
 import CardWebsitePortalverse from "@/old-components/CardWebsitePortalverse"
 
 const AccesosColaboradores: NextPageWithLayout = ({ sections, meta }: any) => {
+
+  const router = useRouter();
 
   return <>
     <Head>
@@ -23,7 +26,7 @@ const AccesosColaboradores: NextPageWithLayout = ({ sections, meta }: any) => {
         <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
           {
            sections.experiencias.cards.map((item:any, i:number) => <section key={`section-blog-${i}`}>
-              <CardWebsitePortalverse classNames="h-[230px]" data={item} onClick={() => console.log("hola")} />
+              <CardWebsitePortalverse classNames="h-[230px]" data={item} onClick={() => router.push(item?.redirect)} />
             </section>)
           }
         </section>
