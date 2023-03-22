@@ -12,26 +12,6 @@
       "experiencias": {
         "cards": [
           { 
-            "image": "https://drive.google.com/uc?export=view&id=1Umw8Hgin_WiChP4UrjDkoE9aAe_o5NTp",
-            "subtitle": "",
-            "title": "Quejas y Sugerencias",
-            "text": "Haznos saber tus demandas o cualquier descontento para darle pronta solución. Comunícanos cualquier recomendación para mejorar el funcionamiento de nuestra universidad. ",
-            "border": true,
-            "type": "vertical",
-            "background": false,
-            "isLink": true,
-            "link": {
-              "text": "Ver más",
-              "size": "large",
-              "disabled": false,
-              "isUnderline": false,
-              "isBold": false,
-              "iconFirst": "",
-              "iconSecond": "chevron_right"
-            },
-            "redirect": "http://infsiaaf.uteg.edu.mx/"
-          },
-          { 
             "image": "https://drive.google.com/uc?export=view&id=1rnN3RNkhohuMItB5N8yV9grlgQkLIFNK",
             "subtitle": "",
             "title": "Sistema de Gestión",
@@ -74,7 +54,7 @@
           { 
             "image": "https://drive.google.com/uc?export=view&id=1bnRp2pIn5Bt7NreF9rt8ztw_jDOYG5Ua",
             "subtitle": "",
-            "title": "correo UTEG",
+            "title": "Correo UTEG",
             "text": "Accede a tu correo electrónico, manténte en contacto. ",
             "border": true,
             "type": "vertical",
@@ -109,27 +89,7 @@
               "iconFirst": "",
               "iconSecond": "chevron_right"
             },
-            "redirect": "https://www.uteg.edu.mx/biblioteca-menu"
-          },
-          { 
-            "image": "https://drive.google.com/uc?export=view&id=1K7Ciuh6MGirh6tbbXqn0o4qw7Jk0Iia6",
-            "subtitle": "",
-            "title": "Proulex-UTEG",
-            "text": "Programa Institucional de Idiomas, incluye entre sus beneficios la capacitación extensiva en tecnologías de la información.",
-            "border": true,
-            "type": "vertical",
-            "background": false,
-            "isLink": true,
-            "link": {
-              "text": "Ver más",
-              "size": "large",
-              "disabled": false,
-              "isUnderline": false,
-              "isBold": false,
-              "iconFirst": "",
-              "iconSecond": "chevron_right"
-            },
-            "redirect": "https://www.uteg.edu.mx/programa-institucional-de-idiomas/"
+            "redirect": "https://biblioteca.uteg.edu.mx/"
           },
           { 
             "image": "https://drive.google.com/uc?export=view&id=1XdIp_XSxXBbFmVJMaJm1T2ukKdxmgHq4",
@@ -191,26 +151,6 @@
             },
             "redirect": "http://zona.uteg.edu.mx:8080/eDenuncias/login.xhtml"
           },
-          {
-            "image": "https://drive.google.com/uc?export=view&id=1GDG0WLmAcW8Z4Vshez0tDFRprQvVRU9x",
-            "subtitle": "",
-            "title": "Servicios Escolares",
-            "text": "Consulta y accedetrámites, certificados, emisión de constancias y otros servicios. ",
-            "border": true,
-            "type": "vertical",
-            "background": false,
-            "isLink": true,
-            "link": {
-              "text": "Ver más",
-              "size": "large",
-              "disabled": false,
-              "isUnderline": false,
-              "isBold": false,
-              "iconFirst": "",
-              "iconSecond": "chevron_right"
-            },
-            "redirect": "https://www.uteg.edu.mx/colaboradores-uteg/servicios-escolares/"
-          },
           { 
             "image": "https://drive.google.com/uc?export=view&id=1XT1M9ItLkbWYqYo8W13veUBeGAX4uopA",
             "subtitle": "",
@@ -249,67 +189,7 @@
               "iconFirst": "",
               "iconSecond": "chevron_right"
             },
-            "redirect": "https://www.uteg.edu.mx/wp-content/uploads/2021/05/Beneficios-DRH21.pdf"
-          },
-          { 
-            "image": "https://drive.google.com/uc?export=view&id=1y7B6aQ-8XTzrGY45pxnl-uKEMM9aADXM",
-            "subtitle": "",
-            "title": "Vacantes UTEG",
-            "text": "Conoce los puestos de trabajo disponibles en nuestros distintos planteles. ",
-            "border": true,
-            "type": "vertical",
-            "background": false,
-            "isLink": true,
-            "link": {
-              "text": "Ver más",
-              "size": "large",
-              "disabled": false,
-              "isUnderline": false,
-              "isBold": false,
-              "iconFirst": "",
-              "iconSecond": "chevron_right"
-            },
-            "redirect": "_-j9GOu_C-M"
-          },
-          { 
-            "image": "https://drive.google.com/uc?export=view&id=1RFAndEgOE-GuAUTxnusq6oO3xB5NGIRh",
-            "subtitle": "",
-            "title": "Vitrina Virtual",
-            "text": "Actividades, eventos de interés e información de corte institucional, comercial , cultural, académico y recreativo al alcance de tus dispositivos.",
-            "border": true,
-            "type": "vertical",
-            "background": false,
-            "isLink": true,
-            "link": {
-              "text": "Ver más",
-              "size": "large",
-              "disabled": false,
-              "isUnderline": false,
-              "isBold": false,
-              "iconFirst": "",
-              "iconSecond": "chevron_right"
-            },
-            "redirect": "_-j9GOu_C-M"
-          },
-          { 
-            "image": "https://drive.google.com/uc?export=view&id=1VICjLNcXE8qQhlCc2Nn5S9HxdM_Gm0qq",
-            "subtitle": "",
-            "title": "Administración Alumnos Talento",
-            "text": "Conviértete en un profesional bilingüe gracias al Programa Institucional de Idiomas. Beneficio que incluye la capacitación extensiva en tecnologías de la información.  ",
-            "border": true,
-            "type": "vertical",
-            "background": false,
-            "isLink": true,
-            "link": {
-              "text": "Ver más",
-              "size": "large",
-              "disabled": false,
-              "isUnderline": false,
-              "isBold": false,
-              "iconFirst": "",
-              "iconSecond": "chevron_right"
-            },
-            "redirect": "_-j9GOu_C-M"
+            "redirect": "https://drive.google.com/file/d/1eTiUJmpuCQY1h_2eeyneyHNwHqlaAWgz/view?usp=sharing"
           }
         ]
       }
