@@ -7,32 +7,27 @@
   "config": {
     "title": "Licenciatura en Diseño Gráfico",
     "config": {
-      "nombre": "Diseño Gráfico",
-      "modalidad": ["Presencial", "Flex"],
-      "areaConocimiento": ["Ciencias Sociales", "Humanidades"],
-      "campus": ["Saltillo", "Matamoros", "Torreón", "Monclova", "Monterrey", "Piedras Negras"],
+      "nombre": "Licenciatura en Diseño Gráfico",
+      "modalidad": ["Online", "Flex"],
+      "areaConocimiento": ["Arquitectura y Diseño"],
+      "campus": [],
       "nivel": ["Licenciatura"],
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1FZpT3gqKOkWmxbzIPp-e8n_1jxfP-ugm",
+        "src": "https://drive.google.com/uc?export=view&id=1nSgmPbU0Y0FIkL3bmEfaxrMnaYyOby3g",
         "alt": "licenciatura"
       },
       "curriculum": {
-        "Presencial": {
-          "Saltillo": "1UXcJqdtiQ6wj2oNL6tO2HY8zBgGYeBIZ",
-          "Matamoros": "1rcl0LY1VYPnswP71u0MK3UezWbF9MlAm",
-          "Torreón": "1S3HeFlly9snhSc2XkxWA98vYgo6R3r7D",
-          "Monclova": "1GXTfFtc9SWu3buUHyO8OwWDPS6qxP_wi"
-        },
-        "Flex": "1LAJderNYz2mPNrQhh4AHCnFfm4o8zPtw"
+        "Online": "14iBVBdnK-Hcy1ZtKvAberxUnNnbfcavy",
+        "Flex": ""
       }
     }
   },
   "sections": {
     "head": {
       "title": "Licenciatura en Diseño Gráfico",
-      "description": "Obtén el conocimiento, las aptitudes y habilidades necesarias para crear soluciones empresariales gráficas que sí promuevan el progreso a través de la comunicación y el arte.",
+      "description": "Obtén el conocimiento, las aptitudes y habilidades necesarias para crear soluciones empresariales gráficas que promuevan el progreso a través de la comunicación y el arte.  Plantea contenidos visuales para un contexto organizacional y que den una representación y posición a nivel nacional e internacional utilizando herramientas tecnológicas.",
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1FZpT3gqKOkWmxbzIPp-e8n_1jxfP-ugm",
+        "src": "https://drive.google.com/uc?export=view&id=1nSgmPbU0Y0FIkL3bmEfaxrMnaYyOby3g",
         "alt": "licenciatura"
       }
     },
@@ -41,88 +36,92 @@
       "tabs": {
         "items": [
           {
-            "label": "Modalidad Presencial", "icons": { "primary": "", "duplicate": false}, "disabled": false,
+            "label": "Modalidad Online",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
             "content": {
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
-                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
+                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "El aspirante a la Licenciatura en Diseño Gráfico debe contar con pensamiento creativo y estratégico. Habilidades de expresión oral y escrita. Interés por el dibujo, colores y las expresiones artísticas. Gusto por el trabajo en equipo e ideas innovadoras y visuales.",
-                  "backgroundColor": "#8B9BA3"
+                  "text": "El aspirante a ingresar a la Licenciatura en Diseño Gráfico deberá contar con los siguientes conocimientos:\n\n• Creatividad, proactividad, expresión oral / escrita e investigación.\n\n• Uso de tecnologías de la información y la comunicación, así como manejo de equipos de cómputo y software.\n\n• Razonamiento lógico, solución de problemas con base en principios, leyes y conceptos.\n\n• Vocación de servicio ante el cambio y la transformación.\n\n• Trabajo en equipo multidisciplinario.",
+                  "backgroundColor": "#1B2D68"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
+                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
                   },
                   "title": "Perfil de egreso",
-                  "text": "Con la Licenciatura en Diseño Gráfico podrás generar propuestas gráficas innovadoras de diseño gráfico y comunicación visual. Lograrás desarrollar proyectos editoriales, publicitarios, de ilustración y gráficos en plataformas multimedia, páginas web y redes sociales como medio de enlace entre la empresa y el cliente.",
-                  "backgroundColor": "#B0003C"
+                  "text": "Conocerá los principios para el análisis y la composición de la comunicación visual, en conjunto con los fundamentos del diseño gráfico, geometría y color.\n\n Integrará la metodología del proceso general del diseño y para la investigación.\n\n Utilizará recursos digitales aplicados a la ilustración, la infografía, la preprensa y a las plataformas e interfaz web.\n\n Aplicará técnicas para el diseño editorial analógico y digital, así como para la animación bidimensional y tridimensional.\n\n Ejecutará conceptos para la gestión y promoción profesional del diseño.",
+                  "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
+                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
                   },
                   "title": "Campo Laboral",
                   "text": "Como egresado de la Licenciatura en Diseño Gráfico podrás desempeñarte como diseñador gráfico en agencias creativas, televisoras, agencias de publicidad, medios de comunicación, consultorías, en departamentos de marketing del sector público y privado y como desarrollador independiente, consultor o freelance.",
-                  "backgroundColor": "#E84537"
+                  "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
+                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento reciente, original del cajero y 2 copias.\n\n• Certificado de secundaria legalizado original y dos copias.\n\n• Certificado de preparatoria legalizado original y 2 copias con su carta de autenticidad. (En caso de no contar con original, presentar constancia de que está en trámite).\n\n• CURP copia.\n\nEn caso de equivalencia\n\n• Certificado parcial de estudios legalizado original con 2 copias y carta de autenticidad.\n\n• 4 fotografías tamaño infantil y 4 tamaño credencial, ambas blanco y negro, papel mate no instantáneas.\n\n• Carta de buena salud expedida por institución pública o privada.",
-                  "backgroundColor": "#00BEB4"
+                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                  "backgroundColor": "#EEAA01"
                 }
               ],
               "wrapper": false
             }
           },
           {
-            "label": "Modalidad Flex", "icons": { "primary": "", "duplicate": false}, "disabled": false,
+            "label": "Modalidad Flex",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
             "content": {
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
-                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
+                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
                   },
                   "title": "Perfil de ingreso",
                   "text": "El aspirante a ingresar a la Licenciatura en Diseño Gráfico deberá contar con los siguientes conocimientos:\n\n• Creatividad, proactividad, expresión oral / escrita e investigación.\n\n• Uso de tecnologías de la información y la comunicación, así como manejo de equipos de cómputo y software.\n\n• Razonamiento lógico, solución de problemas con base en principios, leyes y conceptos.\n\n• Vocación de servicio ante el cambio y la transformación.\n\n• Trabajo en equipo multidisciplinario.",
-                  "backgroundColor": "#8B9BA3"
+                  "backgroundColor": "#1B2D68"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
+                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
                   },
                   "title": "Perfil de egreso",
-                  "text": "\n\n• Conocerá los principios para el análisis y la composición de la comunicación visual, en conjunto con los fundamentos del diseño gráfico, geometría y color.\n\n• Integrará la metodología del proceso general del diseño y para la investigación.\n\n• Utilizará recursos digitales aplicados a la ilustración, la infografía, la preprensa y a las plataformas e interfaz web.\n\n• Aplicará técnicas para el diseño editorial analógico y digital, así como para la animación bidimensional y tridimensional.\n\n• Ejecutará conceptos para la gestión y promoción profesional del diseño.",
-                  "backgroundColor": "#B0003C"
+                  "text": "Conocerá los principios para el análisis y la composición de la comunicación visual, en conjunto con los fundamentos del diseño gráfico, geometría y color.\n\n Integrará la metodología del proceso general del diseño y para la investigación.\n\n Utilizará recursos digitales aplicados a la ilustración, la infografía, la preprensa y a las plataformas e interfaz web.\n\n Aplicará técnicas para el diseño editorial analógico y digital, así como para la animación bidimensional y tridimensional.\n\n Ejecutará conceptos para la gestión y promoción profesional del diseño.",
+                  "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
+                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
                   },
                   "title": "Campo Laboral",
                   "text": "Como egresado de la Licenciatura en Diseño Gráfico podrás desempeñarte como diseñador gráfico en agencias creativas, televisoras, agencias de publicidad, medios de comunicación, consultorías, en departamentos de marketing del sector público y privado y como desarrollador independiente, consultor o freelance.",
-                  "backgroundColor": "#E84537"
+                  "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
+                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento reciente, original del cajero y 2 copias.\n\n• Certificado de secundaria legalizado original y dos copias.\n\n• Certificado de preparatoria legalizado original y 2 copias con su carta de autenticidad. (En caso de no contar con original, presentar constancia de que está en trámite).\n\n• CURP copia.\n\nEn caso de equivalencia\n\n• Certificado parcial de estudios legalizado original con 2 copias y carta de autenticidad.\n\n• 4 fotografías tamaño infantil y 4 tamaño credencial, ambas blanco y negro, papel mate no instantáneas.\n\n• Carta de buena salud expedida por institución pública o privada.",
-                  "backgroundColor": "#00BEB4"
+                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                  "backgroundColor": "#EEAA01"
                 }
               ],
               "wrapper": false
@@ -148,7 +147,7 @@
   "form": {
     "config": {
       "level": { "hidden": true, "value": "licenciatura" },
-      "program": { "hidden": false, "value": "Diseño Gráfico" },
+      "program": { "hidden": false, "value": "Licenciatura en Diseño Gráfico" },
       "modality": { "hidden": false },
       "campus": { "hidden": false }
     },

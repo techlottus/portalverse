@@ -1,33 +1,33 @@
 {
   "meta": {
-    "title": "Ingeniería en Sistemas",
+    "title": "Ingeniería en Desarrollo de Software",
     "description": "",
     "keywords": ""
   },
   "config": {
-    "title": "Ingeniería en Sistemas",
+    "title": "Ingeniería en Desarrollo de Software",
     "config": {
-      "nombre": "Ingeniería en Sistemas",
+      "nombre": "Ingeniería en Desarrollo de Software",
       "modalidad": ["Online", "Flex"],
       "areaConocimiento": ["Ciencias Exactas"],
       "campus": [],
       "nivel": ["Licenciatura"],
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1AQbqbEHbKSyYoyaKBdxmLi2JQ0GkgtlT",
+        "src": "https://drive.google.com/uc?export=view&id=1HgjuqC-nk68KXTX01q0WcMw_UyLQYkTr",
         "alt": "licenciatura"
       },
       "curriculum": {
-        "Online": "1Ct4CG_yd_kLAUZkeUHQFdpvDfggoDQT", 
-        "Flex": "1ELHAYiBCP6_DaxMVNhp3EXvIdMSCia5kg"
+        "Online": "1otHRc17skc6sIVXKXvN6sSZ0zynZj1xn",
+        "Flex": ""
       }
     }
   },
   "sections": {
     "head": {
-      "title": "Ingeniería en Sistemas",
-      "description": "La Licenciatura en Ingeniería en Sistemas brinda las habilidades para gestionar recursos computacionales tales como lenguajes de programación, redes de cómputo, sistemas de bases de datos y administración de proyectos para el desarrollo de las empresas, a través de un manejo eficiente de las redes de cómputo y telecomunicaciones.",
+      "title": "Ingeniería en Desarrollo de Software",
+      "description": "Crea y revoluciona sistemas de intercomunicación en dispositivos y sistemas electrónicos. Contribuye directamente en la mejora continua de las organizaciones que te contraten. Aplica tus conocimientos científicos para el diseño y construcción de programas de computadora y a la documentación asociada para desarrollarlos, operarlos y mantenerlos.",
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1AQbqbEHbKSyYoyaKBdxmLi2JQ0GkgtlT",
+        "src": "https://drive.google.com/uc?export=view&id=1HgjuqC-nk68KXTX01q0WcMw_UyLQYkTr",
         "alt": "licenciatura"
       }
     },
@@ -47,7 +47,7 @@
                     "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "El aspirante a ingresar a la Licenciatura en Ingeniería en Sistemas deberá contar con los siguientes conocimientos:\n\n• Desarrollar procesos lógicos.\n\n• Resolver problemas con base en principios, leyes y conceptos.\n\n• Emplear las nuevas tecnologías de la información y la comunicación.\n\n• Ser capaz para evaluar fortalezas y debilidades de los equipos de trabajo.\n\n• Desarrollar un pensamiento crítico y constructivo.\n\n• Aplicar el razonamiento lógico.\n\n• Manejar equipos de cómputo y electrónicos.\n\n• Tener la capacidad para liderar grupos de trabajo.",
+                  "text": "El aspirante a Ingeniería en Desarrollo de Software debe poseer conocimientos sobre conceptos básicos de geometría y trigonometría; conceptos básicos de operaciones algebraicas y ecuaciones; conceptos básicos de pre cálculo; habilidad y gusto por el manejo de los equipos de cómputo, creatividad para diseñar y gestionar soluciones a través de programas y métodos computacionales. \n\n Capacidad de planear, diseñar, evaluar y construir sistemas que contemplen los sistemas de software y todo lo relacionado con el ambiente computacional.",
                   "backgroundColor": "#1B2D68"
                 },
                 {
@@ -56,7 +56,7 @@
                     "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
                   },
                   "title": "Perfil de egreso",
-                  "text": "Formulará propuestas innovadoras que contribuyan al incremento de la productividad y al fortalecimiento de la tecnología.\n\nFormará nuevas ideas, alianzas y socializará con otras disciplinas para la formación de emprendimiento, acorde a las necesidades actuales de las tecnologías de información.",
+                  "text": "Con la Ingeniería en Desarrollo de Software podrás diseñar y desarrollar sistemas de información en la intercomunicación de dispositivos y sistemas electrónicos, además serás capaz de seleccionar el ERP que contribuya al mejoramiento de la productividad en las organizaciones. Estarás capacitado para desarrollar soluciones a partir de la creación de nuevos sistemas.",
                   "backgroundColor": "#C31433"
                 },
                 {
@@ -65,7 +65,7 @@
                     "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
                   },
                   "title": "Campo Laboral",
-                  "text": "El egresado de la Ingeniería en Sistemas tiene una amplia gama de oportunidades laborales en el sector privado de plantas industriales nacionales y extranjeras, de manufactura y servicios, automotrices, fabricantes o cualquier organización que busque optimizar su sistema, producción y proceso",
+                  "text": "Los egresados como ingenieros en desarrollo de software, estarán un paso adelante en el mundo de la tecnología  y pueden desempeñarse con una consultoría de forma independiente o trabajar en organizaciones públicas o privadas tanto nacionales como internacionales. Pueden trabajar en empresas de desarrollo de software, administración de proyectos, fábricas de software y similares. También en el sector de emprendedurismo como prestadores de servicios a particulares para desarrollo y atención de sistemas. ",
                   "backgroundColor": "#4470B1"
                 },
                 {
@@ -93,7 +93,7 @@
                     "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "El aspirante a Ingeniería en Sistemas debe tener las siguientes habilidades desarrolladas: Habilidad numérica, capacidad creativa e innovadora, capacidad de adaptación y respuesta ágil y eficiente ante situaciones imprevistas, capacidad de análisis, de síntesis y de abstracción, facilidad para entablar relaciones interpersonales, habilidad para administrar y diseñar sistemas y habilidad para optimizar los recursos.",
+                  "text": "El aspirante a Ingeniería en Desarrollo de Software debe poseer conocimientos sobre conceptos básicos de geometría y trigonometría; conceptos básicos de operaciones algebraicas y ecuaciones; conceptos básicos de pre cálculo; habilidad y gusto por el manejo de los equipos de cómputo, creatividad para diseñar y gestionar soluciones a través de programas y métodos computacionales.\n\n Capacidad de planear, diseñar, evaluar y construir sistemas que contemplen los sistemas de software y todo lo relacionado con el ambiente computacional.",
                   "backgroundColor": "#1B2D68"
                 },
                 {
@@ -102,7 +102,7 @@
                     "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
                   },
                   "title": "Perfil de egreso",
-                  "text": "Con la carrera de Ingeniería en Sistemas, tendrás conocimientos y habilidades para desempeñarte en la administración, gestión y desarrollo estratégico de las operaciones de producción, manufactura y logística de las organizaciones. Podrás aplicar métodos de ingeniería industrial, sistemas de información y calidad para lograr mayor eficiencia y sustentabilidad.",
+                  "text": "Con la Ingeniería en Desarrollo de Software podrás diseñar y desarrollar sistemas de información en la intercomunicación de dispositivos y sistemas electrónicos, además serás capaz de seleccionar el ERP que contribuya al mejoramiento de la productividad en las organizaciones. Estarás capacitado para desarrollar soluciones a partir de la creación de nuevos sistemas.",
                   "backgroundColor": "#C31433"
                 },
                 {
@@ -111,7 +111,7 @@
                     "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
                   },
                   "title": "Campo Laboral",
-                  "text": "El egresado de la Ingeniería en Sistemas tiene una amplia gama de oportunidades laborales en el sector privado de plantas industriales nacionales y extranjeras, de manufactura y servicios, automotrices, fabricantes o cualquier organización que busque optimizar su sistema, producción y proceso.",
+                  "text": "Los egresados como ingenieros en desarrollo de software, estarán un paso adelante en el mundo de la tecnología  y pueden desempeñarse con una consultoría de forma independiente o trabajar en organizaciones públicas o privadas tanto nacionales como internacionales. Pueden trabajar en empresas de desarrollo de software, administración de proyectos, fábricas de software y similares. También en el sector de emprendedurismo como prestadores de servicios a particulares para desarrollo y atención de sistemas",
                   "backgroundColor": "#4470B1"
                 },
                 {
@@ -147,7 +147,7 @@
   "form": {
     "config": {
       "level": { "hidden": true, "value": "licenciatura" },
-      "program": { "hidden": false, "value": "Ingeniería en Sistemas" },
+      "program": { "hidden": false, "value": "Ingeniería en Desarrollo de Software" },
       "modality": { "hidden": false },
       "campus": { "hidden": false }
     },

@@ -1,0 +1,119 @@
+{
+    "meta": {
+      "title": "Carrera de Abogado",
+      "description": "",
+      "keywords": ""
+    },
+    "config": {
+      "title": "Carrera de Abogado",
+      "config": {
+        "nombre": "Carrera de Abogado",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Jurídicas y Sociales"],
+        "campus": ["Américas", "Lázaro Cárdenas", "Zapopan"],
+        "nivel": ["Licenciatura"],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1n8ecWPidyZuK14DtPGIDwuAqmRlRP0QT",
+          "alt": "licenciatura"
+        },
+        "curriculum": {
+          "Presencial": {
+            "Américas": "1fXW4xNijR-IXOjwrAIeZ5Eu4Xwdr7Css",
+            "Lázaro Cárdenas": "1fXW4xNijR-IXOjwrAIeZ5Eu4Xwdr7Css",
+            "Zapopan": "1fXW4xNijR-IXOjwrAIeZ5Eu4Xwdr7Css"
+          }
+        }
+      }
+    },
+    "sections": {
+      "head": {
+        "title": "Carrera de Abogado",
+        "description": "La carrera de abogado tiene como meta la  formación dentro de las ciencias jurídicas y sociales, para generar profesionales que sean capaces de desempeñarse en las áreas de la profesión jurídica, siendo los principales motores de la justicia y la equidad , permitiendo resolver los dilemas legales dentro de la sociedad y el país.",
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1n8ecWPidyZuK14DtPGIDwuAqmRlRP0QT",
+          "alt": "licenciatura"
+        }
+      },
+      "modalities": {
+        "title": "Modalidades disponibles en esta licenciatura:",
+        "tabs": {
+          "items": [
+            {
+              "label": "Modalidad Presencial",
+              "icons": { "primary": "", "duplicate": false },
+              "disabled": false,
+              "content": {
+                "cards": [
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    },
+                    "title": "Perfil de ingreso",
+                    "text": "El aspirante a la Carrera de Abogado deberá contar con aptitudes, destrezas y conocimientos tales como: capacidad de análisis, habilidades de redacción y argumentación, exposición de forma oral, capacidad para relacionar el pensamiento abstracto a situaciones concretas con el fin de la interpretación en la práctica jurídica.",
+                    "backgroundColor": "#1B2D68"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    },
+                    "title": "Perfil de egreso",
+                    "text": "El egresado (a) de la Carrera de Abogado contará con una formación académica integral sólida que le permita desarrollarse ética y profesionalmente en el campo jurídico. El egresado (a) será capaz de investigar, certificar, legislar, litigar, asesorar, procurar justicia, administrar justicia y promover aprendizajes jurídicos. Proveer soluciones sociales y culturales eficaces en su entorno profesional.",
+                    "backgroundColor": "#C31433"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    },
+                    "title": "Campo Laboral",
+                    "text": "Dentro del campo privado como abogado litigante, asesor jurídico, abogado corporativo en empresas y sociedades mercantiles, intermediario legal , mediador, árbitro jurídico, ámbito académico, investigador, ponente o conferencista.\n\nDentro del campo público como servidor público dentro del poder judicial, legislativo o ejecutivo, como notario público o con una gran cabida en el ámbito político.",
+                    "backgroundColor": "#4470B1"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    },
+                    "title": "Requisitos de admisión",
+                    "text": "a) Acta de nacimiento original y 1 copias (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.\n\n c) 1 copia de la CURP.\n\n d) 2 copias de Credencial Oficial IFE / INE o Pasaporte\n\n e) 2 copias de Credencial Oficial IFE / INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n f) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n De contar ya con una licenciatura por parte de UdeG y estar titulado, se aceptan copias certificadas expedidas por UdeG del certificado de bachillerato de no más de un mes al día que lo esté entregando y copia simple del título. (Más todos los documentos de nuevo ingreso).\n\n En caso de no estar titulado, debe entregar en original todos los documentos. (Todos los documentos de nuevo ingreso).",
+                    "backgroundColor": "#EEAA01"
+                  }
+                ],
+                "wrapper": false
+              }
+            }
+          ],
+          "size": "medium"
+        }
+      },
+      "descarga": {
+        "id": "program_licenciatura",
+        "type": "primary",
+        "title": "Descarga el plan de estudios",
+        "size": "small",
+        "icon": "download",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "testClick",
+        "test": ""
+      }
+    },
+    "form": {
+      "config": {
+        "level": { "hidden": true, "value": "licenciatura" },
+        "program": { "hidden": false, "value": "Carrera de Abogado" },
+        "modality": { "hidden": false },
+        "campus": { "hidden": false }
+      },
+      "copies": {
+        "stepone": {
+          "title": "Obtén informes sobre tu programa",
+          "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+        }
+      }
+    }
+  }
+  

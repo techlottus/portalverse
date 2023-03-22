@@ -9,27 +9,34 @@
     "config": {
       "nombre": "Licenciatura en Mercadotecnia",
       "modalidad": ["Presencial", "Online"],
-      "areaConocimiento": ["Económico - Administrativo"],
-      "campus": [ "Reynosa" ],
+      "areaConocimiento": [
+        "Negocios y Empresariales",
+        "Económico - Administrativo"
+      ],
+      "campus": ["Américas", "Campus Washington", "Río Nilo", "Tlajomulco", "Zapopan"],
       "nivel": ["Licenciatura"],
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1EMJiqi0D3-Zh5wlyupNi8GdfpwgXGTQi",
+        "src": "https://drive.google.com/uc?export=view&id=1MILM-7eskrngnC2o9ZnGK7VaWLBWSi_U",
         "alt": "licenciatura"
       },
       "curriculum": {
         "Presencial": {
-          "Reynosa": "1fYx1MZyXn1RuYNkvsQdCgVHY3qZ8a8--"
+          "Américas": "1gWEQ5gVXoMvkRhWw_1iNHOZ8j8jZFVmF",
+          "Campus Washington": "1gWEQ5gVXoMvkRhWw_1iNHOZ8j8jZFVmF",
+          "Río Nilo": "1gWEQ5gVXoMvkRhWw_1iNHOZ8j8jZFVmF",
+          "Tlajomulco": "1gWEQ5gVXoMvkRhWw_1iNHOZ8j8jZFVmF",
+          "Zapopan": "1gWEQ5gVXoMvkRhWw_1iNHOZ8j8jZFVmF"
         },
-        "Online": "1oWB2czoX86mIWP73LpmPKFpesSQ8CeIO"
+        "Online": "1rZGcguG10LCDD6Gc5rq70ep7c-JDDbnH"
       }
     }
   },
   "sections": {
     "head": {
       "title": "Licenciatura en Mercadotecnia",
-      "description": "Implementa  estrategias  de  mercadotecnia, satisface las necesidades del cliente y beneficia a la sociedad con el uso de las tecnologías de la información de comunicación.",
+      "description": "Plan de estudios cuatrimestral en modalidad presencial y con incorporación a SICyT que incide en la formación de profesionistas innovadores, creativos y propositivos con capacidad para analizar y diagnosticar una corporación, para con ello diseñar y ejecutar estrategias de mercadotecnia que potencialicen el crecimiento, posicionamiento de la organización.",
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1EMJiqi0D3-Zh5wlyupNi8GdfpwgXGTQi",
+        "src": "https://drive.google.com/uc?export=view&id=1MILM-7eskrngnC2o9ZnGK7VaWLBWSi_U",
         "alt": "licenciatura"
       }
     },
@@ -38,88 +45,92 @@
       "tabs": {
         "items": [
           {
-            "label": "Modalidad Presencial", "icons": { "primary": "", "duplicate": false}, "disabled": false,
+            "label": "Modalidad Presencial",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
             "content": {
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
-                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
+                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "El aspirante a ingresar a la Licenciatura en Mercadotecnia, deberá contar con los siguientes conocimientos:\n\n• Desarrollar procesos lógicos.\n\n• Resolver problemas con base en principios, leyes y conceptos.\n\n• Emplear las nuevas tecnologías de la información y la comunicación.\n\n• Ser capaz para evaluar fortalezas y debilidades de los equipos de trabajo.\n\n• Desarrollar un pensamiento crítico y constructivo.",
-                  "backgroundColor": "#8B9BA3"
+                  "text": "Interés:\n\n• Intención de desempeñarse en el área comercial de las organizaciones.\n\n• Conocer cómo contribuyen la mercadotecnia, publicidad y comercialización a la efectividad de las organizaciones.\n\n• Interactuar con equipo de trabajo para la obtención de logros concretos a través de la comunicación integral.\n\n Aptitudes:\n\n• Observación, concentración, análisis y síntesis, redacción, exposición y evaluación de ideas.\n\n• Obtención y manejo de la información, trabajo en equipo, diplomático y afable, comunicación oral y escrita, comprensión de lectura.\n\nActitudes: Responsabilidad, respeto, visión, creatividad, paciencia y perseverancia, compromiso para la autogestión y el autoaprendizaje.",
+                  "backgroundColor": "#1B2D68"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
+                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
                   },
                   "title": "Perfil de egreso",
-                  "text": "Como egresado de la carrera de Mercadotecnia serás capaz de participar en los procesos mercadológicos de investigación del entorno para diseñar estrategias de desarrollo, comercialización, promoción y posicionamiento en los mercados para satisfacer las necesidades de los consumidores y detectar oportunidades de negocios.Como egresado de la carrera de Mercadotecnia serás capaz de participar en los procesos mercadológicos de investigación del entorno para diseñar estrategias de desarrollo, comercialización, promoción y posicionamiento en los mercados para satisfacer las necesidades de los consumidores y detectar oportunidades de negocios.",
-                  "backgroundColor": "#B0003C"
+                  "text": "El egresado (a)de la Licenciatura de Mercadotecnia, será capaz de diseñar y desarrollar estrategias mercadológicas para la creación, promoción, comercialización de productos y servicios, a través del desarrollo de una marca; con base de investigaciones, análisis e interpretación sobre los comportamientos de las expectativas y necesidades del mercado.",
+                  "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
+                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
                   },
                   "title": "Campo Laboral",
-                  "text": "El Licenciado en Mercadotecnia egresado de UANE podrá trabajar en:\n\n• Entidades gubernamentales\n\n• Instituciones educativas\n\n• Sector industrial\n\n• Ámbito privado\n\n• Emprendimiento",
-                  "backgroundColor": "#E84537"
+                  "text": "El egresado podrá desarrollarse profesionalmente en el sector privado; específicamente en el área de comercialización, desarrollo de nuevos productos, mercadotecnia, publicidad, ventas, investigación de mercados, comunicación organizacional, etc.",
+                  "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
+                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento reciente, original del cajero y 2 copias.\n\n• Certificado de secundaria legalizado original y dos copias.\n\n• Certificado de preparatoria legalizado original y 2 copias con su carta de autenticidad. (En caso de no contar con original, presentar constancia de que está en trámite).\n\n• CURP copia.\n\nEn caso de equivalencia\n\n• Certificado parcial de estudios legalizado original con 2 copias y carta de autenticidad.\n\n• 4 fotografías tamaño infantil y 4 tamaño credencial, ambas blanco y negro, papel mate no instantáneas.\n\n• Carta de buena salud expedida por institución pública o privada.",
-                  "backgroundColor": "#00BEB4"
+                  "text": "• Acta de nacimiento original y 2 copias.\n\n• Certificado original y 2 copias.\n\n• 2 copias de INE/IFE por ambos lados.\n\n• CURP impresa y 1 copia.\n\n• 2 Fotografías tamaño infantil blanco y negro o a color, pueden ser instantáneas o de estudio.",
+                  "backgroundColor": "#EEAA01"
                 }
               ],
               "wrapper": false
             }
           },
           {
-            "label": "Modalidad Online", "icons": { "primary": "", "duplicate": false}, "disabled": false,
+            "label": "Modalidad Online",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
             "content": {
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
-                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
+                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "Para estudiar la Licenciatura en Mercadotecnia es necesario tener una serie de cualidades:\n\n • Haber concluido el bachillerato\n\n • Tener facilidad para comunicarte de manera oral y escrita\n\n • Trabajar en equipo y disposición hacia el trabajo creativo.\n\n • Poseer pensamiento creativo y estratégico.",
-                  "backgroundColor": "#8B9BA3"
+                  "text": "Para estudiar la Licenciatura en Mercadotecnia es necesario tener una serie de cualidades:\n\n• Haber concluido el bachillerato\n\n• Tener facilidad para comunicarte de manera oral y escrita\n\n• Trabajar en equipo y disposición hacia el trabajo creativo.\n\n• Poseer pensamiento creativo y estratégico.",
+                  "backgroundColor": "#1B2D68"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
+                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
                   },
                   "title": "Perfil de egreso",
                   "text": "El Licenciado en Mercadotecnia tendrá la capacidad de visualizar de manera integral las oportunidades que se generan con ayuda de la investigación comercial y la aplicación de la inteligencia de mercados, estará preparado para generar su propia empresa, además brindar servicios de consultoría a empresas de cualquier sector. Será un profesional con habilidades de liderazgo que le permitan relacionarse en diversos contextos. ",
-                  "backgroundColor": "#B0003C"
+                  "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
+                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
                   },
                   "title": "Campo Laboral",
                   "text": "Como egresado de la Licenciatura en Mercadotecnia y gracias a los avances tecnológicos y al Internet, el trabajo para los mercadólogos es más abundante que nunca. Hoy en día, las redes sociales y los sitios web ofrecen un mundo de posibilidades para alcanzar a un público cada vez mayor, y el acceso a estos servicios a través de los teléfonos móviles representa una mina de oro para las agencias de mercadotecnia.",
-                  "backgroundColor": "#E84537"
+                  "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
+                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento reciente, original del cajero y 2 copias.\n\n• Certificado de secundaria legalizado original y dos copias.\n\n• Certificado de preparatoria legalizado original y 2 copias con su carta de autenticidad. (En caso de no contar con original, presentar constancia de que está en trámite).\n\n• CURP copia.\n\nEn caso de equivalencia\n\n• Certificado parcial de estudios legalizado original con 2 copias y carta de autenticidad.\n\n• 4 fotografías tamaño infantil y 4 tamaño credencial, ambas blanco y negro, papel mate no instantáneas.\n\n• Carta de buena salud expedida por institución pública o privada.",
-                  "backgroundColor": "#00BEB4"
+                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                  "backgroundColor": "#EEAA01"
                 }
               ],
               "wrapper": false
@@ -145,7 +156,7 @@
   "form": {
     "config": {
       "level": { "hidden": true, "value": "licenciatura" },
-      "program": { "hidden": false, "value": "Mercadotecnia" },
+      "program": { "hidden": false, "value": "Licenciatura en Mercadotecnia" },
       "modality": { "hidden": false },
       "campus": { "hidden": false }
     },

@@ -1,0 +1,268 @@
+{
+  "meta": {
+    "title": "Licenciatura en Contaduría Pública",
+    "description": "",
+    "keywords": ""
+  },
+  "config": {
+    "title": "Licenciatura en Contaduría Pública",
+    "config": {
+      "nombre": "Licenciatura en Contaduría Pública",
+      "modalidad": ["PresencialSemestral", "PresencialCuatrimestral", "Online", "Flex"],
+      "areaConocimiento": ["Negocios y Empresariales"],
+      "campus": ["Campus Washington", "Tlajomulco", "Zapopan", "Américas", "Río Nilo"],
+      "nivel": ["Licenciatura"],
+      "image": {
+        "src": "https://assets.staging.bedu.org/UTEG/card_contaduria_interna_dbc125d6ae.jpg",
+        "alt": "licenciatura"
+      },
+      "curriculum": {
+        "PresencialSemestral": {
+          "Tlajomulco": "14ghK1hLg7Jfiz8D_iUpNM6CbVKC3U789",
+          "Zapopan": "14ghK1hLg7Jfiz8D_iUpNM6CbVKC3U789",
+          "Campus Washington": "14ghK1hLg7Jfiz8D_iUpNM6CbVKC3U789"
+        },
+        "PresencialCuatrimestral": {
+            "Américas": "1JG7uGT5t2X7eaIrdWtxsixPgYhH0hcYx", 
+            "Campus Washington": "1JG7uGT5t2X7eaIrdWtxsixPgYhH0hcYx",
+            "Río Nilo": "1JG7uGT5t2X7eaIrdWtxsixPgYhH0hcYx", 
+            "Tlajomulco": "1JG7uGT5t2X7eaIrdWtxsixPgYhH0hcYx", 
+            "Zapopan": "1JG7uGT5t2X7eaIrdWtxsixPgYhH0hcYx"
+        },
+        "Online": "1NJ4wOgZztzAagAGLAohQqwA4EAvW99pd",
+        "Flex": "1I1xWQhjY8uInFWkD71fQbFvfvb5XTc8X"
+      }
+    }
+  },
+  "sections": {
+    "head": {
+      "title": "Licenciatura en Contaduría Pública",
+      "description": "Formar profesionales competitivos con capacidad y conocimientos para diseñar, establecer, controlar y evaluar sistemas de información contable, financiera, fiscal, de costos y auditoria, para la toma de decisiones de las entidades económicas con una actitud ética, crítica, responsable y emprendedora a través de la investigación y el uso de la tecnología.",
+      "image": {
+        "src": "https://assets.staging.bedu.org/UTEG/card_contaduria_interna_dbc125d6ae.jpg",
+        "alt": "licenciatura"
+      }
+    },
+    "modalities": {
+      "title": "Modalidades disponibles en esta licenciatura:",
+      "tabs": {
+        "items": [
+          {
+            "label": "Presencial Semestral",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "Para estudiar Contaduría Pública debes tener intereses académicos por las técnicas administrativas y contables, leyes y normas que las rigen, además de un razonamiento abstracto, aptitudes aritméticas, capacidad de concentración y gusto por diagnosticar, auditar y optimizar recursos.",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                  },
+                  "title": "Perfil de egreso",
+
+                  "text": "El egresado /a será capaz de analizar e interpretar los estados financieros y contables de manera responsable, honesta, observando los principios éticos profesionales adquiridos, mediante la aplicación de los conocimientos y habilidades contables, fiscales y financieras, que permitan satisfacer las necesidades de las empresas públicas y privadas.",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "El profesional en Contaduría Pública puede desempeñarse en cualquier tipo de organización, tanto pública como privada, a nivel de mandos intermedios, gerencia o dirección de alguna de las áreas funcionales como: producción (costos), finanzas, recursos humanos, compras, tesorería, contraloría y planeación estratégica fiscal.\n\n En forma independiente podrá realizar actividades de consultoría y asesoría de negocios. Investigación y desarrollo de nuevas tecnologías contables, tanto en el ámbito académico como empresarial e instituciona",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "a) Acta de nacimiento original y 1 copia (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.\n\n c) 1 copia de la CURP.\n\n d) 2 copias de Credencial Oficial IFE / INE o Pasaporte\n\n e) 2 copias de Credencial Oficial IFE / INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n f) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n De contar ya con una licenciatura por parte de UdeG y estar titulado, se aceptan copias certificadas expedidas por UdeG del certificado de bachillerato de no más de un mes al día que lo esté entregando y copia simple del título. (Más todos los documentos de nuevo ingreso).\n\n En caso de no estar titulado, debe entregar en original todos los documentos. (Todos los documentos de nuevo ingreso).\n\n Nota: Si realizó los estudios de bachillerato en otro estado de la república, el certificado debe tener la legalización por parte de Secretaría de Gobernación del estado donde realizaron los estudios.\n\n Si el certificado es de UNAM, Secretaría de la Defensa Nacional (SEDENA), Sistema Educativo Nacional (en el encabezado del documento) y Colegios de Bachilleres, estos no requieren del trámite de legalización.",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          },
+          {
+            "label": "Presencial Cuatrimestral",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "Para estudiar Contaduría Pública debes tener intereses académicos por las técnicas administrativas y contables, leyes y normas que las rigen, además de un razonamiento abstracto, aptitudes aritméticas, capacidad de concentración y gusto por diagnosticar, auditar y optimizar recursos.",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                  },
+                  "title": "Perfil de egreso",
+
+                  "text": "El egresado /a será capaz de analizar e interpretar los estados financieros y contables de manera responsable, honesta, observando los principios éticos profesionales adquiridos, mediante la aplicación de los conocimientos y habilidades contables, fiscales y financieras, que permitan satisfacer las necesidades de las empresas públicas y privadas.",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "El profesional en Contaduría Pública puede desempeñarse en cualquier tipo de organización, tanto pública como privada, a nivel de mandos intermedios, gerencia o dirección de alguna de las áreas funcionales como pueden ser: producción (costos), finanzas, recursos humanos, compras, tesorería, contraloría y planeación estratégica fiscal.\n\n En forma independiente podrá realizar actividades de consultoría y\n\n Asesoría de negocios. Investigación y desarrollo de nuevas tecnologías contables, tanto en el ámbito académico como empresarial e institucional.",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "a) Acta de nacimiento original y 2 copias para SICyT y 1 copia para SEP, (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de bachillerato original, en buen estado con tres copias.\n\n c) 2 copia de la CURP para SICyT\n\n d) 1 copia de la CURP para SEP.\n\n e) 2 copias de Credencial Oficial IFE / INE, o pasaporte.\n\n f) 2 copias de Credencial Oficial IFE / INE, o Pasaporte del padre de familia o tutor (para menores de edad).\n\n g) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          },
+          {
+            "label": "Online",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "El aspirante a contador público debe ser capaz de responder a situaciones complejas y variadas y debe cumplir con las siguientes cualidades:\n\n• Habilidad de conocimiento e identificación de información y contenidos específicos.\n\n• Capacidad de sistematización e integración mediante el uso de fórmulas, reglas o teorías.",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "Este programa te permitirá proponer soluciones a las diversas problemáticas en lo económico y administrativo, a través de estructurar, analizar e interpretar información financiera con el objeto de optimizar recursos, prever y detectar posibilidades de desarrollo e inversión que ayuden a las entidades económicas a operar eficientemente mediante la aplicación de la normatividad en materia contable en un mundo globalizado, que exige respuestas oportunas y veraces en operaciones cada vez más complejas.",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "El Contador Público egresado de UANE podrá trabajar en:\n\n• Firmas profesionales en el área fiscal, auditoría o consultoría *Empresas del sistema financiero\n\n• En diversos sectores como: industrial, comercial, financiero, servicios y sector público",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          },
+          {
+            "label": "Flex",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "El aspirante a contador público debe ser capaz de responder a situaciones complejas y variadas y debe cumplir con las siguientes cualidades:\n\n• Habilidad de conocimiento e identificación de información y contenidos específicos.\n\n• Capacidad de sistematización e integración mediante el uso de fórmulas, reglas o teorías.",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                  },
+                  "title": "Perfil de egreso",
+
+                  "text": "Este programa te permitirá proponer soluciones a las diversas problemáticas en lo económico y administrativo, a través de estructurar, analizar e interpretar información financiera con el objeto de optimizar recursos, prever y detectar posibilidades de desarrollo e inversión que ayuden a las entidades económicas a operar eficientemente mediante la aplicación de la normatividad en materia contable en un mundo globalizado, que exige respuestas oportunas y veraces en operaciones cada vez más complejas.",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "El egresado de la Licenciatura en Contaduría podrá trabajar en:\n\n• Firmas profesionales en el área fiscal, auditoría o consultoría *Empresas del sistema financiero\n\n• En diversos sectores como: industrial, comercial, financiero, servicios y sector público",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          }
+        ],
+        "size": "medium"
+      }
+    },
+    "descarga": {
+      "id": "program_licenciatura",
+      "type": "primary",
+      "title": "Descarga el plan de estudios",
+      "size": "small",
+      "icon": "download",
+      "lyIcon": false,
+      "disabled": false,
+      "isExpand": false,
+      "tagOnClick": "testClick",
+      "test": ""
+    }
+  },
+  "form": {
+    "config": {
+      "level": { "hidden": true, "value": "licenciatura" },
+      "program": { "hidden": false, "value": "Licenciatura en Contaduría Pública" },
+      "modality": { "hidden": false },
+      "campus": { "hidden": false }
+    },
+    "copies": {
+      "stepone": {
+        "title": "Obtén informes sobre tu programa",
+        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+      }
+    }
+  }
+}

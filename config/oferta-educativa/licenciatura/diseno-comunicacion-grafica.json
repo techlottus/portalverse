@@ -1,34 +1,34 @@
 {
     "meta": {
-      "title": "Licenciatura en Nutrición",
+      "title": "Licenciatura en Diseño para la Comunicación Gráfica",
       "description": "",
       "keywords": ""
     },
     "config": {
-      "title": "Licenciatura en Nutrición",
+      "title": "Licenciatura en Diseño para la Comunicación Gráfica",
       "config": {
-        "nombre": "Licenciatura en Nutrición",
+        "nombre": "Licenciatura en Diseño para la Comunicación Gráfica",
         "modalidad": ["Presencial"],
-        "areaConocimiento": ["Salud"],
-        "campus": ["Campus Washington"],
+        "areaConocimiento": ["Arquitectura y Diseño"],
+        "campus": ["Américas"],
         "nivel": ["Licenciatura"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=15gYxmujqlDQ7x08a4AB3V4oaoKcdOdkm",
+          "src": "https://drive.google.com/uc?export=view&id=",
           "alt": "licenciatura"
         },
         "curriculum": {
           "Presencial": {
-            "Campus Washington": "1gyVHxVk6le-0-uilkSYdCbewdu62KhoX"
+            "Américas": "1_irhuJFUD-IyhRgDi2FVt1ajgIa7LnTb"
           }
         }
       }
     },
     "sections": {
       "head": {
-        "title": "Licenciatura en Nutrición",
-        "description": "En la Licenciatura en Nutrición,  se forman profesionales capaces de resolver la problemática alimentario-nutricional de nuestro contexto social, respetando la cultura alimentaria, apoyándose de la normatividad nacional e internacional en materia de salud y alimentación y que inciden en la construcción de un proyecto social, equitativo y solidario.",
+        "title": "Licenciatura en Diseño para la Comunicación Gráfica",
+        "description": "La Licenciatura en Diseño para la Comunicación Gráfica tiene por objetivo formar diseñadores que identifiquen problemas complejos de comunicación gráfica y produzcan soluciones y estratégias, con el uso de medios y lenguajes estratégicos, que utilicen la tecnología para responder a las necesidades de la sociedad con una visión ambiental y sustentable.",
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=15gYxmujqlDQ7x08a4AB3V4oaoKcdOdkm",
+          "src": "https://drive.google.com/uc?export=view&id=",
           "alt": "licenciatura"
         }
       },
@@ -48,7 +48,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
                     },
                     "title": "Perfil de ingreso",
-                    "text": "Ser humanista, tener sed de conocimiento, interés por los hábitos de alimentación personales y de los demás, por los alimentos, sus propiedades, su manejo y preparación. Uso del lenguaje oral y escrito, pensamiento lógico y matemático para resolución de problemas abiertos, auto motivador e innovador.",
+                    "text": "Intereses: por los fenómenos de comunicación humana, tanto individuales como masivos, por conocer y desarrollar habilidades y técnicas de diversa índole, manejo adecuado de la información con fines comunicacionales, técnico y cultural.\n\n Aptitudes: sensibilidad, sentido de organización y mando, creatividad artística y literaria, sistemática, comercial y humanista.\n\n Actitudes: integración al medio ambiente, conciencia y respeto al patrimonio cultural, estabilidad emocional.",
                     "backgroundColor": "#1B2D68"
                   },
                   {
@@ -57,7 +57,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
                     },
                     "title": "Perfil de egreso",
-                    "text": "Es un profesional capaz de brindar atención nutriológica a individuos sanos, en riesgo o enfermos, así como a grupos de los diferentes sectores de sociedad; de administrar servicios y programas de alimentación y nutrición; de proponer, innovar y mejorar la calidad nutrimental y sanitaria de productos alimenticios.\n\nCapaz de integrar, generar y aplicar conocimientos, habilidades y actitudes que permiten su desempeño en los campos profesionales básicos: nutrición clínica, nutrición poblacional, servicios de alimentos, ciencia de los alimentos y otro campos transversales como: investigación educación, administración y consultoría aplicando métodos, técnicas y tecnologías propias de la nutriología y ciencias afines.",
+                    "text": "El profesional de Diseño para la Comunicación Gráfica tendrá la capacidad para: \n\n• Manejar el proceso metodológico del diseño y de expresión gráfica de mensajes en la teoría y en la práctica. \n\n• Conocer y dominar los fundamentos teóricos, científicos, tecnológicos y filosóficos de las disciplinas que le permitan crear los mensajes gráficos que la sociedad demande.\n\n• Aplicar con creatividad la técnica en la búsqueda de soluciones para resolver problemas de diseño.\n\n•  Conocer, manejar y dominar las especialidades del diseño gráfico como imagen corporativa, diseño de carteles, empaques y envases, diseño de campañas.",
                     "backgroundColor": "#C31433"
                   },
                   {
@@ -66,7 +66,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
                     },
                     "title": "Campo Laboral",
-                    "text": "El campo de acción profesional se encuentra dividido en cinco áreas especializadas: nutrición clínica, deportiva, servicio de alimentos, tecnología alimentaria, nutrición poblacional y campos transversales como investigación y docencia. Mismos que se podrán desempeñar en instituciones públicas y privadas del sector salud, manejo de consultorios nutricionales, clínicas de atención nutricional, clínicas de reducción de peso, laboratorio con producción de alimentos y nutrimentos, comedores industriales, legislación, producción y mercadotecnia alimenticia. ",
+                    "text": "El Diseñador/a para la Comunicación Gráfica podrá resolver los problemas de comunicación visual que surjan de la sociedad, aportando soluciones creativas y funcionales. Su función principal será comunicar visualmente un mensaje proveniente de un servicio, producto, empresa o institución, mediante la transformación de dicho mensaje de signos y códigos visuales que sean bien percibidos y aceptados por el público receptor. \n\n Así el/la Diseñador/a para la Comunicación Gráfica podrá trabajar para empresas, instituciones o por cuenta propia en la realización de imágenes corporativas, diseño de carteles, empaques y envases, campañas de difusión, diseño editorial, al igual que en el campo de la investigación y la docencia ",
                     "backgroundColor": "#4470B1"
                   },
                   {
@@ -102,7 +102,7 @@
     "form": {
       "config": {
         "level": { "hidden": true, "value": "licenciatura" },
-        "program": { "hidden": false, "value": "Licenciatura en Nutrición" },
+        "program": { "hidden": false, "value": "Licenciatura en Diseño para la Comunicación Gráfica" },
         "modality": { "hidden": false },
         "campus": { "hidden": false }
       },

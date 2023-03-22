@@ -1,0 +1,117 @@
+{
+    "meta": {
+      "title": "Licenciatura en Enfermeria",
+      "description": "",
+      "keywords": ""
+    },
+    "config": {
+      "title": "Licenciatura en Enfermeria",
+      "config": {
+        "nombre": "Licenciatura en Enfermeria",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Salud"],
+        "campus": ["Campus Washington"],
+        "nivel": ["Licenciatura"],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1-191tYkUURfCkCDWxQ0eWqHaQlCgCVtZ",
+          "alt": "licenciatura"
+        },
+        "curriculum": {
+          "Presencial": {
+            "Campus Washington": "1835UdeH9eycEEuXOA6Z9F5b2MnHUlPw2"
+          }
+        }
+      }
+    },
+    "sections": {
+      "head": {
+        "title": "Licenciatura en Enfermeria",
+        "description": "La licenciatura en Enfermería tiene por objetivo formar y desarrollar profesionales con conocimientos, habilidades prácticas, teóricas y metodológicas con respaldo a la profesión, capaces de incorporarse en la estructura actual de los servicios de salud dentro del ámbito público, privado, social y de investigación de manera productiva y creativa.",
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1-191tYkUURfCkCDWxQ0eWqHaQlCgCVtZ",
+          "alt": "licenciatura"
+        }
+      },
+      "modalities": {
+        "title": "Modalidades disponibles en esta licenciatura:",
+        "tabs": {
+          "items": [
+            {
+              "label": "Modalidad Presencial",
+              "icons": { "primary": "", "duplicate": false },
+              "disabled": false,
+              "content": {
+                "cards": [
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    },
+                    "title": "Perfil de ingreso",
+                    "text": "El aspirante a la Licenciatura en Enfermería del Centro Universitario UTEG debe poseer:\n\nCONOCIMIENTOS\n\n• Manejo de sistemas de información y/o computación.\n\n• Conocimiento y comprensión básica del idioma inglés.\n\n• Capacidad de expresión oral y escrita en diferentes contextos y mediante códigos de herramientas.\n\n• Capacidad de análisis, observación, clasificación y síntesis de información.\n\n• Capacidad para el desarrollo del pensamiento analítico, reflexivo, crítico y lógico – matemático.\n\n HABILIDADES\n\n• Aprendizaje individual, permanente y de alto compromiso por su formación y actuación constante.\n\n• Capacidad para sustentar y expresar temas de diferente índole, brindando puntos de vista de manera crítica y analítica.\n\n• Participación, cooperación y trabajo en equipo.\n\n• Capacidad de resolución en diferentes ámbitos, para resolver problemas a partir de teorías y métodos científicos.\n\n ACTITUDES\n\n• Vocación de servicio, responsabilidad, iniciativa, competitividad y honestidad.\n\n• Interés humanístico, científico y de servicio.\n\n• Manejo de estrés, manejo de conflictos y estabilidad emocional.\n\n• Sensibilidad para entender la conducta humana ante la pérdida de su homeostasis (condición o capacidad de mantener una condición estable)\n\n• Respeto por la vida, los valores, las prácticas sociales, ideas, igualdad y en los diferentes tipos de culturas y razas y/o diversidad cultural.\n\n• Adaptación y apertura a los cambios económicos, políticos, sociales, de educación, tecnología entre otros.\n\n• Actitud de liderazgo y emprendedora para la toma de decisiones y gestiones.\n\n• Actitud de fomentar, educar y transmitir conocimientos.\n\n• Actitud de crecimiento profesional.",
+                    "backgroundColor": "#1B2D68"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    },
+                    "title": "Perfil de egreso",
+                    "text": "El profesionista egresado del Centro Universitario UTEG, es un profesional competente, atento al fenómeno de la internacionalización, con una visión vanguardista. Poseedor de conocimientos científicos, técnicos y humanísticos, así como con el dominio de un segundo idioma que le permita integrarse a la toma de decisiones con el equipo interdisciplinario en la solución de problemas de salud. Capaz de generar nuevos conocimientos y tecnologías para influir positivamente en el bienestar del individuo y la familia, al fomentar conductas para el autocuidado de la salud y del entorno en las diversas etapas de la vida.",
+                    "backgroundColor": "#C31433"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    },
+                    "title": "Campo Laboral",
+                    "text": "Hospitales públicos y privados, empresas, escuelas, etc.",
+                    "backgroundColor": "#4470B1"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    },
+                    "title": "Requisitos de admisión",
+                    "text": "Bachillerato terminado",
+                    "backgroundColor": "#EEAA01"
+                  }
+                ],
+                "wrapper": false
+              }
+            }
+          ],
+          "size": "medium"
+        }
+      },
+      "descarga": {
+        "id": "program_licenciatura",
+        "type": "primary",
+        "title": "Descarga el plan de estudios",
+        "size": "small",
+        "icon": "download",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "testClick",
+        "test": ""
+      }
+    },
+    "form": {
+      "config": {
+        "level": { "hidden": true, "value": "licenciatura" },
+        "program": { "hidden": false, "value": "Licenciatura en Enfermeria" },
+        "modality": { "hidden": false },
+        "campus": { "hidden": false }
+      },
+      "copies": {
+        "stepone": {
+          "title": "Obtén informes sobre tu programa",
+          "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+        }
+      }
+    }
+  }
+  

@@ -1,32 +1,32 @@
 {
     "meta": {
-      "title": "Licenciatura en Negocios Digitales",
+      "title": "Licenciatura en Turismo",
       "description": "",
       "keywords": ""
     },
     "config": {
-      "title": "Licenciatura en Negocios Digitales",
+      "title": "Licenciatura en Turismo",
       "config": {
-        "nombre": "Licenciatura en Negocios Digitales",
+        "nombre": "Licenciatura en Turismo",
         "modalidad": ["Online"],
-        "areaConocimiento": ["Económico - Administrativo"],
+        "areaConocimiento": ["Ciencias Sociales"],
         "campus": [""],
         "nivel": ["Licenciatura"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1k7ycZgkx1BfiVDe3PrLSdgpQi0bJHrhP",
+          "src": "https://drive.google.com/uc?export=view&id=1jiyMdUydq0x18y2U3PzQoh9qFITRs6bT",
           "alt": "licenciatura"
         },
         "curriculum": {
-          "Online": "1-ENcMqVC3s_6gtj9ChKfi3Wb_cB6oTc7"
+          "Online": "1OMTGAn4oEMinUXaaIqs4Hd1N53qKSoFe" 
         }
       }
     },
     "sections": {
       "head": {
-        "title": "Licenciatura en Negocios Digitales",
-        "description": "Detecta nuevos modelos de negocio y diseña estrategias de posicionamiento con el uso de estratégias y métodos tecnológicos para la era digital en el mundo de los negocios. Supervisa que las tareas y funciones de una empresa sí se cumplan satisfactoriamente, así como plantear la innovación y desarrollo de nuevos modelos digitales de negocio.",
+        "title": "Licenciatura en Turismo",
+        "description": "Desarrolla habilidades, conocimientos y técnicas para planea, diseñar y ejecutar modelos de atracción turística de algún destino local o internacional, tomando como base la cultura, economía, así como estrategías de crecimiento en sistemas hoteleros. Serás capaz de desarrollar la logística e identificar los nuevos retos de oportunidad turística. ",
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1k7ycZgkx1BfiVDe3PrLSdgpQi0bJHrhP",
+          "src": "https://drive.google.com/uc?export=view&id=1jiyMdUydq0x18y2U3PzQoh9qFITRs6bT",
           "alt": "licenciatura"
         }
       },
@@ -35,7 +35,7 @@
         "tabs": {
           "items": [
             {
-              "label": "Modalidad Online",
+              "label": "Modalidad Presencial",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {
@@ -46,7 +46,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
                     },
                     "title": "Perfil de ingreso",
-                    "text": "El aspirante a la Licenciatura en Negocios Digitales debe sentir pasión por las negociaciones, y tener las siguientes características:\n\n• Una mente creativa y analítica enfocada a la acción.\n\n• Flexibilidad y dinamismo para aceptar el cambio.n\n• Facilidad para establecer relaciones interpersonales y trabajar en equipo.",
+                    "text": "El aspirante a estudiar la Licenciatura en Turismo deberá poseer un buen manejo del idioma español, una correcta expresión oral y escrita, ser hábil en el manejo de TIC´s e interesarse por los problemas sociales tanto en el país como en el mundo",
                     "backgroundColor": "#1B2D68"
                   },
                   {
@@ -55,7 +55,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
                     },
                     "title": "Perfil de egreso",
-                    "text": "Este programa te permitirá desarrollar los conocimientos y habilidades para detectar oportunidades y/o generar nuevos modelos de negocio de acuerdo con el entorno, los recursos internos y los avances de la tecnología; evaluarás el potencial de mercado y diseñarás una estrategia de posicionamiento; serás capaz de detectar problemas de negocio y articular e instrumentar estrategias de solución. Además podrás administrar negocios virtuales que se dediquen al negocio electrónico.",
+                    "text": "Los egresados de esta licenciatura poseerán conocimientos sobre las disposiciones legales que garantizan el desarrollo y operación de las actividades turísticas, principios matemáticos y fundamentos estadísticos, microeconómicos y macroeconómicos aplicados al sector turístico. Conocerán los criterios y estándares de servicio al cliente y el manejo de los alimentos y bebidas con respecto a normas nacionales e internacionales, serán especialistas en el patrimonio turístico nacional e internacional para su manejo y protección. Serán capaces de desarrollar y operar proyectos turísticos, bares, centros de entretenimiento, hoteles, restaurantes, etc.",
                     "backgroundColor": "#C31433"
                   },
                   {
@@ -64,7 +64,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
                     },
                     "title": "Campo Laboral",
-                    "text": "Al culminar tus estudios en Licenciatura en Negocios Digitales, podrás acceder a puestos ejecutivos de alto nivel en empresas del sector público y privado, aplicando tus conocimientos en áreas directivas, de comercialización, administrativas, ventas, recursos humanos, marketing y planeación estratégica.",
+                    "text": "Como egresado de la Licenciatura en Turismo podrás desempeñarte en centros turísticos, hoteleros, agencias y centros vacacionales implementando acciones que promuevan la competencia nacional e internacional, siendo siempre una persona responsable con el medio y cuidado del ambiente.",
                     "backgroundColor": "#4470B1"
                   },
                   {
@@ -100,7 +100,7 @@
     "form": {
       "config": {
         "level": { "hidden": true, "value": "licenciatura" },
-        "program": { "hidden": false, "value": "Licenciatura en Negocios Digitales" },
+        "program": { "hidden": false, "value": "Licenciatura en Turismo" },
         "modality": { "hidden": false },
         "campus": { "hidden": false }
       },

@@ -1,32 +1,34 @@
 {
     "meta": {
-      "title": "Licenciatura en Negocios Digitales",
+      "title": "Licenciatura Trabajo Social",
       "description": "",
       "keywords": ""
     },
     "config": {
-      "title": "Licenciatura en Negocios Digitales",
+      "title": "Licenciatura Trabajo Social",
       "config": {
-        "nombre": "Licenciatura en Negocios Digitales",
-        "modalidad": ["Online"],
-        "areaConocimiento": ["Económico - Administrativo"],
-        "campus": [""],
+        "nombre": "Licenciatura Trabajo Social",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Jurídicas y Sociales"],
+        "campus": ["Pedro Moreno"],
         "nivel": ["Licenciatura"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1k7ycZgkx1BfiVDe3PrLSdgpQi0bJHrhP",
+          "src": "https://drive.google.com/uc?export=view&id=1ogk8vW9e28Z3uceDaIbXqdl2n-jSW2nZ",
           "alt": "licenciatura"
         },
         "curriculum": {
-          "Online": "1-ENcMqVC3s_6gtj9ChKfi3Wb_cB6oTc7"
+          "Presencial": {
+            "Pedro Moreno": "1vrngvN0OmtjzIqAdgwLwSKg5vZFyee8x"
+          }
         }
       }
     },
     "sections": {
       "head": {
-        "title": "Licenciatura en Negocios Digitales",
-        "description": "Detecta nuevos modelos de negocio y diseña estrategias de posicionamiento con el uso de estratégias y métodos tecnológicos para la era digital en el mundo de los negocios. Supervisa que las tareas y funciones de una empresa sí se cumplan satisfactoriamente, así como plantear la innovación y desarrollo de nuevos modelos digitales de negocio.",
+        "title": "Licenciatura Trabajo Social",
+        "description": "La Licenciatura en Trabajo Social forma profesionales del Trabajo Social, comprometidos con la sociedad, capaces de analizar y comprender la realidad social a partir del conocimiento de teorías; capaces en el diseño e implementación de modelos de intervención social con sujetos individuales y colectivos  y, fomentando actitudes y valores éticos.",
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1k7ycZgkx1BfiVDe3PrLSdgpQi0bJHrhP",
+          "src": "https://drive.google.com/uc?export=view&id=1ogk8vW9e28Z3uceDaIbXqdl2n-jSW2nZ",
           "alt": "licenciatura"
         }
       },
@@ -35,7 +37,7 @@
         "tabs": {
           "items": [
             {
-              "label": "Modalidad Online",
+              "label": "Modalidad Presencial",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {
@@ -46,7 +48,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
                     },
                     "title": "Perfil de ingreso",
-                    "text": "El aspirante a la Licenciatura en Negocios Digitales debe sentir pasión por las negociaciones, y tener las siguientes características:\n\n• Una mente creativa y analítica enfocada a la acción.\n\n• Flexibilidad y dinamismo para aceptar el cambio.n\n• Facilidad para establecer relaciones interpersonales y trabajar en equipo.",
+                    "text": "Para estudiar trabajo social debes tener intereses en la investigación, el cambio social, el hombre, la conducta y sus manifestaciones, en la comunicación en sus diversas modalidades, empatía, iniciativa y creatividad.",
                     "backgroundColor": "#1B2D68"
                   },
                   {
@@ -55,7 +57,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
                     },
                     "title": "Perfil de egreso",
-                    "text": "Este programa te permitirá desarrollar los conocimientos y habilidades para detectar oportunidades y/o generar nuevos modelos de negocio de acuerdo con el entorno, los recursos internos y los avances de la tecnología; evaluarás el potencial de mercado y diseñarás una estrategia de posicionamiento; serás capaz de detectar problemas de negocio y articular e instrumentar estrategias de solución. Además podrás administrar negocios virtuales que se dediquen al negocio electrónico.",
+                    "text": "El egresado de la licenciatura en Trabajo social será un profesionista con una sólida formación en el conocimiento y comprensión de la sociedad contemporánea, promotor de la participación, la ciudadanía, la justicia social y los derechos humanos; poseedor de una gran capacidad para aplicar la mediación como estrategia de intervención destinada a la resolución alternativa de conflictos;  hábil para la gestión social y para generar propuestas innovadoras de intervención social en realidades complejas con sujetos individuales y colectivos.",
                     "backgroundColor": "#C31433"
                   },
                   {
@@ -64,7 +66,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
                     },
                     "title": "Campo Laboral",
-                    "text": "Al culminar tus estudios en Licenciatura en Negocios Digitales, podrás acceder a puestos ejecutivos de alto nivel en empresas del sector público y privado, aplicando tus conocimientos en áreas directivas, de comercialización, administrativas, ventas, recursos humanos, marketing y planeación estratégica.",
+                    "text": "El Trabajador Social se puede desarrollar tanto en organismos e instituciones nacionales como internacionales, públicas y privadas, en la administración pública, en el ámbito educativo en todos los niveles, empresas privadas. En el marco del tercer sector: asociaciones, fundaciones, federaciones u otras organizaciones sociales en distintos campos de acción, salud, educación, readaptación social, protección civil, desarrollo sustentable, impartición de justicia, seguridad social, vivienda, trabajo, alimentación e industria.",
                     "backgroundColor": "#4470B1"
                   },
                   {
@@ -73,7 +75,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
                     },
                     "title": "Requisitos de admisión",
-                    "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                    "text": "Para inscribirse a las licenciaturas semestrales es necesario tener un promedio mínimo de 70, de no ser así, se requiere autorización por escrito del coordinador académico.",
                     "backgroundColor": "#EEAA01"
                   }
                 ],
@@ -100,7 +102,7 @@
     "form": {
       "config": {
         "level": { "hidden": true, "value": "licenciatura" },
-        "program": { "hidden": false, "value": "Licenciatura en Negocios Digitales" },
+        "program": { "hidden": false, "value": "Licenciatura Trabajo Social" },
         "modality": { "hidden": false },
         "campus": { "hidden": false }
       },

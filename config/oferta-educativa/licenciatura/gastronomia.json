@@ -1,115 +1,117 @@
 {
-  "meta": {
-    "title": "Licenciatura en Gastronomía",
-    "description": "",
-    "keywords": ""
-  },
-  "config": {
-    "title": "Licenciatura en Gastronomía",
+    "meta": {
+      "title": "Licenciatura Gastronomía",
+      "description": "",
+      "keywords": ""
+    },
     "config": {
-      "nombre": "Licenciatura en Gastronomía",
-      "modalidad": ["Presencial"],
-      "areaConocimiento": ["Ciencias Sociales y Administrativas"],
-      "campus": ["Saltillo", "Torreón"],
-      "nivel": ["Licenciatura"],
-      "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1xxGeJ91CNxd5ypYaQjNGmKaCZo7Y41Ti",
-        "alt": "licenciatura"
+      "title": "Licenciatura Gastronomía",
+      "config": {
+        "nombre": "Licenciatura Gastronomía",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Negocios y Empresariales"],
+        "campus": ["Américas", "Pedro Moreno"],
+        "nivel": ["Licenciatura"],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1lqXlsBYOO4YcAwQv-9cofFrr8cTyRSy3",
+          "alt": "licenciatura"
+        },
+        "curriculum": {
+          "Presencial": {
+            "Américas": "1kbNoeqIgC2YA2SAQvr-HK3q8UjjLEMva",
+            "Pedro Moreno": "1kbNoeqIgC2YA2SAQvr-HK3q8UjjLEMva"
+          }
+        }
+      }
+    },
+    "sections": {
+      "head": {
+        "title": "Licenciatura Gastronomía",
+        "description": "Formar profesionistas con conocimientos teóricos, prácticos y metodológicos, capaces de prevenir y solucionar los problemas gastronómicos  que enfrenten en la industria alimenticia y restaurantera. Promover la innovación culinaria y ejecutando la organización de instituciones gastronómicas, promoviendo una actitud de servicio y responsabilidad social.",
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1lqXlsBYOO4YcAwQv-9cofFrr8cTyRSy3",
+          "alt": "licenciatura"
+        }
       },
-      "curriculum": {
-        "Presencial": {
-          "Saltillo": "1yz2cY0NtmibR0HpH79fuqszcAvg2iv4K",
-          "Torreón": "1IVbMceHysAYxj5XvNQdlM0wGcbUbMnsp"
+      "modalities": {
+        "title": "Modalidades disponibles en esta licenciatura:",
+        "tabs": {
+          "items": [
+            {
+              "label": "Modalidad Presencial",
+              "icons": { "primary": "", "duplicate": false },
+              "disabled": false,
+              "content": {
+                "cards": [
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    },
+                    "title": "Perfil de ingreso",
+                    "text": "1.- Básico de química\n\n 2.- Conocimiento básico de un segundo idioma\n\n 3.- Principios de matemáticas",
+                    "backgroundColor": "#1B2D68"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    },
+                    "title": "Perfil de egreso",
+                    "text": "1.- Diseñar y planear cartas y menús tomando en cuenta las reglas gastronómicas \n\n 2.- Conocimiento de las normas de higiene y seguridad de nuestro país, así como la aplicación en el campo gastronómico\n\n 3.- Conocimientos de computación para manejar óptimamente cualquier empresa gastronómica nacional e internacional.\n\n 4.- Capacidad para generar e innovar productos gastronómicos, promocionar y conservar el patrimonio local regional y nacional\n\n 5.- Conocer la composición química de los alimentos para su aplicación en la conservación, manejo higiénico y nutricional.\n\n 6.- Nociones del idioma francés",
+                    "backgroundColor": "#C31433"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    },
+                    "title": "Campo Laboral",
+                    "text": "La industria restaurantera: la división de alimentos y bebidas en hotelería, los servicios de alimentos y bebidas colectivas de instituciones, comedores industriales, hospitales, cruceros, servicios de banquetes, la industria alimentaria, instituciones educativas, complejos turísticos.\n\n UTEG posee laboratorios de cocina a la altura de las mejores escuelas del mundo, módulos de cocina profesionales, hornos de convección, tarjas, salamandras mesas de trabajo, extractores de humo, refrigeradores, freidoras y utensilios de producción. Contamos con laboratorios de demostración, que incluyen mesas de trabajo, módulo profesional de cocina, tarjas de lavado, equipo de circuito cerrado, con pantallas LCD para mayor enfoque de la clase y del momento de elaboración.",
+                    "backgroundColor": "#4470B1"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    },
+                    "title": "Requisitos de admisión",
+                    "text": "a) Acta de nacimiento original y 2 copias para SICyT y 1 copia para SEP, (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de bachillerato original, en buen estado con tres copias.\n\n c) 2 copia de la CURP para SICyT\n\n d) 1 copia de la CURP para SEP.\n\n e) 2 copias de Credencial Oficial IFE / INE, o pasaporte.\n\n f) 2 copias de Credencial Oficial IFE / INE, o Pasaporte del padre de familia o tutor (para menores de edad).\n\n g) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n Estudiantes extranjeros deben solicitar con el personal de inscripciones la información completa.",
+                    "backgroundColor": "#EEAA01"
+                  }
+                ],
+                "wrapper": false
+              }
+            }
+          ],
+          "size": "medium"
+        }
+      },
+      "descarga": {
+        "id": "program_licenciatura",
+        "type": "primary",
+        "title": "Descarga el plan de estudios",
+        "size": "small",
+        "icon": "download",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "testClick",
+        "test": ""
+      }
+    },
+    "form": {
+      "config": {
+        "level": { "hidden": true, "value": "licenciatura" },
+        "program": { "hidden": false, "value": "Licenciatura Gastronomía" },
+        "modality": { "hidden": false },
+        "campus": { "hidden": false }
+      },
+      "copies": {
+        "stepone": {
+          "title": "Obtén informes sobre tu programa",
+          "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
         }
       }
     }
-  },
-  "sections": {
-    "head": {
-      "title": "Licenciatura en Gastronomía",
-      "description": "Interviene en servicios de alimentación, administra, dirige y posiciona las tradiciones culinarias. Conviértete en un promotor de la gastronomía de tu país y del mundo.",
-      "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1xxGeJ91CNxd5ypYaQjNGmKaCZo7Y41Ti",
-        "alt": "licenciatura"
-      }
-    },
-    "modalities": {
-      "title": "Modalidades disponibles en esta licenciatura:",
-      "tabs": {
-        "items": [
-          {
-            "label": "Modalidad Presencial", "icons": { "primary": "", "duplicate": false}, "disabled": false,
-            "content": {
-              "cards": [
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
-                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
-                  },
-                  "title": "Perfil de ingreso",
-                  "text": "El aspirante al programa académico de la Licenciatura en Gastronomía deberá contar con las siguientes habilidades, actitudes y valores: Gusto por la gastronomía y su diversidad. Interés difundir la cultura gastronómica en todas sus facetas. Actitud emprendedora, social y gusto por los retos culinarios.",
-                  "backgroundColor": "#8B9BA3"
-                },
-                {
-                  "image": {
-                  "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
-                  "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
-                },
-                "title": "Perfil de egreso",
-                  "text": "La Licenciatura en Gastronomía te dará los conocimientos adquiridos a los servicios de alimentación, interviniendo en las áreas de diseño y preparación de alimentos, administración y dirección de equipos de trabajo, servicio y satisfacción del comensal, con un fuerte sustento ético y nutricional, buscando posicionar y mantener las tradiciones mexicanas.",
-                  "backgroundColor": "#B0003C"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
-                  },
-                  "title": "Campo Laboral",
-                  "text": "El egresado de la Licenciatura en Gastronomía podrá desempeañarse en la producción de alimentos y bebidas de distintas empresas, como son: de hospedaje, destinos turísticos, cruceros, desarrollar su propio restaurante o comedor de servicio, así como en restaurantes, desempeñándose como chef ejecutivo.",
-                  "backgroundColor": "#E84537"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
-                  },
-                  "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento reciente, original del cajero y 2 copias.\n\n• Certificado de secundaria legalizado original y dos copias.\n\n• Certificado de preparatoria legalizado original y 2 copias con su carta de autenticidad. (En caso de no contar con original, presentar constancia de que está en trámite).\n\n• CURP copia.\n\nEn caso de equivalencia\n\n• Certificado parcial de estudios legalizado original con 2 copias y carta de autenticidad.\n\n• 4 fotografías tamaño infantil y 4 tamaño credencial, ambas blanco y negro, papel mate no instantáneas.\n\n• Carta de buena salud expedida por institución pública o privada.",
-                  "backgroundColor": "#00BEB4"
-                }
-              ],
-              "wrapper": false
-            }
-          }
-        ],
-        "size": "medium"
-      }
-    },
-    "descarga": {
-      "id": "program_licenciatura",
-      "type": "primary",
-      "title": "Descarga el plan de estudios",
-      "size": "small",
-      "icon": "download",
-      "lyIcon": false,
-      "disabled": false,
-      "isExpand": false,
-      "tagOnClick": "testClick",
-      "test": ""
-    }
-  },
-  "form": {
-    "config": {
-      "level": { "hidden": true, "value": "licenciatura" },
-      "program": { "hidden": false, "value": "Gastronomía" },
-      "modality": { "hidden": false },
-      "campus": { "hidden": false }
-    },
-    "copies": {
-      "stepone": {
-        "title": "Obtén informes sobre tu programa",
-        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
-      }
-    }
-  }
 }

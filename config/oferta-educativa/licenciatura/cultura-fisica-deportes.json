@@ -1,0 +1,116 @@
+{
+    "meta": {
+      "title": "Licenciatura en Cultura Física y Deportes",
+      "description": "",
+      "keywords": ""
+    },
+    "config": {
+      "title": "Licenciatura en Cultura Física y Deportes",
+      "config": {
+        "nombre": "Licenciatura en Cultura Física y Deportes",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Salud"],
+        "campus": ["Campus Washington"],
+        "nivel": ["Licenciatura"],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1irjsdZWS9jDWvlsKFbFHLP36YZL6Pb2o",
+          "alt": "licenciatura"
+        },
+        "curriculum": {
+          "Presencial": {
+            "Campus Washington": "1U85q9lcAh6dnR_0doAw0b1xMpYfx1Opn"
+          }
+        }
+      }
+    },
+    "sections": {
+      "head": {
+        "title": "Licenciatura en Cultura Física y Deportes",
+        "description": "En la Licenciatura en Cultura Física y Deportes se forman profesionistas capaces de desarrollarse en instituciones educativas del deporte, implementando estrategias para promover la cultura del deporte en nuestra sociedad, siendo a su vez capaces de organizar eventos deportivos de alto impacto con la gestión de recursos y vínculos con organizaciones del deporte.",
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1irjsdZWS9jDWvlsKFbFHLP36YZL6Pb2o",
+          "alt": "licenciatura"
+        }
+      },
+      "modalities": {
+        "title": "Modalidades disponibles en esta licenciatura:",
+        "tabs": {
+          "items": [
+            {
+              "label": "Modalidad Presencial",
+              "icons": { "primary": "", "duplicate": false },
+              "disabled": false,
+              "content": {
+                "cards": [
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    },
+                    "title": "Perfil de ingreso",
+                    "text": "Interesado por la salud y bienestar de la población, por la adquisición de conocimientos de orden técnico, metodológico, social y cultural de las diversas formas de la actividad física. Uso del lenguaje oral y escrito, pensamiento lógico matemático, coordinación motriz, condición física, gusto por la práctica de las actividades físicas, actitud de servicio, ser responsable y honesto con su persona y sociedad. ",
+                    "backgroundColor": "#1B2D68"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    },
+                    "title": "Perfil de egreso",
+                    "text": "El Licenciado /a en Cultura Física y Deportes estará capacitado para:\n\n• Ejercer como docente altamente calificado en el área de la educación física y la recreación, dirigido a individuos de todas las edades, así como en los diversos niveles escolares (preescolar, primaria, secundaria, preparatoria y nivel superior) y en cualquier grupo social. Realizar funciones como entrenador multidisciplinario y acondicionamiento físico.\n\n• Actuar como administrador deportivo optimizando los recursos humanos y materiales, elaborando programas deportivos, realizando planificación en las instituciones y organizaciones deportivas y diseñando programas especiales para la masificación del deporte.\n\n• Realizar investigación científica en el campo de la educación física y del deporte.\n\n• Valorar la importancia de la educación física y deportes para el desarrollo integral del individuo, incidiendo en las masas populares de tal forma que desarrollen una verdadera labor social.\n\n• Elaborar, aplicar y evaluar programas de actividad física con el objetivo de mejorar el proceso de salud en la población.",
+                    "backgroundColor": "#C31433"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    },
+                    "title": "Campo Laboral",
+                    "text": "El licenciado/a en Cultura Física y Deportes será capaz de desarrollarse en las diferentes instituciones deportivas como entrenador deportivo, auxiliar técnico, preparador físico, instructor o entrenador personal, interpretando y desarrollando planes, programas básicos de alto rendimiento.\n\n Además será capaz de desarrollarse en el área docente a nivel básico, medio superior y superior como profesor de educación física dentro del sistema educativo nacional. Así mismo tendrá el conocimiento para gestionar y organizar eventos deportivos con la capacidad de dirigir, administrar recursos humanos, materiales y financieros en instalaciones, organismos y clubes dedicados al deporte. ",
+                    "backgroundColor": "#4470B1"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    },
+                    "title": "Requisitos de admisión",
+                    "text": "a) Acta de nacimiento original y 1 copias (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.\n\n c) 1 copia de la CURP.\n\n d) 2 copias de Credencial Oficial IFE / INE o Pasaporte\n\n e) 2 copias de Credencial Oficial IFE / INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n f) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n De contar ya con una licenciatura por parte de UdeG y estar titulado, se aceptan copias certificadas expedidas por UdeG del certificado de bachillerato de no más de un mes al día que lo esté entregando y copia simple del título. (Más todos los documentos de nuevo ingreso).\n\n En caso de no estar titulado, debe entregar en original todos los documentos. (Todos los documentos de nuevo ingreso).\n\n Nota: Si realizó los estudios de bachillerato en otro estado de la república, el certificado debe tener la legalización por parte de Secretaría de Gobernación del estado donde realizaron los estudios.\n\n Si el certificado es de UNAM, Secretaría de la Defensa Nacional (SEDENA), Sistema Educativo Nacional (en el encabezado del documento) y Colegios de Bachilleres, estos no requieren del trámite de legalización.",
+                    "backgroundColor": "#EEAA01"
+                  }
+                ],
+                "wrapper": false
+              }
+            }
+          ],
+          "size": "medium"
+        }
+      },
+      "descarga": {
+        "id": "program_licenciatura",
+        "type": "primary",
+        "title": "Descarga el plan de estudios",
+        "size": "small",
+        "icon": "download",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "testClick",
+        "test": ""
+      }
+    },
+    "form": {
+      "config": {
+        "level": { "hidden": true, "value": "licenciatura" },
+        "program": { "hidden": false, "value": "Licenciatura en Cultura Física y Deportes" },
+        "modality": { "hidden": false },
+        "campus": { "hidden": false }
+      },
+      "copies": {
+        "stepone": {
+          "title": "Obtén informes sobre tu programa",
+          "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+        }
+      }
+    }
+}

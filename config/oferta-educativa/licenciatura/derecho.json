@@ -1,208 +1,265 @@
 {
-  "meta": {
-    "title": "Licenciatura en Derecho",
-    "description": "",
-    "keywords": ""
-  },
-  "config": {
-    "title": "Licenciatura en Derecho",
-    "config": {
-      "nombre": "Licenciatura en Derecho",
-      "modalidad": ["Presencial", "Online", "Flex"],
-      "areaConocimiento": ["Ciencias Sociales", "Humanidades"],
-      "campus": [ "Saltillo", "Torreón", "Piedras Negras", "Sabinas", "Monclova", "Monterrey" ],
-      "nivel": ["Licenciatura"],
-      "image": {
-        "src": "https://drive.google.com/uc?export=view&id=19Fv-odSZ3hzQTNfQ7XAqIM0LOStux1qn",
-        "alt": "licenciatura"
-      },
-      "curriculum": {
-        "Presencial": {
-          "Saltillo": "1kGEwDTBQ4VWtccCZ6y4l7n_W6fMhJsgb",
-          "Torreón": "1nKOPV54lGe51_WCB3XUWpBDa9Ba0qHGJ",
-          "Piedras Negras": "1EoPzRemVXxZ01feCq-o5HRuhs6Gf1dhB",
-          "Sabinas": "1-zpXjwJrt3RM_Ab1fWAKhfWK4QdBbLoF",
-          "Monclova": "1Y2QUkFTVkkqgnafBOhnbLNgC7leXHtw5"
-        },
-        "Flex": "1vYsxvkttM3LtViImm3b5hGyBIrBDJs1z",
-        "Online": "1iA-_v64nP2Gdm7C25w2jok5vlyGisi0n"
-      }
-    }
-  },
-  "sections": {
-    "head": {
+    "meta": {
       "title": "Licenciatura en Derecho",
-      "description": "Participa en fases de litigio y desempéñate en funciones jurídicas administrativas, fiscales y laborales. Contarás con catedráticos expertos en cada ramo de la abogacía. ",
-      "image": {
-        "src": "https://drive.google.com/uc?export=view&id=19Fv-odSZ3hzQTNfQ7XAqIM0LOStux1qn",
-        "alt": "licenciatura"
-      }
+      "description": "",
+      "keywords": ""
     },
-    "modalities": {
-      "title": "Modalidades disponibles en esta licenciatura:",
-      "tabs": {
-        "items": [
-          {
-            "label": "Modalidad Presencial", "icons": { "primary": "", "duplicate": false}, "disabled": false,
-            "content": {
-              "cards": [
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
-                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
-                  },
-                  "title": "Perfil de ingreso",
-                  "text": "Participa en fases de litigio y desempéñate en funciones jurídicas administrativas, fiscales y laborales. Contarás con catedráticos expertos en cada ramo de la abogacía.",
-                  "backgroundColor": "#8B9BA3"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
-                  },
-                  "title": "Perfil de egreso",
-                  "text": "Con la Licenciatura en Derecho tendrás la capacidad de dirigir, asesorar y participar directamente en todas las fases del litigio, incluyendo los juicios orales como abogado litigante. También podrás desempeñarte en las funciones jurídicas de los Poderes Legislativo, Ejecutivo y Judicial e intervenir en el diseño y dirección de estrategias legales corporativas tanto en el ámbito mercantil como administrativo, fiscal y laboral.",
-                  "backgroundColor": "#B0003C"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
-                  },
-                  "title": "Campo Laboral",
-                  "text": "El egresado de la Licenciatura en Derecho puede desempeñarse en el sector privado y en el sector público como litigante o asesor jurídico, en despachos o bufetes jurídicos y en departamentos legales de empresas comerciales, empresas industriales y empresas de bienes y servicios. También puede integrarse al campo de la docencia, investigación, coordinaciones legales y podría tener su propia firma jurídica y llevar sus propios casos de manera independiente.",
-                  "backgroundColor": "#E84537"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
-                  },
-                  "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento reciente, original del cajero y 2 copias.\n\n• Certificado de secundaria legalizado original y dos copias.\n\n• Certificado de preparatoria legalizado original y 2 copias con su carta de autenticidad. (En caso de no contar con original, presentar constancia de que está en trámite).\n\n• CURP copia.\n\nEn caso de equivalencia\n\n• Certificado parcial de estudios legalizado original con 2 copias y carta de autenticidad.\n\n• 4 fotografías tamaño infantil y 4 tamaño credencial, ambas blanco y negro, papel mate no instantáneas.\n\n• Carta de buena salud expedida por institución pública o privada.",
-                  "backgroundColor": "#00BEB4"
-                }
-              ],
-              "wrapper": false
-            }
-          },
-          {
-            "label": "Modalidad Online", "icons": { "primary": "", "duplicate": false}, "disabled": false,
-            "content": {
-              "cards": [
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
-                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
-                  },
-                  "title": "Perfil de ingreso",
-                  "text": "El aspirante a la Licenciatura en Derecho debe contar con interés por los problemas sociales en los ámbitos histórico, político, económico y cultural; de orden nacional e internacional.\nAdemás, de un manejo adecuado de la expresión oral y escrita, comprensión y gusto por la lectura, y el debate.\nRazonamiento lógico y pensamiento crítico respecto del funcionamiento de las instituciones sociales.",
-                  "backgroundColor": "#8B9BA3"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
-                  },
-                  "title": "Perfil de egreso",
-                  "text": "Con la Licenciatura en Derecho tendrás la capacidad de dirigir, asesorar y participar directamente en todas las fases del litigio, incluyendo los juicios orales como abogado litigante. También podrás desempeñarte en las funciones jurídicas de los Poderes Legislativo, Ejecutivo y Judicial e intervenir en el diseño y dirección de estrategias legales corporativas tanto en el ámbito mercantil como administrativo, fiscal y laboral.",
-                  "backgroundColor": "#B0003C"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
-                  },
-                  "title": "Campo Laboral",
-                  "text": "El egresado de la Licenciatura en Derecho puede desempeñarse en el sector privado y en el sector público como litigante o asesor jurídico, en despachos o bufetes jurídicos y en departamentos legales de empresas comerciales, empresas industriales y empresas de bienes y servicios. También puede integrarse al campo de la docencia, investigación, coordinaciones legales y podría tener su propia firma jurídica y llevar sus propios casos de manera independiente.",
-                  "backgroundColor": "#E84537"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
-                  },
-                  "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento reciente, original del cajero y 2 copias.\n\n• Certificado de secundaria legalizado original y dos copias.\n\n• Certificado de preparatoria legalizado original y 2 copias con su carta de autenticidad. (En caso de no contar con original, presentar constancia de que está en trámite).\n\n• CURP copia.\n\nEn caso de equivalencia\n\n• Certificado parcial de estudios legalizado original con 2 copias y carta de autenticidad.\n\n• 4 fotografías tamaño infantil y 4 tamaño credencial, ambas blanco y negro, papel mate no instantáneas.\n\n• Carta de buena salud expedida por institución pública o privada.",
-                  "backgroundColor": "#00BEB4"
-                }
-              ],
-              "wrapper": false
-            }
-          },
-          {
-            "label": "Modalidad Flex", "icons": { "primary": "", "duplicate": false}, "disabled": false,
-            "content": {
-              "cards": [
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
-                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
-                  },
-                  "title": "Perfil de ingreso",
-                  "text": "El aspirante a la Licenciatura en Derecho debe contar con interés por los problemas sociales en los ámbitos histórico, político, económico y cultural; de orden nacional e internacional.\nAdemás, de un manejo adecuado de la expresión oral y escrita, comprensión y gusto por la lectura, y el debate.\nRazonamiento lógico y pensamiento crítico respecto del funcionamiento de las instituciones sociales.",
-                  "backgroundColor": "#8B9BA3"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
-                  },
-                  "title": "Perfil de egreso",
-                  "text": "Con la Licenciatura en Derecho tendrás la capacidad de dirigir, asesorar y participar directamente en todas las fases del litigio incluyendo los juicios orales como abogado litigante, podrás desempeñarte en las funciones jurídicas de los Poderes Legislativo, Ejecutivo y Judicial e intervenir en el diseño y dirección de estrategias legales corporativas tanto en el ámbito mercantil como administrativo, fiscal y laboral.",
-                  "backgroundColor": "#B0003C"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
-                  },
-                  "title": "Campo Laboral",
-                  "text": "El egresado de la Licenciatura en Derecho puede desempeñarse en el sector privado y en el sector público como litigante o asesor jurídico, en despachos o bufetes jurídicos y en departamentos legales de empresas comerciales, empresas industriales y empresas de bienes y servicios. También puede integrarse al campo de la docencia, investigación, coordinaciones legales y podría tener su propia firma jurídica y llevar sus propios casos de manera independiente.",
-                  "backgroundColor": "#E84537"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
-                  },
-                  "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento reciente, original del cajero y 2 copias.\n\n• Certificado de secundaria legalizado original y dos copias.\n\n• Certificado de preparatoria legalizado original y 2 copias con su carta de autenticidad. (En caso de no contar con original, presentar constancia de que está en trámite).\n\n• CURP copia.\n\nEn caso de equivalencia\\n\n• Certificado parcial de estudios legalizado original con 2 copias y carta de autenticidad.\n\n• 4 fotografías tamaño infantil y 4 tamaño credencial, ambas blanco y negro, papel mate no instantáneas.\n\n• Carta de buena salud expedida por institución pública o privada.",
-                  "backgroundColor": "#00BEB4"
-                }
-              ],
-              "wrapper": false
-            }
-          }
-        ],
-        "size": "medium"
-      }
-    },
-    "descarga": {
-      "id": "program_licenciatura",
-      "type": "primary",
-      "title": "Descarga el plan de estudios",
-      "size": "small",
-      "icon": "download",
-      "lyIcon": false,
-      "disabled": false,
-      "isExpand": false,
-      "tagOnClick": "testClick",
-      "test": ""
-    }
-  },
-  "form": {
     "config": {
-      "level": { "hidden": true, "value": "licenciatura" },
-      "program": { "hidden": false, "value": "Derecho" },
-      "modality": { "hidden": false },
-      "campus": { "hidden": false }
+      "title": "Licenciatura en Derecho",
+      "config": {
+        "nombre": "Licenciatura en Derecho",
+        "modalidad": ["Presencial", "OnlineSemestral", "OnlineCuatrimestral", "Flex"],
+        "areaConocimiento": ["Negocios y Empresariales"],
+        "campus": ["Américas", "Campus Washington", "Río Nilo", "Tlajomulco", "Zapopan"],
+        "nivel": ["Licenciatura"],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_derecho_interna_8acaa229cd.jpg",
+          "alt": "licenciatura"
+        },
+        "curriculum": {
+          "Presencial": {
+            "Américas": "1zzkA90IrxJ44ZB9nI_4jDTFgYDYwMgw6", 
+            "Campus Washington": "1zzkA90IrxJ44ZB9nI_4jDTFgYDYwMgw6", 
+            "Río Nilo": "1zzkA90IrxJ44ZB9nI_4jDTFgYDYwMgw6", 
+            "Tlajomulco": "1zzkA90IrxJ44ZB9nI_4jDTFgYDYwMgw6", 
+            "Zapopan": "1zzkA90IrxJ44ZB9nI_4jDTFgYDYwMgw6"
+          },
+          "OnlineSemestral": "1FpOIGlW4Gp_JjNR0bwl14bYS0IamT-IZ",
+          "OnlineCuatrimestral": "",
+          "Flex": "1TOt1NOeO9-0PANEr-HJCBDO6-xBXp2Dn"
+        }
+      }
     },
-    "copies": {
-      "stepone": {
-        "title": "Obtén informes sobre tu programa",
-        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+    "sections": {
+      "head": {
+        "title": "Licenciatura en Derecho",
+        "description": "La licenciatura en derecho persigue generar profesionales en el  campo legal capaces de comprender los fundamentos teóricos y la aplicación práctica del derecho, es una licenciatura idónea para aquellos con conocimiento en el campo jurídico y para quienes decidan estudiar el derecho de forma activa , concreta y que se enfoquen en la praxis legal.",
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_derecho_interna_8acaa229cd.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "modalities": {
+        "title": "Modalidades disponibles en esta licenciatura:",
+        "tabs": {
+          "items": [
+            {
+              "label": "Presencial",
+              "icons": { "primary": "", "duplicate": false },
+              "disabled": false,
+              "content": {
+                "cards": [
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    },
+                    "title": "Perfil de ingreso",
+                    "text": "El aspirante a la Licenciatura en Derecho deberá contar con aptitudes, destrezas y conocimientos tales como, capacidad de análisis, habilidades de redacción y argumentación así como exposiciones de forma oral, capacidad para relacionar el pensamiento abstracto a situaciones concretas con el fin de la interpretación en la práctica jurídica.",
+                    "backgroundColor": "#1B2D68"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    },
+                    "title": "Perfil de egreso",
+  
+                    "text": "El egresado /a de la Licenciatura en Derecho contará con la formación académica integral, sólida que permita desarrollarse ética y profesionalmente en el campo jurídico. El egresado (a) será capaz de investigar, certificar, legislar, litigar, asesorar, procurar justicia, administrar justicia, y promover aprendizajes jurídicos. Proveer soluciones sociales y culturales eficaces en su entorno profesional.",
+                    "backgroundColor": "#C31433"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    },
+                    "title": "Campo Laboral",
+                    "text": "El Licenciado/a en Derecho puede emplearse tanto en empresas públicas como privadas, en las tres esferas de competencia, federal, estatal y municipal, así como en los tres poderes, legislativo, ejecutivo y judicial, tanto en el ámbito privado o como abogado/a corporativo/a. El abogado/a independiente puede ser litigante o postulante ante los tribunales, como abogado/a particular. ",
+                    "backgroundColor": "#4470B1"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    },
+                    "title": "Requisitos de admisión",
+                    "text": "a) Acta de nacimiento original y 2 copias para SICyT y 1 copia para SEP, (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de bachillerato original, en buen estado con tres copias.\n\n c) 2 copia de la CURP para SICyT\n\n d) 1 copia de la CURP para SEP.\n\n e) 2 copias de Credencial Oficial IFE / INE, o pasaporte.\n\n f) 2 copias de Credencial Oficial IFE / INE, o Pasaporte del padre de familia o tutor (para menores de edad).\n\n g) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.",
+                    "backgroundColor": "#EEAA01"
+                  }
+                ],
+                "wrapper": false
+              }
+            },
+            {
+              "label": "Online Semestral",
+              "icons": { "primary": "", "duplicate": false },
+              "disabled": false,
+              "content": {
+                "cards": [
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    },
+                    "title": "Perfil de ingreso",
+                    "text": "El aspirante a la Licenciatura en Derecho debe contar con interés por los problemas sociales en los ámbitos histórico, político, económico y cultural; de orden nacional e internacional.\n\n Además, de un manejo adecuado de la expresión oral y escrita, comprensión y gusto por la lectura, y el debate.\n\n Razonamiento lógico y pensamiento crítico respecto del funcionamiento de las instituciones sociales.",
+                    "backgroundColor": "#1B2D68"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    },
+                    "title": "Perfil de egreso",
+  
+                    "text": "Con la Licenciatura en Derecho tendrás la capacidad de dirigir, asesorar y participar directamente en todas las fases del litigio incluyendo los juicios orales como abogado litigante, podrás desempeñarte en las funciones jurídicas de los Poderes Legislativo, Ejecutivo y Judicial e intervenir en el diseño y dirección de estrategias legales corporativas tanto en el ámbito mercantil como administrativo, fiscal y laboral.",
+                    "backgroundColor": "#C31433"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    },
+                    "title": "Campo Laboral",
+                    "text": "El egresado de la Licenciatura en Derecho puede desempeñarse en el sector privado y en el sector público como litigante o asesor jurídico, en despachos o bufetes jurídicos y en departamentos legales de empresas comerciales, empresas industriales y empresas de bienes y servicios. También puede integrarse al campo de la docencia, investigación, coordinaciones legales y podría tener su propia firma jurídica y llevar sus propios casos de manera independiente.                     ",
+                    "backgroundColor": "#4470B1"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    },
+                    "title": "Requisitos de admisión",
+                    "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                    "backgroundColor": "#EEAA01"
+                  }
+                ],
+                "wrapper": false
+              }
+            },
+            {
+              "label": "Online Cuatrimestral",
+              "icons": { "primary": "", "duplicate": false },
+              "disabled": false,
+              "content": {
+                "cards": [
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    },
+                    "title": "Perfil de ingreso",
+                    "text": "El aspirante a la Licenciatura en Derecho debe contar con interés por los problemas sociales en los ámbitos histórico, político, económico y cultural; de orden nacional e internacional.\n\n Además, de un manejo adecuado de la expresión oral y escrita, comprensión y gusto por la lectura, y el debate.\n\n Razonamiento lógico y pensamiento crítico respecto del funcionamiento de las instituciones sociales.",
+                    "backgroundColor": "#1B2D68"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    },
+                    "title": "Perfil de egreso",
+                    "text": "Con la Licenciatura en Derecho tendrás la capacidad de dirigir, asesorar y participar directamente en todas las fases del litigio incluyendo los juicios orales como abogado litigante, podrás desempeñarte en las funciones jurídicas de los Poderes Legislativo, Ejecutivo y Judicial e intervenir en el diseño y dirección de estrategias legales corporativas tanto en el ámbito mercantil como administrativo, fiscal y laboral.",
+                    "backgroundColor": "#C31433"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    },
+                    "title": "Campo Laboral",
+                    "text": "El egresado de la Licenciatura en Derecho puede desempeñarse en el sector privado y en el sector público como litigante o asesor jurídico, en despachos o bufetes jurídicos y en departamentos legales de empresas comerciales, empresas industriales y empresas de bienes y servicios. También puede integrarse al campo de la docencia, investigación, coordinaciones legales y podría tener su propia firma jurídica y llevar sus propios casos de manera independiente. ",
+                    "backgroundColor": "#4470B1"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    },
+                    "title": "Requisitos de admisión",
+                    "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                    "backgroundColor": "#EEAA01"
+                  }
+                ],
+                "wrapper": false
+              }
+            },
+            {
+              "label": "Flex",
+              "icons": { "primary": "", "duplicate": false },
+              "disabled": false,
+              "content": {
+                "cards": [
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    },
+                    "title": "Perfil de ingreso",
+                    "text": "El aspirante a la Licenciatura en Derecho debe contar con interés por los problemas sociales en los ámbitos histórico, político, económico y cultural; de orden nacional e internacional.\n\n Además, de un manejo adecuado de la expresión oral y escrita, comprensión y gusto por la lectura, y el debate.\n\n Razonamiento lógico y pensamiento crítico respecto del funcionamiento de las instituciones sociales.",
+                    "backgroundColor": "#1B2D68"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    },
+                    "title": "Perfil de egreso",
+  
+                    "text": "Con la Licenciatura en Derecho tendrás la capacidad de dirigir, asesorar y participar directamente en todas las fases del litigio incluyendo los juicios orales como abogado litigante, podrás desempeñarte en las funciones jurídicas de los Poderes Legislativo, Ejecutivo y Judicial e intervenir en el diseño y dirección de estrategias legales corporativas tanto en el ámbito mercantil como administrativo, fiscal y laboral.",
+                    "backgroundColor": "#C31433"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    },
+                    "title": "Campo Laboral",
+                    "text": "El egresado de la Licenciatura en Derecho puede desempeñarse en el sector privado y en el sector público como litigante o asesor jurídico, en despachos o bufetes jurídicos y en departamentos legales de empresas comerciales, empresas industriales y empresas de bienes y servicios. También puede integrarse al campo de la docencia, investigación, coordinaciones legales y podría tener su propia firma jurídica y llevar sus propios casos de manera independiente. ",
+                    "backgroundColor": "#4470B1"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                      "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    },
+                    "title": "Requisitos de admisión",
+                    "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                    "backgroundColor": "#EEAA01"
+                  }
+                ],
+                "wrapper": false
+              }
+            }
+          ],
+          "size": "medium"
+        }
+      },
+      "descarga": {
+        "id": "program_licenciatura",
+        "type": "primary",
+        "title": "Descarga el plan de estudios",
+        "size": "small",
+        "icon": "download",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "testClick",
+        "test": ""
+      }
+    },
+    "form": {
+      "config": {
+        "level": { "hidden": true, "value": "licenciatura" },
+        "program": { "hidden": false, "value": "Licenciatura en Derecho" },
+        "modality": { "hidden": false },
+        "campus": { "hidden": false }
+      },
+      "copies": {
+        "stepone": {
+          "title": "Obtén informes sobre tu programa",
+          "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+        }
       }
     }
   }
-}
+  

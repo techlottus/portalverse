@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "title": "Ingeniería Industrial con Certificación en Inglés Proulex",
+    "description": "",
+    "keywords": ""
+  },
+  "config": {
+    "title": "Ingeniería Industrial con Certificación en Inglés Proulex",
+    "config": {
+      "nombre": "Ingeniería Industrial con Certificación en Inglés Proulex",
+      "modalidad": ["Presencial"],
+      "areaConocimiento": ["Ingenierías y Tecnología"],
+      "campus": ["Olímpica"],
+      "nivel": ["Licenciatura"],
+      "image": {
+        "src": "https://assets.staging.bedu.org/UTEG/card_industrial_5e4767fc98.jpg",
+        "alt": "licenciatura"
+      },
+      "curriculum": {
+        "Presencial": {
+          "Olímpica": "1_zklXn14OC8lNdqJk3NbspDcTP-owOKw"
+        }
+      }
+    }
+  },
+  "sections": {
+    "head": {
+      "title": "Ingeniería Industrial con Certificación en Inglés Proulex",
+      "description": "Ingeniería Industrial con certificación en Inglés Proulex con la enseñanza del idioma inglés. Ofrecemos el dominio de una segunda lengua bajo un modelo especial.",
+      "image": {
+        "src": "https://assets.staging.bedu.org/UTEG/card_industrial_5e4767fc98.jpg",
+        "alt": "licenciatura"
+      }
+    },
+    "modalities": {
+      "title": "Modalidades disponibles en esta licenciatura:",
+      "tabs": {
+        "items": [
+          {
+            "label": "Modalidad Presencial",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "El aspirante a cursar la carrera de ingeniería industrial debe contar preferentemente con:\n\n Intereses: Por descubrir nuevos hechos y resolver problemas, gusto por el cálculo, los sistemas, el trabajo con maquinas y herramientas, además de la utilización de técnicas administrativas.\n\n Aptitudes: Cálculo matemático, alto sentido de organización, análisis y síntesis, trabajo con maquinas y herramientas, imaginación e inventiva, además de habilidades para entrevistar y tratar gente; promover y vender proyectos.\n\n Actitudes: Estabilidad emocional, responsabilidad, constancia, paciencia, alto sentido de autoridad.",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "Que como perfil de egreso deseable del programa de Ingeniería Industrial, se propone que:\n\n El egresado sea un profesionista capaz de desarrollar empresas sostenibles. Cuente con habilidad para analizar y diseñar sistemas de trabajo y de producción, además de aplicar técnicas cuantitativas para optimizar procesos y controlar la calidad de los mismos, integrando recursos humanos, materiales y económicos.",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "El ingeniero industrial podrá desempeñarse en una gran  variedad de ámbitos laborables, destacando:\n\n• Las industrias extractivas y las de transformación\n\n• Empresas de servicios\n\n• Unidades hospitalarias\n\n• Bufetes de consultoría industrial\n\n• Bancos e instituciones financieras\n\n• Aseguradoras\n\n• Sector público\n\n• Empresas comercializadoras",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "a) Acta de nacimiento original y 1 copia (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.\n\n c) 1 copia de la CURP.\n\n d) 2 copias de Credencial Oficial IFE / INE o Pasaporte\n\n e) 2 copias de Credencial Oficial IFE / INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n f) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n De contar ya con una licenciatura por parte de UdeG y estar titulado, se aceptan copias certificadas expedidas por UdeG del certificado de bachillerato de no más de un mes al día que lo esté entregando y copia simple del título. (Más todos los documentos de nuevo ingreso).\n\n En caso de no estar titulado, debe entregar en original todos los documentos. (Todos los documentos de nuevo ingreso).\n\n Nota: Si realizó los estudios de bachillerato en otro estado de la república, el certificado debe tener la legalización por parte de Secretaría de Gobernación del estado donde realizaron los estudios.\n\n Si el certificado es de UNAM, Secretaría de la Defensa Nacional (SEDENA), Sistema Educativo Nacional (en el encabezado del documento) y Colegios de Bachilleres, estos no requieren del trámite de legalización.",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          }
+        ],
+        "size": "medium"
+      }
+    },
+    "descarga": {
+      "id": "program_licenciatura",
+      "type": "primary",
+      "title": "Descarga el plan de estudios",
+      "size": "small",
+      "icon": "download",
+      "lyIcon": false,
+      "disabled": false,
+      "isExpand": false,
+      "tagOnClick": "testClick",
+      "test": ""
+    }
+  },
+  "form": {
+    "config": {
+      "level": { "hidden": true, "value": "licenciatura" },
+      "program": { "hidden": false, "value": "Ingeniería Industrial con Certificación en Inglés Proulex" },
+      "modality": { "hidden": false },
+      "campus": { "hidden": false }
+    },
+    "copies": {
+      "stepone": {
+        "title": "Obtén informes sobre tu programa",
+        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+      }
+    }
+  }
+}
