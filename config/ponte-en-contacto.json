@@ -23,7 +23,7 @@
       }
     ],
     "campus": {
-      "title": "Visítanos en nuestros campus",
+      "title": "Visítanos en nuestros planteles",
       "button": {
         "id": "",
         "type": "outlined",
@@ -35,7 +35,7 @@
         "isExpand": false,
         "tagOnClick": "testClick", 
         "test": "",
-        "redirect": "/nosotros/campus"
+        "redirect": "/nosotros/planteles"
       }
     },
     "sociales": [
