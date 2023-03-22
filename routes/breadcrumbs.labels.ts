@@ -8,7 +8,7 @@ const BreadcrumbsLabels: any = {
   "especialidad": "Especialidades",
   "doctorado": "Doctorados",
   "extension-universitaria": "Extensión Universitaria",
-  "contactanos": "Contactanos",
+  "contactanos": "Contáctanos",
   "admisiones": "Admisiones",
   "becas": "Becas",
   "egresados": "Egresados",
