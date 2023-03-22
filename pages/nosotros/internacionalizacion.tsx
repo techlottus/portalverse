@@ -16,7 +16,6 @@ import Modal from "@/old-components/Modal/Modal"
 import ContentInsideLayout from "@/layouts/ContentInside.layout"
 import cn from "classnames"
 
-
 const Internacionalizacion: NextPageWithLayout = ({ sections, meta }: any) => {
 
   const router = useRouter();
