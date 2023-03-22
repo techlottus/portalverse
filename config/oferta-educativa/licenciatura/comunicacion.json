@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "title": "Licenciatura en Comunicación",
+    "description": "",
+    "keywords": ""
+  },
+  "config": {
+    "title": "Licenciatura en Comunicación",
+    "config": {
+      "nombre": "Licenciatura en Comunicación",
+      "modalidad": ["Online"],
+      "areaConocimiento": ["Ciencias sociales"],
+      "campus": [],
+      "nivel": ["Licenciatura"],
+      "image": {
+        "src": "https://drive.google.com/uc?export=view&id=1_tHq85RhqWO6CLoIWH7aQfJ-56IkX84b",
+        "alt": "licenciatura"
+      },
+      "curriculum": {
+        "Online": "1x9hUtFor_7L4Lnct69UVdEK-okvKDs5C"
+      }
+    }
+  },
+  "sections": {
+    "head": {
+      "title": "Licenciatura en Comunicación",
+      "description": "Diseña y dirige proyectos de comunicación en medios tradicionales y multimedia, por medio de las tecnologías de la información. Ofrece alternativas innovadoras creando mensajes que sean relevantes e importantes y que logren captar al público en algún tema o comunicado. Desempéñate tanto en el sector público como privado. ",
+      "image": {
+        "src": "https://drive.google.com/uc?export=view&id=1_tHq85RhqWO6CLoIWH7aQfJ-56IkX84b",
+        "alt": "licenciatura"
+      }
+    },
+    "modalities": {
+      "title": "Modalidades disponibles en esta licenciatura:",
+      "tabs": {
+        "items": [
+          {
+            "label": "Modalidad Online",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "La Licenciatura en Ciencias de la Comunicación establece un conjunto de cualidades que los aspirantes deben poseer a fin de asegurar el aprovechamiento de los contenidos y desarrollar las habilidades necesarias para su desempeño profesional. Todo aspirante a cursar la Carrera de Ciencias de la Comunicación requiere:\n\n• Interés por los acontecimientos de su época.\n\n• Gusto por los medios de comunicación social.\n\n• Interés por la investigación.\n\n• Hábito por la lectura.\n\n• Habilidad para expresarse oralmente y por escrito.\n\n• Capacidad de organización e investigación.\n\n• Actitud creativa e innovadora.\n\n• Disposición para el trabajo en equipo.\n\n• Facilidad para desarrollar relaciones humanas.",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "Como egresado de este programa podrás participar en el desarrollo de estrategias de comunicación organizacional y proyectos de investigación para contribuir de manera consciente y responsable al desarrollo social, además, tendrás la habilidad para redactar en los diferentes géneros como periodísticos, mediáticos, institucionales o personales para los diversos medios de  comunicación ",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "El Licenciado en Comunicación podrá trabajar en:\n\n• Empresas de medios de comunicación\n\n• Empresas en el área de comunicación organizacional.\n\n• Elaboración de mensajes y pautas para agenciasde publicidad.\n\n• Buffet de asesoría a empresas",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          }
+        ],
+        "size": "medium"
+      }
+    },
+    "descarga": {
+      "id": "program_licenciatura",
+      "type": "primary",
+      "title": "Descarga el plan de estudios",
+      "size": "small",
+      "icon": "download",
+      "lyIcon": false,
+      "disabled": false,
+      "isExpand": false,
+      "tagOnClick": "testClick",
+      "test": ""
+    }
+  },
+  "form": {
+    "config": {
+      "level": { "hidden": true, "value": "licenciatura" },
+      "program": { "hidden": false, "value": "Licenciatura en Comunicación" },
+      "modality": { "hidden": false },
+      "campus": { "hidden": false }
+    },
+    "copies": {
+      "stepone": {
+        "title": "Obtén informes sobre tu programa",
+        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+      }
+    }
+  }
+}

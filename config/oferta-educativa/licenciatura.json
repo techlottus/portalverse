@@ -344,6 +344,104 @@
         }
       },
       "route": "turismo"
+    },
+    {
+      "title": "Ingeniería en Desarrollo de Software",
+      "config": {
+        "nombre": "Ingeniería en Desarrollo de Software",
+        "modalidad": ["Online", "Flex"],
+        "areaConocimiento": ["Ciencias Exactas"],
+        "campus": [],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1QkGiuIyEYZClG1-kEamZVQuHV4C6HgFw",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "ingenieria-desarrollo-software"
+    },
+    {
+      "title": "Ingeniería en Sistemas",
+      "config": {
+        "nombre": "Ingeniería en Sistemas",
+        "modalidad": ["Online", "Flex"],
+        "areaConocimiento": ["Ciencias Exactas"],
+        "campus": [],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1Rl8EgkrLpTYyY_1Dg56N6WBTzYEvY4J5",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "ingenieria-sistemas"
+    },
+    {
+      "title": "Licenciatura Administración y Liderazgo Empresarial",
+      "config": {
+        "nombre": "Licenciatura Administración y Liderazgo Empresarial",
+        "modalidad": ["Online", "Flex"],
+        "areaConocimiento": ["Económico - Administrativo"],
+        "campus": [],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1H2GGHVOgDizi1A-lxo22b2nFSdkfs9G2",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "administracion-liderazgo-empresarial"
+    },
+    {
+      "title": "Licenciatura en Comunicación",
+      "config": {
+        "nombre": "Licenciatura en Comunicación",
+        "modalidad": ["Online"],
+        "areaConocimiento": ["Ciencias sociales"],
+        "campus": [],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1YVXcF43snvTiNIU6WzZLxT8PuOJJMTFo",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "comunicacion"
+    },
+    {
+      "title": "Licenciatura en Gestión Deportiva",
+      "config": {
+        "nombre": "Licenciatura en Gestión Deportiva",
+        "modalidad": ["Online", "Flex"],
+        "areaConocimiento": ["Ciencias sociales"],
+        "campus": [],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1OSulEXURbK5qPRg8MB1Wko49HjiPQKUH",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "gestion-deportiva"
+    },
+    {
+      "title": "Licenciatura en Diseño Gráfico ",
+      "config": {
+        "nombre": "Licenciatura en Diseño Gráfico ",
+        "modalidad": ["Online", "Flex"],
+        "areaConocimiento": ["Arquitectura y Diseño"],
+        "campus": [],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1xmiGmRMZNlENPk9sF8v4YV0GOcYjUFZ5",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "diseno-grafico"
+    },
+    {
+      "title": "Licenciatura en Relaciones Internacionales",
+      "config": {
+        "nombre": "Licenciatura en Relaciones Internacionales",
+        "modalidad": ["Online"],
+        "areaConocimiento": ["Económico - Administrativo"],
+        "campus": [],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1v_Itxj8u4HmSkVtnR9AssBTL2dBUiXtj",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "relaciones-internacionales"
     }
   ]
 }

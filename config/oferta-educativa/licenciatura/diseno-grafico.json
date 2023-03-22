@@ -1,42 +1,33 @@
 {
   "meta": {
-    "title": "Licenciatura en Mercadotecnia",
+    "title": "Licenciatura en Diseño Gráfico",
     "description": "",
     "keywords": ""
   },
   "config": {
-    "title": "Licenciatura en Mercadotecnia",
+    "title": "Licenciatura en Diseño Gráfico",
     "config": {
-      "nombre": "Licenciatura en Mercadotecnia",
-      "modalidad": ["Presencial", "Online"],
-      "areaConocimiento": [
-        "Negocios y Empresariales",
-        "Económico - Administrativo"
-      ],
-      "campus": ["Américas", "Campus Washington", "Río Nilo", "Tlajomulco", "Zapopan"],
+      "nombre": "Licenciatura en Diseño Gráfico",
+      "modalidad": ["Online", "Flex"],
+      "areaConocimiento": ["Arquitectura y Diseño"],
+      "campus": [],
       "nivel": ["Licenciatura"],
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1MILM-7eskrngnC2o9ZnGK7VaWLBWSi_U",
+        "src": "https://drive.google.com/uc?export=view&id=1nSgmPbU0Y0FIkL3bmEfaxrMnaYyOby3g",
         "alt": "licenciatura"
       },
       "curriculum": {
-        "Presencial": {
-          "Américas": "1gWEQ5gVXoMvkRhWw_1iNHOZ8j8jZFVmF",
-          "Campus Washington": "1gWEQ5gVXoMvkRhWw_1iNHOZ8j8jZFVmF",
-          "Río Nilo": "1gWEQ5gVXoMvkRhWw_1iNHOZ8j8jZFVmF",
-          "Tlajomulco": "1gWEQ5gVXoMvkRhWw_1iNHOZ8j8jZFVmF",
-          "Zapopan": "1gWEQ5gVXoMvkRhWw_1iNHOZ8j8jZFVmF"
-        },
-        "Online": "1rZGcguG10LCDD6Gc5rq70ep7c-JDDbnH"
+        "Online": "14iBVBdnK-Hcy1ZtKvAberxUnNnbfcavy",
+        "Flex": ""
       }
     }
   },
   "sections": {
     "head": {
-      "title": "Licenciatura en Mercadotecnia",
-      "description": "Plan de estudios cuatrimestral en modalidad presencial y con incorporación a SICyT que incide en la formación de profesionistas innovadores, creativos y propositivos con capacidad para analizar y diagnosticar una corporación, para con ello diseñar y ejecutar estrategias de mercadotecnia que potencialicen el crecimiento, posicionamiento de la organización.",
+      "title": "Licenciatura en Diseño Gráfico",
+      "description": "Obtén el conocimiento, las aptitudes y habilidades necesarias para crear soluciones empresariales gráficas que promuevan el progreso a través de la comunicación y el arte.  Plantea contenidos visuales para un contexto organizacional y que den una representación y posición a nivel nacional e internacional utilizando herramientas tecnológicas.",
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1MILM-7eskrngnC2o9ZnGK7VaWLBWSi_U",
+        "src": "https://drive.google.com/uc?export=view&id=1nSgmPbU0Y0FIkL3bmEfaxrMnaYyOby3g",
         "alt": "licenciatura"
       }
     },
@@ -44,52 +35,6 @@
       "title": "Modalidades disponibles en esta licenciatura:",
       "tabs": {
         "items": [
-          {
-            "label": "Modalidad Presencial",
-            "icons": { "primary": "", "duplicate": false },
-            "disabled": false,
-            "content": {
-              "cards": [
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
-                  },
-                  "title": "Perfil de ingreso",
-                  "text": "Interés:\n\n• Intención de desempeñarse en el área comercial de las organizaciones.\n\n• Conocer cómo contribuyen la mercadotecnia, publicidad y comercialización a la efectividad de las organizaciones.\n\n• Interactuar con equipo de trabajo para la obtención de logros concretos a través de la comunicación integral.\n\n Aptitudes:\n\n• Observación, concentración, análisis y síntesis, redacción, exposición y evaluación de ideas.\n\n• Obtención y manejo de la información, trabajo en equipo, diplomático y afable, comunicación oral y escrita, comprensión de lectura.\n\nActitudes: Responsabilidad, respeto, visión, creatividad, paciencia y perseverancia, compromiso para la autogestión y el autoaprendizaje.",
-                  "backgroundColor": "#1B2D68"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
-                  },
-                  "title": "Perfil de egreso",
-                  "text": "El egresado (a)de la Licenciatura de Mercadotecnia, será capaz de diseñar y desarrollar estrategias mercadológicas para la creación, promoción, comercialización de productos y servicios, a través del desarrollo de una marca; con base de investigaciones, análisis e interpretación sobre los comportamientos de las expectativas y necesidades del mercado.",
-                  "backgroundColor": "#C31433"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
-                  },
-                  "title": "Campo Laboral",
-                  "text": "El egresado podrá desarrollarse profesionalmente en el sector privado; específicamente en el área de comercialización, desarrollo de nuevos productos, mercadotecnia, publicidad, ventas, investigación de mercados, comunicación organizacional, etc.",
-                  "backgroundColor": "#4470B1"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
-                  },
-                  "title": "Requisitos de admisión",
-                  "text": "• Acta de nacimiento original y 2 copias.\n\n• Certificado original y 2 copias.\n\n• 2 copias de INE/IFE por ambos lados.\n\n• CURP impresa y 1 copia.\n\n• 2 Fotografías tamaño infantil blanco y negro o a color, pueden ser instantáneas o de estudio.",
-                  "backgroundColor": "#EEAA01"
-                }
-              ],
-              "wrapper": false
-            }
-          },
           {
             "label": "Modalidad Online",
             "icons": { "primary": "", "duplicate": false },
@@ -102,7 +47,7 @@
                     "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "Para estudiar la Licenciatura en Mercadotecnia es necesario tener una serie de cualidades:\n\n• Haber concluido el bachillerato\n\n• Tener facilidad para comunicarte de manera oral y escrita\n\n• Trabajar en equipo y disposición hacia el trabajo creativo.\n\n• Poseer pensamiento creativo y estratégico.",
+                  "text": "El aspirante a ingresar a la Licenciatura en Diseño Gráfico deberá contar con los siguientes conocimientos:\n\n• Creatividad, proactividad, expresión oral / escrita e investigación.\n\n• Uso de tecnologías de la información y la comunicación, así como manejo de equipos de cómputo y software.\n\n• Razonamiento lógico, solución de problemas con base en principios, leyes y conceptos.\n\n• Vocación de servicio ante el cambio y la transformación.\n\n• Trabajo en equipo multidisciplinario.",
                   "backgroundColor": "#1B2D68"
                 },
                 {
@@ -111,7 +56,7 @@
                     "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
                   },
                   "title": "Perfil de egreso",
-                  "text": "El Licenciado en Mercadotecnia tendrá la capacidad de visualizar de manera integral las oportunidades que se generan con ayuda de la investigación comercial y la aplicación de la inteligencia de mercados, estará preparado para generar su propia empresa, además brindar servicios de consultoría a empresas de cualquier sector. Será un profesional con habilidades de liderazgo que le permitan relacionarse en diversos contextos. ",
+                  "text": "Conocerá los principios para el análisis y la composición de la comunicación visual, en conjunto con los fundamentos del diseño gráfico, geometría y color.\n\n Integrará la metodología del proceso general del diseño y para la investigación.\n\n Utilizará recursos digitales aplicados a la ilustración, la infografía, la preprensa y a las plataformas e interfaz web.\n\n Aplicará técnicas para el diseño editorial analógico y digital, así como para la animación bidimensional y tridimensional.\n\n Ejecutará conceptos para la gestión y promoción profesional del diseño.",
                   "backgroundColor": "#C31433"
                 },
                 {
@@ -120,7 +65,53 @@
                     "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
                   },
                   "title": "Campo Laboral",
-                  "text": "Como egresado de la Licenciatura en Mercadotecnia y gracias a los avances tecnológicos y al Internet, el trabajo para los mercadólogos es más abundante que nunca. Hoy en día, las redes sociales y los sitios web ofrecen un mundo de posibilidades para alcanzar a un público cada vez mayor, y el acceso a estos servicios a través de los teléfonos móviles representa una mina de oro para las agencias de mercadotecnia.",
+                  "text": "Como egresado de la Licenciatura en Diseño Gráfico podrás desempeñarte como diseñador gráfico en agencias creativas, televisoras, agencias de publicidad, medios de comunicación, consultorías, en departamentos de marketing del sector público y privado y como desarrollador independiente, consultor o freelance.",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          },
+          {
+            "label": "Modalidad Flex",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "El aspirante a ingresar a la Licenciatura en Diseño Gráfico deberá contar con los siguientes conocimientos:\n\n• Creatividad, proactividad, expresión oral / escrita e investigación.\n\n• Uso de tecnologías de la información y la comunicación, así como manejo de equipos de cómputo y software.\n\n• Razonamiento lógico, solución de problemas con base en principios, leyes y conceptos.\n\n• Vocación de servicio ante el cambio y la transformación.\n\n• Trabajo en equipo multidisciplinario.",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "Conocerá los principios para el análisis y la composición de la comunicación visual, en conjunto con los fundamentos del diseño gráfico, geometría y color.\n\n Integrará la metodología del proceso general del diseño y para la investigación.\n\n Utilizará recursos digitales aplicados a la ilustración, la infografía, la preprensa y a las plataformas e interfaz web.\n\n Aplicará técnicas para el diseño editorial analógico y digital, así como para la animación bidimensional y tridimensional.\n\n Ejecutará conceptos para la gestión y promoción profesional del diseño.",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "Como egresado de la Licenciatura en Diseño Gráfico podrás desempeñarte como diseñador gráfico en agencias creativas, televisoras, agencias de publicidad, medios de comunicación, consultorías, en departamentos de marketing del sector público y privado y como desarrollador independiente, consultor o freelance.",
                   "backgroundColor": "#4470B1"
                 },
                 {
@@ -156,7 +147,7 @@
   "form": {
     "config": {
       "level": { "hidden": true, "value": "licenciatura" },
-      "program": { "hidden": false, "value": "Licenciatura en Mercadotecnia" },
+      "program": { "hidden": false, "value": "Licenciatura en Diseño Gráfico" },
       "modality": { "hidden": false },
       "campus": { "hidden": false }
     },

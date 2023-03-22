@@ -95,6 +95,13 @@ const Routes: any = {
           { params: { "program": "negocios-digitales", "nameProgram": "Licenciatura en Negocios Digitales" } },
           { params: { "program": "ingenieria-ciencias-datos", "nameProgram": "Ingenieria en Ciencia de Datos" } },
           { params: { "program": "turismo", "nameProgram": "Licenciatura en Turismo" } },
+          { params: { "program": "ingenieria-desarrollo-software", "nameProgram": "Ingeniería en Desarrollo de Software" } },
+          { params: { "program": "ingenieria-sistemas", "nameProgram": "Ingeniería en Sistemas" } },
+          { params: { "program": "administracion-liderazgo-empresarial", "nameProgram": "Licenciatura Administración y Liderazgo Empresarial" } },
+          { params: { "program": "comunicacion", "nameProgram": "Licenciatura en Comunicación" } },
+          { params: { "program": "gestion-deportiva", "nameProgram": "Licenciatura en Gestión Deportiva" } },
+          { params: { "program": "diseno-grafico", "nameProgram": "Licenciatura en Diseño Gráfico" } },
+          { params: { "program": "relaciones-internacionales", "nameProgram": "Licenciatura en Relaciones Internacionales" } },
         ]
       }
     },

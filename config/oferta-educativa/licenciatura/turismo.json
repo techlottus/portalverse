@@ -13,7 +13,7 @@
         "campus": [""],
         "nivel": ["Licenciatura"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=",
+          "src": "https://drive.google.com/uc?export=view&id=1jiyMdUydq0x18y2U3PzQoh9qFITRs6bT",
           "alt": "licenciatura"
         },
         "curriculum": {
@@ -26,7 +26,7 @@
         "title": "Licenciatura en Turismo",
         "description": "Desarrolla habilidades, conocimientos y técnicas para planea, diseñar y ejecutar modelos de atracción turística de algún destino local o internacional, tomando como base la cultura, economía, así como estrategías de crecimiento en sistemas hoteleros. Serás capaz de desarrollar la logística e identificar los nuevos retos de oportunidad turística. ",
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=",
+          "src": "https://drive.google.com/uc?export=view&id=1jiyMdUydq0x18y2U3PzQoh9qFITRs6bT",
           "alt": "licenciatura"
         }
       },
@@ -73,7 +73,7 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
                     },
                     "title": "Requisitos de admisión",
-                    "text": "",
+                    "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
                     "backgroundColor": "#EEAA01"
                   }
                 ],

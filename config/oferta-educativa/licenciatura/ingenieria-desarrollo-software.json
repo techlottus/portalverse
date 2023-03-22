@@ -1,42 +1,33 @@
 {
   "meta": {
-    "title": "Licenciatura en Mercadotecnia",
+    "title": "Ingeniería en Desarrollo de Software",
     "description": "",
     "keywords": ""
   },
   "config": {
-    "title": "Licenciatura en Mercadotecnia",
+    "title": "Ingeniería en Desarrollo de Software",
     "config": {
-      "nombre": "Licenciatura en Mercadotecnia",
-      "modalidad": ["Presencial", "Online"],
-      "areaConocimiento": [
-        "Negocios y Empresariales",
-        "Económico - Administrativo"
-      ],
-      "campus": ["Américas", "Campus Washington", "Río Nilo", "Tlajomulco", "Zapopan"],
+      "nombre": "Ingeniería en Desarrollo de Software",
+      "modalidad": ["Online", "Flex"],
+      "areaConocimiento": ["Ciencias Exactas"],
+      "campus": [],
       "nivel": ["Licenciatura"],
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1MILM-7eskrngnC2o9ZnGK7VaWLBWSi_U",
+        "src": "https://drive.google.com/uc?export=view&id=1HgjuqC-nk68KXTX01q0WcMw_UyLQYkTr",
         "alt": "licenciatura"
       },
       "curriculum": {
-        "Presencial": {
-          "Américas": "1gWEQ5gVXoMvkRhWw_1iNHOZ8j8jZFVmF",
-          "Campus Washington": "1gWEQ5gVXoMvkRhWw_1iNHOZ8j8jZFVmF",
-          "Río Nilo": "1gWEQ5gVXoMvkRhWw_1iNHOZ8j8jZFVmF",
-          "Tlajomulco": "1gWEQ5gVXoMvkRhWw_1iNHOZ8j8jZFVmF",
-          "Zapopan": "1gWEQ5gVXoMvkRhWw_1iNHOZ8j8jZFVmF"
-        },
-        "Online": "1rZGcguG10LCDD6Gc5rq70ep7c-JDDbnH"
+        "Online": "1otHRc17skc6sIVXKXvN6sSZ0zynZj1xn",
+        "Flex": ""
       }
     }
   },
   "sections": {
     "head": {
-      "title": "Licenciatura en Mercadotecnia",
-      "description": "Plan de estudios cuatrimestral en modalidad presencial y con incorporación a SICyT que incide en la formación de profesionistas innovadores, creativos y propositivos con capacidad para analizar y diagnosticar una corporación, para con ello diseñar y ejecutar estrategias de mercadotecnia que potencialicen el crecimiento, posicionamiento de la organización.",
+      "title": "Ingeniería en Desarrollo de Software",
+      "description": "Crea y revoluciona sistemas de intercomunicación en dispositivos y sistemas electrónicos. Contribuye directamente en la mejora continua de las organizaciones que te contraten. Aplica tus conocimientos científicos para el diseño y construcción de programas de computadora y a la documentación asociada para desarrollarlos, operarlos y mantenerlos.",
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1MILM-7eskrngnC2o9ZnGK7VaWLBWSi_U",
+        "src": "https://drive.google.com/uc?export=view&id=1HgjuqC-nk68KXTX01q0WcMw_UyLQYkTr",
         "alt": "licenciatura"
       }
     },
@@ -44,52 +35,6 @@
       "title": "Modalidades disponibles en esta licenciatura:",
       "tabs": {
         "items": [
-          {
-            "label": "Modalidad Presencial",
-            "icons": { "primary": "", "duplicate": false },
-            "disabled": false,
-            "content": {
-              "cards": [
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
-                  },
-                  "title": "Perfil de ingreso",
-                  "text": "Interés:\n\n• Intención de desempeñarse en el área comercial de las organizaciones.\n\n• Conocer cómo contribuyen la mercadotecnia, publicidad y comercialización a la efectividad de las organizaciones.\n\n• Interactuar con equipo de trabajo para la obtención de logros concretos a través de la comunicación integral.\n\n Aptitudes:\n\n• Observación, concentración, análisis y síntesis, redacción, exposición y evaluación de ideas.\n\n• Obtención y manejo de la información, trabajo en equipo, diplomático y afable, comunicación oral y escrita, comprensión de lectura.\n\nActitudes: Responsabilidad, respeto, visión, creatividad, paciencia y perseverancia, compromiso para la autogestión y el autoaprendizaje.",
-                  "backgroundColor": "#1B2D68"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
-                  },
-                  "title": "Perfil de egreso",
-                  "text": "El egresado (a)de la Licenciatura de Mercadotecnia, será capaz de diseñar y desarrollar estrategias mercadológicas para la creación, promoción, comercialización de productos y servicios, a través del desarrollo de una marca; con base de investigaciones, análisis e interpretación sobre los comportamientos de las expectativas y necesidades del mercado.",
-                  "backgroundColor": "#C31433"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
-                  },
-                  "title": "Campo Laboral",
-                  "text": "El egresado podrá desarrollarse profesionalmente en el sector privado; específicamente en el área de comercialización, desarrollo de nuevos productos, mercadotecnia, publicidad, ventas, investigación de mercados, comunicación organizacional, etc.",
-                  "backgroundColor": "#4470B1"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
-                  },
-                  "title": "Requisitos de admisión",
-                  "text": "• Acta de nacimiento original y 2 copias.\n\n• Certificado original y 2 copias.\n\n• 2 copias de INE/IFE por ambos lados.\n\n• CURP impresa y 1 copia.\n\n• 2 Fotografías tamaño infantil blanco y negro o a color, pueden ser instantáneas o de estudio.",
-                  "backgroundColor": "#EEAA01"
-                }
-              ],
-              "wrapper": false
-            }
-          },
           {
             "label": "Modalidad Online",
             "icons": { "primary": "", "duplicate": false },
@@ -102,7 +47,7 @@
                     "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "Para estudiar la Licenciatura en Mercadotecnia es necesario tener una serie de cualidades:\n\n• Haber concluido el bachillerato\n\n• Tener facilidad para comunicarte de manera oral y escrita\n\n• Trabajar en equipo y disposición hacia el trabajo creativo.\n\n• Poseer pensamiento creativo y estratégico.",
+                  "text": "El aspirante a Ingeniería en Desarrollo de Software debe poseer conocimientos sobre conceptos básicos de geometría y trigonometría; conceptos básicos de operaciones algebraicas y ecuaciones; conceptos básicos de pre cálculo; habilidad y gusto por el manejo de los equipos de cómputo, creatividad para diseñar y gestionar soluciones a través de programas y métodos computacionales. \n\n Capacidad de planear, diseñar, evaluar y construir sistemas que contemplen los sistemas de software y todo lo relacionado con el ambiente computacional.",
                   "backgroundColor": "#1B2D68"
                 },
                 {
@@ -111,7 +56,7 @@
                     "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
                   },
                   "title": "Perfil de egreso",
-                  "text": "El Licenciado en Mercadotecnia tendrá la capacidad de visualizar de manera integral las oportunidades que se generan con ayuda de la investigación comercial y la aplicación de la inteligencia de mercados, estará preparado para generar su propia empresa, además brindar servicios de consultoría a empresas de cualquier sector. Será un profesional con habilidades de liderazgo que le permitan relacionarse en diversos contextos. ",
+                  "text": "Con la Ingeniería en Desarrollo de Software podrás diseñar y desarrollar sistemas de información en la intercomunicación de dispositivos y sistemas electrónicos, además serás capaz de seleccionar el ERP que contribuya al mejoramiento de la productividad en las organizaciones. Estarás capacitado para desarrollar soluciones a partir de la creación de nuevos sistemas.",
                   "backgroundColor": "#C31433"
                 },
                 {
@@ -120,7 +65,53 @@
                     "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
                   },
                   "title": "Campo Laboral",
-                  "text": "Como egresado de la Licenciatura en Mercadotecnia y gracias a los avances tecnológicos y al Internet, el trabajo para los mercadólogos es más abundante que nunca. Hoy en día, las redes sociales y los sitios web ofrecen un mundo de posibilidades para alcanzar a un público cada vez mayor, y el acceso a estos servicios a través de los teléfonos móviles representa una mina de oro para las agencias de mercadotecnia.",
+                  "text": "Los egresados como ingenieros en desarrollo de software, estarán un paso adelante en el mundo de la tecnología  y pueden desempeñarse con una consultoría de forma independiente o trabajar en organizaciones públicas o privadas tanto nacionales como internacionales. Pueden trabajar en empresas de desarrollo de software, administración de proyectos, fábricas de software y similares. También en el sector de emprendedurismo como prestadores de servicios a particulares para desarrollo y atención de sistemas. ",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          },
+          {
+            "label": "Modalidad Flex",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "El aspirante a Ingeniería en Desarrollo de Software debe poseer conocimientos sobre conceptos básicos de geometría y trigonometría; conceptos básicos de operaciones algebraicas y ecuaciones; conceptos básicos de pre cálculo; habilidad y gusto por el manejo de los equipos de cómputo, creatividad para diseñar y gestionar soluciones a través de programas y métodos computacionales.\n\n Capacidad de planear, diseñar, evaluar y construir sistemas que contemplen los sistemas de software y todo lo relacionado con el ambiente computacional.",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "Con la Ingeniería en Desarrollo de Software podrás diseñar y desarrollar sistemas de información en la intercomunicación de dispositivos y sistemas electrónicos, además serás capaz de seleccionar el ERP que contribuya al mejoramiento de la productividad en las organizaciones. Estarás capacitado para desarrollar soluciones a partir de la creación de nuevos sistemas.",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "Los egresados como ingenieros en desarrollo de software, estarán un paso adelante en el mundo de la tecnología  y pueden desempeñarse con una consultoría de forma independiente o trabajar en organizaciones públicas o privadas tanto nacionales como internacionales. Pueden trabajar en empresas de desarrollo de software, administración de proyectos, fábricas de software y similares. También en el sector de emprendedurismo como prestadores de servicios a particulares para desarrollo y atención de sistemas",
                   "backgroundColor": "#4470B1"
                 },
                 {
@@ -156,7 +147,7 @@
   "form": {
     "config": {
       "level": { "hidden": true, "value": "licenciatura" },
-      "program": { "hidden": false, "value": "Licenciatura en Mercadotecnia" },
+      "program": { "hidden": false, "value": "Ingeniería en Desarrollo de Software" },
       "modality": { "hidden": false },
       "campus": { "hidden": false }
     },

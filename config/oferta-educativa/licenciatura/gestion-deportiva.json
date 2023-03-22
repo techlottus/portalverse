@@ -1,0 +1,161 @@
+{
+  "meta": {
+    "title": "Licenciatura en Gestión Deportiva",
+    "description": "",
+    "keywords": ""
+  },
+  "config": {
+    "title": "Licenciatura en Gestión Deportiva",
+    "config": {
+      "nombre": "Licenciatura en Gestión Deportiva",
+      "modalidad": ["Online", "Flex"],
+        "areaConocimiento": ["Ciencias sociales"],
+        "campus": [],
+      "nivel": ["Licenciatura"],
+      "image": {
+        "src": "https://drive.google.com/uc?export=view&id=1tieAXUY-Wr1XZJVYLrviQRoAUGeDpPMS",
+        "alt": "licenciatura"
+      },
+      "curriculum": {
+        "Online": "10FWytLaf-7yhTdcx4Nw792QN4nH2WsVY",
+        "Flex": "1cLj8uixuMcZzUDejmj8ewnfXfFayYbPB"
+      }
+    }
+  },
+  "sections": {
+    "head": {
+      "title": "Licenciatura en Gestión Deportiva",
+      "description": "Planea y dirige proyectos deportivos para poblaciones y escenarios diversos con la aplicación de estrategias y actividades de comunicación  y  administración en instituciones deportivas, genera vínculos con las distintas áreas del deporte en el sector público y en clubs del deporte. Garantiza una adecuada toma de decisiones!",
+      "image": {
+        "src": "https://drive.google.com/uc?export=view&id=1tieAXUY-Wr1XZJVYLrviQRoAUGeDpPMS",
+        "alt": "licenciatura"
+      }
+    },
+    "modalities": {
+      "title": "Modalidades disponibles en esta licenciatura:",
+      "tabs": {
+        "items": [
+          {
+            "label": "Modalidad Online",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "El aspirante a ingresar a la Licenciatura en Gestión Deportiva deberá contar con los siguientes conocimientos:\n\n• Desarrollar procesos lógicos.\n\n• Resolver problemas con base en principios, leyes y conceptos.\n\n• Emplear las nuevas tecnologías de la información y la comunicación.\n\n• Ser capaz para evaluar fortalezas y debilidades de los equipos de trabajo.\n\n• Desarrollar un pensamiento crítico y constructivo.\n\n• Aplicar el razonamiento lógico.\n\n• Manejar equipos de cómputo y electrónicos.\n\n• Tener la capacidad para liderar grupos de trabajo.",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "Desarrollará las funciones correspondientes a la dirección y manejo de atletas y equipos deportivos en su desempeño disciplinar. \n\n•  Manejará los recursos humanos, materiales y económicos relacionados con el deporte. \n\n•  Realizará campañas publicitarias nacionales e internacionales que promocionan equipos y deportistas. \n\n•  Investigará y recolectará información sobre temas deportivos. \n\n•  Dirigirá instituciones y proyectos relacionados con el deporte. \n\n•  Detectará e identificará características y talentos en niños y adolescentes en el ámbito deportivo. \n\n•  Tomará decisiones relacionadas de las instituciones deportivas y el desarrollo del deportista. \n\n•  Aplicará estrategias para la concertación de tratos en los distintos escenarios y contextos deportivos. \n\n•  Desarrollará la capacidad de motivación que potencie el rendimiento atleta.",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "Los profesionales egresados de la carrera de gestión deportiva cuentan con un extenso campo laboral.\n\n Esto se debe a que, esta es una carrera que se caracteriza por contar con una gran variedad de salidas, entre las cuales se pueden mencionar las que veremos a continuación:\n\n• Centros deportivos\n\n• Administración pública\n\n• Federaciones, ligas, clubes, gimnasios y asociaciones\n\n• Industria de material deportivo\n\n• Consultoría deportiva\n\n• Organización de eventos deportivos\n\n• Dirección en empresas de servicios deportivos\n\n• Formación y enseñanza",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          },
+          {
+            "label": "Modalidad Flex",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "El aspirante a ingresar a la Licenciatura en Gestión Deportiva deberá contar con los siguientes conocimientos:\n\n• Desarrollar procesos lógicos.\n\n• Resolver problemas con base en principios, leyes y conceptos.\n\n• Emplear las nuevas tecnologías de la información y la comunicación.\n\n• Ser capaz para evaluar fortalezas y debilidades de los equipos de trabajo.\n\n• Desarrollar un pensamiento crítico y constructivo.\n\n• Aplicar el razonamiento lógico.\n\n• Manejar equipos de cómputo y electrónicos.\n\n• Tener la capacidad para liderar grupos de trabajo",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "\n\n• Desarrollará las funciones correspondientes a la dirección y manejo de atletas y equipos deportivos en su desempeño disciplinar.\n\n•  Manejará los recursos humanos, materiales y económicos relacionados con el deporte.\n\n•  Realizará campañas publicitarias nacionales e internacionales que promocionan equipos y deportistas.\n\n•  Investigará y recolectar información sobre temas deportivos.\n\n•  Dirigirá instituciones y proyectos relacionados con el deporte.\n\n•  Detectará e identificará características y talentos en niños y adolescentes en el ámbito deportivo.\n\n•  Tomará decisiones relacionadas de las instituciones deportivas y el desarrollo del deportista.\n\n•  Aplicará estrategias para la concertación de tratos en los distintos escenarios y contextos deportivos.\n\n•  Desarrollará la capacidad de motivación que potencie el rendimiento del atleta.",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "Los profesionales egresados de la carrera de gestión deportiva cuentan con un extenso campo laboral.\n\n Esto se debe a que, esta es una carrera que se caracteriza por contar con una gran variedad de salidas, entre las cuales se pueden mencionar las que veremos a continuación:\n\n• Centros deportivos\n\n• Administración pública\n\n• Federaciones, ligas, clubes, gimnasios y asociaciones\n\n• Industria de material deportivo\n\n• Consultoría deportiva\n\n• Organización de eventos deportivos\n\n• Dirección en empresas de servicios deportivos\n\n• Formación y enseñanza",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          }
+        ],
+        "size": "medium"
+      }
+    },
+    "descarga": {
+      "id": "program_licenciatura",
+      "type": "primary",
+      "title": "Descarga el plan de estudios",
+      "size": "small",
+      "icon": "download",
+      "lyIcon": false,
+      "disabled": false,
+      "isExpand": false,
+      "tagOnClick": "testClick",
+      "test": ""
+    }
+  },
+  "form": {
+    "config": {
+      "level": { "hidden": true, "value": "licenciatura" },
+      "program": { "hidden": false, "value": "Licenciatura en Gestión Deportiva" },
+      "modality": { "hidden": false },
+      "campus": { "hidden": false }
+    },
+    "copies": {
+      "stepone": {
+        "title": "Obtén informes sobre tu programa",
+        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+      }
+    }
+  }
+}

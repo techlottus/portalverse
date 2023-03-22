@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "title": "Licenciatura en Relaciones Internacionales",
+    "description": "",
+    "keywords": ""
+  },
+  "config": {
+    "title": "Licenciatura en Relaciones Internacionales",
+    "config": {
+      "nombre": "Licenciatura en Relaciones Internacionales",
+      "modalidad": ["Online"],
+      "areaConocimiento": ["Económico - Administrativo"],
+      "campus": [],
+      "nivel": ["Licenciatura"],
+      "image": {
+        "src": "https://drive.google.com/uc?export=view&id=1MWzsj-Jec-ABUMjdz5T1NRPaWjEAqMxo",
+        "alt": "licenciatura"
+      },
+      "curriculum": {
+        "Online": "1ZR44eDnwiF_9aKXLJF0AvEKd1BpBD39s"
+      }
+    }
+  },
+  "sections": {
+    "head": {
+      "title": "Licenciatura en Relaciones Internacionales",
+      "description": "Desarrolla habilidades y capacidades para resolver y proponer acciones de resolución de conflictos y temas de índole internacional por medio del conocimiento de políticas y cultura económica en un entorno internacional. Diseña y propone herramientas de soluciones para un mundo globalizado utilizando herramientas de análisis estratégico.",
+      "image": {
+        "src": "https://drive.google.com/uc?export=view&id=1MWzsj-Jec-ABUMjdz5T1NRPaWjEAqMxo",
+        "alt": "licenciatura"
+      }
+    },
+    "modalities": {
+      "title": "Modalidades disponibles en esta licenciatura:",
+      "tabs": {
+        "items": [
+          {
+            "label": "Modalidad Online",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "El aspirante a estudiar la Licenciatura en Relaciones Internacionales deberá poseer un buen manejo del idioma español, una correcta expresión oral y escrita, ser hábil en el manejo de TIC´s e interesarse por los problemas sociales tanto en el país como en el mundo. ",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "Los egresados de esta licenciatura tendrán conocimientos teóricos y prácticos sobre las realidades y procesos políticos, gubernamentales de México y el mundo. \n\n Protocolos de asesoramiento diplomático, derecho y comercio internacional, política exterior y diseño de estrategias organizacionales que fomenten las relaciones internacionales.\n\n Poseerán habilidades para resolver conflictos personales y sociales de conformidad a técnicas específicas de su profesión para la adecuada toma de decisiones. Asesorar en materia de política exterior a autoridades mexicanas y otros Estados-nación.",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          }
+        ],
+        "size": "medium"
+      }
+    },
+    "descarga": {
+      "id": "program_licenciatura",
+      "type": "primary",
+      "title": "Descarga el plan de estudios",
+      "size": "small",
+      "icon": "download",
+      "lyIcon": false,
+      "disabled": false,
+      "isExpand": false,
+      "tagOnClick": "testClick",
+      "test": ""
+    }
+  },
+  "form": {
+    "config": {
+      "level": { "hidden": true, "value": "licenciatura" },
+      "program": { "hidden": false, "value": "Licenciatura en Relaciones Internacionales" },
+      "modality": { "hidden": false },
+      "campus": { "hidden": false }
+    },
+    "copies": {
+      "stepone": {
+        "title": "Obtén informes sobre tu programa",
+        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+      }
+    }
+  }
+}
