@@ -41,11 +41,18 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
             <p className="text-white font-Poppins font-bold text-8 leading-10 break-normal mb-16">{infoModal?.title?.title}</p>
             <span className="font-Poppins font-normal text-white mb-6">{infoModal?.redirectLabel}</span>
             {
-              (infoModal?.redirects as Array<{ label: string; link: string; }>)?.map((redirect, index) => {
+              (infoModal?.redirects as Array<{ label: string; link: string; external?: boolean; }>)?.map((redirect, index) => {
                 const children = (
                   <>
                     <span className="font-Nunito-Sans font-normal underline underline-offset-4 mr-auto">{redirect?.label}</span>
-                    <span className="material-icons ml-3 mt-1">download</span>
+                    <span className="material-icons ml-3 mt-1">
+                      {
+                        redirect?.external ?
+                        "chevron_right"
+                        :
+                        "download"
+                      }
+                    </span>
                   </>
                 );
 

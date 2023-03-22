@@ -124,11 +124,7 @@
             "redirects": [
               {
                 "label": "Convenios empresariales",
-                "link": ""
-              },
-              {
-                "label": "Convenios institucionales",
-                "link": ""
+                "link": "https://drive.google.com/uc?export=view&id=1xGEXbB4QoN0JdnqfvKOhruK0pljNSzxa"
               }
             ]
           }
@@ -387,7 +383,8 @@
             "redirects": [
               {
                 "label": "Portal de Alumno",
-                "link": "https://portal.uteg.edu.mx/Alumnos/"
+                "link": "https://portal.uteg.edu.mx/Alumnos/",
+                "external": true
               }
             ]
           }
