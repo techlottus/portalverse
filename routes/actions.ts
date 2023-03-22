@@ -91,11 +91,11 @@ export const action = [
     perform: () => (window.location.pathname = "nosotros/modelo-educativo")
   },
   {
-    id: "somos-uane",
-    name: "Somos UANE",
-    shortcut: ["s", "S", "so", "So", "U", "u", "UA", "ua"],
+    id: "somos-uteg",
+    name: "Somos UTEG",
+    shortcut: ["s", "S", "so", "So", "U", "u", "UT", "ut"],
     keywords: "somos",
-    perform: () => (window.location.pathname = "nosotros/somos-uane")
+    perform: () => (window.location.pathname = "nosotros/somos-uteg")
   },
   {
     id: "oferta-educativa",

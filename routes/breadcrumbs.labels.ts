@@ -8,7 +8,7 @@ const BreadcrumbsLabels: any = {
   "especialidad": "Especialidades",
   "doctorado": "Doctorados",
   "extension-universitaria": "Extensión Universitaria",
-  "contactanos": "Contactanos",
+  "contactanos": "Contáctanos",
   "admisiones": "Admisiones",
   "becas": "Becas",
   "egresados": "Egresados",
@@ -17,7 +17,7 @@ const BreadcrumbsLabels: any = {
   "blog": "Blog",
   "nosotros": "Nosotros",
   "internacionalizacion": "Internacionalización",
-  "somos-UANE": "Somos UANE",
+  "somos-UTEG": "Somos UTEG",
   "planteles": "Planteles",
   "modelo-educativo": "Modelo Educativa",
   "bolsa-de-talento": "Bolsa de Talento",
@@ -28,6 +28,7 @@ const BreadcrumbsLabels: any = {
   "pedir-informacion": "Contacto",
   "vida-estudiantil": "Vida Estudiantil",
   "alumnos": "Alumnos",
+  "accesos-colaboradores": "Acceso para Colaboradores",
   ...Routes["oferta-educativa"].reduce((prev: any, value: any) => {
     const {params: {programs}} = value
     const programList = programs.reduce((p:any, c:any) => {

@@ -13,13 +13,12 @@
 },
   "logotype": { "src":"/images/logotipo.svg", "alt":"UTEG-logotype" },
   "social": [
-    { "name": "facebook", "link": "https://es-la.facebook.com/UANEOficial/" },
-    { "name": "twitter", "link": "https://mobile.twitter.com/uaneoficial" },
-    { "name": "instagram", "link": "https://www.instagram.com/uaneoficial/?hl=es" },
-    { "name": "youtube", "link": "https://www.youtube.com/channel/UCir4jyZ8CBUQ-MhUUxdUiHQ/videos?app=desktop" },
-    { "name": "tiktok", "link": "https://www.tiktok.com/@uaneoficial?lang=es" }
+    { "name": "instagram", "link": "https://www.instagram.com/utegoficial/?hl=es" },
+    { "name": "facebook", "link": "https://www.facebook.com/UtegOficial" },
+    { "name": "youtube", "link": "https://www.youtube.com/@utegoficial" },
+    { "name": "tiktok", "link": "https://www.tiktok.com/@utegoficial?lang=es" }
   ],
-  "phone": "8008228263",
+  "phone": "33 1078 8000",
   "directorio": {
     "size": "small",
     "isUnderline": false,
@@ -36,8 +35,8 @@
       [
         { "label": "Estudiantes", "principal": true, "link": "", "external": false },
         { "label": "SIAAF", "principal": false, "link": "", "external": true },
-        { "label": "UTEG Online", "principal": false, "link": "", "external": true },
-        { "label": "Biblioteca virtual E-libro", "principal": false, "link": "", "external": true },
+        { "label": "UTEG Online", "principal": false, "link": "https://utegvirtual.com/", "external": true },
+        { "label": "Biblioteca virtual E-libro", "principal": false, "link": "https://biblioteca.uteg.edu.mx/", "external": true },
         { "label": "Servicios escolares", "principal": false, "link": "", "external": true },
         { "label": "Alumnos", "principal": false, "link": "/alumnos", "external": false }
       ],
@@ -58,8 +57,7 @@
         { "label": "Bachillerato", "principal": false, "link": "/oferta-educativa/bachillerato", "external": false },
         { "label": "Licenciaturas", "principal": false, "link": "/oferta-educativa/licenciatura", "external": false },
         { "label": "Maestrías", "principal": false, "link": "/oferta-educativa/maestria", "external": false },
-        { "label": "Extensión Universitaria", "principal": false, "link": "/extension-universitaria", "external": false },
-        { "label": "UTEG Virtual", "principal": false, "link": "https://utegvirtual.com/", "external": true }
+        { "label": "Extensión Universitaria", "principal": false, "link": "/extension-universitaria", "external": false }
       ]
     ],
     [

@@ -63,20 +63,20 @@ const EntryBlogDetail: NextPageWithLayout = ({ blog_post, banners, related_post_
             <Button dark data={blog_section} onClick={()=>{router.push(blog_section.redirect)}}/>
           </div>
         </div>
-        <div className="col-span-4 w-t:hidden w-p:hidden w-d:grid-cols-1">
+        {/* <div className="col-span-4 w-t:hidden w-p:hidden w-d:grid-cols-1">
           {
            banners.map((item:any, i:number) => <section className="mb-6" key={`section-blog-${i}`}>
             <BannerWrapper data={item} typeBanner={item.type} banner={item} font={item.font} onBtn={() => router.push(item.redirect)}/>
            </section>)
           }
-        </div>
-        <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-2 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 w-d:hidden">
+        </div> */}
+        {/* <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-2 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 w-d:hidden">
           {
            banners.map((item:any, i:number) => <section key={`section-blog-${i}`}>
             <Banner data={item} onBtn={() => router.push(item.redirect)}/>
            </section>)
           }
-        </section>
+        </section> */}
       </ContentLayout>
     </HeaderFooterLayout>
   </>

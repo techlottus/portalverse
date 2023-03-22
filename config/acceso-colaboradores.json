@@ -1,0 +1,197 @@
+{
+    "meta": {
+      "title": "Accesos para Colaboradores",
+      "description": "",
+      "keywords": ""
+    },
+    "sections": {
+      "head": {
+        "title": "Accesos para Colaboradores",
+        "description": "Este es un apartado  creado especialmente para ti. Desde aquí podrás acceder a la información de tu interés de una manera fácil y sencilla. Puedes ingresar a algunas plataformas internas como SIAAF, Sistema de Gestión, Biblioteca, e-Solicitudes, Proulex- UTEG, Quejas y sugerencias, e-Planeación, Guía de Recursos Gráficos, eDenuncias y Solicitud de Documentos."
+      },
+      "experiencias": {
+        "cards": [
+          { 
+            "image": "https://drive.google.com/uc?export=view&id=1rnN3RNkhohuMItB5N8yV9grlgQkLIFNK",
+            "subtitle": "",
+            "title": "Sistema de Gestión",
+            "text": "Sistema de auditoría que garantiza la excelencia de nuetros procesos internos.",
+            "border": true,
+            "type": "vertical",
+            "background": false,
+            "isLink": true,
+            "link": {
+              "text": "Ver más",
+              "size": "large",
+              "disabled": false,
+              "isUnderline": false,
+              "isBold": false,
+              "iconFirst": "",
+              "iconSecond": "chevron_right"
+            },
+            "redirect": "https://sgc.uteg.edu.mx/"
+          },
+          { 
+            "image": "https://drive.google.com/uc?export=view&id=1kxQFkobzbjQVJ9x_L8XTs-EuKJdph96k",
+            "subtitle": "",
+            "title": "e-Solicitudes",
+            "text": "En esta plataforma puedes consultar el status de tus procesos como colaborador.",
+            "border": true,
+            "type": "vertical",
+            "background": false,
+            "isLink": true,
+            "link": {
+              "text": "Ver más",
+              "size": "large",
+              "disabled": false,
+              "isUnderline": false,
+              "isBold": false,
+              "iconFirst": "",
+              "iconSecond": "chevron_right"
+            },
+            "redirect": "https://aplicativos.uteg.edu.mx/esolicitudes/"
+          },
+          { 
+            "image": "https://drive.google.com/uc?export=view&id=1bnRp2pIn5Bt7NreF9rt8ztw_jDOYG5Ua",
+            "subtitle": "",
+            "title": "Correo UTEG",
+            "text": "Accede a tu correo electrónico, manténte en contacto. ",
+            "border": true,
+            "type": "vertical",
+            "background": false,
+            "isLink": true,
+            "link": {
+              "text": "Ver más",
+              "size": "large",
+              "disabled": false,
+              "isUnderline": false,
+              "isBold": false,
+              "iconFirst": "",
+              "iconSecond": "chevron_right"
+            },
+            "redirect": "https://mail.google.com/mail/u/0/"
+          },
+          { 
+            "image": "https://drive.google.com/uc?export=view&id=1o3XpZEOaztXbhiRfQ9K8EHgq64-fXUhj",
+            "subtitle": "",
+            "title": "Biblioteca UTEG",
+            "text": "Consulta el catálogo de textos científicos, académicos y de literatura mexicana y universal disponibles para los miembros de la comunidad UTEG.",
+            "border": true,
+            "type": "vertical",
+            "background": false,
+            "isLink": true,
+            "link": {
+              "text": "Ver más",
+              "size": "large",
+              "disabled": false,
+              "isUnderline": false,
+              "isBold": false,
+              "iconFirst": "",
+              "iconSecond": "chevron_right"
+            },
+            "redirect": "https://biblioteca.uteg.edu.mx/"
+          },
+          { 
+            "image": "https://drive.google.com/uc?export=view&id=1XdIp_XSxXBbFmVJMaJm1T2ukKdxmgHq4",
+            "subtitle": "",
+            "title": "Quejas y Sugerencias",
+            "text": "Haznos saber tus demandas o cualquier descontento para darle pronta solución. Comunícanos cualquier recomendación para mejorar el funcionamiento de nuestra universidad. ",
+            "border": true,
+            "type": "vertical",
+            "background": false,
+            "isLink": true,
+            "link": {
+              "text": "Ver más",
+              "size": "large",
+              "disabled": false,
+              "isUnderline": false,
+              "isBold": false,
+              "iconFirst": "",
+              "iconSecond": "chevron_right"
+            },
+            "redirect": "http://infsiaaf.uteg.edu.mx/"
+          },
+          { 
+            "image": "https://drive.google.com/uc?export=view&id=1JDmhubLDCKpRh_0BEMFWcXOslL4SnJOT",
+            "subtitle": "",
+            "title": "e-Planeación",
+            "text": "Impulsa tu perfil como profesional, investigador o emprendedor con los beneficios del Programa de Excelencia Académica.",
+            "border": true,
+            "type": "vertical",
+            "background": false,
+            "isLink": true,
+            "link": {
+              "text": "Ver más",
+              "size": "large",
+              "disabled": false,
+              "isUnderline": false,
+              "isBold": false,
+              "iconFirst": "",
+              "iconSecond": "chevron_right"
+            },
+            "redirect": "http://zona.uteg.edu.mx:8080/ePlaneacion/login.xhtml"
+          },
+          { 
+            "image": "https://drive.google.com/uc?export=view&id=1ezWu752syKlX0O-X45dTdC43o3YxyxJ4",
+            "subtitle": "",
+            "title": "e-Denuncias",
+            "text": "El Centro Universitario UTEG es un espacio que promueve la justicia y equidad en todos sus procesos. Haznos saber cualquier irregularidad que detectes o de la que seas víctima. ",
+            "border": true,
+            "type": "vertical",
+            "background": false,
+            "isLink": true,
+            "link": {
+              "text": "Ver más",
+              "size": "large",
+              "disabled": false,
+              "isUnderline": false,
+              "isBold": false,
+              "iconFirst": "",
+              "iconSecond": "chevron_right"
+            },
+            "redirect": "http://zona.uteg.edu.mx:8080/eDenuncias/login.xhtml"
+          },
+          { 
+            "image": "https://drive.google.com/uc?export=view&id=1XT1M9ItLkbWYqYo8W13veUBeGAX4uopA",
+            "subtitle": "",
+            "title": "Convenios Empresariales",
+            "text": "Somos una universidad con sólidos lazos con el mundo empresarial de Jalisco y México. Conoce aquí en detalle nuestros acuerdos de colaboración.",
+            "border": true,
+            "type": "vertical",
+            "background": false,
+            "isLink": true,
+            "link": {
+              "text": "Ver más",
+              "size": "large",
+              "disabled": false,
+              "isUnderline": false,
+              "isBold": false,
+              "iconFirst": "",
+              "iconSecond": "chevron_right"
+            },
+            "redirect": "https://sites.google.com/a/uteg.edu.mx/prestaciones-y-beneficios-uteg/"
+          },
+          { 
+            "image": "https://drive.google.com/uc?export=view&id=12mZq3hrWCi75xpWYHLoBZ-XP22v8Nlj_",
+            "subtitle": "",
+            "title": "Beneficios Institucionales",
+            "text": "Te ayudamos a cuidar tu economía familiar. Conoce los beneficios de los que gozas como miembro de la comunidad UTEG.",
+            "border": true,
+            "type": "vertical",
+            "background": false,
+            "isLink": true,
+            "link": {
+              "text": "Ver más",
+              "size": "large",
+              "disabled": false,
+              "isUnderline": false,
+              "isBold": false,
+              "iconFirst": "",
+              "iconSecond": "chevron_right"
+            },
+            "redirect": "https://drive.google.com/file/d/1eTiUJmpuCQY1h_2eeyneyHNwHqlaAWgz/view?usp=sharing"
+          }
+        ]
+      }
+    }
+  }

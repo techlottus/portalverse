@@ -181,15 +181,15 @@ const OpenForm: FC<any> = ({ classNames, image, pathThankyou, controls, data, cu
       <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
     </div>
     <div className={cn("bg-white absolute w-full h-full z-10 flex flex-col aspect-2/1 justify-center items-center left-0 top-0", { "hidden": !errorLoader, "block": errorLoader })}>
-      <Image src="/images/404.png" alt="error" classNames={cn("w-[50%] h-[50%] top-0 left-0")} />
-      <h1>Ha ocurrido un error al procesar tu información</h1>
-      <h1>Lamentamos el inconveniente y te pedimos intentarlo de nuevo</h1>
-      <Button onClick={() => location.reload()} data={{...ButtonInit, title: "Reintentar" }} />
+      <h1 className="font-bold text-10 text-center leading-12 mb-9">¡Me lleva la ...! no encuentro la página...</h1>
+      <Image src="/images/404-B.jpg" alt="error" classNames={cn("w-[50%] h-[50%] top-0 left-0")} />
+      <h2 className="text-UNI-066 font-semibold text-5.5 my-6">No importa, siempre puedes regresar a inicio</h2>
+      <Button dark onClick={() => location.reload()} data={{...ButtonInit, title: "Reintentar" }} />
     </div>
     <StepOne data={data} step={30} classNames={cn({ "hidden": step !== 1 })} image={image} onNext={(info: any) => handleNextStep(info, 1)} />
     <StepTwo campus={filteredCampus} programs={filteredPrograms} onChangeProgram={(program: string) => handleProgramSelected(program)} onLevelSelected={(level: string) => handleLevelSelected(level)} onChangeModality={(modality: string) => handleFetchEducativeOffer(modality)} modality={infoForm.step1.modality} levels={levelsOffer} step={60} classNames={cn({ "hidden": step !== 2 })} onNext={(info: any) => handleNextStep(info, 2)} controls={{...controlsConfig}} />
     <StepThree onReturnStep={(step: number) => handleReturnedStep(step)} contacts={contacts} schedulers={schedulers} onNext={(info: any) => handleNextStep(info, 3)} step={90} data={{ modality: infoForm.step2.modality, program: infoForm.step2.nameProgram, level: infoForm.step2.level, campus: infoForm.step2.nombreCampus }} classNames={cn({ "hidden": step !== 3 })} />
   </section>
-}
+};
 
-export default OpenForm
+export default OpenForm;

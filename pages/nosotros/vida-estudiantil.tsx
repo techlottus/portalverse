@@ -37,7 +37,7 @@ const VidaEstudiantil: NextPageWithLayout = ({ sections, meta }: any) => {
           />
         </div>
       </ContentLayout>
-      <ContentFullLayout classNames="bg-darkBlue text-white mt-18 w-t:mt-3 w-p:mt-3">
+      <ContentFullLayout classNames="bg-UTEG/blue_bandbook text-white mt-18 w-t:mt-3 w-p:mt-3">
         <ContentLayout classNames="text-white">
           <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 my-6">
             <Video dimensions={["330px", "360px", "200px"]} data={ sections.sportActivities.video} />
@@ -47,8 +47,10 @@ const VidaEstudiantil: NextPageWithLayout = ({ sections, meta }: any) => {
             <RichtText font="dark" data={{
               content: sections.sportActivities.description
             }} />
+           <div className="flex justify-between">
             <p>{sections.sportActivities.moreInformation}</p>
-            <LinkContactTarget type="email" info={sections.sportActivities.moreInformationLink} />
+            <LinkContactTarget type="email" info={sections.sportActivities.moreInformationLink} classNames="text-white" />
+           </div>
           </div>
         </ContentLayout>
       </ContentFullLayout>
@@ -69,7 +71,7 @@ const VidaEstudiantil: NextPageWithLayout = ({ sections, meta }: any) => {
           <Mosaic data={sections.lifeUANE.images}/>
         </div>
       </ContentLayout>
-      <ContentFullLayout classNames="bg-SC/Backgrounds/BG-GRAY mt-18">
+      {/*<ContentFullLayout classNames="bg-SC/Backgrounds/BG-GRAY mt-18">
         <ContentLayout classNames="my-6">
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6">
             <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%]">{sections.lifeUANEarticles.title}</p>
@@ -82,7 +84,7 @@ const VidaEstudiantil: NextPageWithLayout = ({ sections, meta }: any) => {
             }
           </section>
         </ContentLayout>
-      </ContentFullLayout>
+          </ContentFullLayout>*/}
     </HeaderFooterLayout>
   </>
 }
