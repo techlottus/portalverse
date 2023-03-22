@@ -8,12 +8,12 @@ const Routes: any = {
           title: "Bachillerato",
           promo: {
             urlImage: {
-              mobile: "https://drive.google.com/uc?export=view&id=1IZB-O4PNo9wwRDtweld_gpoRxzmv6WhX",
-              desktop: "https://drive.google.com/uc?export=view&id=1ooMLjk3zU7_8_A9W-NOdTOvjbGEw8qQW"
+              mobile: "https://drive.google.com/uc?export=view&id=1wTgY7bg1cFqdEWKNLrsTO8GNR4u3T38_",
+              desktop: "https://drive.google.com/uc?export=view&id=1wTgY7bg1cFqdEWKNLrsTO8GNR4u3T38_"
             },
             text: "",
             icon: "arrow_forward",
-            color: "#99E5E2",
+            color: "#FFD033",
             opacity: "multiply",
             height: "282px",
             enable: true,
@@ -47,8 +47,8 @@ const Routes: any = {
           title: "Licenciaturas",
           promo: {
             urlImage: {
-              mobile: "https://drive.google.com/uc?export=view&id=1zl9VvR13Y1Tk0f-EfvkOzkHUZjQ2gPH_",
-              desktop: "https://drive.google.com/uc?export=view&id=1qB-SaPTknHUetoHA_e0CmcNQZxj2RZ2t"
+              mobile: "https://drive.google.com/uc?export=view&id=19XGOqZziUfaXmB57vG1wxXcFSzWZ8ctR",
+              desktop: "https://drive.google.com/uc?export=view&id=19XGOqZziUfaXmB57vG1wxXcFSzWZ8ctR"
             },
             text: "",
             icon: "arrow_forward",
@@ -109,62 +109,18 @@ const Routes: any = {
     },
     { params:
       {
-        "level": "especialidad",
-        "levelRoute": "oferta-educativa/especialidad",
-        "config": {
-          title: "Especialidades",
-          promo: {
-            urlImage: {
-              mobile: "https://drive.google.com/uc?export=view&id=1jqW4m0V-UYJdCp2Ax0dqLxf04ansooLB",
-              desktop: "https://drive.google.com/uc?export=view&id=1lksUFh99fwx12CS5NDhSzzOwqjE2nBCQ"
-            },
-            text: "",
-            icon: "arrow_forward",
-            color: "#B9C3C8",
-            opacity: "multiply",
-            height: "282px",
-            enable: true,
-            nobackground: false
-          },
-          banner: {
-            image: {
-              src: "https://www.uane.edu.mx/multi/images/programas/becas.jpg",
-              alt: "alumnos"
-            },
-            description: {
-              title: "Especialidades",
-              subtitle: "Elige una lorem ipsum sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            }
-          },
-          head: {
-            title: "",
-            description: "",
-          },
-        },
-        "programs": [
-          { params: { "program": "administracion-liderazgo", "nameProgram": "Especialidad en Administración y Liderazgo" } },
-          { params: { "program": "relaciones-juridico-laborales", "nameProgram": "Especialidad en Relaciones Jurídico Laborales" } },
-          { params: { "program": "salud-ocupacional", "nameProgram": "Especialidad en Salud Ocupacional" } },
-          { params: { "program": "gestion-desarrollo-recursos-humanos", "nameProgram": "Especialidad en Gestión y Desarrollo de Recursos Humanos" } },
-          { params: { "program": "manufactura-esbelta", "nameProgram": "Especialidad en Manufactura Esbelta" } },
-          { params: { "program": "logistica", "nameProgram": "Especialidad en Logística" } },
-        ] 
-      }
-    },
-    { params:
-      {
         "level": "maestria",
         "levelRoute": "oferta-educativa/maestria",
         "config": {
           title: "Maestrías",
           promo: {
             urlImage: {
-              mobile: "https://drive.google.com/uc?export=view&id=1Y7pu9KD4hCZOM5MCQqYUf-cTkm6FjAxu",
-              desktop: "https://drive.google.com/uc?export=view&id=19gyvlX5gfDtt2QeQ5pnc66BAgtV9X5ng"
+              mobile: "https://drive.google.com/uc?export=view&id=11C7rUa3eAS6-tONNT666vk1jrayFBLHv",
+              desktop: "https://drive.google.com/uc?export=view&id=11C7rUa3eAS6-tONNT666vk1jrayFBLHv"
             },
             text: "",
             icon: "arrow_forward",
-            color: "#E94537",
+            color: "#E84537",
             opacity: "multiply",
             height: "282px",
             enable: true,
@@ -200,46 +156,6 @@ const Routes: any = {
         ] 
       }
     },
-    { params:
-      {
-        "level": "doctorado",
-        "levelRoute": "oferta-educativa/doctorado",
-        "config": {
-          title: "Doctorado",
-          promo: {
-            urlImage: {
-              mobile: "https://drive.google.com/uc?export=view&id=1Hkdd9ScYfqlaS3D0wXntZ87PKJyFRXMG",
-              desktop: "https://drive.google.com/uc?export=view&id=1A-V4fwz_65l2Jrt20GxUOb22qshS7hqu"
-            },
-            text: "",
-            icon: "arrow_forward",
-            color: "#A57C1C",
-            opacity: "multiply",
-            height: "282px",
-            enable: true,
-            nobackground: false
-          },
-          banner: {
-            image: {
-              src: "https://www.uane.edu.mx/multi/images/programas/becas.jpg",
-              alt: "alumnos"
-            },
-            description: {
-              title: "Doctorados",
-              subtitle: "Elige una lorem ipsum sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            }
-          },
-          head: {
-            title: "",
-            description: "",
-          },
-        },
-        "programs": [
-          { params: { "program": "derecho", "nameProgram": "Doctorado en Derecho" } },
-          { params: { "program": "planeacion-liderazgo-educativo", "nameProgram": "Doctorado en Planeación y Liderazgo Educativo" } },
-        ] 
-      }
-    }
   ],
   "extension-universitaria": { 
     params: {
@@ -248,12 +164,12 @@ const Routes: any = {
         title: "Extensión Universitaria",
         promo: {
           urlImage: {
-            mobile: "https://drive.google.com/uc?export=view&id=1A4Xz8N7VdVR7qOFR5TtzerX1Qek2qgMu",
-            desktop: "https://drive.google.com/uc?export=view&id=19Oe9R_hCPk8oY2t37VFiIHeZvWwUw3HL"
+            mobile: "https://drive.google.com/uc?export=view&id=1Ti7_CzkaVjV8jg5mxmaUzkF7rfYKKr34",
+            desktop: "https://drive.google.com/uc?export=view&id=1Ti7_CzkaVjV8jg5mxmaUzkF7rfYKKr34"
           },
           text: "",
           icon: "arrow_forward",
-          color: "#6F7C83",
+          color: "#B9C3C8",
           opacity: "multiply",
           height: "282px",
           enable: true,
