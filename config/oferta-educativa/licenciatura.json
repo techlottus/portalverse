@@ -283,7 +283,7 @@
         "areaConocimiento": ["Arquitectura y Diseño"],
         "campus": ["Américas"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=",
+          "src": "https://drive.google.com/uc?export=view&id=1xmiGmRMZNlENPk9sF8v4YV0GOcYjUFZ5",
           "alt": "licenciatura"
         }
       },
@@ -475,7 +475,7 @@
       "title": "Ingeniería Industrial",
       "config": {
         "nombre": "Ingeniería Industrial",
-        "modalidad": ["Presencial"],
+        "modalidad": ["Presencial", "Online", "Flex"],
         "areaConocimiento": ["Ingenierías y Tecnología"],
         "campus": ["Olímpica"],
         "image": {
@@ -554,6 +554,20 @@
         }
       },
       "route": "derecho"
+    },
+    {
+      "title": "Licenciatura en Químico Farmaceutico Biólogo con Certificación en Inglés Proulex",
+      "config": {
+        "nombre": "Licenciatura en Químico Farmaceutico Biólogo con Certificación en Inglés Proulex",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Salud"],
+        "campus": ["Campus Washington"],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1dImSOs33oDQJZD84IXf5IrfZ9XNHYlF5",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "quimico-farmaceutico-biologo-proulex"
     }
   ]
 }

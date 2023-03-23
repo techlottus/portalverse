@@ -110,6 +110,8 @@ const Routes: any = {
           { params: { "program": "contaduria-publica", "nameProgram": "Licenciatura en Contaduría Pública" } },
           { params: { "program": "contaduria-publica-proulex", "nameProgram": "Licenciatura en contaduría Púbica con Certificación en Inglés Proulex" } },
           { params: { "program": "derecho", "nameProgram": "Licenciatura en Derecho" } },
+          { params: { "program": "quimico-farmaceutico-biologo-proulex", "nameProgram": "Licenciatura en Químico Farmaceutico Biólogo con Certificación en Inglés Proulex" } },
+
         ]
       }
     },
