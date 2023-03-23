@@ -434,30 +434,6 @@
           "shadowColor": "#4470B1"
         },
         {
-          "text": "Beca SEJ BIS",
-          "icon": "arrow_forward",
-          "color": "#7DF1ED",
-          "opacity": "multiply",
-          "height": "110px",
-          "enable": true,
-          "nobackground": true,
-          "redirect": "/admisiones/becas",
-          "isShadowColor": true,
-          "shadowColor": "#F8A600"
-        },
-        {
-          "text": "Convocatoria Beca SEJ-SICYT Licenciaturas / Posgrados",
-          "icon": "arrow_forward",
-          "color": "#1B2D68",
-          "opacity": "multiply",
-          "height": "110px",
-          "enable": true,
-          "nobackground": true,
-          "redirect": "/admisiones/becas",
-          "isShadowColor": true,
-          "shadowColor": "#1B2D68"
-        },
-        {
           "text": "Convocatoria Beca SICYT Licenciaturas / Posgrados",
           "icon": "arrow_forward",
           "color": "#7DF1ED",
@@ -468,6 +444,18 @@
           "redirect": "/admisiones/becas",
           "isShadowColor": true,
           "shadowColor": "#4470B1"
+        },
+        {
+          "text": "Beca SEJ BIS",
+          "icon": "arrow_forward",
+          "color": "#7DF1ED",
+          "opacity": "multiply",
+          "height": "110px",
+          "enable": true,
+          "nobackground": true,
+          "redirect": "/admisiones/becas",
+          "isShadowColor": true,
+          "shadowColor": "#F8A600"
         },
         {
           "text": "Dictamen Refrendo de Becas SICYT Licenciaturas / Posgrados",
@@ -498,101 +486,34 @@
       "title": "Más de 1137 convenios",
       "conventions": [
         {
-          "urlImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr1mAjk7blwP1jGnU45XfcCeicbVRJ9rE-FdQFTovdoeEnMYonChejcOeEYtHwkGHJjlk&usqp=CAU",
+          "urlImage": "https://drive.google.com/uc?export=view&id=1GjAbD76dFnymvNOHlBg_vRikzX5T5ujX",
           "subtitle": "",
           "title": "Benito Santos México",
           "text": "Diseñador mexicano quea lo largo de los últimos 15 años se ha posicionadocomo uno de los referentes más importantes enla industria de la moda de México y Latinoamérica.\n\nReconocido internacionalmente con más de 30 colecciones.",
           "border": true,
-          "allContent": true,
-          "height": "",
-          "isShowCardWebsiteContent": true,
-          "id": "",
           "type": "vertical",
-          "link": true,
-          "background": false,
-          "linkText": {
-            "text": "Ver video",
-            "isBold": true,
-            "size": "large",
-            "isUnderline": false,
-            "disabled": false,
-            "icon": "visibility"
-          },
-          "linkIcon": {
-            "text": "Ver video",
-            "iconSecond": "play_circle",
-            "isBold": true,
-            "size": "large",
-            "isUnderline": false,
-            "disabled": false,
-            "icon": ""
-          },
-          "wrapper": true
+          "background": true,
+          "islink": false
         },
         {
-          "urlImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn8fPWgJJCI7-bEpXSg6DJa909NOPr0W7hTWMTMyS36eTZpq96SyjbvGNDvoscxlLhjS0&usqp=CAU",
+          "urlImage": "https://drive.google.com/uc?export=view&id=1LGXBc0L2FMqW2ghsjBjse9qrRaxKk_K3",
           "subtitle": "",
           "title": "Universal Scientific Industrial",
           "text": "USI-México se especializa en el desarrollo y fabricación de productos electrónicos para aplicaciones en diferentes industrias, como la automotriz, la electrónica de consumo y las comunicaciones bajo los modelos de negocios ODM, JDM, EMS+ y EMS.",
           "border": true,
-          "allContent": true,
-          "height": "",
-          "isShowCardWebsiteContent": true,
-          "id": "",
           "type": "vertical",
-          "link": true,
-          "background": false,
-          "linkText": {
-            "text": "Conocer más",
-            "isBold": true,
-            "size": "large",
-            "isUnderline": false,
-            "disabled": false,
-            "icon": "star"
-          },
-          "linkIcon": {
-            "text": "Ver más",
-            "iconSecond": "",
-            "isBold": true,
-            "size": "large",
-            "isUnderline": false,
-            "disabled": false,
-            "icon": ""
-          },
-          "wrapper": true,
-          "video": "8LDTk1DLg4M"
+          "background": true,
+          "islink": false
         },
         {
-          "urlImage": "https://pcredcom.com/blog/wp-content/uploads/2020/06/tipos-de-computadoras.jpg",
+          "urlImage": "https://drive.google.com/uc?export=view&id=1213yexlfLjjALwBW4zQWXpUWUUD_fNE0",
           "subtitle": "",
           "title": "Productos Farmacéuticos Collins",
           "text": "Grupo Farmacéutico Orgullosamente mexicano con más de 47 años y con el propósito de ofrecer medicamentos de la más alta calidad a precios accesibles; ayudando de esta manera a mejorar la salud y bienestar de las personas.",
           "border": true,
-          "allContent": true,
-          "height": "",
-          "isShowCardWebsiteContent": true,
-          "id": "",
           "type": "vertical",
-          "link": true,
-          "background": false,
-          "linkText": {
-            "text": "Conocer más",
-            "isBold": true,
-            "size": "large",
-            "isUnderline": false,
-            "disabled": false,
-            "icon": "star"
-          },
-          "linkIcon": {
-            "text": "Ver más",
-            "iconSecond": "arrow_right",
-            "isBold": true,
-            "size": "large",
-            "isUnderline": false,
-            "disabled": false,
-            "icon": ""
-          },
-          "wrapper": true
+          "background": true,
+          "islink": false
         }
       ]
     },
