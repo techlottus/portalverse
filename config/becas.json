@@ -12,11 +12,11 @@
       "image": {
         "desk": {
           "alt": "imagen",
-          "src": "https://drive.google.com/uc?export=view&id=1q0mQG6nWxqOEQuE2fLng49Sgnrk_hxVk"
+          "src": "https://assets.staging.bedu.org/UTEG/admisiones_banner_becas_desktop_479c6a74f7.jpg"
         },
         "mobile": {
           "alt": "imagen",
-          "src": "https://drive.google.com/uc?export=view&id=1q0mQG6nWxqOEQuE2fLng49Sgnrk_hxVk"
+          "src": "https://assets.staging.bedu.org/UTEG/admisiones_banner_becas_movil_0b3164697b.jpg"
         }
       }
     },
@@ -411,7 +411,7 @@
     "llamanos": {
       "title": "¿Tienes dudas? llámanos",
       "card": {
-        "image": "https://drive.google.com/uc?export=view&id=1yLJVU_hAj3OQz36XtfmcAEzeXVKAaKQa",
+        "image": "https://assets.staging.bedu.org/UTEG/admisiones_atencion_becas_4fcd14ad67.jpg",
         "subtitle": "",
         "title": "Oficinas de servicios escolares ",
         "text": "Nuestros asesores expertos te brindarán apoyo de lunes a viernes de 08:00 a 21:00 horas en el teléfono: 33 10 78 80 00\n\nservicios.campus@uteg.edu.mx\n\nservicios.olimpica@uteg.edu.mx\n\nservicios.americas@uteg.edu.mx\n\nservicios.lzc@uteg.edu.mx\n\nservicios.zapopan@uteg.edu.mx\n\nservicios.rionilo@uteg.edu.mx\n\nservicios.pm@uteg.edu.mx\n\nservicios.tlajomulco@uteg.edu.mx",
