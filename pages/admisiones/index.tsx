@@ -19,7 +19,6 @@ import RichtText from "@/old-components/Richtext/Richtext";
 import CardWebsitePortalverse from "@/old-components/CardWebsitePortalverse";
 import Icon from "@/old-components/Icon";
 
-
 const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
 
   const router = useRouter();
