@@ -1,0 +1,96 @@
+{
+    "meta": {
+      "title": "Bachillerato Online",
+      "description": "",
+      "keywords": ""
+    },
+    "config": {
+      "title": "Bachillerato Online",
+      "config": {
+        "nombre": "Bachillerato Online",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Educación Media"],
+        "campus": [],
+        "nivel": ["Bachillerato"],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1Ql1K5pvcfP5u4e_kqXuxDm802UGbrb3K",
+          "alt": "bachillerato"
+        },
+        "curriculum": {
+          "Presencial": {
+
+          }
+        }
+      }
+    },
+    "sections": {
+      "head": {
+        "title": "Estudia Bachillerato Online",
+        "description": "El bachillerato UANE te proporciona los conocimientos necesarios para continuar con tus estudios a nivel profesional, contribuye a desarrollar las capacidades que te permitirán adquirir una conciencia cívica, consolidar tu madurez personal y social, afianzar tus hábitos de lectura, estudio y disciplina; dominar la expresión oral y escrita y adquirir nociones de una lengua extranjera. \n\nTodo lo anterior en el mejor ambiente universitario con instalaciones de primer nivel y espacios para que desarrolles actividades extramuros y potencies tus capacidades artísticas, culturales y deportivas.\n\n¡Conviértete en un oso!",
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1Ql1K5pvcfP5u4e_kqXuxDm802UGbrb3K",
+          "alt": "bachillerato"
+        }
+      },
+      "modalities": {
+        "title": "Elige una de las tres modalidades disponibles para bachillerato:",
+        "tabs": {
+          "items": [
+            {
+              "label": "Bachillerato Online", "icons": { "primary": "", "duplicate": false }, "disabled": false,
+              "content": [
+                {
+                  "title": "Características del Bachillerato en modalidad online",
+                  "description": "El Bachillerato en Línea te permite optimizar el aprovechamiento académico, el tiempo y el esfuerzo facilitando tu concentración sólo en las materias que cursas en un periodo específico, además, al concluir el programa podrás implementar conocimientos básicos preuniversitarios en un contexto laboral y contar con la formación para abordar estudios de tipo superior.",
+                  "image": {
+                    "src": "https://drive.google.com/uc?export=view&id=1A5TdPuG35sCyqlwSsNskGtHkDTe4TXOv",
+                    "alt": "bachillerato-presencial"
+                  }
+                },
+                {
+                  "title": "Requisitos de admisión",
+                  "description": "Acta de nacimiento original y 1 copias (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n• Certificado de secundaria original y 1 copia por ambos lados.\n\n• 1 copia de la CURP.\n\n• 2 copias de Credencial Oficial IFE / INE o Pasaporte (Para mayores de edad).\n\n• 2 copias de Credencial Oficial IFE / INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n• 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n• Para grado superior deberá de cumplir con los referidos en el P-CE-21 Procedimiento de inscripción de Aspirantes a grado superior.\n\n• Kardex firmado y sellado por el centro universitario donde estudió el bachillerato y que el documento mencione que su situación actual es baja (grado superior).",
+                  "image": {
+                    "src": "https://drive.google.com/uc?export=view&id=12-EqzbiQqGjOPDXhotUWig6FfN-PiKyy",
+                    "alt": "bachillerato-presencial-requisitos"
+                  }
+                }
+              ]
+            }
+          ],
+          "size": "medium"
+        }
+      },
+      "benefits": {
+        "video": "DxJpI7jdB9Q",
+        "title": "Modelo educativo",
+        "description": "En UANE contamos con un sistema educativo modular para llevar a cabo tu programa de bachillerato, el cual te permitirá desarrollar mejor tus habilidades, talentos y concentración por materia, sin descuidar el aprendizaje adquirido que busca la integración de contenidos de acuerdo a una lógica que responda a un campo de conocimiento. El alumno obtiene retroalimentación de su aprendizaje en forma inmediata, ya que a las pocas semanas de haber iniciado sus estudios puede constatar sus logros y comprobar si la preparación corresponde con sus intereses y capacidades. Los exámenes se programan al finalizar cada bloque; esto acostumbra al estudiante al logro de resultados bajo presión.",
+        "action": {
+          "id": "program_bachillerato",
+          "type": "primary",
+          "title": "Descarga el plan de estudios",
+          "size": "small",
+          "icon": "download",
+          "lyIcon": false,
+          "disabled": false,
+          "isExpand": false,
+          "tagOnClick": "testClick",
+          "test": ""
+        }
+      }
+    },
+    "form": {
+      "config": {
+        "level": { "hidden": true, "value": "bachillerato-online" },
+        "program": { "hidden": false },
+        "modality": { "hidden": false },
+        "campus": { "hidden": false }
+      },
+      "copies": {
+        "stepone": {
+          "title": "¿Quieres más información sobre tu bachillerato?",
+          "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+        }
+      }
+    }
+  }

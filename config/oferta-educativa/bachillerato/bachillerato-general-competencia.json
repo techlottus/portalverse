@@ -1,14 +1,14 @@
 {
   "meta": {
-    "title": "Bachillerato General",
+    "title": "Bachillerato General por Competencia",
     "description": "",
     "keywords": ""
   },
   "config": {
-    "title": "Bachillerato",
+    "title": "Bachillerato General por Competencia",
     "config": {
-      "nombre": "Bachillerato",
-      "modalidad": ["Presencial", "Bilingue", "Online"],
+      "nombre": "Bachillerato General por Competencia",
+      "modalidad": ["Presencial"],
       "areaConocimiento": ["Educación Media"],
       "campus": [],
       "nivel": ["Bachillerato"],
@@ -18,26 +18,14 @@
       },
       "curriculum": {
         "Presencial": {
-          "Monclova": "12IvFc7gviVNj52MLSDLx09BqDBpNLyrN",
-          "Monterrey": "1Zehy4bO2JMxUTuWqKpIrp9ndRKSOPMBS",
-          "Piedras Negras": "1xNagUrIbiT_4MnBTsqUm7DNN-5g2cAnx",
-          "Sabinas": "1wo6yi2vtGwY6kMVefWLXkCMOs24YU1dh",
-          "Saltillo": "1t-LUH2iQBvnb8dROo4CzhYdoZUlHz262",
-          "Torreón": "1QwB8h0Vv1qzpIbqu0Q6e2BLylAhu4SvD"
-        },
-        "Bilingue": {
-          "Matamoros": "1WR1QG48uUvy_VlwZIfXHgWtE285vvNWu",
-          "Torreón": "1nh8FglqVjK8gd4RfKq9FIEwjOOPt_wWo",
-          "Saltillo": "1YunpGNXQWeETYNpxwLAh05NJmxbSR2Dq",
-          "Reynosa": "1HpKX0JtpKTZa_nC6cv7CIq_Gt8iYA5jR"
-        },
-        "Online": "1FlO9M0QWafFoMKjaYj7zaC8j22DQrI3u"
+
+        }
       }
     }
   },
   "sections": {
     "head": {
-      "title": "Estudia Bachillerato",
+      "title": "Bachillerato General por Competencia",
       "description": "El bachillerato UANE te proporciona los conocimientos necesarios para continuar con tus estudios a nivel profesional, contribuye a desarrollar las capacidades que te permitirán adquirir una conciencia cívica, consolidar tu madurez personal y social, afianzar tus hábitos de lectura, estudio y disciplina; dominar la expresión oral y escrita y adquirir nociones de una lengua extranjera. \n\nTodo lo anterior en el mejor ambiente universitario con instalaciones de primer nivel y espacios para que desarrolles actividades extramuros y potencies tus capacidades artísticas, culturales y deportivas.\n\n¡Conviértete en un oso!",
       "image": {
         "src": "https://drive.google.com/uc?export=view&id=1Ql1K5pvcfP5u4e_kqXuxDm802UGbrb3K",
@@ -49,7 +37,7 @@
       "tabs": {
         "items": [
           {
-            "label": "Bachillerato General", "icons": { "primary": "", "duplicate": false }, "disabled": false,
+            "label": "Bachillerato General por Competencia", "icons": { "primary": "", "duplicate": false }, "disabled": false,
             "content": [
               {
                 "title": "Características del Bachillerato en modalidad presencial",
@@ -65,48 +53,6 @@
                 "image": {
                   "src": "https://drive.google.com/uc?export=view&id=12-EqzbiQqGjOPDXhotUWig6FfN-PiKyy",
                   "alt": "bachillerato-presencial-requisitos"
-                }
-              }
-            ]
-          },
-          {
-            "label": " Bachillerato Modular Bilingüe ", "icons": { "primary": "", "duplicate": false }, "disabled": false,
-            "content": [
-              {
-                "title": "Características del Bachillerato en modalidad bilingüe",
-                "description": "Con el Bachillerato Modular Bilingüe contarás con habilidades comunicativas en español e inglés, lo que te permitirá aplicar tus conocimientos en proyectos acorde a los adelantos culturales, tecnológicos y científicos que planteen retos vinculados a tu entorno académico, personal o social. Además podrás participar en actividades transversales que ampliarán tu sensibilidad hacia una orientación vocacional que te permita identificar tus talentos.",
-                "image": {
-                  "src": "https://drive.google.com/uc?export=view&id=1A5TdPuG35sCyqlwSsNskGtHkDTe4TXOv",
-                  "alt": "bachillerato-bilingue"
-                }
-              },
-              {
-                "title": "Requisitos de admisión",
-                "description": "\n\n• Acta de nacimiento reciente, original del cajero y 2 copias\n\n• Certificado de secundaria original y 2 copias. En caso de equivalencia presentar certificado parcial original legalizado con carta de autenticidad. (Si aún no cuenta traer constancia de trámite)\n\n• CURP copia4 fotografías tamaño infantil y 4 tamaño credencial, ambas blanco y negro, papel mate no instantáneas.\n\n• Constancia de calificaciones si aún no gradúan de secundaria.\n\n• Carta de buena salud expedida por institución pública o privada",
-                "image": {
-                  "src": "https://drive.google.com/uc?export=view&id=12-EqzbiQqGjOPDXhotUWig6FfN-PiKyy",
-                  "alt": "bachillerato-bilingue-requisitos"
-                }
-              }
-            ]
-          },
-          {
-            "label": "Bachillerato Online", "icons": {"primary": "", "duplicate": false }, "disabled": false,
-            "content": [
-              {
-                "title": "Características del Bachillerato en modalidad online",
-                "description": "Con el Bachillerato en línea tienes la posibilidad de acomodar tu horario escolar de acuerdo a tu rutina diaria para que elijas dedicarle tiempo de calidad a tu aprendizaje, ya sea por la mañana, por la tarde o por la noche. Tú tienes la libertad de avanzar a tu propio ritmo.\n\nAdemás podrás acceder a una biblioteca virtual amplia que cuenta con más de 560 mil títulos en la Biblioteca Virtual y constante retroalimentación de catedráticos o tutores.",
-                "image": {
-                  "src": "https://drive.google.com/uc?export=view&id=1A5TdPuG35sCyqlwSsNskGtHkDTe4TXOv",
-                  "alt": "bachillerato-online"
-                }
-              },
-              {
-                "title": "Requisitos de admisión",
-                "description": "\n\n• Acta de nacimiento reciente, original del cajero y 2 copias\n\n• Certificado de secundaria original y 2 copias. En caso de equivalencia presentar certificado parcial original legalizado con carta de autenticidad. (Si aún no cuenta traer constancia de trámite)\n\n• CURP copia\n\n• 4 fotografías tamaño infantil y 4 tamaño credencial, ambas blanco y negro, papel mate no instantáneas.\n\n• Constancia de calificaciones si aún no gradúan de secundaria.\n\n• Carta de buena salud expedida por institución pública o privada",
-                "image": {
-                  "src": "https://drive.google.com/uc?export=view&id=12-EqzbiQqGjOPDXhotUWig6FfN-PiKyy",
-                  "alt": "bachillerato-online-requisitos"
                 }
               }
             ]

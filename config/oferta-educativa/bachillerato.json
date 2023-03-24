@@ -52,11 +52,11 @@
   },
   "programs": [
     {
-      "title": "Bachillerato",
+      "title": "Bachillerato General por Competencia",
       "config": {
-        "nombre": "Bachillerato",
-        "modalidad": ["Presencial", "Bilingüe", "Online"],
-        "areaConocimiento": ["Educación Media"],
+        "nombre": "Bachillerato General por Competencia",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Media Superior"],
         "campus": [],
         "nivel": ["Bachillerato"],
         "image": {
@@ -64,7 +64,67 @@
           "alt": "bachillerato"
         }
       },
-      "route": "bachillerato"
+      "route": "bachillerato-general-competencia"
+    },
+    {
+      "title": "Bachillerato Intensivo Semiescolarizado",
+      "config": {
+        "nombre": "Bachillerato Intensivo Semiescolarizado",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Media Superior"],
+        "campus": [],
+        "nivel": ["Bachillerato"],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1cRokj6MTR0-IVNnHBaK1PJm-2qOV8cbq",
+          "alt": "bachillerato"
+        }
+      },
+      "route": "bachillerato-intensivo-semiescolarizado"
+    },
+    {
+      "title": "Bachillerato General por Competencia con Diplomado en Gastronomía",
+      "config": {
+        "nombre": "Bachillerato General por Competencia con Diplomado en Gastronomía",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Media Superior"],
+        "campus": [],
+        "nivel": ["Bachillerato"],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1cRokj6MTR0-IVNnHBaK1PJm-2qOV8cbq",
+          "alt": "bachillerato"
+        }
+      },
+      "route": "bachillerato-general-competencia-gastronomia"
+    },
+    {
+      "title": "Bachillerato Online",
+      "config": {
+        "nombre": "Bachillerato Online",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Media Superior"],
+        "campus": [],
+        "nivel": ["Bachillerato"],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1cRokj6MTR0-IVNnHBaK1PJm-2qOV8cbq",
+          "alt": "bachillerato"
+        }
+      },
+      "route": "bachillerato-online"
+    },
+    {
+      "title": "Bachillerato General por Competencia con Certificación en Inglés Proulex",
+      "config": {
+        "nombre": "Bachillerato General por Competencia con Certificación en Inglés Proulex",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Media Superior"],
+        "campus": [],
+        "nivel": ["Bachillerato"],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1cRokj6MTR0-IVNnHBaK1PJm-2qOV8cbq",
+          "alt": "bachillerato"
+        }
+      },
+      "route": "bachillerato-general-competencia-proulex"
     }
   ]
 }
