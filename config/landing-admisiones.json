@@ -9,22 +9,22 @@
       "title":"Inscríbete en UTEG",
       "textIcons":[
         {
-          "icon": "https://drive.google.com/uc?export=view&id=1hJimBZzdCoQ-JKvUMo5zn2gaNhIZ-vc4",
+          "icon": "https://https://assets.staging.bedu.org//UTEG/admisiones_55_aniversario_a566f278a2.svg",
           "name": "aniversario55", 
           "text": "Somos una universidad con 55 años de experiencia"
         },
         {
-          "icon": "https://drive.google.com/uc?export=view&id=1_G9FmBTMdRHMyx2_XpJsluW-qc98RtoW",
+          "icon": "https://https://assets.staging.bedu.org/UTEG/admisiones_udg_b0e94414ef.svg",
           "name": "udg",
           "text": "+ de 21 programas de Licenciatura incorprados a UDG"
         },
         {
-          "icon": "https://drive.google.com/uc?export=view&id=1qdcp8gJkzH3BrJ_bw1c3JLh5nFtSi6Ks",
+          "icon": "https://https://assets.staging.bedu.org/UTEG/admisiones_egresados_72dcb593b8.svg",
           "name": "egresados",
           "text": "+45,000 egresados"
         },
         {
-          "icon": "https://drive.google.com/uc?export=view&id=1poC-ntONnltusWtHuxkiYuvesz3yVyCE",
+          "icon": "https://https://assets.staging.bedu.org/UTEG/admisiones_internacionaizacion_ea248ab423.svg",
           "name": "internacionalizacion",
           "text": "+ de 10 tipos de internacionalización "
         }
@@ -41,11 +41,11 @@
       "image": {
         "desk": {
           "alt": "imagen",
-          "src": "https://drive.google.com/uc?export=view&id=12zep5-S5ab8Y_T2xsoVRfQSba39qf7f4"
+          "src": "https://assets.staging.bedu.org/UTEG/admisiones_banner_becas_desktop_479c6a74f7.jpg"
         },
         "mobile": {
           "alt": "imagen",
-          "src": "https://drive.google.com/uc?export=view&id=19s7--hBNLiFNqupIoA0dMwkFRy46Q7Ro"
+          "src": "https://assets.staging.bedu.org/UTEG/admisiones_banner_becas_movil_0b3164697b.jpg"
         }
       }
     },
@@ -58,7 +58,7 @@
             "content": {
               "image": {
                 "alt": "imagen",
-                "src": "https://drive.google.com/uc?export=view&id=12xntSA2bHQXmfCvFx3_w-II0SOw7Pf5z"
+                "src": "https://assets.staging.bedu.org/UTEG/admisiones_requisitos_admision_bachillerato_39ebf53e86.jpg"
               },
               "content": {
                 "title": "",
@@ -73,7 +73,7 @@
               },
               "cards": [
                 { 
-                  "image": "https://drive.google.com/uc?export=view&id=11LMHqW1q7HZsva3wIb8OiXCnRJ3O_ANV",
+                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_presencial_d62b8a6d09.jpg",
                   "subtitle": "",
                   "title": "Presencial",
                   "text": "Contamos con 31 programas de licenciatura, 21 de ellos con incorporación a la Universidad de Guadalajara.",
@@ -88,7 +88,7 @@
                   "wrapper": true
                 },
                 { 
-                  "image": "https://drive.google.com/uc?export=view&id=17S8occhNQCayN1RkPv6qRDJGFZCA1moc",
+                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_flex_8af4d733fb.jpg",
                   "subtitle": "",
                   "title": "UTEG Flex",
                   "text": "Con esta modalidad de estudios semi-presencial, los sábados, puedes estudiar aún cuando, por cualquier motivo, no puedas asistir regularmente a un plantel.",
@@ -103,7 +103,7 @@
                   "wrapper": true
                 },
                 { 
-                  "image": "https://drive.google.com/uc?export=view&id=1FzfYUz8FSS1Ro9oxnZiLvLqYvzaHQ-RB",
+                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_online_69599a8b38.jpg",
                   "subtitle": "",
                   "title": "UTEG Online",
                   "text": "Vive las experiencias de aprendizaje sin barreras de tiempo y espacio gracias a las plataformas tecnológicas. Interactúa con docentes experimentados y accede a los conocimientos más actualizados.",
@@ -125,7 +125,7 @@
             "content": {
               "image": {
                 "alt": "imagen",
-                "src": "https://drive.google.com/uc?export=view&id=12xntSA2bHQXmfCvFx3_w-II0SOw7Pf5z"
+                "src": "https://assets.staging.bedu.org/UTEG/admisiones_requisitos_admision_bachillerato_39ebf53e86.jpg"
               },
               "content": {
                 "title": "",
@@ -134,7 +134,7 @@
               },
               "cards": [
                 { 
-                  "image": "https://drive.google.com/uc?export=view&id=11LMHqW1q7HZsva3wIb8OiXCnRJ3O_ANV",
+                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_presencial_d62b8a6d09.jpg",
                   "subtitle": "",
                   "title": "Presencial",
                   "text": "Contamos con 31 programas de licenciatura, 21 de ellos con incorporación a la Universidad de Guadalajara.",
@@ -149,7 +149,7 @@
                   "wrapper": true
                 },
                 { 
-                  "image": "https://drive.google.com/uc?export=view&id=17S8occhNQCayN1RkPv6qRDJGFZCA1moc",
+                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_flex_8af4d733fb.jpg",
                   "subtitle": "",
                   "title": "UTEG Flex",
                   "text": "Con esta modalidad de estudios semi-presencial, los sábados, puedes estudiar aún cuando, por cualquier motivo, no puedas asistir regularmente a un plantel.",
@@ -164,7 +164,7 @@
                   "wrapper": true
                 },
                 { 
-                  "image": "https://drive.google.com/uc?export=view&id=1FzfYUz8FSS1Ro9oxnZiLvLqYvzaHQ-RB",
+                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_online_69599a8b38.jpg",
                   "subtitle": "",
                   "title": "UTEG Online",
                   "text": "Vive las experiencias de aprendizaje sin barreras de tiempo y espacio gracias a las plataformas tecnológicas. Interactúa con docentes experimentados y accede a los conocimientos más actualizados.",
@@ -186,7 +186,7 @@
             "content": {
               "image": {
                 "alt": "imagen",
-                "src": "https://drive.google.com/uc?export=view&id=1NhOKKFYAE6hZoNuZQPGpnlvj7MWyGDv6"
+                "src": "https://assets.staging.bedu.org/UTEG/admisiones_requisitos_admision_licenciatura_5ecac8fbea.jpg"
               },
               "content": {
                 "title": "",
@@ -195,7 +195,7 @@
               },
               "cards": [
                 { 
-                  "image": "https://drive.google.com/uc?export=view&id=11LMHqW1q7HZsva3wIb8OiXCnRJ3O_ANV",
+                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_presencial_d62b8a6d09.jpg",
                   "subtitle": "",
                   "title": "Presencial",
                   "text": "Contamos con 31 programas de licenciatura, 21 de ellos con incorporación a la Universidad de Guadalajara.",
@@ -210,7 +210,7 @@
                   "wrapper": true
                 },
                 { 
-                  "image": "https://drive.google.com/uc?export=view&id=17S8occhNQCayN1RkPv6qRDJGFZCA1moc",
+                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_flex_8af4d733fb.jpg",
                   "subtitle": "",
                   "title": "UTEG Flex",
                   "text": "Con esta modalidad de estudios semi-presencial, los sábados, puedes estudiar aún cuando, por cualquier motivo, no puedas asistir regularmente a un plantel.",
@@ -225,7 +225,7 @@
                   "wrapper": true
                 },
                 { 
-                  "image": "https://drive.google.com/uc?export=view&id=1FzfYUz8FSS1Ro9oxnZiLvLqYvzaHQ-RB",
+                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_online_69599a8b38.jpg",
                   "subtitle": "",
                   "title": "UTEG Online",
                   "text": "Vive las experiencias de aprendizaje sin barreras de tiempo y espacio gracias a las plataformas tecnológicas. Interactúa con docentes experimentados y accede a los conocimientos más actualizados.",
@@ -247,7 +247,7 @@
             "content": {
               "image": {
                 "alt": "imagen",
-                "src": "https://drive.google.com/uc?export=view&id=1NhOKKFYAE6hZoNuZQPGpnlvj7MWyGDv6"
+                "src": "https://assets.staging.bedu.org/UTEG/admisiones_requisitos_admision_licenciatura_5ecac8fbea.jpg"
               },
               "content": {
                 "title": "",
@@ -256,7 +256,7 @@
               },
               "cards": [
                 { 
-                  "image": "https://drive.google.com/uc?export=view&id=11LMHqW1q7HZsva3wIb8OiXCnRJ3O_ANV",
+                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_presencial_d62b8a6d09.jpg",
                   "subtitle": "",
                   "title": "Presencial",
                   "text": "Contamos con 31 programas de licenciatura, 21 de ellos con incorporación a la Universidad de Guadalajara.",
@@ -271,7 +271,7 @@
                   "wrapper": true
                 },
                 { 
-                  "image": "https://drive.google.com/uc?export=view&id=17S8occhNQCayN1RkPv6qRDJGFZCA1moc",
+                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_flex_8af4d733fb.jpg",
                   "subtitle": "",
                   "title": "UTEG Flex",
                   "text": "Con esta modalidad de estudios semi-presencial, los sábados, puedes estudiar aún cuando, por cualquier motivo, no puedas asistir regularmente a un plantel.",
@@ -286,7 +286,7 @@
                   "wrapper": true
                 },
                 { 
-                  "image": "https://drive.google.com/uc?export=view&id=1FzfYUz8FSS1Ro9oxnZiLvLqYvzaHQ-RB",
+                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_online_69599a8b38.jpg",
                   "subtitle": "",
                   "title": "UTEG Online",
                   "text": "Vive las experiencias de aprendizaje sin barreras de tiempo y espacio gracias a las plataformas tecnológicas. Interactúa con docentes experimentados y accede a los conocimientos más actualizados.",
@@ -308,7 +308,7 @@
             "content": {
               "image": {
                 "alt": "imagen",
-                "src": "https://drive.google.com/uc?export=view&id=19pd8ekA_qULOr1J1inn4PKjxytTRXrL_"
+                "src": "https://assets.staging.bedu.org/UTEG/admisiones_requisitos_admision_maestria_0333131dbb.jpg"
               },
               "content": {
                 "title": "",
@@ -317,7 +317,7 @@
               },
               "cards": [
                 { 
-                  "image": "https://drive.google.com/uc?export=view&id=11LMHqW1q7HZsva3wIb8OiXCnRJ3O_ANV",
+                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_presencial_d62b8a6d09.jpg",
                   "subtitle": "",
                   "title": "Presencial",
                   "text": "Contamos con 31 programas de licenciatura, 21 de ellos con incorporación a la Universidad de Guadalajara.",
@@ -332,7 +332,7 @@
                   "wrapper": true
                 },
                 { 
-                  "image": "https://drive.google.com/uc?export=view&id=17S8occhNQCayN1RkPv6qRDJGFZCA1moc",
+                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_flex_8af4d733fb.jpg",
                   "subtitle": "",
                   "title": "UTEG Flex",
                   "text": "Con esta modalidad de estudios semi-presencial, los sábados, puedes estudiar aún cuando, por cualquier motivo, no puedas asistir regularmente a un plantel.",
@@ -347,7 +347,7 @@
                   "wrapper": true
                 },
                 { 
-                  "image": "https://drive.google.com/uc?export=view&id=1FzfYUz8FSS1Ro9oxnZiLvLqYvzaHQ-RB",
+                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_online_69599a8b38.jpg",
                   "subtitle": "",
                   "title": "UTEG Online",
                   "text": "Vive las experiencias de aprendizaje sin barreras de tiempo y espacio gracias a las plataformas tecnológicas. Interactúa con docentes experimentados y accede a los conocimientos más actualizados.",
@@ -369,7 +369,7 @@
             "content": {
               "image": {
                 "alt": "imagen",
-                "src": "https://drive.google.com/uc?export=view&id=19pd8ekA_qULOr1J1inn4PKjxytTRXrL_"
+                "src": "https://assets.staging.bedu.org/UTEG/admisiones_requisitos_admision_maestria_0333131dbb.jpg"
               },
               "content": {
                 "title": "",
@@ -378,7 +378,7 @@
               },
               "cards": [
                 { 
-                  "image": "https://drive.google.com/uc?export=view&id=11LMHqW1q7HZsva3wIb8OiXCnRJ3O_ANV",
+                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_presencial_d62b8a6d09.jpg",
                   "subtitle": "",
                   "title": "Presencial",
                   "text": "Contamos con 31 programas de licenciatura, 21 de ellos con incorporación a la Universidad de Guadalajara.",
@@ -393,7 +393,7 @@
                   "wrapper": true
                 },
                 { 
-                  "image": "https://drive.google.com/uc?export=view&id=17S8occhNQCayN1RkPv6qRDJGFZCA1moc",
+                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_flex_8af4d733fb.jpg",
                   "subtitle": "",
                   "title": "UTEG Flex",
                   "text": "Con esta modalidad de estudios semi-presencial, los sábados, puedes estudiar aún cuando, por cualquier motivo, no puedas asistir regularmente a un plantel.",
@@ -408,7 +408,7 @@
                   "wrapper": true
                 },
                 { 
-                  "image": "https://drive.google.com/uc?export=view&id=1FzfYUz8FSS1Ro9oxnZiLvLqYvzaHQ-RB",
+                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_online_69599a8b38.jpg",
                   "subtitle": "",
                   "title": "UTEG Online",
                   "text": "Vive las experiencias de aprendizaje sin barreras de tiempo y espacio gracias a las plataformas tecnológicas. Interactúa con docentes experimentados y accede a los conocimientos más actualizados.",
@@ -430,7 +430,7 @@
             "content": {
               "image": {
                 "alt": "imagen",
-                "src": "https://drive.google.com/uc?export=view&id=19pd8ekA_qULOr1J1inn4PKjxytTRXrL_"
+                "src": "https://assets.staging.bedu.org/UTEG/admisiones_requisitos_admision_maestria_0333131dbb.jpg"
               },
               "content": {
                 "title": "",
@@ -439,7 +439,7 @@
               },
               "cards": [
                 { 
-                  "image": "https://drive.google.com/uc?export=view&id=11LMHqW1q7HZsva3wIb8OiXCnRJ3O_ANV",
+                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_presencial_d62b8a6d09.jpg",
                   "subtitle": "",
                   "title": "Presencial",
                   "text": "Contamos con 31 programas de licenciatura, 21 de ellos con incorporación a la Universidad de Guadalajara.",
@@ -454,7 +454,7 @@
                   "wrapper": true
                 },
                 { 
-                  "image": "https://drive.google.com/uc?export=view&id=17S8occhNQCayN1RkPv6qRDJGFZCA1moc",
+                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_flex_8af4d733fb.jpg",
                   "subtitle": "",
                   "title": "UTEG Flex",
                   "text": "Con esta modalidad de estudios semi-presencial, los sábados, puedes estudiar aún cuando, por cualquier motivo, no puedas asistir regularmente a un plantel.",
@@ -469,7 +469,7 @@
                   "wrapper": true
                 },
                 { 
-                  "image": "https://drive.google.com/uc?export=view&id=1FzfYUz8FSS1Ro9oxnZiLvLqYvzaHQ-RB",
+                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_online_69599a8b38.jpg",
                   "subtitle": "",
                   "title": "UTEG Online",
                   "text": "Vive las experiencias de aprendizaje sin barreras de tiempo y espacio gracias a las plataformas tecnológicas. Interactúa con docentes experimentados y accede a los conocimientos más actualizados.",
@@ -493,9 +493,9 @@
     "internacionalizacion": {
       "banner": {
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1Lu7xscpEX175YSluqf3RorHOvBZEjPwS",
-          "tablet": "https://drive.google.com/uc?export=view&id=1pPFYqosqomNRrh0uli7OdRuIH6fSSADu",
-          "mobile": "https://drive.google.com/uc?export=view&id=16svGkFJxSU2A-Qj_54pOm8HhZA9vvxUB"
+          "desktop": "https://assets.staging.bedu.org/UTEG/admisiones_banner_UTEG_360_desktop_8c708bdce1.jpg",
+          "tablet": "https://assets.staging.bedu.org/UTEG/admisiones_banner_UTEG_360_tablet_e9ec39a149.jpg",
+          "mobile": "https://assets.staging.bedu.org/UTEG/admisiones_banner_UTEG_360_movil_841e8d89ed.jpg"
         },
         "title": "UTEG 360",
         "subtitle": "Vive con nosotros la experiencia internacional de tu profesión. ",
@@ -523,9 +523,9 @@
     "empleabilidad": {
       "banner":{
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1U3unSJTWkRCILKzf2Dgueck5CjAp9fox",
-          "tablet": "https://drive.google.com/uc?export=view&id=1Fy4n36vWxJipGKqUUowQsHuzSNg7K0tm",
-          "mobile": "https://drive.google.com/uc?export=view&id=1YuodH2RuroieCX1ztfqFCk97BAFhYBxW"
+          "desktop": "https://assets.staging.bedu.org/UTEG/admisiones_banner_empleabilidad_desktop_7da61effc1.jpg",
+          "tablet": "https://assets.staging.bedu.org/UTEG/admisiones_banner_empleabilidad_tablet_a347d0898a.jpg",
+          "mobile": "https://assets.staging.bedu.org/UTEG/admisiones_banner_empleabilidad_movil_f0c1bf1c0b.jpg"
         },
         "title": "Empleabilidad en UTEG",
         "subtitle": "¿Buscas empleo? Inscríbete en nuestra Bolsa de Trabajo.",
@@ -554,9 +554,9 @@
     "becas": {
       "banner":{
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=12zep5-S5ab8Y_T2xsoVRfQSba39qf7f4",
-          "tablet": "https://drive.google.com/uc?export=view&id=1hbzZIAxV-coI3F62YjAMEZmOj6z76aia",
-          "mobile": "https://drive.google.com/uc?export=view&id=19s7--hBNLiFNqupIoA0dMwkFRy46Q7Ro"
+          "desktop": "https://assets.staging.bedu.org/UTEG/admisiones_banner_becas_desktop_479c6a74f7.jpg",
+          "tablet": "https://assets.staging.bedu.org/UTEG/admisiones_banner_becas_tablet_a2d3406295.jpg",
+          "mobile": "https://assets.staging.bedu.org/UTEG/admisiones_banner_becas_movil_0b3164697b.jpg"
         },
         "title": "Becas y programas de apoyo económico",
         "subtitle": "Conoce más sobre las opciones de ayuda que te ofrece UTEG para realizar tus estudios.",
@@ -586,7 +586,7 @@
       "description": "Descubre las historias de vida de quienes, como tú, viven o vivieron en UTEG la experiencia de cumplir sus sueños.  ",
       "cards": [
         { 
-          "image": "https://drive.google.com/uc?export=view&id=1EcSyyyjEHZGDnAURl74tTUwhm2gC9bgY",    
+          "image": "https://assets.staging.bedu.org/UTEG/admisiones_adrian_flores_9bd055aed6.jpg",    
           "subtitle": "ALUMNO EN DISEÑO DE MODAS",
           "title": "Adrián Flores",
           "text": "\"Gracias a UTEG, pude participar en el concurso Pierre Cardin Young Designers en México. Conocí muchas personas importantes y originales, y creo que ese fue otro de los regalos que tuve al participar en el concurso.\"",
@@ -596,7 +596,7 @@
           "background": true
         },
         { 
-          "image": "https://drive.google.com/uc?export=view&id=1-mAyUaeo08gTIB-N-FgBg0pzuPzL5S2u",
+          "image": "https://assets.staging.bedu.org/UTEG/admisiones_uriel_montes_ff1ce11276.jpg",
           "subtitle": "LIC. EN NUTRICIÓN",
           "title": "Uriel Montes",
           "text": "Como nutriólogo de los Los Astros de Jalisco, Uriel se encarga de que la “maquinaria” del básquet tapatío esté a punto para la victoria.",
