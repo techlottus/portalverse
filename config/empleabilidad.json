@@ -10,9 +10,9 @@
         "title": "Bolsa de Talento", 
         "subtitle": "Estadísticas", 
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1pRGN-OE45Hbj7Vl_TfLZ_jhektID8dRN",
-          "tablet": "https://drive.google.com/uc?export=view&id=1cpWOBYJCTYoeCPe74eTwNXl1_SVD_RM-",
-          "mobile": "https://drive.google.com/uc?export=view&id=1Jpmo-B4H08HGu7fVgm6mlviuTkandw-J"
+          "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_empleabilidad_Banner_bolsa_empleo_desk_ba766cb93f.jpg",
+          "tablet": "https://assets.staging.bedu.org/UTEG/nosotros_empleabilidad_Banner_bolsa_empleo_tablet_9b78602f47.jpg",
+          "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_empleabilidad_Banner_bolsa_empleo_mobile_948bbffb11.jpg"
         },
         "statics": [
           {"maxNumber": 988, "icon": "", "prefix": "+", "suffix": "", "title": "", "body": "Vacantes publicadas en 2022 - 2023", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
@@ -38,7 +38,7 @@
         "content": "<p>Para nuestra Universidad es primordial generar alianzas con las empresas de nuestra región y del país; buscamos sumarnos a los beneficios que ofrecen a sus colaboradores y lograr una estrecha relación que les permita, a través de nuestra oferta educativa, desarrollar personal mejor capacitado, preparado y actualizado.</p><p>Además, ponemos a su alcance a nuestros alumnos para cubrir las necesidades de prácticas profesionales y a nuestros egresados para cubrir sus vacantes laborales.</p><p>Súmate a las empresas que ya han confiado en nosotros a través de un convenio de colaboración.</p>"
       },
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1X9MBL40qgt6Y1zuX2XSfZfwHEucEwaFp",
+        "src": "https://assets.staging.bedu.org/UTEG/nosotros_empleabilidad_vinculacion_empresarial_df9a864ebb.jpg",
         "alt": "vinculación-empresarial"
       }
     },
@@ -150,8 +150,8 @@
     "contacto": {
       "banner": {
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1qW75lweCcDj_dnBUPbypO0fO3VpK5Mbs",
-          "mobile": "https://drive.google.com/uc?export=view&id=1cGdxuOmKwB0ZetyPXUAG4sg6d_g7bOUA"
+          "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_empleabilidad_Banner_Dudas_desk_6a63ba843f.jpg",
+          "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_empleabilidad_Banner_dudas_tablet_8642d6906f.jpg"
         },
         "title": "¿Tienes dudas? Contáctanos",
         "email": "empleabilidad@uteg.edu.mx",
