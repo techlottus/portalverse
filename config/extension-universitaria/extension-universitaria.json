@@ -7,16 +7,16 @@
   "sections": {
     "head": {
       "title": "Extensión universitaria",
-      "subtitle": "En UANE sabemos que los profesionistas requieren de actualizarse y reforzar sus habilidades y conocimientos. ",
-      "description": "Por eso tenemos a tu disposición diversos programas que te permitirán enriquecer tu currículum, habilidades y destrezas para satisfacer a las necesidades cambiantes del ambiente laboral.\n\n ¡Ponte a la vanguardia dentro de tu campo de trabajo de manera constante y actualízate para ser el mejor candidato de las organizaciones!",
+      "subtitle": "En un entorno laboral altamente competitivo, en UTEG te ofrecemos la posibilidad de convertirte en un mejor profesional. ",
+      "description": "Para mantenerte actualizado con las nuevas tendencias en tu ámbito laboral contamos con una amplia oferta de cursos, seminarios y talleres especializantes. Hemos diseñado programas de educación continua no solo para nuestros egresados, también para los alumnos activos de bachillerato y licenciatura, incluyendo los de nuevo ingreso. ¡Adquire las competencias profesionales que serán la clave de tu éxito!",
       "image": {
         "desk": {
           "alt": "imagen",
-          "src": "https://drive.google.com/uc?export=view&id=1Uiino6zUW6GrzgFokICHGxisBmCLPLlb"
+          "src": "https://assets.staging.bedu.org/UTEG/Extension_Universitaria_mosaico_head_eef5aec6d6.jpg"
         },
         "mobile": {
           "alt": "imagen",
-          "src": "https://drive.google.com/uc?export=view&id=1Uiino6zUW6GrzgFokICHGxisBmCLPLlb"
+          "src": "https://assets.staging.bedu.org/UTEG/Extension_Universitaria_mosaico_head_eef5aec6d6.jpg"
         }
       }
     },
@@ -186,6 +186,924 @@
     },
     "extension": {
       "sections": [
+        {
+          "title": "Bedu",
+          "cursos": [
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "BEDU Curso en Emprendimiento",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extencion_universitaria_b_emprendimiento_desk_a7b8a876d9.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extencion_universitaria_b_emprendimiento_desk_a7b8a876d9.jpg"
+                }
+              },
+              "redirect": "bedu-emprendimiento"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "BEDU Curso en Diseño de Productos Digitales",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_b_diseno_prod_digitales_desk_78c74bd3ae.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_b_diseno_prod_digitales_desk_78c74bd3ae.jpg"
+                }
+              },
+              "redirect": "bedu-productos-digitales"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "BEDU Diplomado en Ciencia de Datos",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_b_ciencias_datos_desk_51b05ca83d.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_b_ciencias_datos_desk_51b05ca83d.jpg"
+                }
+              },
+              "redirect": "bedu-ciencia-de-datos"
+            }
+          ]
+        },
+        {
+          "title": "Cursos",
+          "cursos": [
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Curso Habilidades Interpesonales",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_habilidades_interpersonales_desk_a61877bc14.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_habilidades_interpersonales_desk_a61877bc14.jpg"
+                }
+              },
+              "redirect": "habilidades-interpersonales"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Curso Habilidades Cognitivas",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_habilidades_cognitivas_desk_e7459861dd.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_habilidades_cognitivas_desk_e7459861dd.jpg"
+                }
+              },
+              "redirect": "habilidades-cognitivas"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Curso de Nivelación de Précalculo",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_nivelacion_precalculo_desk_1251efe7d4.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_nivelacion_precalculo_desk_1251efe7d4.jpg"
+                }
+              },
+              "redirect": "nivelacion-precalculo"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Certificación Oficial Adobe Photoshop",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_photoshop_desk_56ffb9b309.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_photoshop_desk_56ffb9b309.jpg"
+                }
+              },
+              "redirect": "adobe-photoshop"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Curso EGGEL CENEVAL QFB Química Clínica",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_Eggel_Ceneval_QFB_desk_530ba4fe35.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_Eggel_Ceneval_QFB_desk_530ba4fe35.jpg"
+                }
+              },
+              "redirect": "eggel-ceneval-qfb"
+            }
+          ]
+        },
+        {
+          "title": "Diplomados UTEG",
+          "cursos": [
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Diplomado en Innovación y Control de Calidad",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_inovacion_gestion_calidad_desk_5d86d5380b.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_inovacion_gestion_calidad_desk_5d86d5380b.jpg"
+                }
+              },
+              "redirect": "diplomado-innovacion-y-control"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Diplomado en Docencia en Linea",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_docencia_online_desk_42beec6002.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_docencia_online_desk_42beec6002.jpg"
+                }
+              },
+              "redirect": "diplomado-docencia-online"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Diplomado en Globalización",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_globalizacion_desk_e3c2673da7.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_globalizacion_desk_e3c2673da7.jpg"
+                }
+              },
+              "redirect": "diplomado-globalizacion"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Diplomado en Desarrollo del Talento Humano",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_desarrollo_talento_humano_desk_48c281e2f5.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_desarrollo_talento_humano_desk_48c281e2f5.jpg"
+                }
+              },
+              "redirect": "diplomado-desarrollo-talento"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Diplomado de Ciencias Forenses y el Sistema de Justicia Penal Acusatorio y Adversarial.",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_forence_justicia_penal_desk_296db0b2c8.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_forence_justicia_penal_desk_296db0b2c8.jpg"
+                }
+              },
+              "redirect": "diplomado-ciencias-forenses"
+            }
+          ]
+        },
+        {
+          "title": "Cursos Cortos",
+          "cursos": [
+            {
+              "hidden": true,
+              "id": "123",
+              "title": "Certificación Oficial Adobe After Effects",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1TRXplcP8ISBVtj1xGHY3a8e-Dp0ZuYUE"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1TRXplcP8ISBVtj1xGHY3a8e-Dp0ZuYUE"
+                }
+              },
+              "redirect": "adobe-after-effects"
+            },
+            {
+              "hidden": true,
+              "id": "123",
+              "title": "Certificación Oficial Adobe Photoshop",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1cnEGJSkqGrixFE_LnEuAq_-Dh-_4k4Zc"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1cnEGJSkqGrixFE_LnEuAq_-Dh-_4k4Zc"
+                }
+              },
+              "redirect": "adobe-photoshop"
+            },
+            {
+              "hidden": true,
+              "id": "123",
+              "title": "Análisis de Datos",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1G5cfpaPeUUL3xe4GKVp_AIYR9kfOVozF"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1G5cfpaPeUUL3xe4GKVp_AIYR9kfOVozF"
+                }
+              },
+              "redirect": "analisis-de-datos"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Comunicación Publica y Gestión de la Reputación",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_comunicacion_publica_gestion_reputacion_desk_a064e6a4fa.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_comunicacion_publica_gestion_reputacion_desk_a064e6a4fa.jpg"
+                }
+              },
+              "redirect": "comunicacion-publica-gestion-reputacion"
+            },
+            {
+              "hidden": true,
+              "id": "123",
+              "title": "Derecho de Autor y Propiedad Intelectual",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1Ku6pYYkERDFRmUMDbZrihCrzNTCWfxtR"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1Ku6pYYkERDFRmUMDbZrihCrzNTCWfxtR"
+                }
+              },
+              "redirect": "derecho-autor-propiedad-intelectual"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Derechos Humanos y Sostenibilidad",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_derechos_humanos_sostenibilidad_desk_258038d7bc.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_derechos_humanos_sostenibilidad_desk_258038d7bc.jpg"
+                }
+              },
+              "redirect": "derechos-humanos-sostenibilidad"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Estrategias de Tiendas en Línea",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_estrategia_tiendas_linea_desk_143714886c.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_estrategia_tiendas_linea_desk_143714886c.jpg"
+                }
+              },
+              "redirect": "estrategias-tiendas-en-linea"
+            },
+            {
+              "hidden": true,
+              "id": "123",
+              "title": "Estructura de Datos",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1qJ7-TOn5q7Qaq_se3hAipdtRYiqZUZZg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1qJ7-TOn5q7Qaq_se3hAipdtRYiqZUZZg"
+                }
+              },
+              "redirect": "estructura-datos"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Gerencia y Gestión Deportiva",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_gerencia_gestion_deportiva_desk_5586f6e8d5.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_gerencia_gestion_deportiva_desk_5586f6e8d5.jpg"
+                }
+              },
+              "redirect": "gerencia-gestion-deportiva"
+            },
+            {
+              "hidden": true,
+              "id": "123",
+              "title": "Higiene y Seguridad en el Trabajo",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1-oip47KlcHezczm8dcv6bZePkJtYkHYN"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1-oip47KlcHezczm8dcv6bZePkJtYkHYN"
+                }
+              },
+              "redirect": "higiene-seguridad-trabajo"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Liderazgo y Trabajo en Equipo",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_liderazgo_trabajo_equipo_desk_282ce2f897.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_liderazgo_trabajo_equipo_desk_282ce2f897.jpg"
+                }
+              },
+              "redirect": "liderazgo-trabajo-equipo"
+            },
+            {
+              "hidden": true,
+              "id": "123",
+              "title": "Mega Tendencias Globales",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1V0_dLRrdEq4MgWYv50yDRpQ_2VUd_fIv"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1V0_dLRrdEq4MgWYv50yDRpQ_2VUd_fIv"
+                }
+              },
+              "redirect": "mega-tendencias-globales"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Mercadotecnia Aplicada a Entornos Virtuales",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_mercadotecnia_aplicada_ent_virt_desk_9e6de4c411.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_mercadotecnia_aplicada_ent_virt_desk_9e6de4c411.jpg"
+                }
+              },
+              "redirect": "mercadotecnia-entornos-virtuales"
+            },
+            {
+              "hidden": true,
+              "id": "123",
+              "title": "Obligaciones y Contratos",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1QKS-W7fNxeHEEI4DZqzv8WUAK1cvqiQW"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1QKS-W7fNxeHEEI4DZqzv8WUAK1cvqiQW"
+                }
+              },
+              "redirect": "obligaciones-contratos"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Políticas Públicas en Gobernanza",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_politicas_publicas_gobernanza_desk_50c951ab7d.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_politicas_publicas_gobernanza_desk_50c951ab7d.jpg"
+                }
+              },
+              "redirect": "politicas-publicas-gobernanza"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Psicología y Comunicación",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_psicologia_comunicacion_desk_36f4d5bd5b.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_psicologia_comunicacion_desk_36f4d5bd5b.jpg"
+                }
+              },
+              "redirect": "psicologia-comunicacion"
+            },
+            {
+              "hidden": true,
+              "id": "123",
+              "title": "Psicología del Consumidor",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1NViTgtihUNLX9h5TYfSxEFJNI4_yWS_3"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://drive.google.com/uc?export=view&id=1NViTgtihUNLX9h5TYfSxEFJNI4_yWS_3"
+                }
+              },
+              "redirect": "psicologia-consumidor"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Diseño Universal para el Aprendizaje y su Aplicación en el Aula (PRODIS)",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_PRODIS_diseno_universal_desk_9ed48b4fad.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_PRODIS_diseno_universal_desk_9ed48b4fad.jpg"
+                }
+              },
+              "redirect": "prodis-diseno-universal"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Estimulación Sensorial en Alumnado con Necesidades de Apoyo Educativo (PRODIS)",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_PRODIS_estimulacion_sensorial_desk_9f77cb5d3e.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_PRODIS_estimulacion_sensorial_desk_9f77cb5d3e.jpg"
+                }
+              },
+              "redirect": "prodis-estimulacion-sensorial"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Estrategias para Potenciar la Comunicación a través de los Sistemas Aumentativos y Alternativos de Comunicación (SAAC) (PRODIS)",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_PRODIS_SAAC_desk_4c5f13bc33.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_PRODIS_SAAC_desk_4c5f13bc33.jpg"
+                }
+              },
+              "redirect": "prodis-saac"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Creación de Recursos Adaptados a través de las TIC en el Aula (PRODIS)",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_PRODIS_TIC_desk_f948e79d54.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_PRODIS_TIC_desk_f948e79d54.jpg"
+                }
+              },
+              "redirect": "prodis-tic"
+            },
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Metodología de la Investigación Aplicada a la Educación (PRODIS)",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_PRODIS_metodologia_investigacion_desk_a7c95a13d0.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_PRODIS_metodologia_investigacion_desk_a7c95a13d0.jpg"
+                }
+              },
+              "redirect": "prodis-metodologia-investigacion-aplicada"
+            }
+          ]
+        },
+        {
+          "title": "Talleres",
+          "cursos": [
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Taller de Fotofrafía CUCEA",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_fotografia_CUCEA_desk_85833257ba.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_fotografia_CUCEA_desk_85833257ba.jpg"
+                }
+              },
+              "redirect": "fotografia-cucea"
+            }
+          ]
+        },
+        {
+          "title": "Seminarios",
+          "cursos": [
+            {
+              "hidden": false,
+              "id": "123",
+              "title": "Seminario de Titulación de Gatronomía",
+              "link":{
+                "text": "Ver más",
+                "size": "large",
+                "isBold": false,
+                "disabled": false,
+                "id":"",
+                "icon":"arrow_forward"
+              },
+              "image": {
+                "desk": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_titulacion_gastronomia_desk_0cd3277da3.jpg"
+                },
+                "mobile": {
+                  "alt": "imagen",
+                  "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_titulacion_gastronomia_desk_0cd3277da3.jpg"
+                }
+              },
+              "redirect": "seminario-titulacion-gastronomia"
+            }
+          ]
+        },
         {
           "title": "Centro de Idiomas",
           "cursos": [
@@ -620,597 +1538,6 @@
                 }
               },
               "redirect": "certificacion-internacional-c2"
-            }
-          ]
-        },
-        {
-          "title": "Bedu",
-          "cursos": [
-            {
-              "hidden": false,
-              "id": "123",
-              "title": "BEDU Curso en Emprendimiento",
-              "link":{
-                "text": "Ver más",
-                "size": "large",
-                "isBold": false,
-                "disabled": false,
-                "id":"",
-                "icon":"arrow_forward"
-              },
-              "image": {
-                "desk": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1rvzYMsZYxA9_3FCqAciMkm6c-B66W5P-"
-                },
-                "mobile": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1rvzYMsZYxA9_3FCqAciMkm6c-B66W5P-"
-                }
-              },
-              "redirect": "bedu-emprendimiento"
-            },
-            {
-              "hidden": false,
-              "id": "123",
-              "title": "BEDU Curso en Diseño de Productos Digitales",
-              "link":{
-                "text": "Ver más",
-                "size": "large",
-                "isBold": false,
-                "disabled": false,
-                "id":"",
-                "icon":"arrow_forward"
-              },
-              "image": {
-                "desk": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1EFKsCCvIjbou57Dm2XfDZqAPINUl9qmZ"
-                },
-                "mobile": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1EFKsCCvIjbou57Dm2XfDZqAPINUl9qmZ"
-                }
-              },
-              "redirect": "bedu-productos-digitales"
-            },
-            {
-              "hidden": false,
-              "id": "123",
-              "title": "BEDU Diplomado en Ciencia de Datos",
-              "link":{
-                "text": "Ver más",
-                "size": "large",
-                "isBold": false,
-                "disabled": false,
-                "id":"",
-                "icon":"arrow_forward"
-              },
-              "image": {
-                "desk": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1mYF6UB3LVLkKv4dtPnbiF-T4uNWUQskL"
-                },
-                "mobile": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1mYF6UB3LVLkKv4dtPnbiF-T4uNWUQskL"
-                }
-              },
-              "redirect": "bedu-ciencia-de-datos"
-            }
-          ]
-        },
-        {
-          "title": "Diplomados UANE",
-          "cursos": [
-            {
-              "hidden": false,
-              "id": "123",
-              "title": "Diplomado en Innovación y Control de Calidad",
-              "link":{
-                "text": "Ver más",
-                "size": "large",
-                "isBold": false,
-                "disabled": false,
-                "id":"",
-                "icon":"arrow_forward"
-              },
-              "image": {
-                "desk": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1HwrrbnGAECa0mN_0Yqhj_S6HoEILT6wA"
-                },
-                "mobile": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1HwrrbnGAECa0mN_0Yqhj_S6HoEILT6wA"
-                }
-              },
-              "redirect": "diplomado-innovacion-y-control"
-            },
-            {
-              "hidden": false,
-              "id": "123",
-              "title": "Diplomado en Docencia en Linea",
-              "link":{
-                "text": "Ver más",
-                "size": "large",
-                "isBold": false,
-                "disabled": false,
-                "id":"",
-                "icon":"arrow_forward"
-              },
-              "image": {
-                "desk": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1kmEZ_bmJeNKvNp08W3oc0nEno71vqqfK"
-                },
-                "mobile": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1kmEZ_bmJeNKvNp08W3oc0nEno71vqqfK"
-                }
-              },
-              "redirect": "diplomado-docencia-online"
-            },
-            {
-              "hidden": false,
-              "id": "123",
-              "title": "Diplomado en Globalización",
-              "link":{
-                "text": "Ver más",
-                "size": "large",
-                "isBold": false,
-                "disabled": false,
-                "id":"",
-                "icon":"arrow_forward"
-              },
-              "image": {
-                "desk": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=15mY-Fn6p86EMFx2bMecCY2QZ5JSun5DE"
-                },
-                "mobile": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=15mY-Fn6p86EMFx2bMecCY2QZ5JSun5DE"
-                }
-              },
-              "redirect": "diplomado-globalizacion"
-            },
-            {
-              "hidden": false,
-              "id": "123",
-              "title": "Diplomado en Desarrollo del Talento Humano",
-              "link":{
-                "text": "Ver más",
-                "size": "large",
-                "isBold": false,
-                "disabled": false,
-                "id":"",
-                "icon":"arrow_forward"
-              },
-              "image": {
-                "desk": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1sPLyzrm6c17l8dBf7daMbh4xa54ZvpQp"
-                },
-                "mobile": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1sPLyzrm6c17l8dBf7daMbh4xa54ZvpQp"
-                }
-              },
-              "redirect": "diplomado-desarrollo-talento"
-            }
-          ]
-        },
-        {
-          "title": "Cursos Cortos",
-          "cursos": [
-            {
-              "hidden": true,
-              "id": "123",
-              "title": "Certificación Oficial Adobe After Effects",
-              "link":{
-                "text": "Ver más",
-                "size": "large",
-                "isBold": false,
-                "disabled": false,
-                "id":"",
-                "icon":"arrow_forward"
-              },
-              "image": {
-                "desk": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1TRXplcP8ISBVtj1xGHY3a8e-Dp0ZuYUE"
-                },
-                "mobile": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1TRXplcP8ISBVtj1xGHY3a8e-Dp0ZuYUE"
-                }
-              },
-              "redirect": "adobe-after-effects"
-            },
-            {
-              "hidden": true,
-              "id": "123",
-              "title": "Certificación Oficial Adobe Photoshop",
-              "link":{
-                "text": "Ver más",
-                "size": "large",
-                "isBold": false,
-                "disabled": false,
-                "id":"",
-                "icon":"arrow_forward"
-              },
-              "image": {
-                "desk": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1cnEGJSkqGrixFE_LnEuAq_-Dh-_4k4Zc"
-                },
-                "mobile": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1cnEGJSkqGrixFE_LnEuAq_-Dh-_4k4Zc"
-                }
-              },
-              "redirect": "adobe-photoshop"
-            },
-            {
-              "hidden": true,
-              "id": "123",
-              "title": "Análisis de Datos",
-              "link":{
-                "text": "Ver más",
-                "size": "large",
-                "isBold": false,
-                "disabled": false,
-                "id":"",
-                "icon":"arrow_forward"
-              },
-              "image": {
-                "desk": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1G5cfpaPeUUL3xe4GKVp_AIYR9kfOVozF"
-                },
-                "mobile": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1G5cfpaPeUUL3xe4GKVp_AIYR9kfOVozF"
-                }
-              },
-              "redirect": "analisis-de-datos"
-            },
-            {
-              "hidden": false,
-              "id": "123",
-              "title": "Comunicación Publica y Gestión de la Reputación",
-              "link":{
-                "text": "Ver más",
-                "size": "large",
-                "isBold": false,
-                "disabled": false,
-                "id":"",
-                "icon":"arrow_forward"
-              },
-              "image": {
-                "desk": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1Eeqy3AX6Hvv7m6DnDEdve_8rB2JQwQzZ"
-                },
-                "mobile": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1Eeqy3AX6Hvv7m6DnDEdve_8rB2JQwQzZ"
-                }
-              },
-              "redirect": "comunicacion-publica-gestion-reputacion"
-            },
-            {
-              "hidden": true,
-              "id": "123",
-              "title": "Derecho de Autor y Propiedad Intelectual",
-              "link":{
-                "text": "Ver más",
-                "size": "large",
-                "isBold": false,
-                "disabled": false,
-                "id":"",
-                "icon":"arrow_forward"
-              },
-              "image": {
-                "desk": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1Ku6pYYkERDFRmUMDbZrihCrzNTCWfxtR"
-                },
-                "mobile": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1Ku6pYYkERDFRmUMDbZrihCrzNTCWfxtR"
-                }
-              },
-              "redirect": "derecho-autor-propiedad-intelectual"
-            },
-            {
-              "hidden": false,
-              "id": "123",
-              "title": "Derechos Humanos y Sostenibilidad",
-              "link":{
-                "text": "Ver más",
-                "size": "large",
-                "isBold": false,
-                "disabled": false,
-                "id":"",
-                "icon":"arrow_forward"
-              },
-              "image": {
-                "desk": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=15iu-kSWLefanbK00jWtYM8aMruBWouJI"
-                },
-                "mobile": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=15iu-kSWLefanbK00jWtYM8aMruBWouJI"
-                }
-              },
-              "redirect": "derechos-humanos-sostenibilidad"
-            },
-            {
-              "hidden": false,
-              "id": "123",
-              "title": "Estrategias de Tiendas en Línea",
-              "link":{
-                "text": "Ver más",
-                "size": "large",
-                "isBold": false,
-                "disabled": false,
-                "id":"",
-                "icon":"arrow_forward"
-              },
-              "image": {
-                "desk": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=11wfyqAaSxa5NOWqNRT_aHkdcCd1CgIUM"
-                },
-                "mobile": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=11wfyqAaSxa5NOWqNRT_aHkdcCd1CgIUM"
-                }
-              },
-              "redirect": "estrategias-tiendas-en-linea"
-            },
-            {
-              "hidden": true,
-              "id": "123",
-              "title": "Estructura de Datos",
-              "link":{
-                "text": "Ver más",
-                "size": "large",
-                "isBold": false,
-                "disabled": false,
-                "id":"",
-                "icon":"arrow_forward"
-              },
-              "image": {
-                "desk": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1qJ7-TOn5q7Qaq_se3hAipdtRYiqZUZZg"
-                },
-                "mobile": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1qJ7-TOn5q7Qaq_se3hAipdtRYiqZUZZg"
-                }
-              },
-              "redirect": "estructura-datos"
-            },
-            {
-              "hidden": false,
-              "id": "123",
-              "title": "Gerencia y Gestión Deportiva",
-              "link":{
-                "text": "Ver más",
-                "size": "large",
-                "isBold": false,
-                "disabled": false,
-                "id":"",
-                "icon":"arrow_forward"
-              },
-              "image": {
-                "desk": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1Z4JRJl4HX2XibflvSCdyKlEaIwDHK_8h"
-                },
-                "mobile": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1Z4JRJl4HX2XibflvSCdyKlEaIwDHK_8h"
-                }
-              },
-              "redirect": "gerencia-gestion-deportiva"
-            },
-            {
-              "hidden": true,
-              "id": "123",
-              "title": "Higiene y Seguridad en el Trabajo",
-              "link":{
-                "text": "Ver más",
-                "size": "large",
-                "isBold": false,
-                "disabled": false,
-                "id":"",
-                "icon":"arrow_forward"
-              },
-              "image": {
-                "desk": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1-oip47KlcHezczm8dcv6bZePkJtYkHYN"
-                },
-                "mobile": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1-oip47KlcHezczm8dcv6bZePkJtYkHYN"
-                }
-              },
-              "redirect": "higiene-seguridad-trabajo"
-            },
-            {
-              "hidden": false,
-              "id": "123",
-              "title": "Liderazgo y Trabajo en Equipo",
-              "link":{
-                "text": "Ver más",
-                "size": "large",
-                "isBold": false,
-                "disabled": false,
-                "id":"",
-                "icon":"arrow_forward"
-              },
-              "image": {
-                "desk": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1eWwamUetRKuLV7tqve0poL-1OjAUcdag"
-                },
-                "mobile": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1eWwamUetRKuLV7tqve0poL-1OjAUcdag"
-                }
-              },
-              "redirect": "liderazgo-trabajo-equipo"
-            },
-            {
-              "hidden": true,
-              "id": "123",
-              "title": "Mega Tendencias Globales",
-              "link":{
-                "text": "Ver más",
-                "size": "large",
-                "isBold": false,
-                "disabled": false,
-                "id":"",
-                "icon":"arrow_forward"
-              },
-              "image": {
-                "desk": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1V0_dLRrdEq4MgWYv50yDRpQ_2VUd_fIv"
-                },
-                "mobile": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1V0_dLRrdEq4MgWYv50yDRpQ_2VUd_fIv"
-                }
-              },
-              "redirect": "mega-tendencias-globales"
-            },
-            {
-              "hidden": false,
-              "id": "123",
-              "title": "Mercadotecnia Aplicada a Entornos Virtuales",
-              "link":{
-                "text": "Ver más",
-                "size": "large",
-                "isBold": false,
-                "disabled": false,
-                "id":"",
-                "icon":"arrow_forward"
-              },
-              "image": {
-                "desk": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1hi1mrvPFAAVz_SDS9iIDVo82uRZt4h5X"
-                },
-                "mobile": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1hi1mrvPFAAVz_SDS9iIDVo82uRZt4h5X"
-                }
-              },
-              "redirect": "mercadotecnia-entornos-virtuales"
-            },
-            {
-              "hidden": true,
-              "id": "123",
-              "title": "Obligaciones y Contratos",
-              "link":{
-                "text": "Ver más",
-                "size": "large",
-                "isBold": false,
-                "disabled": false,
-                "id":"",
-                "icon":"arrow_forward"
-              },
-              "image": {
-                "desk": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1QKS-W7fNxeHEEI4DZqzv8WUAK1cvqiQW"
-                },
-                "mobile": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1QKS-W7fNxeHEEI4DZqzv8WUAK1cvqiQW"
-                }
-              },
-              "redirect": "obligaciones-contratos"
-            },
-            {
-              "hidden": false,
-              "id": "123",
-              "title": "Políticas Públicas en Gobernanza",
-              "link":{
-                "text": "Ver más",
-                "size": "large",
-                "isBold": false,
-                "disabled": false,
-                "id":"",
-                "icon":"arrow_forward"
-              },
-              "image": {
-                "desk": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=11jtwA0pka49L_8w5OSRRhzXXqnnoFMsB"
-                },
-                "mobile": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=11jtwA0pka49L_8w5OSRRhzXXqnnoFMsB"
-                }
-              },
-              "redirect": "politicas-publicas-gobernanza"
-            },
-            {
-              "hidden": false,
-              "id": "123",
-              "title": "Psicología y Comunicación",
-              "link":{
-                "text": "Ver más",
-                "size": "large",
-                "isBold": false,
-                "disabled": false,
-                "id":"",
-                "icon":"arrow_forward"
-              },
-              "image": {
-                "desk": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1zW5f1MOdWG4vl4HXr3rpQYWr3aYxpSQh"
-                },
-                "mobile": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1zW5f1MOdWG4vl4HXr3rpQYWr3aYxpSQh"
-                }
-              },
-              "redirect": "psicologia-comunicacion"
-            },
-            {
-              "hidden": true,
-              "id": "123",
-              "title": "Psicología del Consumidor",
-              "link":{
-                "text": "Ver más",
-                "size": "large",
-                "isBold": false,
-                "disabled": false,
-                "id":"",
-                "icon":"arrow_forward"
-              },
-              "image": {
-                "desk": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1NViTgtihUNLX9h5TYfSxEFJNI4_yWS_3"
-                },
-                "mobile": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1NViTgtihUNLX9h5TYfSxEFJNI4_yWS_3"
-                }
-              },
-              "redirect": "psicologia-consumidor"
             }
           ]
         }
