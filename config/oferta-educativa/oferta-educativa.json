@@ -16,7 +16,7 @@
       "title": "Elige la modalidad de estudios adecuada para ti.",
       "modalities": [
         { 
-          "urlImage": "https://drive.google.com/uc?export=view&id=14Uuom7dBbaooIZmKGuFsZp9Mvhf2WaK9",
+          "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_presencial_a7e546a436.jpg",
           "subtitle": "",
           "title": "Presencial",
           "text": "Diáloga cara a cara con tus profesores y compañeros de clase. Accede al conocimiento en un ambiente colaborativo y de intercambio de ideas.",
@@ -31,7 +31,7 @@
           "wrapper": true
         },
         { 
-          "urlImage": "https://drive.google.com/uc?export=view&id=1zA8PYWoH_PsioqF3zYvW2TWB4UM-mCUt",
+          "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_felx_a1b21905fe.jpg",
           "subtitle": "",
           "title": "UTEG Flex",
           "text": "Recibe clases cada sábado. Combina actividades virtuales y presenciales en horarios que se ajustan a tus necesidades.",
@@ -46,7 +46,7 @@
           "wrapper": true
         },
         { 
-          "urlImage": "https://drive.google.com/uc?export=view&id=14Uuom7dBbaooIZmKGuFsZp9Mvhf2WaK9",
+          "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_online_c7622ead85.jpg",
           "subtitle": "",
           "title": "UTEG online",
           "text": "Estudia en tus términos:desde cualquier lugar y sin horarios rígidos. Conéctate al conocimiento con nuestras plataformas de aprendizaje.",
@@ -166,9 +166,9 @@
     "bannerTest":{
       "banner": {
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1Y-NyCheOPilvlVa45pHQQ97mp-a-rQGy",
-          "mobile": "https://drive.google.com/uc?export=view&id=1XFnp_Ufc-rAqZxZ2KM60ogWyuS2vdOOi",
-          "tablet": "https://drive.google.com/uc?export=view&id=1x00pvwXu6r5KQjR5-zEuV3rbhsaboDFl"
+          "desktop": "https://assets.staging.bedu.org/UTEG/oferta_banner_UTEG_360_desktop_b31611171f.jpg",
+          "mobile": "https://assets.staging.bedu.org/UTEG/oferta_banner_uteg_360_movil_be97a8c285.jpg",
+          "tablet": "https://assets.staging.bedu.org/UTEG/oferta_banner_uteg_360_tablet_3c79b68bdb.jpg"
         },
         "title": "¿Aún no decides qué estudiar?",
         "subtitle": "Te ayudamos a decidir qué rumbo profesional tomar",
@@ -195,9 +195,9 @@
     "bannerInternacionalizacion": {
       "banner": {
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1R3MzEA-eiBR9V5WD8tFOJq09Q8ulv6IR",
-          "mobile": "https://drive.google.com/uc?export=view&id=1qtf3AwHBLQyLs6xS0dtm4CW5gbYWXz91",
-          "tablet": "https://drive.google.com/uc?export=view&id=1R3MzEA-eiBR9V5WD8tFOJq09Q8ulv6IR"
+          "desktop": "https://assets.staging.bedu.org/UTEG/oferta_banner_UTEG_360_desktop_b31611171f.jpg",
+          "mobile": "https://assets.staging.bedu.org/UTEG/oferta_banner_uteg_360_movil_be97a8c285.jpg",
+          "tablet": "https://assets.staging.bedu.org/UTEG/oferta_banner_uteg_360_tablet_3c79b68bdb.jpg"
         },
         "font": "light",
         "title": "UTEG 360",
@@ -244,9 +244,9 @@
     ],
     "bannerParche": {
       "image": {
-        "desktop": "https://drive.google.com/uc?export=view&id=1R3MzEA-eiBR9V5WD8tFOJq09Q8ulv6IR",
-        "mobile": "https://drive.google.com/uc?export=view&id=1qtf3AwHBLQyLs6xS0dtm4CW5gbYWXz91",
-        "tablet": "https://drive.google.com/uc?export=view&id=1R3MzEA-eiBR9V5WD8tFOJq09Q8ulv6IR"
+        "desktop": "https://assets.staging.bedu.org/UTEG/oferta_banner_UTEG_360_desktop_b31611171f.jpg",
+        "mobile": "https://assets.staging.bedu.org/UTEG/oferta_banner_uteg_360_movil_be97a8c285.jpg",
+        "tablet": "https://assets.staging.bedu.org/UTEG/oferta_banner_uteg_360_tablet_3c79b68bdb.jpg"
       },
       "title": " ¡La experiencia educativa que transforma!",
       "subtitle": "",
