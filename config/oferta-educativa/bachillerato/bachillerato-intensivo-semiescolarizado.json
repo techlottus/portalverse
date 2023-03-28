@@ -1,96 +1,98 @@
 {
-    "meta": {
-      "title": "Bachillerato Intensivo Semiescolarizado",
-      "description": "",
-      "keywords": ""
-    },
+  "meta": {
+    "title": "Bachillerato Intensivo Semiescolarizado",
+    "description": "",
+    "keywords": ""
+  },
+  "config": {
+    "title": "Bachillerato Intensivo Semiescolarizado",
     "config": {
-      "title": "Bachillerato Intensivo Semiescolarizado",
-      "config": {
-        "nombre": "Bachillerato Intensivo Semiescolarizado",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Educación Media"],
-        "campus": [],
-        "nivel": ["Bachillerato"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1Ql1K5pvcfP5u4e_kqXuxDm802UGbrb3K",
-          "alt": "bachillerato"
-        },
-        "curriculum": {
-          "Presencial": {
-
-          }
-        }
-      }
-    },
-    "sections": {
-      "head": {
-        "title": "Estudia Bachillerato Intensivo Semiescolarizado",
-        "description": "El bachillerato UANE te proporciona los conocimientos necesarios para continuar con tus estudios a nivel profesional, contribuye a desarrollar las capacidades que te permitirán adquirir una conciencia cívica, consolidar tu madurez personal y social, afianzar tus hábitos de lectura, estudio y disciplina; dominar la expresión oral y escrita y adquirir nociones de una lengua extranjera. \n\nTodo lo anterior en el mejor ambiente universitario con instalaciones de primer nivel y espacios para que desarrolles actividades extramuros y potencies tus capacidades artísticas, culturales y deportivas.\n\n¡Conviértete en un oso!",
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1Ql1K5pvcfP5u4e_kqXuxDm802UGbrb3K",
-          "alt": "bachillerato"
-        }
+      "nombre": "Bachillerato Intensivo Semiescolarizado",
+      "modalidad": ["Presencial"],
+      "areaConocimiento": ["Educación Media"],
+      "campus": ["Zapopan", "Lázaro Cárdenas", "Pedro Moreno"],
+      "nivel": ["Bachillerato"],
+      "image": {
+        "src": "",
+        "alt": "bachillerato"
       },
-      "modalities": {
-        "title": "Elige una de las tres modalidades disponibles para bachillerato:",
-        "tabs": {
-          "items": [
-            {
-              "label": "Bachillerato Intensivo Semiescolarizado", "icons": { "primary": "", "duplicate": false }, "disabled": false,
-              "content": [
-                {
-                  "title": "Características del Bachillerato Intensivo Semiescolarizado",
-                  "description": "El bachillerato es una parte sustancial del desarrollo académico de cualquier ciudadano/a, es en esta etapa que el estudiante desarrolla las herramientas que serán el sustento de sus aptitudes laborales.\n\n En este espacio de autodescubrimiento, el alumno/a conforma una personalidad profesional y descubre sus habilidades, aptitudes y actitudes que le ayudarán a enfocar su futuro estudiantil en pro de una mejor toma de decisiones.",
-                  "image": {
-                    "src": "https://drive.google.com/uc?export=view&id=1A5TdPuG35sCyqlwSsNskGtHkDTe4TXOv",
-                    "alt": "bachillerato-presencial"
-                  }
-                },
-                {
-                  "title": "Requisitos de admisión",
-                  "description": "\n\n• Acta de nacimiento original y 1 copia (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n• Certificado de secundaria original y 3 copias por ambos lados.\n\n• 1 copias de la CURP.\n\n• 2 copias de Credencial Oficial IFE / INE o Pasaporte Para Mayores de edad).\n\n• 2 Copias de Credencial Oficial IFE/ INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n• 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\nNota: Para la modalidad BIS, el aspirante debe de contar con 15 años cumplidos al último día del mes anterior al inicio de clases.",
-                  "image": {
-                    "src": "https://drive.google.com/uc?export=view&id=12-EqzbiQqGjOPDXhotUWig6FfN-PiKyy",
-                    "alt": "bachillerato-presencial-requisitos"
-                  }
-                }
-              ]
-            }
-          ],
-          "size": "medium"
-        }
-      },
-      "benefits": {
-        "video": "DxJpI7jdB9Q",
-        "title": "Modelo educativo",
-        "description": "En UANE contamos con un sistema educativo modular para llevar a cabo tu programa de bachillerato, el cual te permitirá desarrollar mejor tus habilidades, talentos y concentración por materia, sin descuidar el aprendizaje adquirido que busca la integración de contenidos de acuerdo a una lógica que responda a un campo de conocimiento. El alumno obtiene retroalimentación de su aprendizaje en forma inmediata, ya que a las pocas semanas de haber iniciado sus estudios puede constatar sus logros y comprobar si la preparación corresponde con sus intereses y capacidades. Los exámenes se programan al finalizar cada bloque; esto acostumbra al estudiante al logro de resultados bajo presión.",
-        "action": {
-          "id": "program_bachillerato",
-          "type": "primary",
-          "title": "Descarga el plan de estudios",
-          "size": "small",
-          "icon": "download",
-          "lyIcon": false,
-          "disabled": false,
-          "isExpand": false,
-          "tagOnClick": "testClick",
-          "test": ""
-        }
-      }
-    },
-    "form": {
-      "config": {
-        "level": { "hidden": true, "value": "bachillerato" },
-        "program": { "hidden": false },
-        "modality": { "hidden": false },
-        "campus": { "hidden": false }
-      },
-      "copies": {
-        "stepone": {
-          "title": "¿Quieres más información sobre tu bachillerato?",
-          "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+      "curriculum": {
+        "Presencial": { 
+          "Lázaro Cárdenas": "1BTnVwp5EMBnnA5PN3MvKJpGxIiF33kgS", 
+          "Pedro Moreno": "1BTnVwp5EMBnnA5PN3MvKJpGxIiF33kgS",  
+          "Zapopan": "1BTnVwp5EMBnnA5PN3MvKJpGxIiF33kgS"
         }
       }
     }
+  },
+  "sections": {
+    "head": {
+      "title": "Bachillerato Intensivo Semiescolarizado",
+      "description": "El bachillerato es una parte sustancial del desarrollo académico de cualquier ciudadano/a, es en esta etapa que el estudiante desarrolla las herramientas que serán el sustento de sus aptitudes laborales.\n\n En este espacio de autodescubrimiento, el alumno/a conforma una personalidad profesional y descubre sus habilidades, aptitudes y actitudes que le ayudarán a enfocar su futuro estudiantil en pro de una mejor toma de decisiones.",
+      "image": {
+        "src": "https://assets.staging.bedu.org/UTEG/interior_bachillerato_intensivo_semiescolarizado_desk_34a5327ec5.jpg",
+        "alt": "bachillerato"
+      }
+    },
+    "modalities": {
+      "title": "Para cursar Bachillerato Intensivo Semiescolarizado necesitas:",
+      "tabs": {
+        "items": [
+          {
+            "label": "Bachillerato Intensivo Semiescolarizado", "icons": { "primary": "", "duplicate": false }, "disabled": false,
+            "content": [
+              {
+                "title": "Perfil de ingreso",
+                "description": "\n\n• Capacidad de aprendizaje independiente\n\n• Manejo de métodos y técnicas de estudio\n\n• Actitudes autogestivas\n\n• Capacidad de redacción y lectura crítica\n\n• Capacidad organizativa\n\n• Capacidad de administración de su tiempo\n\n• Conocimientos básicos de computación",
+                "image": {
+                  "src": "https://assets.staging.bedu.org/UTEG/perfil_ingreso_bachillerto_desk_fe48b1eccf.jpg",
+                  "alt": "bachillerato-presencial"
+                }
+              },
+              {
+                "title": "Perfil de egreso",
+                "description":"\n\n• Ser crítico y reflexivo respecto al entorno socio-cultural.\n\n• Contar con una cultura básica del mundo científico y social.\n\n• Obtener conocimientos, valores y competencias laborales.\n\n• Ser responsable y consciente de la participación que se tiene como ciudadano/a en la transformación de la sociedad.\n\n Con este programa educativo, se logra que los estudiantes puedan continuar con sus estudios a nivel licenciatura, ya que adquieren los conocimientos y habilidades necesarias para su óptimo desarrollo.\n\n El sistema académico se rige bajo las normativas y diseño curricular de la Secretaría de Educación Jalisco, y está enfocado a que el estudiante reconozca sus habilidades profesionales y reciba los conocimientos de formación que le ayuden a la toma de decisiones con respecto a su futuro.",
+                "image": {
+                  "src": "https://assets.staging.bedu.org/UTEG/perfil_egreso_desk_1aac25431a.jpg",
+                  "alt": "bachillerato-presencial-requisitos"
+                }
+              }
+            ]
+          }
+        ],
+        "size": "medium"
+      }
+    },
+    "benefits": {
+      "video": "La0WLfzrSs4",
+      "title": "Plan de estudios",
+      "description": "Nuestro plan de estudios para el Bachillerato Intensivo Semiescolarizado forma parte del sistema incorporado a la Universidad de Guadalajara.\n\n Nos enfocamos en el desarrollo de habilidades cognitivas y psicosociales, el reforzamiento de tu autoestima y autoimagen en cuanto al área socioemocional. Y a nivel de conocimientos reforzamos y ampliamos los aprendizajes del nivel secundario. \n\nTrabajamos, además, para ayudarte a obtener la licenciatura que deseas y que tu recorrido por la universidad sea exitoso. \n\nSi optas por el Bachillerato General por Competencias con certificación Proulex completarás tu formación aprendiendo inglés y convirtiéndote en una persona bilingüe.\n\nConsulta aquí en detalle las directrices que guiarán tu enseñanza. ",
+      "action": {
+        "id": "program_bachillerato",
+        "type": "primary",
+        "title": "Descarga el plan de estudios",
+        "size": "small",
+        "icon": "download",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "testClick",
+        "test": ""
+      }
+    }
+  },
+  "form": {
+    "config": {
+      "level": { "hidden": true, "value": "bachillerato" },
+      "program": { "hidden": false },
+      "modality": { "hidden": false },
+      "campus": { "hidden": false }
+    },
+    "copies": {
+      "stepone": {
+        "title": "¿Quieres más información sobre tu bachillerato?",
+        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+      }
+    }
   }
+}
