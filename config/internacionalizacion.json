@@ -6,7 +6,7 @@
   },
   "sections": {
     "head": {
-      "slider":{
+      "slider": {
         "width": "100%",
         "height": "600px",
         "iconleft": "arrow_back_ios",
@@ -15,12 +15,12 @@
         "overlayDak": false,
         "slides": [
           {
-            "title": "Conviértete en profesional global", 
+            "title": "Conviértete en profesional global",
             "text": "Aprovecha la flexibilidad de estudiar una carrera profesional a tu propio ritmo y horario. Crea tu futuro con el control en tus manos.",
             "urlImage": {
-              "mobile": "https://drive.google.com/uc?export=view&id=1evmNAuF1cIhkGmNak9_fy8bSfiwpnNe9",
-              "tablet": "https://drive.google.com/uc?export=view&id=1eEHLy3HIKEvW7ca6hOoPMDrrFeqkg30X",
-              "desktop": "https://drive.google.com/uc?export=view&id=1ogArPh0MhBVBSV55hb4rVj7QZAVQYl2Q"
+              "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_banner_internacionalizacion_02_mobile_867f96970c.jpg",
+              "tablet": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_banner_internacionalizacion_02_tablet_423f602090.jpg",
+              "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_banner_internacionalizacion_02_desk_70ef69cb87.jpg"
             },
             "center": true,
             "left": false,
@@ -30,12 +30,12 @@
             "overlayDak": false
           },
           {
-            "title": "¡Transforma tu experiencia!", 
+            "title": "¡Transforma tu experiencia!",
             "text": "Con actividades internacionales ve con todo hacia el mundo laboral",
             "urlImage": {
-              "mobile": "https://drive.google.com/uc?export=view&id=1PlLasXVZeBuJx-PNvF_nUbgBPtPNMsE-",
-              "tablet": "https://drive.google.com/uc?export=view&id=1xk3c_pd-UdtVDF44e7vQ_TfGBZg0ojb1",
-              "desktop": "https://drive.google.com/uc?export=view&id=1_PhvR9z27zS0b8-vOR4jm4nhx_8OQ4Tb"
+              "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_banner_internacionalizacion_01_mobile_0e0a8a92aa.jpg",
+              "tablet": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_banner_internacionalizacion_01_tablet_ac8591e422.jpg",
+              "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_banner_internacionalizacion_01_desk_872818d8ef.jpg"
             },
             "center": true,
             "left": false,
@@ -59,8 +59,8 @@
       "alliances": [
         {
           "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1y4GfgmVSE1sdZHRas01eUWTkDldNqCKH",
-            "desktop": "https://drive.google.com/uc?export=view&id=1y4GfgmVSE1sdZHRas01eUWTkDldNqCKH"
+            "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_universidad_atlantico_eb6f83b336.jpg",
+            "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_universidad_atlantico_eb6f83b336.jpg"
           },
           "text": "Universidad del Atlántico",
           "icon": "arrow_forward",
@@ -90,8 +90,8 @@
         },
         {
           "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1bYClwX93DeXfrAGFsZaDy7rLw463IRQx",
-            "desktop": "https://drive.google.com/uc?export=view&id=1bYClwX93DeXfrAGFsZaDy7rLw463IRQx"
+            "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_unicatolica_2eae781fb4.jpg",
+            "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_unicatolica_2eae781fb4.jpg"
           },
           "text": "UniCatólica, Colombia",
           "icon": "arrow_forward",
@@ -121,8 +121,8 @@
         },
         {
           "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1UsPhr0-uGFFFDb6ImLESNMaYxrPqKqWK",
-            "desktop": "https://drive.google.com/uc?export=view&id=1UsPhr0-uGFFFDb6ImLESNMaYxrPqKqWK"
+            "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_uniremington_d640789125.jpg",
+            "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_uniremington_d640789125.jpg"
           },
           "text": "UniRemington, Colombia",
           "icon": "arrow_forward",
@@ -149,11 +149,11 @@
               "link": "https://www.uniremington.edu.co/"
             }
           }
-        },               
+        },
         {
           "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1M_pGPCF3Ps_wOUj_9YuWGcxTjhu0vqG-",
-            "desktop": "https://drive.google.com/uc?export=view&id=1M_pGPCF3Ps_wOUj_9YuWGcxTjhu0vqG-"
+            "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_Rafael_nunez_502d4ac466.jpg",
+            "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_Rafael_nunez_502d4ac466.jpg"
           },
           "text": "Corporación Universitaria Rafael Núñez",
           "icon": "arrow_forward",
@@ -180,11 +180,11 @@
               "link": "https://www.curn.edu.co/"
             }
           }
-        },   
+        },
         {
           "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1abFyANjgT42zABIxtomJkNgpZpDDIrrK",
-            "desktop": "https://drive.google.com/uc?export=view&id=1abFyANjgT42zABIxtomJkNgpZpDDIrrK"
+            "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_universidad_mendoza_b4aeba7d6f.jpg",
+            "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_universidad_mendoza_b4aeba7d6f.jpg"
           },
           "text": "Universidad de Mendoza, Argentina",
           "icon": "arrow_forward",
@@ -211,11 +211,11 @@
               "link": "https://um.edu.ar/"
             }
           }
-        },   
+        },
         {
           "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1l5s4K_ohiJvp7YFqFUfpCn9flyHxkw-F",
-            "desktop": "https://drive.google.com/uc?export=view&id=1l5s4K_ohiJvp7YFqFUfpCn9flyHxkw-F"
+            "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_cergy_paris_a3b932413a.jpg",
+            "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_cergy_paris_a3b932413a.jpg"
           },
           "text": "CERCY PARIS",
           "icon": "arrow_forward",
@@ -242,11 +242,11 @@
               "link": "https://www.cyu.fr/"
             }
           }
-        },   
+        },
         {
           "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1moXoXJYXdqkHuBCG-l1PEiPzaX7cX7k0",
-            "desktop": "https://drive.google.com/uc?export=view&id=1moXoXJYXdqkHuBCG-l1PEiPzaX7cX7k0"
+            "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_uncom_6562ab9f65.jpg",
+            "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_uncom_6562ab9f65.jpg"
           },
           "text": "Universidad Comunera",
           "icon": "arrow_forward",
@@ -273,11 +273,11 @@
               "link": "https://ucom.edu.py/"
             }
           }
-        },   
+        },
         {
           "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1k-W759cJfFQtU2vQ1ZXxsl1SBopZXf6V",
-            "desktop": "https://drive.google.com/uc?export=view&id=1k-W759cJfFQtU2vQ1ZXxsl1SBopZXf6V"
+            "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_ISEP_b9d580e37a.jpg",
+            "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_ISEP_b9d580e37a.jpg"
           },
           "text": "Universidad ISEP",
           "icon": "arrow_forward",
@@ -304,11 +304,11 @@
               "link": "https://universidadisep.com/mx/"
             }
           }
-        },   
+        },
         {
           "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1XiZTu1ryjGJvE3mYHI21DMWYe9mdtoFR",
-            "desktop": "https://drive.google.com/uc?export=view&id=1XiZTu1ryjGJvE3mYHI21DMWYe9mdtoFR"
+            "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_gran_colombiano_78373b8b63.jpg",
+            "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_gran_colombiano_78373b8b63.jpg"
           },
           "text": "Politécnico Gran Colombiano",
           "icon": "arrow_forward",
@@ -331,15 +331,15 @@
               }
             ],
             "redirect": {
-              "label":"Conoce más",
+              "label": "Conoce más",
               "link": "https://www.poli.edu.co/"
             }
           }
         },
         {
           "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1sIP_Tvk7jfD5HVy_QjeuG8qgT5Fv3Ar5",
-            "desktop": "https://drive.google.com/uc?export=view&id=1sIP_Tvk7jfD5HVy_QjeuG8qgT5Fv3Ar5"
+            "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_iberoamericana_col_9b8e23305e.jpg",
+            "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_iberoamericana_col_9b8e23305e.jpg"
           },
           "text": "Iberoamericana corporación univeristaria",
           "icon": "arrow_forward",
@@ -362,15 +362,15 @@
               }
             ],
             "redirect": {
-              "label":"Conoce más",
+              "label": "Conoce más",
               "link": "https://www.ibero.edu.co/"
             }
           }
         },
         {
           "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1CkWnZkemGdTkCv2KqurvNhgiFIM2KLoF",
-            "desktop": "https://drive.google.com/uc?export=view&id=1CkWnZkemGdTkCv2KqurvNhgiFIM2KLoF"
+            "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_planeta_fomacion_universidades_956744e7a4.jpg",
+            "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_planeta_fomacion_universidades_956744e7a4.jpg"
           },
           "text": "Grupo Planeta Formación y Universidades",
           "icon": "arrow_forward",
@@ -400,8 +400,8 @@
         },
         {
           "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1dQVz7ggB4FYLGK6DfdgjDykdkWBgilVf",
-            "desktop": "https://drive.google.com/uc?export=view&id=1dQVz7ggB4FYLGK6DfdgjDykdkWBgilVf"
+            "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_ucam_8bfd25cfec.jpg",
+            "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_ucam_8bfd25cfec.jpg"
           },
           "text": "Universidad Católica San Antonio de Murcia",
           "icon": "arrow_forward",
@@ -431,8 +431,8 @@
         },
         {
           "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1DTcayWBn0Zghvqsv8BuBeSSsI9vKzaIp",
-            "desktop": "https://drive.google.com/uc?export=view&id=1DTcayWBn0Zghvqsv8BuBeSSsI9vKzaIp"
+            "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_investigacion_delfin_ad84bfdd45.jpg",
+            "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_investigacion_delfin_ad84bfdd45.jpg"
           },
           "text": "Programa Delfín",
           "icon": "arrow_forward",
@@ -462,8 +462,8 @@
         },
         {
           "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=11_HiLp2S1_CujZRXLzV5ht5PdzDipPpd",
-            "desktop": "https://drive.google.com/uc?export=view&id=11_HiLp2S1_CujZRXLzV5ht5PdzDipPpd"
+            "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_unica_7f9b33ae0c.jpg",
+            "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_unica_7f9b33ae0c.jpg"
           },
           "text": "Universidad de Ciego de Ávila Máximo Gómez Báez",
           "icon": "arrow_forward",
@@ -487,8 +487,8 @@
         },
         {
           "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1Jg0dmTavlOC7anwy4JXkESswbaW0Ca3h",
-            "desktop": "https://drive.google.com/uc?export=view&id=1Jg0dmTavlOC7anwy4JXkESswbaW0Ca3h"
+            "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_complutense_madrid_6144e0ab25.jpg",
+            "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_complutense_madrid_6144e0ab25.jpg"
           },
           "text": "Universidad Complutense Madrid",
           "icon": "arrow_forward",
@@ -518,8 +518,8 @@
         },
         {
           "urlImage": {
-            "mobile": "https://drive.google.com/uc?export=view&id=1-wNCT32B7l0zNXNfn7BJeLdOvYhzO-GV",
-            "desktop": "https://drive.google.com/uc?export=view&id=1-wNCT32B7l0zNXNfn7BJeLdOvYhzO-GV"
+            "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_pere_tarres_2e962af684.jpg",
+            "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_pere_tarres_2e962af684.jpg"
           },
           "text": "Pere Tarrés",
           "icon": "arrow_forward",
@@ -546,13 +546,13 @@
               "link": "https://www.peretarres.org/es"
             }
           }
-        }    
+        }
       ]
     },
     "articles": {
       "title": "Artículos sobre UANE Internacional",
       "articles": [
-        { 
+        {
           "urlImage": "https://image.shutterstock.com/image-photo/graduates-student-graduation-caps-thrown-260nw-1937758900.jpg",
           "subtitle": "SUBTITULO",
           "title": "Coursera y UANE se unen para ti",
@@ -585,7 +585,7 @@
           "wrapper": true,
           "redirect": "/convocatoria-investigacion-1"
         },
-        { 
+        {
           "urlImage": "https://image.shutterstock.com/image-photo/graduates-student-graduation-caps-thrown-260nw-1937758900.jpg",
           "subtitle": "SUBTITULO",
           "title": "Coursera y UANE se unen para ti",
@@ -620,33 +620,107 @@
         }
       ]
     },
-    "rainbow": { 
+    "rainbow": {
       "title": "Modos de internacionalización",
       "sections": [
         {
-          "color": "#1B2D68", "sections": [
-            { "title": "Clases Espejo | Global Classroom", "description": "Sesiones virtuales de 45 a 60 minutos, de temáticas incluidas en los planes de estudio, por carrera, impartidas por profesores de las Universidades con convenio.", "image": { "src": "https://drive.google.com/uc?export=view&id=1_av2ueQF9Ovu5VstV41l_RnG5I7OLlQH", "alt": "imagen-item" } },
-            { "title": "Intercambio de materias (virtual)", "description": "Posibilidad de cursar una materia completa, en formato online, en alguna universidad extranjera con convenio. Créditos revalidados por UTEG.", "image": { "src": "https://drive.google.com/uc?export=view&id=1FEKFVOdsozxZ_BDNTM-KidlNSYnYzvdS", "alt": "imagen-item" } },
-            { "title": "Semestre | Año Study Abroad", "description": "En esta modalidad podrás cursar, de forma presencial, un semestre o año completo en alguna universidad en el extranjero. Deberás revisar los planes de estudios y consultar con Academia para saber cuáles son las materias que se revalidan.", "image": { "src": "https://drive.google.com/uc?export=view&id=1B7rVHOue61YAOYKI1SuONlY8IDTKb0Xs", "alt": "imagen-item" } }
+          "color": "#1B2D68",
+          "sections": [
+            {
+              "title": "Clases Espejo | Global Classroom",
+              "description": "Sesiones virtuales de 45 a 60 minutos, de temáticas incluidas en los planes de estudio, por carrera, impartidas por profesores de las Universidades con convenio.",
+              "image": {
+                "src": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_clases_espejo_5b46d4db29.png",
+                "alt": "imagen-item"
+              }
+            },
+            {
+              "title": "Intercambio de materias (virtual)",
+              "description": "Posibilidad de cursar una materia completa, en formato online, en alguna universidad extranjera con convenio. Créditos revalidados por UTEG.",
+              "image": {
+                "src": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_intercambio_materias_9846e1b52b.png",
+                "alt": "imagen-item"
+              }
+            },
+            {
+              "title": "Semestre | Año Study Abroad",
+              "description": "En esta modalidad podrás cursar, de forma presencial, un semestre o año completo en alguna universidad en el extranjero. Deberás revisar los planes de estudios y consultar con Academia para saber cuáles son las materias que se revalidan.",
+              "image": {
+                "src": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_study_abroads_579526a634.png",
+                "alt": "imagen-item"
+              }
+            }
           ]
         },
         {
-          "color": "#C31433", "sections": [
-            { "title": "Webinar | Profesores internacionales", "description": "Masterclasses impartidas por profesores o especialistas internacionales, de temáticas de interés para cada carrera. Con certificado internacional de participación.", "image": { "src": "https://drive.google.com/uc?export=view&id=1qoqxVH1dAHDvqyV1M4fU_r74TP5C5Dpg", "alt": "imagen-item" } },
-            { "title": "Campus de Verano", "description": "Se trata de una actividad internacional a través de la cual alumnos de UTEG podrán tener una experiencia en un campus de verano, con nuestros aliados internacionales, y podrán revalidar algunas de las materias al tiempo que tiene una experiencia internacional inolvidable.", "image": { "src": "https://drive.google.com/uc?export=view&id=1zLXfXwiFAvDEoJlgIY56vc5HrOOq4Ooc", "alt": "imagen-item" } },
-            { "title": "Twin Projects", "description": "Sesiones virtuales de 45 a 60 minutos, de temáticas incluidas en los planes de estudio, por carrera, impartidas por profesores de las Universidades con convenio.", "image": { "src": "https://drive.google.com/uc?export=view&id=1ojxf0XoGFXYJNFfdXyuRaRwmZUsPTI4K", "alt": "imagen-item" } }
+          "color": "#C31433",
+          "sections": [
+            {
+              "title": "Webinar | Profesores internacionales",
+              "description": "Masterclasses impartidas por profesores o especialistas internacionales, de temáticas de interés para cada carrera. Con certificado internacional de participación.",
+              "image": {
+                "src": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_webinars_f78d74827c.png",
+                "alt": "imagen-item"
+              }
+            },
+            {
+              "title": "Campus de Verano",
+              "description": "Se trata de una actividad internacional a través de la cual alumnos de UTEG podrán tener una experiencia en un campus de verano, con nuestros aliados internacionales, y podrán revalidar algunas de las materias al tiempo que tiene una experiencia internacional inolvidable.",
+              "image": {
+                "src": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_campus_verano_9215f97164.png",
+                "alt": "imagen-item"
+              }
+            },
+            {
+              "title": "Twin Projects",
+              "description": "Sesiones virtuales de 45 a 60 minutos, de temáticas incluidas en los planes de estudio, por carrera, impartidas por profesores de las Universidades con convenio.",
+              "image": {
+                "src": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_twin_projects_f20b989f14.png",
+                "alt": "imagen-item"
+              }
+            }
           ]
         },
         {
-          "color": "#4470B1", "sections": [
-            { "title": "Prácticas Internacionales", "description": "A través de diversos programas, los alumnos de UTEG podrán tener acceso al desarrollo de prácticas profesionales internacionales en sus áreas de conocimiento.", "image": { "src": "https://drive.google.com/uc?export=view&id=10IRIbI_gFi9Y0BkX8eLE1TlxDx_jzgOW", "alt": "imagen-item" } },
-            { "title": "Dobles títulos", "description": "Dentro de los esfuerzos de internacionalización de UTEG se encuentra esta modalidad, por la que podrás cursar un semestre de tu carrera en alguna de las universidades internacionales de convenio y obtener, además del título de UTEG, el título extranjero de la carrera que estés cursando.", "image": { "src": "https://drive.google.com/uc?export=view&id=1YWuA2F9WKY7S-LWHw1m0GEaW6UED0_Lo", "alt": "imagen-item" } },
-            { "title": "Materias con contenidos internacionales", "description": "La UTEG cuenta, a través de sus convenios, con materias elaboradas juntamente con las mejores Universidades internacionales. De esta forma podrás tener una experiencia internacional en el marco de su propio itinerario académico y contar con diversos certificados internacionales.", "image": { "src": "https://drive.google.com/uc?export=view&id=1xkFShXa5bKQBe7c0kEPC9_QDc6__HGmJ", "alt": "imagen-item" } }
+          "color": "#4470B1",
+          "sections": [
+            {
+              "title": "Prácticas Internacionales",
+              "description": "A través de diversos programas, los alumnos de UTEG podrán tener acceso al desarrollo de prácticas profesionales internacionales en sus áreas de conocimiento.",
+              "image": {
+                "src": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_practicas_internacionales_a204e72fb6.png",
+                "alt": "imagen-item"
+              }
+            },
+            {
+              "title": "Dobles títulos",
+              "description": "Dentro de los esfuerzos de internacionalización de UTEG se encuentra esta modalidad, por la que podrás cursar un semestre de tu carrera en alguna de las universidades internacionales de convenio y obtener, además del título de UTEG, el título extranjero de la carrera que estés cursando.",
+              "image": {
+                "src": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_dobles_titulos_faa1fe871c.png",
+                "alt": "imagen-item"
+              }
+            },
+            {
+              "title": "Materias con contenidos internacionales",
+              "description": "La UTEG cuenta, a través de sus convenios, con materias elaboradas juntamente con las mejores Universidades internacionales. De esta forma podrás tener una experiencia internacional en el marco de su propio itinerario académico y contar con diversos certificados internacionales.",
+              "image": {
+                "src": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_conteidos_internacionales_281804e22c.png",
+                "alt": "imagen-item"
+              }
+            }
           ]
         },
         {
-          "color": "#EEAA01", "sections": [
-            { "title": "Seminarios Internacionales de Titulación", "description": "Esta novedosa experiencia internacional te permitirá cursar un programa académico y cultural en España. Durante una semana tendrás un completo itinerario en el Campus Lottus Internacional, de acuerdo con tu carrera, con masterclasses en sitios emblemáticos de Madrid y, además, al cursar este programa, podrás cubrir el requisito de seminario de titulación para culminar tu Licenciatura en UTEG.", "image": { "src": "https://drive.google.com/uc?export=view&id=174QwyGIvJgoLC3Pzj002CI0amaDcGJ5t", "alt": "imagen-item" } }
+          "color": "#EEAA01",
+          "sections": [
+            {
+              "title": "Seminarios Internacionales de Titulación",
+              "description": "Esta novedosa experiencia internacional te permitirá cursar un programa académico y cultural en España. Durante una semana tendrás un completo itinerario en el Campus Lottus Internacional, de acuerdo con tu carrera, con masterclasses en sitios emblemáticos de Madrid y, además, al cursar este programa, podrás cubrir el requisito de seminario de titulación para culminar tu Licenciatura en UTEG.",
+              "image": {
+                "src": "https://assets.staging.bedu.org/UTEG/nosotros_internacionalizacion_seminarios_titulacion_ea6471a68f.png",
+                "alt": "imagen-item"
+              }
+            }
           ]
         }
       ]
