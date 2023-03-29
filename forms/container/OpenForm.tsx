@@ -72,6 +72,7 @@ const OpenForm: FC<any> = ({ classNames, image, pathThankyou, controls, data, cu
     step3: {},
   });
   const [ tokenActive, setTokenActive ] = useState<string>("");
+  const [ levelsOffer, setLevelsOffer ] = useState<any>([]);
   const [ filteredPrograms, setFilteredPrograms ] = useState<any>([]);
   const [ filteredCampus, setFilteredCampus ] = useState<any>([]);
   const [ dataPersonal, setDataPersonal ] = useState<any>({});
@@ -110,6 +111,9 @@ const OpenForm: FC<any> = ({ classNames, image, pathThankyou, controls, data, cu
   const isError = isErrorToken || isErrorEO || isErrorSD;
 
   const handleFetchEducativeOffer = (modality: string) => {
+    setLevelsOffer([]);
+    setFilteredPrograms([]);
+    setFilteredCampus([]);
     const businessLineToFetchFrom = getBusinessLineToFetchFrom(businessUnit, modality);
     fetchEducativeOffer(process.env.NEXT_PUBLIC_EDUCATIVE_OFFER!, modality, businessLineToFetchFrom, tokenActive);
   }
@@ -120,8 +124,12 @@ const OpenForm: FC<any> = ({ classNames, image, pathThankyou, controls, data, cu
     }
   }, [isLoadingToken, isErrorToken, token]);
 
-  const levelsOffer = !isLoadingEO ? Object.entries(educativeOfferData).map(([_ , level]: any) => level) : [];
- 
+  useEffect(() => {
+    if (!isLoadingEO && !isErrorEO) {
+      setLevelsOffer(Object.entries(educativeOfferData).map(([_ , level]: any) => level))
+    }
+  }, [isLoadingEO, isErrorEO, educativeOfferData]);
+
   useEffect(() => {
     if (!isLoadingEO && !isErrorEO && !!Object.keys(dataSD).length) {
       setDataPersonal({ ...dataSD });
