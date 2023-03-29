@@ -37,7 +37,6 @@ const formatSalesforceBusinessLine = (businessUnit: string, modality: string) =>
 }
 
 const getBusinessLineToFetchFrom = (businessLine: string, modality: string) => {
-  console.log("businessLine", businessLine);
   switch(businessLine) {
     case "UANE": {
       switch(modality) {
