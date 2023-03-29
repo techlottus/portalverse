@@ -554,6 +554,48 @@
         }
       },
       "route": "derecho"
+    },
+    {
+      "title": "Licenciatura en Ciencias Forenses: Criminalística y Criminología",
+      "config": {
+        "nombre": "Licenciatura en Ciencias Forenses: Criminalística y Criminología",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Jurídicas y Sociales"],
+        "campus": ["Américas", "Campus Washington", "Río Nilo", "Zapopan", "Lázaro Cárdenas", "Tlajomulco"],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_ciencias_forenses_desk_526034da82.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "ciencias-forenses"
+    },
+    {
+      "title": "Licenciatura en Ingeniería en Creación y Desarrollo de Software y Aplicaciones",
+      "config": {
+        "nombre": "Licenciatura en Ingeniería en Creación y Desarrollo de Software y Aplicaciones",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Ingenierías y Tecnología"],
+        "campus": ["Olímpica"],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_creacion_desarrollo_software_aplicaciones_desk_d945aa976d.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "ingenieria-creacion-desarrollo-software-apps"
+    },
+    {
+      "title": "Licenciatura en Pedagogía",
+      "config": {
+        "nombre": "Licenciatura en Pedagogía",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Jurídicas y Sociales"],
+        "campus": ["Américas", "Campus Washington", "Río Nilo", "Zapopan", "Lázaro Cárdenas", "Pedro Moreno"],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_educacion_pedagogia_desk_0a20a6cedf.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "pedagogia"
     }
   ]
 }

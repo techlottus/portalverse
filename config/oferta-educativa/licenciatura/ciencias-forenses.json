@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "title": "Licenciatura en Ciencias Forenses: Criminalística y Criminología",
+    "description": "",
+    "keywords": ""
+  },
+  "config": {
+    "title": "",
+    "config": {
+      "nombre": "Licenciatura en Ciencias Forenses: Criminalística y Criminología",
+      "modalidad": ["Presencial"],
+      "areaConocimiento": ["Jurídicas y Sociales"],
+      "campus": ["Américas", "Campus Washington", "Río Nilo", "Zapopan", "Lázaro Cárdenas", "Tlajomulco"],
+      "nivel": ["Licenciatura"],
+      "image": {
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_ciencias_forenses_desk_6b07dc50b3.jpg",
+        "alt": "licenciatura"
+      },
+      "curriculum": {
+        "Presencial": {
+          "Américas": "", 
+          "Campus Washington": "", 
+          "Río Nilo": "", 
+          "Zapopan": "", 
+          "Lázaro Cárdenas": "", 
+          "Tlajomulco": ""
+        }
+      }
+    }
+  },
+  "sections": {
+    "head": {
+      "title": "Licenciatura en Ciencias Forenses: Criminalística y Criminología",
+      "description": "",
+      "image": {
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_ciencias_forenses_desk_6b07dc50b3.jpg",
+        "alt": "licenciatura"
+      }
+    },
+    "modalities": {
+      "title": "Modalidades disponibles en esta licenciatura:",
+      "tabs": {
+        "items": [
+          {
+            "label": "Modalidad Online",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          }
+        ],
+        "size": "medium"
+      }
+    },
+    "descarga": {
+      "id": "program_licenciatura",
+      "type": "primary",
+      "title": "Descarga el plan de estudios",
+      "size": "small",
+      "icon": "download",
+      "lyIcon": false,
+      "disabled": false,
+      "isExpand": false,
+      "tagOnClick": "testClick",
+      "test": ""
+    }
+  },
+  "form": {
+    "config": {
+      "level": { "hidden": true, "value": "licenciatura" },
+      "program": { "hidden": false, "value": "Licenciatura en Ciencias Forenses: Criminalística y Criminología" },
+      "modality": { "hidden": false },
+      "campus": { "hidden": false }
+    },
+    "copies": {
+      "stepone": {
+        "title": "Obtén informes sobre tu programa",
+        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+      }
+    }
+  }
+}
