@@ -191,13 +191,16 @@ const OpenForm: FC<any> = ({ classNames, image, pathThankyou, controls, data, cu
   }
 
   const handleLevelSelected = (level: string) => {
-    const filteredPrograms = filterByLevel(level);
-    setFilteredPrograms([...filteredPrograms]);
+    setFilteredPrograms([]);
+    setFilteredCampus([]);
+    const programsByLevel = filterByLevel(level);
+    setFilteredPrograms([ ...programsByLevel ]);
   }
 
   const handleProgramSelected = (program: string) => {
-    const filteredCampuses = filterByProgram(program);
-    setFilteredCampus([...filteredCampuses]);
+    setFilteredCampus([]);
+    const campusByProgram = filterByProgram(program);
+    setFilteredCampus([ ...campusByProgram ]);
   }
 
   const handleReturnedStep = (step: number) => {
