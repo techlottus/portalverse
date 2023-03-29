@@ -11,6 +11,7 @@ import { saveDataForms } from "@/utils/saveDataForms"
 import Image from "@/old-components/Image"
 import Button from "@/old-components/Button/Button"
 import { ButtonInit } from "@/old-components/fixture"
+import NextImage from "next/image"
 
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
 
@@ -226,11 +227,21 @@ const OpenForm: FC<any> = ({ classNames, image, pathThankyou, controls, data, cu
       }
       {
         isError
-          ? <div className="bg-white absolute w-full h-full z-10 flex flex-col aspect-2/1 justify-center items-center left-0 top-0">
-              <h1 className="font-bold text-10 text-center leading-12 mb-9">¡Me lleva la ...! no encuentro la página...</h1>
-              <Image src="/images/404-B.jpg" alt="error" classNames={cn("w-[50%] h-[50%] top-0 left-0")} />
-              <h2 className="text-UNI-066 font-semibold text-5.5 my-6">No importa, siempre puedes regresar a inicio</h2>
-              <Button dark onClick={() => location.reload()} data={{...ButtonInit, title: "Reintentar" }} />
+          ? <div className="bg-white w-full h-full p-4 z-10 flex flex-col aspect-2/1 justify-center items-center left-0 top-0">
+              <h1 className="font-bold text-10 text-center leading-12 mb-9">
+                ¡Me lleva la ...! no encuentro la página...
+              </h1>
+              <div className="w-full max-w-[24rem]"> {/* Tailwind's 'max-w-sm' value isn't working for some reason u.u */}
+                <img src="/images/404-B.jpg" className="w-full" alt="error" />
+              </div>
+              <h2 className="text-UNI-066 font-semibold text-5.5 my-6">
+                No importa, siempre puedes regresar a inicio
+              </h2>
+              <Button
+                dark
+                onClick={() => location.reload()}
+                data={{ ...ButtonInit, title: "Reintentar" }}
+              />
             </div>
           : <>
               {
