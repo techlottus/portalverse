@@ -22,7 +22,7 @@ export const getEducativeOffer = () => {
 
   const fetchData = async (url: string, modalidad: string, linea: string, Authorization: string) => {
 
-    
+    console.log("linea", linea);
 
     setIsLoading(true);
     setIsError(false);
