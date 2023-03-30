@@ -19,9 +19,9 @@
       },
       "banner1" :{
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1rbbogWNtVZfHHcPuyZYGL_g-hzUH8moK",
-          "mobile": "https://drive.google.com/uc?export=view&id=1zEWX6bS_Cr3GSJVcbNYv18ORCAm2j0PK",
-          "tablet": "https://drive.google.com/uc?export=view&id=1XDfaTjE_5_onAgRpc2MEsh1llhvIna6C"
+          "desktop": "https://assets.staging.bedu.org/UTEG/oferta_banner_internacional_desktop_7639d8c9e7.jpg",
+          "mobile": "https://assets.staging.bedu.org/UTEG/oferta_banner_internacional_movil_b2c4003361.jpg",
+          "tablet": "https://assets.staging.bedu.org/UTEG/oferta_banner_internacional_tablet_17aad237c5.jpg"
         },
         "title": "",
         "subtitle": "",
@@ -60,7 +60,7 @@
         "campus": ["Américas"],
         "nivel": ["Posgrado"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1a2RMTG-7g-loXhNK8MXu4TDdMeu4xMVL",
+          "src": "https://assets.staging.bedu.org/UTEG/oferta_card_maestria_planeacion_fiscal_de2b3bcb20.jpg",
           "alt": "maestria"
         }
       },
@@ -75,7 +75,7 @@
         "campus": ["Américas"],
         "nivel": ["Posgrado"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=18zN9ymPPBrrRBnLfwu6Xz_0j5EZSCWCq",
+          "src": "https://assets.staging.bedu.org/UTEG/oferta_card_maestria_desarrollo_organizacional_aaaa422a9c.jpg",
           "alt": "maestria"
         }
       },
@@ -90,7 +90,7 @@
         "campus": ["Américas"],
         "nivel": ["Posgrado"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1yxsKvuLw1Qki1enImdE6y7jjXU0Q0TUf",
+          "src": "https://assets.staging.bedu.org/UTEG/oferta_card_maestria_alta_direccion_8a645eb38f.jpg",
           "alt": "maestria"
         }
       },
@@ -105,7 +105,7 @@
         "campus": ["Américas"],
         "nivel": ["Posgrado"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1phN7r0kG66DGPM1CpPCLDN6TTuCMVFgi",
+          "src": "https://assets.staging.bedu.org/UTEG/oferta_card_maestria_docencia_80bbc3a419.jpg",
           "alt": "maestria"
         }
       },
@@ -120,7 +120,7 @@
         "campus": [],
         "nivel": ["Posgrado"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=19Ndn0tlMdQ0UC0C2KSaW6twEzNQXwQDh",
+          "src": "https://assets.staging.bedu.org/UTEG/oferta_card_maestria_educacion_84cf12570a.jpg",
           "alt": "maestria"
         }
       },
@@ -135,7 +135,7 @@
         "campus": [],
         "nivel": ["Posgrado"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1s6PHotJYAnM4jJCoDWLE4zGBuOjlGK1a",
+          "src": "https://assets.staging.bedu.org/UTEG/oferta_card_maestria_mercadotecnia_digital_66ea2188ae.jpg",
           "alt": "maestria"
         }
       },
@@ -150,7 +150,7 @@
         "campus": [],
         "nivel": ["Posgrado"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=17eKRNlmsdhxJWXcoGfP8DvdrBopeppcb",
+          "src": "https://assets.staging.bedu.org/UTEG/oferta_card_maestria_administracion_d6d6761bcc.jpg",
           "alt": "maestria"
         }
       },
@@ -165,7 +165,7 @@
         "campus": [],
         "nivel": ["Posgrado"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1CVB4aG552NGzSja24Usar4DRa_Ig7JJi",
+          "src": "https://assets.staging.bedu.org/UTEG/oferta_card_maestria_comunicacion_empresarial_8038f1e810.jpg",
           "alt": "maestria"
         }
       },
@@ -180,7 +180,7 @@
         "campus": [],
         "nivel": ["Posgrado"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1Wt6UJA5l-k3X4UnA8tRetYlGWwAs6dGR",
+          "src": "https://assets.staging.bedu.org/UTEG/oferta_card_maestria_derecho_79bcab7e8b.jpg",
           "alt": "maestria"
         }
       },
@@ -195,7 +195,7 @@
         "campus": [],
         "nivel": ["Posgrado"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1uGQKxoCvCMgjJky6acie-iWEFIPJwGz2",
+          "src": "https://assets.staging.bedu.org/UTEG/oferta_card_maestria_desarrollo_organizacional_online_892028e772.jpg",
           "alt": "maestria"
         }
       },
@@ -210,7 +210,7 @@
         "campus": [],
         "nivel": ["Posgrado"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1aAZkQklPERDeBsUun6cTx4k1J9OxYEmu",
+          "src": "https://assets.staging.bedu.org/UTEG/oferta_card_maestria_gobierno_estrategia_0218c443b4.jpg",
           "alt": "maestria"
         }
       },

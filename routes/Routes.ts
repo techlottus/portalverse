@@ -3,7 +3,7 @@ const Routes: any = {
     { params:
       {
         "level": "bachillerato",
-        "levelRoute": "oferta-educativa/bachillerato/bachillerato",
+        "levelRoute": "oferta-educativa/bachillerato",
         "config": {
           title: "Bachillerato",
           promo: {
@@ -35,7 +35,12 @@ const Routes: any = {
           },
         },
         "programs": [
-          { params: { "program": "bachillerato", "nameProgram": "Bachillerato" } },
+          { params: { "program": "bachillerato-general-competencia", "nameProgram": "Bachillerato General por Competencia" } },
+          { params: { "program": "bachillerato-intensivo-semiescolarizado", "nameProgram": "Bachillerato Intensivo Semiescolarizado" } },
+          { params: { "program": "bachillerato-general-competencia-gastronomia", "nameProgram": "Bachillerato General por Competencia con Diplomado en Gastronomía" } },
+          { params: { "program": "bachillerato-online", "nameProgram": "Bachillerato Online" } },
+          { params: { "program": "bachillerato-general-competencia-proulex", "nameProgram": "Bachillerato General por Competencia con Certificación en Inglés Proulex" } },
+
         ] 
       }
     },
@@ -114,6 +119,7 @@ const Routes: any = {
           { params: { "program": "ingenieria-creacion-desarrollo-software-apps", "nameProgram": "Licenciatura en Ingeniería en Creación y Desarrollo de Software y Aplicaciones" } },
           { params: { "program": "pedagogia", "nameProgram": "Licenciatura en Pedagogía" } },
           { params: { "program": "creacion-desarrollo-empresas-negocios", "nameProgram": "Licenciatura en Creación y Desarrollo de Empresas y Negocios" } },
+          { params: { "program": "quimico-farmaceutico-biologo-proulex", "nameProgram": "Licenciatura en Químico Farmaceutico Biólogo con Certificación en Inglés Proulex" } },
         ]
       }
     },
@@ -243,6 +249,29 @@ const Routes: any = {
         { params: { "program": "obligaciones-contratos", "nameProgram": "Obligaciones y Contratos" } },
         { params: { "program": "psicologia-comunicacion", "nameProgram": "Psicología y Comunicación" } },
         { params: { "program": "politicas-publicas-gobernanza", "nameProgram": "Políticas Públicas en Gobernanza" } },
+        { params: { "program": "habilidades-interpersonales", "nameProgram": "Curso Habilidades Interpesonales" } },
+        { params: { "program": "habilidades-cognitivas", "nameProgram": "Curso Habilidades Cognitivas" } },
+        { params: { "program": "nivelacion-precalculo", "nameProgram": "Curso de Nivelación de Précalculo" } },
+        { params: { "program": "eggel-ceneval-qfb", "nameProgram": "Curso EGGEL CENEVAL QFB Química Clínica" } },
+        { params: { "program": "diplomado-ciencias-forenses", "nameProgram": "Diplomado de Ciencias Forenses y el Sistema de Justicia Penal Acusatorio y Adversarial" } },
+        { params: { "program": "prodis-diseno-universal", "nameProgram": "Diseño Universal para el Aprendizaje y su Aplicación en el Aula (PRODIS)" } },
+        { params: { "program": "prodis-estimulacion-sensorial", "nameProgram": "Estimulación sensorial en alumnado con necesidades de apoyo educativo (PRODIS)" } },
+        { params: { "program": "prodis-saac", "nameProgram": "Estrategias para Potenciar la Comunicación a través de los Sistemas Aumentativos y Alternativos de Comunicación (SAAC) (PRODIS)" } },
+        { params: { "program": "prodis-tic", "nameProgram": "Creación de Recursos Adaptados a través de las TIC en el Aula (PRODIS)" } },
+        { params: { "program": "prodis-metodologia-investigacion-aplicada", "nameProgram": "Metodología de la investigación aplicada a la educación (PRODIS)" } },
+        { params: { "program": "fotografia-cucea", "nameProgram": "Taller de Fotofrafía CUCEA" } },
+        { params: { "program": "seminario-titulacion-gastronomia", "nameProgram": "Seminario de Titulación de Gatronomía" } },
+
+
+
+
+
+
+
+
+
+
+
       ] 
     }
   },

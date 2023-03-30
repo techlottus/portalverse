@@ -17,7 +17,7 @@
           "subtitle": "Conoce más sobre las licenciaturas que puedes estudiar en UTEG. Elije una entre las que conforman nuestra oferta académica de acuerdo al área de conocimiento, modalidad y plantel de tu interés. "
         }
       },
-      "banner1" :{
+      "banner1": {
         "image": {
           "desktop": "https://drive.google.com/uc?export=view&id=11W0RGhdLOmICd-qtJFBhTCC3IPpEw-Z4",
           "mobile": "https://drive.google.com/uc?export=view&id=1yd6VKxdKPQTAyRJT0YegLihHyzbESFIL",
@@ -27,9 +27,9 @@
         "subtitle": "",
         "position": "middle-center",
         "height": "350px",
-        "overlayWhite":false,
+        "overlayWhite": false,
         "overlayDak": false,
-        "button":{
+        "button": {
           "id": "",
           "type": "outlined",
           "title": "Conocer más",
@@ -55,9 +55,15 @@
       "title": "Cirujano Dentista",
       "config": {
         "nombre": "Cirujano Dentista",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Salud"],
-        "campus": ["Campus Washington"],
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Salud"
+        ],
+        "campus": [
+          "Campus Washington"
+        ],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1hDdotoKywIc4Lbj0PhV-09reK7PWvO51",
           "alt": "licenciatura"
@@ -69,9 +75,15 @@
       "title": "Licenciatura en Enfermeria",
       "config": {
         "nombre": "Licenciatura en Enfermeria",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Salud"],
-        "campus": ["Campus Washington"],
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Salud"
+        ],
+        "campus": [
+          "Campus Washington"
+        ],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1qiv3nTpIEBc_eHR22VKnjJOdMPd36QYD",
           "alt": "licenciatura"
@@ -83,9 +95,17 @@
       "title": "Carrera de Abogado",
       "config": {
         "nombre": "Carrera de Abogado",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Jurídicas y Sociales"],
-        "campus": ["Américas", "Lázaro Cárdenas", "Zapopan"],
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Jurídicas y Sociales"
+        ],
+        "campus": [
+          "Américas",
+          "Lázaro Cárdenas",
+          "Zapopan"
+        ],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1xAx-tPvYzuTEpb7GmHZiC9UYA-GFOAz1",
           "alt": "licenciatura"
@@ -97,9 +117,15 @@
       "title": "Licenciatura Arquitectura",
       "config": {
         "nombre": "Licenciatura Arquitectura",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Arquitectura y Diseño"],
-        "campus": ["Américas"],
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Arquitectura y Diseño"
+        ],
+        "campus": [
+          "Américas"
+        ],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1CtuuEDnJCfGCqxt-XcrgPFl_deE7eGdL",
           "alt": "licenciatura"
@@ -111,9 +137,15 @@
       "title": "Licenciatura Diseño de Interiores",
       "config": {
         "nombre": "Licenciatura Diseño de Interiores",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Arquitectura y Diseño"],
-        "campus": ["Américas"],
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Arquitectura y Diseño"
+        ],
+        "campus": [
+          "Américas"
+        ],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1UjYu4TL8kBl5A8CcftkmHjWU_TLmE67C",
           "alt": "licenciatura"
@@ -125,9 +157,15 @@
       "title": "Ingeniería Comunicaciones y Electrónica",
       "config": {
         "nombre": "Ingeniería Comunicaciones y Electrónica",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Ingenierías y Tecnología"],
-        "campus": ["Olímpica"],
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Ingenierías y Tecnología"
+        ],
+        "campus": [
+          "Olímpica"
+        ],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1MaYPdS7AQLqAIigltmhx6vMG7G2wtzaY",
           "alt": "licenciatura"
@@ -139,9 +177,16 @@
       "title": "Licenciatura Gastronomía",
       "config": {
         "nombre": "Licenciatura Gastronomía",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Negocios y Empresariales"],
-        "campus": ["Américas", "Pedro Moreno"],
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Negocios y Empresariales"
+        ],
+        "campus": [
+          "Américas",
+          "Pedro Moreno"
+        ],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1178Zx6YhLUR9ildkUzdh51cUbpZ-dLGD",
           "alt": "licenciatura"
@@ -153,9 +198,15 @@
       "title": "Licenciatura Diseño de Modas",
       "config": {
         "nombre": "Licenciatura Diseño de Modas",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Arquitectura y Diseño"],
-        "campus": ["Américas"],
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Arquitectura y Diseño"
+        ],
+        "campus": [
+          "Américas"
+        ],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1ogSyMaQ9cVAPOVtzcnY2b7tRmVXOMNQu",
           "alt": "licenciatura"
@@ -167,9 +218,15 @@
       "title": "Licenciatura Trabajo Social",
       "config": {
         "nombre": "Licenciatura Trabajo Social",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Jurídicas y Sociales"],
-        "campus": ["Pedro Moreno"],
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Jurídicas y Sociales"
+        ],
+        "campus": [
+          "Pedro Moreno"
+        ],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=14Pq0T8uYn62Cbq26T7dLfZYw1PJ9Irt9",
           "alt": "licenciatura"
@@ -181,9 +238,19 @@
       "title": "Licenciatura en Administracion",
       "config": {
         "nombre": "Licenciatura en Administracion",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Negocios y Empresariales"],
-        "campus": ["Américas", "Campus Washington", "Río Nilo", "Tlajomulco", "Zapopan"],
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Negocios y Empresariales"
+        ],
+        "campus": [
+          "Américas",
+          "Campus Washington",
+          "Río Nilo",
+          "Tlajomulco",
+          "Zapopan"
+        ],
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/card_administracion_943a10dcd4.jpg",
           "alt": "licenciatura"
@@ -195,9 +262,22 @@
       "title": "Licenciatura en Negocios Internacionales",
       "config": {
         "nombre": "Licenciatura en Negocios Internacionales",
-        "modalidad": ["Presencial", "Online", "Flex"],
-        "areaConocimiento": ["Negocios y Empresariales", "Económico - Administrativo"],
-        "campus": ["Américas", "Campus Washington", "Río Nilo", "Tlajomulco", "Zapopan"],
+        "modalidad": [
+          "Presencial",
+          "Online",
+          "Flex"
+        ],
+        "areaConocimiento": [
+          "Negocios y Empresariales",
+          "Económico - Administrativo"
+        ],
+        "campus": [
+          "Américas",
+          "Campus Washington",
+          "Río Nilo",
+          "Tlajomulco",
+          "Zapopan"
+        ],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1m-W5_0aGQZnepR_Qa4VRj5hJbTIbPjqB",
           "alt": "licenciatura"
@@ -209,9 +289,21 @@
       "title": "Licenciatura en Mercadotecnia",
       "config": {
         "nombre": "Licenciatura en Mercadotecnia",
-        "modalidad": ["Presencial", "Online"],
-        "areaConocimiento": ["Negocios y Empresariales", "Económico - Administrativo"],
-        "campus": ["Américas", "Campus Washington", "Río Nilo", "Tlajomulco", "Zapopan"],
+        "modalidad": [
+          "Presencial",
+          "Online"
+        ],
+        "areaConocimiento": [
+          "Negocios y Empresariales",
+          "Económico - Administrativo"
+        ],
+        "campus": [
+          "Américas",
+          "Campus Washington",
+          "Río Nilo",
+          "Tlajomulco",
+          "Zapopan"
+        ],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1IVXmQY-GVB1sKSIKgLKICGwuVD-BMPpD",
           "alt": "licenciatura"
@@ -223,9 +315,20 @@
       "title": "Licenciatura en Psicología",
       "config": {
         "nombre": "Licenciatura en Psicología",
-        "modalidad": ["Presencial", "Online", "Flex"],
-        "areaConocimiento": ["Salud", "Ciencias sociales"],
-        "campus": ["Campus Washington", "Plantel Zapopan", "Tlajomulco"],
+        "modalidad": [
+          "Presencial",
+          "Online",
+          "Flex"
+        ],
+        "areaConocimiento": [
+          "Salud",
+          "Ciencias sociales"
+        ],
+        "campus": [
+          "Campus Washington",
+          "Plantel Zapopan",
+          "Tlajomulco"
+        ],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1HMK3_HRSTAp0BLnZuynVJRXA-Z2WntR0",
           "alt": "licenciatura"
@@ -237,9 +340,15 @@
       "title": "Licenciatura en Nutrición",
       "config": {
         "nombre": "Licenciatura en Nutrición",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Salud"],
-        "campus": ["Campus Washington"],
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Salud"
+        ],
+        "campus": [
+          "Campus Washington"
+        ],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1QlX9k-z4MVDzyq8DrHAZzKx2XPGCqeEZ",
           "alt": "licenciatura"
@@ -251,9 +360,15 @@
       "title": "Licenciatura en Cultura Física y Deportes",
       "config": {
         "nombre": "Licenciatura en Cultura Física y Deportes",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Salud"],
-        "campus": ["Campus Washington"],
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Salud"
+        ],
+        "campus": [
+          "Campus Washington"
+        ],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1iB_wM3LV78YRm3mhIo-hEeQ8zocMp5JY",
           "alt": "licenciatura"
@@ -265,9 +380,15 @@
       "title": "Licenciatura en Químico Farmacéutico Biólogo",
       "config": {
         "nombre": "Licenciatura en Químico Farmacéutico Biólogo",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Salud"],
-        "campus": ["Campus Washington"],
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Salud"
+        ],
+        "campus": [
+          "Campus Washington"
+        ],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1dImSOs33oDQJZD84IXf5IrfZ9XNHYlF5",
           "alt": "licenciatura"
@@ -279,11 +400,17 @@
       "title": "Licenciatura en Diseño para la Comunicación Gráfica",
       "config": {
         "nombre": "Licenciatura en Diseño para la Comunicación Gráfica",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Arquitectura y Diseño"],
-        "campus": ["Américas"],
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Arquitectura y Diseño"
+        ],
+        "campus": [
+          "Américas"
+        ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=",
+          "src": "https://drive.google.com/uc?export=view&id=1xmiGmRMZNlENPk9sF8v4YV0GOcYjUFZ5",
           "alt": "licenciatura"
         }
       },
@@ -293,9 +420,15 @@
       "title": "Ingeniería en Computación",
       "config": {
         "nombre": "Ingeniería en Computación",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Ingenierías y Tecnología"],
-        "campus": ["Olímpica"],
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Ingenierías y Tecnología"
+        ],
+        "campus": [
+          "Olímpica"
+        ],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1MGmIkTbjGW0JfiEUyGuddGY_V8-cGGVO",
           "alt": "licenciatura"
@@ -307,8 +440,12 @@
       "title": "Licenciatura en Negocios Digitales",
       "config": {
         "nombre": "Licenciatura en Negocios Digitales",
-        "modalidad": ["Online"],
-        "areaConocimiento": ["Económico - Administrativo"],
+        "modalidad": [
+          "Online"
+        ],
+        "areaConocimiento": [
+          "Económico - Administrativo"
+        ],
         "campus": [],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1lf1Ggy3coet6vSnv1PDDbMrW5MyaCgkg",
@@ -321,8 +458,12 @@
       "title": "Ingenieria en Ciencia de Datos",
       "config": {
         "nombre": "Ingenieria en Ciencia de Datos",
-        "modalidad": ["Online"],
-        "areaConocimiento": ["Económico - Administrativo"],
+        "modalidad": [
+          "Online"
+        ],
+        "areaConocimiento": [
+          "Económico - Administrativo"
+        ],
         "campus": [],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1v5fhe1LZL825tt6WRc14dlF9cSVSmwOX",
@@ -335,8 +476,12 @@
       "title": "Licenciatura en Turismo",
       "config": {
         "nombre": "Licenciatura en Turismo",
-        "modalidad": ["Online"],
-        "areaConocimiento": ["Económico - Administrativo"],
+        "modalidad": [
+          "Online"
+        ],
+        "areaConocimiento": [
+          "Económico - Administrativo"
+        ],
         "campus": [],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=15iMG8von_UvJyMB52sHbuS4arBT_b8re",
@@ -349,8 +494,13 @@
       "title": "Ingeniería en Desarrollo de Software",
       "config": {
         "nombre": "Ingeniería en Desarrollo de Software",
-        "modalidad": ["Online", "Flex"],
-        "areaConocimiento": ["Ciencias Exactas"],
+        "modalidad": [
+          "Online",
+          "Flex"
+        ],
+        "areaConocimiento": [
+          "Ciencias Exactas"
+        ],
         "campus": [],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1QkGiuIyEYZClG1-kEamZVQuHV4C6HgFw",
@@ -363,9 +513,17 @@
       "title": "Ingeniería en Sistemas",
       "config": {
         "nombre": "Ingeniería en Sistemas",
-        "modalidad": ["Presencial","Online", "Flex"],
-        "areaConocimiento": ["Ciencias Exactas"],
-        "campus": ["Olímpica"],
+        "modalidad": [
+          "Presencial",
+          "Online",
+          "Flex"
+        ],
+        "areaConocimiento": [
+          "Ciencias Exactas"
+        ],
+        "campus": [
+          "Olímpica"
+        ],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1Rl8EgkrLpTYyY_1Dg56N6WBTzYEvY4J5",
           "alt": "licenciatura"
@@ -377,8 +535,13 @@
       "title": "Licenciatura Administración y Liderazgo Empresarial",
       "config": {
         "nombre": "Licenciatura Administración y Liderazgo Empresarial",
-        "modalidad": ["Online", "Flex"],
-        "areaConocimiento": ["Económico - Administrativo"],
+        "modalidad": [
+          "Online",
+          "Flex"
+        ],
+        "areaConocimiento": [
+          "Económico - Administrativo"
+        ],
         "campus": [],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1H2GGHVOgDizi1A-lxo22b2nFSdkfs9G2",
@@ -391,9 +554,20 @@
       "title": "Licenciatura en Comunicación",
       "config": {
         "nombre": "Licenciatura en Comunicación",
-        "modalidad": ["Presencial","Online"],
-        "areaConocimiento": ["Ciencias sociales"],
-        "campus": ["Américas", "Campus Washington", "Río Nilo", "Zapopan", "Lázaro Cárdenas"],
+        "modalidad": [
+          "Presencial",
+          "Online"
+        ],
+        "areaConocimiento": [
+          "Ciencias sociales"
+        ],
+        "campus": [
+          "Américas",
+          "Campus Washington",
+          "Río Nilo",
+          "Zapopan",
+          "Lázaro Cárdenas"
+        ],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1YVXcF43snvTiNIU6WzZLxT8PuOJJMTFo",
           "alt": "licenciatura"
@@ -405,9 +579,17 @@
       "title": "Licenciatura en Gestión Deportiva",
       "config": {
         "nombre": "Licenciatura en Gestión Deportiva",
-        "modalidad": ["Presencial", "Online", "Flex"],
-        "areaConocimiento": ["Ciencias sociales"],
-        "campus": ["Campus Washington"],
+        "modalidad": [
+          "Presencial",
+          "Online",
+          "Flex"
+        ],
+        "areaConocimiento": [
+          "Ciencias sociales"
+        ],
+        "campus": [
+          "Campus Washington"
+        ],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1OSulEXURbK5qPRg8MB1Wko49HjiPQKUH",
           "alt": "licenciatura"
@@ -419,8 +601,13 @@
       "title": "Licenciatura en Diseño Gráfico ",
       "config": {
         "nombre": "Licenciatura en Diseño Gráfico ",
-        "modalidad": ["Online", "Flex"],
-        "areaConocimiento": ["Arquitectura y Diseño"],
+        "modalidad": [
+          "Online",
+          "Flex"
+        ],
+        "areaConocimiento": [
+          "Arquitectura y Diseño"
+        ],
         "campus": [],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1xmiGmRMZNlENPk9sF8v4YV0GOcYjUFZ5",
@@ -433,8 +620,12 @@
       "title": "Licenciatura en Relaciones Internacionales",
       "config": {
         "nombre": "Licenciatura en Relaciones Internacionales",
-        "modalidad": ["Online"],
-        "areaConocimiento": ["Económico - Administrativo"],
+        "modalidad": [
+          "Online"
+        ],
+        "areaConocimiento": [
+          "Económico - Administrativo"
+        ],
         "campus": [],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=1v_Itxj8u4HmSkVtnR9AssBTL2dBUiXtj",
@@ -447,9 +638,15 @@
       "title": "Ingeniería Civil",
       "config": {
         "nombre": "Ingeniería Civil",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Ingenierías y Tecnología"],
-        "campus": ["Olímpica"],
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Ingenierías y Tecnología"
+        ],
+        "campus": [
+          "Olímpica"
+        ],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=13U-D4vbyjDjvZxmOe_T95xzAcPD80Jvi",
           "alt": "licenciatura"
@@ -461,9 +658,15 @@
       "title": "Ingeniería Civil con Certificación en Inglés Proulex",
       "config": {
         "nombre": "Ingeniería Civil con Certificación en Inglés Proulex",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Ingenierías y Tecnología"],
-        "campus": ["Olímpica"],
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Ingenierías y Tecnología"
+        ],
+        "campus": [
+          "Olímpica"
+        ],
         "image": {
           "src": "https://drive.google.com/uc?export=view&id=13U-D4vbyjDjvZxmOe_T95xzAcPD80Jvi",
           "alt": "licenciatura"
@@ -475,9 +678,17 @@
       "title": "Ingeniería Industrial",
       "config": {
         "nombre": "Ingeniería Industrial",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Ingenierías y Tecnología"],
-        "campus": ["Olímpica"],
+        "modalidad": [
+          "Presencial",
+          "Online",
+          "Flex"
+        ],
+        "areaConocimiento": [
+          "Ingenierías y Tecnología"
+        ],
+        "campus": [
+          "Olímpica"
+        ],
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/card_industrial_5e4767fc98.jpg",
           "alt": "licenciatura"
@@ -489,9 +700,15 @@
       "title": "Ingeniería Industrial con Certificación en Inglés Proulex",
       "config": {
         "nombre": "Ingeniería Industrial con Certificación en Inglés Proulex",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Ingenierías y Tecnología"],
-        "campus": ["Olímpica"],
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Ingenierías y Tecnología"
+        ],
+        "campus": [
+          "Olímpica"
+        ],
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/card_industrial_5e4767fc98.jpg",
           "alt": "licenciatura"
@@ -503,9 +720,21 @@
       "title": "Licenciatura en Administración con Certificación en Inglés Proulex",
       "config": {
         "nombre": "Licenciatura en Administración con Certificación en Inglés Proulex",
-        "modalidad": ["Presencial", "Online", "Flex"],
-      "areaConocimiento": ["Negocios y Empresariales"],
-      "campus": ["Campus Washington", "Tlajomulco", "Zapopan", "Américas", "Río Nilo"],
+        "modalidad": [
+          "Presencial",
+          "Online",
+          "Flex"
+        ],
+        "areaConocimiento": [
+          "Negocios y Empresariales"
+        ],
+        "campus": [
+          "Campus Washington",
+          "Tlajomulco",
+          "Zapopan",
+          "Américas",
+          "Río Nilo"
+        ],
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/card_administracion_943a10dcd4.jpg",
           "alt": "licenciatura"
@@ -517,9 +746,21 @@
       "title": "Licenciatura en Contaduría Pública",
       "config": {
         "nombre": "Licenciatura en Contaduría Pública",
-        "modalidad": ["Presencial", "Online", "Flex"],
-        "areaConocimiento": ["Negocios y Empresariales"],
-        "campus": ["Campus Washington", "Tlajomulco", "Zapopan", "Américas", "Río Nilo"],
+        "modalidad": [
+          "Presencial",
+          "Online",
+          "Flex"
+        ],
+        "areaConocimiento": [
+          "Negocios y Empresariales"
+        ],
+        "campus": [
+          "Campus Washington",
+          "Tlajomulco",
+          "Zapopan",
+          "Américas",
+          "Río Nilo"
+        ],
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/card_contaduria_c0cc41ade5.jpg",
           "alt": "licenciatura"
@@ -531,9 +772,15 @@
       "title": "Licenciatura en Contaduría Púbica con Certificación en Inglés Proulex",
       "config": {
         "nombre": "Licenciatura en Contaduría Púbica con Certificación en Inglés Proulex",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Negocios y Empresariales"],
-        "campus": ["Campus Washington"],
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Negocios y Empresariales"
+        ],
+        "campus": [
+          "Campus Washington"
+        ],
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/card_contaduria_c0cc41ade5.jpg",
           "alt": "licenciatura"
@@ -545,9 +792,21 @@
       "title": "Licenciatura en Derecho",
       "config": {
         "nombre": "Licenciatura en Derecho",
-        "modalidad": ["Presencial", "Online", "Flex"],
-        "areaConocimiento": ["Negocios y Empresariales"],
-        "campus": ["Américas", "Campus Washington", "Río Nilo", "Tlajomulco", "Zapopan"],
+        "modalidad": [
+          "Presencial",
+          "Online",
+          "Flex"
+        ],
+        "areaConocimiento": [
+          "Negocios y Empresariales"
+        ],
+        "campus": [
+          "Américas",
+          "Campus Washington",
+          "Río Nilo",
+          "Tlajomulco",
+          "Zapopan"
+        ],
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/card_derecho_86e1606b34.jpg",
           "alt": "licenciatura"
@@ -559,9 +818,20 @@
       "title": "Licenciatura en Ciencias Forenses: Criminalística y Criminología",
       "config": {
         "nombre": "Licenciatura en Ciencias Forenses: Criminalística y Criminología",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Jurídicas y Sociales"],
-        "campus": ["Américas", "Campus Washington", "Río Nilo", "Zapopan", "Lázaro Cárdenas", "Tlajomulco"],
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Jurídicas y Sociales"
+        ],
+        "campus": [
+          "Américas",
+          "Campus Washington",
+          "Río Nilo",
+          "Zapopan",
+          "Lázaro Cárdenas",
+          "Tlajomulco"
+        ],
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_ciencias_forenses_desk_526034da82.jpg",
           "alt": "licenciatura"
@@ -573,9 +843,15 @@
       "title": "Licenciatura en Ingeniería en Creación y Desarrollo de Software y Aplicaciones",
       "config": {
         "nombre": "Licenciatura en Ingeniería en Creación y Desarrollo de Software y Aplicaciones",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Ingenierías y Tecnología"],
-        "campus": ["Olímpica"],
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Ingenierías y Tecnología"
+        ],
+        "campus": [
+          "Olímpica"
+        ],
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_creacion_desarrollo_software_aplicaciones_desk_d945aa976d.jpg",
           "alt": "licenciatura"
@@ -587,9 +863,20 @@
       "title": "Licenciatura en Pedagogía",
       "config": {
         "nombre": "Licenciatura en Pedagogía",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Jurídicas y Sociales"],
-        "campus": ["Américas", "Campus Washington", "Río Nilo", "Zapopan", "Lázaro Cárdenas", "Pedro Moreno"],
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Jurídicas y Sociales"
+        ],
+        "campus": [
+          "Américas",
+          "Campus Washington",
+          "Río Nilo",
+          "Zapopan",
+          "Lázaro Cárdenas",
+          "Pedro Moreno"
+        ],
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_educacion_pedagogia_desk_0a20a6cedf.jpg",
           "alt": "licenciatura"
@@ -601,15 +888,43 @@
       "title": "Licenciatura en Creación y Desarrollo de Empresas y Negocios",
       "config": {
         "nombre": "Licenciatura en Creación y Desarrollo de Empresas y Negocios",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Negocios y Empresariales"],
-        "campus": ["Américas", "Campus Washington", "Zapopan"],
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Negocios y Empresariales"
+        ],
+        "campus": [
+          "Américas",
+          "Campus Washington",
+          "Zapopan"
+        ],
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_creacion_desarrollo_empresa_negocios_desk_47bb112143.jpg",
           "alt": "licenciatura"
         }
       },
       "route": "creacion-desarrollo-empresas-negocios"
+    },
+    {
+      "title": "Licenciatura en Químico Farmaceutico Biólogo con Certificación en Inglés Proulex",
+      "config": {
+        "nombre": "Licenciatura en Químico Farmaceutico Biólogo con Certificación en Inglés Proulex",
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Salud"
+        ],
+        "campus": [
+          "Campus Washington"
+        ],
+        "image": {
+          "src": "https://drive.google.com/uc?export=view&id=1dImSOs33oDQJZD84IXf5IrfZ9XNHYlF5",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "quimico-farmaceutico-biologo-proulex"
     }
   ]
 }

@@ -1,6 +1,17 @@
 import { useState } from "react"
 import axios from "axios"
 
+const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
+
+const CAMPUS_LIST: {[key: string]: Array<string>} = {
+  "UANE": ["MATAMOROS", "PIEDRAS NEGRAS", "SABINAS", "REYNOSA", "MONTERREY", "SALTILLO", "TORREÓN", "TORREÓN", "MONCLOVA"],
+  "UTEG": ["RIO NILO", "LAZARO CARDENAS", "OLIMPICA", "AMERICAS", "CAMPUS", "CAMPUS ZAPOPAN", "TLAJOMULCO", "PEDRO MORENO"]
+}
+
+const getCampusList = (businessUnit: string) => {
+  return CAMPUS_LIST[businessUnit] || [];
+}
+
 export const getEducativeOffer = () => {
   const [ isLoading, setIsLoading ] = useState<boolean>(false);
   const [ isError, setIsError ] = useState<boolean>(false);
@@ -9,14 +20,13 @@ export const getEducativeOffer = () => {
   const [ _, setAllPrograms ] = useState<Array<any>>([]);
   const [ sourceData, setSourceData ] = useState<any>({});
 
-  const fetchData= async (domain: string, modalidad: string, linea: string, Authorization: string) => {
-
-    const params = `linea=${linea}`;
+  const fetchData = async (url: string, modalidad: string, linea: string, Authorization: string) => {
 
     setIsLoading(true);
     setIsError(false);
+    
     await axios.get(
-      `${domain}`, {
+      `${url}`, {
         params: {
           linea
         },
@@ -32,18 +42,23 @@ export const getEducativeOffer = () => {
         if(!!programs && !!programs.length) {
           setAllPrograms([ ...programs ])
           switch(modalidad) {
-            case 'Presencial':
+            case 'Presencial': {
               dataPrograms = programs.reduce((prev: any, item: any) => item.modalidad === "Presencial" ? [...prev, item] : [...prev], [])
               break;
-            case 'Online':
-              dataPrograms = programs.reduce((prev: any, item: any) => (item.lineaNegocio === 'UANE' && item.modalidad === "Online") || (item.lineaNegocio === "ULA" && (item.nombreCampus === 'UANE ONLINE' && item.modalidad === "Online")) ? [...prev, item] : [...prev], [])
+            }
+            case 'Online': {
+              dataPrograms = programs.reduce((prev: any, item: any) => (item.lineaNegocio === process.env.NEXT_PUBLIC_LINEA && item.modalidad === "Online") || (item.lineaNegocio === "ULA" && (item.nombreCampus === `${process.env.NEXT_PUBLIC_LINEA} ONLINE` && item.modalidad === "Online")) ? [...prev, item] : [...prev], [])
               break;
-            case 'Flex':
-              dataPrograms = programs.reduce((prev: any, item: any) => item.lineaNegocio === "ULA" && item.modalidad === 'Online' && ['MONTERREY','SALTILLO','PIEDRAS NEGRAS','MATAMOROS','TORREÓN','REYNOSA','SABINAS'].includes(item.nombreCampus) ? [...prev, item] : [...prev], [])
+            }
+            case 'Flex': {
+              const campusList = getCampusList(businessUnit);
+              dataPrograms = programs.reduce((prev: any, item: any) => item.lineaNegocio === "ULA" && item.modalidad === 'Online' && campusList?.includes(item.nombreCampus) ? [...prev, item] : [...prev], [])
               break;
-            default:
+            }
+            default: {
               dataPrograms = [ ...programs ]
               break;
+            }
           }
           setFilterPrograms([ ...dataPrograms ]);
           const exists = dataPrograms.reduce((prev: any, curr: any) => {
@@ -92,9 +107,14 @@ export const getEducativeOffer = () => {
     return selectCampus;
   }
 
-  const getDataByProgramEC = (program: string ) => {
-    const programInfo = filterPrograms.filter((item: any) => item.nombrePrograma === program)[0]
-    return { ...programInfo }
+  const getDataByProgramEC = (program: string, campusId?: string ) => {
+    if(campusId) {
+      const programInfo = filterPrograms.find((item: any) => item.nombrePrograma === program && item.idCampus === campusId);
+      return { ...programInfo }
+    } else {
+      const programInfo = filterPrograms.filter((item: any) => item.nombrePrograma === program)[0];
+      return { ...programInfo }
+    }
   }
 
   return {
