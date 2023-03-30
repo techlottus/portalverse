@@ -177,7 +177,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
       >
       <span aria-label="prev" onClick={handlerClickControl} className="material-icons ml-2">arrow_back_ios</span>
     </div>
-    <section style={{ "height": data.height }} className={cn("w-full flex overflow-hidden w-p:hidden")}>
+    <section className="w-full flex overflow-hidden w-p:hidden aspect-2/1">
       {
         slides.map((item: any, i: number) => {
           const textPositionClasses = cn({
