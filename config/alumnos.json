@@ -11,7 +11,7 @@
     },
     "accesos": [
       { 
-        "image": "https://drive.google.com/uc?export=view&id=1HOvM3MWyIvJ2yYlIOxok2bVAsJdN6B2h",
+        "image": "https://assets.staging.bedu.org/UTEG/alumnos_card_acceso_SIAAF_f52aea068a.jpg",
         "subtitle": "",
         "title": "SIAAF",
         "text": "Consulta tus materias, tu kárdex, genera constancias, realiza tus pagos y regístrate a eventos de la universidad.",
@@ -35,7 +35,7 @@
         "redirect": "https://www.uteg.edu.mx/colaboradores-uteg/bienvenidos-a-siaaf/"
       },
       { 
-        "image": "https://drive.google.com/uc?export=view&id=1CbKHgq-IvYRyuLkNrf5mGiP4XX-_wNBn",
+        "image": "https://assets.staging.bedu.org/UTEG/alumnos_card_acceso_talento_0335f9c618.jpg",
         "subtitle": "",
         "title": "Alumnos Talento",
         "text": "Impulsa tu perfil como profesional, investigador o emprendedor con los beneficios del Programa de Excelencia Académica.",
@@ -60,7 +60,7 @@
         "redirect": "https://portal.uteg.edu.mx/Alumnos/"
       },
       { 
-        "image": "https://drive.google.com/uc?export=view&id=1Atl39xX8nqrV0_Nz8U0whJuqLcRUgTB-",
+        "image": "https://assets.staging.bedu.org/UTEG/alumnos_card_acceso_idiomas_7cb52d15e7.jpg",
         "subtitle": "",
         "title": "Programa Institucional de Idiomas ",
         "text": "Conviértete en un profesional bilingüe gracias al Programa Institucional de Idiomas. Beneficio que incluye la capacitación extensiva en tecnologías de la información.  ",
@@ -88,9 +88,9 @@
     "calendario": {
       "banner": {
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1ij0qE9gN8VadcTcssh0z5bZgbZl-PTxH",
-          "mobile": "https://drive.google.com/uc?export=view&id=1YDOZbCo29i56PLD1oBx4g-nRA1_7AcoP",
-          "tablet": "https://drive.google.com/uc?export=view&id=1NXA64gmTTsaUDVCNgDpsHeYvqBvlmaKH"
+          "desktop": "https://assets.staging.bedu.org/UTEG/alumnos_banner_calendario_desktop_12381bb355.jpg",
+          "mobile": "https://assets.staging.bedu.org/UTEG/alumnos_banner_calendario_movil_bfb1ecc26a.jpg",
+          "tablet": "https://assets.staging.bedu.org/UTEG/alumnos_banner_calendario_tablet_d061d72f0a.jpg"
         },
         "font": "",
         "title": "Calendario escolar",
@@ -124,32 +124,32 @@
         "description": "Todos los que integramos la universidad estamos para atenderte y escucharte, contacta con cualquier área de la universidad.",
         "contacts": [
           {
-            "image": "https://drive.google.com/uc?export=view&id=1vjPSksuEKyP2Ivmts-X79vjtJPDoHGsr",
+            "image": "https://assets.staging.bedu.org/UTEG/alumnos_servicios_escolares_f790a4be49.jpg",
             "name": "Servicios escolares",
             "email": "servicios.campus@uteg.edu.mx"
           },
           {
-            "image": "https://drive.google.com/uc?export=view&id=1xTYbUu0xVR8hEP8_LqIZAMA8hIsLOBqr",
+            "image": "https://assets.staging.bedu.org/UTEG/alumnos_beneficios_bd5eaf24b1.jpg",
             "name": "Beneficios",
             "link": "https://sites.google.com/a/uteg.edu.mx/prestaciones-y-beneficios-uteg/"
           },
           {
-            "image": "https://drive.google.com/uc?export=view&id=1jDTNiOjtj_baPk71t_CbmXpSUcjMwHWX",
+            "image": "https://assets.staging.bedu.org/UTEG/alumnos_reglamento_233b4c60e1.jpg",
             "name": "Reglamento y Artículos UTEG",
             "link": "https://www.uteg.edu.mx/alumnos/reglamento-y-articulos-uteg/"
           },
           {
-            "image": "https://drive.google.com/uc?export=view&id=1CIxgErqYQvPo0rNgGrBL65ARAs2zFuNT",
+            "image": "https://assets.staging.bedu.org/UTEG/alumnos_biblioteca_virtual_197e8b5e37.jpg",
             "name": "Biblioteca virtual eLibro",
             "email": "ayudaerecursos@uteg.edu.mx"
           },
           {
-            "image": "https://drive.google.com/uc?export=view&id=1rAPcko_r5CAd3Rkoq7XPEdbAfRFrOa_J",
+            "image": "https://assets.staging.bedu.org/UTEG/alumnos_biblioteca_135ac738d9.jpg",
             "name": "Biblioteca",
             "email": "biblioteca.uteg@uteg.edu.mx"
           },
           {
-            "image": "https://drive.google.com/uc?export=view&id=17rPPChUw1yMR2yE8LvqbGbTtIQhIc8yp",
+            "image": "https://assets.staging.bedu.org/UTEG/alumnos_soporte_tecnico_68c40cf062.jpg",
             "name": "Soporte técnico",
             "email": "ticket@uteg.edu.mx"
           }
