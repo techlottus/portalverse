@@ -175,7 +175,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
           , stylesBaseControls
         )}
       >
-      <span aria-label="prev" onClick={handlerClickControl} className="material-icons ml-2">arrow_back_ios</span>
+      <span className="material-icons ml-2 pointer-events-none">arrow_back_ios</span>
     </div>
     <section className="w-full flex overflow-hidden w-p:hidden aspect-2/1">
       {
@@ -256,7 +256,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
           { "bg-white/50 cursor-pointer": countItems > 1 }, stylesBaseControls
         )}
       >
-      <span aria-label="next" onClick={handlerClickControl} className="material-icons ml-0.5">arrow_forward_ios</span>
+      <span className="material-icons ml-0.5 pointer-events-none">arrow_forward_ios</span>
     </div>
     {/* desktop */}
 
