@@ -9,6 +9,8 @@ export const RegisterBeWantedAccount = () => {
 
   const registerAccount = async (data: any, Authorization: string) => {
 
+    console.log("inside registerAccount, Authorization", Authorization);
+
     setIsLoading(true);
     setIsError(false);
     setIsSuccess(null);
