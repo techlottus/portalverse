@@ -85,4 +85,4 @@ const BeWanted: FC<any> = ({ classNames, copies, pathThankyou, pathBeWanted }: a
   )
 }
 
-export default BeWanted
+export default BeWanted;
