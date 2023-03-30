@@ -11,7 +11,6 @@ import { saveDataForms } from "@/utils/saveDataForms"
 import Image from "@/old-components/Image"
 import Button from "@/old-components/Button/Button"
 import { ButtonInit } from "@/old-components/fixture"
-import NextImage from "next/image"
 
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
 
@@ -244,21 +243,44 @@ const OpenForm: FC<any> = ({ classNames, image, pathThankyou, controls, data, cu
               />
             </div>
           : <>
-              {
-                step === 1
-                  ? <StepOne data={data} step={30} image={image} onNext={(info: any) => handleNextStep(info, 1)} />
-                  : null 
-              }
-              {
-                step === 2
-                  ? <StepTwo campus={filteredCampus} programs={filteredPrograms} onChangeProgram={(program: string) => {handleProgramSelected(program)}} onLevelSelected={(level: string) => handleLevelSelected(level)} onChangeModality={(modality: string) => handleFetchEducativeOffer(modality)} modality={infoForm.step1.modality} levels={levelsOffer} step={60} onNext={(info: any) => handleNextStep(info, 2)} controls={{...controlsConfig}} />
-                  : null
-              }
-              {
-                step === 3
-                  ? <StepThree onReturnStep={(step: number) => handleReturnedStep(step)} contacts={contacts} schedulers={schedulers} onNext={(info: any) => handleNextStep(info, 3)} step={90} data={{ modality: infoForm.step2.modality, program: infoForm.step2.nameProgram, level: infoForm.step2.level, campus: infoForm.step2.nombreCampus }} />
-                  : null
-              }
+              <StepOne
+                data={data}
+                step={30}
+                classNames={cn({ hidden: step !== 1 })}
+                image={image}
+                onNext={(info: any) => handleNextStep(info, 1)}
+              />
+              <StepTwo
+                campus={filteredCampus}
+                programs={filteredPrograms}
+                onChangeProgram={(program: string) =>
+                  handleProgramSelected(program)
+                }
+                onLevelSelected={(level: string) => handleLevelSelected(level)}
+                onChangeModality={(modality: string) =>
+                  handleFetchEducativeOffer(modality)
+                }
+                modality={infoForm.step1.modality}
+                levels={levelsOffer}
+                step={60}
+                classNames={cn({ hidden: step !== 2 })}
+                onNext={(info: any) => handleNextStep(info, 2)}
+                controls={{ ...controlsConfig }}
+              />
+              <StepThree
+                onReturnStep={(step: number) => handleReturnedStep(step)}
+                contacts={contacts}
+                schedulers={schedulers}
+                onNext={(info: any) => handleNextStep(info, 3)}
+                step={90}
+                data={{
+                  modality: infoForm.step2.modality,
+                  program: infoForm.step2.nameProgram,
+                  level: infoForm.step2.level,
+                  campus: infoForm.step2.nombreCampus,
+                }}
+                classNames={cn({ hidden: step !== 3 })}
+              />
             </>
       }
     </section>
