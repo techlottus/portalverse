@@ -10,9 +10,9 @@
         "title": "Egresados", 
         "subtitle": "", 
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1mX_CMUkHNyCD8ZpvMr8iqycMVAjAeWLm",
-          "tablet": "https://drive.google.com/uc?export=view&id=1DUA0wx_NhFbjzFcUw_EPniiyB0sZ0Sz6",
-          "mobile": "https://drive.google.com/uc?export=view&id=1scwRVKauolFHQdF0AVY7r74jh5D3HbGU"
+          "desktop": "https://assets.staging.bedu.org/UTEG/egresados_banner_cf6855c9f9.jpg",
+          "tablet": "https://assets.staging.bedu.org/UTEG/egresados_banner_tablet_f68c2936b9.jpg",
+          "mobile": "https://assets.staging.bedu.org/UTEG/egresados_banner_movil_697fb70c06.jpg"
         },
         "statics": [
           {"maxNumber": 45000, "icon": "", "prefix": "+", "suffix": "", "title": "egresados", "body": "", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false}
@@ -45,9 +45,9 @@
     },
     "bannerEmpleabilidad": {
       "image": {
-        "desktop": "https://drive.google.com/uc?export=view&id=1bNv5NTodzNDqoSfcbfRWAlL-TT3mvldx",
-        "mobile": "https://drive.google.com/uc?export=view&id=1zgmgff6PICikLtNeF4q9pK3bN8F5qtyz",
-        "tablet": "https://drive.google.com/uc?export=view&id=1SEiRubYQbQjP9_ATrAXus_rXN-pV1YOQ"
+        "desktop": "https://assets.staging.bedu.org/UTEG/egresados_banner_empleabilidad_desktop_65e5817571.jpg",
+        "mobile": "https://assets.staging.bedu.org/UTEG/egresados_banner_empleabilidad_movil_9599773752.jpg",
+        "tablet": "https://assets.staging.bedu.org/UTEG/egresados_banner_empleabilidad_tablet_c2cec69a6e.jpg"
       },
       "font": "light",
       "title": "Bolsa de Talento en UTEG",
@@ -73,9 +73,9 @@
     },
     "bannerOfertaEducativa": {
       "image": {
-        "desktop": "https://drive.google.com/uc?export=view&id=1xkpWYmn19vhlaB0Uk-vZjFludsS-7uKy",
-        "mobile": "https://drive.google.com/uc?export=view&id=1Zg53Z3HPy6UG6aEEBQXkp0uiAxOvjj32",
-        "tablet": "https://drive.google.com/uc?export=view&id=11zZ7bRXcghZ4cP7FiESk_2k6PE6ExndM"
+        "desktop": "https://assets.staging.bedu.org/UTEG/egresados_banner_oferta_desktop_0bb3ebe00e.jpg",
+        "mobile": "https://assets.staging.bedu.org/UTEG/egresados_banner_oferta_egresados_movil_36b68186e1.jpg",
+        "tablet": "https://assets.staging.bedu.org/UTEG/egresados_banner_oferta_tablet_8a07bcbf86.jpg"
       },
       "font": "light",
       "title": "Oferta educativa de egresados",
@@ -131,9 +131,9 @@
     },
     "bannerTramites": {
       "image": {
-        "desktop": "https://drive.google.com/uc?export=view&id=1H7rPeyyK9CYCUj_wOMqo_c8BdP2W0gXR",
-        "mobile": "https://drive.google.com/uc?export=view&id=1G3kq4BvWEUaTCBU_3HYt8J256ibHVYg7",
-        "tablet": "https://drive.google.com/uc?export=view&id=1JR2HP7tVP1cOiwBczzUP43oPOEo85zUV"
+        "desktop": "https://assets.staging.bedu.org/UTEG/egresados_banner_tramites_desktop_80f1f1cf1d.jpg",
+        "mobile": "https://assets.staging.bedu.org/UTEG/egresados_banner_tramites_egresados_movil_b1e29c71e4.jpg",
+        "tablet": "https://assets.staging.bedu.org/UTEG/egresados_banner_tramites_tablet_5fd7fe933b.jpg"
       },
       "font": "light",
       "title": "Trámites",
@@ -161,7 +161,7 @@
       "title": "Noticias",
       "news": [
         { 
-          "urlImage": "https://drive.google.com/uc?export=view&id=1GZe0cF2cqYPjG3mbisheqmxrnfZLLab_",
+          "urlImage": "https://assets.staging.bedu.org/UTEG/egresados_noticias_tomas_moro_desktop_2874248421.jpg",
           "subtitle": "ACADEMIA ",
           "title": "Firman Lottus Education y el Centro Tomás Moro convenio de colaboraión. ",
           "text": "El objetivo de este entendimiento es establecer una relación cooperativa en las áreas de docencia, investigación y extensión universitaria con proyectos educativos, profesionales e interculturales que beneficiarán a estudiantes, profesores y personal administrativo de las tres instituciones.",
@@ -193,7 +193,7 @@
           "wrapper": true
         },
         { 
-          "urlImage": "https://drive.google.com/uc?export=view&id=1OWLENlrIvWXTeOS-xeS4jXORNWzewW7o",
+          "urlImage": "https://assets.staging.bedu.org/UTEG/egresados_noticias_desktop_fea45cc4c9.jpg",
           "subtitle": "ACADEMIA ",
           "title": "UTEG online: estudiar desde cualquier lugar del mundo. ",
           "text": "El Centro Universitario UTEG extiende las opciones de la modalidad online a dieciséis licenciaturas y un posgrado: la Maestría en Educación. Propuestas educativas enfocadas a formar a un profesional capaz de insertarse en un mercado laboral en constante transformación.",
@@ -229,8 +229,8 @@
     "dudas": {
       "banner":{
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1TqQd7gLfob2cpeGnOA4T6yYOAEfGhyH9",
-          "mobile": "https://drive.google.com/uc?export=view&id=1hQwtvGAG1CMOn9_lLolpLMv-FMM3s5Ya"
+          "desktop": "https://assets.staging.bedu.org/UTEG/egresados_banner_dudas_tablet_03e5ceffb7.jpg",
+          "mobile": "https://assets.staging.bedu.org/UTEG/egresados_banner_dudas_MOVIL_c9f92fa9f9.jpg"
         },
         "font": "light",
         "title": "¿Tienes dudas? Contáctanos",
