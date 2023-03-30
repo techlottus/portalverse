@@ -95,12 +95,8 @@
             "redirectLabel": "Descargas:",
             "redirects": [
               {
-                "label": "Programa Extraordinario de Becas",
+                "label": "Programa Extraordinario de Becas Institucionales para el Estudio Centro Universitario UTEG",
                 "link": "https://drive.google.com/uc?export=view&id=1CbP7zoqc6Wf4yQ5QyGvr1qg5GQpdaIl2"
-              },
-              {
-                "label": "Institucionales para el Estudio Centro Universitario UTEG",
-                "link": ""
               }
             ]
           }
@@ -274,6 +270,46 @@
           }
         },
         {
+          "text": "Convocatoria Beca SICYT Licenciaturas / Posgrados",
+          "icon": "arrow_forward",
+          "height": "128px",
+          "enable": true,
+          "nobackground": true,
+          "isShadowColor": true,
+          "shadowColor": "#4470B1",
+          "content": {
+            "title": {
+              "title": "Convocatoria Beca SICYT Licenciaturas / Posgrados"
+            },
+            "description": {
+              "content": "<b>Convocatoria Beca SICYT Licenciaturas / Posgrados</b>\n\nEl Centro Universitario UTEG convoca a toda la comunidad Estudiantil de las Licenciaturas / Posgrados con incorporación SICYT a que participe o realice el trámite de renovación de Beca SICYT.\n\nConsulta aquí la convocatoria para trámite o renovación de Beca SICYT.\n\nLa entrega de documentos se realizará en el Portal de Alumno, menú de Finanzas opción Becas."
+            },
+            "redirectLabel": "Descargas:",
+            "redirects": [
+              {
+                "label": "Convocatoria Beca SICYT",
+                "link": "https://drive.google.com/uc?export=view&id=1wXEBh_rYScLNCxH_G0gkuW5YB844i35J"
+              },
+              {
+                "label": "Carta compromiso",
+                "link": "https://drive.google.com/uc?export=view&id=1t6y78b6-HiAa57vdzqSwtHCGPgN--ubQ"
+              },
+              {
+                "label": "Solicitud de beca Nueva y Refrendo",
+                "link": "https://drive.google.com/uc?export=view&id=1vykHBHeyq5MT8EZfnO6nNI2oFq5jM4AQ"
+              },
+              {
+                "label": "Formato de información socieconómica",
+                "link": "https://drive.google.com/uc?export=view&id=15JK9fbgR7UNWLgahi5yCqXVvDxQOEuiY"
+              },
+              {
+                "label": "Manual trámite de beca",
+                "link": "https://drive.google.com/uc?export=view&id=14MCCuO1MULNaOKqh3mMAkYayn7O9eqcl"
+              }
+            ]
+          }
+        },
+        {
           "text": "Beca SEJ BIS",
           "icon": "arrow_forward",
           "height": "100px",
@@ -301,65 +337,6 @@
               {
                 "label": "Estudio socioeconómico",
                 "link": "https://drive.google.com/uc?export=view&id=1cSxwh2Y9N-V-K0aRNF-D92kCrS7QaNHG"
-              }
-            ]
-          }
-        },
-        {
-          "text": "Convocatoria Beca SEJ-SICYT Licenciaturas / Posgrados",
-          "icon": "arrow_forward",
-          "height": "100px",
-          "enable": true,
-          "nobackground": true,
-          "isShadowColor": true,
-          "shadowColor": "#1B2D68",
-          "content": {
-            "title": {
-              "title": "Convocatoria Beca SEJ-SICYT Licenciaturas / Posgrados"
-            },
-            "description": {
-              "content": ""
-            },
-            "redirectLabel": "",
-            "redirects": []
-          }
-        },
-        {
-          "text": "Convocatoria Beca SICYT Licenciaturas / Posgrados",
-          "icon": "arrow_forward",
-          "height": "128px",
-          "enable": true,
-          "nobackground": true,
-          "isShadowColor": true,
-          "shadowColor": "#4470B1",
-          "content": {
-            "title": {
-              "title": "Convocatoria Beca SICYT Licenciaturas / Posgrados"
-            },
-            "description": {
-              "content": "<b>Convocatoria Beca SICYT Licenciaturas / Posgrados</b>\n\nEl Centro Universitario UTEG convoca a toda la comunidad Estudiantil de las Licenciaturas / Posgrados con incorporación SICYT a que participe o realice el trámite de renovación de Beca SICYT.\n\nConsulta aquí la convocatoria para trámite o renovación de Beca SICYT.\n\nLa entrega de documentos se realizará en el Portal de Alumno, menú de Finanzas opción Becas."
-            },
-            "redirectLabel": "Descargas:",
-            "redirects": [
-              {
-                "label": "Convocatoria Beca SICYT",
-                "link": ""
-              },
-              {
-                "label": "Carta compromiso",
-                "link": ""
-              },
-              {
-                "label": "Solicitud de beca Nueva y Refrendo",
-                "link": ""
-              },
-              {
-                "label": "Formato de información socieconómica",
-                "link": ""
-              },
-              {
-                "label": "Manual trámite de beca",
-                "link": ""
               }
             ]
           }

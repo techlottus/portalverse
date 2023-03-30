@@ -13,7 +13,7 @@
         "campus": [],
         "nivel": ["Posgrado"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=10Lv90xwTIYqurq23gQH3RVXeK5Svm_ES",
+          "src": "https://assets.staging.bedu.org/UTEG/oferta_card_educacion_2eedee0c1d.jpg",
           "alt": "maestria"
         },
         "curriculum": {
@@ -26,7 +26,7 @@
         "title": "Maestría en Educación",
         "description": "Aplica tus conocimientos formativos y desarrolla proyectos orientados a revolucionar la industria de la educación a través de las tendencias y modalidades vanguardistas. Mejora el sistema educativo de tu país desde el sector público o privado. Dirige dependencias relacionadas con la educación o instituciones educativas con una perspectiva de mejora continua.",
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=10Lv90xwTIYqurq23gQH3RVXeK5Svm_ES",
+          "src": "https://assets.staging.bedu.org/UTEG/oferta_card_educacion_2eedee0c1d.jpg",
           "alt": "maestria"
         }
       },
@@ -40,8 +40,8 @@
                 "cards": [
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1evRDmArAV5DLLoIN0YQay-rc_YghOakJ",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1evRDmArAV5DLLoIN0YQay-rc_YghOakJ"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/oferta_perfil_ingreso_cd151fd87d.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/oferta_perfil_ingreso_cd151fd87d.png"
                     },
                     "title": "Perfil de ingreso",
                     "text": "El aspirante a la Maestría en Educación deberá desenvolverse profesionalmente en el ámbito educativo, de preferencia como docente o directivo, para aplicar sus conocimientos en su ejercicio profesional. Estar abierto al cambio y a las nuevas propuestas y generación de las mismas que sí revolucionen el nivel educativo de la sociedad. Estar comprometido con una de las asignaturas pendientes más importantes de México en la actualidad.",
@@ -49,8 +49,8 @@
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1iemzpeGBJ6WcMyBTfFhMclNHU0xiyX03",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1iemzpeGBJ6WcMyBTfFhMclNHU0xiyX03"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/oferta_perfil_egreso_9efedde160.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/oferta_perfil_egreso_9efedde160.png"
                     },
                     "title": "Perfil de egreso",
                     "text": "Con la Maestría en Educación serás capaz de aplicar tus conocimientos de procesos educativos para desarrollar proyectos orientados a resolver problemáticas de contexto; mediante la inteligencia emocional y el liderazgo. Poseerás sensibilidad para la detección de áreas de oportunidad en el sistema educativo, así como detectar logros para replicar métodos de trabajo en diversas instituciones educativas o como propuesta para un cambio integral en la educación de México.",
@@ -58,8 +58,8 @@
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1iUw_Me9RaeUp-onOlNWF_uDwKPc683Ma",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1iUw_Me9RaeUp-onOlNWF_uDwKPc683Ma"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/oferta_campo_laboral_9c7f94c46b.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/oferta_campo_laboral_9c7f94c46b.png"
                     },
                     "title": "Campo Laboral",
                     "text": "Los egresados de la Maestría en Educación serán profesionales con competencias educativas con preparación teórica y metodológica sólida, capaces de desarrollar propuestas y soluciones viables e innovadoras a los problemas educativos que enfrentan las instituciones. \n\n Por lo tanto podrán desenvolverse en el sector público o privado a través de las escuelas públicas o particulares y como funcionario en dependencias relacionadas con la educación y cultura.",
@@ -67,8 +67,8 @@
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1EqRAwPumEIMpZ6c_NNacezmBbTo87STw",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1EqRAwPumEIMpZ6c_NNacezmBbTo87STw"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/oferta_requisitos_admision_ce1636dc61.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/oferta_requisitos_admision_ce1636dc61.png"
                     },
                     "title": "Requisitos de admisión",
                     "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• Ine\n\n• Comprobante de domicilio\n\n• Título",

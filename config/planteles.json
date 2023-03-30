@@ -9,7 +9,7 @@
       {
         "images": [
           {
-            "src": "https://drive.google.com/uc?export=view&id=1_gqM74MVuxMHY2vYqlGXoATnaXBiYljJ",
+            "src": "https://assets.staging.bedu.org/UTEG/nosotros_planteles_campus_desk_d2d8935bc5.jpg",
             "alt": "image-1"
           }
         ],
@@ -25,7 +25,7 @@
       {
         "images": [
           {
-            "src": "https://drive.google.com/uc?export=view&id=1hS1T-7w6JeeOXxA1pJ3w0GU1uw2rgry_",
+            "src": "https://assets.staging.bedu.org/UTEG/nosotros_planteles_americas_desk_e6e185c44d.jpg",
             "alt": "image-1"
           }
         ],
@@ -41,7 +41,7 @@
       {
         "images": [
           {
-            "src": "https://drive.google.com/uc?export=view&id=1D_KyNiRA72hFQuQqtdpz8jzNqMuIYrCQ",
+            "src": "https://assets.staging.bedu.org/UTEG/nosotros_planteles_olimpica_desk_5f913cc1b1.jpg",
             "alt": "image-1"
           }
         ],
@@ -57,7 +57,7 @@
       {
         "images": [
           {
-            "src": "https://drive.google.com/uc?export=view&id=1M1OXAcCuNUCNnDr6DBea2EJatMRKhWGX",
+            "src": "https://assets.staging.bedu.org/UTEG/nosotros_planteles_pedro_moreno_desk_19b0bc89a8.jpg",
             "alt": "image-1"
           }
         ],
@@ -73,7 +73,7 @@
       {
         "images": [
           {
-            "src": "https://drive.google.com/uc?export=view&id=1UP4lnNEj_IyBHYf3vJrAEcEDwl3P2Y3o",
+            "src": "https://assets.staging.bedu.org/UTEG/nosotros_planteles_lazaro_cardenas_desk_60bdaa50a2.jpg",
             "alt": "image-1"
           }
         ],
@@ -89,7 +89,7 @@
       {
         "images": [
           {
-            "src": "https://drive.google.com/uc?export=view&id=1Oo0Ro9Ctqi5Ud2Q_17eSTfr9aapfYa0H",
+            "src": "https://assets.staging.bedu.org/UTEG/nosotros_planteles_rio_nilo_desk_ea5e70ddba.jpg",
             "alt": "image-1"
           }
         ],
@@ -105,7 +105,7 @@
       {
         "images": [
           {
-            "src": "https://drive.google.com/uc?export=view&id=1qwMbQFW-9UNz2G7284O1cp7ntW5xG0pl",
+            "src": "https://assets.staging.bedu.org/UTEG/nosotros_planteles_Tlajomulco_desk_0eba17e6cc.jpg",
             "alt": "image-1"
           }
         ],
@@ -121,7 +121,7 @@
       {
         "images": [
           {
-            "src": "https://drive.google.com/uc?export=view&id=1siVJURjybsRyFsS00Jf1ePweurehoeIX",
+            "src": "https://assets.staging.bedu.org/UTEG/nosotros_planteles_zapopan_desk_88d326196f.jpg",
             "alt": "image-1"
           }
         ],
@@ -138,9 +138,9 @@
     "head": {
       "banner": {
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1ci78QhldvqocaIf4RJBJe5lHOBZo1cC9",
-          "tablet": "https://drive.google.com/uc?export=view&id=1YnIE2Z9kKffx97jpxoxeJhDAGWh-V5JA",
-          "mobile": "https://drive.google.com/uc?export=view&id=1fN7r0zEFigErLQpgZBwGn0GYn4l-luJq"
+          "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_planteles_Banner_campus_desk_0abb325f82.jpg",
+          "tablet": "https://assets.staging.bedu.org/UTEG/nosotros_planteles_Banner_campus_tablet_031d4ec726.jpg",
+          "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_planteles_Banner_campus_mobile_d63b662861.jpg"
         },
         "title": "Conoce nuestros planteles",
         "subtitle": "¿Dónde están y cómo se ven tus espacios físicos de aprendizaje?",
@@ -170,9 +170,9 @@
       "subtitle": "internacionalízate agrega experiencias internacionales a tu educación",
       "contentVariant": "light",
       "image": {
-        "desktop":  "https://drive.google.com/uc?export=view&id=1Vi7FMdSqWk_EHFvWZiRF8dG67U-CDPNO",
-        "tablet":  "https://drive.google.com/uc?export=view&id=1HyN3W_v2c-K0dqn7b_INsudUkuv-5zhz",
-        "mobile":  "https://drive.google.com/uc?export=view&id=1RnS27zhUCNTWYpZfYrmYVGtvpfzWRdP6"
+        "desktop":  "https://assets.staging.bedu.org/UTEG/nosotros_planteles_Banner_cita_desk_b034e7462a.jpg",
+        "tablet":  "https://assets.staging.bedu.org/UTEG/nosotros_planteles_Banner_campus_tablet_031d4ec726.jpg",
+        "mobile":  "https://assets.staging.bedu.org/UTEG/nosotros_planteles_Banner_cita_mobile_a3e33bbc47.jpg"
       },
       "email": "egresados@uteg.edu.mx",
       "phone": "5555012672"

@@ -1,32 +1,32 @@
 {
-  "meta":{
-    "title": "Estrategias de Tiendas en Línea",
+  "meta": {
+    "title": "Seminario de Titulación de Gatronomía",
     "description": "",
     "keywords": ""
   },
-  "sections":{
-    "head":{
-      "title": "Estrategias de Tiendas en Línea",
+  "sections": {
+    "head": {
+      "title": "Seminario de Titulación de Gatronomía",
       "image": {
         "alt": "imagen",
-        "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_estrategia_tiendas_linea_desk_143714886c.jpg"
+        "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_titulacion_gastronomia_desk_0cd3277da3.jpg"
       },
-      "description": "Duración aproximada: 15 horas\n\nPerfil del participante: Este curso está dirigido para aquellas personas que tienen interés en realizar negocios en Internet mediante la creación de tiendas en línea.\n\nCarreras afines: Negocios, Mercadotecnia, Comunicación\n\nObjetivo: El participante manejará las tecnologías de información y de la comunicación para el desarrollo de un proyecto de mercadotecnia a través de la Internet y la implementación del comercio electrónico.\n\nTemas a abordar:\n1. Introducción a Tienda en Línea\n2. Comercio Electrónico\n3. Tipos de Comercio Electrónico\n4. Tienda Virtual o Electrónico\n5. Aspectos Legales\n6. Sistemas de Pago en Línea\n7. Protocolos y Certificados de Seguridad\n\nRecursos de aprendizaje:\n1. Vídeos explicativos\n2. Material interactivo\n\nEvaluación: La evaluación se realizará por medio de exámenes. Para acreditar debes tener cuando menos 70 de calificación.\n\n",
-      "price": "$1200.00"
+      "description": "Duración aproximada: 50 horas\n\nPerfil del participante: Dirigido a egresados de la Licenciatura en Gastronomía que hayan completado su formación académica y opten por esta modalidad de titulación.\n\nCarreras afines: Gastronomía\n\nObjetivo: Desarrollar en el alumno habilidades prácticas y conocimientos teóricos que demuestren las competencias de la profesión en base en los lineamientos establecidos para el grado de Licenciados en Gastronomía.\n\nTemas a abordar: \n\n I. DIRECCIÓN DE EMPRESAS GASTRONOMICAS\n\n II. CONTROL DE COSTOS DE ALIMIENTOS Y BEBIDAS\n\n III. TÉCNICAS CULINARIAS\n\n IV. COCINA FRIA\n\n V. PANADERIA\n\n VI. REPOSTERIA\n\n VII. ESTILISMO DE PLATILLOS\n\n VIII. COCTELERIA\n\n IX. SERVICIO\n\n X. QUIMICA CULINARIA\n\nRecursos de aprendizaje: Presencial\n\nEvaluación: Evaluaciones prácticas al finalizar cada modulo, ya que el 85% es práctico y en el teórico se evalúa con un producto entregable.",
+      "price": "$ 3,850.00"
     },
-    "relatedCourses":{
+    "relatedCourses": {
       "title": "Cursos relacionados",
       "courses": [
         {
           "id": "123",
           "title": "Análisis de datos",
-          "link":{
+          "link": {
             "text": "Ver más",
             "size": "large",
             "isBold": false,
             "disabled": false,
-            "id":"",
-            "icon":"arrow_forward"
+            "id": "",
+            "icon": "arrow_forward"
           },
           "image": {
             "desk": {
@@ -43,13 +43,13 @@
         {
           "id": "123",
           "title": "Derecho de Autor y Propiedad Intelectual",
-          "link":{
+          "link": {
             "text": "Ver más",
             "size": "large",
             "isBold": false,
             "disabled": false,
-            "id":"",
-            "icon":""
+            "id": "",
+            "icon": ""
           },
           "image": {
             "desk": {
@@ -66,13 +66,13 @@
         {
           "id": "123",
           "title": "Estrategias de tiendas en línea",
-          "link":{
+          "link": {
             "text": "Ver más",
             "size": "large",
             "isBold": false,
             "disabled": false,
-            "id":"",
-            "icon":""
+            "id": "",
+            "icon": ""
           },
           "image": {
             "desk": {
@@ -89,13 +89,13 @@
         {
           "id": "123",
           "title": "Mega tendencias Globales",
-          "link":{
+          "link": {
             "text": "Ver más",
             "size": "large",
             "isBold": false,
             "disabled": false,
-            "id":"",
-            "icon":""
+            "id": "",
+            "icon": ""
           },
           "image": {
             "desk": {

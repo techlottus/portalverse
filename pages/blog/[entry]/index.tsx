@@ -1,17 +1,16 @@
-import Head from "next/head"
-import { useRouter } from "next/router"
-import { env } from "process"
-import HeaderFooterLayout from "@/layouts/HeaderFooter.layout"
-import NextPageWithLayout from "@/types/Layout.types"
-import { getDataPageFromJSON } from "@/utils/getDataPage"
-import  { fetchStrapi, replaceURL }  from "@/utils/getStrapi"
-import ContentLayout from "@/layouts/Content.layout"
-import Image from "@/old-components/Image"
-import CardWebsite from "@/old-components/CardWebsite"
-import Button from "@/old-components/Button/Button"
-import Banner from "@/old-components/Banner"
-import BannerWrapper from "@/old-components/BannerWrapper"
-import Editor from "@/old-components/Editor"
+import Head from "next/head";
+import { useRouter } from "next/router";
+import HeaderFooterLayout from "@/layouts/HeaderFooter.layout";
+import NextPageWithLayout from "@/types/Layout.types";
+import { getDataPageFromJSON } from "@/utils/getDataPage";
+import  { fetchStrapi, replaceURL }  from "@/utils/getStrapi";
+import ContentLayout from "@/layouts/Content.layout";
+import Image from "@/old-components/Image";
+import CardWebsite from "@/old-components/CardWebsite";
+import Button from "@/old-components/Button/Button";
+import Banner from "@/old-components/Banner";
+import BannerWrapper from "@/old-components/BannerWrapper";
+import Editor from "@/old-components/Editor";
 
 
 const EntryBlogDetail: NextPageWithLayout = ({ blog_post, banners, related_post_title, blog_section }: any) => {
@@ -63,20 +62,20 @@ const EntryBlogDetail: NextPageWithLayout = ({ blog_post, banners, related_post_
             <Button dark data={blog_section} onClick={()=>{router.push(blog_section.redirect)}}/>
           </div>
         </div>
-        {/* <div className="col-span-4 w-t:hidden w-p:hidden w-d:grid-cols-1">
+        <div className="col-span-4 w-t:hidden w-p:hidden w-d:grid-cols-1">
           {
            banners.map((item:any, i:number) => <section className="mb-6" key={`section-blog-${i}`}>
             <BannerWrapper data={item} typeBanner={item.type} banner={item} font={item.font} onBtn={() => router.push(item.redirect)}/>
            </section>)
           }
-        </div> */}
-        {/* <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-2 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 w-d:hidden">
+        </div>
+        <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-2 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 w-d:hidden">
           {
            banners.map((item:any, i:number) => <section key={`section-blog-${i}`}>
             <Banner data={item} onBtn={() => router.push(item.redirect)}/>
            </section>)
           }
-        </section> */}
+        </section>
       </ContentLayout>
     </HeaderFooterLayout>
   </>
