@@ -1,5 +1,5 @@
 {
-  "meta":{
+  "meta": {
     "title": "Vida Estudiantil",
     "description": "",
     "keywords": ""
@@ -12,11 +12,11 @@
       "image": {
         "desk": {
           "alt": "imagen",
-          "src": "https://drive.google.com/uc?export=view&id=1MYgJ_jcFJz_82klNi-gD5twGumMgvciG"
+          "src": "https://assets.staging.bedu.org/UTEG/nosotros_vida_estudiantil_foto_vida_estudiantil_desk_0aa2aee95d.jpg"
         },
         "mobile": {
           "alt": "imagen",
-          "src": "https://drive.google.com/uc?export=view&id=1a__M3KOZT7V_V7pMBTwIEHOBvq3zsON8"
+          "src": "https://assets.staging.bedu.org/UTEG/nosotros_vida_estudiantil_foto_vida_estudiantil_tablet_974f89aaf8.jpg"
         }
       }
     },
@@ -54,12 +54,75 @@
     },
     "lifeUANE": {
       "title": "Vive la experiencia UTEG",
-      "images": {"images": [{"id": "1", "image": "https://drive.google.com/uc?export=view&id=1dYLVnIRsGD9HWfhFLFjhSSHyLPdQkAc7", "icon": "zoom_out_map" }, {"id": "2", "image": "https://drive.google.com/uc?export=view&id=1BmT8r6JN31UKRNOIoWlxkC6ylAabI-Gg", "icon": "zoom_out_map" }, {"id": "3", "image": "https://drive.google.com/uc?export=view&id=1YjHsJH9hbWiQCDKsgNGwi6cDId8ilLcD", "icon": "zoom_out_map"}, {"id": "4", "image": "https://drive.google.com/uc?export=view&id=1N8sYlp4_ZkEICzAxkXh7b_ares41V4zN", "icon": "zoom_out_map"},{"id": "5", "image": "https://drive.google.com/uc?export=view&id=1x14moFIv0DI_PunaO6xJlTrDFkvHcfw0", "icon": "zoom_out_map"}, {"id": "6", "image": "https://drive.google.com/uc?export=view&id=1sRIhitN-GfZlU5WTD9dNUB4AEJ__Txam", "icon": "zoom_out_map" }, {"id": "7", "image": "https://drive.google.com/uc?export=view&id=1RQ1e7j7a8zHXBTEiJU-b-OtK1PH4KrED", "icon": "zoom_out_map"}, {"id": "8", "image": "https://drive.google.com/uc?export=view&id=1-8qllPAPv1qFerbgOpQe1XGlSS5SpI-t", "icon": "zoom_out_map"}, {"id": "9", "image": "https://drive.google.com/uc?export=view&id=1EAQtPL-lzIFUfA9iIdPJ-bKbOFmSLTXk", "icon": "zoom_out_map"}, {"id": "10", "image": "https://drive.google.com/uc?export=view&id=15G9tN02WUPD9Vv8GHX1SSK7f-u_wZ4kR", "icon": "zoom_out_map"}, {"id": "11", "image": "https://drive.google.com/uc?export=view&id=1AvkqkQ5iPkIowS0UZWh4eZYSm21vmQvA", "icon": "zoom_out_map"}, {"id": "12", "image": "https://drive.google.com/uc?export=view&id=1Jz-joCu6ZRnAfXnpZJyWls2IqOdLx4-e", "icon": "zoom_out_map"}]}
+      "images": {
+        "images": [
+          {
+            "id": "1",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_04_99b8d12a55.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "2",
+            "image": "https://assets.staging.bedu.org/UTEG/Mosaico_Experiencia_UTEG_02_3369876e00.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "3",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_02_55a49a0875.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "4",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_02_c18936a680.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "5",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_07_cbdaaa0d92.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "6",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_08_399b9b9e50.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "7",
+            "image": "https://assets.staging.bedu.org/UTEG/Mosaico_Experiencia_UTEG_01_060a1ddcc0.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "8",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_06_8865c6d247.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "9",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_01_c68eb13a8a.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "10",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_03_05f32e415c.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "11",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_05_50d8d3f6a5.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "12",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_01_3cf215909a.jpg",
+            "icon": "zoom_out_map"
+          }
+        ]
+      }
     },
     "lifeUANEarticles": {
       "title": "Artículos sobre la vida estudiantil en UANE",
       "articles": [
-        { 
+        {
           "urlImage": "https://image.shutterstock.com/image-photo/graduates-student-graduation-caps-thrown-260nw-1937758900.jpg",
           "subtitle": "SUBTITULO",
           "title": "Coursera y UANE se unen para ti",
@@ -92,7 +155,7 @@
           "wrapper": true,
           "redirect": "/convocatoria-investigacion-1"
         },
-        { 
+        {
           "urlImage": "https://image.shutterstock.com/image-photo/graduates-student-graduation-caps-thrown-260nw-1937758900.jpg",
           "subtitle": "SUBTITULO",
           "title": "Coursera y UANE se unen para ti",
