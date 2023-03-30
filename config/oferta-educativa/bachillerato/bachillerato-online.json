@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Bachillerato Online",
+    "description": "",
+    "keywords": ""
+  },
+  "config": {
+    "title": "Bachillerato Online",
+    "config": {
+      "nombre": "Bachillerato Online",
+      "modalidad": ["Online"],
+      "areaConocimiento": ["Educación Media"],
+      "campus": [],
+      "nivel": ["Bachillerato"],
+      "image": {
+        "src": "",
+        "alt": "bachillerato"
+      },
+      "curriculum": {
+        "Online": "1vtKicZMJOrN-GzvnEZo0TnTETDJv5LWB"
+      }
+    }
+  },
+  "sections": {
+    "head": {
+      "title": "Estudia Bachillerato Online",
+      "description": "El Bachillerato en Línea te permite optimizar el aprovechamiento académico, el tiempo y el esfuerzo facilitando tu concentración sólo en las materias que cursas en un periodo específico, además, al concluir el programa podrás implementar conocimientos básicos preuniversitarios en un contexto laboral y contar con la formación para abordar estudios de tipo superior.",
+      "image": {
+        "src": "https://assets.staging.bedu.org/UTEG/interior_bachillerato_online_desk_b5bd5c3aef.jpg",
+        "alt": "bachillerato"
+      }
+    },
+    "modalities": {
+      "title": "Para cursar Bachillerato Online necesitas:",
+      "tabs": {
+        "items": [
+          {
+            "label": "Bachillerato Online",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": [
+              {
+                "title": "Perfil de ingreso",
+                "description": "El aspirante deberá contar con los siguientes conocimientos:\n\n• Capacidad de organización y autoaprendizaje.\n\n• Manejo básico de tecnologías de la información y de la comunicación.\n\n• Conocimiento básico de internet.\n\n• Manejo de correo electrónico.\n\n• Manejo de procesador de textos.\n\n• Conocimientos de gramática y redacción.",
+                "image": {
+                  "src": "https://assets.staging.bedu.org/UTEG/perfil_ingreso_bachillerto_desk_fe48b1eccf.jpg",
+                  "alt": "bachillerato-presencial"
+                }
+              },
+              {
+                "title": "Perfil de egreso",
+                "description": "Al egresar serás capaz de:\n\n• Escuchar, interpretar y emitir mensajes en distintos contextos mediante la utilización de medios, códigos y herramientas apropiados.\n\n• Participar y colaborar de manera efectiva en equipos diversos.\n\n• Formular y resolver problemas matemáticos con diferentes enfoques.\n\n• Establecer la interrelación entre la ciencia, la tecnología, la sociedad y el ambiente en contextos históricos y sociales específicos.\n\n• Interpretar la realidad social a partir de los procesos históricos locales, nacionales e internacionales que la han configurado.",
+                "image": {
+                  "src": "https://assets.staging.bedu.org/UTEG/perfil_egreso_desk_1aac25431a.jpg",
+                  "alt": "bachillerato-presencial-requisitos"
+                }
+              }
+            ]
+          }
+        ],
+        "size": "medium"
+      }
+    },
+    "benefits": {
+      "video": "La0WLfzrSs4",
+      "title": "Plan de estudios",
+      "description": "Nuestro plan de estudios para el Bachillerato Online forma parte del sistema incorporado a la Universidad de Guadalajara.\n\n Nos enfocamos en el desarrollo de habilidades cognitivas y psicosociales, el reforzamiento de tu autoestima y autoimagen en cuanto al área socioemocional. Y a nivel de conocimientos reforzamos y ampliamos los aprendizajes del nivel secundario. \n\nTrabajamos, además, para ayudarte a obtener la licenciatura que deseas y que tu recorrido por la universidad sea exitoso. \n\nSi optas por el Bachillerato General por Competencias con certificación Proulex completarás tu formación aprendiendo inglés y convirtiéndote en una persona bilingüe.\n\nConsulta aquí en detalle las directrices que guiarán tu enseñanza. ",
+      "action": {
+        "id": "program_bachillerato",
+        "type": "primary",
+        "title": "Descarga el plan de estudios",
+        "size": "small",
+        "icon": "download",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "testClick",
+        "test": ""
+      }
+    }
+  },
+  "form": {
+    "config": {
+      "level": { "hidden": true, "value": "bachillerato" },
+      "program": { "hidden": false },
+      "modality": { "hidden": false },
+      "campus": { "hidden": false }
+    },
+    "copies": {
+      "stepone": {
+        "title": "¿Quieres más información sobre tu bachillerato?",
+        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+      }
+    }
+  }
+}

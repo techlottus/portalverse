@@ -3,7 +3,7 @@ const Routes: any = {
     { params:
       {
         "level": "bachillerato",
-        "levelRoute": "oferta-educativa/bachillerato/bachillerato",
+        "levelRoute": "oferta-educativa/bachillerato",
         "config": {
           title: "Bachillerato",
           promo: {
@@ -35,7 +35,12 @@ const Routes: any = {
           },
         },
         "programs": [
-          { params: { "program": "bachillerato", "nameProgram": "Bachillerato" } },
+          { params: { "program": "bachillerato-general-competencia", "nameProgram": "Bachillerato General por Competencia" } },
+          { params: { "program": "bachillerato-intensivo-semiescolarizado", "nameProgram": "Bachillerato Intensivo Semiescolarizado" } },
+          { params: { "program": "bachillerato-general-competencia-gastronomia", "nameProgram": "Bachillerato General por Competencia con Diplomado en Gastronomía" } },
+          { params: { "program": "bachillerato-online", "nameProgram": "Bachillerato Online" } },
+          { params: { "program": "bachillerato-general-competencia-proulex", "nameProgram": "Bachillerato General por Competencia con Certificación en Inglés Proulex" } },
+
         ] 
       }
     },

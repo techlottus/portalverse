@@ -33,7 +33,7 @@ const Breadcrumbs: FC<BreadcrumbsComponentData> = ({ visible = true, classNames 
         : <Link href={"/"} className="font-Nunito-Sans font-normal text-xs">{mainRoute}</Link>
       : !last
         ? <Link href={url} className="flex"><p className="font-Nunito-Sans font-normal text-xs mr-1 text-[#282828]">/</p><p className="mr-1 font-Nunito-Sans font-normal text-xs">{ label }</p></Link>
-        : <span className="flex"><p className="font-Nunito-Sans font-normal text-xs mr-1 text-[#282828]">/</p><p className="text-[#B0003C] font-Nunito-Sans font-normal text-xs">{ label }</p></span>;
+        : <span className="flex"><p className="font-Nunito-Sans font-normal text-xs mr-1 text-[#282828]">/</p><p className="text-[#282828] font-Nunito-Sans font-normal text-xs">{ label }</p></span>;
   }
 
   return <ul className={cn("breadcrumbs w-full flex my-6 font-Nunito font-bold text-xs text-[#686868]", classNames, { "hidden": !visible })} aria-label="breadcrumbs">
