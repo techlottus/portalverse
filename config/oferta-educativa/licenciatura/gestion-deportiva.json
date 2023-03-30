@@ -8,15 +8,18 @@
     "title": "Licenciatura en Gestión Deportiva",
     "config": {
       "nombre": "Licenciatura en Gestión Deportiva",
-      "modalidad": ["Online", "Flex"],
-        "areaConocimiento": ["Ciencias sociales"],
-        "campus": [],
+      "modalidad": ["Presencial", "Online", "Flex"],
+      "areaConocimiento": ["Ciencias sociales"],
+      "campus": ["Campus Washington"],
       "nivel": ["Licenciatura"],
       "image": {
         "src": "https://drive.google.com/uc?export=view&id=1tieAXUY-Wr1XZJVYLrviQRoAUGeDpPMS",
         "alt": "licenciatura"
       },
       "curriculum": {
+        "Presencial": {
+          "Campus Washington": ""
+        },
         "Online": "10FWytLaf-7yhTdcx4Nw792QN4nH2WsVY",
         "Flex": "1cLj8uixuMcZzUDejmj8ewnfXfFayYbPB"
       }
@@ -35,6 +38,52 @@
       "title": "Modalidades disponibles en esta licenciatura:",
       "tabs": {
         "items": [
+          {
+            "label": "Modalidad Presencial",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          },
           {
             "label": "Modalidad Online",
             "icons": { "primary": "", "duplicate": false },

@@ -8,15 +8,23 @@
     "title": "Licenciatura en Comunicación",
     "config": {
       "nombre": "Licenciatura en Comunicación",
-      "modalidad": ["Online"],
+      "modalidad": ["Presencial","Online"],
       "areaConocimiento": ["Ciencias sociales"],
-      "campus": [],
+      "campus": ["Américas", "Campus Washington", "Río Nilo", "Zapopan", "Lázaro Cárdenas"],
       "nivel": ["Licenciatura"],
       "image": {
         "src": "https://drive.google.com/uc?export=view&id=1_tHq85RhqWO6CLoIWH7aQfJ-56IkX84b",
         "alt": "licenciatura"
       },
       "curriculum": {
+        "Presencial": {
+          "Américas": "", 
+          "Campus Washington": "", 
+          "Río Nilo": "", 
+          "Zapopan": "", 
+          "Lázaro Cárdenas": ""
+ 
+        },
         "Online": "1x9hUtFor_7L4Lnct69UVdEK-okvKDs5C"
       }
     }
@@ -34,6 +42,52 @@
       "title": "Modalidades disponibles en esta licenciatura:",
       "tabs": {
         "items": [
+          {
+            "label": "Modalidad Presencial",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          },
           {
             "label": "Modalidad Online",
             "icons": { "primary": "", "duplicate": false },
