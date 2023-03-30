@@ -113,6 +113,7 @@ const Routes: any = {
           { params: { "program": "ciencias-forenses", "nameProgram": "Licenciatura en Ciencias Forenses: Criminalística y Criminología" } },
           { params: { "program": "ingenieria-creacion-desarrollo-software-apps", "nameProgram": "Licenciatura en Ingeniería en Creación y Desarrollo de Software y Aplicaciones" } },
           { params: { "program": "pedagogia", "nameProgram": "Licenciatura en Pedagogía" } },
+          { params: { "program": "creacion-desarrollo-empresas-negocios", "nameProgram": "Licenciatura en Creación y Desarrollo de Empresas y Negocios" } },
         ]
       }
     },
