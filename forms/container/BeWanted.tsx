@@ -39,7 +39,7 @@ const BeWanted: FC<any> = ({ classNames, copies, pathThankyou, pathBeWanted }: a
 
   const handleNext = (info: any) => {
     const { name: first_name, surname: last_name, email, password } = info;
-    const data = { first_name, last_name, email, password, legal_advice: 1, newsletter_advice: 1, pool_advice: 1, partner_university_id: Number(`${process.env.NEXT_PUBLIC_BE_WANTED_PARTNER_ID_UANE}`)};
+    const data = { first_name, last_name, email, password, legal_advice: 1, newsletter_advice: 1, pool_advice: 1, partner_university_id: Number(`${process.env.NEXT_PUBLIC_BE_WANTED_PARTNER_ID}`)};
     setInfoForm({ ...data });
     registerAccount(data, tokenActive);
   }
