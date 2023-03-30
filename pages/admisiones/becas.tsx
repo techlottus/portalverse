@@ -135,7 +135,7 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
           </Feedback>
         </div>
         <div className="col-span-7 w-t:col-span-8 w-p:col-span-4">
-          <OpenForm pathThankyou={`/thank-you`} image={{ src: "https://assets.staging.bedu.org/UTEG/formulario_contacto_05c2dd6895.jpg", alt: "image-person" }} />
+          <OpenForm pathThankyou={`/thank-you`} image={{ src: "https://assets.staging.bedu.org/UTEG/admisiones_pedir_informacion_avatar_6738c707b5.jpg", alt: "image-person" }} />
         </div>
         <div className="col-span-5 w-t:col-span-8 w-p:col-span-4">
           <p className="font-Poppins font-bold leading-[130%] text-5.5 mb-[30px]">{sections.llamanos.title}</p>

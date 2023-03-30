@@ -129,7 +129,7 @@ const Home: NextPageWithLayout = ({ data: { sections, meta, strapi } }: any) => 
       </ContentLayout>
       <ContentLayout>
           <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mt-8">
-            <OpenForm pathThankyou={`/thank-you`} image={{ src: "https://drive.google.com/uc?export=view&id=1CxZzCcuuptzexZwBWNtktMbIT5Z9dB6B", alt:"image-person" }} />
+            <OpenForm pathThankyou={`/thank-you`} image={{ src: "https://assets.staging.bedu.org/UTEG/admisiones_pedir_informacion_avatar_6738c707b5.jpg", alt:"image-person" }} />
           </div>
           <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mt-8">
             <p className="mb-6 text-Poppins font-semibold text-[22px] w-p:text-6">{sections.descubre.title}</p>
