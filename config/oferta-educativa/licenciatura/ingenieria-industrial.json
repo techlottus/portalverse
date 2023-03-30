@@ -8,7 +8,7 @@
     "title": "Ingeniería Industrial",
     "config": {
       "nombre": "Ingeniería Industrial",
-      "modalidad": ["Presencial"],
+      "modalidad": ["Presencial", "Online", "Flex"],
       "areaConocimiento": ["Ingenierías y Tecnología"],
       "campus": ["Olímpica"],
       "nivel": ["Licenciatura"],
@@ -19,7 +19,9 @@
       "curriculum": {
         "Presencial": {
           "Olímpica": "1TDGOlR8q204UTGExXJVD9DhW_UyDcK8C"
-        }
+        },
+        "Online": "1ltdwUDo_DAAiIU2ma_Uh9dQovU8XZJ47",
+        "Flex": "15qGPRrm48npIAPGRLxfj8O5Oy7aY8LIE"
       }
     }
   },
@@ -76,6 +78,98 @@
                   },
                   "title": "Requisitos de admisión",
                   "text": "a) Acta de nacimiento original y 1 copia (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.\n\n c) 1 copia de la CURP.\n\n d) 2 copias de Credencial Oficial IFE / INE o Pasaporte\n\n e) 2 copias de Credencial Oficial IFE / INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n f) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n De contar ya con una licenciatura por parte de UdeG y estar titulado, se aceptan copias certificadas expedidas por UdeG del certificado de bachillerato de no más de un mes al día que lo esté entregando y copia simple del título. (Más todos los documentos de nuevo ingreso).\n\n En caso de no estar titulado, debe entregar en original todos los documentos. (Todos los documentos de nuevo ingreso).\n\n Nota: Si realizó los estudios de bachillerato en otro estado de la república, el certificado debe tener la legalización por parte de Secretaría de Gobernación del estado donde realizaron los estudios.\n\n Si el certificado es de UNAM, Secretaría de la Defensa Nacional (SEDENA), Sistema Educativo Nacional (en el encabezado del documento) y Colegios de Bachilleres, estos no requieren del trámite de legalización.",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          },
+          {
+            "label": "Modalidad Online",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "El aspirante a estudiar la Licenciatura en Ingeniería Industrial debe poseer conocimientos en: Matemáticas, Física, Química, conocimientos de la metodología científica, manejo de lenguaje (comprender textos), bases de un segundo idioma, técnicas de estudio, técnicas de lectura, técnicas de redacción. Para lograr una formación exitosa del ingeniero industrial, el aspirante debe caracterizarse por reunir los conocimientos, habilidades y aptitudes necesarias como requisitos que exige el plan de estudios.",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "Estudiar Ingeniería Industrial en Producción te permitirá administrar las operaciones de empresas relacionadas con el diseño y la manufactura de moldes y piezas en plásticos y aplicar métodos de ingeniería y tecnologías de vanguardia para responder a los requerimientos de los clientes.",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "El egresado de la Ingeniería Industrial en Producción es el encargado de diseñar, desarrollar y organizar toda la creación, producción, distribución, mantenimiento de los bienes y servicios generados por una empresa, para destacarse entre su competencia. También puede contratarse como consultor externo. ",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          },
+          {
+            "label": "Modalidad Flex",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "El aspirante a estudiar la Licenciatura en Ingeniería Industrial debe poseer conocimientos en: Matemáticas, Física, Química, conocimientos de la metodología científica, manejo de lenguaje (comprender textos), bases de un segundo idioma, técnicas de estudio, técnicas de lectura, técnicas de redacción. Para lograr una formación exitosa del ingeniero industrial, el aspirante debe caracterizarse por reunir los conocimientos, habilidades y aptitudes necesarias como requisitos que exige el plan de estudios.",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "Estudiar Ingeniería Industrial en Producción te permitirá administrar las operaciones de empresas relacionadas con el diseño y la manufactura de moldes y piezas en plásticos y aplicar métodos de ingeniería y tecnologías de vanguardia para responder a los requerimientos de los clientes.                  ",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "El egresado de la Ingeniería Industrial en Producción es el encargado de diseñar, desarrollar y organizar toda la creación, producción, distribución, mantenimiento de los bienes y servicios generados por una empresa, para destacarse entre su competencia. También puede contratarse como consultor externo. ",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
+                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
                   "backgroundColor": "#EEAA01"
                 }
               ],
