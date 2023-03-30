@@ -17,8 +17,6 @@ const BeWanted: FC<any> = ({ classNames, copies, pathThankyou, pathBeWanted }: a
   const { isLoading: isLoadingRegister, isError: isErrorRegister, data, isSuccess, registerAccount } = RegisterBeWantedAccount();
   const { isLoading: isLoadingToken, isError: isErrorToken, isLogoutSuccess, logoutToken, token } = getTokenBeWanted();
 
-  console.log("tokenActive", tokenActive);
-
   const isLoading = isLoadingToken || isLoadingRegister;
   const isError = isErrorToken || isErrorRegister;
   const responseStatus = data?.response?.status;
