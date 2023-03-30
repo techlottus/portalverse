@@ -1,23 +1,41 @@
-import { createRef, FC, SyntheticEvent, useEffect, useState } from "react"
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import cn from "classnames"
-import Button from "@/old-components/Button/Button"
-import Image from "@/old-components/Image"
-import React from "react";
+import Button from "@/old-components/Button/Button";
+import Image from "@/old-components/Image";
+import cn from "classnames";
+import type { FC } from "react";
 
-const SliderPortalverse: FC<any> = ({ data, onBtn, classNames, mobile = false }: any) => {
+type SliderPortalverseProps = {
+  data?: any;
+  onBtn?: any;
+  classNames?: string;
+  mobile?: boolean;
+};
+
+const validateTextPosition = (textPosition: string, position: string) => {
+  return !!textPosition?.split("_")?.[0]?.includes(position);
+};
+
+const SliderPortalverse: FC<SliderPortalverseProps> = (
+  {
+    data,
+    onBtn,
+    classNames,
+    mobile = false
+  }: SliderPortalverseProps
+) => {
   const router = useRouter()
 
   const stylesBaseControls = "w-p:hidden select-none absolute top-[45%] p-1 rounded-lg text-[12px]";
 
-  const [ active, setActive ] = useState<number>(0);
-  const [ countItems, setCountItems ] = useState<number>(0);
-  const [ slides, setSlides ] = useState<Array<any>>([]);
-  const [ changeDetect, setChangeDetect ] = useState<number>(0);
-  const [ wMob, setWMob ] = useState<string>("0px");
-  const [ dir, setDir ] = useState<any>({xDown: null, yDown: null})
-  const [ typeDir, setTypeDir] = useState<any>(null)
-  const [ flag, setFlag ] = useState<any>(false)
+  const [active, setActive] = useState<number>(0);
+  const [countItems, setCountItems] = useState<number>(0);
+  const [slides, setSlides] = useState<Array<any>>([]);
+  const [changeDetect, setChangeDetect] = useState<number>(0);
+  const [wMob, setWMob] = useState<string>("0px");
+  const [dir, setDir] = useState<any>({ xDown: null, yDown: null })
+  const [typeDir, setTypeDir] = useState<any>(null)
+  const [flag, setFlag] = useState<any>(false)
 
   const detectResize = () => {
     setChangeDetect((prevState: number) => prevState + 1);
@@ -25,51 +43,50 @@ const SliderPortalverse: FC<any> = ({ data, onBtn, classNames, mobile = false }:
 
   const getTouches = (evt: any) => {
     return evt.touches ||             // browser API
-           evt.originalEvent.touches; // jQuery
-  }    
+      evt.originalEvent.touches; // jQuery
+  }
 
   const handleTouchMove = (evt: any) => {
     setDir((val: any) => {
-      if ( ! val?.xDown || ! val?.yDown ) {
+      if (!val?.xDown || !val?.yDown) {
         return;
-    }
+      }
 
-    var xUp = evt.touches[0].clientX;                                    
-    var yUp = evt.touches[0].clientY;
+      var xUp = evt.touches[0].clientX;
+      var yUp = evt.touches[0].clientY;
 
-    var xDiff = val?.xDown - xUp;
-    var yDiff = val?.yDown - yUp;
-                                                                         
-    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
-        if ( xDiff > 0 ) {
+      var xDiff = val?.xDown - xUp;
+      var yDiff = val?.yDown - yUp;
+
+      if (Math.abs(xDiff) > Math.abs(yDiff)) {/*most significant*/
+        if (xDiff > 0) {
           setTypeDir("left")
-            /* right swipe */ 
+          /* right swipe */
         } else {
           setTypeDir("right")
-            /* left swipe */
-        }                       
-    } else {
-        if ( yDiff > 0 ) {
-            /* down swipe */ 
-        } else { 
-            /* up swipe */
-        }                                                                 
-    }
-    /* reset values */
-    return {xDown: null, yDown: null}
+          /* left swipe */
+        }
+      } else {
+        if (yDiff > 0) {
+          /* down swipe */
+        } else {
+          /* up swipe */
+        }
+      }
+      /* reset values */
+      return { xDown: null, yDown: null }
     })
-                                             
-};     
 
+  };
 
-const handleTouchStart = (evt: any) => {
-  const firstTouch = getTouches(evt)[0];   
-   setDir({xDown: firstTouch.clientX, yDown: firstTouch.clientY})                                                                     
-}
+  const handleTouchStart = (evt: any) => {
+    const firstTouch = getTouches(evt)[0];
+    setDir({ xDown: firstTouch.clientX, yDown: firstTouch.clientY })
+  }
 
   useEffect(() => {
     let ignore = false
-    if(mobile) {
+    if (mobile) {
       ignore = true
       document.querySelector("#sectionRef")?.addEventListener('touchstart', handleTouchStart, false);
       document.querySelector("#sectionRef")?.addEventListener('touchmove', handleTouchMove, false)
@@ -88,29 +105,29 @@ const handleTouchStart = (evt: any) => {
 
   useEffect(() => {
     const { outerWidth } = window;
-    if ( outerWidth < 600) {
+    if (outerWidth < 600) {
       setWMob(`${outerWidth}px`)
     }
   }, [changeDetect]);// eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     setCountItems(data.slides.length);
-    setSlides([ ...data.slides ]);
+    setSlides([...data.slides]);
   }, [data])
 
   useEffect(() => {
-    if(typeDir !== null ) {
-      handlerClickControl({target: {ariaLabel: null}})
+    if (typeDir !== null) {
+      handlerClickControl({ target: { ariaLabel: null } })
       setTypeDir(null)
     }
   }, [typeDir])
 
   useEffect(() => {
-    if(slides.length > 0 && !flag){
+    if (slides.length > 0 && !flag) {
       setFlag(true)
     }
 
-  },[slides, flag])
+  }, [slides, flag])
 
   const onBtnSlider = () => {
     if (!!onBtn) {
@@ -119,60 +136,111 @@ const handleTouchStart = (evt: any) => {
   }
 
   const handlerClickControl = ({ target }: any) => {
-    const { ariaLabel } = target 
-    if ( countItems > 1) {
-      if ( ariaLabel === "next" || typeDir === "left" ) {
-        if ( active === countItems - 1 ) {
+    const { ariaLabel } = target
+    if (countItems > 1) {
+      if (ariaLabel === "next" || typeDir === "left") {
+        if (active === countItems - 1) {
           setActive(0);
           return
         }
-        if ( active < countItems ) {
-          setActive((prevState: number) => prevState+1);
+        if (active < countItems) {
+          setActive((prevState: number) => prevState + 1);
           return
         }
       }
-  
-      if ( ariaLabel === "prev" || typeDir === "right" ) {
-        if ( active === 0 ) {
+
+      if (ariaLabel === "prev" || typeDir === "right") {
+        if (active === 0) {
           setActive(countItems - 1);
           return
         }
-        if ( active > 0 ) {
-          setActive((prevState: number) => prevState-1);
+        if (active > 0) {
+          setActive((prevState: number) => prevState - 1);
           return
         }
       }
     }
-  }
+  };
 
-  const activeBulletSlide = (position: number) => setActive(position)
+  const activeBulletSlide = (position: number) => setActive(position);
 
   return <section className="relative z-1">
     {/* desktop */}
-    <div className={cn("z-20 left-0", { "bg-white cursor-pointer": countItems > 1 }, stylesBaseControls)}>
-      <span aria-label="prev" onClick={handlerClickControl} className="material-icons">arrow_back_ios</span>
+    <div
+      aria-label="prev"
+      onClick={handlerClickControl}
+      className={cn(
+          "flex justify-center items-center z-20 left-8 w-14 h-14",
+          { "bg-white/50 cursor-pointer": countItems > 1 }
+          , stylesBaseControls
+        )}
+      >
+      <span className="material-icons ml-2 pointer-events-none">arrow_back_ios</span>
     </div>
-    <section style={{ "height": data.height }} className={cn("w-full flex overflow-hidden w-p:hidden")}>
+    <section className="w-full flex overflow-hidden w-p:hidden aspect-2/1">
       {
-        slides.map((item: any, i: number) => <div key={`slide-item-${i}`} style={{ "transition": "left 0.5s ease-out", "left": `${active === 0 ? 0 : `-${active*100}%`}` }} className={cn("w-full h-full relative flex flex-col grow aspect-2/1")}>
-          <Image classNames="w-t:hidden w-full h-full absolute z-1 aspect-2/1" src={item.urlImage.desktop} alt="image" />
-          <Image classNames="w-d:hidden w-full h-full absolute z-1 aspect-2/1" src={item.urlImage.tablet} alt="image" />
-          <div className={cn("absolute z-10 w-full h-full pt-10 px-40", {
-            "text-white": item?.contentVariant === "light"
-          })}>
-            <h2 className="font-Poppins font-bold text-center w-d:text-[65px] w-d:leading-[80px] w-t:text-[30px]">{ item.title }</h2>
-            <p className="font-Poppins font-semibold text-center w-d:text-[24px] w-d:leading-[30px] w-t:text-base">{ item.text }</p>
+        slides.map((item: any, i: number) => {
+          const textPositionClasses = cn({
+            ["text-left"]: validateTextPosition(item?.textPosition, "left"),
+            ["text-center"]: validateTextPosition(item?.textPosition, "center"),
+            ["text-right"]: validateTextPosition(item?.textPosition, "right")
+          });
+
+          return (<div key={`slide-item-${i}`} style={{ "transition": "left 0.5s ease-out", "left": `${active === 0 ? 0 : `-${active * 100}%`}` }} className={cn("w-full h-full relative flex flex-col grow aspect-2/1")}>
+            <Image classNames="w-t:hidden w-full h-full absolute z-1 aspect-2/1" src={item.urlImage.desktop} alt="image" />
+            <Image classNames="w-d:hidden w-full h-full absolute z-1 aspect-2/1" src={item.urlImage.tablet} alt="image" />
+            <div className={cn("flex absolute z-10 pt-12 pb-16 px-32 w-full h-full", {
+              "text-white": item?.contentVariant === "light",
+              ["justify-start items-start"]: item?.textPosition === "left_top",
+              ["justify-center items-start"]: item?.textPosition === "center_top",
+              ["justify-end items-start"]: item?.textPosition === "right_top",
+              ["justify-start items-center"]: item?.textPosition === "left_center",
+              ["justify-center items-center"]: item?.textPosition === "center",
+              ["justify-end items-center"]: item?.textPosition === "right_center",
+              ["justify-start items-end"]: item?.textPosition === "left_bottom",
+              ["justify-center items-end"]: item?.textPosition === "center_bottom",
+              ["justify-end items-end"]: item?.textPosition === "right_bottom"
+            })}>
+              <div className="flex flex-col z-10 w-d:w-[500px] w-t:w-[392px] gap-4">
+                <h2
+                  className={cn(
+                    "font-Poppins font-bold w-d:text-10 w-d:leading-[50px] w-t:text-[30px] w-t:leading-9",
+                    textPositionClasses
+                  )}
+                >
+                  {item.title}
+                </h2>
+                <p
+                  className={cn(
+                    "font-Poppins font-semibold w-d:text-4.5 w-d:leading-6 w-t:text-base w-t:leading-5",
+                    textPositionClasses
+                  )}
+                >
+                  {item.text}
+                </p>
+                {
+                  !!item?.action?.title
+                    ? 
+                    <Button
+                      darkOutlined={item?.contentVariant === "light"}
+                      dark={item?.contentVariant === "dark"}
+                      data={{ ...item.action }}
+                      onClick={() => router.push(`${item.action.redirect}`)}
+                    />
+                    : null
+                }
+              </div>
+            </div>
             {
-              !!item?.action?.title
-                ? <div className="flex justify-center"><Button darkOutlined={item?.contentVariant === "light"} dark={item?.contentVariant === "dark"} data={{...item.action}} onClick={()=> router.push(`${item.action.redirect}`)}/></div>
-                : null
+              item?.overlayWhite || item?.overlayDak ?
+                <div className={cn("absolute w-full h-full", classNames, {
+                  "bg-[#ffffff80]": item.overlayWhite,
+                  "bg-[#00000080]": item.overlayDak
+                })}></div>
+              : null
             }
-          </div>
-          <div className={cn("absolute w-full h-full", classNames, {
-          "bg-[#ffffff80]": item.overlayWhite,
-          "bg-[#00000080]": item.overlayDak
-          })}></div>
-        </div>)
+          </div>)
+        })
       }
       <div className={cn("w-full flex justify-center absolute bottom-10 gap-2 z-20")}>
         {
@@ -180,24 +248,35 @@ const handleTouchStart = (evt: any) => {
         }
       </div>
     </section>
-    <div className={cn("z-10 right-0", { "bg-white cursor-pointer": countItems > 1 }, stylesBaseControls)}>
-      <span aria-label="next" onClick={handlerClickControl} className="material-icons">arrow_forward_ios</span>
+    <div
+      aria-label="next"
+      onClick={handlerClickControl}
+      className={cn(
+          "flex justify-center items-center z-10 right-8 w-14 h-14",
+          { "bg-white/50 cursor-pointer": countItems > 1 }, stylesBaseControls
+        )}
+      >
+      <span className="material-icons ml-0.5 pointer-events-none">arrow_forward_ios</span>
     </div>
     {/* desktop */}
 
     {/* mobile */}
     <section id="sectionRef" className={cn("w-full h-auto flex overflow-hidden w-d:hidden w-t:hidden")}>
       {
-        slides.map((item: any, i: number) => <div key={`slide-item-${i}`} style={{ "transition": "left 0.5s ease-out", "left": `${active === 0 ? 0 : `-${active*100}%`}` }} className={cn("w-full h-auto relative flex flex-col grow")}>
-          <div style={{"width": wMob}} className={cn("aspect-1/1")}>
+        slides.map((item: any, i: number) => <div key={`slide-item-${i}`} style={{ "transition": "left 0.5s ease-out", "left": `${active === 0 ? 0 : `-${active * 100}%`}` }} className={cn("w-full h-auto relative flex flex-col grow")}>
+          <div style={{ "width": wMob }} className={cn("aspect-1/1")}>
             <Image classNames="w-full h-full aspect-1/1" src={item.urlImage.mobile} alt="image" />
           </div>
           <div className="p-4 flex flex-col gap-6">
-            <h2 className="font-Poppins font-normal text-[32px] leading-10">{ item.title }</h2>
-            <p className="font-Nunito-Sans font-normal text-base leading-5">{ item.text }</p>
+            <h2
+              className="font-Poppins font-normal text-[32px] leading-10"
+            >
+              {item.title}
+            </h2>
+            <p className="font-Nunito-Sans font-normal text-base leading-5">{item.text}</p>
             {
               !!item?.action?.title
-                ? <div className="flex justify-center"><Button data={{...item.action, isExpand: true}} onClick={()=> router.push(`${item.action.redirect}`)}/></div>
+                ? <Button data={{ ...item.action, isExpand: true }} dark onClick={() => router.push(`${item.action.redirect}`)} />
                 : null
             }
           </div>
@@ -211,6 +290,6 @@ const handleTouchStart = (evt: any) => {
     </div>
     {/* mobile */}
   </section>
-}
+};
 
 export default SliderPortalverse;

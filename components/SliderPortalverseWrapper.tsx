@@ -13,6 +13,7 @@ const defaultSliderData = {
       contentVariant: "dark",
       title: "",
       text: "",
+      textPosition: "",
       urlImage: {
         mobile:"",
         tablet:"",
@@ -59,6 +60,8 @@ const formatSlides = (slides: Array<Slide>): Array<SlideConfig> => {
     formattedSlideData.contentVariant = slide?.contentVariant
     formattedSlideData.title = slide?.title
     formattedSlideData.text = slide?.subtitle
+    // @ts-ignore
+    formattedSlideData.textPosition = slide?.textPosition
     formattedSlideData.urlImage = {
       mobile : formatStrapiImage(slide?.mobileImage),
       desktop : formatStrapiImage(slide?.desktopImage),
@@ -68,7 +71,7 @@ const formatSlides = (slides: Array<Slide>): Array<SlideConfig> => {
     formattedSlideData.overlayDak = slide?.overlay === "black",
     formattedSlideData.action.title = slide?.ctaText
     formattedSlideData.action.redirect = slide?.ctaUrl
-
+    
     return formattedSlideData
   })
   return formattedSlides

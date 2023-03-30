@@ -14,6 +14,7 @@ export type BannerPortalverseConfig = {
   noAction:boolean;
   dimensions?: Array<string>;
   font: string;
+  variant?: "sm" | "md" | "lg";
 }
 
 type BannerPortalverseComponentData = {
