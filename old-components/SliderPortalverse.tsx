@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Button from "@/old-components/Button/Button";
 import Image from "@/old-components/Image";
+import Aspect from "@/components/Aspect";
 import cn from "classnames";
 import type { FC } from "react";
 
@@ -166,97 +167,103 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
 
   return <section className="relative z-1">
     {/* desktop */}
-    <div
-      aria-label="prev"
-      onClick={handlerClickControl}
-      className={cn(
-          "flex justify-center items-center z-20 left-8 w-14 h-14",
-          { "bg-white/50 cursor-pointer": countItems > 1 }
-          , stylesBaseControls
-        )}
-      >
-      <span className="material-icons ml-2 pointer-events-none">arrow_back_ios</span>
-    </div>
-    <section className="w-full flex overflow-hidden w-p:hidden aspect-2/1">
-      {
-        slides.map((item: any, i: number) => {
-          const textPositionClasses = cn({
-            ["text-left"]: validateTextPosition(item?.textPosition, "left"),
-            ["text-center"]: validateTextPosition(item?.textPosition, "center"),
-            ["text-right"]: validateTextPosition(item?.textPosition, "right")
-          });
+    <div className="w-p:hidden">
+      <Aspect ratio="2/1">
+        <div className="w-full h-full">
+          <div
+          aria-label="prev"
+          onClick={handlerClickControl}
+          className={cn(
+              "flex justify-center items-center z-20 left-8 w-14 h-14",
+              { "bg-white/50 cursor-pointer": countItems > 1 }
+              , stylesBaseControls
+            )}
+          >
+          <span className="material-icons ml-2 pointer-events-none">arrow_back_ios</span>
+        </div>
+        <section className="w-full h-full flex overflow-hidden">
+          {
+            slides.map((item: any, i: number) => {
+              const textPositionClasses = cn({
+                ["text-left"]: validateTextPosition(item?.textPosition, "left"),
+                ["text-center"]: validateTextPosition(item?.textPosition, "center"),
+                ["text-right"]: validateTextPosition(item?.textPosition, "right")
+              });
 
-          return (<div key={`slide-item-${i}`} style={{ "transition": "left 0.5s ease-out", "left": `${active === 0 ? 0 : `-${active * 100}%`}` }} className={cn("w-full h-full relative flex flex-col grow aspect-2/1")}>
-            <Image classNames="w-t:hidden w-full h-full absolute z-1 aspect-2/1" src={item.urlImage.desktop} alt="image" />
-            <Image classNames="w-d:hidden w-full h-full absolute z-1 aspect-2/1" src={item.urlImage.tablet} alt="image" />
-            <div className={cn("flex absolute z-10 pt-12 pb-16 px-32 w-full h-full", {
-              "text-white": item?.contentVariant === "light",
-              ["justify-start items-start"]: item?.textPosition === "left_top",
-              ["justify-center items-start"]: item?.textPosition === "center_top",
-              ["justify-end items-start"]: item?.textPosition === "right_top",
-              ["justify-start items-center"]: item?.textPosition === "left_center",
-              ["justify-center items-center"]: item?.textPosition === "center",
-              ["justify-end items-center"]: item?.textPosition === "right_center",
-              ["justify-start items-end"]: item?.textPosition === "left_bottom",
-              ["justify-center items-end"]: item?.textPosition === "center_bottom",
-              ["justify-end items-end"]: item?.textPosition === "right_bottom"
-            })}>
-              <div className="flex flex-col z-10 w-d:w-[500px] w-t:w-[392px] gap-4">
-                <h2
-                  className={cn(
-                    "font-Poppins font-bold w-d:text-10 w-d:leading-[50px] w-t:text-[30px] w-t:leading-9",
-                    textPositionClasses
-                  )}
-                >
-                  {item.title}
-                </h2>
-                <p
-                  className={cn(
-                    "font-Poppins font-semibold w-d:text-4.5 w-d:leading-6 w-t:text-base w-t:leading-5",
-                    textPositionClasses
-                  )}
-                >
-                  {item.text}
-                </p>
+              return (<div key={`slide-item-${i}`} style={{ "transition": "left 0.5s ease-out", "left": `${active === 0 ? 0 : `-${active * 100}%`}` }} className={cn("w-full h-full relative flex flex-col shrink-0")}>
+                <Image classNames="w-t:hidden w-full h-full absolute z-1 w-full h-full" src={item.urlImage.desktop} alt="image" />
+                <Image classNames="w-d:hidden w-full h-full absolute z-1 w-full h-full" src={item.urlImage.tablet} alt="image" />
+                <div className={cn("flex absolute z-10 pt-12 pb-16 px-32 w-full h-full", {
+                  "text-white": item?.contentVariant === "light",
+                  ["justify-start items-start"]: item?.textPosition === "left_top",
+                  ["justify-center items-start"]: item?.textPosition === "center_top",
+                  ["justify-end items-start"]: item?.textPosition === "right_top",
+                  ["justify-start items-center"]: item?.textPosition === "left_center",
+                  ["justify-center items-center"]: item?.textPosition === "center",
+                  ["justify-end items-center"]: item?.textPosition === "right_center",
+                  ["justify-start items-end"]: item?.textPosition === "left_bottom",
+                  ["justify-center items-end"]: item?.textPosition === "center_bottom",
+                  ["justify-end items-end"]: item?.textPosition === "right_bottom"
+                })}>
+                  <div className="flex flex-col z-10 w-d:w-[500px] w-t:w-[392px] gap-4">
+                    <h2
+                      className={cn(
+                        "font-Poppins font-bold w-d:text-10 w-d:leading-[50px] w-t:text-[30px] w-t:leading-9",
+                        textPositionClasses
+                      )}
+                    >
+                      {item.title}
+                    </h2>
+                    <p
+                      className={cn(
+                        "font-Poppins font-semibold w-d:text-4.5 w-d:leading-6 w-t:text-base w-t:leading-5",
+                        textPositionClasses
+                      )}
+                    >
+                      {item.text}
+                    </p>
+                    {
+                      !!item?.action?.title
+                        ? 
+                        <Button
+                          darkOutlined={item?.contentVariant === "light"}
+                          dark={item?.contentVariant === "dark"}
+                          data={{ ...item.action }}
+                          onClick={() => router.push(`${item.action.redirect}`)}
+                        />
+                        : null
+                    }
+                  </div>
+                </div>
                 {
-                  !!item?.action?.title
-                    ? 
-                    <Button
-                      darkOutlined={item?.contentVariant === "light"}
-                      dark={item?.contentVariant === "dark"}
-                      data={{ ...item.action }}
-                      onClick={() => router.push(`${item.action.redirect}`)}
-                    />
-                    : null
+                  item?.overlayWhite || item?.overlayDak ?
+                    <div className={cn("absolute w-full h-full", classNames, {
+                      "bg-[#ffffff80]": item.overlayWhite,
+                      "bg-[#00000080]": item.overlayDak
+                    })}></div>
+                  : null
                 }
-              </div>
-            </div>
+              </div>)
+            })
+          }
+          <div className={cn("w-full flex justify-center absolute bottom-10 gap-2 z-20")}>
             {
-              item?.overlayWhite || item?.overlayDak ?
-                <div className={cn("absolute w-full h-full", classNames, {
-                  "bg-[#ffffff80]": item.overlayWhite,
-                  "bg-[#00000080]": item.overlayDak
-                })}></div>
-              : null
+              slides.map((_: any, i: number) => <div key={`bullet-item-${i}`} onClick={() => activeBulletSlide(i)} className={cn("h-4 bg-[#686868] rounded-full cursor-pointer", { "w-4": i !== active, "w-8": i === active })} />)
             }
-          </div>)
-        })
-      }
-      <div className={cn("w-full flex justify-center absolute bottom-10 gap-2 z-20")}>
-        {
-          slides.map((_: any, i: number) => <div key={`bullet-item-${i}`} onClick={() => activeBulletSlide(i)} className={cn("h-4 bg-[#686868] rounded-full cursor-pointer", { "w-4": i !== active, "w-8": i === active })} />)
-        }
-      </div>
-    </section>
-    <div
-      aria-label="next"
-      onClick={handlerClickControl}
-      className={cn(
-          "flex justify-center items-center z-10 right-8 w-14 h-14",
-          { "bg-white/50 cursor-pointer": countItems > 1 }, stylesBaseControls
-        )}
-      >
-      <span className="material-icons ml-0.5 pointer-events-none">arrow_forward_ios</span>
+          </div>
+        </section>
+        <div
+          aria-label="next"
+          onClick={handlerClickControl}
+          className={cn(
+              "flex justify-center items-center z-10 right-8 w-14 h-14",
+              { "bg-white/50 cursor-pointer": countItems > 1 }, stylesBaseControls
+            )}
+          >
+            <span className="material-icons ml-0.5 pointer-events-none">arrow_forward_ios</span>
+          </div>
+        </div>
+      </Aspect>
     </div>
     {/* desktop */}
 
