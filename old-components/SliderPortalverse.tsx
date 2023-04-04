@@ -270,10 +270,10 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
     {/* mobile */}
     <section id="sectionRef" className={cn("w-full h-auto flex overflow-hidden w-d:hidden w-t:hidden")}>
       {
-        slides.map((item: any, i: number) => <div key={`slide-item-${i}`} style={{ "transition": "left 0.5s ease-out", "left": `${active === 0 ? 0 : `-${active * 100}%`}` }} className={cn("w-full h-auto relative flex flex-col grow")}>
-          <div style={{ "width": wMob }} className={cn("aspect-1/1")}>
+        slides.map((item: any, i: number) => <div key={`slide-item-${i}`} style={{ "transition": "left 0.5s ease-out", "left": `${active === 0 ? 0 : `-${active * 100}%`}` }} className={cn("w-full h-auto relative flex flex-col shrink-0")}>
+          <Aspect ratio="1/1">
             <Image classNames="w-full h-full aspect-1/1" src={item.urlImage.mobile} alt="image" />
-          </div>
+          </Aspect>
           <div className="p-4 flex flex-col gap-6">
             <h2
               className="font-Poppins font-normal text-[32px] leading-10"
