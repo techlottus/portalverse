@@ -61,7 +61,7 @@
         "title": "Conoce más sobre tu Universidad ",
         "subtitle": "",
         "position": "",
-        "height": "300px",
+        "height": "auto",
         "overlayWhite":false,
         "overlayDak": false,
         "button":{

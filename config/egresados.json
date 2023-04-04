@@ -53,7 +53,7 @@
       "title": "Bolsa de Talento en UTEG",
       "subtitle": "¿Buscas empleo? Inscríbete en nuestra Bolsa de Talento",
       "position": "right",
-      "height": "350px",
+      "height": "auto",
       "overlayWhite":false,
       "overlayDak": false,
       "button":{
