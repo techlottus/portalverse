@@ -272,7 +272,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
       {
         slides.map((item: any, i: number) => <div key={`slide-item-${i}`} style={{ "transition": "left 0.5s ease-out", "left": `${active === 0 ? 0 : `-${active * 100}%`}` }} className={cn("w-full h-auto relative flex flex-col shrink-0")}>
           <Aspect ratio="1/1">
-            <Image classNames="w-full h-full aspect-1/1" src={item.urlImage.mobile} alt="image" />
+            <Image classNames="w-full h-full" src={item.urlImage.mobile} alt="image" />
           </Aspect>
           <div className="p-4 flex flex-col space-y-6">
             <h2
