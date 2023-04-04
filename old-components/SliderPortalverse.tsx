@@ -205,7 +205,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
                   ["justify-center items-end"]: item?.textPosition === "center_bottom",
                   ["justify-end items-end"]: item?.textPosition === "right_bottom"
                 })}>
-                  <div className="flex flex-col z-10 w-d:w-[500px] w-t:w-[392px] gap-4">
+                  <div className="flex flex-col z-10 w-d:w-[500px] w-t:w-[392px] space-y-4">
                     <h2
                       className={cn(
                         "font-Poppins font-bold w-d:text-10 w-d:leading-[50px] w-t:text-[30px] w-t:leading-9",
@@ -246,7 +246,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
               </div>)
             })
           }
-          <div className={cn("w-full flex justify-center absolute bottom-10 gap-2 z-20")}>
+          <div className={cn("w-full flex justify-center absolute bottom-10 space-x-2 z-20")}>
             {
               slides.map((_: any, i: number) => <div key={`bullet-item-${i}`} onClick={() => activeBulletSlide(i)} className={cn("h-4 bg-[#686868] rounded-full cursor-pointer", { "w-4": i !== active, "w-8": i === active })} />)
             }
@@ -274,7 +274,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
           <Aspect ratio="1/1">
             <Image classNames="w-full h-full aspect-1/1" src={item.urlImage.mobile} alt="image" />
           </Aspect>
-          <div className="p-4 flex flex-col gap-6">
+          <div className="p-4 flex flex-col space-y-6">
             <h2
               className="font-Poppins font-normal text-[32px] leading-10"
             >
@@ -290,7 +290,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
         </div>)
       }
     </section>
-    <div className={cn("w-full flex justify-center gap-2 mt-4 pb-4 w-d:hidden w-t:hidden")}>
+    <div className={cn("w-full flex justify-center space-x-2 mt-4 pb-4 w-d:hidden w-t:hidden")}>
       {
         slides.map((_: any, i: number) => <div key={`bullet-item-${i}`} onClick={() => activeBulletSlide(i)} className={cn("h-4 bg-[#DDDDDD] rounded-full cursor-pointer", { "w-4": i !== active, "w-8": i === active })} />)
       }
