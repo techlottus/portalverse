@@ -13,7 +13,7 @@
         "campus": ["Campus Washington"],
         "nivel": ["Licenciatura"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1irjsdZWS9jDWvlsKFbFHLP36YZL6Pb2o",
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_cultura_fisica_desk_e436f181dd.jpg",
           "alt": "licenciatura"
         },
         "curriculum": {
@@ -26,9 +26,9 @@
     "sections": {
       "head": {
         "title": "Licenciatura en Cultura Física y Deportes",
-        "description": "En la Licenciatura en Cultura Física y Deportes se forman profesionistas capaces de desarrollarse en instituciones educativas del deporte, implementando estrategias para promover la cultura del deporte en nuestra sociedad, siendo a su vez capaces de organizar eventos deportivos de alto impacto con la gestión de recursos y vínculos con organizaciones del deporte.",
+        "description": "En la Licenciatura en Cultura Física y Deportes se forman profesionistas que promueven la cultura del deporte, la educación física y la actividad física en nuestra sociedad. El profesional es un promotor y ejemplo de estilos de vida saludable y activos, generando métodos y estrategias de cultura física dentro del contexto donde se desenvuelve.",
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1irjsdZWS9jDWvlsKFbFHLP36YZL6Pb2o",
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_cultura_fisica_desk_e436f181dd.jpg",
           "alt": "licenciatura"
         }
       },
@@ -44,38 +44,38 @@
                 "cards": [
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                     },
                     "title": "Perfil de ingreso",
-                    "text": "Interesado por la salud y bienestar de la población, por la adquisición de conocimientos de orden técnico, metodológico, social y cultural de las diversas formas de la actividad física. Uso del lenguaje oral y escrito, pensamiento lógico matemático, coordinación motriz, condición física, gusto por la práctica de las actividades físicas, actitud de servicio, ser responsable y honesto con su persona y sociedad. ",
+                    "text": "El aspirante de cultura física y deportes le interesa:\n\n• La salud y bienestar de la población, por la adquisición de conocimientos de orden técnico, metodológico, social y cultural de las diversas formas de la actividad física.\n\n• El uso del lenguaje oral y escrito, pensamiento lógico matemático, coordinación motriz, condición física, gusto por la práctica de las actividades físicas, actitud de servicio, ser responsable y honesto con su persona y sociedad.\n\n• Uso de las TIC´s.\n\n• Expresión oral y escrita.",
                     "backgroundColor": "#1B2D68"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                     },
                     "title": "Perfil de egreso",
-                    "text": "El Licenciado /a en Cultura Física y Deportes estará capacitado para:\n\n• Ejercer como docente altamente calificado en el área de la educación física y la recreación, dirigido a individuos de todas las edades, así como en los diversos niveles escolares (preescolar, primaria, secundaria, preparatoria y nivel superior) y en cualquier grupo social. Realizar funciones como entrenador multidisciplinario y acondicionamiento físico.\n\n• Actuar como administrador deportivo optimizando los recursos humanos y materiales, elaborando programas deportivos, realizando planificación en las instituciones y organizaciones deportivas y diseñando programas especiales para la masificación del deporte.\n\n• Realizar investigación científica en el campo de la educación física y del deporte.\n\n• Valorar la importancia de la educación física y deportes para el desarrollo integral del individuo, incidiendo en las masas populares de tal forma que desarrollen una verdadera labor social.\n\n• Elaborar, aplicar y evaluar programas de actividad física con el objetivo de mejorar el proceso de salud en la población.",
+                    "text": "Desarrolla una visión multidisciplinaria sobre los aspectos psicológico, social, histórico, filosófico y antropológico del cuerpo humano, con relación a la actividad física y el deporte.\n\nGestiona recursos para desarrollar proyectos y programas de actividad física y deporte en organizaciones de los sectores público y privado en los ámbitos de la salud, la educación física, la recreación y el deporte.\n\nDiseña, dirige y evalúa programas de entrenamiento personalizado para el bienestar y para el mejoramiento de la condición física de individuos y de grupos.",
                     "backgroundColor": "#C31433"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                     },
                     "title": "Campo Laboral",
-                    "text": "El licenciado/a en Cultura Física y Deportes será capaz de desarrollarse en las diferentes instituciones deportivas como entrenador deportivo, auxiliar técnico, preparador físico, instructor o entrenador personal, interpretando y desarrollando planes, programas básicos de alto rendimiento.\n\n Además será capaz de desarrollarse en el área docente a nivel básico, medio superior y superior como profesor de educación física dentro del sistema educativo nacional. Así mismo tendrá el conocimiento para gestionar y organizar eventos deportivos con la capacidad de dirigir, administrar recursos humanos, materiales y financieros en instalaciones, organismos y clubes dedicados al deporte. ",
+                    "text": "Áreas: instituciones deportivas, entrenador deportivo, auxiliar técnico, preparador físico, instructor, entrenador personal. \n\nActividades: interpretación y desarrollo de programas de alto rendimiento, conocimientos para gestionar y organizar eventos deportivos.",
                     "backgroundColor": "#4470B1"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                     },
                     "title": "Requisitos de admisión",
-                    "text": "a) Acta de nacimiento original y 1 copias (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.\n\n c) 1 copia de la CURP.\n\n d) 2 copias de Credencial Oficial IFE / INE o Pasaporte\n\n e) 2 copias de Credencial Oficial IFE / INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n f) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n De contar ya con una licenciatura por parte de UdeG y estar titulado, se aceptan copias certificadas expedidas por UdeG del certificado de bachillerato de no más de un mes al día que lo esté entregando y copia simple del título. (Más todos los documentos de nuevo ingreso).\n\n En caso de no estar titulado, debe entregar en original todos los documentos. (Todos los documentos de nuevo ingreso).\n\n Nota: Si realizó los estudios de bachillerato en otro estado de la república, el certificado debe tener la legalización por parte de Secretaría de Gobernación del estado donde realizaron los estudios.\n\n Si el certificado es de UNAM, Secretaría de la Defensa Nacional (SEDENA), Sistema Educativo Nacional (en el encabezado del documento) y Colegios de Bachilleres, estos no requieren del trámite de legalización.",
+                    "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                     "backgroundColor": "#EEAA01"
                   }
                 ],

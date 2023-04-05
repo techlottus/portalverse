@@ -13,7 +13,7 @@
         "campus": ["Campus Washington"],
         "nivel": ["Licenciatura"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1-191tYkUURfCkCDWxQ0eWqHaQlCgCVtZ",
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_enfermeria_desk_a456e2044c.jpg",
           "alt": "licenciatura"
         },
         "curriculum": {
@@ -26,9 +26,9 @@
     "sections": {
       "head": {
         "title": "Licenciatura en Enfermeria",
-        "description": "La licenciatura en Enfermería tiene por objetivo formar y desarrollar profesionales con conocimientos, habilidades prácticas, teóricas y metodológicas con respaldo a la profesión, capaces de incorporarse en la estructura actual de los servicios de salud dentro del ámbito público, privado, social y de investigación de manera productiva y creativa.",
+        "description": "La Licenciatura en Enfermería forma profesionales con la habilidad de desarrollar estrategias de prevención, promoción, cuidado integral, recuperación y mantenimiento de la condición de salud de los grupos poblacionales y personas en edad reproductiva; para responder a las políticas nacionales en salud y al desarrollo de su disciplina.",
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1-191tYkUURfCkCDWxQ0eWqHaQlCgCVtZ",
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_enfermeria_desk_a456e2044c.jpg",
           "alt": "licenciatura"
         }
       },
@@ -44,38 +44,38 @@
                 "cards": [
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                     },
                     "title": "Perfil de ingreso",
-                    "text": "El aspirante a la Licenciatura en Enfermería del Centro Universitario UTEG debe poseer:\n\nCONOCIMIENTOS\n\n• Manejo de sistemas de información y/o computación.\n\n• Conocimiento y comprensión básica del idioma inglés.\n\n• Capacidad de expresión oral y escrita en diferentes contextos y mediante códigos de herramientas.\n\n• Capacidad de análisis, observación, clasificación y síntesis de información.\n\n• Capacidad para el desarrollo del pensamiento analítico, reflexivo, crítico y lógico – matemático.\n\n HABILIDADES\n\n• Aprendizaje individual, permanente y de alto compromiso por su formación y actuación constante.\n\n• Capacidad para sustentar y expresar temas de diferente índole, brindando puntos de vista de manera crítica y analítica.\n\n• Participación, cooperación y trabajo en equipo.\n\n• Capacidad de resolución en diferentes ámbitos, para resolver problemas a partir de teorías y métodos científicos.\n\n ACTITUDES\n\n• Vocación de servicio, responsabilidad, iniciativa, competitividad y honestidad.\n\n• Interés humanístico, científico y de servicio.\n\n• Manejo de estrés, manejo de conflictos y estabilidad emocional.\n\n• Sensibilidad para entender la conducta humana ante la pérdida de su homeostasis (condición o capacidad de mantener una condición estable)\n\n• Respeto por la vida, los valores, las prácticas sociales, ideas, igualdad y en los diferentes tipos de culturas y razas y/o diversidad cultural.\n\n• Adaptación y apertura a los cambios económicos, políticos, sociales, de educación, tecnología entre otros.\n\n• Actitud de liderazgo y emprendedora para la toma de decisiones y gestiones.\n\n• Actitud de fomentar, educar y transmitir conocimientos.\n\n• Actitud de crecimiento profesional.",
+                    "text": "<p><span>El aspirante a la Licenciatura en Enfermer&iacute;a deber&aacute;:</span></p><p><span>&bull; Manejar sistemas de informaci&oacute;n y/o computaci&oacute;n.</span></p><p><span>&bull; Tener conocimientos b&aacute;sicos de una segunda lengua.</span></p><p><span>&bull; Tener capacidad de expresi&oacute;n oral y escrita en diferentes contextos y mediante c&oacute;digos de herramientas.</span></p><p><span>&bull; Poseer xapacidad de an&aacute;lisis, observaci&oacute;n, clasificaci&oacute;n y s&iacute;ntesis de informaci&oacute;n.</span></p><p><span>&bull; Vocaci&oacute;n de servicio y honestidad.</span></p><p><span>&bull; Inter&eacute;s en los asuntos human&iacute;sticos y cient&iacute;ficos.</span></p><p><span>&bull; Respeto por la vida, los valores, las pr&aacute;cticas sociales, las ideas y la diversidad social y cultural. </span></p>",
                     "backgroundColor": "#1B2D68"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                     },
                     "title": "Perfil de egreso",
-                    "text": "El profesionista egresado del Centro Universitario UTEG, es un profesional competente, atento al fenómeno de la internacionalización, con una visión vanguardista. Poseedor de conocimientos científicos, técnicos y humanísticos, así como con el dominio de un segundo idioma que le permita integrarse a la toma de decisiones con el equipo interdisciplinario en la solución de problemas de salud. Capaz de generar nuevos conocimientos y tecnologías para influir positivamente en el bienestar del individuo y la familia, al fomentar conductas para el autocuidado de la salud y del entorno en las diversas etapas de la vida.",
+                    "text": "<p><span>Proporciona cuidados de enfermer&iacute;a al atender las necesidades de salud enfermedad de las personas mediante intervenciones independientes o de colaboraci&oacute;n que fortalezcan la promoci&oacute;n, prevenci&oacute;n, recuperaci&oacute;n y rehabilitaci&oacute;n de la persona sana o enferma.</span></p><p><span>Participa en la aplicaci&oacute;n de pol&iacute;ticas p&uacute;blicas dirigidas a los distintos grupos poblacionales que den respuesta a las necesidades de salud enfermedad, de riesgo o de bienestar; que contribuyan en el cuidado de la salud reproductiva e infantil, la enfermedad aguda o cr&oacute;nica, la discapacidad y envejecimiento.</span></p>",
                     "backgroundColor": "#C31433"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                     },
                     "title": "Campo Laboral",
-                    "text": "Hospitales públicos y privados, empresas, escuelas, etc.",
+                    "text": "Áreas: hospitales, centros de salud públicos y privados, empresas y escuelas. ",
                     "backgroundColor": "#4470B1"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                     },
                     "title": "Requisitos de admisión",
-                    "text": "Bachillerato terminado",
+                    "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                     "backgroundColor": "#EEAA01"
                   }
                 ],

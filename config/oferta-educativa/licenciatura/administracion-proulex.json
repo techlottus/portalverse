@@ -13,7 +13,7 @@
       "campus": ["Campus Washington"],
       "nivel": ["Licenciatura"],
       "image": {
-        "src": "https://assets.staging.bedu.org/UTEG/card_administracion_interna_a25b3ca7d1.jpg",
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_administracion_desk_fd6b3b197b.jpg",
         "alt": "licenciatura"
       },
       "curriculum": {
@@ -26,9 +26,9 @@
   "sections": {
     "head": {
       "title": "Licenciatura en Administración con Certificación en Inglés Proulex",
-      "description": "En la Licenciatura en Administración, a través de un conjunto de conocimientos teóricos y prácticos como:simuladores empresariales, estudios de caso, generación de proyectos de emprendimiento y consultoría, desarrollarás las aptitudes necesarias para alcanzar tus metas personales ya sea trabajando dentro de una organización o emprendiendo tu propio negocio.",
+      "description": "Licenciatura en Administración con certificación en Inglés Proulex. Ofrecemos el dominio de una segunda lengua bajo un modelo especial.",
       "image": {
-        "src": "https://assets.staging.bedu.org/UTEG/card_administracion_interna_a25b3ca7d1.jpg",
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_administracion_desk_fd6b3b197b.jpg",
         "alt": "licenciatura"
       }
     },
@@ -44,39 +44,38 @@
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "El aspirante a cursar esta licenciatura deberá haber acreditado en su totalidad el nivel académico de bachillerato o equivalente, considerando los siguientes intereses:\n\n• Intención de desempeñarse en el área económico – administrativa de las organizaciones.\n\n• Conocer cómo contribuye el proceso administrativo a la efectividad de las organizaciones.\n\n• Interactuar con equipos de trabajo para la obtención de logros concretos a través del proceso administrativo.\n\n Conocimientos: fundamentos matemáticos (suma, resta, multiplicación, división, etc.), fundamentos ortográficos, fundamentos computacionales (procesador de textos, hoja de cálculo), \n\nHabilidades: observación, concentración análisis, síntesis, redacción, exposición y evaluación de ideas.",
+                  "text": "El aspirante administración deberá tener conocimientos sobre:\n\n• Matemáticas.\n\n• El uso de las TIC´s.\n\n• La expresión oral y escrita.\n\n• La comunicación efectiva.\n\nHabilidades y aptitudes para:\n\n• Desarrollar procesos lógicos.\n\n• Resolver problemas con base en principios, leyes y conceptos.\n\n• Evaluar fortalezas y debilidades de los equipos de trabajo.\n\n• Pensamiento crítico.\n\n• Aplicar el razonamiento lógico.\n\n• Manejar equipos de cómputo y electrónicos.\n\n• Liderar grupos de trabajo.\n\nActitudes de:\n\n• Creatividad.\n\n• Liderazgo.\n\n• Trabajo en equipo.",
                   "backgroundColor": "#1B2D68"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                   },
                   "title": "Perfil de egreso",
-
-                  "text": "El egresado/a de la licenciatura en Administración será capaz de planear, organizar, dirigir y controlar el desarrollo y funcionamiento de varias organizaciones, en las áreas comerciales, tecnológicas, financieras y de personal, aportando soluciones por medio de análisis, diseño e implementación y mejora de estrategias que permitan mejorar su rentabilidad con base a lo siguiente, conocimientos: análisis de entornos políticos, económicos, socioculturales y tecnológicos para la toma de decisiones. Diseño e implementación de estrategias competitivas de una organización. Formulación e implementación de estrategias de comunicación corporativa. Identificación y análisis de las oportunidades del mercado para la organización. Diseño de estrategias comerciales. Diseño y desarrollo para el plan de vida y carrera profesional de una organización, gestión, desarrollo y evaluación de desempeño humano dentro del contexto diverso. Establecimientos de modelos de cambio educativo planeado en una organización. Identificación y mejora de operaciones clave de una organización. Establecimiento de los modelos de aprovechamiento del capital de trabajo. Establecimiento de los modelos para maximizar la rentabilidad de una organización. Marco legal aplicable en los ámbitos laborales y fiscales.",
+                  "text": "CONOCIMIENTOS:\n\n• Las tendencias administrativas mercadológicas.\n\n• Las estrategias de comunicación para el desarrollo del liderazgo en las organizaciones.\n\n• Los elementos de los sistemas de negocios y su relación con los departamentos de la organización.\n\n• Estrategias de comercialización y negociación.\n\nHABILIDADES:\n\n• Desarrollar una visión integral sobre los objetivos y estrategias de las organizaciones.\n\n• Asesorar en el diseño e implantación de sistemas y modelos administrativos.\n\nACTITUDES:\n\n• Negociación.\n\n• Trabajo en equipo.",
                   "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "El campo laboral y el ejercicio profesional de la Licenciatura en Administración del Centro Universitario UTEG, consideran su colaboración en empresas de servicios, comerciales o industriales; casas de bolsas o aseguradoras; arrendadoras, instituciones bancarias, empresas públicas y privadas; en despacho como asesor, consultor independiente, organismos descentralizados; docentes o investigadores en universidades e instituciones públicas o privadas.",
+                  "text": "Áreas: empresas de servicios, comerciales o industriales, casas de bolsas, aseguradoras, arrendadoras, instituciones bancarias, empresas públicas o privadas, asesoría, organismos descentralizados, docencias e investigación, instituciones públicas o privadas. ",
                   "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "Para ingresar como alumno a la institución en cualquier programa académico será indispensable:\n\n 1.- Haber concluido íntegramente el ciclo inmediato anterior.\n\n 2.- Solicitar a los asesores de admisiones el ingreso a la Universidad, de acuerdo a los instructivos correspondientes.\n\n 3.- Ser aceptado después de haber concluido el proceso de admisión.",
+                  "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                   "backgroundColor": "#EEAA01"
                 }
               ],

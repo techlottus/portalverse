@@ -13,7 +13,7 @@
       "campus": ["Olímpica"],
       "nivel": ["Licenciatura"],
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1AQbqbEHbKSyYoyaKBdxmLi2JQ0GkgtlT",
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_sistemas_desk_ec52f38c53.jpg",
         "alt": "licenciatura"
       },
       "curriculum": {
@@ -28,9 +28,9 @@
   "sections": {
     "head": {
       "title": "Ingeniería en Sistemas",
-      "description": "La Licenciatura en Ingeniería en Sistemas brinda las habilidades para gestionar recursos computacionales tales como lenguajes de programación, redes de cómputo, sistemas de bases de datos y administración de proyectos para el desarrollo de las empresas, a través de un manejo eficiente de las redes de cómputo y telecomunicaciones.",
+      "description": "En esta licenciatura se forman profesionales capaces de gestionar recursos computacionales tales como: lenguajes de programación, redes de cómputo, sistemas de bases de datos y administración de proyectos para el desarrollo de las empresas, a través de un manejo eficiente de las redes de cómputo y telecomunicaciones  y la optimización de las tecnologías de la información. ",
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1AQbqbEHbKSyYoyaKBdxmLi2JQ0GkgtlT",
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_sistemas_desk_ec52f38c53.jpg",
         "alt": "licenciatura"
       }
     },
@@ -46,38 +46,38 @@
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "",
+                  "text": "El aspirante deberá tener conocimientos sobre:\n\n• Matemáticas.\n\n• El uso de las TIC´s.\n\n• La expresión oral y escrita.\n\n• La comunicación efectiva.\n\nHabilidades y aptitudes para:\n\n• Desarrollar procesos lógicos.\n\n• Resolver problemas con base en principios, leyes y conceptos.\n\n• Evaluar fortalezas y debilidades de los equipos de trabajo.\n\n• Aplicar el razonamiento lógico.\n\n• Manejar equipos de cómputo y electrónicos.\n\n• Liderar grupos de trabajo.\n\nActitudes de:\n\n• Sensibilidad a las necesidades sociales.\n\n• Creatividad.\n\n• Liderazgo.\n\n• Trabajo en equipo.",
                   "backgroundColor": "#1B2D68"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                   },
                   "title": "Perfil de egreso",
-                  "text": "",
+                  "text": "CONOCIMIENTOS:\n\n• Fundamentos y lenguajes de programación Web.\n\n• Administración de proyectos y centros de cómputo.\n\n• Desarrollo de bases de datos.\n\n• Lógica matemática computacional.\n\n• Principios de la Ingeniería de software.\n\nHABILIDADES:\n\n• Formular propuestas tecnológicas. \n\n• Resolver problemas que necesiten una solución tecnológica.\n\nACTITUDES:\n\n• Generar un constante desarrollo innovador en el área de las tecnologías.\n\n• Brindar un servicio de calidad y con ética profesional.\n\n• Reconocer la importancia del trabajo en equipo.",
                   "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "",
+                  "text": "El egresado de la Ingeniería en Sistemas tiene una amplia gama de oportunidades laborales en el sector privado: en plantas industriales nacionales o extranjeras, de manufactura y servicios, automotrices, o en cualquier organización que busque optimizar su sistema computacional o de redes y telecomunicaciones.",
                   "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "",
+                  "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                   "backgroundColor": "#EEAA01"
                 }
               ],
@@ -92,8 +92,8 @@
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
                   "text": "El aspirante a ingresar a la Licenciatura en Ingeniería en Sistemas deberá contar con los siguientes conocimientos:\n\n• Desarrollar procesos lógicos.\n\n• Resolver problemas con base en principios, leyes y conceptos.\n\n• Emplear las nuevas tecnologías de la información y la comunicación.\n\n• Ser capaz para evaluar fortalezas y debilidades de los equipos de trabajo.\n\n• Desarrollar un pensamiento crítico y constructivo.\n\n• Aplicar el razonamiento lógico.\n\n• Manejar equipos de cómputo y electrónicos.\n\n• Tener la capacidad para liderar grupos de trabajo.",
@@ -101,29 +101,29 @@
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                   },
                   "title": "Perfil de egreso",
-                  "text": "Formulará propuestas innovadoras que contribuyan al incremento de la productividad y al fortalecimiento de la tecnología.\n\nFormará nuevas ideas, alianzas y socializará con otras disciplinas para la formación de emprendimiento, acorde a las necesidades actuales de las tecnologías de información.",
+                  "text": "CONOCIMIENTOS:\n\n• Fundamentos y lenguajes de programación Web.\n\n• Administración de proyectos y centros de cómputo.\n\n• Desarrollo de bases de datos.\n\n• Lógica matemática computacional.\n\n• Principios de la Ingeniería de software.\n\nHABILIDADES:\n\n• Formular propuestas tecnológicas.\n\n• Resolver problemas que necesiten una solución tecnológica.\n\nACTITUDES:\n\n• Generar un constante desarrollo innovador en el área de las tecnologías.\n\n• Brindar un servicio de calidad y con ética profesional.\n\n• Reconocer la importancia del trabajo en equipo.",
                   "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "El egresado de la Ingeniería en Sistemas tiene una amplia gama de oportunidades laborales en el sector privado de plantas industriales nacionales y extranjeras, de manufactura y servicios, automotrices, fabricantes o cualquier organización que busque optimizar su sistema, producción y proceso",
+                  "text": "Áreas: sector privado, plantas industriales nacionales e internacionales de manufactura y servicios automotrices. \n\nActividades: optimización de sistemas computacionales, redes y telecomunicaciones. ",
                   "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                  "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; Comprobante de domicilio.</p>",
                   "backgroundColor": "#EEAA01"
                 }
               ],
@@ -138,8 +138,8 @@
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
                   "text": "El aspirante a Ingeniería en Sistemas debe tener las siguientes habilidades desarrolladas: Habilidad numérica, capacidad creativa e innovadora, capacidad de adaptación y respuesta ágil y eficiente ante situaciones imprevistas, capacidad de análisis, de síntesis y de abstracción, facilidad para entablar relaciones interpersonales, habilidad para administrar y diseñar sistemas y habilidad para optimizar los recursos.",
@@ -147,29 +147,29 @@
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                   },
                   "title": "Perfil de egreso",
-                  "text": "Con la carrera de Ingeniería en Sistemas, tendrás conocimientos y habilidades para desempeñarte en la administración, gestión y desarrollo estratégico de las operaciones de producción, manufactura y logística de las organizaciones. Podrás aplicar métodos de ingeniería industrial, sistemas de información y calidad para lograr mayor eficiencia y sustentabilidad.",
+                  "text": "CONOCIMIENTOS:\n\n• Fundamentos y lenguajes de programación Web.\n\n• Administración de proyectos y centros de cómputo.\n\n• Desarrollo de bases de datos.\n\n• Lógica matemática computacional.\n\n• Principios de la Ingeniería de software.\n\nHABILIDADES:\n\n• Formular propuestas tecnológicas.\n\n• Resolver problemas que necesiten una solución tecnológica.\n\nACTITUDES:\n\n• Generar un constante desarrollo innovador en el área de las tecnologías.\n\n• Brindar un servicio de calidad y con ética profesional.\n\n• Reconocer la importancia del trabajo en equipo.",
                   "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "El egresado de la Ingeniería en Sistemas tiene una amplia gama de oportunidades laborales en el sector privado de plantas industriales nacionales y extranjeras, de manufactura y servicios, automotrices, fabricantes o cualquier organización que busque optimizar su sistema, producción y proceso.",
+                  "text": "Áreas: sector privado, plantas industriales nacionales e internacionales de manufactura y servicios automotrices. \n\nActividades: optimización de sistemas computacionales, redes y telecomunicaciones. ",
                   "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                  "text": "<p>&bull;&nbsp;Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).<br />&bull;&nbsp;Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.<br />&bull;&nbsp;1 copia de la CURP.<br />&bull;&nbsp;2 copias de Credencial Oficial IFE / INE o Pasaporte.<br />&bull;&nbsp;2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).<br />&bull;&nbsp;2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                   "backgroundColor": "#EEAA01"
                 }
               ],

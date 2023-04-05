@@ -13,7 +13,7 @@
       "campus": [],
       "nivel": ["Licenciatura"],
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=15t1A6OFgh7GXYohbWlnRjhk4Ug4qBJD9",
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_adminstracion_liderazgo_desk_96c32945ee.jpg",
         "alt": "licenciatura"
       },
       "curriculum": {
@@ -28,9 +28,9 @@
   "sections": {
     "head": {
       "title": "Licenciatura Administración y Liderazgo Empresarial",
-      "description": "El Licenciado en Administración, optimiza los recursos de instituciones públicas y privadas  a  través  de  procesos  administrativos. Coordina e implementa estrategias innovadoras  de  desarrollo planificando y ejecutando acciones innovadoras dentro de una organización buscando la calidad, la mejora y optimización de recursos y procesos.",
+      "description": "En esta licenciatura se forman profesionales capaces de propiciar el logro de objetivos de las instituciones públicas y privadas con el aprovechamiento eficiente de los recursos a través de la implementación del proceso administrativo en las áreas funcionales que comprendan cada organización, así como coordinar e implementar planes de desarrollo con una visión estratégica",
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=15t1A6OFgh7GXYohbWlnRjhk4Ug4qBJD9",
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_adminstracion_liderazgo_desk_96c32945ee.jpg",
         "alt": "licenciatura"
       }
     },
@@ -46,38 +46,38 @@
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "",
+                  "text": "El aspirante deberá tener conocimientos sobre:\n\n• Matemáticas.\n\n• El uso de las TIC´s.\n\n• La expresión oral y escrita.\n\n• La comunicación efectiva.\n\nHabilidades y aptitudes para:\n\n• Desarrollar procesos lógicos.\n\n• Resolver problemas con base en principios, leyes y conceptos.\n\n• Evaluar fortalezas y debilidades de los equipos de trabajo.\n\n• Pensamiento crítico.\n\n• Aplicar el razonamiento lógico.\n\n• Manejar equipos de cómputo y electrónicos.\n\n• Liderar grupos de trabajo.\n\nActitudes de:\n\n• Creatividad.\n\n• Liderazgo.\n\n• Trabajo en equipo.",
                   "backgroundColor": "#1B2D68"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                   },
                   "title": "Perfil de egreso",
-                  "text": "",
+                  "text": "CONOCIMIENTOS:\n\n• Las tendencias administrativas mercadológicas.\n\n• Las estrategias de comunicación para el desarrollo del liderazgo en las organizaciones.\n\n• Los elementos de los sistemas de negocios y su relación con los departamentos de la organización.\n\n• Estrategias de comercialización y negociación.\n\nHABILIDADES:\n\n• Desarrollar una visión integral sobre los objetivos y estrategias de las organizaciones.\n\n• Asesorar en el diseño e implantación de sistemas y modelos administrativos.\n\nACTITUDES:\n\n• Negociación.\n\n• Trabajo en equipo.",
                   "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "",
+                  "text": "El egresado de la Licenciatura en Administración y Liderazgo Empresarial planifica, organiza, coordina y controla los diferentes recursos dentro de organizaciones públicas y privadas. Desempeña funciones directivas, asesora y presta asistencia técnica para las funciones gerenciales de dichas organizaciones.",
                   "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "",
+                  "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                   "backgroundColor": "#EEAA01"
                 }
               ],
@@ -92,8 +92,8 @@
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
                   "text": "El aspirante a ingresar a la Licenciatura en Administración debe sentir pasión por los negocios, y tener las siguientes características:\n\n• Una mente creativa y analítica enfocada a la acción.\n\n• Flexibilidad y dinamismo para aceptar el cambio.\n\n• Facilidad para establecer relaciones interpersonales y trabajar en equipo.",
@@ -101,29 +101,29 @@
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                   },
                   "title": "Perfil de egreso",
-                  "text": "Al estudiar la Licenciatura en Administración y Liderazgo Empresarial serás capaz de contribuir a la planeación, organización, dirección y control de los recursos de cualquier organización lucrativa. Serás pieza fundamental de la toma de decisiones a través de la innovación empresarial y las tecnologías de la información como herramientas de apoyo para orientar el desarrollo del negocio.",
+                  "text": "CONOCIMIENTOS:\n\n• Las tendencias administrativas mercadológicas.\n\n• Las estrategias de comunicación para el desarrollo del liderazgo en las organizaciones.\n\n• Los elementos de los sistemas de negocios y su relación con los departamentos de la organización.\n\n• Estrategias de comercialización y negociación.\n\nHABILIDADES:\n\n• Desarrollar una visión integral sobre los objetivos y estrategias de las organizaciones.\n\n• Asesorar en el diseño e implantación de sistemas y modelos administrativos.\n\nACTITUDES:\n\n• Negociación.\n\n• Trabajo en equipo.",
                   "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "El egresado de la Licenciatura en Administración y Liderazgo Empresarial planifica, organiza, coordina y controla los diferentes recursos dentro de organizaciones públicas y privadas. Desempeña funciones directivas, asesora y presta asistencia técnica para las funciones gerenciales de dichas organizaciones.",
+                  "text": "Áreas: públicas y privadas. \n\nActividades: planificar, organizar, coordinar y controlar los recursos y bienes. Funciones directivas y de asesoría. Asistencia técnica y de gestión.",
                   "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                  "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; Comprobante de domicilio.</p>",
                   "backgroundColor": "#EEAA01"
                 }
               ],
@@ -138,38 +138,38 @@
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "El aspirante a ingresar a la Licenciatura en Administración y Liderazgo Empresarial deberá contar con los siguientes conocimientos:\n\n • Desarrollar procesos lógicos.\n\n • Resolver problemas con base en principios, leyes y conceptos.\n\n • Emplear las nuevas tecnologías de la información y la comunicación.\n\n • Ser capaz para evaluar fortalezas y debilidades de los equipos de trabajo.\n\n • Desarrollar un pensamiento crítico y constructivo.\n\n • Aplicar el razonamiento lógico.\n\n • Manejar equipos de cómputo y electrónicos.\n\n • Tener la capacidad para liderar grupos de trabajo.",
+                  "text": "El aspirante a ingresar a la Licenciatura en Administración y Liderazgo Empresarial deberá contar con los siguientes conocimientos:\n\n• Desarrollar procesos lógicos.\n\n• Resolver problemas con base en principios, leyes y conceptos.\n\n• Emplear las nuevas tecnologías de la información y la comunicación.\n\n• Ser capaz de evaluar fortalezas y debilidades de los equipos de trabajo.\n\n• Desarrollar un pensamiento crítico y constructivo.\n\n• Aplicar el razonamiento lógico.\n\n• Manejar equipos de cómputo y electrónicos.\n\n• Tener la capacidad para liderar grupos de trabajo.",
                   "backgroundColor": "#1B2D68"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                   },
                   "title": "Perfil de egreso",
-                  "text": "Al estudiar la Licenciatura en Administración y Liderazgo Empresarial serás capaz de contribuir a la planeación, organización, dirección y control de los recursos de cualquier organización lucrativa. Serás pieza fundamental de la toma de decisiones a través de la innovación empresarial y las tecnologías de la información como herramientas de apoyo para orientar el desarrollo del negocio.",
+                  "text": "CONOCIMIENTOS:\n\n• Las tendencias administrativas mercadológicas.\n\n• Las estrategias de comunicación para el desarrollo del liderazgo en las organizaciones.\n\n• Los elementos de los sistemas de negocios y su relación con los departamentos de la organización.\n\n• Estrategias de comercialización y negociación.\n\nHABILIDADES:\n\n• Desarrollar una visión integral sobre los objetivos y estrategias de las organizaciones.\n\n• Asesorar en el diseño e implantación de sistemas y modelos administrativos.\n\nACTITUDES:\n\n• Negociación.\n\n• Trabajo en equipo.",
                   "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "El egresado de la Licenciatura en Administración y Liderazgo Empresarial planifica, organiza, coordina y controla los diferentes recursos dentro de organizaciones públicas y privadas. Desempeña funciones directivas, asesora y presta asistencia técnica para las funciones gerenciales de dichas organizaciones.",
+                  "text": "Áreas: públicas y privadas. \n\nActividades: planificar, organizar, coordinar y controlar los recursos y bienes. Funciones directivas y de asesoría. Asistencia técnica y de gestión. ",
                   "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                  "text": "<p>&bull;&nbsp;Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).<br />&bull;&nbsp;Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.<br />&bull;&nbsp;1 copia de la CURP.<br />&bull;&nbsp;2 copias de Credencial Oficial IFE / INE o Pasaporte.<br />&bull;&nbsp;2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).<br />&bull;&nbsp;2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                   "backgroundColor": "#EEAA01"
                 }
               ],

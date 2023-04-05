@@ -26,7 +26,7 @@
     "sections": {
       "head": {
         "title": "Licenciatura en Ingeniería en Creación y Desarrollo de Software y Aplicaciones",
-        "description": "",
+        "description": "El desarrollo del software tiene que ver con todos los ámbitos de la sociedad, la cultura y la economía, por lo que es indispensable la formación de profesionales con capacidad crítica y creativa para responder éticamente a las necesidades de una sociedad inmersa en un proceso acelerado de transformación digital.",
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_creacion_desarrollo_software_aplicaciones_desk_a1960847ac.jpg",
           "alt": "licenciatura"
@@ -37,45 +37,45 @@
         "tabs": {
           "items": [
             {
-              "label": "Modalidad Online",
+              "label": "Modalidad Presencial",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {
                 "cards": [
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                     },
                     "title": "Perfil de ingreso",
-                    "text": "",
+                    "text": "El aspirante de la Ingeniería en Creación y Desarrollo de Software y Aplicaciones deberá tener:\n\n• Interés por resolver problemas, trabajar con máquinas y herramientas, la física y las matemáticas, además de los métodos de ingeniería y sistemas.\n\n• Gusto por el trabajo con máquinas y herramientas.\n\n• Interés por las ciencias exactas, las dimensiones y representaciones gráficas, inclinación por el conocimiento técnico.\n\n• Capacidad de análisis y síntesis.\n\n• Creatividad.\n\n• Criterio y razonamiento lógico matemático.",
                     "backgroundColor": "#1B2D68"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                     },
                     "title": "Perfil de egreso",
-                    "text": "",
+                    "text": "El egresado:\n\n• Aplica la ingeniería en creación y desarrollo de software para responder a problemas sociales.\n\n• Crea y desarrolla sistemas web, de información, aplicaciones móviles y aquellas de inteligencia artificial.\n\n• Trabaja de manera colaborativa en equipos multidisciplinarios y multiculturales.\n\n• Coordina equipos para ejecutar proyectos de desarrollo de software y aplicaciones con capacidad de liderazgo.\n\n• Gestiona la seguridad de procesos de desarrollo y uso de software.",
                     "backgroundColor": "#C31433"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                     },
                     "title": "Campo Laboral",
-                    "text": "",
+                    "text": "El egresado podrá desempeñarse en el área de tecnologías de la información de cualquier empresa o industria, proponiendo soluciones innovadoras en el desarrollo de software y aplicaciones que mejoren los procesos de la organización.",
                     "backgroundColor": "#4470B1"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                     },
                     "title": "Requisitos de admisión",
-                    "text": "",
+                    "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                     "backgroundColor": "#EEAA01"
                   }
                 ],

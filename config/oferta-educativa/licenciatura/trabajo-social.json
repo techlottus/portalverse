@@ -13,7 +13,7 @@
         "campus": ["Pedro Moreno"],
         "nivel": ["Licenciatura"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1ogk8vW9e28Z3uceDaIbXqdl2n-jSW2nZ",
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_trabajo_social_desk_4bb6c0a69e.jpg",
           "alt": "licenciatura"
         },
         "curriculum": {
@@ -26,9 +26,9 @@
     "sections": {
       "head": {
         "title": "Licenciatura Trabajo Social",
-        "description": "La Licenciatura en Trabajo Social forma profesionales del Trabajo Social, comprometidos con la sociedad, capaces de analizar y comprender la realidad social a partir del conocimiento de teorías; capaces en el diseño e implementación de modelos de intervención social con sujetos individuales y colectivos  y, fomentando actitudes y valores éticos.",
+        "description": "La Licenciatura en Trabajo Social forma profesionales comprometidos con la comunidad, capaces de analizar y comprender la realidad del contexto social a partir del conocimiento de teorías; desarrollan, diseñan e implementan modelos de intervención con sujetos individuales y colectivos, fomentando actitudes y valores éticos en su labor.",
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1ogk8vW9e28Z3uceDaIbXqdl2n-jSW2nZ",
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_trabajo_social_desk_4bb6c0a69e.jpg",
           "alt": "licenciatura"
         }
       },
@@ -44,38 +44,38 @@
                 "cards": [
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                     },
                     "title": "Perfil de ingreso",
-                    "text": "Para estudiar trabajo social debes tener intereses en la investigación, el cambio social, el hombre, la conducta y sus manifestaciones, en la comunicación en sus diversas modalidades, empatía, iniciativa y creatividad.",
+                    "text": "El aspirante de trabajo social deberá tener:\n\n• Habilidad en el uso de las TIC´s.\n\n• Habilidades en expresión oral y escrita.\n\n• Intereses en la investigación.\n\n• El cambio social, el hombre, la conducta y sus manifestaciones.\n\n• En la comunicación en sus diversas modalidades, empatía, iniciativa y creatividad.\n\n• Interés por el conocimiento de las Ciencias Sociales y Humanidades.\n\n• Habilidades para la comunicación en sus diversas modalidades.\n\n• Iniciativa y creatividad.\n\n• Actitud para la interacción social.",
                     "backgroundColor": "#1B2D68"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                     },
                     "title": "Perfil de egreso",
-                    "text": "El egresado de la licenciatura en Trabajo social será un profesionista con una sólida formación en el conocimiento y comprensión de la sociedad contemporánea, promotor de la participación, la ciudadanía, la justicia social y los derechos humanos; poseedor de una gran capacidad para aplicar la mediación como estrategia de intervención destinada a la resolución alternativa de conflictos;  hábil para la gestión social y para generar propuestas innovadoras de intervención social en realidades complejas con sujetos individuales y colectivos.",
+                    "text": "Promueve la participación, la ciudadanía, la justicia social y los derechos humanos.\n\nPoseedor de una gran capacidad para aplicar la mediación como estrategia de intervención destinada a la resolución alternativa de conflictos; es hábil para la gestión social y para generar propuestas innovadoras de intervención social en realidades complejas con sujetos individuales y colectivos.\n\nPosee respeto por el medio ambiente, la interculturalidad y la diversidad.\n\nActúa en la búsqueda de la equidad y la inclusión, así como el fomento de la cultura de la paz y no violencia.",
                     "backgroundColor": "#C31433"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                     },
                     "title": "Campo Laboral",
-                    "text": "El Trabajador Social se puede desarrollar tanto en organismos e instituciones nacionales como internacionales, públicas y privadas, en la administración pública, en el ámbito educativo en todos los niveles, empresas privadas. En el marco del tercer sector: asociaciones, fundaciones, federaciones u otras organizaciones sociales en distintos campos de acción, salud, educación, readaptación social, protección civil, desarrollo sustentable, impartición de justicia, seguridad social, vivienda, trabajo, alimentación e industria.",
+                    "text": "Áreas: organismos e instituciones nacionales e internacionales, públicas o privadas, administración pública, ámbito educativo, empresas privadas, asociaciones, fundaciones, federaciones. Campos de la salud, protección civil, desarrollo sustentable, impartición de justicia, seguridad social, vivienda, trabajo, alimentación e industria.",
                     "backgroundColor": "#4470B1"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                     },
                     "title": "Requisitos de admisión",
-                    "text": "Para inscribirse a las licenciaturas semestrales es necesario tener un promedio mínimo de 70, de no ser así, se requiere autorización por escrito del coordinador académico.",
+                    "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                     "backgroundColor": "#EEAA01"
                   }
                 ],

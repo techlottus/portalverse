@@ -30,7 +30,7 @@
     "sections": {
       "head": {
         "title": "Licenciatura en Pedagogía",
-        "description": "",
+        "description": "La Licenciatura en Educación y Pedagogía tiene como objetivo formar profesionales que cuenten con conocimientos integrales sobre los procesos de enseñanza-aprendizaje, con énfasis en la adquisición de habilidades y competencias para el diseño de proyectos educativos y organizacionales. Competencias para el ejercicio de asesor en consultorías.",
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_educacion_pedagogia_desk_eea00ae8cb.jpg",
           "alt": "licenciatura"
@@ -41,45 +41,45 @@
         "tabs": {
           "items": [
             {
-              "label": "Modalidad Online",
+              "label": "Modalidad Presencial",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {
                 "cards": [
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                     },
                     "title": "Perfil de ingreso",
-                    "text": "",
+                    "text": "El aspirante  en pedagogía deberá tener interés por:\n\n• Temas relacionados con la enseñanza y la educación.\n\n• Deberá interesarse por el análisis de problemáticas educativas realizando propuesta de soluciones.\n\n• Deberá contar con conocimientos básicos de informática para el uso de plataformas educativas.\n\n• También  con herramientas de comunicación oral y escrita y de lectura analítica.\n\n• Deberá mostrar capacidad para el trabajo en equipo y manejo de relaciones interpersonales,  vocación de servicio y búsqueda de conocimientos.",
                     "backgroundColor": "#1B2D68"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                     },
                     "title": "Perfil de egreso",
-                    "text": "",
+                    "text": "Conocimientos:\n\n• El egresado tendrá un amplio conocimiento sobre teorías, métodos y técnicas pedagógicas.\n\n• De diseño curricular y orientación educativa.\n\n• Sobre el proceso de administración y gestión en una institución educativa.\n\n• Sobre comportamiento organizacional y capacitación de capital humano.\n\n• Para la elaboración de diagnósticos psicopedagógicos.\n\n• Sobre las áreas de administración y emprendimiento.\n\n• Sobre el comportamiento humano y las distintas etapas del desarrollo para el diseño de actividades que faciliten el aprendizaje.",
                     "backgroundColor": "#C31433"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                     },
                     "title": "Campo Laboral",
-                    "text": "",
+                    "text": "El egresado de la Licenciatura en Educación y Pedagogía podrá desempeñarse como docente en todos los niveles de las instituciones educativas públicas o privadas, como directivo, gestor  y/o asesor educativo. ",
                     "backgroundColor": "#4470B1"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                     },
                     "title": "Requisitos de admisión",
-                    "text": "",
+                    "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                     "backgroundColor": "#EEAA01"
                   }
                 ],

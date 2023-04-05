@@ -13,7 +13,7 @@
       "campus": [],
       "nivel": ["Licenciatura"],
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1MWzsj-Jec-ABUMjdz5T1NRPaWjEAqMxo",
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_relaciones_internacionales_desk_fab5440b94.jpg",
         "alt": "licenciatura"
       },
       "curriculum": {
@@ -24,9 +24,9 @@
   "sections": {
     "head": {
       "title": "Licenciatura en Relaciones Internacionales",
-      "description": "Desarrolla habilidades y capacidades para resolver y proponer acciones de resolución de conflictos y temas de índole internacional por medio del conocimiento de políticas y cultura económica en un entorno internacional. Diseña y propone herramientas de soluciones para un mundo globalizado utilizando herramientas de análisis estratégico.",
+      "description": "En la Licenciatura en Relaciones Internacionales se forman profesionales que solventan y proponen acciones de resolución de conflictos y temas de índole internacional por medio del conocimiento de políticas y cultura económica. Diseña y propone herramientas de soluciones para un mundo globalizado utilizando herramientas de análisis estratégico.",
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1MWzsj-Jec-ABUMjdz5T1NRPaWjEAqMxo",
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_relaciones_internacionales_desk_fab5440b94.jpg",
         "alt": "licenciatura"
       }
     },
@@ -42,38 +42,38 @@
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "El aspirante a estudiar la Licenciatura en Relaciones Internacionales deberá poseer un buen manejo del idioma español, una correcta expresión oral y escrita, ser hábil en el manejo de TIC´s e interesarse por los problemas sociales tanto en el país como en el mundo. ",
+                  "text": "El aspirante a estudiar la Licenciatura en Relaciones Internacionales deberá poseer un buen manejo del idioma español, una correcta expresión oral y escrita, ser hábil en el manejo de TIC´s e interesarse por los problemas sociales tanto en el país como en el mundo.",
                   "backgroundColor": "#1B2D68"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                   },
                   "title": "Perfil de egreso",
-                  "text": "Los egresados de esta licenciatura tendrán conocimientos teóricos y prácticos sobre las realidades y procesos políticos, gubernamentales de México y el mundo. \n\n Protocolos de asesoramiento diplomático, derecho y comercio internacional, política exterior y diseño de estrategias organizacionales que fomenten las relaciones internacionales.\n\n Poseerán habilidades para resolver conflictos personales y sociales de conformidad a técnicas específicas de su profesión para la adecuada toma de decisiones. Asesorar en materia de política exterior a autoridades mexicanas y otros Estados-nación.",
+                  "text": "Los egresados de esta licenciatura tendrán conocimientos teóricos y prácticos sobre las realidades y procesos políticos, gubernamentales de México y el mundo.\n\nProtocolos de asesoramiento diplomático, derecho y comercio internacional, política exterior y diseño de estrategias organizacionales que fomenten las relaciones internacionales.\n\nPoseerán habilidades para resolver conflictos personales y sociales de conformidad a técnicas específicas de su profesión para la adecuada toma de decisiones. Asesorar en materia de política exterior a autoridades mexicanas y otros Estados-Nación.",
                   "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "Como egresado de la Licenciatura en Relaciones Internacionales podrás desempeñarte proponiendo soluciones en organismos internacionales, dependencias de gobierno y entidades empresariales donde formularán y evaluarán propuestas económicas, sociales y políticas que fomenten la cooperación y desarrollo internacional, así como ser asesor en temas de carácter legal, económico y político.",
+                  "text": "Áreas: organismos internacionales, dependencias de gobierno y entidades empresariales. \n\nActividades: formulación de propuestas económicas, sociales y políticas que fomenten la cooperación y desarrollo internacional. Asesor en temas de carácter legal, económico y político. ",
                   "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                  "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; Comprobante de domicilio.</p>",
                   "backgroundColor": "#EEAA01"
                 }
               ],

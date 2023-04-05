@@ -13,7 +13,7 @@
         "campus": ["Américas"],
         "nivel": ["Licenciatura"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=",
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_diseno_grafico_desk_f05a4f5d1a.jpg",
           "alt": "licenciatura"
         },
         "curriculum": {
@@ -26,9 +26,9 @@
     "sections": {
       "head": {
         "title": "Licenciatura en Diseño para la Comunicación Gráfica",
-        "description": "La Licenciatura en Diseño para la Comunicación Gráfica tiene por objetivo formar diseñadores que identifiquen problemas complejos de comunicación gráfica y produzcan soluciones y estratégias, con el uso de medios y lenguajes estratégicos, que utilicen la tecnología para responder a las necesidades de la sociedad con una visión ambiental y sustentable.",
+        "description": "La Licenciatura en Diseño para la Comunicación Gráfica tiene por objetivo formar profesionales que identifiquen problemas complejos de comunicación gráfica y produzcan soluciones y estrategias, con el uso de medios y lenguajes actuales, que utilicen la tecnología para responder a las necesidades de la sociedad con una visión ambiental y sustentable.",
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1wgZwyx4z5cjqmDKBXziK0SHJzJgaPrPK",
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_diseno_grafico_desk_f05a4f5d1a.jpg",
           "alt": "licenciatura"
         }
       },
@@ -44,38 +44,38 @@
                 "cards": [
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                     },
                     "title": "Perfil de ingreso",
-                    "text": "Intereses: por los fenómenos de comunicación humana, tanto individuales como masivos, por conocer y desarrollar habilidades y técnicas de diversa índole, manejo adecuado de la información con fines comunicacionales, técnico y cultural.\n\n Aptitudes: sensibilidad, sentido de organización y mando, creatividad artística y literaria, sistemática, comercial y humanista.\n\n Actitudes: integración al medio ambiente, conciencia y respeto al patrimonio cultural, estabilidad emocional.",
+                    "text": "El aspirante a Diseño para la comunicación gráfica debe tener Intereses:\n\n• Por los fenómenos de comunicación humana, tanto individuales como masivos, por conocer y desarrollar habilidades y técnicas de diversa índole,\n\n• Manejo adecuado de la información con fines comunicacionales, técnico y cultura.\n\n Aptitudes: sensibilidad, sentido de organización y mando, creatividad artística y literaria, sistemática, comercial y humanista.\n\n Actitudes: integración al medio ambiente, conciencia y respeto al patrimonio cultural, estabilidad emocional.",
                     "backgroundColor": "#1B2D68"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                     },
                     "title": "Perfil de egreso",
-                    "text": "El profesional de Diseño para la Comunicación Gráfica tendrá la capacidad para: \n\n• Manejar el proceso metodológico del diseño y de expresión gráfica de mensajes en la teoría y en la práctica. \n\n• Conocer y dominar los fundamentos teóricos, científicos, tecnológicos y filosóficos de las disciplinas que le permitan crear los mensajes gráficos que la sociedad demande.\n\n• Aplicar con creatividad la técnica en la búsqueda de soluciones para resolver problemas de diseño.\n\n•  Conocer, manejar y dominar las especialidades del diseño gráfico como imagen corporativa, diseño de carteles, empaques y envases, diseño de campañas.",
+                    "text": "Conocimientos\n\n• Manejo y dominio en las especialidades como  Imagen corporativa, diseño de carteles, envases, diseño de campañas, gestión del diseño.\n\n• Dominio en los fundamentos teóricos, tecnológicos y filosóficos de las disciplinas que le permitan crear los mensajes gráficos.\n\nHabilidades\n\n• Aplicar con creatividad la técnica en la búsqueda de soluciones para resolver problemas de diseño.\n\n• Planear, proponer, producir y coordinar proyectos funcionales y creativos centrados en el usuario.\n\nActitudes\n\n• Responsabilidad social, innovación y sustentabilidad.",
                     "backgroundColor": "#C31433"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                     },
                     "title": "Campo Laboral",
-                    "text": "El Diseñador/a para la Comunicación Gráfica podrá resolver los problemas de comunicación visual que surjan de la sociedad, aportando soluciones creativas y funcionales. Su función principal será comunicar visualmente un mensaje proveniente de un servicio, producto, empresa o institución, mediante la transformación de dicho mensaje de signos y códigos visuales que sean bien percibidos y aceptados por el público receptor. \n\n Así el/la Diseñador/a para la Comunicación Gráfica podrá trabajar para empresas, instituciones o por cuenta propia en la realización de imágenes corporativas, diseño de carteles, empaques y envases, campañas de difusión, diseño editorial, al igual que en el campo de la investigación y la docencia ",
+                    "text": "Áreas: empresas e instituciones, campo educativo. Empleado por cuenta propia. \n\nActividades: resolución de problemas de comunicación visual, aportante de soluciones creativas y funcionales. Comunicador visual de las ideas, mensajes, y símbolos de los productos, empresas o campañas. Diseñador. ",
                     "backgroundColor": "#4470B1"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                     },
                     "title": "Requisitos de admisión",
-                    "text": "a) Acta de nacimiento original y 1 copia (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.\n\n c) 1 copia de la CURP.\n\n d) 2 copias de Credencial Oficial IFE / INE o Pasaporte\n\n e) 2 copias de Credencial Oficial IFE / INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n f) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n De contar ya con una licenciatura por parte de UdeG y estar titulado, se aceptan copias certificadas expedidas por UdeG del certificado de bachillerato de no más de un mes al día que lo esté entregando y copia simple del título. (Más todos los documentos de nuevo ingreso).\n\n En caso de no estar titulado, debe entregar en original todos los documentos. (Todos los documentos de nuevo ingreso).\n\n Nota: Si realizó los estudios de bachillerato en otro estado de la república, el certificado debe tener la legalización por parte de la Secretaría de Gobernación del estado donde realizaron los estudios.\n\n Si el certificado es de UNAM, Secretaría de la Defensa Nacional (SEDENA), Sistema Educativo Nacional (en el encabezado del documento) y Colegios de Bachilleres, estos no requieren del trámite de legalización.",
+                    "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                     "backgroundColor": "#EEAA01"
                   }
                 ],

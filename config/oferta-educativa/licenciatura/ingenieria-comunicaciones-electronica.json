@@ -13,7 +13,7 @@
         "campus": ["Olímpica"],
         "nivel": ["Licenciatura"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1L1GKi6XqnYU-Pns6TQ1jba5vshI3sF_f",
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_comunicaciones_electronica_desk_fce749a4bc.jpg",
           "alt": "licenciatura"
         },
         "curriculum": {
@@ -28,7 +28,7 @@
         "title": "Ingeniería Comunicaciones y Electrónica",
         "description": "El Ingeniero en Comunicaciones y Electrónica es el profesionista que se encarga del análisis, diseño, implementación y mantenimiento de sistemas electrónicos para dar solución a problemáticas en el ámbito de la industria o de los diversos sectores de la sociedad, implementando estrategias innovadoras y actuales para el mundo moderno.",
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1L1GKi6XqnYU-Pns6TQ1jba5vshI3sF_f",
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_comunicaciones_electronica_desk_fce749a4bc.jpg",
           "alt": "licenciatura"
         }
       },
@@ -44,38 +44,38 @@
                 "cards": [
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                     },
                     "title": "Perfil de ingreso",
-                    "text": "El aspirante deberá contar con:\n\n 1.- Conocimientos básicos de cómputo, física y cálculo.\n\n 2.- Orientación al trabajo en equipo.\n\n 3.- Organización.\n\n 4.-Gusto por la innovación tecnológica.\n\n 5.-Habilidades de análisis crítico del entorno.",
+                    "text": "El aspirante de la ingeniería en comunicaciones y electrónica deberá contar con:\n\n• Interés: por resolver problemas, trabajar con máquinas y herramientas, la física y las matemáticas, además de los métodos de ingeniería y sistemas.\n\n• Aptitudes: de razonamiento para la resolución de problemas, razonamiento gráfico visualizando representaciones tridimensionales y objetos en movimiento.\n\n• Actitudes: de observación y análisis, imaginación creativa, gusto por la manipulación y solución de problemas, prepositivo e inquietud por la investigación.",
                     "backgroundColor": "#1B2D68"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                     },
                     "title": "Perfil de egreso",
-                    "text": "El egresado de Ingeniería en Comunicaciones y electrónica será capaz de analizar sistemas de su entorno para proponer mejoras basadas en aprovechamiento de tecnología de telecomunicaciones y electrónica sustentable y optimizada al máximo.",
+                    "text": "El ingeniero en Comunicaciones y Electrónica será capaz de:\n\n• Aplicar técnicas matemáticas para el análisis, modelado y solución de problemas.\n\n• Medir, interpretar y hacer uso de parámetros eléctricos y electrónicos.\n\n• Diseñar, construir y dar mantenimiento a dispositivos, equipos y máquinas de la rama de Ingeniería en Comunicaciones y Electrónica.\n\n• Proyectar, diseñar y realizar propuestas para poner en operación plantas y sistemas que integren equipos de Ingeniería en Comunicaciones y Electrónica.",
                     "backgroundColor": "#C31433"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                     },
                     "title": "Campo Laboral",
-                    "text": "El campo laboral se extiende a empresas de telecomunicaciones, automatización, diseño electrónico y sistemas embebidos, así como la administración de tecnologías de la información, procesos de manufactura e incluso consultoría privada e investigación para el desarrollo de nuevas tecnologías.",
+                    "text": "Áreas: telecomunicaciones, automatización, diseño electrónico y sistemas, administración de tecnologías de la información, procesos de manufactura, consultoría privada e investigación para el desarrollo de nuevas tecnologías.",
                     "backgroundColor": "#4470B1"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                     },
                     "title": "Requisitos de admisión",
-                    "text": "a) Acta de nacimiento original y 1 copias (se puede recibir de cualquier año siempre y cuando se encuentre en buen est\n\n b) Certificado de bachillerato original, en buen estado y 1 copia por ambos l\n\n c) 1 copia de la \n\n d) 2 copias de Credencial Oficial IFE / INE o Pasa\n\n e) 2 copias de Credencial Oficial IFE / INE o Pasaporte del padre de familia o tutor (para menores de e\n\n f) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantá\n\n De contar ya con una licenciatura por parte de UdeG y estar titulado, se aceptan copias certificadas expedidas por UdeG del certificado de bachillerato de no más de un mes al día que lo esté entregando y copia simple del título. (Más todos los documentos de nuevo ingreso En caso de no estar titulado, debe entregar en original todos los documentos. (Todos los documentos de nuevo ingreso).\n\n Nota: Si realizó los estudios de bachillerato en otro estado de la república, el certificado debe tener la legalización por parte de Secretaría de Gobernación del estado donde realizaron los estu\n\n Si el certificado es de UNAM, Secretaría de la Defensa Nacional (SEDENA), Sistema Educativo Nacional (en el encabezado del documento) y Colegios de Bachilleres, estos no requieren del trámite de legaliza\n\n Extranjeros solicitar informes completos con personal de inscripciones.",
+                    "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                     "backgroundColor": "#EEAA01"
                   }
                 ],
