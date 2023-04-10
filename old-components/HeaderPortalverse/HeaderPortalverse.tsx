@@ -217,4 +217,4 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, l
   </>; 
 }
 
-export default Header
+export default Header;
