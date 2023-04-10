@@ -597,6 +597,7 @@
         "overlayWhite": false,
         "overlayDak": false,
         "font": "light",
+        "desktopRatio": "2/1",
         "button": {
           "id": "",
           "type": "outlined",
@@ -628,6 +629,7 @@
         "overlayWhite": false,
         "overlayDak": false,
         "font": "light",
+        "desktopRatio": "2/1",
         "button": {
           "id": "",
           "type": "outlined",

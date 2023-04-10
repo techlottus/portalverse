@@ -62,6 +62,7 @@
         "subtitle": "",
         "position": "",
         "height": "auto",
+        "desktopRatio": "300/53",
         "overlayWhite":false,
         "overlayDak": false,
         "button":{

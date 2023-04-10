@@ -59,13 +59,13 @@
     "banner": {
       "image": {
         "desktop": "https://assets.staging.bedu.org/UTEG/contactanos_Banner_contacto_desk_bf01582aca.jpg",
-        "mobile": "https://assets.staging.bedu.org/UTEG/contactanos_Banner_contacto_tablet_ce1a095f33.jpg",
-        "tablet": "https://assets.staging.bedu.org/UTEG/contactanos_Banner_contacto_mobile_643ff42d9a.jpg"
+        "tablet": "https://assets.staging.bedu.org/UTEG/contactanos_Banner_contacto_tablet_ce1a095f33.jpg",
+        "mobile": "https://assets.staging.bedu.org/UTEG/contactanos_Banner_contacto_mobile_643ff42d9a.jpg"
       },
       "title": "UTEG 360",
       "subtitle": "Vive con nosotros la experiencia internacional de tu profesión.",
       "position": "left-bottom",
-      "height": "342px",
+      "height": "auto",
       "overlayWhite":false,
       "overlayDak": false,
       "button":{
