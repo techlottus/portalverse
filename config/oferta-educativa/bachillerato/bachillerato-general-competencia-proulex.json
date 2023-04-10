@@ -28,7 +28,7 @@
     "sections": {
       "head": {
         "title": "Bachillerato General por Competencia con Certificación en Inglés Proulex",
-        "description": "Bachillerato General por Competencias con certificación en Inglés Proulex que incluye la enseñanza del idioma inglés, único en el mercado local y a un costo menor que en instituciones externas. El objetivo es promover en la comunidad estudiantil el dominio de una segunda lengua bajo un modelo especial; cubriendo de este modo, con la calidad académica requerida por nuestros estudiantes y aspirantes.",
+        "description": "Es el Bachillerato General por Competencias con certificación en Inglés Proulex que incluye la enseñanza del idioma inglés, único en el mercado local y a un costo menor que en instituciones externas. El objetivo es promover en la comunidad estudiantil el dominio de una segunda lengua bajo un modelo especial; cubriendo de este modo, con la calidad académica requerida por nuestros estudiantes y aspirantes.",
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/interior_bachillerato_proulex_desk_6c5a4934d4.jpg",
           "alt": "bachillerato"
@@ -43,7 +43,7 @@
               "content": [
                 {
                   "title": "Perfil de ingreso",
-                  "description": "\n\n• Utiliza el lenguaje oral y escrito con claridad y fluidez para interactuar en distintos contextos sociales.\n\n• Emplea la argumentación y el razonamiento al analizar situaciones identificar problemas formular preguntas emitir juicios y proponer diversas soluciones.\n\n• Selecciona, analiza, evalúa y comparte información proveniente de diversas fuentes y aprovecha los recursos tecnológicos a su alcance para profundizar y ampliar su aprendizaje de manera permanente.\n\n• Emplea los conocimientos adquiridos a fin de interpretar y explicar procesos sociales económicos culturales y sociales así como tomar decisiones y actuar individual y colectivamente en aras de promover la salud y el cuidado ambiental como formas de mejorar la calidad de vida.\n\n• Conoce y valora sus características y potencialidades como ser humano se identifica como parte de un grupo social, emprende proyectos personales se esfuerza para lograr sus propósitos y asume con responsabilidad las consecuencias de sus acciones.\n\n• Aprecia y participa en diversas manifestaciones artísticas. Integra conocimientos y saberes de la cultura como medio para conocer las ideas y los sentimientos de otros, así como manifestar los propios.\n\n• Se reconoce como un ser con potencialidades físicas que le permiten mejorar su capacidad motriz y favorecer un estilo de vida activo y saludable.",
+                  "description": "\n\n• Utiliza el lenguaje oral y escrito con claridad y fluidez para interactuar en distintos contextos sociales.\n\n• Emplea la argumentación y el razonamiento al analizar situaciones identificar problemas formular preguntas emitir juicios y proponer diversas soluciones.\n\n• Selecciona, analiza, evalúa y comparte información proveniente de diversas fuentes.\n\n• Aprovecha los recursos tecnológicos a su alcance para profundizar y ampliar su aprendizaje de manera permanente.\n\n• Conoce y valora sus características y potencialidades como ser humano.",
                   "image": {
                     "src": "https://assets.staging.bedu.org/UTEG/perfil_ingreso_bachillerto_desk_fe48b1eccf.jpg",
                     "alt": "bachillerato-presencial"
@@ -51,7 +51,7 @@
                 },
                 {
                   "title": "Perfil de egreso",
-                  "description": "Las competencias genéricas que constituyen el perfil del egresado del Bachillerato General por Competencias son las que todos los bachilleres deben estar capacitados para desempeñar y les permiten:\n\n• Contar con una cultura básica acerca del mundo científico y social.\n\n• Obtener conocimientos, valores y competencias laborales.\n\n• Ser responsable y consciente de la participación que tiene como ciudadano en la transformación de la sociedad.",
+                  "description": "• Pensamiento crítico y reflexivo respecto al entorno socio-cultural. \n\n• Conocimiento básico acerca del mundo científico y social. \n\n• Saberes, competencias, valores y aptitudes básicas para el mundo laboral. \n\n• Consciente de su participación y valor como ciudadano en la sociedad. ",
                   "image": {
                     "src": "https://assets.staging.bedu.org/UTEG/perfil_egreso_desk_1aac25431a.jpg",
                     "alt": "bachillerato-presencial-requisitos"
