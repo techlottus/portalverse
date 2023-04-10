@@ -1,6 +1,5 @@
 import { Fragment, useEffect, useState } from "react";
 import Head from "next/head";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import cn from "classnames";
 import ContentInsideLayout from "@/layouts/ContentInside.layout";
@@ -14,10 +13,10 @@ import RichtText from "@/old-components/Richtext/Richtext";
 import LinkContactTarget from "@/old-components/LinkContactTarget";
 import DescriptionSection from "@/old-components/DescriptionSection";
 import Mosaic from "@/old-components/Mosaic";
-import Button from "@/old-components/Button/Button";
 import TabsFeatured from "@/old-components/TabsFeatured";
 import Feedback from "@/old-components/Feedback";
 import Icon from "@/old-components/Icon";
+import Aspect from "@/components/Aspect";
 
 
 const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => {
@@ -88,12 +87,14 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
         </div>
         <div className="w-d:col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mb-6 ">
           {
-            sections.alliances.carrousel.map((item: any, i: number) => <section key={`section-numbers-${i}`}>
-              <Image
-                alt={item.desk.alt}
-                src={item.desk.src}
-                classNames="h-52"
-              />
+            sections?.alliances?.carrousel?.map((item: any, i: number) => <section key={`section-numbers-${i}`}>
+              <Aspect ratio="4/3">
+                <Image
+                  alt={item.desk.alt}
+                  src={item.desk.src}
+                  classNames="w-full h-full"
+                />
+              </Aspect>
             </section>)
           }
         </div>
@@ -127,20 +128,11 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
                     src={src}
                     classNames={cn("aspect-4/3 col-span-5 w-t:col-start-2 w-t:col-end-8 w-p:col-span-4", { "hidden": tabActive !== i })}
                   />
-                  {/* <DescriptionSection
-                  action={<Link href={download.link}><a className="flex items-center" target={"_blank"}>{download.title} <span className="material-icons">download</span></a></Link>}
-                  mode="transparent"
-                  title={titleProcess}
-                  description={descripcionProcess}
-                  classNames={cn("col-span-12 grid grid-cols-12 gap-6 w-t:col-span-8 w-t:grid-cols-8 w-p:col-span-4 py-[40px] w-t:py-[94px] w-p:flex w-p:flex-col w-p:p-6", { "hidden w-p:hidden": tabActive !== i })}
-                  titleStyles="col-start-2 col-end-12 w-t:col-end-8"
-                  descriptionStyles="col-start-2 col-end-12 w-t:col-end-8" /> */}
                 </Fragment>)
               }
             </ContentInsideLayout>
           </div>
         </ContentLayout>
-
       </ContentFullLayout>
       <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 flex flex-col my-6">
@@ -157,6 +149,8 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
             </div>
           </Feedback>
         </div>
+      </ContentLayout>
+      <ContentLayout classNames="w-d:-mb-40">
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
           <p className="font-Poppins font-bold text-13 w-t:text-8.5 w-p:text-7.5 mb-18">{sections.descriptionSection.title}</p>
           {
@@ -173,28 +167,37 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
               </div>
             )
           }
-          {/* <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center mt-9">
-            <Button dark data={ sections.head.button }/>
-          </div> */}
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-          <Image
-            alt={sections.descriptionSection.image.desk.alt}
-            src={sections.descriptionSection.image.desk.src}
-            classNames="aspect-3/4 w-t:hidden w-p:hidden"
-          />
-          <Image
-            alt={sections.descriptionSection.image.tablet.alt}
-            src={sections.descriptionSection.image.tablet.src}
-            classNames="aspect-3/4 w-d:hidden w-p:hidden"
-          />
-          <Image
-            alt={sections.descriptionSection.image.mobile.alt}
-            src={sections.descriptionSection.image.mobile.src}
-            classNames="aspect-2/1 w-d:hidden w-t:hidden"
-          />
+          <div className="w-t:hidden w-p:hidden">
+            <Aspect ratio="240/383">
+              <div className="flex w-full justify-center">
+                <img
+                  alt={sections.descriptionSection.image.desk.alt}
+                  src={sections.descriptionSection.image.desk.src}
+                />
+              </div>
+            </Aspect>
+          </div>
+          <div className="w-d:hidden w-p:hidden">
+            <Aspect ratio="2/1">
+              <Image
+                alt={sections.descriptionSection.image.tablet.alt}
+                src={sections.descriptionSection.image.tablet.src}
+                classNames="w-full h-full"
+              />
+            </Aspect>
+          </div>
+          <div className="w-d:hidden w-t:hidden">
+            <Aspect ratio="2/1">
+              <Image
+                alt={sections.descriptionSection.image.mobile.alt}
+                src={sections.descriptionSection.image.mobile.src}
+                classNames="w-full h-full"
+              />
+            </Aspect>
+          </div>
         </div>
-
       </ContentLayout>
       <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-12 w-t:mt-6 w-p:mt-6">
