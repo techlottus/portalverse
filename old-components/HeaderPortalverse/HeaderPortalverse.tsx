@@ -117,7 +117,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, l
           <Image src={logotype.src} alt={logotype.alt} classNames="w-[143px] h-10" classNamesImg="w-[143px] h-[38px]" />
         </div>
         <div className={cn("flex flex-col flex-grow p-1")}>
-          <div className="flex justify-end pr-6 gap-6 font-Nunito text-gray-500 text-sm">
+          <div className="flex justify-end pr-6 space-x-6 font-Nunito text-gray-500 text-sm">
             <span className="font-normal text-[#686868]">Accesos para:</span>
             <Link href="/egresados" passHref>
               <p className="font-bold text-[#686868]">Exalumnos</p>
@@ -127,7 +127,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, l
             </Link>
           </div>
           <div className="flex flex-grow p-1 border-solid border-SC/Actions/AC-300 border-t-2">
-            <div className="flex flex-grow gap-6">
+            <div className="flex flex-grow space-x-6">
               {
                 menus.map((item: any, i: number) => <div key={`menu-${i}`} className="cursor-pointer p-1 z-20 flex items-center">
                   {
@@ -155,7 +155,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, l
         </div>
       </div>
       {/* menu suboptions */}
-      <div onMouseLeave={handleHoverOutOption} className={cn("w-full p-2 flex gap-6 justify-center w-t:hidden w-p:hidden bg-white z-50", { "hidden": !activeMenu, "block shadow-15": activeMenu })}>
+      <div onMouseLeave={handleHoverOutOption} className={cn("w-full p-2 flex space-x-6 justify-center w-t:hidden w-p:hidden bg-white z-50", { "hidden": !activeMenu, "block shadow-15": activeMenu })}>
         {
           activeOptionMenu.map((item: any, i: number) => <div key={`submenu-${i}`} className={cn("py-1 px-6 z-20 border-solid border-SC/Actions/AC-300", { "border-r-2": activeOptionMenu.length > 1 })}>
               <Link href={item.route} passHref className="w-full">
