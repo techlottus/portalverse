@@ -122,7 +122,7 @@ const Planteles = ({ sections, meta }: any) => {
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           <Cintillo
-            classNames="h-[200px]"
+            classNames="h-auto"
             image={sections.banner.image}
             title={sections.banner.title}
             email={sections.banner.email}
