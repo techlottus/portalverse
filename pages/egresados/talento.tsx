@@ -58,15 +58,19 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
             </section>)
           }
         </section>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:hidden w-p:hidden">
-          <Cintillo classNames="h-[200px]" image={sections.aplica.banner.image} title={sections.aplica.banner.title} subtitle={sections.aplica.banner.subtitle} phone={sections.aplica.banner.phone} email={sections.aplica.banner.email} contentVariant={sections.aplica.banner.font}/>
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 wd:mb-18 w-t:mb-20 w-p:mb-4">
+          <Cintillo
+            classNames="auto"
+            {...sections?.aplica?.banner}
+            image={sections.aplica.banner.image}
+            title={sections.aplica.banner.title}
+            subtitle={sections.aplica.banner.subtitle}
+            phone={sections.aplica.banner.phone}
+            email={sections.aplica.banner.email}
+            contentVariant={sections.aplica.banner.font}
+          />
         </div>
       </ContentLayout>
-      <ContentFullLayout classNames="w-d:hidden w-t:mt-[65px]">
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <Cintillo classNames="h-[200px]" image={sections.aplica.banner.image} title={sections.aplica.banner.title} subtitle={sections.aplica.banner.subtitle} phone={sections.aplica.banner.phone} email={sections.aplica.banner.email} contentVariant={sections.aplica.banner.font}/>
-        </div>
-      </ContentFullLayout>
     </HeaderFooterLayout>
   </>
 }
