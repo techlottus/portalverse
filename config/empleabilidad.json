@@ -151,7 +151,8 @@
       "banner": {
         "image": {
           "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_empleabilidad_Banner_Dudas_desk_6a63ba843f.jpg",
-          "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_empleabilidad_Banner_dudas_tablet_8642d6906f.jpg"
+          "tablet": "https://assets.staging.bedu.org/UTEG/nosotros_empleabilidad_Banner_dudas_tablet_8642d6906f.jpg",
+          "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_empleabilidad_Banner_dudas_mobile_1f8125d99c.jpg"
         },
         "title": "¿Tienes dudas? Contáctanos",
         "email": "empleabilidad@uteg.edu.mx",
