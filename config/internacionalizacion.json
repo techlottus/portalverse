@@ -724,6 +724,51 @@
           ]
         }
       ]
+    },
+    "videoSection": {
+      "title": "Información UTEG global",
+      "videos": [
+        {
+          "options": {
+            "id": "zPdrz3IL-FY",
+            "type": "single",
+            "controls": true
+          },
+          "dimensions": {
+            "height": "500px"
+          }
+        },
+        {
+          "options": {
+            "id": "io38iBPkhNg",
+            "type": "single",
+            "controls": true
+          },
+          "dimensions": {
+            "height": "500px"
+          }
+        },
+        {
+          "options": {
+            "id": "NLRlSftS4Ac",
+            "type": "single",
+            "controls": true
+          },
+          "dimensions": {
+            "height": "500px"
+          }
+        },
+        {
+          "options": {
+            "id": "eSEU0mxKX8U",
+            "type": "single",
+            "controls": true
+          },
+          "dimensions": {
+            "height": "500px"
+          }
+        }
+      ]
     }
   }
 }
