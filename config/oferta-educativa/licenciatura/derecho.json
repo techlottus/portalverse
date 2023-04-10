@@ -33,7 +33,7 @@
     "sections": {
       "head": {
         "title": "Licenciatura en Derecho",
-        "description": "",
+        "description": "La licenciatura en Derecho persigue generar profesionales en el  campo legal capaces de comprender los fundamentos teóricos y la aplicación práctica del derecho, es una licenciatura idónea para aquellos con conocimiento en el campo jurídico y para quienes decidan estudiar el derecho de forma activa , concreta y que se enfoquen en la praxis legal.",
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_derecho_desk_f435630e68.jpg",
           "alt": "licenciatura"
@@ -55,8 +55,8 @@
                       "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                     },
                     "title": "Perfil de ingreso",
-                    "text": "",
-                    "backgroundColor": "#1B2D68"
+                    "text": "El aspirante deberá tener\n\nConocimiento sobre:\n\n• Matemáticas.\n\n• Problemas sociales.\n\n• El uso de las TIC´s.\n\n• La expresión oral y escrita.\n\n• La comunicación efectiva.\n\nHabilidades y aptitud para:\n\n• Desarrollar procesos lógicos.\n\n• Resolver problemas con base en principios, leyes y conceptos.\n\n• Evaluar fortalezas y debilidades de los equipos de trabajo.\n\n• Pensamiento crítico.\n\n• Aplicar el razonamiento lógico.\n\n• Manejar equipos de cómputo y electrónicos.\n\n• Liderar grupos de trabajo.\n\nActitudes de:\n\n• Creatividad.\n\n• Liderazgo.\n\n• Trabajo en equipo.",
+                   "backgroundColor": "#1B2D68"
                   },
                   {
                     "image": {
@@ -65,7 +65,7 @@
                     },
                     "title": "Perfil de egreso",
   
-                    "text": "",
+                    "text": "CONOCIMIENTOS SOBRE:\n\n• El marco normativo de los bienes constitutivos del patrimonio del Estado, su aplicación y defensa. \n\n• Las relaciones político-jurídicas entre los Estados.\n\n• La ley general de sociedades mercantiles.\n\n• Las disposiciones legales del sistema jurídico mexicano, en materia de recaudación nacional, contribuciones y carácter fiscal.\n\nHABILIDADES PARA:\n\n• Promover soluciones jurídicas.\n\n• Identificar la vía jurisdiccional adecuada a cada situación.\n\n• Formular estrategias jurídicas para la resolución de controversias.",
                     "backgroundColor": "#C31433"
                   },
                   {
@@ -74,7 +74,7 @@
                       "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                     },
                     "title": "Campo Laboral",
-                    "text": "",
+                    "text": "El Licenciado/a en Derecho puede emplearse tanto en empresas públicas como privadas, en las tres esferas de competencia: federal, estatal y municipal, así como en los tres poderes: legislativo, ejecutivo y judicial, en el ámbito privado o como abogado/a corporativo/a. El abogado/a independiente puede ser litigante o postulante ante los tribunales como abogado/a particular. ",
                     "backgroundColor": "#4470B1"
                   },
                   {
@@ -102,7 +102,7 @@
                       "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                     },
                     "title": "Perfil de ingreso",
-                    "text": "",
+                    "text": "El aspirante a la Licenciatura en Derecho debe contar con interés por los problemas sociales en los ámbitos histórico, político, económico y cultural; de orden nacional e internacional.\n\nAdemás de un manejo adecuado de la expresión oral y escrita, comprensión y gusto por la lectura y el debate.\n\nRazonamiento lógico y pensamiento crítico respecto del funcionamiento de las instituciones sociales.",
                     "backgroundColor": "#1B2D68"
                   },
                   {
@@ -112,7 +112,7 @@
                     },
                     "title": "Perfil de egreso",
   
-                    "text": "",
+                    "text": "CONOCIMIENTOS SOBRE:\n\n• El marco normativo de los bienes constitutivos del patrimonio del Estado, su aplicación y defensa.\n\n• Las relaciones político-jurídicas entre los Estados.\n\n• La ley general de sociedades mercantiles.\n\n• Las disposiciones legales del sistema jurídico mexicano, en materia de recaudación nacional, contribuciones y carácter fiscal.\n\nHABILIDADES PARA:\n\n• Promover soluciones jurídicas.\n\n• Identificar la vía jurisdiccional adecuada a cada situación.\n\n• Formular estrategias jurídicas para la resolución de controversias.",
                     "backgroundColor": "#C31433"
                   },
                   {
@@ -121,7 +121,7 @@
                       "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                     },
                     "title": "Campo Laboral",
-                    "text": "",
+                    "text": "Áreas: empresas públicas o privadas en las esferas federales, estatales y municipales. Litigante. ",
                     "backgroundColor": "#4470B1"
                   },
                   {

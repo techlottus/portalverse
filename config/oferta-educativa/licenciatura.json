@@ -885,28 +885,6 @@
       "route": "pedagogia"
     },
     {
-      "title": "Licenciatura en Creación y Desarrollo de Empresas y Negocios",
-      "config": {
-        "nombre": "Licenciatura en Creación y Desarrollo de Empresas y Negocios",
-        "modalidad": [
-          "Presencial"
-        ],
-        "areaConocimiento": [
-          "Negocios y Empresariales"
-        ],
-        "campus": [
-          "Américas",
-          "Campus Washington",
-          "Zapopan"
-        ],
-        "image": {
-          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_creacion_desarrollo_empresa_negocios_desk_47bb112143.jpg",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "creacion-desarrollo-empresas-negocios"
-    },
-    {
       "title": "Licenciatura en Químico Farmaceutico Biólogo con Certificación en Inglés Proulex",
       "config": {
         "nombre": "Licenciatura en Químico Farmaceutico Biólogo con Certificación en Inglés Proulex",
