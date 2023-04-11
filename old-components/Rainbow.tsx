@@ -59,4 +59,4 @@ const Rainbow: FC<RainbowComponentConfig> = ({ sections, title, classNamesTitle 
   );
 }
 
-export default Rainbow
+export default Rainbow;
