@@ -67,7 +67,7 @@ const Home: NextPageWithLayout = ({ data: { sections, meta, strapi } }: any) => 
           <SliderPortalverseWrapper data={{ ...slider }} mobile = {true}/>
         </div>
       </ContentFullLayout>
-      <ContentLayout>
+      <ContentLayout classNames="relative z-0">
         <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4 mt-3">
           <SliderPortalverseWrapper data={{ ...slider, height: "600px" }} mobile = {false}/>
         </div>
