@@ -74,7 +74,7 @@ const EducativeOfferProgram: NextPageWithLayout<any> = ({ level, program, meta, 
     }
   }
 
-  const downloadFileProgram = () => window.open(`https://drive.google.com/uc?export=download&id=${fileSelected}`, "_blank")
+  const downloadFileProgram = () => window.open(`https://assets.staging.bedu.org/UTEG/${fileSelected}`, "_blank")
 
   const handleSelectOption = async ({ detail }: CustomEvent) => {
     setFileSelected(detail);
