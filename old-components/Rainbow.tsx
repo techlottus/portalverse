@@ -17,7 +17,6 @@ const Rainbow: FC<RainbowComponentConfig> = ({ sections, title, classNamesTitle 
       >
         {title}
       </h1>
-      {/* <div className="hidden absolute w-4 w-t:w-5 w-p:w-2 bg-[#CDCDCD] h-[93%] w-t:h-[95%] w-p:h-[95%] ml-2 w-t:ml-6 w-p:ml-[2px] rounded-[20px] my-[80px]"></div> */}
       {
         sections?.map((section, i) => {
           return (
