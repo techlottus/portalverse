@@ -70,6 +70,15 @@ const Rainbow: FC<RainbowComponentConfig> = ({ sections, title, classNamesTitle 
                 })
               }
               </div>
+              
+              {/* Section's background color */}
+              <div className="absolute top-0 left-0 w-full h-full flex">
+                <div
+                  className="w-full h-full"
+                  style={{ backgroundColor: section?.color || "white" }}
+                ></div>
+                <div className="w-d:w-1/3 h-full bg-white"></div>
+              </div>
             </section>
           );
         })
