@@ -1,38 +1,11 @@
-import { FC, useEffect, useState } from "react"
+import { FC } from "react"
 import cn from "classnames"
 import RichtText from "@/old-components/Richtext/Richtext"
 import Image from "@/old-components/Image"
-import RainbowComponentConfig, { RainbowItemComponentConfig, RainbowSectionComponentConfig, StyleRainbowSectionAll, StyleRainbowSectionItem } from "@/types/Rainbow.types"
+import RainbowComponentConfig from "@/types/Rainbow.types"
 import Aspect from "@/components/Aspect"
 
 const Rainbow: FC<RainbowComponentConfig> = ({ sections, title, classNamesTitle }: RainbowComponentConfig) => {
-
-  const [ stylesContainer, setStylesContainer ] = useState<StyleRainbowSectionAll>({});
-  const [ changeDetect, setChangeDetect ] = useState<number>(0);
-
-  const detectResize = () => {
-    setChangeDetect((prevState: number) => prevState + 1);
-  }
-
-  useEffect(() => {
-    detectResize();
-    window.addEventListener('resize', detectResize);
-    return () => window.removeEventListener('resize', detectResize);
-  }, []);
-
-  useEffect(() => {
-    const { outerWidth } = window;
-    const allStyles = sections.reduce(( prev: StyleRainbowSectionAll, { color = null, sections: items }: any, i: number ) => {
-      return { ...prev, ...items.reduce((p: StyleRainbowSectionAll, { color: colorItem = null }: any, j: number) => {
-        let stylesItem: StyleRainbowSectionItem = { "backgroundImage": `linear-gradient(to right, ${!!colorItem ? colorItem : color} 75%, white 70%)` };
-        if ( outerWidth < 1024 ) {
-          stylesItem = { "backgroundColor": `${!!colorItem ? colorItem : color}` }
-        }
-        return { ...p, [`${i}-${j}`]: { ...stylesItem } }
-      }, {}) }
-    }, {});
-    setStylesContainer({ ...allStyles });
-  }, [changeDetect]);// eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <section className="relative w-full">
@@ -70,7 +43,7 @@ const Rainbow: FC<RainbowComponentConfig> = ({ sections, title, classNamesTitle 
                 })
               }
               </div>
-              
+
               {/* Section's background color */}
               <div className="absolute top-0 left-0 w-full h-full flex">
                 <div
