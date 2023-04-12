@@ -8,7 +8,7 @@ import Aspect from "@/components/Aspect"
 const Rainbow: FC<RainbowComponentConfig> = ({ sections, title, classNamesTitle }: RainbowComponentConfig) => {
 
   return (
-    <section className="relative w-full">
+    <section className="relative w-full z-0">
       <h1
         className={cn(
           "mb-6 ac-type-h3-bold-solid-poppins-desktop w-t:ac-type-h2-bold-solid-poppins-mobile w-p:ac-type-h3-bold-solid-poppins-tabmob",
