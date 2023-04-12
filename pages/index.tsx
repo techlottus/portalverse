@@ -98,7 +98,7 @@ const Home: NextPageWithLayout = ({ data: { sections, meta, strapi } }: any) => 
           } */}
           {
             sections.numbers.map((item:any, i:number) => <section key={`section-numbers-${i}`}>
-              <NumbersPortalverse data={item}/>
+              <NumbersPortalverse data={item} classNames="p-2 justify-center"/>
             </section>)
           }
         </div>
