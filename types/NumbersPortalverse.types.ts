@@ -28,11 +28,12 @@ export type NumbersPortalverseconfig = {
   isShadowColor?: boolean;
   bordered?: boolean;
   typeShadowColor?: string;
-  boxShadow?: boolean
+  boxShadow?: boolean;
+  iconClassNames?: string;
 }
 
 export type NumbersPortalverseData = {
-  data:NumbersPortalverseconfig;
+  data: NumbersPortalverseconfig;
   classNames?: any;
   onAnimation?: any;
   timer?: number;
