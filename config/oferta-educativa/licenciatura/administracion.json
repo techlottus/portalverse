@@ -46,7 +46,7 @@
         "tabs": {
           "items": [
             {
-              "label": "Presencial Semestral",
+              "label": "Presencial",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {
@@ -76,53 +76,6 @@
                     },
                     "title": "Campo Laboral",
                     "text": "Áreas: empresas de servicios, comerciales o industriales, casas de bolsas, aseguradoras, arrendadoras, instituciones bancarias, empresas públicas o privadas, asesoría, organismos descentralizados, docencias e investigación, instituciones públicas o privadas. ",
-                    "backgroundColor": "#4470B1"
-                  },
-                  {
-                    "image": {
-                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
-                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
-                    },
-                    "title": "Requisitos de admisión",
-                    "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
-                    "backgroundColor": "#EEAA01"
-                  }
-                ],
-                "wrapper": false
-              }
-            },
-            {
-              "label": "Presencial Cuatrimestral",
-              "icons": { "primary": "", "duplicate": false },
-              "disabled": false,
-              "content": {
-                "cards": [
-                  {
-                    "image": {
-                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
-                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
-                    },
-                    "title": "Perfil de ingreso",
-                    "text": "",
-                    "backgroundColor": "#1B2D68"
-                  },
-                  {
-                    "image": {
-                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
-                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
-                    },
-                    "title": "Perfil de egreso",
-                    
-                    "text": "",
-                    "backgroundColor": "#C31433"
-                  },
-                  {
-                    "image": {
-                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
-                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
-                    },
-                    "title": "Campo Laboral",
-                    "text": "",
                     "backgroundColor": "#4470B1"
                   },
                   {
