@@ -8,7 +8,7 @@
       "title": "Licenciatura en Derecho",
       "config": {
         "nombre": "Licenciatura en Derecho",
-        "modalidad": ["Presencial", "OnlineSemestral", "OnlineCuatrimestral", "Flex"],
+        "modalidad": ["Presencial", "Online", "Flex"],
         "areaConocimiento": ["Negocios y Empresariales"],
         "campus": ["Américas", "Campus Washington", "Río Nilo", "Tlajomulco", "Zapopan"],
         "nivel": ["Licenciatura"],
@@ -24,8 +24,7 @@
             "Tlajomulco": "1zzkA90IrxJ44ZB9nI_4jDTFgYDYwMgw6", 
             "Zapopan": "1zzkA90IrxJ44ZB9nI_4jDTFgYDYwMgw6"
           },
-          "OnlineSemestral": "1FpOIGlW4Gp_JjNR0bwl14bYS0IamT-IZ",
-          "OnlineCuatrimestral": "",
+          "Online": "1z2DiKg5VygR_EQ04esH1SHYaZm9B1CIZ",
           "Flex": "1TOt1NOeO9-0PANEr-HJCBDO6-xBXp2Dn"
         }
       }
@@ -91,7 +90,7 @@
               }
             },
             {
-              "label": "Online Semestral",
+              "label": "Online",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {
@@ -111,7 +110,6 @@
                       "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                     },
                     "title": "Perfil de egreso",
-  
                     "text": "CONOCIMIENTOS SOBRE:\n\n• El marco normativo de los bienes constitutivos del patrimonio del Estado, su aplicación y defensa.\n\n• Las relaciones político-jurídicas entre los Estados.\n\n• La ley general de sociedades mercantiles.\n\n• Las disposiciones legales del sistema jurídico mexicano, en materia de recaudación nacional, contribuciones y carácter fiscal.\n\nHABILIDADES PARA:\n\n• Promover soluciones jurídicas.\n\n• Identificar la vía jurisdiccional adecuada a cada situación.\n\n• Formular estrategias jurídicas para la resolución de controversias.",
                     "backgroundColor": "#C31433"
                   },
@@ -122,52 +120,6 @@
                     },
                     "title": "Campo Laboral",
                     "text": "Áreas: empresas públicas o privadas en las esferas federales, estatales y municipales. Litigante. ",
-                    "backgroundColor": "#4470B1"
-                  },
-                  {
-                    "image": {
-                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
-                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
-                    },
-                    "title": "Requisitos de admisión",
-                    "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; Comprobante de domicilio.</p>",
-                    "backgroundColor": "#EEAA01"
-                  }
-                ],
-                "wrapper": false
-              }
-            },
-            {
-              "label": "Online Cuatrimestral",
-              "icons": { "primary": "", "duplicate": false },
-              "disabled": false,
-              "content": {
-                "cards": [
-                  {
-                    "image": {
-                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
-                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
-                    },
-                    "title": "Perfil de ingreso",
-                    "text": "",
-                    "backgroundColor": "#1B2D68"
-                  },
-                  {
-                    "image": {
-                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
-                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
-                    },
-                    "title": "Perfil de egreso",
-                    "text": "",
-                    "backgroundColor": "#C31433"
-                  },
-                  {
-                    "image": {
-                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
-                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
-                    },
-                    "title": "Campo Laboral",
-                    "text": "",
                     "backgroundColor": "#4470B1"
                   },
                   {

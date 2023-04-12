@@ -576,28 +576,6 @@
       "route": "comunicacion"
     },
     {
-      "title": "Licenciatura en Gestión Deportiva",
-      "config": {
-        "nombre": "Licenciatura en Gestión Deportiva",
-        "modalidad": [
-          "Presencial",
-          "Online",
-          "Flex"
-        ],
-        "areaConocimiento": [
-          "Ciencias sociales"
-        ],
-        "campus": [
-          "Campus Washington"
-        ],
-        "image": {
-          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_gestion_deportiva_desk_9ab0349424.jpg",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "gestion-deportiva"
-    },
-    {
       "title": "Licenciatura en Diseño Gráfico ",
       "config": {
         "nombre": "Licenciatura en Diseño Gráfico ",
@@ -838,26 +816,6 @@
         }
       },
       "route": "ciencias-forenses"
-    },
-    {
-      "title": "Licenciatura en Ingeniería en Creación y Desarrollo de Software y Aplicaciones",
-      "config": {
-        "nombre": "Licenciatura en Ingeniería en Creación y Desarrollo de Software y Aplicaciones",
-        "modalidad": [
-          "Presencial"
-        ],
-        "areaConocimiento": [
-          "Ingenierías y Tecnología"
-        ],
-        "campus": [
-          "Olímpica"
-        ],
-        "image": {
-          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_creacion_desarrollo_software_aplicaciones_desk_d945aa976d.jpg",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "ingenieria-creacion-desarrollo-software-apps"
     },
     {
       "title": "Licenciatura en Pedagogía",
