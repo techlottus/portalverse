@@ -18,8 +18,6 @@ const BannerPortalverse: FC<BannerPortalverseComponentData> = memo((props: Banne
     mobileRatio = "4/3"
   } = data;
 
-  console.log("data: ", data)
-
   return (
     <>
       {/** Desktop banner */}
@@ -71,18 +69,7 @@ const BannerPortalverse: FC<BannerPortalverseComponentData> = memo((props: Banne
                 "bg-[#ffffff80]": data.overlayWhite,
                 "bg-[#00000080]": data.overlayDak
               })}></div>
-              <div className={cn("absolute w-full h-full flex", classNames, {
-                "justify-center text-center": data.position === "center",
-                "justify-end text-right": data.position === "right",
-                "items-center": data.position === "middle",
-                "items-center text-center": data.position === "middle-left",
-                "justify-end items-center text-end": data.position === "middle-right",
-                "justify-center items-center text-center": data.position === "middle-center",
-                "justify-start items-end": data.position === "left-bottom",
-                "justify-center items-end text-center": data.position === "center-bottom",
-                "justify-end items-end text-end": data.position === "right-bottom",
-                "justify-start items-end text-end": data.position === "right-top",
-              })}
+              <div className={cn("absolute w-full h-full flex justify-start items-start", classNames)}
               >
                 <div className="p-10">
                   <h1 className={cn("font-Poppins font-bold w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5 w-d:text-6.5 w-t:text-6 w-p:text-6", classNames, { "text-white": data.overlayDak || data.font === "light" })}>{data.title}</h1>
