@@ -7,21 +7,33 @@
   "sections": {
     "head": {
       "banner": {
-        "title": "Egresados", 
-        "subtitle": "", 
+        "title": "Egresados",
+        "subtitle": "",
         "image": {
           "desktop": "https://assets.staging.bedu.org/UTEG/egresados_banner_cf6855c9f9.jpg",
           "tablet": "https://assets.staging.bedu.org/UTEG/egresados_banner_tablet_f68c2936b9.jpg",
           "mobile": "https://assets.staging.bedu.org/UTEG/egresados_banner_movil_697fb70c06.jpg"
         },
         "statics": [
-          {"maxNumber": 45000, "icon": "", "prefix": "+", "suffix": "", "title": "egresados", "body": "", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false}
+          {
+            "maxNumber": 45000,
+            "icon": "",
+            "prefix": "+",
+            "suffix": "",
+            "title": "egresados",
+            "body": "",
+            "container": false,
+            "isShadowColor": false,
+            "bordered": false,
+            "typeShadowColor": "blue-pastel-right",
+            "boxShadow": false
+          }
         ]
       }
     },
     "introduccion": {
       "title": "UTEG siempre será tu casa",
-      "descripcion": "¡Querido ExaUANE! Este espacio está hecho para ti, estamos comprometidos en apoyarte a generar oportunidades para desarrollar tu potencial y actualización constante. Somos una comunidad de más de 45mil egresados y queremos mantenernos en contacto contigo, que participes en las actividades que realiza tu universidad y continúes formando parte de ella."
+      "descripcion": "¡Querido ExaUTEG! Este espacio está hecho para ti, estamos comprometidos en apoyarte a generar oportunidades para desarrollar tu potencial y actualización constante. Somos una comunidad de más de 45mil egresados y queremos mantenernos en contacto contigo, que participes en las actividades que realiza tu universidad y continúes formando parte de ella."
     },
     "video": {
       "title": "Conoce a nuestros egresados talento",
@@ -41,7 +53,7 @@
         "dimensions": {
           "height": "334px"
         }
-      } 
+      }
     },
     "bannerEmpleabilidad": {
       "image": {
@@ -54,9 +66,9 @@
       "subtitle": "¿Buscas empleo? Inscríbete en nuestra Bolsa de Talento",
       "position": "right",
       "height": "350px",
-      "overlayWhite":false,
+      "overlayWhite": false,
       "overlayDak": false,
-      "button":{
+      "button": {
         "id": "",
         "type": "primary",
         "title": "Continuar",
@@ -82,9 +94,9 @@
       "subtitle": "En UTEG seguimos apoyándote, ahora en tus proyectos de superación profesional. ",
       "position": "right",
       "height": "350px",
-      "overlayWhite":false,
+      "overlayWhite": false,
       "overlayDak": false,
-      "button":{
+      "button": {
         "id": "",
         "type": "primary",
         "title": "Consulta la oferta educativa",
@@ -100,9 +112,9 @@
       "redirect": "/oferta-educativa"
     },
     "banner-tramites": {
-      "font":"light",
+      "font": "light",
       "title": "Trámites",
-      "subtitle":"Ingresa al sistema de la universidad y revisa tu estatus o realiza algún nuevo trámite.",
+      "subtitle": "Ingresa al sistema de la universidad y revisa tu estatus o realiza algún nuevo trámite.",
       "state": "",
       "size": "medium",
       "middle": false,
@@ -140,9 +152,9 @@
       "subtitle": "Ingresa al sistema de la universidad y revisa tu estatus o realiza algún nuevo trámite.",
       "position": "light",
       "height": "350px",
-      "overlayWhite":false,
+      "overlayWhite": false,
       "overlayDak": false,
-      "button":{
+      "button": {
         "id": "",
         "type": "outlined",
         "title": "Ingresar",
@@ -160,7 +172,7 @@
     "noticias": {
       "title": "Noticias",
       "news": [
-        { 
+        {
           "urlImage": "https://assets.staging.bedu.org/UTEG/egresados_noticias_tomas_moro_desktop_2874248421.jpg",
           "subtitle": "ACADEMIA ",
           "title": "Firman Lottus Education y el Centro Tomás Moro convenio de colaboraión. ",
@@ -192,7 +204,7 @@
           },
           "wrapper": true
         },
-        { 
+        {
           "urlImage": "https://assets.staging.bedu.org/UTEG/egresados_noticias_desktop_fea45cc4c9.jpg",
           "subtitle": "ACADEMIA ",
           "title": "UTEG online: estudiar desde cualquier lugar del mundo. ",
@@ -227,7 +239,7 @@
       ]
     },
     "dudas": {
-      "banner":{
+      "banner": {
         "image": {
           "desktop": "https://assets.staging.bedu.org/UTEG/egresados_banner_dudas_tablet_03e5ceffb7.jpg",
           "mobile": "https://assets.staging.bedu.org/UTEG/egresados_banner_dudas_MOVIL_c9f92fa9f9.jpg"
@@ -235,13 +247,12 @@
         "font": "light",
         "title": "¿Tienes dudas? Contáctanos",
         "position": "light",
-        "overlayWhite":false,
+        "overlayWhite": false,
         "overlayDak": false,
         "subtitle": "",
         "email": "egresados@uteg.edu.mx",
         "phone": "55-5501-2672",
         "whatsApp": ""
-
       }
     }
   }

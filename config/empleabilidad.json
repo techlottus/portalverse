@@ -6,25 +6,77 @@
   },
   "sections": {
     "head": {
-      "banner":{
-        "title": "Bolsa de Talento", 
-        "subtitle": "Estadísticas", 
+      "banner": {
+        "title": "Bolsa de Talento",
+        "subtitle": "Estadísticas",
         "image": {
           "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_empleabilidad_Banner_bolsa_empleo_desk_ba766cb93f.jpg",
           "tablet": "https://assets.staging.bedu.org/UTEG/nosotros_empleabilidad_Banner_bolsa_empleo_tablet_9b78602f47.jpg",
           "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_empleabilidad_Banner_bolsa_empleo_mobile_948bbffb11.jpg"
         },
         "statics": [
-          {"maxNumber": 988, "icon": "", "prefix": "+", "suffix": "", "title": "", "body": "Vacantes publicadas en 2022 - 2023", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
-          {"maxNumber": 11250, "icon": "", "prefix": "+", "suffix": "", "title": "", "body": "Invitaciones enviadas a nuestros alumnos y egresados", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
-          {"maxNumber": 1100, "icon": "", "prefix": "+", "suffix": "", "title": "", "body": "Convenios con empresas firmados", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
-          {"maxNumber": 4837, "icon": "", "prefix": "+", "suffix": "", "title": "", "body": "Alumnos y egresados registrados", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false}
+          {
+            "maxNumber": 988,
+            "icon": "edit_note",
+            "prefix": "+",
+            "suffix": "",
+            "title": "",
+            "body": "Vacantes publicadas en 2022 - 2023",
+            "container": false,
+            "isShadowColor": false,
+            "bordered": false,
+            "typeShadowColor": "blue-pastel-right",
+            "boxShadow": false,
+            "iconClassNames": "text-white"
+          },
+          {
+            "maxNumber": 11250,
+            "icon": "book",
+            "prefix": "+",
+            "suffix": "",
+            "title": "",
+            "body": "Invitaciones enviadas a nuestros alumnos y egresados",
+            "container": false,
+            "isShadowColor": false,
+            "bordered": false,
+            "typeShadowColor": "blue-pastel-right",
+            "boxShadow": false,
+            "iconClassNames": "text-white"
+          },
+          {
+            "maxNumber": 1100,
+            "icon": "menu_book",
+            "prefix": "+",
+            "suffix": "",
+            "title": "",
+            "body": "Convenios con empresas firmados",
+            "container": false,
+            "isShadowColor": false,
+            "bordered": false,
+            "typeShadowColor": "blue-pastel-right",
+            "boxShadow": false,
+            "iconClassNames": "text-white"
+          },
+          {
+            "maxNumber": 4837,
+            "icon": "school",
+            "prefix": "+",
+            "suffix": "",
+            "title": "",
+            "body": "Alumnos y egresados registrados",
+            "container": false,
+            "isShadowColor": false,
+            "bordered": false,
+            "typeShadowColor": "blue-pastel-right",
+            "boxShadow": false,
+            "iconClassNames": "text-white"
+          }
         ]
       }
     },
     "descripcion": {
       "title": "¡Únete a la bolsa de talento de UTEG!",
-      "text": { 
+      "text": {
         "content": "El Centro Universitario UTEG forma profesionistas competentes mediante la impartición de programas de calidad académica, con enfoque práctico y tecnología de vanguardia. Por el conocimiento de estas características, tenemos convenio con diversas empresas para elevar <b>la empleabilidad de nuestros estudiantes y egresados de la Universidad</b>."
       }
     },
@@ -34,7 +86,7 @@
     },
     "vinculacionEmpresas": {
       "title": "Vinculación empresarial",
-      "description":{
+      "description": {
         "content": "<p>Para nuestra Universidad es primordial generar alianzas con las empresas de nuestra región y del país; buscamos sumarnos a los beneficios que ofrecen a sus colaboradores y lograr una estrecha relación que les permita, a través de nuestra oferta educativa, desarrollar personal mejor capacitado, preparado y actualizado.</p><p>Además, ponemos a su alcance a nuestros alumnos para cubrir las necesidades de prácticas profesionales y a nuestros egresados para cubrir sus vacantes laborales.</p><p>Súmate a las empresas que ya han confiado en nosotros a través de un convenio de colaboración.</p>"
       },
       "image": {
@@ -80,8 +132,8 @@
     },
     "noticias": {
       "title": "Noticias",
-      "news":[
-        { 
+      "news": [
+        {
           "urlImage": "https://image.shutterstock.com/image-photo/graduates-student-graduation-caps-thrown-260nw-1937758900.jpg",
           "subtitle": "SUBTITULO",
           "title": "Coursera y UANE se unen para ti",
@@ -113,7 +165,7 @@
           },
           "wrapper": true
         },
-        { 
+        {
           "urlImage": "https://image.shutterstock.com/image-photo/graduates-student-graduation-caps-thrown-260nw-1937758900.jpg",
           "subtitle": "SUBTITULO",
           "title": "Coursera y UANE se unen para ti",
