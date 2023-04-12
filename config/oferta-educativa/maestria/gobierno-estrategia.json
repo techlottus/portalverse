@@ -1,13 +1,13 @@
 {
   "meta": {
-    "title": "Master en Gobierno y Estrategia",
+    "title": "Maestría en Gobierno y Estrategia",
     "description": "",
     "keywords": ""
   },
   "config": {
-    "title": "Master en Gobierno y Estrategia",
+    "title": "Maestría en Gobierno y Estrategia",
     "config": {
-      "nombre": "Master en Gobierno y Estrategia",
+      "nombre": "Maestría en Gobierno y Estrategia",
       "modalidad": ["Online"],
       "areaConocimiento": ["Ciencias Sociales"],
       "campus": [],
@@ -17,13 +17,13 @@
         "alt": "maestria"
       },
       "curriculum": {
-        "Online": "1qjAKOmXXEnCgmStzDt59snQ7X3q1y5ZH"
+        "Online": "Maestria_Gobierno_Estrategia_Publica_Online_9f6d21a490.pdf"
       }
     }
   },
   "sections": {
     "head": {
-      "title": "Master en Gobierno y Estrategia",
+      "title": "Maestría en Gobierno y Estrategia",
       "description": "Diagnostica problemas y diseña e implementa las políticas públicas mediante la investigación y evaluación sistemática del proceso de toma de decisiones en entornos de máxima complejidad y en escenarios siempre cambiantes; donde la gobernanza y la participación de la ciudadanía, sirvan al objetivo global del bienestar de la sociedad civil.",
       "image": {
         "src": "https://assets.staging.bedu.org/UTEG/oferta_card_maestria_gobierno_estrategia_d747b3ca59.jpg",
