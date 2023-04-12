@@ -9,7 +9,7 @@
     "config": {
       "nombre": "Maestría en Desarrollo Organizacional y Talento Humano",
       "modalidad": ["Online"],
-      "areaConocimiento": [""],
+      "areaConocimiento": ["Ciencias Sociales"],
       "campus": [],
       "nivel": ["Posgrado"],
       "image": {
@@ -17,7 +17,7 @@
         "alt": "maestria"
       },
       "curriculum": {
-        "Online": "1admvrmZ079rRUt50kN1nHBk8UUM_VPtz"
+        "Online": "Maestria_Desarrollo_Organizacional_Talento_Humano_Online_25d51b62ba.pdf"
       }
     }
   },
@@ -46,7 +46,7 @@
                     "mobile": "https://assets.staging.bedu.org/UTEG/oferta_perfil_ingreso_cd151fd87d.png"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "El aspirante a ingresar a la Maestría en Desarrollo Organizacional y Talento Humano deberá contar con los siguientes conocimientos:\n\n • La expresión oral y escrita\n\n • La investigación y redacción de documentos\n\n • Manejo de relaciones interpersonales\n\n • El análisis de problemas públicos\n\n • Diseñar estrategias\n\n • Transferencia de información al contexto empresarial\n\n • Realizar operaciones numéricas y saber estimar cantidades y lectura de las mismas en aspectos contables\n\n • Interpretar cifras y resolver problemas cuantificables",
+                  "text": "El aspirante a ingresar a la Maestría en Desarrollo Organizacional y Talento Humano deberá contar con los siguientes conocimientos:\n\n• La expresión oral y escrita.\n\n• La investigación y redacción de documentos.\n\n• Manejo de relaciones interpersonales.\n\n• El análisis de problemas públicos.\n\n• Diseñar estrategias.\n\n• Transferencia de información al contexto empresarial.\n\n• Realizar operaciones numéricas y saber estimar cantidades y lectura de las mismas en aspectos contables.\n\n• Interpretar cifras y resolver problemas cuantificables.",
                   "backgroundColor": "#1B2D68"
                 },
                 {
@@ -55,7 +55,7 @@
                     "mobile": "https://assets.staging.bedu.org/UTEG/oferta_perfil_egreso_9efedde160.png"
                   },
                   "title": "Perfil de egreso",
-                  "text": "• Desarrollará una visión integral sobre los objetivos de las organizaciones y sus estrategias.\n\n • Conducirá grupos de trabajo y logrará la solución de conflictos para lograr objetivos organizacionales.\n\n • Asesorará en el diseño e implantación de sistemas y modelos administrativos para la toma de decisiones.\n\n • Operará sistemas de cómputo y comunicación para el procesamiento de la información.\n\n • Fundamentará la toma de decisiones, basándose en el análisis de información.\n\n • Propondrá alternativas de solución para la toma de decisiones.\n\n • Evaluará con sentido crítico las situaciones a través del uso de evidencia de investigación confiable y relevante para contribuir con la solución de los problemas empresariales.\n\n • Propondrá soluciones para resolver asuntos específicos relacionados con la organización, con diferentes niveles de complejidad.",
+                  "text": "\n\n• Desarrollará una visión integral sobre los objetivos de las organizaciones y sus estrategias.\n\n• Conducirá grupos de trabajo y logrará la solución de conflictos para lograr objetivos organizacionales.\n\n• Asesorará en el diseño e implantación de sistemas y modelos administrativos para la toma de decisiones.\n\n• Fundamentará la toma de decisiones, basándose en el análisis de información.\n\n• Evaluará con sentido crítico las situaciones a través del uso de evidencia de investigación confiable y relevante para contribuir con la solución de los problemas empresariales",
                   "backgroundColor": "#C31433"
                 },
                 {
@@ -64,7 +64,7 @@
                     "mobile": "https://assets.staging.bedu.org/UTEG/oferta_campo_laboral_9c7f94c46b.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "El egresado de la Maestría en Desarrollo Organizacional y Talento Humano es quien analiza las necesidades del capital humano. Brinda consultoría a líderes de departamento, de empresas o unidades de negocio para que sepan cómo llevar los proyectos de desarrollo. Realiza diagnósticos dentro de las empresas para mejorar la productividad de los empleados.",
+                  "text": "Actividades: analista de las necesidades del capital humano. Consultoría a empresas o unidades de negocio. Diagnósticos de empresas que mejoren la productividad de los empleados. ",
                   "backgroundColor": "#4470B1"
                 },
                 {
@@ -73,7 +73,7 @@
                     "mobile": "https://assets.staging.bedu.org/UTEG/oferta_requisitos_admision_ce1636dc61.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• Ine\n\n• Comprobante de domicilio\n\n• Título",
+                  "text": "\n\n• Acta de nacimiento original y 2 copias (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n• Copia de certificado total de licenciatura, o copia de Título o copia de acta de titulación no mayor a 1 año. (Maestrías SEP).\n\n• 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n• 2 copia de la CURP.\n\n• 2 copia Credencial Oficial IFE o INE, o pasaporte.\n\n• Copia del Comprobante aspirante seleccionado Maestría (F-DA-82).",
                   "backgroundColor": "#EEAA01"
                 }
               ],

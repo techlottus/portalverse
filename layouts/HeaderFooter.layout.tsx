@@ -20,10 +20,12 @@ export default function HeaderFooterLayout({ children, breadcrumbs = true }: Hea
 
   return <>
     <Header menus={menus} menusMobile={menuMobile} onClickLogo={logotypeClick} onClickCTA={clickCTA} logotype={logotype} />
-    <ContentLayout>
-      <Breadcrumbs classNames="col-span-12 w-t:col-span-8 w-p:col-span-4" visible={breadcrumbs} />
-    </ContentLayout>
-    { children }
-    <Footer onClickLogo={logotypeClick} privacyLink={privacyLink} certifications={certifications} logotype={logotipo} social={social} phone={phone} directorio={directorio} sections={sections} />
+    <div className="w-d:pt-24">
+      <ContentLayout>
+        <Breadcrumbs classNames="col-span-12 w-t:col-span-8 w-p:col-span-4" visible={breadcrumbs} />
+      </ContentLayout>
+      { children }
+      <Footer onClickLogo={logotypeClick} privacyLink={privacyLink} certifications={certifications} logotype={logotipo} social={social} phone={phone} directorio={directorio} sections={sections} />
+    </div>
   </>
 }

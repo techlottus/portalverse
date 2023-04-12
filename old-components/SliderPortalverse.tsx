@@ -165,7 +165,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
 
   const activeBulletSlide = (position: number) => setActive(position);
 
-  return <section className="relative z-1">
+  return <section className="relative z-0">
     {/* desktop */}
     <div className="w-p:hidden">
       <Aspect ratio="2/1">

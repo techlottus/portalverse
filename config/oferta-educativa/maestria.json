@@ -165,7 +165,7 @@
         "campus": [],
         "nivel": ["Posgrado"],
         "image": {
-          "src": "https://assets.staging.bedu.org/UTEG/oferta_card_maestria_comunicacion_empresarial_8038f1e810.jpg",
+          "src": "https://assets.staging.bedu.org/UTEG/oferta_card_maestria_comunicacion_empresarial_20238ea59f.png",
           "alt": "maestria"
         }
       },
@@ -202,9 +202,9 @@
       "route": "desarrollo-organizacional-talento-humano"
     },
     {
-      "title": "Master en Gobierno y Estrategia",
+      "title": "Maestría en Gobierno y Estrategia",
       "config": {
-        "nombre": "Master en Gobierno y Estrategia",
+        "nombre": "Maestría en Gobierno y Estrategia",
         "modalidad": ["Online"],
         "areaConocimiento": ["Ciencias Sociales"],
         "campus": [],
