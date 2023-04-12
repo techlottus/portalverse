@@ -197,4 +197,4 @@ export async function getStaticProps(context: any) {
   }
 }
 
-export default Internacionalizacion
+export default Internacionalizacion;
