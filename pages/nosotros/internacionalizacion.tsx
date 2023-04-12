@@ -122,7 +122,7 @@ const Internacionalizacion: NextPageWithLayout = ({ sections, meta }: any) => {
           <Slider data={{ ...sections.head.slider, height: "600px" }} mobile = {false}/>
         </div>
       </ContentLayout>
-      <ContentLayout classNames="w-d:mt-18 w-t:mt-6 w-p:mt-12">
+      <ContentLayout classNames="mt-6 w-d:mt-18">
         <div className="col-span-8 w-t:col-span-8 w-p:col-span-4">
           <p className="font-Poppins font-bold text-10 w-t:text.8.5 w-p:text-6 mb-6 leading-[125%] w-t:leading-[111%]">{sections.head.title}</p>
           <p className="font-Poppins font-bold text-5.5 w-t:text-4.5 w-p:text-base mb-6 leading-[130%] w-t:leading-[125%]">{sections.head.subtitle}</p>
