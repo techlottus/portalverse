@@ -66,10 +66,21 @@ const Alumnos: NextPageWithLayout = ({ sections, meta }: any) => {
         {
           sections.calendario.banner.visible ?
             <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-              <BannerPortalverse
-                data={sections.calendario.banner}
-                onClick={downloadFile}
-              />
+              <div className="w-p:hidden">
+                <BannerPortalverse
+                  data={sections.calendario.banner}
+                  onClick={downloadFile}
+                />
+              </div>
+              <div className="w-d:hidden w-t:hidden">
+                <BannerPortalverse
+                  data={{
+                    ...sections.calendario.banner,
+                    font: "light"
+                  }}
+                  onClick={downloadFile}
+                />
+              </div>
             </div>
             : null
         }
