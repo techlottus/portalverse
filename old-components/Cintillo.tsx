@@ -55,7 +55,7 @@ const CintilloContent = (props: CintilloData) => {
   return (
     <>
       <div className={cn("col-span-12 w-t:col-span-8 w-p:col-span-4 relative flex shrink-0 w-full h-full", classNames)}>
-        <Image classNames="w-full h-full w-p:hidden w-t:hidden py-[110px]" src={image?.desktop!} alt="image" />
+        <Image classNames="w-full h-full w-p:hidden w-t:hidden" src={image?.desktop!} alt="image" />
         <Image classNames="w-full h-full w-d:hidden w-p:hidden" src={image?.tablet!} alt="image" />
         <Image classNames="w-full h-full w-d:hidden w-t:hidden" src={image?.mobile!} alt="image" />
         <div className="absolute p-10">
