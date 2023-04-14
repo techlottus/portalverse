@@ -85,4 +85,4 @@ export async function getStaticProps(context: any) {
   }
 }
 
-export default DetalleCursoEducacionContinua
+export default DetalleCursoEducacionContinua;
