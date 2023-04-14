@@ -7,6 +7,7 @@ import configControls from "@/forms/fixtures/controls"
 import Select from "@/old-components/Select"
 import Button from "@/old-components/Button/Button"
 import { SelectInit } from "@/old-components/fixture"
+import Link from "next/link"
 
 
 const StepOne: FC<any> = ({ classNames, data, image, onNext, programs }: any) => {
@@ -129,7 +130,12 @@ const StepOne: FC<any> = ({ classNames, data, image, onNext, programs }: any) =>
       <Image classNamesImg="rounded-full" classNames="w-[112px] h-[112px]" src={image.src} alt={image.alt} />
     </div>
   </div>
-  <p className="mt-8 mb-6 text-[14px] leading-5 text-[#282828 mb-6">{  config.conditions }</p>
+  <div className="flex align-middle items-center">
+    <p className="mt-8 mb-6 text-[14px] leading-5 text-[#282828] font-Nunito-Sans font-normal mr-1">{  config.conditions }</p>
+    <Link href={config?.privacyLink?.link || ""} passHref target={"_blank"}>
+      <p className="mt-8 mb-6 text-[14px] font-Nunito font-normal text-sm text-[#282828]">{config?.privacyLink?.label}</p>
+    </Link>
+  </div>
   <div className="mt-6 flex w-p:flex-col gap-6">
     <div className="grow">
       <Input errorMessage={configControls.errorMessagesStepOneOpenFormContinuous.name} hasError={errorControls.name} eventFocus={() => handleTouchedControl("name")} data={ configControls.inputNameOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "name")} />
