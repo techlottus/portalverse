@@ -17,8 +17,8 @@
         "alt": "licenciatura"
       },
       "curriculum": {
-        "Online": "14iBVBdnK-Hcy1ZtKvAberxUnNnbfcavy",
-        "Flex": "1WCSP8Cv0lSuiSJQb1OFUdcvOBHSWewzm"
+        "Online": "Lic_en_Diseno_Grafico_Online_122a8a7477.pdf",
+        "Flex": "Lic_en_Diseno_Grafico_Flex_a3a3d03550.pdf"
       }
     }
   },
@@ -36,7 +36,7 @@
       "tabs": {
         "items": [
           {
-            "label": "Modalidad Online",
+            "label": "Online",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {
@@ -82,7 +82,7 @@
             }
           },
           {
-            "label": "Modalidad Flex",
+            "label": "Flex",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {

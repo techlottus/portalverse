@@ -1,13 +1,13 @@
 {
     "meta": {
-      "title": "Licenciatura Diseño de Interiores y Ambientación",
+      "title": "Licenciatura en Diseño de Interiores y Ambientación",
       "description": "",
       "keywords": ""
     },
     "config": {
-      "title": "Licenciatura Diseño de Interiores y Ambientación",
+      "title": "Licenciatura en Diseño de Interiores y Ambientación",
       "config": {
-        "nombre": "Licenciatura Diseño de Interiores y Ambientación",
+        "nombre": "Licenciatura en Diseño de Interiores y Ambientación",
         "modalidad": ["Presencial"],
         "areaConocimiento": ["Arquitectura y Diseño"],
         "campus": ["Américas"],
@@ -18,14 +18,14 @@
         },
         "curriculum": {
           "Presencial": {
-            "Américas": "1qCZcHRvmshf8aELTNcKd9j1QEP-PKMg8"
+            "Américas": "Lic_en_Diseno_de_Interiores_Presencial_e8acafaa3d.pdf"
           }
         }
       }
     },
     "sections": {
       "head": {
-        "title": "Licenciatura Diseño de Interiores y Ambientación",
+        "title": "Licenciatura en Diseño de Interiores y Ambientación",
         "description": "El Profesional del Diseño de Interiores y Ambientación está involucrado en diversas áreas productivas, enfocado en las demandas para el acondicionamiento de espacios para la vivienda, trabajo, cultura, educación, gobierno, religión, salud, diversión y todos los demás ámbitos del hábitat humano que la sociedad precise. ",
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_diseno_interiores_desk_cd21d891f1.jpg",
@@ -37,7 +37,7 @@
         "tabs": {
           "items": [
             {
-              "label": "Modalidad Presencial",
+              "label": "Presencial",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {
@@ -102,7 +102,7 @@
     "form": {
       "config": {
         "level": { "hidden": true, "value": "licenciatura" },
-        "program": { "hidden": false, "value": "Licenciatura Diseño de Interiores y Ambientación" },
+        "program": { "hidden": false, "value": "Licenciatura en Diseño de Interiores y Ambientación" },
         "modality": { "hidden": false },
         "campus": { "hidden": false }
       },

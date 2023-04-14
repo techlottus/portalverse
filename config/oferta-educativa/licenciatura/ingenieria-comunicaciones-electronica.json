@@ -1,13 +1,13 @@
 {
     "meta": {
-      "title": "Ingeniería Comunicaciones y Electrónica",
+      "title": "Ingeniería en Comunicaciones y Electrónica",
       "description": "",
       "keywords": ""
     },
     "config": {
-      "title": "Ingeniería Comunicaciones y Electrónica",
+      "title": "Ingeniería en Comunicaciones y Electrónica",
       "config": {
-        "nombre": "Ingeniería Comunicaciones y Electrónica",
+        "nombre": "Ingeniería en Comunicaciones y Electrónica",
         "modalidad": ["Presencial"],
         "areaConocimiento": ["Ingenierías y Tecnología"],
         "campus": ["Olímpica"],
@@ -18,14 +18,14 @@
         },
         "curriculum": {
           "Presencial": {
-            "Olímpica": "186zfpeXz1IxiM_c-WlwO9LJEvD4HHdkN"
+            "Olímpica": "Lic_en_Ingenieria_en_Comunicaciones_y_Electronica_Presencial_ea1f4ac08a.pdf"
           }
         }
       }
     },
     "sections": {
       "head": {
-        "title": "Ingeniería Comunicaciones y Electrónica",
+        "title": "Ingeniería en Comunicaciones y Electrónica",
         "description": "El Ingeniero en Comunicaciones y Electrónica es el profesionista que se encarga del análisis, diseño, implementación y mantenimiento de sistemas electrónicos para dar solución a problemáticas en el ámbito de la industria o de los diversos sectores de la sociedad, implementando estrategias innovadoras y actuales para el mundo moderno.",
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_comunicaciones_electronica_desk_fce749a4bc.jpg",
@@ -37,7 +37,7 @@
         "tabs": {
           "items": [
             {
-              "label": "Modalidad Presencial",
+              "label": "Presencial",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {
@@ -102,7 +102,7 @@
     "form": {
       "config": {
         "level": { "hidden": true, "value": "licenciatura" },
-        "program": { "hidden": false, "value": "Ingeniería Comunicaciones y Electrónica" },
+        "program": { "hidden": false, "value": "Ingeniería en Comunicaciones y Electrónica" },
         "modality": { "hidden": false },
         "campus": { "hidden": false }
       },

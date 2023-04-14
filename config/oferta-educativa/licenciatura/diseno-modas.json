@@ -1,13 +1,13 @@
 {
     "meta": {
-      "title": "Licenciatura Diseño de Modas",
+      "title": "Licenciatura en Diseño de Modas",
       "description": "",
       "keywords": ""
     },
     "config": {
-      "title": "Licenciatura Diseño de Modas",
+      "title": "Licenciatura en Diseño de Modas",
       "config": {
-        "nombre": "Licenciatura Diseño de Modas",
+        "nombre": "Licenciatura en Diseño de Modas",
         "modalidad": ["Presencial"],
         "areaConocimiento": ["Arquitectura y Diseño"],
         "campus": ["Américas"],
@@ -18,14 +18,14 @@
         },
         "curriculum": {
           "Presencial": {
-            "Américas": "1nEFDR95Ep6EFpBNV012uaeCuUhHhIpDQ"
+            "Américas": "Lic_en_Diseno_de_Modas_Presencial_17357287ad.pdf"
           }
         }
       }
     },
     "sections": {
       "head": {
-        "title": "Licenciatura Diseño de Modas",
+        "title": "Licenciatura en Diseño de Modas",
         "description": "La Licenciatura en Diseño de Modas forma profesionales con aprendizajes que les permiten incursionar en varias áreas de la industria de la moda. Contamos con un plan de estudios completo, que forma a nuestros estudiantes para saber realizar desde cero un look o un accesorio, hasta poder dirigir una marca de modas, cuidando la sensibilidad estética y espacial.",
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_diseno_moda_desk_48f7a407e7.jpg",
@@ -37,7 +37,7 @@
         "tabs": {
           "items": [
             {
-              "label": "Modalidad Presencial",
+              "label": "Presencial",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {
@@ -102,7 +102,7 @@
     "form": {
       "config": {
         "level": { "hidden": true, "value": "licenciatura" },
-        "program": { "hidden": false, "value": "Licenciatura Diseño de Modas" },
+        "program": { "hidden": false, "value": "Licenciatura en Diseño de Modas" },
         "modality": { "hidden": false },
         "campus": { "hidden": false }
       },

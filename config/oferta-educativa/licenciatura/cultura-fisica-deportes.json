@@ -18,7 +18,7 @@
         },
         "curriculum": {
           "Presencial": {
-            "Campus Washington": "1U85q9lcAh6dnR_0doAw0b1xMpYfx1Opn"
+            "Campus Washington": "Lic_Cultura_Fisica_y_Deportes_Presencial_d1c782ca3d.pdf"
           }
         }
       }
@@ -37,7 +37,7 @@
         "tabs": {
           "items": [
             {
-              "label": "Modalidad Presencial",
+              "label": "Presencial",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {

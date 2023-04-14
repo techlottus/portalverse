@@ -8,26 +8,19 @@
       "title": "Licenciatura en Administración",
       "config": {
         "nombre": "Licenciatura en Administración",
-        "modalidad": ["PresencialSemestral", "PresencialCuatrimestral"],
+        "modalidad": ["Presencial"],
         "areaConocimiento": ["Negocios y Empresariales"],
-        "campus": ["Américas", "Campus Washington", "Río Nilo", "Tlajomulco", "Zapopan"],
+        "campus": ["Campus Washington", "Tlajomulco", "Zapopan"],
         "nivel": ["Licenciatura"],
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_administracion_desk_fd6b3b197b.jpg",
           "alt": "licenciatura"
         },
         "curriculum": {
-          "PresencialSemestral": {
-            "Tlajomulco": "1uU1S999Ti1uCzLZ3vupwg0KPIl_iZ3wM",
-            "Zapopan": "1uU1S999Ti1uCzLZ3vupwg0KPIl_iZ3wM",
-            "Campus Washington": "1uU1S999Ti1uCzLZ3vupwg0KPIl_iZ3wM"
-          },
-          "PresencialCuatrimestral": {
-            "Américas": "1eodl4Un5BvWmyHzQ_Y1AD6YJTylE3j-H",
-            "Campus Washington": "1eodl4Un5BvWmyHzQ_Y1AD6YJTylE3j-H",
-            "Río Nilo": "1eodl4Un5BvWmyHzQ_Y1AD6YJTylE3j-H",
-            "Tlajomulco": "1eodl4Un5BvWmyHzQ_Y1AD6YJTylE3j-H",
-            "Zapopan": "1eodl4Un5BvWmyHzQ_Y1AD6YJTylE3j-H"
+          "Presencial": {
+            "Tlajomulco": "Lic_en_Administracion_Presencial_ca7a0a469d.pdf",
+            "Zapopan": "Lic_en_Administracion_Presencial_ca7a0a469d.pdf",
+            "Campus Washington": "Lic_en_Administracion_Presencial_ca7a0a469d.pdf"
           }
         }
       }

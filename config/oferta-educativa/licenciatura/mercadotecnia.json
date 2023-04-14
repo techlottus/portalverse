@@ -21,13 +21,13 @@
       },
       "curriculum": {
         "Presencial": {
-          "Américas": "1gWEQ5gVXoMvkRhWw_1iNHOZ8j8jZFVmF",
-          "Campus Washington": "1gWEQ5gVXoMvkRhWw_1iNHOZ8j8jZFVmF",
-          "Río Nilo": "1gWEQ5gVXoMvkRhWw_1iNHOZ8j8jZFVmF",
-          "Tlajomulco": "1gWEQ5gVXoMvkRhWw_1iNHOZ8j8jZFVmF",
-          "Zapopan": "1gWEQ5gVXoMvkRhWw_1iNHOZ8j8jZFVmF"
+          "Américas": "Lic_en_Mercadotecnia_Presencial_2da6ce134f.pdf",
+          "Campus Washington": "Lic_en_Mercadotecnia_Presencial_2da6ce134f.pdf",
+          "Río Nilo": "Lic_en_Mercadotecnia_Presencial_2da6ce134f.pdf",
+          "Tlajomulco": "Lic_en_Mercadotecnia_Presencial_2da6ce134f.pdf",
+          "Zapopan": "Lic_en_Mercadotecnia_Presencial_2da6ce134f.pdf"
         },
-        "Online": "1rZGcguG10LCDD6Gc5rq70ep7c-JDDbnH"
+        "Online": "Lic_en_Mercadotecnia_Online_4a13a4cdf9.pdf"
       }
     }
   },
@@ -45,7 +45,7 @@
       "tabs": {
         "items": [
           {
-            "label": "Modalidad Presencial",
+            "label": "Presencial",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {

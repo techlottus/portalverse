@@ -114,9 +114,9 @@
       "route": "carrera-abogado"
     },
     {
-      "title": "Licenciatura Arquitectura",
+      "title": "Licenciatura en Arquitectura",
       "config": {
-        "nombre": "Licenciatura Arquitectura",
+        "nombre": "Licenciatura en Arquitectura",
         "modalidad": [
           "Presencial"
         ],
@@ -134,9 +134,9 @@
       "route": "arquitectura"
     },
     {
-      "title": "Licenciatura Diseño de Interiores",
+      "title": "Licenciatura en Diseño de Interiores",
       "config": {
-        "nombre": "Licenciatura Diseño de Interiores",
+        "nombre": "Licenciatura en Diseño de Interiores",
         "modalidad": [
           "Presencial"
         ],
@@ -154,9 +154,9 @@
       "route": "diseno-interiores"
     },
     {
-      "title": "Ingeniería Comunicaciones y Electrónica",
+      "title": "Ingeniería en Comunicaciones y Electrónica",
       "config": {
-        "nombre": "Ingeniería Comunicaciones y Electrónica",
+        "nombre": "Ingeniería en Comunicaciones y Electrónica",
         "modalidad": [
           "Presencial"
         ],
@@ -174,9 +174,9 @@
       "route": "ingenieria-comunicaciones-electronica"
     },
     {
-      "title": "Licenciatura Gastronomía",
+      "title": "Licenciatura en Gastronomía",
       "config": {
-        "nombre": "Licenciatura Gastronomía",
+        "nombre": "Licenciatura en Gastronomía",
         "modalidad": [
           "Presencial"
         ],
@@ -195,9 +195,9 @@
       "route": "gastronomia"
     },
     {
-      "title": "Licenciatura Diseño de Modas",
+      "title": "Licenciatura en Diseño de Modas",
       "config": {
-        "nombre": "Licenciatura Diseño de Modas",
+        "nombre": "Licenciatura en Diseño de Modas",
         "modalidad": [
           "Presencial"
         ],
@@ -215,9 +215,9 @@
       "route": "diseno-modas"
     },
     {
-      "title": "Licenciatura Trabajo Social",
+      "title": "Licenciatura en Trabajo Social",
       "config": {
-        "nombre": "Licenciatura Trabajo Social",
+        "nombre": "Licenciatura en Trabajo Social",
         "modalidad": [
           "Presencial"
         ],
@@ -244,19 +244,13 @@
         "areaConocimiento": [
           "Negocios y Empresariales"
         ],
-        "campus": [
-          "Américas",
-          "Campus Washington",
-          "Río Nilo",
-          "Tlajomulco",
-          "Zapopan"
-        ],
+        "campus": ["Campus Washington", "Tlajomulco", "Zapopan"],
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_administracion_desk_8b57900228.jpg",
           "alt": "licenciatura"
         }
       },
-      "route": "administracion"
+      "route": "lic-administracion"
     },
     {
       "title": "Licenciatura en Negocios Internacionales",

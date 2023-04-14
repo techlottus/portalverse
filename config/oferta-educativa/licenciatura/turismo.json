@@ -17,7 +17,7 @@
           "alt": "licenciatura"
         },
         "curriculum": {
-          "Online": "1OMTGAn4oEMinUXaaIqs4Hd1N53qKSoFe" 
+          "Online": "Lic_en_Turismo_Online_29a41a3a93.pdf" 
         }
       }
     },
@@ -35,7 +35,7 @@
         "tabs": {
           "items": [
             {
-              "label": "Modalidad Presencial",
+              "label": "Presencial",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {

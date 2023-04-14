@@ -1,13 +1,13 @@
 {
     "meta": {
-      "title": "Licenciatura Gastronomía",
+      "title": "Licenciatura en Gastronomía",
       "description": "",
       "keywords": ""
     },
     "config": {
-      "title": "Licenciatura Gastronomía",
+      "title": "Licenciatura en Gastronomía",
       "config": {
-        "nombre": "Licenciatura Gastronomía",
+        "nombre": "Licenciatura en Gastronomía",
         "modalidad": ["Presencial"],
         "areaConocimiento": ["Negocios y Empresariales"],
         "campus": ["Américas", "Pedro Moreno"],
@@ -18,15 +18,15 @@
         },
         "curriculum": {
           "Presencial": {
-            "Américas": "1kbNoeqIgC2YA2SAQvr-HK3q8UjjLEMva",
-            "Pedro Moreno": "1kbNoeqIgC2YA2SAQvr-HK3q8UjjLEMva"
+            "Américas": "Lic_en_Gastronomia_Presencial_c9df5d9192.pdf",
+            "Pedro Moreno": "Lic_en_Gastronomia_Presencial_c9df5d9192.pdf"
           }
         }
       }
     },
     "sections": {
       "head": {
-        "title": "Licenciatura Gastronomía",
+        "title": "Licenciatura en Gastronomía",
         "description": "Formar profesionistas con conocimientos teóricos, prácticos y metodológicos, capaces de prevenir y solucionar los problemas gastronómicos que enfrenten en la industria alimenticia y restaurantera. Promover la innovación culinaria y ejecutar la organización de instituciones gastronómicas, promoviendo una actitud de servicio y responsabilidad social.",
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_gastronomia_desk_7f119d2e76.jpg",
@@ -38,7 +38,7 @@
         "tabs": {
           "items": [
             {
-              "label": "Modalidad Presencial",
+              "label": "Presencial",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {
@@ -103,7 +103,7 @@
     "form": {
       "config": {
         "level": { "hidden": true, "value": "licenciatura" },
-        "program": { "hidden": false, "value": "Licenciatura Gastronomía" },
+        "program": { "hidden": false, "value": "Licenciatura en Gastronomía" },
         "modality": { "hidden": false },
         "campus": { "hidden": false }
       },

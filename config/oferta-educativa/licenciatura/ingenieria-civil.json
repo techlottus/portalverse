@@ -18,7 +18,7 @@
       },
       "curriculum": {
         "Presencial": {
-          "Olímpica": "1D-ag__8z-AjB8cklTh1Yl1GmEH8Wn5Qw"
+          "Olímpica": "Lic_en_Ingenierio_Civil_Presencial_d82f21644c.pdf"
         }
       }
     }
@@ -37,7 +37,7 @@
       "tabs": {
         "items": [
           {
-            "label": "Modalidad Presencial",
+            "label": "Presencial",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {

@@ -18,7 +18,7 @@
       },
       "curriculum": {
         "Presencial": {
-          "Campus Washington": "1OcV6QVS2rybuUuZAyn8oqsCm7UhfqTrG"
+          "Campus Washington": "Lic_Cirujano_Dentista_Presencial_cc2f10c6a6.pdf"
         }
       }
     }
@@ -37,7 +37,7 @@
       "tabs": {
         "items": [
           {
-            "label": "Modalidad Presencial",
+            "label": "Presencial",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {

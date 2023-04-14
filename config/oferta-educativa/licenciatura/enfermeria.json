@@ -18,7 +18,7 @@
         },
         "curriculum": {
           "Presencial": {
-            "Campus Washington": "1835UdeH9eycEEuXOA6Z9F5b2MnHUlPw2"
+            "Campus Washington": "Lic_en_Enfermeria_Presencial_58e7d53323.pdf"
           }
         }
       }
@@ -37,7 +37,7 @@
         "tabs": {
           "items": [
             {
-              "label": "Modalidad Presencial",
+              "label": "Presencial",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {

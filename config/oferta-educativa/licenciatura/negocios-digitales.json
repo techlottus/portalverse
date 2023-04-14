@@ -17,7 +17,7 @@
           "alt": "licenciatura"
         },
         "curriculum": {
-          "Online": "1-ENcMqVC3s_6gtj9ChKfi3Wb_cB6oTc7"
+          "Online": "Lic_en_Negocios_Digitales_Onlinepdf_9efc5675d5.pdf"
         }
       }
     },
@@ -35,7 +35,7 @@
         "tabs": {
           "items": [
             {
-              "label": "Modalidad Online",
+              "label": "Online",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {

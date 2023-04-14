@@ -1,13 +1,13 @@
 {
     "meta": {
-      "title": "Licenciatura Trabajo Social",
+      "title": "Licenciatura en Trabajo Social",
       "description": "",
       "keywords": ""
     },
     "config": {
-      "title": "Licenciatura Trabajo Social",
+      "title": "Licenciatura en Trabajo Social",
       "config": {
-        "nombre": "Licenciatura Trabajo Social",
+        "nombre": "Licenciatura en Trabajo Social",
         "modalidad": ["Presencial"],
         "areaConocimiento": ["Jurídicas y Sociales"],
         "campus": ["Pedro Moreno"],
@@ -18,14 +18,14 @@
         },
         "curriculum": {
           "Presencial": {
-            "Pedro Moreno": "1vrngvN0OmtjzIqAdgwLwSKg5vZFyee8x"
+            "Pedro Moreno": "Lic_en_Trabajo_Social_Presencial_c9d6b55324.pdf"
           }
         }
       }
     },
     "sections": {
       "head": {
-        "title": "Licenciatura Trabajo Social",
+        "title": "Licenciatura en Trabajo Social",
         "description": "La Licenciatura en Trabajo Social forma profesionales comprometidos con la comunidad, capaces de analizar y comprender la realidad del contexto social a partir del conocimiento de teorías; desarrollan, diseñan e implementan modelos de intervención con sujetos individuales y colectivos, fomentando actitudes y valores éticos en su labor.",
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_trabajo_social_desk_4bb6c0a69e.jpg",
@@ -37,7 +37,7 @@
         "tabs": {
           "items": [
             {
-              "label": "Modalidad Presencial",
+              "label": "Presencial",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {
@@ -102,7 +102,7 @@
     "form": {
       "config": {
         "level": { "hidden": true, "value": "licenciatura" },
-        "program": { "hidden": false, "value": "Licenciatura Trabajo Social" },
+        "program": { "hidden": false, "value": "Licenciatura en Trabajo Social" },
         "modality": { "hidden": false },
         "campus": { "hidden": false }
       },

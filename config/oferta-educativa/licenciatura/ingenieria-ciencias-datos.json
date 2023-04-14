@@ -1,13 +1,13 @@
 {
     "meta": {
-      "title": "Ingenieria en Ciencia de Datos",
+      "title": "Ingeniería en Ciencia de Datos",
       "description": "",
       "keywords": ""
     },
     "config": {
-      "title": "Ingenieria en Ciencia de Datos",
+      "title": "Ingeniería en Ciencia de Datos",
       "config": {
-        "nombre": "Ingenieria en Ciencia de Datos",
+        "nombre": "Ingeniería en Ciencia de Datos",
         "modalidad": ["Online"],
         "areaConocimiento": ["Económico - Administrativo"],
         "campus": [""],
@@ -17,13 +17,13 @@
           "alt": "licenciatura"
         },
         "curriculum": {
-          "Online": "1-DVV9By7bx4n_7NZZuRARAd0WD2qAa07"
+          "Online": "Lic_en_Ingenieria_en_Ciencias_de_Datos_Online_4e50e0c7ee.pdf"
         }
       }
     },
     "sections": {
       "head": {
-        "title": "Ingenieria en Ciencia de Datos",
+        "title": "Ingeniería en Ciencia de Datos",
         "description": "La carrera en Ingeniería en Ciencia de Datos forma profesionales que analizan y procesan datos estructurados y no estructurados empleando métodos matemáticos, estadísticos, de inteligencia artificial y técnicas innovadoras.  Diseña nuevos modelos para el análisis de gran cantidad de información para cualquier tipo de organización.",
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_ciencias_datos_desk_3273cce2bd.jpg",
@@ -35,7 +35,7 @@
         "tabs": {
           "items": [
             {
-              "label": "Modalidad Online",
+              "label": "Online",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {
@@ -100,7 +100,7 @@
     "form": {
       "config": {
         "level": { "hidden": true, "value": "licenciatura" },
-        "program": { "hidden": false, "value": "Ingenieria en Ciencia de Datos" },
+        "program": { "hidden": false, "value": "Ingeniería en Ciencia de Datos" },
         "modality": { "hidden": false },
         "campus": { "hidden": false }
       },

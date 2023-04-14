@@ -18,9 +18,9 @@
         },
         "curriculum": {
           "Presencial": {
-            "Américas": "1fXW4xNijR-IXOjwrAIeZ5Eu4Xwdr7Css",
-            "Lázaro Cárdenas": "1fXW4xNijR-IXOjwrAIeZ5Eu4Xwdr7Css",
-            "Zapopan": "1fXW4xNijR-IXOjwrAIeZ5Eu4Xwdr7Css"
+            "Américas": "Carrera_de_Abogado_Presencial_a5229c035f.pdf",
+            "Lázaro Cárdenas": "Carrera_de_Abogado_Presencial_a5229c035f.pdf",
+            "Zapopan": "Carrera_de_Abogado_Presencial_a5229c035f.pdf"
           }
         }
       }
@@ -39,7 +39,7 @@
         "tabs": {
           "items": [
             {
-              "label": "Modalidad Presencial",
+              "label": "Presencial",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {

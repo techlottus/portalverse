@@ -18,7 +18,7 @@
         },
         "curriculum": {
           "Presencial": {
-            "Campus Washington": "1YI-NfQXopBcjvMhnOpUtlqgK3hQjTGzW"
+            "Campus Washington": "Lic_en_Quimico_Farmaceutico_Presencial_f344308ad5.pdf"
           }
         }
       }
@@ -37,7 +37,7 @@
         "tabs": {
           "items": [
             {
-              "label": "Modalidad Presencial",
+              "label": "Presencial",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {

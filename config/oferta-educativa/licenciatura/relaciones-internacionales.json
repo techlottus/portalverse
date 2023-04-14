@@ -17,7 +17,7 @@
         "alt": "licenciatura"
       },
       "curriculum": {
-        "Online": "1ZR44eDnwiF_9aKXLJF0AvEKd1BpBD39s"
+        "Online": "Lic_en_Relaciones_Internacionales_Online_b79d3f4704.pdf"
       }
     }
   },
@@ -35,7 +35,7 @@
       "tabs": {
         "items": [
           {
-            "label": "Modalidad Online",
+            "label": "Online",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {

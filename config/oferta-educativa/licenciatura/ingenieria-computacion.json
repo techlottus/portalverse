@@ -1,13 +1,13 @@
 {
   "meta": {
-    "title": "Ingeniería en Computacion",
+    "title": "Ingeniería en Computación",
     "description": "",
     "keywords": ""
   },
   "config": {
-    "title": "Ingeniería en Computacion",
+    "title": "Ingeniería en Computación",
     "config": {
-      "nombre": "Ingeniería en Computacion",
+      "nombre": "Ingeniería en Computación",
       "modalidad": ["PresencialSemestral", "PresencialCuatrimestral"],
       "areaConocimiento": ["Ingenierías y Tecnología"],
       "campus": ["Olímpica"],
@@ -28,7 +28,7 @@
   },
   "sections": {
     "head": {
-      "title": "Ingeniería en Computacion",
+      "title": "Ingeniería en Computación",
       "description": "Los avances en las Tecnologías de la Información y la Comunicación implican una notoria capacidad para modelar digitalmente fenómenos y actividades cotidianas de la sociedad. Por lo que el desafío de un estudioso de la computación ha sido, es y será, encontrar la representación computable de toda clase de fenómenos manifestados en la realidad.",
       "image": {
         "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_ing_computacion_desk_0b63a1a088.jpg",
@@ -40,7 +40,7 @@
       "tabs": {
         "items": [
           {
-            "label": "Modalidad Presencial Semestral",
+            "label": "Presencial Semestral",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {
@@ -51,7 +51,7 @@
                     "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "El aspirante de la ingenieria en computación deberá tener:\n\n• Interés por resolver problemas, trabajar con máquinas y herramientas, la física y las matemáticas, además de los métodos de ingeniería y sistemas.\n\n• Gusto por el trabajo con máquinas y herramientas.\n\n• Interés por las ciencias exactas, las dimensiones y representaciones gráficas, inclinación por el conocimiento técnico.\n\n• Capacidad de análisis y síntesis.\n\n• Creatividad.\n\n• Criterio y razonamiento lógico Matemático.\n\n• Preferencia por la investigación científica.",
+                  "text": "El aspirante de la ingeniería en computación deberá tener:\n\n• Interés por resolver problemas, trabajar con máquinas y herramientas, la física y las matemáticas, además de los métodos de ingeniería y sistemas.\n\n• Gusto por el trabajo con máquinas y herramientas.\n\n• Interés por las ciencias exactas, las dimensiones y representaciones gráficas, inclinación por el conocimiento técnico.\n\n• Capacidad de análisis y síntesis.\n\n• Creatividad.\n\n• Criterio y razonamiento lógico Matemático.\n\n• Preferencia por la investigación científica.",
                   "backgroundColor": "#1B2D68"
                 },
                 {
@@ -86,7 +86,7 @@
             }
           },
           {
-            "label": "Modalidad Presencial Cuatrimestral",
+            "label": "Presencial Cuatrimestral",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {
@@ -97,7 +97,7 @@
                     "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "El aspirante de la ingenieria en computación deberá tener:\n\n• Interés por resolver problemas, trabajar con máquinas y herramientas, la física y las matemáticas, además de los métodos de ingeniería y sistemas.\n\n• Gusto por el trabajo con máquinas y herramientas.\n\n• Interés por las ciencias exactas, las dimensiones y representaciones gráficas, inclinación por el conocimiento técnico.\n\n• Capacidad de análisis y síntesis.\n\n• Creatividad.\n\n• Criterio y razonamiento lógico Matemático.\n\n• Preferencia por la investigación científica.",
+                  "text": "El aspirante de la ingeniería en computación deberá tener:\n\n• Interés por resolver problemas, trabajar con máquinas y herramientas, la física y las matemáticas, además de los métodos de ingeniería y sistemas.\n\n• Gusto por el trabajo con máquinas y herramientas.\n\n• Interés por las ciencias exactas, las dimensiones y representaciones gráficas, inclinación por el conocimiento técnico.\n\n• Capacidad de análisis y síntesis.\n\n• Creatividad.\n\n• Criterio y razonamiento lógico Matemático.\n\n• Preferencia por la investigación científica.",
                   "backgroundColor": "#1B2D68"
                 },
                 {
@@ -151,7 +151,7 @@
   "form": {
     "config": {
       "level": { "hidden": true, "value": "licenciatura" },
-      "program": { "hidden": false, "value": "Ingeniería en Computacion" },
+      "program": { "hidden": false, "value": "Ingeniería en Computación" },
       "modality": { "hidden": false },
       "campus": { "hidden": false }
     },

@@ -1,13 +1,13 @@
 {
     "meta": {
-      "title": "Licenciatura Arquitectura",
+      "title": "Licenciatura en Arquitectura",
       "description": "",
       "keywords": ""
     },
     "config": {
-      "title": "Licenciatura Arquitectura",
+      "title": "Licenciatura en Arquitectura",
       "config": {
-        "nombre": "Licenciatura Arquitectura",
+        "nombre": "Licenciatura en Arquitectura",
         "modalidad": ["Presencial"],
         "areaConocimiento": ["Arquitectura y Diseño"],
         "campus": ["Américas"],
@@ -18,14 +18,14 @@
         },
         "curriculum": {
           "Presencial": {
-            "Américas": "1Aw8otnzxEvR7gElrSjQv8-4UNRfC-Pb7"
+            "Américas": "Lic_en_Arquitectura_Presencial_2325104799.pdf"
           }
         }
       }
     },
     "sections": {
       "head": {
-        "title": "Licenciatura Arquitectura",
+        "title": "Licenciatura en Arquitectura",
         "description": "La Licenciatura en Arquitectura es la carrera donde se forman profesionistas para crear, diseñar, comprender y ejecutar el acto de ordenar y construir el espacio habitable sustentable, con responsabilidad e integración al contexto urbano, equilibrando emoción, razón e intuición, y dando forma física a las necesidades de la sociedad y el individuo.",
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_arquitectura_desk_a70ab65b3c.jpg",
@@ -37,7 +37,7 @@
         "tabs": {
           "items": [
             {
-              "label": "Modalidad Presencial",
+              "label": "Presencial",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {
@@ -102,7 +102,7 @@
     "form": {
       "config": {
         "level": { "hidden": true, "value": "licenciatura" },
-        "program": { "hidden": false, "value": "Licenciatura Arquitectura" },
+        "program": { "hidden": false, "value": "Licenciatura en Arquitectura" },
         "modality": { "hidden": false },
         "campus": { "hidden": false }
       },

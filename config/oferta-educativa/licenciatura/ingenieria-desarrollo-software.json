@@ -17,8 +17,8 @@
         "alt": "licenciatura"
       },
       "curriculum": {
-        "Online": "1otHRc17skc6sIVXKXvN6sSZ0zynZj1xn",
-        "Flex": "1paDeZu0dmgodCDIXoHyJw2Sp6-A7KGAQ"
+        "Online": "Lic_en_Ingenieria_en_Desarrollo_de_Software_Online_a3ff857646.pdf",
+        "Flex": "Ing_Desarrollo_en_Software_Flex_561a2eea9f.pdf"
       }
     }
   },
@@ -36,7 +36,7 @@
       "tabs": {
         "items": [
           {
-            "label": "Modalidad Online",
+            "label": "Online",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {
@@ -82,7 +82,7 @@
             }
           },
           {
-            "label": "Modalidad Flex",
+            "label": "Flex",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {
