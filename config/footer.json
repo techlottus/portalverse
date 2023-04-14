@@ -1,5 +1,5 @@
 {
-  "privacyLink": { "link": "https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTEG/aviso_de_privacidad_UTEG_24_02_2022_1_9018cd9357.pdf?updated_at=2023-04-13T17:11:00.696Z", "label": "Aviso de privacidad" },
+  "privacyLink": { "link": "https://assets.staging.bedu.org/UTEG/aviso_de_privacidad_UTEG_24_02_2022_1_9018cd9357.pdf", "label": "Aviso de privacidad" },
   "certifications": { "title": "Certificaciones", "certificaciones": [
     {
       "src": "https://assets.staging.bedu.org/UTEG/home_iso_50f1b3eee1.svg",
@@ -11,7 +11,7 @@
     }
   ]
 },
-  "logotype": { "src":"https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTEG/logo_uteg_79d8e731bf.svg?updated_at=2023-04-14T19:20:19.468Z", "alt":"UTEG-logotype" },
+  "logotype": { "src":"https://assets.staging.bedu.org/UTEG/logotipo_8dcbf6898f.svg", "alt":"UTEG-logotype" },
   "social": [
     { "name": "instagram", "link": "https://www.instagram.com/utegoficial/?hl=es" },
     { "name": "facebook", "link": "https://www.facebook.com/UtegOficial" },

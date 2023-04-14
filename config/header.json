@@ -20,7 +20,7 @@
     },
     { "label": "Blog", "route": "/blog", "items": [] }
   ],
-  "logotype": { "src":"https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTEG/logo_uteg_79d8e731bf.svg?updated_at=2023-04-14T19:20:19.468Z", "alt":"logotipo-uteg" },
+  "logotype": { "src":"https://assets.staging.bedu.org/UTEG/logotipo_8dcbf6898f.svg", "alt":"logotipo-uteg" },
   "menuMobile": [
     {
       "label": "Estudiantes", "principal": true, "route": "", "external": false,
