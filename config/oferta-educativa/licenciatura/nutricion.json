@@ -13,12 +13,12 @@
         "campus": ["Campus Washington"],
         "nivel": ["Licenciatura"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=15gYxmujqlDQ7x08a4AB3V4oaoKcdOdkm",
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_nutricion_desk_189ff4c478.jpg",
           "alt": "licenciatura"
         },
         "curriculum": {
           "Presencial": {
-            "Campus Washington": "1gyVHxVk6le-0-uilkSYdCbewdu62KhoX"
+            "Campus Washington": "Lic_en_Nutricion_Presencial_dfb5c839ec.pdf"
           }
         }
       }
@@ -26,9 +26,9 @@
     "sections": {
       "head": {
         "title": "Licenciatura en Nutrición",
-        "description": "En la Licenciatura en Nutrición,  se forman profesionales capaces de resolver la problemática alimentario-nutricional de nuestro contexto social, respetando la cultura alimentaria, apoyándose de la normatividad nacional e internacional en materia de salud y alimentación y que inciden en la construcción de un proyecto social, equitativo y solidario.",
+        "description": "En la Licenciatura en Nutrición,  se forman profesionales capaces de enfrentar la problemática alimentario-nutricional de nuestro contexto social, respetando la cultura alimentaria, apoyándose de la normatividad nacional e internacional en materia de salud y alimentación y que inciden en la construcción de un proyecto social, equitativo y solidario.",
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=15gYxmujqlDQ7x08a4AB3V4oaoKcdOdkm",
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_nutricion_desk_189ff4c478.jpg",
           "alt": "licenciatura"
         }
       },
@@ -37,45 +37,45 @@
         "tabs": {
           "items": [
             {
-              "label": "Modalidad Presencial",
+              "label": "Presencial",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {
                 "cards": [
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                     },
                     "title": "Perfil de ingreso",
-                    "text": "Ser humanista, tener sed de conocimiento, interés por los hábitos de alimentación personales y de los demás, por los alimentos, sus propiedades, su manejo y preparación. Uso del lenguaje oral y escrito, pensamiento lógico y matemático para resolución de problemas abiertos, auto motivador e innovador.",
+                    "text": "El aspirante a la carrera de nutrición deberá tener interés:\n\n• Sobre el humanismo.\n\n• Por los hábitos de alimentación personales y de los demás.\n\n• Por los alimentos, sus propiedades, su manejo y preparación. \n\n• Uso del lenguaje oral y escrito, pensamiento lógico y matemático para resolución de problemas abiertos, auto motivador e innovador.\n\n• Ampliar y aplicar conocimientos referentes a todas las áreas de la nutrición, con interés en la salud individual y de la población.\n\n• Hábitos de alimentación y estilos de vida saludables personales y de los demás.",
                     "backgroundColor": "#1B2D68"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                     },
                     "title": "Perfil de egreso",
-                    "text": "Es un profesional capaz de brindar atención nutriológica a individuos sanos, en riesgo o enfermos, así como a grupos de los diferentes sectores de sociedad; de administrar servicios y programas de alimentación y nutrición; de proponer, innovar y mejorar la calidad nutrimental y sanitaria de productos alimenticios.\n\nCapaz de integrar, generar y aplicar conocimientos, habilidades y actitudes que permiten su desempeño en los campos profesionales básicos: nutrición clínica, nutrición poblacional, servicios de alimentos, ciencia de los alimentos y otro campos transversales como: investigación educación, administración y consultoría aplicando métodos, técnicas y tecnologías propias de la nutriología y ciencias afines.",
+                    "text": "Evalúa el proceso alimentario nutricio del individuo, las familias y la sociedad con una visión general integral que considera aspectos biológicos, socioeconómicos, culturales y psicológicos con relación a las prácticas alimentarias, estilos de vida, seguridad y soberanía alimentaria, necesidades de salud, perfil epidemiológico, demográfico y el desarrollo sustentable.\n\nGestiona proyectos para el desarrollo de sistemas de producción y transformación de alimentos, fundamentado en el pensamiento crítico-reflexivo, con una visión ecológica y sustentable.",
                     "backgroundColor": "#C31433"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                     },
                     "title": "Campo Laboral",
-                    "text": "El campo de acción profesional se encuentra dividido en cinco áreas especializadas: nutrición clínica, deportiva, servicio de alimentos, tecnología alimentaria, nutrición poblacional y campos transversales como investigación y docencia. Mismos que se podrán desempeñar en instituciones públicas y privadas del sector salud, manejo de consultorios nutricionales, clínicas de atención nutricional, clínicas de reducción de peso, laboratorio con producción de alimentos y nutrimentos, comedores industriales, legislación, producción y mercadotecnia alimenticia. ",
+                    "text": "Áreas: nutrición clínica, deportiva, servicio de alimentos, tecnología alimentaria, nutrición poblacional, investigación y docencia, instituciones públicas o privadas, laboratorios, comedores industriales.\n\n Actividades: producción de mercadotecnia alimenticia.",
                     "backgroundColor": "#4470B1"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                     },
                     "title": "Requisitos de admisión",
-                    "text": "a) Acta de nacimiento original y 1 copia (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.\n\n c) 1 copia de la CURP.\n\n d) 2 copias de Credencial Oficial IFE / INE o Pasaporte\n\n e) 2 copias de Credencial Oficial IFE / INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n f) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n De contar ya con una licenciatura por parte de UdeG y estar titulado, se aceptan copias certificadas expedidas por UdeG del certificado de bachillerato de no más de un mes al día que lo esté entregando y copia simple del título. (Más todos los documentos de nuevo ingreso).\n\n En caso de no estar titulado, debe entregar en original todos los documentos. (Todos los documentos de nuevo ingreso).\n\n Nota: Si realizó los estudios de bachillerato en otro estado de la república, el certificado debe tener la legalización por parte de la Secretaría de Gobernación del estado donde realizaron los estudios.\n\n Si el certificado es de UNAM, Secretaría de la Defensa Nacional (SEDENA), Sistema Educativo Nacional (en el encabezado del documento) y Colegios de Bachilleres, estos no requieren del trámite de legalización.",
+                    "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                     "backgroundColor": "#EEAA01"
                   }
                 ],

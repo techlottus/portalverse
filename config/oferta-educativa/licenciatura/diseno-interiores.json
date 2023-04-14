@@ -1,34 +1,34 @@
 {
     "meta": {
-      "title": "Licenciatura Diseño de Interiores y Ambientación",
+      "title": "Licenciatura en Diseño de Interiores y Ambientación",
       "description": "",
       "keywords": ""
     },
     "config": {
-      "title": "Licenciatura Diseño de Interiores y Ambientación",
+      "title": "Licenciatura en Diseño de Interiores y Ambientación",
       "config": {
-        "nombre": "Licenciatura Diseño de Interiores y Ambientación",
+        "nombre": "Licenciatura en Diseño de Interiores y Ambientación",
         "modalidad": ["Presencial"],
         "areaConocimiento": ["Arquitectura y Diseño"],
         "campus": ["Américas"],
         "nivel": ["Licenciatura"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1Eb23UmKQtnFs5kLq9CU9-uU3OHfXWh96",
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_diseno_interiores_desk_cd21d891f1.jpg",
           "alt": "licenciatura"
         },
         "curriculum": {
           "Presencial": {
-            "Américas": "1qCZcHRvmshf8aELTNcKd9j1QEP-PKMg8"
+            "Américas": "Lic_en_Diseno_de_Interiores_Presencial_e8acafaa3d.pdf"
           }
         }
       }
     },
     "sections": {
       "head": {
-        "title": "Licenciatura Diseño de Interiores y Ambientación",
-        "description": "El Profesional del Diseño de Interiores y Ambientación está involucrado en diversas áreas productivas, enfocado a los requerimientos de acondicionamiento de espacios para la Vivienda, Trabajo, Cultura, Educación, Gobierno, Religión, Salud Pública, Diversión y todos los demás ámbitos del hábitat humano que la sociedad demande.",
+        "title": "Licenciatura en Diseño de Interiores y Ambientación",
+        "description": "El Profesional del Diseño de Interiores y Ambientación está involucrado en diversas áreas productivas, enfocado en las demandas para el acondicionamiento de espacios para la vivienda, trabajo, cultura, educación, gobierno, religión, salud, diversión y todos los demás ámbitos del hábitat humano que la sociedad precise. ",
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1Eb23UmKQtnFs5kLq9CU9-uU3OHfXWh96",
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_diseno_interiores_desk_cd21d891f1.jpg",
           "alt": "licenciatura"
         }
       },
@@ -37,45 +37,45 @@
         "tabs": {
           "items": [
             {
-              "label": "Modalidad Presencial",
+              "label": "Presencial",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {
                 "cards": [
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                     },
                     "title": "Perfil de ingreso",
-                    "text": "El aspirante debe tener el siguiente perfil de ingreso: \n\n Contar con una fuerte capacidad de observación, conocimientos básicos orientados a aspectos creativos.\n\n Con desarrollo del sentido de la percepción y el análisis.\n\n Interesado por resolver aspectos técnicos, sistemáticos, artísticos y humanistas.\n\n Con capacidad de observación y análisis para el desarrollo proyectual del contexto socio-cultural y su problemática, así como por el avance teórico, práctico y tecnológico de su disciplina, con apertura a las aplicaciones de las nuevas tecnologías como herramienta de comunicación.\n\n Con habilidad para expresarse gráficamente y verbalmente, mostrando interés por los detalles y la precisión.\n\n Hábil para el dibujo, con imaginación, innovación e inventiva plástica.\n\n Con interés por la investigación.\n\n Interesado en la conservación del patrimonio edificado, desarrollo sustentable y el medio ambiente.\n\n Ser organizado y disciplinado en su aprendizaje.\n\n Con vocación de servicio, de adaptabilidad y de sociabilidad, con sentido de organización y mando, mostrándose como persona emprendedora.",
+                    "text": "El aspirante en la licenciatura en Diseño de Interiores y ambientación debe:\n\n• Contar con una fuerte capacidad de observación, conocimientos básicos orientados a aspectos creativos.                   \n\n• Poseer un sentido de la percepción y el análisis desarrollado.                    \n\n• Contar con una capacidad de observación y análisis para el desarrollo proyectual del contexto socio-cultural                   \n\n• Tener la habilidad de expresarse gráfica y verbalmente.                   \n\n• Ser hábil para dibujar con imaginación, innovación e inventiva plástica.                  \n\n• Ser organizado y disciplinado.",
                     "backgroundColor": "#1B2D68"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                     },
                     "title": "Perfil de egreso",
-                    "text": "Es un profesional capaz de aportar ideas creativas para soluciones de diseño y ambientación de espacios, que reflejen identidad. Se distingue por su iniciativa y la creatividad mediante una actitud propositiva e innovadora y ser promotor de proyectos de inversión, en los sectores público y la iniciativa privada, desarrollándose en las áreas de diseño, supervisión y ejecución de proyecto.\n\n La función principal del Diseñador de Interiores y Ambientación es resolver problemas de diseño en espacios interiores y su entorno inmediato.\n\nEl Diseñador de Interiores y Ambientación puede resolver problemas de espacios en sus diversos géneros, que surjan de la sociedad, aportando soluciones funcionales, útiles y estéticas, así como la capacidad para modificarlos y cambiarles de función de ser requerido.\n\nEl Diseñador de Interiores y Ambientación está involucrado con las áreas productivas y enfocadas a los requerimientos de: la vivienda, la cultura, la educación, el gobierno, la religión, la salud pública, la recreación, el deporte entre otros.",
+                    "text": "Es un profesional capaz de aportar ideas creativas para soluciones de diseño y ambientación de espacios, que reflejen identidad.\n\nSe distingue por su iniciativa y la creatividad mediante una actitud propositiva e innovadora y ser promotor de proyectos de inversión, en los sectores público y la iniciativa privada.\n\nResuelve problemas de espacios en sus diversos géneros, que surjan de la sociedad, aportando soluciones funcionales, útiles y estéticas, así como la capacidad para modificarlos y cambiarles de función de ser requerido.",
                     "backgroundColor": "#C31433"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                     },
                     "title": "Campo Laboral",
-                    "text": "El campo profesional de trabajo del Diseñador de Interiores se presenta no solo como una oportunidad de desarrollo sino también como una exigencia social y económica del país.\n\n Su campo de acción es amplio, tanto en el aspecto de desarrollo profesional particular o independiente, así como en forma combinada en despachos de arquitectos, urbanistas, ingenieros civiles, promotores turísticos y de vivienda.\n\n Las áreas donde se puede desarrollar son: \n\n• El diseño y adecuación de espacios interiores en todo lo referente a la construcción habitable por el hombre.\n\n• Adecuación y conservación de espacios de valor histórico y/o arquitectónico de función definida para otro uso.\n\n• Diseño y adecuación de espacios exteriores específicos (Paisaje y mobiliario urbano).\n\n• Diseño y adecuación de espacios interiores contenidos en unidades móviles.\n\n• Diseño y adecuación de espacios para actividades eventuales (espacios efímeros).\n\n• Ambientación de espacios interiores y exteriores (ambientación).\n\n• Diseño de mobiliario y accesorios para espacios específicos.",
+                    "text": "Áreas: despachos de arquitectos, urbanistas, ingenieros civiles, promotores turísticos y de vivienda.\n\nActividades:  diseño y adecuación de espacios interiores y exteriores, diseño de mobiliario y accesorios para espacios específicos. ",
                     "backgroundColor": "#4470B1"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                     },
                     "title": "Requisitos de admisión",
-                    "text": "Para inscribirse a las licenciaturas semestrales es necesario tener un promedio mínimo de 70, de no ser así, se requiere autorización por escrito del director académico.\n\n a) Acta de nacimiento original y 1 copias (se puede recibir de cualquier año siempre y cuan\n\n encuentre en buen estado).\n\n b) Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.\n\n c) 1 copia de la CURP.\n\n d) 2 copias de Credencial Oficial IFE / INE o Pasaporte\n\n e) 2 copias de Credencial Oficial IFE / INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n f) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n De contar ya con una licenciatura por parte de UdeG y estar titulado, se aceptan copias certificadas expedidas por UdeG del certificado de bachillerato de no más de un mes al día que lo esté entregando y copia simple del título. (Más todos los documentos de nuevo ingreso).\n\n En caso de no estar titulado, debe entregar en original todos los documentos. (Todos los documentos de nuevo ingreso).\n\n Nota: Si realizó los estudios de bachillerato en otro estado de la república, el certificado debe tener la legalización por parte de Secretaría de Gobernación del estado donde realizaron los estudios.\n\n Si el certificado es de UNAM, Secretaría de la Defensa Nacional (SEDENA), Sistema Educativo Nacional (en el encabezado del documento) y Colegios de Bachilleres, estos no requieren del trámite de legalización.\n\n EXTRANJEROS: a cualquier modalidad de licenciatura\n\n Acta de nacimiento reciente. del año en curso (original y una copia). Si son extranjeros se recibe sólo el acta original de su país de origen (no se acepta copia certificada por notario). El acta puede ser traducida al español por un perito oficial con firma y sello.\n\n Copia de la CURP (deben de tramitar la CURP mexicana).\n\n Certificado de bachillerato (original en buen estado y tres copias) esto si el aspirante realizó sus estudios dentro del país.\n\n Si realizó estudios de bachillerato en el extranjero, debe presentar la equivalencia por parte de la SEP (el trámite se realiza en Av. Prolongación Alcalde No. 1351, Edif. «B», Torre de Educación, 7º Piso, Col. Miraflores).\n\n Si pretenden realizar sus estudios de licenciatura dentro de la institución y son extranjeros deberán de presentar la FM3 reciente (forma migratoria número tres) permiso de migración para estudiar en el país a nombre del Centro Universitario UTEG).\n\n 2 fotografías tamaño infantil blanco y negro o a color",
+                    "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                     "backgroundColor": "#EEAA01"
                   }
                 ],
@@ -102,7 +102,7 @@
     "form": {
       "config": {
         "level": { "hidden": true, "value": "licenciatura" },
-        "program": { "hidden": false, "value": "Licenciatura Diseño de Interiores y Ambientación" },
+        "program": { "hidden": false, "value": "Licenciatura en Diseño de Interiores y Ambientación" },
         "modality": { "hidden": false },
         "campus": { "hidden": false }
       },

@@ -13,14 +13,14 @@
         "campus": ["Américas", "Lázaro Cárdenas", "Zapopan"],
         "nivel": ["Licenciatura"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1n8ecWPidyZuK14DtPGIDwuAqmRlRP0QT",
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_abogado_desk_8a986b124a.jpg",
           "alt": "licenciatura"
         },
         "curriculum": {
           "Presencial": {
-            "Américas": "1fXW4xNijR-IXOjwrAIeZ5Eu4Xwdr7Css",
-            "Lázaro Cárdenas": "1fXW4xNijR-IXOjwrAIeZ5Eu4Xwdr7Css",
-            "Zapopan": "1fXW4xNijR-IXOjwrAIeZ5Eu4Xwdr7Css"
+            "Américas": "Carrera_de_Abogado_Presencial_a5229c035f.pdf",
+            "Lázaro Cárdenas": "Carrera_de_Abogado_Presencial_a5229c035f.pdf",
+            "Zapopan": "Carrera_de_Abogado_Presencial_a5229c035f.pdf"
           }
         }
       }
@@ -28,9 +28,9 @@
     "sections": {
       "head": {
         "title": "Carrera de Abogado",
-        "description": "La carrera de abogado tiene como meta la  formación dentro de las ciencias jurídicas y sociales, para generar profesionales que sean capaces de desempeñarse en las áreas de la profesión jurídica, siendo los principales motores de la justicia y la equidad , permitiendo resolver los dilemas legales dentro de la sociedad y el país.",
+        "description": "La Carrera de Abogado tiene como meta la  formación de profesionales capaces de desempeñarse en las áreas de la profesión jurídica, motivados por valores como la justicia y la equidad para la resolución de dilemas legales dentro de la sociedad y el país.",
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1n8ecWPidyZuK14DtPGIDwuAqmRlRP0QT",
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_abogado_desk_8a986b124a.jpg",
           "alt": "licenciatura"
         }
       },
@@ -39,27 +39,27 @@
         "tabs": {
           "items": [
             {
-              "label": "Modalidad Presencial",
+              "label": "Presencial",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {
                 "cards": [
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                     },
                     "title": "Perfil de ingreso",
-                    "text": "El aspirante a la Carrera de Abogado deberá contar con aptitudes, destrezas y conocimientos tales como: capacidad de análisis, habilidades de redacción y argumentación, exposición de forma oral, capacidad para relacionar el pensamiento abstracto a situaciones concretas con el fin de la interpretación en la práctica jurídica.",
+                    "text": "<p>El aspirante a la Carrera de Abogado deber&aacute; tener:</p><p>&bull; Capacidad de an&aacute;lisis, habilidades de redacci&oacute;n y argumentaci&oacute;n.</p><p>&bull; Vocaci&oacute;n &eacute;tica y de compromiso con la Justicia.</p><p>&bull; Razonamiento inductivo y deductivo.</p><p>&bull; Capacidad de an&aacute;lisis cr&iacute;tico.</p><p>&bull; Compromiso con los valores &eacute;ticos y morales aplicables a la realidad social.</p><p>&bull; Inter&eacute;s en la transformaci&oacute;n del entorno social, sustentado en el respeto y protecci&oacute;n de los derechos humanos.</p><p>&bull; Conocimientos b&aacute;sicos de una segunda lengua.</p><p>&bull; Habilidad para el manejo de tecnolog&iacute;as de informaci&oacute;n y comunicaci&oacute;n.</p>",
                     "backgroundColor": "#1B2D68"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                     },
                     "title": "Perfil de egreso",
-                    "text": "El egresado (a) de la Carrera de Abogado contará con una formación académica integral sólida que le permita desarrollarse ética y profesionalmente en el campo jurídico. El egresado (a) será capaz de investigar, certificar, legislar, litigar, asesorar, procurar justicia, administrar justicia y promover aprendizajes jurídicos. Proveer soluciones sociales y culturales eficaces en su entorno profesional.",
+                    "text": "<p>CONOCIMIENTOS SOBRE:<br /><span>&bull;&nbsp;</span>El marco normativo de los bienes constitutivos del patrimonio del Estado, su aplicaci&oacute;n y defensa.<br /><span>&bull;&nbsp;</span>Las relaciones pol&iacute;tico-jur&iacute;dicas entre los Estados.<br /><span>&bull;&nbsp;</span>La ley general de sociedades mercantiles.<br /><span>&bull;</span>&nbsp;Las disposiciones legales del sistema jur&iacute;dico mexicano, en materia de recaudaci&oacute;n nacional, contribuciones y car&aacute;cter fiscal.<br />HABILIDADES PARA:<br /><span>&bull;&nbsp;</span>Promover soluciones jur&iacute;dicas.<br /><span>&bull;&nbsp;</span>Identificar la v&iacute;a jurisdiccional adecuada a cada situaci&oacute;n.<br /><span>&bull;&nbsp;</span>Formular estrategias jur&iacute;dicas para la resoluci&oacute;n de controversias.</p>",
                     "backgroundColor": "#C31433"
                   },
                   {
@@ -68,16 +68,16 @@
                       "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
                     },
                     "title": "Campo Laboral",
-                    "text": "Dentro del campo privado como abogado litigante, asesor jurídico, abogado corporativo en empresas y sociedades mercantiles, intermediario legal , mediador, árbitro jurídico, ámbito académico, investigador, ponente o conferencista.\n\nDentro del campo público como servidor público dentro del poder judicial, legislativo o ejecutivo, como notario público o con una gran cabida en el ámbito político.",
+                    "text": "Áreas: litigantes, asesores jurídicos, abogados corporativos, intermediarios legales, mediadores, árbitros jurídicos, investigadores, académicos, servidores públicos en los poderes del Estado, notarios públicos, políticos.",
                     "backgroundColor": "#4470B1"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                     },
                     "title": "Requisitos de admisión",
-                    "text": "a) Acta de nacimiento original y 1 copias (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.\n\n c) 1 copia de la CURP.\n\n d) 2 copias de Credencial Oficial IFE / INE o Pasaporte\n\n e) 2 copias de Credencial Oficial IFE / INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n f) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n De contar ya con una licenciatura por parte de UdeG y estar titulado, se aceptan copias certificadas expedidas por UdeG del certificado de bachillerato de no más de un mes al día que lo esté entregando y copia simple del título. (Más todos los documentos de nuevo ingreso).\n\n En caso de no estar titulado, debe entregar en original todos los documentos. (Todos los documentos de nuevo ingreso).",
+                    "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                     "backgroundColor": "#EEAA01"
                   }
                 ],

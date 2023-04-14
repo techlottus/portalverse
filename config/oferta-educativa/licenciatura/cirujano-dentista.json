@@ -13,12 +13,12 @@
       "campus": ["Campus Washington"],
       "nivel": ["Licenciatura"],
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1Zq0r7Lkr8_D_GStwkWsnP1iq1O3Trtmi",
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_dentista_desk_2f7dc70b4e.jpg",
         "alt": "licenciatura"
       },
       "curriculum": {
         "Presencial": {
-          "Campus Washington": "1OcV6QVS2rybuUuZAyn8oqsCm7UhfqTrG"
+          "Campus Washington": "Lic_Cirujano_Dentista_Presencial_cc2f10c6a6.pdf"
         }
       }
     }
@@ -26,9 +26,9 @@
   "sections": {
     "head": {
       "title": "Cirujano Dentista",
-      "description": "La Licenciatura de Cirujano Dentista, se lleva la teoría, la práctica laboratorial de asignaturas básicas, práctica con simulación en asignaturas básicas particulares, la práctica clínica en asignaturas Especializante, la carrera dura 3 años 4 meses, lo que es 10 Cuatrimestres, al término de la Licenciatura sigue el servicio social y proceso de titulación.",
+      "description": "La Licenciatura en Cirujano Dentista forma profesionales de la salud que promueven, prevén, diagnostican, curan y rehabilitan a la población en el proceso salud-enfermedad del sistema estomatognático, con base en una sólida preparación y obtención de competencias. Es un promotor de estrategias de prevención y preservación de la salud bucal.",
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1Zq0r7Lkr8_D_GStwkWsnP1iq1O3Trtmi",
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_dentista_desk_2f7dc70b4e.jpg",
         "alt": "licenciatura"
       }
     },
@@ -37,45 +37,45 @@
       "tabs": {
         "items": [
           {
-            "label": "Modalidad Presencial",
+            "label": "Presencial",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "El aspirante a la carrera de Licenciado /a  en Cirujano Dentista deberá de contar con: \n\n• Conocimientos básicos de las ciencias  biológicas, como es la estructura de la célula y la del cuerpo humano.\n\n• Habilidad Manual, ya que su actividad minuciosa.Debe ser meticuloso y paciente, por las características del trabajos que desempeñará.\n\n• Un trató amable con la gente ya que la profesión tiene como finalidad en el servicio a la comunidad.\n\nDeberá contar con Conciencia social e interés por los problemas de la salud de la sociedad.",
+                  "text": "<p>El aspirante a la carrera de Licenciado en Cirujano Dentista deber&aacute;:</p><p>&bull; Poseer conocimientos b&aacute;sicos de las Ciencias Biol&oacute;gicas, como son la estructura de la c&eacute;lula y del cuerpo humano.</p><p>&bull; Poseer habilidades manuales, para realizar una actividad minuciosa.</p><p>&bull; Deber&aacute; ser meticuloso y paciente, por las caracter&iacute;sticas del trabajo que desempe&ntilde;ar&aacute;.</p><p>&bull; Tener un trato amable con las personas ya que su profesi&oacute;n tiene como prop&oacute;sito el servicio a la comunidad.</p><p>&bull; Poseer conciencia social e inter&eacute;s por los problemas de salud de la sociedad. </p>",
                   "backgroundColor": "#1B2D68"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                   },
                   "title": "Perfil de egreso",
-                  "text": "\n\n• Conocerá y maneja los conceptos de la salud bucal.\n\n• Conocerá a profundidad los problemas sistémicos que presenten en sus pacientes\n\n• Poseerá un amplio Conocimiento sobre los medicamentos que empleará para sus efectos y aplicaciones\n\n• Tendrá amplio conocimiento sobre las múltiples tecnologías que se emplean en la actualidad en las diversas ramas de la Odontología\n\n• Tendrá los conocimientos necesarios para la administración de sus capacidades y recursos\n\n• Contará con los conocimientos de una segundo idioma\n\n• Habilidades y destrezas de comunicación con sus pacientes\n\n• Capacidad para determinar los diversos problemas de la salud de sus pacientes\n\n• Contar con la habilidad de la planeación y la destreza necesaria para el desarrollo y aplicación de los tratamientos requeridos \n\n• Dar seguimiento al tratamiento y determinar sus posible variación\n\n• Capacidad  de prevenir y contrarrestar problemas\n\n• Capacidad para lograr el impacto en la comunidad en que se desarrolle\n\n• Capacidad para el auto enseñanza y constante actualización\n\n• Será generador de empatía y confianza en la comunidad\n\n• Desarrollará un alto nivel de honestidad y ética\n\n• Generará un compromiso permanente con la salud del paciente\n\n• Desarrollará una actitud solidaria  hacia el dolor y el sufrimiento humano.",
+                  "text": "<p>Conocimientos:</p><p>&bull; Sobre las m&uacute;ltiples tecnolog&iacute;as que se emplean actualmente en las diversas ramas de la Odontolog&iacute;a. Gestor de capacidades y recursos.</p><p>Habilidades y Actitudes</p><p>&bull; Comunicaci&oacute;n con sus pacientes. Capacidad para diagnosticar los problemas de la salud de sus pacientes.</p><p>&bull; Seguir&aacute; el tratamiento indicado a sus pacientes y determinar&aacute; posibles variaciones.</p><p>Actitudes:</p><p>&bull; Autodidacta, alto nivel de honestidad y &eacute;tica. Actitud solidaria hacia el dolor y sufrimiento humano.</p>",
                   "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "Nuestros egresados y egresadas de la licenciatura se caracterizan por su sensibilidad y capacidad de buen trato con sus pacientes, así como la habilidad para el examen de diagnóstico de sus dolencias. Entre sus mejores cualidades está la minuciosidad en el trabajo, una reconocida destreza manual. nuestros graduados son también reconocidos por su habilidad para planificar y aplicar el tratamiento que precisa cada doliente, además, han sido partícipes activos en planes y programas de concientización comunitaria de la salud dental, así como constantes promotores de hábitos saludables que garantizan su mantenimiento y mejora. ",
+                  "text": "Áreas: salud bucal.<br>Actividades: habilidad para el diagnóstico de dolencias, cuidado del paciente, minuciosidad en el trabajo, destreza manual. Habilidad en la planificación. Gestores de planes para la salud dental comunitaria. Promotores de hábitos dentales saludables.",
                   "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "&quot;Interés por la lectura\n\nhabilidad motora\n\nequilibrio emocional\n\ninterés por la investigación&quot;",
+                  "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                   "backgroundColor": "#EEAA01"
                 }
               ],

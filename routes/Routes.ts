@@ -88,7 +88,7 @@ const Routes: any = {
           { params: { "program": "gastronomia", "nameProgram": "Licenciatura en Gastronomía" } },
           { params: { "program": "diseno-modas", "nameProgram": "Licenciatura Diseño de Modas" } },
           { params: { "program": "trabajo-social", "nameProgram": "Licenciatura Trabajo Social" } },
-          { params: { "program": "administracion", "nameProgram": "Licenciatura en Administracion" } },
+          { params: { "program": "lic-administracion", "nameProgram": "Licenciatura en Administracion" } },
           { params: { "program": "negocios-internacionales", "nameProgram": "Licenciatura en Negocios Internacionales" } },
           { params: { "program": "mercadotecnia", "nameProgram": "Licenciatura en Mercadotecnia" } },
           { params: { "program": "psicologia", "nameProgram": "Licenciatura en Psicología" } },
@@ -98,7 +98,7 @@ const Routes: any = {
           { params: { "program": "diseno-comunicacion-grafica", "nameProgram": "Licenciatura en Diseño para la Comunicación Gráfica" } },
           { params: { "program": "ingenieria-computacion", "nameProgram": "Ingeniería en Computación" } },
           { params: { "program": "negocios-digitales", "nameProgram": "Licenciatura en Negocios Digitales" } },
-          { params: { "program": "ingenieria-ciencias-datos", "nameProgram": "Ingenieria en Ciencia de Datos" } },
+          { params: { "program": "ingenieria-ciencias-datos", "nameProgram": "Ingeniería en Ciencia de Datos" } },
           { params: { "program": "turismo", "nameProgram": "Licenciatura en Turismo" } },
           { params: { "program": "ingenieria-desarrollo-software", "nameProgram": "Ingeniería en Desarrollo de Software" } },
           { params: { "program": "ingenieria-sistemas", "nameProgram": "Ingeniería en Sistemas" } },
@@ -118,7 +118,6 @@ const Routes: any = {
           { params: { "program": "ciencias-forenses", "nameProgram": "Licenciatura en Ciencias Forenses: Criminalística y Criminología" } },
           { params: { "program": "ingenieria-creacion-desarrollo-software-apps", "nameProgram": "Licenciatura en Ingeniería en Creación y Desarrollo de Software y Aplicaciones" } },
           { params: { "program": "pedagogia", "nameProgram": "Licenciatura en Pedagogía" } },
-          { params: { "program": "creacion-desarrollo-empresas-negocios", "nameProgram": "Licenciatura en Creación y Desarrollo de Empresas y Negocios" } },
           { params: { "program": "quimico-farmaceutico-biologo-proulex", "nameProgram": "Licenciatura en Químico Farmaceutico Biólogo con Certificación en Inglés Proulex" } },
         ]
       }

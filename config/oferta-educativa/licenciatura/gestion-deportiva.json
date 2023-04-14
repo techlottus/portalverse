@@ -13,7 +13,7 @@
       "campus": ["Campus Washington"],
       "nivel": ["Licenciatura"],
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1tieAXUY-Wr1XZJVYLrviQRoAUGeDpPMS",
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_gestion_deportiva_desk_312cbdcbad.jpg",
         "alt": "licenciatura"
       },
       "curriculum": {
@@ -28,9 +28,9 @@
   "sections": {
     "head": {
       "title": "Licenciatura en Gestión Deportiva",
-      "description": "Planea y dirige proyectos deportivos para poblaciones y escenarios diversos con la aplicación de estrategias y actividades de comunicación  y  administración en instituciones deportivas, genera vínculos con las distintas áreas del deporte en el sector público y en clubs del deporte. Garantiza una adecuada toma de decisiones!",
+      "description": "En esta licenciatura se forman profesionales capaces de dirigir, planear y organizar proyectos y empresas deportivas privadas. Trabajar en organismos deportivos e instituciones públicas relacionadas con el deporte, implementando programas, proyectos y estrategias vinculadas con la comunicación, economía y administración deportiva.",
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1tieAXUY-Wr1XZJVYLrviQRoAUGeDpPMS",
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_gestion_deportiva_desk_312cbdcbad.jpg",
         "alt": "licenciatura"
       }
     },
@@ -39,45 +39,45 @@
       "tabs": {
         "items": [
           {
-            "label": "Modalidad Presencial",
+            "label": "Presencial",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "",
+                  "text": "El aspirante deberá tener conocimiento sobre:\n\n• Matemáticas\n\n• El uso de las TIC´s.\n\n• La expresión oral y escrita.\n\n• La comunicación efectiva.\n\nHabilidades y aptitudes para:\n\n• Desarrollar procesos lógicos.\n\n• Resolver problemas con base en principios, leyes y conceptos.\n\n• Evaluar fortalezas y debilidades de los equipos de trabajo.\n\n• Aplicar el razonamiento lógico.\n\n• Manejar equipos de cómputo y electrónicos.\n\n• Liderar grupos de trabajo.\n\nActitudes de:\n\n• Sensibilidad a las necesidades sociales.\n\n• Creatividad.\n\n• Liderazgo.\n\n• Trabajo en equipo.",
                   "backgroundColor": "#1B2D68"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                   },
                   "title": "Perfil de egreso",
-                  "text": "",
+                  "text": "Conocimientos en:\n\n • Gestión de proyectos deportivos.\n\n • Fundamentos normativos del deporte.\n\n • Organización y gestión de los recursos necesarios para eventos deportivos.\n\n • Estrategias de comercialización y posicionamiento de productos deportivos.\n\n Habilidades para:\n\n • Dirigir atletas y equipos deportivos.\n\n • Realizar campañas publicitarias para equipos y deportistas.\n\n • Identificar el talento deportivo.\n\n • Concertar tratos en escenarios y contextos deportivos.\n\n Actitudes de:\n\n • Liderazgo y emprendimiento.\n\n • Honestidad y ética.",
                   "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "",
+                  "text": "Los profesionales egresados de la carrera de Gestión Deportiva cuentan con un extenso campo laboral:\n\n• Centros deportivos.\n\n• Administración pública.\n\n• Federaciones, ligas, clubes, gimnasios y asociaciones.\n\n• Industria de materiales deportivos.\n\n• Consultorías deportivas.\n\n• Organización de eventos deportivos.\n\n• Dirección en empresas de servicios deportivos.\n\n• Formación y enseñanza.",
                   "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "",
+                  "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                   "backgroundColor": "#EEAA01"
                 }
               ],
@@ -85,15 +85,15 @@
             }
           },
           {
-            "label": "Modalidad Online",
+            "label": "Online",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
                   "text": "El aspirante a ingresar a la Licenciatura en Gestión Deportiva deberá contar con los siguientes conocimientos:\n\n• Desarrollar procesos lógicos.\n\n• Resolver problemas con base en principios, leyes y conceptos.\n\n• Emplear las nuevas tecnologías de la información y la comunicación.\n\n• Ser capaz para evaluar fortalezas y debilidades de los equipos de trabajo.\n\n• Desarrollar un pensamiento crítico y constructivo.\n\n• Aplicar el razonamiento lógico.\n\n• Manejar equipos de cómputo y electrónicos.\n\n• Tener la capacidad para liderar grupos de trabajo.",
@@ -101,29 +101,29 @@
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                   },
                   "title": "Perfil de egreso",
-                  "text": "Desarrollará las funciones correspondientes a la dirección y manejo de atletas y equipos deportivos en su desempeño disciplinar. \n\n•  Manejará los recursos humanos, materiales y económicos relacionados con el deporte. \n\n•  Realizará campañas publicitarias nacionales e internacionales que promocionan equipos y deportistas. \n\n•  Investigará y recolectará información sobre temas deportivos. \n\n•  Dirigirá instituciones y proyectos relacionados con el deporte. \n\n•  Detectará e identificará características y talentos en niños y adolescentes en el ámbito deportivo. \n\n•  Tomará decisiones relacionadas de las instituciones deportivas y el desarrollo del deportista. \n\n•  Aplicará estrategias para la concertación de tratos en los distintos escenarios y contextos deportivos. \n\n•  Desarrollará la capacidad de motivación que potencie el rendimiento atleta.",
+                  "text": "Conocimientos en:\n\n• Gestión de proyectos deportivos.\n\n• Fundamentos normativos del deporte.\n\n• Organización y gestión de los recursos necesarios para eventos deportivos.\n\n• Estrategias de comercialización y posicionamiento de productos deportivos.\n\nHabilidades para:\n\n• Dirigir atletas y equipos deportivos.\n\n• Realizar campañas publicitarias para equipos y deportistas.\n\n• Identificar el talento deportivo.\n\n• Concertar tratos en escenarios y contextos deportivos.\n\nActitudes de:\n\n• Liderazgo y emprendimiento.\n\n• Honestidad y ética.",
                   "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "Los profesionales egresados de la carrera de gestión deportiva cuentan con un extenso campo laboral.\n\n Esto se debe a que, esta es una carrera que se caracteriza por contar con una gran variedad de salidas, entre las cuales se pueden mencionar las que veremos a continuación:\n\n• Centros deportivos\n\n• Administración pública\n\n• Federaciones, ligas, clubes, gimnasios y asociaciones\n\n• Industria de material deportivo\n\n• Consultoría deportiva\n\n• Organización de eventos deportivos\n\n• Dirección en empresas de servicios deportivos\n\n• Formación y enseñanza",
+                  "text": "Áreas: centros deportivos, administración pública, federaciones, ligas, clubes, gimnasios y asociaciones. Industrias de materiales deportivos. \n\nActividades: consultoría, organización de eventos deportivos, dirección de empresas de servicios deportivos, formación y enseñanza. ",
                   "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                  "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; Comprobante de domicilio.</p>",
                   "backgroundColor": "#EEAA01"
                 }
               ],
@@ -131,45 +131,45 @@
             }
           },
           {
-            "label": "Modalidad Flex",
+            "label": "Flex",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "El aspirante a ingresar a la Licenciatura en Gestión Deportiva deberá contar con los siguientes conocimientos:\n\n• Desarrollar procesos lógicos.\n\n• Resolver problemas con base en principios, leyes y conceptos.\n\n• Emplear las nuevas tecnologías de la información y la comunicación.\n\n• Ser capaz para evaluar fortalezas y debilidades de los equipos de trabajo.\n\n• Desarrollar un pensamiento crítico y constructivo.\n\n• Aplicar el razonamiento lógico.\n\n• Manejar equipos de cómputo y electrónicos.\n\n• Tener la capacidad para liderar grupos de trabajo",
+                  "text": "El aspirante a ingresar a la Licenciatura en Gestión Deportiva deberá contar con los siguientes conocimientos:\n\n• Desarrollar procesos lógicos.\n\n• Resolver problemas con base en principios, leyes y conceptos.\n\n• Emplear las nuevas tecnologías de la información y la comunicación.\n\n• Ser capaz para evaluar fortalezas y debilidades de los equipos de trabajo.\n\n• Desarrollar un pensamiento crítico y constructivo.\n\n• Aplicar el razonamiento lógico.\n\n• Manejar equipos de cómputo y electrónicos.\n\n• Tener la capacidad para liderar grupos de trabajo.",
                   "backgroundColor": "#1B2D68"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                   },
                   "title": "Perfil de egreso",
-                  "text": "\n\n• Desarrollará las funciones correspondientes a la dirección y manejo de atletas y equipos deportivos en su desempeño disciplinar.\n\n•  Manejará los recursos humanos, materiales y económicos relacionados con el deporte.\n\n•  Realizará campañas publicitarias nacionales e internacionales que promocionan equipos y deportistas.\n\n•  Investigará y recolectar información sobre temas deportivos.\n\n•  Dirigirá instituciones y proyectos relacionados con el deporte.\n\n•  Detectará e identificará características y talentos en niños y adolescentes en el ámbito deportivo.\n\n•  Tomará decisiones relacionadas de las instituciones deportivas y el desarrollo del deportista.\n\n•  Aplicará estrategias para la concertación de tratos en los distintos escenarios y contextos deportivos.\n\n•  Desarrollará la capacidad de motivación que potencie el rendimiento del atleta.",
+                  "text": "onocimientos en:\n\n • Gestión de proyectos deportivos.\n\n • Fundamentos normativos del deporte.\n\n • Organización y gestión de los recursos necesarios para eventos deportivos.\n\n • Estrategias de comercialización y posicionamiento de productos deportivos.\n\nHabilidades para:\n\n • Dirigir atletas y equipos deportivos.\n\n • Realizar campañas publicitarias para equipos y deportistas.\n\n • Identificar el talento deportivo.\n\n • Concertar tratos en escenarios y contextos deportivos.\n\nActitudes de:\n\n • Liderazgo y emprendimiento.\n\n • Honestidad y ética.",
                   "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "Los profesionales egresados de la carrera de gestión deportiva cuentan con un extenso campo laboral.\n\n Esto se debe a que, esta es una carrera que se caracteriza por contar con una gran variedad de salidas, entre las cuales se pueden mencionar las que veremos a continuación:\n\n• Centros deportivos\n\n• Administración pública\n\n• Federaciones, ligas, clubes, gimnasios y asociaciones\n\n• Industria de material deportivo\n\n• Consultoría deportiva\n\n• Organización de eventos deportivos\n\n• Dirección en empresas de servicios deportivos\n\n• Formación y enseñanza",
+                  "text": "Áreas: centros deportivos, administración pública, federaciones, ligas, clubes, gimnasios y asociaciones. Industrias de materiales deportivos. \n\nActividades: consultoría, organización de eventos deportivos, dirección de empresas de servicios deportivos, formación y enseñanza. ",
                   "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                  "text": "<p>&bull;&nbsp;Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).<br />&bull;&nbsp;Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.<br />&bull;&nbsp;1 copia de la CURP.<br />&bull;&nbsp;2 copias de Credencial Oficial IFE / INE o Pasaporte.<br />&bull;&nbsp;2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).<br />&bull;&nbsp;2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                   "backgroundColor": "#EEAA01"
                 }
               ],

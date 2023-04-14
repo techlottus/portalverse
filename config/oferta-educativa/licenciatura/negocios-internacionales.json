@@ -13,28 +13,28 @@
       "campus": ["Américas", "Campus Washington", "Río Nilo", "Tlajomulco", "Zapopan"],
       "nivel": ["Licenciatura"],
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1hI32NVtHkVkKEk8Hl0hQuuUOT7v2OOSV",
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_negocios_internacionales_desk_ac91bc86bc.jpg",
         "alt": "licenciatura"
       },
       "curriculum": {
         "Presencial": {
-          "Américas": "19cUurU0zjEAPpiZ_iyaPt7O9DpOQujFs",
-          "Campus Washington": "19cUurU0zjEAPpiZ_iyaPt7O9DpOQujFs",
-          "Río Nilo": "19cUurU0zjEAPpiZ_iyaPt7O9DpOQujFs",
-          "Tlajomulco": "19cUurU0zjEAPpiZ_iyaPt7O9DpOQujFs",
-          "Zapopan": "19cUurU0zjEAPpiZ_iyaPt7O9DpOQujFs"
+          "Américas": "Lic_en_Negocios_Internacionales_Presencial_bbb687a02d.pdf",
+          "Campus Washington": "Lic_en_Negocios_Internacionales_Presencial_bbb687a02d.pdf",
+          "Río Nilo": "Lic_en_Negocios_Internacionales_Presencial_bbb687a02d.pdf",
+          "Tlajomulco": "Lic_en_Negocios_Internacionales_Presencial_bbb687a02d.pdf",
+          "Zapopan": "Lic_en_Negocios_Internacionales_Presencial_bbb687a02d.pdf"
         },
-        "Online": "1s1njln0oBHv3rcnogTQY3fA3-_7K9en9",
-        "Flex": "1la7UEUQb2rnmzHNYZ44Gi-GK32qoavTw"
+        "Online": "Lic_en_Negocios_Internacionales_Online_77e4344323.pdf",
+        "Flex": "Lic_en_Negocios_Internacionales_Flex_bd08175cfd.pdf"
       }
     }
   },
   "sections": {
     "head": {
       "title": "Licenciatura en Negocios Internacionales",
-      "description": "Diseña modelos de negocios y genera soluciones creativas a las necesidades del mercado mundial, así promueve estrategias para el logro de objetivos en organizaciones públicas y privadas basados en un dominio de los conocimientos, habilidades y actitudes que la competencia internacional exige, todo ello en términos de proporcionar una ventaja competitiva.",
+      "description": "En esta licenciatura se forman profesionales capaces de implementar planes estratégicos de negociación, importación y exportación. Propuestas que satisfagan las necesidades del mercado globalizado y generen beneficios a la sociedad en instituciones públicas y privadas con el uso de herramientas y softwares que permitan nuevos esquemas de comercialización a nivel internacional.",
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1hI32NVtHkVkKEk8Hl0hQuuUOT7v2OOSV",
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_negocios_internacionales_desk_ac91bc86bc.jpg",
         "alt": "licenciatura"
       }
     },
@@ -43,18 +43,18 @@
       "tabs": {
         "items": [
           {
-            "label": "Modalidad Presencial",
+            "label": "Presencial",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "Interés: Gusto por el conocimiento del contexto Nacional e Internacional y por el desarrollo de mercados nacionales e internacionales.\n\n Aptitudes: Fundamentos lógico-matemáticos, habilidades de lectocomprensión y ortografía, uso de equipo de cómputo. Pensamiento estratégico, capacidad de análisis y síntesis.\n\n Actitudes: Compromiso para la autogestión y autoaprendizaje.",
+                  "text": "El aspirante deberá tener conocimientos sobre:\n\n• Matemáticas.\n\n• El uso de las TIC´s.\n\n• La expresión oral y escrita.\n\n• La comunicación efectiva.\n\nHabilidades y aptitudes para:\n\n• Desarrollar procesos lógicos.\n\n• Resolver problemas con base en principios, leyes y conceptos.\n\n• Evaluar fortalezas y debilidades de los equipos de trabajo.\n\n• Pensamiento crítico.\n\n• Aplicar el razonamiento lógico.\n\n• Manejar equipos de cómputo y electrónicos.\n\n• Liderar grupos de trabajo.\n\nActitudes de:\n\n• Creatividad.\n\n• Liderazgo.\n\n• Trabajo en equipo.",
                   "backgroundColor": "#1B2D68"
                 },
                 {
@@ -63,25 +63,25 @@
                     "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
                   },
                   "title": "Perfil de egreso",
-                  "text": "El egresado /a de la Licenciatura en Negocios Internacionales del Centro Universitario UTEG será un profesionista con sustento teórico-práctico respecto a la comercialización y operación del comercio internacional, con los conocimientos de la normatividad y fundamentación que le permitan evitar los obstáculos dentro del comercio exterior y con ello obtener ventajas en el desarrollo de su carrera.",
+                  "text": "CONOCIMIENTOS SOBRE:\n\n• Las tendencias de negociación internacional.\n\n• El entorno en que se desenvuelve la organización y su sector específico.\n\n• Las técnicas de negociación organizacionales.\n\n• Estrategias de comercialización y negociación.\n\nHABILIDADES PARA:\n\n• Evaluar planes estratégicos de importación y exportación.\n\n• Generar negociaciones de exportación e importación teniendo en cuenta aspectos culturales.\n\n• La búsqueda de soluciones en ámbitos arancelarios.\n\n• Proponer alternativas portuarias y aeroportuarias para socios comerciales.",
                   "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "El campo de trabajo y el ejercicio profesional del egresado/a de la Licenciatura en Negocios Internacionales del Centro Universitario UTEG, se considera su colaboración en empresas u organizaciones tales como:\n\n• Organización Mundial de Comercio (OMC)\n\n• Fondo Monetario Internacional\n\n• Banco Mundial\n\n• Dependencias oficiales o de Gobierno\n\n• Banca comercial y Banca de desarrollo\n\n• Agencias aduanales\n\n• Departamento de tráfico o exportación de empresas nacionales e internacionales\n\n• Empresario/a independiente o consultor/a\n\n• Docente o investigador en universidades públicas o privadas, nacionales e internacionales.",
+                  "text": "El egresado podrá ejercer en industrias del sector público y privado que importen y exporten productos, empresas transportistas, agencias aduanales, instituciones financieras y dependencias del gobierno.\n\nComo administrador de agencias aduanales, de paquetería o carga internacionales, consultor de comercio internacional. ",
                   "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "Para ingresar como alumno a la institución en cualquier programa académico será indispensable:\n\n 1.- Haber concluido íntegramente el ciclo inmediato anterior.\n\n 2.- Solicitar a los asesores de admisiones el ingreso a la Universidad, de acuerdo a los instructivos correspondientes.\n\n 3.- Ser aceptado después de haber concluido el proceso de admisión.",
+                  "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                   "backgroundColor": "#EEAA01"
                 }
               ],
@@ -89,18 +89,18 @@
             }
           },
           {
-            "label": "Modalidad Online",
+            "label": "Online",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "El aspirante a ingresar a la Licenciatura en Negocios Internacionales deberá contar con los siguientes conocimientos:\n\n• Sensibilidad a las necesidades sociales\n\n• Expresión oral / escrita\n\n• Investigación\n\n• Comunicación efectiva y liderazgo de grupos de trabajo\n\n• Evaluación fortalezas y debilidades de los equipos de trabajo\n\n• Razonamiento lógico; solución de problemas con base en principios, leyes y conceptos\n\n• Desarrollo de pensamiento crítico y constructivo.",
+                  "text": "El aspirante a ingresar a la Licenciatura en Negocios Internacionales deberá contar con los siguientes conocimientos:\n\n• Sensibilidad a las necesidades sociales.\n\n• Expresión oral / escrita, investigación, comunicación efectiva y liderazgo de grupos de trabajo.\n\n• Evaluación de fortalezas y debilidades de los equipos de trabajo.\n\n• Razonamiento lógico.\n\n• Solución de problemas con base en principios, leyes y conceptos.\n\n• Desarrollo de pensamiento crítico y constructivo.",
                   "backgroundColor": "#1B2D68"
                 },
                 {
@@ -109,25 +109,25 @@
                     "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
                   },
                   "title": "Perfil de egreso",
-                  "text": "\n\n• Conocerá las estrategias financieras y económicas para la evaluación de viabilidad y factibilidad de un negocio.\n\n• Ejecutará procesos administrativos sobre empresas internacionales y análisis micro y macroeconómico mundial.\n\n• Dirigirá al capital humano en el ámbito internacional, considerando el factor multicultural.\n\n• Aplicará conceptos jurídicos, económicos, administrativos y de mercado.\n\n• Diseñará modelos de negocios y estrategias comerciales internacionales que permitan obtener una ventaja competitiva.",
+                  "text": "CONOCIMIENTOS SOBRE:\n\n• Las tendencias de negociación internacional.\n\n• El entorno en que se desenvuelve la organización y su sector específico.\n\n• Las técnicas de negociación organizacionales.\n\n• Estrategias de comercialización y negociación.\n\nHABILIDADES PARA:\n\n• Evaluar planes estratégicos de importación y exportación.\n\n• Generar negociaciones de exportación e importación teniendo en cuenta aspectos culturales.\n\n• La búsqueda de soluciones en ámbitos arancelarios.\n\n• Proponer alternativas portuarias y aeroportuarias para socios comerciales.",
                   "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "Como egresado de la Licenciatura de Negocios Internacionales podrás desarrollarte en industrias del sector público y privado que realicen importación y exportación de productos, empresas transportistas, agencias aduanales, instituciones financieras y dependencias del gobierno. \n\n Además, tienes la oportunidad de administrar una agencia aduanal y/o ser consultor de comercio internacional. Des envuélvete en paqueterías internacionales o agencias de carga internacional; verifica la mercancía a exportar.",
+                  "text": "Áreas: empresas u organizaciones privadas o gubernamentales nacionales e internacionales. Agencias aduanales, departamentos de tráfico o exportación, empresario independiente, consultor, docente, investigador. ",
                   "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                  "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; Comprobante de domicilio.</p>",
                   "backgroundColor": "#EEAA01"
                 }
               ],
@@ -135,18 +135,18 @@
             }
           },
           {
-            "label": "Modalidad Flex",
+            "label": "Flex",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "El aspirante a ingresar a la Licenciatura en Negocios Internacionales deberá contar con los siguientes conocimientos:\n\n Sensibilidad a las necesidades sociales; expresión oral / escrita, investigación, comunicación efectiva y liderazgo de grupos de trabajo; evaluación fortalezas y debilidades de los equipos de trabajo; razonamiento lógico; solución de problemas con base en principios, leyes y conceptos; y desarrollo de pensamiento crítico y constructivo.",
+                  "text": "El aspirante a ingresar a la Licenciatura en Negocios Internacionales deberá contar con los siguientes conocimientos:\n\n• Sensibilidad a las necesidades sociales. \n\n• Expresión oral / escrita, investigación, comunicación efectiva y liderazgo de grupos de trabajo.\n\n• Evaluación de fortalezas y debilidades de los equipos de trabajo.\n\n• Razonamiento lógico.\n\n• Solución de problemas con base en principios, leyes y conceptos.\n\n• Desarrollo de pensamiento crítico y constructivo.",
                   "backgroundColor": "#1B2D68"
                 },
                 {
@@ -155,25 +155,25 @@
                     "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
                   },
                   "title": "Perfil de egreso",
-                  "text": "Conocerá las estrategias financieras y económicas para la evaluación de viabilidad y factibilidad de un negocio.\n\n Ejecutará procesos administrativos sobre empresas internacionales y análisis micro y macroeconómico mundial.\n\n Dirigirá al capital humano en el ámbito internacional, considerando el factor multicultural.\n\n Aplicará conceptos jurídicos, económicos, administrativos y de mercado.\n\n Diseñará modelos de negocios y estrategias comerciales internacionales que permitan obtener una ventaja competitiva.",
+                  "text": "CONOCIMIENTOS SOBRE:\n\n• Las tendencias de negociación internacional.\n\n• El entorno en que se desenvuelve la organización y su sector específico.\n\n• Las técnicas de negociación organizacionales.\n\n• Estrategias de comercialización y negociación.\n\nHABILIDADES PARA:\n\n• Evaluar planes estratégicos de importación y exportación.\n\n• Generar negociaciones de exportación e importación teniendo en cuenta aspectos culturales.\n\n• La búsqueda de soluciones en ámbitos arancelarios.\n\n• Proponer alternativas portuarias y aeroportuarias para socios comerciales.",
                   "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "Como egresado de la Licenciatura de Negocios Internacionales podrás desarrollarte en industrias del sector público y privado que realicen importación y exportación de productos, empresas transportistas, agencias aduanales, instituciones financieras y dependencias del gobierno.\n\n Además, tienes la oportunidad de administrar una agencia aduanal y/o ser consultor de comercio internacional. Des envuélvete en paqueterías internacionales o agencias de carga internacional; verifica la mercancía a exportar.",
+                  "text": "Áreas: empresas u organizaciones privadas o gubernamentales nacionales e internacionales. Agencias aduanales, departamentos de tráfico o exportación, empresario independiente, consultor, docente, investigador. ",
                   "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                  "text": "<p>&bull;&nbsp;Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).<br />&bull;&nbsp;Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.<br />&bull;&nbsp;1 copia de la CURP.<br />&bull;&nbsp;2 copias de Credencial Oficial IFE / INE o Pasaporte.<br />&bull;&nbsp;2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).<br />&bull;&nbsp;2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                   "backgroundColor": "#EEAA01"
                 }
               ],

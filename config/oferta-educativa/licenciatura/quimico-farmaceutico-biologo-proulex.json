@@ -13,12 +13,12 @@
       "campus": ["Campus Washington"],
       "nivel": ["Licenciatura"],
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1UKvFZNbUDMEqO93XIhHRgGGESi4z2V-V",
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_QFB_desk_90e66f29c5.jpg",
         "alt": "licenciatura"
       },
       "curriculum": {
         "Presencial": {
-          "Campus Washington": "19ZNw0X-1OeuXQA-CuWxZKHxnuB8wH9Lt"
+          "Campus Washington": "Lic_en_Quimico_Farmaceutico_Biologo_Proulex_Presencial_bace9314e2.pdf"
         }
       }
     }
@@ -28,7 +28,7 @@
       "title": "Licenciatura en Químico Farmaceutico Biólogo con Certificación en Inglés Proulex",
       "description": "Licenciatura en Químico Farmacéutico Biólogo con certificación en Inglés Proulex. Ofrecemos el dominio de una segunda lengua bajo un modelo especial.",
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1UKvFZNbUDMEqO93XIhHRgGGESi4z2V-V",
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_QFB_desk_90e66f29c5.jpg",
         "alt": "licenciatura"
       }
     },
@@ -37,45 +37,45 @@
       "tabs": {
         "items": [
           {
-            "label": "Modalidad Presencial",
+            "label": "Presencial",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "Interés por la investigación y participación en el desarrollo de proyectos para innovar o formular productos que se involucren en el avance de la industria farmacéutica, alimenticia y ciencias del laboratorio clínico.\n\n Tener habilidades de expresión oral y escrita, capacidad de análisis y síntesis, destreza manual e intelectual, habilidades psicomotrices y observación.\n\n Gusto por la química, las matemáticas, biología y física, habilidades en el cálculo y las tecnologías informáticas.\n\n Tener actitud ética, iniciativa, creatividad, disciplina, responsabilidad, colaboración e interés por la salud.",
+                  "text": "El aspirante a químico farmacéutico Biologo debe tener Interés por:\n\n• La investigación y participación en el desarrollo de proyectos para innovar o formular productos que se involucren en el avance de la industria farmacéutica, alimenticia y ciencias del laboratorio clínico.\n\n• Tener habilidades de expresión oral y escrita, capacidad de análisis y síntesis, destreza manual e intelectual, habilidades psicomotrices y observación.\n\n• Gusto por la química, las matemáticas, biología y física, habilidades en el cálculo y las tecnologías informáticas.",
                   "backgroundColor": "#1B2D68"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                   },
                   "title": "Perfil de egreso",
-                  "text": "El egresado /a de la Licenciatura en Químico Farmacéutico Biólogo, desarrollará competencias, conocimientos y actitudes necesarias para servir a la sociedad como un profesional que participa de forma responsable en gestionar, diseñar y administrar los procesos de control y aseguramiento de calidad en las industrias y laboratorios para la evaluación, validación, producción y distribución de los productos químicos. Será el profesional que reúne los conocimientos necesarios para el manejo de sustancias, técnicas y procedimientos que tienen por objeto prevenir, establecer un diagnóstico y sanar enfermedades.\n\n Será capaz de determinar la actividad biológica, el valor terapéutico y la toxicidad de fármacos y medicamentos.\n\n Será un profesional que posea cualidades de competencias, capacidad de convivencia multicultural, compromiso con la universidad y el entorno, alto sentido humanista, responsabilidad, honestidad, capacidad crítica, liderazgo, alta velocidad de respuesta, manejo de tecnología y sistemas de información acordes a la innovación tecnológica.",
+                  "text": "Profesional capaz de gestionar, diseñar y administrar los procesos de control y aseguramiento de calidad en las industrias y laboratorios para la evaluación, validación, producción y distribución de los productos químicos. \n\nManejo de sustancias, técnicas y procedimientos que tienen por objeto prevenir, establecer un diagnóstico y sanar enfermedades. \n\nSerá capaz de determinar la actividad biológica, el valor terapéutico y la toxicidad de fármacos y medicamentos.",
                   "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "En industrias públicas y privadas realizando:\n\n• Producción y control de alimentos, complementos y suplementos alimenticios\n\n• Producción y control de productos farmacéuticos\n\n• Producción y control de productos cosméticos\n\n• Análisis químico-clínicos\n\n• Análisis microbiológicos\n\n• Farmacia hospitalaria, clínica y comunitaria\n\n• Evaluación de contaminación ambiental\n\n• Enseñanza, investigación y salud pública",
+                  "text": "Áreas: industrias públicas y privadas, farmacias hospitalarias, clínicas y comunitarias, enseñanza, docencia e investigación. \n\nActividades: producción y control de alimentos, complementos y suplementos alimenticios. Producción y control de productos farmacéuticos y cosméticos. Análisis químicos-clínicos y microbiológicos. ",
                   "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "a) Acta de nacimiento original y 1 copias (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.\n\n c) 1 copia de la CURP.\n\n d) 2 copias de Credencial Oficial IFE / INE o Pasaporte\n\n e) 2 copias de Credencial Oficial IFE / INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n f) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n De contar ya con una licenciatura por parte de UdeG y estar titulado, se aceptan copias certificadas expedidas por UdeG del certificado de bachillerato de no más de un mes al día que lo esté entregando y copia simple del título. (Más todos los documentos de nuevo ingreso).\n\n En caso de no estar titulado, debe entregar en original todos los documentos. (Todos los documentos de nuevo ingreso).\n\n Nota: Si realizó los estudios de bachillerato en otro estado de la república, el certificado debe tener la legalización por parte de Secretaría de Gobernación del estado donde realizaron los estudios.\n\n Si el certificado es de UNAM, Secretaría de la Defensa Nacional (SEDENA), Sistema Educativo Nacional (en el encabezado del documento) y Colegios de Bachilleres, estos no requieren del trámite de legalización.",
+                  "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                   "backgroundColor": "#EEAA01"
                 }
               ],

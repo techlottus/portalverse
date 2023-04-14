@@ -1,34 +1,34 @@
 {
     "meta": {
-      "title": "Licenciatura Arquitectura",
+      "title": "Licenciatura en Arquitectura",
       "description": "",
       "keywords": ""
     },
     "config": {
-      "title": "Licenciatura Arquitectura",
+      "title": "Licenciatura en Arquitectura",
       "config": {
-        "nombre": "Licenciatura Arquitectura",
+        "nombre": "Licenciatura en Arquitectura",
         "modalidad": ["Presencial"],
         "areaConocimiento": ["Arquitectura y Diseño"],
         "campus": ["Américas"],
         "nivel": ["Licenciatura"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1Y3D2ZDxoHjLpxCFX2FQJQF0Cx8-cPXXa",
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_arquitectura_desk_a70ab65b3c.jpg",
           "alt": "licenciatura"
         },
         "curriculum": {
           "Presencial": {
-            "Américas": "1Aw8otnzxEvR7gElrSjQv8-4UNRfC-Pb7"
+            "Américas": "Lic_en_Arquitectura_Presencial_2325104799.pdf"
           }
         }
       }
     },
     "sections": {
       "head": {
-        "title": "Licenciatura Arquitectura",
-        "description": "Licenciatura en Arquitectura es la carrera donde se forman profesionistas para crear, diseñar, comprender y ejecutar el acto de ordenar y construir el espacio habitable sustentable,  con responsabilidad de integración al contexto urbano, equilibrando emoción, razón e intuición, y dando forma física a las necesidades de la sociedad y el individuo.",
+        "title": "Licenciatura en Arquitectura",
+        "description": "La Licenciatura en Arquitectura es la carrera donde se forman profesionistas para crear, diseñar, comprender y ejecutar el acto de ordenar y construir el espacio habitable sustentable, con responsabilidad e integración al contexto urbano, equilibrando emoción, razón e intuición, y dando forma física a las necesidades de la sociedad y el individuo.",
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1Y3D2ZDxoHjLpxCFX2FQJQF0Cx8-cPXXa",
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_arquitectura_desk_a70ab65b3c.jpg",
           "alt": "licenciatura"
         }
       },
@@ -37,45 +37,45 @@
         "tabs": {
           "items": [
             {
-              "label": "Modalidad Presencial",
+              "label": "Presencial",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {
                 "cards": [
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                     },
                     "title": "Perfil de ingreso",
-                    "text": "El aspirante debe contar preferentemente con:\n\n INTERESES: humanistas y artísticos en la técnica administrativa, científica y sistemática, por el cálculo y la técnica, por el bienestar social.\n\nAPTITUDES. Habilidad para el dibujo, para captar y representar formas y partes, capacidad de análisis y síntesis, facilidad para el cálculo matemático y la física, imaginación e inventiva plástica, que se hábil para presentar objetos arquitectónicos verbal y gráficamente, con capacidad de mando y persuasión y capaz de trabajar en equipo.\n\nACTITUDES. Observador, perceptivo de su entorno, interesado por los detalles y por la precisión, organizado, eficiente, con vocación de servicio, abierto a las aplicaciones de las nuevas tecnologías, disciplinado, responsable de su aprendizaje, consciente y respetuoso del patrimonio cultural, estable desde el punto de vista emocional, sociable.",
+                    "text": "<p>El aspirante de la licenciatura en Arquitectura debe contar preferentemente con:<br /><span>&bull;&nbsp;</span>Intereses Humanistas y art&iacute;sticos.<br /><span >&bull;&nbsp;</span>Gusto por el c&aacute;lculo y la t&eacute;cnica.<br /><span >&bull;&nbsp;</span>Aptitudes en la Habilidad para el dibujo.<br /><span>&bull;&nbsp;</span>Captar y representar formas y partes.<br /><span>&bull;&nbsp;</span>Capacidad de an&aacute;lisis y s&iacute;ntesis, facilidad para el c&aacute;lculo matem&aacute;tico y la f&iacute;sica, imaginaci&oacute;n e inventiva pl&aacute;stica.<br /><span>&bull;&nbsp;</span>Actitudes como observador, perceptivo de su entorno, interesado por los detalles y por la precisi&oacute;n, organizado, eficiente, disciplinado, consciente y respetuoso del patrimonio cultural.</p>",
                     "backgroundColor": "#1B2D68"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                     },
                     "title": "Perfil de egreso",
-                    "text": "Será un profesionista que investiga las variables del objeto arquitectónico con conocimientos teóricos e históricos, que conoce la problemática urbana, que proyecta con sentido técnico y estético espacios habitables, que representa conceptos de diseño arquitectónico y urbano, que edifica proyectos, aplicando con creatividad diversas técnicas y sistemas constructivos, que gestiona y administra el proyecto y la construcción, adaptándolo a su contexto, con criterios de sustentabilidad, sentido ético y responsabilidad social.",
+                    "text": "<p><span>Conocimientos</span></p><p><span>&bull; Capacidad de producci&oacute;n de bienes art&iacute;stico-culturales que sinteticen la teor&iacute;a y la pr&aacute;ctica en la fotograf&iacute;a contempor&aacute;nea.</span></p><p><span>&bull; Dominio en el uso adecuado de las herramientas y materiales particulares del &aacute;rea creativa de su elecci&oacute;n.</span></p><p><span>Habilidades</span></p><p><span>&bull; Gran desarrollo sensitivo-intelectivo integral.</span></p><p><span>&bull; Capacidad de comunicaci&oacute;n a trav&eacute;s de la creaci&oacute;n fotogr&aacute;fica.</span></p><p><span>Actitudes</span></p><p><span>&bull; Fuerte vinculaci&oacute;n con su entorno social, siendo capaz de reflexionar sobre &eacute;l, interpret&aacute;ndolo y transform&aacute;ndolo art&iacute;stica y est&eacute;ticamente.</span></p>",
                     "backgroundColor": "#C31433"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                     },
                     "title": "Campo Laboral",
-                    "text": "El profesional de la arquitectura deberá involucrarse en las áreas productivas orientadas a los requerimientos de vivienda, en las cuales tendrá una intervención de orientación y participación directa para  la creación de los espacios arquitectónicos.\n\n El arquitecto podrá contribuir a la resolución de problemas referidos a los espacios habitables de vivienda, de trabajo, cultura, educación y recreativos, incorporando los nuevos materiales de la industria de la construcción, así como todas aquellas técnicas alternativas que favorezcan la protección y mejora del medio ambiente\n\n El arquitecto podrá coadyuvar a resolver problemas de los espacios para diversos usos, utilizando materiales tanto naturales como artificiales, usando las nuevas tecnologías convenientes según el problema a resolver, utilizando al medio ambiente como factor importante a considerar en su proyecto arquitectónico.\n\n También podrá ayudar a resolver problemas tales como: los de la calidad del medio ambiente, el de la conservación del patrimonio arquitectónico edificado, y la proyección de espacios que sean congruentes con el desarrollo sustentable.",
+                    "text": "Áreas: creación de viviendas, uso del espacio público.<br>Actividades: habilidades para la resolución de problemas referidos a los espacios habitables de vivienda, ambientales y ecológicos, usos de espacios, utilización eficiente de materiales naturales o artificiales, conservación del patrimonio edificado y proyectos con visión sustentable. ",
                     "backgroundColor": "#4470B1"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                     },
                     "title": "Requisitos de admisión",
-                    "text": "Para inscribirse a las licenciaturas semestrales es necesario tener un promedio mínimo de 70, de no ser así, se requiere autorización por escrito del director académico.\n\n a) Acta de nacimiento original y 1 copias (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.\n\n c) 1 copia de la CURP.\n\n d) 2 copias de Credencial Oficial IFE / INE o Pasaporte\n\n e) 2 copias de Credencial Oficial IFE / INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n f) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n De contar ya con una licenciatura por parte de UdeG y estar titulado, se aceptan copias certificadas expedidas por UdeG del certificado de bachillerato de no más de un mes al día que lo esté entregando y copia simple del título. (Más todos los documentos de nuevo ingreso).\n\n En caso de no estar titulado, debe entregar en original todos los documentos. (Todos los documentos de nuevo ingreso).\n\n Nota: Si realizó los estudios de bachillerato en otro estado de la república, el certificado debe tener la legalización por parte de Secretaría de Gobernación del estado donde realizaron los estudios.\n\n Si el certificado es de UNAM, Secretaría de la Defensa Nacional (SEDENA), Sistema Educativo Nacional (en el encabezado del documento) y Colegios de Bachilleres, estos no requieren del trámite de legalización.\n\n EXTRANJEROS a cualquier modalidad de licenciatura\n\n Acta de nacimiento reciente. del año en curso (original y una copia). Si son extranjeros se recibe sólo el acta original de su país de origen (no se acepta copia certificada por notario). El acta puede ser traducida al español por un perito oficial con firma y sello.\n\n Copia de la CURP (deben de tramitar la CURP mexicana).\n\n Certificado de bachillerato (original en buen estado y tres copias) esto si el aspirante realizó sus estudios dentro del país.\n\n Si realizó estudios de bachillerato en el extranjero, debe presentar la equivalencia por parte de la SEP (el trámite se realiza en Av. Prolongación Alcalde No. 1351, Edif. «B», Torre de Educación, 7º Piso, Col. Miraflores).\n\n Si pretenden realizar sus estudios de licenciatura dentro de la institución y son extranjeros deberán de presentar la FM3 reciente (forma migratoria número tres) permiso de migración para estudiar en el país a nombre del Centro Universitario UTEG).\n\n 2 fotografías tamaño infantil blanco y negro o a color",
+                    "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                     "backgroundColor": "#EEAA01"
                   }
                 ],
@@ -102,7 +102,7 @@
     "form": {
       "config": {
         "level": { "hidden": true, "value": "licenciatura" },
-        "program": { "hidden": false, "value": "Licenciatura Arquitectura" },
+        "program": { "hidden": false, "value": "Licenciatura en Arquitectura" },
         "modality": { "hidden": false },
         "campus": { "hidden": false }
       },

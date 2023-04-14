@@ -19,9 +19,9 @@
       },
       "banner1": {
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=11W0RGhdLOmICd-qtJFBhTCC3IPpEw-Z4",
-          "mobile": "https://drive.google.com/uc?export=view&id=1yd6VKxdKPQTAyRJT0YegLihHyzbESFIL",
-          "tablet": "https://drive.google.com/uc?export=view&id=1IlM4lTIJJHL25xtsHkMalPKiJ8C3dUz1"
+          "desktop": "https://assets.staging.bedu.org/UTEG/oferta_educativa_superior_desk_4d59ca2494.jpg",
+          "mobile": "https://assets.staging.bedu.org/UTEG/oferta_educativa_superior_mobile_eb4fc332bf.jpg",
+          "tablet": "https://assets.staging.bedu.org/UTEG/oferta_educativa_superior_tablet_1f1d997cdc.jpg"
         },
         "title": "",
         "subtitle": "",
@@ -65,7 +65,7 @@
           "Campus Washington"
         ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1hDdotoKywIc4Lbj0PhV-09reK7PWvO51",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_dentista_desk_597d3d19ff.jpg",
           "alt": "licenciatura"
         }
       },
@@ -85,7 +85,7 @@
           "Campus Washington"
         ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1qiv3nTpIEBc_eHR22VKnjJOdMPd36QYD",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_enfermeria_desk_19dcf0d22c.jpg",
           "alt": "licenciatura"
         }
       },
@@ -107,16 +107,16 @@
           "Zapopan"
         ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1xAx-tPvYzuTEpb7GmHZiC9UYA-GFOAz1",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_abogado_desk_d6cf1c6564.jpg",
           "alt": "licenciatura"
         }
       },
       "route": "carrera-abogado"
     },
     {
-      "title": "Licenciatura Arquitectura",
+      "title": "Licenciatura en Arquitectura",
       "config": {
-        "nombre": "Licenciatura Arquitectura",
+        "nombre": "Licenciatura en Arquitectura",
         "modalidad": [
           "Presencial"
         ],
@@ -127,16 +127,16 @@
           "Américas"
         ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1CtuuEDnJCfGCqxt-XcrgPFl_deE7eGdL",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_arquitectura_desk_caaf32b52c.jpg",
           "alt": "licenciatura"
         }
       },
       "route": "arquitectura"
     },
     {
-      "title": "Licenciatura Diseño de Interiores",
+      "title": "Licenciatura en Diseño de Interiores",
       "config": {
-        "nombre": "Licenciatura Diseño de Interiores",
+        "nombre": "Licenciatura en Diseño de Interiores",
         "modalidad": [
           "Presencial"
         ],
@@ -147,16 +147,16 @@
           "Américas"
         ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1UjYu4TL8kBl5A8CcftkmHjWU_TLmE67C",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_diseno_interiores_desk_5702d670d6.jpg",
           "alt": "licenciatura"
         }
       },
       "route": "diseno-interiores"
     },
     {
-      "title": "Ingeniería Comunicaciones y Electrónica",
+      "title": "Ingeniería en Comunicaciones y Electrónica",
       "config": {
-        "nombre": "Ingeniería Comunicaciones y Electrónica",
+        "nombre": "Ingeniería en Comunicaciones y Electrónica",
         "modalidad": [
           "Presencial"
         ],
@@ -167,16 +167,16 @@
           "Olímpica"
         ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1MaYPdS7AQLqAIigltmhx6vMG7G2wtzaY",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_comunicaciones_electronica_desk_ef6570d17b.jpg",
           "alt": "licenciatura"
         }
       },
       "route": "ingenieria-comunicaciones-electronica"
     },
     {
-      "title": "Licenciatura Gastronomía",
+      "title": "Licenciatura en Gastronomía",
       "config": {
-        "nombre": "Licenciatura Gastronomía",
+        "nombre": "Licenciatura en Gastronomía",
         "modalidad": [
           "Presencial"
         ],
@@ -188,16 +188,16 @@
           "Pedro Moreno"
         ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1178Zx6YhLUR9ildkUzdh51cUbpZ-dLGD",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_gastronomia_desk_89620b54bd.jpg",
           "alt": "licenciatura"
         }
       },
       "route": "gastronomia"
     },
     {
-      "title": "Licenciatura Diseño de Modas",
+      "title": "Licenciatura en Diseño de Modas",
       "config": {
-        "nombre": "Licenciatura Diseño de Modas",
+        "nombre": "Licenciatura en Diseño de Modas",
         "modalidad": [
           "Presencial"
         ],
@@ -208,16 +208,16 @@
           "Américas"
         ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1ogSyMaQ9cVAPOVtzcnY2b7tRmVXOMNQu",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_diseno_moda_desk_1c4acc3ce3.jpg",
           "alt": "licenciatura"
         }
       },
       "route": "diseno-modas"
     },
     {
-      "title": "Licenciatura Trabajo Social",
+      "title": "Licenciatura en Trabajo Social",
       "config": {
-        "nombre": "Licenciatura Trabajo Social",
+        "nombre": "Licenciatura en Trabajo Social",
         "modalidad": [
           "Presencial"
         ],
@@ -228,7 +228,7 @@
           "Pedro Moreno"
         ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=14Pq0T8uYn62Cbq26T7dLfZYw1PJ9Irt9",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_trabajo_social_desk_08c1de177a.jpg",
           "alt": "licenciatura"
         }
       },
@@ -244,19 +244,13 @@
         "areaConocimiento": [
           "Negocios y Empresariales"
         ],
-        "campus": [
-          "Américas",
-          "Campus Washington",
-          "Río Nilo",
-          "Tlajomulco",
-          "Zapopan"
-        ],
+        "campus": ["Campus Washington", "Tlajomulco", "Zapopan"],
         "image": {
-          "src": "https://assets.staging.bedu.org/UTEG/card_administracion_943a10dcd4.jpg",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_administracion_desk_8b57900228.jpg",
           "alt": "licenciatura"
         }
       },
-      "route": "administracion"
+      "route": "lic-administracion"
     },
     {
       "title": "Licenciatura en Negocios Internacionales",
@@ -279,7 +273,7 @@
           "Zapopan"
         ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1m-W5_0aGQZnepR_Qa4VRj5hJbTIbPjqB",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_negocios_internacionales_desk_9f8db6672d.jpg",
           "alt": "licenciatura"
         }
       },
@@ -305,7 +299,7 @@
           "Zapopan"
         ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1IVXmQY-GVB1sKSIKgLKICGwuVD-BMPpD",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_mercadotecnia_desk_4d62709a2f.jpg",
           "alt": "licenciatura"
         }
       },
@@ -330,7 +324,7 @@
           "Tlajomulco"
         ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1HMK3_HRSTAp0BLnZuynVJRXA-Z2WntR0",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_psicologia_desk_d3eea318ea.jpg",
           "alt": "licenciatura"
         }
       },
@@ -350,7 +344,7 @@
           "Campus Washington"
         ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1QlX9k-z4MVDzyq8DrHAZzKx2XPGCqeEZ",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_nutricion_desk_82870f067e.jpg",
           "alt": "licenciatura"
         }
       },
@@ -370,7 +364,7 @@
           "Campus Washington"
         ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1iB_wM3LV78YRm3mhIo-hEeQ8zocMp5JY",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_cultura_deporte_desk_46da34acbb.jpg",
           "alt": "licenciatura"
         }
       },
@@ -390,7 +384,7 @@
           "Campus Washington"
         ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1dImSOs33oDQJZD84IXf5IrfZ9XNHYlF5",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_QFB_desk_628f88f2ad.jpg",
           "alt": "licenciatura"
         }
       },
@@ -410,7 +404,7 @@
           "Américas"
         ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1xmiGmRMZNlENPk9sF8v4YV0GOcYjUFZ5",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_diseno_grafico_desk_b30075642a.jpg",
           "alt": "licenciatura"
         }
       },
@@ -430,7 +424,7 @@
           "Olímpica"
         ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1MGmIkTbjGW0JfiEUyGuddGY_V8-cGGVO",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_computacion_desk_faf7e24602.jpg",
           "alt": "licenciatura"
         }
       },
@@ -448,7 +442,7 @@
         ],
         "campus": [],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1lf1Ggy3coet6vSnv1PDDbMrW5MyaCgkg",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_negocios_digitales_desk_d5e2d5753e.jpg",
           "alt": "licenciatura"
         }
       },
@@ -466,7 +460,7 @@
         ],
         "campus": [],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1v5fhe1LZL825tt6WRc14dlF9cSVSmwOX",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_ciencias_datos_desk_9565005ad9.jpg",
           "alt": "licenciatura"
         }
       },
@@ -484,7 +478,7 @@
         ],
         "campus": [],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=15iMG8von_UvJyMB52sHbuS4arBT_b8re",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_turismo_desk_7187cdfdc4.jpg",
           "alt": "licenciatura"
         }
       },
@@ -503,7 +497,7 @@
         ],
         "campus": [],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1QkGiuIyEYZClG1-kEamZVQuHV4C6HgFw",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_desarrollo_software_desk_d0c18a6b00.jpg",
           "alt": "licenciatura"
         }
       },
@@ -525,14 +519,14 @@
           "Olímpica"
         ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1Rl8EgkrLpTYyY_1Dg56N6WBTzYEvY4J5",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_sistemas_desk_383f631ee0.jpg",
           "alt": "licenciatura"
         }
       },
       "route": "ingenieria-sistemas"
     },
     {
-      "title": "Licenciatura Administración y Liderazgo Empresarial",
+      "title": "Licenciatura en Administración y Liderazgo Empresarial",
       "config": {
         "nombre": "Licenciatura Administración y Liderazgo Empresarial",
         "modalidad": [
@@ -544,7 +538,7 @@
         ],
         "campus": [],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1H2GGHVOgDizi1A-lxo22b2nFSdkfs9G2",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_administracion_liderazgo_desk_c066be2d7c.jpg",
           "alt": "licenciatura"
         }
       },
@@ -569,33 +563,11 @@
           "Lázaro Cárdenas"
         ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1YVXcF43snvTiNIU6WzZLxT8PuOJJMTFo",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_comunicacion_desk_52a59f193a.jpg",
           "alt": "licenciatura"
         }
       },
       "route": "comunicacion"
-    },
-    {
-      "title": "Licenciatura en Gestión Deportiva",
-      "config": {
-        "nombre": "Licenciatura en Gestión Deportiva",
-        "modalidad": [
-          "Presencial",
-          "Online",
-          "Flex"
-        ],
-        "areaConocimiento": [
-          "Ciencias sociales"
-        ],
-        "campus": [
-          "Campus Washington"
-        ],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1OSulEXURbK5qPRg8MB1Wko49HjiPQKUH",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "gestion-deportiva"
     },
     {
       "title": "Licenciatura en Diseño Gráfico ",
@@ -610,7 +582,7 @@
         ],
         "campus": [],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1xmiGmRMZNlENPk9sF8v4YV0GOcYjUFZ5",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_diseno_grafico_desk_b30075642a.jpg",
           "alt": "licenciatura"
         }
       },
@@ -628,7 +600,7 @@
         ],
         "campus": [],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1v_Itxj8u4HmSkVtnR9AssBTL2dBUiXtj",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_relaciones_internacionales_desk_25858d261c.jpg",
           "alt": "licenciatura"
         }
       },
@@ -648,7 +620,7 @@
           "Olímpica"
         ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=13U-D4vbyjDjvZxmOe_T95xzAcPD80Jvi",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_ing_civil_desk_d9544d10e5.jpg",
           "alt": "licenciatura"
         }
       },
@@ -668,7 +640,7 @@
           "Olímpica"
         ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=13U-D4vbyjDjvZxmOe_T95xzAcPD80Jvi",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_ing_civil_desk_d9544d10e5.jpg",
           "alt": "licenciatura"
         }
       },
@@ -690,7 +662,7 @@
           "Olímpica"
         ],
         "image": {
-          "src": "https://assets.staging.bedu.org/UTEG/card_industrial_5e4767fc98.jpg",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_ing_industrial_desk_f2ff714569.jpg",
           "alt": "licenciatura"
         }
       },
@@ -710,7 +682,7 @@
           "Olímpica"
         ],
         "image": {
-          "src": "https://assets.staging.bedu.org/UTEG/card_industrial_5e4767fc98.jpg",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_ing_industrial_desk_f2ff714569.jpg",
           "alt": "licenciatura"
         }
       },
@@ -736,7 +708,7 @@
           "Río Nilo"
         ],
         "image": {
-          "src": "https://assets.staging.bedu.org/UTEG/card_administracion_943a10dcd4.jpg",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_administracion_desk_8b57900228.jpg",
           "alt": "licenciatura"
         }
       },
@@ -762,7 +734,7 @@
           "Río Nilo"
         ],
         "image": {
-          "src": "https://assets.staging.bedu.org/UTEG/card_contaduria_c0cc41ade5.jpg",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_contaduria_desk_8b19c81d0f.jpg",
           "alt": "licenciatura"
         }
       },
@@ -782,7 +754,7 @@
           "Campus Washington"
         ],
         "image": {
-          "src": "https://assets.staging.bedu.org/UTEG/card_contaduria_c0cc41ade5.jpg",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_contaduria_desk_8b19c81d0f.jpg",
           "alt": "licenciatura"
         }
       },
@@ -808,7 +780,7 @@
           "Zapopan"
         ],
         "image": {
-          "src": "https://assets.staging.bedu.org/UTEG/card_derecho_86e1606b34.jpg",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_derecho_desk_a2e6bd184d.jpg",
           "alt": "licenciatura"
         }
       },
@@ -840,26 +812,6 @@
       "route": "ciencias-forenses"
     },
     {
-      "title": "Licenciatura en Ingeniería en Creación y Desarrollo de Software y Aplicaciones",
-      "config": {
-        "nombre": "Licenciatura en Ingeniería en Creación y Desarrollo de Software y Aplicaciones",
-        "modalidad": [
-          "Presencial"
-        ],
-        "areaConocimiento": [
-          "Ingenierías y Tecnología"
-        ],
-        "campus": [
-          "Olímpica"
-        ],
-        "image": {
-          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_creacion_desarrollo_software_aplicaciones_desk_d945aa976d.jpg",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "ingenieria-creacion-desarrollo-software-apps"
-    },
-    {
       "title": "Licenciatura en Pedagogía",
       "config": {
         "nombre": "Licenciatura en Pedagogía",
@@ -885,28 +837,6 @@
       "route": "pedagogia"
     },
     {
-      "title": "Licenciatura en Creación y Desarrollo de Empresas y Negocios",
-      "config": {
-        "nombre": "Licenciatura en Creación y Desarrollo de Empresas y Negocios",
-        "modalidad": [
-          "Presencial"
-        ],
-        "areaConocimiento": [
-          "Negocios y Empresariales"
-        ],
-        "campus": [
-          "Américas",
-          "Campus Washington",
-          "Zapopan"
-        ],
-        "image": {
-          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_creacion_desarrollo_empresa_negocios_desk_47bb112143.jpg",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "creacion-desarrollo-empresas-negocios"
-    },
-    {
       "title": "Licenciatura en Químico Farmaceutico Biólogo con Certificación en Inglés Proulex",
       "config": {
         "nombre": "Licenciatura en Químico Farmaceutico Biólogo con Certificación en Inglés Proulex",
@@ -920,7 +850,7 @@
           "Campus Washington"
         ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1dImSOs33oDQJZD84IXf5IrfZ9XNHYlF5",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_QFB_desk_628f88f2ad.jpg",
           "alt": "licenciatura"
         }
       },

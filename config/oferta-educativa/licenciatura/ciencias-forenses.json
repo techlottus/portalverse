@@ -18,12 +18,12 @@
       },
       "curriculum": {
         "Presencial": {
-          "Américas": "", 
-          "Campus Washington": "", 
-          "Río Nilo": "", 
-          "Zapopan": "", 
-          "Lázaro Cárdenas": "", 
-          "Tlajomulco": ""
+          "Américas": "Lic_Ciencias_Forenses_Criminalistica_Presencial_6b7248c257.pdf", 
+          "Campus Washington": "Lic_Ciencias_Forenses_Criminalistica_Presencial_6b7248c257.pdf", 
+          "Río Nilo": "Lic_Ciencias_Forenses_Criminalistica_Presencial_6b7248c257.pdf", 
+          "Zapopan": "Lic_Ciencias_Forenses_Criminalistica_Presencial_6b7248c257.pdf", 
+          "Lázaro Cárdenas": "Lic_Ciencias_Forenses_Criminalistica_Presencial_6b7248c257.pdf", 
+          "Tlajomulco": "Lic_Ciencias_Forenses_Criminalistica_Presencial_6b7248c257.pdf"
         }
       }
     }
@@ -31,7 +31,7 @@
   "sections": {
     "head": {
       "title": "Licenciatura en Ciencias Forenses: Criminalística y Criminología",
-      "description": "",
+      "description": "En esta licenciatura se forman profesionales con sólidos conocimientos en materia criminalística, criminológica y pericial. Con las habilidades para la aplicación de las técnicas y metodologías para analizar evidencias, determinar hechos delictivos, conocer las causas y orígenes de los delitos y sus tendencias.",
       "image": {
         "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_ciencias_forenses_desk_6b07dc50b3.jpg",
         "alt": "licenciatura"
@@ -42,45 +42,45 @@
       "tabs": {
         "items": [
           {
-            "label": "Modalidad Online",
+            "label": "Presencial",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "",
+                  "text": "El aspirante deberá tener:\n\n• Conocimientos básicos de las leyes.\n\n• Conocimientos en el área de informática.\n\n• Conocimientos básicos del idioma inglés.\n\n• Conocimientos básicos de las herramientas educativas virtuales.\n\nHabilidades e intereses:\n\n• Habilidad para la búsqueda e investigación.\n\n• Capacidad de observación.\n\n• Interés por el trabajo en laboratorio.\n\n• Interés por el trabajo de campo.\n\n• Habilidad lectoescritora.\n\nActitudes:\n\n• De constante aprendizaje.\n\n• De respeto a las leyes y la justicia.\n\n• Adaptabilidad.\n\n• Disponibilidad para el trabajo en equipo.",
                   "backgroundColor": "#1B2D68"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                   },
                   "title": "Perfil de egreso",
-                  "text": "",
+                  "text": "CONOCIMIENTOS DE:\n\n• Justicia penal.\n\n• Ciencias forenses.\n\n• Metodología para el estudio del lugar de los hechos y las evidencias.\n\n• Causas  psicosociales de las conductas delictivas.\n\n• Políticas de seguridad pública.\n\n• Estrategias de protección a víctimas del delito.\n\nHABILIDADES:\n\n• Observación de evidencias.\n\n• Manejo de las técnicas criminalísticas de laboratorio.\n\n• Realizar entrevistas e interrogatorios.\n\n• Realización de reportes y estudios periciales.\n\nACTITUDES:\n\n• Sentido  justicia.\n\n• Ética.\n\n• Respeto a los derechos humanos.",
                   "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "",
+                  "text": "El profesional en Ciencias Forenses tendrá la capacidad de coordinar y realizar la investigación científica de un hecho delictuoso, analizando el material de los hechos. Su principal función es la cercanía con la autoridad competente a quienes les dará a conocer los resultados de su investigación.",
                   "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "",
+                  "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                   "backgroundColor": "#EEAA01"
                 }
               ],

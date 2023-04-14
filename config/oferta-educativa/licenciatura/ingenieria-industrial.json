@@ -13,24 +13,24 @@
       "campus": ["Olímpica"],
       "nivel": ["Licenciatura"],
       "image": {
-        "src": "https://assets.staging.bedu.org/UTEG/card_industrial_5e4767fc98.jpg",
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_ing_industrial_desk_a9a582b164.jpg",
         "alt": "licenciatura"
       },
       "curriculum": {
         "Presencial": {
-          "Olímpica": "1TDGOlR8q204UTGExXJVD9DhW_UyDcK8C"
+          "Olímpica": "Lic_Ing_Industrial_Presencial_4ad8890b5b.pdf"
         },
-        "Online": "1ltdwUDo_DAAiIU2ma_Uh9dQovU8XZJ47",
-        "Flex": "15qGPRrm48npIAPGRLxfj8O5Oy7aY8LIE"
+        "Online": "Ing_Industrial_Online_623c31a4a6.pdf",
+        "Flex": "Lic_Ing_Industrial_Flex_5a62f468a2.pdf"
       }
     }
   },
   "sections": {
     "head": {
       "title": "Ingeniería Industrial",
-      "description": "Formar profesionistas con un alto nivel de conocimientos y habilidades, en la planeación y operación de sistemas integradores de recursos humanos y medios de producción.\n\n Los Ingenieros Industriales son capaces de impulsar el desarrollo de empresas sostenibles, al optimizar los procesos y sus controles de calidad, mediante la integración de recursos",
+      "description": "En la carrera de Ingeniería Industrial se forman profesionales capaces de optimizar sistemas de producción, de recursos humanos o de servicios. Impulsan el desarrollo de empresas con un enfoque sostenible y con una visión que responda a los retos que presentan los constantes cambios en el ámbito industrial garantizando procesos eficientes y de calidad.",
       "image": {
-        "src": "https://assets.staging.bedu.org/UTEG/card_industrial_5e4767fc98.jpg",
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_ing_industrial_desk_a9a582b164.jpg",
         "alt": "licenciatura"
       }
     },
@@ -39,45 +39,45 @@
       "tabs": {
         "items": [
           {
-            "label": "Modalidad Presencial",
+            "label": "Presencial",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "El aspirante a cursar la carrera de ingeniería industrial debe contar preferentemente con:\n\n Intereses: Por descubrir nuevos hechos y resolver problemas, gusto por el cálculo, los sistemas, el trabajo con maquinas y herramientas, además de la utilización de técnicas administrativas.\n\n Aptitudes: Cálculo matemático, alto sentido de organización, análisis y síntesis, trabajo con maquinas y herramientas, imaginación e inventiva, además de habilidades para entrevistar y tratar gente; promover y vender proyectos.\n\n Actitudes: Estabilidad emocional, responsabilidad, constancia, paciencia, alto sentido de autoridad.",
+                  "text": "El aspirante deberá tener conocimientos sobre:\n\n• Matemáticas\n\n• El uso de las TIC´s.\n\n• La expresión oral y escrita.\n\n• La comunicación efectiva.\n\nHabilidades y aptitudes para:\n\n• Desarrollar procesos lógicos.\n\n• Resolver problemas con base en principios, leyes y conceptos.\n\n• Evaluar fortalezas y debilidades de los equipos de trabajo.\n\n• Pensamiento crítico.\n\n• Aplicar el razonamiento lógico.\n\n• Manejar equipos de cómputo y electrónicos.\n\n• Liderar grupos de trabajo.\n\nActitudes de:\n\n• Creatividad.\n\n• Liderazgo.\n\n• Trabajo en equipo.",
                   "backgroundColor": "#1B2D68"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                   },
                   "title": "Perfil de egreso",
-                  "text": "Que como perfil de egreso deseable del programa de Ingeniería Industrial, se propone que:\n\n El egresado sea un profesionista capaz de desarrollar empresas sostenibles. Cuente con habilidad para analizar y diseñar sistemas de trabajo y de producción, además de aplicar técnicas cuantitativas para optimizar procesos y controlar la calidad de los mismos, integrando recursos humanos, materiales y económicos.",
+                  "text": "CONOCIMIENTOS SOBRE:\n\n• Matemáticas aplicadas a la administración, la producción y calidad.\n\n• Uso, análisis e interpretación de datos.\n\n• Desarrollo de proyectos sostenibles.\n\n• Logística y distribución internacional\n\n HABILIDADES PARA:\n\n• Diseñar el entorno administrativo, industrial y de negocios de las empresas.\n\n• Poner en marcha/activar/crear/dirigir empresas.\n\n• Elaborar programas de seguridad industrial.\n\n• Diseñar y administrar sistemas de producción.ACTITUDES DE:\n\n• Conciencia social, cívica y profesional.\n\n• Ética y responsabilidad social.",
                   "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "El ingeniero industrial podrá desempeñarse en una gran  variedad de ámbitos laborables, destacando:\n\n• Las industrias extractivas y las de transformación\n\n• Empresas de servicios\n\n• Unidades hospitalarias\n\n• Bufetes de consultoría industrial\n\n• Bancos e instituciones financieras\n\n• Aseguradoras\n\n• Sector público\n\n• Empresas comercializadoras",
+                  "text": "Áreas: industrias extractivas y de transformación, empresas de servicios, unidades hospitalarias, bufetes de consultoría, bancos e instituciones financieras, aseguradoras, sector público, empresas comercializadoras. ",
                   "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "a) Acta de nacimiento original y 1 copia (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n b) Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.\n\n c) 1 copia de la CURP.\n\n d) 2 copias de Credencial Oficial IFE / INE o Pasaporte\n\n e) 2 copias de Credencial Oficial IFE / INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n f) 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n De contar ya con una licenciatura por parte de UdeG y estar titulado, se aceptan copias certificadas expedidas por UdeG del certificado de bachillerato de no más de un mes al día que lo esté entregando y copia simple del título. (Más todos los documentos de nuevo ingreso).\n\n En caso de no estar titulado, debe entregar en original todos los documentos. (Todos los documentos de nuevo ingreso).\n\n Nota: Si realizó los estudios de bachillerato en otro estado de la república, el certificado debe tener la legalización por parte de Secretaría de Gobernación del estado donde realizaron los estudios.\n\n Si el certificado es de UNAM, Secretaría de la Defensa Nacional (SEDENA), Sistema Educativo Nacional (en el encabezado del documento) y Colegios de Bachilleres, estos no requieren del trámite de legalización.",
+                  "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                   "backgroundColor": "#EEAA01"
                 }
               ],
@@ -85,15 +85,15 @@
             }
           },
           {
-            "label": "Modalidad Online",
+            "label": "Online",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
                   "text": "El aspirante a estudiar la Licenciatura en Ingeniería Industrial debe poseer conocimientos en: Matemáticas, Física, Química, conocimientos de la metodología científica, manejo de lenguaje (comprender textos), bases de un segundo idioma, técnicas de estudio, técnicas de lectura, técnicas de redacción. Para lograr una formación exitosa del ingeniero industrial, el aspirante debe caracterizarse por reunir los conocimientos, habilidades y aptitudes necesarias como requisitos que exige el plan de estudios.",
@@ -101,29 +101,29 @@
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                   },
                   "title": "Perfil de egreso",
-                  "text": "Estudiar Ingeniería Industrial en Producción te permitirá administrar las operaciones de empresas relacionadas con el diseño y la manufactura de moldes y piezas en plásticos y aplicar métodos de ingeniería y tecnologías de vanguardia para responder a los requerimientos de los clientes.",
+                  "text": "CONOCIMIENTOS SOBRE:\n\n• Matemáticas aplicadas a la administración y la producción.\n\n• Uso, análisis e interpretación de datos.\n\n• Desarrollo de proyectos sostenibles.\n\n• Logística y distribución internacional\n\nHABILIDADES PARA:\n\n• Diseñar el entorno administrativo, industrial y de negocios de las empresas.\n\n• Poner en marcha/activar/crear/dirigir empresas..\n\n• Elaborar programas de seguridad industrial.\n\n• Diseñar y administrar sistemas de producción.\n\nACTITUDES DE:\n\n• Conciencia social, cívica y profesional.\n\n• Ética y responsabilidad social.",
                   "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "El egresado de la Ingeniería Industrial en Producción es el encargado de diseñar, desarrollar y organizar toda la creación, producción, distribución, mantenimiento de los bienes y servicios generados por una empresa, para destacarse entre su competencia. También puede contratarse como consultor externo. ",
+                  "text": "Áreas: empresariales. Actividades: diseño, desarrollo, organización y producción de bienes y servicios. ",
                   "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                  "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; Comprobante de domicilio.</p>",
                   "backgroundColor": "#EEAA01"
                 }
               ],
@@ -131,15 +131,15 @@
             }
           },
           {
-            "label": "Modalidad Flex",
+            "label": "Flex",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
                   "text": "El aspirante a estudiar la Licenciatura en Ingeniería Industrial debe poseer conocimientos en: Matemáticas, Física, Química, conocimientos de la metodología científica, manejo de lenguaje (comprender textos), bases de un segundo idioma, técnicas de estudio, técnicas de lectura, técnicas de redacción. Para lograr una formación exitosa del ingeniero industrial, el aspirante debe caracterizarse por reunir los conocimientos, habilidades y aptitudes necesarias como requisitos que exige el plan de estudios.",
@@ -147,29 +147,29 @@
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                   },
                   "title": "Perfil de egreso",
-                  "text": "Estudiar Ingeniería Industrial en Producción te permitirá administrar las operaciones de empresas relacionadas con el diseño y la manufactura de moldes y piezas en plásticos y aplicar métodos de ingeniería y tecnologías de vanguardia para responder a los requerimientos de los clientes.                  ",
+                  "text": "CONOCIMIENTOS SOBRE:\n\n• Matemáticas aplicadas a la administración y la producción.\n\n• Uso, análisis e interpretación de datos.\n\n• Desarrollo de proyectos sostenibles.\n\n• Logística y distribución internacional.\n\nHABILIDADES PARA:\n\n• Diseñar el entorno administrativo, industrial y de negocios de las empresas.\n\n• Poner en marcha/activar/crear/dirigir empresas.\n\n• Elaborar programas de seguridad industrial.\n\n• Diseñar y administrar sistemas de producción.\n\nACTITUDES DE:\n\n• Conciencia social, cívica y profesional.\n\n• Ética y responsabilidad social.",
                   "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "El egresado de la Ingeniería Industrial en Producción es el encargado de diseñar, desarrollar y organizar toda la creación, producción, distribución, mantenimiento de los bienes y servicios generados por una empresa, para destacarse entre su competencia. También puede contratarse como consultor externo. ",
+                  "text": "Áreas: empresariales. \n\nActividades: diseño, desarrollo, organización y producción de bienes y servicios. ",
                   "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                  "text": "<p>&bull;&nbsp;Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).<br />&bull;&nbsp;Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.<br />&bull;&nbsp;1 copia de la CURP.<br />&bull;&nbsp;2 copias de Credencial Oficial IFE / INE o Pasaporte.<br />&bull;&nbsp;2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).<br />&bull;&nbsp;2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                   "backgroundColor": "#EEAA01"
                 }
               ],

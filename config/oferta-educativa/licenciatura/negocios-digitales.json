@@ -13,20 +13,20 @@
         "campus": [""],
         "nivel": ["Licenciatura"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1k7ycZgkx1BfiVDe3PrLSdgpQi0bJHrhP",
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_negocios_digitales_desk_12b9d8db01.jpg",
           "alt": "licenciatura"
         },
         "curriculum": {
-          "Online": "1-ENcMqVC3s_6gtj9ChKfi3Wb_cB6oTc7"
+          "Online": "Lic_en_Negocios_Digitales_Onlinepdf_9efc5675d5.pdf"
         }
       }
     },
     "sections": {
       "head": {
         "title": "Licenciatura en Negocios Digitales",
-        "description": "Detecta nuevos modelos de negocio y diseña estrategias de posicionamiento con el uso de estratégias y métodos tecnológicos para la era digital en el mundo de los negocios. Supervisa que las tareas y funciones de una empresa sí se cumplan satisfactoriamente, así como plantear la innovación y desarrollo de nuevos modelos digitales de negocio.",
+        "description": "La Licenciatura en Negocios Digitales forma profesionales que detectan nuevos modelos y  estrategias de posicionamiento con el uso de métodos tecnológicos para la era digital en el mundo de los negocios. Supervisa que las tareas y funciones de una empresa sí se cumplan satisfactoriamente, así como plantear la innovación y desarrollo de nuevos modelos digitales.",
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1k7ycZgkx1BfiVDe3PrLSdgpQi0bJHrhP",
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_negocios_digitales_desk_12b9d8db01.jpg",
           "alt": "licenciatura"
         }
       },
@@ -35,24 +35,24 @@
         "tabs": {
           "items": [
             {
-              "label": "Modalidad Online",
+              "label": "Online",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {
                 "cards": [
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                     },
                     "title": "Perfil de ingreso",
-                    "text": "El aspirante a la Licenciatura en Negocios Digitales debe sentir pasión por las negociaciones, y tener las siguientes características:\n\n• Una mente creativa y analítica enfocada a la acción.\n\n• Flexibilidad y dinamismo para aceptar el cambio.n\n• Facilidad para establecer relaciones interpersonales y trabajar en equipo.",
+                    "text": "El aspirante a la Licenciatura en Negocios Digitales debe sentir pasión por las negociaciones, y tener las siguientes características:\n\n• Una mente creativa y analítica enfocada a la acción.\n\n• Flexibilidad y dinamismo para aceptar el cambio.\n\n• Facilidad para establecer relaciones interpersonales y trabajar en equipo.",
                     "backgroundColor": "#1B2D68"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                     },
                     "title": "Perfil de egreso",
                     "text": "Este programa te permitirá desarrollar los conocimientos y habilidades para detectar oportunidades y/o generar nuevos modelos de negocio de acuerdo con el entorno, los recursos internos y los avances de la tecnología; evaluarás el potencial de mercado y diseñarás una estrategia de posicionamiento; serás capaz de detectar problemas de negocio y articular e instrumentar estrategias de solución. Además podrás administrar negocios virtuales que se dediquen al negocio electrónico.",
@@ -60,20 +60,20 @@
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                     },
                     "title": "Campo Laboral",
-                    "text": "Al culminar tus estudios en Licenciatura en Negocios Digitales, podrás acceder a puestos ejecutivos de alto nivel en empresas del sector público y privado, aplicando tus conocimientos en áreas directivas, de comercialización, administrativas, ventas, recursos humanos, marketing y planeación estratégica.",
+                    "text": "Áreas: directivas, de comercialización, administrativas, ventas, recursos humanos, marketing y planeación estratégica. ",
                     "backgroundColor": "#4470B1"
                   },
                   {
                     "image": {
-                      "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                      "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                     },
                     "title": "Requisitos de admisión",
-                    "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                    "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; Comprobante de domicilio.</p>",
                     "backgroundColor": "#EEAA01"
                   }
                 ],

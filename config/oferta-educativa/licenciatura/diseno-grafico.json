@@ -13,21 +13,21 @@
       "campus": [],
       "nivel": ["Licenciatura"],
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1nSgmPbU0Y0FIkL3bmEfaxrMnaYyOby3g",
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_diseno_grafico_desk_f05a4f5d1a.jpg",
         "alt": "licenciatura"
       },
       "curriculum": {
-        "Online": "14iBVBdnK-Hcy1ZtKvAberxUnNnbfcavy",
-        "Flex": "1WCSP8Cv0lSuiSJQb1OFUdcvOBHSWewzm"
+        "Online": "Lic_en_Diseno_Grafico_Online_122a8a7477.pdf",
+        "Flex": "Lic_en_Diseno_Grafico_Flex_a3a3d03550.pdf"
       }
     }
   },
   "sections": {
     "head": {
       "title": "Licenciatura en Diseño Gráfico",
-      "description": "Obtén el conocimiento, las aptitudes y habilidades necesarias para crear soluciones empresariales gráficas que promuevan el progreso a través de la comunicación y el arte.  Plantea contenidos visuales para un contexto organizacional y que den una representación y posición a nivel nacional e internacional utilizando herramientas tecnológicas.",
+      "description": "El profesional en Diseño Gráfico cuenta con el conocimiento, las aptitudes y habilidades necesarias para crear soluciones empresariales gráficas que promuevan el progreso a través de la comunicación y el arte.  Plantea contenidos visuales que den una representación y posición a nivel nacional e internacional utilizando herramientas tecnológicas.",
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1nSgmPbU0Y0FIkL3bmEfaxrMnaYyOby3g",
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_diseno_grafico_desk_f05a4f5d1a.jpg",
         "alt": "licenciatura"
       }
     },
@@ -36,15 +36,15 @@
       "tabs": {
         "items": [
           {
-            "label": "Modalidad Online",
+            "label": "Online",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
                   "text": "El aspirante a ingresar a la Licenciatura en Diseño Gráfico deberá contar con los siguientes conocimientos:\n\n• Creatividad, proactividad, expresión oral / escrita e investigación.\n\n• Uso de tecnologías de la información y la comunicación, así como manejo de equipos de cómputo y software.\n\n• Razonamiento lógico, solución de problemas con base en principios, leyes y conceptos.\n\n• Vocación de servicio ante el cambio y la transformación.\n\n• Trabajo en equipo multidisciplinario.",
@@ -52,29 +52,29 @@
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                   },
                   "title": "Perfil de egreso",
-                  "text": "Conocerá los principios para el análisis y la composición de la comunicación visual, en conjunto con los fundamentos del diseño gráfico, geometría y color.\n\n Integrará la metodología del proceso general del diseño y para la investigación.\n\n Utilizará recursos digitales aplicados a la ilustración, la infografía, la preprensa y a las plataformas e interfaz web.\n\n Aplicará técnicas para el diseño editorial analógico y digital, así como para la animación bidimensional y tridimensional.\n\n Ejecutará conceptos para la gestión y promoción profesional del diseño.",
+                  "text": "Conocimientos\n\n• Manejo y dominio en las especialidades como Imagen corporativa, diseño de carteles, envases, diseño de campañas, gestión del diseño.\n\n• Dominio en los fundamentos teóricos, tecnológicos y filosóficos de las disciplinas que le permitan crear los mensajes gráficos.\n\nHabilidades\n\n• Aplicar con creatividad la técnica en la búsqueda de soluciones para resolver problemas de diseño.\n\n• Planear, proponer, producir y coordinar proyectos funcionales y creativos centrados en el usuario.\n\nActitudes\n\n• Responsabilidad social, innovación y sustentabilidad.",
                   "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "Como egresado de la Licenciatura en Diseño Gráfico podrás desempeñarte como diseñador gráfico en agencias creativas, televisoras, agencias de publicidad, medios de comunicación, consultorías, en departamentos de marketing del sector público y privado y como desarrollador independiente, consultor o freelance.",
+                  "text": "Áreas: empresas e instituciones, campo educativo. Empleado por cuenta propia. \n\nActividades: resolución de problemas de comunicación visual, aportante de soluciones creativas y funcionales. Comunicador visual de las ideas, mensajes, y símbolos de los productos, empresas o campañas. Diseñador. ",
                   "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                  "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; Comprobante de domicilio.</p>",
                   "backgroundColor": "#EEAA01"
                 }
               ],
@@ -82,15 +82,15 @@
             }
           },
           {
-            "label": "Modalidad Flex",
+            "label": "Flex",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1hslWKE1TY_EzaG4gxbQfiKGdi-v9Ksoo"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
                   "text": "El aspirante a ingresar a la Licenciatura en Diseño Gráfico deberá contar con los siguientes conocimientos:\n\n• Creatividad, proactividad, expresión oral / escrita e investigación.\n\n• Uso de tecnologías de la información y la comunicación, así como manejo de equipos de cómputo y software.\n\n• Razonamiento lógico, solución de problemas con base en principios, leyes y conceptos.\n\n• Vocación de servicio ante el cambio y la transformación.\n\n• Trabajo en equipo multidisciplinario.",
@@ -98,29 +98,29 @@
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1gPvp5IvN_Q9uGDHpqiPhATpUv7jHb6CA"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                   },
                   "title": "Perfil de egreso",
-                  "text": "Conocerá los principios para el análisis y la composición de la comunicación visual, en conjunto con los fundamentos del diseño gráfico, geometría y color.\n\n Integrará la metodología del proceso general del diseño y para la investigación.\n\n Utilizará recursos digitales aplicados a la ilustración, la infografía, la preprensa y a las plataformas e interfaz web.\n\n Aplicará técnicas para el diseño editorial analógico y digital, así como para la animación bidimensional y tridimensional.\n\n Ejecutará conceptos para la gestión y promoción profesional del diseño.",
+                  "text": "Conocimientos:\n\n• Manejo y dominio en las especialidades como  Imagen corporativa, diseño de carteles, envases, diseño de campañas, gestión del diseño.\n\n• Dominio en los fundamentos teóricos, tecnológicos y filosóficos de las disciplinas que le permitan crear los mensajes gráficos.\n\nHabilidades:\n\n• Aplicar con creatividad la técnica en la búsqueda de soluciones para resolver problemas de diseño.\n\n• Planear, proponer, producir y coordinar proyectos funcionales y creativos centrados en el usuario.\n\nActitudes:\n\n• Responsabilidad social, innovación y sustentabilidad.",
                   "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1ysqnifvmmhZfZCPdtOWE5akpFleE-E8d"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "Como egresado de la Licenciatura en Diseño Gráfico podrás desempeñarte como diseñador gráfico en agencias creativas, televisoras, agencias de publicidad, medios de comunicación, consultorías, en departamentos de marketing del sector público y privado y como desarrollador independiente, consultor o freelance.",
+                  "text": "Áreas: empresas e instituciones, campo educativo. Empleado por cuenta propia. \n\nActividades: resolución de problemas de comunicación visual, aportante de soluciones creativas y funcionales. Comunicador visual de las ideas, mensajes, y símbolos de los productos, empresas o campañas. Diseñador. ",
                   "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1y5PKCduzj_bO5Df9aWrfS3utslfR3QgS"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento\n\n• Curp\n\n• INE\n\n• Comprobante de domicilio\n\n• Certificado Original de Bachillerato",
+                  "text": "<p>&bull;&nbsp;Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).<br />&bull;&nbsp;Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.<br />&bull;&nbsp;1 copia de la CURP.<br />&bull;&nbsp;2 copias de Credencial Oficial IFE / INE o Pasaporte.<br />&bull;&nbsp;2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).<br />&bull;&nbsp;2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
                   "backgroundColor": "#EEAA01"
                 }
               ],
