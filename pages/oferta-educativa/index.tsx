@@ -78,7 +78,7 @@ const OfertaEducativa: NextPageWithLayout<any> = ({ data: { oferta, level }, sec
 }
 
 export async function getStaticProps(context: any) {
-  const oferta = Routes["oferta-educativa"].reduce((prev: any, { params: { levelRoute: level, config: { title, promo } } }: any) => [ ...prev, ({ level, title, promo:{...promo, text: title} })], []);
+  const oferta = Routes["oferta-educativa"].reduce((prev: any, { params: { levelRoute: level, config: { title, promo } } }: any) => [ ...prev, ({ level, url: level, title, promo:{...promo, text: title} })], []);
   
   const { sections, meta } = await getDataPageFromJSON('/oferta-educativa/oferta-educativa.json');
   
@@ -86,7 +86,7 @@ export async function getStaticProps(context: any) {
   const { level, config: { title, promo } } = Routes["extension-universitaria"].params;
 
   return {
-    props: {  data: { oferta: [ ...oferta, { level, title, promo: { ...promo, text: title } } ], level:'oferta-educativa/' }, sections, meta }
+    props: {  data: { oferta: [ ...oferta, { level, title, url: "/extension-universitaria", promo: { ...promo, text: title } } ], level:'oferta-educativa/' }, sections, meta }
   }
 }
 
