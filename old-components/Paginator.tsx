@@ -12,6 +12,7 @@ const Paginator: FC<PaginatorData> = memo(({ data, onClick}: PaginatorData) => {
       maxNumbers: data.maxNumbers || 10,
     }
   }, [data]); // eslint-disable-line react-hooks/exhaustive-deps
+  //test
 
   useEffect(() => {
     let observerRef: any = null;
