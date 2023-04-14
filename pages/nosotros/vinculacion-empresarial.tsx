@@ -56,7 +56,7 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
     <HeaderFooterLayout breadcrumbs={true}>
       <ContentLayout classNames="gap-12">
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-Poppins font-bold text-13 w-t:text-8.5 w-p:text-7.5 leading-[60px] w-t:leading-[111%] w-d:mb-6">{sections.head.title}</p>
+          <p className="font-Poppins font-bold text-13 w-t:text-8.5 w-p:text-7.5 w-d:mb-6 w-d:leading-13">{sections.head.title}</p>
           <p className="font-Poppins font-bold text-5.5 mb-6">{sections.head.subtitle}</p>
           <RichtText font="light" data={{
             content: sections.head.description
