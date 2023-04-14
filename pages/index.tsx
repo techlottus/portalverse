@@ -110,7 +110,7 @@ const Home: NextPageWithLayout = ({ data: { sections, meta, strapi } }: any) => 
         <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mb-12 w-t:mb-6 w-p:mb-6">
           {
             blogPostsData?.blogPosts?.data.map((blogPost, i:number) => <section key={`section-blog-${i}`}>
-             <BlogPostCardWrapper data={blogPost} onClick={() => router.push(`voz-uane/blog/${blogPost?.attributes?.slug}`)}/>
+             <BlogPostCardWrapper data={blogPost} onClick={() => router.push(`blog/${blogPost?.attributes?.slug}`)}/>
             </section>)
           }
         </section>
