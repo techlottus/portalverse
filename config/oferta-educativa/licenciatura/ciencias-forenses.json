@@ -18,12 +18,12 @@
       },
       "curriculum": {
         "Presencial": {
-          "Américas": "", 
-          "Campus Washington": "", 
-          "Río Nilo": "", 
-          "Zapopan": "", 
-          "Lázaro Cárdenas": "", 
-          "Tlajomulco": ""
+          "Américas": "Lic_Ciencias_Forenses_Criminalistica_Presencial_6b7248c257.pdf", 
+          "Campus Washington": "Lic_Ciencias_Forenses_Criminalistica_Presencial_6b7248c257.pdf", 
+          "Río Nilo": "Lic_Ciencias_Forenses_Criminalistica_Presencial_6b7248c257.pdf", 
+          "Zapopan": "Lic_Ciencias_Forenses_Criminalistica_Presencial_6b7248c257.pdf", 
+          "Lázaro Cárdenas": "Lic_Ciencias_Forenses_Criminalistica_Presencial_6b7248c257.pdf", 
+          "Tlajomulco": "Lic_Ciencias_Forenses_Criminalistica_Presencial_6b7248c257.pdf"
         }
       }
     }
@@ -42,7 +42,7 @@
       "tabs": {
         "items": [
           {
-            "label": "Modalidad Presencial",
+            "label": "Presencial",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {

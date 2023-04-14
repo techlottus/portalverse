@@ -18,10 +18,10 @@
       },
       "curriculum": {
         "Presencial": {
-          "Olímpica": "1TDGOlR8q204UTGExXJVD9DhW_UyDcK8C"
+          "Olímpica": "Lic_Ing_Industrial_Presencial_4ad8890b5b.pdf"
         },
-        "Online": "1ltdwUDo_DAAiIU2ma_Uh9dQovU8XZJ47",
-        "Flex": "15qGPRrm48npIAPGRLxfj8O5Oy7aY8LIE"
+        "Online": "Ing_Industrial_Online_623c31a4a6.pdf",
+        "Flex": "Lic_Ing_Industrial_Flex_5a62f468a2.pdf"
       }
     }
   },
@@ -39,7 +39,7 @@
       "tabs": {
         "items": [
           {
-            "label": "Modalidad Presencial",
+            "label": "Presencial",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {
@@ -85,7 +85,7 @@
             }
           },
           {
-            "label": "Modalidad Online",
+            "label": "Online",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {
@@ -131,7 +131,7 @@
             }
           },
           {
-            "label": "Modalidad Flex",
+            "label": "Flex",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {

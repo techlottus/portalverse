@@ -17,12 +17,12 @@
         },
         "curriculum": {
           "Presencial": {
-            "Américas": "", 
-            "Campus Washington": "", 
-            "Río Nilo": "", 
-            "Zapopan": "", 
-            "Lázaro Cárdenas": "", 
-            "Pedro Moreno": ""
+            "Américas": "Lic_Eduacion_Pedagogia_Presencial_62cee7d776.pdf", 
+            "Campus Washington": "Lic_Eduacion_Pedagogia_Presencial_62cee7d776.pdf", 
+            "Río Nilo": "Lic_Eduacion_Pedagogia_Presencial_62cee7d776.pdf", 
+            "Zapopan": "Lic_Eduacion_Pedagogia_Presencial_62cee7d776.pdf", 
+            "Lázaro Cárdenas": "Lic_Eduacion_Pedagogia_Presencial_62cee7d776.pdf", 
+            "Pedro Moreno": "Lic_Eduacion_Pedagogia_Presencial_62cee7d776.pdf"
           }
         }
       }
@@ -41,7 +41,7 @@
         "tabs": {
           "items": [
             {
-              "label": "Modalidad Presencial",
+              "label": "Presencial",
               "icons": { "primary": "", "duplicate": false },
               "disabled": false,
               "content": {

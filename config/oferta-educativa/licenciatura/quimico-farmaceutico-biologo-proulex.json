@@ -18,7 +18,7 @@
       },
       "curriculum": {
         "Presencial": {
-          "Campus Washington": "19ZNw0X-1OeuXQA-CuWxZKHxnuB8wH9Lt"
+          "Campus Washington": "Lic_en_Quimico_Farmaceutico_Biologo_Proulex_Presencial_bace9314e2.pdf"
         }
       }
     }
@@ -37,7 +37,7 @@
       "tabs": {
         "items": [
           {
-            "label": "Modalidad Presencial",
+            "label": "Presencial",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {

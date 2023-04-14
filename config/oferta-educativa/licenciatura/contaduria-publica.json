@@ -18,19 +18,19 @@
       },
       "curriculum": {
         "PresencialSemestral": {
-          "Tlajomulco": "14ghK1hLg7Jfiz8D_iUpNM6CbVKC3U789",
-          "Zapopan": "14ghK1hLg7Jfiz8D_iUpNM6CbVKC3U789",
-          "Campus Washington": "14ghK1hLg7Jfiz8D_iUpNM6CbVKC3U789"
+          "Tlajomulco": "Lic_Contaduria_Semestral_Presencial_f783c20eef.pdf",
+          "Zapopan": "Lic_Contaduria_Semestral_Presencial_f783c20eef.pdf",
+          "Campus Washington": "Lic_Contaduria_Semestral_Presencial_f783c20eef.pdf"
         },
         "PresencialCuatrimestral": {
-            "Américas": "1JG7uGT5t2X7eaIrdWtxsixPgYhH0hcYx", 
-            "Campus Washington": "1JG7uGT5t2X7eaIrdWtxsixPgYhH0hcYx",
-            "Río Nilo": "1JG7uGT5t2X7eaIrdWtxsixPgYhH0hcYx", 
-            "Tlajomulco": "1JG7uGT5t2X7eaIrdWtxsixPgYhH0hcYx", 
-            "Zapopan": "1JG7uGT5t2X7eaIrdWtxsixPgYhH0hcYx"
+            "Américas": "Lic_en_Contaduria_Publlica_sep_Presencial_cd36889617.pdf", 
+            "Campus Washington": "Lic_en_Contaduria_Publlica_sep_Presencial_cd36889617.pdf",
+            "Río Nilo": "Lic_en_Contaduria_Publlica_sep_Presencial_cd36889617.pdf", 
+            "Tlajomulco": "Lic_en_Contaduria_Publlica_sep_Presencial_cd36889617.pdf", 
+            "Zapopan": "Lic_en_Contaduria_Publlica_sep_Presencial_cd36889617.pdf"
         },
-        "Online": "1NJ4wOgZztzAagAGLAohQqwA4EAvW99pd",
-        "Flex": "1I1xWQhjY8uInFWkD71fQbFvfvb5XTc8X"
+        "Online": "Lic_en_Contaduria_Online_1791f07f6c.pdf",
+        "Flex": "Lic_en_Contaduria_Flex_2463d992ba.pdf"
       }
     }
   },

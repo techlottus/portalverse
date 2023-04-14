@@ -18,7 +18,7 @@
       },
       "curriculum": {
         "Presencial": {
-          "Campus Washington": "15r_GSsVzNEgqrPGVJJQgHZd9NBEe4W7R"
+          "Campus Washington": "Lic_en_Administracion_Proulex_Presencial_76879acb38.pdf"
         }
       }
     }
@@ -37,7 +37,7 @@
       "tabs": {
         "items": [
           {
-            "label": "Modalidad Presencial",
+            "label": "Presencial",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {
