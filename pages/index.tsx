@@ -71,8 +71,8 @@ const Home: NextPageWithLayout = ({ data: { sections, meta, strapi } }: any) => 
         <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4 mt-3">
           <SliderPortalverseWrapper data={{ ...slider, height: "600px" }} mobile = {false}/>
         </div>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mt-12 w-t:mt-6 w-p:mt-6">
-          <p className="ac-type-h3-bold-solid-poppins-desktop w-t:ac-type-h3-bold-solid-poppins-tablet w-p:ac-type-h3-bold-solid-poppins-tablet">{ overlayCardsSection?.title }</p>
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-12 w-d:mt-18">
+          <p className="ac-type-h3-bold-solid-poppins-desktop w-t:ac-type-h3-bold-solid-poppins-tablet w-p:ac-type-h3-bold-solid-poppins-tablet w-p:text-6 w-t:text-10 w-d:text-10">{ overlayCardsSection?.title }</p>
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-12 w-t:mb-6 w-p:mb-6">
           <OfertaEducativaWrapper data={{...overlayCardsSection}} classNames="opacity-80 w-d:mb-8"/>
@@ -81,13 +81,13 @@ const Home: NextPageWithLayout = ({ data: { sections, meta, strapi } }: any) => 
       <ContentFullLayout classNames="w-d:hidden w-p:hidden my-6">
         <ContentInsideLayout classNames="gap-6">
         <div className="col-span-8">
-          <BannerPortalverseWrapper data={{...banner1, height: "300px"}} onClick={ () => router.push(`${banner1?.ctaUrl}`)}/>
+          <BannerPortalverseWrapper data={{...banner1, height: "auto"}} onClick={ () => router.push(`${banner1?.ctaUrl}`)}/>
         </div>
         </ContentInsideLayout>
       </ContentFullLayout>
       <ContentLayout classNames="">
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:hidden">
-          <BannerPortalverseWrapper data={{...banner1, height: "300px"}} onClick={ () => router.push(`${banner1?.ctaUrl}`)}/>
+          <BannerPortalverseWrapper data={{...banner1, height: "auto"}} onClick={ () => router.push(`${banner1?.ctaUrl}`)}/>
         </div>
         <div className="w-d:col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 w-d:mt-8 ">
           {/* Use data from JSON */}
@@ -118,13 +118,13 @@ const Home: NextPageWithLayout = ({ data: { sections, meta, strapi } }: any) => 
       <ContentFullLayout classNames="w-d:hidden w-p:hidden gap-6 my-6">
         <ContentInsideLayout classNames="gap-6">
         <div className="w-t:col-span-8 w-p:col-span-4">
-          <BannerPortalverseWrapper data={{...banner2, height: "300px"}} onClick={ () => router.push(`${banner2?.ctaUrl}`)}/>
+          <BannerPortalverseWrapper data={{...banner2, height: "auto"}} onClick={ () => router.push(`${banner2?.ctaUrl}`)}/>
         </div>
         </ContentInsideLayout>
       </ContentFullLayout>
       <ContentLayout classNames="w-t:hidden my-6">
         <div className="col-span-12 w-p:col-span-4">
-          <BannerPortalverseWrapper data={{...banner2, height: "300px"}} onClick={ () => router.push(`${banner2?.ctaUrl}`)}/>
+          <BannerPortalverseWrapper data={{...banner2, height: "auto"}} onClick={ () => router.push(`${banner2?.ctaUrl}`)}/>
         </div>
       </ContentLayout>
       <ContentLayout>

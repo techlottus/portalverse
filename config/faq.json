@@ -121,14 +121,16 @@
       "center": false,
       "bottom": false,
       "left": false,
-      "urlImage": {
+      "image": {
         "mobile": "https://assets.staging.bedu.org/UTEG/faq_Banner_FAQ_mobile_199e969c6c.jpeg",
         "tablet": "https://assets.staging.bedu.org/UTEG/faq_Banner_FAQ_tablet_f11a81b395.jpeg",
         "desktop": "https://assets.staging.bedu.org/UTEG/faq_Banner_FAQ_desk_22d3486da9.jpeg"
       },
       "overlay": "",
-      "height": "212px",
-      "action": {
+      "height": "auto",
+      "font": "light",
+      "desktopRatio": "300/53",
+      "button": {
         "id": "",
         "type": "primary",
         "title": "Ir a CESEPCOM",
@@ -141,7 +143,7 @@
         "test": ""
       },
       "wrapper": true,
-      "redirect": "/"
+      "redirect": "/nosotros/CESEPCOM"
     }
   }
 }

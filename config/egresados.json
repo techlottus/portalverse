@@ -65,8 +65,8 @@
       "title": "Bolsa de Talento en UTEG",
       "subtitle": "¿Buscas empleo? Inscríbete en nuestra Bolsa de Talento",
       "position": "right",
-      "height": "350px",
-      "overlayWhite": false,
+      "height": "auto",
+      "overlayWhite":false,
       "overlayDak": false,
       "button": {
         "id": "",
@@ -93,10 +93,11 @@
       "title": "Oferta educativa de egresados",
       "subtitle": "En UTEG seguimos apoyándote, ahora en tus proyectos de superación profesional. ",
       "position": "right",
-      "height": "350px",
-      "overlayWhite": false,
+      "height": "auto",
+      "overlayWhite":false,
       "overlayDak": false,
-      "button": {
+      "desktopRatio": "2/1",
+      "button":{
         "id": "",
         "type": "primary",
         "title": "Consulta la oferta educativa",
@@ -151,10 +152,11 @@
       "title": "Trámites",
       "subtitle": "Ingresa al sistema de la universidad y revisa tu estatus o realiza algún nuevo trámite.",
       "position": "light",
-      "height": "350px",
-      "overlayWhite": false,
+      "height": "auto",
+      "overlayWhite":false,
       "overlayDak": false,
-      "button": {
+      "desktopRatio": "2/1",
+      "button":{
         "id": "",
         "type": "outlined",
         "title": "Ingresar",
@@ -241,7 +243,8 @@
     "dudas": {
       "banner": {
         "image": {
-          "desktop": "https://assets.staging.bedu.org/UTEG/egresados_banner_dudas_tablet_03e5ceffb7.jpg",
+          "desktop": "https://assets.staging.bedu.org/UTEG/egresados_banner_dudas_desktop_f5619394bc.jpg?updated_at=2023-03-27T16:55:08.826Z",
+          "tablet": "https://assets.staging.bedu.org/UTEG/egresados_banner_dudas_tablet_03e5ceffb7.jpg",
           "mobile": "https://assets.staging.bedu.org/UTEG/egresados_banner_dudas_MOVIL_c9f92fa9f9.jpg"
         },
         "font": "light",

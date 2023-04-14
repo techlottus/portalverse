@@ -1,9 +1,9 @@
 {
   "banners":[
     {
-      "font": "",
+      "font": "light",
       "type": "",
-      "title": "Clinicas dentales",
+      "title": "Clínicas dentales",
       "subtitle": "Atención profesional con calidad de nuestros alumnos",
       "state": "black",
       "size": "medium",
@@ -11,13 +11,17 @@
       "center": false,
       "bottom": false,
       "left": false,
-      "urlImage": {
-        "mobile": "https://assets.staging.bedu.org/UTEG/Entrada_blog_clinica_dental_DESK_c58af881ff.jpg",
-        "desktop": "https://assets.staging.bedu.org/UTEG/Entrada_blog_clinica_dental_DESK_c58af881ff.jpg"
+      "image": {
+        "desktop": "https://assets.staging.bedu.org/UTEG/Entrada_blog_clinica_dental_DESK_c58af881ff.jpg",
+        "mobile": "https://assets.staging.bedu.org/UTEG/nota_blog_Entrada_blog_clinica_dental_tablet_mobile_bd1512ade5.jpg",
+        "tablet": "https://assets.staging.bedu.org/UTEG/nota_blog_Entrada_blog_clinica_dental_tablet_mobile_bd1512ade5.jpg"
       },
       "overlay": false,
-      "height": "769px",
-      "action": {
+      "height": "auto",
+      "desktopRatio": "1/2",
+      "tabletRatio": "4/3",
+      "mobileRatio": "4/3",
+      "button": {
         "id": "",
         "type": "secondary",
         "title": "Contactar",
@@ -45,11 +49,30 @@
       "left": false,
       "urlImage": {
         "mobile": "https://assets.staging.bedu.org/UTEG/CESEPCOM_DESK_17b65774ab.jpg",
+        "tablet": "https://assets.staging.bedu.org/UTEG/CESEPCOM_DESK_17b65774ab.jpg",
+        "desktop": "https://assets.staging.bedu.org/UTEG/CESEPCOM_DESK_17b65774ab.jpg"
+      },
+      "image": {
+        "mobile": "https://assets.staging.bedu.org/UTEG/CESEPCOM_DESK_17b65774ab.jpg",
+        "tablet": "https://assets.staging.bedu.org/UTEG/CESEPCOM_DESK_17b65774ab.jpg",
         "desktop": "https://assets.staging.bedu.org/UTEG/CESEPCOM_DESK_17b65774ab.jpg"
       },
       "overlay": false,
       "height": "",
+      "tabletRatio": "4/3",
       "action": {
+        "id": "",
+        "type": "primary",
+        "title": "Contactar",
+        "size": "small",
+        "icon": "",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "",
+        "test": ""
+      },
+      "button": {
         "id": "",
         "type": "primary",
         "title": "Contactar",
