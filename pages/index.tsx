@@ -23,6 +23,9 @@ import SliderPortalverseWrapper from "@/components/SliderPortalverseWrapper"
 import OfertaEducativaWrapper from "@/components/OfertaEducativaWrapper"
 import NumbersPortalverseWrapper from "@/components/NumbersPortalverseWrapper"
 import BlogPostCardWrapper from "@/components/BlogPostCardWrapper"
+import { CarouselType } from "@/types/Carousel.types"
+import Carousel from "@/old-components/Carousel/Carousel"
+import Button from "@/old-components/Button/Button"
 
 const Home: NextPageWithLayout = ({ data: { sections, meta, strapi } }: any) => {
   const router = useRouter();
@@ -84,7 +87,7 @@ const Home: NextPageWithLayout = ({ data: { sections, meta, strapi } }: any) => 
         </div>
         </ContentInsideLayout>
       </ContentFullLayout>
-      <ContentLayout classNames="">
+      <ContentLayout classNames="mb-18">
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:hidden">
           <BannerPortalverseWrapper data={{...internationalizationBanner, height: "300px"}} onClick={ () => router.push(`${podcastBanner?.ctaUrl}`)}/>
         </div>
@@ -96,6 +99,19 @@ const Home: NextPageWithLayout = ({ data: { sections, meta, strapi } }: any) => 
           }
         </div>
       </ContentLayout>
+      <ContentFullLayout classNames="bg-gray-100 py-12">
+        <ContentLayout classNames="gap-0">
+          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 flex">
+            <p className="text-Poppins font-bold text-[40px] w-p:text-6">Nuestros Planteles</p>
+          </div>
+          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 flex">
+            <Carousel data={sections.campus} type={CarouselType.CARD}/>
+          </div> 
+          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center">
+            <Button dark data={sections.campus.button}/>
+          </div>
+        </ContentLayout>
+      </ContentFullLayout>
       <ContentLayout>
         <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mt-[72px] mt-[72px]">
           <p className="ac-type-h3-bold-solid-poppins-desktop w-p:ac-type-h3-bold-solid-poppins-tabmob">{ blogListConfig?.title }</p>

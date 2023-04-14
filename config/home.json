@@ -351,7 +351,7 @@
     "campus": {
       "items": [
         { 
-          "urlImage": "https://drive.google.com/uc?export=view&id=1-H0lWSF74-m7I27Ajimfv-3MklsQ0nZ_",
+          "image": "https://drive.google.com/uc?export=view&id=1-H0lWSF74-m7I27Ajimfv-3MklsQ0nZ_",
           "subtitle": "",
           "title": "Coursera y UANE se unen para ti",
           "text": "Se firma una alianza con Coursera para acceder a contenidos que complementen la formación profesional de su comunidad educativa",
@@ -383,7 +383,7 @@
           "wrapper": true
         },
         { 
-          "urlImage": "https://drive.google.com/uc?export=view&id=1_HDZ0yzh3bmGey33AoUhO4oOMKDTW4ON",
+          "image": "https://drive.google.com/uc?export=view&id=1_HDZ0yzh3bmGey33AoUhO4oOMKDTW4ON",
           "subtitle": "",
           "title": "Coursera y UANE se unen para ti",
           "text": "Se firma una alianza con Coursera para acceder a contenidos que complementen la formación profesional de su comunidad educativa",
@@ -415,7 +415,7 @@
           "wrapper": true
         },
         { 
-          "urlImage": "https://drive.google.com/uc?export=view&id=1Xlshz6sWTpWQhjCH5ZtF6PLZNHVFl0jF",
+          "image": "https://drive.google.com/uc?export=view&id=1Xlshz6sWTpWQhjCH5ZtF6PLZNHVFl0jF",
           "subtitle": "",
           "title": "Coursera y UANE se unen para ti",
           "text": "Se firma una alianza con Coursera para acceder a contenidos que complementen la formación profesional de su comunidad educativa",
@@ -447,7 +447,7 @@
           "wrapper": true
         },
         { 
-          "urlImage": "https://drive.google.com/uc?export=view&id=1Xlshz6sWTpWQhjCH5ZtF6PLZNHVFl0jF",
+          "image": "https://drive.google.com/uc?export=view&id=1Xlshz6sWTpWQhjCH5ZtF6PLZNHVFl0jF",
           "subtitle": "",
           "title": "Coursera y UANE se unen para ti",
           "text": "Se firma una alianza con Coursera para acceder a contenidos que complementen la formación profesional de su comunidad educativa",
@@ -479,7 +479,7 @@
           "wrapper": true
         },
         { 
-          "urlImage": "https://drive.google.com/uc?export=view&id=1Xlshz6sWTpWQhjCH5ZtF6PLZNHVFl0jF",
+          "image": "https://drive.google.com/uc?export=view&id=1Xlshz6sWTpWQhjCH5ZtF6PLZNHVFl0jF",
           "subtitle": "",
           "title": "Coursera y UANE se unen para ti",
           "text": "Se firma una alianza con Coursera para acceder a contenidos que complementen la formación profesional de su comunidad educativa",
@@ -513,8 +513,8 @@
       ],
       "button": {
         "id": "",
-        "type": "",
-        "title": "Campus",
+        "type": "outlined",
+        "title": "Ver todos los planteles",
         "size": "small",
         "icon": "",
         "lyIcon": false,
