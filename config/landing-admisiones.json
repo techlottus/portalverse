@@ -21,7 +21,7 @@
         {
           "icon": "https://https://assets.staging.bedu.org/UTEG/admisiones_egresados_72dcb593b8.svg",
           "name": "egresados",
-          "text": "+45,000 egresados"
+          "text": "+ 45,000 egresados"
         },
         {
           "icon": "https://https://assets.staging.bedu.org/UTEG/admisiones_internacionaizacion_ea248ab423.svg",
@@ -54,7 +54,7 @@
       "tabs": {
         "items":[
           {
-            "label": "Bachillerato BIS", "icons": { "primary": "", "duplicate": true }, "disabled": false,
+            "label": "Bachilleratos", "icons": { "primary": "", "duplicate": true }, "disabled": false,
             "content": {
               "image": {
                 "alt": "imagen",
@@ -62,7 +62,7 @@
               },
               "content": {
                 "title": "",
-                "description": "<b>Bachillerato Intensivo Semiescolarizado (BIS)</b> incorporado SEJ:\n\n• Acta de nacimiento original y 1 copia (ambos documentos deben estar en buen estado).\n\n• Certificado de Secundaria (original y 3 copias por ambos lados).\n\n• 1 copia de la Clave Única de Registro de Población (CURP).\n\n• 2 copias de Credencial Oficial IFE/INE o Pasaporte para mayores de edad.\n\n• 2 copias de Credencial Oficial IFE/INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n• 2 fotografías tamaño infantil, blanco y negro o a color, de estudio o instantáneas. \n\n• Para grado superior deberá cumplir con los referidos en el P-AB-10 Inscripción de Aspirantes a Grado Superior BIS",
+                "description": "• Acta de nacimiento original y 3 copias.\n\n • Certificado de Secundaria y 3 copias.\n\n • 3 copias de (CURP).\n\n • 3 copias de Credencial IFE/INE o Pasaporte para mayores de edad y/o padre de familia o tutor (para menores de edad).\n\n •2 fotografías tamaño infantil, blanco y negro o a color.",
                 "action": {
                   "title": "Explora los programas",
                   "type": "outlined",
@@ -121,68 +121,7 @@
             }
           },
           {
-            "label": "Bachillerato BGC", "icons": { "primary": "", "duplicate": true }, "disabled": false,
-            "content": {
-              "image": {
-                "alt": "imagen",
-                "src": "https://assets.staging.bedu.org/UTEG/admisiones_requisitos_admision_bachillerato_39ebf53e86.jpg"
-              },
-              "content": {
-                "title": "",
-                "description": "<b>Bachillerato General por Competencias</b>\n\nRequisitos para el primer ingreso Bachillerato General por Competencias (BGC) incorporado a la UDG:\n\n• Acta de nacimiento original y 1 copia (ambos documentos deben estar en buen estado).\n\n• Certificado de Secundaria (original y 3 copias por ambos lados).\n\n• 1 copia de la Clave Única de Registro de Población (CURP).\n\n• 2 copias de Credencial Oficial IFE/INE o Pasaporte para mayores de edad.\n\n• 2 copias de Credencial Oficial IFE/INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n• 2 fotografías tamaño infantil, blanco y negro o a color, de estudio o instantáneas. \n\n• Para grado superior deberá cumplir con los referidos en el P-CE-21 Procemiento de inscripción de Aspirantes a Grado Superior.\n\n• Kardex firmado y sellado por el centro universitario donde cursó el bachillerato. El documento debe mencionar que su situación actual es baja (grado superior).",
-                "action": {"title": "Explora los programas", "type": "outlined", "icon": "", "isExpand": false, "route": "/oferta-educativa/bachillerato"}
-              },
-              "cards": [
-                { 
-                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_presencial_d62b8a6d09.jpg",
-                  "subtitle": "",
-                  "title": "Presencial",
-                  "text": "Contamos con 31 programas de licenciatura, 21 de ellos con incorporación a la Universidad de Guadalajara.",
-                  "border": true,
-                  "allContent": true,
-                  "height": "",
-                  "isShowCardWebsiteContent": true,
-                  "id": "",
-                  "type": "horizontal",
-                  "link": true,
-                  "background": false,
-                  "wrapper": true
-                },
-                { 
-                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_flex_8af4d733fb.jpg",
-                  "subtitle": "",
-                  "title": "UTEG Flex",
-                  "text": "Con esta modalidad de estudios semi-presencial, los sábados, puedes estudiar aún cuando, por cualquier motivo, no puedas asistir regularmente a un plantel.",
-                  "border": true,
-                  "allContent": true,
-                  "height": "",
-                  "isShowCardWebsiteContent": true,
-                  "id": "",
-                  "type": "horizontal",
-                  "link": true,
-                  "background": false,
-                  "wrapper": true
-                },
-                { 
-                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_online_69599a8b38.jpg",
-                  "subtitle": "",
-                  "title": "UTEG Online",
-                  "text": "Vive las experiencias de aprendizaje sin barreras de tiempo y espacio gracias a las plataformas tecnológicas. Interactúa con docentes experimentados y accede a los conocimientos más actualizados.",
-                  "border": true,
-                  "allContent": true,
-                  "height": "",
-                  "isShowCardWebsiteContent": true,
-                  "id": "",
-                  "type": "horizontal",
-                  "link": true,
-                  "background": false,
-                  "wrapper": true
-                }
-              ]
-            }
-          },
-          {
-            "label": "Lic. Semestrales", "icons": { "primary": "", "duplicate": true }, "disabled": false,
+            "label": "Licenciaturas", "icons": { "primary": "", "duplicate": true }, "disabled": false,
             "content": {
               "image": {
                 "alt": "imagen",
@@ -190,68 +129,7 @@
               },
               "content": {
                 "title": "",
-                "description": "<b>Para Licenciaturas incorporadas UDG o semestrales</b>\n\n• Acta de nacimiento original y 1 copia (ambos documentos deben estar en buen estado).\n\n• Certificado de Bachillerato original, en buen estado, y 1 copia por ambos lados\n\n• 1 copia de la Clave Única de Registro de Población (CURP).\n\n• 2 copias de Credencial Oficial IFE/INE o Pasaporte para mayores de edad.\n\n• 2 copias de Credencial Oficial IFE/INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n• 2 fotografías tamaño infantil, blanco y negro o a color, de estudio o instantáneas. \n\n• Para grado superior deberá cumplir con los referidos en el P-CE-21 Procedimiento de inscripción de aspirantes a grado superior.",
-                "action": {"title": "Explora los programas", "type": "outlined", "icon": "", "isExpand": false, "route": "/oferta-educativa/bachillerato"}
-              },
-              "cards": [
-                { 
-                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_presencial_d62b8a6d09.jpg",
-                  "subtitle": "",
-                  "title": "Presencial",
-                  "text": "Contamos con 31 programas de licenciatura, 21 de ellos con incorporación a la Universidad de Guadalajara.",
-                  "border": true,
-                  "allContent": true,
-                  "height": "",
-                  "isShowCardWebsiteContent": true,
-                  "id": "",
-                  "type": "horizontal",
-                  "link": true,
-                  "background": false,
-                  "wrapper": true
-                },
-                { 
-                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_flex_8af4d733fb.jpg",
-                  "subtitle": "",
-                  "title": "UTEG Flex",
-                  "text": "Con esta modalidad de estudios semi-presencial, los sábados, puedes estudiar aún cuando, por cualquier motivo, no puedas asistir regularmente a un plantel.",
-                  "border": true,
-                  "allContent": true,
-                  "height": "",
-                  "isShowCardWebsiteContent": true,
-                  "id": "",
-                  "type": "horizontal",
-                  "link": true,
-                  "background": false,
-                  "wrapper": true
-                },
-                { 
-                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_online_69599a8b38.jpg",
-                  "subtitle": "",
-                  "title": "UTEG Online",
-                  "text": "Vive las experiencias de aprendizaje sin barreras de tiempo y espacio gracias a las plataformas tecnológicas. Interactúa con docentes experimentados y accede a los conocimientos más actualizados.",
-                  "border": true,
-                  "allContent": true,
-                  "height": "",
-                  "isShowCardWebsiteContent": true,
-                  "id": "",
-                  "type": "horizontal",
-                  "link": true,
-                  "background": false,
-                  "wrapper": true
-                }
-              ]
-            }
-          },
-          {
-            "label": "Lic. Cuatrimestrales", "icons": { "primary": "", "duplicate": true }, "disabled": false,
-            "content": {
-              "image": {
-                "alt": "imagen",
-                "src": "https://assets.staging.bedu.org/UTEG/admisiones_requisitos_admision_licenciatura_5ecac8fbea.jpg"
-              },
-              "content": {
-                "title": "",
-                "description": "<b>Para Licenciaturas SICyT o cuatrimestrales</b>:\n\n• Acta de nacimiento original y 1 copia (ambos documentos deben estar en buen estado).\n\n• Certificado de Bachillerato (original y 3 copias por ambos lados).\n\n• 1 copia de la Clave Única de Registro de Población (CURP).\n\n• 2 copias de Credencial Oficial IFE/INE o Pasaporte para mayores de edad.\n\n• 2 copias de Credencial Oficial IFE/INE o Pasaporte del padre de familia o tutor (para menores de edad).\n\n• 2 fotografías tamaño infantil, blanco y negro o a color, de estudio o instantáneas. \n\n• Para grado superior deberá cumplir con los referidos en el P-ML-10 para SEP/P-ML-11 para SICyT. Procedimiento de inscripción de aspirantes a grado superior.",
+                "description": "• Acta de nacimiento original y 3 copias (ambos documentos deben estar en buen estado).\n\n • Certificado de Bachillerato original, en buen estado, y 3 copia por ambos lados.\n\n • 3 copias de (CURP).\n\n • 3 copias de Credencial IFE/INE o Pasaporte para mayores de edad y/o padre de familia o tutor (para menores de edad).\n\n • 2 fotografías tamaño infantil, blanco y negro o a color.",
                 "action": {"title": "Explora los programas", "type": "outlined", "icon": "", "isExpand": false, "route": "/oferta-educativa/bachillerato"}
               },
               "cards": [
@@ -312,129 +190,7 @@
               },
               "content": {
                 "title": "",
-                "description": "• Acta de nacimiento original y 2 copias (ambos documentos deben estar en buen estado).\n\n• Certificado de licenciatura original y 3 copias (en buen estado).\n\n• Para maestría cuatrimestral SEP, en caso de que se encuentre en trámite el certificado de licenciatura, pero cuente con el título o acta de titulación se recibirá la copia del certificado junto con la carta de compromiso en la cual se mencione que en un lapso de 6 meses se entregará el documento original, de lo contrario se le dará de baja sin responsabilidad de la institución.\n\n• 3 copias del Título y acta de titulación no mayor a 1 año.\n\n• 2 fotografías tamaño infantil, blanco y negro o a color, de estudio o instantáneas.\n\n• 2 copias de la Clave Única de Registro de Población (CURP).\n\n• 2 copias de Credencial Oficial IFE/INE o Pasaporte.\n\n• En caso de titularse de la licenciatura por créditos de maestría se solicitará la carta de créditos (original y 2 copias) del oficio de aceptación para titularse por dicha modalidad (aplica para cuatrimestral o semestral).",
-                "action": {"title": "Explora los programas", "type": "outlined", "icon": "", "isExpand": false, "route": "/oferta-educativa/bachillerato"}
-              },
-              "cards": [
-                { 
-                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_presencial_d62b8a6d09.jpg",
-                  "subtitle": "",
-                  "title": "Presencial",
-                  "text": "Contamos con 31 programas de licenciatura, 21 de ellos con incorporación a la Universidad de Guadalajara.",
-                  "border": true,
-                  "allContent": true,
-                  "height": "",
-                  "isShowCardWebsiteContent": true,
-                  "id": "",
-                  "type": "horizontal",
-                  "link": true,
-                  "background": false,
-                  "wrapper": true
-                },
-                { 
-                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_flex_8af4d733fb.jpg",
-                  "subtitle": "",
-                  "title": "UTEG Flex",
-                  "text": "Con esta modalidad de estudios semi-presencial, los sábados, puedes estudiar aún cuando, por cualquier motivo, no puedas asistir regularmente a un plantel.",
-                  "border": true,
-                  "allContent": true,
-                  "height": "",
-                  "isShowCardWebsiteContent": true,
-                  "id": "",
-                  "type": "horizontal",
-                  "link": true,
-                  "background": false,
-                  "wrapper": true
-                },
-                { 
-                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_online_69599a8b38.jpg",
-                  "subtitle": "",
-                  "title": "UTEG Online",
-                  "text": "Vive las experiencias de aprendizaje sin barreras de tiempo y espacio gracias a las plataformas tecnológicas. Interactúa con docentes experimentados y accede a los conocimientos más actualizados.",
-                  "border": true,
-                  "allContent": true,
-                  "height": "",
-                  "isShowCardWebsiteContent": true,
-                  "id": "",
-                  "type": "horizontal",
-                  "link": true,
-                  "background": false,
-                  "wrapper": true
-                }
-              ]
-            }
-          },
-          {
-            "label": "UTEG Flex", "icons": { "primary": "", "duplicate": true }, "disabled": false,
-            "content": {
-              "image": {
-                "alt": "imagen",
-                "src": "https://assets.staging.bedu.org/UTEG/admisiones_requisitos_admision_maestria_0333131dbb.jpg"
-              },
-              "content": {
-                "title": "",
-                "description": "• Acta de nacimiento original y 1 copia (ambos documentos deben estar en buen estado).\n\n• Certificado de Bachillerato (original y 3 copias por ambos lados).\n\n• 1 copia de la Clave Única de Registro de Población (CURP).\n\n• 2 copias de Credencial Oficial IFE/INE o Pasaporte. \n\n• 2 fotografías tamaño infantil, blanco y negro o a color, de estudio o instantáneas.",
-                "action": {"title": "Explora los programas", "type": "outlined", "icon": "", "isExpand": false, "route": "/oferta-educativa/bachillerato"}
-              },
-              "cards": [
-                { 
-                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_presencial_d62b8a6d09.jpg",
-                  "subtitle": "",
-                  "title": "Presencial",
-                  "text": "Contamos con 31 programas de licenciatura, 21 de ellos con incorporación a la Universidad de Guadalajara.",
-                  "border": true,
-                  "allContent": true,
-                  "height": "",
-                  "isShowCardWebsiteContent": true,
-                  "id": "",
-                  "type": "horizontal",
-                  "link": true,
-                  "background": false,
-                  "wrapper": true
-                },
-                { 
-                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_flex_8af4d733fb.jpg",
-                  "subtitle": "",
-                  "title": "UTEG Flex",
-                  "text": "Con esta modalidad de estudios semi-presencial, los sábados, puedes estudiar aún cuando, por cualquier motivo, no puedas asistir regularmente a un plantel.",
-                  "border": true,
-                  "allContent": true,
-                  "height": "",
-                  "isShowCardWebsiteContent": true,
-                  "id": "",
-                  "type": "horizontal",
-                  "link": true,
-                  "background": false,
-                  "wrapper": true
-                },
-                { 
-                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_online_69599a8b38.jpg",
-                  "subtitle": "",
-                  "title": "UTEG Online",
-                  "text": "Vive las experiencias de aprendizaje sin barreras de tiempo y espacio gracias a las plataformas tecnológicas. Interactúa con docentes experimentados y accede a los conocimientos más actualizados.",
-                  "border": true,
-                  "allContent": true,
-                  "height": "",
-                  "isShowCardWebsiteContent": true,
-                  "id": "",
-                  "type": "horizontal",
-                  "link": true,
-                  "background": false,
-                  "wrapper": true
-                }
-              ]
-            }
-          },
-          {
-            "label": "UTEG Online", "icons": { "primary": "", "duplicate": true }, "disabled": false,
-            "content": {
-              "image": {
-                "alt": "imagen",
-                "src": "https://assets.staging.bedu.org/UTEG/admisiones_requisitos_admision_maestria_0333131dbb.jpg"
-              },
-              "content": {
-                "title": "",
-                "description": "• Acta de nacimiento original y 1 copia (ambos documentos deben estar en buen estado).\n\n• Certificado de Bachillerato (original y 3 copias por ambos lados).\n\n• 1 copia de la Clave Única de Registro de Población (CURP).\n\n• 2 copias de Credencial Oficial IFE/INE o Pasaporte. \n\n• 2 fotografías tamaño infantil, blanco y negro o a color, de estudio o instantáneas.",
+                "description": "• Acta de nacimiento y 3 copias.\n\n • Certificado de licenciatura y 3 copias.                \n\n • 3 copias del Título y acta de titulación a 1 año.                \n\n • 3 fotografías tamaño infantil blanco y negro o a color.                \n\n • 3 copias de CURP.                \n\n • 3 copias de Credencial IFE/INE o Pasaporte.                \n\n • Para maestría cuatrimestral SEP, en caso que se encuentre en trámite el certificado de licenciatura, o cuente con el título o acta de titulación se recibirá la copia del certificado con carta compromiso en la cual se mencione que en un lapso de 6 meses se entregará el documento original, de lo contrario se dará de baja sin responsabilidad de la institución.<br><br>* Si la titulación de licenciatura es por créditos de maestría, acércate con servicios escolares.",
                 "action": {"title": "Explora los programas", "type": "outlined", "icon": "", "isExpand": false, "route": "/oferta-educativa/bachillerato"}
               },
               "cards": [
