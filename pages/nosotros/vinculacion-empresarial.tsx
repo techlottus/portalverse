@@ -1,6 +1,5 @@
 import { Fragment, useEffect, useState } from "react";
 import Head from "next/head";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import cn from "classnames";
 import ContentInsideLayout from "@/layouts/ContentInside.layout";
@@ -9,12 +8,10 @@ import ContentFullLayout from "@/layouts/ContentFull.layout";
 import NextPageWithLayout from "@/types/Layout.types";
 import { getDataPageFromJSON } from "@/utils/getDataPage";
 import ContentLayout from "@/layouts/Content.layout";
-import Image from "@/old-components/Image";
 import RichtText from "@/old-components/Richtext/Richtext";
 import LinkContactTarget from "@/old-components/LinkContactTarget";
 import DescriptionSection from "@/old-components/DescriptionSection";
 import Mosaic from "@/old-components/Mosaic";
-import Button from "@/old-components/Button/Button";
 import TabsFeatured from "@/old-components/TabsFeatured";
 import Feedback from "@/old-components/Feedback";
 import Icon from "@/old-components/Icon";
@@ -57,9 +54,9 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
       <title>{meta.title}</title>
     </Head>
     <HeaderFooterLayout breadcrumbs={true}>
-      <ContentLayout>
+      <ContentLayout classNames="gap-12">
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-Poppins font-bold text-13 w-t:text-8.5 w-p:text-7.5 leading-[60px] w-t:leading-[111%] mb-6">{sections.head.title}</p>
+          <p className="font-Poppins font-bold text-13 w-t:text-8.5 w-p:text-7.5 w-d:mb-6 w-d:leading-13">{sections.head.title}</p>
           <p className="font-Poppins font-bold text-5.5 mb-6">{sections.head.subtitle}</p>
           <RichtText font="light" data={{
             content: sections.head.description
@@ -73,31 +70,27 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
           </div>
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-          <Image
+          <img
             alt={sections.head.image.desk.alt}
             src={sections.head.image.desk.src}
-            classNames="aspect-2/1 w-t:aspect-2/1 w-p:aspect-2/1"
+            className="w-full"
           />
         </div>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-12">
-          <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%]">{sections.alliances.title}</p>
-
-          {/* <div className=" justify-center hidden">
-          <Button data={sections.alliances.button} />
-          </div> */}
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+          <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%] w-d:mb-6">{sections.alliances.title}</p>
+          <div className="w-d:col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mb-6 ">
+            {
+              sections?.alliances?.carrousel?.map((item: any, i: number) => <section key={`section-numbers-${i}`}>
+                <img
+                  alt={item.desk.alt}
+                  src={item.desk.src}
+                  className="w-full h-full"
+                />
+              </section>)
+            }
+          </div>
         </div>
-        <div className="w-d:col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mb-6 ">
-          {
-            sections.alliances.carrousel.map((item: any, i: number) => <section key={`section-numbers-${i}`}>
-              <Image
-                alt={item.desk.alt}
-                src={item.desk.src}
-                classNames="h-52"
-              />
-            </section>)
-          }
-        </div>
-        <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center w-d:mb-2">
+        <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center">
           <TabsFeatured active={tabActive} tabs={sections.socialService.tabs.items} onActive={(active: number) => setTabActive(active)} />
         </div>
       </ContentLayout>
@@ -121,26 +114,18 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
                       { "hidden w-p:hidden": tabActive !== i }
                     )}
                     titleStyles="col-start-2 col-end-7 w-t:col-end-8 text-[32px] !leading-10"
-                    descriptionStyles="col-start-2 col-end-7 w-t:col-end-8" />
-                  <Image
+                    descriptionStyles="col-start-2 col-end-7 w-t:col-end-8"
+                  />
+                  <img
                     alt={alt}
                     src={src}
-                    classNames={cn("aspect-4/3 col-span-5 w-t:col-start-2 w-t:col-end-8 w-p:col-span-4", { "hidden": tabActive !== i })}
+                    className={cn("w-full col-span-5 w-t:col-start-2 w-t:col-end-8 w-p:col-span-4", { "hidden": tabActive !== i })}
                   />
-                  {/* <DescriptionSection
-                  action={<Link href={download.link}><a className="flex items-center" target={"_blank"}>{download.title} <span className="material-icons">download</span></a></Link>}
-                  mode="transparent"
-                  title={titleProcess}
-                  description={descripcionProcess}
-                  classNames={cn("col-span-12 grid grid-cols-12 gap-6 w-t:col-span-8 w-t:grid-cols-8 w-p:col-span-4 py-[40px] w-t:py-[94px] w-p:flex w-p:flex-col w-p:p-6", { "hidden w-p:hidden": tabActive !== i })}
-                  titleStyles="col-start-2 col-end-12 w-t:col-end-8"
-                  descriptionStyles="col-start-2 col-end-12 w-t:col-end-8" /> */}
                 </Fragment>)
               }
             </ContentInsideLayout>
           </div>
         </ContentLayout>
-
       </ContentFullLayout>
       <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 flex flex-col my-6">
@@ -157,8 +142,10 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
             </div>
           </Feedback>
         </div>
+      </ContentLayout>
+      <ContentLayout classNames="mt-6">
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-Poppins font-bold text-13 w-t:text-8.5 w-p:text-7.5 mb-18">{sections.descriptionSection.title}</p>
+          <p className="font-Poppins font-bold text-13 w-t:text-8.5 w-p:text-7.5 mb-18 w-d:leading-13">{sections.descriptionSection.title}</p>
           {
             sections.descriptionSection.textIcons.map((item: any, i: number) =>
               <div key={`icon-${i}`} className="flex mt-4 gap-6">
@@ -173,28 +160,29 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
               </div>
             )
           }
-          {/* <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center mt-9">
-            <Button dark data={ sections.head.button }/>
-          </div> */}
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-          <Image
-            alt={sections.descriptionSection.image.desk.alt}
-            src={sections.descriptionSection.image.desk.src}
-            classNames="aspect-3/4 w-t:hidden w-p:hidden"
-          />
-          <Image
-            alt={sections.descriptionSection.image.tablet.alt}
-            src={sections.descriptionSection.image.tablet.src}
-            classNames="aspect-3/4 w-d:hidden w-p:hidden"
-          />
-          <Image
-            alt={sections.descriptionSection.image.mobile.alt}
-            src={sections.descriptionSection.image.mobile.src}
-            classNames="aspect-2/1 w-d:hidden w-t:hidden"
-          />
+          <div className="w-t:hidden w-p:hidden flex justify-end">
+            <img
+              alt={sections.descriptionSection.image.desk.alt}
+              src={sections.descriptionSection.image.desk.src}
+            />
+          </div>
+          <div className="w-d:hidden w-p:hidden">
+            <img
+              alt={sections.descriptionSection.image.tablet.alt}
+              src={sections.descriptionSection.image.tablet.src}
+              className="w-full h-full"
+            />
+          </div>
+          <div className="w-d:hidden w-t:hidden">
+            <img
+              alt={sections.descriptionSection.image.mobile.alt}
+              src={sections.descriptionSection.image.mobile.src}
+              className="w-full h-full"
+            />
+          </div>
         </div>
-
       </ContentLayout>
       <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-12 w-t:mt-6 w-p:mt-6">

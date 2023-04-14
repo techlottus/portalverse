@@ -8,9 +8,9 @@ import ContentLayout from "@/layouts/Content.layout";
 import Image from "@/old-components/Image";
 import CardWebsite from "@/old-components/CardWebsite";
 import Button from "@/old-components/Button/Button";
-import Banner from "@/old-components/Banner";
 import BannerWrapper from "@/old-components/BannerWrapper";
 import Editor from "@/old-components/Editor";
+import BannerPortalverse from "@/old-components/BannerPortalverse";
 
 
 const EntryBlogDetail: NextPageWithLayout = ({ blog_post, banners, related_post_title, blog_section }: any) => {
@@ -62,7 +62,38 @@ const EntryBlogDetail: NextPageWithLayout = ({ blog_post, banners, related_post_
             <Button dark data={blog_section} onClick={()=>{router.push(blog_section.redirect)}}/>
           </div>
         </div>
+        {/** Dental clínic banner: Desk */}
         <div className="col-span-4 w-t:hidden w-p:hidden w-d:grid-cols-1">
+          {
+            banners?.[0] ?
+              <BannerPortalverse data={banners?.[0]} />
+            : null
+          }
+          {
+            banners?.[1] ?
+              <section className="w-d:mt-6">
+                <BannerWrapper data={banners?.[1]} typeBanner={banners?.[1]?.type} banner={banners?.[1]} font={banners?.[1]?.font} onBtn={() => router.push(banners?.[1]?.redirect)}/>
+              </section>
+            : null
+          }
+        </div>
+        {/** Dental clínic & CESEPCOM banner: Tablet & Mobile */}
+        <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-2 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 w-d:hidden">
+          {
+            banners?.[0] ?
+              <BannerPortalverse data={banners?.[0]} />
+            : null
+          }
+          {
+            banners?.[1] ?
+              <section className="w-d:mt-6">
+                <BannerPortalverse data={banners?.[1]} />
+              </section>
+            : null
+          }
+        </section>
+
+        {/* <div className="col-span-4 w-t:hidden w-p:hidden w-d:grid-cols-1">
           {
            banners.map((item:any, i:number) => <section className="mb-6" key={`section-blog-${i}`}>
             <BannerWrapper data={item} typeBanner={item.type} banner={item} font={item.font} onBtn={() => router.push(item.redirect)}/>
@@ -75,7 +106,7 @@ const EntryBlogDetail: NextPageWithLayout = ({ blog_post, banners, related_post_
             <Banner data={item} onBtn={() => router.push(item.redirect)}/>
            </section>)
           }
-        </section>
+        </section> */}
       </ContentLayout>
     </HeaderFooterLayout>
   </>

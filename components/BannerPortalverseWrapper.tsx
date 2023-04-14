@@ -53,7 +53,7 @@ const formatData = (props: BannerPortalverseWrapperProps): BannerPortalverseConf
     title: data?.title,
     subtitle: data?.subtitle,
     position: getTextPosition(data?.textPosition),
-    height: data?.height,
+    height: data?.height || "auto",
     overlayWhite: data?.overlay === "white",
     overlayDak: data?.overlay === "black",
     button: {
