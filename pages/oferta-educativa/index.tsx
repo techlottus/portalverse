@@ -21,7 +21,7 @@ const OfertaEducativa: NextPageWithLayout<any> = ({ data: { oferta, level }, sec
     </Head>
     <HeaderFooterLayout>
       <ContentLayout>
-        <section className="mx-auto mt-6 w-full col-span-7 w-t:colspan-7 w-p:col-span-4">
+        <section className="mx-auto w-d:mt-6 w-full col-span-7 w-t:colspan-7 w-p:col-span-4">
           <h1 className="font-Poppins font-bold text-13 w-t:text-8.5 w-p:text-6 leading-16.25 text-black">{ sections.head.title }</h1>
           <RichtText data={{
             content: sections.head.description
@@ -31,12 +31,12 @@ const OfertaEducativa: NextPageWithLayout<any> = ({ data: { oferta, level }, sec
           <p>{sections.offers.title}</p>
         </section>
         <section className="w-d:col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <Ofertas classNames="mb-6 mt-4 opacity-80" data={oferta} />
+          <Ofertas classNames="mb-6 w-d:mt-4 opacity-80" data={oferta} />
         </section>
         <section className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           <p className="text-10 w-t:text-8.5 w-p:text-6 font-Poppins font-bold">{sections.modalities.title }</p>
         </section>
-        <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
+        <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 w-d:mb-12 w-p:mb-6">
           {
            sections.modalities.modalities.map((item:any, i:number) => <section key={`section-blog-${i}`}>
             <CardWebsite data={item}/>
@@ -46,7 +46,7 @@ const OfertaEducativa: NextPageWithLayout<any> = ({ data: { oferta, level }, sec
         <section className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           <p className="text-10 w-t:text-8.5 w-p:text-6 font-Poppins font-bold">{sections.knowledges.title }</p>
         </section>
-        <div className="w-d:col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
+        <div className="w-d:col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 w-d:mb-12 w-p:mb-6">
           {/* {
             sections.knowledges.knowledges.map((item:any, i:number) => <section key={`section-schoolarships-${i}`}>
               <PromoLink data={item} onClick={()=> router.push(item.redirect)} typeShadowColor={item.shadowColor}/>
@@ -78,7 +78,7 @@ const OfertaEducativa: NextPageWithLayout<any> = ({ data: { oferta, level }, sec
 }
 
 export async function getStaticProps(context: any) {
-  const oferta = Routes["oferta-educativa"].reduce((prev: any, { params: { levelRoute: level, config: { title, promo } } }: any) => [ ...prev, ({ level, title, promo:{...promo, text: title} })], []);
+  const oferta = Routes["oferta-educativa"].reduce((prev: any, { params: { levelRoute: level, config: { title, promo } } }: any) => [ ...prev, ({ level, url: level, title, promo:{...promo, text: title} })], []);
   
   const { sections, meta } = await getDataPageFromJSON('/oferta-educativa/oferta-educativa.json');
   
@@ -86,7 +86,7 @@ export async function getStaticProps(context: any) {
   const { level, config: { title, promo } } = Routes["extension-universitaria"].params;
 
   return {
-    props: {  data: { oferta: [ ...oferta, { level, title, promo: { ...promo, text: title } } ], level:'oferta-educativa/' }, sections, meta }
+    props: {  data: { oferta: [ ...oferta, { level, title, url: "/extension-universitaria", promo: { ...promo, text: title } } ], level:'oferta-educativa/' }, sections, meta }
   }
 }
 

@@ -9,6 +9,7 @@ import { Replace } from "@/utils/typescript";
 const defaultLevelData = {
   level: "",
   title: "",
+  url: "/",
   promo: {
     urlImage: {
       mobile: "",
@@ -41,7 +42,7 @@ const formatOverlayCardsData = (cards: Array<OverlayCard>): Array<LevelObj> => {
     );
 
     // Replace fields with Strapi data
-    formattedCard.level = card?.url;
+    formattedCard.url = card?.url;
     formattedCard.title = card?.title;
     formattedCard.promo.urlImage.desktop = formatStrapiImage(
       card?.desktopImage

@@ -96,7 +96,7 @@ const SomosUteg: NextPageWithLayout = ({ sections, meta }: any) => {
           <div className="grid w-d:grid-cols-2 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
             {
               sections?.ourValues?.numbers?.map((item: any, i: number) => <section key={`section-numbers-${i}`}>
-                <NumbersPortalverse data={item} />
+                <NumbersPortalverse data={item} classNames="p-2 justify-center text-center" />
               </section>)
             }
           </div>

@@ -52,6 +52,10 @@ type BannerWrapperConfig = {
    * Action button
    */
   action: ButtonConfig;
+  /**
+   * Content position
+   */
+  position?: string;
 }
 
 

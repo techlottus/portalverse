@@ -13,7 +13,7 @@
       "title": "Niveles Educativos"
     },
     "modalities": {
-      "title": "Elige la modalidad de estudios adecuada para ti.",
+      "title": "Elige la modalidad de estudios adecuada para ti",
       "modalities": [
         { 
           "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_presencial_a7e546a436.jpg",
@@ -202,8 +202,8 @@
         "font": "light",
         "title": "UTEG 360",
         "subtitle": "Vive con nosotros la experiencia internacional de tu profesión",
-        "position": "",
-        "height": "350px",
+        "position": "left-bottom",
+        "height": "auto",
         "overlayWhite":false,
         "overlayDak": false,
         "button":{
@@ -250,8 +250,9 @@
       },
       "title": " ¡La experiencia educativa que transforma!",
       "subtitle": "",
-      "position": "middle",
-      "height": "350px",
+      "position": "left-bottom",
+      "font": "light",
+      "height": "auto",
       "overlayWhite":false,
       "overlayDak": false,
       "button":{

@@ -96,9 +96,11 @@
         "title": "Calendario escolar",
         "subtitle": "Consulta el calendario escolar del periodo actual",
         "position": "",
-        "height": "200px",
+        "height": "auto",
         "overlayWhite":false,
         "overlayDak": false,
+        "desktopRatio": "300/53",
+        "tabletRatio": "768/219",
         "button":{
           "id": "",
           "type": "outlined",
@@ -112,7 +114,7 @@
           "test": ""
         },
         "noAction": false,
-        "file": "https://drive.google.com/uc?export=view&id=1WXtLY22w6CQpqTnBeb5J1b7gw6ahc8Mw",
+        "file": "https://assets.staging.bedu.org/UTEG/calendario_2022_40109f1c7d.pdf",
         "fileNmae": "calendario",
         "redirect": "",
         "visible": true

@@ -165,7 +165,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
 
   const activeBulletSlide = (position: number) => setActive(position);
 
-  return <section className="relative z-0">
+  return <section className="relative z-0 shadow-lg">
     {/* desktop */}
     <div className="w-p:hidden">
       <Aspect ratio="2/1">
@@ -276,7 +276,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
           </Aspect>
           <div className="p-4 flex flex-col space-y-6">
             <h2
-              className="font-Poppins font-normal text-[32px] leading-10"
+              className="font-Poppins font-bold w-t:font-normal text-6 w-t:text-[32px] leading-8 w-t:leading-10"
             >
               {item.title}
             </h2>
@@ -290,7 +290,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
         </div>)
       }
     </section>
-    <div className={cn("w-full flex justify-center space-x-2 mt-4 pb-4 w-d:hidden w-t:hidden")}>
+    <div className={cn("w-full flex justify-center space-x-2 mt-4 pb-5 w-t:pb-4 w-d:hidden w-t:hidden")}>
       {
         slides.map((_: any, i: number) => <div key={`bullet-item-${i}`} onClick={() => activeBulletSlide(i)} className={cn("h-4 bg-[#DDDDDD] rounded-full cursor-pointer", { "w-4": i !== active, "w-8": i === active })} />)
       }

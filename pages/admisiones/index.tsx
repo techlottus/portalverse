@@ -51,11 +51,15 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
             </div>
             )
           }
-          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center mt-9">
-            <Button dark data={sections.head.button} onClick={() => navigate(sections.head.button.redirect)} />
-          </div>
+          {
+            sections?.head?.button ?
+              <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center mt-9">
+                <Button dark data={sections.head.button} onClick={() => navigate(sections.head.button.redirect)} />
+              </div>
+              : null
+          }
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
+        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mt-20">
           <Image
             alt={sections.head.image.desk.alt}
             src={sections.head.image.desk.src}

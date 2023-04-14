@@ -6,11 +6,11 @@
   },
   "sections": {
     "head": {
-      "title":"Inscríbete en UTEG",
-      "textIcons":[
+      "title": "Inscríbete en UTEG",
+      "textIcons": [
         {
           "icon": "https://https://assets.staging.bedu.org//UTEG/admisiones_55_aniversario_a566f278a2.svg",
-          "name": "aniversario55", 
+          "name": "aniversario55",
           "text": "Somos una universidad con 55 años de experiencia"
         },
         {
@@ -29,15 +29,6 @@
           "text": "+ de 10 tipos de internacionalización "
         }
       ],
-      "button": {
-        "id": "123",
-        "title": "Quiero más información",
-        "type": "primary",
-        "icon": "",
-        "isExpand": false,
-        "size":"small",
-        "redirect": "/admisiones/pedir-informacion"
-      },
       "image": {
         "desk": {
           "alt": "imagen",
@@ -52,7 +43,7 @@
     "requirements": {
       "title": "Requisitos de admisión",
       "tabs": {
-        "items":[
+        "items": [
           {
             "label": "Bachilleratos", "icons": { "primary": "", "duplicate": true }, "disabled": false,
             "content": {
@@ -72,7 +63,7 @@
                 }
               },
               "cards": [
-                { 
+                {
                   "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_presencial_d62b8a6d09.jpg",
                   "subtitle": "",
                   "title": "Presencial",
@@ -87,7 +78,7 @@
                   "background": false,
                   "wrapper": true
                 },
-                { 
+                {
                   "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_flex_8af4d733fb.jpg",
                   "subtitle": "",
                   "title": "UTEG Flex",
@@ -102,7 +93,7 @@
                   "background": false,
                   "wrapper": true
                 },
-                { 
+                {
                   "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_online_69599a8b38.jpg",
                   "subtitle": "",
                   "title": "UTEG Online",
@@ -133,7 +124,7 @@
                 "action": {"title": "Explora los programas", "type": "outlined", "icon": "", "isExpand": false, "route": "/oferta-educativa/bachillerato"}
               },
               "cards": [
-                { 
+                {
                   "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_presencial_d62b8a6d09.jpg",
                   "subtitle": "",
                   "title": "Presencial",
@@ -148,7 +139,7 @@
                   "background": false,
                   "wrapper": true
                 },
-                { 
+                {
                   "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_flex_8af4d733fb.jpg",
                   "subtitle": "",
                   "title": "UTEG Flex",
@@ -163,7 +154,7 @@
                   "background": false,
                   "wrapper": true
                 },
-                { 
+                {
                   "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_online_69599a8b38.jpg",
                   "subtitle": "",
                   "title": "UTEG Online",
@@ -182,7 +173,12 @@
             }
           },
           {
-            "label": "Maestrías", "icons": { "primary": "", "duplicate": true }, "disabled": false,
+            "label": "Maestrías",
+            "icons": {
+              "primary": "",
+              "duplicate": true
+            },
+            "disabled": false,
             "content": {
               "image": {
                 "alt": "imagen",
@@ -194,7 +190,7 @@
                 "action": {"title": "Explora los programas", "type": "outlined", "icon": "", "isExpand": false, "route": "/oferta-educativa/bachillerato"}
               },
               "cards": [
-                { 
+                {
                   "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_presencial_d62b8a6d09.jpg",
                   "subtitle": "",
                   "title": "Presencial",
@@ -209,7 +205,7 @@
                   "background": false,
                   "wrapper": true
                 },
-                { 
+                {
                   "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_flex_8af4d733fb.jpg",
                   "subtitle": "",
                   "title": "UTEG Flex",
@@ -224,7 +220,7 @@
                   "background": false,
                   "wrapper": true
                 },
-                { 
+                {
                   "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_online_69599a8b38.jpg",
                   "subtitle": "",
                   "title": "UTEG Online",
@@ -256,11 +252,11 @@
         "title": "UTEG 360",
         "subtitle": "Vive con nosotros la experiencia internacional de tu profesión. ",
         "position": "left-top",
-        "height": "342px",
-        "overlayWhite":false,
+        "height": "auto",
+        "overlayWhite": false,
         "overlayDak": false,
         "font": "light",
-        "button":{
+        "button": {
           "id": "",
           "type": "outlined",
           "title": "Continuar",
@@ -277,7 +273,7 @@
       }
     },
     "empleabilidad": {
-      "banner":{
+      "banner": {
         "image": {
           "desktop": "https://assets.staging.bedu.org/UTEG/admisiones_banner_empleabilidad_desktop_7da61effc1.jpg",
           "tablet": "https://assets.staging.bedu.org/UTEG/admisiones_banner_empleabilidad_tablet_a347d0898a.jpg",
@@ -287,11 +283,12 @@
         "subtitle": "¿Buscas empleo? Inscríbete en nuestra Bolsa de Trabajo.",
         "position": "right-top",
         "textPosition": "right_top",
-        "height": "294px",
-        "overlayWhite":false,
+        "height": "auto",
+        "overlayWhite": false,
         "overlayDak": false,
         "font": "light",
-        "button":{
+        "desktopRatio": "2/1",
+        "button": {
           "id": "",
           "type": "outlined",
           "title": "Continuar",
@@ -309,7 +306,7 @@
       }
     },
     "becas": {
-      "banner":{
+      "banner": {
         "image": {
           "desktop": "https://assets.staging.bedu.org/UTEG/admisiones_banner_becas_desktop_479c6a74f7.jpg",
           "tablet": "https://assets.staging.bedu.org/UTEG/admisiones_banner_becas_tablet_a2d3406295.jpg",
@@ -318,11 +315,12 @@
         "title": "Becas y programas de apoyo económico",
         "subtitle": "Conoce más sobre las opciones de ayuda que te ofrece UTEG para realizar tus estudios.",
         "position": "left-top",
-        "height": "294px",
-        "overlayWhite":false,
+        "height": "auto",
+        "overlayWhite": false,
         "overlayDak": false,
         "font": "light",
-        "button":{
+        "desktopRatio": "2/1",
+        "button": {
           "id": "",
           "type": "outlined",
           "title": "Continuar",
@@ -339,12 +337,12 @@
         "redirect": "/admisiones/becas"
       }
     },
-    "egresados":{
+    "egresados": {
       "title": "Historias de Vida en UTEG",
       "description": "Descubre las historias de vida de quienes, como tú, viven o vivieron en UTEG la experiencia de cumplir sus sueños.  ",
       "cards": [
-        { 
-          "image": "https://assets.staging.bedu.org/UTEG/admisiones_adrian_flores_9bd055aed6.jpg",    
+        {
+          "image": "https://assets.staging.bedu.org/UTEG/admisiones_adrian_flores_9bd055aed6.jpg",
           "subtitle": "ALUMNO EN DISEÑO DE MODAS",
           "title": "Adrián Flores",
           "text": "\"Gracias a UTEG, pude participar en el concurso Pierre Cardin Young Designers en México. Conocí muchas personas importantes y originales, y creo que ese fue otro de los regalos que tuve al participar en el concurso.\"",
@@ -353,7 +351,7 @@
           "islink": false,
           "background": true
         },
-        { 
+        {
           "image": "https://assets.staging.bedu.org/UTEG/admisiones_uriel_montes_ff1ce11276.jpg",
           "subtitle": "LIC. EN NUTRICIÓN",
           "title": "Uriel Montes",
@@ -364,10 +362,25 @@
           "background": true
         }
       ],
-      "button":{"title": "Descubre aquí más historias", "type": "primary", "icon": "", "isExpand": false, "redirect": "egresados/talento"},
-      "video": {"options": { "id": "75aA5Eo39og", "type": "single", "controls": true}, "dimensions": { "height": "400px"} }
+      "button": {
+        "title": "Descubre aquí más historias",
+        "type": "primary",
+        "icon": "",
+        "isExpand": false,
+        "redirect": "egresados/talento"
+      },
+      "video": {
+        "options": {
+          "id": "75aA5Eo39og",
+          "type": "single",
+          "controls": true
+        },
+        "dimensions": {
+          "height": "400px"
+        }
+      }
     },
-    "FAQ":{
+    "FAQ": {
       "title": "Preguntas frecuentes",
       "questions": [
         {
@@ -395,7 +408,13 @@
           "answer": "Sí, puedes realizar tu proceso de admisión en línea. Puede ser por WhatsApp o por medio de correo electrónico con alguno de los asesores. Te solicitarán tu nombre completo, fecha de nacimiento. Se te enviará la ficha de pago, enviar el comprobante de pago y luego se agendará una cita para la entrega de los documentos en el Campus ubicado en Héroes Ferrocarrileros 1325, Col. La Aurora, C.P. 44460, Guadalajara, Jalisco."
         }
       ],
-      "button":{"title": "Ver más preguntas", "type": "outlined", "icon": "", "isExpand": false, "redirect":"/contactanos/faq/general"}
+      "button": {
+        "title": "Ver más preguntas",
+        "type": "outlined",
+        "icon": "",
+        "isExpand": false,
+        "redirect": "/contactanos/faq/general"
+      }
     }
   }
 }
