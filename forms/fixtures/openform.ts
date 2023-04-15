@@ -4,11 +4,11 @@ import { SelectOptionConfig } from "@/types/Select.types"
 
 const OpenFormInit = {
   stepone: {
-    title: "¿Quieres conocer más de UANE?",
-    subtitle: "Elegir una universidad es una gran decisión y queremos orientarte en cada paso, comparte tus datos para que un asesor de admisiones te oriente a resolver todas tus dudas y puedas estar seguro de tu elección.",
+    title: "¿Quieres saber más sobre UTEG?",
+    subtitle: "Sabemos que elegir una universidad donde cumplir tus sueños puede ser una decisión muy seria y que quieres solucionar cualquier incertidumbre, dinos tus datos y un asesor de admisiones te orientará para resolver todas tus dudas y realizar una elección bien informada.",
     conditions: "Al llenar tus datos aceptas nuestro",
     modality: "¿Qué modalidad te interesa?",
-    privacyLink: { "link": "/docs/Aviso_Privacidad.pdf", "label": "Aviso de privacidad" },
+    privacyLink: { "link": "https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTEG/aviso_de_privacidad_UTEG_24_02_2022_1_9018cd9357.pdf?updated_at=2023-04-13T17:11:00.696Z", "label": "Aviso de privacidad" },
   },
   steptwo: {
     title: "Cuéntanos ¿Qué programa te interesa?",
@@ -39,14 +39,15 @@ const OpenFormInit = {
   steponecontinuos: {
     title: "Contáctanos e inscríbete",
     subtitle: "Llena el siguiente formulario para que te ayudemos a inscribirte en el curso de ",
-    conditions: "Al llenar tus datos aceptas nuestro Aviso de privacidad",
+    conditions: "Al llenar tus datos aceptas nuestro",
+    privacyLink: { "link": "https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTEG/aviso_de_privacidad_UTEG_24_02_2022_1_9018cd9357.pdf?updated_at=2023-04-13T17:11:00.696Z", "label": "Aviso de privacidad" },
   },
   steponecontinuoscontrols: {
     programs: "Curso seleccionado"
   },
   steponebewanted: {
-    title: "Regístrate, completa todos tus datos y haz match con la vacante de tus sueños",
-    description: ""
+    title: "Postúlate, y encuentra una oportunidad en nuestra bolsa de trabajo",
+    description: "Regístrate, completa todos tus datos y haz match con la vacante de tus sueños."
   }
 }
 

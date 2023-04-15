@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "title": "Maestría en Alta Dirección",
+    "description": "",
+    "keywords": ""
+  },
+  "config": {
+    "title": "Maestría en Alta Dirección",
+    "config": {
+      "nombre": "Maestría en Alta Dirección",
+      "modalidad": ["Presencial"],
+      "areaConocimiento": ["Negocios y Empresariales"],
+      "campus": [],
+      "nivel": ["Posgrado"],
+      "image": {
+        "src": "https://assets.staging.bedu.org/UTEG/oferta_card_alta_direccion_d3d0b254d5.jpg",
+        "alt": "maestria"
+      },
+      "curriculum": {
+        "Presencial": {
+            "Américas": "Maestria_en_Alta_Direccion_a8859ab8fd.pdf"
+        }
+      }
+    }
+  },
+  "sections": {
+    "head": {
+      "title": "Maestría en Alta Dirección",
+      "description": "Desarrollarás conocimientos, habilidades y actitudes necesarias para la toma de decisiones de alto nivel dentro de una organización, diseñando, aplicando y generando estrategias de venta y comercialización para el manejo eficaz del presupuesto, así como la actitud de responsabilidad en el ejercicio de un liderazgo que promueva el desarrollo humano.",
+      "image": {
+        "src": "https://assets.staging.bedu.org/UTEG/oferta_card_alta_direccion_d3d0b254d5.jpg",
+        "alt": "maestria"
+      }
+    },
+    "modalities": {
+      "title": "Modalidades disponibles en esta maestría:",
+      "tabs": {
+        "items": [
+          {
+            "label": "Modalidad Presencial",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://assets.staging.bedu.org/UTEG/oferta_perfil_ingreso_cd151fd87d.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/oferta_perfil_ingreso_cd151fd87d.png"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "Dirigido a licenciados /as en Administración, Administración de Instituciones Educativas, Administración de Empresas Turísticas, Mercadotecnia, Finanzas, Informática Administrativa, Contaduría, Psicología, etc.",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://assets.staging.bedu.org/UTEG/oferta_perfil_egreso_9efedde160.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/oferta_perfil_egreso_9efedde160.png"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "El egresado/a de la Maestría en Alta Dirección poseerá los conocimientos, habilidades y actitudes para la ejecución de la política y organización empresariales. \n\nConocerá las técnicas y ventajas del trabajo colaborativo, así como el manejo de los modelos y enfoques financieros corporativos para su aplicación en la toma de decisiones en la alta dirección de empresas.  \n\nDiseñará, aplicará y generará estrategias de venta y comercialización para el manejo eficaz del presupuesto, así como la actitud de responsabilidad en el ejercicio de un liderazgo que promueva el desarrollo humano.",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://assets.staging.bedu.org/UTEG/oferta_campo_laboral_9c7f94c46b.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/oferta_campo_laboral_9c7f94c46b.png"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "Áreas: empresas públicas y privadas. Actividades: diseño y ejecución de proyectos para la toma de decisiones y resolución de problemas. Desarrollo de recursos humanos con responsabilidad social. ",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://assets.staging.bedu.org/UTEG/oferta_requisitos_admision_ce1636dc61.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/oferta_requisitos_admision_ce1636dc61.png"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "\n\n• Acta de nacimiento original y 2 copias (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n• Certificado de licenciatura en buen estado original y tres copias. (Maestrías SICYT).\n\n• 3 copias del Título o acta de titulación no mayor a 1 año. (Maestrías SICYT).\n\n• Copia de certificado total de licenciatura, o copia de Título o copia de acta de titulación no mayor a 1 año. (Maestrías SEP).\n\n• 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n• 2 copia de la CURP.\n\n• 2 copia Credencial Oficial IFE o INE, o pasaporte.\n\n• Copia del Comprobante aspirante seleccionado Maestría (F-DA-82).",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          }
+        ],
+        "size": "medium"
+      }
+    },
+    "descarga": {
+      "id": "program_maestria",
+      "type": "primary",
+      "title": "Descarga el plan de estudios",
+      "size": "small",
+      "icon": "download",
+      "lyIcon": false,
+      "disabled": false,
+      "isExpand": false,
+      "tagOnClick": "testClick",
+      "test": ""
+    }
+  },
+  "form": {
+    "config": {
+      "level": { "hidden": true, "value": "maestria" },
+      "program": { "hidden": false, "value": "Administración" },
+      "modality": { "hidden": false },
+      "campus": { "hidden": false }
+    },
+    "copies": {
+      "stepone": {
+        "title": "Obtén informes sobre tu programa",
+        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+      }
+    }
+  }
+}

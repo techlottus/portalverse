@@ -7,19 +7,19 @@
   "sections":{
     "head": {
       "title": "Oferta Educativa",
-      "description": "Encuentra en UANE la licenciatura, ingeniería o posgrado que estás buscando y estudia con el respaldo y prestigio de una de las mejores universidades del país."
+      "description": "Disfruta de un ambiente educativo que estimula el aprendizaje y la colaboración. Con una amplia propuesta de programas de estudios de bachillerato, licenciatura y estudios de posgrado en modalidades que se acomodan a tus necesidades educativas. "
     },
     "offers": {
-      "title": "Busca tu nivel educativo"
+      "title": "Niveles Educativos"
     },
     "modalities": {
-      "title": "Estudia en la modalidad que más te convenga",
+      "title": "Elige la modalidad de estudios adecuada para ti",
       "modalities": [
         { 
-          "urlImage": "https://drive.google.com/uc?export=view&id=1LQ5gMlzjBHJRt_LD24p8rHzHxMb_bYzP",
+          "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_presencial_a7e546a436.jpg",
           "subtitle": "",
           "title": "Presencial",
-          "text": "Asiste a clases y relaciónate en persona con profesores y alumnos en cualquiera de nuestros campus",
+          "text": "Diáloga cara a cara con tus profesores y compañeros de clase. Accede al conocimiento en un ambiente colaborativo y de intercambio de ideas.",
           "border": true,
           "allContent": true,
           "height": "",
@@ -31,10 +31,10 @@
           "wrapper": true
         },
         { 
-          "urlImage": "https://drive.google.com/uc?export=view&id=1s_95yEEf8AtHRcvciNowBl5nIBwQZ7Ui",
+          "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_felx_a1b21905fe.jpg",
           "subtitle": "",
-          "title": "Flex",
-          "text": "Estudia en una modalidad híbrida, con clases remotas y presenciales",
+          "title": "UTEG Flex",
+          "text": "Recibe clases cada sábado. Combina actividades virtuales y presenciales en horarios que se ajustan a tus necesidades.",
           "border": true,
           "allContent": true,
           "height": "",
@@ -46,10 +46,10 @@
           "wrapper": true
         },
         { 
-          "urlImage": "https://drive.google.com/uc?export=view&id=1_m_d-VlFYnVRS9wgVpi3d_tZY15ZOwK4",
+          "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_online_c7622ead85.jpg",
           "subtitle": "",
-          "title": "En línea",
-          "text": "Aprovecha tu tiempo al máximo y obtén tu título estudiando desde nuestra plataforma",
+          "title": "UTEG online",
+          "text": "Estudia en tus términos:desde cualquier lugar y sin horarios rígidos. Conéctate al conocimiento con nuestras plataformas de aprendizaje.",
           "border": true,
           "allContent": true,
           "height": "",
@@ -70,7 +70,7 @@
             "mobile": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms=",
             "desktop": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms="
           },
-          "text": "Negocios",
+          "text": "Gastronomía",
           "icon": "",
           "color": "red",
           "opacity": "multiply",
@@ -86,7 +86,7 @@
             "mobile": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms=",
             "desktop": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms="
           },
-          "text": "Ingeniería",
+          "text": "Económico-Administrativas",
           "icon": "",
           "color": "#FADB62",
           "opacity": "multiply",
@@ -102,7 +102,7 @@
             "mobile": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms=",
             "desktop": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms="
           },
-          "text": "Ciencias Sociales",
+          "text": "Arquitectura y Diseño",
           "icon": "",
           "color": "#7DF1ED",
           "opacity": "multiply",
@@ -111,14 +111,14 @@
           "nobackground": true,
           "redirect": "",
           "isShadowColor": true,
-          "shadowColor": "blue-left"
+          "shadowColor": "blue-right"
         },
         {
           "urlImage": {
             "mobile": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms=",
             "desktop": "https://media.istockphoto.com/id/105344728/es/v%C3%ADdeo/tirando-tapas-de-graduaci%C3%B3n-en-el-aire.jpg?s=640x640&k=20&c=apAf3-4NZLFD-Yzp6zFZAe4G0LlGwHl_FtD1_caV2ms="
           },
-          "text": "Comunicación y diseño",
+          "text": "Ingenierías",
           "icon": "",
           "color": "#7DF1ED",
           "opacity": "multiply",
@@ -166,9 +166,9 @@
     "bannerTest":{
       "banner": {
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1Y-NyCheOPilvlVa45pHQQ97mp-a-rQGy",
-          "mobile": "https://drive.google.com/uc?export=view&id=1XFnp_Ufc-rAqZxZ2KM60ogWyuS2vdOOi",
-          "tablet": "https://drive.google.com/uc?export=view&id=1x00pvwXu6r5KQjR5-zEuV3rbhsaboDFl"
+          "desktop": "https://assets.staging.bedu.org/UTEG/oferta_banner_UTEG_360_desktop_b31611171f.jpg",
+          "mobile": "https://assets.staging.bedu.org/UTEG/oferta_banner_uteg_360_movil_be97a8c285.jpg",
+          "tablet": "https://assets.staging.bedu.org/UTEG/oferta_banner_uteg_360_tablet_3c79b68bdb.jpg"
         },
         "title": "¿Aún no decides qué estudiar?",
         "subtitle": "Te ayudamos a decidir qué rumbo profesional tomar",
@@ -195,14 +195,15 @@
     "bannerInternacionalizacion": {
       "banner": {
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1Y_edCTwyeAXRGkcjqf5V2S8QEyVYaENW",
-          "mobile": "https://drive.google.com/uc?export=view&id=1PZURny8POJsMYHamJycNKgM3LmxoMUiK",
-          "tablet": "https://drive.google.com/uc?export=view&id=1TpgDT_hQIJ0hew0WPp40M21oURKnD9B_"
+          "desktop": "https://assets.staging.bedu.org/UTEG/oferta_banner_UTEG_360_desktop_b31611171f.jpg",
+          "mobile": "https://assets.staging.bedu.org/UTEG/oferta_banner_uteg_360_movil_be97a8c285.jpg",
+          "tablet": "https://assets.staging.bedu.org/UTEG/oferta_banner_uteg_360_tablet_3c79b68bdb.jpg"
         },
-        "title": "UANE  Internacional",
-        "subtitle": "Agrega experiencias internacionales a tus estudios",
+        "font": "light",
+        "title": "UTEG 360",
+        "subtitle": "Vive con nosotros la experiencia internacional de tu profesión",
         "position": "left-bottom",
-        "height": "350px",
+        "height": "auto",
         "overlayWhite":false,
         "overlayDak": false,
         "button":{
@@ -223,34 +224,35 @@
     },
     "areasConocimiento": [
       {
-        "title": "Económico - Administrativo"
+        "title": "Gastronomía"
+      },
+      {
+        "title": "Económico-Administrativas"
+      },
+      {
+        "title": "Arquitectura y Diseño"
+      },
+      {
+        "title": "Ingenierías"
+      },
+      {
+        "title": "Ciencias de la salud"
       },
       {
         "title": "Humanidades"
-      },
-      {
-        "title": "Ciencias Sociales"
-      },
-      {
-        "title": "Ciencias Exactas"
-      },
-      {
-        "title": "Ciencias Biológicas"
-      },
-      {
-        "title": "Ciencias de la Salud"
       }
     ],
     "bannerParche": {
       "image": {
-        "desktop": "https://drive.google.com/uc?export=view&id=1lmzq0OxTZmK_Ukzq0s0dDsyvUGKwrvFX",
-        "mobile": "https://drive.google.com/uc?export=view&id=1lmzq0OxTZmK_Ukzq0s0dDsyvUGKwrvFX",
-        "tablet": "https://drive.google.com/uc?export=view&id=1lmzq0OxTZmK_Ukzq0s0dDsyvUGKwrvFX"
+        "desktop": "https://assets.staging.bedu.org/UTEG/oferta_banner_UTEG_360_desktop_b31611171f.jpg",
+        "mobile": "https://assets.staging.bedu.org/UTEG/oferta_banner_uteg_360_movil_be97a8c285.jpg",
+        "tablet": "https://assets.staging.bedu.org/UTEG/oferta_banner_uteg_360_tablet_3c79b68bdb.jpg"
       },
       "title": " ¡La experiencia educativa que transforma!",
       "subtitle": "",
-      "position": "middle",
-      "height": "350px",
+      "position": "left-bottom",
+      "font": "light",
+      "height": "auto",
       "overlayWhite":false,
       "overlayDak": false,
       "button":{

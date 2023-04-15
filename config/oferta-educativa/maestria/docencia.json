@@ -9,18 +9,16 @@
     "config": {
       "nombre": "Maestría en Docencia",
       "modalidad": ["Presencial"],
-      "areaConocimiento": ["Ciencias Sociales"],
-      "campus": ["Saltillo", "Piedras Negras", "Torreón"],
+        "areaConocimiento": ["Jurídicas y Sociales"],
+        "campus": ["Américas"],
       "nivel": ["Posgrado"],
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1qd2xPLTXKkhCPofxw3o1h1Fg1pCVViuq",
+        "src": "https://assets.staging.bedu.org/UTEG/oferta_card_maestria_docencia_5a293ad979.jpg",
         "alt": "maestria"
       },
       "curriculum": {
         "Presencial": {
-          "Piedras Negras": "1Z5Q__hqpeHGsBI4ZcbMnGH1FDEClKjIO",
-          "Saltillo": "1OfYnyuM_Ikpa0HolEEpm0LPll4zl47p1",
-          "Torreón": "1pHEKkZWB1vfLIxUmbA94u3TO1cG90ETv"
+            "Américas": "Maestria_en_Docencia_2011ae5a9d.pdf"
         }
       }
     }
@@ -28,9 +26,9 @@
   "sections": {
     "head": {
       "title": "Maestría en Docencia",
-      "description": "La Maestría en Docencia permite a nuestros aspirantes que transmitan conocimientos, construyan valores, vivan el crecimiento, desarrollen la personalidad y la capacidad para tomar decisiones. Plantean retos y desafíos. La vocación es la base que necesita todo aquel que quiere dedicarse a la docencia.",
+      "description": "Desarrollarás competencias para la realización de propuestas innovadoras en el contexto educativo, teniendo como punto de partida las nuevas tendencias en la educación. Tendrás las habilidades y destrezas necesarias para asumir los retos a los que se enfrenta el docente del siglo XXI, incluyendo la apropiación de las herramientas tecnológicas.",
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1qd2xPLTXKkhCPofxw3o1h1Fg1pCVViuq",
+        "src": "https://assets.staging.bedu.org/UTEG/oferta_card_maestria_docencia_5a293ad979.jpg",
         "alt": "maestria"
       }
     },
@@ -39,44 +37,46 @@
       "tabs": {
         "items": [
           {
-            "label": "Modalidad Presencial", "icons": { "primary": "", "duplicate": false}, "disabled": false,
+            "label": "Modalidad Online",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
             "content": {
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
-                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/oferta_perfil_ingreso_cd151fd87d.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/oferta_perfil_ingreso_cd151fd87d.png"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "Este programa está dirigido a cualquier profesional que se dedique a la Docencia.\n\nRequisitos de ingreso: \n\n• Los aspirantes a cursar la Maestría deberán cubrir los siguientes requisitos:\n\n• Tener experiencia mínima de dos años en Docencia.\n\n• Título profesional, carta de pasante o documento afín.\n\n• Aprobar la entrevista en el departamento de postgrado.\n\n• Acreditar la documentación y pagos correspondientes.",
-                  "backgroundColor": "#8B9BA3"
+                  "text": "Esta maestría está dirigida a profesores de nivel medio superior o superior, preferentemente en ejercicio, a quienes poseen un título de licenciatura y vocación hacia la docencia.",
+                  "backgroundColor": "#1B2D68"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
-                  "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/oferta_perfil_egreso_9efedde160.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/oferta_perfil_egreso_9efedde160.png"
                   },
                   "title": "Perfil de egreso",
-                  "text": "El egresado de este programa podrá ser capaz de aplicar estrategias didácticas y educativas para lograr el aprendizaje significativo de los estudiantes, a través del diseño y planeación de programas académicos, evaluación del conocimiento o desempeño del estudiante, así como la oportunidad de desarrollar proyectos de investigación educativa para la mejora continua del docente",
-                  "backgroundColor": "#B0003C"
+                  "text": "Los egresados/as de esta maestría pueden desempeñarse en las funciones sustantivas de la docencia, investigación y extensión.\n\nPrincipales modelos, teorías, métodos y técnicas pedagógicas para comprender, interpretar y evaluar los fenómenos relacionados con la práctica de la educación inclusiva, tomando en cuenta los niveles, tipos y modalidades educativas.\n\nReferentes conceptuales-metodológicos e instrumentales de vanguardia y sus repercusiones sociales y educativas en el ámbito pedagógico-didáctico y curricular para el tratamiento didáctico pedagógico de la diversidad.",
+                  "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/oferta_campo_laboral_9c7f94c46b.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/oferta_campo_laboral_9c7f94c46b.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "El egresado de la Maestría en Salud Ocupacional de UANE podrá ejercer en:\n\n • Organizaciones públicas como instituciones de salud \n\n • Organizaciones privadas como la industria alimentaria, minería, automotriz, agrícola, etc.",
-                  "backgroundColor": "#E84537"
+                  "text": "Actividades: incidencia en las funciones universitarias, desarrollo y práctica de la docencia, gestión de la tecnología para la ejecución de procesos pedagógicos. Investigación.",
+                  "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/oferta_requisitos_admision_ce1636dc61.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/oferta_requisitos_admision_ce1636dc61.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento original del cajero reciente y 2 copias\n\n• Copia fiel del título (Constancia de trámite en caso de aún no tener el título)\n\n• Copia de cédula (traer original para copia)\n\n• Impresión de CURP directo de intenet sin ampliación\n\n• CV y Constancia laboral\n\n• Fotografías (Preguntar por especificaciones)\n\n• Solicitud de Admisión",
-                  "backgroundColor": "#00BEB4"
+                  "text": "\n\n• Acta de nacimiento original y 2 copias (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n• Certificado de licenciatura en buen estado original y tres copias. (Maestrías SICYT).\n\n• 3 copias del Título o acta de titulación no mayor a 1 año. (Maestrías SICYT).\n\n• Copia de certificado total de licenciatura, o copia de Título o copia de acta de titulación no mayor a 1 año. (Maestrías SEP).\n\n• 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n• 2 copia de la CURP.\n\n• 2 copia Credencial Oficial IFE o INE, o pasaporte.\n\n• Copia del Comprobante aspirante seleccionado Maestría (F-DA-82).",
+                  "backgroundColor": "#EEAA01"
                 }
               ],
               "wrapper": false
@@ -102,7 +102,7 @@
   "form": {
     "config": {
       "level": { "hidden": true, "value": "maestria" },
-      "program": { "hidden": false, "value": "Docencia" },
+      "program": { "hidden": false, "value": "Administración" },
       "modality": { "hidden": false },
       "campus": { "hidden": false }
     },

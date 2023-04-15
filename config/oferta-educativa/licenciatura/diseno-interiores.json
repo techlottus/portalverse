@@ -1,0 +1,116 @@
+{
+    "meta": {
+      "title": "Licenciatura en Diseño de Interiores y Ambientación",
+      "description": "",
+      "keywords": ""
+    },
+    "config": {
+      "title": "Licenciatura en Diseño de Interiores y Ambientación",
+      "config": {
+        "nombre": "Licenciatura en Diseño de Interiores y Ambientación",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Arquitectura y Diseño"],
+        "campus": ["Américas"],
+        "nivel": ["Licenciatura"],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_diseno_interiores_desk_cd21d891f1.jpg",
+          "alt": "licenciatura"
+        },
+        "curriculum": {
+          "Presencial": {
+            "Américas": "Lic_en_Diseno_de_Interiores_Presencial_e8acafaa3d.pdf"
+          }
+        }
+      }
+    },
+    "sections": {
+      "head": {
+        "title": "Licenciatura en Diseño de Interiores y Ambientación",
+        "description": "El Profesional del Diseño de Interiores y Ambientación está involucrado en diversas áreas productivas, enfocado en las demandas para el acondicionamiento de espacios para la vivienda, trabajo, cultura, educación, gobierno, religión, salud, diversión y todos los demás ámbitos del hábitat humano que la sociedad precise. ",
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_diseno_interiores_desk_cd21d891f1.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "modalities": {
+        "title": "Modalidades disponibles en esta licenciatura:",
+        "tabs": {
+          "items": [
+            {
+              "label": "Presencial",
+              "icons": { "primary": "", "duplicate": false },
+              "disabled": false,
+              "content": {
+                "cards": [
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
+                    },
+                    "title": "Perfil de ingreso",
+                    "text": "El aspirante en la licenciatura en Diseño de Interiores y ambientación debe:\n\n• Contar con una fuerte capacidad de observación, conocimientos básicos orientados a aspectos creativos.                   \n\n• Poseer un sentido de la percepción y el análisis desarrollado.                    \n\n• Contar con una capacidad de observación y análisis para el desarrollo proyectual del contexto socio-cultural                   \n\n• Tener la habilidad de expresarse gráfica y verbalmente.                   \n\n• Ser hábil para dibujar con imaginación, innovación e inventiva plástica.                  \n\n• Ser organizado y disciplinado.",
+                    "backgroundColor": "#1B2D68"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
+                    },
+                    "title": "Perfil de egreso",
+                    "text": "Es un profesional capaz de aportar ideas creativas para soluciones de diseño y ambientación de espacios, que reflejen identidad.\n\nSe distingue por su iniciativa y la creatividad mediante una actitud propositiva e innovadora y ser promotor de proyectos de inversión, en los sectores público y la iniciativa privada.\n\nResuelve problemas de espacios en sus diversos géneros, que surjan de la sociedad, aportando soluciones funcionales, útiles y estéticas, así como la capacidad para modificarlos y cambiarles de función de ser requerido.",
+                    "backgroundColor": "#C31433"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
+                    },
+                    "title": "Campo Laboral",
+                    "text": "Áreas: despachos de arquitectos, urbanistas, ingenieros civiles, promotores turísticos y de vivienda.\n\nActividades:  diseño y adecuación de espacios interiores y exteriores, diseño de mobiliario y accesorios para espacios específicos. ",
+                    "backgroundColor": "#4470B1"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
+                    },
+                    "title": "Requisitos de admisión",
+                    "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
+                    "backgroundColor": "#EEAA01"
+                  }
+                ],
+                "wrapper": false
+              }
+            }
+          ],
+          "size": "medium"
+        }
+      },
+      "descarga": {
+        "id": "program_licenciatura",
+        "type": "primary",
+        "title": "Descarga el plan de estudios",
+        "size": "small",
+        "icon": "download",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "testClick",
+        "test": ""
+      }
+    },
+    "form": {
+      "config": {
+        "level": { "hidden": true, "value": "licenciatura" },
+        "program": { "hidden": false, "value": "Licenciatura en Diseño de Interiores y Ambientación" },
+        "modality": { "hidden": false },
+        "campus": { "hidden": false }
+      },
+      "copies": {
+        "stepone": {
+          "title": "Obtén informes sobre tu programa",
+          "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+        }
+      }
+    }
+}

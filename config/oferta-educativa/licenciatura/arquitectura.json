@@ -1,117 +1,117 @@
 {
-  "meta": {
-    "title": "Licenciatura en Arquitectura",
-    "description": "",
-    "keywords": ""
-  },
-  "config": {
-    "title": "Licenciatura en Arquitectura",
+    "meta": {
+      "title": "Licenciatura en Arquitectura",
+      "description": "",
+      "keywords": ""
+    },
     "config": {
-      "nombre": "Licenciatura en Arquitectura",
-      "modalidad": ["Presencial"],
-      "areaConocimiento": ["Ciencias Sociales"],
-      "campus": [ "Saltillo", "Monclova", "Monterrey", "Torreón" ],
-      "nivel": ["Licenciatura"],
-      "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1XsYl_oQybO6fUDX5Agi8bfUalpwPsOhv",
-        "alt": "licenciatura"
+      "title": "Licenciatura en Arquitectura",
+      "config": {
+        "nombre": "Licenciatura en Arquitectura",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Arquitectura y Diseño"],
+        "campus": ["Américas"],
+        "nivel": ["Licenciatura"],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_arquitectura_desk_a70ab65b3c.jpg",
+          "alt": "licenciatura"
+        },
+        "curriculum": {
+          "Presencial": {
+            "Américas": "Lic_en_Arquitectura_Presencial_2325104799.pdf"
+          }
+        }
+      }
+    },
+    "sections": {
+      "head": {
+        "title": "Licenciatura en Arquitectura",
+        "description": "La Licenciatura en Arquitectura es la carrera donde se forman profesionistas para crear, diseñar, comprender y ejecutar el acto de ordenar y construir el espacio habitable sustentable, con responsabilidad e integración al contexto urbano, equilibrando emoción, razón e intuición, y dando forma física a las necesidades de la sociedad y el individuo.",
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_arquitectura_desk_a70ab65b3c.jpg",
+          "alt": "licenciatura"
+        }
       },
-      "curriculum": {
-        "Presencial": {
-          "Saltillo": "1TQWzkTHuINFqqY9WVegaHDFxjaxJPpZU",
-          "Monclova": "1nLspEW0ALDqFcbz1X7CpedhA519g_KbF",
-          "Monterrey": "1lAunMk54QbmzdnhIpQgcgQaYmc-INCIo",
-          "Torreón": "1gZ_F0OxyR9NRarQ3DebrWMwTnSuXL6XL"
+      "modalities": {
+        "title": "Modalidades disponibles en esta licenciatura:",
+        "tabs": {
+          "items": [
+            {
+              "label": "Presencial",
+              "icons": { "primary": "", "duplicate": false },
+              "disabled": false,
+              "content": {
+                "cards": [
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
+                    },
+                    "title": "Perfil de ingreso",
+                    "text": "<p>El aspirante de la licenciatura en Arquitectura debe contar preferentemente con:<br /><span>&bull;&nbsp;</span>Intereses Humanistas y art&iacute;sticos.<br /><span >&bull;&nbsp;</span>Gusto por el c&aacute;lculo y la t&eacute;cnica.<br /><span >&bull;&nbsp;</span>Aptitudes en la Habilidad para el dibujo.<br /><span>&bull;&nbsp;</span>Captar y representar formas y partes.<br /><span>&bull;&nbsp;</span>Capacidad de an&aacute;lisis y s&iacute;ntesis, facilidad para el c&aacute;lculo matem&aacute;tico y la f&iacute;sica, imaginaci&oacute;n e inventiva pl&aacute;stica.<br /><span>&bull;&nbsp;</span>Actitudes como observador, perceptivo de su entorno, interesado por los detalles y por la precisi&oacute;n, organizado, eficiente, disciplinado, consciente y respetuoso del patrimonio cultural.</p>",
+                    "backgroundColor": "#1B2D68"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
+                    },
+                    "title": "Perfil de egreso",
+                    "text": "<p><span>Conocimientos</span></p><p><span>&bull; Capacidad de producci&oacute;n de bienes art&iacute;stico-culturales que sinteticen la teor&iacute;a y la pr&aacute;ctica en la fotograf&iacute;a contempor&aacute;nea.</span></p><p><span>&bull; Dominio en el uso adecuado de las herramientas y materiales particulares del &aacute;rea creativa de su elecci&oacute;n.</span></p><p><span>Habilidades</span></p><p><span>&bull; Gran desarrollo sensitivo-intelectivo integral.</span></p><p><span>&bull; Capacidad de comunicaci&oacute;n a trav&eacute;s de la creaci&oacute;n fotogr&aacute;fica.</span></p><p><span>Actitudes</span></p><p><span>&bull; Fuerte vinculaci&oacute;n con su entorno social, siendo capaz de reflexionar sobre &eacute;l, interpret&aacute;ndolo y transform&aacute;ndolo art&iacute;stica y est&eacute;ticamente.</span></p>",
+                    "backgroundColor": "#C31433"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
+                    },
+                    "title": "Campo Laboral",
+                    "text": "Áreas: creación de viviendas, uso del espacio público.<br>Actividades: habilidades para la resolución de problemas referidos a los espacios habitables de vivienda, ambientales y ecológicos, usos de espacios, utilización eficiente de materiales naturales o artificiales, conservación del patrimonio edificado y proyectos con visión sustentable. ",
+                    "backgroundColor": "#4470B1"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
+                    },
+                    "title": "Requisitos de admisión",
+                    "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
+                    "backgroundColor": "#EEAA01"
+                  }
+                ],
+                "wrapper": false
+              }
+            }
+          ],
+          "size": "medium"
+        }
+      },
+      "descarga": {
+        "id": "program_licenciatura",
+        "type": "primary",
+        "title": "Descarga el plan de estudios",
+        "size": "small",
+        "icon": "download",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "testClick",
+        "test": ""
+      }
+    },
+    "form": {
+      "config": {
+        "level": { "hidden": true, "value": "licenciatura" },
+        "program": { "hidden": false, "value": "Licenciatura en Arquitectura" },
+        "modality": { "hidden": false },
+        "campus": { "hidden": false }
+      },
+      "copies": {
+        "stepone": {
+          "title": "Obtén informes sobre tu programa",
+          "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
         }
       }
     }
-  },
-  "sections": {
-    "head": {
-      "title": "Arquitectura",
-      "description": "Diseña y dirige o supervisa espacios arquitectónicos que cumplan las necesidades de la sociedad, proporciona  construcciones que sean estéticas, funcionales y sustentables.",
-      "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1XsYl_oQybO6fUDX5Agi8bfUalpwPsOhv",
-        "alt": "licenciatura"
-      }
-    },
-    "modalities": {
-      "title": "Modalidades disponibles en esta licenciatura:",
-      "tabs": {
-        "items": [
-          {
-            "label": "Modalidad Presencial", "icons": { "primary": "", "duplicate": false}, "disabled": false,
-            "content": {
-              "cards": [
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
-                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
-                  },
-                  "title": "Perfil de ingreso",
-                  "text": "Los aspirantes a ingresar al programa de Arquitectura preferentemente deberán mostrar una inclinación a las ciencias físico-matemáticas y humanidades, contar con capacidad analítica y deductiva, gran interés por el arte y la cultura, así como comprensión y visualización espacial, capacidad de síntesis y concretar pensamientos abstractos, interés por la ecología y la sustentabilidad, conocimientos elementales sobre representación gráfica, habilidad numérica y conocimientos de inglés.",
-                  "backgroundColor": "#8B9BA3"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
-                  },
-                  "title": "Perfil de egreso",
-                  "text": "Tendrás la capacidad y habilidad para diseñar, supervisar, dirigir y administrar espacios arquitectónicos que cumplan las necesidades de la sociedad, con el uso de los avances tecnológicos y las diferentes tendencias en diseño y arquitectura para proporcionar construcciones que sean estéticas, funcionales y sustentables",
-                  "backgroundColor": "#B0003C"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
-                  },
-                  "title": "Campo Laboral",
-                  "text": "El Arquitecto egresado de UANE podrá trabajar en:\nDespachos de arquitectos realizando:\n\n• Representaciones gráficas y digitales de proyectos arquitectónicos.\n\n•  Supervisión de construcción.\n\n• Admistración de la construcción.\n\n• Diseño de la construcción.",
-                  "backgroundColor": "#E84537"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
-                  },
-                  "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento reciente, original del cajero y 2 copias.\n\n• Certificado de secundaria legalizado original y dos copias.\n\n• Certificado de preparatoria legalizado original y 2 copias con su carta de autenticidad. (En caso de no contar con original, presentar constancia de que está en trámite).\n\n• CURP copia.\n\nEn caso de equivalencia\n\n• Certificado parcial de estudios legalizado original con 2 copias y carta de autenticidad.\n\n• 4 fotografías tamaño infantil y 4 tamaño credencial, ambas blanco y negro, papel mate no instantáneas.\n\n• Carta de buena salud expedida por institución pública o privada.",
-                  "backgroundColor": "#00BEB4"
-                }
-              ],
-              "wrapper": false
-            }
-          }
-        ],
-        "size": "medium"
-      }
-    },
-    "descarga": {
-      "id": "program_licenciatura",
-      "type": "primary",
-      "title": "Descarga el plan de estudios",
-      "size": "small",
-      "icon": "download",
-      "lyIcon": false,
-      "disabled": false,
-      "isExpand": false,
-      "tagOnClick": "testClick",
-      "test": ""
-    }
-  },
-  "form": {
-    "config": {
-      "level": { "hidden": true, "value": "licenciatura" },
-      "program": { "hidden": false, "value": "Arquitectura" },
-      "modality": { "hidden": false },
-      "campus": { "hidden": false }
-    },
-    "copies": {
-      "stepone": {
-        "title": "Obtén informes sobre tu programa",
-        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
-      }
-    }
   }
-}
+  

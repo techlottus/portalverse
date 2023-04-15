@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "UANE - Experiencia que transforma, Inscríbete",
+    "title": "UTEG VA CONTIGO",
     "description": "Conoce todos los programas académicos de UANE: Bachillerato, Licenciaturas, Ingenierías, Maestrídas, Especialidades, Doctorados y Programas Internacionales",
     "keywords": ""
   },
@@ -13,7 +13,7 @@
         "iconright": "arrow_forward_ios", 
         "slides": [
           {
-            "title": "It´s a match!", 
+            "title": "It's a match!", 
             "text": "¡Enamórate de nuestra nueva página web!",
             "urlImage": {
               "mobile": "https://drive.google.com/uc?export=view&id=1wFK6Femg-40TKITbTrdDYgW3eeAbej4D",
@@ -101,7 +101,7 @@
       "button": {}
     },
     "oferta": {
-      "title": "¿Qué me ofrece UANE para estudiar?",
+      "title": "¿Qué me ofrece UTEG para estudiar?",
       "levels": [
         {
           "level": "oferta-educativa/bachillerato/bachillerato",
@@ -235,10 +235,10 @@
       "redirect": "/nosotros/internacionalizacion"
     },
     "numbers":[
-      {"maxNumber": 8, "icon": "apartment", "prefix": "", "suffix": "", "title": "Campus en el país", "body": "", "container": false, "isShadowColor": true, "bordered": true, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
-      {"maxNumber": 48, "icon": "manage_history", "prefix": "+", "suffix": "", "title": "Años de experiencia", "body": "", "container": false, "isShadowColor": true, "bordered": true, "typeShadowColor": "red-pastel-right", "boxShadow": false},
-      {"maxNumber": 12500, "icon": "group", "prefix": "+", "suffix": "", "title": "Alumnos Inscritos", "body": "", "container": false, "isShadowColor": true, "bordered": true, "typeShadowColor": "gray-pastel-right", "boxShadow": false},
-      {"maxNumber": 48000, "icon": "history_edu", "prefix": "+", "suffix": "", "title": "Egresados", "body": "", "container": false, "isShadowColor": true, "bordered": true, "typeShadowColor": "yellow-pastel-right", "boxShadow": false}
+      {"maxNumber": 13000, "icon": "group", "prefix": "", "suffix": "", "title": "Becas otorgadas", "body": "Estamos comprometidos con el futuro de los jóvenes en México.", "container": false, "isShadowColor": true, "bordered": true, "typeShadowColor": "#1B2D68", "boxShadow": false},
+      {"maxNumber": 10, "icon": "group", "prefix": "+", "suffix": "", "title": "Alianzas globales", "body": "Amplía tus skills profesionales con una perspectiva internacional.", "container": false, "isShadowColor": true, "bordered": true, "typeShadowColor": "#C31433", "boxShadow": false},
+      {"maxNumber": 8, "icon": "group", "prefix": "", "suffix": "", "title": "Planteles", "body": "Con excelentes ubicaciones que nos mantienen cerca de ti.", "container": false, "isShadowColor": true, "bordered": true, "typeShadowColor": "#4470B1", "boxShadow": false},
+      {"maxNumber": 45000, "icon": "group", "prefix": "+", "suffix": "", "title": "Egresados", "body": "Talentosos profesionales que transforman la sociedad. ", "container": false, "isShadowColor": true, "bordered": true, "typeShadowColor": "#EEAA01", "boxShadow": false}
     ],
     "vozUane": {
       "title": "Voz UANE blog",
@@ -338,9 +338,9 @@
       "redirect": "/voz-uane/podcast"
     },
     "descubre": {
-      "title": "Descubre más de la vida UANE",
+      "title": "Vive la experiencia UTEG",
       "options": {
-        "id": "DxJpI7jdB9Q",
+        "id": "md9RlHIspXA",
         "type": "single",
         "controls": true
       },
@@ -514,7 +514,7 @@
       "button": {
         "id": "",
         "type": "",
-        "title": "Campus",
+        "title": "Planteles",
         "size": "small",
         "icon": "",
         "lyIcon": false,
@@ -522,7 +522,7 @@
         "isExpand": false,
         "tagOnClick": "",
         "test": "",
-        "redirect": "/nosotros/campus"
+        "redirect": "/nosotros/planteles"
       }
     }
   }

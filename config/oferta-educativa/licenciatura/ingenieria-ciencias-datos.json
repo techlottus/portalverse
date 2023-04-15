@@ -1,0 +1,114 @@
+{
+    "meta": {
+      "title": "Ingeniería en Ciencia de Datos",
+      "description": "",
+      "keywords": ""
+    },
+    "config": {
+      "title": "Ingeniería en Ciencia de Datos",
+      "config": {
+        "nombre": "Ingeniería en Ciencia de Datos",
+        "modalidad": ["Online"],
+        "areaConocimiento": ["Económico - Administrativo"],
+        "campus": [""],
+        "nivel": ["Licenciatura"],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_ciencias_datos_desk_3273cce2bd.jpg",
+          "alt": "licenciatura"
+        },
+        "curriculum": {
+          "Online": "Lic_en_Ingenieria_en_Ciencias_de_Datos_Online_4e50e0c7ee.pdf"
+        }
+      }
+    },
+    "sections": {
+      "head": {
+        "title": "Ingeniería en Ciencia de Datos",
+        "description": "La carrera en Ingeniería en Ciencia de Datos forma profesionales que analizan y procesan datos estructurados y no estructurados empleando métodos matemáticos, estadísticos, de inteligencia artificial y técnicas innovadoras.  Diseña nuevos modelos para el análisis de gran cantidad de información para cualquier tipo de organización.",
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_ciencias_datos_desk_3273cce2bd.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "modalities": {
+        "title": "Modalidades disponibles en esta licenciatura:",
+        "tabs": {
+          "items": [
+            {
+              "label": "Online",
+              "icons": { "primary": "", "duplicate": false },
+              "disabled": false,
+              "content": {
+                "cards": [
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
+                    },
+                    "title": "Perfil de ingreso",
+                    "text": "El aspirante para ingresar a la Licenciatura en Ingeniería en Ciencias de Datos deberá contar con los siguientes conocimientos:\n\n• Método científico y problemas sociales.\n\n• Uso de tecnologías de la información y la comunicación, así como manejo de equipos de cómputo y electrónicos.\n\n• Expresión oral / escrita, investigación, comunicación efectiva y liderazgo de grupos de trabajo.\n\n• Razonamiento lógico, solución de problemas con base en principios, leyes y conceptos.\n\n• Desarrollo de pensamiento crítico y constructivo.",
+                    "backgroundColor": "#1B2D68"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
+                    },
+                    "title": "Perfil de egreso",
+                    "text": "La Licenciatura en Ingeniería Ciencia de Datos te permite administrar y analizar datos a través de métodos de inteligencia artificial, estadística, aprendizaje de máquina, sistemas de bases de datos y modelos matemáticos para participar en la toma de decisiones y resolver problemas en ámbitos relacionados con la economía y negocios con el fin de tener un impacto positivo en la sociedad actual.",
+                    "backgroundColor": "#C31433"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
+                    },
+                    "title": "Campo Laboral",
+                    "text": "Áreas: privadas, públicas, consultoras, despachos, educativas. \n\nActividades: programación y estadística para extraer y analizar datos y así generar conocimientos valiosos. ",
+                    "backgroundColor": "#4470B1"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
+                    },
+                    "title": "Requisitos de admisión",
+                    "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; Comprobante de domicilio.</p>",
+                    "backgroundColor": "#EEAA01"
+                  }
+                ],
+                "wrapper": false
+              }
+            }
+          ],
+          "size": "medium"
+        }
+      },
+      "descarga": {
+        "id": "program_licenciatura",
+        "type": "primary",
+        "title": "Descarga el plan de estudios",
+        "size": "small",
+        "icon": "download",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "testClick",
+        "test": ""
+      }
+    },
+    "form": {
+      "config": {
+        "level": { "hidden": true, "value": "licenciatura" },
+        "program": { "hidden": false, "value": "Ingeniería en Ciencia de Datos" },
+        "modality": { "hidden": false },
+        "campus": { "hidden": false }
+      },
+      "copies": {
+        "stepone": {
+          "title": "Obtén informes sobre tu programa",
+          "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+        }
+      }
+    }
+}

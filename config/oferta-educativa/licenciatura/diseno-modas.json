@@ -1,0 +1,116 @@
+{
+    "meta": {
+      "title": "Licenciatura en Diseño de Modas",
+      "description": "",
+      "keywords": ""
+    },
+    "config": {
+      "title": "Licenciatura en Diseño de Modas",
+      "config": {
+        "nombre": "Licenciatura en Diseño de Modas",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Arquitectura y Diseño"],
+        "campus": ["Américas"],
+        "nivel": ["Licenciatura"],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_diseno_moda_desk_48f7a407e7.jpg",
+          "alt": "licenciatura"
+        },
+        "curriculum": {
+          "Presencial": {
+            "Américas": "Lic_en_Diseno_de_Modas_Presencial_17357287ad.pdf"
+          }
+        }
+      }
+    },
+    "sections": {
+      "head": {
+        "title": "Licenciatura en Diseño de Modas",
+        "description": "La Licenciatura en Diseño de Modas forma profesionales con aprendizajes que les permiten incursionar en varias áreas de la industria de la moda. Contamos con un plan de estudios completo, que forma a nuestros estudiantes para saber realizar desde cero un look o un accesorio, hasta poder dirigir una marca de modas, cuidando la sensibilidad estética y espacial.",
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_diseno_moda_desk_48f7a407e7.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "modalities": {
+        "title": "Modalidades disponibles en esta licenciatura:",
+        "tabs": {
+          "items": [
+            {
+              "label": "Presencial",
+              "icons": { "primary": "", "duplicate": false },
+              "disabled": false,
+              "content": {
+                "cards": [
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
+                    },
+                    "title": "Perfil de ingreso",
+                    "text": "El aspirante de diseño de modas deberá tener:\n\n• Habilidad de expresarse gráfica y verbalmente.\n\n• Sensibilidad estética y espacial.\n\n• Vocación.\n\n• Capacidad de razonamiento abstracto y numérico.\n\n• Disponibilidad para el desarrollo personal por medio de su profesión.\n\n• Sentido de pertenencia social y conciencia humanitaria.\n\n• Aprecio por el arte y la cultura.\n\n• Disciplina y constancia.\n\n• Habilidades manuales e intelectuales para el uso de herramientas e implementaciones tecnológicas.\n\n• Ser hábil para dibujar con imaginación, innovación e inventiva.",
+                    "backgroundColor": "#1B2D68"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
+                    },
+                    "title": "Perfil de egreso",
+                    "text": "Conocimientos:\n\n• Elaborará presupuestos para la integración de proyectos.\n\n• Conoce, administra y controla los recursos y procesos de producción, transformación y comercialización de una empresa.\n\n• Domina las tecnologías tanto tradicionales como de nueva generación en la confección y la moda.\n\nActitudes:\n\n• Maneja elementos de autenticidad y ética.\n\n• Identifica y desarrolla las oportunidades de negocio.\n\nHabilidades:\n\n• Crea tendencias de moda con base en el análisis de estos elementos.\n\n• Conoce las líneas de producción de la industria del vestir y de la moda.",
+                    "backgroundColor": "#C31433"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
+                    },
+                    "title": "Campo Laboral",
+                    "text": "Áreas: de la moda y el vestido. Textiles. Producciones audiovisuales. \n\nActividades: creativas, innovadoras y a la vanguardia de cualquier tendencia. Investigación de mercados, expertos de la fast fashion. Diseñadores de las propuestas de vestuario de personajes.",
+                    "backgroundColor": "#4470B1"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
+                    },
+                    "title": "Requisitos de admisión",
+                    "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
+                    "backgroundColor": "#EEAA01"
+                  }
+                ],
+                "wrapper": false
+              }
+            }
+          ],
+          "size": "medium"
+        }
+      },
+      "descarga": {
+        "id": "program_licenciatura",
+        "type": "primary",
+        "title": "Descarga el plan de estudios",
+        "size": "small",
+        "icon": "download",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "testClick",
+        "test": ""
+      }
+    },
+    "form": {
+      "config": {
+        "level": { "hidden": true, "value": "licenciatura" },
+        "program": { "hidden": false, "value": "Licenciatura en Diseño de Modas" },
+        "modality": { "hidden": false },
+        "campus": { "hidden": false }
+      },
+      "copies": {
+        "stepone": {
+          "title": "Obtén informes sobre tu programa",
+          "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+        }
+      }
+    }
+}

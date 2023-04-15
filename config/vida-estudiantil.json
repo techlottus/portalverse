@@ -1,5 +1,5 @@
 {
-  "meta":{
+  "meta": {
     "title": "Vida Estudiantil",
     "description": "",
     "keywords": ""
@@ -7,27 +7,27 @@
   "sections": {
     "head": {
       "title": "Vida estudiantil",
-      "subtitle": "",
-      "description": "La universidad no es solamente un lugar para atender a clases; la experiencia y aprendizaje de convivir con distintas formas de pensamiento y participar en sus actividades de integración y recreación, contribuye al desarrollo integral de la comunidad universitaria.\n\n Viajes académicos y culturales, visitas empresariales, bici tours, un cineclub, organizaciones estudiantiles. La UDLAP ofrece una gran variedad de actividades caracterizadas por su diversidad temática.\n\n ¡Te invitamos a explorar nuestra vida universitaria!",
+      "subtitle": "Estudia y disfruta la experiencia UTEG",
+      "description": "Forma parte de nuestra vida cultura y deportiva. En cada plantel promovemos un ambiente sano para que disfrutes del tiempo libre demostrando tu talento en el arte o las manifestaciones deportivas. Equilibra cuerpo y mente para lograr un desarrollo armónico de tu personalidad.\n\n¡Disfruta la experiencia de ser estudiante en UTEG! ",
       "image": {
         "desk": {
           "alt": "imagen",
-          "src": "https://drive.google.com/uc?export=view&id=1qtkEi-n689eoCm7o5pGxQeoRkmiAcN7U"
+          "src": "https://assets.staging.bedu.org/UTEG/nosotros_vida_estudiantil_foto_vida_estudiantil_desk_0aa2aee95d.jpg"
         },
         "mobile": {
           "alt": "imagen",
-          "src": "https://drive.google.com/uc?export=view&id=1E5_6re4V8sEIrG7K5w0BJp5McjKTjXdo"
+          "src": "https://assets.staging.bedu.org/UTEG/nosotros_vida_estudiantil_foto_vida_estudiantil_tablet_974f89aaf8.jpg"
         }
       }
     },
     "sportActivities": {
-      "title": "Actividades deportivas",
-      "description": "¡Por actividades deportivas no paramos! \n\n No sólo porque contamos con varias disciplinas deportivas que te harán más responsable, un mejor estudiante y ser humano; sino porque tenemos el evento INTER UANE que se convierte en algo inolvidable año con año.",
-      "moreInformation": "¿Quiere ser un oso UANE?",
-      "moreInformationLink": "hola@uane.edu.mx",
+      "title": "Mundo deportivo UTEG",
+      "description": "Únete al programa UTEG Institución Saludable, participa de las activaciones físicas que organizan cada ciclo escolar. Se parte de los torneos y rallys deportivos que organizamos bajo la máxima de forjar tu mente, pero también tu cuerpo y espíritu con una vida físicamente activa. También puedes ser parte de nuestro evento deportivo más importante: la Carrera Atlética UTEG, una maratón para corredores de todas las edades y orígenes que recorre las calles de Guadalajara. ",
+      "moreInformation": "¿Quieres saber más?",
+      "moreInformationLink": "elcervantes@uteg.edu.mx",
       "video": {
         "options": {
-          "id": "c6eT6nLYGO4",
+          "id": "5kZiXzUqwjs",
           "type": "single",
           "controls": true
         },
@@ -37,13 +37,13 @@
       }
     },
     "culturalActivities": {
-      "title": "Actividades Culturales",
-      "description": "- Cine\n\n - Jazz\n\n - Hip-Hop\n\n - Ritmos latinos\n\n - Canto\n\n - Comedia Musical",
-      "moreInformation": "¿Quieres ser un oso UANE?",
-      "moreInformationLink": "hola@uane.edu.mx",
+      "title": "Cultura UTEG",
+      "description": "En UTEG tenemos una intensa vida cultural. Cada año puedes participar de nuestros talleres anuales en cada bachillerato y licenciatura. Si te interesa el maquillaje y el diseño amateur puedes participar en nuestro concurso de altares de muertos, catrines y catrinas y del Aquelarre que celebramos cada mes de noviembre. Para los jóvenes aficionados a la escritura organizamos encuentros con renombrados escritores jaliscienses y el Concurso de Cuento Bachillerato UTEG. Durante los días de “Aniversario UTEG” vivimos una entusiasta fiesta de cumpleaños con manifestaciones danzarias y expresiones musicales que celebran la fundación de nuestro Centro.",
+      "moreInformation": "¿Quieres más información?",
+      "moreInformationLink": "",
       "video": {
         "options": {
-          "id": "61X0lE23eY0",
+          "id": "fgTGiqcn_qc",
           "type": "single",
           "controls": true
         },
@@ -53,13 +53,76 @@
       }
     },
     "lifeUANE": {
-      "title": "La vida en UANE",
-      "images": {"images": [{"id": "1", "image": "https://drive.google.com/uc?export=view&id=1qvfZZMQy0cUiux_SEidrjfz7k8L9xKnX", "icon": "zoom_out_map" }, {"id": "2", "image": "https://drive.google.com/uc?export=view&id=15ai6Kdi1ZrzR0fsSdjQfvJYmx-OAGNpj", "icon": "zoom_out_map" }, {"id": "3", "image": "https://drive.google.com/uc?export=view&id=19SHJznLzkqimZg9gUFGwGH2c8fdw9fqT", "icon": "zoom_out_map"}, {"id": "4", "image": "https://drive.google.com/uc?export=view&id=1x0P7sQCuO1PbyEUb-ozK_G_03qrs_3LT", "icon": "zoom_out_map"},{"id": "5", "image": "https://drive.google.com/uc?export=view&id=1YDEzMKH5qpxOuE1khAimLyQc4TCGqKue", "icon": "zoom_out_map"}, {"id": "6", "image": "https://drive.google.com/uc?export=view&id=1bJwIjf41GECmkQNnbwUpXJxXwx4OHA8q", "icon": "zoom_out_map" }, {"id": "7", "image": "https://drive.google.com/uc?export=view&id=1j6jkoWBs0KIRItxWBL-NoRObJZjm3okg", "icon": "zoom_out_map"}, {"id": "8", "image": "https://drive.google.com/uc?export=view&id=1QQqrxbT8cdt5EH_L-BiP_m4aidlLaqpZ", "icon": "zoom_out_map"}, {"id": "9", "image": "https://drive.google.com/uc?export=view&id=1U6UZeS0-8cM5vKYDKLhWqUqAnWKeLJCx", "icon": "zoom_out_map"}, {"id": "10", "image": "https://drive.google.com/uc?export=view&id=1U64hNXjuLlKi_PikBmzgDQNIXBbldjeN", "icon": "zoom_out_map"}, {"id": "11", "image": "https://drive.google.com/uc?export=view&id=1JOlP0twXTmFzgUB1ysJ_Bn3xXOQRAW4s", "icon": "zoom_out_map"}, {"id": "12", "image": "https://drive.google.com/uc?export=view&id=104DHiqgxZD_dJ497xOlcbcYgMOZHCV3_", "icon": "zoom_out_map"}]}
+      "title": "Vive la experiencia UTEG",
+      "images": {
+        "images": [
+          {
+            "id": "1",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_04_99b8d12a55.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "2",
+            "image": "https://assets.staging.bedu.org/UTEG/Mosaico_Experiencia_UTEG_02_3369876e00.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "3",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_02_55a49a0875.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "4",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_02_c18936a680.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "5",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_07_cbdaaa0d92.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "6",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_08_399b9b9e50.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "7",
+            "image": "https://assets.staging.bedu.org/UTEG/Mosaico_Experiencia_UTEG_01_060a1ddcc0.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "8",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_06_8865c6d247.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "9",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_01_c68eb13a8a.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "10",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_03_05f32e415c.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "11",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_05_50d8d3f6a5.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "12",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_01_3cf215909a.jpg",
+            "icon": "zoom_out_map"
+          }
+        ]
+      }
     },
     "lifeUANEarticles": {
       "title": "Artículos sobre la vida estudiantil en UANE",
       "articles": [
-        { 
+        {
           "urlImage": "https://image.shutterstock.com/image-photo/graduates-student-graduation-caps-thrown-260nw-1937758900.jpg",
           "subtitle": "SUBTITULO",
           "title": "Coursera y UANE se unen para ti",
@@ -92,7 +155,7 @@
           "wrapper": true,
           "redirect": "/convocatoria-investigacion-1"
         },
-        { 
+        {
           "urlImage": "https://image.shutterstock.com/image-photo/graduates-student-graduation-caps-thrown-260nw-1937758900.jpg",
           "subtitle": "SUBTITULO",
           "title": "Coursera y UANE se unen para ti",

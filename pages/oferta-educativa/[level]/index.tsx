@@ -38,7 +38,7 @@ const Level: NextPageWithLayout<any> = ({ meta, filtro, programs, sections, leve
 
     const allFilter = {
       modalidad: { options: [ ...modalidades ], config: { label: "Modalidades", icon: "edit_note" } },
-      campus: { options: [ ...campus ], config: { label: "Campus", icon: "apartment" } },
+      campus: { options: [ ...campus ], config: { label: "Planteles", icon: "apartment" } },
       areaConocimiento: { options: [ ...conocimiento ], config: { label: "Áreas de Conocimiento", icon: "school" } }
     };
     setFilterConfig({ ...allFilter });
@@ -81,7 +81,7 @@ const Level: NextPageWithLayout<any> = ({ meta, filtro, programs, sections, leve
           <h3 className="font-Nunito font-normal w-d:leading-5 w-t:leading-[17.5px] w-p:leading-[17.5px] w-d:text-base w-t:text-3.5 w-p:text-3.5">{ sections.introduction.description }</h3>
         </div>
         <div className={cn("col-span-12 w-t:col-span-8 w-p:col-span-4 flex flex-col", { "hidden": !filtro })}>
-          <Filter color={"#B0003C"} data={filterConfig} onSelectionItems={(filters: any) => setNewSelecton(filters)} onChangeView={(status: boolean) => setMosaicActive(status) } />
+          <Filter color={"#282828"} data={filterConfig} onSelectionItems={(filters: any) => setNewSelecton(filters)} onChangeView={(status: boolean) => setMosaicActive(status) } />
         </div>
         <ContentInsideLayout classNames="mt-12 gap-6 col-span-12 w-t:col-span-8 w-p:col-span-4">
           {

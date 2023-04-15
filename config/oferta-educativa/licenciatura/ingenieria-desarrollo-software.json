@@ -1,0 +1,161 @@
+{
+  "meta": {
+    "title": "Ingeniería en Desarrollo de Software",
+    "description": "",
+    "keywords": ""
+  },
+  "config": {
+    "title": "Ingeniería en Desarrollo de Software",
+    "config": {
+      "nombre": "Ingeniería en Desarrollo de Software",
+      "modalidad": ["Online", "Flex"],
+      "areaConocimiento": ["Ciencias Exactas"],
+      "campus": [],
+      "nivel": ["Licenciatura"],
+      "image": {
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_desarrollo_software_desk_7f158c0abe.jpg",
+        "alt": "licenciatura"
+      },
+      "curriculum": {
+        "Online": "Lic_en_Ingenieria_en_Desarrollo_de_Software_Online_a3ff857646.pdf",
+        "Flex": "Ing_Desarrollo_en_Software_Flex_561a2eea9f.pdf"
+      }
+    }
+  },
+  "sections": {
+    "head": {
+      "title": "Ingeniería en Desarrollo de Software",
+      "description": "En la carrera de Ingeniería en Desarrollo de Software se forman profesionales que crean y revolucionan los sistemas de intercomunicación y sistemas electrónicos. Contribuye directamente en la mejora continua aplicando los conocimientos para el diseño y construcción de programas y a la documentación asociada para desarrollarlos, operarlos y mantenerlos.",
+      "image": {
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_desarrollo_software_desk_7f158c0abe.jpg",
+        "alt": "licenciatura"
+      }
+    },
+    "modalities": {
+      "title": "Modalidades disponibles en esta licenciatura:",
+      "tabs": {
+        "items": [
+          {
+            "label": "Online",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "El aspirante a Ingeniería en Desarrollo de Software debe poseer conocimientos sobre conceptos básicos de geometría y trigonometría; conceptos básicos de operaciones algebraicas y ecuaciones; conceptos básicos de pre cálculo; habilidad y gusto por el manejo de los equipos de cómputo, creatividad para diseñar y gestionar soluciones a través de programas y métodos computacionales. \n\nCapacidad de planear, diseñar, evaluar y construir sistemas que contemplen los sistemas de software y todo lo relacionado con el ambiente computacional.",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "CONOCIMIENTOS\n\n• Tendrá fundamentos y lenguajes de programación Web.\n\n• Estará capacitado para desarrollar soluciones a partir de la creación de nuevos sistemas.\n\n• Desarrollo de bases de datos.\n\n• Principios de la Ingeniería de software.\n\nHABILIDADES:\n\n• Formular propuestas tecnológicas.\n\n• Resolver problemas que necesiten una solución tecnológica.\n\nACTITUDES:\n\n• Generar un constante desarrollo innovador en el área de las tecnologías.\n\n• Brindar un servicio de calidad y con ética profesional.\n\n• Reconocer la importancia del trabajo en equipo.",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "Áreas: tecnologías de la información en empresas o industrias. \n\nActividades: creación y desarrollo de software y aplicaciones que mejoran los procesos de organización.",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; Comprobante de domicilio.</p>",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          },
+          {
+            "label": "Flex",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "El aspirante a Ingeniería en Desarrollo de Software debe poseer conocimientos sobre conceptos básicos de geometría y trigonometría; conceptos básicos de operaciones algebraicas y ecuaciones; conceptos básicos de pre cálculo; habilidad y gusto por el manejo de los equipos de cómputo, creatividad para diseñar y gestionar soluciones a través de programas y métodos computacionales.\n\nCapacidad de planear, diseñar, evaluar y construir sistemas que contemplen los sistemas de software y todo lo relacionado con el ambiente computacional.",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "CONOCIMIENTOS\n\n• Tendrá fundamentos y lenguajes de programación Web.\n\n• Estará capacitado para desarrollar soluciones a partir de la creación de nuevos sistemas.\n\n• Desarrollo de bases de datos.\n\n• Principios de la Ingeniería de software.\n\nHABILIDADES:\n\n• Formular propuestas tecnológicas.\n\n• Resolver problemas que necesiten una solución tecnológica.\n\nACTITUDES:\n\n• Generar un constante desarrollo innovador en el área de las tecnologías.\n\n• Brindar un servicio de calidad y con ética profesional.\n\n• Reconocer la importancia del trabajo en equipo.",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "Áreas: tecnologías de la información en empresas o industrias. \n\nActividades: creación y desarrollo de software y aplicaciones que mejoran los procesos de organización. ",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "<p>&bull;&nbsp;Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).<br />&bull;&nbsp;Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.<br />&bull;&nbsp;1 copia de la CURP.<br />&bull;&nbsp;2 copias de Credencial Oficial IFE / INE o Pasaporte.<br />&bull;&nbsp;2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).<br />&bull;&nbsp;2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          }
+        ],
+        "size": "medium"
+      }
+    },
+    "descarga": {
+      "id": "program_licenciatura",
+      "type": "primary",
+      "title": "Descarga el plan de estudios",
+      "size": "small",
+      "icon": "download",
+      "lyIcon": false,
+      "disabled": false,
+      "isExpand": false,
+      "tagOnClick": "testClick",
+      "test": ""
+    }
+  },
+  "form": {
+    "config": {
+      "level": { "hidden": true, "value": "licenciatura" },
+      "program": { "hidden": false, "value": "Ingeniería en Desarrollo de Software" },
+      "modality": { "hidden": false },
+      "campus": { "hidden": false }
+    },
+    "copies": {
+      "stepone": {
+        "title": "Obtén informes sobre tu programa",
+        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+      }
+    }
+  }
+}

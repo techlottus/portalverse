@@ -1,0 +1,116 @@
+{
+    "meta": {
+      "title": "Licenciatura en Cultura Física y Deportes",
+      "description": "",
+      "keywords": ""
+    },
+    "config": {
+      "title": "Licenciatura en Cultura Física y Deportes",
+      "config": {
+        "nombre": "Licenciatura en Cultura Física y Deportes",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Salud"],
+        "campus": ["Campus Washington"],
+        "nivel": ["Licenciatura"],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_cultura_fisica_desk_e436f181dd.jpg",
+          "alt": "licenciatura"
+        },
+        "curriculum": {
+          "Presencial": {
+            "Campus Washington": "Lic_Cultura_Fisica_y_Deportes_Presencial_d1c782ca3d.pdf"
+          }
+        }
+      }
+    },
+    "sections": {
+      "head": {
+        "title": "Licenciatura en Cultura Física y Deportes",
+        "description": "En la Licenciatura en Cultura Física y Deportes se forman profesionistas que promueven la cultura del deporte, la educación física y la actividad física en nuestra sociedad. El profesional es un promotor y ejemplo de estilos de vida saludable y activos, generando métodos y estrategias de cultura física dentro del contexto donde se desenvuelve.",
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_cultura_fisica_desk_e436f181dd.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "modalities": {
+        "title": "Modalidades disponibles en esta licenciatura:",
+        "tabs": {
+          "items": [
+            {
+              "label": "Presencial",
+              "icons": { "primary": "", "duplicate": false },
+              "disabled": false,
+              "content": {
+                "cards": [
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
+                    },
+                    "title": "Perfil de ingreso",
+                    "text": "El aspirante de cultura física y deportes le interesa:\n\n• La salud y bienestar de la población, por la adquisición de conocimientos de orden técnico, metodológico, social y cultural de las diversas formas de la actividad física.\n\n• El uso del lenguaje oral y escrito, pensamiento lógico matemático, coordinación motriz, condición física, gusto por la práctica de las actividades físicas, actitud de servicio, ser responsable y honesto con su persona y sociedad.\n\n• Uso de las TIC´s.\n\n• Expresión oral y escrita.",
+                    "backgroundColor": "#1B2D68"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
+                    },
+                    "title": "Perfil de egreso",
+                    "text": "Desarrolla una visión multidisciplinaria sobre los aspectos psicológico, social, histórico, filosófico y antropológico del cuerpo humano, con relación a la actividad física y el deporte.\n\nGestiona recursos para desarrollar proyectos y programas de actividad física y deporte en organizaciones de los sectores público y privado en los ámbitos de la salud, la educación física, la recreación y el deporte.\n\nDiseña, dirige y evalúa programas de entrenamiento personalizado para el bienestar y para el mejoramiento de la condición física de individuos y de grupos.",
+                    "backgroundColor": "#C31433"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
+                    },
+                    "title": "Campo Laboral",
+                    "text": "Áreas: instituciones deportivas, entrenador deportivo, auxiliar técnico, preparador físico, instructor, entrenador personal. \n\nActividades: interpretación y desarrollo de programas de alto rendimiento, conocimientos para gestionar y organizar eventos deportivos.",
+                    "backgroundColor": "#4470B1"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
+                    },
+                    "title": "Requisitos de admisión",
+                    "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
+                    "backgroundColor": "#EEAA01"
+                  }
+                ],
+                "wrapper": false
+              }
+            }
+          ],
+          "size": "medium"
+        }
+      },
+      "descarga": {
+        "id": "program_licenciatura",
+        "type": "primary",
+        "title": "Descarga el plan de estudios",
+        "size": "small",
+        "icon": "download",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "testClick",
+        "test": ""
+      }
+    },
+    "form": {
+      "config": {
+        "level": { "hidden": true, "value": "licenciatura" },
+        "program": { "hidden": false, "value": "Licenciatura en Cultura Física y Deportes" },
+        "modality": { "hidden": false },
+        "campus": { "hidden": false }
+      },
+      "copies": {
+        "stepone": {
+          "title": "Obtén informes sobre tu programa",
+          "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+        }
+      }
+    }
+}

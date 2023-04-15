@@ -1,159 +1,112 @@
 {
-  "meta": {
-    "title": "Maestría en Educación",
-    "description": "",
-    "keywords": ""
-  },
-  "config": {
-    "title": "Maestría en Educación",
-    "config": {
-      "nombre": "Maestría en Educación",
-      "modalidad": ["Presencial", "Online"],
-      "areaConocimiento": ["Ciencias Sociales"],
-      "campus": ["Torreón"],
-      "nivel": ["Posgrado"],
-      "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1YQZ1oEFSaQXkHomilL8nnzBq6rPuQ_uO",
-        "alt": "maestria"
-      },
-      "curriculum": {
-        "Presencial": {
-          "Matamoros": "1Onx59ekW2k-i5o8NV1EOWIz5HzPE6Y9s"
-        },
-        "Online": "1kMbFTdsLsnYbugrEwlSfEjwEONMQTf6n"
-      }
-    }
-  },
-  "sections": {
-    "head": {
+    "meta": {
       "title": "Maestría en Educación",
-      "description": "El profesional de la carrera de educación tendrá la posibilidad, gracias a las herramientas brindadas a lo largo de la cursada, de planear estrategias y técnicas curriculares. En este sentido, podrá ser parte de una gestión política y tener tareas que en el ámbito gubernamental a través del diseño de políticas educacionales y también culturales, que tengan una íntima relación con el aprendizaje.",
-      "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1YQZ1oEFSaQXkHomilL8nnzBq6rPuQ_uO",
-        "alt": "maestria"
-      }
+      "description": "",
+      "keywords": ""
     },
-    "modalities": {
-      "title": "Modalidades disponibles en esta maestría:",
-      "tabs": {
-        "items": [
-          {
-            "label": "Modalidad Presencial", "icons": { "primary": "", "duplicate": false}, "disabled": false,
-            "content": {
-              "cards": [
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
-                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
-                  },
-                  "title": "Perfil de ingreso",
-                  "text": "Para asegurar un desempeño exitoso en su formación profesional, los aspirantes deben reunir las siguientes habilidades y conocimientos:\n\nHabilidades:\n\n• Capacidad para trabajar en equipo.\n\n• Facilidad para las relaciones humanas.\n\n• Conocimientos:\n\n• Cultura general.\n\n• Conocimientos básicos de computación e Internet",
-                  "backgroundColor": "#8B9BA3"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
-                  "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
-                  },
-                  "title": "Perfil de egreso",
-                  "text": "Los profesionistas que cursen la Maestría en Educación obtendrán conocimientos y habilidades para participar activamente en acciones de transformación escolar mediante la gestión del cambio, del conocimiento y la investigación educativa.",
-                  "backgroundColor": "#B0003C"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
-                  },
-                  "title": "Campo Laboral",
-                  "text": "El egresado de la Maestría en Salud Ocupacional de UANE podrá ejercer en:\n\n • Organizaciones públicas como instituciones de salud\n\n • Organizaciones privadas como la industria alimentaria, minería, automotriz, agrícola, etc.",
-                  "backgroundColor": "#E84537"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
-                  },
-                  "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento original del cajero reciente y 2 copias\n\n• Copia fiel del título (Constancia de trámite en caso de aún no tener el título)\n\n• Copia de cédula (traer original para copia)\n\n• Impresión de CURP directo de intenet sin ampliación\n\n• CV y Constancia laboral\n\n• Fotografías (Preguntar por especificaciones)\n\n• Solicitud de Admisión",
-                  "backgroundColor": "#00BEB4"
-                }
-              ],
-              "wrapper": false
-            }
-          },
-          {
-            "label": "Modalidad Online", "icons": { "primary": "", "duplicate": false}, "disabled": false,
-            "content": {
-              "cards": [
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
-                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
-                  },
-                  "title": "Perfil de ingreso",
-                  "text": "El aspirante a la Maestría en Educación deberá desenvolverse profesionalmente en el ámbito educativo, de preferencia como docente o directivo, para aplicar sus conocimientos en su ejercicio profesional. Estar abierto al cambio y a las nuevas propuestas y generación de las mismas que sí revolucionen el nivel educativo de la sociedad. Estar comprometido con una de las asignaturas pendientes más importantes de México en la actualidad. ",
-                  "backgroundColor": "#8B9BA3"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
-                  "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
-                  },
-                  "title": "Perfil de egreso",
-                  "text": "Con la Maestría en Educación serás capaz de aplicar tus conocimientos de procesos educativos para desarrollar proyectos orientados a resolver problemáticas de contexto; mediante la inteligencia emocional y el liderazgo. Poseerás sensibilidad para la detección de áreas de oportunidad en el sistema educativo, así como detectar logros para replicar métodos de trabajo en diversas instituciones educativas o como propuesta para un cambio integral en la educación de México.",
-                  "backgroundColor": "#B0003C"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
-                  },
-                  "title": "Campo Laboral",
-                  "text": "Los egresados de la Maestría en Educación serán profesionales con competencias educativas con preparación teórica y metodológica sólida, capaces de desarrollar propuestas y soluciones viables e innovadoras a los problemas educativos que enfrentan las instituciones. Por lo tanto podrán desenvolverse en el sector público o privado a través de las escuelas públicas o particulares y como funcionario en dependencias relacionadas con la educación y cultura. ",
-                  "backgroundColor": "#E84537"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
-                  },
-                  "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento original del cajero reciente y 2 copias\n\n• Copia fiel del título (Constancia de trámite en caso de aún no tener el título)\n\n• Copia de cédula (traer original para copia)\n\n• Impresión de CURP directo de intenet sin ampliación\n\n• CV y Constancia laboral\n\n• Fotografías (Preguntar por especificaciones)\n\n• Solicitud de Admisión",
-                  "backgroundColor": "#00BEB4"
-                }
-              ],
-              "wrapper": false
-            }
-          }
-        ],
-        "size": "medium"
-      }
-    },
-    "descarga": {
-      "id": "program_maestria",
-      "type": "primary",
-      "title": "Descarga el plan de estudios",
-      "size": "small",
-      "icon": "download",
-      "lyIcon": false,
-      "disabled": false,
-      "isExpand": false,
-      "tagOnClick": "testClick",
-      "test": ""
-    }
-  },
-  "form": {
     "config": {
-      "level": { "hidden": true, "value": "maestria" },
-      "program": { "hidden": false, "value": "Educación" },
-      "modality": { "hidden": false },
-      "campus": { "hidden": false }
+      "title": "Maestría en Educación",
+      "config": {
+        "nombre": "Maestría en Educación",
+        "modalidad": ["Online"],
+        "areaConocimiento": ["Ciencias Sociales"],
+        "campus": [],
+        "nivel": ["Posgrado"],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/oferta_card_educacion_2eedee0c1d.jpg",
+          "alt": "maestria"
+        },
+        "curriculum": {
+          "Online": "Maestria_en_Educacion_ONLINE_6ba02d7557.pdf"
+        }
+      }
     },
-    "copies": {
-      "stepone": {
-        "title": "Obtén informes sobre tu programa",
-        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+    "sections": {
+      "head": {
+        "title": "Maestría en Educación",
+        "description": "Aplica tus conocimientos formativos y desarrolla proyectos orientados a revolucionar la industria de la educación a través de las tendencias y modalidades vanguardistas. Mejora el sistema educativo de tu país desde el sector público o privado. \n\nDirige dependencias relacionadas con la educación o instituciones educativas con una perspectiva de mejora continua. ",
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/oferta_card_educacion_2eedee0c1d.jpg",
+          "alt": "maestria"
+        }
+      },
+      "modalities": {
+        "title": "Modalidades disponibles en esta maestría:",
+        "tabs": {
+          "items": [
+            {
+              "label": "Modalidad Online", "icons": { "primary": "", "duplicate": false}, "disabled": false,
+              "content": {
+                "cards": [
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/oferta_perfil_ingreso_cd151fd87d.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/oferta_perfil_ingreso_cd151fd87d.png"
+                    },
+                    "title": "Perfil de ingreso",
+                    "text": "El aspirante a la Maestría en Educación deberá desenvolverse profesionalmente en el ámbito educativo, de preferencia como docente o directivo, para aplicar sus conocimientos en su ejercicio profesional.\n\nEstar abierto al cambio y a las nuevas propuestas y generación de las mismas que sí revolucionen el nivel educativo de la sociedad. Estar comprometido con una de las asignaturas pendientes más importantes de México en la actualidad.",
+                    "backgroundColor": "#1B2D68"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/oferta_perfil_egreso_9efedde160.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/oferta_perfil_egreso_9efedde160.png"
+                    },
+                    "title": "Perfil de egreso",
+                    "text": "Con la Maestría en Educación serás capaz de aplicar tus conocimientos de procesos educativos para desarrollar proyectos orientados a resolver problemáticas de contexto; mediante la inteligencia emocional y el liderazgo. Poseerás sensibilidad para la detección de áreas de oportunidad en el sistema educativo, así como detectar logros para replicar métodos de trabajo en diversas instituciones educativas o como propuesta para un cambio integral en la educación de México. ",
+                    "backgroundColor": "#C31433"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/oferta_campo_laboral_9c7f94c46b.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/oferta_campo_laboral_9c7f94c46b.png"
+                    },
+                    "title": "Campo Laboral",
+                    "text": "Áreas: sector público y privado. Dependencias culturales. \n\nActividades: desarrollar propuestas y soluciones a los problemas educativos. ",
+                    "backgroundColor": "#4470B1"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/oferta_requisitos_admision_ce1636dc61.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/oferta_requisitos_admision_ce1636dc61.png"
+                    },
+                    "title": "Requisitos de admisión",
+                    "text": "\n\n• Acta de nacimiento original y 2 copias (se puede recibir de cualquier año siempre y cuando se encuentre en buen estado).\n\n• Copia de certificado total de licenciatura, o copia de Título o copia de acta de titulación no mayor a 1 año. (Maestrías SEP).\n\n• 2 fotografías tamaño infantil blanco y negro o a color, de estudio o instantáneas.\n\n• 2 copia de la CURP.\n\n• 2 copia Credencial Oficial IFE o INE, o pasaporte.\n\n• Copia del Comprobante aspirante seleccionado Maestría (F-DA-82).",
+                    "backgroundColor": "#EEAA01"
+                  }
+                ],
+                "wrapper": false
+              }
+            }
+          ],
+          "size": "medium"
+        }
+      },
+      "descarga": {
+        "id": "program_maestria",
+        "type": "primary",
+        "title": "Descarga el plan de estudios",
+        "size": "small",
+        "icon": "download",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "testClick",
+        "test": ""
+      }
+    },
+    "form": {
+      "config": {
+        "level": { "hidden": true, "value": "maestria" },
+        "program": { "hidden": false, "value": "Administración" },
+        "modality": { "hidden": false },
+        "campus": { "hidden": false }
+      },
+      "copies": {
+        "stepone": {
+          "title": "Obtén informes sobre tu programa",
+          "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+        }
       }
     }
   }
-}

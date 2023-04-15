@@ -14,22 +14,22 @@
         },
         "description": {
           "title": "Licenciaturas",
-          "subtitle": "Los mejores programas educativos de alto nivel, con experiencias y planes de estudio internacionales, por un sistema modular que te permitirá aprovechar el conocimiento y aprendizaje al máximo."
+          "subtitle": "Conoce más sobre las licenciaturas que puedes estudiar en UTEG. Elije una entre las que conforman nuestra oferta académica de acuerdo al área de conocimiento, modalidad y plantel de tu interés. "
         }
       },
-      "banner1" :{
+      "banner1": {
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1kVvyHmdlUY2Tugvlu2Jywkhpz2lQGJj5",
-          "mobile": "https://drive.google.com/uc?export=view&id=1yd6VKxdKPQTAyRJT0YegLihHyzbESFIL",
-          "tablet": "https://drive.google.com/uc?export=view&id=1IlM4lTIJJHL25xtsHkMalPKiJ8C3dUz1"
+          "desktop": "https://assets.staging.bedu.org/UTEG/oferta_educativa_superior_desk_4d59ca2494.jpg",
+          "mobile": "https://assets.staging.bedu.org/UTEG/oferta_educativa_superior_mobile_eb4fc332bf.jpg",
+          "tablet": "https://assets.staging.bedu.org/UTEG/oferta_educativa_superior_tablet_1f1d997cdc.jpg"
         },
         "title": "",
         "subtitle": "",
         "position": "middle-center",
         "height": "350px",
-        "overlayWhite":false,
+        "overlayWhite": false,
         "overlayDak": false,
-        "button":{
+        "button": {
           "id": "",
           "type": "outlined",
           "title": "Conocer más",
@@ -47,446 +47,814 @@
     },
     "introduction": {
       "title": "Licenciaturas",
-      "description": "Los mejores programas educativos con experiencias y planes de estudio internacionales y un sistema modular que te permitirá aprovechar el conocimiento al máximo."
+      "description": "Conoce más sobre las licenciaturas que puedes estudiar en UTEG. Elije una entre las que conforman nuestra oferta académica de acuerdo al área de conocimiento, modalidad y plantel de tu interés. "
     }
   },
   "programs": [
     {
-      "title": "Licenciatura en Administración de Empresas",
+      "title": "Cirujano Dentista",
       "config": {
-        "nombre": "Licenciatura en Administración de Empresas",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Económico - Administrativo"],
-        "campus": ["Saltillo", "Matamoros", "Torreón", "Piedras Negras", "Sabinas", "Reynosa", "Monclova"],
-        "nivel": ["Licenciatura"],
+        "nombre": "Cirujano Dentista",
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Salud"
+        ],
+        "campus": [
+          "Campus Washington"
+        ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1Sb3r92gDYkX9h3ZVXXdw04itRVmUg7sH",
-          "alt": "especilidad"
-        }
-      },
-      "route": "administracion-empresas"
-    },
-    {
-      "title": "Licenciatura en Idiomas",
-      "config": {
-        "nombre": "Licenciatura en Idiomas",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Humanidades"],
-        "campus": ["Saltillo", "Torreón", "Piedras Negras"],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=19wr68tsR7OEsvbnzWY5xXpYgpYQqkYdS",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_dentista_desk_597d3d19ff.jpg",
           "alt": "licenciatura"
         }
       },
-      "route": "idiomas"
+      "route": "cirujano-dentista"
     },
     {
-      "title": "Licenciatura en Diseño Gráfico",
+      "title": "Licenciatura en Enfermeria",
       "config": {
-        "nombre": "Diseño Gráfico",
-        "modalidad": ["Presencial", "Flex"],
-        "areaConocimiento": ["Ciencias Sociales", "Humanidades"],
-        "campus": ["Saltillo", "Matamoros", "Torreón", "Monclova", "Monterrey", "Piedras Negras"],
-        "nivel": ["Licenciatura"],
+        "nombre": "Licenciatura en Enfermeria",
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Salud"
+        ],
+        "campus": [
+          "Campus Washington"
+        ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1pcSuQipeNpn8hQT2axqtZ9OuMineeoC9",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_enfermeria_desk_19dcf0d22c.jpg",
           "alt": "licenciatura"
         }
       },
-      "route": "diseno-grafico"
+      "route": "enfermeria"
     },
     {
-      "title": "Licenciatura en Gastronomía",
+      "title": "Carrera de Abogado",
       "config": {
-        "nombre": "Licenciatura en Gastronomía",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Ciencias Sociales y Administrativas"],
-        "campus": ["Saltillo", "Torreón"],
-        "nivel": ["Licenciatura"],
+        "nombre": "Carrera de Abogado",
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Jurídicas y Sociales"
+        ],
+        "campus": [
+          "Américas",
+          "Lázaro Cárdenas",
+          "Zapopan"
+        ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1Yr8Kk57j3iGB8yrgbEBWOh7LGWwxBoRT",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_abogado_desk_d6cf1c6564.jpg",
           "alt": "licenciatura"
         }
       },
-      "route": "gastronomia"
-    },
-    {
-      "title": "Licenciatura en Comercio Internacional",
-      "config": {
-        "nombre": "Licenciatura en Comercio Internacional",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Económico - Administrativo"],
-        "campus": [ "Saltillo", "Monterrey",  "Matamoros", "Torreón", "Piedras Negras", "Reynosa", "Monclova" ],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1QjAGs7uqe1J88h2dA3weRoNOMAg5ZGhb",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "comercio-internacional"
-    },
-    {
-      "title": "Licenciatura en Derecho con Acentuación en Negocios Internacionales",
-      "config": {
-        "nombre": "Licenciatura en Derecho con Acentuación en Negocios Internacionales",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Ciencias Sociales"],
-        "campus": [ "Monterrey", "Matamoros", "Reynosa" ],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1fxU5qQvmvjtXd3M4ggcoGFH7a_tEBHFC",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "derecho-acentuacion-negocios-internacionales"
-    },
-    {
-      "title": "Licenciatura en Psicología",
-      "config": {
-        "nombre": "Licenciatura en Psicología",
-        "modalidad": ["Presencial", "Online", "Flex"],
-        "areaConocimiento": ["Ciencias de la Salud", "Ciencias Sociales"],
-        "campus": ["Saltillo", "Monterrey" , "Matamoros", "Torreón", "Piedras Negras", "Sabinas", "Reynosa", "Monclova"],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1YxjRkrGXP14MaiZRSy9CNqVd-ltFVMCJ",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "psicologia"
-    },
-    {
-      "title": "Licenciatura en Administración de Empresas Turísticas",
-      "config": {
-        "nombre": "Licenciatura en Administración de Empresas Turísticas",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Económico - Administrativo"],
-        "campus": [ "Saltillo", "Torreón" ],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1y6BzlxIr6Zi_sV9uNgq3PeCxtqZhLIeu",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "administracion-empresas-turisticas"
-    },
-    {
-      "title": "Ingeniería Industrial y de Sistemas",
-      "config": {
-        "nombre": "Ingeniería Industrial y de Sistemas",
-        "modalidad": ["Presencial", "Online", "Flex"],
-        "areaConocimiento": ["Ciencias Exactas"],
-        "campus": [ "Saltillo", "Monterrey", "Matamoros", "Torreón", "Piedras Negras", "Monclova" ],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1txiRradR7dgMBlxeIJVCRhNoDA5DV_jR",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "ingenieria-industrial-sistemas"
-    },
-    {
-      "title": "Licenciatura en Ciencias de la Educación",
-      "config": {
-        "nombre": "Licenciatura en Ciencias de la Educación",
-        "modalidad": ["Presencial", "Online"],
-        "areaConocimiento": ["Ciencias Sociales"],
-        "campus": [ "Saltillo", "Matamoros", "Torreón", "Piedras Negras", "Sabinas", "Reynosa", "Monclova" ],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1jrKgLYJoy9oX14IF6vqsEX_R-zX9cOaY",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "ciencias-educacion"
-    },
-    {
-      "title": "Licenciatura en Nutrición",
-      "config": {
-        "nombre": "Licenciatura en Nutrición",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Ciencias Biologicas"],
-        "campus": [ "Saltillo", "Monterrey", "Torreón", "Monclova" ],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1kyJT49LV6EcSA65HNK7IJKw3IKj4V7PJ",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "nutricion"
-    },
-    {
-      "title": "Licenciatura en Derecho",
-      "config": {
-        "nombre": "Licenciatura en Derecho",
-        "modalidad": ["Presencial", "Online", "Flex"],
-        "areaConocimiento": ["Ciencias Sociales", "Humanidades"],
-        "campus": [ "Saltillo", "Torreón", "Piedras Negras", "Sabinas", "Monclova", "Monterrey" ],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1fkHschHQn87_ISClxQ3JrxbTSYmFMjCH",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "derecho"
-    },
-    {
-      "title": "Licenciatura en Administración de Recursos Humanos",
-      "config": {
-        "nombre": "Licenciatura en Administración de Recursos Humanos",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Ciencias Sociales"],
-        "campus": [ "Saltillo", "Sabinas", "Torreón", "Piedras Negras", "Monclova" ],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1947RsnMuQbrbSemz26C_eA93kabKyP8a",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "administracion-recursos-humanos"
+      "route": "carrera-abogado"
     },
     {
       "title": "Licenciatura en Arquitectura",
       "config": {
         "nombre": "Licenciatura en Arquitectura",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Ciencias Sociales"],
-        "campus": [ "Saltillo", "Monclova", "Monterrey", "Torreón" ],
-        "nivel": ["Licenciatura"],
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Arquitectura y Diseño"
+        ],
+        "campus": [
+          "Américas"
+        ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=140DMD5weJlXIItPXz9OndgRL3AvyLsGi",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_arquitectura_desk_caaf32b52c.jpg",
           "alt": "licenciatura"
         }
       },
       "route": "arquitectura"
     },
     {
-      "title": "Licenciatura en Contador Público",
+      "title": "Licenciatura en Diseño de Interiores",
       "config": {
-        "nombre": "Licenciatura en Contador Público",
-        "modalidad": ["Presencial", "Online", "Flex"],
-        "areaConocimiento": ["Económico - Administrativo"],
-        "campus": [ "Matamoros", "Monterrey", "Reynosa", "Sabinas", "Saltillo", "Torreón", "Piedras Negras" ],
-        "nivel": ["Licenciatura"],
+        "nombre": "Licenciatura en Diseño de Interiores",
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Arquitectura y Diseño"
+        ],
+        "campus": [
+          "Américas"
+        ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=15AwG8zlwoiekeC8ZiBjUSom7SGgIHqTH",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_diseno_interiores_desk_5702d670d6.jpg",
           "alt": "licenciatura"
         }
       },
-      "route": "contador-publico"
+      "route": "diseno-interiores"
     },
     {
-      "title": "Licenciatura en Comunicación",
+      "title": "Ingeniería en Comunicaciones y Electrónica",
       "config": {
-        "nombre": "Licenciatura en Comunicación",
-        "modalidad": ["Presencial", "Online"],
-        "areaConocimiento": ["Ciencias Sociales"],
-        "campus": [ "Saltillo", "Torreón", "Monclova", "Piedras Negras" ],
-        "nivel": ["Licenciatura"],
+        "nombre": "Ingeniería en Comunicaciones y Electrónica",
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Ingenierías y Tecnología"
+        ],
+        "campus": [
+          "Olímpica"
+        ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1Stw3--PtA0_0qK13VxwxPwrweM4IlfLZ",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_comunicaciones_electronica_desk_ef6570d17b.jpg",
           "alt": "licenciatura"
         }
       },
-      "route": "comunicacion"
+      "route": "ingenieria-comunicaciones-electronica"
     },
     {
-      "title": "Ingeniería en Sistemas y Productividad Industrial",
+      "title": "Licenciatura en Gastronomía",
       "config": {
-        "nombre": "Ingeniería en Sistemas y Productividad Industrial",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Ciencias Exactas"],
-        "campus": [ "Saltillo", "Reynosa" ],
-        "nivel": ["Licenciatura"],
+        "nombre": "Licenciatura en Gastronomía",
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Negocios y Empresariales"
+        ],
+        "campus": [
+          "Américas",
+          "Pedro Moreno"
+        ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1LWTwinSoVElzup0ONvuV_YMioVNzUmfL",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_gastronomia_desk_89620b54bd.jpg",
           "alt": "licenciatura"
         }
       },
-      "route": "sistemas-productividad-industrial"
+      "route": "gastronomia"
     },
     {
-      "title": "Licenciatura en Mercadotecnia",
+      "title": "Licenciatura en Diseño de Modas",
       "config": {
-        "nombre": "Licenciatura en Mercadotecnia",
-        "modalidad": ["Presencial", "Online"],
-        "areaConocimiento": ["Económico - Administrativo"],
-        "campus": [ "Reynosa" ],
-        "nivel": ["Licenciatura"],
+        "nombre": "Licenciatura en Diseño de Modas",
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Arquitectura y Diseño"
+        ],
+        "campus": [
+          "Américas"
+        ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1SlyD0RBk6qwgjGE8FLl3w9p4LTLrG3GE",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_diseno_moda_desk_1c4acc3ce3.jpg",
           "alt": "licenciatura"
         }
       },
-      "route": "mercadotecnia"
+      "route": "diseno-modas"
     },
     {
-      "title": "Licenciatura en Administración Estratégica de Negocios",
+      "title": "Licenciatura en Trabajo Social",
       "config": {
-        "nombre": "Licenciatura en Administración Estratégica de Negocios",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Económico - Administrativo"],
-        "campus": [ "Monterrey" ],
-        "nivel": ["Licenciatura"],
+        "nombre": "Licenciatura en Trabajo Social",
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Jurídicas y Sociales"
+        ],
+        "campus": [
+          "Pedro Moreno"
+        ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=19vFuL48Tc5YTDXAIBvonJ-XL23DcIUSK",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_trabajo_social_desk_08c1de177a.jpg",
           "alt": "licenciatura"
         }
       },
-      "route": "administracion-estrategia-negocios"
+      "route": "trabajo-social"
     },
     {
-      "title": "Ingeniería en Desarrollo de Software",
+      "title": "Licenciatura en Administracion",
       "config": {
-        "nombre": "Ingeniería en Desarrollo de Software",
-        "modalidad": ["Online", "Flex"],
-        "areaConocimiento": ["Ciencias Exactas"],
-        "campus": ["Saltillo", "Monterrey", "Piedras Negras", "Torreón", "Matamoros"],
-        "nivel": ["Licenciatura"],
+        "nombre": "Licenciatura en Administracion",
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Negocios y Empresariales"
+        ],
+        "campus": ["Campus Washington", "Tlajomulco", "Zapopan"],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1hPGAnoL1QoExyzS6aOGkRBYXSk351GM1",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_administracion_desk_8b57900228.jpg",
           "alt": "licenciatura"
         }
       },
-      "route": "desarrollo-software"
-    },
-    {
-      "title": "Ingeniería en Sistemas",
-      "config": {
-        "hidden": true,
-        "nombre": "Ingeniería en Sistemas",
-        "modalidad": ["Online", "Flex"],
-        "areaConocimiento": ["Ciencias Exactas"],
-        "campus": [ "Saltillo", "Monterrey", "Piedras Negras", "Torreón", "Matamoros"],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1bBv99_xuMk_M2DhAwzDc0WxaQtGKs9WW",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "ingenieria-sistemas"
-    },
-    {
-      "title": "Ingeniería Industrial en Producción",
-      "config": {
-        "nombre": "Ingeniería Industrial en Producción",
-        "modalidad": ["Online"],
-        "areaConocimiento": ["Ciencias Exactas"],
-        "campus": [],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1NMLlLwRog1Dvaoc4gCZG6neGsJFIlc57",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "ingenieria-industrial-produccion"
-    },
-    {
-      "title": "Licenciatura en Administración y Liderazgo Empresarial",
-      "config": {
-        "nombre": "Licenciatura en Administración y Liderazgo Empresarial",
-        "modalidad": ["Online", "Flex"],
-        "areaConocimiento": ["Económico - Administrativo"],
-        "campus": [ "Saltillo", "Monterrey", "Piedras Negras", "Torreón", "Matamoros"],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1SoA5ssMvmxkcxky4xmh_k08qGMxcguIT",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "administracion-liderazgo-empresarial"
-    },
-    {
-      "title": "Licenciatura en Contaduría",
-      "config": {
-        "hidden": true,
-        "nombre": "Licenciatura en Contaduría",
-        "modalidad": ["Online", "Flex"],
-        "areaConocimiento": ["Económico - Administrativo"],
-        "campus": [ "Saltillo", "Monterrey", "Piedras Negras", "Torreón", "Matamoros" ],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=15AwG8zlwoiekeC8ZiBjUSom7SGgIHqTH",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "contaduria"
-    },
-    {
-      "title": "Licenciatura en Gestión Deportiva",
-      "config": {
-        "nombre": "Licenciatura en Gestión Deportiva",
-        "modalidad": ["Online", "Flex"],
-        "areaConocimiento": ["Ciencias Sociales y Administrativas"],
-        "campus": [ "Saltillo", "Monterrey", "Piedras Negras", "Torreón", "Matamoros"],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1iWJf1IJ_ew8fwl7Ibr2j7gTjKGZoqAx8",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "gestion-deportiva"
-    },
-    {
-      "title": "Ingeniería Mecánica en Procesos de Inyección",
-      "config": {
-        "nombre": "Ingeniería Mecánica en Procesos de Inyección",
-        "modalidad": ["Presencial", "Online"],
-        "areaConocimiento": ["Ciencias Exactas", "Ciencias Sociales"],
-        "campus": [ "Saltillo", "Monterrey"],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1w0UVDGgpcJ9-LPVD2x99zfIupjeqyoJJ",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "mecanica-procesos-inyeccion"
-    },
-    {
-      "title": "Licenciatura en Negocios Digitales",
-      "config": {
-        "nombre": "Licenciatura en negocios digitales",
-        "modalidad": ["Online"],
-        "areaConocimiento": ["Económico - Administrativo"],
-        "campus": [],
-        "nivel": ["Licenciatura"],
-        "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1u5C7cOsjHiY96xDGAtmL80MdONHTJRhP",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "negocios-digitales"
+      "route": "lic-administracion"
     },
     {
       "title": "Licenciatura en Negocios Internacionales",
       "config": {
-        "nombre": "Licenciatura en negocios internacionales",
-        "modalidad": ["Online", "Flex"],
-        "areaConocimiento": ["Económico - Administrativo"],
-        "campus": [ "Saltillo", "Piedras Negras", "Monterrey", "Matamoros", "Torreón"],
-        "nivel": ["Licenciatura"],
+        "nombre": "Licenciatura en Negocios Internacionales",
+        "modalidad": [
+          "Presencial",
+          "Online",
+          "Flex"
+        ],
+        "areaConocimiento": [
+          "Negocios y Empresariales",
+          "Económico - Administrativo"
+        ],
+        "campus": [
+          "Américas",
+          "Campus Washington",
+          "Río Nilo",
+          "Tlajomulco",
+          "Zapopan"
+        ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=1bY5_8INHrJMAVRNWVxO7jr9kXlO23Fz-",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_negocios_internacionales_desk_9f8db6672d.jpg",
           "alt": "licenciatura"
         }
       },
       "route": "negocios-internacionales"
     },
     {
-      "title": "Ingeniería en Ciencias de Datos",
+      "title": "Licenciatura en Mercadotecnia",
       "config": {
-        "nombre": "Ingenieria en Ciencias de Datos",
-        "modalidad": ["Online"],
-        "areaConocimiento": ["Económico - Administrativo"],
-        "campus": [],
-        "nivel": ["Licenciatura"],
+        "nombre": "Licenciatura en Mercadotecnia",
+        "modalidad": [
+          "Presencial",
+          "Online"
+        ],
+        "areaConocimiento": [
+          "Negocios y Empresariales",
+          "Económico - Administrativo"
+        ],
+        "campus": [
+          "Américas",
+          "Campus Washington",
+          "Río Nilo",
+          "Tlajomulco",
+          "Zapopan"
+        ],
         "image": {
-          "src": "https://drive.google.com/uc?export=view&id=17KoWteVG1PLUT3BSJai2wSN-KUtBS-Il",
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_mercadotecnia_desk_4d62709a2f.jpg",
           "alt": "licenciatura"
         }
       },
-      "route": "ingenieria-ciencia-datos"
+      "route": "mercadotecnia"
+    },
+    {
+      "title": "Licenciatura en Psicología",
+      "config": {
+        "nombre": "Licenciatura en Psicología",
+        "modalidad": [
+          "Presencial",
+          "Online",
+          "Flex"
+        ],
+        "areaConocimiento": [
+          "Salud",
+          "Ciencias sociales"
+        ],
+        "campus": [
+          "Campus Washington",
+          "Plantel Zapopan",
+          "Tlajomulco"
+        ],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_psicologia_desk_d3eea318ea.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "psicologia"
+    },
+    {
+      "title": "Licenciatura en Nutrición",
+      "config": {
+        "nombre": "Licenciatura en Nutrición",
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Salud"
+        ],
+        "campus": [
+          "Campus Washington"
+        ],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_nutricion_desk_82870f067e.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "nutricion"
+    },
+    {
+      "title": "Licenciatura en Cultura Física y Deportes",
+      "config": {
+        "nombre": "Licenciatura en Cultura Física y Deportes",
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Salud"
+        ],
+        "campus": [
+          "Campus Washington"
+        ],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_cultura_deporte_desk_46da34acbb.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "cultura-fisica-deportes"
+    },
+    {
+      "title": "Licenciatura en Químico Farmacéutico Biólogo",
+      "config": {
+        "nombre": "Licenciatura en Químico Farmacéutico Biólogo",
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Salud"
+        ],
+        "campus": [
+          "Campus Washington"
+        ],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_QFB_desk_628f88f2ad.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "quimico-farmaceutico-biologo"
+    },
+    {
+      "title": "Licenciatura en Diseño para la Comunicación Gráfica",
+      "config": {
+        "nombre": "Licenciatura en Diseño para la Comunicación Gráfica",
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Arquitectura y Diseño"
+        ],
+        "campus": [
+          "Américas"
+        ],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_diseno_grafico_desk_b30075642a.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "diseno-comunicacion-grafica"
+    },
+    {
+      "title": "Ingeniería en Computación",
+      "config": {
+        "nombre": "Ingeniería en Computación",
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Ingenierías y Tecnología"
+        ],
+        "campus": [
+          "Olímpica"
+        ],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_computacion_desk_faf7e24602.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "ingenieria-computacion"
+    },
+    {
+      "title": "Licenciatura en Negocios Digitales",
+      "config": {
+        "nombre": "Licenciatura en Negocios Digitales",
+        "modalidad": [
+          "Online"
+        ],
+        "areaConocimiento": [
+          "Económico - Administrativo"
+        ],
+        "campus": [],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_negocios_digitales_desk_d5e2d5753e.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "negocios-digitales"
+    },
+    {
+      "title": "Ingenieria en Ciencia de Datos",
+      "config": {
+        "nombre": "Ingenieria en Ciencia de Datos",
+        "modalidad": [
+          "Online"
+        ],
+        "areaConocimiento": [
+          "Económico - Administrativo"
+        ],
+        "campus": [],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_ciencias_datos_desk_9565005ad9.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "ingenieria-ciencias-datos"
+    },
+    {
+      "title": "Licenciatura en Turismo",
+      "config": {
+        "nombre": "Licenciatura en Turismo",
+        "modalidad": [
+          "Online"
+        ],
+        "areaConocimiento": [
+          "Económico - Administrativo"
+        ],
+        "campus": [],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_turismo_desk_7187cdfdc4.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "turismo"
+    },
+    {
+      "title": "Ingeniería en Desarrollo de Software",
+      "config": {
+        "nombre": "Ingeniería en Desarrollo de Software",
+        "modalidad": [
+          "Online",
+          "Flex"
+        ],
+        "areaConocimiento": [
+          "Ciencias Exactas"
+        ],
+        "campus": [],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_desarrollo_software_desk_d0c18a6b00.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "ingenieria-desarrollo-software"
+    },
+    {
+      "title": "Ingeniería en Sistemas",
+      "config": {
+        "nombre": "Ingeniería en Sistemas",
+        "modalidad": [
+          "Presencial",
+          "Online",
+          "Flex"
+        ],
+        "areaConocimiento": [
+          "Ciencias Exactas"
+        ],
+        "campus": [
+          "Olímpica"
+        ],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_sistemas_desk_383f631ee0.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "ingenieria-sistemas"
+    },
+    {
+      "title": "Licenciatura en Administración y Liderazgo Empresarial",
+      "config": {
+        "nombre": "Licenciatura Administración y Liderazgo Empresarial",
+        "modalidad": [
+          "Online",
+          "Flex"
+        ],
+        "areaConocimiento": [
+          "Económico - Administrativo"
+        ],
+        "campus": [],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_administracion_liderazgo_desk_c066be2d7c.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "administracion-liderazgo-empresarial"
+    },
+    {
+      "title": "Licenciatura en Comunicación",
+      "config": {
+        "nombre": "Licenciatura en Comunicación",
+        "modalidad": [
+          "Presencial",
+          "Online"
+        ],
+        "areaConocimiento": [
+          "Ciencias sociales"
+        ],
+        "campus": [
+          "Américas",
+          "Campus Washington",
+          "Río Nilo",
+          "Zapopan",
+          "Lázaro Cárdenas"
+        ],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_comunicacion_desk_52a59f193a.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "comunicacion"
+    },
+    {
+      "title": "Licenciatura en Diseño Gráfico ",
+      "config": {
+        "nombre": "Licenciatura en Diseño Gráfico ",
+        "modalidad": [
+          "Online",
+          "Flex"
+        ],
+        "areaConocimiento": [
+          "Arquitectura y Diseño"
+        ],
+        "campus": [],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_diseno_grafico_desk_b30075642a.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "diseno-grafico"
+    },
+    {
+      "title": "Licenciatura en Relaciones Internacionales",
+      "config": {
+        "nombre": "Licenciatura en Relaciones Internacionales",
+        "modalidad": [
+          "Online"
+        ],
+        "areaConocimiento": [
+          "Económico - Administrativo"
+        ],
+        "campus": [],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_relaciones_internacionales_desk_25858d261c.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "relaciones-internacionales"
+    },
+    {
+      "title": "Ingeniería Civil",
+      "config": {
+        "nombre": "Ingeniería Civil",
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Ingenierías y Tecnología"
+        ],
+        "campus": [
+          "Olímpica"
+        ],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_ing_civil_desk_d9544d10e5.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "ingenieria-civil"
+    },
+    {
+      "title": "Ingeniería Civil con Certificación en Inglés Proulex",
+      "config": {
+        "nombre": "Ingeniería Civil con Certificación en Inglés Proulex",
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Ingenierías y Tecnología"
+        ],
+        "campus": [
+          "Olímpica"
+        ],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_ing_civil_desk_d9544d10e5.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "ingenieria-civil-proulex"
+    },
+    {
+      "title": "Ingeniería Industrial",
+      "config": {
+        "nombre": "Ingeniería Industrial",
+        "modalidad": [
+          "Presencial",
+          "Online",
+          "Flex"
+        ],
+        "areaConocimiento": [
+          "Ingenierías y Tecnología"
+        ],
+        "campus": [
+          "Olímpica"
+        ],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_ing_industrial_desk_f2ff714569.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "ingenieria-industrial"
+    },
+    {
+      "title": "Ingeniería Industrial con Certificación en Inglés Proulex",
+      "config": {
+        "nombre": "Ingeniería Industrial con Certificación en Inglés Proulex",
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Ingenierías y Tecnología"
+        ],
+        "campus": [
+          "Olímpica"
+        ],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_ing_industrial_desk_f2ff714569.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "ingenieria-industrial-proulex"
+    },
+    {
+      "title": "Licenciatura en Administración con Certificación en Inglés Proulex",
+      "config": {
+        "nombre": "Licenciatura en Administración con Certificación en Inglés Proulex",
+        "modalidad": [
+          "Presencial",
+          "Online",
+          "Flex"
+        ],
+        "areaConocimiento": [
+          "Negocios y Empresariales"
+        ],
+        "campus": [
+          "Campus Washington",
+          "Tlajomulco",
+          "Zapopan",
+          "Américas",
+          "Río Nilo"
+        ],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_administracion_desk_8b57900228.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "administracion-proulex"
+    },
+    {
+      "title": "Licenciatura en Contaduría Pública",
+      "config": {
+        "nombre": "Licenciatura en Contaduría Pública",
+        "modalidad": [
+          "Presencial",
+          "Online",
+          "Flex"
+        ],
+        "areaConocimiento": [
+          "Negocios y Empresariales"
+        ],
+        "campus": [
+          "Campus Washington",
+          "Tlajomulco",
+          "Zapopan",
+          "Américas",
+          "Río Nilo"
+        ],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_contaduria_desk_8b19c81d0f.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "contaduria-publica"
+    },
+    {
+      "title": "Licenciatura en Contaduría Púbica con Certificación en Inglés Proulex",
+      "config": {
+        "nombre": "Licenciatura en Contaduría Púbica con Certificación en Inglés Proulex",
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Negocios y Empresariales"
+        ],
+        "campus": [
+          "Campus Washington"
+        ],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_contaduria_desk_8b19c81d0f.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "contaduria-publica-proulex"
+    },
+    {
+      "title": "Licenciatura en Derecho",
+      "config": {
+        "nombre": "Licenciatura en Derecho",
+        "modalidad": [
+          "Presencial",
+          "Online",
+          "Flex"
+        ],
+        "areaConocimiento": [
+          "Negocios y Empresariales"
+        ],
+        "campus": [
+          "Américas",
+          "Campus Washington",
+          "Río Nilo",
+          "Tlajomulco",
+          "Zapopan"
+        ],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_derecho_desk_a2e6bd184d.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "derecho"
+    },
+    {
+      "title": "Licenciatura en Ciencias Forenses: Criminalística y Criminología",
+      "config": {
+        "nombre": "Licenciatura en Ciencias Forenses: Criminalística y Criminología",
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Jurídicas y Sociales"
+        ],
+        "campus": [
+          "Américas",
+          "Campus Washington",
+          "Río Nilo",
+          "Zapopan",
+          "Lázaro Cárdenas",
+          "Tlajomulco"
+        ],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_ciencias_forenses_desk_526034da82.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "ciencias-forenses"
+    },
+    {
+      "title": "Licenciatura en Pedagogía",
+      "config": {
+        "nombre": "Licenciatura en Pedagogía",
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Jurídicas y Sociales"
+        ],
+        "campus": [
+          "Américas",
+          "Campus Washington",
+          "Río Nilo",
+          "Zapopan",
+          "Lázaro Cárdenas",
+          "Pedro Moreno"
+        ],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_educacion_pedagogia_desk_0a20a6cedf.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "pedagogia"
+    },
+    {
+      "title": "Licenciatura en Químico Farmaceutico Biólogo con Certificación en Inglés Proulex",
+      "config": {
+        "nombre": "Licenciatura en Químico Farmaceutico Biólogo con Certificación en Inglés Proulex",
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Salud"
+        ],
+        "campus": [
+          "Campus Washington"
+        ],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_QFB_desk_628f88f2ad.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "quimico-farmaceutico-biologo-proulex"
     }
   ]
 }

@@ -3,17 +3,17 @@ const Routes: any = {
     { params:
       {
         "level": "bachillerato",
-        "levelRoute": "oferta-educativa/bachillerato/bachillerato",
+        "levelRoute": "oferta-educativa/bachillerato",
         "config": {
           title: "Bachillerato",
           promo: {
             urlImage: {
-              mobile: "https://drive.google.com/uc?export=view&id=1IZB-O4PNo9wwRDtweld_gpoRxzmv6WhX",
-              desktop: "https://drive.google.com/uc?export=view&id=1ooMLjk3zU7_8_A9W-NOdTOvjbGEw8qQW"
+              mobile: "https://drive.google.com/uc?export=view&id=1wTgY7bg1cFqdEWKNLrsTO8GNR4u3T38_",
+              desktop: "https://drive.google.com/uc?export=view&id=1wTgY7bg1cFqdEWKNLrsTO8GNR4u3T38_"
             },
             text: "",
             icon: "arrow_forward",
-            color: "#99E5E2",
+            color: "#FFD033",
             opacity: "multiply",
             height: "282px",
             enable: true,
@@ -35,7 +35,12 @@ const Routes: any = {
           },
         },
         "programs": [
-          { params: { "program": "bachillerato", "nameProgram": "Bachillerato" } },
+          { params: { "program": "bachillerato-general-competencia", "nameProgram": "Bachillerato General por Competencia" } },
+          { params: { "program": "bachillerato-intensivo-semiescolarizado", "nameProgram": "Bachillerato Intensivo Semiescolarizado" } },
+          { params: { "program": "bachillerato-general-competencia-gastronomia", "nameProgram": "Bachillerato General por Competencia con Diplomado en Gastronomía" } },
+          { params: { "program": "bachillerato-online", "nameProgram": "Bachillerato Online" } },
+          { params: { "program": "bachillerato-general-competencia-proulex", "nameProgram": "Bachillerato General por Competencia con Certificación en Inglés Proulex" } },
+
         ] 
       }
     },
@@ -47,8 +52,8 @@ const Routes: any = {
           title: "Licenciaturas",
           promo: {
             urlImage: {
-              mobile: "https://drive.google.com/uc?export=view&id=1zl9VvR13Y1Tk0f-EfvkOzkHUZjQ2gPH_",
-              desktop: "https://drive.google.com/uc?export=view&id=1qB-SaPTknHUetoHA_e0CmcNQZxj2RZ2t"
+              mobile: "https://drive.google.com/uc?export=view&id=19XGOqZziUfaXmB57vG1wxXcFSzWZ8ctR",
+              desktop: "https://drive.google.com/uc?export=view&id=19XGOqZziUfaXmB57vG1wxXcFSzWZ8ctR"
             },
             text: "",
             icon: "arrow_forward",
@@ -74,81 +79,47 @@ const Routes: any = {
           },
         },
         "programs": [
-          { params: { "program": "desarrollo-software", "nameProgram": "Ingeniería en Desarrollo de Software" } },
-          { params: { "program": "psicologia-laboral", "nameProgram": "Licenciatura en Psicología Laboral" } },
-          { params: { "program": "ingenieria-sistemas", "nameProgram": "Ingeniería en Sistemas" } },
-          { params: { "program": "ingenieria-industrial-produccion", "nameProgram": "Ingeniería Industrial en Producción" } },
-          { params: { "program": "administracion-liderazgo-empresarial", "nameProgram": "Licenciatura en Administración y Liderazgo Empresarial" } },
-          { params: { "program": "contaduria", "nameProgram": "Licenciatura en Contaduría" } },
-          { params: { "program": "gestion-deportiva", "nameProgram": "Licenciatura en Gestión Deportiva" } },
-          { params: { "program": "administracion-empresas", "nameProgram": "Licenciatura en Administración de Empresas" } },
-          { params: { "program": "idiomas", "nameProgram": "Licenciatura en Idiomas" } },
-          { params: { "program": "diseno-grafico", "nameProgram": "Licenciatura en Diseño Gráfico" } },
-          { params: { "program": "gastronomia", "nameProgram": "Licenciatura en Gastronomía" } },
-          { params: { "program": "comercio-internacional", "nameProgram": "Licenciatura en Comercio Internacional" } },
-          { params: { "program": "derecho-acentuacion-negocios-internacionales", "nameProgram": "Licenciatura en Derecho con Acentuación en Negocios Internacionales" } },
-          { params: { "program": "psicologia", "nameProgram": "Licenciatura en Psicología" } },
-          { params: { "program": "administracion-empresas-turisticas", "nameProgram": "Licenciatura en Administración de Empresas Turísticas" } },
-          { params: { "program": "mecanica-procesos-inyeccion", "nameProgram": "Ingeniería Mecánica en Procesos de Inyección" } },
-          { params: { "program": "ingenieria-industrial-sistemas", "nameProgram": "Ingeniería Industrial y de Sistemas" } },
-          { params: { "program": "ciencias-educacion", "nameProgram": "Licenciatura en Ciencias de la Educación" } },
-          { params: { "program": "nutricion", "nameProgram": "Licenciatura en Nutrición" } },
-          { params: { "program": "derecho", "nameProgram": "Licenciatura en Derecho" } },
-          { params: { "program": "administracion-recursos-humanos", "nameProgram": "Licenciatura en Administración de Recursos Humanos" } },
+          { params: { "program": "cirujano-dentista", "nameProgram": "Cirujano Dentista" } },
+          { params: { "program": "enfermeria", "nameProgram": "Licenciatura en Enfermeria" } },
+          { params: { "program": "carrera-abogado", "nameProgram": "Carrera de Abogado" } },
           { params: { "program": "arquitectura", "nameProgram": "Licenciatura en Arquitectura" } },
-          { params: { "program": "contador-publico", "nameProgram": "Licenciatura en Contador Público" } },
-          { params: { "program": "comunicacion", "nameProgram": "Licenciatura en Comunicación" } },
-          { params: { "program": "sistemas-productividad-industrial", "nameProgram": "Ingenería en Sistemas y Productividad Industrial" } },
-          { params: { "program": "mercadotecnia", "nameProgram": "Licenciatura en Mercadotecnia" } },
-          { params: { "program": "administracion-estrategia-negocios", "nameProgram": "Licenciatura en Administración Estratégica de Negocios" } },
+          { params: { "program": "diseno-interiores", "nameProgram": "Licenciatura en Diseño de Interiores" } },
+          { params: { "program": "ingenieria-comunicaciones-electronica", "nameProgram": "Ingeniería Comunicaciones y Electrónica" } },
+          { params: { "program": "gastronomia", "nameProgram": "Licenciatura en Gastronomía" } },
+          { params: { "program": "diseno-modas", "nameProgram": "Licenciatura Diseño de Modas" } },
+          { params: { "program": "trabajo-social", "nameProgram": "Licenciatura Trabajo Social" } },
+          { params: { "program": "lic-administracion", "nameProgram": "Licenciatura en Administracion" } },
           { params: { "program": "negocios-internacionales", "nameProgram": "Licenciatura en Negocios Internacionales" } },
+          { params: { "program": "mercadotecnia", "nameProgram": "Licenciatura en Mercadotecnia" } },
+          { params: { "program": "psicologia", "nameProgram": "Licenciatura en Psicología" } },
+          { params: { "program": "nutricion", "nameProgram": "Licenciatura en Nutrición" } },
+          { params: { "program": "cultura-fisica-deportes", "nameProgram": "Licenciatura en Cultura Física y Deportes" } },
+          { params: { "program": "quimico-farmaceutico-biologo", "nameProgram": "Licenciatura en Químico Farmacéutico Biólogo" } },
+          { params: { "program": "diseno-comunicacion-grafica", "nameProgram": "Licenciatura en Diseño para la Comunicación Gráfica" } },
+          { params: { "program": "ingenieria-computacion", "nameProgram": "Ingeniería en Computación" } },
           { params: { "program": "negocios-digitales", "nameProgram": "Licenciatura en Negocios Digitales" } },
-          { params: { "program": "ingenieria-ciencia-datos", "nameProgram": "Ingenieria en Ciencias de Datos" } },
+          { params: { "program": "ingenieria-ciencias-datos", "nameProgram": "Ingeniería en Ciencia de Datos" } },
+          { params: { "program": "turismo", "nameProgram": "Licenciatura en Turismo" } },
+          { params: { "program": "ingenieria-desarrollo-software", "nameProgram": "Ingeniería en Desarrollo de Software" } },
+          { params: { "program": "ingenieria-sistemas", "nameProgram": "Ingeniería en Sistemas" } },
+          { params: { "program": "administracion-liderazgo-empresarial", "nameProgram": "Licenciatura Administración y Liderazgo Empresarial" } },
+          { params: { "program": "comunicacion", "nameProgram": "Licenciatura en Comunicación" } },
+          { params: { "program": "gestion-deportiva", "nameProgram": "Licenciatura en Gestión Deportiva" } },
+          { params: { "program": "diseno-grafico", "nameProgram": "Licenciatura en Diseño Gráfico" } },
+          { params: { "program": "relaciones-internacionales", "nameProgram": "Licenciatura en Relaciones Internacionales" } },
+          { params: { "program": "ingenieria-civil", "nameProgram": "Ingeniería Civil" } },
+          { params: { "program": "ingenieria-civil-proulex", "nameProgram": "Ingeniería Civil con Certificación en Inglés Proulex" } },
+          { params: { "program": "ingenieria-industrial", "nameProgram": "Ingeniería Industrial" } },
+          { params: { "program": "ingenieria-industrial-proulex", "nameProgram": "Ingeniería Industrial con Certificación en Inglés Proulex" } },
+          { params: { "program": "administracion-proulex", "nameProgram": "Licenciatura en Administración con Certificación en Inglés Proulex" } },
+          { params: { "program": "contaduria-publica", "nameProgram": "Licenciatura en Contaduría Pública" } },
+          { params: { "program": "contaduria-publica-proulex", "nameProgram": "Licenciatura en contaduría Púbica con Certificación en Inglés Proulex" } },
+          { params: { "program": "derecho", "nameProgram": "Licenciatura en Derecho" } },
+          { params: { "program": "ciencias-forenses", "nameProgram": "Licenciatura en Ciencias Forenses: Criminalística y Criminología" } },
+          { params: { "program": "ingenieria-creacion-desarrollo-software-apps", "nameProgram": "Licenciatura en Ingeniería en Creación y Desarrollo de Software y Aplicaciones" } },
+          { params: { "program": "pedagogia", "nameProgram": "Licenciatura en Pedagogía" } },
+          { params: { "program": "quimico-farmaceutico-biologo-proulex", "nameProgram": "Licenciatura en Químico Farmaceutico Biólogo con Certificación en Inglés Proulex" } },
         ]
-      }
-    },
-    { params:
-      {
-        "level": "especialidad",
-        "levelRoute": "oferta-educativa/especialidad",
-        "config": {
-          title: "Especialidades",
-          promo: {
-            urlImage: {
-              mobile: "https://drive.google.com/uc?export=view&id=1jqW4m0V-UYJdCp2Ax0dqLxf04ansooLB",
-              desktop: "https://drive.google.com/uc?export=view&id=1lksUFh99fwx12CS5NDhSzzOwqjE2nBCQ"
-            },
-            text: "",
-            icon: "arrow_forward",
-            color: "#B9C3C8",
-            opacity: "multiply",
-            height: "282px",
-            enable: true,
-            nobackground: false
-          },
-          banner: {
-            image: {
-              src: "https://www.uane.edu.mx/multi/images/programas/becas.jpg",
-              alt: "alumnos"
-            },
-            description: {
-              title: "Especialidades",
-              subtitle: "Elige una lorem ipsum sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            }
-          },
-          head: {
-            title: "",
-            description: "",
-          },
-        },
-        "programs": [
-          { params: { "program": "administracion-liderazgo", "nameProgram": "Especialidad en Administración y Liderazgo" } },
-          { params: { "program": "relaciones-juridico-laborales", "nameProgram": "Especialidad en Relaciones Jurídico Laborales" } },
-          { params: { "program": "salud-ocupacional", "nameProgram": "Especialidad en Salud Ocupacional" } },
-          { params: { "program": "gestion-desarrollo-recursos-humanos", "nameProgram": "Especialidad en Gestión y Desarrollo de Recursos Humanos" } },
-          { params: { "program": "manufactura-esbelta", "nameProgram": "Especialidad en Manufactura Esbelta" } },
-          { params: { "program": "logistica", "nameProgram": "Especialidad en Logística" } },
-        ] 
       }
     },
     { params:
@@ -159,12 +130,12 @@ const Routes: any = {
           title: "Maestrías",
           promo: {
             urlImage: {
-              mobile: "https://drive.google.com/uc?export=view&id=1Y7pu9KD4hCZOM5MCQqYUf-cTkm6FjAxu",
-              desktop: "https://drive.google.com/uc?export=view&id=19gyvlX5gfDtt2QeQ5pnc66BAgtV9X5ng"
+              mobile: "https://drive.google.com/uc?export=view&id=11C7rUa3eAS6-tONNT666vk1jrayFBLHv",
+              desktop: "https://drive.google.com/uc?export=view&id=11C7rUa3eAS6-tONNT666vk1jrayFBLHv"
             },
             text: "",
             icon: "arrow_forward",
-            color: "#E94537",
+            color: "#E84537",
             opacity: "multiply",
             height: "282px",
             enable: true,
@@ -186,73 +157,20 @@ const Routes: any = {
           },
         },
         "programs": [
-          { params: { "program": "derecho-fiscal", "nameProgram": "Maestría en Derecho Fiscal" } },
-          { params: { "program": "nutricion-obesidad-diabetes", "nameProgram": "Maestría en Nutrición en Obesidad y Diabetes" } },
-          { params: { "program": "efectividad-organizacional", "nameProgram": "Maestría en Efectividad Organizacional" } },
-          { params: { "program": "impuestos", "nameProgram": "Maestría en Impuestos" } },
-          { params: { "program": "gestion-servicios-salud", "nameProgram": "Maestría en Gestión en Servicios de Salud" } },
-          { params: { "program": "salud-ocupacional", "nameProgram": "Maestría en Salud Ocupacional" } },
-          { params: { "program": "derecho-laboral", "nameProgram": "Maestría en Derecho Laboral" } },
-          { params: { "program": "terapia-familiar", "nameProgram": "Maestría en Terapia Familiar" } },
-          { params: { "program": "justicia-administrativa", "nameProgram": "Maestría en Justicia Administrativa" } },
-          { params: { "program": "derecho-mercantil", "nameProgram": "Maestría en Derecho Mercantil" } },
-          { params: { "program": "gestion-ambiental", "nameProgram": "Maestría en Gestión Ambiental" } },
+          { params: { "program": "planeacion-fiscal-corporativa", "nameProgram": "Maestría en Planeación Fiscal Corporativa" } },
+          { params: { "program": "desarrollo-organizacional", "nameProgram": "Maestría en Desarrollo Organizacional" } },
+          { params: { "program": "alta-direccion", "nameProgram": "Maestría en Alta Dirección" } },
+          { params: { "program": "mercadotecnia-digital", "nameProgram": "Maestría en Mercadotecnia digital " } },
           { params: { "program": "docencia", "nameProgram": "Maestría en Docencia" } },
-          { params: { "program": "educacion", "nameProgram": "Maestría en Educación" } },
-          { params: { "program": "gestion-negocios-manufactura", "nameProgram": "Maestría en Gestión de Negocios de Manufactura" } },
-          { params: { "program": "administracion-liderazgo", "nameProgram": "Maestría en Administración y Liderazgo" } },
-          { params: { "program": "docencia-investigacion-educativa", "nameProgram": "Maestría en Docencia e Investigación Educativa" } },
-          { params: { "program": "sistema-penal-acusatorio", "nameProgram": "Maestría en Sistema Penal Acusatorio" } },
-          { params: { "program": "mercadotecnia-estrategica", "nameProgram": "Maestría en Mercadotecnia Estratégica" } },
+          { params: { "program": "educacion", "nameProgram": "Maestría en Educación " } },
           { params: { "program": "administracion", "nameProgram": "Maestría en Administración" } },
           { params: { "program": "comunicacion-empresarial", "nameProgram": "Maestría en Comunicación Empresarial" } },
           { params: { "program": "derecho", "nameProgram": "Maestría en Derecho" } },
           { params: { "program": "desarrollo-organizacional-talento-humano", "nameProgram": "Maestría en Desarrollo Organizacional y Talento Humano" } },
-          { params: { "program": "mercadotecnia-digital", "nameProgram": "Maestría en Mercadotecnia Digital" } },
-          { params: { "program": "gobierno-estrategia-publica", "nameProgram": "Maestría en Gobierno y Estrategia Pública" } },
+          { params: { "program": "gobierno-estrategia", "nameProgram": "Master en Gobierno y Estrategia" } },
         ] 
       }
     },
-    { params:
-      {
-        "level": "doctorado",
-        "levelRoute": "oferta-educativa/doctorado",
-        "config": {
-          title: "Doctorado",
-          promo: {
-            urlImage: {
-              mobile: "https://drive.google.com/uc?export=view&id=1Hkdd9ScYfqlaS3D0wXntZ87PKJyFRXMG",
-              desktop: "https://drive.google.com/uc?export=view&id=1A-V4fwz_65l2Jrt20GxUOb22qshS7hqu"
-            },
-            text: "",
-            icon: "arrow_forward",
-            color: "#A57C1C",
-            opacity: "multiply",
-            height: "282px",
-            enable: true,
-            nobackground: false
-          },
-          banner: {
-            image: {
-              src: "https://www.uane.edu.mx/multi/images/programas/becas.jpg",
-              alt: "alumnos"
-            },
-            description: {
-              title: "Doctorados",
-              subtitle: "Elige una lorem ipsum sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            }
-          },
-          head: {
-            title: "",
-            description: "",
-          },
-        },
-        "programs": [
-          { params: { "program": "derecho", "nameProgram": "Doctorado en Derecho" } },
-          { params: { "program": "planeacion-liderazgo-educativo", "nameProgram": "Doctorado en Planeación y Liderazgo Educativo" } },
-        ] 
-      }
-    }
   ],
   "extension-universitaria": { 
     params: {
@@ -261,12 +179,12 @@ const Routes: any = {
         title: "Extensión Universitaria",
         promo: {
           urlImage: {
-            mobile: "https://drive.google.com/uc?export=view&id=1A4Xz8N7VdVR7qOFR5TtzerX1Qek2qgMu",
-            desktop: "https://drive.google.com/uc?export=view&id=19Oe9R_hCPk8oY2t37VFiIHeZvWwUw3HL"
+            mobile: "https://drive.google.com/uc?export=view&id=1Ti7_CzkaVjV8jg5mxmaUzkF7rfYKKr34",
+            desktop: "https://drive.google.com/uc?export=view&id=1Ti7_CzkaVjV8jg5mxmaUzkF7rfYKKr34"
           },
           text: "",
           icon: "arrow_forward",
-          color: "#6F7C83",
+          color: "#B9C3C8",
           opacity: "multiply",
           height: "282px",
           enable: true,
@@ -330,14 +248,36 @@ const Routes: any = {
         { params: { "program": "obligaciones-contratos", "nameProgram": "Obligaciones y Contratos" } },
         { params: { "program": "psicologia-comunicacion", "nameProgram": "Psicología y Comunicación" } },
         { params: { "program": "politicas-publicas-gobernanza", "nameProgram": "Políticas Públicas en Gobernanza" } },
+        { params: { "program": "habilidades-interpersonales", "nameProgram": "Curso Habilidades Interpesonales" } },
+        { params: { "program": "habilidades-cognitivas", "nameProgram": "Curso Habilidades Cognitivas" } },
+        { params: { "program": "nivelacion-precalculo", "nameProgram": "Curso de Nivelación de Précalculo" } },
+        { params: { "program": "eggel-ceneval-qfb", "nameProgram": "Curso EGGEL CENEVAL QFB Química Clínica" } },
+        { params: { "program": "diplomado-ciencias-forenses", "nameProgram": "Diplomado de Ciencias Forenses y el Sistema de Justicia Penal Acusatorio y Adversarial" } },
+        { params: { "program": "prodis-diseno-universal", "nameProgram": "Diseño Universal para el Aprendizaje y su Aplicación en el Aula (PRODIS)" } },
+        { params: { "program": "prodis-estimulacion-sensorial", "nameProgram": "Estimulación sensorial en alumnado con necesidades de apoyo educativo (PRODIS)" } },
+        { params: { "program": "prodis-saac", "nameProgram": "Estrategias para Potenciar la Comunicación a través de los Sistemas Aumentativos y Alternativos de Comunicación (SAAC) (PRODIS)" } },
+        { params: { "program": "prodis-tic", "nameProgram": "Creación de Recursos Adaptados a través de las TIC en el Aula (PRODIS)" } },
+        { params: { "program": "prodis-metodologia-investigacion-aplicada", "nameProgram": "Metodología de la investigación aplicada a la educación (PRODIS)" } },
+        { params: { "program": "fotografia-cucea", "nameProgram": "Taller de Fotofrafía CUCEA" } },
+        { params: { "program": "seminario-titulacion-gastronomia", "nameProgram": "Seminario de Titulación de Gatronomía" } },
+
+
+
+
+
+
+
+
+
+
+
       ] 
     }
   },
   "faq": [
     { params: { "section": "general" } },
-    { params: { "section": "modalidad-presencial" } },
-    { params: { "section": "modalidad-online" } },
-    { params: { "section": "modalidad-flex" } },
+    { params: { "section": "becas" } },
+    { params: { "section": "finanzas" } },
   ],
   "blog": [
     { params:

@@ -12,60 +12,77 @@ const BeWanted: FC<any> = ({ classNames, copies, pathThankyou, pathBeWanted }: a
 
   const router = useRouter();
 
-  const [ activeLoader, setActiveLoader ] = useState<boolean>(false);
-  const [ errorLoader, setErrorLoader ] = useState<boolean>(false);
   const [ _, setInfoForm ] = useState<any>({});
   const [ tokenActive, setTokenActive ] = useState<string>("");
+  const { isLoading: isLoadingRegister, isError: isErrorRegister, data, isSuccess, registerAccount } = RegisterBeWantedAccount();
+  const { isLoading: isLoadingToken, isError: isErrorToken, isLogoutSuccess, logoutToken, token } = getTokenBeWanted();
 
-  const { isLoading: isLoadingWanted, isError: isErrorWanted, data, userCreated, registerAccount } = RegisterBeWantedAccount();
-  const { isLoading, isError, isLogoutSuccess, logoutToken, token } = getTokenBeWanted();
+  const isLoading = isLoadingToken || isLoadingRegister;
+  const isError = isErrorToken || isErrorRegister;
+  const responseStatus = data?.response?.status;
 
   useEffect(() => {
     setTokenActive(`${token.token_type} ${token.access_token}`);
   }, [token]);
-
-  useEffect(() => {
-    setActiveLoader(isLoading || isLoadingWanted)
-  }, [isLoading, isLoadingWanted])
   
   useEffect(() => {
-    setErrorLoader(isError || isErrorWanted || userCreated === false)
-    if (!isError && !isLoading && userCreated && !!Object.keys(data).length) {
+    if (!isErrorToken && !isLoading && isSuccess && !!Object.keys(data).length) {
       logoutToken(tokenActive);
     }
-  }, [isError, isErrorWanted, userCreated, data])
+  }, [isErrorToken, isErrorRegister, isSuccess, data])
   
   useEffect(() => {
-    if (!isError && !isLoading && userCreated && !!Object.keys(data).length && isLogoutSuccess) {
+    if (isSuccess && isLogoutSuccess) {
       router.push(pathThankyou)
     }
-  }, [isError, isErrorWanted, userCreated, data, isLogoutSuccess])
-
-
+  }, [isSuccess, isLogoutSuccess])
 
   const handleNext = (info: any) => {
     const { name: first_name, surname: last_name, email, password } = info;
-    const data = { first_name, last_name, email, password, legal_advice: 1, newsletter_advice: 1, pool_advice: 1, partner_university_id: Number(`${process.env.NEXT_PUBLIC_BE_WANTED_PARTNER_ID_UANE}`)};
+    const data = { first_name, last_name, email, password, legal_advice: 1, newsletter_advice: 1, pool_advice: 1, partner_university_id: Number(`${process.env.NEXT_PUBLIC_BE_WANTED_PARTNER_ID}`)};
     setInfoForm({ ...data });
     registerAccount(data, tokenActive);
   }
 
-  return <section className={cn("p-6 shadow-15 bg-white relative w-d:max-w-[588px] w-t:max-w-[588px] w-t:mx-auto w-p:w-auto", classNames)}>
-    <div className={cn("absolute w-full h-full z-10 flex justify-center items-center left-0 top-0", { "hidden": !activeLoader, "block": activeLoader })}>
-      <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
-    </div>
-    <div className={cn("bg-white absolute w-full h-full z-10 flex flex-col aspect-2/1 justify-center items-center left-0 top-0  p-6", { "hidden": !errorLoader, "block": errorLoader })}>
-      <h1>Ya te registraste en la Bolsa de talento</h1>
-      <h1>Este correo ya está registrado en la bolsa de talento, si no recuerdas tu contraseña puedes reestablecerla en la bolsa de talento de Bewanted y pulsar en la opción que dice: ¿Olvidaste tu contraseña?</h1>
-      <Image src="/images/404.png" alt="error" classNames={cn("w-[347px] h-[270px]")} />
-    
-      <div className="w-full flex justify-between">
-        <Button onClick={() => location.reload()} data={{...ButtonInit, title: "Reintentar" }} />
-        <Button onClick={() => window.open(pathBeWanted)} data={{...ButtonInit, title: "Visitar Bolsa de talento" }} />
+  return (
+    <section className={cn("p-6 shadow-15 bg-white relative w-d:max-w-[588px] w-t:max-w-[588px] w-t:mx-auto w-p:w-auto", classNames)}>
+      <div className={cn("absolute w-full h-full z-10 flex justify-center items-center left-0 top-0", { "hidden": !isLoading, "block":isLoading })}>
+        <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
       </div>
-    </div>
-    <StepOne onNext={(info: any) => handleNext(info)} copies={copies} />
-  </section>
+      {
+        isError
+          ? isErrorRegister && responseStatus === 409 // user already registered for this job pool
+            ? <div className="bg-white w-full h-full z-10 flex flex-col items-center space-y-6 aspect-2/1">
+                <h1 className="font-semibold text-6">Ya te registraste en la Bolsa de Talento</h1>
+                <p className="font-normal text-sm">Este correo ya está registrado en la bolsa de talento, si no recuerdas tu contraseña puedes restablecerla en la bolsa de talento de Bewanted y pulsar en la opción que dice: ¿Olvidaste tu contraseña?</p>
+                <div className="w-full max-w-[24rem]"> {/* Tailwind's 'max-w-sm' value isn't working for some reason u.u */}
+                  <img src="/images/404-B.jpg" className="w-full" alt="error" />
+                </div>
+                <div className="w-full flex space-x-3 justify-between items-center">
+                  <Button dark onClick={() => location.reload()} data={{...ButtonInit, title: "Regresar" }} />
+                  <Button dark onClick={() => window.open(pathBeWanted)} data={{...ButtonInit, title: "Visitar Bolsa de talento" }} />
+                </div>
+              </div>
+            : <div className="bg-white w-full h-full p-4 z-10 flex flex-col aspect-2/1 justify-center items-center">
+                <h1 className="font-bold text-10 text-center leading-12 mb-9">
+                  ¡Me lleva la ...! no encuentro la página...
+                </h1>
+                <div className="w-full max-w-[24rem]"> {/* Tailwind's 'max-w-sm' value isn't working for some reason u.u */}
+                  <img src="/images/404-B.jpg" className="w-full" alt="error" />
+                </div>
+                <p className="text-UNI-066 font-semibold text-5.5 my-6">
+                  No importa, siempre puedes regresar a inicio
+                </p>
+                <Button
+                  dark
+                  onClick={() => location.reload()}
+                  data={{ ...ButtonInit, title: "Reintentar" }}
+                />
+              </div>
+          : <StepOne onNext={(info: any) => handleNext(info)} copies={copies} />
+      }
+    </section>
+  )
 }
 
-export default BeWanted
+export default BeWanted;

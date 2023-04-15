@@ -22,7 +22,7 @@ const PonteEnContacto: NextPageWithLayout = ({ sections, meta }: any) => {
     </Head>
     <HeaderFooterLayout breadcrumbs={false}>
       <ContentFullLayout>
-        <ContentInsideLayout>
+        <ContentInsideLayout classNames="mb-12">
           <div className="col-span-5 w-t:col-span-8 w-p:col-span-4 bg-darkBlue text-white w-t:pb-6">
             <ContentInsideLayout classNames="grid-cols-5 w-t:grid-cols-8">
               <div className="col-span-5 col-start-2 col-end-5 w-t:col-span-8 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 w-p:col-end-5">
@@ -30,7 +30,7 @@ const PonteEnContacto: NextPageWithLayout = ({ sections, meta }: any) => {
               </div>
               <h1 className="col-span-5 col-start-2 col-end-5 w-t:col-span-8 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 w-p:col-end-5 text-10 w-p:text-[30px] w-p:m-6 font-bold font-Poppins leading-[125%]">{ sections.head.title }</h1>
               {
-                sections.medios.map((medio: any, i: number) => <p key={`item-media-${i}`} className="col-span-5 col-start-2 col-end-5 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 text-base font-Poppins w-d:mt-6 w-t:mt-6 w-p:mt-2 w-p:mx-6 leading-[24px] w-t:leading-[125%] w-p:leading-3[130%]"><span className="material-icons mr-2">{ medio.icon }</span>{ medio.text }</p>)
+                sections.medios.map((medio: any, i: number) => <p key={`item-media-${i}`} className="col-span-5 col-start-2 col-end-5 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 text-base font-Poppins w-d:mt-6 w-t:mt-6 w-p:mt-2 w-p:mx-6 leading-[24px] w-t:leading-[125%] w-p:leading-3[130%] flex items-center font-normal"><span className="material-icons mr-2">{ medio.icon }</span>{ medio.text }</p>)
               }
               <section className="col-span-5 col-start-2 col-end-5 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1">
                 <p className="text-4.5 w-t:text-6 font-Poppins font-bold w-d:mt-6 w-t:mt-6 w-p:mt-2 w-p:mx-6 leading-[125%]">{sections.campus.title}</p>
@@ -51,10 +51,10 @@ const PonteEnContacto: NextPageWithLayout = ({ sections, meta }: any) => {
             </ContentInsideLayout>
           </div>
           <div className="col-span-7 w-t:col-span-8 w-p:col-span-4">
-            <ContentInsideLayout classNames="grid-cols-7 w-t:grid-cols-8">
+            <ContentInsideLayout classNames="w-t:grid-cols-8">
               <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 col-start-3 col-end-11 w-t:col-start-1 w-t:col-end-8 w-p:col-start-1 w-p:col-end-5">
                 <div className="mt-18">
-                  <ReasonsToContact image={{ src: "https://drive.google.com/uc?export=view&id=1CxZzCcuuptzexZwBWNtktMbIT5Z9dB6B", alt:"image-person" }} pathThanyouOtherReason="/thank-you" pathThanyouOpenForm="/thank-you" />
+                  <ReasonsToContact image={{ src: "https://assets.staging.bedu.org/UTEG/admisiones_pedir_informacion_avatar_6738c707b5.jpg", alt:"image-person" }} pathThanyouOtherReason="/thank-you" pathThanyouOpenForm="/thank-you" />
                 </div>
               </div>
             </ContentInsideLayout>

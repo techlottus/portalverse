@@ -1,0 +1,572 @@
+{
+  "meta": {
+    "title": "Somos UTEG",
+    "description": "",
+    "keywords": ""
+  },
+  "sections": {
+    "head": {
+      "title": "Somos UTEG",
+      "subtitle": "55 años...y seguimos siendo el futuro",
+      "description": "El Centro Universitario UTEG es una institución educativa con una profunda responsabilidad social y un enfoque de servicio. Hoy formamos parte de la gran familia de Lottus Education y continuamos dispuestos, como hace más de medio siglo, a revolucionar la educación para convertir en profesionales de excelencia a jóvenes de todo Jalisco.",
+      "image": {
+        "desk": {
+          "alt": "imagen",
+          "src": "https://assets.staging.bedu.org/UTEG/nosotros_55_niversario_desk_c1e987e8d2.jpg"
+        },
+        "tablet": {
+          "alt": "imagen",
+          "src": "https://assets.staging.bedu.org/UTEG/nosotros_55_aniversario_tablet_5f5135209e.jpg"
+        },
+        "mobile": {
+          "alt": "imagen",
+          "src": "https://assets.staging.bedu.org/UTEG/nosotros_55_aniversario_tablet_5f5135209e.jpg"
+        }
+      }
+    },
+    "history": {
+      "title": "Nuestra historia",
+      "description": "Fundado el 20 de febrero de 1968, al Centro Universitario UTEG lo avalan 55 años de experiencia en la formación de los profesionales que han transformado la vida económica, social y cultural de Jalisco y México. Somos un centro educativo de referencia en la formación de las generaciones del siglo XXI. Contamos con una oferta académica que incluye bachilleratos, licenciaturas, maestrías y proyectos de educación continua presenciales, online y con modelos educativos flexibles.\n\nNuestros programas de estudio abarcan diversas áreas del conocimiento y se adaptan a las necesidades de los estudiantes, con flexibilidad de horarios y turnos, y van desde bachillerato hasta posgrados.",
+      "image": {
+        "desk": {
+          "alt": "imagen",
+          "src": "https://assets.staging.bedu.org/UTEG/nosotros_campus_0629208e85.jpg"
+        },
+        "mobile": {
+          "alt": "imagen",
+          "src": "https://assets.staging.bedu.org/UTEG/nosotros_campus_0629208e85.jpg"
+        }
+      }
+    },
+    "missionAndVission": {
+      "title": "Misión y Visión",
+      "description": "MISIÓN\n\nEl Centro Universitario UTEG es una universidad orientada hacia la excelencia académica, cuyo objetivo es formar a profesionales competentes, con conocimientos sólidos, capaces desarrollar con plenitud sus proyectos de vida y de insertarse, con éxito, en el mercado laboral, para contribuir a la transformación de la sociedad.\n\nVISIÓN\n\nBrindar educación accesible, con los más altos estándares de calidad. Aportar al desarrollo científico, económico y social de Jalisco. Convertirnos en una universidad de referencia por el rigor de sus procesos formativos y la calidad humana y profesional de sus egresados. ",
+      "image": {
+        "desk": {
+          "alt": "imagen",
+          "src": "https://assets.staging.bedu.org/UTEG/nosotros_mision_vision_6a50e50cad.jpg"
+        },
+        "tablet": {
+          "alt": "imagen",
+          "src": "https://assets.staging.bedu.org/UTEG/nosotros_mision_vision_TABLET_2f3ffe94a1.jpg"
+        },
+        "mobile": {
+          "alt": "imagen",
+          "src": "https://assets.staging.bedu.org/UTEG/nosotros_mision_vision_TABLET_2f3ffe94a1.jpg"
+        }
+      }
+    },
+    "ourValues": {
+      "title": "Nuestros valores ",
+      "values": [
+        {
+          "urlImage": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_honestidad_2325bcd5db.svg",
+          "subtitle": "",
+          "title": "Honestidad",
+          "text": "Actuamos con integridad, congruencia y rectitud en nuestro quehacer cotidiano y nos conducimos con apego a la verdad.",
+          "border": true,
+          "allContent": true,
+          "height": "",
+          "isShowCardWebsiteContent": true,
+          "id": "",
+          "type": "small",
+          "link": true,
+          "background": false,
+          "linkText": {
+            "text": "",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": "visibility"
+          },
+          "linkIcon": {
+            "text": "",
+            "iconSecond": "play_circle",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": ""
+          },
+          "wrapper": true
+        },
+        {
+          "urlImage": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_servicio_0ce9c0e222.svg",
+          "subtitle": "",
+          "title": "Responsabilidad",
+          "text": "Estamos comprometidos con la comunidad universitaria y con la sociedad, desempeñando nuestro trabajo con exigencia y profesionalismo.",
+          "border": true,
+          "allContent": true,
+          "height": "",
+          "isShowCardWebsiteContent": true,
+          "id": "",
+          "type": "small",
+          "link": true,
+          "background": false,
+          "linkText": {
+            "text": "",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": "star"
+          },
+          "linkIcon": {
+            "text": "",
+            "iconSecond": "",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": ""
+          },
+          "wrapper": true,
+          "video": "8LDTk1DLg4M"
+        },
+        {
+          "urlImage": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_responsabilidad_6d6757b155.svg",
+          "subtitle": "",
+          "title": "Justicia",
+          "text": "Somos una universidad comprometida con la verdad, la equidad y el bien común.",
+          "border": true,
+          "allContent": true,
+          "height": "",
+          "isShowCardWebsiteContent": true,
+          "id": "",
+          "type": "small",
+          "link": true,
+          "background": false,
+          "linkText": {
+            "text": "",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": "star"
+          },
+          "linkIcon": {
+            "text": "",
+            "iconSecond": "arrow_right",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": ""
+          },
+          "wrapper": true
+        },
+        {
+          "urlImage": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_desarrollo_humano_60b6c87a39.svg",
+          "subtitle": "",
+          "title": "Servicio",
+          "text": "Estamos en permanente colaboración con los miembros de nuestra comunidad y con la sociedad para contribuir al bienestar común.",
+          "border": true,
+          "allContent": true,
+          "height": "",
+          "isShowCardWebsiteContent": true,
+          "id": "",
+          "type": "small",
+          "link": true,
+          "background": false,
+          "linkText": {
+            "text": "",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": "star"
+          },
+          "linkIcon": {
+            "text": "",
+            "iconSecond": "arrow_right",
+            "isBold": true,
+            "size": "large",
+            "isUnderline": false,
+            "disabled": false,
+            "icon": ""
+          },
+          "wrapper": true
+        }
+      ],
+      "numbers": [
+        {
+          "maxNumber": 17639,
+          "icon": "diversity_3",
+          "prefix": "",
+          "suffix": "",
+          "title": "ESTUDIANTES",
+          "body": "",
+          "container": false,
+          "isShadowColor": false,
+          "bordered": false,
+          "typeShadowColor": "blue-pastel-right",
+          "boxShadow": true
+        },
+        {
+          "maxNumber": 54,
+          "icon": "diversity_3",
+          "prefix": "",
+          "suffix": "",
+          "title": "PROGRAMAS",
+          "body": "",
+          "container": false,
+          "isShadowColor": false,
+          "bordered": false,
+          "typeShadowColor": "red-pastel-right",
+          "boxShadow": true
+        },
+        {
+          "maxNumber": 8,
+          "icon": "diversity_3",
+          "prefix": "",
+          "suffix": "",
+          "title": "CAMPUS",
+          "body": "",
+          "container": false,
+          "isShadowColor": false,
+          "bordered": false,
+          "typeShadowColor": "gray-pastel-right",
+          "boxShadow": true
+        },
+        {
+          "maxNumber": 413,
+          "icon": "diversity_3",
+          "prefix": "",
+          "suffix": "",
+          "title": "CONVENIOS",
+          "body": "",
+          "container": false,
+          "isShadowColor": false,
+          "bordered": false,
+          "typeShadowColor": "yellow-pastel-right",
+          "boxShadow": true
+        }
+      ]
+    },
+    "community": {
+      "title": "Comunidad UTEG",
+      "links": [
+        {
+          "urlImage": {
+            "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_central_noticias_2b2a2d7dc5.jpg",
+            "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_central_noticias_2b2a2d7dc5.jpg"
+          },
+          "text": "Central de Noticias",
+          "icon": "arrow_forward",
+          "color": "",
+          "opacity": "",
+          "height": "282px",
+          "enable": true,
+          "nobackground": false,
+          "redirect": "/blog"
+        },
+        {
+          "urlImage": {
+            "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_UTEG_360_4c3249c025.jpg",
+            "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_UTEG_360_4c3249c025.jpg"
+          },
+          "text": "UTEG 360",
+          "icon": "arrow_forward",
+          "color": "",
+          "opacity": "",
+          "height": "282px",
+          "enable": true,
+          "nobackground": false,
+          "redirect": "https://assets.staging.bedu.org/nosotros/internacionalizacion"
+        },
+        {
+          "urlImage": {
+            "mobile": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_CECEPCOM_27180a4969.jpg",
+            "desktop": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_CECEPCOM_27180a4969.jpg"
+          },
+          "text": "CESEPCOM",
+          "icon": "arrow_forward",
+          "color": "",
+          "opacity": "",
+          "height": "282px",
+          "enable": true,
+          "nobackground": false,
+          "redirect": "/nosotros/CESEPCOM"
+        }
+      ]
+    },
+    "experiences": {
+      "title": "Vive la experiencia UTEG",
+      "images": {
+        "images": [
+          {
+            "id": "1",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_04_99b8d12a55.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "2",
+            "image": "https://assets.staging.bedu.org/UTEG/Mosaico_Experiencia_UTEG_02_3369876e00.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "3",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_02_55a49a0875.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "4",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_02_c18936a680.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "5",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_07_cbdaaa0d92.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "6",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_08_399b9b9e50.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "7",
+            "image": "https://assets.staging.bedu.org/UTEG/Mosaico_Experiencia_UTEG_01_060a1ddcc0.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "8",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_06_8865c6d247.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "9",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_01_c68eb13a8a.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "10",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_03_05f32e415c.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "11",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_05_50d8d3f6a5.jpg",
+            "icon": "zoom_out_map"
+          },
+          {
+            "id": "12",
+            "image": "https://assets.staging.bedu.org/UTEG/nosotros_comunidad_Mosaico_Experiencia_UTEG_01_3cf215909a.jpg",
+            "icon": "zoom_out_map"
+          }
+        ]
+      }
+    },
+    "ourScholarships": {
+      "title": "Becas/PEBIE UTEG",
+      "scholarships": [
+        {
+          "text": "PEBIE",
+          "icon": "arrow_forward",
+          "color": "red",
+          "opacity": "multiply",
+          "height": "110px",
+          "enable": true,
+          "nobackground": true,
+          "redirect": "/admisiones/becas",
+          "isShadowColor": true,
+          "shadowColor": "#1B2D68"
+        },
+        {
+          "text": "Convenios Empresariales",
+          "icon": "arrow_forward",
+          "color": "#FADB62",
+          "opacity": "multiply",
+          "height": "110px",
+          "enable": true,
+          "nobackground": true,
+          "redirect": "/admisiones/becas",
+          "isShadowColor": true,
+          "shadowColor": "#C31433"
+        },
+        {
+          "text": "Convocatoria Cuatrimestral",
+          "icon": "arrow_forward",
+          "color": "#7DF1ED",
+          "opacity": "multiply",
+          "height": "110px",
+          "enable": true,
+          "nobackground": true,
+          "redirect": "/admisiones/becas",
+          "isShadowColor": true,
+          "shadowColor": "#4470B1"
+        },
+        {
+          "text": "Convocatoria Semestral",
+          "icon": "arrow_forward",
+          "color": "#7DF1ED",
+          "opacity": "multiply",
+          "height": "110px",
+          "enable": true,
+          "nobackground": true,
+          "redirect": "/admisiones/becas",
+          "isShadowColor": true,
+          "shadowColor": "#F8A600"
+        },
+        {
+          "text": "Becas Solicitudes de Apoyo",
+          "icon": "arrow_forward",
+          "color": "#7DF1ED",
+          "opacity": "multiply",
+          "height": "110px",
+          "enable": true,
+          "nobackground": true,
+          "redirect": "/admisiones/becas",
+          "isShadowColor": true,
+          "shadowColor": "#C31433"
+        },
+        {
+          "text": "Solicitud de Reembolso",
+          "icon": "arrow_forward",
+          "color": "#7DF1ED",
+          "opacity": "multiply",
+          "height": "110px",
+          "enable": true,
+          "nobackground": true,
+          "redirect": "/admisiones/becas",
+          "isShadowColor": true,
+          "shadowColor": "#4470B1"
+        },
+        {
+          "text": "Convocatoria Beca SICYT Licenciaturas / Posgrados",
+          "icon": "arrow_forward",
+          "color": "#7DF1ED",
+          "opacity": "multiply",
+          "height": "120px",
+          "enable": true,
+          "nobackground": true,
+          "redirect": "/admisiones/becas",
+          "isShadowColor": true,
+          "shadowColor": "#4470B1"
+        },
+        {
+          "text": "Beca SEJ BIS",
+          "icon": "arrow_forward",
+          "color": "#7DF1ED",
+          "opacity": "multiply",
+          "height": "110px",
+          "enable": true,
+          "nobackground": true,
+          "redirect": "/admisiones/becas",
+          "isShadowColor": true,
+          "shadowColor": "#F8A600"
+        },
+        {
+          "text": "Dictamen Refrendo de Becas SICYT Licenciaturas / Posgrados",
+          "icon": "arrow_forward",
+          "color": "#7DF1ED",
+          "opacity": "multiply",
+          "height": "120px",
+          "enable": true,
+          "nobackground": true,
+          "redirect": "/admisiones/becas",
+          "isShadowColor": true,
+          "shadowColor": "#C31433"
+        }
+      ],
+      "link": {
+        "text": "Ver todas las becas",
+        "size": "large",
+        "isUnderline": false,
+        "isBold": true,
+        "disabled": false,
+        "id": "",
+        "iconFirst": "",
+        "iconSecond": "arrow_right_ios",
+        "redirect": "/admisiones/becas"
+      }
+    },
+    "ourConventions": {
+      "title": "Más de 1137 convenios",
+      "conventions": [
+        {
+          "urlImage": "https://assets.staging.bedu.org/UTEG/nosotros_benito_santos_d7c1bfaaba.jpg",
+          "subtitle": "",
+          "title": "Benito Santos México",
+          "text": "Diseñador mexicano quea lo largo de los últimos 15 años se ha posicionadocomo uno de los referentes más importantes enla industria de la moda de México y Latinoamérica.\n\nReconocido internacionalmente con más de 30 colecciones.",
+          "border": true,
+          "type": "vertical",
+          "background": true,
+          "islink": false
+        },
+        {
+          "urlImage": "https://assets.staging.bedu.org/UTEG/nosotros_USI_98555a36a0.jpg",
+          "subtitle": "",
+          "title": "Universal Scientific Industrial",
+          "text": "USI-México se especializa en el desarrollo y fabricación de productos electrónicos para aplicaciones en diferentes industrias, como la automotriz, la electrónica de consumo y las comunicaciones bajo los modelos de negocios ODM, JDM, EMS+ y EMS.",
+          "border": true,
+          "type": "vertical",
+          "background": true,
+          "islink": false
+        },
+        {
+          "urlImage": "https://assets.staging.bedu.org/UTEG/nosotros_COLLINS_14da7eba12.jpg",
+          "subtitle": "",
+          "title": "Productos Farmacéuticos Collins",
+          "text": "Grupo Farmacéutico Orgullosamente mexicano con más de 47 años y con el propósito de ofrecer medicamentos de la más alta calidad a precios accesibles; ayudando de esta manera a mejorar la salud y bienestar de las personas.",
+          "border": true,
+          "type": "vertical",
+          "background": true,
+          "islink": false
+        }
+      ]
+    },
+    "ourCertifications": {
+      "title": "Certificaciones",
+      "description": "Contamos con certificaciones de carácter internacional que acreditan nuestra calidad y competitividad en el ámbito educativo. Las certificaciones que ostentamos demuestran nuestra capacidad para satisfacer las necesidades de los miembros de la Comunidad UTEG.",
+      "id": "certificaciones",
+      "certifications": [
+        {
+          "urlImage": "https://assets.staging.bedu.org/UTEG/nosotros_iso_9a6cd486c7.svg",
+          "subtitle": "",
+          "title": "ISO 9001",
+          "text": "International Standarization Organization",
+          "border": true,
+          "allContent": true,
+          "height": "",
+          "isShowCardWebsiteContent": true,
+          "id": "",
+          "type": "small",
+          "link": true,
+          "background": false,
+          "wrapper": true
+        },
+        {
+          "urlImage": "https://assets.staging.bedu.org/UTEG/nosotros_top_cf168d4a61.svg",
+          "subtitle": "",
+          "title": "Top Companies 2022",
+          "text": "Top Companies México",
+          "border": true,
+          "allContent": true,
+          "height": "",
+          "isShowCardWebsiteContent": true,
+          "id": "",
+          "type": "small",
+          "link": true,
+          "background": false,
+          "wrapper": true
+        }
+      ]
+    },
+    "meetYourRector": {
+      "title": "Conoce a tu Rectora",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci sagittis eu volutpat odio facilisis mauris sit A\n\nmet massa vitae tortor condimentum lacinia quis vel eros donec ac odio tempor orci dapibus ultrices in iaculis nunc sed augue lacus, viverra vitae congue eu, consequat ac felis donec et odio pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus",
+      "video": {
+        "options": {
+          "id": "Ae84Xfec1HM",
+          "type": "single",
+          "controls": true
+        },
+        "dimensions": {
+          "height": "500px"
+        }
+      }
+    }
+  }
+}
