@@ -18,6 +18,7 @@ import BannerPortalverse from "@/old-components/BannerPortalverse";
 import RichtText from "@/old-components/Richtext/Richtext";
 import CardWebsitePortalverse from "@/old-components/CardWebsitePortalverse";
 import Icon from "@/old-components/Icon";
+import CardWebsite from "@/old-components/CardWebsite";
 
 const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
 
@@ -82,7 +83,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
           </div>
       </ContentFullLayout>
       <ContentLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-12 w-t:mb-6 w-p:mb-6">
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-p:mb-6 w-t:mb-12 w-d:mb-12">
           <ContentInsideLayout classNames="gap-6">
             {
               contentTabs.map(({ image: { src, alt }, content: { title, description, action = null }, cards }: any, i: number) => <Fragment key={`description-beca-${i}`}>
@@ -107,7 +108,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
                 <section className={cn("col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1", { "hidden w-p:hidden": tabActive !== i })}>
                   {
                     cards.map((item: any, i: number) => <section key={`section-blog-${i}`}>
-                      <CardWebsitePortalverse classNames="overflow-hidden" data={item} />
+                      <CardWebsite data={item}/>
                     </section>)
                   }
                 </section>
@@ -116,33 +117,33 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
           </ContentInsideLayout>
         </div>
 
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:hidden w-t:mb-6 w-p:mb-6">
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:hidden">
           <BannerPortalverse data={sections.internacionalizacion.banner} onClick={() => router.push(sections.internacionalizacion.banner.redirect)} />
         </div>
 
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-t:hidden w-t:mb-6 w-p:mb-6">
+        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-t:hidden">
           <BannerPortalverse data={sections.empleabilidad.banner} onClick={() => router.push(sections.empleabilidad.banner.redirect)} />
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-t:hidden w-t:mb-6 w-p:mb-6">
+        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-t:hidden">
           <BannerPortalverse data={sections.becas.banner} onClick={() => router.push(sections.becas.banner.redirect)} />
         </div>
       </ContentLayout>
-      <ContentFullLayout classNames="w-d:hidden w-p:hidden">
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6 mb-6">
+      <ContentFullLayout classNames="w-d:hidden w-p:hidden flex flex-col space-y-6">
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           <BannerPortalverse data={sections.internacionalizacion.banner} onClick={() => router.push(sections.internacionalizacion.banner.redirect)} />
         </div>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6">
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           <BannerPortalverse data={sections.empleabilidad.banner} onClick={() => router.push(sections.empleabilidad.banner.redirect)} />
         </div>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6">
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           <BannerPortalverse data={sections.becas.banner} onClick={() => router.push(sections.becas.banner.redirect)} />
         </div>
       </ContentFullLayout>
 
 
-      <ContentLayout classNames="mt-[72px]">
+      <ContentLayout classNames="mt-12 w-d:mt-[72px]">
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-Poppins text-10 font-bold leading-[125%] w-t:text-6 w-p:text-6">{sections.egresados.title}</p>
+          <p className="font-Poppins text-10 font-bold leading-[125%] w-t:text-6 w-p:text-6 mb-6">{sections.egresados.title}</p>
           <RichtText data={{
             content: sections.egresados.description
           }} />
