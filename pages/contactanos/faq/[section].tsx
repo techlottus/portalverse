@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react"
-import Head from "next/head"
-import Link from "next/link"
-import { useRouter } from "next/router"
-import cn from "classnames"
-import Routes from "@/routes/Routes"
-import Accordion from "@/old-components/Accordion/Accordion"
-import HeaderFooterLayout from "@/layouts/HeaderFooter.layout"
-import ContentLayout from "@/layouts/Content.layout"
-import NextPageWithLayout from "@/types/Layout.types"
-import { getDataPageFromJSON } from "@/utils/getDataPage"
-import Banner from "@/old-components/Banner"
-import ContentFullLayout from "@/layouts/ContentFull.layout"
+import { useEffect, useState } from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import cn from "classnames";
+import Routes from "@/routes/Routes";
+import Accordion from "@/old-components/Accordion/Accordion";
+import HeaderFooterLayout from "@/layouts/HeaderFooter.layout";
+import ContentLayout from "@/layouts/Content.layout";
+import NextPageWithLayout from "@/types/Layout.types";
+import { getDataPageFromJSON } from "@/utils/getDataPage";
+import ContentFullLayout from "@/layouts/ContentFull.layout";
+import BannerPortalverse from "@/old-components/BannerPortalverse";
 
 const FAQ: NextPageWithLayout<any> = ({ info, meta, sections }: any) => {
   const router = useRouter()
@@ -64,12 +64,14 @@ const FAQ: NextPageWithLayout<any> = ({ info, meta, sections }: any) => {
           }
         </div>
         <div className="col-span-12 w-t:hidden w-p:hidden w-p:col-span-4 mt-[72px] w-p:mt-12">
-         <Banner data={sections.banner} onBtn={()=> handleRedirect(sections.banner.redirect)}/>
+         {/* <Banner data={sections.banner} onBtn={()=> handleRedirect(sections.banner.redirect)}/> */}
+         <BannerPortalverse data={sections?.banner} onClick={()=> handleRedirect(sections.banner.redirect)} />
         </div>
       </ContentLayout>
       <ContentFullLayout classNames="mt-12">
         <div className="w-d:hidden">
-         <Banner data={sections.banner} onBtn={()=> handleRedirect(sections.banner.redirect)}/>
+         {/* <Banner data={sections.banner} onBtn={()=> handleRedirect(sections.banner.redirect)}/> */}
+         <BannerPortalverse data={sections?.banner} onClick={()=> handleRedirect(sections.banner.redirect)} />
         </div>
       </ContentFullLayout>
     </HeaderFooterLayout>

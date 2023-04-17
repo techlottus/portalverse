@@ -1,0 +1,117 @@
+{
+    "meta": {
+      "title": "Ingeniería Civil con Certificación en Inglés Proulex",
+      "description": "",
+      "keywords": ""
+    },
+    "config": {
+      "title": "Ingeniería Civil con Certificación en Inglés Proulex",
+      "config": {
+        "nombre": "Ingeniería Civil",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Ingenierías y Tecnología"],
+        "campus": ["Olímpica"],
+        "nivel": ["Licenciatura"],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_ing_civil_desk_7c7028c9ec.jpg",
+          "alt": "licenciatura"
+        },
+        "curriculum": {
+          "Presencial": {
+            "Olímpica": "Lic_en_Ingenierio_Civil_Proulex_Presencial_099388ccc9.pdf"
+          }
+        }
+      }
+    },
+    "sections": {
+      "head": {
+        "title": "Ingeniería Civil con Certificación en Inglés Proulex",
+        "description": "Ingeniería Civil con certificación en Inglés Proulex con la enseñanza del idioma inglés. Ofrecemos el dominio de una segunda lengua bajo un modelo especial.",
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_ing_civil_desk_7c7028c9ec.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "modalities": {
+        "title": "Modalidades disponibles en esta licenciatura:",
+        "tabs": {
+          "items": [
+            {
+              "label": "Presencial",
+              "icons": { "primary": "", "duplicate": false },
+              "disabled": false,
+              "content": {
+                "cards": [
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
+                    },
+                    "title": "Perfil de ingreso",
+                    "text": "El aspirante a cursar la carrera de Ingeniería Civil debe contar con conocimientos sobre:\n\n• Pensamiento reflexivo y critico; resuelve modelos matemáticos considerando diferentes criterios y enfoques.\n\n• La Interpretación de los resultados a través de las matemáticas y los discute con los paradigmas establecidos.\n\n• La Interpretación mapas, gráficas y diagramas con diferentes nomenclaturas.\n\n• El uso las TIC´s.\n\n• La expresión oral y escrita.\n\n• Evaluar fortalezas y debilidades de los equipos de trabajo.\n\n• Manejar equipos de cómputo y electrónicos.",
+                    "backgroundColor": "#1B2D68"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
+                    },
+                    "title": "Perfil de egreso",
+                    "text": "Los problemas de la ingeniería civil se identifican con la planeación, diseño y realización de la construcción, operación y mantenimiento de obras de diverso tipos.\n\nTener la habilidad para manejar e interpretar los paquetes computacionales básicos de uso en su campo.\n\nAtender los problemas de la ingeniería desde una visión inclusiva de la problemática global de los fenómenos sociales.\n\nTener actitud de respetar los valores, costumbres y tradiciones de las comunidades afectadas por las obras.\n\nTener actitud de respeto por el medio ambiente.",
+                    "backgroundColor": "#C31433"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
+                    },
+                    "title": "Campo Laboral",
+                    "text": "Áreas:\n\n • Sector público: dependencias federales, estatales y municipales.\n\n • Sector privado: industria de construcción.\n\n • Instituciones educativas: docencia e investigación.",
+                    "backgroundColor": "#4470B1"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
+                    },
+                    "title": "Requisitos de admisión",
+                    "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
+                    "backgroundColor": "#EEAA01"
+                  }
+                ],
+                "wrapper": false
+              }
+            }
+          ],
+          "size": "medium"
+        }
+      },
+      "descarga": {
+        "id": "program_licenciatura",
+        "type": "primary",
+        "title": "Descarga el plan de estudios",
+        "size": "small",
+        "icon": "download",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "testClick",
+        "test": "1qZVnBuLPzxLH3SoazOIjUnKi4zu_xKGX"
+      }
+    },
+    "form": {
+      "config": {
+        "level": { "hidden": true, "value": "licenciatura" },
+        "program": { "hidden": false, "value": "Ingeniería Civil con Certificación en Inglés Proulex" },
+        "modality": { "hidden": false },
+        "campus": { "hidden": false }
+      },
+      "copies": {
+        "stepone": {
+          "title": "Obtén informes sobre tu programa",
+          "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+        }
+      }
+    }
+  }
+  

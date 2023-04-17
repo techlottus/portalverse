@@ -1,117 +1,116 @@
 {
-  "meta": {
-    "title": "Licenciatura en Nutrición",
-    "description": "",
-    "keywords": ""
-  },
-  "config": {
-    "title": "Licenciatura en Nutrición",
+    "meta": {
+      "title": "Licenciatura en Nutrición",
+      "description": "",
+      "keywords": ""
+    },
     "config": {
-      "nombre": "Licenciatura en Nutrición",
-      "modalidad": ["Presencial"],
-      "areaConocimiento": ["Ciencias Biologicas"],
-      "campus": [ "Saltillo", "Monterrey", "Torreón", "Monclova" ],
-      "nivel": ["Licenciatura"],
-      "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1jPhoRe9clsE3sP9r0HI3sMrIr07kWVJA",
-        "alt": "licenciatura"
+      "title": "Licenciatura en Nutrición",
+      "config": {
+        "nombre": "Licenciatura en Nutrición",
+        "modalidad": ["Presencial"],
+        "areaConocimiento": ["Salud"],
+        "campus": ["Campus Washington"],
+        "nivel": ["Licenciatura"],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_nutricion_desk_189ff4c478.jpg",
+          "alt": "licenciatura"
+        },
+        "curriculum": {
+          "Presencial": {
+            "Campus Washington": "Lic_en_Nutricion_Presencial_dfb5c839ec.pdf"
+          }
+        }
+      }
+    },
+    "sections": {
+      "head": {
+        "title": "Licenciatura en Nutrición",
+        "description": "En la Licenciatura en Nutrición,  se forman profesionales capaces de enfrentar la problemática alimentario-nutricional de nuestro contexto social, respetando la cultura alimentaria, apoyándose de la normatividad nacional e internacional en materia de salud y alimentación y que inciden en la construcción de un proyecto social, equitativo y solidario.",
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_nutricion_desk_189ff4c478.jpg",
+          "alt": "licenciatura"
+        }
       },
-      "curriculum": {
-        "Presencial": {
-          "Saltillo": "1_uWoSH422agx3GSCkxCh6HViPoi5vL0K",
-          "Monterrey": "1I68GMgn6mEdqu7mO5KNmneqKOGmKXJAf",
-          "Torreón": "1ol0B23zRozhMfRlXMrv_C_nc3WzJI9Mx",
-          "Monclova": "1bPmCGK4gEDTjQ_lmZoR9P0kNqHy_xzrn"
+      "modalities": {
+        "title": "Modalidades disponibles en esta licenciatura:",
+        "tabs": {
+          "items": [
+            {
+              "label": "Presencial",
+              "icons": { "primary": "", "duplicate": false },
+              "disabled": false,
+              "content": {
+                "cards": [
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
+                    },
+                    "title": "Perfil de ingreso",
+                    "text": "El aspirante a la carrera de nutrición deberá tener interés:\n\n• Sobre el humanismo.\n\n• Por los hábitos de alimentación personales y de los demás.\n\n• Por los alimentos, sus propiedades, su manejo y preparación. \n\n• Uso del lenguaje oral y escrito, pensamiento lógico y matemático para resolución de problemas abiertos, auto motivador e innovador.\n\n• Ampliar y aplicar conocimientos referentes a todas las áreas de la nutrición, con interés en la salud individual y de la población.\n\n• Hábitos de alimentación y estilos de vida saludables personales y de los demás.",
+                    "backgroundColor": "#1B2D68"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
+                    },
+                    "title": "Perfil de egreso",
+                    "text": "Evalúa el proceso alimentario nutricio del individuo, las familias y la sociedad con una visión general integral que considera aspectos biológicos, socioeconómicos, culturales y psicológicos con relación a las prácticas alimentarias, estilos de vida, seguridad y soberanía alimentaria, necesidades de salud, perfil epidemiológico, demográfico y el desarrollo sustentable.\n\nGestiona proyectos para el desarrollo de sistemas de producción y transformación de alimentos, fundamentado en el pensamiento crítico-reflexivo, con una visión ecológica y sustentable.",
+                    "backgroundColor": "#C31433"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
+                    },
+                    "title": "Campo Laboral",
+                    "text": "Áreas: nutrición clínica, deportiva, servicio de alimentos, tecnología alimentaria, nutrición poblacional, investigación y docencia, instituciones públicas o privadas, laboratorios, comedores industriales.\n\n Actividades: producción de mercadotecnia alimenticia.",
+                    "backgroundColor": "#4470B1"
+                  },
+                  {
+                    "image": {
+                      "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                      "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
+                    },
+                    "title": "Requisitos de admisión",
+                    "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
+                    "backgroundColor": "#EEAA01"
+                  }
+                ],
+                "wrapper": false
+              }
+            }
+          ],
+          "size": "medium"
+        }
+      },
+      "descarga": {
+        "id": "program_licenciatura",
+        "type": "primary",
+        "title": "Descarga el plan de estudios",
+        "size": "small",
+        "icon": "download",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "testClick",
+        "test": ""
+      }
+    },
+    "form": {
+      "config": {
+        "level": { "hidden": true, "value": "licenciatura" },
+        "program": { "hidden": false, "value": "Licenciatura en Nutrición" },
+        "modality": { "hidden": false },
+        "campus": { "hidden": false }
+      },
+      "copies": {
+        "stepone": {
+          "title": "Obtén informes sobre tu programa",
+          "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
         }
       }
     }
-  },
-  "sections": {
-    "head": {
-      "title": "Licenciatura en Nutrición",
-      "description": "Aplica estrategias y mejora la calidad de vida de la sociedad a través de balances nutricionales. Ejerce tu labor en clínicas públicas o privadas, escuelas o centros de salud.",
-      "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1jPhoRe9clsE3sP9r0HI3sMrIr07kWVJA",
-        "alt": "licenciatura"
-      }
-    },
-    "modalities": {
-      "title": "Modalidades disponibles en esta licenciatura:",
-      "tabs": {
-        "items": [
-          {
-            "label": "Modalidad Presencial", "icons": { "primary": "", "duplicate": false}, "disabled": false,
-            "content": {
-              "cards": [
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
-                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
-                  },
-                  "title": "Perfil de ingreso",
-                  "text": "El aspirante a la Licenciatura en Nutrición debe tener interés en el desarrollo humano, gusto por aprender, curiosidad por los hábitos alimenticios propios y de los demás, y por los alimentos, sus propiedades, preparación y combinación para la salud humana. Debe contar con capacidad de servicio, trabajo en equipo y perseverancia para trabajar sobre las metas de sus pacientes.",
-                  "backgroundColor": "#8B9BA3"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
-                  },
-                  "title": "Perfil de egreso",
-                  "text": "La Licenciatura en Nutrición te ayudará a aplicar metodologías, estrategias de intervención y seguimiento individual, familiar, comunitario e institucional a fin de conservar y mejorar la calidad de vida, de salud o en procesos patológicos; además de administrar los servicios alimentarios y programas educativos preventivos y correctivos con balance nutricional.",
-                  "backgroundColor": "#B0003C"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
-                  },
-                  "title": "Campo Laboral",
-                  "text": "Como egresado de la Licenciatura en Nutrición, podrás desarrollarte en hospitales y clínicas del sector público o privado, centros deportivos y gimnasios como orientador y coach nutricional. También podrás aplicar tus conocimientos en las áreas de investigación y desarrollo de productos alimenticios, además puedes desempeñarte de manera independiente en tu propio consultorio o como consultor profesional.",
-                  "backgroundColor": "#E84537"
-                },
-                {
-                  "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
-                  },
-                  "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento reciente, original del cajero y 2 copias.\n\n• Certificado de secundaria legalizado original y dos copias.\n\n• Certificado de preparatoria legalizado original y 2 copias con su carta de autenticidad. (En caso de no contar con original, presentar constancia de que está en trámite).\n\n• CURP copia.\n\nEn caso de equivalencia\n\n• Certificado parcial de estudios legalizado original con 2 copias y carta de autenticidad.\n\n• 4 fotografías tamaño infantil y 4 tamaño credencial, ambas blanco y negro, papel mate no instantáneas.\n\n• Carta de buena salud expedida por institución pública o privada.",
-                  "backgroundColor": "#00BEB4"
-                }
-              ],
-              "wrapper": false
-            }
-          }
-        ],
-        "size": "medium"
-      }
-    },
-    "descarga": {
-      "id": "program_licenciatura",
-      "type": "primary",
-      "title": "Descarga el plan de estudios",
-      "size": "small",
-      "icon": "download",
-      "lyIcon": false,
-      "disabled": false,
-      "isExpand": false,
-      "tagOnClick": "testClick",
-      "test": ""
-    }
-  },
-  "form": {
-    "config": {
-      "level": { "hidden": true, "value": "licenciatura" },
-      "program": { "hidden": false, "value": "Nutrición" },
-      "modality": { "hidden": false },
-      "campus": { "hidden": false }
-    },
-    "copies": {
-      "stepone": {
-        "title": "Obtén informes sobre tu programa",
-        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
-      }
-    }
-  }
 }

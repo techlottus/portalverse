@@ -6,15 +6,15 @@
   },
   "sections": {
     "head":{
-      "title": "Alumnos ¡Bienvenidos a la Universidad Americana del Noreste!",
-      "description": "Tenemos 48 años de experiencia en la formación de profesionistas que sí resuelven las necesidades de las empresas.\n\nAquí tendrás un progreso con educación continua y experiencias internacionales, a través de modalidades que te permitirán desarrollarte en todas las áreas de tu vida."
+      "title": "Acceso al estudiante",
+      "description": "¡Bienvenidos al Centro Universitario UTEG! Somos una universidad con 55 años de experiencia. En este espacio ponemos a tu alcance una vía fácil y rápida para acceder a los trámites, servicios, actividades, eventos de interés e información institucional. Te garantizamos una experiencia virtual eficiente, ágil y transparente."
     },
     "accesos": [
       { 
-        "image": "https://drive.google.com/uc?export=view&id=17IHKUeFZlozxvkt1GRKKU9CHkO_QBYJQ",
+        "image": "https://assets.staging.bedu.org/UTEG/alumnos_card_acceso_SIAAF_f52aea068a.jpg",
         "subtitle": "",
-        "title": "SIUANE",
-        "text": "Portal para estudiantes: Aquí encontrarás información sobre tus materias, horarios, pagos, avisos y más.",
+        "title": "SIAAF",
+        "text": "Consulta tus materias, tu kárdex, genera constancias, realiza tus pagos y regístrate a eventos de la universidad.",
         "border": true,
         "allContent": true,
         "height": "",
@@ -32,13 +32,13 @@
           "disabled": false,
           "icon": ""
         },
-        "redirect": "http://sistema.uane.edu.mx/siuane/login.aspx"
+        "redirect": "https://www.uteg.edu.mx/colaboradores-uteg/bienvenidos-a-siaaf/"
       },
       { 
-        "image": "https://drive.google.com/uc?export=view&id=1vN8A17tA73ECHhlapbvLgJVIo5ZW0sEa",
+        "image": "https://assets.staging.bedu.org/UTEG/alumnos_card_acceso_talento_0335f9c618.jpg",
         "subtitle": "",
-        "title": "AULA VIRTUAL MOODLE",
-        "text": "Hemos diseñado una plataforma de aprendizaje seguro para que aproveches tus clases virtuales al máximo.",
+        "title": "Alumnos Talento",
+        "text": "Impulsa tu perfil como profesional, investigador o emprendedor con los beneficios del Programa de Excelencia Académica.",
         "border": true,
         "allContent": true,
         "height": "",
@@ -57,13 +57,13 @@
           "icon": "chevron_right"
         },
         "wrapper": true,
-        "redirect": "https://aula.uane.mx/my/"
+        "redirect": "https://portal.uteg.edu.mx/Alumnos/"
       },
       { 
-        "image": "https://drive.google.com/uc?export=view&id=1D2BUw7hrBN6M_fVDEIO7lbYB25a_sQiT",
+        "image": "https://assets.staging.bedu.org/UTEG/alumnos_card_acceso_idiomas_7cb52d15e7.jpg",
         "subtitle": "",
-        "title": "ESPACIO DIGITAL CANVAS ",
-        "text": "Herramientas digitales que facilitan la enseñanza y aprendizaje. Accede a la información de manera simple.",
+        "title": "Programa Institucional de Idiomas ",
+        "text": "Conviértete en un profesional bilingüe gracias al Programa Institucional de Idiomas. Beneficio que incluye la capacitación extensiva en tecnologías de la información.  ",
         "border": true,
         "allContent": true,
         "height": "",
@@ -82,27 +82,29 @@
           "icon": ""
         },
         "wrapper": true,
-        "redirect": "https://uane.instructure.com/login/canvas"
+        "redirect": ""
       }
     ],
     "calendario": {
       "banner": {
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1T-W52yh4F3iGkl1u8sQrhM1ij-ctSnuw",
-          "mobile": "https://drive.google.com/uc?export=view&id=1oYRLmnAXdRUZ3i88SOblPkbWBdP78NIv",
-          "tablet": "https://drive.google.com/uc?export=view&id=1aEm5uY89FbvNcWOvJ1ayjLV0WZRuSZyF"
+          "desktop": "https://assets.staging.bedu.org/UTEG/alumnos_banner_calendario_desktop_12381bb355.jpg",
+          "mobile": "https://assets.staging.bedu.org/UTEG/alumnos_banner_calendario_movil_bfb1ecc26a.jpg",
+          "tablet": "https://assets.staging.bedu.org/UTEG/alumnos_banner_calendario_tablet_d061d72f0a.jpg"
         },
         "font": "",
-        "title": "UANE Internacional",
-        "subtitle": "Agrega experiencias internacionales a tu educación",
+        "title": "Calendario escolar",
+        "subtitle": "Consulta el calendario escolar del periodo actual",
         "position": "",
-        "height": "200px",
+        "height": "auto",
         "overlayWhite":false,
         "overlayDak": false,
+        "desktopRatio": "300/53",
+        "tabletRatio": "768/219",
         "button":{
           "id": "",
           "type": "outlined",
-          "title": "Conocer más",
+          "title": "Consultar",
           "size": "small",
           "icon": "",
           "lyIcon": false,
@@ -112,20 +114,46 @@
           "test": ""
         },
         "noAction": false,
-        "redirect": "/nosotros/internacionalizacion",
+        "file": "https://assets.staging.bedu.org/UTEG/calendario_2022_40109f1c7d.pdf",
+        "fileNmae": "calendario",
+        "redirect": "",
         "visible": true
       }
     },
     "directorio": [
       {
-        "name": "Contacto universitario",
-        "description": "Todos los que integramos la universidad estamos para atenderte y escucharte, contacta a cualquier área de la universidad",
+        "name": "Directorio universitario",
+        "description": "Todos los que integramos la universidad estamos para atenderte y escucharte, contacta con cualquier área de la universidad.",
         "contacts": [
           {
-            "image": "https://drive.google.com/uc?export=view&id=1e5UpQ17ZAUGw_0bb3I9tRz_dJmq8LNIn",
-            "name": "Contacto Central",
-            "email": "hola@uane.edu.mx",
-            "phone": "8008228263"
+            "image": "https://assets.staging.bedu.org/UTEG/alumnos_servicios_escolares_f790a4be49.jpg",
+            "name": "Servicios escolares",
+            "email": "servicios.campus@uteg.edu.mx"
+          },
+          {
+            "image": "https://assets.staging.bedu.org/UTEG/alumnos_beneficios_bd5eaf24b1.jpg",
+            "name": "Beneficios",
+            "link": "https://sites.google.com/a/uteg.edu.mx/prestaciones-y-beneficios-uteg/"
+          },
+          {
+            "image": "https://assets.staging.bedu.org/UTEG/alumnos_reglamento_233b4c60e1.jpg",
+            "name": "Reglamento y Artículos UTEG",
+            "link": "https://www.uteg.edu.mx/alumnos/reglamento-y-articulos-uteg/"
+          },
+          {
+            "image": "https://assets.staging.bedu.org/UTEG/alumnos_biblioteca_virtual_197e8b5e37.jpg",
+            "name": "Biblioteca virtual eLibro",
+            "email": "ayudaerecursos@uteg.edu.mx"
+          },
+          {
+            "image": "https://assets.staging.bedu.org/UTEG/alumnos_biblioteca_135ac738d9.jpg",
+            "name": "Biblioteca",
+            "email": "biblioteca.uteg@uteg.edu.mx"
+          },
+          {
+            "image": "https://assets.staging.bedu.org/UTEG/alumnos_soporte_tecnico_68c40cf062.jpg",
+            "name": "Soporte técnico",
+            "email": "ticket@uteg.edu.mx"
           }
         ]
       }

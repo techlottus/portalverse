@@ -1,22 +1,65 @@
 {
   "banners":[
     {
-      "font": "",
+      "font": "light",
       "type": "",
-      "title": "Voz UANE ayuda a difundir tus ideas",
-      "subtitle": "Si eres parte de la comunidad contacta al equipo. Te estamos buscando",
+      "title": "Clínicas dentales",
+      "subtitle": "Atención profesional con calidad de nuestros alumnos",
       "state": "black",
       "size": "medium",
       "middle": false,
       "center": false,
       "bottom": false,
       "left": false,
-      "urlImage": {
-        "mobile": "https://cdn.milenio.com/uploads/media/2020/01/31/reconocio-alumnos-obtuvieron-promedios-mayores.jpg",
-        "desktop": "https://cdn.milenio.com/uploads/media/2020/01/31/reconocio-alumnos-obtuvieron-promedios-mayores.jpg"
+      "image": {
+        "desktop": "https://assets.staging.bedu.org/UTEG/Entrada_blog_clinica_dental_DESK_c58af881ff.jpg",
+        "mobile": "https://assets.staging.bedu.org/UTEG/nota_blog_Entrada_blog_clinica_dental_tablet_mobile_bd1512ade5.jpg",
+        "tablet": "https://assets.staging.bedu.org/UTEG/nota_blog_Entrada_blog_clinica_dental_tablet_mobile_bd1512ade5.jpg"
       },
-      "overlay": "black",
+      "overlay": false,
+      "height": "auto",
+      "desktopRatio": "1/2",
+      "tabletRatio": "4/3",
+      "mobileRatio": "4/3",
+      "button": {
+        "id": "",
+        "type": "secondary",
+        "title": "Contactar",
+        "size": "small",
+        "icon": "",
+        "lyIcon": false,
+        "disabled": false,
+        "isExpand": false,
+        "tagOnClick": "",
+        "test": ""
+      },
+      "wrapper": true,
+      "redirect": "/contactanos"
+    },
+    {
+      "font": "light",
+      "type": "sm",
+      "title": "CESEPCOM",
+      "subtitle": "Atención profesional con calidad y espacio de aprendizaje y práctica para nuestros alumnos",
+      "state": "black",
+      "size": "large",
+      "middle": false,
+      "center": false,
+      "bottom": false,
+      "left": false,
+      "urlImage": {
+        "mobile": "https://assets.staging.bedu.org/UTEG/CESEPCOM_DESK_17b65774ab.jpg",
+        "tablet": "https://assets.staging.bedu.org/UTEG/CESEPCOM_DESK_17b65774ab.jpg",
+        "desktop": "https://assets.staging.bedu.org/UTEG/CESEPCOM_DESK_17b65774ab.jpg"
+      },
+      "image": {
+        "mobile": "https://assets.staging.bedu.org/UTEG/CESEPCOM_DESK_17b65774ab.jpg",
+        "tablet": "https://assets.staging.bedu.org/UTEG/CESEPCOM_DESK_17b65774ab.jpg",
+        "desktop": "https://assets.staging.bedu.org/UTEG/CESEPCOM_DESK_17b65774ab.jpg"
+      },
+      "overlay": false,
       "height": "",
+      "tabletRatio": "4/3",
       "action": {
         "id": "",
         "type": "primary",
@@ -29,30 +72,10 @@
         "tagOnClick": "",
         "test": ""
       },
-      "wrapper": true,
-      "redirect": "/voz-UANE"
-    },
-    {
-      "font": "light",
-      "type": "sm",
-      "title": "Escucha nuestro Podcast",
-      "subtitle": "Un episodio cada 2 semanas\n\nDisponible en spotify y youtube",
-      "state": "black",
-      "size": "medium",
-      "middle": false,
-      "center": false,
-      "bottom": false,
-      "left": false,
-      "urlImage": {
-        "mobile": "https://cdn.milenio.com/uploads/media/2020/01/31/reconocio-alumnos-obtuvieron-promedios-mayores.jpg",
-        "desktop": "https://cdn.milenio.com/uploads/media/2020/01/31/reconocio-alumnos-obtuvieron-promedios-mayores.jpg"
-      },
-      "overlay": "black",
-      "height": "",
-      "action": {
+      "button": {
         "id": "",
         "type": "primary",
-        "title": "Ir a Podcast",
+        "title": "Contactar",
         "size": "small",
         "icon": "",
         "lyIcon": false,
@@ -62,15 +85,15 @@
         "test": ""
       },
       "wrapper": true,
-      "redirect": "/podcast"
+      "redirect": "/nosotros/CESEPCOM"
     }
   ],
-  "related_post_title": "Artículos relacionados",
+  "related_post_title": "Quizás también te interese",
   "blog_section": {
-    "title": "Ver más Artículos",
+    "title": "Ver más notas",
     "type": "primary",
     "icon": "",
     "isExpand": false,
-    "redirect": "/voz-uane/blog"
+    "redirect": "/blog"
   }
 }

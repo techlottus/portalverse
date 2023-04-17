@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "title": "Licenciatura en contaduría Púbica con Certificación en Inglés Proulex",
+    "description": "",
+    "keywords": ""
+  },
+  "config": {
+    "title": "Licenciatura en contaduría Púbica con Certificación en Inglés Proulex",
+    "config": {
+      "nombre": "Licenciatura en contaduría Púbica con Certificación en Inglés Proulex",
+      "modalidad": ["Presencial"],
+      "areaConocimiento": ["Negocios y Empresariales"],
+      "campus": ["Campus Washington"],
+      "nivel": ["Licenciatura"],
+      "image": {
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_contaduria_desk_9f755fe126.jpg",
+        "alt": "licenciatura"
+      },
+      "curriculum": {
+        "Presencial": {
+          "Campus Washington": "Lic_en_Contaduria_Semestral_Proulex_Presencial_5c7d3e5c9a.pdf"
+        }
+      }
+    }
+  },
+  "sections": {
+    "head": {
+      "title": "Licenciatura en contaduría Púbica con Certificación en Inglés Proulex",
+      "description": "Licenciatura en Contaduría Pública con certificación en Inglés Proulex. Ofrecemos el dominio de una segunda lengua bajo un modelo especial.",
+      "image": {
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_contaduria_desk_9f755fe126.jpg",
+        "alt": "licenciatura"
+      }
+    },
+    "modalities": {
+      "title": "Modalidades disponibles en esta licenciatura:",
+      "tabs": {
+        "items": [
+          {
+            "label": "Presencial",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "El aspirante deberá tener conocimientos sobre:\n\n• Matemáticas.\n\n• Uso de las TIC´s.\n\n• Expresión oral y escrita.\n\nHabilidades y aptitudes para:\n\n• Desarrollar procesos lógicos.\n\n• Resolver problemas con base en principios, leyes y conceptos.\n\n• Evaluar fortalezas y debilidades de los equipos de trabajo.\n\n• El pensamiento crítico.\n\n• Aplicar el razonamiento lógico.\n\n• Manejar equipos de cómputo y electrónicos.\n\n• Liderar grupos de trabajo.\n\nActitudes:\n\n• Sensibilidad ante las necesidades sociales.\n\n• Creatividad.\n\n• Liderazgo.\n\n• Trabajo en equipo.",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "CONOCIMIENTOS:\n\n• Los procesos contables aplicados al control administrativo y fiscal.\n\n• Normas y procedimientos de auditoría e información financiera de México y el mundo.\n\nHABILIDADES:\n\n• Detectar problemas contables, fiscales y financieros.\n\n• Crear estrategias de venta, crédito y cobranza.\n\n• Crear estrategias financieras y fiscales éticas y legales.\n\nACTITUDES:\n\n• Negociación.\n\n• Trabajo en equipo.\n\n• Innovación y creación de estrategias financieras.\n\n• Compromiso ético.",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "Áreas: organizaciones públicas o privadas, mandos intermedios, gerencia o dirección en producción, finanzas, recursos humanos, compras, tesorería, contraloría y planeación estratégica fiscal. \n\nActividades: consultoría y asesoría de negocios, investigación y desarrollo de nuevas tecnologías contables. ",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          }
+        ],
+        "size": "medium"
+      }
+    },
+    "descarga": {
+      "id": "program_licenciatura",
+      "type": "primary",
+      "title": "Descarga el plan de estudios",
+      "size": "small",
+      "icon": "download",
+      "lyIcon": false,
+      "disabled": false,
+      "isExpand": false,
+      "tagOnClick": "testClick",
+      "test": ""
+    }
+  },
+  "form": {
+    "config": {
+      "level": { "hidden": true, "value": "licenciatura" },
+      "program": {
+        "hidden": false,
+        "value": "Licenciatura en contaduría Púbica con Certificación en Inglés Proulexa"
+      },
+      "modality": { "hidden": false },
+      "campus": { "hidden": false }
+    },
+    "copies": {
+      "stepone": {
+        "title": "Obtén informes sobre tu programa",
+        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+      }
+    }
+  }
+}

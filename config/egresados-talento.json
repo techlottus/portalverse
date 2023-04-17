@@ -7,15 +7,15 @@
   "sections": {
     "head": {
       "title": "Egresados talento",
-      "description": "<b>En estos 48 años de historia y experiencia hemos formando profesionales que han contribuido y dejado huella en nuestra sociedad. Nuestros egresados trabajan en empresas e instituciones de muy diversos sectores, tanto de la región como nacionales e internacionales,</b> y se han convertido en un engranaje clave. Estamos orgullosos de todos y cada uno de los miles de titulados que han egresado de la Universidad Americana del Noreste."
+      "description": "En UTEG contamos con un Programa de Egresados Talento cuyo propósito es resaltar el trabajo de aquellos exalmunos reconocidos por su destacado desempeño en el ámbito profesional, académico, empresarial y social. Contamos sus historias de éxito y les agradecemos su aporte al perfeccionamiento de nuestros procesos educativos."
     },
     "experiencias": {
       "cards": [
         { 
-          "image": "https://drive.google.com/uc?export=view&id=1aUcuNe6I1zMp2-gYwbK7wO9FFTINPQ-T",
-          "subtitle": "DISEÑO GRÁFICO",
-          "title": "Noé Silva",
-          "text": "Noé ha logrado dejar huella con su trabajo en todo el país. Gracias a su único estilo, desde la imagen de una edición especial de la cerveza Indio, hasta el diseño del Quetzalcoatl de la imagen conmemorativa del aniversario de la independencia de México en 2021.",
+          "image": "https://assets.staging.bedu.org/UTEG/egresados_talento_daniel_guerrero_d6c47322a1.jpg",
+          "subtitle": "DERECHO",
+          "title": "Diego Daniel Guerrero",
+          "text": "Uno de los egresados de UTEG más exitosos en el ejercicio de la abogacía. En nuestras aulas sentó las bases de su éxito profesional hasta convertirse en un profesionista sobresaliente, con vocación de servicio a la sociedad y al prójimo.",
           "border": true,
           "type": "vertical",
           "background": false,
@@ -29,13 +29,13 @@
             "iconFirst": "play_circle",
             "iconSecond": ""
           },
-          "video": "GMtcxjuvBHc"
+          "video": "XwnPj-Jesxw"
         },
         { 
-          "image": "https://drive.google.com/uc?export=view&id=1lsuR-ejEiIq7GaFf5V3pHJ3zkIY6tlt8",
-          "subtitle": "RECURSOS HUMANOS",
-          "title": "Martha Rodríguez",
-          "text": "Después de concluir su Licenciatura, Martha continúa su crecimiento académico y profesional con una Maestría en Administración y Liderazgo en UANE. Hoy se desempeña como Gerente Administrativa.",
+          "image": "https://assets.staging.bedu.org/UTEG/egresados_talento_leslee_barba_600f79007d.jpg",
+          "subtitle": "DISEÑO DE INTERIORES",
+          "title": "Leslee Barba Salas",
+          "text": "En UTEG aprendió a considerar el Diseño de Interiores como un estilo de vida que le permite llegar a las personas. Las habilidades y valores adquiridos durante su formación académica y profesional, le han permitido  trabajar de manera armoniosa en equipos de trabajo multidisciplinarios.",
           "border": true,
           "type": "vertical",
           "background": false,
@@ -49,13 +49,13 @@
             "iconFirst": "play_circle",
             "iconSecond": ""
           },
-          "video": "RRd5gA6AVDY"
+          "video": "kYJJiaEMHD8"
         },
         { 
-          "image": "https://drive.google.com/uc?export=view&id=1aMNri-Z6QO84SDIlX_LnlYW3goXelTXy",
-          "subtitle": "COMUNICACIÓN",
-          "title": "Nidia Orozco",
-          "text": "Nidia se consolidó en los medios de comunicación en Piedras Negras Coahuila, pero continúo su formación y hoy tiene su propio negocio.",
+          "image": "https://assets.staging.bedu.org/UTEG/egresados_talento_juan_carlos_vera_22fee9b399.jpg",
+          "subtitle": "GASTRONOMÍA",
+          "title": "Chef Juan Carlos Cruz Vera",
+          "text": "En nuestras aulas conoció a gente talentosa y comenzó su desandar profesional. Su universidad le abrió las puertas al área profesional. Vera Cruz agradece y recuerda con cariño cómo sus maestros lo acercaron a “la vida real de cocina” durante su periodo de formación.",
           "border": true,
           "type": "vertical",
           "background": false,
@@ -69,13 +69,13 @@
             "iconFirst": "play_circle",
             "iconSecond": ""
           },
-          "video": "rDfCvp0UrKg"
+          "video": "9Z_edVszIV8"
         },
         { 
-          "image": "https://drive.google.com/uc?export=view&id=1Dgn8f02hCN5rU7xsGQKG64BUlaNgatAT",
-          "subtitle": "MERCADOTECNIA INTERNACIONAL",
-          "title": "Luis Cruz Brito",
-          "text": "Conoce la trayectoria de Luis quien hoy se desempeña como Gerente General Regional de Televisa Piedras Negras, Coahuila.",
+          "image": "https://assets.staging.bedu.org/UTEG/egresados_talento_maria_galarza_ef4f244a9f.jpg",
+          "subtitle": "ABOGADO",
+          "title": "María de Jesús Galarza Uribe",
+          "text": "Ayudar a los más vulnerables es una de las razones por las que se convirtió en abogada. La formación en valores y la ética profesional que le inculcaron sus profesores es de sus recuerdos más gratos durante sus años como estudiante en UTEG.",
           "border": true,
           "type": "vertical",
           "background": false,
@@ -89,13 +89,13 @@
             "iconFirst": "play_circle",
             "iconSecond": ""
           },
-          "video": "0bq-GyBddBo"
+          "video": "jSdTAFDbuHg"
         },
         { 
-          "image": "https://drive.google.com/uc?export=view&id=1VzrgljQOc90V6KMGAG6SBNtX4iwYYqR1",
-          "subtitle": "DISEÑO GRÁFICO",
-          "title": "Ángel Treviño",
-          "text": "Gracias a su excepcional trabajo como diseñador, Ángel ha logrado trabajar para artistas de alto nivel como Shakira o su más reciente colaboración con Gloria Trevi.",
+          "image": "https://assets.staging.bedu.org/UTEG/egresados_talento_iris_hernandez_9f99e0ba24.jpg",
+          "subtitle": "INGENIERA EN COMPUTACIÓN",
+          "title": "Iris Monserrat Hernández González",
+          "text": "Los conocimientos obtenidos durante sus años de formación en UTEG la convirtieron en una profesional segura de sí misma, capaz de lograr sus objetivos y con las competencias necesarias para afrontar cualquier reto en su vida laboral.",
           "border": true,
           "type": "vertical",
           "background": false,
@@ -109,13 +109,13 @@
             "iconFirst": "play_circle",
             "iconSecond": ""
           },
-          "video": "JSlK3lrUYY8"
+          "video": "dQQZ8nyrwv4"
         },
         { 
-          "image": "https://drive.google.com/uc?export=view&id=1od1pDMWv3auv2Vt2XTjlqSQl2EyYFcI7",
-          "subtitle": "PSICOLOGÍA",
-          "title": "FIDENCIO GONZÁLEZ",
-          "text": "Ganador de la medalla de oro de los Juegos Panamericanos de Lima en 2019, Fidencio es Atleta de la Selección Mexicana de Tiro Deportivo y nos cuenta su paso por UANE Monterrey.",
+          "image": "https://assets.staging.bedu.org/UTEG/egresados_talento_jonathan_ramirez_60e326790b.jpg",
+          "subtitle": "ARQUITECTURA",
+          "title": "Jonathan Ramírez Sánchez",
+          "text": "En UTEG se convirtió en un profesional completo, su interés por los edificios y los espacios de las ciudades se transformó en un amor incondicional por la arquitectura mexicana y un gran interés por idear espacios amigables, creativos y funcionales.",
           "border": true,
           "type": "vertical",
           "background": false,
@@ -129,20 +129,22 @@
             "iconFirst": "play_circle",
             "iconSecond": ""
           },
-          "video": "_-j9GOu_C-M"
+          "video": "76L9qisrFFQ"
         }
       ]
     },
     "aplica": {
       "banner":{
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1bAZaQJAenCjvL_3Yw2Mj_50G3h-tB3gV",
-          "mobile": "https://drive.google.com/uc?export=view&id=1wSC-z_Mzco940OwZ1jKjqnv9c0wTUPx9"
+          "desktop": "https://assets.staging.bedu.org/UTEG/egresados_banner_talento_desktop_7f77d513bb.jpg",
+          "tablet": "https://assets.staging.bedu.org/UTEG/egresados_banner_talento_tablet_b3045bfeb8.jpg",
+          "mobile": "https://assets.staging.bedu.org/UTEG/egresados_banner_talento_movil_0a40f2f6c8.jpg"
         },
         "title": "¿Quieres postularte?",
+        "font": "light",
         "subtitle": "",
-        "email": "egresados@uane.edu.mx",
-        "phone": "55-1224-2345"
+        "email": "egresados@uteg.edu.mx",
+        "phone": "55-5501-2672"
       }
     }
   }

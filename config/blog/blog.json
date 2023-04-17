@@ -12,59 +12,62 @@
           "height": "600px",
           "iconleft": "arrow_back_ios",
           "iconright": "arrow_forward_ios",
-          "overlayWhite": true,
+          "overlayWhite": false,
           "overlayDak": false,
           "slides": [
             {
-              "title": "Estudia una carrera a tu ritmo ¡y aprovecha tu fin de semana!", 
-              "text": "Carreras sabatinas con sesiones de 4 horas.",
+              "title": "Conviértete en profesional a tu ritmo", 
+              "text": "Aprovecha la flexibilidad de estudiar una carrera profesional a tu propio ritmo y horario. Crea tu futuro con el control en tus manos.",
               "urlImage": {
-                "mobile": "https://drive.google.com/uc?export=view&id=1sbsXvmOyKDNpFoVq4MpLUbMdq8dHmRzk",
-                "tablet": "https://drive.google.com/uc?export=view&id=1wsAv6xU6W7XmtPohh7W43XMClSns-Ui0",
-                "desktop": "https://drive.google.com/uc?export=view&id=1DJEJ4lIYY8HJg_mvIWPtUpNz0YLmITIT"
+                "mobile": "https://assets.staging.bedu.org/UTEG/blog_Banner_blog_01_mobile_d8aca47bf1.jpeg",
+                "tablet": "https://assets.staging.bedu.org/UTEG/blog_Banner_blog_01_tablet_a03c680ced.jpeg",
+                "desktop": "https://assets.staging.bedu.org/UTEG/blog_Banner_blog_01_desk_be59078461.jpeg"
               },
               "center": true,
               "left": false,
               "middle": true,
               "bottom": false,
-              "overlayWhite": true,
-              "overlayDak": false
+              "overlayWhite": false,
+              "overlayDak": false,
+              "contentVariant":"light"
             },
             {
-              "title": "Conecta con el mundo", 
-              "text": "UANE te da acceso a diferentes programas internacionales con movilidad al extranjero y en línea.",
+              "title": "Comunidad UTEG Historias y sucesos de los que también tú eres protagonista", 
+              "text": "",
               "urlImage": {
-                "mobile": "https://drive.google.com/uc?export=view&id=1sbsXvmOyKDNpFoVq4MpLUbMdq8dHmRzk",
-                "tablet": "https://drive.google.com/uc?export=view&id=1wsAv6xU6W7XmtPohh7W43XMClSns-Ui0",
-                "desktop": "https://drive.google.com/uc?export=view&id=1DJEJ4lIYY8HJg_mvIWPtUpNz0YLmITIT"
+                "mobile": "https://assets.staging.bedu.org/UTEG/blog_Banner_blog_03_mobile_e54ad6ec21.jpeg",
+                "tablet": "https://assets.staging.bedu.org/UTEG/blog_Banner_blog_03_tablet_9a6014547c.jpeg",
+                "desktop": "https://assets.staging.bedu.org/UTEG/blog_Banner_blog_03_desk_8a86e59a57.jpeg"
               },
               "center": true,
               "left": false,
               "middle": true,
               "bottom": false,
-              "overlayWhite": true,
-              "overlayDak": false
+              "overlayWhite": false,
+              "overlayDak": false,
+              "contentVariant":"light"
             },
             {
-              "title": "¡Tenemos vacantes nuevas!", 
-              "text": "Accede y descubre las oportunidades que tenemos para ti.",
+              "title": "¿Qué valor tiene que UTEG sea “incorporada a la UDG”?", 
+              "text": "",
               "urlImage": {
-                "mobile": "https://drive.google.com/uc?export=view&id=1sbsXvmOyKDNpFoVq4MpLUbMdq8dHmRzk",
-                "tablet": "https://drive.google.com/uc?export=view&id=1wsAv6xU6W7XmtPohh7W43XMClSns-Ui0",
-                "desktop": "https://drive.google.com/uc?export=view&id=1DJEJ4lIYY8HJg_mvIWPtUpNz0YLmITIT"
+                "mobile": "https://assets.staging.bedu.org/UTEG/blog_Banner_blog_02_mobile_f4dfbfdc91.jpeg",
+                "tablet": "https://assets.staging.bedu.org/UTEG/blog_Banner_blog_02_tablet_12a66abc33.jpeg",
+                "desktop": "https://assets.staging.bedu.org/UTEG/blog_Banner_blog_02_desk_60b3448315.jpeg"
               },
               "center": true,
               "left": false,
               "middle": true,
               "bottom": false,
-              "overlayWhite": true,
-              "overlayDak": false
+              "overlayWhite": false,
+              "overlayDak": false,
+              "contentVariant":"light"
             }
           ]
         }
     },
     "blogNotices":{
-      "title": "Artículos de Voz UANE",
+      "title": "Artículos Central de Noticias",
       "notas": [
         { 
           "urlImage": "https://image.shutterstock.com/image-photo/graduates-student-graduation-caps-thrown-260nw-1937758900.jpg",

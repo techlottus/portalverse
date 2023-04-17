@@ -12,9 +12,56 @@ import Image from "@/old-components/Image"
 import Button from "@/old-components/Button/Button"
 import { ButtonInit } from "@/old-components/fixture"
 
+const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
+
+const formatSalesforceBusinessLine = (businessUnit: string, modality: string) => {
+  switch(businessUnit) {
+    case "UANE": {
+      switch(modality) {
+        case "Presencial": return "UANE";
+        case "Online": return "UANE";
+        case "Flex": return "ULA";
+        default: return "UANE";
+      }
+    }
+    case "UTEG": {
+      switch(modality) {
+        case "Presencial": return "UTEG";
+        case "Online": return "ULA";
+        case "Flex": return "ULA";
+        default: return "UTEG";
+      }
+    }
+    default: return businessUnit;
+  }
+}
+
+const getBusinessLineToFetchFrom = (businessLine: string, modality: string) => {
+  switch(businessLine) {
+    case "UANE": {
+      switch(modality) {
+        case "Presencial": return "UANE";
+        case "Flex": return "ULA";
+        case "Online": return "UANE,ULA";
+        default: return "UANE"
+      }
+    }
+    case "UTEG": {
+      switch(modality) {
+        case "Presencial": return "UTEG";
+        case "Flex": return "ULA";
+        case "Online": return "ULA";
+        default: return "UTEG"
+      }
+    }
+    default: return ""
+  }
+}
+
 const OpenForm: FC<any> = ({ classNames, image, pathThankyou, controls, data, currentStep }: any) => {
 
   const router = useRouter();
+  const queryParams = router?.query;
 
   const [ step, setStep ] = useState<number>(1);
   const [ controlsConfig, setControlsConfig ] = useState({ ...FormConfig });
@@ -31,46 +78,57 @@ const OpenForm: FC<any> = ({ classNames, image, pathThankyou, controls, data, cu
   const [ idLead, setIdLead ] = useState<string>("");
   const [ contacts, setContacts ] = useState<string>("");
   const [ schedulers, setSchedulers ] = useState<string>("");
-  const [ activeLoader, setActiveLoader ] = useState<boolean>(false);
-  const [ errorLoader, setErrorLoader ] = useState<boolean>(false);
   const [ returnedStep, setReturnedStep ] = useState<boolean>(false);
-  const [ newLineaNegocio, setNewLineaNegocio ] = useState<string>("");
-  const [ newModalidad, setNewModalidad ] = useState<string>("");
 
 
-  const { isLoading, isError, token } = getTokenForms();
+  const {
+    isLoading: isLoadingToken,
+    isError: isErrorToken,
+    token,
+  } = getTokenForms();
 
-  const { fetchData: fetchEducativeOffer, filterByLevel, filterByProgram, getDataByProgramEC, data: dataEO, isLoading: isLoadingEO, isError: isErrorEO, sourceData } = getEducativeOffer();
+  const {
+    fetchData: fetchEducativeOffer,
+    filterByLevel,
+    filterByProgram,
+    getDataByProgramEC,
+    data: educativeOfferData,
+    isLoading: isLoadingEO,
+    isError: isErrorEO,
+    sourceData,
+  } = getEducativeOffer();
 
-  const { isLoading: isLoadingSD, isError: isErrorSD, data: dataSD, saveData } = saveDataForms();
+
+  const {
+    isLoading: isLoadingSD,
+    isError: isErrorSD,
+    data: dataSD,
+    saveData,
+  } = saveDataForms();
+
+  const isLoading = isLoadingToken || isLoadingEO || isLoadingSD;
+  const isError = isErrorToken || isErrorEO || isErrorSD;
 
   const handleFetchEducativeOffer = (modality: string) => {
     setLevelsOffer([]);
     setFilteredPrograms([]);
     setFilteredCampus([]);
-    let modalidad = modality;
-    let lineaNegocio = `${process.env.NEXT_PUBLIC_LINEA!}`
-    if (step === 2 && modality === 'Flex') {
-      lineaNegocio = "ULA"
-    }
-    if (step === 2 && modality === 'Online') {
-      lineaNegocio = "UANE,ULA"
-    }
-    fetchEducativeOffer(process.env.NEXT_PUBLIC_EDUCATIVE_OFFER!, modalidad, lineaNegocio, tokenActive);
+    const businessLineToFetchFrom = getBusinessLineToFetchFrom(businessUnit, modality);
+    fetchEducativeOffer(process.env.NEXT_PUBLIC_EDUCATIVE_OFFER!, modality, businessLineToFetchFrom, tokenActive);
   }
 
   useEffect(() => {
-    if (!isLoading && !isError && !!Object.keys(token).length) {
+    if (!isLoadingToken && !isErrorToken && !!Object.keys(token).length) {
       setTokenActive(`${token.token_type} ${token.access_token}`);
     }
-  }, [isLoading, isError, token]);
+  }, [isLoadingToken, isErrorToken, token]);
 
   useEffect(() => {
     if (!isLoadingEO && !isErrorEO) {
-      setLevelsOffer(Object.entries(dataEO).map(([_ , level]: any) => level))
+      setLevelsOffer(Object.entries(educativeOfferData).map(([_ , level]: any) => level))
     }
-  }, [isLoadingEO, isErrorEO, dataEO]);
- 
+  }, [isLoadingEO, isErrorEO, educativeOfferData]);
+
   useEffect(() => {
     if (!isLoadingEO && !isErrorEO && !!Object.keys(dataSD).length) {
       setDataPersonal({ ...dataSD });
@@ -105,35 +163,24 @@ const OpenForm: FC<any> = ({ classNames, image, pathThankyou, controls, data, cu
   }, [controls]);
 
   const handleNextStep = (info: any, step: number) => {
-    let modalidad = info.modality;
-    let lineaNegocio = `${process.env.NEXT_PUBLIC_LINEA!}`;
 
-    if (step === 1 && modalidad === 'Flex') {
-      lineaNegocio = "ULA";
-    }
-
-    if (modalidad === 'Flex') {
-      modalidad = "Online";
-    }
-    
-    if (step === 2) {
-      const programa = getDataByProgramEC(info.program);
-      console.log("programa", programa)
-      lineaNegocio = programa.lineaNegocio;
-      setNewLineaNegocio(lineaNegocio);
-      setNewModalidad(modalidad);
-    }
     setInfoForm({ ...infoForm, [`step${step}`]: { ...info } });
+
     if (`step${step}` === 'step1') {
-      saveData(`step${step}`, { ...info, modality: modalidad}, tokenActive, "UANE");
-    } if (`step${step}` === 'step3') {
+      const linea = formatSalesforceBusinessLine(businessUnit, info.modality)
+      saveData(`step${step}`, { ...info }, tokenActive, linea, queryParams);
+    }
+
+    if (`step${step}` === 'step3') {
+      const selectedProgramData = getDataByProgramEC(infoForm.step2.nameProgram, infoForm.step2.campusId);
+
       const data = {
         id: idLead,
         nivel: infoForm.step2.level,
         campus: infoForm.step2.campus,
         programa: infoForm.step2.program,
-        modalidad: newModalidad,
-        lineaNegocio: newLineaNegocio,
+        modalidad: infoForm.step2.modality,
+        lineaNegocio: selectedProgramData?.lineaNegocio || "",
         medioContacto: info.contacto,
         horarioContacto: info.horario
       }
@@ -143,7 +190,7 @@ const OpenForm: FC<any> = ({ classNames, image, pathThankyou, controls, data, cu
         const { idPrograma: program, nombreCampus } = sourceData[info.program]?.filter((campus: any) => {
           return campus.idCampus === info.campus;
         })[0];
-        setInfoForm({ ...infoForm, 'step2': { ...info, nameProgram: info.program, nombreCampus, program } });
+        setInfoForm({ ...infoForm, 'step2': { ...info, nameProgram: info.program, nombreCampus, campusId: info.campus, program } });
         const newStep = step + 1;
         setStep(newStep);
       }
@@ -163,33 +210,81 @@ const OpenForm: FC<any> = ({ classNames, image, pathThankyou, controls, data, cu
     setFilteredCampus([ ...campusByProgram ]);
   }
 
-  useEffect(() => {
-    setActiveLoader(isLoading || isLoadingEO || isLoadingSD)
-  }, [isLoading, isLoadingEO, isLoadingSD])
-  
-  useEffect(() => {
-    setErrorLoader(isError || isErrorEO || isErrorSD)
-  }, [isError, isErrorEO, isErrorSD])
-
   const handleReturnedStep = (step: number) => {
     setReturnedStep(true);
     setStep(step);
   }
 
-  return <section className={cn("p-6 shadow-15 bg-white relative", classNames)}>
-    <div className={cn("absolute w-full h-full z-10 flex justify-center items-center left-0 top-0", { "hidden": !activeLoader, "block": activeLoader })}>
-      <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
-    </div>
-    <div className={cn("bg-white absolute w-full h-full z-10 flex flex-col aspect-2/1 justify-center items-center left-0 top-0", { "hidden": !errorLoader, "block": errorLoader })}>
-      <Image src="/images/404.png" alt="error" classNames={cn("w-[50%] h-[50%] top-0 left-0")} />
-      <h1>Ha ocurrido un error al procesar tu información</h1>
-      <h1>Lamentamos el inconveniente y te pedimos intentarlo de nuevo</h1>
-      <Button onClick={() => location.reload()} data={{...ButtonInit, title: "Reintentar" }} />
-    </div>
-    <StepOne data={data} step={30} classNames={cn({ "hidden": step !== 1 })} image={image} onNext={(info: any) => handleNextStep(info, 1)} />
-    <StepTwo campus={filteredCampus} programs={filteredPrograms} onChangeProgram={(program: string) => handleProgramSelected(program)} onLevelSelected={(level: string) => handleLevelSelected(level)} onChangeModality={(modality: string) => handleFetchEducativeOffer(modality)} modality={infoForm.step1.modality} levels={levelsOffer} step={60} classNames={cn({ "hidden": step !== 2 })} onNext={(info: any) => handleNextStep(info, 2)} controls={{...controlsConfig}} />
-    <StepThree onReturnStep={(step: number) => handleReturnedStep(step)} contacts={contacts} schedulers={schedulers} onNext={(info: any) => handleNextStep(info, 3)} step={90} data={{ modality: infoForm.step2.modality, program: infoForm.step2.nameProgram, level: infoForm.step2.level, campus: infoForm.step2.nombreCampus }} classNames={cn({ "hidden": step !== 3 })} />
-  </section>
-}
+  return (
+    <section className={cn("p-6 shadow-15 bg-white relative", classNames)}>
+      {
+        isLoading
+          ? <div className="absolute w-full h-full z-10 flex justify-center items-center left-0 top-0">
+              <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
+            </div>
+          : null
+      }
+      {
+        isError
+          ? <div className="bg-white w-full h-full p-4 z-10 flex flex-col aspect-2/1 justify-center items-center left-0 top-0">
+              <h1 className="font-bold text-10 text-center leading-12 mb-9">
+                ¡Me lleva la ...! no encuentro la página...
+              </h1>
+              <div className="w-full max-w-[24rem]"> {/* Tailwind's 'max-w-sm' value isn't working for some reason u.u */}
+                <img src="/images/404-B.jpg" className="w-full" alt="error" />
+              </div>
+              <h2 className="text-UNI-066 font-semibold text-5.5 my-6">
+                No importa, siempre puedes regresar a inicio
+              </h2>
+              <Button
+                dark
+                onClick={() => location.reload()}
+                data={{ ...ButtonInit, title: "Reintentar" }}
+              />
+            </div>
+          : <>
+              <StepOne
+                data={data}
+                step={30}
+                classNames={cn({ hidden: step !== 1 })}
+                image={image}
+                onNext={(info: any) => handleNextStep(info, 1)}
+              />
+              <StepTwo
+                campus={filteredCampus}
+                programs={filteredPrograms}
+                onChangeProgram={(program: string) =>
+                  handleProgramSelected(program)
+                }
+                onLevelSelected={(level: string) => handleLevelSelected(level)}
+                onChangeModality={(modality: string) =>
+                  handleFetchEducativeOffer(modality)
+                }
+                modality={infoForm.step1.modality}
+                levels={levelsOffer}
+                step={60}
+                classNames={cn({ hidden: step !== 2 })}
+                onNext={(info: any) => handleNextStep(info, 2)}
+                controls={{ ...controlsConfig }}
+              />
+              <StepThree
+                onReturnStep={(step: number) => handleReturnedStep(step)}
+                contacts={contacts}
+                schedulers={schedulers}
+                onNext={(info: any) => handleNextStep(info, 3)}
+                step={90}
+                data={{
+                  modality: infoForm.step2.modality,
+                  program: infoForm.step2.nameProgram,
+                  level: infoForm.step2.level,
+                  campus: infoForm.step2.nombreCampus,
+                }}
+                classNames={cn({ hidden: step !== 3 })}
+              />
+            </>
+      }
+    </section>
+  )
+};
 
-export default OpenForm
+export default OpenForm;

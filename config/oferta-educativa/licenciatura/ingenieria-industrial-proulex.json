@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "title": "Ingeniería Industrial con Certificación en Inglés Proulex",
+    "description": "",
+    "keywords": ""
+  },
+  "config": {
+    "title": "Ingeniería Industrial con Certificación en Inglés Proulex",
+    "config": {
+      "nombre": "Ingeniería Industrial con Certificación en Inglés Proulex",
+      "modalidad": ["Presencial"],
+      "areaConocimiento": ["Ingenierías y Tecnología"],
+      "campus": ["Olímpica"],
+      "nivel": ["Licenciatura"],
+      "image": {
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_ing_industrial_desk_a9a582b164.jpg",
+        "alt": "licenciatura"
+      },
+      "curriculum": {
+        "Presencial": {
+          "Olímpica": "Lic_en_Ing_Industrial_Proulex_Presencial_a786e05a11.pdf"
+        }
+      }
+    }
+  },
+  "sections": {
+    "head": {
+      "title": "Ingeniería Industrial con Certificación en Inglés Proulex",
+      "description": "Ingeniería Industrial con certificación en Inglés Proulex con la enseñanza del idioma inglés. Ofrecemos el dominio de una segunda lengua bajo un modelo especial.",
+      "image": {
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_ing_industrial_desk_a9a582b164.jpg",
+        "alt": "licenciatura"
+      }
+    },
+    "modalities": {
+      "title": "Modalidades disponibles en esta licenciatura:",
+      "tabs": {
+        "items": [
+          {
+            "label": "Presencial",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
+            "content": {
+              "cards": [
+                {
+                  "image": {
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
+                  },
+                  "title": "Perfil de ingreso",
+                  "text": "El aspirante deberá tener conocimientos sobre:\n\n• Matemáticas\n\n• El uso de las TIC´s.\n\n• La expresión oral y escrita.\n\n• La comunicación efectiva.\n\nHabilidades y aptitudes para:\n\n• Desarrollar procesos lógicos.\n\n• Resolver problemas con base en principios, leyes y conceptos.\n\n• Evaluar fortalezas y debilidades de los equipos de trabajo.\n\n• Pensamiento crítico.\n\n• Aplicar el razonamiento lógico.\n\n• Manejar equipos de cómputo y electrónicos.\n\n• Liderar grupos de trabajo.\n\nActitudes de:\n\n• Creatividad.\n\n• Liderazgo.\n\n• Trabajo en equipo.",
+                  "backgroundColor": "#1B2D68"
+                },
+                {
+                  "image": {
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
+                  },
+                  "title": "Perfil de egreso",
+                  "text": "CONOCIMIENTOS SOBRE:\n\n• Matemáticas aplicadas a la administración, la producción y calidad.\n\n• Uso, análisis e interpretación de datos.\n\n• Desarrollo de proyectos sostenibles.\n\n• Logística y distribución internacional\n\n HABILIDADES PARA:\n\n• Diseñar el entorno administrativo, industrial y de negocios de las empresas.\n\n• Poner en marcha/activar/crear/dirigir empresas.\n\n• Elaborar programas de seguridad industrial.\n\n• Diseñar y administrar sistemas de producción.ACTITUDES DE:\n\n• Conciencia social, cívica y profesional.\n\n• Ética y responsabilidad social.",
+                  "backgroundColor": "#C31433"
+                },
+                {
+                  "image": {
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
+                  },
+                  "title": "Campo Laboral",
+                  "text": "Áreas: industrias extractivas y de transformación, empresas de servicios, unidades hospitalarias, bufetes de consultoría, bancos e instituciones financieras, aseguradoras, sector público, empresas comercializadoras. ",
+                  "backgroundColor": "#4470B1"
+                },
+                {
+                  "image": {
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
+                  },
+                  "title": "Requisitos de admisión",
+                  "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
+                  "backgroundColor": "#EEAA01"
+                }
+              ],
+              "wrapper": false
+            }
+          }
+        ],
+        "size": "medium"
+      }
+    },
+    "descarga": {
+      "id": "program_licenciatura",
+      "type": "primary",
+      "title": "Descarga el plan de estudios",
+      "size": "small",
+      "icon": "download",
+      "lyIcon": false,
+      "disabled": false,
+      "isExpand": false,
+      "tagOnClick": "testClick",
+      "test": ""
+    }
+  },
+  "form": {
+    "config": {
+      "level": { "hidden": true, "value": "licenciatura" },
+      "program": { "hidden": false, "value": "Ingeniería Industrial con Certificación en Inglés Proulex" },
+      "modality": { "hidden": false },
+      "campus": { "hidden": false }
+    },
+    "copies": {
+      "stepone": {
+        "title": "Obtén informes sobre tu programa",
+        "subtitle": "Resuelve todas tus dudas, comparte tus datos para que un asesor de admisiones te oriente y puedas estar seguro de tu elección."
+      }
+    }
+  }
+}

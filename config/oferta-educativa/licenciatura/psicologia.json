@@ -9,35 +9,30 @@
     "config": {
       "nombre": "Licenciatura en Psicología",
       "modalidad": ["Presencial", "Online", "Flex"],
-      "areaConocimiento": ["Ciencias de la Salud", "Ciencias Sociales"],
-      "campus": [ "Saltillo", "Monterrey" , "Matamoros", "Torreón", "Piedras Negras", "Sabinas", "Reynosa", "Monclova" ],
+      "areaConocimiento": ["Salud", "Ciencias sociales"],
+      "campus": ["Campus Washington", "Plantel Zapopan", "Tlajomulco"],
       "nivel": ["Licenciatura"],
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1mcSvxgwuT1q2IZU_ZNbQFUKeF_s-W9iJ",
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_piscologia_desk_1671c43b06.jpg",
         "alt": "licenciatura"
       },
       "curriculum": {
         "Presencial": {
-          "Saltillo": "1IyRB9sRFHBn1JbEAdxCQ0Vc-w3NHv1JA",
-          "Monterrey": "1DIbnCHKGLYBtHVdWLogiUc2rRba4WJ8r",
-          "Matamoros": "1QQD1i_1EEOEl0kIYc4gRWQQpQ7qPHlYX",
-          "Torreón": "1QITOLsbvcmI8PkA-iRofCLDZjTZJ-5XJ",
-          "Piedras Negras": "1f75-kxsLPi2_GVMDBUQPpN0cz2mofCyN",
-          "Sabinas": "1cP3064cAw3OVyN-ZO_VFMkkdK9ygBqww",
-          "Reynosa": "1E8wpoKqSbNTW-MsYB4Sae8fRwpdMb20Q",
-          "Monclova": "1vntzenIE1ombyo9bYgCwR0gmSZ8pR6L5"
+          "Campus Washington": "Lic_en_Psicologia_Presencial_952312256a.pdf",
+          "Plantel Zapopan": "Lic_en_Psicologia_Presencial_952312256a.pdf",
+          "Tlajomulco": "Lic_en_Psicologia_Presencial_952312256a.pdf"
         },
-        "Online": "1ZHOOcVeBfX3DUh7Mfe1kGvkUMynVLO6e",
-        "Flex" : "1QKr3InMPawHJrzT0XaNhNv3OSzon524p"
+        "Online": "Lic_en_Psicologia_Online_37450597ad.pdf",
+        "Flex": "Lic_en_Psicologia_Flex_38122a46bc.pdf"
       }
     }
   },
   "sections": {
     "head": {
       "title": "Licenciatura en Psicología",
-      "description": "Interviene en áreas clínicas, sociales o educativas y desarrolla estrategias a beneficio de la salud mental. Escucha, analiza y evalúa la conducta. Motiva al cambio.",
+      "description": "La Licenciatura en Psicología forma profesionales competentes y comprometidos con el pensamiento crítico y la capacidad de análisis. El psicólogo se encuentra en constante búsqueda de metodologías para fomentar el desarrollo integral de las personas a quienes dirige su labor de una forma ética y respetuosa; promoviendo relaciones saludables en la sociedad.",
       "image": {
-        "src": "https://drive.google.com/uc?export=view&id=1mcSvxgwuT1q2IZU_ZNbQFUKeF_s-W9iJ",
+        "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_piscologia_desk_1671c43b06.jpg",
         "alt": "licenciatura"
       }
     },
@@ -46,132 +41,138 @@
       "tabs": {
         "items": [
           {
-            "label": "Modalidad Presencial", "icons": { "primary": "", "duplicate": false}, "disabled": false,
+            "label": "Presencial",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
             "content": {
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
-                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "El aspirante a la Licenciatura en Psicología deberá contar con habilidad de comunicación e interacción para trabajar en equipo. Gusto por la escucha activa. Capacidad manifiesta por la lectura y el análisis de texto como una disciplina y como una forma de desarrollo personal y profesional.",
-                  "backgroundColor": "#8B9BA3"
+                  "text": "El aspirante deberá tener:\n\n• Intereses humanistas, de servicio y científicos.\n\n• Aptitudes: habilidad para la lectura, facilidad para la comunicación verbal y escrita, habilidades de pensamiento (atención, memoria, análisis, síntesis), habilidades para las relaciones interpersonales, capacidad de autobservación. \n\n•  Actitudes: respeto, responsabilidad, tolerancia y empatía.\n\n• Se autodetermina y cuida de sí. Esto es, se conoce y valora a sí mismo y aborda problemas y retos teniendo en cuenta los objetivos que persigue.",
+                  "backgroundColor": "#1B2D68"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                   },
                   "title": "Perfil de egreso",
-                  "text": "La Licenciatura en Psicología te dará las herramientas para realizar intervenciones en las áreas clínica, social, educativa e industrial para promover el bienestar integral de los individuos, grupos y sociedad. Además, desarrollarás estrategias para la prevención y promoción de la salud mental.",
-                  "backgroundColor": "#B0003C"
+                  "text": "Entre las capacidades que el psicólogo desarrolla se encuentra la de aplicar estrategias para gestionar, promover e intervenir en la formulación de proyectos y programas psicosociales para la salud mental, la evaluación de los procesos de salud- enfermedad, en los neuropsicológico, del medio ambiente y del desarrollo urbano rural sustentable, en situaciones críticas y de emergencia.\n\nAdemás, desarrolla habilidades para la intervención psicoeducativa e integración educativa, entre otras.",
+                  "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "Como egresado de la Licenciatura en Psicología, podrás desempeñar tus conocimientos en el sector público como clínicas, instituciones de apoyo psicológico, oficinas o áreas de atención familiar, así como escuelas entre los que se incluyen gabinetes de orientación psicológica y educativa, así como en empresas del sector privado o como independiente desarrollando tu propio consultorio.",
-                  "backgroundColor": "#E84537"
+                  "text": "Áreas: campo clínico, asilos, unidades de salud, consultorios, centros de asistencia social, hospitales psiquiátricos, organismos estatales y paraestatales, centros de reclusión y readaptación social, centros comunitarios, centros de investigación, instituciones educativas de cualquier tipo y nivel académico.",
+                  "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento reciente, original del cajero y 2 copias.\\n\n• Certificado de secundaria legalizado original y dos copias.\n\n• Certificado de preparatoria legalizado original y 2 copias con su carta de autenticidad. (En caso de no contar con original, presentar constancia de que está en trámite).\n\n• CURP copia.\n\nEn caso de equivalencia\n\n• Certificado parcial de estudios legalizado original con 2 copias y carta de autenticidad.\n\n• 4 fotografías tamaño infantil y 4 tamaño credencial, ambas blanco y negro, papel mate no instantáneas.\n\n• Carta de buena salud expedida por institución pública o privada.",
-                  "backgroundColor": "#00BEB4"
+                  "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
+                  "backgroundColor": "#EEAA01"
                 }
               ],
               "wrapper": false
             }
           },
           {
-            "label": "Modalidad Online", "icons": { "primary": "", "duplicate": false}, "disabled": false,
+            "label": "Online",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
             "content": {
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
-                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
-                  "text": "\n\n• Disposición y empatía para las relaciones interpersonales.\n\n• Capacidad de reflexión e interpretación.\n\n• Habilidad para la expresión oral y escrita.\n\n• Sensibilidad para comprender la diversidad cultural y conductual.\n\n• Trabajo en equipo.\n\n• Habilidad para intervenir en la resolución de problemas.",
-                  "backgroundColor": "#8B9BA3"
+                  "text": "El aspirante a la licenciatura en psicología laboral debe poseer ciertas competencias que se trabajarán durante la carrera, como lo son: \n\n• Capacidad de comunicación oral y escrita en lengua nativa, capacidad para el razonamiento verbal y numérico.",
+                  "backgroundColor": "#1B2D68"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                   },
                   "title": "Perfil de egreso",
-                  "text": "\n\n• Analizar los fenómenos vinculados al comportamiento humano así como generar y aplicar soluciones a problemáticas individuales y grupales relacionadas con éste, sobre diversos entornos: educativo, laboral, familiar o clínico.\n\n• Realizar diagnósticos certeros con base en los resultados de evaluación a partir de pruebas, técnicas de observación y/o instrumentos especializados.\n\n• Elaborar y aplicar o canalizar planes de intervención psicológica acorde al objetivo, tratamiento, rehabilitación, inserción y acompañamiento, entre otros.\n\n• Tomar decisiones con base en evidencia científica y construir informes y escritos académicos a partir de las reglas de la comunicación efectiva.",
-                  "backgroundColor": "#B0003C"
+                  "text": "Entre las capacidades que el psicólogo desarrolla se encuentra la de aplicar estrategias para gestionar, promover e intervenir en la formulación de proyectos y programas psicosociales para la salud mental, la evaluación de los procesos de salud- enfermedad, en los neuropsicológico, del medio ambiente y del desarrollo urbano rural sustentable, en situaciones críticas y de emergencia.\n\nAdemás, desarrolla habilidades para la intervención psicoeducativa e integración educativa, entre otras.",
+                  "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "Ejerce de manera individual o en equipos multidisciplinarios, como psicólogo, terapeuta, docente, investigador o bien, asesor de procesos conductuales, en instituciones educativas, orientación vocacional o psicológica; en instituciones de salud, públicas o privadas, en dependencias gubernamentales o empresas de todo tipo, sobre todo en las áreas de recursos humanos.",
-                  "backgroundColor": "#E84537"
+                  "text": "Áreas: campo clínico, asilos, unidades de salud, consultorios, centros de asistencia social, hospitales psiquiátricos, organismos estatales y paraestatales, centros de reclusión y readaptación social, centros comunitarios, centros de investigación, instituciones educativas de cualquier tipo y nivel académico.",
+                  "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento reciente, original del cajero y 2 copias.\\n\n• Certificado de secundaria legalizado original y dos copias.\n\n• Certificado de preparatoria legalizado original y 2 copias con su carta de autenticidad. (En caso de no contar con original, presentar constancia de que está en trámite).\n\n• CURP copia.\n\nEn caso de equivalencia\n\n• Certificado parcial de estudios legalizado original con 2 copias y carta de autenticidad.\n\n• 4 fotografías tamaño infantil y 4 tamaño credencial, ambas blanco y negro, papel mate no instantáneas.\n\n• Carta de buena salud expedida por institución pública o privada.",
-                  "backgroundColor": "#00BEB4"
+                  "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; Comprobante de domicilio.</p>",
+                  "backgroundColor": "#EEAA01"
                 }
               ],
               "wrapper": false
             }
           },
           {
-            "label": "Modalidad flex", "icons": { "primary": "", "duplicate": false}, "disabled": false,
+            "label": "Flex",
+            "icons": { "primary": "", "duplicate": false },
+            "disabled": false,
             "content": {
               "cards": [
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5",
-                    "mobile": "https://drive.google.com/uc?export=view&id=171bigOFmz4UxGVCQwYvz8El9znvXaQs5"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
                   },
                   "title": "Perfil de ingreso",
                   "text": "Si te intriga la mente humana, te gusta organizar grupos y hacerlos funcionar óptimamente y estás de acuerdo en que las personas son el alma de las empresas, eres un excelente candidato para estudiar la Licenciatura en Psicología en la Universidad Latinoamericana.",
-                  "backgroundColor": "#8B9BA3"
+                  "backgroundColor": "#1B2D68"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1NzKYhz_dKLooxzrSgMf73YcBJK4Uq1e8"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
                   },
                   "title": "Perfil de egreso",
-                  "text": "Como graduado en psicología de la Universidad Latinoamericana te podrás desenvolver en las empresas privadas y en dependencias públicas, especialmente en el área de relaciones humanas, donde se te apreciará por tu desempeño en psicología laboral, capacitación y manejo de recursos humanos.",
-                  "backgroundColor": "#B0003C"
+                  "text": "Entre las capacidades que el psicólogo desarrolla se encuentra la de aplicar estrategias para gestionar, promover e intervenir en la formulación de proyectos y programas psicosociales para la salud mental, la evaluación de los procesos de salud- enfermedad, en los neuropsicológico, del medio ambiente y del desarrollo urbano rural sustentable, en situaciones críticas y de emergencia.\n\nAdemás, desarrolla habilidades para la intervención psicoeducativa e integración educativa, entre otras.",
+                  "backgroundColor": "#C31433"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1L4dV8lbYcFwuDr7vm45rriq9K2HfcVyC"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
                   },
                   "title": "Campo Laboral",
-                  "text": "Ejerce de manera individual o en equipos multidisciplinarios, como psicólogo, terapeuta, docente, investigador o bien, asesor de procesos conductuales, en instituciones educativas, orientación vocacional o psicológica; en instituciones de salud, públicas o privadas, en dependencias gubernamentales o empresas de todo tipo, sobre todo en las áreas de recursos humanos.",
-                  "backgroundColor": "#E84537"
+                  "text": "Áreas: campo clínico, asilos, unidades de salud, consultorios, centros de asistencia social, hospitales psiquiátricos, organismos estatales y paraestatales, centros de reclusión y readaptación social, centros comunitarios, centros de investigación, instituciones educativas de cualquier tipo y nivel académico.",
+                  "backgroundColor": "#4470B1"
                 },
                 {
                   "image": {
-                    "desktop": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ",
-                    "mobile": "https://drive.google.com/uc?export=view&id=1YVLI0R1gSPoN4p5IH8dAi6JGsemsGUgQ"
+                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
+                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
                   },
                   "title": "Requisitos de admisión",
-                  "text": "\n\n• Acta de nacimiento reciente, original del cajero y 2 copias.\\n\n• Certificado de secundaria legalizado original y dos copias.\n\n• Certificado de preparatoria legalizado original y 2 copias con su carta de autenticidad. (En caso de no contar con original, presentar constancia de que está en trámite).\n\n• CURP copia.\n\nEn caso de equivalencia\n\n• Certificado parcial de estudios legalizado original con 2 copias y carta de autenticidad.\n\n• 4 fotografías tamaño infantil y 4 tamaño credencial, ambas blanco y negro, papel mate no instantáneas.\n\n• Carta de buena salud expedida por institución pública o privada.",
-                  "backgroundColor": "#00BEB4"
+                  "text": "<p>&bull;&nbsp;Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).<br />&bull;&nbsp;Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.<br />&bull;&nbsp;1 copia de la CURP.<br />&bull;&nbsp;2 copias de Credencial Oficial IFE / INE o Pasaporte.<br />&bull;&nbsp;2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).<br />&bull;&nbsp;2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
+                  "backgroundColor": "#EEAA01"
                 }
               ],
               "wrapper": false
@@ -197,7 +198,7 @@
   "form": {
     "config": {
       "level": { "hidden": true, "value": "licenciatura" },
-      "program": { "hidden": false, "value": "Psicología" },
+      "program": { "hidden": false, "value": "Licenciatura en Psicología" },
       "modality": { "hidden": false },
       "campus": { "hidden": false }
     },

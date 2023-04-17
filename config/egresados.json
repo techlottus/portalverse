@@ -7,26 +7,37 @@
   "sections": {
     "head": {
       "banner": {
-        "title": "ExaUANE", 
-        "subtitle": "Estadísticas", 
+        "title": "Egresados",
+        "subtitle": "",
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1pLqo240d_ACAIP_mIU57CAep_Asd_nSa",
-          "tablet": "https://drive.google.com/uc?export=view&id=1rMe3GSofFPVTorN9VI9Bvn9CUdtoygMc",
-          "mobile": "https://drive.google.com/uc?export=view&id=1lJ4sw-tmKdpTS3carQuLc-nLfEEXDOkk"
+          "desktop": "https://assets.staging.bedu.org/UTEG/egresados_banner_cf6855c9f9.jpg",
+          "tablet": "https://assets.staging.bedu.org/UTEG/egresados_banner_tablet_f68c2936b9.jpg",
+          "mobile": "https://assets.staging.bedu.org/UTEG/egresados_banner_movil_697fb70c06.jpg"
         },
         "statics": [
-          {"maxNumber": 50, "icon": "", "prefix": "", "suffix": "mil", "title": "ESTUDIANTES", "body": "egresados de UANE", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false},
-          {"maxNumber": 50, "icon": "", "prefix": "", "suffix": "%", "title": "ESTUDIANTES", "body": "a nivel licenciatura", "container": false, "isShadowColor": false, "bordered": false, "typeShadowColor": "blue-pastel-right", "boxShadow": false}
+          {
+            "maxNumber": 45000,
+            "icon": "",
+            "prefix": "+",
+            "suffix": "",
+            "title": "",
+            "body": "",
+            "container": false,
+            "isShadowColor": false,
+            "bordered": false,
+            "typeShadowColor": "blue-pastel-right",
+            "boxShadow": false
+          }
         ]
       }
     },
     "introduccion": {
-      "title": "¡Bienvenido!",
-      "descripcion": "¡Querido ExaUANE! Este espacio está hecho para ti, estamos comprometidos en apoyarte a generar oportunidades para desarrollar tu potencial y actualización constante. Somos una comunidad de más de 45mil egresados y queremos mantenernos en contacto contigo, que participes en las actividades que realiza tu universidad y continúes formando parte de ella."
+      "title": "UTEG siempre será tu casa",
+      "descripcion": "¡Querido ExaUTEG! Este espacio está hecho para ti, estamos comprometidos en apoyarte a generar oportunidades para desarrollar tu potencial y actualización constante. Somos una comunidad de más de 45mil egresados y queremos mantenernos en contacto contigo, que participes en las actividades que realiza tu universidad y continúes formando parte de ella."
     },
     "video": {
-      "title": "Conoce a nuestro Talento Exa UANE",
-      "descripcion": "El objetivo de este programa es destacar la labor de los ex alumnos que han dejado huella en los campos académico, laboral, empresarial y/o social. Buscamos hacer un reconocimiento público a nuestro «Talento ExaUANE» (ex alumnos de licenciatura y/o maestría) que tengan logros profesionales detacables y que sirvan de inspiración a toda la comunidad UANE.",
+      "title": "Conoce a nuestros egresados talento",
+      "descripcion": "El Programa de Egresados Talento UTEG resalta la labor de los egresados que han dejado huella en los campos académico, laboral, empresarial y social. Buscamos hacer un reconocimiento público a nuestros “Egresados Talento” (egresados de licenciaturas y maestrías) que tengan logros profesionales destacables. ",
       "accion": {
         "title": "Saber más",
         "type": "primary",
@@ -35,31 +46,31 @@
       },
       "video": {
         "options": {
-          "id": "AIgIgANXCx0",
+          "id": "9Z_edVszIV8",
           "type": "single",
           "controls": true
         },
         "dimensions": {
           "height": "334px"
         }
-      } 
+      }
     },
     "bannerEmpleabilidad": {
       "image": {
-        "desktop": "https://drive.google.com/uc?export=view&id=1idUUed8QBG8hf9qbpWqm00PmVs-JbGMw",
-        "mobile": "https://drive.google.com/uc?export=view&id=1AouSIC5-YJc0Js1LIRHRxRf03n5ibngx",
-        "tablet": "https://drive.google.com/uc?export=view&id=16G9jZNK2fS1E5tl5pDA-EmB3RVfOi5hr"
+        "desktop": "https://assets.staging.bedu.org/UTEG/egresados_banner_empleabilidad_desktop_65e5817571.jpg",
+        "mobile": "https://assets.staging.bedu.org/UTEG/egresados_banner_empleabilidad_movil_9599773752.jpg",
+        "tablet": "https://assets.staging.bedu.org/UTEG/egresados_banner_empleabilidad_tablet_c2cec69a6e.jpg"
       },
-      "font": "",
-      "title": "Empleabilidad en UANE",
-      "subtitle": "Inscríbete en nuestra Bolsa de Trabajo y encuentra empleo",
+      "font": "light",
+      "title": "Bolsa de Talento en UTEG",
+      "subtitle": "¿Buscas empleo? Inscríbete en nuestra Bolsa de Talento",
       "position": "right",
-      "height": "350px",
-      "overlayWhite":true,
+      "height": "auto",
+      "overlayWhite":false,
       "overlayDak": false,
-      "button":{
+      "button": {
         "id": "",
-        "type": "outlined",
+        "type": "primary",
         "title": "Continuar",
         "size": "small",
         "icon": "",
@@ -70,25 +81,26 @@
         "test": ""
       },
       "noAction": false,
-      "redirect": "/nosotros/empleabilidad"
+      "redirect": "/nosotros/bolsa-de-talento"
     },
     "bannerOfertaEducativa": {
       "image": {
-        "desktop": "https://drive.google.com/uc?export=view&id=1ublCyobsLlz7uKehh34mAfdpQ1or4eYv",
-        "mobile": "https://drive.google.com/uc?export=view&id=190CNvADpywpMXK_QVM6udMb2GsV4HsMt",
-        "tablet": "https://drive.google.com/uc?export=view&id=1-dKm6LNGLTiYVh4bFNe5SFxc1mPffLF9"
+        "desktop": "https://assets.staging.bedu.org/UTEG/egresados_banner_oferta_desktop_0bb3ebe00e.jpg",
+        "mobile": "https://assets.staging.bedu.org/UTEG/egresados_banner_oferta_egresados_movil_36b68186e1.jpg",
+        "tablet": "https://assets.staging.bedu.org/UTEG/egresados_banner_oferta_tablet_8a07bcbf86.jpg"
       },
       "font": "light",
       "title": "Oferta educativa de egresados",
-      "subtitle": "UANE te ofrece opciones preferenciales para continuar con tu opreparación profesional",
+      "subtitle": "En UTEG seguimos apoyándote, ahora en tus proyectos de superación profesional. ",
       "position": "right",
-      "height": "350px",
+      "height": "auto",
       "overlayWhite":false,
       "overlayDak": false,
+      "desktopRatio": "2/1",
       "button":{
         "id": "",
-        "type": "outlined",
-        "title": "Ver oferta educativa",
+        "type": "primary",
+        "title": "Consulta la oferta educativa",
         "size": "small",
         "icon": "",
         "lyIcon": false,
@@ -101,9 +113,10 @@
       "redirect": "/oferta-educativa"
     },
     "banner-tramites": {
-      "title": "Trámites de egresados",
-      "subtitle":"Entra al sistema de la universidad y revisa el estatus o solicita algún trámite nuevo",
-      "state": "black",
+      "font": "light",
+      "title": "Trámites",
+      "subtitle": "Ingresa al sistema de la universidad y revisa tu estatus o realiza algún nuevo trámite.",
+      "state": "",
       "size": "medium",
       "middle": false,
       "center": false,
@@ -113,12 +126,12 @@
         "mobile": "https://drive.google.com/uc?export=view&id=1cXj_pPf0OvVkA7ew-UF--T-L-20FPoOl",
         "desktop": "https://drive.google.com/uc?export=view&id=1lymiihfxStWQNox-uD9mvh2Ln6GEuUjU"
       },
-      "overlay": "black",
+      "overlay": "",
       "height": "",
       "action": {
         "id": "",
         "type": "outlined",
-        "title": "Entra a SIUANE",
+        "title": "Ingresar",
         "size": "small",
         "icon": "",
         "lyIcon": false,
@@ -131,21 +144,22 @@
     },
     "bannerTramites": {
       "image": {
-        "desktop": "https://drive.google.com/uc?export=view&id=1lymiihfxStWQNox-uD9mvh2Ln6GEuUjU",
-        "mobile": "https://drive.google.com/uc?export=view&id=1cXj_pPf0OvVkA7ew-UF--T-L-20FPoOl",
-        "tablet": "https://drive.google.com/uc?export=view&id=1yYRKBIWFTDeyIKXur1aOKx1mPgq3DDDo"
+        "desktop": "https://assets.staging.bedu.org/UTEG/egresados_banner_tramites_desktop_80f1f1cf1d.jpg",
+        "mobile": "https://assets.staging.bedu.org/UTEG/egresados_banner_tramites_egresados_movil_b1e29c71e4.jpg",
+        "tablet": "https://assets.staging.bedu.org/UTEG/egresados_banner_tramites_tablet_5fd7fe933b.jpg"
       },
-      "font": "",
-      "title": "Trámites de egresados",
-      "subtitle": "Entra al sistema de la universidad y revisa el estatus o solicita algún trámite nuevo",
+      "font": "light",
+      "title": "Trámites",
+      "subtitle": "Ingresa al sistema de la universidad y revisa tu estatus o realiza algún nuevo trámite.",
       "position": "light",
-      "height": "350px",
+      "height": "auto",
       "overlayWhite":false,
       "overlayDak": false,
+      "desktopRatio": "2/1",
       "button":{
         "id": "",
         "type": "outlined",
-        "title": "Entra a SIUANE",
+        "title": "Ingresar",
         "size": "small",
         "icon": "",
         "lyIcon": false,
@@ -155,16 +169,16 @@
         "test": ""
       },
       "noAction": false,
-      "redirect": "http://sistema.uane.edu.mx/siuane/login.aspx"
+      "redirect": "https://www.uteg.edu.mx/colaboradores-uteg/servicios-escolares/"
     },
     "noticias": {
       "title": "Noticias",
       "news": [
-        { 
-          "urlImage": "https://drive.google.com/uc?export=view&id=17DFc4e-VEJry-I3puVquu4wxR0m6J6Rw",
-          "subtitle": "SUBTITULO",
-          "title": "Coursera y UANE se unen para ti",
-          "text": "Se firma una alianza con Coursera para acceder a contenidos que complementen la formación profesional de su comunidad educativa",
+        {
+          "urlImage": "https://assets.staging.bedu.org/UTEG/egresados_noticias_tomas_moro_desktop_2874248421.jpg",
+          "subtitle": "ACADEMIA ",
+          "title": "Firman Lottus Education y el Centro Tomás Moro convenio de colaboraión. ",
+          "text": "El objetivo de este entendimiento es establecer una relación cooperativa en las áreas de docencia, investigación y extensión universitaria con proyectos educativos, profesionales e interculturales que beneficiarán a estudiantes, profesores y personal administrativo de las tres instituciones.",
           "border": true,
           "allContent": true,
           "height": "",
@@ -182,7 +196,7 @@
             "icon": "star"
           },
           "linkIcon": {
-            "text": "vvv",
+            "text": "Ver noticia",
             "iconSecond": "person",
             "isBold": true,
             "size": "large",
@@ -192,11 +206,11 @@
           },
           "wrapper": true
         },
-        { 
-          "urlImage": "https://drive.google.com/uc?export=view&id=1DlQof6MOk9PQgJtcad50-gb5K3l7WHL_",
-          "subtitle": "SUBTITULO",
-          "title": "Coursera y UANE se unen para ti",
-          "text": "Se firma una alianza con Coursera para acceder a contenidos que complementen la formación profesional de su comunidad educativa",
+        {
+          "urlImage": "https://assets.staging.bedu.org/UTEG/egresados_noticias_desktop_fea45cc4c9.jpg",
+          "subtitle": "ACADEMIA ",
+          "title": "UTEG online: estudiar desde cualquier lugar del mundo. ",
+          "text": "El Centro Universitario UTEG extiende las opciones de la modalidad online a dieciséis licenciaturas y un posgrado: la Maestría en Educación. Propuestas educativas enfocadas a formar a un profesional capaz de insertarse en un mercado laboral en constante transformación.",
           "border": true,
           "allContent": true,
           "height": "",
@@ -214,7 +228,7 @@
             "icon": "star"
           },
           "linkIcon": {
-            "text": "vvv",
+            "text": "Ver noticia",
             "iconSecond": "person",
             "isBold": true,
             "size": "large",
@@ -227,17 +241,21 @@
       ]
     },
     "dudas": {
-      "banner":{
+      "banner": {
         "image": {
-          "desktop": "https://drive.google.com/uc?export=view&id=1jYKPrTuBTGJ1VrYVGhpD7IDeIihrE9SL",
-          "mobile": "https://drive.google.com/uc?export=view&id=1JqS9W5d0AKqVOPSVjti6C1hgJMkysgvf"
+          "desktop": "https://assets.staging.bedu.org/UTEG/egresados_banner_dudas_desktop_f5619394bc.jpg?updated_at=2023-03-27T16:55:08.826Z",
+          "tablet": "https://assets.staging.bedu.org/UTEG/egresados_banner_dudas_tablet_03e5ceffb7.jpg",
+          "mobile": "https://assets.staging.bedu.org/UTEG/egresados_banner_dudas_MOVIL_c9f92fa9f9.jpg"
         },
+        "font": "light",
         "title": "¿Tienes dudas? Contáctanos",
-        "subtitle": "Mándanos un mensaje de WhatsApp",
-        "email": "egresados@uane.edu.mx",
-        "phone": "5519596979",
-        "whatsApp": "5519596979"
-
+        "position": "light",
+        "overlayWhite": false,
+        "overlayDak": false,
+        "subtitle": "",
+        "email": "egresados@uteg.edu.mx",
+        "phone": "55-5501-2672",
+        "whatsApp": ""
       }
     }
   }

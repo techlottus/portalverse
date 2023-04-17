@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "title": "Seminario de Titulación de Gatronomía",
+    "description": "",
+    "keywords": ""
+  },
+  "sections": {
+    "head": {
+      "title": "Seminario de Titulación de Gatronomía",
+      "image": {
+        "alt": "imagen",
+        "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_titulacion_gastronomia_desk_0cd3277da3.jpg"
+      },
+      "description": "Duración aproximada: 50 horas\n\nPerfil del participante: Dirigido a egresados de la Licenciatura en Gastronomía que hayan completado su formación académica y opten por esta modalidad de titulación.\n\nCarreras afines: Gastronomía\n\nObjetivo: Desarrollar en el alumno habilidades prácticas y conocimientos teóricos que demuestren las competencias de la profesión en base en los lineamientos establecidos para el grado de Licenciados en Gastronomía.\n\nTemas a abordar: \n\n I. DIRECCIÓN DE EMPRESAS GASTRONOMICAS\n\n II. CONTROL DE COSTOS DE ALIMIENTOS Y BEBIDAS\n\n III. TÉCNICAS CULINARIAS\n\n IV. COCINA FRIA\n\n V. PANADERIA\n\n VI. REPOSTERIA\n\n VII. ESTILISMO DE PLATILLOS\n\n VIII. COCTELERIA\n\n IX. SERVICIO\n\n X. QUIMICA CULINARIA\n\nRecursos de aprendizaje: Presencial\n\nEvaluación: Evaluaciones prácticas al finalizar cada modulo, ya que el 85% es práctico y en el teórico se evalúa con un producto entregable.",
+      "price": "$ 3,850.00"
+    },
+    "relatedCourses": {
+      "title": "Cursos relacionados",
+      "courses": [
+        {
+          "id": "123",
+          "title": "Análisis de datos",
+          "link": {
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id": "",
+            "icon": "arrow_forward"
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        },
+        {
+          "id": "123",
+          "title": "Derecho de Autor y Propiedad Intelectual",
+          "link": {
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id": "",
+            "icon": ""
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        },
+        {
+          "id": "123",
+          "title": "Estrategias de tiendas en línea",
+          "link": {
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id": "",
+            "icon": ""
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        },
+        {
+          "id": "123",
+          "title": "Mega tendencias Globales",
+          "link": {
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id": "",
+            "icon": ""
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        }
+      ]
+    }
+  }
+}

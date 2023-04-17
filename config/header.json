@@ -2,51 +2,48 @@
   "menus": [
     { "label": "Admisiones", "route": "/admisiones", "items": [] },
     { "label": "Oferta Educativa", "route": "/oferta-educativa", "items": [
-      { "label": "Bachillerato", "route": "/oferta-educativa/bachillerato/bachillerato" },
+      { "label": "Bachillerato", "route": "/oferta-educativa/bachillerato" },
       { "label": "Licenciaturas", "route": "/oferta-educativa/licenciatura" },
-      { "label": "Especialidades", "route": "/oferta-educativa/especialidad" },
-      { "label": "Maestria", "route": "/oferta-educativa/maestria" },
-      { "label": "Doctorados", "route": "/oferta-educativa/doctorado" },
-      { "label": "Extensión Universitaria", "route": "/extension-universitaria" }
+      { "label": "Maestrías", "route": "/oferta-educativa/maestria" },
+      { "label": "Extensión Universitaria", "route": "/extension-universitaria" },
+      { "label": "UTEG Virtual", "route": "https://utegvirtual.com/", "external": true }
       ]
     },
     { "label": "Nosotros", "route": "/nosotros", "items": [
-      { "label": "Somos UANE", "route": "/nosotros" },
-      { "label": "Campus", "route": "/nosotros/campus" },
+      { "label": "Somos UTEG", "route": "/nosotros" },
+      { "label": "Planteles", "route": "/nosotros/planteles" },
       { "label": "Modelo Educativo", "route": "/nosotros/modelo-educativo" },
       { "label": "Internacionalización", "route": "/nosotros/internacionalizacion" },
-      { "label": "Empleabilidad", "route": "/nosotros/empleabilidad" }
-
+      { "label": "Bolsa de Talento", "route": "/nosotros/bolsa-de-talento" },
+      { "label": "CESEPCOM", "route": "/nosotros/CESEPCOM" }
       ]
     },
-    { "label": "Voz UANE", "route": "/voz-uane", "items": [
-      { "label": "Blog", "principal": false, "route": "/voz-uane/blog" },
-        { "label": "Podcast", "principal": false, "route": "/voz-uane/podcast" }
-      ]
-    }
+    { "label": "Blog", "route": "/blog", "items": [] }
   ],
-  "logotype": { "src":"/images/logotipo.png", "alt":"logotipo-uane" },
+  "logotype": { "src":"https://assets.staging.bedu.org/UTEG/logo_uteg_79d8e731bf.svg?updated_at=2023-04-14T19:20:19.468Z", "alt":"logotipo-uteg" },
   "menuMobile": [
     {
       "label": "Estudiantes", "principal": true, "route": "", "external": false,
       "children": [
-        { "label": "SIUANE", "principal": false, "route": "https://sistema.uane.edu.mx/", "external": true },
-        { "label": "Aula Virtual", "principal": false, "route": "https://aula.uane.mx/login/index.php", "external": true },
-        { "label": "Biblioteca Digital", "principal": false, "route": "https://biblioteca.uane.edu.mx/", "external": true }
+        { "label": "SIAAF", "principal": false, "route": "https://www.uteg.edu.mx/colaboradores-uteg/bienvenidos-a-siaaf/", "external": true },
+        { "label": "UTEG Online", "principal": false, "route": "/", "external": false },
+        { "label": "Biblioteca virtual E-libro", "principal": false, "route": "https://biblioteca.uteg.edu.mx/", "external": true },
+        { "label": "Servicios escolares", "principal": false, "route": "https://www.uteg.edu.mx/colaboradores-uteg/servicios-escolares/", "external": false },
+        { "label": "Alumnos", "principal": false, "route": "/alumnos", "external": false }
       ]
     },
     {
-      "label": "Exalumnos", "principal": true, "route": "", "external": false,
+      "label": "Egresados", "principal": true, "route": "", "external": false,
       "children": [
-        { "label": "Beneficios ExaUANE", "principal": false, "route": "/egresados", "external": false },
-        { "label": "SIUANE para Egresados", "principal": false, "route": "https://sistema.uane.edu.mx/", "external": true }
+        { "label": "Egresados", "principal": false, "route": "/egresados", "external": false },
+        { "label": "Egresados talento", "principal": false, "route": "/egresados/talento", "external": false }
       ]
     },
     {
-      "label": "Admisiones", "principal": true, "route": "/admisiones",
+      "label": "Admisiones", "principal": true, "route": "",
       "children": [
-        { "label": "Solicita Informes", "principal": false, "route": "/admisiones/pedir-informacion", "external": false },
-        { "label": "Becas para el Estudiante", "principal": false, "route": "/admisiones/becas", "external": false }
+        { "label": "Solicita informes", "principal": false, "route": "/admisiones/pedir-informacion", "external": false },
+        { "label": "Becas", "principal": false, "route": "/admisiones/becas", "external": false }
       ]
     },
     {
@@ -55,24 +52,26 @@
         { "label": "Bachillerato", "principal": false, "route": "/oferta-educativa/bachillerato", "external": false },
         { "label": "Licenciaturas", "principal": false, "route": "/oferta-educativa/licenciatura", "external": false },
         { "label": "Maestrías", "principal": false, "route": "/oferta-educativa/maestria", "external": false },
-        { "label": "Especialidades", "principal": false, "route": "/oferta-educativa/especialidad", "external": false },
-        { "label": "Doctorados", "principal": false, "route": "/oferta-educativa/doctorado", "external": false },
-        { "label": "Extensión Universitaria", "principal": false, "route": "/extension-universitaria", "external": false }
+        { "label": "Extensión Universitaria", "principal": false, "route": "/extension-universitaria", "external": false },
+        { "label": "UTEG Virtual", "principal": false, "route": "https://utegvirtual.com/", "external": true }
       ]
     },
     {
       "label": "Nosotros", "principal": true, "route": "/nosotros", "external": false,
       "children": [
         { "label": "Internacionalización", "principal": false, "route": "/nosotros/internacionalizacion", "external": false },
-        { "label": "Somos UANE", "principal": false, "route": "/nosotros", "external": false },
-        { "label": "Campus", "principal": false, "route": "/nosotros/campus", "external": false },
+        { "label": "Somos UTEG", "principal": false, "route": "/nosotros", "external": false },
+        { "label": "Vida estudiantil", "principal": false, "route": "/nosotros/vida-estudiantil", "external": false },
+        { "label": "Planteles", "principal": false, "route": "/nosotros/planteles", "external": false },
         { "label": "Modelo educativo", "principal": false, "route": "/nosotros/modelo-educativo", "external": false },
-        { "label": "Empleabilidad", "principal": false, "route": "/nosotros/empleabilidad", "external": false },
-        { "label": "Conexión Educativa", "principal": false, "route": "/nosotros/conexion-educativa", "external": false }
+        { "label": "Bolsa de Talento", "principal": false, "route": "/nosotros/bolsa-de-talento", "external": false },
+        { "label": "Vinculación empresarial", "principal": false, "route": "/nosotros/vinculacion-empresarial", "external": false },
+        { "label": "CESEPCOM", "principal": false, "route": "/nosotros/CESEPCOM", "external": false },
+        { "label": "Accesos para colaboradores", "principal": false, "route": "/nosotros/accesos-colaboradores", "external": false }
       ]
     },
     {
-      "label": "Contacto", "principal": true, "route": "", "external": false,
+      "label": "Contacto", "principal": true, "route": "/contactanos", "external": false,
       "children": [
         { "label": "Línea segura", "principal": false, "route": "https://lineasegura.uane.edu.mx/", "external": true },
         { "label": "Preguntas frecuentes", "principal": false, "route": "/contactanos/faq/general", "external": false },
@@ -80,11 +79,8 @@
       ]
     },
     {
-      "label": "Voz UANE", "principal": true, "route": "/voz-uane/", "external": false,
-      "children":[
-        { "label": "Blog", "principal": false, "route": "/voz-uane/blog", "external": false },
-        { "label": "Podcast", "principal": false, "route": "/voz-uane/podcast", "external": false }
-      ]
+      "label": "Blog", "principal": true, "route": "/blog", "external": false,
+      "children":[]
     }
   ]
 }
