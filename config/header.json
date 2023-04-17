@@ -15,8 +15,7 @@
       { "label": "Modelo Educativo", "route": "/nosotros/modelo-educativo" },
       { "label": "Internacionalización", "route": "/nosotros/internacionalizacion" },
       { "label": "Bolsa de Talento", "route": "/nosotros/bolsa-de-talento" },
-      { "label": "CESEPCOM", "route": "/nosotros/CESEPCOM" },
-      { "label": "SIAAF", "route": "/nosotros/SIAAF" }
+      { "label": "CESEPCOM", "route": "/nosotros/CESEPCOM" }
       ]
     },
     { "label": "Blog", "route": "/blog", "items": [] }
