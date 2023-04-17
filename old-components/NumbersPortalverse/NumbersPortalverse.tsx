@@ -51,9 +51,15 @@ const NumbersPortalverse: FC<NumbersPortalverseData> = memo(({data, classNames }
             <p className="font-Poppins text-10 w-t:text-6 w-p:text-6 font-bold leading-[125%] pr-2">{data?.prefix}</p>
           : null
         }
-        <CountUp separator="," start={0} end={data?.maxNumber} delay={0} onEnd={() => setFinishedCount(true)} >
+        <CountUp separator="," start={0} end={data?.maxNumber} onEnd={() => setFinishedCount(true)} >
           {({ countUpRef, start }) => (
-            <VisibilitySensor onChange={() => !finishedCount ? start : null} delayedCall>
+            <VisibilitySensor
+              onChange={(isVisible: boolean) => {
+                if(!isVisible || finishedCount) return;
+                start();
+              }}
+              delayedCall
+            >
               <span className="font-Poppins text-10 w-t:text-6 w-p:text-6 font-semibold leading-[125%] pr-2" ref={countUpRef} />
             </VisibilitySensor>
           )}
