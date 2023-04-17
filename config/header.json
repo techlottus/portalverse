@@ -15,7 +15,8 @@
       { "label": "Modelo Educativo", "route": "/nosotros/modelo-educativo" },
       { "label": "Internacionalización", "route": "/nosotros/internacionalizacion" },
       { "label": "Bolsa de Talento", "route": "/nosotros/bolsa-de-talento" },
-      { "label": "CESEPCOM", "route": "/nosotros/CESEPCOM" }
+      { "label": "CESEPCOM", "route": "/nosotros/CESEPCOM" },
+      { "label": "SIAAF", "route": "/nosotros/SIAAF" }
       ]
     },
     { "label": "Blog", "route": "/blog", "items": [] }
@@ -25,7 +26,6 @@
     {
       "label": "Estudiantes", "principal": true, "route": "", "external": false,
       "children": [
-        { "label": "SIAAF", "principal": false, "route": "/nosotros/accesos-colaboradores", "external": false },
         { "label": "UTEG Online", "principal": false, "route": "/", "external": false },
         { "label": "Biblioteca virtual E-libro", "principal": false, "route": "https://biblioteca.uteg.edu.mx/", "external": true },
         { "label": "Alumnos", "principal": false, "route": "/alumnos", "external": false }
@@ -65,7 +65,8 @@
         { "label": "Modelo educativo", "principal": false, "route": "/nosotros/modelo-educativo", "external": false },
         { "label": "Bolsa de Talento", "principal": false, "route": "/nosotros/bolsa-de-talento", "external": false },
         { "label": "Vinculación empresarial", "principal": false, "route": "/nosotros/vinculacion-empresarial", "external": false },
-        { "label": "CESEPCOM", "principal": false, "route": "/nosotros/CESEPCOM", "external": false }
+        { "label": "CESEPCOM", "principal": false, "route": "/nosotros/CESEPCOM", "external": false },
+        { "label": "SIAAF", "principal": false, "route": "/nosotros/SIAAF", "external": false }
       ]
     },
     {
