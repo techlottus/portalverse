@@ -1,13 +1,13 @@
 {
     "meta": {
-      "title": "Accesos para Colaboradores",
+      "title": "SIAAF",
       "description": "",
       "keywords": ""
     },
     "sections": {
       "head": {
-        "title": "Accesos para Colaboradores",
-        "description": "Este es un apartado  creado especialmente para ti. Desde aquí podrás acceder a la información de tu interés de una manera fácil y sencilla. Puedes ingresar a algunas plataformas internas como SIAAF, Sistema de Gestión, Biblioteca, e-Solicitudes, Proulex- UTEG, Quejas y sugerencias, e-Planeación, Guía de Recursos Gráficos, eDenuncias y Solicitud de Documentos."
+        "title": "Sistema de Información Administrativo Académico y Financiero",
+        "description": "Éste es un apartado creado especialmente para ti. Desde aquí podrás acceder a la información de tu interés de una manera fácil y sencilla. Puedes ingresar a algunas plataformas internas como, Sistema de Gestión, Biblioteca, e-Solicitudes, Proulex- UTEG, Quejas y sugerencias, e-Planeación, Guía de Recursos Gráficos, eDenuncias y Solicitud de Documentos."
       },
       "experiencias": {
         "cards": [
@@ -175,7 +175,7 @@
             "image": "https://assets.staging.bedu.org/UTEG/acceso_colab_emision_documentos_92f760e274.jpg",
             "subtitle": "",
             "title": "Emisión de documentos",
-            "text": "",
+            "text": "Es una Plataforma en la cual se pueden descargar reportes y formatos para realizar constancias.",
             "border": true,
             "type": "vertical",
             "background": false,
@@ -195,7 +195,7 @@
             "image": "https://assets.staging.bedu.org/UTEG/acceso_colab_estatus_tramites_0567304d7f.jpg",
             "subtitle": "",
             "title": "Estatus de trámites",
-            "text": "",
+            "text": "Visualiza la fecha, tipo de documento solicitado y estatus de tu trámite.",
             "border": true,
             "type": "vertical",
             "background": false,
@@ -215,7 +215,7 @@
             "image": "https://assets.staging.bedu.org/UTEG/acceso_colab_uteg_cam_cbe2b2154e.jpg",
             "subtitle": "",
             "title": "UTEG Cam",
-            "text": "",
+            "text": "Plataforma para la toma de fotografías de alumnos y colaboradores.",
             "border": true,
             "type": "vertical",
             "background": false,
@@ -235,7 +235,7 @@
             "image": "https://assets.staging.bedu.org/UTEG/acceso_colab_siaaf_finanzas_7e96ae44e1.jpg",
             "subtitle": "",
             "title": "SIAAF Finanzas",
-            "text": "",
+            "text": "Plataforma en la que podrás revisar el estado de cuenta del alumno.",
             "border": true,
             "type": "vertical",
             "background": false,
