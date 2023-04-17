@@ -7,7 +7,7 @@ import { getDataPageFromJSON } from "@/utils/getDataPage"
 import RichtText from "@/old-components/Richtext/Richtext"
 import CardWebsitePortalverse from "@/old-components/CardWebsitePortalverse"
 
-const AccesosColaboradores: NextPageWithLayout = ({ sections, meta }: any) => {
+const SIAAF: NextPageWithLayout = ({ sections, meta }: any) => {
 
   const router = useRouter();
 
@@ -44,4 +44,4 @@ export async function getStaticProps(context: any) {
   }
 }
 
-export default AccesosColaboradores
+export default SIAAF
