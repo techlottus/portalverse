@@ -21,10 +21,7 @@
     },
     "descripcion": {
       "title": "Revolucionamos tu educación",
-      "body": [
-        "En UTEG te preparamos para la vida profesional con un modelo educativo que hemos denominado “30-30-40”. Conformado por tres áreas: disciplinar, profesional e integral, este modelo te brindará las herramientas necesarias para tu desarrollo. Obtendrás las competencias imprescindibles para convertirte en el candidato ideal que buscan las empresas puntera en el mercado laboral",
-        "Las tres áreas formativas de nuestro modelo cuentan con materias donde aprenderas habilidades como el pensamiento crítico, el liderazgo, la comunicación asertiva y el manejo de las TIC´s. Recibirás los principios disciplinares necesarios para ser un buen profesionista y aquellos que te convertirán en un experto en tu área de trabajo mientras vives la perspectiva internacional de tu carrera."
-      ]
+      "body": "En UTEG te preparamos para la vida profesional con un modelo educativo que hemos denominado “30-30-40”. Conformado por tres áreas: disciplinar, profesional e integral, este modelo te brindará las herramientas necesarias para tu desarrollo. Obtendrás las competencias imprescindibles para convertirte en el candidato ideal que buscan las empresas puntera en el mercado laboral<br><br>Las tres áreas formativas de nuestro modelo cuentan con materias donde aprenderas habilidades como el pensamiento crítico, el liderazgo, la comunicación asertiva y el manejo de las TIC´s. Recibirás los principios disciplinares necesarios para ser un buen profesionista y aquellos que te convertirán en un experto en tu área de trabajo mientras vives la perspectiva internacional de tu carrera."
     }
   }
 }

@@ -30,12 +30,11 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
           <h3 className="font-Poppins font-bold text-10 leading-[50px] w-t:text-6 w-t:leading-[30px] w-p:text-6 w-p:leading-[30px]">{ sections.descripcion.title }</h3>
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <ContentInsideLayout classNames="gap-6">
-            {
-              sections.descripcion.body.map((text: string, i: number) => <p key={`text-${i}`} className="text-base w-t:text-sm w-p:text-sm font-Nunito-Sans leading-[125%] col-span-6 w-p:col-span-4">{ text }</p>)
-            }
-          </ContentInsideLayout>
+          <RichtText data={{
+            content: sections.descripcion.body
+          }} />
         </div>
+
       </ContentLayout>    
     </HeaderFooterLayout>
   </>

@@ -145,7 +145,7 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
       </ContentLayout>
       <ContentLayout classNames="mt-6">
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-Poppins font-bold text-13 w-t:text-8.5 w-p:text-7.5 mb-18 w-d:leading-13">{sections.descriptionSection.title}</p>
+          <p className="font-Poppins font-bold text-13 w-t:text-8.5 w-p:text-7.5 mb-18 w-p:m-6  w-d:leading-13">{sections.descriptionSection.title}</p>
           {
             sections.descriptionSection.textIcons.map((item: any, i: number) =>
               <div key={`icon-${i}`} className="flex mt-4 gap-6">
