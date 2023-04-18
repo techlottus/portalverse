@@ -8,7 +8,6 @@ import RichtText from "@/old-components/Richtext/Richtext"
 import CardWebsitePortalverse from "@/old-components/CardWebsitePortalverse"
 
 const SIAAF: NextPageWithLayout = ({ sections, meta }: any) => {
-
   const router = useRouter();
 
   return <>
