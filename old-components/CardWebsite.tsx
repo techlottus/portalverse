@@ -23,7 +23,7 @@ const CardWebsite: FC<CardWebsiteComponentData> = memo(({ data, onClick }: CardW
       allContent: data.allContent || true,
       height: data.height || '',
       isShowCardWebsiteContent: data.isShowCardWebsiteContent || false,
-      background: data.background || true,
+      background: data?.background,
       type: data.type || '',
       link: data.link || true,
       linkIcon: data.linkText || {...LinkInit},

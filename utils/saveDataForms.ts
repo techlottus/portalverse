@@ -72,8 +72,11 @@ export const saveDataForms = () => {
 
     const bot = setRegisterBot();
 
-    const medio = UTM_MEDIUMS.includes(queryParams?.utm_medium) || " ";
-    const campana = UTM_CAMPAIGNS.includes(queryParams?.utm_campaign) || " ";
+    // Values for Marketing team
+    const utmMedium = queryParams?.utm_medium;
+    const utmCampaign = queryParams?.utm_campaign;
+    const medio = UTM_MEDIUMS.includes(utmMedium) ? utmMedium : null;
+    const campana = UTM_CAMPAIGNS.includes(utmCampaign) ? utmCampaign : null;
 
     const nombre = data.name;
     const apellidos = data.surname;
@@ -87,7 +90,7 @@ export const saveDataForms = () => {
     const modalidad = data?.modalidad === "Presencial" ? "Presencial" : "Online";
 
     const params = step === 'step1'
-      ? `nombre=${nombre}&apellidos=${apellidos}&telefono=${telefono}&email=${email}&lineaNegocio=${linea}&modalidad=${modality}&avisoPrivacidad=true&leadSource=Digital&validaRegistroBoot=${bot}&source=${source}&canal=${canal}${webtoleadcampus ? `&webtoleadcampus=${webtoleadcampus}` : ""}&medio=${medio}&campana=${campana}`
+      ? `nombre=${nombre}&apellidos=${apellidos}&telefono=${telefono}&email=${email}&lineaNegocio=${linea}&modalidad=${modality}&avisoPrivacidad=true&leadSource=Digital&validaRegistroBoot=${bot}&source=${source}&canal=${canal}${webtoleadcampus ? `&webtoleadcampus=${webtoleadcampus}` : ""}${medio ? `&medio=${medio}` : ""}${campana ? `&campana=${campana}` : ""}`
       : `id=${data.id}&nivel=${data.nivel}&campus=${data.campus}&programa=${data.programa}&modalidad=${modalidad}&lineaNegocio=${data.lineaNegocio}&medioContacto=${data.medioContacto}&horarioContacto=${data.horarioContacto}`
 
     setIsLoading(true);

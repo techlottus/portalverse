@@ -25,10 +25,8 @@
     {
       "label": "Estudiantes", "principal": true, "route": "", "external": false,
       "children": [
-        { "label": "SIAAF", "principal": false, "route": "https://www.uteg.edu.mx/colaboradores-uteg/bienvenidos-a-siaaf/", "external": true },
         { "label": "UTEG Online", "principal": false, "route": "/", "external": false },
         { "label": "Biblioteca virtual E-libro", "principal": false, "route": "https://biblioteca.uteg.edu.mx/", "external": true },
-        { "label": "Servicios escolares", "principal": false, "route": "https://www.uteg.edu.mx/colaboradores-uteg/servicios-escolares/", "external": false },
         { "label": "Alumnos", "principal": false, "route": "/alumnos", "external": false }
       ]
     },
@@ -67,7 +65,7 @@
         { "label": "Bolsa de Talento", "principal": false, "route": "/nosotros/bolsa-de-talento", "external": false },
         { "label": "Vinculación empresarial", "principal": false, "route": "/nosotros/vinculacion-empresarial", "external": false },
         { "label": "CESEPCOM", "principal": false, "route": "/nosotros/CESEPCOM", "external": false },
-        { "label": "Accesos para colaboradores", "principal": false, "route": "/nosotros/accesos-colaboradores", "external": false }
+        { "label": "SIAAF", "principal": false, "route": "/nosotros/SIAAF", "external": false }
       ]
     },
     {
