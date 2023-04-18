@@ -129,4 +129,4 @@ const EducacionContinuaForm: FC<any> = ({ classNames, copies, image, pathThankyo
   )
 }
 
-export default EducacionContinuaForm
+export default EducacionContinuaForm;
