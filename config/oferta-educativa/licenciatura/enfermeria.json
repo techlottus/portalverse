@@ -1,13 +1,13 @@
 {
     "meta": {
-      "title": "Licenciatura en Enfermeria",
+      "title": "Licenciatura en Enfermería",
       "description": "",
       "keywords": ""
     },
     "config": {
-      "title": "Licenciatura en Enfermeria",
+      "title": "Licenciatura en Enfermería",
       "config": {
-        "nombre": "Licenciatura en Enfermeria",
+        "nombre": "Licenciatura en Enfermería",
         "modalidad": ["Presencial"],
         "areaConocimiento": ["Salud"],
         "campus": ["Campus Washington"],
@@ -25,7 +25,7 @@
     },
     "sections": {
       "head": {
-        "title": "Licenciatura en Enfermeria",
+        "title": "Licenciatura en Enfermería",
         "description": "La Licenciatura en Enfermería forma profesionales con la habilidad de desarrollar estrategias de prevención, promoción, cuidado integral, recuperación y mantenimiento de la condición de salud de los grupos poblacionales y personas en edad reproductiva; para responder a las políticas nacionales en salud y al desarrollo de su disciplina.",
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_enfermeria_desk_a456e2044c.jpg",
@@ -102,7 +102,7 @@
     "form": {
       "config": {
         "level": { "hidden": true, "value": "licenciatura" },
-        "program": { "hidden": false, "value": "Licenciatura en Enfermeria" },
+        "program": { "hidden": false, "value": "Licenciatura en Enfermería" },
         "modality": { "hidden": false },
         "campus": { "hidden": false }
       },
