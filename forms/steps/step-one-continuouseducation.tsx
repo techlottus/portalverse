@@ -163,4 +163,4 @@ const StepOne: FC<any> = ({ classNames, data, image, onNext, programs }: any) =>
 </section>
 }
 
-export default StepOne
+export default StepOne;
