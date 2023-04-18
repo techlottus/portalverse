@@ -63,7 +63,7 @@
                 }
               },
               "cards": [
-                { 
+                {
                   "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_presencial_a7e546a436.jpg",
                   "subtitle": "",
                   "title": "Presencial",
@@ -78,7 +78,7 @@
                   "background": false,
                   "wrapper": true
                 },
-                { 
+                {
                   "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_felx_a1b21905fe.jpg",
                   "subtitle": "",
                   "title": "UTEG Flex",
@@ -93,7 +93,7 @@
                   "background": false,
                   "wrapper": true
                 },
-                { 
+                {
                   "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_online_c7622ead85.jpg",
                   "subtitle": "",
                   "title": "UTEG Online",
@@ -124,7 +124,7 @@
                 "action": {"title": "Explora los programas", "type": "outlined", "icon": "", "isExpand": false, "route": "/oferta-educativa/bachillerato"}
               },
               "cards": [
-                { 
+                {
                   "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_presencial_a7e546a436.jpg",
                   "subtitle": "",
                   "title": "Presencial",
@@ -139,7 +139,7 @@
                   "background": false,
                   "wrapper": true
                 },
-                { 
+                {
                   "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_felx_a1b21905fe.jpg",
                   "subtitle": "",
                   "title": "UTEG Flex",
@@ -154,7 +154,7 @@
                   "background": false,
                   "wrapper": true
                 },
-                { 
+                {
                   "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_online_c7622ead85.jpg",
                   "subtitle": "",
                   "title": "UTEG Online",
@@ -190,7 +190,7 @@
                 "action": {"title": "Explora los programas", "type": "outlined", "icon": "", "isExpand": false, "route": "/oferta-educativa/bachillerato"}
               },
               "cards": [
-                { 
+                {
                   "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_presencial_a7e546a436.jpg",
                   "subtitle": "",
                   "title": "Presencial",
@@ -205,7 +205,7 @@
                   "background": false,
                   "wrapper": true
                 },
-                { 
+                {
                   "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_felx_a1b21905fe.jpg",
                   "subtitle": "",
                   "title": "UTEG Flex",
@@ -220,7 +220,7 @@
                   "background": false,
                   "wrapper": true
                 },
-                { 
+                {
                   "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_online_c7622ead85.jpg",
                   "subtitle": "",
                   "title": "UTEG Online",
