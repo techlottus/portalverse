@@ -72,9 +72,9 @@
       "route": "cirujano-dentista"
     },
     {
-      "title": "Licenciatura en Enfermeria",
+      "title": "Licenciatura en Enfermería",
       "config": {
-        "nombre": "Licenciatura en Enfermeria",
+        "nombre": "Licenciatura en Enfermería",
         "modalidad": [
           "Presencial"
         ],

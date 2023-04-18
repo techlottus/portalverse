@@ -96,7 +96,7 @@ const Level: NextPageWithLayout<any> = ({ meta, filtro, programs, sections, leve
                   href={`${level}/${route}`}
                   className="flex items-center justify-end font-Nunito font-bold">
 
-                  <span className="mr-1 w-t:hidden w-p:hidden">Ver más</span>
+                  <span className="mr-1">Ver más</span>
                   <span className="material-icons icon">chevron_right</span>
 
                 </Link>
