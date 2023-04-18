@@ -216,7 +216,7 @@ const OpenForm: FC<any> = ({ classNames, image, pathThankyou, controls, data, cu
   }
 
   return (
-    <section className={cn("p-6 shadow-15 bg-white relative", classNames)}>
+    <section className={cn("p-6 shadow-15 bg-white relative z-0", classNames)}>
       {
         isLoading
           ? <div className="absolute w-full h-full z-10 flex justify-center items-center left-0 top-0">
