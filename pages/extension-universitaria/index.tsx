@@ -41,9 +41,9 @@ const EducacionContinua: NextPageWithLayout = ({ data: { oferta, level }, sectio
         <section className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           {
             sections.extension.sections.map((item:any, i:number) => <>
-              <ContentLayout>
+              <ContentFullLayout classNames="w-t:mt-12 w-p:mt-12">
                 <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-                <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%]">{item.title}</p>
+                <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%] w-t:mb-6 w-p:mb-6">{item.title}</p>
                 </div>
                 <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-2 w-d:mb-[72px]">
           {
@@ -52,7 +52,7 @@ const EducacionContinua: NextPageWithLayout = ({ data: { oferta, level }, sectio
            </section>)
           }
         </section>
-              </ContentLayout>
+              </ContentFullLayout>
             </>)
           }
         </section>

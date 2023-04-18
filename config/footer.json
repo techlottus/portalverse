@@ -34,10 +34,8 @@
     [
       [
         { "label": "Estudiantes", "principal": true, "link": "", "external": false },
-        { "label": "SIAAF", "principal": false, "link": "", "external": true },
         { "label": "UTEG Online", "principal": false, "link": "https://utegvirtual.com/", "external": true },
         { "label": "Biblioteca virtual E-libro", "principal": false, "link": "https://biblioteca.uteg.edu.mx/", "external": true },
-        { "label": "Servicios escolares", "principal": false, "link": "", "external": true },
         { "label": "Alumnos", "principal": false, "link": "/alumnos", "external": false }
       ],
       [
@@ -71,8 +69,7 @@
         { "label": "Bolsa de Talento", "principal": false, "link": "/nosotros/bolsa-de-talento", "external": false },
         { "label": "Vinculación empresarial", "principal": false, "link": "/nosotros/vinculacion-empresarial", "external": false },
         { "label": "CESEPCOM", "principal": false, "link": "/nosotros/CESEPCOM", "external": false },
-        { "label": "Accesos para colaboradores", "principal": false, "link": "/nosotros/accesos-colaboradores", "external": false }
-
+        { "label": "SIAAF", "principal": false, "link": "/nosotros/SIAAF", "external": false }
       ]
     ],
     [

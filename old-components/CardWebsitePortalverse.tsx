@@ -2,6 +2,7 @@ import { FC } from "react";
 import Image from "@/old-components/Image";
 import RichtText from "./Richtext/Richtext";
 import LinkIcons from "./LinkLottus";
+import Aspect from "@/components/Aspect";
 import type { CardWebsitePortalverseData } from "@/types/CardWebsitePortalverse.types";
 import cn from "classnames";
 
@@ -12,7 +13,9 @@ const CardWebsitePortalverse: FC<CardWebsitePortalverseData> = ({ data, classNam
       data.type === "vertical"
         ? <div className={cn("rounded-b-lg hover:shadow-2xl flex flex-col h-full")}>
           <div>
-            <Image classNames="w-full aspect-2/1 flex h-full" src={data.image} alt="image" />
+            <Aspect ratio="2/1">
+              <Image classNames="w-full h-full" src={data.image} alt="image" />
+            </Aspect>
           </div>
           <div className={cn("px-3 flex flex-col h-full", classNames, { "border-l-[1px] border-r-[1px] border-b-[1px] rounded-b-lg": data.border, "bg-white": data.background })}>
             <h3 className="pt-3 mb-2 font-Nunito font-normal text-SC/Blackandgrey/B-60 text-[11px]">{data.subtitle?.toLocaleUpperCase()}</h3>

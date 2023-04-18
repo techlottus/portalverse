@@ -64,7 +64,7 @@
               },
               "cards": [
                 {
-                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_presencial_d62b8a6d09.jpg",
+                  "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_presencial_a7e546a436.jpg",
                   "subtitle": "",
                   "title": "Presencial",
                   "text": "Contamos con 31 programas de licenciatura, 21 de ellos con incorporación a la Universidad de Guadalajara.",
@@ -73,13 +73,13 @@
                   "height": "",
                   "isShowCardWebsiteContent": true,
                   "id": "",
-                  "type": "horizontal",
+                  "type": "vertical",
                   "link": true,
                   "background": false,
                   "wrapper": true
                 },
                 {
-                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_flex_8af4d733fb.jpg",
+                  "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_felx_a1b21905fe.jpg",
                   "subtitle": "",
                   "title": "UTEG Flex",
                   "text": "Con esta modalidad de estudios semi-presencial, los sábados, puedes estudiar aún cuando, por cualquier motivo, no puedas asistir regularmente a un plantel.",
@@ -88,13 +88,13 @@
                   "height": "",
                   "isShowCardWebsiteContent": true,
                   "id": "",
-                  "type": "horizontal",
+                  "type": "vertical",
                   "link": true,
                   "background": false,
                   "wrapper": true
                 },
                 {
-                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_online_69599a8b38.jpg",
+                  "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_online_c7622ead85.jpg",
                   "subtitle": "",
                   "title": "UTEG Online",
                   "text": "Vive las experiencias de aprendizaje sin barreras de tiempo y espacio gracias a las plataformas tecnológicas. Interactúa con docentes experimentados y accede a los conocimientos más actualizados.",
@@ -103,7 +103,7 @@
                   "height": "",
                   "isShowCardWebsiteContent": true,
                   "id": "",
-                  "type": "horizontal",
+                  "type": "vertical",
                   "link": true,
                   "background": false,
                   "wrapper": true
@@ -125,7 +125,7 @@
               },
               "cards": [
                 {
-                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_presencial_d62b8a6d09.jpg",
+                  "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_presencial_a7e546a436.jpg",
                   "subtitle": "",
                   "title": "Presencial",
                   "text": "Contamos con 31 programas de licenciatura, 21 de ellos con incorporación a la Universidad de Guadalajara.",
@@ -134,13 +134,13 @@
                   "height": "",
                   "isShowCardWebsiteContent": true,
                   "id": "",
-                  "type": "horizontal",
+                  "type": "vertical",
                   "link": true,
                   "background": false,
                   "wrapper": true
                 },
                 {
-                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_flex_8af4d733fb.jpg",
+                  "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_felx_a1b21905fe.jpg",
                   "subtitle": "",
                   "title": "UTEG Flex",
                   "text": "Con esta modalidad de estudios semi-presencial, los sábados, puedes estudiar aún cuando, por cualquier motivo, no puedas asistir regularmente a un plantel.",
@@ -149,13 +149,13 @@
                   "height": "",
                   "isShowCardWebsiteContent": true,
                   "id": "",
-                  "type": "horizontal",
+                  "type": "vertical",
                   "link": true,
                   "background": false,
                   "wrapper": true
                 },
                 {
-                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_online_69599a8b38.jpg",
+                  "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_online_c7622ead85.jpg",
                   "subtitle": "",
                   "title": "UTEG Online",
                   "text": "Vive las experiencias de aprendizaje sin barreras de tiempo y espacio gracias a las plataformas tecnológicas. Interactúa con docentes experimentados y accede a los conocimientos más actualizados.",
@@ -164,7 +164,7 @@
                   "height": "",
                   "isShowCardWebsiteContent": true,
                   "id": "",
-                  "type": "horizontal",
+                  "type": "vertical",
                   "link": true,
                   "background": false,
                   "wrapper": true
@@ -191,7 +191,7 @@
               },
               "cards": [
                 {
-                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_presencial_d62b8a6d09.jpg",
+                  "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_presencial_a7e546a436.jpg",
                   "subtitle": "",
                   "title": "Presencial",
                   "text": "Contamos con 31 programas de licenciatura, 21 de ellos con incorporación a la Universidad de Guadalajara.",
@@ -200,13 +200,13 @@
                   "height": "",
                   "isShowCardWebsiteContent": true,
                   "id": "",
-                  "type": "horizontal",
+                  "type": "vertical",
                   "link": true,
                   "background": false,
                   "wrapper": true
                 },
                 {
-                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_flex_8af4d733fb.jpg",
+                  "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_felx_a1b21905fe.jpg",
                   "subtitle": "",
                   "title": "UTEG Flex",
                   "text": "Con esta modalidad de estudios semi-presencial, los sábados, puedes estudiar aún cuando, por cualquier motivo, no puedas asistir regularmente a un plantel.",
@@ -215,13 +215,13 @@
                   "height": "",
                   "isShowCardWebsiteContent": true,
                   "id": "",
-                  "type": "horizontal",
+                  "type": "vertical",
                   "link": true,
                   "background": false,
                   "wrapper": true
                 },
                 {
-                  "image": "https://assets.staging.bedu.org/UTEG/admisiones_modalidad_online_69599a8b38.jpg",
+                  "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_online_c7622ead85.jpg",
                   "subtitle": "",
                   "title": "UTEG Online",
                   "text": "Vive las experiencias de aprendizaje sin barreras de tiempo y espacio gracias a las plataformas tecnológicas. Interactúa con docentes experimentados y accede a los conocimientos más actualizados.",
@@ -230,7 +230,7 @@
                   "height": "",
                   "isShowCardWebsiteContent": true,
                   "id": "",
-                  "type": "horizontal",
+                  "type": "vertical",
                   "link": true,
                   "background": false,
                   "wrapper": true

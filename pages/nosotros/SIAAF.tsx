@@ -7,8 +7,7 @@ import { getDataPageFromJSON } from "@/utils/getDataPage"
 import RichtText from "@/old-components/Richtext/Richtext"
 import CardWebsitePortalverse from "@/old-components/CardWebsitePortalverse"
 
-const AccesosColaboradores: NextPageWithLayout = ({ sections, meta }: any) => {
-
+const SIAAF: NextPageWithLayout = ({ sections, meta }: any) => {
   const router = useRouter();
 
   return <>
@@ -17,7 +16,7 @@ const AccesosColaboradores: NextPageWithLayout = ({ sections, meta }: any) => {
     </Head>
     <HeaderFooterLayout breadcrumbs={true}>
       <ContentLayout>
-        <div className="w-d:col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 w-t:mb-6 w-p:mb-6">
+        <div className="w-d:col-span-7 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 w-t:mb-6 w-p:mb-6">
           <h1 className="text-13 w-t:text-8.25 w-p:text-6 font-Poppins font-bold leading-[125%] w-t:leading-[111%] mb-5">{ sections.head.title }</h1>
           <RichtText data={{
             content: sections.head.description
@@ -37,11 +36,11 @@ const AccesosColaboradores: NextPageWithLayout = ({ sections, meta }: any) => {
 
 // `getStaticPaths` requires using `getStaticProps`
 export async function getStaticProps(context: any) {
-  const { sections, meta } = await getDataPageFromJSON('acceso-colaboradores.json');
+  const { sections, meta } = await getDataPageFromJSON('SIAAF.json');
 
   return {
     props: { sections, meta }
   }
 }
 
-export default AccesosColaboradores
+export default SIAAF;

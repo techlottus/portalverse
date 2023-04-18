@@ -25,13 +25,13 @@ const Alumnos: NextPageWithLayout = ({ sections, meta }: any) => {
     </Head>
     <HeaderFooterLayout>
       <ContentLayout>
-        <div className="col-span-6 w-p:col-span-4 mb-12">
+        <div className="col-span-6 w-p:col-span-4 mb-12 w-t:mb-6 w-p:mb-6">
           <p className="font-Poppins font-bold text-[52px] w-t:text-8.5 w-p:text-7.5 leading-13 w-t:leading-[111%] w-p:leading-[125%] mb-6">{sections.head.title}</p>
           <RichtText data={{
             content: sections.head.description
           }} />
         </div>
-        <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mb-12">
+        <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mb-12 w-t:mb-6 w-p:mb-6">
           {
             sections.accesos.map((item: any, i: number) => <section key={`section-blog-${i}`}>
               <CardWebsitePortalverse data={item} onClick={() => window.open(item.redirect, "_blank")} />

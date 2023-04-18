@@ -8,7 +8,7 @@ const OpenFormInit = {
     subtitle: "Sabemos que elegir una universidad donde cumplir tus sueños puede ser una decisión muy seria y que quieres solucionar cualquier incertidumbre, dinos tus datos y un asesor de admisiones te orientará para resolver todas tus dudas y realizar una elección bien informada.",
     conditions: "Al llenar tus datos aceptas nuestro",
     modality: "¿Qué modalidad te interesa?",
-    privacyLink: { "link": "https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTEG/aviso_de_privacidad_UTEG_24_02_2022_1_9018cd9357.pdf?updated_at=2023-04-13T17:11:00.696Z", "label": "Aviso de privacidad" },
+    privacyLink: { "link": "https://assets.staging.bedu.org/UTEG/aviso_de_privacidad_UTEG_24_02_2022_1_9018cd9357.pdf", "label": "Aviso de privacidad" },
   },
   steptwo: {
     title: "Cuéntanos ¿Qué programa te interesa?",
@@ -40,7 +40,7 @@ const OpenFormInit = {
     title: "Contáctanos e inscríbete",
     subtitle: "Llena el siguiente formulario para que te ayudemos a inscribirte en el curso de ",
     conditions: "Al llenar tus datos aceptas nuestro",
-    privacyLink: { "link": "https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTEG/aviso_de_privacidad_UTEG_24_02_2022_1_9018cd9357.pdf?updated_at=2023-04-13T17:11:00.696Z", "label": "Aviso de privacidad" },
+    privacyLink: { "link": "https://assets.staging.bedu.org/UTEG/aviso_de_privacidad_UTEG_24_02_2022_1_9018cd9357.pdf", "label": "Aviso de privacidad" },
   },
   steponecontinuoscontrols: {
     programs: "Curso seleccionado"
