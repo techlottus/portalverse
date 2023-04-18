@@ -216,73 +216,75 @@ const OpenForm: FC<any> = ({ classNames, image, pathThankyou, controls, data, cu
   }
 
   return (
-    <section className={cn("p-6 shadow-15 bg-white relative z-0", classNames)}>
-      {
-        isLoading
-          ? <div className="absolute w-full h-full z-10 flex justify-center items-center left-0 top-0">
-              <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
-            </div>
-          : null
-      }
-      {
-        isError
-          ? <div className="bg-white w-full h-full p-4 z-10 flex flex-col aspect-2/1 justify-center items-center left-0 top-0">
-              <h1 className="font-bold text-10 text-center leading-12 mb-9">
-                ¡Me lleva la ...! no encuentro la página...
-              </h1>
-              <div className="w-full max-w-[24rem]"> {/* Tailwind's 'max-w-sm' value isn't working for some reason u.u */}
-                <img src="/images/404-B.jpg" className="w-full" alt="error" />
+    <section className={cn("p-6 shadow-15 bg-white relative", classNames)}>
+      <div>
+        {
+          isLoading
+            ? <div className="absolute w-full h-full z-10 flex justify-center items-center left-0 top-0">
+                <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
               </div>
-              <h2 className="text-UNI-066 font-semibold text-5.5 my-6">
-                No importa, siempre puedes regresar a inicio
-              </h2>
-              <Button
-                dark
-                onClick={() => location.reload()}
-                data={{ ...ButtonInit, title: "Reintentar" }}
-              />
-            </div>
-          : <>
-              <StepOne
-                data={data}
-                step={30}
-                classNames={cn({ hidden: step !== 1 })}
-                image={image}
-                onNext={(info: any) => handleNextStep(info, 1)}
-              />
-              <StepTwo
-                campus={filteredCampus}
-                programs={filteredPrograms}
-                onChangeProgram={(program: string) =>
-                  handleProgramSelected(program)
-                }
-                onLevelSelected={(level: string) => handleLevelSelected(level)}
-                onChangeModality={(modality: string) =>
-                  handleFetchEducativeOffer(modality)
-                }
-                modality={infoForm.step1.modality}
-                levels={levelsOffer}
-                step={60}
-                classNames={cn({ hidden: step !== 2 })}
-                onNext={(info: any) => handleNextStep(info, 2)}
-                controls={{ ...controlsConfig }}
-              />
-              <StepThree
-                onReturnStep={(step: number) => handleReturnedStep(step)}
-                contacts={contacts}
-                schedulers={schedulers}
-                onNext={(info: any) => handleNextStep(info, 3)}
-                step={90}
-                data={{
-                  modality: infoForm.step2.modality,
-                  program: infoForm.step2.nameProgram,
-                  level: infoForm.step2.level,
-                  campus: infoForm.step2.nombreCampus,
-                }}
-                classNames={cn({ hidden: step !== 3 })}
-              />
-            </>
-      }
+            : null
+        }
+        {
+          isError
+            ? <div className="bg-white w-full h-full p-4 z-10 flex flex-col aspect-2/1 justify-center items-center left-0 top-0">
+                <h1 className="font-bold text-10 text-center leading-12 mb-9">
+                  ¡Me lleva la ...! no encuentro la página...
+                </h1>
+                <div className="w-full max-w-[24rem]"> {/* Tailwind's 'max-w-sm' value isn't working for some reason u.u */}
+                  <img src="/images/404-B.jpg" className="w-full" alt="error" />
+                </div>
+                <h2 className="text-UNI-066 font-semibold text-5.5 my-6">
+                  No importa, siempre puedes regresar a inicio
+                </h2>
+                <Button
+                  dark
+                  onClick={() => location.reload()}
+                  data={{ ...ButtonInit, title: "Reintentar" }}
+                />
+              </div>
+            : <>
+                <StepOne
+                  data={data}
+                  step={30}
+                  classNames={cn({ hidden: step !== 1 })}
+                  image={image}
+                  onNext={(info: any) => handleNextStep(info, 1)}
+                />
+                <StepTwo
+                  campus={filteredCampus}
+                  programs={filteredPrograms}
+                  onChangeProgram={(program: string) =>
+                    handleProgramSelected(program)
+                  }
+                  onLevelSelected={(level: string) => handleLevelSelected(level)}
+                  onChangeModality={(modality: string) =>
+                    handleFetchEducativeOffer(modality)
+                  }
+                  modality={infoForm.step1.modality}
+                  levels={levelsOffer}
+                  step={60}
+                  classNames={cn({ hidden: step !== 2 })}
+                  onNext={(info: any) => handleNextStep(info, 2)}
+                  controls={{ ...controlsConfig }}
+                />
+                <StepThree
+                  onReturnStep={(step: number) => handleReturnedStep(step)}
+                  contacts={contacts}
+                  schedulers={schedulers}
+                  onNext={(info: any) => handleNextStep(info, 3)}
+                  step={90}
+                  data={{
+                    modality: infoForm.step2.modality,
+                    program: infoForm.step2.nameProgram,
+                    level: infoForm.step2.level,
+                    campus: infoForm.step2.nombreCampus,
+                  }}
+                  classNames={cn({ hidden: step !== 3 })}
+                />
+              </>
+        }
+      </div>
     </section>
   )
 };

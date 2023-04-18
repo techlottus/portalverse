@@ -95,34 +95,36 @@ const EducacionContinuaForm: FC<any> = ({ classNames, copies, image, pathThankyo
   }
 
   return (
-    <section className={cn("p-6 shadow-15 bg-white relative z-0", classNames)}>
-      {
-        isLoading
-          ? <div className="absolute w-full h-full z-10 flex justify-center items-center left-0 top-0">
-              <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
-            </div>
-          : null
-      }
-      {
-        isError
-          ? <div className="bg-white w-full h-full p-4 z-10 flex flex-col aspect-2/1 justify-center items-center left-0 top-0">
-              <h1 className="font-bold text-10 text-center leading-12 mb-9">
-                ¡Me lleva la ...! no encuentro la página...
-              </h1>
-              <div className="w-full max-w-[24rem]"> {/* Tailwind's 'max-w-sm' value isn't working for some reason u.u */}
-                <img src="/images/404-B.jpg" className="w-full" alt="error" />
+    <section className={cn("p-6 shadow-15 bg-white relative", classNames)}>
+      <div>
+        {
+          isLoading
+            ? <div className="absolute w-full h-full z-10 flex justify-center items-center left-0 top-0">
+                <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
               </div>
-              <h2 className="text-UNI-066 font-semibold text-5.5 my-6">
-                No importa, siempre puedes regresar a inicio
-              </h2>
-              <Button
-                dark
-                onClick={() => location.reload()}
-                data={{ ...ButtonInit, title: "Reintentar" }}
-              />
-            </div>
-          : <StepOne data={ copies } step={30} image={image} programs={filteredPrograms} onNext={(info: any) => handleNext(info)}/>
-      }
+            : null
+        }
+        {
+          isError
+            ? <div className="bg-white w-full h-full p-4 z-10 flex flex-col aspect-2/1 justify-center items-center left-0 top-0">
+                <h1 className="font-bold text-10 text-center leading-12 mb-9">
+                  ¡Me lleva la ...! no encuentro la página...
+                </h1>
+                <div className="w-full max-w-[24rem]"> {/* Tailwind's 'max-w-sm' value isn't working for some reason u.u */}
+                  <img src="/images/404-B.jpg" className="w-full" alt="error" />
+                </div>
+                <h2 className="text-UNI-066 font-semibold text-5.5 my-6">
+                  No importa, siempre puedes regresar a inicio
+                </h2>
+                <Button
+                  dark
+                  onClick={() => location.reload()}
+                  data={{ ...ButtonInit, title: "Reintentar" }}
+                />
+              </div>
+            : <StepOne data={ copies } step={30} image={image} programs={filteredPrograms} onNext={(info: any) => handleNext(info)}/>
+        }
+      </div>
     </section>
   )
 }
