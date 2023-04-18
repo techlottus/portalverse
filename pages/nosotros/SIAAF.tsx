@@ -37,11 +37,11 @@ const SIAAF: NextPageWithLayout = ({ sections, meta }: any) => {
 
 // `getStaticPaths` requires using `getStaticProps`
 export async function getStaticProps(context: any) {
-  const { sections, meta } = await getDataPageFromJSON('acceso-colaboradores.json');
+  const { sections, meta } = await getDataPageFromJSON('SIAAF.json');
 
   return {
     props: { sections, meta }
   }
 }
 
-export default SIAAF
+export default SIAAF;
