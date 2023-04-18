@@ -37,7 +37,7 @@ const VidaEstudiantil: NextPageWithLayout = ({ sections, meta }: any) => {
           />
         </div>
       </ContentLayout>
-      <ContentFullLayout classNames="bg-UTEG/blue_bandbook text-white mt-18 w-t:mt-3 w-p:mt-3">
+      <ContentFullLayout classNames="bg-UTEG/blue_bandbook text-white mt-18 w-t:mt-12 w-p:mt-12">
         <ContentLayout classNames="text-white">
           <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 my-6">
             <Video dimensions={["330px", "360px", "200px"]} data={ sections.sportActivities.video} />
@@ -47,26 +47,24 @@ const VidaEstudiantil: NextPageWithLayout = ({ sections, meta }: any) => {
             <RichtText font="dark" data={{
               content: sections.sportActivities.description
             }} />
-           <div className="flex justify-between">
-            <p>{sections.sportActivities.moreInformation}</p>
-            <LinkContactTarget type="email" info={sections.sportActivities.moreInformationLink} classNames="text-white" />
+           <div className="mb-6">
+            <p>{sections.sportActivities.moreInformation}<span className="ml-2"><LinkContactTarget type="email" info={sections.sportActivities.moreInformationLink} classNames="text-white" /></span></p>
            </div>
           </div>
         </ContentLayout>
       </ContentFullLayout>
-      <ContentLayout classNames="mt-18">
+      <ContentLayout classNames="mt-18 w-t:mt-12 w-p:mt-12">
           <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 my-auto">
-            <p className="font-Poppins font-bold text-6.5 w-t:text-6 w-p:text-6 leading-[125%] mb-6">{sections.culturalActivities.title}</p>
+            <p className="font-Poppins font-bold text-6.5 w-t:text-6 w-p:text-6 leading-[125%]">{sections.culturalActivities.title}</p>
             <RichtText font="light" data={{
               content: sections.culturalActivities.description
             }} />
-            <p>{sections.culturalActivities.moreInformation}</p>
-            <LinkContactTarget type="email" info={sections.culturalActivities.moreInformationLink} />
+            <p>{sections.culturalActivities.moreInformation}<LinkContactTarget type="email" info={sections.culturalActivities.moreInformationLink}/></p>
           </div>
-          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 my-6">
+          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
             <Video dimensions={["330px", "360px", "200px"]} data={ sections.culturalActivities.video} />
           </div>
-          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-12 w-t:mt-6 w-p:mt-6">
+          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mt-18">
           <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%] mb-6">{ sections.lifeUANE.title}</p>
           <Mosaic data={sections.lifeUANE.images}/>
         </div>
