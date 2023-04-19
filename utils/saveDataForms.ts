@@ -82,7 +82,7 @@ export const saveDataForms = () => {
     const apellidos = data.surname;
     const telefono = data.phone;
     const email = data.email;
-    const source = `portal${process.env.NEXT_PUBLIC_LINEA}`
+    const source = `portal${businessUnit}`
     const canal = process.env.NEXT_PUBLIC_CANAL;
     const webtoleadcampus = formatWebToLeadCampus(businessUnit, data?.modality);
 
@@ -123,7 +123,9 @@ export const saveDataForms = () => {
 
   const saveDataEducacionContinua = async(data: any, Authorization: string, infoProgram: any, linea?: string) => {
     const bot = setRegisterBot();
-    const params = `nombre=${data.name}&apellidos=${data.surname}&telefono=${data.phone}&email=${data.email}&lineaNegocio=${!!linea ? linea : data.lineaNegocio}&modalidad=${data.modalidad}&avisoPrivacidad=true&leadSource=Digital&validaRegistroBoot=${bot}&source=landing`;
+    const source = `portal${businessUnit}`;
+    const canal = process.env.NEXT_PUBLIC_CANAL;
+    const params = `nombre=${data.name}&apellidos=${data.surname}&telefono=${data.phone}&email=${data.email}&lineaNegocio=${!!linea ? linea : data.lineaNegocio}&modalidad=${data.modalidad}&avisoPrivacidad=true&leadSource=Digital&validaRegistroBoot=${bot}&source=${source}&canal=${canal}`;
   
     setIsLoading(true);
     setIsError(false);
