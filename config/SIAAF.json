@@ -12,6 +12,46 @@
       "experiencias": {
         "cards": [
           { 
+            "image": "https://assets.staging.bedu.org/UTEG/alumnos_35b2381640.jpg",
+            "subtitle": "",
+            "title": "Alumnos (Acceso al SIAAF)",
+            "text": "Gestiona de manera fácil y rápida los trámites cotidianos de tu vida estudiantil: calificaciones, abono de pagos, solicitud de constancias y expedición de documentos y certificaciones, etc.",
+            "border": true,
+            "type": "vertical",
+            "background": false,
+            "isLink": true,
+            "link": {
+              "text": "Ver más",
+              "size": "large",
+              "disabled": false,
+              "isUnderline": false,
+              "isBold": false,
+              "iconFirst": "",
+              "iconSecond": "chevron_right"
+            },
+            "redirect": "https://portal.uteg.edu.mx/Alumnos/"
+          },
+          { 
+            "image": "https://assets.staging.bedu.org/UTEG/acceso_colab_solicitudes_ebd5676f1d.jpg",
+            "subtitle": "",
+            "title": "Colaboradores (Acceso al SIAAF)",
+            "text": "Gestiona procesos docentes o como colaborador: asistencia y calificaciones de estudiantes, participación en eventos, actualización de datos,  quejas y sugerencias.",
+            "border": true,
+            "type": "vertical",
+            "background": false,
+            "isLink": true,
+            "link": {
+              "text": "Ver más",
+              "size": "large",
+              "disabled": false,
+              "isUnderline": false,
+              "isBold": false,
+              "iconFirst": "",
+              "iconSecond": "chevron_right"
+            },
+            "redirect": "https://portal.uteg.edu.mx/Colaboradores/"
+          },
+          { 
             "image": "https://assets.staging.bedu.org/UTEG/acceso_colab_sistema_gestion_519e0b6bd5.jpg",
             "subtitle": "",
             "title": "Sistema de Gestión",
@@ -30,26 +70,6 @@
               "iconSecond": "chevron_right"
             },
             "redirect": "https://sgc.uteg.edu.mx/"
-          },
-          { 
-            "image": "https://assets.staging.bedu.org/UTEG/acceso_colab_solicitudes_ebd5676f1d.jpg",
-            "subtitle": "",
-            "title": "Colaboradores",
-            "text": "Gestiona procesos docentes o como colaborador: asistencia y calificaciones de estudiantes, participación en eventos, actualización de datos,  quejas y sugerencias.",
-            "border": true,
-            "type": "vertical",
-            "background": false,
-            "isLink": true,
-            "link": {
-              "text": "Ver más",
-              "size": "large",
-              "disabled": false,
-              "isUnderline": false,
-              "isBold": false,
-              "iconFirst": "",
-              "iconSecond": "chevron_right"
-            },
-            "redirect": "https://portal.uteg.edu.mx/Colaboradores/"
           },
           { 
             "image": "https://assets.staging.bedu.org/UTEG/acceso_colab_solicitudes_ebd5676f1d.jpg",
