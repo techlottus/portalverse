@@ -126,6 +126,16 @@ const errorMessagesStepOneOpenForm = {
   comment: 'Proporciona el mensaje para contactarte',
   password: 'Ingresa una contraseña'
 }
+const errorMessagesBeWantedForm = {
+  name: 'Ingresa un nombre',
+  surname: 'Ingresa tus apellidos',
+  email: 'Ingresa un correo electrónico válido',
+  phone: 'Ingresa un teléfono de 10 dígitos',
+  password: {
+    required: "Ingresa una contraseña",
+    minLength: "Ingresa una contraseña de al menos 8 caracteres"
+  }
+}
 const errorMessagesStepTwoOpenForm = {
   modality: 'Debes elegir una modalidad',
   level: 'Debes elegir un nivel',
@@ -168,6 +178,7 @@ export default {
   inputCommentOpenFormStepOther,
   buttonConfigSend,
   patternEmail,
+  errorMessagesBeWantedForm,
   errorMessagesStepOneOpenForm,
   errorMessagesStepTwoOpenForm,
   errorMessagesStepThreeOpenForm,
