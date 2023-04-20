@@ -120,7 +120,7 @@ const StepOne = ( { onNext, copies }: any ) => {
       </div>
     </form>
     <div className="mt-6">
-      <Button dark onClick={handleNext} data={ configControls.buttonConfigOpenFormStepOne } />
+      <Button dark onClick={handleNext} data={ {...configControls.buttonConfigOpenFormStepOne, disabled: !validateControls() }} />
     </div>
   </section>
 }
