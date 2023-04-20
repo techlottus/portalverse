@@ -35,6 +35,54 @@
         "redirect": "https://portal.uteg.edu.mx/Alumnos/"
       },
       { 
+        "image": "https://assets.staging.bedu.org/UTEG/alumnos_card_acceso_aula_da8895d338.jpg",
+        "subtitle": "",
+        "title": "Aula UTEG",
+        "text": "Es espacio concebido para que tomes tus clases virtuales e interactúes desde cualquier lugar del mundo con tus docentes y compañeros.  ",
+        "border": true,
+        "allContent": true,
+        "height": "",
+        "isShowCardWebsiteContent": true,
+        "id": "",
+        "type": "vertical",
+        "isLink": true,
+        "background": false,
+        "link": {
+          "text": "Ver más",
+          "iconSecond": "chevron_right",
+          "isBold": true,
+          "size": "large",
+          "isUnderline": false,
+          "disabled": false,
+          "icon": ""
+        },
+        "redirect": "https://aula.uteg.edu.mx/login/index.php"
+      },
+      { 
+        "image": "https://assets.staging.bedu.org/UTEG/alumnos_card_acceso_biblioteca_virtual_76c388889d.jpg",
+        "subtitle": "",
+        "title": "Biblioteca Virtual",
+        "text": "Accede a un amplio acervo de recursos digitalizados: textos científicos, artículos, revistas, tesis, enciclopedias, catálogos y bases de datos. ",
+        "border": true,
+        "allContent": true,
+        "height": "",
+        "isShowCardWebsiteContent": true,
+        "id": "",
+        "type": "vertical",
+        "isLink": true,
+        "background": false,
+        "link": {
+          "text": "Ver más",
+          "iconSecond": "chevron_right",
+          "isBold": true,
+          "size": "large",
+          "isUnderline": false,
+          "disabled": false,
+          "icon": ""
+        },
+        "redirect": "https://biblioteca.uteg.edu.mx/"
+      },
+      { 
         "image": "https://assets.staging.bedu.org/UTEG/alumnos_card_acceso_talento_0335f9c618.jpg",
         "subtitle": "",
         "title": "Alumnos Talento",
