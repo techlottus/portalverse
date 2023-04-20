@@ -29,7 +29,7 @@ const StepOne = ( { onNext, copies }: any ) => {
 
   const validateControls = () => !Object.entries(infoControls).map((value: any) => {
     if(value[0] === 'email') {
-      return !!value[1].match(configControls.patternEmail) ? !!value[1].match(configControls.patternEmail).length : true
+      return !!value[1].match(configControls.patternEmail) ? !!value[1].match(configControls.patternEmail).length : false
     }
     if(value[0] === 'phone') {
       return value[1].length === 10
