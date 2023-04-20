@@ -34,6 +34,9 @@ const StepOne = ( { onNext, copies }: any ) => {
     if(value[0] === 'phone') {
       return value[1].length === 10
     }
+    if(value[0] === 'password') {
+      return value[1]?.length >= 8
+    }
     return !!value[1];
   }).includes(false)
 
@@ -43,6 +46,9 @@ const StepOne = ( { onNext, copies }: any ) => {
     }
     if (control === 'phone') {
       return touched ? !(value && value.length === 10) : false;
+    }
+    if (control === 'password') {
+      return touched ? !value || value?.length < 8 : false;
     }
     return touched ? !value : false;
   };
@@ -87,20 +93,30 @@ const StepOne = ( { onNext, copies }: any ) => {
     <form>
       <div className="mt-6 flex w-p:flex-col gap-6">
         <div className="grow">
-          <Input errorMessage={configControls.errorMessagesStepOneOpenForm.name} hasError={errorControls.name} eventFocus={() => handleTouchedControl("name")} data={ configControls.inputNameOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "name")} />
+          <Input errorMessage={configControls.errorMessagesBeWantedForm.name} hasError={errorControls.name} eventFocus={() => handleTouchedControl("name")} data={ configControls.inputNameOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "name")} />
         </div>
         <div  className="grow">
-          <Input errorMessage={configControls.errorMessagesStepOneOpenForm.surname} hasError={errorControls.surname} eventFocus={() => handleTouchedControl("surname")} data={ configControls.inputSurnameOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "surname")} />
+          <Input errorMessage={configControls.errorMessagesBeWantedForm.surname} hasError={errorControls.surname} eventFocus={() => handleTouchedControl("surname")} data={ configControls.inputSurnameOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "surname")} />
         </div>
       </div>
       <div className="mt-6">
-        <Input errorMessage={configControls.errorMessagesStepOneOpenForm.phone} hasError={errorControls.phone} eventFocus={() => handleTouchedControl("phone")} data={ configControls.inputPhoneOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "phone")} />
+        <Input errorMessage={configControls.errorMessagesBeWantedForm.phone} hasError={errorControls.phone} eventFocus={() => handleTouchedControl("phone")} data={ configControls.inputPhoneOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "phone")} />
       </div>
       <div className="mt-6">
-        <Input errorMessage={configControls.errorMessagesStepOneOpenForm.email} hasError={errorControls.email} eventFocus={() => handleTouchedControl("email")} data={ configControls.inputEmailOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "email")} />
+        <Input errorMessage={configControls.errorMessagesBeWantedForm.email} hasError={errorControls.email} eventFocus={() => handleTouchedControl("email")} data={ configControls.inputEmailOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "email")} />
       </div>
       <div className="mt-6">
-        <Input errorMessage={configControls.errorMessagesStepOneOpenForm.password} hasError={errorControls.password} eventFocus={() => handleTouchedControl("password")} data={ configControls.inputPasswordOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "password")} />
+        <Input
+          errorMessage={
+            !infoControls?.password
+              ? configControls?.errorMessagesBeWantedForm?.password?.required
+              : configControls.errorMessagesBeWantedForm?.password?.minLength
+          }
+          hasError={errorControls.password}
+          eventFocus={() => handleTouchedControl("password")}
+          data={ configControls.inputPasswordOpenFormStepOne }
+          eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "password")}
+        />
       </div>
     </form>
     <div className="mt-6">
