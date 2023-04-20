@@ -13,9 +13,9 @@ const NotFound: NextPageWithLayout = _ => {
       <title>Not Found</title>
     </Head>
     <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-full flex font-Poppins justify-center items-center flex-col mx-auto">
-      <h1 className="font-bold text-10 w-t:text-7.5 w-p:text-base leading-8.6 w-t:leading-9.375 w-p:leading-5.2 py-18 w-t:py-12 w-p:py-12">Yo había ponido mi nota aquí</h1>
+      <h1 className="font-bold text-10 w-t:text-7.5 w-p:text-base leading-8.6 w-t:leading-9.375 w-p:leading-5.2 py-18 w-t:py-12 w-p:py-12">Qué pena pero...</h1>
       <Image src="/images/404.jpg" alt="error_image" classNames="w-96 h-72 w-t:w-135.5 w-t:h-100 w-p:w-78 w-p:h-58.5 aspect-4/3" />
-      <p className="text-UNI-066 font-semibold text-5.5 w-t:text-6 w-p:text-base py-6 w-p:pt-6 w-p:pb-4 leading-7.15 w-t:leading-8">No importa, siempre puedes regresar a inicio</p>
+      <p className="text-UNI-066 font-semibold text-5.5 w-t:text-6 w-p:text-base py-6 w-p:pt-6 w-p:pb-4 leading-7.15 w-t:leading-8">La página que buscas no existe o algo salió mal. Lo sentimos</p>
       <Link
         href={'/'}
         className="font-Nunito-Sans py-4 px-8 w-p:w-full w-p:text-center font-bold w-p:text-5 bg-black rounded-lg text-white text-base mb-13.75 w-t:mb-12 w-p:mb-16.5">

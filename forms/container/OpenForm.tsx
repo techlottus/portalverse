@@ -229,13 +229,13 @@ const OpenForm: FC<any> = ({ classNames, image, pathThankyou, controls, data, cu
           isError
             ? <div className="bg-white w-full h-full p-4 z-10 flex flex-col aspect-2/1 justify-center items-center left-0 top-0">
                 <h1 className="font-bold text-10 text-center leading-12 mb-9">
-                  ¡Me lleva la ...! no encuentro la página...
+                Qué pena pero...
                 </h1>
                 <div className="w-full max-w-[24rem]"> {/* Tailwind's 'max-w-sm' value isn't working for some reason u.u */}
-                  <img src="/images/404-B.jpg" className="w-full" alt="error" />
+                  <img src="/images/404.jpg" className="w-full" alt="error" />
                 </div>
                 <h2 className="text-UNI-066 font-semibold text-5.5 my-6">
-                  No importa, siempre puedes regresar a inicio
+                La página que buscas no existe o algo salió mal. Lo sentimos
                 </h2>
                 <Button
                   dark
