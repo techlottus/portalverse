@@ -38,7 +38,7 @@
       ]
     },
     {
-      "label": "Admisiones", "principal": true, "route": "",
+      "label": "Admisiones", "principal": true, "route": "/admisiones",
       "children": [
         { "label": "Solicita informes", "principal": false, "route": "/admisiones/pedir-informacion", "external": false },
         { "label": "Becas", "principal": false, "route": "/admisiones/becas", "external": false }
