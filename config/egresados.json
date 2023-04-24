@@ -33,7 +33,7 @@
     },
     "introduccion": {
       "title": "UTEG siempre será tu casa",
-      "descripcion": "¡Querido ExaUTEG! Este espacio está hecho para ti, estamos comprometidos en apoyarte a generar oportunidades para desarrollar tu potencial y actualización constante. Somos una comunidad de más de 45mil egresados y queremos mantenernos en contacto contigo, que participes en las actividades que realiza tu universidad y continúes formando parte de ella."
+      "descripcion": "Somos una comunidad y deseamos formar una red de contactos entre nuestros egresados. Tú eres un pilar fundamental en la relación entre nuestra universidad y la sociedad.\n\nComo egresado UTEG cuentas con servicios y beneficios adicionales para tu formación:\n\n• Orientación en trámites académicos.\n\n• Beneficios en el área de titulación.\n\n• Cursos, talleres, posgrados y maestrías para su superación profesional.\n\n• Participación en eventos exclusivos para egresados.\n\n• Apoyo en la búsqueda de empleo. "
     },
     "video": {
       "title": "Conoce a nuestros egresados talento",
@@ -90,7 +90,7 @@
         "tablet": "https://assets.staging.bedu.org/UTEG/egresados_banner_oferta_tablet_8a07bcbf86.jpg"
       },
       "font": "light",
-      "title": "Oferta educativa de egresados",
+      "title": "Oferta educativa para los  egresados",
       "subtitle": "En UTEG seguimos apoyándote, ahora en tus proyectos de superación profesional. ",
       "position": "right",
       "height": "auto",
