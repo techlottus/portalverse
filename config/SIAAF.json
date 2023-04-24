@@ -310,6 +310,66 @@
               "iconSecond": "chevron_right"
             },
             "redirect": "http://infsiaaf.uteg.edu.mx:7777/sso/jsp/login.jsp?site2pstoretoken=v1.4~269D73D9~B73C803D32A0C6585CCEF93F95757CD5125FB2FEE867C953F79038B7D0EC5E945321E990686599C600AFA434287CFA7A2E19A992BA215B7A2850A2D1F77AB959B686A8B8917078C0DBD0C63C3AFB42D2038B894E35D3D6C34047435EB89F5FDB54CC60D0D993A16AD97D1139BC17B1B2D2B5E94236C350C4C3E1334659FE5F945BF61BE676C1AB4F0EC4833F5356C6A00117F62E0758C52190DBA02B72D369F602610B4E5B4581C25B4721616541D4CE470C6485599C39CDFAEF66540B513FDFD19A58E8E2C45905B613D18350914B6ECD0ABA697C4D65CE&p_error_code=&p_submit_url=http%3A%2F%2Finfsiaaf.uteg.edu.mx%3A7777%2Fsso%2Fauth&p_cancel_url=http%3A%2F%2Fappsiaaf.uteg.edu.mx%3A7781&ssousername="
+          },
+          { 
+            "image": "https://assets.staging.bedu.org/UTEG/",
+            "subtitle": "",
+            "title": "Catálogo Público OPAC",
+            "text": "",
+            "border": true,
+            "type": "vertical",
+            "background": false,
+            "isLink": true,
+            "link": {
+              "text": "Ver más",
+              "size": "large",
+              "disabled": false,
+              "isUnderline": false,
+              "isBold": false,
+              "iconFirst": "",
+              "iconSecond": "chevron_right"
+            },
+            "redirect": "infsiaaf.uteg.edu.mx:7777/sso/jsp/login.jsp?site2pstoretoken=v1.4~269D73D9~2AC698D5F53AC5708CBF1B262FD33E7DF130ACD476FBF330F2796BB9AB883F66BB7AF710BFD81F43EAB63623FCF5C7FE14CEB875868DDF0313A5C74B4DA555BF7D1FFE697D23F3EBFF9DCAA2D0E3EAA45B4584EDB70C8438CCEAE4ED164CE4E6667C9CB8781A247B28B1969CF06CF10AAE38D987AB58C63226B9E376341B968B10909BF6A7E7BFE1A8758BF91C21181F8E2808A12AB8F1565EA197C1BCCE931F8BBF9B915785954EDA031009B73A5DD513D8539369C12101BCC1B8AD4095999E4A34C2D8D2DD707FB0F9B7B7AC92431EFF5FCDD409FFA27D2D4BB1B5089CBDAB&p_error_code=&p_submit_url=http%3A%2F%2Finfsiaaf.uteg.edu.mx%3A7777%2Fsso%2Fauth&p_cancel_url=http%3A%2F%2Fappsiaaf.uteg.edu.mx%3A7781&ssousername="
+          },
+          { 
+            "image": "https://assets.staging.bedu.org/UTEG/",
+            "subtitle": "",
+            "title": "Incidencias SIICEI",
+            "text": "",
+            "border": true,
+            "type": "vertical",
+            "background": false,
+            "isLink": true,
+            "link": {
+              "text": "Ver más",
+              "size": "large",
+              "disabled": false,
+              "isUnderline": false,
+              "isBold": false,
+              "iconFirst": "",
+              "iconSecond": "chevron_right"
+            },
+            "redirect": "https://aplicativos.uteg.edu.mx/Incidenciassiicei/"
+          },
+          { 
+            "image": "https://assets.staging.bedu.org/UTEG/",
+            "subtitle": "",
+            "title": "Coordinadores",
+            "text": "",
+            "border": true,
+            "type": "vertical",
+            "background": false,
+            "isLink": true,
+            "link": {
+              "text": "Ver más",
+              "size": "large",
+              "disabled": false,
+              "isUnderline": false,
+              "isBold": false,
+              "iconFirst": "",
+              "iconSecond": "chevron_right"
+            },
+            "redirect": "http://appsiaaf.uteg.edu.mx:7777/pls/portal/url/page/port_coord"
           }
         ]
       }
