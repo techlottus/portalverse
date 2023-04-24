@@ -322,21 +322,17 @@
               "title": "Beca SEJ BIS"
             },
             "description": {
-              "content": "<b>Convocatoria Beca BIS</b>\n\nEl Centro Universitario UTEG convoca a toda la comunidad Estudiantil de Bachillerato Intensivo Semiescolarizado a realizar el trámite o renovación de Becas Institucionales.\n\nConsulta aquí la convocatoria para trámite o renovación de becas Institucionales.\n\nLa entrega de documentos se realizará en el Portal de Alumno, menú de Finanzas opción Becas."
+              "content": "<b>Convocatoria Beca SEJ/BIS</b>\n\nEl Centro Universitario UTEG convoca a toda la comunidad Estudiantil que cursan Bachillerato Semiescolarizado (BIS) y que ya cursaron por lo menos un ciclo escolar,  a que participe o realice el trámite de renovación para obtener beca por parte de Secretaria de Educación Jalisco, la cual se tramitará en el área de Servicios Escolares.\n\nConsulta aquí la convocatoria para trámite o renovación de Beca SEJ BIS."
             },
             "redirectLabel": "Descargas:",
             "redirects": [
               {
                 "label": "Convocatoria Beca SEJ BIS",
-                "link": "https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTEG/Convocatoria_apoyos_2023_B_BIS_75ffcd1886.pdf"
+                "link": "https://assets.staging.bedu.org/UTEG/Convocatoria_Beca_SEJ_BIS_25c4dd247e.pdf"
               },
               {
                 "label": "Solicitud de beca nueva y refrendo",
                 "link": "https://assets.staging.bedu.org/UTEG/becas_manual_tramite_cuatrimestral_1_085eedeca5.pdf"
-              },
-              {
-                "label": "Manual trámite de beca",
-                "link": "https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTEG/Manual_tramite_beca_1_03b640aa5f.pdf"
               },
               {
                 "label": "Estudio socioeconómico",
@@ -366,6 +362,34 @@
                 "label": "Portal de Alumno",
                 "link": "https://portal.uteg.edu.mx/Alumnos/",
                 "external": true
+              }
+            ]
+          }
+        },
+        {
+          "text": "Beca BIS",
+          "icon": "arrow_forward",
+          "height": "100px",
+          "enable": true,
+          "nobackground": true,
+          "isShadowColor": true,
+          "shadowColor": "#F8A600",
+          "content": {
+            "title": {
+              "title": "Beca BIS"
+            },
+            "description": {
+              "content": "<b>Convocatoria Beca BIS</b>\n\nEl Centro Universitario UTEG convoca a toda la comunidad Estudiantil de Bachillerato Intensivo Semiescolarizado a realizar el trámite o renovación de Becas Institucionales.\n\nConsulta aquí la convocatoria para trámite o renovación de becas Institucionales.\n\nLa entrega de documentos se realizará en el Portal de Alumno, menú de Finanzas opción Becas."
+            },
+            "redirectLabel": "Descargas:",
+            "redirects": [
+              {
+                "label": "Convocatoria Beca BIS",
+                "link": "https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTEG/Convocatoria_apoyos_2023_B_BIS_75ffcd1886.pdf"
+              },
+              {
+                "label": "Manual trámite de becas",
+                "link": "https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTEG/Manual_tramite_beca_1_03b640aa5f.pdf"
               }
             ]
           }
