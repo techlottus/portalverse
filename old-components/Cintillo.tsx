@@ -46,6 +46,7 @@ const CintilloContent = (props: CintilloData) => {
     email,
     phone,
     whatsApp,
+    actionLink,
     classNames,
     contentVariant = "dark",
   } = props;
@@ -126,6 +127,13 @@ const CintilloContent = (props: CintilloData) => {
                   <Icon name="whatsapp" />
                 </span>
                 <span><a target="_blank" rel="noreferrer noopener" className="font-Nunito font-normal text-base" href={redirectWhats}>{whatsApp}</a></span>
+              </div>
+              : null
+          }
+          {
+            !!actionLink
+              ? <div className={cn("flex align-middle items-center space-x-2 text-black w-p:text-white", { "!text-white": contentVariant === "light" })}>
+                <slot name="areaAction">{actionLink}</slot>
               </div>
               : null
           }
