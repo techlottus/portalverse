@@ -385,11 +385,11 @@
             "redirects": [
               {
                 "label": "Convocatoria Beca BIS",
-                "link": "https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTEG/Convocatoria_apoyos_2023_B_BIS_75ffcd1886.pdf"
+                "link": "https://assets.staging.bedu.org/UTEG/Convocatoria_apoyos_2023_B_BIS_75ffcd1886.pdf"
               },
               {
                 "label": "Manual trámite de becas",
-                "link": "https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTEG/Manual_tramite_beca_1_03b640aa5f.pdf"
+                "link": "https://assets.staging.bedu.org/UTEG/Manual_tramite_beca_1_03b640aa5f.pdf"
               }
             ]
           }
