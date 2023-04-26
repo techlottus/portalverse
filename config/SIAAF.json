@@ -350,26 +350,6 @@
               "iconSecond": "chevron_right"
             },
             "redirect": "https://aplicativos.uteg.edu.mx/Incidenciassiicei/"
-          },
-          { 
-            "image": "https://assets.staging.bedu.org/UTEG/SIAAF_coordinadores_cb22b6ea20.jpg",
-            "subtitle": "",
-            "title": "Coordinadores",
-            "text": "",
-            "border": true,
-            "type": "vertical",
-            "background": false,
-            "isLink": true,
-            "link": {
-              "text": "Ver más",
-              "size": "large",
-              "disabled": false,
-              "isUnderline": false,
-              "isBold": false,
-              "iconFirst": "",
-              "iconSecond": "chevron_right"
-            },
-            "redirect": "http://appsiaaf.uteg.edu.mx:7777/pls/portal/url/page/port_coord"
           }
         ]
       }
