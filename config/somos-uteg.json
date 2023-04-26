@@ -273,7 +273,7 @@
           "height": "282px",
           "enable": true,
           "nobackground": false,
-          "redirect": "https://assets.staging.bedu.org/nosotros/internacionalizacion"
+          "redirect": "/nosotros/internacionalizacion"
         },
         {
           "urlImage": {
@@ -523,7 +523,7 @@
       "id": "certificaciones",
       "certifications": [
         {
-          "urlImage": "https://assets.staging.bedu.org/UTEG/nosotros_iso_9a6cd486c7.svg",
+          "urlImage": "https://assets.staging.bedu.org/UTEG/Certificacion_2_eab2a53311.png",
           "subtitle": "",
           "title": "ISO 9001",
           "text": "International Standarization Organization",

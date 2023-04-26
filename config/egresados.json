@@ -90,7 +90,7 @@
         "tablet": "https://assets.staging.bedu.org/UTEG/egresados_banner_oferta_tablet_8a07bcbf86.jpg"
       },
       "font": "light",
-      "title": "Oferta educativa para los  egresados",
+      "title": "Sigue estudiando con nosotros",
       "subtitle": "En UTEG seguimos apoyándote, ahora en tus proyectos de superación profesional. ",
       "position": "right",
       "height": "auto",
@@ -100,7 +100,7 @@
       "button":{
         "id": "",
         "type": "primary",
-        "title": "Consulta la oferta educativa",
+        "title": "Consulta nuestras maestrías",
         "size": "small",
         "icon": "",
         "lyIcon": false,
@@ -110,7 +110,7 @@
         "test": ""
       },
       "noAction": false,
-      "redirect": "/oferta-educativa"
+      "redirect": "/oferta-educativa/maestria"
     },
     "banner-tramites": {
       "font": "light",
@@ -169,7 +169,7 @@
         "test": ""
       },
       "noAction": false,
-      "redirect": "https://www.uteg.edu.mx/colaboradores-uteg/servicios-escolares/"
+      "redirect": "https://assets.staging.bedu.org/UTEG/Titulacion_maestria_tabloide_93d010c2ca.pdf"
     },
     "noticias": {
       "title": "Noticias",
