@@ -19,7 +19,7 @@
           "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_presencial_a7e546a436.jpg",
           "subtitle": "",
           "title": "Presencial",
-          "text": "Diáloga cara a cara con tus profesores y compañeros de clase. Accede al conocimiento en un ambiente colaborativo y de intercambio de ideas.",
+          "text": "Dialoga cara a cara con tus profesores y compañeros de clase. Accede al conocimiento en un ambiente colaborativo y de intercambio de ideas.",
           "border": true,
           "allContent": true,
           "height": "",
@@ -49,7 +49,7 @@
           "urlImage": "https://assets.staging.bedu.org/UTEG/oferta_card_online_c7622ead85.jpg",
           "subtitle": "",
           "title": "UTEG online",
-          "text": "Estudia en tus términos:desde cualquier lugar y sin horarios rígidos. Conéctate al conocimiento con nuestras plataformas de aprendizaje.",
+          "text": "Estudia en tus términos: desde cualquier lugar y sin horarios rígidos. Conéctate al conocimiento con nuestras plataformas de aprendizaje.",
           "border": true,
           "allContent": true,
           "height": "",
@@ -236,7 +236,7 @@
         "title": "Ingenierías"
       },
       {
-        "title": "Ciencias de la salud"
+        "title": "Ciencias de la Salud"
       },
       {
         "title": "Humanidades"

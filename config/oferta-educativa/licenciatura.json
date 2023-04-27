@@ -235,9 +235,9 @@
       "route": "trabajo-social"
     },
     {
-      "title": "Licenciatura en Administracion",
+      "title": "Licenciatura en Administración",
       "config": {
-        "nombre": "Licenciatura en Administracion",
+        "nombre": "Licenciatura en Administración",
         "modalidad": [
           "Presencial"
         ],
@@ -449,9 +449,9 @@
       "route": "negocios-digitales"
     },
     {
-      "title": "Ingenieria en Ciencia de Datos",
+      "title": "Ingeniería en Ciencia de Datos",
       "config": {
-        "nombre": "Ingenieria en Ciencia de Datos",
+        "nombre": "Ingeniería en Ciencia de Datos",
         "modalidad": [
           "Online"
         ],
