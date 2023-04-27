@@ -350,6 +350,26 @@
               "iconSecond": "chevron_right"
             },
             "redirect": "https://aplicativos.uteg.edu.mx/Incidenciassiicei/"
+          },
+          { 
+            "image": "https://assets.staging.bedu.org/UTEG/siicei_3aee15fd01.jpg",
+            "subtitle": "",
+            "title": "SIICEI",
+            "text": "Accede a los trámites de los programas de estudio incorporados a la Universidad de Guadalajara.",
+            "border": true,
+            "type": "vertical",
+            "background": false,
+            "isLink": true,
+            "link": {
+              "text": "Ver más",
+              "size": "large",
+              "disabled": false,
+              "isUnderline": false,
+              "isBold": false,
+              "iconFirst": "",
+              "iconSecond": "chevron_right"
+            },
+            "redirect": "https://siicei.cei.udg.mx/siicei_Cei/index.action"
           }
         ]
       }
