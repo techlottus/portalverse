@@ -48,7 +48,7 @@
               "contentVariant":"light"
             },
             {
-              "title": "¿Qué valor tiene que UTEG sea “incorporada a la UDG”?", 
+              "title": "Mantente informado sobre lo que ocurre en UTEG.", 
               "text": "",
               "urlImage": {
                 "mobile": "https://assets.staging.bedu.org/UTEG/blog_Banner_blog_02_mobile_f4dfbfdc91.jpeg",
@@ -61,7 +61,20 @@
               "bottom": false,
               "overlayWhite": false,
               "overlayDak": false,
-              "contentVariant":"light"
+              "contentVariant":"light",
+              "action":{
+                "id": "",
+                "type": "primary",
+                "title": "Conoce más",
+                "size": "small",
+                "icon": "",
+                "lyIcon": false,
+                "disabled": false,
+                "isExpand": false,
+                "tagOnClick": "",
+                "test": "",
+                "redirect":"/blog/que-valor-tiene-que-uteg-sea-incorporada-a-la-udg"
+              }
             }
           ]
         }
