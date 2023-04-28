@@ -24,7 +24,7 @@
   "sections": {
     "head": {
       "title": "Estudia Bachillerato Online",
-      "description": "El Bachillerato en Línea te permite optimizar el aprovechamiento académico, el tiempo y el esfuerzo facilitando tu concentración sólo en las materias que cursas en un periodo específico, además, al concluir el programa podrás implementar conocimientos básicos preuniversitarios en un contexto laboral y contar con la formación para abordar estudios de tipo superior.",
+      "description": "El Centro Universitario UTEG ha desarrollado un nuevo modelo que responde al contexto actual, con la flexibilidad necesaria para que adquieras las competencias y habilidades que te permitirán desarrollar con éxito tus intereses profesionales, sin abandonar tus otras responsabilidades. ",
       "image": {
         "src": "https://assets.staging.bedu.org/UTEG/interior_bachillerato_online_desk_b5bd5c3aef.jpg",
         "alt": "bachillerato"
@@ -41,7 +41,7 @@
             "content": [
               {
                 "title": "Perfil de ingreso",
-                "description": "El aspirante deberá contar con los siguientes conocimientos:\n\n• Selecciona, analiza, evalúa y comparte información proveniente de diversas fuentes.\n\n• Utiliza el lenguaje oral y escrito con claridad y fluidez para interactuar en distintos contextos sociales.\n\n• Capacidad de organización y autoaprendizaje.\n\n• Manejo básico de tecnologías de la información y de la comunicación.\n\n• Conocimiento básico de internet.\n\n• Manejo de correo electrónico.\n\n• Manejo de procesador de textos.\n\n• Conocimientos de gramática y redacción.",
+                "description": "• Capacidad de organización y autoaprendizaje.\n\n• Manejo básico de tecnologías de la información y la comunicación.\n\n• Conocimientos básicos de Internet.\n\n• Manejo de procesadores de texto.\n\n• Conocimientos de gramática y redacción. ",
                 "image": {
                   "src": "https://assets.staging.bedu.org/UTEG/perfil_ingreso_bachillerto_desk_fe48b1eccf.jpg",
                   "alt": "bachillerato-presencial"
@@ -49,7 +49,7 @@
               },
               {
                 "title": "Perfil de egreso",
-                "description": "• Escuchar, interpretar y emitir mensajes en distintos contextos mediante la utilización de medios, códigos y herramientas apropiados.\n\n• Participar y colaborar de manera efectiva en equipos diversos.\n\n• Formular y resolver problemas matemáticos con diferentes enfoques.",
+                "description": "El egresado del Bachillerato General en Línea:\n\n• Escuchará, interpretará y emitirá mensajes en distintos contextos mediante los códigos, medios y herramientas apropiados. \n\n• Participará y colaborará de manera efectiva con equipos diversos.\n\n• Formulará y resolverá problemas matemáticas con diferentes enfoques.\n\n• Interrelacionará ciencia, tecnología, medioambiente y sociedad en contextos sociohistóricos específicos.\n\n• Será capaz de interpretar la realidad social. ",
                 "image": {
                   "src": "https://assets.staging.bedu.org/UTEG/perfil_egreso_desk_1aac25431a.jpg",
                   "alt": "bachillerato-presencial-requisitos"
@@ -64,7 +64,7 @@
     "benefits": {
       "video": "La0WLfzrSs4",
       "title": "Plan de estudios",
-      "description": "Nuestro plan de estudios para el Bachillerato Online forma parte del sistema incorporado a la Universidad de Guadalajara.\n\n Nos enfocamos en el desarrollo de habilidades cognitivas y psicosociales, el reforzamiento de tu autoestima y autoimagen en cuanto al área socioemocional. Y a nivel de conocimientos reforzamos y ampliamos los aprendizajes del nivel secundario. \n\nTrabajamos, además, para ayudarte a obtener la licenciatura que deseas y que tu recorrido por la universidad sea exitoso. \n\nSi optas por el Bachillerato General por Competencias con certificación Proulex completarás tu formación aprendiendo inglés y convirtiéndote en una persona bilingüe.\n\nConsulta aquí en detalle las directrices que guiarán tu enseñanza. ",
+      "description": "Nuestro plan de estudios para el Bachillerato General en Línea forma parte del sistema “incorporado a la Secretaría de Educación Pública”.\n\nEl propósito es dotarte de los conocimientos preuniversitarios imprescindibles que te garanticen un desarrollo personal y profesional óptimo: responsabilidad, autoconfianza, resolución de problemas, habilidades comunicativas, razonamiento crítico, flexibilidad, trabajo en equipo, iniciativa, planificación, innovación y creatividad. Te ayudamos a formar o afianzar capacidades complejas que te convertirán en un ciudadano competente capaz de insertarse en los más diversos entornos sociales y laborales con éxito.\n\nConsulta aquí en detalle las directrices que guiarán tu enseñanza. ",
       "action": {
         "id": "program_bachillerato",
         "type": "primary",

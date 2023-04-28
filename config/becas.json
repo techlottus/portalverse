@@ -114,7 +114,7 @@
               "title": "Convenios empresariales"
             },
             "description": {
-              "content": "<b>Convenios Empresariales</b>\n\nEs un beneficio que se tiene con varias instituciones y empresas del sector público y privado.\n\nSe anexa en esta sección el listado de general de los convenios en materia educativa, empresarial e institucional. En este sentido podrás descargarlos en los adjuntos que se anexan en formato PDF."
+              "content": "<b>Convenios Empresariales</b>\n\nEs un beneficio que se tiene con varias instituciones y empresas del sector público y privado. \n\nSe anexa en esta sección el listado general de los convenios educativos, empresariales e institucionales. Descárgalos en el adjunto que se anexa en formato PDF."
             },
             "redirectLabel": "Descargas:",
             "redirects": [
@@ -138,13 +138,13 @@
               "title": "Becas Convocatoria Cuatrimestral"
             },
             "description": {
-              "content": "<b>Becas Convocatoria Cuatrimestral</b>\n\nEl Centro Universitario UTEG convoca a toda la comunidad Estudiantil de Licenciaturas cuatrimestrales a realizar el trámite o renovación de Becas Institucionales.\n\nConsulta aquí la convocatoria para trámite o renovación de becas Institucionales.\n\nLa entrega de documentos se realizará en el Portal de Alumno, menú de Finanzas opción Becas."
+              "content": "<b>Becas Convocatoria Cuatrimestral</b>\n\nEl Centro Universitario UTEG convoca a todos los estudiantes de las licenciaturas cuatrimestrales a realizar el trámite o la renovación de las Becas Institucionales.\n\n Consulta aquí la convocatoria o el manual de trámites.\n\n La entrega de documentos se realizará en el Portal de Alumno, menú de Finanzas opción Becas."
             },
             "redirectLabel": "Descargas:",
             "redirects": [
               {
                 "label": "Convocatoria cuatrimestral",
-                "link": "https://assets.staging.bedu.org/UTEG/Convocatoria_apoyos_2023_A_Lic_Cuatrimestrales_e559873f14.pdf"
+                "link": "https://assets.staging.bedu.org/UTEG/Convocatoria_apoyos_2023_B_Lic_Cuatrimestrales_4f9f293d96.pdf"
               },
               {
                 "label": "Manual trámite de becas",
@@ -166,7 +166,7 @@
               "title": "Becas Convocatoria Semestral"
             },
             "description": {
-              "content": "<b>Becas Convocatoria Semestral</b>\n\nEl Centro Universitario UTEG convoca a toda la comunidad Estudiantil de Licenciaturas incorporadas a U de G y de Bachillerato General por Competencias (BGC) a realizar el trámite o renovación de Becas Institucionales.\n\nConsulta aquí las convocatorias para trámite o renovación de becas, correspondientes a modalidad semestral.\n\nLa entrega de documentos se realizará en el Portal de Alumno, menú de Finanzas opción Becas."
+              "content": "<b>Becas Convocatoria Semestral</b>\n\nEl Centro Universitario UTEG convoca a todos los estudiantes de las licenciaturas cuatrimestrales a realizar el trámite o la renovación de las Becas Institucionales.\n\nConsulta aquí la convocatoria o el manual de trámites.\n\nLa entrega de documentos se realizará en el Portal de Alumno, menú de Finanzas opción Becas."
             },
             "redirectLabel": "Descargas:",
             "redirects": [
