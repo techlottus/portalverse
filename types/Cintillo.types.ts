@@ -8,7 +8,7 @@ export type CintilloData = {
   phone: string;
   classNames?: string;
   whatsApp?: string;
-  actionLink: any;
+  actionLink?: any;
   contentVariant?: "light" | "dark";
   desktopRatio?: string;
   tabletRatio?: string;
