@@ -144,7 +144,10 @@
         "font": "light",
         "subtitle": "",
         "email": "egresados@uteg.edu.mx",
-        "phone": "55-5501-2672"
+        "phone": "",
+        "actionLink": "Facebook",
+        "redirecActionLink": "https://www.facebook.com/people/Comunidad-de-Egresados-UTEG/100086435586586/",
+        "icon": "facebook"
       }
     }
   }
