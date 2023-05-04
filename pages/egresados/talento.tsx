@@ -12,6 +12,8 @@ import { getDataPageFromJSON } from "@/utils/getDataPage"
 import RichtText from "@/old-components/Richtext/Richtext"
 import Cintillo from "@/old-components/Cintillo"
 import CardWebsitePortalverse from "@/old-components/CardWebsitePortalverse"
+import Link from "next/link"
+import  Icon  from "@/old-components/Icon"
 
 const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
 
@@ -68,6 +70,11 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
             phone={sections.aplica.banner.phone}
             email={sections.aplica.banner.email}
             contentVariant={sections.aplica.banner.font}
+            actionLink={
+              <div slot="areaAction" className="flex align-middle items-center">
+                <Icon name={sections.aplica.banner.icon} className="w-6 h-6 mr-2 text-white"/><Link className="font-Nunito font-normal text-base" href={sections.aplica.banner.redirecActionLink} passHref target={"_blank"}>{sections.aplica.banner.actionLink}</Link>
+              </div>
+            }
           />
         </div>
       </ContentLayout>
