@@ -1,13 +1,13 @@
 {
   "meta": {
-    "title": "Licenciatura en contaduría Púbica con Certificación en Inglés Proulex",
+    "title": "Licenciatura en contaduría Pública con Certificación en Inglés Proulex",
     "description": "",
     "keywords": ""
   },
   "config": {
-    "title": "Licenciatura en contaduría Púbica con Certificación en Inglés Proulex",
+    "title": "Licenciatura en contaduría Pública con Certificación en Inglés Proulex",
     "config": {
-      "nombre": "Licenciatura en contaduría Púbica con Certificación en Inglés Proulex",
+      "nombre": "Licenciatura en contaduría Pública con Certificación en Inglés Proulex",
       "modalidad": ["Presencial"],
       "areaConocimiento": ["Negocios y Empresariales"],
       "campus": ["Campus Washington"],
@@ -25,7 +25,7 @@
   },
   "sections": {
     "head": {
-      "title": "Licenciatura en contaduría Púbica con Certificación en Inglés Proulex",
+      "title": "Licenciatura en contaduría Pública con Certificación en Inglés Proulex",
       "description": "Licenciatura en Contaduría Pública con certificación en Inglés Proulex. Ofrecemos el dominio de una segunda lengua bajo un modelo especial.",
       "image": {
         "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_contaduria_desk_9f755fe126.jpg",
@@ -104,7 +104,7 @@
       "level": { "hidden": true, "value": "licenciatura" },
       "program": {
         "hidden": false,
-        "value": "Licenciatura en contaduría Púbica con Certificación en Inglés Proulexa"
+        "value": "Licenciatura en contaduría Pública con Certificación en Inglés Proulexa"
       },
       "modality": { "hidden": false },
       "campus": { "hidden": false }
