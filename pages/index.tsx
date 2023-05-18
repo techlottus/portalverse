@@ -184,4 +184,4 @@ export async function getStaticProps(context: any) {
   };
 }
 
-export default Home
+export default Home;
