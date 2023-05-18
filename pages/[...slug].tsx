@@ -10,6 +10,9 @@ import type { PageData } from "@/utils/getPageData";
 const Page = (props: {data: PageData}) => {  
   const pageBlocks = props?.data?.attributes?.sections;
 
+  // For validation purposes
+  console.log("Props received in Page:", props);
+
   return (
     <Fragment>
       {
