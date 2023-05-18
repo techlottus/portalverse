@@ -29,7 +29,7 @@ const EntryBlogDetail: NextPageWithLayout = ({ blog_post, banners, related_post_
   return <>
     <Head>
       <title>{ blog_post?.seo?.title }</title>
-        <meta name="description" content="Checkout our cool page" key="desc" />
+        <meta name="description" content={blog_post?.seo?.metaDescription} key="desc" />
         <meta property="og:title" content={ blog_post?.seo?.metaTitle }/>
         <meta
           property="og:description"
