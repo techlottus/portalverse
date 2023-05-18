@@ -1,12 +1,39 @@
+import { Fragment } from "react";
+import HeaderFooterLayout from "@/layouts/HeaderFooter.layout";
+import ContentGenerator from "@/utils/ContentGenerator";
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
+import type { ReactElement } from "react";
+import type { Block } from "@/utils/ContentGenerator";
 
-export default function Page(props: any) {
+const Page = (props: PageData) => {
+  const {
+    attributes
+  } = props;
+
+  const pageBlocks = attributes?.blocks;
+
   return (
-    <main>
-      <h1>This is a dynamically generated page from Strapi! :) uwu :3</h1>
-    </main>
+    <Fragment>
+      {
+        pageBlocks?.length > 0 ?
+          <ContentGenerator
+            blocks={pageBlocks}
+          />
+        : null
+      }
+    </Fragment>
   );
-}
+};
+
+Page.getLayout = (page: ReactElement) => {
+  return (
+    <HeaderFooterLayout>
+      {page}
+    </HeaderFooterLayout>
+  );
+};
+
+export default Page;
 
 export async function getStaticPaths() {
   const pagesPaths = await getPagesPaths();
@@ -25,8 +52,10 @@ export async function getStaticProps(context: any) {
     params: { slug },
   } = context;
 
+  const dummyPageData = getDummyPageData();
+
   return {
-    props: {},
+    props: {...dummyPageData},
     revalidate: 60
   };
 }
@@ -55,7 +84,9 @@ const getPagesPaths = async () => {
 
 type PageData = {
   attributes: {
+    title: string;
     slug: string;
+    blocks: Block[]; // Sections or components
   };
 };
 
@@ -76,3 +107,18 @@ query Pages {
   }
 }
 `;
+
+const getDummyPageData = () => {
+  return {
+    attributes: {
+      title: "My first test page",
+      slug: "hola/test",
+      blocks: [
+        {
+          type: "paragraph",
+          content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        },
+      ] 
+    }
+  };
+};
