@@ -129,7 +129,6 @@ export async function getStaticPaths() {
   const fullblogposts = await rawblogpost.json()
 
   let slugs = fullblogposts?.data?.map((post: any) => {
-    console.log("full", post?.attributes)
     const { attributes: { slug } } = post
     return { params: { entry: slug } }
   })
