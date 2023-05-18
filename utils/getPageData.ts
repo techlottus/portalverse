@@ -23,8 +23,8 @@ const getPageData = async (variables: PageVariables) => {
 };
 
 const PAGE = `
-query Page {
-  page(id: 1) {
+query Page($id: ID) {
+  page(id: $id) {
     data {
       attributes {
         slug
