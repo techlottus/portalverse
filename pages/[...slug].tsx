@@ -1,16 +1,14 @@
 import { Fragment } from "react";
 import HeaderFooterLayout from "@/layouts/HeaderFooter.layout";
 import ContentGenerator from "@/utils/ContentGenerator";
-import { fetchStrapiGraphQL } from "@/utils/getStrapi";
+import getPagesData from "@/utils/getPagesData";
+import { getPageBySlug } from "@/utils/strapi";
+import { isValidPath, normalizePath } from "@/utils/routes";
 import type { ReactElement } from "react";
-import type { Block } from "@/utils/ContentGenerator";
+import type { PageData } from "@/utils/getPageData";
 
-const Page = (props: PageData) => {
-  const {
-    attributes
-  } = props;
-
-  const pageBlocks = attributes?.blocks;
+const Page = (props: {data: PageData}) => {  
+  const pageBlocks = props?.data?.attributes?.sections;
 
   return (
     <Fragment>
@@ -36,10 +34,14 @@ Page.getLayout = (page: ReactElement) => {
 export default Page;
 
 export async function getStaticPaths() {
-  const pagesPaths = await getPagesPaths();
+  const pagesData = await getPagesData();
+  const pagesPaths = pagesData?.map((page) => page?.attributes?.slug);
+
+  // pages with an invalid path format are filtered out and won't be generated at build time
+  const normalizedPaths = pagesPaths?.filter(isValidPath)?.map(normalizePath);
 
   return {
-    paths: pagesPaths.map((path) => ({
+    paths: normalizedPaths.map((path) => ({
       params: { slug: path?.split("/") },
     })),
     fallback: false, // can also be true or 'blocking'
@@ -52,73 +54,11 @@ export async function getStaticProps(context: any) {
     params: { slug },
   } = context;
 
-  const dummyPageData = getDummyPageData();
+  const pageData = await getPageBySlug(slug?.join("/"));
 
   return {
-    props: {...dummyPageData},
-    revalidate: 60
+    props: {
+      data: pageData,
+    },
   };
 }
-
-const isValidPath = (path: string) => {
-  return !!path.trim() && !path?.includes("//") && !path?.includes(" ");
-};
-
-// https://stackoverflow.com/questions/19134860/javascript-remove-strings-in-beginning-and-end
-const normalizePath = (path: string) => path?.replace(/(^\/+|\/+$)/gm, "");
-
-const getPagesData = async () => {
-  const pagesData = await fetchStrapiGraphQL<PagesData>(PAGES);
-  return pagesData;
-};
-
-const getPagesPaths = async () => {
-  const pagesData = await getPagesData();
-  const pagesPaths = pagesData?.pages?.data?.map(
-    (page) => page?.attributes?.slug
-  );
-
-  // pages with an invalid path format are filtered out and won't be generated at build time
-  return pagesPaths?.filter(isValidPath)?.map(normalizePath);
-};
-
-type PageData = {
-  attributes: {
-    title: string;
-    slug: string;
-    blocks: Block[]; // Sections or components
-  };
-};
-
-type PagesData = {
-  pages: {
-    data: Array<PageData>;
-  };
-};
-
-const PAGES = `
-query Pages {
-  pages {
-    data {
-      attributes {
-        slug
-      }
-    }
-  }
-}
-`;
-
-const getDummyPageData = () => {
-  return {
-    attributes: {
-      title: "My first test page",
-      slug: "hola/test",
-      blocks: [
-        {
-          type: "paragraph",
-          content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        },
-      ] 
-    }
-  };
-};
