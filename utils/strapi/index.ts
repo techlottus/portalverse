@@ -1,16 +1,8 @@
 import { StrapiImage } from "@/types/strapi/common";
-import { HeroSliderSection } from "./sections/HeroSlider";
-import { BannerSection } from "./sections/Banner";
-import { ListconfigSection } from "./sections/Listconfig";
-import { OverlayCardListSection } from "./sections/OverlayCardList";
-import { StatisticsCardListSection } from "./sections/StatisticsCardList";
-
-type ComponentSection =
-  | BannerSection
-  | HeroSliderSection
-  | OverlayCardListSection
-  | ListconfigSection
-  | StatisticsCardListSection
+import { ComponentSection } from "@/utils/strapi/queries";
+import getPageData from "@/utils/getPageData";
+import getPagesData from "@/utils/getPagesData";
+import { normalizePath } from "@/utils/routes";
   
 export function findSection<T extends ComponentSection>(sections: Array<ComponentSection>, sectionTypename: T["__typename"]): T {
   //@ts-ignore
@@ -24,4 +16,18 @@ export function findSections<T extends ComponentSection>(sections: Array<Compone
 
 export const formatStrapiImage = (imageObj: StrapiImage): string => {
   return imageObj?.data?.attributes?.url;
+};
+
+export const getPageBySlug = async (slug: string) => {
+  const pagesData = await getPagesData();
+
+  const targetPage = pagesData?.find(
+    (page) => normalizePath(page?.attributes?.slug) === normalizePath(slug)
+  );
+  const targetPageId = targetPage?.id;
+
+  if (!targetPageId) throw new Error("Page ID Not Found");
+
+  const pageData = await getPageData({ id: targetPageId });
+  return pageData?.page?.data;
 };
