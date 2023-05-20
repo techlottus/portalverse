@@ -1,15 +1,15 @@
 import { StrapiImage } from "@/types/strapi/common";
 
 export type ContactTargetCard = {
-  name: string;
+  image: StrapiImage;
+  title: string;
   email: string;
   phone: string;
   link: string;
-  image: StrapiImage;
 };
 
 export type ContactTargetListSection = {
-  __typename: "ComponentSectionsContactTargetList";
+  type: "ComponentSectionsContactTargetList";
   title: string;
   subtitle: string;
   description: string;
@@ -18,15 +18,10 @@ export type ContactTargetListSection = {
 
 export const CONTACT_TARGET_LIST = `
 ...on ComponentSectionsContactTargetList {
-    __typename
     title
     subtitle
     description
-    test:cards {
-      name
-      email
-      phone
-      link
+    cards {
       image {
         data {
           attributes {
@@ -34,6 +29,10 @@ export const CONTACT_TARGET_LIST = `
           }
         }
       }
+      title
+      email
+      phone
+      link
     }
   }
 `;

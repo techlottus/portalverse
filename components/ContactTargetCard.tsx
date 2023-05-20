@@ -2,17 +2,28 @@ import Image from "@/old-components/Image";
 import LinkContactTarget from "@/old-components/LinkContactTarget";
 import cn from "classnames";
 import type { FC } from "react";
-import type ContactTargetComponentData from "@/types/ContactPage.types";
 
-const ContactTargetCard: FC<ContactTargetComponentData> = (props: ContactTargetComponentData) => {
+type ContactTargetCardData = {
+  key: string;
+  image: string;
+  title: string;
+  email: string;
+  phone: string;
+  link?: string;
+  classNames?: string;
+}
+
+const ContactTargetCard: FC<ContactTargetCardData> = (props: ContactTargetCardData) => {
+  
   const {
     image,
-    name,
+    title,
     email,
     phone,
     link,
     classNames,
   } = props;
+
   return (
     <div className={cn("bg-SC/Backgrounds/BG-GRAY flex", classNames)}>
       {
@@ -31,7 +42,7 @@ const ContactTargetCard: FC<ContactTargetComponentData> = (props: ContactTargetC
           : <div className="bg-[gray] rounded w-22 h-22" />
       }
       <div className="w-full flex flex-col justify-center p-3 overflow-hidden">
-        <p className="font-Nunito font-bold text-sm leading-5">{name}</p>
+        <p className="font-Nunito font-bold text-sm leading-5">{title}</p>
         <a className="font-Nunito font-normal text-sm leading-5 text-SC/Blackandgrey/B-60 w-p:w-56 w-60 break-words" target="_blank" rel="noreferrer noopener" href={link}>{link}</a>
         <LinkContactTarget type="email" info={email} />
         <LinkContactTarget type="phone" info={phone} />

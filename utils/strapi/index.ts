@@ -1,8 +1,19 @@
 import { StrapiImage } from "@/types/strapi/common";
-import { ComponentSection } from "@/utils/strapi/queries";
 import getPageData from "@/utils/getPageData";
 import getPagesData from "@/utils/getPagesData";
 import { normalizePath } from "@/utils/routes";
+import { BannerSection } from "@/utils/strapi/sections/Banner";
+import { HeroSliderSection } from "@/utils/strapi/sections/HeroSlider";
+import { ListconfigSection } from "@/utils/strapi/sections/Listconfig";
+import { OverlayCardListSection } from "@/utils/strapi/sections/OverlayCardList";
+import { StatisticsCardListSection } from "@/utils/strapi/sections/StatisticsCardList";
+
+type ComponentSection =
+  | BannerSection
+  | HeroSliderSection
+  | OverlayCardListSection
+  | ListconfigSection
+  | StatisticsCardListSection
   
 export function findSection<T extends ComponentSection>(sections: Array<ComponentSection>, sectionTypename: T["__typename"]): T {
   //@ts-ignore
