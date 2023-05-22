@@ -28,7 +28,13 @@ const EntryBlogDetail: NextPageWithLayout = ({ blog_post, banners, related_post_
 
   return <>
     <Head>
-    <title>{ blog_post?.seo.title }</title>
+      <title>{ blog_post?.seo?.title }</title>
+        <meta property="og:title" content={ blog_post?.seo?.metaTitle }/>
+        <meta property="title" content={ blog_post?.seo?.metaTitle }/>
+        <meta property="og:description" content={ blog_post?.seo?.metaDescription }/>
+        <meta name="description" content={blog_post?.seo?.metaDescription} key="desc" />
+        <meta property="og:image" content={blog_post?.featured_image?.src}/>
+        <meta property="image" content={blog_post?.featured_image?.src}/>
     </Head>
     <HeaderFooterLayout breadcrumbs={true}>
       <ContentLayout>
@@ -118,11 +124,11 @@ export async function getStaticPaths() {
   
   const fullblogposts = await rawblogpost.json()
 
-  let slugs = fullblogposts.data.map((post: any) => {
+  let slugs = fullblogposts?.data?.map((post: any) => {
     const { attributes: { slug } } = post
     return { params: { entry: slug } }
   })
-  
+
   return {
     paths: slugs,
     fallback: 'blocking'
@@ -134,15 +140,15 @@ export async function getStaticProps(context: any) {
   const { params: { entry } } = context
   const rawblogpost = await fetchStrapi(`blog-posts`,['[populate][seo]=*','[populate][featured_image]=*','[populate][related_posts][populate][featured_image]=*',`filters[slug][$eq]=${entry}`])
     const blogposts = await rawblogpost.json()
-    const pre_blog_post = blogposts.data[0].attributes
-    const related_posts = pre_blog_post.related_posts.data.map((post: any) => {
-      const url = post.attributes.featured_image?.data.attributes.formats.thumbnail.url || post.attributes.featured_image.data.attributes.url;
+    const pre_blog_post = blogposts?.data?.[0]?.attributes
+    const related_posts = pre_blog_post?.related_posts?.data?.map((post: any) => {
+      const url = post.attributes?.featured_image?.data?.attributes?.formats?.thumbnail?.url || post?.attributes?.featured_image?.data?.attributes?.url;
       const urlImage = replaceURL(url, "thumbnail")
-      return { ...post.attributes, urlImage }
-    })
+      return { ...post?.attributes, urlImage: urlImage || "" }
+    }) || []
     const featured_image = {
-      alt: pre_blog_post.featured_image.data.attributes.alternativeText || pre_blog_post.featured_image.data.attributes.url ,
-      src: replaceURL(pre_blog_post.featured_image)
+      alt: pre_blog_post?.featured_image?.data?.attributes?.alternativeText || pre_blog_post?.featured_image?.data?.attributes?.url || "",
+      src: replaceURL(pre_blog_post?.featured_image) || ""
     }
     const blog_post = { ...pre_blog_post, featured_image, related_posts}
 
