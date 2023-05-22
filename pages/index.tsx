@@ -144,7 +144,6 @@ export async function getStaticProps(context: any) {
   const { sections, meta } = await getDataPageFromJSON('home.json');
 
   const homePageData = await getHomePageData();
-  console.log("hola",homePageData)
   const attributes = homePageData?.homePage?.data?.attributes;
 
   const strapiSections = attributes?.sections;

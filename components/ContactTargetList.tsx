@@ -3,47 +3,54 @@ import cn from "classnames";
 import ContactTargetCard from "./ContactTargetCard";
 import { ContactTargetListSection } from "@/utils/strapi/sections/ContactTargetList";
 import RichtText from "@/old-components/Richtext/Richtext";
+import Editor from "@/old-components/Editor";
+import Container from "@/layouts/Container.layout";
 
-const ContactTargetList: FC<ContactTargetListSection> = memo((props  : ContactTargetListSection) => {
+const ContactTargetList: FC<ContactTargetListSection> = memo((props: ContactTargetListSection) => {
 
-  const {title, subtitle, description, cards} = props
-  const parsedDescription = JSON.parse(description)
-    return (
-      <section className="flex flex-col space-y-9">
-        {
-          title && subtitle && description ?
-          <div className="flex flex-col space-y-6">
-            {
-              title ? <h3>{title}</h3> : null
-            }
-            {
-              subtitle ? <p>{subtitle}</p> : null
-            }
-            {
-              description ? <div><RichtText data={{content: description}} /></div> : null
-            }
-          </div>
-          : null
-        }
-        {
-          cards?.length > 0 ?
-          <div className="grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
+  const { title, subtitle, cards } = props
+  const description = props?.description as any
+
+  return (
+    <section>
+      <Container>
+        <div className="flex flex-col space-y-6">
           {
-            cards?.map(({ title, email, phone, link = '', image }, j: number) =>
-            <ContactTargetCard
-              key={`card-item-${j}`}
-              image={image?.data?.attributes?.url}
-              title={title}
-              email={email}
-              phone={phone}
-              link={link}
-            />)
+            title || subtitle || description ?
+              <div className="flex flex-col space-y-4">
+                {
+                  title ? <h3 className="font-Poppins text-10 font-bold leading-[125%] w-t:text-8.5 w-p:text-6">{title}</h3> : null
+                }
+                {
+                  subtitle ? <p className="font-Poppins font-semibold leading-[130%] text-5.5 w-t:text-4.5 w-p:text-4">{subtitle}</p> : null
+                }
+                {
+                  description ? <div><Editor readOnly holder="editor" value={description} /></div> : null
+                }
+              </div>
+              : null
+          }
+          {
+            cards?.length > 0 ?
+              <div className="grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
+                {
+                  cards?.map(({ title, email, phone, link = '', image }, j: number) =>
+                    <ContactTargetCard
+                      key={`card-item-${j}`}
+                      image={image?.data?.attributes?.url}
+                      title={title}
+                      email={email}
+                      phone={phone}
+                      link={link}
+                    />)
+                }
+              </div>
+              : null
           }
         </div>
-        : null
-        }
-      </section>
-    );
-  })
-  
-  export default ContactTargetList
+      </Container>
+    </section>
+  );
+})
+
+export default ContactTargetList
