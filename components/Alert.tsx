@@ -33,9 +33,9 @@ const Alert: FC<AlertSection> = (props: AlertSection) => {
               links?.length > 0
                 ? <div className="flex flex-col items-start space-y-4">
                   {
-                    links?.map(link => {
+                    links?.map((link, i) => {
                       return (
-                        <a href={link?.href} target={link?.target === "blank" ? "_blank" : "_self"} className="flex items-center space-x-2">
+                        <a key={i} href={link?.href} target={link?.target === "blank" ? "_blank" : "_self"} rel={link?.target === "blank" ? "noreferrer" : undefined} className="flex items-center space-x-2">
                           {
                             link?.iconPosition === "left"
                               ? <span className="material-icons font-normal">{link?.iconName}</span>
