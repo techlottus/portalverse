@@ -26,7 +26,7 @@ const RichTextImage: FC<RichTextImageSection> = (props: RichTextImageSection) =>
           {
             title ? <h3 className="font-Poppins text-10 font-bold leading-[125%] w-t:text-8.5 w-p:text-6">{title}</h3> : null
           }
-          <div className="grid grid-cols-2 w-t:grid-cols-2 w-p:grid-cols-1 gap-6">
+          <div className="grid w-p:grid-cols-1 w-t:grid-cols-1 grid-cols-2 gap-6">
           {
             imagePosition === "left"
               ? renderImage()
