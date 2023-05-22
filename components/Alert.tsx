@@ -1,13 +1,10 @@
 import { FC } from "react"
-import RichtText from "@/old-components/Richtext/Richtext"
 import { AlertSection } from "@/utils/strapi/sections/Alert"
 import Container from "@/layouts/Container.layout";
-import cn from "classnames";
-import Editor from "@/old-components/Editor";
 
 const Alert: FC<AlertSection> = (props: AlertSection) => {
   const { title, links, iconName } = props;
-  const text = props?.text as any
+  const text = props?.text as any;
 
   return (
     <section>
@@ -41,7 +38,11 @@ const Alert: FC<AlertSection> = (props: AlertSection) => {
                               ? <span className="material-icons font-normal">{link?.iconName}</span>
                               : null
                           }
-                          <span className="font-normal hover:underline">{link?.text}</span>
+                          {
+                            link?.text
+                              ? <span className="font-normal hover:underline">{link?.text}</span>
+                              : null
+                          }
                           {
                             link?.iconPosition === "right"
                               ? <span className="material-icons font-normal">{link?.iconName}</span>
