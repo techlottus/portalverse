@@ -1,4 +1,5 @@
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
+import { SECTIONS } from "./strapi/queries";
 
 type PageVariables = {
   id: number;
@@ -30,6 +31,7 @@ query Page($id: ID) {
         slug
         sections {
           type: __typename
+          ${SECTIONS}
         }
       }
     }

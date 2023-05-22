@@ -1,3 +1,4 @@
+import ContactTargetList from "@/components/ContactTargetList";
 import Paragraph from "@/components/Paragraph";
 import type { FC } from "react";
 
@@ -6,7 +7,8 @@ type Renderer = {
 };
 
 const defaultRenderers: Renderer = {
-  paragraph: Paragraph
+  paragraph: Paragraph,
+  ComponentSectionsContactTargetList: ContactTargetList,
 };
 
 export default defaultRenderers;

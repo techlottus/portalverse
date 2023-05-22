@@ -7,7 +7,7 @@ import { isValidPath, normalizePath } from "@/utils/routes";
 import type { ReactElement } from "react";
 import type { PageData } from "@/utils/getPageData";
 
-const Page = (props: {data: PageData}) => {  
+const Page = (props: { data: PageData }) => {
   const pageBlocks = props?.data?.attributes?.sections;
 
   // For validation purposes
@@ -15,13 +15,16 @@ const Page = (props: {data: PageData}) => {
 
   return (
     <Fragment>
-      {
-        pageBlocks?.length > 0 ?
-          <ContentGenerator
-            blocks={pageBlocks}
-          />
-        : null
-      }
+      <div className="flex flex-col w-p:space-y-12 w-t:space-y-12 w-d:space-y-18">
+        {
+          pageBlocks?.length > 0 ?
+            <ContentGenerator
+              blocks={pageBlocks}
+            />
+            : null
+        }
+      </div>
+
     </Fragment>
   );
 };
