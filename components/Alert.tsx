@@ -1,33 +1,64 @@
 import { FC } from "react"
 import RichtText from "@/old-components/Richtext/Richtext"
 import { AlertSection } from "@/utils/strapi/sections/Alert"
+import Container from "@/layouts/Container.layout";
+import cn from "classnames";
+import Editor from "@/old-components/Editor";
 
-const Alert: FC<AlertSection> = ({ title, text, iconContact, iconLeft, ctaUrl, linkText }: AlertSection) => {
+const Alert: FC<AlertSection> = (props: AlertSection) => {
+  const { title, links, iconName } = props;
+  const text = props?.text as any
 
-  return <>
-  <div className="border-2 rounded-lg flex">
-    {
-      iconLeft
-      ? <div className=""><span className="material-icons pl-4 pt-4">{ iconLeft }</span></div>
-      : null
-    }
-    <div className="pl-4">
-      <p className="font-normal font-Nunito text-5 my-4">{title}</p>
-      <RichtText data={{
-          content: text
-      }} />    
-      {
-        linkText
-        ? <div className="flex items-center mb-4">
-            <span className="font-normal material-icons">{iconContact}</span>
-            <span className="font-normal hover:underline">{linkText}</span>
+  return (
+    <section>
+      <Container>
+        <div className="border-2 rounded-lg flex space-x-4 items-start p-4">
+          {
+            iconName
+              ? <span className="material-icons text-SC/Blackandgrey/B-60 text-4.5!">{iconName}</span>
+              : null
+          }
+          <div className="flex flex-col space-y-4">
+            {
+              title
+                ? <p className="font-normal text-4">{title}</p>
+                : null
+            }
+            {
+              text
+                ? <p className="font-normal">{text}</p>
+                : null
+            }
+            {
+              links?.length > 0
+                ? <div className="flex flex-col items-start space-y-4">
+                  {
+                    links?.map(link => {
+                      return (
+                        <a href={link?.href} target={link?.target === "blank" ? "_blank" : "_self"} className="flex items-center space-x-2">
+                          {
+                            link?.iconPosition === "left"
+                              ? <span className="material-icons font-normal">{link?.iconName}</span>
+                              : null
+                          }
+                          <span className="font-normal hover:underline">{link?.text}</span>
+                          {
+                            link?.iconPosition === "right"
+                              ? <span className="material-icons font-normal">{link?.iconName}</span>
+                              : null
+                          }
+                        </a>
+                      )
+                    })
+                  }
+                </div>
+                : null
+            }
+          </div>
         </div>
-        : null
-      }
-    </div>
-  </div>
-  </>
-  
+      </Container>
+    </section>
+  );
 }
 
 export default Alert

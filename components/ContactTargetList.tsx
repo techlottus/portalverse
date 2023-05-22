@@ -25,7 +25,7 @@ const ContactTargetList: FC<ContactTargetListSection> = memo((props: ContactTarg
                   subtitle ? <p className="font-Poppins font-semibold leading-[130%] text-5.5 w-t:text-4.5 w-p:text-4">{subtitle}</p> : null
                 }
                 {
-                  description ? <div><Editor readOnly holder="editor" value={description} /></div> : null
+                  description ? <div>{description}</div> : null
                 }
               </div>
               : null

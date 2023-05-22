@@ -1,23 +1,32 @@
-import { StrapiImage } from "@/types/strapi/common";
+type AlertLink = {
+  text: string;
+  href: string;
+  target: "self" | "blank";
+  iconName: string;
+  iconPosition: "left" | "right";
+  disabled: boolean;
+};
 
 export type AlertSection = {
-   __typename: "ComponentSectionsAlert";
-  title: string
+  type: "ComponentSectionsAlert";
+  title: string;
   text: string;
-  ctaUrl: string;
-  linkText: string;
-  iconLeft: string;
-  iconContact: string;
+  links: Array<AlertLink>;
+  iconName: string;
 };
-  
-  export const ALERT = `
-  __typename
+
+export const ALERT = `
   ...on ComponentSectionsAlert {
     title
     text
-    ctaUrl
-    linkText
-    iconLeft
-    iconContact
+    links {
+      text
+      href
+      target
+      iconName
+      iconPosition
+      disabled
+    }
+    iconName
   }
   `;
