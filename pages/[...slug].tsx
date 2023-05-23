@@ -10,9 +10,6 @@ import type { PageData } from "@/utils/getPageData";
 const Page = (props: { data: PageData }) => {
   const pageBlocks = props?.data?.attributes?.sections;
 
-  // For validation purposes
-  console.log("Props received in Page:", props);
-
   return (
     <Fragment>
       <div className="flex flex-col w-p:space-y-12 w-t:space-y-12 w-d:space-y-18">
