@@ -1,6 +1,6 @@
 import { FC, memo } from "react";
-import { LinkListSection } from "@/utils/strapi/sections/LinkList";
 import Container from "@/layouts/Container.layout";
+import type { LinkListSection } from "@/utils/strapi/sections/LinkList";
 
 const LinkList: FC<LinkListSection> = memo((props: LinkListSection) => {
   const { title, links } = props;

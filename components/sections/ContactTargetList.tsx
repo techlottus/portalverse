@@ -1,10 +1,7 @@
 import { FC, memo } from "react";
-import cn from "classnames";
-import ContactTargetCard from "./ContactTargetCard";
-import { ContactTargetListSection } from "@/utils/strapi/sections/ContactTargetList";
-import RichtText from "@/old-components/Richtext/Richtext";
-import Editor from "@/old-components/Editor";
 import Container from "@/layouts/Container.layout";
+import ContactTargetCard from "@/components/ContactTargetCard";
+import type { ContactTargetListSection } from "@/utils/strapi/sections/ContactTargetList";
 
 const ContactTargetList: FC<ContactTargetListSection> = memo((props: ContactTargetListSection) => {
 

@@ -1,6 +1,6 @@
 import { FC } from "react"
-import { AlertSection } from "@/utils/strapi/sections/Alert"
 import Container from "@/layouts/Container.layout";
+import type { AlertSection } from "@/utils/strapi/sections/Alert"
 
 const Alert: FC<AlertSection> = (props: AlertSection) => {
   const { title, links, iconName } = props;
