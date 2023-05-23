@@ -4,6 +4,7 @@ import ContactTargetList from "@/components/sections/ContactTargetList";
 import LinkList from "@/components/sections/LinkList";
 import Paragraph from "@/components/Paragraph";
 import RichTextImage from "@/components/sections/RichTextImage";
+import TextContent from "@/components/sections/TextContent";
 import type { FC } from "react";
 
 type Renderer = {
@@ -16,7 +17,8 @@ const defaultRenderers: Renderer = {
   ComponentSectionsAlert: Alert,
   ComponentSectionsRichTextImage: RichTextImage,
   ComponentSectionsLinkList: LinkList,
-  ComponentSectionsBanner: Banner
+  ComponentSectionsBanner: Banner,
+  ComponentSectionsTextContent: TextContent
 };
 
 export default defaultRenderers;
