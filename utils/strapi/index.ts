@@ -15,14 +15,14 @@ type ComponentSection =
   | ListconfigSection
   | StatisticsCardListSection
   
-export function findSection<T extends ComponentSection>(sections: Array<ComponentSection>, sectionTypename: T["__typename"]): T {
+export function findSection<T extends ComponentSection>(sections: Array<ComponentSection>, sectionTypename: T["type"]): T {
   //@ts-ignore
-  return sections?.find((section): section is T => section?.__typename === sectionTypename);
+  return sections?.find((section): section is T => section?.type === sectionTypename);
 }
 
-export function findSections<T extends ComponentSection>(sections: Array<ComponentSection>, sectionTypename: T["__typename"]): Array<T> {
+export function findSections<T extends ComponentSection>(sections: Array<ComponentSection>, sectionTypename: T["type"]): Array<T> {
   //@ts-ignore
-  return sections?.filter((section): section is T => section?.__typename === sectionTypename);
+  return sections?.filter((section): section is T => section?.type === sectionTypename);
 }
 
 export const formatStrapiImage = (imageObj: StrapiImage): string => {
