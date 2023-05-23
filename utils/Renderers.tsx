@@ -1,8 +1,9 @@
-import Alert from "@/components/Alert";
-import ContactTargetList from "@/components/ContactTargetList";
-import LinkList from "@/components/LinkList";
+import Alert from "@/components/sections/Alert";
+import Banner from "@/components/sections/Banner";
+import ContactTargetList from "@/components/sections/ContactTargetList";
+import LinkList from "@/components/sections/LinkList";
 import Paragraph from "@/components/Paragraph";
-import RichTextImage from "@/components/RichTextImage";
+import RichTextImage from "@/components/sections/RichTextImage";
 import type { FC } from "react";
 
 type Renderer = {
@@ -14,7 +15,8 @@ const defaultRenderers: Renderer = {
   ComponentSectionsContactTargetList: ContactTargetList,
   ComponentSectionsAlert: Alert,
   ComponentSectionsRichTextImage: RichTextImage,
-  ComponentSectionsLinkList: LinkList
+  ComponentSectionsLinkList: LinkList,
+  ComponentSectionsBanner: Banner
 };
 
 export default defaultRenderers;

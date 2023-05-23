@@ -33,7 +33,7 @@ export const getHomePageData = async () => {
 
 const HOME_PAGE_SECTIONS = `
 sections {
-  __typename
+  type: __typename
   ${BANNER}
   ${HERO_SLIDER}
   ${OVERLAY_CARD_LIST}

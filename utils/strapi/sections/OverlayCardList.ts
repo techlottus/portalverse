@@ -9,14 +9,13 @@ export type OverlayCard = {
 };
 
 export type OverlayCardListSection = {
-  __typename: "ComponentSectionsOverlayCardList";
+  type: "ComponentSectionsOverlayCardList";
   title: string;
   overlayCards: Array<OverlayCard>;
 };
 
 export const OVERLAY_CARD_LIST = `
 ...on ComponentSectionsOverlayCardList {
-  __typename
   title
   overlayCards {
     title

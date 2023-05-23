@@ -1,8 +1,7 @@
-import RichtText from "@/old-components/Richtext/Richtext"
-import Image from "@/old-components/Image"
 import { FC } from "react"
-import { RichTextImageSection } from "@/utils/strapi/sections/RichTextImage"
 import Container from "@/layouts/Container.layout"
+import Image from "@/old-components/Image"
+import type { RichTextImageSection } from "@/utils/strapi/sections/RichTextImage"
 
 const RichTextImage: FC<RichTextImageSection> = (props: RichTextImageSection) => {
   const { title, image, text, imagePosition = "right" } = props;

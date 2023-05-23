@@ -21,13 +21,12 @@ export type Card = {
 };
 
 export type StatisticsCardListSection = {
-  __typename: "ComponentSectionsStatisticsCardList";
+  type: "ComponentSectionsStatisticsCardList";
   cards: Array<Card>;
 };
 
 export const STATISTICS_CARD_LIST = `
 ...on ComponentSectionsStatisticsCardList {
-  __typename
   cards {
     title
     body
