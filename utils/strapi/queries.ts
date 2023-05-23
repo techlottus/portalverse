@@ -1,8 +1,9 @@
 import { ALERT, AlertSection } from "@/utils/strapi/sections/Alert";
 import { BANNER, BannerSection } from "@/utils/strapi/sections/Banner";
 import { CONTACT_TARGET_LIST, ContactTargetListSection } from "@/utils/strapi/sections/ContactTargetList";
-import { RichTextImageSection, RICH_TEXT_IMAGE } from "@/utils/strapi/sections/RichTextImage";
-import { LinkListSection, LINK_LIST } from "./sections/LinkList";
+import { LINK_LIST, LinkListSection } from "@/utils/strapi/sections/LinkList";
+import { RICH_TEXT_IMAGE, RichTextImageSection } from "@/utils/strapi/sections/RichTextImage";
+import { TEXT_CONTENT, TextContentSection } from "@/utils/strapi/sections/TextContent";
 
 export type ComponentSection =
   | ContactTargetListSection
@@ -10,6 +11,7 @@ export type ComponentSection =
   | RichTextImageSection
   | LinkListSection
   | BannerSection
+  | TextContentSection
 
 export const SECTIONS = `
   ${CONTACT_TARGET_LIST}
@@ -17,4 +19,5 @@ export const SECTIONS = `
   ${RICH_TEXT_IMAGE}
   ${LINK_LIST}
   ${BANNER}
+  ${TEXT_CONTENT}
 `;
