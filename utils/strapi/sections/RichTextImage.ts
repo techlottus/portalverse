@@ -6,6 +6,8 @@ export type RichTextImageSection = {
   image: StrapiImage;
   text: string;
   imagePosition: "left" | "right";
+  backgroundColor: string;
+  richTextImageContentVariant: "light" | "dark";
 };
   
 export const RICH_TEXT_IMAGE = `
@@ -20,5 +22,7 @@ export const RICH_TEXT_IMAGE = `
   }
   text
   imagePosition
+  backgroundColor
+  richTextImageContentVariant: contentVariant
 }
 `;
