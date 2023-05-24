@@ -24,7 +24,7 @@ const ContactTargetList: FC<ContactTargetListSection> = memo((props: ContactTarg
                 }
                 {
                   richTextMarkup
-                    ? <RichtText data={{content: richTextMarkup}} classNames="text-xl"/>
+                    ? <div><RichtText data={{content: richTextMarkup}} /></div>
                     : null
                 }
               </div>
