@@ -1,10 +1,12 @@
 import { FC } from "react"
 import Container from "@/layouts/Container.layout";
+import parseEditorRawData from "@/utils/parseEditorRawData";
+import RichtText from "@/old-components/Richtext/Richtext";
 import type { AlertSection } from "@/utils/strapi/sections/Alert"
 
 const Alert: FC<AlertSection> = (props: AlertSection) => {
-  const { title, links, iconName } = props;
-  const text = props?.text as any;
+  const { title, text, links, iconName } = props;
+  const richTextMarkup = parseEditorRawData(text);
 
   return (
     <section>
@@ -22,8 +24,8 @@ const Alert: FC<AlertSection> = (props: AlertSection) => {
                 : null
             }
             {
-              text
-                ? <p className="font-normal">{text}</p>
+              richTextMarkup
+                ? <RichtText data={{content: richTextMarkup}} classNames="text-xl"/>
                 : null
             }
             {
@@ -32,23 +34,25 @@ const Alert: FC<AlertSection> = (props: AlertSection) => {
                   {
                     links?.map((link, i) => {
                       return (
-                        <a key={i} href={link?.href} target={link?.target === "blank" ? "_blank" : "_self"} rel={link?.target === "blank" ? "noreferrer" : undefined} className="flex items-center space-x-2">
-                          {
-                            link?.iconPosition === "left"
-                              ? <span className="material-icons font-normal">{link?.iconName}</span>
-                              : null
-                          }
-                          {
-                            link?.text
-                              ? <span className="font-normal hover:underline">{link?.text}</span>
-                              : null
-                          }
-                          {
-                            link?.iconPosition === "right"
-                              ? <span className="material-icons font-normal">{link?.iconName}</span>
-                              : null
-                          }
-                        </a>
+                        link?.href && link?.href
+                          ? <a key={i} href={link?.href} target={link?.target === "blank" ? "_blank" : "_self"} rel={link?.target === "blank" ? "noreferrer" : undefined} className="flex items-center space-x-2">
+                              {
+                                link?.iconName && link?.iconPosition === "left"
+                                  ? <span className="material-icons font-normal">{link?.iconName}</span>
+                                  : null
+                              }
+                              {
+                                link?.text
+                                  ? <span className="font-normal hover:underline">{link?.text}</span>
+                                  : null
+                              }
+                              {
+                                link?.iconName && link?.iconPosition === "right"
+                                  ? <span className="material-icons font-normal">{link?.iconName}</span>
+                                  : null
+                              }
+                            </a>
+                          : null
                       )
                     })
                   }

@@ -1,5 +1,5 @@
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
-import { SECTIONS } from "./strapi/queries";
+import { ComponentSection, SECTIONS } from "@/utils/strapi/queries";
 
 type PageVariables = {
   id: number;
@@ -8,7 +8,7 @@ type PageVariables = {
 export type PageData = {
   attributes: {
     slug: string;
-    sections: Array<any>; // TODO
+    sections: Array<ComponentSection>;
   };
 };
 

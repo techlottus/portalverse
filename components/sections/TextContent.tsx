@@ -1,8 +1,11 @@
 import Container from "@/layouts/Container.layout";
+import RichtText from "@/old-components/Richtext/Richtext";
+import parseEditorRawData from "@/utils/parseEditorRawData";
 import type { TextContentSection } from "@/utils/strapi/sections/TextContent";
 
 const TextContent = (props: TextContentSection) => {
   const { title, subtitle, text } = props;
+  const richTextMarkup = parseEditorRawData(text);
 
   return (
     <section>
@@ -23,8 +26,8 @@ const TextContent = (props: TextContentSection) => {
                 : null
             }
             {
-              text
-                ? <div className="break-words">{text}</div>
+              richTextMarkup
+                ? <RichtText data={{content: richTextMarkup}} classNames="text-xl"/>
                 : null
             }
           </div>

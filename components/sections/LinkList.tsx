@@ -17,30 +17,32 @@ const LinkList: FC<LinkListSection> = memo((props: LinkListSection) => {
           {
             links?.length > 0
               ? <div className="flex flex-col items-start space-y-4">
-                {
-                  links?.map((link, i) => {
-                    return (
-                      <a key={i} href={link?.href} target={link?.target === "blank" ? "_blank" : "_self"} rel={link?.target === "blank" ? "noreferrer" : undefined} className="flex items-center space-x-2">
-                        {
-                          link?.iconPosition === "left"
-                            ? <span className="material-icons font-normal">{link?.iconName}</span>
-                            : null
-                        }
-                        {
-                          link?.text
-                            ? <span className="font-normal underline">{link?.text}</span>
-                            : null
-                        }
-                        {
-                          link?.iconPosition === "right"
-                            ? <span className="material-icons font-normal">{link?.iconName}</span>
-                            : null
-                        }
-                      </a>
-                    )
-                  })
-                }
-              </div>
+                  {
+                    links?.map((link, i) => {
+                      return (
+                        link?.href && link?.href
+                          ? <a key={i} href={link?.href} target={link?.target === "blank" ? "_blank" : "_self"} rel={link?.target === "blank" ? "noreferrer" : undefined} className="flex items-center space-x-2">
+                              {
+                                link?.iconName && link?.iconPosition === "left"
+                                  ? <span className="material-icons font-normal">{link?.iconName}</span>
+                                  : null
+                              }
+                              {
+                                link?.text
+                                  ? <span className="font-normal underline">{link?.text}</span>
+                                  : null
+                              }
+                              {
+                                link?.iconName && link?.iconPosition === "right"
+                                  ? <span className="material-icons font-normal">{link?.iconName}</span>
+                                  : null
+                              }
+                            </a>
+                          : null
+                        )
+                      })
+                    }
+                </div>
               : null
             }
         </div>

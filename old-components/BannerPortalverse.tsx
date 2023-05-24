@@ -72,11 +72,19 @@ const BannerPortalverse: FC<BannerPortalverseComponentData> = memo((props: Banne
               <div className={cn("absolute w-full h-full flex justify-start items-start", classNames)}
               >
                 <div className="p-10">
-                  <h1 className={cn("font-Poppins font-bold w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5 w-d:text-6.5 w-t:text-6 w-p:text-6", classNames, { "text-white": data.overlayDak || data.font === "light" })}>{data.title}</h1>
-                  <h3
-                    className={cn("font-Nunito-Sans font-normal w-d:leading-5 w-t:leading-[17.5px] w-p:leading-[17.5px] w-d:text-base w-t:text-3.5 w-p:text-3.5", classNames, { "text-white": data.overlayDak || data.font === "light" })}
-                    dangerouslySetInnerHTML={{ __html: String(data.subtitle) }}
-                  />
+                  {
+                    data?.title
+                      ? <h1 className={cn("font-Poppins font-bold w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5 w-d:text-6.5 w-t:text-6 w-p:text-6", classNames, { "text-white": data.overlayDak || data.font === "light" })}>{data.title}</h1>
+                      : null
+                  }
+                  {
+                    data?.subtitle
+                      ? <h3
+                          className={cn("font-Nunito-Sans font-normal w-d:leading-5 w-t:leading-[17.5px] w-p:leading-[17.5px] w-d:text-base w-t:text-3.5 w-p:text-3.5", classNames, { "text-white": data.overlayDak || data.font === "light" })}
+                          dangerouslySetInnerHTML={{ __html: String(data.subtitle) }}
+                        />
+                      : null
+                  }
                 </div>
               </div>
             </div>
@@ -84,7 +92,7 @@ const BannerPortalverse: FC<BannerPortalverseComponentData> = memo((props: Banne
         </Aspect>
         <div>
           {
-            !data.noAction
+            !data?.noAction && data?.button?.title
               ? <div className="mt-2"><Button dark data={{ ...data.button, isExpand: true }} onClick={onClick} /></div>
               : null
           }
@@ -103,6 +111,74 @@ const BannerContent = (props: BannerPortalverseComponentData) => {
 
   const { variant = "lg" } = data;
 
+  const renderButton = () => {
+    return (
+      <>
+        {!data.noAction && data.overlayDak ? (
+          <div
+            className={cn("mt-2 flex", classNames, {
+              "justify-end": data.position === "right",
+              "justify-center": data.position === "center",
+              "items-center justify-center": data.position === "middle-center",
+              "items-center justify-end": data.position === "middle-right",
+              "items-end": data.position === "left-bottom",
+              "items-end justify-center": data.position === "center-bottom",
+              "items-end justify-end": data.position === "right-bottom",
+              "items-start justify-end": data.position === "right-top",
+            })}
+          >
+            <Button darkOutlined data={data?.button} onClick={onClick} />
+          </div>
+        ) : !data.noAction && data.overlayWhite ? (
+          <div
+            className={cn("mt-2 flex", classNames, {
+              "justify-end": data.position === "right",
+              "justify-center": data.position === "center",
+              "items-center justify-center": data.position === "middle-center",
+              "items-center justify-end": data.position === "middle-right",
+              "items-end": data.position === "left-bottom",
+              "items-end justify-center": data.position === "center-bottom",
+              "items-end justify-end": data.position === "right-bottom",
+              "items-start justify-end": data.position === "right-top",
+            })}
+          >
+            <Button dark data={data.button} onClick={onClick} />
+          </div>
+        ) : !data.noAction && data.font === "light" ? (
+          <div
+            className={cn("mt-2 flex", classNames, {
+              "justify-end": data.position === "right",
+              "justify-center": data.position === "center",
+              "items-center justify-center": data.position === "middle-center",
+              "items-center justify-end": data.position === "middle-right",
+              "items-end": data.position === "left-bottom",
+              "items-end justify-center": data.position === "center-bottom",
+              "items-end justify-end": data.position === "right-bottom",
+              "items-start justify-end": data.position === "right-top",
+            })}
+          >
+            <Button darkOutlined data={data?.button} onClick={onClick} />
+          </div>
+        ) : data.noAction ? null : (
+          <div
+            className={cn("mt-2 flex", classNames, {
+              "justify-end": data.position === "right",
+              "justify-center": data.position === "center",
+              "items-center justify-center": data.position === "middle-center",
+              "items-center justify-end": data.position === "middle-right",
+              "items-end": data.position === "left-bottom",
+              "items-end justify-center": data.position === "center-bottom",
+              "items-end justify-end": data.position === "right-bottom",
+              "items-start justify-end": data.position === "right-top",
+            })}
+          >
+            <Button dark data={data?.button} onClick={onClick} />
+          </div>
+        )}
+      </>
+    );
+  };
+
   const desktopTabletContainerClasses = cn("absolute w-full h-full flex", classNames, {
     "justify-center text-center": data?.position === "center",
     "justify-end text-right": data?.position === "right",
@@ -119,82 +195,47 @@ const BannerContent = (props: BannerPortalverseComponentData) => {
   return (
     <div className={desktopTabletContainerClasses}>
       <div className="p-10">
-        <h1
-          className={cn(
-            "font-Poppins font-bold",
-            classNames,
-            {
-              "text-white": data.overlayDak || data.font === "light",
-              "w-d:text-6.5 w-t:text-6 w-p:text-6 w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5": variant === "lg",
-              "w-d:text-[22px] w-t:text-[22px] w-p:text-[22px] w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5": variant === "md",
-              "w-d:text-4 w-t:text-4 w-p:text-4 w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5": variant === "sm"
-            }
-          )
-          }
-        >
-          {data.title}
-        </h1>
-        <h3
-          className={cn(
-            "font-Nunito-Sans font-normal",
-            classNames,
-            {
-              "text-white": data.overlayDak || data.font === "light",
-              "w-d:leading-6 w-t:leading-[17.5px] w-p:leading-[17.5px] w-d:text-base w-t:text-3.5 w-p:text-3.5": variant === "lg",
-              "w-d:leading-5 w-t:leading-5 w-p:leading-4 w-d:text-sm w-t:text-3.5 w-p:text-3.5": variant === "md",
-              "w-d:leading-5 w-t:leading-5 w-p:leading-4 w-d:text-xs w-t:text-3.5 w-p:text-3.5": variant === "sm"
-            }
-          )
-          }
-          dangerouslySetInnerHTML={{ __html: String(data.subtitle) }}
-        />
         {
-          !data.noAction && data.overlayDak
-            ? <div className={cn("mt-2 flex", classNames, {
-              "justify-end": data.position === "right",
-              "justify-center": data.position === "center",
-              "items-center justify-center": data.position === "middle-center",
-              "items-center justify-end": data.position === "middle-right",
-              "items-end": data.position === "left-bottom",
-              "items-end justify-center": data.position === "center-bottom",
-              "items-end justify-end": data.position === "right-bottom",
-              "items-start justify-end": data.position === "right-top"
-            })}>
-              <Button darkOutlined data={data?.button} onClick={onClick} />
-            </div>
-            : !data.noAction && data.overlayWhite
-              ? <div className={cn("mt-2 flex", classNames, {
-                "justify-end": data.position === "right",
-                "justify-center": data.position === "center",
-                "items-center justify-center": data.position === "middle-center",
-                "items-center justify-end": data.position === "middle-right",
-                "items-end": data.position === "left-bottom",
-                "items-end justify-center": data.position === "center-bottom",
-                "items-end justify-end": data.position === "right-bottom",
-                "items-start justify-end": data.position === "right-top"
-              })}><Button dark data={data.button} onClick={onClick} /></div>
-              : !data.noAction && data.font === "light"
-                ? <div className={cn("mt-2 flex", classNames, {
-                  "justify-end": data.position === "right",
-                  "justify-center": data.position === "center",
-                  "items-center justify-center": data.position === "middle-center",
-                  "items-center justify-end": data.position === "middle-right",
-                  "items-end": data.position === "left-bottom",
-                  "items-end justify-center": data.position === "center-bottom",
-                  "items-end justify-end": data.position === "right-bottom",
-                  "items-start justify-end": data.position === "right-top"
-                })}><Button darkOutlined data={data?.button} onClick={onClick} /></div>
-                : data.noAction
-                  ? null : <div className={cn("mt-2 flex", classNames, {
-                    "justify-end": data.position === "right",
-                    "justify-center": data.position === "center",
-                    "items-center justify-center": data.position === "middle-center",
-                    "items-center justify-end": data.position === "middle-right",
-                    "items-end": data.position === "left-bottom",
-                    "items-end justify-center": data.position === "center-bottom",
-                    "items-end justify-end": data.position === "right-bottom",
-                    "items-start justify-end": data.position === "right-top"
-                  })}><Button dark data={data?.button} onClick={onClick} /></div>
+          data?.title
+            ? <h1
+                className={cn(
+                  "font-Poppins font-bold",
+                  classNames,
+                  {
+                    "text-white": data.overlayDak || data.font === "light",
+                    "w-d:text-6.5 w-t:text-6 w-p:text-6 w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5": variant === "lg",
+                    "w-d:text-[22px] w-t:text-[22px] w-p:text-[22px] w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5": variant === "md",
+                    "w-d:text-4 w-t:text-4 w-p:text-4 w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5": variant === "sm"
+                  }
+                )
+                }
+              >
+                {data.title}
+              </h1>
+            : null
+        }
+        {
+          data?.subtitle
+            ? <h3
+                className={cn(
+                  "font-Nunito-Sans font-normal",
+                  classNames,
+                  {
+                    "text-white": data.overlayDak || data.font === "light",
+                    "w-d:leading-6 w-t:leading-[17.5px] w-p:leading-[17.5px] w-d:text-base w-t:text-3.5 w-p:text-3.5": variant === "lg",
+                    "w-d:leading-5 w-t:leading-5 w-p:leading-4 w-d:text-sm w-t:text-3.5 w-p:text-3.5": variant === "md",
+                    "w-d:leading-5 w-t:leading-5 w-p:leading-4 w-d:text-xs w-t:text-3.5 w-p:text-3.5": variant === "sm"
+                  }
+                )
+                }
+                dangerouslySetInnerHTML={{ __html: String(data.subtitle) }}
+              />
+            : null
+        }
+        {
+          data?.button?.title
+            ? renderButton()
+            : null
         }
       </div>
     </div>
