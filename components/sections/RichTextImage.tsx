@@ -44,10 +44,9 @@ const RichTextImage: FC<RichTextImageSection> = (props: RichTextImageSection) =>
             title ? <h3 className="font-Poppins text-10 font-bold leading-[125%] w-t:text-8.5 w-p:text-6">{title}</h3> : null
           }
           <div className="grid w-p:grid-cols-1 w-t:grid-cols-1 grid-cols-2 gap-6">
-            <div className="w-d:hidden">{renderImage()}</div>
             {
-              imagePosition === "left"
-                ? <div className="w-p:hidden w-t:hidden">{renderImage()}</div>
+              imagePosition === "left" || title
+                ? <div className="w-d:hidden">{renderImage()}</div>
                 : null
             }
             {
@@ -56,8 +55,8 @@ const RichTextImage: FC<RichTextImageSection> = (props: RichTextImageSection) =>
                 : null
             }
             {
-              imagePosition === "right"
-                ? <div className="w-p:hidden w-t:hidden">{renderImage()}</div>
+              imagePosition === "right" && !title
+                ? <div>{renderImage()}</div>
                 : null
             }
           </div>
