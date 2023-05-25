@@ -102,7 +102,7 @@ const Alumnos: NextPageWithLayout = ({ sections, meta }: any) => {
           </div>
         </ContentLayout>         
       </ContentFullLayout>
-      <ContentFullLayout classNames="col-span-12 w-t:col-span-8 w-p:col-span-4">
+      <ContentFullLayout classNames="col-span-12 w-t:col-span-8 w-p:col-span-4 pt-18">
         <ContentLayout>
           <p className="font-Poppins font-bold text-10 leading-12.5 col-span-12 mb-6 text-[#282828]">{sections?.titulacion?.title}</p>
           <div className="w-d:col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
