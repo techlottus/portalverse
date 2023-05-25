@@ -25,7 +25,7 @@ const Alert: FC<AlertSection> = (props: AlertSection) => {
             }
             {
               richTextMarkup
-                ? <RichtText data={{content: richTextMarkup}} classNames="text-xl"/>
+                ? <div style={{overflowWrap: "anywhere"}}><RichtText data={{content: richTextMarkup}}/></div>
                 : null
             }
             {

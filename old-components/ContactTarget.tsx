@@ -22,9 +22,10 @@ const ContactTarget: FC<ContactTargetComponentData> = (props: ContactTargetCompo
             classNames={cn(
               "min-w-[96px] min-h-[84px]",
               "w-d:min-w-[120px] w-d:min-h-[105px]",
-              "h-full flex shrink-0 oject-cover"
+              "h-full flex shrink-0"
               )
             }
+            classNamesImg="object-cover"
             alt="contact-image"
             src={image}
           />

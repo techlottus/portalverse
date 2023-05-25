@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { Fragment } from "react";
 import HeaderFooterLayout from "@/layouts/HeaderFooter.layout";
 import ContentGenerator from "@/utils/ContentGenerator";
@@ -12,6 +13,9 @@ const Page = (props: { data: PageData }) => {
 
   return (
     <Fragment>
+      <Head>
+        <title>{props?.data?.attributes?.title}</title>
+      </Head>
       <div className="flex flex-col w-p:space-y-12 w-t:space-y-12 w-d:space-y-18">
         {
           pageBlocks?.length > 0 ?

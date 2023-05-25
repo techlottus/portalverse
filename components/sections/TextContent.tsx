@@ -27,7 +27,7 @@ const TextContent = (props: TextContentSection) => {
             }
             {
               richTextMarkup
-                ? <RichtText data={{content: richTextMarkup}} classNames="text-xl"/>
+                ? <div><RichtText data={{content: richTextMarkup}} classNames="text-xl"/></div>
                 : null
             }
           </div>

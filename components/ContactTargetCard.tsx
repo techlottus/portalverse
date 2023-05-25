@@ -36,6 +36,7 @@ const ContactTargetCard: FC<ContactTargetCardData> = (props: ContactTargetCardDa
               "h-full flex shrink-0 oject-cover"
               )
             }
+            classNamesImg="object-cover"
             alt="contact-image"
             src={image}
           />
@@ -44,8 +45,8 @@ const ContactTargetCard: FC<ContactTargetCardData> = (props: ContactTargetCardDa
       <div className="w-full flex flex-col justify-center p-3 overflow-hidden">
         <p className="font-Nunito font-bold text-sm leading-5">{title}</p>
         <a className="font-Nunito font-normal text-sm leading-5 text-SC/Blackandgrey/B-60 w-p:w-56 w-60 break-words" target="_blank" rel="noreferrer noopener" href={link}>{link}</a>
-        <LinkContactTarget type="email" info={email} />
-        <LinkContactTarget type="phone" info={phone} />
+        <LinkContactTarget classNames="break-all" type="email" info={email} />
+        <LinkContactTarget classNames="break-all" type="phone" info={phone} />
       </div>
     </div>
   );
