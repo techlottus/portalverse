@@ -7,6 +7,7 @@ type PageVariables = {
 
 export type PageData = {
   attributes: {
+    title: string;
     slug: string;
     sections: Array<ComponentSection>;
   };
@@ -28,6 +29,7 @@ query Page($id: ID) {
   page(id: $id) {
     data {
       attributes {
+        title
         slug
         sections {
           type: __typename
