@@ -6,7 +6,7 @@ const Banner = (props: BannerSection) => {
   const { ctaText } = props;
   return (
     <section>
-      <Container classNames={!ctaText ? "w-p:!p-0" : ""}>
+      <Container classNames={!ctaText ? "w-p:!p-0 w-t:!p-0" : ""}>
         <BannerPortalverseWrapper data={props} />
       </Container>
     </section>
