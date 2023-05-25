@@ -12,7 +12,7 @@ const Leaderboard = (props: LeaderboardSection) => {
     desktopImage,
     tabletImage,
     mobileImage,
-    leaderboardContentVariant
+    leaderboardContentVariant: contentVariant
   } = props;
 
   return (
@@ -20,7 +20,7 @@ const Leaderboard = (props: LeaderboardSection) => {
       <Container>
         <div
           className={cn("relative w-p:px-10 w-p:py-7 w-t:px-15 w-t:py-6 px-20 py-10 w-p:min-h-[236px] min-h-[212px]", {
-            "text-white": leaderboardContentVariant === "light",
+            "text-white": contentVariant === "light",
           })}
         >
           <div className="absolute top-0 left-0 w-full h-full">
