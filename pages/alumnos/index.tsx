@@ -9,9 +9,12 @@ import { getDataPageFromJSON } from "@/utils/getDataPage";
 import RichtText from "@/old-components/Richtext/Richtext";
 import BannerPortalverse from "@/old-components/BannerPortalverse";
 import CardWebsitePortalverse from "@/old-components/CardWebsitePortalverse";
+import PromoLink from "@/old-components/PromoLink";
+import ContentFullLayout from "@/layouts/ContentFull.layout";
+import { useRouter } from "next/router";
 
 const Alumnos: NextPageWithLayout = ({ sections, meta }: any) => {
-
+  const router = useRouter();
   const downloadFile = () => {
     const file = document.createElement('a');
     file.target = '__blank';
@@ -43,7 +46,7 @@ const Alumnos: NextPageWithLayout = ({ sections, meta }: any) => {
             sections.directorio.map(({ name: title, description, contacts }: SectionData, i: number) => <section key={`section-directory-${i}`} className="mb-9">
               <ContentInsideLayout>
                 <p className="font-Poppins font-bold text-10 leading-12.5 col-span-12 mb-6">{title}</p>
-                <p className="font-Nunito text-base w-t:text-3.5 w-p:text-base col-span-7 leading-[125%]">{description}</p>
+                <p className="font-Nunito font-normal text-base w-t:text-3.5 w-p:text-base col-span-7 leading-[125%]">{description}</p>
               </ContentInsideLayout>
               <ContentInsideLayout classNames="mt-6 gap-6">
                 {
@@ -65,7 +68,7 @@ const Alumnos: NextPageWithLayout = ({ sections, meta }: any) => {
         </div>
         {
           sections.calendario.banner.visible ?
-            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 pb-18">
               <div className="w-p:hidden">
                 <BannerPortalverse
                   data={sections.calendario.banner}
@@ -83,8 +86,40 @@ const Alumnos: NextPageWithLayout = ({ sections, meta }: any) => {
               </div>
             </div>
             : null
-        }
+        }      
       </ContentLayout>
+      <ContentFullLayout classNames="col-span-12 w-t:col-span-8 w-p:col-span-4 bg-[#F4F4F4] py-18 px-2">
+        <ContentLayout>
+          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+            <p className="font-Poppins font-bold text-10 leading-12.5 col-span-12 mb-6 text-[#282828]">{sections?.servicio?.title}</p>
+          </div>
+          <div className="w-d:col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 pt-6">
+          {
+            sections?.servicio?.niveles?.map((item: any, i: number) => 
+              <section key={`section-schoolarships-${i}`}>
+                <PromoLink data={item} onClick={() => { router?.push(item?.redirect) }} shadowColor={item?.shadowColor}/>  
+              </section>
+            )
+          }
+          </div>
+        </ContentLayout>         
+      </ContentFullLayout>
+      <ContentFullLayout classNames="col-span-12 w-t:col-span-8 w-p:col-span-4 pt-18 w-t:pt-12 w-p:pt-12">
+        <ContentLayout>
+          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+            <p className="font-Poppins font-bold text-10 leading-12.5 col-span-12 mb-6 text-[#282828]">{sections?.titulacion?.title}</p>
+          </div>
+          <div className="w-d:col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
+          {
+            sections?.titulacion?.niveles?.map((item: any, i: number) => 
+              <section key={`section-schoolarships-${i}`}>
+                <PromoLink data={item} onClick={() => { router?.push(item?.redirect) }}/>  
+              </section>
+            )
+          }
+          </div>
+        </ContentLayout>       
+      </ContentFullLayout>
     </HeaderFooterLayout>
   </>
 };

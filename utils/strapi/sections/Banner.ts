@@ -6,7 +6,7 @@ import type {
 } from "@/types/strapi/common";
 
 export type BannerSection = {
-  __typename: "ComponentSectionsBanner";
+  type: "ComponentSectionsBanner";
   title: string;
   subtitle: string;
   ctaText: string;
@@ -21,7 +21,6 @@ export type BannerSection = {
 
 export const BANNER = `
 ...on ComponentSectionsBanner {
-  __typename
   title
   subtitle
   ctaText
