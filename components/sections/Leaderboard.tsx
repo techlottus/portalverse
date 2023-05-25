@@ -112,4 +112,4 @@ const Leaderboard = (props: LeaderboardSection) => {
   )
 }
 
-export default Leaderboard
+export default Leaderboard;
