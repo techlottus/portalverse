@@ -168,6 +168,113 @@
         "visible": true
       }
     },
+    "servicio" : {
+      "title" : "Servicio social y prácticas profesionales",
+      "niveles": [
+        {
+          "text": "Licenciaturas cuatrimestrales",
+          "icon": "arrow_forward",
+          "color": "red",
+          "opacity": "multiply",
+          "height": "84px",
+          "enable": true,
+          "nobackground": true,
+          "redirect": "/alumnos/servicio-social-lic-cuatrimestrales",
+          "isShadowColor": true,
+          "shadowColor": "#1B2D68"
+        },
+        {
+          "text": "Licenciaturas semestrales UdeG",
+          "icon": "arrow_forward",
+          "color": "red",
+          "opacity": "multiply",
+          "height": "84px",
+          "enable": true,
+          "nobackground": true,
+          "redirect": "/alumnos/servicio-social-lic-semestrales",
+          "isShadowColor": true,
+          "shadowColor": "#C31433"
+        },
+        {
+          "text": "Bachillerato técnico SEJ",
+          "icon": "arrow_forward",
+          "color": "red",
+          "opacity": "multiply",
+          "height": "84px",
+          "enable": true,
+          "nobackground": true,
+          "redirect": "/alumnos/bachillerato-tecnico-sej",
+          "isShadowColor": true,
+          "shadowColor": "#4470B1"
+        },
+        {
+          "text": "Prácticas profesionales voluntarias",
+          "icon": "arrow_forward",
+          "color": "red",
+          "opacity": "multiply",
+          "height": "84px",
+          "enable": true,
+          "nobackground": true,
+          "redirect": "/alumnos/servicio-social-practicas-profesionales-voluntarias",
+          "isShadowColor": true,
+          "shadowColor": "#F8A600"
+        }
+      ]
+    },
+    "titulacion" : {
+      "title" : "Titulación",
+      "niveles": [
+        {
+          "text": "Programa Titulación segura",
+          "icon": "arrow_forward",
+          "opacity": "multiply",
+          "height": "282px",
+          "enable": true,
+          "redirect": "/alumnos/programa-titulacion-segura",
+          "urlImage": {
+            "desktop": "https://assets.staging.bedu.org/UANE/Banner_titulacion_43faf6f399.jpg",
+            "mobile": "https://assets.staging.bedu.org/UANE/Banner_titulacion_43faf6f399.jpg"
+          }
+        },
+        {
+          "text": "Carta de pasante",
+          "icon": "arrow_forward",
+          "opacity": "multiply",
+          "height": "282px",
+          "enable": true,
+          "redirect": "/alumnos/carta-pasante",
+          "urlImage": {
+            "desktop": "https://assets.staging.bedu.org/UANE/Banner_carta_pasante_454f223dcc.jpg",
+            "mobile": "https://assets.staging.bedu.org/UANE/Banner_carta_pasante_454f223dcc.jpg"
+          }
+        },
+        {
+          "text": "Modalidades, requisitos y reglamentos",
+          "icon": "arrow_forward",
+          "opacity": "multiply",
+          "height": "282px",
+          "enable": true,
+          "redirect": "/alumnos/modalidades-requisitos-y-reglamentos-de-titulacion",
+          "urlImage": {
+            "desktop": "https://assets.staging.bedu.org/UANE/Banner_modalidades_d170bb27dc.jpg",
+            "mobile": "https://assets.staging.bedu.org/UANE/Banner_modalidades_d170bb27dc.jpg"
+          }
+        },
+        {
+          "text": "Convocatorias de titulación y comunicados",
+          "icon": "arrow_forward",
+          "opacity": "multiply",
+          "font-size" : "22px",
+          "height": "282px",
+          "enable": true,
+          "redirect": "/alumnos/convocatorias-titulacion-comunicados",
+          "urlImage": {
+            "desktop": "https://assets.staging.bedu.org/UANE/Banner_convocatoria_dbb6c7ccd8.jpg",
+            "mobile": "https://assets.staging.bedu.org/UANE/Banner_convocatoria_dbb6c7ccd8.jpg"
+          }
+        }
+      ]
+    },
     "directorio": [
       {
         "name": "Directorio universitario",
