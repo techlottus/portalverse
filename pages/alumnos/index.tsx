@@ -90,7 +90,9 @@ const Alumnos: NextPageWithLayout = ({ sections, meta }: any) => {
       </ContentLayout>
       <ContentFullLayout classNames="col-span-12 w-t:col-span-8 w-p:col-span-4 bg-[#F4F4F4] py-18 px-2">
         <ContentLayout>
-          <p className="font-Poppins font-bold text-10 leading-12.5 col-span-12 mb-6 text-[#282828]">{sections?.servicio?.title}</p>
+          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+            <p className="font-Poppins font-bold text-10 leading-12.5 col-span-12 mb-6 text-[#282828]">{sections?.servicio?.title}</p>
+          </div>
           <div className="w-d:col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 pt-6">
           {
             sections?.servicio?.niveles?.map((item: any, i: number) => 
@@ -104,7 +106,9 @@ const Alumnos: NextPageWithLayout = ({ sections, meta }: any) => {
       </ContentFullLayout>
       <ContentFullLayout classNames="col-span-12 w-t:col-span-8 w-p:col-span-4 pt-18">
         <ContentLayout>
-          <p className="font-Poppins font-bold text-10 leading-12.5 col-span-12 mb-6 text-[#282828]">{sections?.titulacion?.title}</p>
+          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+            <p className="font-Poppins font-bold text-10 leading-12.5 col-span-12 mb-6 text-[#282828]">{sections?.titulacion?.title}</p>
+          </div>
           <div className="w-d:col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
           {
             sections?.titulacion?.niveles?.map((item: any, i: number) => 
