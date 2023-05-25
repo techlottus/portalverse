@@ -94,7 +94,7 @@ const Footer: FC<FooterPortalverseComponentData> = ({ privacyLink, certification
         <p className="mb-5">{ certifications.title }</p>
         <div className="flex gap-12 w-p:flex-wrap">
           {
-            certifications.certificaciones.map(({ src, alt }: any, i: number) => <Image key={`certification-${i}`} classNamesImg="w-12 w-p:w-8 h-12 w-p:h-9" classNames="w-12 w-p:w-8 h-12 w-p:h-9 aspect-1/1" src={src} alt={alt} />)
+            certifications.certificaciones.map(({ src, alt }: any, i: number) => <Image key={`certification-${i}`} classNamesImg="w-12 w-p:w-8 h-12 w-p:h-8" classNames="w-12 w-p:w-8 h-12 w-p:h-8 aspect-1/1" src={src} alt={alt} />)
           }
         </div>
       </div>
