@@ -25,8 +25,8 @@ const BannerPortalverse: FC<BannerPortalverseComponentData> = memo((props: Banne
         <Aspect ratio={desktopRatio}>
           <div className="w-full h-full">
             <div className={cn(`relative flex w-full h-full shrink-0`, classNames)} >
-              <Image classNames="w-full h-full w-t:hidden" src={data.image?.desktop!} alt="image" />
-              <Image classNames="w-full h-full w-d:hidden" src={data.image?.tablet!} alt="image" />
+              <Image classNamesImg="object-cover" classNames="w-full h-full w-t:hidden" src={data.image?.desktop!} alt="image" />
+              <Image classNamesImg="object-cover" classNames="w-full h-full w-d:hidden" src={data.image?.tablet!} alt="image" />
               {
                 data?.overlayDak || data?.overlayWhite ?
                   <div className={cn("absolute w-full h-full", classNames, {
@@ -45,7 +45,7 @@ const BannerPortalverse: FC<BannerPortalverseComponentData> = memo((props: Banne
         <Aspect ratio={tabletRatio}>
           <div className="w-full h-full">
             <div className={cn(`relative flex w-full h-full shrink-0`, classNames)} >
-              <Image classNames="w-full h-full" src={data.image?.tablet!} alt="image" />
+              <Image classNamesImg="object-cover" classNames="w-full h-full" src={data.image?.tablet!} alt="image" />
               {
                 data?.overlayDak || data?.overlayWhite ?
                   <div className={cn("absolute w-full h-full", classNames, {
@@ -64,7 +64,7 @@ const BannerPortalverse: FC<BannerPortalverseComponentData> = memo((props: Banne
         <Aspect ratio={mobileRatio}>
           <div className="w-full h-full">
             <div className={cn(`relative flex w-full h-full shrink-0`, classNames)} >
-              <Image classNames="w-full h-full w-d:hidden w-t:hidden aspect-4/3" src={data.image?.mobile!} alt="image" />
+              <Image classNamesImg="object-cover" classNames="w-full h-full w-d:hidden w-t:hidden" src={data.image?.mobile!} alt="image" />
               <div className={cn("absolute w-full h-full", classNames, {
                 "bg-[#ffffff80]": data.overlayWhite,
                 "bg-[#00000080]": data.overlayDak
