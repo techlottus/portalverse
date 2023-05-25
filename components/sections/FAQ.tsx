@@ -7,7 +7,11 @@ import type { FAQSection } from "@/utils/strapi/sections/FAQ";
 import type { AccordionItemConfig } from "@/types/Accordion.types";
 
 const FAQ = (props: FAQSection) => {
-  const { title, ctaText, ctaUrl, component, faqCategory } = props
+  /**
+   *  Currently, all FAQ section components are rendered through an Accordion,
+   *  leaving component prop unused for the time being.
+   */
+  const { title, ctaText, ctaUrl, component, faqCategory } = props;
 
   const router = useRouter();
   
