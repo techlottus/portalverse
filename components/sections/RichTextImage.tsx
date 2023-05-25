@@ -44,21 +44,27 @@ const RichTextImage: FC<RichTextImageSection> = (props: RichTextImageSection) =>
             title ? <h3 className="font-Poppins text-10 font-bold leading-[125%] w-t:text-8.5 w-p:text-6">{title}</h3> : null
           }
           <div className="grid w-p:grid-cols-1 w-t:grid-cols-1 grid-cols-2 gap-6">
-            {
-              imagePosition === "left" || title
-                ? <div className="w-d:hidden">{renderImage()}</div>
-                : null
-            }
+            <div
+              className={cn({
+                "w-d:hidden": imagePosition !== "left",
+                "w-p:hidden w-t:hidden": !title
+              })}
+            >
+              {renderImage()}
+            </div>
             {
               richTextMarkup
                 ? <div className="dark"><RichtText font={contentVariant === "light" ? "dark" : "light"} data={{content: richTextMarkup}}/></div>
                 : null
             }
-            {
-              imagePosition === "right" && !title
-                ? <div>{renderImage()}</div>
-                : null
-            }
+            <div
+              className={cn({
+                "w-d:hidden": imagePosition !== "right",
+                "w-p:hidden w-t:hidden": !!title
+              })}
+            >
+              {renderImage()}
+            </div>
           </div>
         </div>
       </Container>
