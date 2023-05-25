@@ -68,7 +68,7 @@ const Alumnos: NextPageWithLayout = ({ sections, meta }: any) => {
         </div>
         {
           sections.calendario.banner.visible ?
-            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 pb-18">
               <div className="w-p:hidden">
                 <BannerPortalverse
                   data={sections.calendario.banner}
@@ -88,7 +88,7 @@ const Alumnos: NextPageWithLayout = ({ sections, meta }: any) => {
             : null
         }      
       </ContentLayout>
-      <ContentFullLayout classNames="col-span-12 w-t:col-span-8 w-p:col-span-4 bg-[#F4F4F4] py-18 px-2 hidden">
+      <ContentFullLayout classNames="col-span-12 w-t:col-span-8 w-p:col-span-4 bg-[#F4F4F4] py-18 px-2">
         <ContentLayout>
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
             <p className="font-Poppins font-bold text-10 leading-12.5 col-span-12 mb-6 text-[#282828]">{sections?.servicio?.title}</p>
@@ -104,7 +104,7 @@ const Alumnos: NextPageWithLayout = ({ sections, meta }: any) => {
           </div>
         </ContentLayout>         
       </ContentFullLayout>
-      <ContentFullLayout classNames="col-span-12 w-t:col-span-8 w-p:col-span-4 pt-18 w-t:pt-12 w-p:pt-12 hidden">
+      <ContentFullLayout classNames="col-span-12 w-t:col-span-8 w-p:col-span-4 pt-18 w-t:pt-12 w-p:pt-12">
         <ContentLayout>
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
             <p className="font-Poppins font-bold text-10 leading-12.5 col-span-12 mb-6 text-[#282828]">{sections?.titulacion?.title}</p>
