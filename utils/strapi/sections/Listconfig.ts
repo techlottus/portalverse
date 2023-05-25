@@ -1,5 +1,5 @@
 export type ListconfigSection = {
-  __typename: "ComponentSectionsListconfig";
+  type: "ComponentSectionsListconfig";
   title: string;
   maxentries: number;
   relatesto: "blogentries" | "pages" | "faq";
@@ -8,7 +8,6 @@ export type ListconfigSection = {
 
 export const LIST_CONFIG = `
 ...on ComponentSectionsListconfig {
-  __typename
   title
   maxentries
   relatesto

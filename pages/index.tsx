@@ -8,13 +8,11 @@ import ContentInsideLayout from "@/layouts/ContentInside.layout"
 import OpenForm from "@/forms/container/OpenForm"
 import { getDataPageFromJSON } from "@/utils/getDataPage"
 import Video from "@/old-components/Video"
-import { getHomePageData } from "@/utils/getHomePageData"
-import { ComponentSection } from "@/utils/strapi/queries";
+import { HomeComponentSection, getHomePageData } from "@/utils/getHomePageData"
 import { SeoData } from "@/utils/strapi/sections/SEO"
 import { OverlayCardListSection } from "@/utils/strapi/sections/OverlayCardList"
 import { BannerSection } from "@/utils/strapi/sections/Banner"
 import { HeroSliderSection } from "@/utils/strapi/sections/HeroSlider"
-import { StatisticsCardListSection } from "@/utils/strapi/sections/StatisticsCardList"
 import BannerPortalverseWrapper from "@/components/BannerPortalverseWrapper"
 import { ListconfigSection } from "@/utils/strapi/sections/Listconfig"
 import getBlogPosts, { BlogPostsData } from "@/utils/getBlogPosts"
@@ -27,7 +25,7 @@ import NumbersPortalverse from "@/old-components/NumbersPortalverse/NumbersPorta
 const Home: NextPageWithLayout = ({ data: { sections, meta, strapi } }: any) => {
   const router = useRouter();
 
-  const strapiSections = strapi?.sections as Array<ComponentSection>;
+  const strapiSections = strapi?.sections as Array<HomeComponentSection>;
   const strapiSeo = strapi?.seo as SeoData;
 
   const blogListConfig = findSection<ListconfigSection>(strapiSections, "ComponentSectionsListconfig");

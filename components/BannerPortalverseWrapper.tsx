@@ -79,7 +79,7 @@ const formatData = (props: BannerPortalverseWrapperProps): BannerPortalverseConf
 type BannerPortalverseWrapperProps = Replace<
   BannerPortalverseComponentData,
   "data",
-  BannerSection & { height: string }
+  BannerSection & { height?: string }
 >;
 
 const BannerPortalverseWrapper = (props: BannerPortalverseWrapperProps) => {

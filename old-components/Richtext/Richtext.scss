@@ -1,17 +1,39 @@
+lottus-rich-text {
+  > markdown {
+    h1, h2 {
+      @apply font-Poppins leading-[36px] w-d:leading-[60px] font-bold w-p:text-7.5 w-t:text-8.5 w-d:text-13 #{!important}
+    }
+    ul li {
+      @apply list-disc #{!important}
+    }
+    table {
+        tr {
+          td {
+            a {
+              @apply font-bold w-p:break-all #{!important}
+            }
+            @apply w-p:px-4 px-7 w-p:py-6 py-9 font-bold align-top #{!important}
+          }
+          @apply first:bg-[#F9F9F9] first:border-b first:border-[#D9D9D9] #{!important}
+        }
+    }
+  }
+}
+
 div {
   &.dark {
     > lottus-rich-text {
       > markdown{
         * {
           color: white;
-          @apply font-Nunito-Sans font-normal;
+          @apply font-Nunito-Sans font-normal text-base leading-5;
         }
 
         p {
-          margin-bottom: .5rem;
           b {
             font-weight: 700;
           }
+          @apply last:mb-0
         }
         ul {
           list-style-type: circle;
@@ -24,14 +46,14 @@ div {
       > markdown{
         * {
           color: black;
-          @apply font-Nunito-Sans font-normal;
+          @apply font-Nunito-Sans font-normal text-base leading-5;
         }
 
         p {
-          margin-bottom: .5rem;
           b {
             font-weight: 700;
           }
+          @apply last:mb-0
         }
         ul {
           list-style-type: circle;
@@ -44,14 +66,14 @@ div {
       > markdown{
         * {
           color: black;
-          @apply font-Nunito-Sans font-normal;
+          @apply font-Nunito-Sans font-normal text-base leading-5;
         }
 
         p {
-          margin-bottom: .5rem;
           b {
             font-weight: 700;
           }
+          @apply last:mb-0
         }
         ul {
           list-style-type: circle;

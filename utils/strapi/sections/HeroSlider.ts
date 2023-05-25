@@ -19,13 +19,12 @@ export type Slide = {
 };
 
 export type HeroSliderSection = {
-  __typename: "ComponentSectionsHeroSlider";
+  type: "ComponentSectionsHeroSlider";
   slides: Array<Slide>;
 };
 
 export const HERO_SLIDER = `
 ...on ComponentSectionsHeroSlider {
-  __typename
   slides: slide {
     title
     subtitle

@@ -2197,6 +2197,11 @@ duplexer@^0.1.2:
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.2.tgz#3abe43aef3835f8ae077d136ddce0f276b0400e6"
   integrity sha512-jtD6YG370ZCIi/9GTaJKQxWTZD045+4R4hTk/x1UyoqadyJ9x9CgSi1RlVDQF8U2sxLLSnFkCaMihqljHIWgMg==
 
+editorjs-parser@^1.5.3:
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/editorjs-parser/-/editorjs-parser-1.5.3.tgz#b977f970ba85375252546a8e34e1d3c72ebd03a6"
+  integrity sha512-ypc6mku0A55ycxdTHjijy/rRtQ060bwQKyEGMDPbnEglRAR/DE/4GJNdKtMGvUWNTGT6Fe25L/AoEQ5bhasQAg==
+
 electron-to-chromium@^1.4.284:
   version "1.4.330"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.330.tgz#4740378db7160d7210afb29800c74048cdf10a99"
