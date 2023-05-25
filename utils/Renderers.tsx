@@ -1,6 +1,7 @@
 import Alert from "@/components/sections/Alert";
 import Banner from "@/components/sections/Banner";
 import ContactTargetList from "@/components/sections/ContactTargetList";
+import FAQ from "@/components/sections/FAQ";
 import Leaderboard from "@/components/sections/Leaderboard";
 import LinkList from "@/components/sections/LinkList";
 import Paragraph from "@/components/Paragraph";
@@ -14,13 +15,14 @@ type Renderer = {
 
 const defaultRenderers: Renderer = {
   paragraph: Paragraph,
-  ComponentSectionsContactTargetList: ContactTargetList,
   ComponentSectionsAlert: Alert,
-  ComponentSectionsRichTextImage: RichTextImage,
-  ComponentSectionsLinkList: LinkList,
   ComponentSectionsBanner: Banner,
+  ComponentSectionsContactTargetList: ContactTargetList,
+  ComponentSectionsFaqSection: FAQ,
+  ComponentSectionsLeaderboard: Leaderboard,
+  ComponentSectionsLinkList: LinkList,
+  ComponentSectionsRichTextImage: RichTextImage,
   ComponentSectionsTextContent: TextContent,
-  ComponentSectionsLeaderboard: Leaderboard
 };
 
 export default defaultRenderers;
