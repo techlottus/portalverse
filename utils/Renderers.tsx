@@ -1,6 +1,7 @@
 import Alert from "@/components/sections/Alert";
 import Banner from "@/components/sections/Banner";
 import ContactTargetList from "@/components/sections/ContactTargetList";
+import FAQ from "@/components/sections/FAQ";
 import LinkList from "@/components/sections/LinkList";
 import Paragraph from "@/components/Paragraph";
 import RichTextImage from "@/components/sections/RichTextImage";
@@ -18,7 +19,8 @@ const defaultRenderers: Renderer = {
   ComponentSectionsRichTextImage: RichTextImage,
   ComponentSectionsLinkList: LinkList,
   ComponentSectionsBanner: Banner,
-  ComponentSectionsTextContent: TextContent
+  ComponentSectionsTextContent: TextContent,
+  ComponentSectionsFaqSection: FAQ
 };
 
 export default defaultRenderers;
