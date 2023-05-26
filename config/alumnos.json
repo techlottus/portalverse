@@ -38,7 +38,7 @@
         "image": "https://assets.staging.bedu.org/UTEG/alumnos_card_acceso_aula_da8895d338.jpg",
         "subtitle": "",
         "title": "Aula UTEG",
-        "text": "Es espacio concebido para que tomes tus clases virtuales e interactúes desde cualquier lugar del mundo con tus docentes y compañeros.  ",
+        "text": "Este es un espacio concebido para que tomes tus clases virtuales e interactúes desde cualquier lugar del mundo con tus docentes y compañeros. ",
         "border": true,
         "allContent": true,
         "height": "",
@@ -169,7 +169,7 @@
       }
     },
     "servicio" : {
-      "title" : "Servicio social y prácticas profesionales",
+      "title" : "Servicio Social y Prácticas Profesionales",
       "niveles": [
         {
           "text": "Licenciaturas cuatrimestrales",
@@ -196,18 +196,6 @@
           "shadowColor": "#C31433"
         },
         {
-          "text": "Bachillerato técnico SEJ",
-          "icon": "arrow_forward",
-          "color": "red",
-          "opacity": "multiply",
-          "height": "84px",
-          "enable": true,
-          "nobackground": true,
-          "redirect": "/alumnos/bachillerato-tecnico-sej",
-          "isShadowColor": true,
-          "shadowColor": "#4470B1"
-        },
-        {
           "text": "Prácticas profesionales voluntarias",
           "icon": "arrow_forward",
           "color": "red",
@@ -225,7 +213,7 @@
       "title" : "Titulación",
       "niveles": [
         {
-          "text": "Programa Titulación segura",
+          "text": "Programa Titulación Segura",
           "icon": "arrow_forward",
           "opacity": "multiply",
           "height": "282px",
@@ -237,7 +225,7 @@
           }
         },
         {
-          "text": "Carta de pasante",
+          "text": "Carta de Pasante",
           "icon": "arrow_forward",
           "opacity": "multiply",
           "height": "282px",
@@ -249,7 +237,7 @@
           }
         },
         {
-          "text": "Modalidades, requisitos y reglamentos",
+          "text": "Modalidades, Requisitos y Reglamentos",
           "icon": "arrow_forward",
           "opacity": "multiply",
           "height": "282px",
@@ -261,7 +249,7 @@
           }
         },
         {
-          "text": "Convocatorias de titulación y comunicados",
+          "text": "Convocatorias de Titulación y Comunicados",
           "icon": "arrow_forward",
           "opacity": "multiply",
           "font-size" : "22px",
@@ -282,7 +270,7 @@
         "contacts": [
           {
             "image": "https://assets.staging.bedu.org/UTEG/alumnos_servicios_escolares_f790a4be49.jpg",
-            "name": "Servicios escolares",
+            "name": "Servicios Escolares",
             "email": "servicios.campus@uteg.edu.mx"
           },
           {
@@ -297,7 +285,7 @@
           },
           {
             "image": "https://assets.staging.bedu.org/UTEG/alumnos_biblioteca_virtual_197e8b5e37.jpg",
-            "name": "Biblioteca virtual eLibro",
+            "name": "Biblioteca Virtual eLibro",
             "email": "ayudaerecursos@uteg.edu.mx"
           },
           {
@@ -307,7 +295,7 @@
           },
           {
             "image": "https://assets.staging.bedu.org/UTEG/alumnos_soporte_tecnico_68c40cf062.jpg",
-            "name": "Soporte técnico",
+            "name": "Soporte Técnico",
             "email": "ticket@uteg.edu.mx"
           }
         ]
