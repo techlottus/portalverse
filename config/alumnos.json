@@ -220,8 +220,8 @@
           "enable": true,
           "redirect": "/alumnos/programa-titulacion-segura",
           "urlImage": {
-            "desktop": "https://assets.staging.bedu.org/UANE/Banner_titulacion_43faf6f399.jpg",
-            "mobile": "https://assets.staging.bedu.org/UANE/Banner_titulacion_43faf6f399.jpg"
+            "desktop": "https://assets.staging.bedu.org/UTEG/Banner_titulacion_b93a30b0ac.jpg",
+            "mobile": "https://assets.staging.bedu.org/UTEG/Banner_titulacion_b93a30b0ac.jpg"
           }
         },
         {
@@ -232,8 +232,8 @@
           "enable": true,
           "redirect": "/alumnos/carta-pasante",
           "urlImage": {
-            "desktop": "https://assets.staging.bedu.org/UANE/Banner_carta_pasante_454f223dcc.jpg",
-            "mobile": "https://assets.staging.bedu.org/UANE/Banner_carta_pasante_454f223dcc.jpg"
+            "desktop": "https://assets.staging.bedu.org/UTEG/Banner_carta_pasante_b28179d301.jpg",
+            "mobile": "https://assets.staging.bedu.org/UTEG/Banner_carta_pasante_b28179d301.jpg"
           }
         },
         {
@@ -244,8 +244,8 @@
           "enable": true,
           "redirect": "/alumnos/modalidades-requisitos-y-reglamentos-de-titulacion",
           "urlImage": {
-            "desktop": "https://assets.staging.bedu.org/UANE/Banner_modalidades_d170bb27dc.jpg",
-            "mobile": "https://assets.staging.bedu.org/UANE/Banner_modalidades_d170bb27dc.jpg"
+            "desktop": "https://assets.staging.bedu.org/UTEG/Banner_modalidades_d127fb5f01.jpg",
+            "mobile": "https://assets.staging.bedu.org/UTEG/Banner_modalidades_d127fb5f01.jpg"
           }
         },
         {
@@ -257,8 +257,8 @@
           "enable": true,
           "redirect": "/alumnos/convocatorias-titulacion-comunicados",
           "urlImage": {
-            "desktop": "https://assets.staging.bedu.org/UANE/Banner_convocatoria_dbb6c7ccd8.jpg",
-            "mobile": "https://assets.staging.bedu.org/UANE/Banner_convocatoria_dbb6c7ccd8.jpg"
+            "desktop": "https://assets.staging.bedu.org/UTEG/Banner_convocatoria_868649c3c6.jpg",
+            "mobile": "https://assets.staging.bedu.org/UTEG/Banner_convocatoria_868649c3c6.jpg"
           }
         }
       ]
