@@ -38,7 +38,7 @@
         "image": "https://assets.staging.bedu.org/UTEG/alumnos_card_acceso_aula_da8895d338.jpg",
         "subtitle": "",
         "title": "Aula UTEG",
-        "text": "Es espacio concebido para que tomes tus clases virtuales e interactúes desde cualquier lugar del mundo con tus docentes y compañeros.  ",
+        "text": "Éste es un espacio concebido para que tomes tus clases virtuales e interactúes desde cualquier lugar del mundo con tus docentes y compañeros. ",
         "border": true,
         "allContent": true,
         "height": "",
@@ -169,7 +169,7 @@
       }
     },
     "servicio" : {
-      "title" : "Servicio social y prácticas profesionales",
+      "title" : "Servicio Social y Prácticas Profesionales",
       "niveles": [
         {
           "text": "Licenciaturas cuatrimestrales",
@@ -196,18 +196,6 @@
           "shadowColor": "#C31433"
         },
         {
-          "text": "Bachillerato técnico SEJ",
-          "icon": "arrow_forward",
-          "color": "red",
-          "opacity": "multiply",
-          "height": "84px",
-          "enable": true,
-          "nobackground": true,
-          "redirect": "/alumnos/bachillerato-tecnico-sej",
-          "isShadowColor": true,
-          "shadowColor": "#4470B1"
-        },
-        {
           "text": "Prácticas profesionales voluntarias",
           "icon": "arrow_forward",
           "color": "red",
@@ -225,43 +213,43 @@
       "title" : "Titulación",
       "niveles": [
         {
-          "text": "Programa Titulación segura",
+          "text": "Programa Titulación Segura",
           "icon": "arrow_forward",
           "opacity": "multiply",
           "height": "282px",
           "enable": true,
           "redirect": "/alumnos/programa-titulacion-segura",
           "urlImage": {
-            "desktop": "https://assets.staging.bedu.org/UANE/Banner_titulacion_43faf6f399.jpg",
-            "mobile": "https://assets.staging.bedu.org/UANE/Banner_titulacion_43faf6f399.jpg"
+            "desktop": "https://assets.staging.bedu.org/UTEG/Banner_titulacion_b93a30b0ac.jpg",
+            "mobile": "https://assets.staging.bedu.org/UTEG/Banner_titulacion_b93a30b0ac.jpg"
           }
         },
         {
-          "text": "Carta de pasante",
+          "text": "Carta de Pasante",
           "icon": "arrow_forward",
           "opacity": "multiply",
           "height": "282px",
           "enable": true,
           "redirect": "/alumnos/carta-pasante",
           "urlImage": {
-            "desktop": "https://assets.staging.bedu.org/UANE/Banner_carta_pasante_454f223dcc.jpg",
-            "mobile": "https://assets.staging.bedu.org/UANE/Banner_carta_pasante_454f223dcc.jpg"
+            "desktop": "https://assets.staging.bedu.org/UTEG/Banner_carta_pasante_b28179d301.jpg",
+            "mobile": "https://assets.staging.bedu.org/UTEG/Banner_carta_pasante_b28179d301.jpg"
           }
         },
         {
-          "text": "Modalidades, requisitos y reglamentos",
+          "text": "Modalidades, Requisitos y Reglamentos",
           "icon": "arrow_forward",
           "opacity": "multiply",
           "height": "282px",
           "enable": true,
           "redirect": "/alumnos/modalidades-requisitos-y-reglamentos-de-titulacion",
           "urlImage": {
-            "desktop": "https://assets.staging.bedu.org/UANE/Banner_modalidades_d170bb27dc.jpg",
-            "mobile": "https://assets.staging.bedu.org/UANE/Banner_modalidades_d170bb27dc.jpg"
+            "desktop": "https://assets.staging.bedu.org/UTEG/Banner_modalidades_d127fb5f01.jpg",
+            "mobile": "https://assets.staging.bedu.org/UTEG/Banner_modalidades_d127fb5f01.jpg"
           }
         },
         {
-          "text": "Convocatorias de titulación y comunicados",
+          "text": "Convocatorias de Titulación y Comunicados",
           "icon": "arrow_forward",
           "opacity": "multiply",
           "font-size" : "22px",
@@ -269,8 +257,8 @@
           "enable": true,
           "redirect": "/alumnos/convocatorias-titulacion-comunicados",
           "urlImage": {
-            "desktop": "https://assets.staging.bedu.org/UANE/Banner_convocatoria_dbb6c7ccd8.jpg",
-            "mobile": "https://assets.staging.bedu.org/UANE/Banner_convocatoria_dbb6c7ccd8.jpg"
+            "desktop": "https://assets.staging.bedu.org/UTEG/Banner_convocatoria_868649c3c6.jpg",
+            "mobile": "https://assets.staging.bedu.org/UTEG/Banner_convocatoria_868649c3c6.jpg"
           }
         }
       ]
@@ -282,7 +270,7 @@
         "contacts": [
           {
             "image": "https://assets.staging.bedu.org/UTEG/alumnos_servicios_escolares_f790a4be49.jpg",
-            "name": "Servicios escolares",
+            "name": "Servicios Escolares",
             "email": "servicios.campus@uteg.edu.mx"
           },
           {
@@ -297,7 +285,7 @@
           },
           {
             "image": "https://assets.staging.bedu.org/UTEG/alumnos_biblioteca_virtual_197e8b5e37.jpg",
-            "name": "Biblioteca virtual eLibro",
+            "name": "Biblioteca Virtual eLibro",
             "email": "ayudaerecursos@uteg.edu.mx"
           },
           {
@@ -307,7 +295,7 @@
           },
           {
             "image": "https://assets.staging.bedu.org/UTEG/alumnos_soporte_tecnico_68c40cf062.jpg",
-            "name": "Soporte técnico",
+            "name": "Soporte Técnico",
             "email": "ticket@uteg.edu.mx"
           }
         ]
