@@ -196,6 +196,18 @@
           "shadowColor": "#C31433"
         },
         {
+          "text": "Bachillerato técnico SEJ",
+          "icon": "arrow_forward",
+          "color": "red",
+          "opacity": "multiply",
+          "height": "84px",
+          "enable": true,
+          "nobackground": true,
+          "redirect": "/alumnos/bachillerato-tecnico-sej",
+          "isShadowColor": true,
+          "shadowColor": "#4470B1"
+        },
+        {
           "text": "Prácticas profesionales voluntarias",
           "icon": "arrow_forward",
           "color": "red",
