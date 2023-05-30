@@ -14,8 +14,11 @@ export type BannerSection = {
   textPosition: TextPosition;
   overlay: OverlayColor;
   contentVariant: ContentVariant;
+  desktopRatio: string;
   desktopImage: StrapiImage;
+  tabletRatio: string;
   tabletImage: StrapiImage;
+  mobileRatio: string;
   mobileImage: StrapiImage;
 };
 
@@ -28,21 +31,24 @@ export const BANNER = `
   textPosition
   overlay
   contentVariant
-  desktopImage {
+  desktopRatio
+  desktopImage{
     data {
       attributes {
         url
       }
     }
   }
-  tabletImage {
+  tabletRatio
+  tabletImage{
     data {
       attributes {
         url
       }
     }
   }
-  mobileImage {
+  mobileRatio
+  mobileImage{
     data {
       attributes {
         url
