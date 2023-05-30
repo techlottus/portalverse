@@ -1,6 +1,28 @@
+//Font sizes are based on Strapi editor styles
 #editor {
   * {
     @apply font-Nunito-Sans font-normal;
+  }
+  b {
+    @apply font-bold;
+  }
+  h1 {
+    @apply font-bold text-10;
+  }
+  h2 {
+    @apply font-bold text-[1.5em];
+  }
+  h3 {
+    @apply font-bold text-[1.17rem];
+  }
+  h4 {
+    @apply font-bold text-[1em];
+  }
+  h5 {
+    @apply font-bold text-[0.83em];
+  }
+  h6 {
+    @apply font-bold text-[0.67em];
   }
 }
 
