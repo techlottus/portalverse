@@ -19,7 +19,7 @@ export type BannerSection = {
   tabletRatio: string;
   tabletImage: StrapiImage;
   mobileRatio: string;
-  mobileImage: StrapiImage;
+  mobileImage: StrapiImage; 
 };
 
 export const BANNER = `
