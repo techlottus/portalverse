@@ -10,8 +10,6 @@ const ListConfigPodcastItems = (props: ListconfigSection) => {
 
   console.log("props", props);
 
-  if (relatesto !== "podcasts") return null;
-
   const podcastItems = data as Array<PodcastEpisode>;
 
   const router = useRouter();
@@ -33,6 +31,8 @@ const ListConfigPodcastItems = (props: ListconfigSection) => {
     currentPage,
     pageSize
   );
+
+  if (relatesto !== "podcasts") return null;
 
   return (
     <section>
