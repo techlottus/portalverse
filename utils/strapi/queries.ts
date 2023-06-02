@@ -6,6 +6,10 @@ import { LINK_LIST, LinkListSection } from "@/utils/strapi/sections/LinkList";
 import { RICH_TEXT_IMAGE, RichTextImageSection } from "@/utils/strapi/sections/RichTextImage";
 import { TEXT_CONTENT, TextContentSection } from "@/utils/strapi/sections/TextContent";
 import { FAQ_SECTION, FAQSection } from "@/utils/strapi/sections/FAQ";
+import { ListconfigSection, LIST_CONFIG } from "./sections/Listconfig";
+import { BlogPostsPodcastSection, BLOG_POSTS_PODCAST } from "./sections/BlogPostsPodcast";
+import { PodcastListSection, PODCAST_LIST } from "./sections/PodcastList";
+import { HeroSliderSection, HERO_SLIDER } from "./sections/HeroSlider";
 
 export type ComponentSection =
   | AlertSection
@@ -16,6 +20,10 @@ export type ComponentSection =
   | LinkListSection
   | RichTextImageSection
   | TextContentSection
+  | BlogPostsPodcastSection
+  | ListconfigSection
+  | PodcastListSection
+  | HeroSliderSection
 
 export const SECTIONS = `
   ${ALERT}
@@ -26,4 +34,8 @@ export const SECTIONS = `
   ${LEADERBOARD}
   ${RICH_TEXT_IMAGE}
   ${TEXT_CONTENT}
+  ${BLOG_POSTS_PODCAST}
+  ${LIST_CONFIG}
+  ${PODCAST_LIST}
+  ${HERO_SLIDER}
 `;
