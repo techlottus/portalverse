@@ -40,5 +40,5 @@ export const getPageBySlug = async (slug: string) => {
   if (!targetPageId) throw new Error("Page ID Not Found");
 
   const pageData = await getPageData({ id: targetPageId });
-  return pageData?.page?.data;
+  return pageData?.page;
 };

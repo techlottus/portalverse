@@ -54,7 +54,7 @@ type SliderPortalverseComponentData = {
 };
 
 const formatSlides = (slides: Array<Slide>): Array<SlideConfig> => {
-  const formattedSlides = slides.map((slide) => {
+  const formattedSlides = slides?.map((slide) => {
     // Create new object with default data
     const formattedSlideData: SlideConfig = JSON.parse(JSON.stringify(defaultSliderData.slides[0]));
     formattedSlideData.contentVariant = slide?.contentVariant
