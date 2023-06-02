@@ -66,15 +66,15 @@ const BlogEntryPage = (props: BlogEntryPageEntity) => {
           <Fragment>
             {/** Dental clínic banner: Desk */}
             <div className="col-span-4 w-t:hidden w-p:hidden w-d:grid-cols-1 flex flex-col space-y-6">
-              {banners?.map((banner) => (
-                <BannerPortalverseWrapper data={banner} />
+              {banners?.map((banner, i) => (
+                <BannerPortalverseWrapper key={i} data={banner} />
               ))}
             </div>
 
             {/** Dental clínic & CESEPCOM banner: Tablet & Mobile */}
             <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-2 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 w-d:hidden">
-              {banners?.map((banner) => (
-                <BannerPortalverseWrapper data={banner} />
+              {banners?.map((banner, i) => (
+                <BannerPortalverseWrapper key={i} data={banner} />
               ))}
             </section>
           </Fragment>
