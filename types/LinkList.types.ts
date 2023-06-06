@@ -1,10 +1,10 @@
 import { LinkComponentConfig } from "./LinkListComponentS";
 
-export type LinkListConfig = {
+export type LinkListconfig = {
   links: Array<LinkComponentConfig>
   title: string;
 }
 
 export type LinkListData = {
-  data: LinkListConfig
+  data: LinkListconfig
 }

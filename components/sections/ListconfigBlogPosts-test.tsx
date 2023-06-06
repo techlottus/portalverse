@@ -1,9 +1,9 @@
 import { useRouter } from "next/router";
 import Container from "@/layouts/Container.layout";
 import BlogPostCardWrapper from "@/components/BlogPostCardWrapper";
-import type { ListConfigData } from "@/utils/strapi/sections/Listconfig";
+import type { ListconfigData } from "@/utils/strapi/sections/Listconfig";
 
-const ListConfigBlogPosts = (props: ListConfigData) => {
+const ListconfigBlogPosts = (props: ListconfigData) => {
   const { title, relatesto, data } = props;
   const router = useRouter();
 
@@ -51,4 +51,4 @@ const ListConfigBlogPosts = (props: ListConfigData) => {
   );
 };
 
-export default ListConfigBlogPosts;
+export default ListconfigBlogPosts;

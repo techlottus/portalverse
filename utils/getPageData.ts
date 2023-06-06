@@ -55,7 +55,7 @@ const formatBlogPostsPodcastSection = async (
   return section;
 };
 
-const formatListConfigSection = async (section: ListconfigSection) => {
+const formatListconfigSection = async (section: ListconfigSection) => {
   switch (section?.relatesto) {
     case "blogentries": {
 
@@ -102,7 +102,7 @@ const formatPageData = async (data: PageResponse): Promise<PageResponse> => {
           return formattedData;
         }
         case "ComponentSectionsListconfig": {
-          const formattedData = await formatListConfigSection(section);
+          const formattedData = await formatListconfigSection(section);
           return formattedData;
         }
         default:

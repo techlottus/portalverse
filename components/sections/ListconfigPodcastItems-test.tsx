@@ -5,7 +5,7 @@ import Spotify from "@/old-components/Spotify";
 import type { ListconfigSection } from "@/utils/strapi/sections/Listconfig";
 import type { PodcastEpisode } from "@/utils/getPodcastEpisodes";
 
-const ListConfigPodcastItems = (props: ListconfigSection) => {
+const ListconfigPodcastItems = (props: ListconfigSection) => {
   const { title, relatesto, data } = props;
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -67,4 +67,4 @@ const ListConfigPodcastItems = (props: ListconfigSection) => {
   );
 };
 
-export default ListConfigPodcastItems;
+export default ListconfigPodcastItems;

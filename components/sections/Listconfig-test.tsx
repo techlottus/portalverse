@@ -1,5 +1,5 @@
-import ListconfigBlogPosts from "@/components/sections/ListconfigBlogPosts";
-import ListconfigPodcastItems from "@/components/sections/ListconfigPodcastItems";
+import ListconfigBlogPosts from "@/components/sections/ListconfigBlogPosts-test";
+import ListconfigPodcastItems from "@/components/sections/ListconfigPodcastItems-test";
 import type { ListconfigSection } from "@/utils/strapi/sections/Listconfig";
 
 const Listconfig = (props: ListconfigSection) => {

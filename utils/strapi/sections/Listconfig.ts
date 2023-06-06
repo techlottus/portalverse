@@ -22,9 +22,9 @@ type Type =
       data?: Array<PodcastEpisode>;
     };
 
-export type ListConfigData = Base & Type;
+export type ListconfigData = Base & Type;
 
-export type ListconfigSection = ListConfigData & {
+export type ListconfigSection = ListconfigData & {
   type: "ComponentSectionsListconfig";
 };
 
