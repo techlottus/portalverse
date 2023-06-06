@@ -1,14 +1,28 @@
-import { BlogPost } from "@/utils/getBlogPosts";
-import { PodcastEpisode } from "@/utils/getPodcastEpisodes";
+import type { BlogPost } from "@/utils/getBlogPosts";
+import type { PodcastEpisode } from "@/utils/getPodcastEpisodes";
 
+type BlogEntriesData = {
+  blogPageSlug: string;
+  blogPosts: Array<BlogPost>;
+};
 
-export type ListConfigData = {
+type Base = {
   title: string;
-  relatesto: "blogentries" | "podcasts"; // TODO: Add or remove pages & fqa
   maxentries: number;
   sortdate: "latest" | "earliest";
-  data?: Array<BlogPost> | Array<PodcastEpisode>;
 }
+
+type Type =
+  | {
+      relatesto: "blogentries";
+      data?: BlogEntriesData;
+    }
+  | {
+      relatesto: "podcasts";
+      data?: Array<PodcastEpisode>;
+    };
+
+export type ListConfigData = Base & Type;
 
 export type ListconfigSection = ListConfigData & {
   type: "ComponentSectionsListconfig";
