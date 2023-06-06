@@ -1,20 +1,33 @@
 import { FC, memo } from "react" 
-import cn from "classnames"
+import Aspect from "@/components/Aspect"
 import BannerWrapperData from "@/types/BannerWrapper.types"
 import Banner from "@/old-components/Banner"
 import Button from "@/old-components/Button/Button"
 import RichtText from "@/old-components/Richtext/Richtext"
 import Image from "@/old-components/Image"
+import cn from "classnames"
 
 const BannerWrapper: FC<BannerWrapperData> = memo(({ data: { urlImage, title, subtitle,description, action, overlayDark, overlayWhite }, classNames, typeBanner="banner", banner, font = "light", onBtn}: BannerWrapperData) => {
   return <>
     {
       typeBanner === "sm"
         ? <>
-        <div className={cn("w-full h-full relative flex flex-col grow aspect-2/1")}>
-          <Image classNames="w-t:hidden w-p:hidden w-full h-full absolute z-1 aspect-4/3" alt="image" src={urlImage.desktop} />
-          <Image classNames="w-d:hidden w-t:hidden w-full h-full absolute z-1 aspect-4/3"  alt="image" src={urlImage.mobile}/>
-          <Image classNames="w-d:hidden w-p:hidden w-full h-full absolute z-1 aspect-4/3"  alt="image" src={urlImage.mobile}/>
+        <div className={cn("w-full h-full relative flex flex-col grow")}>
+          <div className="w-t:hidden w-p:hidden">
+            <Aspect ratio="4/3">
+              <Image classNames="w-full h-full" classNamesImg="w-full h-full object-cover" alt="image" src={urlImage.desktop} />
+            </Aspect>
+          </div>
+          <div className="w-d:hidden w-t:hidden">
+            <Aspect ratio="4/3">
+              <Image classNames="w-full h-full" classNamesImg="w-full h-full object-cover" alt="image" src={urlImage.mobile}/>
+            </Aspect>
+          </div>
+          <div className="w-d:hidden w-p:hidden">
+            <Aspect ratio="4/3">
+              <Image classNames="w-full h-full" classNamesImg="w-full h-full object-cover" alt="image" src={urlImage.mobile}/>
+            </Aspect>
+          </div>
           <div className={cn("absolute w-full h-full z-10 p-6", classNames, {
             "text-white": font === "light",
             "text-black": font === "dark" ,
