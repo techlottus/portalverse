@@ -1,17 +1,17 @@
-import ListConfigBlogPosts from "@/components/sections/ListConfigBlogPosts";
-import ListConfigPodcastItems from "@/components/sections/ListConfigPodcastItems";
+import ListconfigBlogPosts from "@/components/sections/ListconfigBlogPosts";
+import ListconfigPodcastItems from "@/components/sections/ListconfigPodcastItems";
 import type { ListconfigSection } from "@/utils/strapi/sections/Listconfig";
 
-const ListConfig = (props: ListconfigSection) => {
+const Listconfig = (props: ListconfigSection) => {
   const { relatesto } = props;
   switch (relatesto) {
     case "blogentries":
-      return <ListConfigBlogPosts {...props} />;
+      return <ListconfigBlogPosts {...props} />;
     case "podcasts":
-      return <ListConfigPodcastItems {...props} />;
+      return <ListconfigPodcastItems {...props} />;
     default:
       return null;
   }
 };
 
-export default ListConfig;
+export default Listconfig;
