@@ -1,17 +1,16 @@
-import Container from "@/layouts/Container.layout";
-import { BlogPost } from "@/utils/getBlogPosts";
-import { ListconfigSection } from "@/utils/strapi/sections/Listconfig";
 import { useRouter } from "next/router";
-import React from "react";
-import BlogPostCardWrapper from "../BlogPostCardWrapper";
+import Container from "@/layouts/Container.layout";
+import BlogPostCardWrapper from "@/components/BlogPostCardWrapper";
+import type { ListConfigData } from "@/utils/strapi/sections/Listconfig";
 
-const ListConfigBlogPosts = (props: ListconfigSection) => {
+const ListConfigBlogPosts = (props: ListConfigData) => {
   const { title, relatesto, data } = props;
   const router = useRouter();
 
   if (relatesto !== "blogentries") return null;
 
-  const blogPosts = data as Array<BlogPost>;
+  const blogPosts = data?.blogPosts || [];
+  const blogPageSlug = data?.blogPageSlug;
 
   return (
     <section>
@@ -29,22 +28,20 @@ const ListConfigBlogPosts = (props: ListconfigSection) => {
           {
             blogPosts?.length > 0
               ? <div className="grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
-                  {blogPosts?.map((item: any, i: number) => (
-                    <div key={`section-blog-${i}`}>
-                      <BlogPostCardWrapper
-                        onClick={() =>
-                          router.push(`${router.pathname}/${item.attributes.slug}`)
-                        }
-                        data={{
-                          ...item,
-                          linkIcon: "",
-                          linkText: "",
-                          type: "vertical",
-                          wrapper: true,
-                        }}
-                      />
-                    </div>
-                  ))}
+                  {
+                    blogPosts?.map((blogPost, i) => (
+                      <div key={`section-blog-${i}`}>
+                        <BlogPostCardWrapper
+                          onClick={() =>
+                            router.push(`${blogPageSlug}/${blogPost.attributes.slug}`)
+                          }
+                          data={{
+                            ...blogPost,
+                          }}
+                        />
+                      </div>
+                    ))
+                  }
                 </div>
               : null
           }

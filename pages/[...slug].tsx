@@ -1,19 +1,16 @@
-import Head from "next/head";
 import { Fragment } from "react";
 import HeaderFooterLayout from "@/layouts/HeaderFooter.layout";
-import ContentGenerator from "@/utils/ContentGenerator";
+import BlogEntryPage from "@/components/BlogEntryPageContent";
+import DynamicPageContent from "@/components/DynamicPageContent";
+import getBlogEntryPageData from "@/utils/getBlogEntryPageData";
+import getBlogEntryBySlug from "@/utils/getBlogEntryBySlug";
+import getBlogPosts from "@/utils/getBlogPosts";
 import getPagesData from "@/utils/getPagesData";
 import { getPageBySlug } from "@/utils/strapi";
 import { isValidPath, normalizePath } from "@/utils/routes";
 import type { ReactElement } from "react";
+import type { BlogEntryPageEntity } from "@/utils/getBlogEntryPageData";
 import type { PageEntity } from "@/utils/getPageData";
-import getBlogEntryPageData, {
-  BlogEntryPageEntity,
-} from "@/utils/getBlogEntryPageData";
-import getBlogPosts from "@/utils/getBlogPosts";
-import getBlogEntryBySlug from "@/utils/getBlogEntryBySlug";
-import BlogEntryPage from "@/components/BlogEntryPageContent";
-import DynamicPageContent from "@/components/DynamicPageContent";
 
 const Page = (props: { data: PageEntity | BlogEntryPageEntity }) => {
   
@@ -53,7 +50,7 @@ export async function getStaticPaths() {
    */
   const blogEntryPageData = await getBlogEntryPageData();
   const blogEntryParentSlug = normalizePath(
-    blogEntryPageData?.blogEntryPage?.data?.attributes?.slug
+    blogEntryPageData?.data?.attributes?.slug
   );
 
   const blogPostsData = await getBlogPosts({ pageSize: 100 });
@@ -84,24 +81,22 @@ export async function getStaticProps(context: any) {
 
   const blogEntryPageData = await getBlogEntryPageData();
   const blogEntryParentSlug = normalizePath(
-    blogEntryPageData?.blogEntryPage?.data?.attributes?.slug
+    blogEntryPageData?.data?.attributes?.slug
   );
 
-  const isBlogEntry = normalizePath(slug?.join("/"))?.includes(
-    blogEntryParentSlug
-  );
+  /**
+   * Blog Entry pages need to be handled separately
+   */
+  const isBlogEntry = normalizePath(slug?.join("/"))?.includes(blogEntryParentSlug) && normalizePath(slug?.join("/")) !== normalizePath(blogEntryParentSlug);
 
   if (isBlogEntry) {
-    console.log("inside getstaticprops else");
     const blogEntrySlug = slug?.[slug?.length - 1];
     const blogEntryData = await getBlogEntryBySlug(blogEntrySlug);
-    blogEntryPageData.blogEntryPage.data.attributes.blogPost = {
-      ...blogEntryData,
-    };
+    blogEntryPageData.data.attributes.blogPost = { ...blogEntryData };
 
     return {
       props: {
-        data: { ...blogEntryPageData?.blogEntryPage },
+        data: { ...blogEntryPageData },
       },
     };
   } else {
