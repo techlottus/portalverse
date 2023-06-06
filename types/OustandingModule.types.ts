@@ -3,7 +3,7 @@ export type OustandingModuleConfig = {
   title?: string;
   text: string;
   backgroundColor?: string;
-  direction: string;
+  direction?: string;
 }
 
 export type Image = {
