@@ -1,9 +1,11 @@
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
-import { ComponentSection, SECTIONS } from "@/utils/strapi/queries";
-import getBlogPosts from "./getBlogPosts";
-import getPodcastEpisodes from "./getPodcastEpisodes";
-import { BlogPostsPodcastSection } from "./strapi/sections/BlogPostsPodcast";
-import { ListconfigSection } from "./strapi/sections/Listconfig";
+import { SECTIONS } from "@/utils/strapi/queries";
+import getBlogEntryPageData from "@/utils/getBlogEntryPageData";
+import getBlogPosts from "@/utils/getBlogPosts";
+import getPodcastEpisodes from "@/utils/getPodcastEpisodes";
+import type { BlogPostsPodcastSection } from "@/utils/strapi/sections/BlogPostsPodcast";
+import type { ComponentSection } from "@/utils/strapi/queries";
+import type { ListconfigSection } from "@/utils/strapi/sections/Listconfig";
 
 type PageVariables = {
   id: number;
@@ -36,6 +38,8 @@ const formatBlogPostsPodcastSection = async (
       "BlogPostsPodcastSection must have its relatesto value set to 'blogentries'"
     );
 
+  const blogEntryPage = await getBlogEntryPageData();
+
   const blogPostsData = await getBlogPosts({
     pageSize: blogPostsConfig?.maxentries,
     sort:
@@ -44,21 +48,30 @@ const formatBlogPostsPodcastSection = async (
         : "publication_date:asc",
   });
 
-  blogPostsConfig.data = blogPostsData?.blogPosts?.data;
+  blogPostsConfig.data = {
+    blogPageSlug: blogEntryPage?.data?.attributes?.slug,
+    blogPosts: blogPostsData?.blogPosts?.data,
+  };
   return section;
 };
 
 const formatListConfigSection = async (section: ListconfigSection) => {
   switch (section?.relatesto) {
     case "blogentries": {
-      const blogPosts = await getBlogPosts({
+
+      const blogEntryPage = await getBlogEntryPageData();
+
+      const blogPostsData = await getBlogPosts({
         pageSize: section?.maxentries,
         sort:
           section?.sortdate === "latest"
             ? "publication_date:desc"
             : "publication_date:asc",
       });
-      section.data = blogPosts?.blogPosts?.data;
+
+      const blogPosts = blogPostsData?.blogPosts?.data;
+
+      section.data = { blogPageSlug: blogEntryPage?.data?.attributes?.slug, blogPosts };
       break;
     }
     case "podcasts": {

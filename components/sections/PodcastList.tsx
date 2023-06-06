@@ -1,7 +1,6 @@
 import Container from "@/layouts/Container.layout";
 import Spotify from "@/old-components/Spotify";
-import { PodcastListSection } from "@/utils/strapi/sections/PodcastList";
-import React from "react";
+import type { PodcastListSection } from "@/utils/strapi/sections/PodcastList";
 
 const PodcastList = (props: PodcastListSection) => {
   const { title, podcastItems } = props;

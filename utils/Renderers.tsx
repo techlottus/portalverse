@@ -8,10 +8,10 @@ import Leaderboard from "@/components/sections/Leaderboard";
 import LinkList from "@/components/sections/LinkList";
 import ListConfig from "@/components/sections/ListConfig";
 import Paragraph from "@/components/Paragraph";
+import PodcastList from "@/components/sections/PodcastList";
 import RichTextImage from "@/components/sections/RichTextImage";
 import TextContent from "@/components/sections/TextContent";
 import type { FC } from "react";
-import PodcastList from "@/components/sections/PodcastList";
 
 type Renderer = {
   [key: string]: FC<any>;

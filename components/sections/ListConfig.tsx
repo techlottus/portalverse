@@ -1,7 +1,6 @@
-import { ListconfigSection } from "@/utils/strapi/sections/Listconfig";
-import React from "react";
-import ListConfigBlogPosts from "./ListConfigBlogPosts";
-import ListConfigPodcastItems from "./ListConfigPodcastItems";
+import ListConfigBlogPosts from "@/components/sections/ListConfigBlogPosts";
+import ListConfigPodcastItems from "@/components/sections/ListConfigPodcastItems";
+import type { ListconfigSection } from "@/utils/strapi/sections/Listconfig";
 
 const ListConfig = (props: ListconfigSection) => {
   const { relatesto } = props;

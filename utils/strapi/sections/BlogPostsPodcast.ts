@@ -1,5 +1,5 @@
-import { BannerData } from "./Banner";
-import { ListConfigData } from "./Listconfig";
+import type { BannerData } from "@/utils/strapi/sections/Banner";
+import type { ListConfigData } from "@/utils/strapi/sections/Listconfig";
 
 type PodcastItemType = "playlist" | "episode" | "album" | "artist" | "track";
 type PodcastItemFormat = "compact" | "normal";

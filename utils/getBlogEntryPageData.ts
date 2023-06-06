@@ -1,7 +1,7 @@
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
-import { ComponentSection } from "@/utils/strapi/queries";
-import { BlogPost } from "./getBlogPosts";
-import { BANNER, BannerSection } from "./strapi/sections/Banner";
+import { BANNER } from "@/utils/strapi/sections/Banner";
+import type { BlogPost } from "@/utils/getBlogPosts";
+import type { BannerSection } from "@/utils/strapi/sections/Banner";
 
 type BlogEntryPageComponentSections = Array<BannerSection>;
 
@@ -21,10 +21,8 @@ export type BlogEntryPageResponse = {
 };
 
 const getBlogEntryPageData = async () => {
-  const pageData = await fetchStrapiGraphQL<BlogEntryPageResponse>(
-    BLOG_ENTRY_PAGE
-  );
-  return pageData;
+  const pageData = await fetchStrapiGraphQL<BlogEntryPageResponse>(BLOG_ENTRY_PAGE);
+  return pageData?.blogEntryPage;
 };
 
 const BLOG_ENTRY_PAGE = `
