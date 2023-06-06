@@ -224,13 +224,18 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
                     </p>
                     {
                       !!item?.action?.title
-                        ? 
-                        <Button
-                          darkOutlined={item?.contentVariant === "light"}
-                          dark={item?.contentVariant === "dark"}
-                          data={{ ...item.action }}
-                          onClick={() => router.push(`${item.action.redirect}`)}
-                        />
+                        ? <div className={cn("w-full flex", {
+                            ["justify-center"]: item?.textPosition === "center_top" || item?.textPosition === "center" || item?.textPosition === "center_bottom",
+                            ["justify-start"]: item?.textPosition === "left_top" || item?.textPosition === "left_bottom",
+                            ["justify-end"]: item?.textPosition === "right_top" || item?.textPosition === "right_bottom",
+                          })}>
+                            <Button
+                              darkOutlined={item?.contentVariant === "light"}
+                              dark={item?.contentVariant === "dark"}
+                              data={{ ...item.action }}
+                              onClick={() => router.push(`${item.action.redirect}`)}
+                            />
+                          </div>
                         : null
                     }
                   </div>
