@@ -6,7 +6,7 @@ import FAQ from "@/components/sections/FAQ";
 import HeroSlider from "@/components/sections/HeroSlider";
 import Leaderboard from "@/components/sections/Leaderboard";
 import LinkList from "@/components/sections/LinkList";
-import Listconfig from "@/components/sections/Listconfig-test";
+import Listconfig from "@/components/sections/Listconfig";
 import Paragraph from "@/components/Paragraph";
 import PodcastList from "@/components/sections/PodcastList";
 import RichTextImage from "@/components/sections/RichTextImage";
