@@ -1,5 +1,5 @@
-import { StrapiImage } from "@/types/strapi/common";
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
+import type { StrapiImage } from "@/types/strapi/common";
 
 export type BlogPostsVariables = {
   page?: number;

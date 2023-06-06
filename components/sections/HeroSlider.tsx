@@ -1,9 +1,8 @@
 import Container from "@/layouts/Container.layout";
-import { HeroSliderSection } from "@/utils/strapi/sections/HeroSlider";
-import SliderPortalverseWrapper from "../SliderPortalverseWrapper";
+import SliderPortalverseWrapper from "@/components/SliderPortalverseWrapper";
+import type { HeroSliderSection } from "@/utils/strapi/sections/HeroSlider";
 
 const HeroSlider = (props: HeroSliderSection) => {
-  console.log("props", props);
   return (
     <section>
       <Container classNames="w-p:!p-0 w-t:!p-0">

@@ -1,7 +1,7 @@
+import { useRouter } from "next/router";
 import Container from "@/layouts/Container.layout";
 import BannerPortalverseWrapper from "@/components/BannerPortalverseWrapper";
 import type { BannerSection } from "@/utils/strapi/sections/Banner";
-import { useRouter } from "next/router";
 
 const Banner = (props: BannerSection) => {
   const { ctaText, ctaUrl } = props;
