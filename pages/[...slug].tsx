@@ -63,7 +63,9 @@ export async function getStaticPaths() {
         ?.filter(isValidPath)
     : [];
 
-  const allPagesPaths = [...dynamicPagesPaths, ...blogEntriesPaths];
+  // TODO: Uncomment when blog pages can be handled from Strapi and blog pages files can be deleted from the project.
+  // const allPagesPaths = [...dynamicPagesPaths, ...blogEntriesPaths];
+  const allPagesPaths = [...dynamicPagesPaths];
 
   return {
     paths: allPagesPaths?.map((path) => ({
