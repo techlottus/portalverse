@@ -10,7 +10,7 @@
       "nombre": "Bachillerato Intensivo Semiescolarizado",
       "modalidad": ["Presencial"],
       "areaConocimiento": ["Educación Media"],
-      "campus": ["Zapopan", "Lázaro Cárdenas", "Pedro Moreno"],
+      "campus": ["Zapopan", "Lázaro Cárdenas", "Pedro Moreno", "Río Nilo"],
       "nivel": ["Bachillerato"],
       "image": {
         "src": "",
@@ -20,7 +20,9 @@
         "Presencial": { 
           "Lázaro Cárdenas": "Bachillerato_Intensivo_Semiescolarizado_ce4f0008e1.pdf", 
           "Pedro Moreno": "Bachillerato_Intensivo_Semiescolarizado_ce4f0008e1.pdf",  
-          "Zapopan": "Bachillerato_Intensivo_Semiescolarizado_ce4f0008e1.pdf"
+          "Zapopan": "Bachillerato_Intensivo_Semiescolarizado_ce4f0008e1.pdf",
+          "Río Nilo": "Bachillerato_Intensivo_Semiescolarizado_ce4f0008e1.pdf"
+
         }
       }
     }

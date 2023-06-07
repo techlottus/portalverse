@@ -10,7 +10,7 @@
       "nombre": "Licenciatura en Comunicación",
       "modalidad": ["Presencial","Online"],
       "areaConocimiento": ["Ciencias sociales"],
-      "campus": ["Américas", "Campus Washington", "Río Nilo", "Zapopan", "Lázaro Cárdenas"],
+      "campus": ["Campus Washington", "Zapopan"],
       "nivel": ["Licenciatura"],
       "image": {
         "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_comunicacion_desk_fc3b6730bf.jpg",
@@ -21,8 +21,7 @@
           "Américas": "Licenciatura_en_Comunicacion_sep_Presencial_3586e6deae.pdf", 
           "Campus Washington": "Licenciatura_en_Comunicacion_sep_Presencial_3586e6deae.pdf", 
           "Río Nilo": "Licenciatura_en_Comunicacion_sep_Presencial_3586e6deae.pdf", 
-          "Zapopan": "Licenciatura_en_Comunicacion_sep_Presencial_3586e6deae.pdf", 
-          "Lázaro Cárdenas": "Licenciatura_en_Comunicacion_sep_Presencial_3586e6deae.pdf"
+          "Zapopan": "Licenciatura_en_Comunicacion_sep_Presencial_3586e6deae.pdf"
  
         },
         "Online": "Lic_en_Comunicacion_Online_88928f6de2.pdf"

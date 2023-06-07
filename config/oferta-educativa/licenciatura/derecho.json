@@ -10,7 +10,7 @@
         "nombre": "Licenciatura en Derecho",
         "modalidad": ["Presencial", "Online", "Flex"],
         "areaConocimiento": ["Negocios y Empresariales"],
-        "campus": ["Américas", "Campus Washington", "Río Nilo", "Tlajomulco", "Zapopan"],
+        "campus": ["Américas", "Campus Washington", "Río Nilo", "Tlajomulco", "Zapopan", "Lázaro Cárdenas"],
         "nivel": ["Licenciatura"],
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_derecho_desk_f435630e68.jpg",
@@ -22,7 +22,9 @@
             "Campus Washington": "Lic_derecho_sep_Presencial_5942480c77.pdf", 
             "Río Nilo": "Lic_derecho_sep_Presencial_5942480c77.pdf", 
             "Tlajomulco": "Lic_derecho_sep_Presencial_5942480c77.pdf", 
-            "Zapopan": "Lic_derecho_sep_Presencial_5942480c77.pdf"
+            "Zapopan": "Lic_derecho_sep_Presencial_5942480c77.pdf",
+            "Lázaro Cárdenas": "Lic_derecho_sep_Presencial_5942480c77.pdf"
+
           },
           "Online": "Lic_en_Derecho_Online_1389031b46.pdf",
           "Flex": "Lic_en_Derecho_Flex_1311df1224.pdf"
