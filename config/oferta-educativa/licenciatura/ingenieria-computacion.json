@@ -19,9 +19,6 @@
       "curriculum": {
         "PresencialSemestral": {
             "Olímpica": "Lic_en_Ing_en_Computacion_Presencial_6621070a51.pdf"
-        },
-        "PresencialCuatrimestral": {
-            "Olímpica": "Lic_en_Ing_en_computacion_SEP_cd3cfc4acd.pdf"
         }
       }
     }
@@ -41,52 +38,6 @@
         "items": [
           {
             "label": "Presencial Semestral",
-            "icons": { "primary": "", "duplicate": false },
-            "disabled": false,
-            "content": {
-              "cards": [
-                {
-                  "image": {
-                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png",
-                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_ingreso_desk_c4b16d543a.png"
-                  },
-                  "title": "Perfil de ingreso",
-                  "text": "El aspirante de la ingeniería en computación deberá tener:\n\n• Interés por resolver problemas, trabajar con máquinas y herramientas, la física y las matemáticas, además de los métodos de ingeniería y sistemas.\n\n• Gusto por el trabajo con máquinas y herramientas.\n\n• Interés por las ciencias exactas, las dimensiones y representaciones gráficas, inclinación por el conocimiento técnico.\n\n• Capacidad de análisis y síntesis.\n\n• Creatividad.\n\n• Criterio y razonamiento lógico Matemático.\n\n• Preferencia por la investigación científica.",
-                  "backgroundColor": "#1B2D68"
-                },
-                {
-                  "image": {
-                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png",
-                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_perfil_egreso_desk_e9a163d219.png"
-                  },
-                  "title": "Perfil de egreso",
-                  "text": "Profesionales capaces de diseñar, construir y operar sistemas digitales para el desarrollo y avance de la tecnología computacional. Evaluador de sistemas de software. Capacitados para proveer, construir y mantener redes de cómputo, y funcionalidad de sitios web, software y hardware.\n\n Desarrollará software de sistemas paralelos, concurrentes,  distribuidos con un alto grado de dificultad técnica.\n\n Aplicará formalismos matemáticos y metodologías de ingeniería de software en la implementación de sistemas auto adaptables, flexibles, escalables y de alto desempeño.",
-                  "backgroundColor": "#C31433"
-                },
-                {
-                  "image": {
-                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png",
-                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_campo_laboral_desk_3d38432dc1.png"
-                  },
-                  "title": "Campo Laboral",
-                  "text": "Áreas: diseño, producción, operación de sistemas basados en la programación y el hardware en los sectores privado, público, científico y comercial.  \n\nActividades: creación de modelos matemáticos, estadísticos y de simulación. Evaluación, selección e instalación de equipos de cómputo. Integración de equipos multidisciplinarios. ",
-                  "backgroundColor": "#4470B1"
-                },
-                {
-                  "image": {
-                    "desktop": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png",
-                    "mobile": "https://assets.staging.bedu.org/UTEG/superior_requsitos_admision_desk_3ebc8cb957.png"
-                  },
-                  "title": "Requisitos de admisión",
-                  "text": "<p>&bull; Acta de nacimiento original y 1 copias (se puede recibir de cualquier a&ntilde;o siempre y cuando se encuentre en buen estado).</p><p>&bull; Certificado de bachillerato original, en buen estado y 1 copia por ambos lados.</p><p>&bull; 1 copia de la CURP.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o Pasaporte.</p><p>&bull; 2 copias de Credencial Oficial IFE / INE o pasaporte del padre de familia o tutor (para menores de edad).</p><p>&bull; 2 fotograf&iacute;as tama&ntilde;o infantil blanco y negro o a color, de estudio o instant&aacute;neas.</p>",
-                  "backgroundColor": "#EEAA01"
-                }
-              ],
-              "wrapper": false
-            }
-          },
-          {
-            "label": "Presencial Cuatrimestral",
             "icons": { "primary": "", "duplicate": false },
             "disabled": false,
             "content": {
