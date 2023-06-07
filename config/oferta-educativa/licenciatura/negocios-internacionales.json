@@ -10,7 +10,7 @@
       "nombre": "Licenciatura en Negocios Internacionales",
       "modalidad": ["Presencial", "Online", "Flex"],
       "areaConocimiento": ["Negocios y Empresariales", "Económico - Adminstrativo"],
-      "campus": ["Américas", "Campus Washington", "Río Nilo", "Tlajomulco", "Zapopan"],
+      "campus": ["Américas", "Campus Washington", "Río Nilo", "Tlajomulco", "Zapopan", "Lázaro Cárdenas"],
       "nivel": ["Licenciatura"],
       "image": {
         "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_negocios_internacionales_desk_ac91bc86bc.jpg",
@@ -22,7 +22,9 @@
           "Campus Washington": "Lic_en_Negocios_Internacionales_Presencial_bbb687a02d.pdf",
           "Río Nilo": "Lic_en_Negocios_Internacionales_Presencial_bbb687a02d.pdf",
           "Tlajomulco": "Lic_en_Negocios_Internacionales_Presencial_bbb687a02d.pdf",
-          "Zapopan": "Lic_en_Negocios_Internacionales_Presencial_bbb687a02d.pdf"
+          "Zapopan": "Lic_en_Negocios_Internacionales_Presencial_bbb687a02d.pdf",
+          "Lázaro Cárdenas": "Lic_en_Negocios_Internacionales_Presencial_bbb687a02d.pdf"
+
         },
         "Online": "Lic_en_Negocios_Internacionales_Online_77e4344323.pdf",
         "Flex": "Lic_en_Negocios_Internacionales_Flex_bd08175cfd.pdf"
