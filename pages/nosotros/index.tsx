@@ -54,8 +54,8 @@ const SomosUteg: NextPageWithLayout = ({ sections, meta }: any) => {
           }} />
         </div>
       </ContentLayout>
-      <ContentFullLayout classNames="bg-[#1B2D68] text-white mt-18 w-t:mt-3 w-p:mt-3">
-        <ContentLayout classNames="w-d:my-6">
+      <ContentFullLayout classNames="bg-[#1B2D68] w-d:py-12 text-white mt-18 w-t:mt-3 w-p:mt-3">
+        <ContentLayout classNames="w-d:my-6 flex items-center">
           <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-t:mt-6 w-p:mt-6 w-d:my-auto">
             <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%]">{sections?.missionAndVission?.title}</p>
             <RichtText font="dark" classNames="w-t:hidden w-p:hidden" data={{
