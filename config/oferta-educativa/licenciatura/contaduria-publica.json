@@ -10,7 +10,7 @@
       "nombre": "Licenciatura en Contaduría Pública",
       "modalidad": ["PresencialSemestral", "PresencialCuatrimestral", "Online", "Flex"],
       "areaConocimiento": ["Negocios y Empresariales"],
-      "campus": ["Campus Washington", "Tlajomulco", "Zapopan", "Américas", "Río Nilo"],
+      "campus": ["Campus Washington", "Tlajomulco", "Zapopan", "Américas", "Río Nilo", "Lázaro Cárdenas"],
       "nivel": ["Licenciatura"],
       "image": {
         "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_contaduria_desk_9f755fe126.jpg",
@@ -27,7 +27,8 @@
             "Campus Washington": "Lic_en_Contaduria_Publlica_sep_Presencial_cd36889617.pdf",
             "Río Nilo": "Lic_en_Contaduria_Publlica_sep_Presencial_cd36889617.pdf", 
             "Tlajomulco": "Lic_en_Contaduria_Publlica_sep_Presencial_cd36889617.pdf", 
-            "Zapopan": "Lic_en_Contaduria_Publlica_sep_Presencial_cd36889617.pdf"
+            "Zapopan": "Lic_en_Contaduria_Publlica_sep_Presencial_cd36889617.pdf",
+            "Lázaro Cárdenas": "Lic_en_Contaduria_Publlica_sep_Presencial_cd36889617.pdf"
         },
         "Online": "Lic_en_Contaduria_Online_1791f07f6c.pdf",
         "Flex": "Lic_en_Contaduria_Flex_2463d992ba.pdf"

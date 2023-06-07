@@ -50,6 +50,9 @@ const formatData = (props: BannerPortalverseWrapperProps): BannerPortalverseConf
       tablet: formatStrapiImage(data?.tabletImage),
       desktop: formatStrapiImage(data?.desktopImage)
     },
+    desktopRatio: data?.desktopRatio,
+    tabletRatio: data?.tabletRatio,
+    mobileRatio: data?.mobileRatio,
     title: data?.title,
     subtitle: data?.subtitle,
     position: getTextPosition(data?.textPosition),

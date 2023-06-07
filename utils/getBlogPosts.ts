@@ -1,10 +1,10 @@
-import { StrapiImage } from "@/types/strapi/common";
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
+import type { StrapiImage } from "@/types/strapi/common";
 
 export type BlogPostsVariables = {
   page?: number;
-  pageSize: number;
-  sort: "publication_date:desc" | "publication_date:asc";
+  pageSize?: number;
+  sort?: "publication_date:desc" | "publication_date:asc";
 };
 
 const getBlogPosts = async (variables: BlogPostsVariables) => {
@@ -24,6 +24,7 @@ export type BlogPost = {
     title: string;
     abstract: string;
     slug: string;
+    body: string;
     publication_date: string;
     featured_image: StrapiImage;
   }
@@ -43,6 +44,7 @@ query BlogPosts ($page: Int, $pageSize: Int, $sort: [String]) {
         title
         abstract
         slug
+        body
         publication_date
         featured_image {
           data {

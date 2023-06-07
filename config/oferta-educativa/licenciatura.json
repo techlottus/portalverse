@@ -235,24 +235,6 @@
       "route": "trabajo-social"
     },
     {
-      "title": "Licenciatura en Administración",
-      "config": {
-        "nombre": "Licenciatura en Administración",
-        "modalidad": [
-          "Presencial"
-        ],
-        "areaConocimiento": [
-          "Negocios y Empresariales"
-        ],
-        "campus": ["Campus Washington", "Tlajomulco", "Zapopan"],
-        "image": {
-          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_administracion_desk_8b57900228.jpg",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "lic-administracion"
-    },
-    {
       "title": "Licenciatura en Negocios Internacionales",
       "config": {
         "nombre": "Licenciatura en Negocios Internacionales",
@@ -270,7 +252,8 @@
           "Campus Washington",
           "Río Nilo",
           "Tlajomulco",
-          "Zapopan"
+          "Zapopan",
+          "Lázaro Cárdenas"
         ],
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_negocios_internacionales_desk_9f8db6672d.jpg",
@@ -296,7 +279,8 @@
           "Campus Washington",
           "Río Nilo",
           "Tlajomulco",
-          "Zapopan"
+          "Zapopan", 
+          "Lázaro Cárdenas"
         ],
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_mercadotecnia_desk_4d62709a2f.jpg",
@@ -320,7 +304,7 @@
         ],
         "campus": [
           "Campus Washington",
-          "Plantel Zapopan",
+          "Zapopan",
           "Tlajomulco"
         ],
         "image": {
@@ -534,9 +518,10 @@
           "Flex"
         ],
         "areaConocimiento": [
-          "Económico - Administrativo"
+          "Económico - Administrativo",
+          "Negocios y Empresariales"
         ],
-        "campus": [],
+        "campus": ["Américas", "Campus Washington", "Río Nilo", "Zapopan", "Lázaro Cárdenas", "Tlajomulco"],
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_administracion_liderazgo_desk_c066be2d7c.jpg",
           "alt": "licenciatura"
@@ -556,11 +541,8 @@
           "Ciencias sociales"
         ],
         "campus": [
-          "Américas",
           "Campus Washington",
-          "Río Nilo",
-          "Zapopan",
-          "Lázaro Cárdenas"
+          "Zapopan"
         ],
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_comunicacion_desk_52a59f193a.jpg",
@@ -701,11 +683,7 @@
           "Negocios y Empresariales"
         ],
         "campus": [
-          "Campus Washington",
-          "Tlajomulco",
-          "Zapopan",
-          "Américas",
-          "Río Nilo"
+          "Campus Washington"
         ],
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_administracion_desk_8b57900228.jpg",
@@ -727,6 +705,7 @@
           "Negocios y Empresariales"
         ],
         "campus": [
+          "Lázaro Cárdenas",
           "Campus Washington",
           "Tlajomulco",
           "Zapopan",
@@ -777,7 +756,8 @@
           "Campus Washington",
           "Río Nilo",
           "Tlajomulco",
-          "Zapopan"
+          "Zapopan",
+          "Lázaro Cárdenas"
         ],
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_derecho_desk_a2e6bd184d.jpg",
@@ -855,6 +835,24 @@
         }
       },
       "route": "quimico-farmaceutico-biologo-proulex"
+    },
+    {
+      "title": "Licenciatura en Administración",
+      "config": {
+        "nombre": "Licenciatura en Administración",
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Negocios y Empresariales"
+        ],
+        "campus": ["Campus Washington", "Tlajomulco", "Zapopan"],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_administracion_desk_8b57900228.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "lic-administracion"
     }
   ]
 }

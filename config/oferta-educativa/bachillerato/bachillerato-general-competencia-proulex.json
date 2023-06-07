@@ -10,7 +10,7 @@
         "nombre": "Bachillerato General por Competencia con Certificación en Inglés Proulex",
         "modalidad": ["Presencial"],
         "areaConocimiento": ["Educación Media"],
-        "campus": ["Campus", "Américas", "Zapopan"],
+        "campus": ["Campus", "Américas", "Zapopan", "Río Nilo"],
         "nivel": ["Bachillerato"],
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/interior_bachillerato_proulex_desk_6c5a4934d4.jpg",
@@ -20,7 +20,9 @@
           "Presencial": {
             "Campus": "Bachillerato_General_Competencias_PROULEX_7e74610f9d.pdf", 
             "Américas": "Bachillerato_General_Competencias_PROULEX_7e74610f9d.pdf",
-            "Zapopan": "Bachillerato_General_Competencias_PROULEX_7e74610f9d.pdf"
+            "Zapopan": "Bachillerato_General_Competencias_PROULEX_7e74610f9d.pdf",
+            "Río Nilo": "Bachillerato_General_Competencias_PROULEX_7e74610f9d.pdf"
+
           }
         }
       }
