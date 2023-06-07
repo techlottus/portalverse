@@ -23,12 +23,12 @@
           "Campus Washington": "Lic_Contaduria_Semestral_Presencial_f783c20eef.pdf"
         },
         "PresencialCuatrimestral": {
-            "Américas": "Lic_en_Contaduria_Publlica_sep_Presencial_cd36889617.pdf", 
-            "Campus Washington": "Lic_en_Contaduria_Publlica_sep_Presencial_cd36889617.pdf",
-            "Río Nilo": "Lic_en_Contaduria_Publlica_sep_Presencial_cd36889617.pdf", 
-            "Tlajomulco": "Lic_en_Contaduria_Publlica_sep_Presencial_cd36889617.pdf", 
-            "Zapopan": "Lic_en_Contaduria_Publlica_sep_Presencial_cd36889617.pdf",
-            "Lázaro Cárdenas": "Lic_en_Contaduria_Publlica_sep_Presencial_cd36889617.pdf"
+            "Américas": "Tripticos_licenciatura_en_contaduria_Publica_sep_9950e6e30f.pdf", 
+            "Campus Washington": "Tripticos_licenciatura_en_contaduria_Publica_sep_9950e6e30f.pdf",
+            "Río Nilo": "Tripticos_licenciatura_en_contaduria_Publica_sep_9950e6e30f.pdf", 
+            "Tlajomulco": "Tripticos_licenciatura_en_contaduria_Publica_sep_9950e6e30f.pdf", 
+            "Zapopan": "Tripticos_licenciatura_en_contaduria_Publica_sep_9950e6e30f.pdf",
+            "Lázaro Cárdenas": "Tripticos_licenciatura_en_contaduria_Publica_sep_9950e6e30f.pdf"
         },
         "Online": "Lic_en_Contaduria_Online_1791f07f6c.pdf",
         "Flex": "Lic_en_Contaduria_Flex_2463d992ba.pdf"
@@ -38,7 +38,7 @@
   "sections": {
     "head": {
       "title": "Licenciatura en Contaduría Pública",
-      "description": "",
+      "description": "En esta licenciatura se forman profesionales que aplican eficientemente las estrategias financieras, fiscales yadministrativas dentro del marco legal.  Planean, diseñan, organizan y ejecutan las transacciones, transformacionesinternas y otros eventos en el sistema de información contable en el ámbito nacional einternacional. ",
       "image": {
         "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_contaduria_desk_9f755fe126.jpg",
         "alt": "licenciatura"
