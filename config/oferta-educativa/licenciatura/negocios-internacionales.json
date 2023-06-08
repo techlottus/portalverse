@@ -10,7 +10,7 @@
       "nombre": "Licenciatura en Negocios Internacionales",
       "modalidad": ["Presencial", "Online", "Flex"],
       "areaConocimiento": ["Negocios y Empresariales", "Económico - Adminstrativo"],
-      "campus": ["Américas", "Campus Washington", "Río Nilo", "Tlajomulco", "Zapopan"],
+      "campus": ["Américas", "Campus Washington", "Río Nilo", "Tlajomulco", "Zapopan", "Lázaro Cárdenas"],
       "nivel": ["Licenciatura"],
       "image": {
         "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_negocios_internacionales_desk_ac91bc86bc.jpg",
@@ -18,11 +18,13 @@
       },
       "curriculum": {
         "Presencial": {
-          "Américas": "Lic_en_Negocios_Internacionales_Presencial_bbb687a02d.pdf",
-          "Campus Washington": "Lic_en_Negocios_Internacionales_Presencial_bbb687a02d.pdf",
-          "Río Nilo": "Lic_en_Negocios_Internacionales_Presencial_bbb687a02d.pdf",
-          "Tlajomulco": "Lic_en_Negocios_Internacionales_Presencial_bbb687a02d.pdf",
-          "Zapopan": "Lic_en_Negocios_Internacionales_Presencial_bbb687a02d.pdf"
+          "Américas": "Triptico_lic_negocios_internacionales_sep_e373a84394.pdf",
+          "Campus Washington": "Triptico_lic_negocios_internacionales_sep_e373a84394.pdf",
+          "Río Nilo": "Triptico_lic_negocios_internacionales_sep_e373a84394.pdf",
+          "Tlajomulco": "Triptico_lic_negocios_internacionales_sep_e373a84394.pdf",
+          "Zapopan": "Triptico_lic_negocios_internacionales_sep_e373a84394.pdf",
+          "Lázaro Cárdenas": "Triptico_lic_negocios_internacionales_sep_e373a84394.pdf"
+
         },
         "Online": "Lic_en_Negocios_Internacionales_Online_77e4344323.pdf",
         "Flex": "Lic_en_Negocios_Internacionales_Flex_bd08175cfd.pdf"

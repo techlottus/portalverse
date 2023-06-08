@@ -1,54 +1,74 @@
-import Head from "next/head";
 import { Fragment } from "react";
 import HeaderFooterLayout from "@/layouts/HeaderFooter.layout";
-import ContentGenerator from "@/utils/ContentGenerator";
+import BlogEntryPage from "@/components/BlogEntryPageContent";
+import DynamicPageContent from "@/components/DynamicPageContent";
+import getBlogEntryPageData from "@/utils/getBlogEntryPageData";
+import getBlogEntryBySlug from "@/utils/getBlogEntryBySlug";
+import getBlogPosts from "@/utils/getBlogPosts";
 import getPagesData from "@/utils/getPagesData";
 import { getPageBySlug } from "@/utils/strapi";
 import { isValidPath, normalizePath } from "@/utils/routes";
 import type { ReactElement } from "react";
-import type { PageData } from "@/utils/getPageData";
+import type { BlogEntryPageEntity } from "@/utils/getBlogEntryPageData";
+import type { PageEntity } from "@/utils/getPageData";
 
-const Page = (props: { data: PageData }) => {
-  const pageBlocks = props?.data?.attributes?.sections;
+const Page = (props: { data: PageEntity | BlogEntryPageEntity }) => {
+  
+  const renderContent = () => {
+    switch (props?.data?.type) {
+      case "BlogEntryPageEntityResponse":
+        return <BlogEntryPage {...props?.data} />;
+      case "PageEntityResponse":
+        return <DynamicPageContent {...props?.data} />;
+      default:
+        return null;
+    }
+  };
 
-  return (
-    <Fragment>
-      <Head>
-        <title>{props?.data?.attributes?.title}</title>
-      </Head>
-      <div className="flex flex-col w-p:space-y-12 w-t:space-y-12 w-d:space-y-18">
-        {
-          pageBlocks?.length > 0 ?
-            <ContentGenerator
-              blocks={pageBlocks}
-            />
-            : null
-        }
-      </div>
-
-    </Fragment>
-  );
+  return <Fragment>{renderContent()}</Fragment>;
 };
 
 Page.getLayout = (page: ReactElement) => {
-  return (
-    <HeaderFooterLayout>
-      {page}
-    </HeaderFooterLayout>
-  );
+  return <HeaderFooterLayout>{page}</HeaderFooterLayout>;
 };
 
 export default Page;
 
 export async function getStaticPaths() {
+  /**
+   * Dynamic Pages
+   */
+
   const pagesData = await getPagesData();
   const pagesPaths = pagesData?.map((page) => page?.attributes?.slug);
 
   // pages with an invalid path format are filtered out and won't be generated at build time
-  const normalizedPaths = pagesPaths?.filter(isValidPath)?.map(normalizePath);
+  const dynamicPagesPaths = pagesPaths?.filter(isValidPath)?.map(normalizePath);
+
+  /**
+   * Blog Entry Pages
+   */
+  const blogEntryPageData = await getBlogEntryPageData();
+  const blogEntryParentSlug = normalizePath(
+    blogEntryPageData?.data?.attributes?.slug
+  );
+
+  const blogPostsData = await getBlogPosts({ pageSize: 100 });
+  const blogEntriesSlugs = blogPostsData?.blogPosts?.data?.map((blogPost) =>
+    normalizePath(blogPost?.attributes?.slug)
+  );
+  const blogEntriesPaths = blogEntryParentSlug
+    ? blogEntriesSlugs
+        ?.map((blogEntrySlug) => `${blogEntryParentSlug}/${blogEntrySlug}`)
+        ?.filter(isValidPath)
+    : [];
+
+  // TODO: Uncomment when blog pages can be handled from Strapi and blog pages files can be deleted from the project.
+  // const allPagesPaths = [...dynamicPagesPaths, ...blogEntriesPaths];
+  const allPagesPaths = [...dynamicPagesPaths];
 
   return {
-    paths: normalizedPaths.map((path) => ({
+    paths: allPagesPaths?.map((path) => ({
       params: { slug: path?.split("/") },
     })),
     fallback: false, // can also be true or 'blocking'
@@ -61,11 +81,33 @@ export async function getStaticProps(context: any) {
     params: { slug },
   } = context;
 
-  const pageData = await getPageBySlug(slug?.join("/"));
+  const blogEntryPageData = await getBlogEntryPageData();
+  const blogEntryParentSlug = normalizePath(
+    blogEntryPageData?.data?.attributes?.slug
+  );
 
-  return {
-    props: {
-      data: pageData,
-    },
-  };
+  /**
+   * Blog Entry pages need to be handled separately
+   */
+  const isBlogEntry = normalizePath(slug?.join("/"))?.includes(blogEntryParentSlug) && normalizePath(slug?.join("/")) !== normalizePath(blogEntryParentSlug);
+
+  if (isBlogEntry) {
+    const blogEntrySlug = slug?.[slug?.length - 1];
+    const blogEntryData = await getBlogEntryBySlug(blogEntrySlug);
+    blogEntryPageData.data.attributes.blogPost = { ...blogEntryData };
+
+    return {
+      props: {
+        data: { ...blogEntryPageData },
+      },
+    };
+  } else {
+    const pageData = await getPageBySlug(slug?.join("/"));
+
+    return {
+      props: {
+        data: pageData,
+      },
+    };
+  }
 }

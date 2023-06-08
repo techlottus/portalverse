@@ -28,7 +28,7 @@ const Home: NextPageWithLayout = ({ data: { sections, meta, strapi } }: any) => 
   const strapiSections = strapi?.sections as Array<HomeComponentSection>;
   const strapiSeo = strapi?.seo as SeoData;
 
-  const blogListConfig = findSection<ListconfigSection>(strapiSections, "ComponentSectionsListconfig");
+  const blogListconfig = findSection<ListconfigSection>(strapiSections, "ComponentSectionsListconfig");
   const blogPostsData = strapi?.blogPostsData as BlogPostsData;
 
 
@@ -103,7 +103,7 @@ const Home: NextPageWithLayout = ({ data: { sections, meta, strapi } }: any) => 
       </ContentLayout>
       <ContentLayout>
         <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mt-[72px] mt-[72px]">
-          <p className="ac-type-h3-bold-solid-poppins-desktop w-p:ac-type-h3-bold-solid-poppins-tabmob">{ blogListConfig?.title }</p>
+          <p className="ac-type-h3-bold-solid-poppins-desktop w-p:ac-type-h3-bold-solid-poppins-tabmob">{ blogListconfig?.title }</p>
         </section>
         <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mb-12 w-t:mb-6 w-p:mb-6">
           {
