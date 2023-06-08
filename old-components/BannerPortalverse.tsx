@@ -12,11 +12,9 @@ const BannerPortalverse: FC<BannerPortalverseComponentData> = memo((props: Banne
     onClick
   } = props;
 
-  const {
-    desktopRatio = "7/2",
-    tabletRatio = "7/2",
-    mobileRatio = "4/3"
-  } = data;
+  const desktopRatio = data?.desktopRatio || "7/2";
+  const tabletRatio = data?.tabletRatio || "7/2";
+  const mobileRatio = data?.mobileRatio || "4/3";
 
   return (
     <>

@@ -10,7 +10,7 @@
       "nombre": "Licenciatura en Psicología",
       "modalidad": ["Presencial", "Online", "Flex"],
       "areaConocimiento": ["Salud", "Ciencias sociales"],
-      "campus": ["Campus Washington", "Plantel Zapopan", "Tlajomulco"],
+      "campus": ["Campus Washington", "Zapopan", "Tlajomulco"],
       "nivel": ["Licenciatura"],
       "image": {
         "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_piscologia_desk_1671c43b06.jpg",
@@ -19,7 +19,7 @@
       "curriculum": {
         "Presencial": {
           "Campus Washington": "Lic_en_Psicologia_Presencial_952312256a.pdf",
-          "Plantel Zapopan": "Lic_en_Psicologia_Presencial_952312256a.pdf",
+          "Zapopan": "Lic_en_Psicologia_Presencial_952312256a.pdf",
           "Tlajomulco": "Lic_en_Psicologia_Presencial_952312256a.pdf"
         },
         "Online": "Lic_en_Psicologia_Online_37450597ad.pdf",

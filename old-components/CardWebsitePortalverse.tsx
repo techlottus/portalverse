@@ -1,20 +1,19 @@
 import { FC } from "react";
-import Image from "@/old-components/Image";
-import RichtText from "./Richtext/Richtext";
-import LinkIcons from "./LinkLottus";
 import Aspect from "@/components/Aspect";
-import type { CardWebsitePortalverseData } from "@/types/CardWebsitePortalverse.types";
+import Image from "@/old-components/Image";
+import LinkIcons from "@/old-components/LinkLottus";
+import RichtText from "@/old-components/Richtext/Richtext";
 import cn from "classnames";
+import type { CardWebsitePortalverseData } from "@/types/CardWebsitePortalverse.types";
 
 const CardWebsitePortalverse: FC<CardWebsitePortalverseData> = ({ data, classNames, onClick }: CardWebsitePortalverseData) => {
-
   return <>
     {
       data.type === "vertical"
         ? <div className={cn("rounded-b-lg hover:shadow-2xl flex flex-col h-full")}>
           <div>
             <Aspect ratio="2/1">
-              <Image classNames="w-full h-full" src={data.image} alt="image" />
+              <Image classNames="w-full h-full" classNamesImg="w-full h-full object-cover" src={data.image} alt="image" />
             </Aspect>
           </div>
           <div className={cn("px-3 flex flex-col h-full", classNames, { "border-l-[1px] border-r-[1px] border-b-[1px] rounded-b-lg": data.border, "bg-white": data.background })}>

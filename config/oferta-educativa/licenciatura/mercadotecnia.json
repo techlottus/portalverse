@@ -13,7 +13,7 @@
         "Negocios y Empresariales",
         "Económico - Administrativo"
       ],
-      "campus": ["Américas", "Campus Washington", "Río Nilo", "Tlajomulco", "Zapopan"],
+      "campus": ["Américas", "Campus Washington", "Río Nilo", "Tlajomulco", "Zapopan", "Lázaro Cárdenas"],
       "nivel": ["Licenciatura"],
       "image": {
         "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_mercadotecnia_desk_c28b0e6ba6.jpg",
@@ -21,11 +21,13 @@
       },
       "curriculum": {
         "Presencial": {
-          "Américas": "Lic_en_Mercadotecnia_Presencial_2da6ce134f.pdf",
-          "Campus Washington": "Lic_en_Mercadotecnia_Presencial_2da6ce134f.pdf",
-          "Río Nilo": "Lic_en_Mercadotecnia_Presencial_2da6ce134f.pdf",
-          "Tlajomulco": "Lic_en_Mercadotecnia_Presencial_2da6ce134f.pdf",
-          "Zapopan": "Lic_en_Mercadotecnia_Presencial_2da6ce134f.pdf"
+          "Américas": "Triptico_Lic_mercadotecnia_sep_b8f22cb31c.pdf",
+          "Campus Washington": "Triptico_Lic_mercadotecnia_sep_b8f22cb31c.pdf",
+          "Río Nilo": "Triptico_Lic_mercadotecnia_sep_b8f22cb31c.pdf",
+          "Tlajomulco": "Triptico_Lic_mercadotecnia_sep_b8f22cb31c.pdf",
+          "Zapopan": "Triptico_Lic_mercadotecnia_sep_b8f22cb31c.pdf",
+          "Lázaro Cárdenas": "Triptico_Lic_mercadotecnia_sep_b8f22cb31c.pdf"
+
         },
         "Online": "Lic_en_Mercadotecnia_Online_4a13a4cdf9.pdf"
       }

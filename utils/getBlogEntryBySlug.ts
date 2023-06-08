@@ -1,6 +1,5 @@
-import { StrapiImage } from "@/types/strapi/common";
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
-import { BlogPost } from "./getBlogPosts";
+import type { BlogPost } from "@/utils/getBlogPosts";
 
 const getBlogEntryBySlug = async (slug: string) => {
   const data = await fetchStrapiGraphQL<BlogPostsData>(BLOG_ENTRY_BY_SLUG, {
