@@ -853,6 +853,24 @@
         }
       },
       "route": "lic-administracion"
+    },
+    {
+      "title": "Licenciatura en Enfermería Internacional",
+      "config": {
+        "nombre": "Licenciatura en Enfermería Internacional",
+        "modalidad": [
+          "Presencial"
+        ],
+        "areaConocimiento": [
+          "Salud"
+        ],
+        "campus": ["Campus"],
+        "image": {
+          "src": "https://assets.staging.bedu.org/UTEG/card_enfermeria_internacional_8a3f68eb43.jpg",
+          "alt": "licenciatura"
+        }
+      },
+      "route": "enfermeria-internacional"
     }
   ]
 }
