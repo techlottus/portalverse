@@ -11,6 +11,7 @@ import Paragraph from "@/components/Paragraph";
 import PodcastList from "@/components/sections/PodcastList";
 import RichTextImage from "@/components/sections/RichTextImage";
 import TextContent from "@/components/sections/TextContent";
+import PromoLinkList from "@/components/sections/PromoLinkList";
 import type { FC } from "react";
 
 type Renderer = {
@@ -31,6 +32,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsRichTextImage: RichTextImage,
   ComponentSectionsTextContent: TextContent,
   ComponentSectionsPodcastList: PodcastList,
+  ComponentSectionsPromoLinkList: PromoLinkList,
 };
 
 export default defaultRenderers;
