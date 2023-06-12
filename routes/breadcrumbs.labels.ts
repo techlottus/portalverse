@@ -37,6 +37,7 @@ const BreadcrumbsLabels: any = {
   "modalidades-requisitos-y-reglamentos-de-titulacion": "Modalidades, Requisitos y Reglamentos de Titulación",
   "convocatorias-titulacion-comunicados": "Convocatorias de Titulación y Comunicados",
   "carta-pasante": "Carta de Pasante",
+  "aviso-de-privacidad-egresados-UTEG": "Aviso de Privacidad Encuesta Egresados UTEG",
   ...Routes["oferta-educativa"].reduce((prev: any, value: any) => {
     const {params: {programs}} = value
     const programList = programs.reduce((p:any, c:any) => {
