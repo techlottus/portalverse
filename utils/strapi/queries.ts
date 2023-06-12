@@ -10,6 +10,7 @@ import { LIST_CONFIG } from "@/utils/strapi/sections/Listconfig";
 import { PODCAST_LIST } from "@/utils/strapi/sections/PodcastList";
 import { RICH_TEXT_IMAGE } from "@/utils/strapi/sections/RichTextImage";
 import { TEXT_CONTENT } from "@/utils/strapi/sections/TextContent";
+import { PROMO_LINK_LIST } from "@/utils/strapi/sections/PromoLinkList";
 import type { AlertSection } from "@/utils/strapi/sections/Alert";
 import type { BannerSection } from "@/utils/strapi/sections/Banner";
 import type { BlogPostsPodcastSection } from "@/utils/strapi/sections/BlogPostsPodcast";
@@ -22,6 +23,7 @@ import type { ListconfigSection } from "@/utils/strapi/sections/Listconfig";
 import type { PodcastListSection } from "@/utils/strapi/sections/PodcastList";
 import type { RichTextImageSection } from "@/utils/strapi/sections/RichTextImage";
 import type { TextContentSection } from "@/utils/strapi/sections/TextContent";
+import type { PromoLinkListSection } from "@/utils/strapi/sections/PromoLinkList";
 
 export type ComponentSection =
   | AlertSection
@@ -36,6 +38,7 @@ export type ComponentSection =
   | ListconfigSection
   | PodcastListSection
   | HeroSliderSection
+  | PromoLinkListSection
 
 export const SECTIONS = `
   ${ALERT}
@@ -54,4 +57,5 @@ export const SECTIONS = `
   ${LIST_CONFIG}
   ${PODCAST_LIST}
   ${HERO_SLIDER}
+  ${PROMO_LINK_LIST}
 `;
