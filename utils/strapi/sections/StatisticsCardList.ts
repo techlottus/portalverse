@@ -1,28 +1,30 @@
-export type Card = {
+export type StatisticsCard = {
   title: string;
   body: string;
   maxNumber: number;
   prefix: string;
   suffix: string;
-  color: string;
   iconName: string;
+  color: string;
+  variant: "neutral" | "stroke" | "shadow";
 };
 
 export type StatisticsCardListSection = {
   type: "ComponentSectionsStatisticsCardList";
-  cards: Array<Card>;
+  statisticsCards: Array<StatisticsCard>;
 };
 
 export const STATISTICS_CARD_LIST = `
 ...on ComponentSectionsStatisticsCardList {
-  cards {
+  statisticsCards: cards {
     title
     body
     maxNumber
     prefix
     suffix
-    color
     iconName
+    color
+    variant
   }
 }
 `;
