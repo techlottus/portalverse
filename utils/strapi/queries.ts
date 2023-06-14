@@ -14,6 +14,7 @@ import { RICH_TEXT_IMAGE } from "@/utils/strapi/sections/RichTextImage";
 import { STATISTICS_CARD_LIST } from "@/utils/strapi/sections/StatisticsCardList";
 import { TEXT_CONTENT } from "@/utils/strapi/sections/TextContent";
 import { PROMO_LINK_LIST } from "@/utils/strapi/sections/PromoLinkList";
+import { CARD_LIST } from "@/utils/strapi/sections/CardList";
 import type { AlertSection } from "@/utils/strapi/sections/Alert";
 import type { BannerSection } from "@/utils/strapi/sections/Banner";
 import type { BlogPostsPodcastSection } from "@/utils/strapi/sections/BlogPostsPodcast";
@@ -29,11 +30,13 @@ import type { RichTextImageSection } from "@/utils/strapi/sections/RichTextImage
 import type { StatisticsCardListSection } from "@/utils/strapi/sections/StatisticsCardList";
 import type { TextContentSection } from "@/utils/strapi/sections/TextContent";
 import type { PromoLinkListSection } from "@/utils/strapi/sections/PromoLinkList";
+import type { CardListSection } from "@/utils/strapi/sections/CardList";
 
 export type ComponentSection =
   | AlertSection
   | BannerSection
   | BlogPostsPodcastSection
+  | CardListSection
   | ContactTargetListSection
   | FAQSection
   | FormVideoSection
@@ -51,6 +54,7 @@ export const SECTIONS = `
   ${ALERT}
   ${BANNER}
   ${BLOG_POSTS_PODCAST}
+  ${CARD_LIST} 
   ${CONTACT_TARGET_LIST}
   ${FAQ_SECTION}
   ${FORM_VIDEO}

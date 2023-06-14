@@ -1,0 +1,19 @@
+.card {
+  lottus-link {
+    .link-content.-disabled {
+      color: #cdcdcd;
+      cursor: not-allowed;
+      
+      &:hover {
+        .text {
+          cursor: not-allowed;
+          text-decoration: none;
+          user-select: none;
+        }
+      }
+    }
+    .link-content {
+      color: #000;
+    }
+  }
+}
