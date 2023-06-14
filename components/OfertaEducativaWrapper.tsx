@@ -44,10 +44,8 @@ const formatOverlayCardsData = (cards: Array<OverlayCard>): Array<LevelObj> => {
     // Replace fields with Strapi data
     formattedCard.url = card?.url;
     formattedCard.title = card?.title;
-    formattedCard.promo.urlImage.desktop = formatStrapiImage(
-      card?.desktopImage
-    );
-    formattedCard.promo.urlImage.mobile = formatStrapiImage(card?.mobileImage);
+    formattedCard.promo.urlImage.desktop = formatStrapiImage(card?.image)
+    formattedCard.promo.urlImage.mobile = formatStrapiImage(card?.image);
     formattedCard.promo.text = card?.title;
     formattedCard.promo.color = card?.overlayColor;
 

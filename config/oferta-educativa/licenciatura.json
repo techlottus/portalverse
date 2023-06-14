@@ -415,42 +415,6 @@
       "route": "ingenieria-computacion"
     },
     {
-      "title": "Licenciatura en Negocios Digitales",
-      "config": {
-        "nombre": "Licenciatura en Negocios Digitales",
-        "modalidad": [
-          "Online"
-        ],
-        "areaConocimiento": [
-          "Económico - Administrativo"
-        ],
-        "campus": [],
-        "image": {
-          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_negocios_digitales_desk_d5e2d5753e.jpg",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "negocios-digitales"
-    },
-    {
-      "title": "Ingeniería en Ciencia de Datos",
-      "config": {
-        "nombre": "Ingeniería en Ciencia de Datos",
-        "modalidad": [
-          "Online"
-        ],
-        "areaConocimiento": [
-          "Económico - Administrativo"
-        ],
-        "campus": [],
-        "image": {
-          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_ciencias_datos_desk_9565005ad9.jpg",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "ingenieria-ciencias-datos"
-    },
-    {
       "title": "Licenciatura en Turismo",
       "config": {
         "nombre": "Licenciatura en Turismo",
@@ -569,24 +533,6 @@
         }
       },
       "route": "diseno-grafico"
-    },
-    {
-      "title": "Licenciatura en Relaciones Internacionales",
-      "config": {
-        "nombre": "Licenciatura en Relaciones Internacionales",
-        "modalidad": [
-          "Online"
-        ],
-        "areaConocimiento": [
-          "Económico - Administrativo"
-        ],
-        "campus": [],
-        "image": {
-          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_relaciones_internacionales_desk_25858d261c.jpg",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "relaciones-internacionales"
     },
     {
       "title": "Ingeniería Civil",

@@ -1,6 +1,6 @@
 import NumbersPortalverse from "@/old-components/NumbersPortalverse/NumbersPortalverse";
 import { NumbersPortalverseData } from "@/types/NumbersPortalverse.types";
-import { Card } from "@/utils/strapi/sections/StatisticsCardList";
+import { StatisticsCard } from "@/utils/strapi/sections/StatisticsCardList";
 import { Replace } from "@/utils/typescript";
 
 const defaultCardNumberData = {
@@ -33,9 +33,9 @@ const formatData = (
   formattedCard.body = strapiData?.body;
   formattedCard.prefix = strapiData?.prefix;
   formattedCard.suffix = strapiData?.suffix;
-  formattedCard.typeShadowColor = strapiData?.boxShadowColor?.replaceAll("_","-");
-  formattedCard.isShadowColor = !!strapiData?.boxShadowColor;
-  formattedCard.icon = strapiData?.icon;
+  formattedCard.typeShadowColor = strapiData?.color;
+  formattedCard.isShadowColor = !!strapiData?.color;
+  formattedCard.icon = strapiData?.iconName;
 
   return formattedCard;
 };
@@ -43,7 +43,7 @@ const formatData = (
 type NumbersPortalverseWrapper = Replace<
   NumbersPortalverseData,
   "data",
-  Card & { classNames?: string }
+  StatisticsCard & { classNames?: string }
 >;
 
 const NumbersPortalverseWrapper = (props: NumbersPortalverseWrapper) => {

@@ -10,9 +10,9 @@ import Button from "@/old-components/Button/Button"
 import { SelectInit } from "@/old-components/fixture"
 import Link from "next/link"
 
-const StepOne: FC<any> = ({ classNames, data, image, onNext, step }: any) => {
+const StepOne: FC<any> = ({ classNames, data, image, onNext, step, config: stepOneConfig }: any) => {
 
-  const [ config, setConfig ] = useState<any>({ ...OpenFormInit.stepone });
+  const [ config, setConfig ] = useState<any>( stepOneConfig ? {...stepOneConfig} : {...OpenFormInit.stepone });
   const [ progress, setProgress ] = useState<number>(0);
   const [ infoControls, setInfoControls ] = useState<any>({
     name: "",
@@ -117,14 +117,14 @@ const StepOne: FC<any> = ({ classNames, data, image, onNext, step }: any) => {
         <h1 className="font-Nunito-Sans font-bold text-5 leading-6">{ config.title }</h1>
         <p className="font-Nunito-Sans font-normal text-[14px] leading-4">{ config.subtitle }</p>
       </div>
-      <div className={"aspect-1/1 w-p:hidden"} >
-        <Image classNamesImg="rounded-full" classNames="w-[112px] h-[112px]" src={image.src} alt={image.alt} />
+      <div className="w-p:hidden">
+        <Image classNamesImg="w-full h-full object-cover" classNames="w-[112px] h-[112px] rounded-full overflow-hidden" src={image.src} alt={image.alt} />
       </div>
     </div>
-    <div className="flex align-middle items-center">
-      <p className="mt-8 mb-6 text-[14px] leading-5 text-[#282828] font-Nunito-Sans font-normal mr-1">{  config.conditions }</p>
+    <div className="flex align-middle items-center mt-8 mb-6">
+      <p className="text-[14px] leading-5 text-[#282828] font-Nunito-Sans font-normal mr-1">{ config.conditions }</p>
       <Link href={config.privacyLink.link} passHref target={"_blank"}>
-        <p className="mt-8 mb-6 text-[14px] font-Nunito font-normal text-sm text-[#282828]">{config.privacyLink.label}</p>
+        <p className="text-[14px] font-Nunito font-normal text-sm text-[#282828] underline">{config.privacyLink.label}</p>
       </Link>
     </div>
     <div className="mb-6">
