@@ -1,11 +1,10 @@
-import { StrapiImage } from "@/types/strapi/common";
+import type { StrapiImage } from "@/types/strapi/common";
 
 export type OverlayCard = {
   title: string;
   url: string;
   overlayColor: string;
-  desktopImage: StrapiImage;
-  mobileImage: StrapiImage;
+  image: StrapiImage;
 };
 
 export type OverlayCardListSection = {
@@ -21,14 +20,7 @@ export const OVERLAY_CARD_LIST = `
     title
     url
     overlayColor
-    desktopImage {
-      data {
-        attributes {
-          url
-        }
-      }
-    }
-    mobileImage {
+    image {
       data {
         attributes {
           url
