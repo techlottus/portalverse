@@ -18,7 +18,7 @@ const getPagesData = async () => {
 
 const PAGES = `
 query Pages {
-  pages(pagination: {start: 0, limit: -1})
+  pages(pagination: {start: 0, limit: -1}) {
     data {
       id
       attributes {
