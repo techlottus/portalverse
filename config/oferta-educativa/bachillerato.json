@@ -97,21 +97,6 @@
       "route": "bachillerato-general-competencia-gastronomia"
     },
     {
-      "title": "Bachillerato Online",
-      "config": {
-        "nombre": "Bachillerato Online",
-        "modalidad": ["Presencial"],
-        "areaConocimiento": ["Media Superior"],
-        "campus": [],
-        "nivel": ["Bachillerato"],
-        "image": {
-          "src": "https://assets.staging.bedu.org/UTEG/card_bachillerato_online_desk_231abe5902.jpg",
-          "alt": "bachillerato"
-        }
-      },
-      "route": "bachillerato-online"
-    },
-    {
       "title": "Bachillerato General por Competencia con Certificación en Inglés Proulex",
       "config": {
         "nombre": "Bachillerato General por Competencia con Certificación en Inglés Proulex",
