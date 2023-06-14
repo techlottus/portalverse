@@ -7,6 +7,7 @@ import HeroSlider from "@/components/sections/HeroSlider";
 import Leaderboard from "@/components/sections/Leaderboard";
 import LinkList from "@/components/sections/LinkList";
 import Listconfig from "@/components/sections/Listconfig";
+import OverlayCardList from "@/components/sections/OverlayCardList";
 import Paragraph from "@/components/Paragraph";
 import PodcastList from "@/components/sections/PodcastList";
 import RichTextImage from "@/components/sections/RichTextImage";
@@ -28,9 +29,10 @@ const defaultRenderers: Renderer = {
   ComponentSectionsLeaderboard: Leaderboard,
   ComponentSectionsLinkList: LinkList,
   ComponentSectionsListconfig: Listconfig,
+  ComponentSectionsOverlayCardList: OverlayCardList,
+  ComponentSectionsPodcastList: PodcastList,
   ComponentSectionsRichTextImage: RichTextImage,
   ComponentSectionsTextContent: TextContent,
-  ComponentSectionsPodcastList: PodcastList,
 };
 
 export default defaultRenderers;
