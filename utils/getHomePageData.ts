@@ -1,19 +1,25 @@
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
-import { SEO, SeoData } from "@/utils/strapi/sections/SEO";
-import { BannerSection, BANNER } from "./strapi/sections/Banner";
-import { HeroSliderSection, HERO_SLIDER } from "./strapi/sections/HeroSlider";
-import { ListconfigSection, LIST_CONFIG } from "./strapi/sections/Listconfig";
-import { OverlayCardListSection, OVERLAY_CARD_LIST } from "./strapi/sections/OverlayCardList";
-import { StatisticsCardListSection, STATISTICS_CARD_LIST } from "./strapi/sections/StatisticsCardList";
+import { BANNER } from "@/utils/strapi/sections/Banner";
+import { HERO_SLIDER } from "@/utils/strapi/sections/HeroSlider";
+import { LIST_CONFIG, formatListconfigSection } from "@/utils/strapi/sections/Listconfig";
+import { OVERLAY_CARD_LIST } from "@/utils/strapi/sections/OverlayCardList";
+import { SEO } from "@/utils/strapi/sections/SEO";
+import { STATISTICS_CARD_LIST } from "@/utils/strapi/sections/StatisticsCardList";
+import type { BannerSection } from "@/utils/strapi/sections/Banner";
+import type { HeroSliderSection } from "@/utils/strapi/sections/HeroSlider";
+import type { ListconfigSection } from "@/utils/strapi/sections/Listconfig";
+import type { OverlayCardListSection } from "@/utils/strapi/sections/OverlayCardList";
+import type { SeoData } from "@/utils/strapi/sections/SEO";
+import type { StatisticsCardListSection } from "@/utils/strapi/sections/StatisticsCardList";
 
 export type HomeComponentSection =
   | BannerSection
   | HeroSliderSection
-  | OverlayCardListSection
   | ListconfigSection
-  | StatisticsCardListSection
+  | OverlayCardListSection
+  | StatisticsCardListSection;
 
-type HomePageData = {
+type HomePageResponse = {
   homePage: {
     data: {
       attributes: {
@@ -26,9 +32,32 @@ type HomePageData = {
   };
 };
 
-export const getHomePageData = async () => {
-  const data = await fetchStrapiGraphQL<HomePageData>(HOME_PAGE);
+const formatHomePageData = async (
+  data: HomePageResponse
+): Promise<HomePageResponse> => {
+  const sections = data?.homePage?.data?.attributes?.sections;
+
+  const formattedSections = await Promise.all(
+    sections?.map(async (section) => {
+      switch (section?.type) {
+        case "ComponentSectionsListconfig": {
+          const formattedData = await formatListconfigSection(section);
+          return formattedData;
+        }
+        default:
+          return section;
+      }
+    })
+  );
+
+  data.homePage.data.attributes.sections = formattedSections;
   return data;
+};
+
+export const getHomePageData = async () => {
+  const data = await fetchStrapiGraphQL<HomePageResponse>(HOME_PAGE);
+  const formattedData = await formatHomePageData(data);
+  return formattedData;
 };
 
 const HOME_PAGE_SECTIONS = `
