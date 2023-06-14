@@ -15,9 +15,9 @@ const StatisticsCardList = (props: StatisticsCardListSection) => {
                 style={{ gridTemplateColumns: "repeat(4, minmax(0, 1fr))" }}
               >
                 {
-                  cards?.map((card) => {
+                  cards?.map((card, i) => {
                     return (
-                      <div>
+                      <div key={i}>
                         <NumbersPortalverseWrapper
                           data={card}
                           classNames="p-2 justify-center"
