@@ -58,7 +58,27 @@ const getBusinessLineToFetchFrom = (businessLine: string, modality: string) => {
   }
 }
 
-const OpenForm: FC<any> = ({ classNames, image, pathThankyou, controls, data, currentStep }: any) => {
+type OpenFormConfig = {
+  title: string;
+  subtitle: string;
+  conditions: string;
+  privacyLink: { link: string; label: string };
+};
+
+type OpenForm = {
+  classNames?: string;
+  image: {
+    src: string;
+    alt: string;
+  }
+  pathThankyou: string;
+  controls?: any;
+  data?: any;
+  currentStep?: any;
+  config: OpenFormConfig
+}
+
+const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, currentStep }: OpenForm) => {
 
   const router = useRouter();
   const queryParams = router?.query;
@@ -245,6 +265,7 @@ const OpenForm: FC<any> = ({ classNames, image, pathThankyou, controls, data, cu
               </div>
             : <>
                 <StepOne
+                  config={config}
                   data={data}
                   step={30}
                   classNames={cn({ hidden: step !== 1 })}
