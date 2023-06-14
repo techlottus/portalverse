@@ -28,9 +28,9 @@ const OverlayCardList = (props: OverlayCardListSection) => {
                   })}
                 >
                   {
-                    overlayCards?.map((card) => {
+                    overlayCards?.map((card, i) => {
                       return (
-                        <div className="overlay-card">
+                        <div key={i} className="overlay-card">
                           <Aspect ratio="1/1">
                             <Link href={card?.url || "/"}>
                               <PromoLink
