@@ -33,9 +33,9 @@ const formatData = (
   formattedCard.body = strapiData?.body;
   formattedCard.prefix = strapiData?.prefix;
   formattedCard.suffix = strapiData?.suffix;
-  formattedCard.typeShadowColor = strapiData?.boxShadowColor?.replaceAll("_","-");
-  formattedCard.isShadowColor = !!strapiData?.boxShadowColor;
-  formattedCard.icon = strapiData?.icon;
+  formattedCard.typeShadowColor = strapiData?.color;
+  formattedCard.isShadowColor = !!strapiData?.color;
+  formattedCard.icon = strapiData?.iconName;
 
   return formattedCard;
 };

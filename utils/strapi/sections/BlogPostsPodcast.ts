@@ -1,3 +1,5 @@
+import getBlogEntryPageData from "@/utils/getBlogEntryPageData";
+import getBlogPosts from "@/utils/getBlogPosts";
 import type { BannerData } from "@/utils/strapi/sections/Banner";
 import type { ListconfigData } from "@/utils/strapi/sections/Listconfig";
 
@@ -81,3 +83,30 @@ export const BLOG_POSTS_PODCAST = `
   }
 }
 `;
+
+export const formatBlogPostsPodcastSection = async (
+  section: BlogPostsPodcastSection
+) => {
+  const blogPostsConfig = section?.blogPosts;
+
+  if (blogPostsConfig?.relatesto !== "blogentries")
+    throw new Error(
+      "BlogPostsPodcastSection must have its relatesto value set to 'blogentries'"
+    );
+
+  const blogEntryPage = await getBlogEntryPageData();
+
+  const blogPostsData = await getBlogPosts({
+    pageSize: blogPostsConfig?.maxentries,
+    sort:
+      blogPostsConfig?.sortdate === "latest"
+        ? "publication_date:desc"
+        : "publication_date:asc",
+  });
+
+  blogPostsConfig.data = {
+    blogPageSlug: blogEntryPage?.data?.attributes?.slug,
+    blogPosts: blogPostsData?.blogPosts?.data,
+  };
+  return section;
+};

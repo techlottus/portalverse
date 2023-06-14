@@ -21,14 +21,7 @@ export const OVERLAY_CARD_LIST = `
     title
     url
     overlayColor
-    desktopImage {
-      data {
-        attributes {
-          url
-        }
-      }
-    }
-    mobileImage {
+    image {
       data {
         attributes {
           url
