@@ -1,5 +1,5 @@
 export const isValidPath = (path: string) => {
-  return !!path.trim() && !path?.includes("//") && !path?.includes(" ");
+  return !!path?.trim() && !path?.includes("//") && !path?.includes(" ");
 };
 
 /**
