@@ -10,6 +10,7 @@ import { LIST_CONFIG } from "@/utils/strapi/sections/Listconfig";
 import { OVERLAY_CARD_LIST } from "@/utils/strapi/sections/OverlayCardList";
 import { PODCAST_LIST } from "@/utils/strapi/sections/PodcastList";
 import { RICH_TEXT_IMAGE } from "@/utils/strapi/sections/RichTextImage";
+import { STATISTICS_CARD_LIST } from "@/utils/strapi/sections/StatisticsCardList";
 import { TEXT_CONTENT } from "@/utils/strapi/sections/TextContent";
 import type { AlertSection } from "@/utils/strapi/sections/Alert";
 import type { BannerSection } from "@/utils/strapi/sections/Banner";
@@ -22,6 +23,7 @@ import type { LinkListSection } from "@/utils/strapi/sections/LinkList";
 import type { ListconfigSection } from "@/utils/strapi/sections/Listconfig";
 import type { PodcastListSection } from "@/utils/strapi/sections/PodcastList";
 import type { RichTextImageSection } from "@/utils/strapi/sections/RichTextImage";
+import type { StatisticsCardListSection } from "@/utils/strapi/sections/StatisticsCardList";
 import type { TextContentSection } from "@/utils/strapi/sections/TextContent";
 
 export type ComponentSection =
@@ -36,6 +38,7 @@ export type ComponentSection =
   | ListconfigSection
   | PodcastListSection
   | RichTextImageSection
+  | StatisticsCardListSection
   | TextContentSection
 
 export const SECTIONS = `
@@ -51,5 +54,6 @@ export const SECTIONS = `
   ${OVERLAY_CARD_LIST}
   ${PODCAST_LIST}
   ${RICH_TEXT_IMAGE}
+  ${STATISTICS_CARD_LIST}
   ${TEXT_CONTENT}
 `;

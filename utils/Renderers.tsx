@@ -11,6 +11,7 @@ import OverlayCardList from "@/components/sections/OverlayCardList";
 import Paragraph from "@/components/Paragraph";
 import PodcastList from "@/components/sections/PodcastList";
 import RichTextImage from "@/components/sections/RichTextImage";
+import StatisticsCardList from "@/components/sections/StatisticsCardList";
 import TextContent from "@/components/sections/TextContent";
 import type { FC } from "react";
 
@@ -32,6 +33,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsOverlayCardList: OverlayCardList,
   ComponentSectionsPodcastList: PodcastList,
   ComponentSectionsRichTextImage: RichTextImage,
+  ComponentSectionsStatisticsCardList: StatisticsCardList,
   ComponentSectionsTextContent: TextContent,
 };
 
