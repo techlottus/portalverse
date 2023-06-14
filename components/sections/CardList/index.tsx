@@ -32,30 +32,31 @@ const CardList: FC<CardListSection> = (props: CardListSection) => {
                     } = card;
 
                     return (
-                      <CardWebsite
-                        key={index}
-                        //@ts-ignore
-                        data={{
-                          ...card,
-                          type: "vertical",
-                          urlImage,
-                          text: cardContent,
-                          wrapper: true,
-                          //@ts-ignore
-                          linkIcon: linkText ? {
-                            text: linkText,
-                            disabled: !linkUrl,
-                            size: "medium"
-                          } : null,
-                          link: true,
-                        }}
-                        onClick={() => {
-                          if (!!linkUrl) {
-                            return window?.open(linkUrl, "_self")
-                          }
-                          return null
-                        }}
-                      />
+                      <div key={index} className="card">
+                          <CardWebsite
+                            //@ts-ignore
+                            data={{
+                              ...card,
+                              type: "vertical",
+                              urlImage,
+                              text: cardContent,
+                              wrapper: true,
+                              //@ts-ignore
+                              linkIcon: linkText ? {
+                                text: linkText,
+                                disabled: !linkUrl,
+                                size: "medium"
+                              } : null,
+                              link: true,
+                            }}
+                            onClick={() => {
+                              if (!!linkUrl) {
+                                return window?.open(linkUrl, "_self")
+                              }
+                              return null
+                            }}
+                          />
+                      </div>
                     )
                   })
                 }
