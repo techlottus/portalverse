@@ -1,6 +1,6 @@
 import NumbersPortalverse from "@/old-components/NumbersPortalverse/NumbersPortalverse";
 import { NumbersPortalverseData } from "@/types/NumbersPortalverse.types";
-import { Card } from "@/utils/strapi/sections/StatisticsCardList";
+import { StatisticsCard } from "@/utils/strapi/sections/StatisticsCardList";
 import { Replace } from "@/utils/typescript";
 
 const defaultCardNumberData = {
@@ -43,7 +43,7 @@ const formatData = (
 type NumbersPortalverseWrapper = Replace<
   NumbersPortalverseData,
   "data",
-  Card & { classNames?: string }
+  StatisticsCard & { classNames?: string }
 >;
 
 const NumbersPortalverseWrapper = (props: NumbersPortalverseWrapper) => {
