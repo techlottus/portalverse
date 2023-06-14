@@ -75,7 +75,7 @@ type OpenForm = {
   controls?: any;
   data?: any;
   currentStep?: any;
-  config: OpenFormConfig
+  config?: OpenFormConfig
 }
 
 const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, currentStep }: OpenForm) => {
