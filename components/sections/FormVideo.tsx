@@ -3,13 +3,6 @@ import Container from "@/layouts/Container.layout";
 import Video from "@/old-components/Video";
 import type { FormVideoSection } from "@/utils/strapi/sections/FormVideo";
 
-type OpenFormStepOneConfig = {
-  title: string;
-  subtitle: string;
-  conditions: string;
-  privacyLink: { link: string; label: "Aviso de privacidad" };
-};
-
 const FormVideo = (props: FormVideoSection) => {
   const {
     formTitle,
@@ -39,7 +32,7 @@ const FormVideo = (props: FormVideoSection) => {
               pathThankyou={`/thank-you`}
               image={{
                 src: formImage?.data?.attributes?.url,
-                alt: formImage?.data?.attributes?.alt || "image-person",
+                alt: formImage?.data?.attributes?.alternativeText || "image-person",
               }}
             />
           </div>
