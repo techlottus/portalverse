@@ -11,6 +11,7 @@ import Listconfig from "@/components/sections/Listconfig";
 import OverlayCardList from "@/components/sections/OverlayCardList";
 import Paragraph from "@/components/Paragraph";
 import PodcastList from "@/components/sections/PodcastList";
+import ProgramsFilter from "@/components/sections/ProgramsFilter";
 import RichTextImage from "@/components/sections/RichTextImage";
 import StatisticsCardList from "@/components/sections/StatisticsCardList";
 import TextContent from "@/components/sections/TextContent";
@@ -34,6 +35,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsListconfig: Listconfig,
   ComponentSectionsOverlayCardList: OverlayCardList,
   ComponentSectionsPodcastList: PodcastList,
+  ComponentSectionsProgramsFilter: ProgramsFilter,
   ComponentSectionsRichTextImage: RichTextImage,
   ComponentSectionsStatisticsCardList: StatisticsCardList,
   ComponentSectionsTextContent: TextContent,
