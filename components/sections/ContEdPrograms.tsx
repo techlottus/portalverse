@@ -16,19 +16,20 @@ const ContEdPrograms = (props: ContEdProgramsSection) => {
       <Container>
         <div className="flex flex-col space-y-12 w-d:space-y-18">
           {
-            categories?.map((category) => {
+            categories?.map((category, i) => {
               const categoryName = category?.attributes?.name;
               const categoryPrograms = category?.attributes?.programs?.data;
               return categoryPrograms?.length > 0
-                ? <div className="flex flex-col space-y-6">
+                ? <div key={i} className="flex flex-col space-y-6">
                     {
                       categoryName ? <h3 className="font-Poppins text-10 font-bold leading-[125%] w-t:text-8.5 w-p:text-6">{categoryName}</h3> : null
                     }
                     <div className="grid w-p:grid-cols-1 w-t:grid-cols-2 w-d:grid-cols-4 gap-6 items-stretch">
                       {
-                        categoryPrograms?.map((program) => {
+                        categoryPrograms?.map((program, i) => {
                           return (
                             <CardProgram
+                              key={i}
                               classNames="hover:shadow-15"
                               image={{
                                 src: program?.attributes?.image?.data?.attributes?.url,
