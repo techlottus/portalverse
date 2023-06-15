@@ -2,6 +2,7 @@ import Alert from "@/components/sections/Alert";
 import Banner from "@/components/sections/Banner";
 import BlogPostsPodcast from "@/components/sections/BlogPostsPodcast";
 import ContactTargetList from "@/components/sections/ContactTargetList";
+import ContEdPrograms from "@/components/sections/ContEdPrograms";
 import FAQ from "@/components/sections/FAQ";
 import FormVideo from "@/components/sections/FormVideo";
 import HeroSlider from "@/components/sections/HeroSlider";
@@ -27,6 +28,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsBanner: Banner,
   ComponentSectionsBlogPostsPodcast: BlogPostsPodcast,
   ComponentSectionsContactTargetList: ContactTargetList,
+  ComponentSectionsContEdPrograms: ContEdPrograms,
   ComponentSectionsFaqSection: FAQ,
   ComponentSectionsFormVideo: FormVideo,
   ComponentSectionsHeroSlider: HeroSlider,
