@@ -1,6 +1,7 @@
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
 import { SECTIONS } from "@/utils/strapi/queries";
 import { formatBlogPostsPodcastSection } from "@/utils/strapi/sections/BlogPostsPodcast";
+import { formatContEdProgramsSection } from "@/utils/strapi/sections/ContEdPrograms";
 import { formatListconfigSection } from "@/utils/strapi/sections/Listconfig";
 import { formatProgramsFilterSection } from "@/utils/strapi/sections/ProgramsFilter";
 import type { ComponentSection } from "@/utils/strapi/queries";
@@ -34,6 +35,10 @@ const formatPageData = async (data: PageResponse): Promise<PageResponse> => {
       switch (section?.type) {
         case "ComponentSectionsBlogPostsPodcast": {
           const formattedData = await formatBlogPostsPodcastSection(section);
+          return formattedData;
+        }
+        case "ComponentSectionsContEdPrograms": {
+          const formattedData = await formatContEdProgramsSection(section);
           return formattedData;
         }
         case "ComponentSectionsListconfig": {
