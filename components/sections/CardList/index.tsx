@@ -21,7 +21,7 @@ const CardList: FC<CardListSection> = (props: CardListSection) => {
           }
           {
             cards?.length > 0 ?
-              <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 w-d:mb-12 w-p:mb-6">
+              <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 w-t:grid-cols-2 w-p:grid-cols-1 gap-6">
                 {
                   cards?.map((card, index) => {
                     const urlImage = card?.image?.data?.attributes?.url;
