@@ -18,7 +18,7 @@ const PromoLinkList: FC<PromoLinkListSection> = (props: PromoLinkListSection) =>
           }
           {
             promoLinks?.length > 0 ?
-              <div className="w-d:col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-4 w-t:grid-cols-2 w-p:grid-cols-1 w-d:mb-12 w-p:mb-6 gap-6">
+              <div className="w-d:col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-4 w-t:grid-cols-2 w-p:grid-cols-1 gap-6">
                 {
                   promoLinks?.map((promoLink, index) => {
                     const {
