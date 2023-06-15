@@ -5,6 +5,7 @@ import RichtText from "@/old-components/Richtext/Richtext";
 import Filter from "@/old-components/Filter/Filter";
 import Image from "@/old-components/Image";
 import Aspect from "@/components/Aspect";
+import { normalizeString } from "@/utils/misc";
 import cn from "classnames";
 import type { FilterProgram, ProgramsFilterSection } from "@/utils/strapi/sections/ProgramsFilter";
 
@@ -22,6 +23,7 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
 
   const levelAttributes = props?.level?.data?.attributes;
   const levelTitle = levelAttributes?.title;
+  const levelRoute = normalizeString(levelTitle)?.toLowerCase()
 
   const programs = levelAttributes?.programs?.data;
   const sortedPrograms = programs?.slice()?.sort((a, b) => a?.attributes?.name?.localeCompare(b?.attributes?.name));
@@ -153,7 +155,7 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
                           </p>
                           <div className="w-full h-full flex justify-end pb-2 font-Nunito font-bold items-end">
                             <Link
-                              href={`/oferta-educativa/${levelTitle?.toLowerCase()}/${programAttributes?.slug}`}
+                              href={`/oferta-educativa/${levelRoute}/${programAttributes?.slug}`}
                               className="flex items-center justify-end font-Nunito font-bold"
                             >
                               <span className="mr-1">Ver más</span>
