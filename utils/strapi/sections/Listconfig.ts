@@ -55,12 +55,16 @@ export const formatListconfigSection = async (
             : "publication_date:asc",
       });
 
+      const blogPageSlug = blogEntryPage?.data?.attributes?.slug;
       const blogPosts = blogPostsData?.blogPosts?.data;
 
-      section.data = {
-        blogPageSlug: blogEntryPage?.data?.attributes?.slug,
-        blogPosts,
-      };
+      if(blogPageSlug && blogPosts) {
+        section.data = {
+          blogPageSlug: blogEntryPage?.data?.attributes?.slug,
+          blogPosts,
+        };
+      }
+
       break;
     }
     case "podcasts": {

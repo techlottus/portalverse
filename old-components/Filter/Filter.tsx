@@ -18,7 +18,7 @@ const Filter: FC<FilterComponentConfig> = memo(({ data, color = "#000", onSelect
   const changeMosaicView = () => {
     const newView = !mosaicActive;
     setMosaicActive(newView);
-    onChangeView(newView);
+    // onChangeView(newView);
   }
 
   useEffect(() => {

@@ -20,7 +20,7 @@ const BlogEntryPageContent = (props: BlogEntryPageEntity) => {
 
   const blogPostImage = blogPost?.featured_image?.data?.attributes;
   const blogPostImageUrl = blogPostImage?.url;
-  const blogPostImageAltText = blogPostImage?.alt;
+  const blogPostImageAltText = blogPostImage?.alternativeText || "";
 
   const banners = attributes?.sections;
 
