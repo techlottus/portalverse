@@ -20,7 +20,7 @@ interface FilterComponentConfig {
   data: FilterComponentData;
   color?: string;
   onSelectionItems: (filters: any) => void;
-  onChangeView: (status: boolean) => void;
+  onChangeView?: (status: boolean) => void;
 }
 
 
