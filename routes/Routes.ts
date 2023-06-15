@@ -96,7 +96,6 @@ const Routes: any = {
           { params: { "program": "quimico-farmaceutico-biologo", "nameProgram": "Licenciatura en Químico Farmacéutico Biólogo" } },
           { params: { "program": "diseno-comunicacion-grafica", "nameProgram": "Licenciatura en Diseño para la Comunicación Gráfica" } },
           { params: { "program": "ingenieria-computacion", "nameProgram": "Ingeniería en Computación" } },
-          { params: { "program": "turismo", "nameProgram": "Licenciatura en Turismo" } },
           { params: { "program": "ingenieria-desarrollo-software", "nameProgram": "Ingeniería en Desarrollo de Software" } },
           { params: { "program": "ingenieria-sistemas", "nameProgram": "Ingeniería en Sistemas" } },
           { params: { "program": "administracion-liderazgo-empresarial", "nameProgram": "Licenciatura Administración y Liderazgo Empresarial" } },
