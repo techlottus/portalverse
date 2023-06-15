@@ -1,28 +1,32 @@
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
 
-type PagesResponse = {
+export type DynamicPageData = {
+  id: number;
+  attributes: {
+    slug: string;
+    breadcrumb?: string;
+  };
+}
+
+type DynamicPagesResponse = {
   pages: {
-    data: Array<{
-      id: number;
-      attributes: {
-        slug: string;
-      };
-    }>;
+    data: Array<DynamicPageData>;
   };
 };
 
 const getPagesData = async () => {
-  const pagesData = await fetchStrapiGraphQL<PagesResponse>(PAGES);
+  const pagesData = await fetchStrapiGraphQL<DynamicPagesResponse>(DYNAMIC_PAGES);
   return pagesData?.pages?.data;
 };
 
-const PAGES = `
-query Pages {
+const DYNAMIC_PAGES = `
+query DynamicPages {
   pages(pagination: {start: 0, limit: -1}) {
     data {
       id
       attributes {
         slug
+        breadcrumb
       }
     }
   }
