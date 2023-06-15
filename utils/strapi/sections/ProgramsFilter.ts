@@ -1,4 +1,5 @@
 import { getDataPageFromJSON } from "@/utils/getDataPage";
+import { normalizeString } from "@/utils/misc";
 import parseEditorRawData from "@/utils/parseEditorRawData";
 import type { StrapiImage } from "@/types/strapi/common";
 
@@ -126,14 +127,6 @@ type StaticProgram = {
   };
   route: string;
 };
-
-/**
- * Removes accentuated characters from a string. Taken from:
- * https://stackoverflow.com/questions/70287406/how-to-replace-all-accented-characters-with-english-equivalents
- */
-const normalizeString = (string: string) => {
-  return string.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-}
 
 const formatStaticProgram = (program: StaticProgram): FilterProgram => {
   return {
