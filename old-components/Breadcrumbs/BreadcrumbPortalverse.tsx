@@ -3,12 +3,14 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 import cn from "classnames"
 import BreadcrumbsComponentData from "@/types/BreadcrumbsPortalverse.types"
-import BreadcrumbsLabels from "@/routes/breadcrumbs.labels"
+import StaticPagesBreadcrumbsLabels from "@/routes/breadcrumbs.labels"
 
-const Breadcrumbs: FC<BreadcrumbsComponentData> = ({ visible = true, classNames }: BreadcrumbsComponentData) => {
+const Breadcrumbs: FC<BreadcrumbsComponentData> = ({ visible = true, classNames, breadcrumbs = {} }: BreadcrumbsComponentData) => {
   const mainRoute = <span className="material-icons mr-1">home</span>;
   const { asPath } = useRouter();
   const [ allRoutes, setAllRoutes ] = useState<Array<string>>([]);
+
+  const breadcrumbsLabels = {...breadcrumbs, ...StaticPagesBreadcrumbsLabels};
 
   useEffect(() => {
     const routes = Array.from(asPath.split("/"));
@@ -25,7 +27,7 @@ const Breadcrumbs: FC<BreadcrumbsComponentData> = ({ visible = true, classNames 
     if(text.includes("#") && last){
       cleanText = text.split("#")[0]
     }
-    const label = !!BreadcrumbsLabels[cleanText] ? BreadcrumbsLabels[cleanText] : cleanText
+    const label = !!breadcrumbsLabels[cleanText] ? breadcrumbsLabels[cleanText] : cleanText
 
     return text === ''
       ? last

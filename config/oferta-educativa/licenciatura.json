@@ -416,24 +416,6 @@
       "route": "ingenieria-computacion"
     },
     {
-      "title": "Licenciatura en Turismo",
-      "config": {
-        "nombre": "Licenciatura en Turismo",
-        "modalidad": [
-          "Online"
-        ],
-        "areaConocimiento": [
-          "Económico - Administrativo"
-        ],
-        "campus": [],
-        "image": {
-          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_turismo_desk_7187cdfdc4.jpg",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "turismo"
-    },
-    {
       "title": "Ingeniería en Desarrollo de Software",
       "config": {
         "nombre": "Ingeniería en Desarrollo de Software",
