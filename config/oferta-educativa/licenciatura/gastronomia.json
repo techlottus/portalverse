@@ -10,7 +10,7 @@
         "nombre": "Licenciatura en Gastronomía",
         "modalidad": ["Presencial"],
         "areaConocimiento": ["Negocios y Empresariales"],
-        "campus": ["Américas", "Pedro Moreno"],
+        "campus": ["Américas", "Pedro Moreno", "Río Nilo"],
         "nivel": ["Licenciatura"],
         "image": {
           "src": "https://assets.staging.bedu.org/UTEG/interior_licenciatura_gastronomia_desk_7f119d2e76.jpg",
@@ -19,7 +19,9 @@
         "curriculum": {
           "Presencial": {
             "Américas": "Lic_en_Gastronomia_Presencial_c9df5d9192.pdf",
-            "Pedro Moreno": "Lic_en_Gastronomia_Presencial_c9df5d9192.pdf"
+            "Pedro Moreno": "Lic_en_Gastronomia_Presencial_c9df5d9192.pdf",
+            "Río Nilo": "Lic_en_Gastronomia_Presencial_c9df5d9192.pdf"
+
           }
         }
       }
