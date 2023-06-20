@@ -1,5 +1,5 @@
 {
-  "privacyLink": { "link": "https://assets.staging.bedu.org/UTEG/aviso_de_privacidad_UTEG_24_02_2022_1_9018cd9357.pdf", "label": "Aviso de privacidad" },
+  "privacyLink": { "link": "/aviso-de-privacidad", "label": "Aviso de privacidad" },
   "certifications": { "title": "Certificaciones", "certificaciones": [
     {
       "src": "https://assets.staging.bedu.org/UTEG/Global_color_badc769606.png",
