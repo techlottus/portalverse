@@ -176,7 +176,7 @@ export const formatProgramsFilterSection = async (
   
   const levelAttributes = section?.level?.data?.attributes;
 
-  const levelTitle = normalizeString(levelAttributes.title);
+  const levelTitle = normalizeString(levelAttributes?.title);
   const programsData = levelAttributes?.programs?.data;
 
   const staticProgramsData = await getDataPageFromJSON(`/oferta-educativa/${levelTitle?.toLowerCase()}.json`);
