@@ -1,4 +1,4 @@
-const Routes: any = {
+const Routes = {
   "oferta-educativa": [
     { params:
       {
