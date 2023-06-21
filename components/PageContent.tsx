@@ -1,9 +1,9 @@
 import { Fragment } from "react";
 import Head from "next/head";
 import ContentGenerator from "@/utils/ContentGenerator";
-import type { DynamicPageData } from "@/utils/getPageDataById";
+import type { PageData } from "@/utils/getPageDataById";
 
-const PageContent = (props: DynamicPageData) => {
+const PageContent = (props: PageData) => {
   const pageBlocks = props?.attributes?.sections;
 
   return (

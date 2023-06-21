@@ -7,7 +7,7 @@ import getEducationalOfferingConfig from "@/utils/getEducationalOfferingConfig";
 import getPagesInfo from "@/utils/getPagesInfo";
 import getProgramsByLevel from "@/utils/getProgramsByLevel";
 import { isValidPath, normalizePath } from "@/utils/misc";
-import type { DynamicPageData, PageEntityResponse } from "@/utils/getPageDataById";
+import type { PageData, PageEntityResponse } from "@/utils/getPageDataById";
 
 type PageType = "programDetail" | "blogEntry" | "dynamic";
 
@@ -48,7 +48,7 @@ export type ProgramDetailPage =
     }
   | {
       type: "DynamicProgramDetail";
-      data: DynamicPageData;
+      data: PageData;
     };
 
 export const getPageDataBySlug = async (slug: string) => {
@@ -117,7 +117,7 @@ export const getProgramDetailPageData = async (path: string): Promise<ProgramDet
     return {
       // TODO
       type: "DynamicProgramDetail",
-      data: {} as DynamicPageData,
+      data: {} as PageData,
     };
 
   }

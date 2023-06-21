@@ -10,7 +10,7 @@ type PageVariables = {
   id: number;
 };
 
-export type DynamicPageData = {
+export type PageData = {
   attributes: {
     title: string;
     slug: string;
@@ -21,7 +21,7 @@ export type DynamicPageData = {
 
 export type PageEntityResponse = {
   type: "PageEntityResponse";
-  data: DynamicPageData;
+  data: PageData;
 };
 
 type PageResponse = {
