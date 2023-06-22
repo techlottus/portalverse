@@ -1,6 +1,7 @@
-import { StrapiImage } from "@/types/strapi/common";
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
 import type { BannerData } from "@/utils/strapi/sections/Banner";
+import type { StrapiImage } from "@/types/strapi/common";
+
 
 
 export type ProgramDetailBachilleratoData = {

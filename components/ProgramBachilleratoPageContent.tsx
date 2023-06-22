@@ -14,8 +14,9 @@ import parseEditorRawData from "@/utils/parseEditorRawData";
 import ContentFullLayout from "@/layouts/ContentFull.layout";
 import ContentInsideLayout from "@/layouts/ContentInside.layout";
 import Banner from "@/components/sections/Banner";
-import { ProgramDetailBachilleratoData } from "@/utils/getProgramDetailBachillerato";
 import { DynamicProgramDetailData } from "@/utils/pages";
+import type { ProgramDetailBachilleratoData } from "@/utils/getProgramDetailBachillerato";
+
 
 const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
   const program = props?.program;
