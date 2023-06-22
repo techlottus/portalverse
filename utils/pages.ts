@@ -18,11 +18,11 @@ export const getPageType = async (path: string): Promise<PageType> => {
 
   const blogEntryPageData = await getBlogEntryPageData();
   const blogEntryParentSlug = normalizePath(blogEntryPageData?.data?.attributes?.slug);
-  const isBlogEntryPage = path?.includes(blogEntryParentSlug) && normalizedPath !== normalizePath(blogEntryParentSlug);
+  const isBlogEntryPage = path?.startsWith(`${blogEntryParentSlug}/`) && normalizedPath !== normalizePath(blogEntryParentSlug);
 
   const levelsConfig = await getEducationalOfferingConfig();
   const programDetailParentSlugs = levelsConfig?.map(levelConfig => normalizePath(levelConfig?.slug))
-  const isProgramDetailPage = programDetailParentSlugs?.reduce((acc, parentSlug) => {return acc || normalizedPath?.includes(parentSlug) && normalizedPath !== parentSlug;
+  const isProgramDetailPage = programDetailParentSlugs?.reduce((acc, parentSlug) => {return acc || normalizedPath?.startsWith(`${parentSlug}/`) && normalizedPath !== parentSlug;
   }, false);
 
   if(isBlogEntryPage) {
@@ -129,7 +129,7 @@ export const getProgramDetailPageData = async (path: string): Promise<ProgramDet
         program: { ...programData },
       },
     };
-    
+
   }
   
 }
