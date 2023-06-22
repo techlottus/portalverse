@@ -8,9 +8,9 @@ import getPagesInfo from "@/utils/getPagesInfo";
 import getProgramsByLevel from "@/utils/getProgramsByLevel";
 import { isValidPath, normalizePath } from "@/utils/misc";
 import getProgramBySlug from "@/utils/getProgramBySlug";
+import getProgramDetailBachillerato from "@/utils/getProgramDetailBachillerato";
 import type { PageEntityResponse } from "@/utils/getPageDataById";
 import type { ProgramData } from "@/utils/getProgramBySlug";
-import getProgramDetailBachillerato from "@/utils/getProgramDetailBachillerato";
 
 type PageType = "programDetail" | "blogEntry" | "dynamic";
 
