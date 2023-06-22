@@ -1,6 +1,6 @@
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
 
-export type DynamicPageData = {
+export type DynamicPageInfo = {
   id: number;
   attributes: {
     slug: string;
@@ -8,19 +8,19 @@ export type DynamicPageData = {
   };
 }
 
-type DynamicPagesResponse = {
+type DynamicPagesInfoResponse = {
   pages: {
-    data: Array<DynamicPageData>;
+    data: Array<DynamicPageInfo>;
   };
 };
 
-const getPagesData = async () => {
-  const pagesData = await fetchStrapiGraphQL<DynamicPagesResponse>(DYNAMIC_PAGES);
+const getPagesInfo = async () => {
+  const pagesData = await fetchStrapiGraphQL<DynamicPagesInfoResponse>(DYNAMIC_PAGES_INFO);
   return pagesData?.pages?.data;
 };
 
-const DYNAMIC_PAGES = `
-query DynamicPages {
+const DYNAMIC_PAGES_INFO = `
+query DynamicPagesInfo {
   pages(pagination: {start: 0, limit: -1}) {
     data {
       id
@@ -33,4 +33,4 @@ query DynamicPages {
 }
 `;
 
-export default getPagesData;
+export default getPagesInfo;

@@ -2,27 +2,48 @@ import { Fragment } from "react";
 import DynamicPageLayout from "@/layouts/DynamicPageLayout.layout";
 import Container from "@/layouts/Container.layout";
 import Breadcrumbs from "@/old-components/Breadcrumbs/BreadcrumbPortalverse";
-import BlogEntryPage from "@/components/BlogEntryPageContent";
-import DynamicPageContent from "@/components/DynamicPageContent";
-import getBlogEntryPageData from "@/utils/getBlogEntryPageData";
-import getBlogEntryBySlug from "@/utils/getBlogEntryBySlug";
-import getBlogPosts from "@/utils/getBlogPosts";
-import getPagesData from "@/utils/getPagesData";
-import { getPageBySlug } from "@/utils/strapi";
-import { getDynamicPagesBreadcrumbs, isValidPath, normalizePath } from "@/utils/routes";
+import BlogEntryPageContent from "@/components/BlogEntryPageContent";
+import PageContent from "@/components/PageContent";
+import DynamicProgramContent from "@/components/DynamicProgramContent";
+import StaticProgramContent from "@/components/StaticProgramContent";
+import StaticContEdProgramContent from "@/components/StaticContEdProgramContent";
+import {
+  getBlogEntryPagesPaths,
+  getPageBreadcrumb,
+  getPageDataBySlug,
+  getDynamicPagesPaths,
+  getPageType,
+  getProgramDetailPageData,
+  getProgramDetailPagesPaths,
+} from "@/utils/pages";
+import { normalizePath } from "@/utils/misc";
 import type { ReactElement } from "react";
-import type { BlogEntryPageEntity } from "@/utils/getBlogEntryPageData";
-import type { PageEntity } from "@/utils/getPageData";
+import type { BlogEntryPageEntityResponse } from "@/utils/getBlogEntryPageData";
+import type { PageEntityResponse } from "@/utils/getPageDataById";
+import type { ProgramDetailPage } from "@/utils/pages";
 
-const Page = (props: { data: PageEntity | BlogEntryPageEntity, breadcrumbs: Record<string, string> }) => {
-  const { data, breadcrumbs } = props;
+type PageProps = {
+  page: PageEntityResponse | BlogEntryPageEntityResponse | ProgramDetailPage;
+  breadcrumb: Record<string, string>;
+};
+
+const Page = (props: PageProps) => {
+  const { page, breadcrumb } = props;
+  const pageType = page?.type;
+  const pageData = page?.data;
 
   const renderContent = () => {
-    switch (data?.type) {
+    switch (pageType) {
       case "BlogEntryPageEntityResponse":
-        return <BlogEntryPage {...data} />;
+        return <BlogEntryPageContent {...pageData} />;
       case "PageEntityResponse":
-        return <DynamicPageContent {...data} />;
+        return <PageContent {...pageData} />;
+      case "StaticProgramDetail":
+        return <StaticProgramContent {...pageData} />;
+      case "StaticContinuousEducationProgramDetail":
+        return <StaticContEdProgramContent {...pageData} />;
+      case "DynamicProgramDetail":
+        return <DynamicProgramContent />;
       default:
         return null;
     }
@@ -31,12 +52,11 @@ const Page = (props: { data: PageEntity | BlogEntryPageEntity, breadcrumbs: Reco
   return (
     <Fragment>
       <Container>
-        <Breadcrumbs
-          visible
-          breadcrumbs={breadcrumbs}
-        />
+        <Breadcrumbs visible breadcrumbs={breadcrumb} />
       </Container>
-      {renderContent()}
+      {
+        renderContent()
+      }
     </Fragment>
   );
 };
@@ -48,37 +68,13 @@ Page.getLayout = (page: ReactElement) => {
 export default Page;
 
 export async function getStaticPaths() {
-  /**
-   * Dynamic Pages
-   */
-
-  const pagesData = await getPagesData();
-  const pagesPaths = pagesData?.map((page) => page?.attributes?.slug);
-
-  // pages with an invalid path format are filtered out and won't be generated at build time
-  const dynamicPagesPaths = pagesPaths?.filter(isValidPath)?.map(normalizePath);
-
-  /**
-   * Blog Entry Pages
-   */
-  const blogEntryPageData = await getBlogEntryPageData();
-  const blogEntryParentSlug = normalizePath(
-    blogEntryPageData?.data?.attributes?.slug
-  );
-
-  const blogPostsData = await getBlogPosts({ pageSize: 100 });
-  const blogEntriesSlugs = blogPostsData?.blogPosts?.data?.map((blogPost) =>
-    normalizePath(blogPost?.attributes?.slug)
-  );
-  const blogEntriesPaths = blogEntryParentSlug
-    ? blogEntriesSlugs
-        ?.map((blogEntrySlug) => `${blogEntryParentSlug}/${blogEntrySlug}`)
-        ?.filter(isValidPath)
-    : [];
+  const blogEntryPagesPaths = await getBlogEntryPagesPaths();
+  const dynamicPagesPaths = await getDynamicPagesPaths();
+  const programDetailPagesPaths = await getProgramDetailPagesPaths();
 
   // TODO: Uncomment when blog pages can be handled from Strapi and blog pages files can be deleted from the project.
   // const allPagesPaths = [...dynamicPagesPaths, ...blogEntriesPaths];
-  const allPagesPaths = [...dynamicPagesPaths];
+  const allPagesPaths = [...dynamicPagesPaths, ...programDetailPagesPaths]?.map(normalizePath);
 
   return {
     paths: allPagesPaths?.map((path) => ({
@@ -94,37 +90,46 @@ export async function getStaticProps(context: any) {
     params: { slug },
   } = context;
 
-  const blogEntryPageData = await getBlogEntryPageData();
-  const blogEntryParentSlug = normalizePath(
-    blogEntryPageData?.data?.attributes?.slug
-  );
+  const path = slug?.join("/");
+  const pageType = await getPageType(path);
 
-  /**
-   * Blog Entry pages need to be handled separately
-   */
-  const isBlogEntry = normalizePath(slug?.join("/"))?.includes(blogEntryParentSlug) && normalizePath(slug?.join("/")) !== normalizePath(blogEntryParentSlug);
+  switch (pageType) {
+    case "programDetail": {
+      const programDetailData = await getProgramDetailPageData(path);
 
-  if (isBlogEntry) {
-    const blogEntrySlug = slug?.[slug?.length - 1];
-    const blogEntryData = await getBlogEntryBySlug(blogEntrySlug);
-    blogEntryPageData.data.attributes.blogPost = { ...blogEntryData };
+      return {
+        props: {
+          page: { ...programDetailData },
+          breadcrumb: {},
+        },
+      };
+    }
+    case "blogEntry": {
+      return {
+        props: {
+          page: {},
+          breadcrumb: {},
+        },
+      };
+    }
+    case "dynamic": {
+      const pageData = await getPageDataBySlug(path);
+      const pageBreadcrumb = getPageBreadcrumb(pageData);
 
-    return {
-      props: {
-        data: { ...blogEntryPageData },
-      },
-    };
-  } else {
-    const pageData = await getPageBySlug(slug?.join("/"));
-
-    const pagesData = await getPagesData();
-    const pagesBreadcrumbs = getDynamicPagesBreadcrumbs(pagesData);
-
-    return {
-      props: {
-        data: pageData,
-        breadcrumbs: pagesBreadcrumbs
-      },
-    };
+      return {
+        props: {
+          page: { ...pageData },
+          breadcrumb: pageBreadcrumb,
+        },
+      };
+    }
+    default: {
+      return {
+        props: {
+          page: {},
+          breadcrumb: {},
+        },
+      };
+    }
   }
 }
