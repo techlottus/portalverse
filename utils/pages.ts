@@ -10,7 +10,7 @@ import { isValidPath, normalizePath } from "@/utils/misc";
 import getProgramBySlug from "@/utils/getProgramBySlug";
 import type { PageEntityResponse } from "@/utils/getPageDataById";
 import type { ProgramData } from "@/utils/getProgramBySlug";
-import getProgramDetailBachillerato from "./getProgramDetailBachillerato";
+import getProgramDetailBachillerato from "@/utils/getProgramDetailBachillerato";
 
 type PageType = "programDetail" | "blogEntry" | "dynamic";
 

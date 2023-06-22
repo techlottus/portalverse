@@ -13,7 +13,7 @@ import { ButtonInit, SelectInit } from "@/old-components/fixture";
 import parseEditorRawData from "@/utils/parseEditorRawData";
 import ContentFullLayout from "@/layouts/ContentFull.layout";
 import ContentInsideLayout from "@/layouts/ContentInside.layout";
-import Banner from "./sections/Banner";
+import Banner from "@/components/sections/Banner";
 import { ProgramDetailBachilleratoData } from "@/utils/getProgramDetailBachillerato";
 import { DynamicProgramDetailData } from "@/utils/pages";
 

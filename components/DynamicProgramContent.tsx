@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import type { DynamicProgramDetailData } from "@/utils/pages";
-import ProgramBachilleratoPageContent from "./ProgramBachilleratoPageContent";
+import ProgramBachilleratoPageContent from "@/components/ProgramBachilleratoPageContent";
 
 const DynamicProgramContent = (props: DynamicProgramDetailData) => {
 
