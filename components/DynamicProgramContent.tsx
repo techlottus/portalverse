@@ -4,7 +4,7 @@ import type { DynamicProgramDetailData } from "@/utils/pages";
 const DynamicProgramContent = (props: DynamicProgramDetailData) => {
 
   const programAttributes = props?.program?.attributes;
-  const level = programAttributes.level?.data?.attributes?.title;
+  const level = programAttributes?.level?.data?.attributes?.title;
 
   const renderContent = () => {
     switch(level) {
