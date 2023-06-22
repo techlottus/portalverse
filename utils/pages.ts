@@ -7,7 +7,9 @@ import getEducationalOfferingConfig from "@/utils/getEducationalOfferingConfig";
 import getPagesInfo from "@/utils/getPagesInfo";
 import getProgramsByLevel from "@/utils/getProgramsByLevel";
 import { isValidPath, normalizePath } from "@/utils/misc";
-import type { PageData, PageEntityResponse } from "@/utils/getPageDataById";
+import getProgramBySlug from "@/utils/getProgramBySlug";
+import type { PageEntityResponse } from "@/utils/getPageDataById";
+import type { ProgramData } from "@/utils/getProgramBySlug";
 
 type PageType = "programDetail" | "blogEntry" | "dynamic";
 
@@ -16,11 +18,11 @@ export const getPageType = async (path: string): Promise<PageType> => {
 
   const blogEntryPageData = await getBlogEntryPageData();
   const blogEntryParentSlug = normalizePath(blogEntryPageData?.data?.attributes?.slug);
-  const isBlogEntryPage = path?.includes(blogEntryParentSlug) && normalizedPath !== normalizePath(blogEntryParentSlug);
+  const isBlogEntryPage = path?.startsWith(`${blogEntryParentSlug}/`) && normalizedPath !== normalizePath(blogEntryParentSlug);
 
   const levelsConfig = await getEducationalOfferingConfig();
   const programDetailParentSlugs = levelsConfig?.map(levelConfig => normalizePath(levelConfig?.slug))
-  const isProgramDetailPage = programDetailParentSlugs?.reduce((acc, parentSlug) => {return acc || normalizedPath?.includes(parentSlug) && normalizedPath !== parentSlug;
+  const isProgramDetailPage = programDetailParentSlugs?.reduce((acc, parentSlug) => {return acc || normalizedPath?.startsWith(`${parentSlug}/`) && normalizedPath !== parentSlug;
   }, false);
 
   if(isBlogEntryPage) {
@@ -37,6 +39,11 @@ export const getPageType = async (path: string): Promise<PageType> => {
  * PAGE DATA FETCHING
  */
 
+export type DynamicProgramDetailData = {
+  program: ProgramData;
+  layout?: any;
+};
+
 export type ProgramDetailPage =
   | {
       type: "StaticProgramDetail";
@@ -48,7 +55,7 @@ export type ProgramDetailPage =
     }
   | {
       type: "DynamicProgramDetail";
-      data: PageData;
+      data: DynamicProgramDetailData
     };
 
 export const getPageDataBySlug = async (slug: string) => {
@@ -66,7 +73,7 @@ export const getPageDataBySlug = async (slug: string) => {
 };
 
 export const getProgramDetailPageData = async (path: string): Promise<ProgramDetailPage> => {
-  const pathSegments = path?.split("/");
+  const pathSegments = normalizePath(path)?.split("/");
   const levelSlug = pathSegments?.slice(pathSegments?.length - 2, pathSegments?.length - 1)?.[0];
   const programSlug = pathSegments?.slice(pathSegments?.length - 1, pathSegments?.length)?.[0];
 
@@ -113,11 +120,14 @@ export const getProgramDetailPageData = async (path: string): Promise<ProgramDet
 
     }
   } else {
+    const programData = await getProgramBySlug(programSlug);
 
     return {
       // TODO
       type: "DynamicProgramDetail",
-      data: {} as PageData,
+      data: {
+        program: { ...programData },
+      },
     };
 
   }

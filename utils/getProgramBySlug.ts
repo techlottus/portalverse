@@ -1,7 +1,19 @@
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
 import type { StrapiImage } from "@/types/strapi/common";
 
-type CurriculumsDetail = {
+/**
+ * These are the current program levels available in [UANE, UTEG] exactly as they appear in Salesforce.
+ * These strings must match exactly when registering program levels in Strapi's "Level" Collection Type.
+ */
+type ProgramLevel =
+  | "Bachillerato"
+  | "Licenciatura"
+  | "Maestría"
+  | "Doctorado"
+  | "Especialidad"
+  | "Educación Continua";
+
+type CurriculumDetail = {
   campus: {
     data: {
       attributes: {
@@ -31,22 +43,28 @@ type ProgramModalitiesDetail = {
   laborField: string;
   admissionRequirements: string;
   curriculumDescription: string;
-  curriculums: Array<CurriculumsDetail>
+  curriculums: Array<CurriculumDetail>
 }
 
 export type ProgramData = {
+  id: number;
   attributes: {
+    slug: string;
     name: string;
     description: string;
-    image: StrapiImage
-    programModalities: Array<ProgramModalitiesDetail>
+    image: StrapiImage;
+    detail: string;
+    programModalities: Array<ProgramModalitiesDetail>;
     level: {
       data: {
         attributes: {
-          title: string
+          title: ProgramLevel;
         }
       }
     }
+    price: number;
+    offerPrice: number;
+    priceDetail: string;
   }
 }
 
@@ -65,7 +83,9 @@ const PROGRAM_BY_SLUG = `
 query ProgramBySlug($slug: String!) {
   programs(filters: { slug: { eq: $slug } }) {
     data {
+      id
       attributes {
+        slug
         name
         description
         image {
@@ -76,6 +96,7 @@ query ProgramBySlug($slug: String!) {
             }
           }
         }
+        detail
         level {
           data {
             attributes {
@@ -83,6 +104,9 @@ query ProgramBySlug($slug: String!) {
             }
           }
         }
+        price
+        offerPrice
+        priceDetail
         programModalities {
           admissionProfile
           graduateProfile
