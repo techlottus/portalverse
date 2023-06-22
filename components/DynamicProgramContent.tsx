@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import type { DynamicProgramDetailData } from "@/utils/pages";
+import ProgramBachilleratoPageContent from "./ProgramBachilleratoPageContent";
 
 const DynamicProgramContent = (props: DynamicProgramDetailData) => {
 
@@ -12,7 +13,7 @@ const DynamicProgramContent = (props: DynamicProgramDetailData) => {
         return <h1>Agregar Renderer de Educación Continua</h1>
       }
       case "Bachillerato": {
-        return <h1>Agregar Renderer de Bachillerato</h1>
+        return <ProgramBachilleratoPageContent {...props} />
       }
       default: {
         return <h1>Agregar Renderer de Nivel Superior</h1>

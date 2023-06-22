@@ -10,6 +10,7 @@ import { isValidPath, normalizePath } from "@/utils/misc";
 import getProgramBySlug from "@/utils/getProgramBySlug";
 import type { PageEntityResponse } from "@/utils/getPageDataById";
 import type { ProgramData } from "@/utils/getProgramBySlug";
+import getProgramDetailBachillerato from "./getProgramDetailBachillerato";
 
 type PageType = "programDetail" | "blogEntry" | "dynamic";
 
@@ -121,12 +122,14 @@ export const getProgramDetailPageData = async (path: string): Promise<ProgramDet
     }
   } else {
     const programData = await getProgramBySlug(programSlug);
-
+    const programLevel = programData?.attributes?.level?.data?.attributes?.title;
+    const programDetail = await getProgramDetailBachillerato()
     return {
       // TODO
       type: "DynamicProgramDetail",
       data: {
         program: { ...programData },
+        layout: programLevel === "Bachillerato" ? {...programDetail} : null
       },
     };
 

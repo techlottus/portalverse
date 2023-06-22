@@ -30,7 +30,7 @@ type CurriculumDetail = {
   }
 }
 
-type ProgramModalitiesDetail = {
+type ProgramModalityDetail = {
   modality: {
     data: {
       attributes: {
@@ -54,7 +54,7 @@ export type ProgramData = {
     description: string;
     image: StrapiImage;
     detail: string;
-    programModalities: Array<ProgramModalitiesDetail>;
+    programModalities: Array<ProgramModalityDetail>;
     level: {
       data: {
         attributes: {
@@ -108,6 +108,13 @@ query ProgramBySlug($slug: String!) {
         offerPrice
         priceDetail
         programModalities {
+          modality {
+            data {
+              attributes {
+                name
+              }
+            }
+          }
           admissionProfile
           graduateProfile
           laborField
@@ -134,6 +141,7 @@ query ProgramBySlug($slug: String!) {
     }
   }
 }
+
 `;
 
 export default getProgramBySlug;

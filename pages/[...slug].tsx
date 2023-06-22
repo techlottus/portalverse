@@ -31,7 +31,6 @@ const Page = (props: PageProps) => {
   const { page, breadcrumb } = props;
   const pageType = page?.type;
   const pageData = page?.data;
-
   const renderContent = () => {
     switch (pageType) {
       case "BlogEntryPageEntityResponse":
