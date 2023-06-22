@@ -43,7 +43,7 @@ const Page = (props: PageProps) => {
       case "StaticContinuousEducationProgramDetail":
         return <StaticContEdProgramContent {...pageData} />;
       case "DynamicProgramDetail":
-        return <DynamicProgramContent />;
+        return <DynamicProgramContent {...pageData} />;
       default:
         return null;
     }
@@ -85,7 +85,7 @@ export async function getStaticPaths() {
 }
 
 // `getStaticPaths` requires using `getStaticProps`
-export async function getStaticProps(context: any) {
+export async function getStaticProps(context: any): Promise<{props: PageProps}> {
   const {
     params: { slug },
   } = context;
@@ -107,7 +107,7 @@ export async function getStaticProps(context: any) {
     case "blogEntry": {
       return {
         props: {
-          page: {},
+          page: {} as any, // TODO
           breadcrumb: {},
         },
       };
@@ -126,7 +126,7 @@ export async function getStaticProps(context: any) {
     default: {
       return {
         props: {
-          page: {},
+          page: {} as any, // TODO
           breadcrumb: {},
         },
       };
