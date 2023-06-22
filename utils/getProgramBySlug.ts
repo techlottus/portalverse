@@ -96,6 +96,7 @@ query ProgramBySlug($slug: String!) {
             }
           }
         }
+        detail
         level {
           data {
             attributes {
