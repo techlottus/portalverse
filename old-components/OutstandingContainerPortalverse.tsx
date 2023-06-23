@@ -24,7 +24,7 @@ const OutstandingContainer: FC<OutstandingContainerPortalverseComponentData> = (
 
   return <section className="flex flex-col w-t:grid w-t:gap-6 w-t:grid-cols-2 w-t:grid-rows-2 w-p:grid-cols-1 w-p:grid-rows-1 w-p:gap-6">
     {
-      items.map((item: any, i: number) => <article key={`outstanding-module-${i}`} className="justify-self-stretch"><OustandingModule data={{...item, direction: i % 2 === 0 ? 'right' : 'left' }} /></article>)
+      items?.map((item: any, i: number) => <article key={`outstanding-module-${i}`} className="justify-self-stretch"><OustandingModule data={{...item, direction: i % 2 === 0 ? 'right' : 'left' }} /></article>)
     }
   </section>
 }

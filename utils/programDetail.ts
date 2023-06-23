@@ -28,7 +28,7 @@ const dictionarySuperior = {
 };
 
 export const formatModalityDataSuperior = (modalityData: ProgramModalityDetail, layout: ProgramDetailSuperiorData) => {
-  const cards: Array<OustandingModuleConfig> = Object.keys(dictionarySuperior).map((key) => {
+  const cards: Array<OustandingModuleConfig> = Object?.keys(dictionarySuperior)?.map((key) => {
     //@ts-ignore
     const imageUrl = layout?.attributes?.[dictionarySuperior?.[key]?.imageKey]?.data?.attributes?.url
     return {
@@ -36,7 +36,7 @@ export const formatModalityDataSuperior = (modalityData: ProgramModalityDetail, 
         mobile: imageUrl, desktop: imageUrl
       },
       //@ts-ignore
-      title: dictionarySuperior?.[key].title, 
+      title: dictionarySuperior?.[key]?.title, 
       //@ts-ignore
       text: parseEditorRawData(modalityData?.[key]),
       //@ts-ignore
