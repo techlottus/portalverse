@@ -46,27 +46,29 @@ type ProgramModalitiesDetail = {
   curriculums: Array<CurriculumDetail>
 }
 
-export type ProgramData = {
-  id: number;
-  attributes: {
-    slug: string;
-    name: string;
-    description: string;
-    image: StrapiImage;
-    detail: string;
-    programModalities: Array<ProgramModalitiesDetail>;
-    level: {
-      data: {
-        attributes: {
-          title: ProgramLevel;
-        }
+export type ProgramAttributes = {
+  slug: string;
+  name: string;
+  description: string;
+  image: StrapiImage;
+  detail: string;
+  programModalities: Array<ProgramModalitiesDetail>;
+  level: {
+    data: {
+      attributes: {
+        title: ProgramLevel;
       }
     }
-    price: number;
-    offerPrice: number;
-    priceDetail: string;
   }
-}
+  price: number;
+  offerPrice: number;
+  priceDetail: string;
+};
+
+export type ProgramData = {
+  id: number;
+  attributes: ProgramAttributes;
+};
 
 type ProgramBySlugResponse = {
   programs: {
