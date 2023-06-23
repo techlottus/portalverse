@@ -46,7 +46,7 @@ export const formatModalityDataSuperior = (modalityData: ProgramModalityDetail, 
   })
   const curriculumsByModality = modalityData?.curriculums
   const curriculumsByCampus: Array<{campusName: string, curriculumUrl: string}> = []
-  curriculumsByModality.map((campus) => {
+  curriculumsByModality?.map((campus) => {
     const campusName = campus?.campus?.data?.attributes?.name
     const curriculumUrl = campus?.curriculum?.data?.attributes?.url
     curriculumsByCampus.push({ campusName, curriculumUrl })
