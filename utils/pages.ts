@@ -1,13 +1,14 @@
 import Routes from "@/routes/Routes";
 import getBlogEntryPageData from "@/utils/getBlogEntryPageData";
 import getBlogPosts from "@/utils/getBlogPosts";
-import { getDataPageFromJSON } from "@/utils/getDataPage";
 import getPageDataById from "@/utils/getPageDataById";
 import getEducationalOfferingConfig from "@/utils/getEducationalOfferingConfig";
 import getPagesInfo from "@/utils/getPagesInfo";
 import getProgramsByLevel from "@/utils/getProgramsByLevel";
-import { isValidPath, normalizePath } from "@/utils/misc";
 import getProgramBySlug from "@/utils/getProgramBySlug";
+import getProgramDetailSuperiorPageData from "@/utils/getProgramDetailSuperior";
+import { getDataPageFromJSON } from "@/utils/getDataPage";
+import { isValidPath, normalizePath } from "@/utils/misc";
 import type { PageEntityResponse } from "@/utils/getPageDataById";
 import type { ProgramData } from "@/utils/getProgramBySlug";
 
@@ -33,7 +34,6 @@ export const getPageType = async (path: string): Promise<PageType> => {
     return "dynamic"
   }
 }
-
 
 /**
  * PAGE DATA FETCHING
@@ -121,12 +121,15 @@ export const getProgramDetailPageData = async (path: string): Promise<ProgramDet
     }
   } else {
     const programData = await getProgramBySlug(programSlug);
-
+    const programLevel = programData?.attributes?.level?.data?.attributes?.title;
+    const programDetailSuperior = await getProgramDetailSuperiorPageData()
     return {
       // TODO
       type: "DynamicProgramDetail",
       data: {
         program: { ...programData },
+        // still need to add the detail for the programs of Bachillerato 
+        layout: programLevel === "Bachillerato" ? {} : {...programDetailSuperior}
       },
     };
 

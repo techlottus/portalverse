@@ -1,19 +1,7 @@
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
 import type { StrapiImage } from "@/types/strapi/common";
 
-/**
- * These are the current program levels available in [UANE, UTEG] exactly as they appear in Salesforce.
- * These strings must match exactly when registering program levels in Strapi's "Level" Collection Type.
- */
-type ProgramLevel =
-  | "Bachillerato"
-  | "Licenciatura"
-  | "Maestría"
-  | "Doctorado"
-  | "Especialidad"
-  | "Educación Continua";
-
-type CurriculumDetail = {
+type CurriculumsDetail = {
   campus: {
     data: {
       attributes: {
@@ -30,7 +18,7 @@ type CurriculumDetail = {
   }
 }
 
-export type ProgramModalityDetail = {
+type ProgramModalitiesDetail = {
   modality: {
     data: {
       attributes: {
@@ -43,49 +31,43 @@ export type ProgramModalityDetail = {
   laborField: string;
   admissionRequirements: string;
   curriculumDescription: string;
-  curriculums: Array<CurriculumDetail>
+  curriculums: Array<CurriculumsDetail>
 }
 
 export type ProgramData = {
-  id: number;
   attributes: {
-    slug: string;
     name: string;
     description: string;
-    image: StrapiImage;
-    detail: string;
-    programModalities: Array<ProgramModalityDetail>;
+    image: StrapiImage
+    programModalities: Array<ProgramModalitiesDetail>
     level: {
       data: {
         attributes: {
-          title: ProgramLevel;
+          title: string
         }
       }
     }
-    price: number;
-    offerPrice: number;
-    priceDetail: string;
   }
 }
 
-type ProgramBySlugResponse = {
-  programs: {
-    data: Array<ProgramData>
-  }
+type ProgramDetail = {
+  data: Array<ProgramData>
 };
 
-const getProgramBySlug = async (slug: string = "") => {
-  const response = await fetchStrapiGraphQL<ProgramBySlugResponse>(PROGRAM_BY_SLUG, {slug});
-  return response?.programs?.data?.[0];
+type ProgramsDetailResponse = {
+  programs: ProgramDetail;
 };
 
-const PROGRAM_BY_SLUG = `
-query ProgramBySlug($slug: String!) {
-  programs(filters: { slug: { eq: $slug } }) {
+const getProgramsData = async () => {
+  const pageData = await fetchStrapiGraphQL<ProgramsDetailResponse>(PROGRAMS_DATA);
+  return pageData;
+};
+
+const PROGRAMS_DATA = `
+query GetAllProgramsData {
+  programs(pagination: { start: 0, limit: -1 }) {
     data {
-      id
       attributes {
-        slug
         name
         description
         image {
@@ -96,25 +78,14 @@ query ProgramBySlug($slug: String!) {
             }
           }
         }
-        detail
         level {
           data {
             attributes {
-              title
+              title	
             }
           }
         }
-        price
-        offerPrice
-        priceDetail
         programModalities {
-          modality {
-            data {
-              attributes {
-                name
-              }
-            }
-          }
           admissionProfile
           graduateProfile
           laborField
@@ -141,7 +112,6 @@ query ProgramBySlug($slug: String!) {
     }
   }
 }
+`
 
-`;
-
-export default getProgramBySlug;
+export default getProgramsData
