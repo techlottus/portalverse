@@ -24,7 +24,7 @@ type CurriculumDetail = {
   curriculum: {
     data: {
       attributes: {
-        url: string
+        url: string;
       }
     }
   }
@@ -143,7 +143,6 @@ query ProgramBySlug($slug: String!) {
     }
   }
 }
-
 `;
 
 export default getProgramBySlug;

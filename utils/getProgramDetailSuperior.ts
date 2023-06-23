@@ -2,25 +2,24 @@ import { fetchStrapiGraphQL } from "@/utils/getStrapi";
 import type { BannerData } from "@/utils/strapi/sections/Banner";
 import type { StrapiImage } from "@/types/strapi/common";
 
-
 export type ProgramDetailSuperiorData = {
   attributes: {
     admissionProfileImage: StrapiImage;
-    admissionProfileBackgroundColor: string
+    admissionProfileBackgroundColor: string;
     graduateProfileImage: StrapiImage;
-    graduateProfileBackgroundColor: string
+    graduateProfileBackgroundColor: string;
     laborFieldImage: StrapiImage;
-    laborFieldBackgroundColor: string
+    laborFieldBackgroundColor: string;
     admissionRequirementsImage: StrapiImage;
-    admissionRequirementsBackgroundColor: string
-    banner: BannerData
+    admissionRequirementsBackgroundColor: string;
+    banner: BannerData;
   }
 }
 
 export type ProgramDetailSuperiorPageResponse = {
   programDetailSuperior : {
     type: "ProgramDetailSuperiorEntityResponse";
-    data: ProgramDetailSuperiorData
+    data: ProgramDetailSuperiorData;
   }
 };
 

@@ -22,7 +22,7 @@ export const getPageType = async (path: string): Promise<PageType> => {
   const isBlogEntryPage = path?.startsWith(`${blogEntryParentSlug}/`) && normalizedPath !== normalizePath(blogEntryParentSlug);
 
   const levelsConfig = await getEducationalOfferingConfig();
-  const programDetailParentSlugs = levelsConfig?.map(levelConfig => normalizePath(levelConfig?.slug))
+  const programDetailParentSlugs = levelsConfig?.map(levelConfig => normalizePath(levelConfig?.slug));
   const isProgramDetailPage = programDetailParentSlugs?.reduce((acc, parentSlug) => {return acc || normalizedPath?.startsWith(`${parentSlug}/`) && normalizedPath !== parentSlug;
   }, false);
 
@@ -55,7 +55,7 @@ export type ProgramDetailPage =
     }
   | {
       type: "DynamicProgramDetail";
-      data: DynamicProgramDetailData
+      data: DynamicProgramDetailData;
     };
 
 export const getPageDataBySlug = async (slug: string) => {
@@ -137,7 +137,6 @@ export const getProgramDetailPageData = async (path: string): Promise<ProgramDet
   
 }
 
-
 /**
  * PAGES PATHS
  */
@@ -217,12 +216,11 @@ export const getProgramDetailPagesPaths = async () => {
   const strapiProgramDetailPagesPaths = await getDynamicProgramsPaths();
   const staticProgramDetailPagesPaths = getJSONProgramsPaths();
 
-  const paths = [...strapiProgramDetailPagesPaths, ...staticProgramDetailPagesPaths]?.map(normalizePath)
+  const paths = [...strapiProgramDetailPagesPaths, ...staticProgramDetailPagesPaths]?.map(normalizePath);
   const set = Array.from(new Set(paths)); // remove duplicates
 
   return set;
 }
-
 
 /**
  * PAGES BREADCRUMBS

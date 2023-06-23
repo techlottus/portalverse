@@ -12,7 +12,7 @@ type CurriculumsDetail = {
   curriculum: {
     data: {
       attributes: {
-        url: string
+        url: string;
       }
     }
   }
@@ -38,12 +38,12 @@ export type ProgramData = {
   attributes: {
     name: string;
     description: string;
-    image: StrapiImage
+    image: StrapiImage;
     programModalities: Array<ProgramModalitiesDetail>
     level: {
       data: {
         attributes: {
-          title: string
+          title: string;
         }
       }
     }
@@ -114,4 +114,4 @@ query GetAllProgramsData {
 }
 `
 
-export default getProgramsData
+export default getProgramsData;

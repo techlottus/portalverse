@@ -20,23 +20,20 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const title = program?.attributes?.name;
   const description = program?.attributes?.description;
   const levelProgram = program?.attributes?.level?.data?.attributes?.title;
-
-  const imageProgram = program?.attributes.image?.data?.attributes?.url;
+  const imageProgram = program?.attributes?.image?.data?.attributes?.url;
   const singleTypeAttributes = layout?.attributes;
-  
-  const bannerData = singleTypeAttributes?.banner
+  const bannerData = singleTypeAttributes?.banner;
 
   //estado para información
   const [optionsSelect, setOptionsSelect] = useState<Array<SelectItem>>([]);
   const [tabActive, setTabActive] = useState<number>(0);
 
   const modalities = program?.attributes?.programModalities
-  const selectedModality = modalities[tabActive]
+  const selectedModality = modalities?.[tabActive]
 
   const formattedModalityData = formatModalityDataSuperior(selectedModality, layout)
   const campusDetail = formattedModalityData?.curriculumsByCampus
   const hasCampuses = campusDetail?.some((option) => { return !!option?.campusName })
-
 
   const selectedOption = optionsSelect?.find((testOption) => { return testOption?.active })
 
@@ -133,9 +130,6 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
       </ContentFullLayout>
       <ContentLayout>
         <div className="gap-6 col-span-12 w-t:col-span-8 w-p:col-span-4">
-          {/* {
-            dataTabs.map((content: { cards: OustandingModuleConfig[]; }, i: number) => <div key={`content-outstanding-${i}`} className={cn("col-span-12 w-t:col-span-8 w-p:col-span-4 text-white")}><OutstandingContainer items={content.cards} /></div>)
-          } */}
           {
             <OutstandingContainer items={formattedModalityData?.cards} />
           }

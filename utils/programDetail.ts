@@ -3,7 +3,6 @@ import type { ProgramModalityDetail } from "@/utils/getProgramBySlug";
 import type { ProgramDetailSuperiorData } from "@/utils/getProgramDetailSuperior";
 import type { OustandingModuleConfig } from "@/types/OustandingModule.types";
 
-
 const dictionarySuperior = {
   admissionProfile: {
     title: "Perfil de ingreso",
@@ -30,7 +29,7 @@ const dictionarySuperior = {
 export const formatModalityDataSuperior = (modalityData: ProgramModalityDetail, layout: ProgramDetailSuperiorData) => {
   const cards: Array<OustandingModuleConfig> = Object?.keys(dictionarySuperior)?.map((key) => {
     //@ts-ignore
-    const imageUrl = layout?.attributes?.[dictionarySuperior?.[key]?.imageKey]?.data?.attributes?.url
+    const imageUrl = layout?.attributes?.[dictionarySuperior?.[key]?.imageKey]?.data?.attributes?.url;
     return {
       image: {
         mobile: imageUrl, desktop: imageUrl
@@ -44,12 +43,12 @@ export const formatModalityDataSuperior = (modalityData: ProgramModalityDetail, 
       direction: ""
     }
   })
-  const curriculumsByModality = modalityData?.curriculums
+  const curriculumsByModality = modalityData?.curriculums;
   const curriculumsByCampus: Array<{campusName: string, curriculumUrl: string}> = []
   curriculumsByModality?.map((campus) => {
-    const campusName = campus?.campus?.data?.attributes?.name
-    const curriculumUrl = campus?.curriculum?.data?.attributes?.url
-    curriculumsByCampus.push({ campusName, curriculumUrl })
+    const campusName = campus?.campus?.data?.attributes?.name;
+    const curriculumUrl = campus?.curriculum?.data?.attributes?.url;
+    curriculumsByCampus?.push({ campusName, curriculumUrl })
   })
 
   return {cards, curriculumsByCampus}
