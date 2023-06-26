@@ -2,6 +2,7 @@ import parseEditorRawData from "@/utils/parseEditorRawData";
 import type { ProgramModalityDetail } from "@/utils/getProgramBySlug";
 import type { ProgramDetailSuperiorData } from "@/utils/getProgramDetailSuperior";
 import type { OustandingModuleConfig } from "@/types/OustandingModule.types";
+import type { ProgramDetailBachilleratoData } from "./getProgramDetailBachillerato";
 
 const dictionarySuperior = {
   admissionProfile: {
@@ -14,15 +15,15 @@ const dictionarySuperior = {
     backgroundColorKey: "graduateProfileBackgroundColor",
     imageKey: "graduateProfileImage"
   },
-  admissionRequirements: {
-    title: "Requisitos de admisión",
-    backgroundColorKey: "admissionRequirementsBackgroundColor",
-    imageKey: "admissionRequirementsImage"
-  },
   laborField: {
     title: "Campo laboral",
     backgroundColorKey: "laborFieldBackgroundColor",
     imageKey: "laborFieldImage"
+  },
+  admissionRequirements: {
+    title: "Requisitos de admisión",
+    backgroundColorKey: "admissionRequirementsBackgroundColor",
+    imageKey: "admissionRequirementsImage"
   }
 };
 
