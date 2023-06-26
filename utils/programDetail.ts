@@ -2,7 +2,6 @@ import parseEditorRawData from "@/utils/parseEditorRawData";
 import type { ProgramModalityDetail } from "@/utils/getProgramBySlug";
 import type { ProgramDetailSuperiorData } from "@/utils/getProgramDetailSuperior";
 import type { OustandingModuleConfig } from "@/types/OustandingModule.types";
-import type { ProgramDetailBachilleratoData } from "./getProgramDetailBachillerato";
 
 const dictionarySuperior = {
   admissionProfile: {
