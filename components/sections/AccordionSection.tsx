@@ -50,7 +50,6 @@ const AccordionComponent = (props: AccordionSection) => {
           <div>
             <Accordion data={{ items: items }} />
           </div>
-
         </div>
       </Container>
     </section>
