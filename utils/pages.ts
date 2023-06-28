@@ -7,6 +7,7 @@ import getPagesInfo from "@/utils/getPagesInfo";
 import getProgramsByLevel from "@/utils/getProgramsByLevel";
 import getProgramBySlug from "@/utils/getProgramBySlug";
 import getProgramDetailSuperiorPageData from "@/utils/getProgramDetailSuperior";
+import getProgramDetailBachillerato from "@/utils/getProgramDetailBachillerato";
 import { getDataPageFromJSON } from "@/utils/getDataPage";
 import { isValidPath, normalizePath } from "@/utils/misc";
 import type { PageEntityResponse } from "@/utils/getPageDataById";
@@ -122,14 +123,14 @@ export const getProgramDetailPageData = async (path: string): Promise<ProgramDet
   } else {
     const programData = await getProgramBySlug(programSlug);
     const programLevel = programData?.attributes?.level?.data?.attributes?.title;
-    const programDetailSuperior = await getProgramDetailSuperiorPageData()
+    const programDetailSuperior = await getProgramDetailSuperiorPageData();
+    const programDetailBachillerato = await getProgramDetailBachillerato();
     return {
       // TODO
       type: "DynamicProgramDetail",
       data: {
         program: { ...programData },
-        // still need to add the detail for the programs of Bachillerato 
-        layout: programLevel === "Bachillerato" ? {} : {...programDetailSuperior}
+        layout: programLevel === "Bachillerato" ? {...programDetailBachillerato} : {...programDetailSuperior}
       },
     };
 
