@@ -4,7 +4,7 @@ import RichtText from "@/old-components/Richtext/Richtext";
 import parseEditorRawData from "@/utils/parseEditorRawData";
 import type { AccordionSection } from "@/utils/strapi/sections/Accordion";
 
-const AccordionSection = (props: AccordionSection) => {
+const AccordionComponent = (props: AccordionSection) => {
 
   const { title, subtitle, description, accordionItems } = props;
 
@@ -57,4 +57,4 @@ const AccordionSection = (props: AccordionSection) => {
   );
 }
 
-export default AccordionSection
+export default AccordionComponent
