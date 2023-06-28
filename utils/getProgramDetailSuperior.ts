@@ -72,6 +72,8 @@ query ProgramDetailSuperior {
           title
           subtitle
           textPosition
+          contentVariant
+          overlay
           mobileImage {
             data {
               attributes {
@@ -79,6 +81,7 @@ query ProgramDetailSuperior {
               }
             }
           }
+          mobileRatio
           tabletImage {
             data {
               attributes {
@@ -86,6 +89,7 @@ query ProgramDetailSuperior {
               }
             }
           }
+          tabletRatio
           desktopImage {
             data {
               attributes {
@@ -93,6 +97,7 @@ query ProgramDetailSuperior {
               }
             }
           }
+          desktopRatio
         }
       }
     }
