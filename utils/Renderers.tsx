@@ -1,3 +1,4 @@
+import AccordionSection from "@/components/sections/AccordionSection";
 import Alert from "@/components/sections/Alert";
 import Banner from "@/components/sections/Banner";
 import BlogPostsPodcast from "@/components/sections/BlogPostsPodcast";
@@ -26,6 +27,7 @@ type Renderer = {
 
 const defaultRenderers: Renderer = {
   paragraph: Paragraph,
+  ComponentSectionsAccordion: AccordionSection,
   ComponentSectionsAlert: Alert,
   ComponentSectionsBanner: Banner,
   ComponentSectionsBlogPostsPodcast: BlogPostsPodcast,

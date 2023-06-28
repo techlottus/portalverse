@@ -1,3 +1,4 @@
+import { ACCORDION_SECTION, AccordionSection } from "./sections/Accordion";
 import { ALERT } from "@/utils/strapi/sections/Alert";
 import { BANNER } from "@/utils/strapi/sections/Banner";
 import { BLOG_POSTS_PODCAST } from "@/utils/strapi/sections/BlogPostsPodcast";
@@ -55,8 +56,10 @@ export type ComponentSection =
   | RichTextImageSection
   | StatisticsCardListSection
   | TextContentSection
+  | AccordionSection
 
 export const SECTIONS = `
+  ${ACCORDION_SECTION}
   ${ALERT}
   ${BANNER}
   ${BLOG_POSTS_PODCAST}
