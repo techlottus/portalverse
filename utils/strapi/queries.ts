@@ -1,4 +1,4 @@
-import { ACCORDION_SECTION, AccordionSection } from "./sections/Accordion";
+import { ACCORDION_SECTION } from "@/utils/strapi/sections/Accordion";
 import { ALERT } from "@/utils/strapi/sections/Alert";
 import { BANNER } from "@/utils/strapi/sections/Banner";
 import { BLOG_POSTS_PODCAST } from "@/utils/strapi/sections/BlogPostsPodcast";
@@ -18,6 +18,7 @@ import { PROMO_LINK_LIST } from "@/utils/strapi/sections/PromoLinkList";
 import { RICH_TEXT_IMAGE } from "@/utils/strapi/sections/RichTextImage";
 import { STATISTICS_CARD_LIST } from "@/utils/strapi/sections/StatisticsCardList";
 import { TEXT_CONTENT } from "@/utils/strapi/sections/TextContent";
+import type {AccordionSection} from "@/utils/strapi/sections/Accordion";
 import type { AlertSection } from "@/utils/strapi/sections/Alert";
 import type { BannerSection } from "@/utils/strapi/sections/Banner";
 import type { BlogPostsPodcastSection } from "@/utils/strapi/sections/BlogPostsPodcast";
@@ -38,6 +39,7 @@ import type { StatisticsCardListSection } from "@/utils/strapi/sections/Statisti
 import type { TextContentSection } from "@/utils/strapi/sections/TextContent";
 
 export type ComponentSection =
+  | AccordionSection
   | AlertSection
   | BannerSection
   | BlogPostsPodcastSection
@@ -56,7 +58,6 @@ export type ComponentSection =
   | RichTextImageSection
   | StatisticsCardListSection
   | TextContentSection
-  | AccordionSection
 
 export const SECTIONS = `
   ${ACCORDION_SECTION}
