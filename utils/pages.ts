@@ -1,13 +1,14 @@
 import Routes from "@/routes/Routes";
 import getBlogEntryPageData from "@/utils/getBlogEntryPageData";
 import getBlogPosts from "@/utils/getBlogPosts";
-import { getDataPageFromJSON } from "@/utils/getDataPage";
 import getPageDataById from "@/utils/getPageDataById";
 import getEducationalOfferingConfig from "@/utils/getEducationalOfferingConfig";
 import getPagesInfo from "@/utils/getPagesInfo";
 import getProgramsByLevel from "@/utils/getProgramsByLevel";
-import { isValidPath, normalizePath } from "@/utils/misc";
 import getProgramBySlug from "@/utils/getProgramBySlug";
+import getProgramDetailSuperiorPageData from "@/utils/getProgramDetailSuperior";
+import { getDataPageFromJSON } from "@/utils/getDataPage";
+import { isValidPath, normalizePath } from "@/utils/misc";
 import type { PageEntityResponse } from "@/utils/getPageDataById";
 import type { ProgramData } from "@/utils/getProgramBySlug";
 
@@ -21,7 +22,7 @@ export const getPageType = async (path: string): Promise<PageType> => {
   const isBlogEntryPage = path?.startsWith(`${blogEntryParentSlug}/`) && normalizedPath !== normalizePath(blogEntryParentSlug);
 
   const levelsConfig = await getEducationalOfferingConfig();
-  const programDetailParentSlugs = levelsConfig?.map(levelConfig => normalizePath(levelConfig?.slug))
+  const programDetailParentSlugs = levelsConfig?.map(levelConfig => normalizePath(levelConfig?.slug));
   const isProgramDetailPage = programDetailParentSlugs?.reduce((acc, parentSlug) => {return acc || normalizedPath?.startsWith(`${parentSlug}/`) && normalizedPath !== parentSlug;
   }, false);
 
@@ -33,7 +34,6 @@ export const getPageType = async (path: string): Promise<PageType> => {
     return "dynamic"
   }
 }
-
 
 /**
  * PAGE DATA FETCHING
@@ -55,7 +55,7 @@ export type ProgramDetailPage =
     }
   | {
       type: "DynamicProgramDetail";
-      data: DynamicProgramDetailData
+      data: DynamicProgramDetailData;
     };
 
 export const getPageDataBySlug = async (slug: string) => {
@@ -121,19 +121,21 @@ export const getProgramDetailPageData = async (path: string): Promise<ProgramDet
     }
   } else {
     const programData = await getProgramBySlug(programSlug);
-
+    const programLevel = programData?.attributes?.level?.data?.attributes?.title;
+    const programDetailSuperior = await getProgramDetailSuperiorPageData()
     return {
       // TODO
       type: "DynamicProgramDetail",
       data: {
         program: { ...programData },
+        // still need to add the detail for the programs of Bachillerato 
+        layout: programLevel === "Bachillerato" ? {} : {...programDetailSuperior}
       },
     };
 
   }
   
 }
-
 
 /**
  * PAGES PATHS
@@ -214,12 +216,11 @@ export const getProgramDetailPagesPaths = async () => {
   const strapiProgramDetailPagesPaths = await getDynamicProgramsPaths();
   const staticProgramDetailPagesPaths = getJSONProgramsPaths();
 
-  const paths = [...strapiProgramDetailPagesPaths, ...staticProgramDetailPagesPaths]?.map(normalizePath)
+  const paths = [...strapiProgramDetailPagesPaths, ...staticProgramDetailPagesPaths]?.map(normalizePath);
   const set = Array.from(new Set(paths)); // remove duplicates
 
   return set;
 }
-
 
 /**
  * PAGES BREADCRUMBS

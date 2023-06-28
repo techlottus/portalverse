@@ -24,13 +24,13 @@ type CurriculumDetail = {
   curriculum: {
     data: {
       attributes: {
-        url: string
+        url: string;
       }
     }
   }
 }
 
-type ProgramModalitiesDetail = {
+export type ProgramModalityDetail = {
   modality: {
     data: {
       attributes: {
@@ -52,7 +52,7 @@ export type ProgramAttributes = {
   description: string;
   image: StrapiImage;
   detail: string;
-  programModalities: Array<ProgramModalitiesDetail>;
+  programModalities: Array<ProgramModalityDetail>;
   level: {
     data: {
       attributes: {
@@ -110,6 +110,13 @@ query ProgramBySlug($slug: String!) {
         offerPrice
         priceDetail
         programModalities {
+          modality {
+            data {
+              attributes {
+                name
+              }
+            }
+          }
           admissionProfile
           graduateProfile
           laborField
