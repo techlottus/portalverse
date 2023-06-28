@@ -47,12 +47,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
     text: string;
     active: boolean;
   }
-  type SelectedItem2 = {
-    value: string;
-    text: string;
-    active: boolean;
-  }
-
+  
   const handleSetActiveTab = (active: number) => {
     setTabActive(active);
   }
