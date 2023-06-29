@@ -104,12 +104,14 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
           />
         </div>
       </ContentLayout>
-      <ContentFullLayout classNames="w-d:hidden w-t:hidden mb-10 mt-6">
-        <Image
-          alt={"image"}
-          src={imageProgram}
-          classNamesImg="w-full !h-auto"
-          classNames="w-full h-fit" />
+      <ContentFullLayout>
+        <div className="w-d:hidden w-t:hidden col-span-4 mb-10 mt-6">
+          <Image
+            alt={"image"}
+            src={imageProgram}
+            classNamesImg="w-full !h-auto !relative"
+            classNames="w-full h-fit" />
+        </div>
       </ContentFullLayout>
       <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6">
