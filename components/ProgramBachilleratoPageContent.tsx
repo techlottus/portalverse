@@ -156,7 +156,11 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
           <h4 className="text-6.5 font-Poppins font-semibold leading-[125%] w-t:leading-[125%] w-p:leading-[125%] w-t:text-6 w-p:text-6">{"Plan de estudios"}</h4>
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 leading-[125%] w-d:order-1 w-t:order-1">
-          <RichtText font="light" data={{ content: formattedModalityData?.curriculumDescription }} />
+          {
+            formattedModalityData?.curriculumDescription
+            ? <RichtText font="light" data={{ content: formattedModalityData?.curriculumDescription }} />
+            : null
+          }
           {
             hasCampuses ?
               <>
