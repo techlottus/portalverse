@@ -11,6 +11,10 @@ import { getDataPageFromJSON } from "@/utils/getDataPage";
 import { isValidPath, normalizePath } from "@/utils/misc";
 import type { PageEntityResponse } from "@/utils/getPageDataById";
 import type { ProgramData } from "@/utils/getProgramBySlug";
+import type {
+  StaticContinuousEducationCategory,
+  StaticContinuousEducationProgram,
+} from "@/utils/strapi/sections/ContEdPrograms";
 
 type PageType = "programDetail" | "blogEntry" | "dynamic";
 
@@ -170,23 +174,38 @@ export const getDynamicPagesPaths = async () => {
   return dynamicPagesPaths;
 }
 
-export const getJSONProgramsPaths = () => {
-  const educationalOfferingItems = Routes["oferta-educativa"];
-  const continuousEducationItems = Routes["extension-universitaria"];
+export const getJSONProgramsPaths = async () => {
+  const educationalOfferingParams = Routes["oferta-educativa"];
+  const continuousEducationParams = Routes["extension-universitaria"];
+
+  const continuousEducationStaticPageData = await getDataPageFromJSON('extension-universitaria/extension-universitaria.json');
+  const continuousEducationStaticCategories = continuousEducationStaticPageData?.sections?.extension?.sections as Array<StaticContinuousEducationCategory>;
+  const hiddenContinuousEducationProgramsPaths =
+    continuousEducationStaticCategories
+      ?.reduce((programs, category) => { // merge all programs from all categories
+        return [...programs, ...category?.cursos];
+      }, [] as Array<StaticContinuousEducationProgram>)
+      ?.filter((program) => program?.hidden)
+      ?.map((program) => program?.redirect);
 
   const paths: Array<string> = [];
 
-  educationalOfferingItems?.forEach(level => {
+  educationalOfferingParams?.forEach(level => {
     level?.params?.programs?.forEach(program => {
       const path = `${level?.params?.levelRoute}/${program?.params?.program}`;
       paths?.push(path);
     })
   });
 
-  continuousEducationItems?.params?.programs?.forEach(program => {
-    const path = `extension-universitaria/${program?.params?.program}`;
-    paths?.push(path);
-  })
+  // Generate paths for every non hidden static Continuous Education program.
+  continuousEducationParams?.params?.programs
+    ?.filter((program) => {
+      return !hiddenContinuousEducationProgramsPaths?.includes(program?.params?.program)
+    })
+    ?.forEach((program) => {
+      const path = `extension-universitaria/${program?.params?.program}`;
+      paths?.push(path);
+    });
 
   return paths;
 }
@@ -214,7 +233,7 @@ export const getDynamicProgramsPaths = async () => {
 
 export const getProgramDetailPagesPaths = async () => {
   const strapiProgramDetailPagesPaths = await getDynamicProgramsPaths();
-  const staticProgramDetailPagesPaths = getJSONProgramsPaths();
+  const staticProgramDetailPagesPaths = await getJSONProgramsPaths();
 
   const paths = [...strapiProgramDetailPagesPaths, ...staticProgramDetailPagesPaths]?.map(normalizePath);
   const set = Array.from(new Set(paths)); // remove duplicates
