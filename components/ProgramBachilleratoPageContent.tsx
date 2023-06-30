@@ -122,7 +122,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
         </div>
       </ContentLayout>
       <ContentFullLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center">
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:flex w-t:justify-center">
           <section className="w-d:hidden">
             <TabsFeatured tabs={modalities?.map((modality) => ({ label: modality?.modality?.data?.attributes?.name }))} onActive={(active: number) => handleSetActiveTab(active)} />
           </section>
