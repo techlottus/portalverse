@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import Container from "@/layouts/Container.layout";
 import CardProgram from "@/old-components/CardProgram/CardProgram";
-import cn from "classnames";
 import type { ContEdProgramsSection } from "@/utils/strapi/sections/ContEdPrograms";
 
 const ContEdPrograms = (props: ContEdProgramsSection) => {
