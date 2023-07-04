@@ -7,10 +7,12 @@ import PageContent from "@/components/PageContent";
 import DynamicProgramContent from "@/components/DynamicProgramContent";
 import StaticProgramContent from "@/components/StaticProgramContent";
 import StaticContEdProgramContent from "@/components/StaticContEdProgramContent";
+import getBlogEntryBySlug from "@/utils/getBlogEntryBySlug";
+import getBlogEntryPageData from "@/utils/getBlogEntryPageData";
 import {
   getBlogEntryPagesPaths,
-  getPageBreadcrumb,
   getPageDataBySlug,
+  getDynamicPagesBreadcrumbs,
   getDynamicPagesPaths,
   getPageType,
   getProgramDetailPageData,
@@ -24,26 +26,24 @@ import type { ProgramDetailPage } from "@/utils/pages";
 
 type PageProps = {
   page: PageEntityResponse | BlogEntryPageEntityResponse | ProgramDetailPage;
-  breadcrumb: Record<string, string>;
+  breadcrumbs: Record<string, string>;
 };
 
 const Page = (props: PageProps) => {
-  const { page, breadcrumb } = props;
-  const pageType = page?.type;
-  const pageData = page?.data;
+  const { page, breadcrumbs } = props;
 
   const renderContent = () => {
-    switch (pageType) {
+    switch (page?.type) {
       case "BlogEntryPageEntityResponse":
-        return <BlogEntryPageContent {...pageData} />;
+        return <BlogEntryPageContent {...page?.data} />;
       case "PageEntityResponse":
-        return <PageContent {...pageData} />;
+        return <PageContent {...page?.data} />;
       case "StaticProgramDetail":
-        return <StaticProgramContent {...pageData} />;
+        return <StaticProgramContent {...page?.data} />;
       case "StaticContinuousEducationProgramDetail":
-        return <StaticContEdProgramContent {...pageData} />;
+        return <StaticContEdProgramContent {...page?.data} />;
       case "DynamicProgramDetail":
-        return <DynamicProgramContent {...pageData} />;
+        return <DynamicProgramContent {...page?.data} />;
       default:
         return null;
     }
@@ -52,7 +52,7 @@ const Page = (props: PageProps) => {
   return (
     <Fragment>
       <Container>
-        <Breadcrumbs visible breadcrumbs={breadcrumb} />
+        <Breadcrumbs visible breadcrumbs={breadcrumbs} />
       </Container>
       {
         renderContent()
@@ -72,9 +72,11 @@ export async function getStaticPaths() {
   const dynamicPagesPaths = await getDynamicPagesPaths();
   const programDetailPagesPaths = await getProgramDetailPagesPaths();
 
-  // TODO: Uncomment when blog pages can be handled from Strapi and blog pages files can be deleted from the project.
-  // const allPagesPaths = [...dynamicPagesPaths, ...blogEntriesPaths];
-  const allPagesPaths = [...dynamicPagesPaths, ...programDetailPagesPaths]?.map(normalizePath);
+  const allPagesPaths = [
+    ...dynamicPagesPaths,
+    ...programDetailPagesPaths,
+    ...blogEntryPagesPaths,
+  ]?.map(normalizePath);
 
   return {
     paths: allPagesPaths?.map((path) => ({
@@ -93,41 +95,61 @@ export async function getStaticProps(context: any): Promise<{props: PageProps}> 
   const path = slug?.join("/");
   const pageType = await getPageType(path);
 
+  const breadcrumbs = await getDynamicPagesBreadcrumbs();
+
   switch (pageType) {
     case "programDetail": {
-      const programDetailData = await getProgramDetailPageData(path);
+      const programDetailPage = await getProgramDetailPageData(path);
+
+      if(programDetailPage?.type === "DynamicProgramDetail") {
+        // Add program breadcrumb. Static program breadcrumbs already exist in the Routes.ts file
+        const programAttributes = programDetailPage?.data?.program?.attributes;
+        const programSlug = programAttributes?.slug;
+        const programName = programAttributes?.name;
+
+        breadcrumbs[programSlug] = programName;
+      }
 
       return {
         props: {
-          page: { ...programDetailData },
-          breadcrumb: {},
+          page: { ...programDetailPage },
+          breadcrumbs,
         },
       };
     }
     case "blogEntry": {
+      const blogEntryPageData = await getBlogEntryPageData();
+      const blogEntrySlug = slug?.[slug?.length - 1];
+      const blogEntryData = await getBlogEntryBySlug(blogEntrySlug);
+      blogEntryPageData.data.attributes.blogPost = { ...blogEntryData };
+
+      breadcrumbs[blogEntrySlug] = blogEntryData?.attributes?.title;
+
       return {
         props: {
-          page: {} as any, // TODO
-          breadcrumb: {},
+          page: {
+            type: "BlogEntryPageEntityResponse",
+            data: blogEntryPageData?.data,
+          },
+          breadcrumbs,
         },
       };
     }
     case "dynamic": {
       const pageData = await getPageDataBySlug(path);
-      const pageBreadcrumb = getPageBreadcrumb(pageData);
 
       return {
         props: {
           page: { ...pageData },
-          breadcrumb: pageBreadcrumb,
+          breadcrumbs,
         },
       };
     }
     default: {
       return {
         props: {
-          page: {} as any, // TODO
-          breadcrumb: {},
+          page: {} as PageEntityResponse,
+          breadcrumbs: {},
         },
       };
     }
