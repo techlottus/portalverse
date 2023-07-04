@@ -1,12 +1,11 @@
 import Head from "next/head"
 import { useRouter } from "next/router"
 import { Fragment } from "react"
-import NextPageWithLayout from "@/types/Layout.types"
 import ContentLayout from "@/layouts/Content.layout"
 import RichtText from "@/old-components/Richtext/Richtext"
 import Image from "@/old-components/Image"
 
-const DetalleCursoEducacionContinua: NextPageWithLayout = ({ sections, meta }: any) => {
+const DetalleCursoEducacionContinua = ({ sections, meta }: any) => {
 
   const router = useRouter()
 

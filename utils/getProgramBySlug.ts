@@ -5,7 +5,7 @@ import type { StrapiImage } from "@/types/strapi/common";
  * These are the current program levels available in [UANE, UTEG] exactly as they appear in Salesforce.
  * These strings must match exactly when registering program levels in Strapi's "Level" Collection Type.
  */
-type ProgramLevel =
+export type ProgramLevel =
   | "Bachillerato"
   | "Licenciatura"
   | "Maestría"
