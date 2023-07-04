@@ -1,4 +1,6 @@
 import { getDataPageFromJSON } from "@/utils/getDataPage";
+import getEducationalOfferingConfig from "@/utils/getEducationalOfferingConfig";
+import { normalizePath } from "@/utils/misc";
 import type { StrapiImage } from "@/types/strapi/common";
 
 type ContinuousEducationProgram = {
@@ -23,6 +25,7 @@ export type ContEdProgramsSection = {
   categories: {
     data: Array<ContinuousEducationCategory>
   }
+  programParentPageSlug?: string;
 };
 
 export const CONT_ED_PROGRAMS = `
@@ -146,6 +149,14 @@ export const formatContEdProgramsSection = async(section: ContEdProgramsSection)
     ];
 
   })
+
+  const educationalOfferingConfig = await getEducationalOfferingConfig();
+  const continuousEducationSlug = educationalOfferingConfig?.find(
+    (configItem) =>
+      configItem?.level?.data?.attributes?.title === "Educación Continua"
+  )?.slug || "";
+
+  section.programParentPageSlug = normalizePath(continuousEducationSlug);
 
   return section;
 }
