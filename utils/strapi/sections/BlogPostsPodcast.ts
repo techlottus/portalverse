@@ -97,7 +97,7 @@ export const formatBlogPostsPodcastSection = async (
   const blogEntryPage = await getBlogEntryPageData();
 
   const blogPostsData = await getBlogPosts({
-    pageSize: blogPostsConfig?.maxentries,
+    limit: blogPostsConfig?.maxentries,
     sort:
       blogPostsConfig?.sortdate === "latest"
         ? "publication_date:desc"

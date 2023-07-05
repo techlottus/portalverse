@@ -1,19 +1,19 @@
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
 
 export type PodcastEpisodesVariables = {
-  page?: number;
-  pageSize?: number;
+  start?: number;
+  limit?: number;
   sort?: "publicationDate:desc" | "publicationDate:asc";
 };
 
 const getPodcastEpisodes = async (variables: PodcastEpisodesVariables) => {
-  const { page = 1, pageSize, sort = "publicationDate:desc" } = variables;
+  const { start = 1, limit, sort = "publicationDate:desc" } = variables;
 
   const data = await fetchStrapiGraphQL<PodcastEpisodesResponse>(
     PODCAST_EPISODES,
     {
-      page,
-      pageSize,
+      start,
+      limit,
       sort,
     }
   );
@@ -37,7 +37,7 @@ export type PodcastEpisodesResponse = {
 
 const PODCAST_EPISODES = `
 query PodcastEpisodes($sort: [String]) {
-  podcasts(filters: { type: { eq: "episode" } }, sort: $sort) {
+  podcasts(filters: { type: { eq: "episode" } }, sort: $sort, pagination: {start: 0, limit: -1}) {
     data {
       attributes {
         providerId
