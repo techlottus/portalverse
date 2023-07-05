@@ -36,8 +36,8 @@ export type PodcastEpisodesResponse = {
 };
 
 const PODCAST_EPISODES = `
-query PodcastEpisodes($sort: [String]) {
-  podcasts(filters: { type: { eq: "episode" } }, sort: $sort, pagination: {start: 0, limit: -1}) {
+query PodcastEpisodes($start: Int, $limit: Int, $sort: [String]) {
+  podcasts(filters: { type: { eq: "episode" } }, sort: $sort, pagination: {start: $start, limit: $limit}) {
     data {
       attributes {
         providerId
