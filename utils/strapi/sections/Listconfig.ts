@@ -48,7 +48,7 @@ export const formatListconfigSection = async (
       const blogEntryPage = await getBlogEntryPageData();
 
       const blogPostsData = await getBlogPosts({
-        pageSize: section?.maxentries,
+        limit: section?.maxentries,
         sort:
           section?.sortdate === "latest"
             ? "publication_date:desc"
@@ -69,7 +69,7 @@ export const formatListconfigSection = async (
     }
     case "podcasts": {
       const podcastEpisodes = await getPodcastEpisodes({
-        pageSize: section?.maxentries,
+        limit: section?.maxentries,
         sort:
           section?.sortdate === "latest"
             ? "publicationDate:desc"
