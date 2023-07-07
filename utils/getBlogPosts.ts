@@ -8,7 +8,7 @@ export type BlogPostsVariables = {
 };
 
 const getBlogPosts = async (variables: BlogPostsVariables) => {
-  const { start = 1, limit, sort } = variables;
+  const { start = 0, limit, sort } = variables;
 
   const data = await fetchStrapiGraphQL<BlogPostsData>(BLOG_POSTS, {
     start,

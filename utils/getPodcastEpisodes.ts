@@ -7,7 +7,7 @@ export type PodcastEpisodesVariables = {
 };
 
 const getPodcastEpisodes = async (variables: PodcastEpisodesVariables) => {
-  const { start = 1, limit, sort = "publicationDate:desc" } = variables;
+  const { start = 0, limit, sort = "publicationDate:desc" } = variables;
 
   const data = await fetchStrapiGraphQL<PodcastEpisodesResponse>(
     PODCAST_EPISODES,
