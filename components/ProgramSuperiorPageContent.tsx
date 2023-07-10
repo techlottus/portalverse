@@ -24,6 +24,8 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const singleTypeAttributes = layout?.attributes;
   const bannerData = singleTypeAttributes?.banner;
 
+  const titleTabs = levelProgram === "Doctorado" ? "Modalidades disponibles en este" : "Modalidades disponibles en esta"
+
   //estado para información
   const [optionsSelect, setOptionsSelect] = useState<Array<SelectItem>>([]);
   const [tabActive, setTabActive] = useState<number>(0);
@@ -110,7 +112,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
       </ContentFullLayout>
       <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6">
-          <p className="text-6.5 font-Poppins font-semibold leading-[125%] w-t:leading-[125%] w-p:leading-[125%] w-t:text-6 w-p:text-6">{`Modalidades disponibles en esta ${levelProgram}`}</p>
+          <p className="text-6.5 font-Poppins font-semibold leading-[125%] w-t:leading-[125%] w-p:leading-[125%] w-t:text-6 w-p:text-6">{`${titleTabs} ${levelProgram}`}</p>
         </div>
         <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8' w-p:col-span-4 flex justify-center">
           <TabsFeatured tabs={modalities?.map((modality) => ({ label: modality?.modality?.data?.attributes?.name }))} onActive={(active: number) => handleSetActiveTab(active)} />
