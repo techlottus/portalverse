@@ -2,8 +2,8 @@ import { useRouter } from "next/router";
 import Container from "@/layouts/Container.layout";
 import BannerWrapper from "@/old-components/BannerWrapper";
 import Button from "@/old-components/Button/Button";
-import Spotify from "@/old-components/Spotify";
 import BlogPostCardWrapper from "@/components/BlogPostCardWrapper";
+import PodcastList from "@/components/sections/PodcastList";
 import type { BlogPostsPodcastSection } from "@/utils/strapi/sections/BlogPostsPodcast";
 
 const BlogPostsPodcast = (props: BlogPostsPodcastSection) => {
@@ -82,36 +82,17 @@ const BlogPostsPodcast = (props: BlogPostsPodcastSection) => {
             }
           </div>
 
-          {/* Podcast Sidebar */}
-          <div className="col-span-4 w-t:col-span-8 w-p:col-span-4">
-            {
-              podcastItemsTitle
-                ? <p className="font-Poppins font-bold text-10 w-t:text-7.5 w-p:text-7.5 leading-[125%] mb-6">
-                    {podcastItemsTitle}
-                  </p>
-                : null
-            }
-            {
-              podcastItems?.length > 0
-                ? <div>
-                    {
-                      podcastItems?.map((podcastItem, i) => (
-                        <div className="mb-6" key={`section-articles-${i}`}>
-                          <Spotify
-                            data={{
-                              config: {
-                                type: podcastItem?.podcastItem?.data?.attributes?.type,
-                                id: podcastItem?.podcastItem?.data?.attributes?.providerId,
-                                format: podcastItem?.format,
-                              },
-                            }}
-                          />
-                        </div>
-                      ))
-                    }
-                  </div>
-                : null
-            }
+          {/* Sidebar */}
+          <div className="col-span-4 w-t:col-span-8 w-p:col-span-4 w-d-base:-mx-6">
+            
+            {/* Podcast Items */}
+            <PodcastList
+              type="ComponentSectionsPodcastList"
+              title={podcastItemsTitle}
+              podcastItems={podcastItems}
+            />
+
+            {/* Banners */}
             {
               banners?.length > 0
                 ? <div>
