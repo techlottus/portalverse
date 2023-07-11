@@ -93,7 +93,7 @@ export const getProgramDetailPageData = async (path: string): Promise<ProgramDet
   const levelSlug = pathSegments?.slice(pathSegments?.length - 2, pathSegments?.length - 1)?.[0];
   const programSlug = pathSegments?.slice(pathSegments?.length - 1, pathSegments?.length)?.[0];
 
-  const staticProgramsItemsByLevel = Routes["oferta-educativa"];
+  const staticProgramsByLevel = Routes["oferta-educativa"];
   const continuousEducationPrograms = Routes["extension-universitaria"]?.params?.programs;
 
   const isContinuousEducationProgram = levelSlug === "extension-universitaria";
@@ -102,9 +102,9 @@ export const getProgramDetailPageData = async (path: string): Promise<ProgramDet
     ? continuousEducationPrograms?.some((program) => {
         return program?.params?.program === programSlug;
       })
-    : staticProgramsItemsByLevel?.some((item) => {
-        return item?.params?.programs?.some((program) => {
-          return program?.params?.program === programSlug;
+    : staticProgramsByLevel?.some((level) => {
+        return level?.params?.programs?.some((program) => {
+          return level?.params?.level === levelSlug && program?.params?.program === programSlug;
         });
       });
 
