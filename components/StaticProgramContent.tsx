@@ -1,17 +1,12 @@
 import { Fragment, useEffect, useState } from "react"
 import Head from "next/head"
 import cn from "classnames"
-import Routes from "@/routes/Routes"
-import HeaderFooterLayout from "@/layouts/HeaderFooter.layout"
 import ContentLayout from "@/layouts/Content.layout"
 import NextPageWithLayout from "@/types/Layout.types"
 import Image from "@/old-components/Image"
 import ContentInsideLayout from "@/layouts/ContentInside.layout"
 import RichtText from "@/old-components/Richtext/Richtext"
 import DescriptionSection from "@/old-components/DescriptionSection"
-import OpenFormBachillerato from "@/forms/container/OpenFormBachillerato"
-import OpenFormSuperior from "@/forms/container/OpenFormSuperior"
-import { getDataPageFromJSON } from "@/utils/getDataPage"
 import Button from "@/old-components/Button/Button"
 import Select from "@/old-components/Select"
 import { SelectInit } from "@/old-components/fixture"
@@ -21,7 +16,7 @@ import ContentFullLayout from "@/layouts/ContentFull.layout"
 import Video from "@/old-components/Video"
 import BannerPortalverse from "@/old-components/BannerPortalverse"
 
-const EducativeOfferProgram: NextPageWithLayout<any> = ({ level, program, meta, config, sections, form, bannerParche }: any) => {
+const StaticProgramContent: NextPageWithLayout<any> = ({ level, program, meta, config, sections, form, bannerParche }: any) => {
 
   const [ tabActive, setTabActive ] = useState<number>(0);
   const [ contentTabs, setContentTabs ] = useState<any>([]);
@@ -85,7 +80,7 @@ const EducativeOfferProgram: NextPageWithLayout<any> = ({ level, program, meta, 
     <Head>
       <title>{ meta.title }</title>
     </Head>
-    <HeaderFooterLayout>
+    <Fragment>
       <ContentLayout>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12">
           <h1 className="text-13 font-bold font-Poppins leading-13 w-t:leading-[111%] w-p:leading-[125%] w-t:text-8.5 w-p:text-7.5 mb-6">{sections.head.title}</h1>
@@ -204,34 +199,8 @@ const EducativeOfferProgram: NextPageWithLayout<any> = ({ level, program, meta, 
           }}/>
         </div>
       </ContentLayout>
-    </HeaderFooterLayout>
+    </Fragment>
   </>
 }
 
-export async function getStaticPaths(props: any) {
-  const allRoutes = Routes["oferta-educativa"].reduce((prev: any, { params: { programs, level } }: any) => {
-    const finalRoutes = programs.map(({ params }: any) => {
-      return { params: { level, ...params } }
-    })
-    return [ ...prev, ...finalRoutes ]
-  } , []);
-
-  return {
-    paths: [...allRoutes],
-    fallback: false,
-  }
-}
-
-// `getStaticPaths` requires using `getStaticProps`
-export async function getStaticProps(context: any) {
-  const { params: { level, program } } = context;
-  const { meta, config, sections, form } = await getDataPageFromJSON(`/oferta-educativa/${level}/${program}.json`);
-  const bannerParche  = await getDataPageFromJSON("oferta-educativa/oferta-educativa.json")
-  return {
-    props: {
-      level, program, meta, config, sections, form, bannerParche
-    },
-  }
-}
-
-export default EducativeOfferProgram;
+export default StaticProgramContent;

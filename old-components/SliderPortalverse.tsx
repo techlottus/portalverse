@@ -227,7 +227,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
                         ? <div className={cn("w-full flex", {
                             ["justify-center"]: item?.textPosition === "center_top" || item?.textPosition === "center" || item?.textPosition === "center_bottom",
                             ["justify-start"]: item?.textPosition === "left_top" || item?.textPosition === "left_bottom",
-                            ["justify-end"]: item?.textPosition === "right_top" || item?.textPosition === "right_bottom",
+                            ["justify-end"]: item?.textPosition === "right_top" || item?.textPosition === "right_bottom" || item?.textPosition === "right_center",
                           })}>
                             <Button
                               darkOutlined={item?.contentVariant === "light"}

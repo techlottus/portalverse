@@ -7,12 +7,12 @@ import BannerPortalverseWrapper from "@/components/BannerPortalverseWrapper";
 import Button from "@/old-components/Button/Button";
 import Editor from "@/old-components/Editor";
 import Image from "@/old-components/Image";
-import type { BlogEntryPageEntity } from "@/utils/getBlogEntryPageData";
+import type { BlogEntryPageData } from "@/utils/getBlogEntryPageData";
 
-const BlogEntryPageContent = (props: BlogEntryPageEntity) => {
+const BlogEntryPageContent = (props: BlogEntryPageData) => {
   const router = useRouter();
 
-  const attributes = props?.data?.attributes;
+  const attributes = props?.attributes;
   const parentSlug = attributes?.slug;
 
   const blogPost = attributes?.blogPost?.attributes;
@@ -79,7 +79,8 @@ const BlogEntryPageContent = (props: BlogEntryPageEntity) => {
                 isExpand: false,
               }}
               onClick={() => {
-                router.push(parentSlug || "/");
+                if (!parentSlug) return;
+                router.push(parentSlug);
               }}
             />
           </div>
@@ -92,14 +93,38 @@ const BlogEntryPageContent = (props: BlogEntryPageEntity) => {
                 {/** Dental clínic banner: Desk */}
                   <div className="col-span-4 w-t:hidden w-p:hidden w-d:grid-cols-1 flex flex-col space-y-6">
                     {
-                      banners?.map((banner, i) => <BannerPortalverseWrapper key={i} data={banner} />)
+                      banners?.map((banner, i) => {
+                        return (
+                          <BannerPortalverseWrapper
+                            key={i}
+                            data={banner}
+                            onClick={() => {
+                              const ctaUrl = banner?.ctaUrl;
+                              if (!ctaUrl) return;
+                              router.push(ctaUrl);
+                            }}
+                          />
+                        )}
+                      )
                     }
                   </div>
 
                   {/** Dental clínic & CESEPCOM banner: Tablet & Mobile */}
                   <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-2 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 w-d:hidden">
                     {
-                      banners?.map((banner, i) => <BannerPortalverseWrapper key={i} data={banner} />)
+                      banners?.map((banner, i) => {
+                        return (
+                          <BannerPortalverseWrapper
+                            key={i}
+                            data={banner}
+                            onClick={() => {
+                              const ctaUrl = banner?.ctaUrl;
+                              if (!ctaUrl) return;
+                              router.push(ctaUrl);
+                            }}
+                          />
+                        )}
+                      )
                     }
                   </section>
                 </Fragment>

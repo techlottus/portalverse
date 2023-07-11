@@ -2,17 +2,17 @@ import { fetchStrapiGraphQL } from "@/utils/getStrapi";
 import type { StrapiImage } from "@/types/strapi/common";
 
 export type BlogPostsVariables = {
-  page?: number;
-  pageSize?: number;
+  start?: number;
+  limit?: number;
   sort?: "publication_date:desc" | "publication_date:asc";
 };
 
 const getBlogPosts = async (variables: BlogPostsVariables) => {
-  const { page = 1, pageSize, sort } = variables;
+  const { start = 0, limit, sort } = variables;
 
   const data = await fetchStrapiGraphQL<BlogPostsData>(BLOG_POSTS, {
-    page,
-    pageSize,
+    start,
+    limit,
     sort,
   });
 
@@ -37,8 +37,8 @@ export type BlogPostsData = {
 }
 
 const BLOG_POSTS = `
-query BlogPosts ($page: Int, $pageSize: Int, $sort: [String]) {
-  blogPosts(pagination: { page: $page, pageSize: $pageSize }, sort: $sort){
+query BlogPosts ($start: Int, $limit: Int, $sort: [String]) {
+  blogPosts(pagination: { start: $start, limit: $limit }, sort: $sort){
     data {
       attributes {
         title

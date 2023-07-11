@@ -1,4 +1,6 @@
 import { getDataPageFromJSON } from "@/utils/getDataPage";
+import getEducationalOfferingConfig from "@/utils/getEducationalOfferingConfig";
+import { normalizePath } from "@/utils/misc";
 import type { StrapiImage } from "@/types/strapi/common";
 
 type ContinuousEducationProgram = {
@@ -23,6 +25,7 @@ export type ContEdProgramsSection = {
   categories: {
     data: Array<ContinuousEducationCategory>
   }
+  programParentPageSlug?: string;
 };
 
 export const CONT_ED_PROGRAMS = `
@@ -53,7 +56,7 @@ export const CONT_ED_PROGRAMS = `
 }
 `;
 
-type StaticProgram = {
+export type StaticContinuousEducationProgram = {
   hidden: boolean;
   id: string;
   title: string;
@@ -78,12 +81,12 @@ type StaticProgram = {
   redirect: string;
 }
 
-type StaticProgramCategory = {
+export type StaticContinuousEducationCategory = {
   title: string;
-  cursos: Array<StaticProgram>
+  cursos: Array<StaticContinuousEducationProgram>
 }
 
-const formatStaticProgramCategory = (category: StaticProgramCategory): ContinuousEducationCategory => {
+const formatStaticProgramCategory = (category: StaticContinuousEducationCategory): ContinuousEducationCategory => {
   return {
     attributes: {
       name: category?.title,
@@ -107,32 +110,53 @@ const formatStaticProgramCategory = (category: StaticProgramCategory): Continuou
   }
 }
 
+const excludeHiddenPrograms = (category: StaticContinuousEducationCategory) => {
+  return {
+    ...category,
+    cursos: category?.cursos?.filter(
+      (program) => !program?.hidden
+    ),
+  };
+}
+
+const hasAtLeastOneProgram = (category: StaticContinuousEducationCategory) => {
+  return category?.cursos?.length > 0;
+}
+
 export const formatContEdProgramsSection = async(section: ContEdProgramsSection) => {
-  const staticProgramsData = await getDataPageFromJSON('extension-universitaria/extension-universitaria.json');
-  const staticProgramCategories = staticProgramsData?.sections?.extension?.sections as Array<StaticProgramCategory>;
+  const continuousEducationStaticPageData = await getDataPageFromJSON('extension-universitaria/extension-universitaria.json');
+  const staticCategories = continuousEducationStaticPageData?.sections?.extension?.sections as Array<StaticContinuousEducationCategory>;
+  const formattedStaticCategories = staticCategories
+    ?.map(excludeHiddenPrograms)
+    ?.filter(hasAtLeastOneProgram)
+    ?.map(formatStaticProgramCategory)
 
-  const formattedStaticProgramCategories = staticProgramCategories?.map(formatStaticProgramCategory);
+  const categories = section?.categories?.data;
 
-  const categories = section.categories.data;
+  categories?.forEach(category => {
+    const categoryName = category?.attributes?.name;
+    const programs = category?.attributes?.programs?.data;
 
-  /**
-   * Group programs under the same category.
-   * Append categories that are not currently captured in Strapi but exist in the static JSON file. 
-   */
-  formattedStaticProgramCategories?.forEach(staticProgramCategory => {
-    const staticCategoryName = staticProgramCategory?.attributes?.name;
+    // Retrieve static programs under the given category.
+    const staticPrograms =
+      formattedStaticCategories?.find(
+        (programCategory) => programCategory?.attributes?.name === categoryName
+      )?.attributes?.programs?.data || [];
 
-    // Find if a category coming from the JSON file already exists within the categories retrieved from Strapi.
-    const foundCategory = categories?.find(category => category?.attributes?.name === staticCategoryName);
+    category.attributes.programs.data = [
+      ...programs,
+      ...staticPrograms,
+    ];
 
-    if(!!foundCategory) { // merge both programs under the same category
-      const programs = foundCategory.attributes.programs?.data;
-      foundCategory.attributes.programs.data = [...programs, ...staticProgramCategory?.attributes?.programs?.data];
-    } else { // append the new category object
-      section.categories.data = [...section.categories.data, staticProgramCategory]
-    }
+  })
 
-  });
+  const educationalOfferingConfig = await getEducationalOfferingConfig();
+  const continuousEducationSlug = educationalOfferingConfig?.find(
+    (configItem) =>
+      configItem?.level?.data?.attributes?.title === "Educación Continua"
+  )?.slug || "";
+
+  section.programParentPageSlug = normalizePath(continuousEducationSlug);
 
   return section;
 }
