@@ -6,7 +6,7 @@ const RichtText: FC<RichTextComponentData> = memo(({ data, font = "light", class
   const richTextRef = createRef();
 
   useEffect(() => {
-    const { content } = data;
+    const content  = data?.content || "";
     (richTextRef.current as any).data = content;
   }, [data, richTextRef]);// eslint-disable-line react-hooks/exhaustive-deps
   
