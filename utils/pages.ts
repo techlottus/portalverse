@@ -163,7 +163,7 @@ export const getBlogEntryPagesPaths = async () => {
     blogEntryPageData?.data?.attributes?.slug
   );
 
-  const blogPostsData = await getBlogPosts({ pageSize: 100 });
+  const blogPostsData = await getBlogPosts({ limit: -1 });
   const blogEntriesSlugs = blogPostsData?.blogPosts?.data?.map((blogPost) =>
     normalizePath(blogPost?.attributes?.slug)
   );
