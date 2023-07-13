@@ -9,16 +9,11 @@ export type BlogPostsVariables = {
 };
 
 const getBlogPosts = async (variables: BlogPostsVariables = {}) => {
-
-  console.log("Inside getBlogPosts");
-  console.log("variables", variables);
-
+  
   const start = variables?.start || 0;
   const limit = variables?.limit;
   const sort = variables?.sort || "publication_date:desc";
   const category = variables?.category;
-
-  console.log("category", category);
 
   const data = await fetchStrapiGraphQL<BlogPostsData>(BLOG_POSTS, {
     start,
