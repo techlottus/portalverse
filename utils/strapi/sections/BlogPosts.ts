@@ -51,8 +51,8 @@ export const formatBlogPostsSection = async (
 
   const blogEntryPageData = await getBlogEntryPageData();
 
-  section.blogPosts = blogPostsData?.blogPosts?.data;
-  section.blogPageSlug = blogEntryPageData?.data?.attributes?.slug;
+  section.blogPosts = blogPostsData?.blogPosts?.data || [];
+  section.blogPageSlug = blogEntryPageData?.data?.attributes?.slug || 'nosotros/internacionalizacion';
 
   return section;
 };
