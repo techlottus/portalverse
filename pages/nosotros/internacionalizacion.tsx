@@ -9,15 +9,17 @@ import NextPageWithLayout from "@/types/Layout.types"
 import Slider from "@/old-components/SliderPortalverse"
 import RichtText from "@/old-components/Richtext/Richtext"
 import PromoLink from "@/old-components/PromoLink"
-import CardWebsite from "@/old-components/CardWebsite"
 import { getDataPageFromJSON } from "@/utils/getDataPage"
 import Rainbow from "@/old-components/Rainbow"
 import Modal from "@/old-components/Modal/Modal"
 import ContentInsideLayout from "@/layouts/ContentInside.layout"
 import cn from "classnames"
 import Video from "@/old-components/Video"
+import BlogPosts from "@/components/sections/BlogPosts"
+import { formatBlogPostsSection } from "@/utils/strapi/sections/BlogPosts"
+import type { BlogPostsSection } from "@/utils/strapi/sections/BlogPosts"
 
-const Internacionalizacion: NextPageWithLayout = ({ sections, meta }: any) => {
+const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: any, meta: any, blogPostsSection: BlogPostsSection}) => {
 
   const router = useRouter();
   // Modal functionality begin
@@ -155,8 +157,8 @@ const Internacionalizacion: NextPageWithLayout = ({ sections, meta }: any) => {
       </ContentLayout>
       <ContentLayout classNames="mt-6 w-d:mt-18">
         <div className="col-span-12">
-          <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%] mb-6">{sections.alliances.title}</p>
-          <section className="grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mb-12 w-t:mb-12 w-p:mb-6">
+          <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%]">{sections.alliances.title}</p>
+          <section className="grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
           {
             sections.alliances.alliances.map((item:any, i:number) => <section key={`section-alliances-${i}`}>
               <PromoLink data={item} onClick={() => {
@@ -165,18 +167,11 @@ const Internacionalizacion: NextPageWithLayout = ({ sections, meta }: any) => {
             </section>)
             }
           </section>
-          {/*<div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6">
-            <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%]">{sections.articles.title}</p>
-          </div>
-          <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-2 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
-            {
-            sections.articles.articles.map((item:any, i:number) => <section key={`section-alliances-${i}`}>
-              <CardWebsite data={item} onClick={()=> router.push(`/voz-uane/blog/${item.redirect}`)}/>
-            </section>)
-            }
-          </section> */}
         </div>
       </ContentLayout>
+      <div className="w-p:mt-12 w-t:mt-12 w-d:mt-18">
+        <BlogPosts {...blogPostsSection} />
+      </div>
     </HeaderFooterLayout>
   </>
 }
@@ -184,6 +179,29 @@ const Internacionalizacion: NextPageWithLayout = ({ sections, meta }: any) => {
 // `getStaticPaths` requires using `getStaticProps`
 export async function getStaticProps(context: any) {
   const { sections, meta } = await getDataPageFromJSON('internacionalizacion.json');
+
+  /**
+   * This is a representation of the section data that will come from Strapi once
+   * this page can be fully dynamically generated. This will show the 3 latest blog
+   * entries under the "Internacionalziación" category.
+   */
+  const blogPostsSection: BlogPostsSection = {
+    type: "ComponentSectionsBlogPosts",
+    title: "Artículos sobre UTEG 360",
+    subtitle: "",
+    description: "",
+    maxEntries: 3,
+    sort: "latest",
+    category: {
+      data: {
+        attributes: {
+          title: "Internacionalización",
+        }
+      }
+    }
+  }
+
+  const formattedBlogPostsSection = await formatBlogPostsSection(blogPostsSection);
 
   // redirect not avaliable page
   if (!!meta.hidden) {
@@ -193,7 +211,7 @@ export async function getStaticProps(context: any) {
   }
 
   return {
-    props: { sections, meta }
+    props: { sections, meta, blogPostsSection: formattedBlogPostsSection }
   }
 }
 
