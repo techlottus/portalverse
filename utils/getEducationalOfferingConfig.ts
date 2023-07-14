@@ -24,7 +24,7 @@ type EducationalOfferingConfigResponse = {
 
 const getEducationalOfferingConfig = async () => {
   const response = await fetchStrapiGraphQL<EducationalOfferingConfigResponse>(EDUCATIONAL_OFFERING_CONFIG);
-  return response?.educationalOffering?.data?.attributes?.levelsConfig || [];
+  return response?.educationalOffering?.data?.attributes?.levelsConfig;
 };
 
 const EDUCATIONAL_OFFERING_CONFIG = `
