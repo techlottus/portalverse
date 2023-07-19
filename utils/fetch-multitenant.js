@@ -26,7 +26,7 @@ const setcolors = (colors) => {
 }
 
 async function fetchColors(){
-  
+  console.log(env);
   const rawColors = await
   fetch(`${env.NEXT_PUBLIC_MULTITENANT_URL}/pallete?populate[0]=primary,secondary,surface,complementary.colors,contextual.success,contextual.error,contextual.warning,contextual.info`, {
     headers: {
