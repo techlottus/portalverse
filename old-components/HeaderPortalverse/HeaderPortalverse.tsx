@@ -113,8 +113,8 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, l
     {/* desktop menu */}
     <section ref={navbarRef} className={cn("fixed w-t:hidden w-p:hidden w-full bg-white z-10 transition-transform", { "shadow-15": !activeMenu }, classNames)}>
       <div className="flex p-1">
-        <div className={cn("p-6 cursor-pointer border-solid border-SC/Actions/AC-300 border-r-2")} onClick={onClickLogo}>
-          <Image src={logotype.src} alt={logotype.alt} classNames="w-[143px] h-10" classNamesImg="w-[143px] h-[38px]" />
+        <div className={cn("p-6 border-0 cursor-pointer border-solid border-SC/Actions/AC-300 border-r-2")} onClick={onClickLogo}>
+          <div className="w-36 h-9 bg-logo bg-cover bg-center"> </div>
         </div>
         <div className={cn("flex flex-col flex-grow p-1")}>
           <div className="flex justify-end pr-6 space-x-6 font-Nunito text-gray-500 text-sm">
@@ -126,7 +126,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, l
               <p className="font-bold text-[#686868]">Egresados</p>
             </Link>
           </div>
-          <div className="flex flex-grow p-1 border-solid border-SC/Actions/AC-300 border-t-2">
+          <div className="flex flex-grow p-1 border-0 border-solid border-SC/Actions/AC-300 border-t-2">
             <div className="flex flex-grow space-x-6">
               {
                 menus.map((item: any, i: number) => <div key={`menu-${i}`} className="cursor-pointer p-1 z-20 flex items-center">
@@ -176,8 +176,8 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, l
         <Icon name="sort" className="w-6 h-6" />
       </div>
       <div className="flex justify-center items-center flex-grow" onClick={onClickLogo}>
-        <Image src={logotype.src} alt={logotype.alt} classNames="w-[90px] h-6" classNamesImg="w-[90px] h-6" />
-      </div>
+          <div className="w-36 h-9 bg-logo bg-cover bg-center"> </div>
+        </div>
       {/* <div className="p-3 border-solid border-SC/Actions/AC-300 border-l-2">
         <Icon name="search" className="w-6 h-6" />
       </div> */}
