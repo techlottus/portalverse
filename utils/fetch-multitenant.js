@@ -1,5 +1,6 @@
 const fs = require('fs')
-const env = require('dotenv').config().parsed;
+const dotenv = require('dotenv').config();
+const { env } = require('process')
 
 const setcolors = (colors) => {
   return Object.keys(colors) .reduce((acc, key) => {
@@ -26,8 +27,6 @@ const setcolors = (colors) => {
 }
 
 async function fetchColors(){
-  console.log(env);
-  console.log(process.env);
   const rawColors = await
   fetch(`${env.NEXT_PUBLIC_MULTITENANT_URL}/pallete?populate[0]=primary,secondary,surface,complementary.colors,contextual.success,contextual.error,contextual.warning,contextual.info`, {
     headers: {
