@@ -123,7 +123,7 @@ const StepOne: FC<any> = ({ classNames, data, image, onNext, programs }: any) =>
   return <section className={cn(classNames)}>
   <div className="flex gap-6">
     <div className="flex flex-col gap-6">
-      <h1 className="font-Nunito-Sans font-bold text-5 leading-6">{ config.title }</h1>
+      <h1 className="font-texts font-bold text-5 leading-6">{ config.title }</h1>
       <p className="font-Nunito font-normal text-[14px] leading-4">{ config.subtitle }</p>
     </div>
     <div className={"aspect-1/1 w-t:hidden w-p:hidden"} >
@@ -131,7 +131,7 @@ const StepOne: FC<any> = ({ classNames, data, image, onNext, programs }: any) =>
     </div>
   </div>
   <div className="flex align-middle items-center">
-    <p className="mt-8 mb-6 text-[14px] leading-5 text-[#282828] font-Nunito-Sans font-normal mr-1">
+    <p className="mt-8 mb-6 text-[14px] leading-5 text-[#282828] font-texts font-normal mr-1">
       { config.conditions }{" "}
       <Link href={config?.privacyLink?.link || ""} passHref target={"_blank"}>
         <span className="mt-8 mb-6 text-[14px] font-Nunito font-normal text-sm text-[#282828]">{config?.privacyLink?.label}</span>

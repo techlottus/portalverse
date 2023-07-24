@@ -114,15 +114,15 @@ const StepOne: FC<any> = ({ classNames, data, image, onNext, step, config: stepO
   return <section className={cn(classNames)}>
     <div className="flex gap-6">
       <div className="flex flex-col gap-6">
-        <h1 className="font-Nunito-Sans font-bold text-5 leading-6">{ config.title }</h1>
-        <p className="font-Nunito-Sans font-normal text-[14px] leading-4">{ config.subtitle }</p>
+        <h1 className="font-texts font-bold text-5 leading-6">{ config.title }</h1>
+        <p className="font-texts font-normal text-[14px] leading-4">{ config.subtitle }</p>
       </div>
       <div className="w-p:hidden">
         <Image classNamesImg="w-full h-full object-cover" classNames="w-[112px] h-[112px] rounded-full overflow-hidden" src={image.src} alt={image.alt} />
       </div>
     </div>
     <div className="flex align-middle items-center mt-8 mb-6">
-      <p className="text-[14px] leading-5 text-[#282828] font-Nunito-Sans font-normal mr-1">{ config.conditions }</p>
+      <p className="text-[14px] leading-5 text-[#282828] font-texts font-normal mr-1">{ config.conditions }</p>
       <Link href={config.privacyLink.link} passHref target={"_blank"}>
         <p className="text-[14px] font-Nunito font-normal text-sm text-[#282828] underline">{config.privacyLink.label}</p>
       </Link>
@@ -146,7 +146,7 @@ const StepOne: FC<any> = ({ classNames, data, image, onNext, step, config: stepO
         <Input errorMessage={configControls.errorMessagesStepOneOpenForm.email} hasError={errorControls.email} eventFocus={() => handleTouchedControl("email")} data={ configControls.inputEmailOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "email")} />
       </div>
       <div className="mt-6">
-        <p className="font-Nunito-Sans font-normal text-[14px] leading-5">{ config.modality }</p>
+        <p className="font-texts font-normal text-[14px] leading-5">{ config.modality }</p>
         <Select onClick={(option: CustomEvent) => handleOptionSelected(option)} options={[...dataModalities]} data={{ ...SelectInit, textDefault: !!infoControls.modality ? " " : "Elige una modalidad", icon: "school" }}  />
         <p className={cn("text-[#e57565] text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{ configControls.errorMessagesStepOneOpenForm.modality }</p>
       </div>

@@ -51,7 +51,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
                         (infoModal?.downloadables as Array<{ label: string; link: string; }>)?.map((redirect, index) => {
                           const children = (
                             <>
-                              <span className="font-Nunito-Sans font-normal underline underline-offset-4 mr-auto">{redirect?.label}</span>
+                              <span className="font-texts font-normal underline underline-offset-4 mr-auto">{redirect?.label}</span>
                               <span className="material-icons ml-3 mt-1">download</span>
                             </>
                           );
@@ -97,7 +97,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
                           cn("flex items-center text-white mt-6")
                         }
                       >
-                        <span className="font-Nunito-Sans font-normal underline underline-offset-4 mr-auto">{infoModal?.redirect?.link}</span>
+                        <span className="font-texts font-normal underline underline-offset-4 mr-auto">{infoModal?.redirect?.link}</span>
                         <span className="material-icons ml-3 mt-1">chevron_right</span>
                       </a>
                   </div>

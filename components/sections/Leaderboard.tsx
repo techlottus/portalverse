@@ -57,7 +57,7 @@ const Leaderboard = (props: LeaderboardSection) => {
                     }
                     <span
                       className={cn(
-                        "font-Nunito-Sans font-normal",
+                        "font-texts font-normal",
                         "w-d:leading-5 w-t:leading-[17.5px] w-p:leading-[17.5px]",
                         "w-d:text-base w-t:text-3.5 w-p:text-3.5",
                       )}

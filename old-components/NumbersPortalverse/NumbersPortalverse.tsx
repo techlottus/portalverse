@@ -71,7 +71,7 @@ const NumbersPortalverse: FC<NumbersPortalverseData> = memo(({data, classNames }
     })}>
         {
           data?.title ?
-            <p className="font-Nunito-Sans font-semibold text-lg leading-5 mb-2">{data?.title}</p>
+            <p className="font-texts font-semibold text-lg leading-5 mb-2">{data?.title}</p>
           : null
         }
         {

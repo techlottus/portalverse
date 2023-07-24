@@ -101,20 +101,20 @@ const StepThree: FC<any> = ({ classNames, step, data, contacts, schedulers, onNe
       <div className="flex flex-col grow">
         <h2 className="font-headings font-semibold text-[18px] leading-[22px] mb-2">{ config.description }</h2>
         <div className="flex">
-          <h3 className="font-Nunito-Sans text-sm leading-[17px] font-bold mr-1">{ config.labelModality }</h3>
-          <p className="font-Nunito-Sans text-sm leading-[17px] font-normal">{ data.modality }</p>
+          <h3 className="font-texts text-sm leading-[17px] font-bold mr-1">{ config.labelModality }</h3>
+          <p className="font-texts text-sm leading-[17px] font-normal">{ data.modality }</p>
         </div>
         <div className="flex">
-          <h3 className="font-Nunito-Sans text-sm leading-[17px] font-bold mr-1">{ config.labelNivel }</h3>
-          <p className="font-Nunito-Sans text-sm leading-[17px] font-normal">{ data.level }</p>
+          <h3 className="font-texts text-sm leading-[17px] font-bold mr-1">{ config.labelNivel }</h3>
+          <p className="font-texts text-sm leading-[17px] font-normal">{ data.level }</p>
         </div>
         <div className="flex">
-          <h3 className="font-Nunito-Sans text-sm leading-[17px] font-bold mr-1">{ config.labelProgram }</h3>
-          <p className="font-Nunito-Sans text-sm leading-[17px] font-normal">{ data.program }</p>
+          <h3 className="font-texts text-sm leading-[17px] font-bold mr-1">{ config.labelProgram }</h3>
+          <p className="font-texts text-sm leading-[17px] font-normal">{ data.program }</p>
         </div>
         <div className="flex">
-          <h3 className="font-Nunito-Sans text-sm leading-[17px] font-bold mr-1">{ config.labelCampus }</h3>
-          <p className="font-Nunito-Sans text-sm leading-[17px]">{ data.campus }</p>
+          <h3 className="font-texts text-sm leading-[17px] font-bold mr-1">{ config.labelCampus }</h3>
+          <p className="font-texts text-sm leading-[17px]">{ data.campus }</p>
         </div>
       </div>
       <div className="cursor-pointer" onClick={handleChangeInfo}>

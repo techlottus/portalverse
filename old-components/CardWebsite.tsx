@@ -57,7 +57,7 @@ const CardWebsite: FC<CardWebsiteComponentData> = memo(({ data, onClick }: CardW
       <Link data={linkTextData} onClick={onClick} />
     </div>
     <div className="flex flex-col gap-2" slot="areaContentCardWebsite">
-      <p className="font-Nunito-Sans font-normal w-d:text-base w-d:leading-5 w-t:text-sm w-t:leading-[17.5px] w-p:text-sm w-p:leading-[17.5px] text-[#686868]">{ data.subtitle }</p>
+      <p className="font-texts font-normal w-d:text-base w-d:leading-5 w-t:text-sm w-t:leading-[17.5px] w-p:text-sm w-p:leading-[17.5px] text-[#686868]">{ data.subtitle }</p>
       <h2 className="font-headings font-semibold w-d:text-[22px] w-d:leading-7 w-t:text-base w-t:leading-5 w-p:text-base w-p:leading-5">{ data.title }</h2>
       <RichtText data={{content}}/>
     </div>

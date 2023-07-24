@@ -285,7 +285,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
             >
               {item.title}
             </h2>
-            <p className="font-Nunito-Sans font-normal text-base leading-5">{item.text}</p>
+            <p className="font-texts font-normal text-base leading-5">{item.text}</p>
             {
               !!item?.action?.title
                 ? <Button data={{ ...item.action, isExpand: true }} dark onClick={() => router.push(`${item.action.redirect}`)} />

@@ -165,7 +165,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
             hasCampuses ?
               <>
                 <div className="my-6">
-                  <p className="font-Nunito-Sans font-normal text-xs mb-0">Los planes de estudio pueden variar por campus*</p>
+                  <p className="font-texts font-normal text-xs mb-0">Los planes de estudio pueden variar por campus*</p>
                   <Select onClick={(option: CustomEvent) => handleSelectOption(option)} data={{ ...SelectInit, textDefault: "Elige el campus de tu interés" }} options={optionsSelect} flagHeight={true} />
                 </div>
                 <Button dark data={{ ...ButtonInit, title: "Descarga el plan de estudios", disabled: !isOptionSelected, icon: "download" }} onClick={downloadFileProgram} />

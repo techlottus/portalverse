@@ -44,7 +44,7 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
               (infoModal?.redirects as Array<{ label: string; link: string; external?: boolean; }>)?.map((redirect, index) => {
                 const children = (
                   <>
-                    <span className="font-Nunito-Sans font-normal underline underline-offset-4 mr-auto">{redirect?.label}</span>
+                    <span className="font-texts font-normal underline underline-offset-4 mr-auto">{redirect?.label}</span>
                     <span className="material-icons ml-3 mt-1">
                       {
                         redirect?.external ?
@@ -130,8 +130,8 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
       <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-12 w-t:mb-6 w-p:mb-6">
           <Feedback data={sections.feedback.feedback} >
-            <h1 className="font-Nunito-Sans font-normal text-base leading-6 text-SC/Blackandgrey/B-80 mb-3">{sections.feedback.title}</h1>
-            <p className="font-Nunito-Sans font-normal text-sm text-SC/Blackandgrey/B-80">{sections.feedback.text}</p>
+            <h1 className="font-texts font-normal text-base leading-6 text-SC/Blackandgrey/B-80 mb-3">{sections.feedback.title}</h1>
+            <p className="font-texts font-normal text-sm text-SC/Blackandgrey/B-80">{sections.feedback.text}</p>
           </Feedback>
         </div>
         <div className="col-span-7 w-t:col-span-8 w-p:col-span-4">
