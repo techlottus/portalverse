@@ -22,7 +22,7 @@ const ContEdPrograms = (props: ContEdProgramsSection) => {
               return categoryPrograms?.length > 0
                 ? <div key={i} className="flex flex-col space-y-6">
                     {
-                      categoryName ? <h3 className="font-Poppins text-10 font-bold leading-[125%] w-t:text-8.5 w-p:text-6">{categoryName}</h3> : null
+                      categoryName ? <h3 className="font-headings text-10 font-bold leading-[125%] w-t:text-8.5 w-p:text-6">{categoryName}</h3> : null
                     }
                     <div className="grid w-p:grid-cols-1 w-t:grid-cols-2 w-d:grid-cols-4 gap-6 items-stretch">
                       {

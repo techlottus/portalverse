@@ -38,8 +38,8 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
       <section slot="areaModalContent" className="flex w-t:flex-col w-p:flex-col w-full h-auto">
         <ContentInsideLayout classNames="gap-6">
           <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 bg-[#2B2C34] p-6">
-            <p className="text-white font-Poppins font-bold text-8 leading-10 break-normal mb-16">{infoModal?.title?.title}</p>
-            <span className="font-Poppins font-normal text-white mb-6">{infoModal?.redirectLabel}</span>
+            <p className="text-white font-headings font-bold text-8 leading-10 break-normal mb-16">{infoModal?.title?.title}</p>
+            <span className="font-headings font-normal text-white mb-6">{infoModal?.redirectLabel}</span>
             {
               (infoModal?.redirects as Array<{ label: string; link: string; external?: boolean; }>)?.map((redirect, index) => {
                 const children = (
@@ -94,8 +94,8 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
     <HeaderFooterLayout>
       <ContentLayout>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12">
-          <h1 className="text-13 font-bold font-Poppins leading-13 w-t:leading-[111%] w-p:leading-[125%] w-t:text-8.5 w-p:text-7.5 w-d:mb-6 w-t:mb-4 w-p:mb-3">{sections.head.title}</h1>
-          <p className="text-5.5  font-bold font-Poppins leading-[130%] w-t:leading-[125%] w-p:leading-[125%] w-t:text-4.5 w-p:text-4.5 w-d:mb-6 w-t:mb-4 w-p:mb-3">{sections.head.subtitle}</p>
+          <h1 className="text-13 font-bold font-headings leading-13 w-t:leading-[111%] w-p:leading-[125%] w-t:text-8.5 w-p:text-7.5 w-d:mb-6 w-t:mb-4 w-p:mb-3">{sections.head.title}</h1>
+          <p className="text-5.5  font-bold font-headings leading-[130%] w-t:leading-[125%] w-p:leading-[125%] w-t:text-4.5 w-p:text-4.5 w-d:mb-6 w-t:mb-4 w-p:mb-3">{sections.head.subtitle}</p>
           <RichtText data={{
             content: sections.head.description
           }} />
@@ -113,7 +113,7 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
       </ContentLayout>
       <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6 w-t:mb-12 w-p:mb-6">
-          <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%]">{sections?.becas?.title}</p>
+          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%]">{sections?.becas?.title}</p>
         </div>
         <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mb-12 w-t:mb-12 w-p:mb-6">
           {
@@ -138,7 +138,7 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
           <OpenForm pathThankyou={`/thank-you`} image={{ src: "https://assets.staging.bedu.org/UTEG/admisiones_pedir_informacion_avatar_6738c707b5.jpg", alt: "image-person" }} />
         </div>
         <div className="col-span-5 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-Poppins font-bold leading-[130%] text-5.5 mb-[30px]">{sections.llamanos.title}</p>
+          <p className="font-headings font-bold leading-[130%] text-5.5 mb-[30px]">{sections.llamanos.title}</p>
           <CardWebsitePortalverse data={sections.llamanos.card} />
         </div>
       </ContentLayout>

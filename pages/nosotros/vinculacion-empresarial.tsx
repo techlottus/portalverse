@@ -56,13 +56,13 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
     <HeaderFooterLayout breadcrumbs={true}>
       <ContentLayout classNames="gap-12">
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-Poppins font-bold text-13 w-t:text-8.5 w-p:text-7.5 w-d:mb-6 w-d:leading-13">{sections.head.title}</p>
-          <p className="font-Poppins font-bold text-5.5 mb-6">{sections.head.subtitle}</p>
+          <p className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-7.5 w-d:mb-6 w-d:leading-13">{sections.head.title}</p>
+          <p className="font-headings font-bold text-5.5 mb-6">{sections.head.subtitle}</p>
           <RichtText font="light" data={{
             content: sections.head.description
           }} classNames="mb-4" />
           <div className="flex sm:gap-2 md:gap-0 md:flex-row md:items-center">
-            <p className="font-Poppins font-bold mr-6">{sections.head.contactText}</p>
+            <p className="font-headings font-bold mr-6">{sections.head.contactText}</p>
             <div className="flex md:items-center">
               <span className="material-icons text-SC/Blackandgrey/B-100 mr-2">mail</span>
               <LinkContactTarget type={"email"} classNames="text-SC/Blackandgrey/B-100 underline" info={sections.head.contactLink} />
@@ -77,7 +77,7 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
           />
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%] w-d:mb-6">{sections.alliances.title}</p>
+          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%] w-d:mb-6">{sections.alliances.title}</p>
           <div className="w-d:col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mb-6 ">
             {
               sections?.alliances?.carrousel?.map((item: any, i: number) => <section key={`section-numbers-${i}`}>
@@ -145,7 +145,7 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
       </ContentLayout>
       <ContentLayout classNames="mt-6">
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-Poppins font-bold text-13 w-t:text-8.5 w-p:text-7.5 mb-18 w-p:m-6  w-d:leading-13">{sections.descriptionSection.title}</p>
+          <p className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-7.5 mb-18 w-p:m-6  w-d:leading-13">{sections.descriptionSection.title}</p>
           {
             sections.descriptionSection.textIcons.map((item: any, i: number) =>
               <div key={`icon-${i}`} className="flex mt-4 gap-6">
@@ -186,7 +186,7 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
       </ContentLayout>
       <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-12 w-t:mt-6 w-p:mt-6">
-          <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%] mb-6">{sections.experiences.title}</p>
+          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%] mb-6">{sections.experiences.title}</p>
           <Mosaic data={sections.experiences.images} />
         </div>
       </ContentLayout>

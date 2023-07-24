@@ -30,31 +30,31 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
           <BannerNumeralia data={sections.head.banner} />
         </div>
         <div className="col-span-6 mt-auto mb-auto w-t:col-span-8 w-p:col-span-4 w-t:hidden w-p:hidden">
-          <p className="font-Poppins font-bold leading-[125%] text-10 w-t:text-6 w-p:text-6 mb-6"> {sections.descripcion.title}</p>
+          <p className="font-headings font-bold leading-[125%] text-10 w-t:text-6 w-p:text-6 mb-6"> {sections.descripcion.title}</p>
           <RichtText data={{ content: sections.descripcion.text.content }} />
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
           <BeWanted pathBeWanted="https://www.bewanted.com/acceso/candidatos" copies={{ ...OpenFormInit.steponebewanted }} pathThankyou={`/thank-you?type=egresados`} classNames="w-full h-auto bg-white bottom-0 rounded-lg" />
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:hidden">
-          <p className="font-Poppins font-bold leading-[125%] text-10 w-t:text-6 w-p:text-6 mb-6">{sections.comoFunciona.title}</p>
+          <p className="font-headings font-bold leading-[125%] text-10 w-t:text-6 w-p:text-6 mb-6">{sections.comoFunciona.title}</p>
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mt-auto mb-auto">
           <Video dimensions={["330px", "350px", "200px"]} data={sections.comoFunciona.video} />
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-t:hidden w-p:hidden my-auto ">
-          <p className="font-Poppins font-bold leading-[125%] text-10 w-t:text-6 w-p:text-6 mb-6">{sections.comoFunciona.title}</p>
+          <p className="font-headings font-bold leading-[125%] text-10 w-t:text-6 w-p:text-6 mb-6">{sections.comoFunciona.title}</p>
           <RichtText data={{ content: sections.comoFunciona.description.content }} />
         </div>
         <div className="w-t:col-span-8 w-p:col-span-4 w-d:hidden">
           <RichtText data={{ content: sections.comoFunciona.description.content }} />
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 hidden">
-          <p className="font-Poppins font-bold leading-[125%] text-10"> {sections.vacantes.title}</p>
+          <p className="font-headings font-bold leading-[125%] text-10"> {sections.vacantes.title}</p>
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4"></div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mt-auto mb-auto">
-          <p className="font-Poppins font-bold leading-[125%] text-10 w-t:text-6 w-p:text-6 mb-6">{sections.vinculacionEmpresas.title}</p>
+          <p className="font-headings font-bold leading-[125%] text-10 w-t:text-6 w-p:text-6 mb-6">{sections.vinculacionEmpresas.title}</p>
           <RichtText data={{ content: sections.vinculacionEmpresas.description.content }} />
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
@@ -64,10 +64,10 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
       <ContentFullLayout classNames="bg-darkBlue">
         <ContentLayout>
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-4 w-d:hidden">
-            <p className="font-Poppins text-white font-bold leading-[125%] text-6.5 w-t:text-6 w-p:text-6">{sections.historiasExito.title}</p>
+            <p className="font-headings text-white font-bold leading-[125%] text-6.5 w-t:text-6 w-p:text-6">{sections.historiasExito.title}</p>
           </div>
           <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mt-auto mb-auto w-t:hidden w-p:hidden">
-            <p className="font-Poppins text-white font-bold leading-[125%] text-6.5 w-t:text-6 w-p:text-6 mb-6">{sections.historiasExito.title}</p>
+            <p className="font-headings text-white font-bold leading-[125%] text-6.5 w-t:text-6 w-p:text-6 mb-6">{sections.historiasExito.title}</p>
             <RichtText font="dark" data={{ content: sections.historiasExito.description.content }} />
           </div>
           <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mb-6 w-d:hidden">
@@ -81,7 +81,7 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
       <ContentFullLayout classNames="bg-SC/Backgrounds/BG-GRAY mt-[72px] w-t:mt-12 w-p:mt-12">
         {/* <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6">
-          <p className="font-Poppins font-bold leading-[125%] text-10 w-t:text-6 w-p:text-6">{ sections.noticias.title }</p>
+          <p className="font-headings font-bold leading-[125%] text-10 w-t:text-6 w-p:text-6">{ sections.noticias.title }</p>
         </div>
         <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-2 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mb-6">
           {

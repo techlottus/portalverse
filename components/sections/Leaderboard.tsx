@@ -38,7 +38,7 @@ const Leaderboard = (props: LeaderboardSection) => {
               title
                 ? <h4
                     className={cn(
-                      "font-Poppins font-bold",
+                      "font-headings font-bold",
                       "w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5",
                       "w-d:text-6.5 w-t:text-6 w-p:text-6"
                     )}

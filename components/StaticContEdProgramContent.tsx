@@ -16,7 +16,7 @@ const DetalleCursoEducacionContinua = ({ sections, meta }: any) => {
     <Fragment>
       <ContentLayout classNames="gap-6">
         <div className="col-span-6 w-t:col-span-4 w-p:col-span-4">
-          <p className="font-Poppins font-bold text-13 w-t:text-8.5 w-p:text-7.5 leading-13 w-t:leading-[111%] w-p:leading-[125%] mb-6">{sections.head.title}</p>
+          <p className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-7.5 leading-13 w-t:leading-[111%] w-p:leading-[125%] mb-6">{sections.head.title}</p>
           <RichtText data={{
             content: sections.head.description
           }} />
@@ -29,7 +29,7 @@ const DetalleCursoEducacionContinua = ({ sections, meta }: any) => {
             />
           <div className="flex flex-col p-2 border rounded-lg mb-6">
             <p className="font-Nunito-Sans font-normal text-base leading-5 text-[#818181]">Precio:</p>
-            <h1 className="font-Poppins font-semibold text-[32px] leading-10" dangerouslySetInnerHTML={{__html: sections.head.price}}/>
+            <h1 className="font-headings font-semibold text-[32px] leading-10" dangerouslySetInnerHTML={{__html: sections.head.price}}/>
             <p className="font-Nunito-Sans font-normal text-sm leading-5 text-black">Solicita información en el siguiente correo:</p>
             <div className="flex">
               <a href={`mailto:${sections.head.email}`} target="__blank" className="font-Nunito-Sans font-bold text-sm leading-5 text-black">{sections.head.email}</a>
@@ -39,7 +39,7 @@ const DetalleCursoEducacionContinua = ({ sections, meta }: any) => {
           {/* <EducacionContinuaForm pathThankyou="/thank-you" image={{ src: "https://assets.staging.bedu.org/UTEG/admisiones_pedir_informacion_avatar_6738c707b5.jpg", alt:"image-person" }} copies={{...OpenFormInit.steponecontinuos, subtitle: OpenFormInit.steponecontinuos.subtitle + meta.title}} defaultProgram={sections.head.title} /> */}
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:hidden w-t:hidden hidden">
-          <p className="font-Poppins font-bold text-10 pt-6 w-t:text-8.5 w-p:text-7.5 leading-[125%]">{sections.relatedCourses.title}</p>
+          <p className="font-headings font-bold text-10 pt-6 w-t:text-8.5 w-p:text-7.5 leading-[125%]">{sections.relatedCourses.title}</p>
         </div>
         {/* <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mb-12 w-d:hidden w-t:hidden hidden">
           {
@@ -52,7 +52,7 @@ const DetalleCursoEducacionContinua = ({ sections, meta }: any) => {
       {/* <ContentFullLayout classNames="bg-SC/Backgrounds/BG-GRAY w-p:hidden hidden">
         <ContentLayout>
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-            <p className="font-Poppins font-bold text-10 pt-6">{sections.relatedCourses.title}</p>
+            <p className="font-headings font-bold text-10 pt-6">{sections.relatedCourses.title}</p>
           </div>
           <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mb-12">
             {

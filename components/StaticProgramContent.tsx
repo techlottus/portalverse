@@ -83,7 +83,7 @@ const StaticProgramContent: NextPageWithLayout<any> = ({ level, program, meta, c
     <Fragment>
       <ContentLayout>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12">
-          <h1 className="text-13 font-bold font-Poppins leading-13 w-t:leading-[111%] w-p:leading-[125%] w-t:text-8.5 w-p:text-7.5 mb-6">{sections.head.title}</h1>
+          <h1 className="text-13 font-bold font-headings leading-13 w-t:leading-[111%] w-p:leading-[125%] w-t:text-8.5 w-p:text-7.5 mb-6">{sections.head.title}</h1>
           <RichtText data={{
             content: sections.head.description
           }} />
@@ -106,7 +106,7 @@ const StaticProgramContent: NextPageWithLayout<any> = ({ level, program, meta, c
       </ContentFullLayout>  
       <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6">
-          <p className="text-6.5 font-Poppins font-semibold leading-[125%] w-t:leading-[125%] w-p:leading-[125%] w-t:text-6 w-p:text-6">{sections.modalities.title}</p>
+          <p className="text-6.5 font-headings font-semibold leading-[125%] w-t:leading-[125%] w-p:leading-[125%] w-t:text-6 w-p:text-6">{sections.modalities.title}</p>
         </div>
         <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center">
           <TabsFeatured tabs={sections.modalities.tabs.items} onActive={(active: number) => handleSetActiveTab(active)} />
@@ -170,7 +170,7 @@ const StaticProgramContent: NextPageWithLayout<any> = ({ level, program, meta, c
           level === 'bachillerato'
             ? <>
                 <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6">
-                  <h4 className="text-6.5 font-Poppins font-semibold leading-[125%] w-t:leading-[125%] w-p:leading-[125%] w-t:text-6 w-p:text-6">{ sections.benefits.title }</h4>
+                  <h4 className="text-6.5 font-headings font-semibold leading-[125%] w-t:leading-[125%] w-p:leading-[125%] w-t:text-6 w-p:text-6">{ sections.benefits.title }</h4>
                 </div>
                 <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 leading-[125%] w-d:order-1 w-t:order-1">
                   <RichtText font="light" data={{ content: sections.benefits.description }} />

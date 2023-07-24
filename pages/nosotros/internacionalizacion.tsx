@@ -41,12 +41,12 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
       <section slot="areaModalContent" className="flex w-t:flex-col w-p:flex-col w-full h-auto">
       <ContentInsideLayout classNames="gap-6">
           <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 bg-[#2B2C34] p-6">
-            <p className="text-white font-Poppins font-bold text-6 break-normal mb-16">{infoModal?.title?.title}</p>
+            <p className="text-white font-headings font-bold text-6 break-normal mb-16">{infoModal?.title?.title}</p>
             <div className="flex flex-col space-y-12">
               {
                 infoModal?.downloadables?.length > 0
                   ? <div>
-                      <span className="font-Poppins font-normal text-white mb-6">Descargas</span>
+                      <span className="font-headings font-normal text-white mb-6">Descargas</span>
                       {
                         (infoModal?.downloadables as Array<{ label: string; link: string; }>)?.map((redirect, index) => {
                           const children = (
@@ -88,7 +88,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
               {
                 infoModal?.redirect?.link  
                 ? <div>
-                    <span className="font-Poppins font-normal text-white mb-6">Visita el sitio de la universidad</span>
+                    <span className="font-headings font-normal text-white mb-6">Visita el sitio de la universidad</span>
                       <a
                         href={infoModal?.redirect?.link}
                         rel="noreferrer noopener"
@@ -126,8 +126,8 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
       </ContentLayout>
       <ContentLayout classNames="mt-6 w-d:mt-18">
         <div className="col-span-8 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-Poppins font-bold text-10 w-t:text.8.5 w-p:text-6 mb-6 leading-[125%] w-t:leading-[111%]">{sections.head.title}</p>
-          <p className="font-Poppins font-bold text-5.5 w-t:text-4.5 w-p:text-base mb-6 leading-[130%] w-t:leading-[125%]">{sections.head.subtitle}</p>
+          <p className="font-headings font-bold text-10 w-t:text.8.5 w-p:text-6 mb-6 leading-[125%] w-t:leading-[111%]">{sections.head.title}</p>
+          <p className="font-headings font-bold text-5.5 w-t:text-4.5 w-p:text-base mb-6 leading-[130%] w-t:leading-[125%]">{sections.head.subtitle}</p>
           <RichtText classNames="" data={{
             content: sections.head.description
           }} />
@@ -145,7 +145,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
       </ContentFullLayout>
       <ContentLayout classNames="mt-12 w-d:mt-18">
         <section className="col-span-12">
-          <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%] mb-6 w-d:mb-">{sections.videoSection.title}</p>
+          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%] mb-6 w-d:mb-">{sections.videoSection.title}</p>
           <div className="grid w-d:grid-cols-2 w-p:grid-cols-1 gap-6">
             {
             sections.videoSection.videos.map((item:any, i:number) => <section key={`section-alliances-${i}`}>
@@ -157,7 +157,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
       </ContentLayout>
       <ContentLayout classNames="mt-6 w-d:mt-18">
         <div className="col-span-12">
-          <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%]">{sections.alliances.title}</p>
+          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%]">{sections.alliances.title}</p>
           <section className="grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
           {
             sections.alliances.alliances.map((item:any, i:number) => <section key={`section-alliances-${i}`}>

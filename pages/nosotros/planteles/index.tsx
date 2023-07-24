@@ -75,7 +75,7 @@ const Planteles = ({ sections, meta }: any) => {
           <Image alt="campus" src="https://viveloensaltillo.com/wp-content/uploads/2021/11/1254x851usne-768x521.png"></Image>
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-Poppins font-bold text-10 leading-12.5">{`¿En cuál de nuestros ${sections?.campus?.length} campus te gustaría estudiar?`}</p>
+          <p className="font-headings font-bold text-10 leading-12.5">{`¿En cuál de nuestros ${sections?.campus?.length} campus te gustaría estudiar?`}</p>
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           {
@@ -83,7 +83,7 @@ const Planteles = ({ sections, meta }: any) => {
               <Image classNames="col-span-4 w-t:col-span-4 w-p:col-span-4 w-p:aspect-2/1" alt={items[0].alt} src={items[0].src} />
               <div className="col-span-4 border w-t:col-span-4 w-p:col-span-4 border-gray-300 rounded pl-3">
                 <p className="font-Nunito-Sans font-normal text-base leading-5 my-2">{description.state}</p>
-                <p className="font-Poppins font-semibold text-4.5 leading-5.625 my-2">{description.name}</p>
+                <p className="font-headings font-semibold text-4.5 leading-5.625 my-2">{description.name}</p>
                 <ContentInsideLayout>
                   <IconComponent name="marker" className="col-span-1 w-t:col-span-1 w-p:col-span-1" />
                   <p className="col-span-11 w-t:col-span-7 w-p:col-span-3 font-Nunito-Sans font-normal">{description.address}</p>

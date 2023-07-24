@@ -72,7 +72,7 @@ const BannerPortalverse: FC<BannerPortalverseComponentData> = memo((props: Banne
                 <div className="p-10">
                   {
                     data?.title
-                      ? <h1 className={cn("font-Poppins font-bold w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5 w-d:text-6.5 w-t:text-6 w-p:text-6", classNames, { "text-white": data.overlayDak || data.font === "light" })}>{data.title}</h1>
+                      ? <h1 className={cn("font-headings font-bold w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5 w-d:text-6.5 w-t:text-6 w-p:text-6", classNames, { "text-white": data.overlayDak || data.font === "light" })}>{data.title}</h1>
                       : null
                   }
                   {
@@ -197,7 +197,7 @@ const BannerContent = (props: BannerPortalverseComponentData) => {
           data?.title
             ? <h1
                 className={cn(
-                  "font-Poppins font-bold",
+                  "font-headings font-bold",
                   classNames,
                   {
                     "text-white": data.overlayDak || data.font === "light",

@@ -19,7 +19,7 @@ const ListconfigBlogPosts = (props: ListconfigData) => {
           {
             title
               ? <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:mt-6 w-p:mt-6">
-                  <p className="font-Poppins font-bold text-8.5 w-t:text-6 w-p:text-6 leading-[111%] w-t:leading-[125%] w-p:leading-[125%]">
+                  <p className="font-headings font-bold text-8.5 w-t:text-6 w-p:text-6 leading-[111%] w-t:leading-[125%] w-p:leading-[125%]">
                     {title}
                   </p>
                 </div>

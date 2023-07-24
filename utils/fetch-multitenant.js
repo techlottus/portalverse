@@ -135,27 +135,28 @@ const setConfig = ({ styles_safelist, environment_variables }) => {
   return { safelist, variables }
 }
 
-async function fetchConfig(){
+// async function fetchConfig(){
 
-  const rawConfig = await
-  fetch(`${env.NEXT_PUBLIC_MULTITENANT_URL}/config?populate=styles_safelist,environment_variables`, {
-    headers: {
-      "Authorization": `Bearer ${env.NEXT_PUBLIC_MULTITENANT_TOKEN}`
-    }
-  })
+//   const rawConfig = await
+//   fetch(`${env.NEXT_PUBLIC_MULTITENANT_URL}/config?populate=styles_safelist,environment_variables`, {
+//     headers: {
+//       "Authorization": `Bearer ${env.NEXT_PUBLIC_MULTITENANT_TOKEN}`
+//     }
+//   })
+//   console.log("rawConfig", rawConfig)
+//   const Config = await rawConfig.json() 
+//   console.log("Config", Config)
+//   const { data : { attributes } } = Config
 
-  const Config = await rawConfig.json() 
-  const { data : { attributes } } = Config
-
-  return attributes
-}
+//   return attributes
+// }
 
 async function populateTailwind  () {
 
   const tailwindColors = setcolors(await fetchColors())
   const tailwindFonts = setFonts(await fetchFonts())
   const tailwindLogos = setLogos(await fetchLogos())
-  const config = setConfig(await fetchConfig())
+  // const config = setConfig(await fetchConfig())
   const tailwindExtend = {
     screens: {      
       "w-p": {"max": '599px'},
@@ -275,7 +276,7 @@ module.exports = {
     "./forms/**/*.{js,ts,jsx,tsx}",
     "./public/icons/**/*.{svg,jsx}"
   ],
-  safelist: ${JSON.stringify([...config.safelist, ...fonttokens, ...logostokens])},
+  safelist: ${JSON.stringify([...fonttokens, ...logostokens])},
   theme: {
     extend: ${JSON.stringify(tailwindExtend, null, 3)}
   },
@@ -297,15 +298,15 @@ module.exports = {
     }
   });
 
-  fs.readFile('./.env.local', 'utf8', function(err, data){
-    const env = `${data} \n${config.variables}`
+  // fs.readFile('./.env.local', 'utf8', function(err, data){
+  //   const env = `${data} \n${config.variables}`
 
-    fs.writeFile('./.env.local', env, 'utf-8', (err) => {
-      if (err) {
-        console.error(err);
-      }
-    });
-  });
+  //   fs.writeFile('./.env.local', env, 'utf-8', (err) => {
+  //     if (err) {
+  //       console.error(err);
+  //     }
+  //   });
+  // });
   
 }
 

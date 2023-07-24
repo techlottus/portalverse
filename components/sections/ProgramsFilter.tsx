@@ -97,7 +97,7 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
               ? <div className="flex flex-col space-y-3">
                   {
                     sectionTitle
-                      ? <h1 className="font-Poppins font-bold w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5 w-d:text-13 w-t:text-6 w-p:text-6">{ sectionTitle }</h1>
+                      ? <h1 className="font-headings font-bold w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5 w-d:text-13 w-t:text-6 w-p:text-6">{ sectionTitle }</h1>
                       : null 
                   }
                   {

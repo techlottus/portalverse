@@ -41,7 +41,7 @@ const FAQ = (props: FAQSection) => {
         <div className="flex flex-col space-y-6">
           {
             title
-              ? <h3 className="font-Poppins text-10 font-bold leading-[125%] w-t:text-8.5 w-p:text-6">
+              ? <h3 className="font-headings text-10 font-bold leading-[125%] w-t:text-8.5 w-p:text-6">
                   {title}
                 </h3>
               : null

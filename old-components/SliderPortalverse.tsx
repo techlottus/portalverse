@@ -208,7 +208,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
                   <div className="flex flex-col z-10 w-d:w-[500px] w-t:w-[392px] space-y-4">
                     <h2
                       className={cn(
-                        "font-Poppins font-bold w-d:text-10 w-d:leading-[50px] w-t:text-[30px] w-t:leading-9",
+                        "font-headings font-bold w-d:text-10 w-d:leading-[50px] w-t:text-[30px] w-t:leading-9",
                         textPositionClasses
                       )}
                     >
@@ -216,7 +216,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
                     </h2>
                     <p
                       className={cn(
-                        "font-Poppins font-semibold w-d:text-4.5 w-d:leading-6 w-t:text-base w-t:leading-5",
+                        "font-headings font-semibold w-d:text-4.5 w-d:leading-6 w-t:text-base w-t:leading-5",
                         textPositionClasses
                       )}
                     >
@@ -281,7 +281,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
           </Aspect>
           <div className="p-4 flex flex-col space-y-6">
             <h2
-              className="font-Poppins font-bold w-t:font-normal text-6 w-t:text-[32px] leading-8 w-t:leading-10"
+              className="font-headings font-bold w-t:font-normal text-6 w-t:text-[32px] leading-8 w-t:leading-10"
             >
               {item.title}
             </h2>
