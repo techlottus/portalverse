@@ -41,7 +41,7 @@ const FAQ: NextPageWithLayout<any> = ({ info, meta, sections }: any) => {
             {
               info.map((section: any, i:number) => <Link key={`section-item${i}`} href={`${section.route}`}>
 
-                <li className={cn("font-headings font-bold flex py-2 w-t:py-4 w-p:py-4 w-t:px-6 w-p:px-6 w-t:border-solid w-t:border-[1px] w-p:border-solid w-p:border-[1px] items-center", { "text-Brands/UANE/Primary/UANE-P-00": section.status, "text-surface-950": !section.status })}>
+                <li className={cn("font-headings font-bold flex py-2 w-t:py-4 w-p:py-4 w-t:px-6 w-p:px-6 w-t:border-solid w-t:border-[1px] w-p:border-solid w-p:border-[1px] items-center", { "text-primary-500": section.status, "text-surface-950": !section.status })}>
                   <span className="material-icons icon pr-3">{section.icon}</span>
                   <p>{ section.title }</p>
                 </li>
@@ -53,7 +53,7 @@ const FAQ: NextPageWithLayout<any> = ({ info, meta, sections }: any) => {
           
         </div>
         <div className="col-span-9 w-t:col-span-8 w-p:col-span-4 flex-grow overflow-y-auto">
-          <h1 className="font-headings font-bold text-[32px] text-Brands/UANE/Primary/UANE-P-00 w-t:text-6 w-p:text-base w-p:my-6">{ sectionTitle }</h1>
+          <h1 className="font-headings font-bold text-[32px] text-primary-500 w-t:text-6 w-p:text-base w-p:my-6">{ sectionTitle }</h1>
           {
             info.map(({ questions }: any, i: number) => {
               if (!!questions.length) {
