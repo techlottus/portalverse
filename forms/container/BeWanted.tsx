@@ -70,7 +70,7 @@ const BeWanted: FC<any> = ({ classNames, copies, pathThankyou, pathBeWanted }: a
                 <div className="w-full max-w-[24rem]"> {/* Tailwind's 'max-w-sm' value isn't working for some reason u.u */}
                   <img src="https://assets.staging.bedu.org/UTEG/404_318781b8aa.jpg" className="w-full" alt="error" />
                 </div>
-                <p className="text-UNI-066 font-semibold text-5.5 my-6">
+                <p className="text-surface-600 font-semibold text-5.5 my-6">
                 Esta página no está disponible
                 </p>
                 <Button

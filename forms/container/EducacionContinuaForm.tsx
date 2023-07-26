@@ -113,7 +113,7 @@ const EducacionContinuaForm: FC<any> = ({ classNames, copies, image, pathThankyo
                 <div className="w-full max-w-[24rem]"> {/* Tailwind's 'max-w-sm' value isn't working for some reason u.u */}
                   <img src="https://assets.staging.bedu.org/UTEG/404_318781b8aa.jpg" className="w-full" alt="error" />
                 </div>
-                <h2 className="text-UNI-066 font-semibold text-5.5 my-6">
+                <h2 className="text-surface-600 font-semibold text-5.5 my-6">
                 Esta página no está disponible
                 </h2>
                 <Button
