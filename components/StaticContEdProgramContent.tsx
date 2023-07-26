@@ -28,7 +28,7 @@ const DetalleCursoEducacionContinua = ({ sections, meta }: any) => {
               classNames="aspect-2/1 w-t:aspect-2/1 w-p:aspect-2/1 mb-6"
             />
           <div className="flex flex-col p-2 border rounded-lg mb-6">
-            <p className="font-texts font-normal text-base leading-5 text-[#818181]">Precio:</p>
+            <p className="font-texts font-normal text-base leading-5 text-surface-300">Precio:</p>
             <h1 className="font-headings font-semibold text-[32px] leading-10" dangerouslySetInnerHTML={{__html: sections.head.price}}/>
             <p className="font-texts font-normal text-sm leading-5 text-black">Solicita información en el siguiente correo:</p>
             <div className="flex">

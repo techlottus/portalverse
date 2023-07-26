@@ -34,11 +34,11 @@ const Breadcrumbs: FC<BreadcrumbsComponentData> = ({ visible = true, classNames,
         ? mainRoute
         : <Link href={"/"} className="font-texts font-normal text-xs">{mainRoute}</Link>
       : !last
-        ? <Link href={url} className="flex"><p className="font-texts font-normal text-xs mr-1 text-[#282828]">/</p><p className="mr-1 font-texts font-normal text-xs">{ label }</p></Link>
-        : <span className="flex"><p className="font-texts font-normal text-xs mr-1 text-[#282828]">/</p><p className="text-[#282828] font-texts font-normal text-xs">{ label }</p></span>;
+        ? <Link href={url} className="flex"><p className="font-texts font-normal text-xs mr-1 text-saurface-800 ">/</p><p className="mr-1 font-texts font-normal text-xs">{ label }</p></Link>
+        : <span className="flex"><p className="font-texts font-normal text-xs mr-1 text-saurface-800 ">/</p><p className="text-primary-500 font-texts font-normal text-xs">{ label }</p></span>;
   }
 
-  return <ul className={cn("breadcrumbs w-full flex my-6 font-texts font-bold text-xs text-[#686868]", classNames, { "hidden": !visible })} aria-label="breadcrumbs">
+  return <ul className={cn("breadcrumbs w-full flex my-6 font-texts font-bold text-xs   text-surface-500", classNames, { "hidden": !visible })} aria-label="breadcrumbs">
     {
       allRoutes.map((route: string, i: number, arr: Array<string>) => <li key={`crumb-${i}`}>{Crumb( route, i, arr, i === (arr.length - 1) )}</li>)
     }

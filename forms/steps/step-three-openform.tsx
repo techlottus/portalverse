@@ -128,13 +128,13 @@ const StepThree: FC<any> = ({ classNames, step, data, contacts, schedulers, onNe
           {
             dataContacts.map((level: any, i: number) => <OptionPill onClick={(value: string) => handleSelect(i, level.disabled, value)}  key={`pill-${i}`} data={{...level}} active={i === activePill} />)
           }
-          <p className={cn("text-[#e57565] text-xs px-3 mt-4", { "hidden": !errorControls.contacto })}>{ configControls.errorMessagesStepThreeOpenForm.contacto }</p>
+          <p className={cn("text-error-500 text-xs px-3 mt-4", { "hidden": !errorControls.contacto })}>{ configControls.errorMessagesStepThreeOpenForm.contacto }</p>
         </div>
       </div>
       <div className="mt-6 flex flex-col">
         <p className="font-texts font-normal text-sm leading-5">{ config.schedule }</p>
         <Select onClick={(option: CustomEvent) => handleSelectHorario(option)} options={[...dataSchedulers]} data={{ ...SelectInit, textDefault: !!infoControls.horario ? " " : "Horarios disponibles", icon: "schedule" }}  />
-        <p className={cn("text-[#e57565] text-xs px-3 mt-4", { "hidden": !errorControls.horario })}>{ configControls.errorMessagesStepThreeOpenForm.horario }</p>
+        <p className={cn("text-error-500 text-xs px-3 mt-4", { "hidden": !errorControls.horario })}>{ configControls.errorMessagesStepThreeOpenForm.horario }</p>
       </div>
     </form>
     <div className="mt-6">

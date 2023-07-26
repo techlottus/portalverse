@@ -60,7 +60,7 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
           {
             !!price ?
               <div className="flex flex-col">
-                <span className="font-texts font-normal text-base leading-5 text-[#818181]">Precio:</span>
+                <span className="font-texts font-normal text-base leading-5 text-surface-500">Precio:</span>
                 <div className="flex items-end gap-2">
                   <span
                     className={cn(

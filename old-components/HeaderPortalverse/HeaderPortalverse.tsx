@@ -118,12 +118,12 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, l
         </div>
         <div className={cn("flex flex-col flex-grow p-1")}>
           <div className="flex justify-end pr-6 space-x-6 font-texts text-gray-500 text-sm">
-            <span className="font-normal text-[#686868]">Accesos para:</span>
+            <span className="font-normal  text-surface-500">Accesos para:</span>
             <Link href="/alumnos" passHref>
-              <p className="font-bold text-[#686868]">Alumnos</p>
+              <p className="font-bold text-primary-500">Alumnos</p>
             </Link>
             <Link href="/egresados" passHref>
-              <p className="font-bold text-[#686868]">Egresados</p>
+              <p className="font-bold text-primary-500">Egresados</p>
             </Link>
           </div>
           <div className="flex flex-grow p-1 border-0 border-solid border-SC/Actions/AC-300 border-t-2">
