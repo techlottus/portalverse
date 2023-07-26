@@ -30,9 +30,9 @@ const DetalleCursoEducacionContinua = ({ sections, meta }: any) => {
           <div className="flex flex-col p-2 border rounded-lg mb-6">
             <p className="font-texts font-normal text-base leading-5 text-surface-500">Precio:</p>
             <h1 className="font-headings font-semibold text-[32px] leading-10" dangerouslySetInnerHTML={{__html: sections.head.price}}/>
-            <p className="font-texts font-normal text-sm leading-5 text-black">Solicita información en el siguiente correo:</p>
+            <p className="font-texts font-normal text-sm leading-5 text-surface-950">Solicita información en el siguiente correo:</p>
             <div className="flex">
-              <a href={`mailto:${sections.head.email}`} target="__blank" className="font-texts font-bold text-sm leading-5 text-black">{sections.head.email}</a>
+              <a href={`mailto:${sections.head.email}`} target="__blank" className="font-texts font-bold text-sm leading-5 text-surface-950">{sections.head.email}</a>
             </div>
           </div>
           {/* Form is currently hidden, as UTEG has yet to upload program data to Salesforce */}

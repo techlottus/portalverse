@@ -65,7 +65,7 @@ const CintilloContent = (props: CintilloData) => {
               "font-headings font-bold",
               "w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5",
               "w-d:text-6.5 w-t:text-6 w-p:text-6",
-              "text-black w-p:text-surface-0",
+              "text-surface-950 w-p:text-surface-0",
               {
                 "!text-surface-0": contentVariant === "light"
               }
@@ -78,7 +78,7 @@ const CintilloContent = (props: CintilloData) => {
               "font-texts font-normal",
               "w-d:leading-5 w-t:leading-[17.5px] w-p:leading-[17.5px]",
               "w-d:text-base w-t:text-3.5 w-p:text-3.5",
-              "text-black w-p:text-surface-0",
+              "text-surface-950 w-p:text-surface-0",
               {
                 "text-surface-0": contentVariant === "light"
               }
@@ -91,7 +91,7 @@ const CintilloContent = (props: CintilloData) => {
               ? <div className="flex my-4 items-center">
                 <span
                   className={cn(
-                    "material-icons pr-2 pt-1 text-2 text-black w-p:text-surface-0",
+                    "material-icons pr-2 pt-1 text-2 text-surface-950 w-p:text-surface-0",
                     {
                       "!text-surface-0": contentVariant === "light"
                     }
@@ -99,7 +99,7 @@ const CintilloContent = (props: CintilloData) => {
                 >
                   mail
                 </span>
-                <LinkContactTarget classNames={cn("text-black w-p:text-surface-0", { "!text-surface-0": contentVariant === "light" })} type="email" info={email} />
+                <LinkContactTarget classNames={cn("text-surface-950 w-p:text-surface-0", { "!text-surface-0": contentVariant === "light" })} type="email" info={email} />
               </div>
               : null
           }
@@ -108,7 +108,7 @@ const CintilloContent = (props: CintilloData) => {
               ? <div className="flex my-4 items-center">
                 <span
                   className={cn(
-                    "material-icons pr-2 pt-1 text-2 text-black w-p:text-surface-0",
+                    "material-icons pr-2 pt-1 text-2 text-surface-950 w-p:text-surface-0",
                     {
                       "!text-surface-0": contentVariant === "light"
                     }
@@ -116,13 +116,13 @@ const CintilloContent = (props: CintilloData) => {
                 >
                   phone
                 </span>
-                <LinkContactTarget classNames={cn("text-black w-p:text-surface-0", { "!text-surface-0": contentVariant === "light" })} type="phone" info={phone} />
+                <LinkContactTarget classNames={cn("text-surface-950 w-p:text-surface-0", { "!text-surface-0": contentVariant === "light" })} type="phone" info={phone} />
               </div>
               : null
           }
           {
             !!whatsApp
-              ? <div className={cn("flex align-middle items-center space-x-2 text-black w-p:text-surface-0", { "!text-surface-0": contentVariant === "light" })}>
+              ? <div className={cn("flex align-middle items-center space-x-2 text-surface-950 w-p:text-surface-0", { "!text-surface-0": contentVariant === "light" })}>
                 <span className="w-6 h-6">
                   <Icon name="whatsapp" />
                 </span>
@@ -132,7 +132,7 @@ const CintilloContent = (props: CintilloData) => {
           }
           {
             !!actionLink
-              ? <div className={cn("flex align-middle items-center space-x-2 text-black w-p:text-surface-0", { "!text-surface-0": contentVariant === "light" })}>
+              ? <div className={cn("flex align-middle items-center space-x-2 text-surface-950 w-p:text-surface-0", { "!text-surface-0": contentVariant === "light" })}>
                 <slot name="areaAction">{actionLink}</slot>
               </div>
               : null

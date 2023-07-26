@@ -30,7 +30,7 @@ const BannerWrapper: FC<BannerWrapperData> = memo(({ data: { urlImage, title, su
           </div>
           <div className={cn("absolute w-full h-full z-10 p-6", classNames, {
             "text-surface-0": font === "light",
-            "text-black": font === "dark" ,
+            "text-surface-950": font === "dark" ,
             })}>
               <h1 className="font-headings font-bold w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5 w-d:text-6 w-t:text-6 w-p:text-6">{ title }</h1>
               <h3 className="font-texts font-normal w-d:leading-5 w-t:leading-[17.5px] w-p:leading-[17.5px] w-d:text-base w-t:text-3.5 w-p:text-3.5">{ subtitle }</h3>
@@ -54,7 +54,7 @@ const BannerWrapper: FC<BannerWrapperData> = memo(({ data: { urlImage, title, su
           {/* <div style={{"backgroundImage":`url(${urlImage?.desktop})`}} className={cn("mt-6 col-span-12 w-t:col-span-8 w-p:col-span-4 bg-cover p-10 relative" , classNames)}>
             <div className={cn("relative", classNames, {
             "text-surface-0": font === "light",
-            "text-black": font === "dark" ,
+            "text-surface-950": font === "dark" ,
             })}>
               <h1 className="font-headings font-bold w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5 w-d:text-6 w-t:text-6 w-p:text-6">{ title }</h1>
               <h3 className="font-texts font-normal w-d:leading-5 w-t:leading-[17.5px] w-p:leading-[17.5px] w-d:text-base w-t:text-3.5 w-p:text-3.5">{ subtitle }</h3>
