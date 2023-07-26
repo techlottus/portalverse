@@ -32,8 +32,8 @@ const ContactTarget: FC<ContactTargetComponentData> = (props: ContactTargetCompo
           : <div className="bg-[gray] rounded w-22 h-22" />
       }
       <div className="w-full flex flex-col justify-center p-3 overflow-hidden">
-        <p className="font-Nunito font-bold text-sm leading-5">{name}</p>
-        <a className="font-Nunito font-normal text-sm leading-5 text-SC/Blackandgrey/B-60 w-p:w-56 w-60 break-words" target="_blank" rel="noreferrer noopener" href={link}>{link}</a>
+        <p className="font-texts font-bold text-sm leading-5">{name}</p>
+        <a className="font-texts font-normal text-sm leading-5 text-SC/Blackandgrey/B-60 w-p:w-56 w-60 break-words" target="_blank" rel="noreferrer noopener" href={link}>{link}</a>
         <LinkContactTarget type="email" info={email} />
         <LinkContactTarget type="phone" info={phone} />
       </div>

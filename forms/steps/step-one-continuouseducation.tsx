@@ -124,7 +124,7 @@ const StepOne: FC<any> = ({ classNames, data, image, onNext, programs }: any) =>
   <div className="flex gap-6">
     <div className="flex flex-col gap-6">
       <h1 className="font-texts font-bold text-5 leading-6">{ config.title }</h1>
-      <p className="font-Nunito font-normal text-[14px] leading-4">{ config.subtitle }</p>
+      <p className="font-texts font-normal text-[14px] leading-4">{ config.subtitle }</p>
     </div>
     <div className={"aspect-1/1 w-t:hidden w-p:hidden"} >
       <Image classNamesImg="rounded-full" classNames="w-[112px] h-[112px]" src={image.src} alt={image.alt} />
@@ -134,7 +134,7 @@ const StepOne: FC<any> = ({ classNames, data, image, onNext, programs }: any) =>
     <p className="mt-8 mb-6 text-[14px] leading-5 text-[#282828] font-texts font-normal mr-1">
       { config.conditions }{" "}
       <Link href={config?.privacyLink?.link || ""} passHref target={"_blank"}>
-        <span className="mt-8 mb-6 text-[14px] font-Nunito font-normal text-sm text-[#282828]">{config?.privacyLink?.label}</span>
+        <span className="mt-8 mb-6 text-[14px] font-texts font-normal text-sm text-[#282828]">{config?.privacyLink?.label}</span>
       </Link>
     </p>
   </div>
@@ -153,7 +153,7 @@ const StepOne: FC<any> = ({ classNames, data, image, onNext, programs }: any) =>
     <Input errorMessage={configControls.errorMessagesStepOneOpenFormContinuous.email} hasError={errorControls.email} eventFocus={() => handleTouchedControl("email")} data={ configControls.inputEmailOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "email")} />
   </div>
   <div className="mt-6">
-    <p className="font-Nunito font-normal text-[14px] leading-5">{ config.programs }</p>
+    <p className="font-texts font-normal text-[14px] leading-5">{ config.programs }</p>
     <Select onClick={(option: CustomEvent) => handleOptionSelected(option)} options={dataPrograms} data={{ ...SelectInit, textDefault: !!infoControls.program ? "  " : "Elige un programa", disabled: !dataPrograms.length }}  />
     <p className={cn("text-[#e57565] text-xs px-3 mt-4", { "hidden": !errorControls.program })}>{ configControls.errorMessagesStepOneOpenFormContinuous.program }</p>
   </div>

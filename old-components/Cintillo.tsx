@@ -126,7 +126,7 @@ const CintilloContent = (props: CintilloData) => {
                 <span className="w-6 h-6">
                   <Icon name="whatsapp" />
                 </span>
-                <span><a target="_blank" rel="noreferrer noopener" className="font-Nunito font-normal text-base" href={redirectWhats}>{whatsApp}</a></span>
+                <span><a target="_blank" rel="noreferrer noopener" className="font-texts font-normal text-base" href={redirectWhats}>{whatsApp}</a></span>
               </div>
               : null
           }

@@ -20,7 +20,7 @@ const CardProgram: FC<CardProgramData> = memo(({ title, link, image, classNames 
       </div>
       <div className="flex flex-col h-full">
       <p className="font-texts font-normal text-4.5 mt-3 mb-2 mx-3">{title}</p>
-      <div className="w-full h-full flex justify-end pb-2 font-Nunito font-bold items-end">
+      <div className="w-full h-full flex justify-end pb-2 font-texts font-bold items-end">
         <LinkIcons data={link} onClick={onClick}/>
         <span className="material-icons icon">chevron_right</span>
       </div>

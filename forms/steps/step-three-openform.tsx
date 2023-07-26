@@ -123,7 +123,7 @@ const StepThree: FC<any> = ({ classNames, step, data, contacts, schedulers, onNe
     </div>
     <form>
       <div className="mt-6 flex flex-col">
-        <p className="font-Nunito font-normal text-sm leading-5">{ config.contact }</p>
+        <p className="font-texts font-normal text-sm leading-5">{ config.contact }</p>
         <div className="w-full flex justify-start gap-6 flex-wrap mt-1">
           {
             dataContacts.map((level: any, i: number) => <OptionPill onClick={(value: string) => handleSelect(i, level.disabled, value)}  key={`pill-${i}`} data={{...level}} active={i === activePill} />)
@@ -132,7 +132,7 @@ const StepThree: FC<any> = ({ classNames, step, data, contacts, schedulers, onNe
         </div>
       </div>
       <div className="mt-6 flex flex-col">
-        <p className="font-Nunito font-normal text-sm leading-5">{ config.schedule }</p>
+        <p className="font-texts font-normal text-sm leading-5">{ config.schedule }</p>
         <Select onClick={(option: CustomEvent) => handleSelectHorario(option)} options={[...dataSchedulers]} data={{ ...SelectInit, textDefault: !!infoControls.horario ? " " : "Horarios disponibles", icon: "schedule" }}  />
         <p className={cn("text-[#e57565] text-xs px-3 mt-4", { "hidden": !errorControls.horario })}>{ configControls.errorMessagesStepThreeOpenForm.horario }</p>
       </div>

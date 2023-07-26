@@ -17,8 +17,8 @@ const CardWebsitePortalverse: FC<CardWebsitePortalverseData> = ({ data, classNam
             </Aspect>
           </div>
           <div className={cn("px-3 flex flex-col h-full", classNames, { "border-l-[1px] border-r-[1px] border-b-[1px] rounded-b-lg": data.border, "bg-white": data.background })}>
-            <h3 className="pt-3 mb-2 font-Nunito font-normal text-SC/Blackandgrey/B-60 text-[11px]">{data.subtitle?.toLocaleUpperCase()}</h3>
-            <h1 className="mb-2 font-Nunito font-bold text-base">{data.title}</h1>
+            <h3 className="pt-3 mb-2 font-texts font-normal text-SC/Blackandgrey/B-60 text-[11px]">{data.subtitle?.toLocaleUpperCase()}</h3>
+            <h1 className="mb-2 font-headings font-bold text-base">{data.title}</h1>
             <RichtText data={{
               content: data.text
             }} classNames="mb-2" />
@@ -35,8 +35,8 @@ const CardWebsitePortalverse: FC<CardWebsitePortalverseData> = ({ data, classNam
           ? <div className={cn("rounded-b-lg hover:shadow-2xl h-full flex")}>
             <Image classNames="w-full h-full aspect-3/4" src={data.image} alt="image" />
             <div className={cn("px-2 flex flex-col break-words h-auto", classNames, { "border-t-[1px] border-r-[1px] border-b-[1px] rounded-r-lg": data.border, "bg-white": data.background })}>
-              <p className="pt-3 mb-2 font-Nunito font-normal text-SC/Blackandgrey/B-60 text-[11px]">{data.subtitle?.toLocaleUpperCase()}</p>
-              <p className="mb-2 font-Nunito font-bold text-base">{data.title}</p>
+              <p className="pt-3 mb-2 font-texts font-normal text-SC/Blackandgrey/B-60 text-[11px]">{data.subtitle?.toLocaleUpperCase()}</p>
+              <p className="mb-2 font-headings font-bold text-base">{data.title}</p>
               <RichtText data={{
                 content: data.text
               }} classNames="mb-2 pb-2" />

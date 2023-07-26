@@ -16,7 +16,7 @@ const PedirInformacion: NextPageWithLayout<PedirInformacionPage> = ({ sections, 
     <HeaderFooterLayout>
       <ContentLayout>
         <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:col-start-3 w-d:col-end-11 text-13.5 w-t:text-8.5 w-p:text-6 font-headings font-bold leading-[125%] w-t:leading-[111%]">{ sections.head.title }</section>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:col-start-3 w-d:col-end-11 text-base w-t:text-3.5 w-p:text-3.5 font-Nunito leading-[125%]">
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:col-start-3 w-d:col-end-11 text-base w-t:text-3.5 w-p:text-3.5 font-texts leading-[125%]">
           <RichtText data={{
             content: sections.head.description
           }} />

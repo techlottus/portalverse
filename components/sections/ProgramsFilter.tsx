@@ -153,10 +153,10 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
                            <p className="font-texts font-normal text-4.5 mt-3 mx-3">
                             {programAttributes?.name}
                           </p>
-                          <div className="w-full h-full flex justify-end pb-2 font-Nunito font-bold items-end">
+                          <div className="w-full h-full flex justify-end pb-2 font-texts font-bold items-end">
                             <Link
                               href={`/oferta-educativa/${levelRoute}/${programAttributes?.slug}`}
-                              className="flex items-center justify-end font-Nunito font-bold"
+                              className="flex items-center justify-end font-texts font-bold"
                             >
                               <span className="mr-1">Ver más</span>
                               <span className="material-icons icon">chevron_right</span>

@@ -16,7 +16,7 @@ const Table:FC<TableData> = memo(({ data, classNames } : TableData) => {
     <table className="w-full">
       <thead>
         <tr>
-          <th className='text-white text-base font-Nunito bg-[#8B9BA3] px-4 py-[10px] border border-[#8B9BA3] rounded-t-[8px] flex justify-between'>
+          <th className='text-white text-base font-texts bg-[#8B9BA3] px-4 py-[10px] border border-[#8B9BA3] rounded-t-[8px] flex justify-between'>
           <span className=''>{data.head}</span><span className='material-icons'>{data.icon}</span>
         </th>
         </tr>
@@ -24,7 +24,7 @@ const Table:FC<TableData> = memo(({ data, classNames } : TableData) => {
       <tbody className='bg-white'>
         {
           data.rows.map((row: any, i: number)=>{
-            return [<tr key={i} className='border-b border-[#8B9BA3]'><td className='px-6 py-2 font-Nunito text-sm'>{data.rows[i]}</td></tr>]
+            return [<tr key={i} className='border-b border-[#8B9BA3]'><td className='px-6 py-2 font-texts text-sm'>{data.rows[i]}</td></tr>]
           })
         }
       </tbody>

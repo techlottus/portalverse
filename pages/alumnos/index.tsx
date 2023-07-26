@@ -46,7 +46,7 @@ const Alumnos: NextPageWithLayout = ({ sections, meta }: any) => {
             sections.directorio.map(({ name: title, description, contacts }: SectionData, i: number) => <section key={`section-directory-${i}`} className="mb-9">
               <ContentInsideLayout>
                 <p className="font-headings font-bold text-10 leading-12.5 col-span-12 mb-6">{title}</p>
-                <p className="font-Nunito font-normal text-base w-t:text-3.5 w-p:text-base col-span-7 leading-[125%]">{description}</p>
+                <p className="font-texts font-normal text-base w-t:text-3.5 w-p:text-base col-span-7 leading-[125%]">{description}</p>
               </ContentInsideLayout>
               <ContentInsideLayout classNames="mt-6 gap-6">
                 {

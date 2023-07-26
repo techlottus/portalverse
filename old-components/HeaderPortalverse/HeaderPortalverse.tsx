@@ -117,7 +117,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, l
           <div className="w-36 h-9 bg-logo bg-cover bg-center"> </div>
         </div>
         <div className={cn("flex flex-col flex-grow p-1")}>
-          <div className="flex justify-end pr-6 space-x-6 font-Nunito text-gray-500 text-sm">
+          <div className="flex justify-end pr-6 space-x-6 font-texts text-gray-500 text-sm">
             <span className="font-normal text-[#686868]">Accesos para:</span>
             <Link href="/alumnos" passHref>
               <p className="font-bold text-[#686868]">Alumnos</p>
@@ -197,11 +197,11 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, l
                     target={item.external ? "_blank" : "_self"}
                     onClick={handleMenuMobile}>
 
-                    <p className="font-Nunito font-bold text-sm">{item.label}</p>
+                    <p className="font-texts font-bold text-sm">{item.label}</p>
 
                   </Link>
                     : <div onClick={() => handleEventNavigate(!item.route, item.label, "single", !!item.back)} className="p-1 grow">
-                        <p className="font-Nunito font-bold text-sm">{ item.label }</p>
+                        <p className="font-texts font-bold text-sm">{ item.label }</p>
                       </div>
                 }
                 <div className={cn("p-3", { "cursor-pointer": !!item.route })} onClick={() => handleEventNavigate(!!item.route, item.label, "arrow", !!item.back)}>
