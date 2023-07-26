@@ -41,12 +41,12 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
       <section slot="areaModalContent" className="flex w-t:flex-col w-p:flex-col w-full h-auto">
       <ContentInsideLayout classNames="gap-6">
           <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 bg-[#2B2C34] p-6">
-            <p className="text-white font-headings font-bold text-6 break-normal mb-16">{infoModal?.title?.title}</p>
+            <p className="text-surface-0 font-headings font-bold text-6 break-normal mb-16">{infoModal?.title?.title}</p>
             <div className="flex flex-col space-y-12">
               {
                 infoModal?.downloadables?.length > 0
                   ? <div>
-                      <span className="font-headings font-normal text-white mb-6">Descargas</span>
+                      <span className="font-headings font-normal text-surface-0 mb-6">Descargas</span>
                       {
                         (infoModal?.downloadables as Array<{ label: string; link: string; }>)?.map((redirect, index) => {
                           const children = (
@@ -64,7 +64,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
                                 rel="noreferrer noopener"
                                 target="_blank"
                                 className={
-                                  cn("flex items-center text-white mt-6")
+                                  cn("flex items-center text-surface-0 mt-6")
                                 }
                               >
                                 {children}
@@ -88,13 +88,13 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
               {
                 infoModal?.redirect?.link  
                 ? <div>
-                    <span className="font-headings font-normal text-white mb-6">Visita el sitio de la universidad</span>
+                    <span className="font-headings font-normal text-surface-0 mb-6">Visita el sitio de la universidad</span>
                       <a
                         href={infoModal?.redirect?.link}
                         rel="noreferrer noopener"
                         target="_blank"
                         className={
-                          cn("flex items-center text-white mt-6")
+                          cn("flex items-center text-surface-0 mt-6")
                         }
                       >
                         <span className="font-texts font-normal underline underline-offset-4 mr-auto">{infoModal?.redirect?.link}</span>

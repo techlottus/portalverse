@@ -64,10 +64,10 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
       <ContentFullLayout classNames="bg-darkBlue">
         <ContentLayout>
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-4 w-d:hidden">
-            <p className="font-headings text-white font-bold leading-[125%] text-6.5 w-t:text-6 w-p:text-6">{sections.historiasExito.title}</p>
+            <p className="font-headings text-surface-0 font-bold leading-[125%] text-6.5 w-t:text-6 w-p:text-6">{sections.historiasExito.title}</p>
           </div>
           <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mt-auto mb-auto w-t:hidden w-p:hidden">
-            <p className="font-headings text-white font-bold leading-[125%] text-6.5 w-t:text-6 w-p:text-6 mb-6">{sections.historiasExito.title}</p>
+            <p className="font-headings text-surface-0 font-bold leading-[125%] text-6.5 w-t:text-6 w-p:text-6 mb-6">{sections.historiasExito.title}</p>
             <RichtText font="dark" data={{ content: sections.historiasExito.description.content }} />
           </div>
           <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mb-6 w-d:hidden">

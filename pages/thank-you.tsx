@@ -43,7 +43,7 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
     <HeaderFooterLayout breadcrumbs={false}>
       <ContentFullLayout>
         <ContentInsideLayout>
-          <div className="col-span-5 w-t:col-span-8 w-p:col-span-4 bg-darkBlue text-white w-t:pb-6">
+          <div className="col-span-5 w-t:col-span-8 w-p:col-span-4 bg-darkBlue text-surface-0 w-t:pb-6">
             <ContentInsideLayout>
               <h1 className="col-span-12 col-start-3 col-end-11 w-t:col-span-8 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 w-p:col-end-5 text-10 w-p:text-[30px] w-p:m-6 font-bold font-headings mt-[72px] leading-[125%]">{ messages[flow].title }</h1>
               <p className="col-span-12 col-start-3 col-end-11 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 text-base font-semibold font-texts w-d:mt-6 w-t:mt-6 w-p:mt-2 w-p:mx-6 leading-[24px] w-t:leading-[125%] w-p:leading-3[130%]">{ messages[flow].subtitle }</p>
@@ -52,7 +52,7 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
                 {
                   sections.agradecimiento.social.map((item: any, i: number) => <Link key={`social-${i}`} href={item.link} passHref target={"_blank"}>
 
-                    <Icon name={item.name} className="w-14 h-14 text-white" />
+                    <Icon name={item.name} className="w-14 h-14 text-surface-0" />
 
                   </Link>)
                 }

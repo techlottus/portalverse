@@ -29,7 +29,7 @@ const BannerWrapper: FC<BannerWrapperData> = memo(({ data: { urlImage, title, su
             </Aspect>
           </div>
           <div className={cn("absolute w-full h-full z-10 p-6", classNames, {
-            "text-white": font === "light",
+            "text-surface-0": font === "light",
             "text-black": font === "dark" ,
             })}>
               <h1 className="font-headings font-bold w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5 w-d:text-6 w-t:text-6 w-p:text-6">{ title }</h1>
@@ -53,7 +53,7 @@ const BannerWrapper: FC<BannerWrapperData> = memo(({ data: { urlImage, title, su
         
           {/* <div style={{"backgroundImage":`url(${urlImage?.desktop})`}} className={cn("mt-6 col-span-12 w-t:col-span-8 w-p:col-span-4 bg-cover p-10 relative" , classNames)}>
             <div className={cn("relative", classNames, {
-            "text-white": font === "light",
+            "text-surface-0": font === "light",
             "text-black": font === "dark" ,
             })}>
               <h1 className="font-headings font-bold w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5 w-d:text-6 w-t:text-6 w-p:text-6">{ title }</h1>

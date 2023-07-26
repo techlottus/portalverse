@@ -37,18 +37,18 @@ const VidaEstudiantil: NextPageWithLayout = ({ sections, meta }: any) => {
           />
         </div>
       </ContentLayout>
-      <ContentFullLayout classNames="bg-UTEG/blue_bandbook text-white mt-18 w-t:mt-12 w-p:mt-12">
-        <ContentLayout classNames="text-white">
+      <ContentFullLayout classNames="bg-UTEG/blue_bandbook text-surface-00 mt-18 w-t:mt-12 w-p:mt-12">
+        <ContentLayout classNames="text-surface-0">
           <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 my-6">
             <Video dimensions={["330px", "360px", "200px"]} data={ sections.sportActivities.video} />
           </div>
-          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 my-auto">
+          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 my-auto text-surface-0">
             <p className="font-headings font-bold text-6.5 w-t:text-6 w-p:text-6 leading-[125%] mb-6">{sections.sportActivities.title}</p>
             <RichtText font="dark" data={{
               content: sections.sportActivities.description
             }} />
            <div className="mb-6">
-            <p>{sections.sportActivities.moreInformation}<span className="ml-2"><LinkContactTarget type="email" info={sections.sportActivities.moreInformationLink} classNames="text-white" /></span></p>
+            <p>{sections.sportActivities.moreInformation}<span className="ml-2"><LinkContactTarget type="email" info={sections.sportActivities.moreInformationLink} classNames="text-surface-0" /></span></p>
            </div>
           </div>
         </ContentLayout>

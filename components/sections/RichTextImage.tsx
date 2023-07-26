@@ -35,7 +35,7 @@ const RichTextImage: FC<RichTextImageSection> = (props: RichTextImageSection) =>
       style={{ backgroundColor }}
       className={cn({
         "w-p:py-10 w-t:py-6 w-d:py-10": !!backgroundColor,
-        "text-white": contentVariant === "light",
+        "text-surface-0": contentVariant === "light",
       })}
     >
       <Container>

@@ -72,7 +72,7 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
             contentVariant={sections.aplica.banner.font}
             actionLink={
               <div slot="areaAction" className="flex align-middle items-center">
-                <Icon name={sections.aplica.banner.icon} className="w-6 h-6 mr-2 text-white"/><Link className="font-texts font-normal text-base" href={sections.aplica.banner.redirecActionLink} passHref target={"_blank"}>{sections.aplica.banner.actionLink}</Link>
+                <Icon name={sections.aplica.banner.icon} className="w-6 h-6 mr-2 text-surface-0"/><Link className="font-texts font-normal text-base" href={sections.aplica.banner.redirecActionLink} passHref target={"_blank"}>{sections.aplica.banner.actionLink}</Link>
               </div>
             }
           />

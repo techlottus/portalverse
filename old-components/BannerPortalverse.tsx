@@ -72,13 +72,13 @@ const BannerPortalverse: FC<BannerPortalverseComponentData> = memo((props: Banne
                 <div className="p-10">
                   {
                     data?.title
-                      ? <h1 className={cn("font-headings font-bold w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5 w-d:text-6.5 w-t:text-6 w-p:text-6", classNames, { "text-white": data.overlayDak || data.font === "light" })}>{data.title}</h1>
+                      ? <h1 className={cn("font-headings font-bold w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5 w-d:text-6.5 w-t:text-6 w-p:text-6", classNames, { "text-surface-0": data.overlayDak || data.font === "light" })}>{data.title}</h1>
                       : null
                   }
                   {
                     data?.subtitle
                       ? <h3
-                          className={cn("font-texts font-normal w-d:leading-5 w-t:leading-[17.5px] w-p:leading-[17.5px] w-d:text-base w-t:text-3.5 w-p:text-3.5", classNames, { "text-white": data.overlayDak || data.font === "light" })}
+                          className={cn("font-texts font-normal w-d:leading-5 w-t:leading-[17.5px] w-p:leading-[17.5px] w-d:text-base w-t:text-3.5 w-p:text-3.5", classNames, { "text-surface-0": data.overlayDak || data.font === "light" })}
                           dangerouslySetInnerHTML={{ __html: String(data.subtitle) }}
                         />
                       : null
@@ -200,7 +200,7 @@ const BannerContent = (props: BannerPortalverseComponentData) => {
                   "font-headings font-bold",
                   classNames,
                   {
-                    "text-white": data.overlayDak || data.font === "light",
+                    "text-surface-0": data.overlayDak || data.font === "light",
                     "w-d:text-6.5 w-t:text-6 w-p:text-6 w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5": variant === "lg",
                     "w-d:text-[22px] w-t:text-[22px] w-p:text-[22px] w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5": variant === "md",
                     "w-d:text-4 w-t:text-4 w-p:text-4 w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5": variant === "sm"
@@ -219,7 +219,7 @@ const BannerContent = (props: BannerPortalverseComponentData) => {
                   "font-texts font-normal",
                   classNames,
                   {
-                    "text-white": data.overlayDak || data.font === "light",
+                    "text-surface-0": data.overlayDak || data.font === "light",
                     "w-d:leading-6 w-t:leading-[17.5px] w-p:leading-[17.5px] w-d:text-base w-t:text-3.5 w-p:text-3.5": variant === "lg",
                     "w-d:leading-5 w-t:leading-5 w-p:leading-4 w-d:text-sm w-t:text-3.5 w-p:text-3.5": variant === "md",
                     "w-d:leading-5 w-t:leading-5 w-p:leading-4 w-d:text-xs w-t:text-3.5 w-p:text-3.5": variant === "sm"

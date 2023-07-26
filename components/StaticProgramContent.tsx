@@ -138,7 +138,7 @@ const StaticProgramContent: NextPageWithLayout<any> = ({ level, program, meta, c
                   />
                 </Fragment>)
               })
-            : contentTabs.map( (content: any, i: number) => <div key={`content-outstanding-${i}`} className={cn("col-span-12 w-t:col-span-8 w-p:col-span-4 text-white", { "hidden": i !== tabActive })}><OutstandingContainer items={content.cards} /></div>)
+            : contentTabs.map( (content: any, i: number) => <div key={`content-outstanding-${i}`} className={cn("col-span-12 w-t:col-span-8 w-p:col-span-4 text-surface-0", { "hidden": i !== tabActive })}><OutstandingContainer items={content.cards} /></div>)
         }
         </ContentInsideLayout>
       </ContentLayout>

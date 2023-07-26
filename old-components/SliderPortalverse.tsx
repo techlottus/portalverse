@@ -194,7 +194,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
                 <Image classNames="w-t:hidden w-full h-full absolute z-1" classNamesImg="w-full h-full object-cover" src={item.urlImage.desktop} alt="image" />
                 <Image classNames="w-d:hidden w-full h-full absolute z-1" classNamesImg="w-full h-full object-cover" src={item.urlImage.tablet} alt="image" />
                 <div className={cn("flex absolute z-10 pt-12 pb-16 px-32 w-full h-full", {
-                  "text-white": item?.contentVariant === "light",
+                  "text-surface-0": item?.contentVariant === "light",
                   ["justify-start items-start"]: item?.textPosition === "left_top",
                   ["justify-center items-start"]: item?.textPosition === "center_top",
                   ["justify-end items-start"]: item?.textPosition === "right_top",
