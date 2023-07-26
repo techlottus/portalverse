@@ -44,7 +44,7 @@ const ContactTargetCard: FC<ContactTargetCardData> = (props: ContactTargetCardDa
       }
       <div className="w-full flex flex-col justify-center p-3 overflow-hidden">
         <p className="font-headings font-bold text-sm leading-5">{title}</p>
-        <a className="font-texts font-normal text-sm leading-5 text-SC/Blackandgrey/B-60 w-p:w-56 w-60 break-words" target="_blank" rel="noreferrer noopener" href={link}>{link}</a>
+        <a className="font-texts font-normal text-sm leading-5 text-surface-500 w-p:w-56 w-60 break-words" target="_blank" rel="noreferrer noopener" href={link}>{link}</a>
         <LinkContactTarget classNames="break-all" type="email" info={email} />
         <LinkContactTarget classNames="break-all" type="phone" info={phone} />
       </div>

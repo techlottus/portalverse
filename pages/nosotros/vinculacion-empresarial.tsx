@@ -136,7 +136,7 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
                 content: sections.head.feedback.text
               }} classNames="mb-4" />
               <div className="flex align-middle items-center">
-                <span className="material-icons text-SC/Blackandgrey/B-60 mr-2">mail</span>
+                <span className="material-icons text-surface-500 mr-2">mail</span>
                 <LinkContactTarget classNames="!font-bold underline" type={"email"} info={sections.head.feedback.contact} />
               </div>
             </div>

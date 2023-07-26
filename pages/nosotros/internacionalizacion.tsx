@@ -74,7 +74,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
                             return (
                               <div
                                 key={index}
-                                className="flex items-center mt-6 text-SC/Blackandgrey/B-60 cursor-not-allowed"
+                                className="flex items-center mt-6 text-surface-500 cursor-not-allowed"
                               >
                                 {children}
                               </div>
