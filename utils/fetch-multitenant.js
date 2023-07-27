@@ -276,7 +276,7 @@ module.exports = {
     "./forms/**/*.{js,ts,jsx,tsx}",
     "./public/icons/**/*.{svg,jsx}"
   ],
-  safelist: ${JSON.stringify([...fonttokens, ...logostokens])},
+  safelist: ${JSON.stringify([ ...fonttokens, ...logostokens])},
   theme: {
     extend: ${JSON.stringify(tailwindExtend, null, 3)}
   },
@@ -298,16 +298,6 @@ module.exports = {
     }
   });
 
-  // fs.readFile('./.env.local', 'utf8', function(err, data){
-  //   const env = `${data} \n${config.variables}`
-
-  //   fs.writeFile('./.env.local', env, 'utf-8', (err) => {
-  //     if (err) {
-  //       console.error(err);
-  //     }
-  //   });
-  // });
-  
 }
 
 
