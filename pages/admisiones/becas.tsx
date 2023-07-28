@@ -130,8 +130,8 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
       <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-12 w-t:mb-6 w-p:mb-6">
           <Feedback data={sections.feedback.feedback} >
-            <h1 className="font-texts font-normal text-base leading-6 text-SC/Blackandgrey/B-80 mb-3">{sections.feedback.title}</h1>
-            <p className="font-texts font-normal text-sm text-SC/Blackandgrey/B-80">{sections.feedback.text}</p>
+            <h1 className="font-texts font-normal text-base leading-6 text-surface-800 mb-3">{sections.feedback.title}</h1>
+            <p className="font-texts font-normal text-sm text-surface-800">{sections.feedback.text}</p>
           </Feedback>
         </div>
         <div className="col-span-7 w-t:col-span-8 w-p:col-span-4">
