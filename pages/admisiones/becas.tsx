@@ -37,7 +37,7 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
     <Modal isShow={isShow} onClose={handleVisibilityModal} data={{ icon: 'close', title: "", tagOnClose: 'testOnClose', wrapper: true, }}>
       <section slot="areaModalContent" className="flex w-t:flex-col w-p:flex-col w-full h-auto">
         <ContentInsideLayout classNames="gap-6">
-          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 bg-[#2B2C34] p-6">
+          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 bg-surface-400 p-6">
             <p className="text-surface-0 font-headings font-bold text-8 leading-10 break-normal mb-16">{infoModal?.title?.title}</p>
             <span className="font-headings font-normal text-surface-0 mb-6">{infoModal?.redirectLabel}</span>
             {
