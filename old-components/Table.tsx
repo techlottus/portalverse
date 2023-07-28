@@ -16,7 +16,7 @@ const Table:FC<TableData> = memo(({ data, classNames } : TableData) => {
     <table className="w-full">
       <thead>
         <tr>
-          <th className='text-surface-0 text-base font-texts bg-[#8B9BA3] px-4 py-[10px] border border-[#8B9BA3] rounded-t-[8px] flex justify-between'>
+          <th className='text-surface-0 text-base font-texts bg-primary-200 px-4 py-[10px] border border-[#8B9BA3] rounded-t-[8px] flex justify-between'>
           <span className=''>{data.head}</span><span className='material-icons'>{data.icon}</span>
         </th>
         </tr>
