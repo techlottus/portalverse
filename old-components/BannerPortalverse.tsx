@@ -202,7 +202,7 @@ const BannerContent = (props: BannerPortalverseComponentData) => {
                   {
                     "text-surface-0": data.overlayDak || data.font === "light",
                     "w-d:text-6.5 w-t:text-6 w-p:text-6 w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5": variant === "lg",
-                    "w-d:text-[22px] w-t:text-[22px] w-p:text-[22px] w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5": variant === "md",
+                    "w-d:text-5.5 w-t:text-5.5 w-p:text-5.5 w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5": variant === "md",
                     "w-d:text-4 w-t:text-4 w-p:text-4 w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5": variant === "sm"
                   }
                 )
