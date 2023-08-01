@@ -94,7 +94,7 @@ const StepTwo: FC<EgresadosStepComponentData> = ({ data, classNames, enrollment,
     <h1 className="font-headings font-semibold text-5.5 leading-7">{ config.title }</h1>
     <p className="font-texts font-normal text-base leading-4 mt-6">{ config.subtitleStep2 }</p>
     <div className="mt-6">
-      <p className="  text-surface-500 text-[13px]">{ `${config.messageEnrollment}${enrollment}`}</p>
+      <p className="  text-surface-500 text-3.5">{ `${config.messageEnrollment}${enrollment}`}</p>
     </div>
     <div className="mt-8">
       <Input data={ inputMailConfig } errorMessage={configControls.errorMessagesFormEgresados.email} hasError={errorControls.email} eventFocus={() => handleTouchedControl("email")} eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "email")} />
