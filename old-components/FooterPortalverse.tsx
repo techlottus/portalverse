@@ -103,7 +103,7 @@ const Footer: FC<FooterPortalverseComponentData> = ({ privacyLink, certification
         <p className="w-d:hidden font-texts font-normal italic text-sm leading-[17px] text-surface-500">&copy; <span className="text-surface-950">Lottus Education { year }</span></p>
         <Link href={privacyLink.link} passHref target={"_self"}>
 
-          <p className="font-texts font-normal italic text-sm leading-[17px] text-saurface-800 ">{privacyLink.label}</p>
+          <p className="font-texts font-normal italic text-sm leading-[17px] text-surface-800 ">{privacyLink.label}</p>
 
         </Link>
       </div>

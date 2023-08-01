@@ -89,7 +89,7 @@ const StepOtherReason: FC<any> = ({ classNames, step, pathThankyou }: any) => {
   return <section className={cn(classNames)}>
     <h1 className="font-headings font-semibold text-[22px] leading-7">{ config.title }</h1>
     <p className="font-texts font-normal text-base leading-4 mt-6">{ config.subtitle }</p>
-    <p className="mt-8 mb-6 text-[14px] leading-5 text-saurface-800 ">{  config.conditions }</p>
+    <p className="mt-8 mb-6 text-[14px] leading-5 text-surface-800 ">{  config.conditions }</p>
     <div className="mb-6">
       <ProgressBar data={{ progress }} />
     </div>

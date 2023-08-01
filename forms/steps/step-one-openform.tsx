@@ -122,9 +122,9 @@ const StepOne: FC<any> = ({ classNames, data, image, onNext, step, config: stepO
       </div>
     </div>
     <div className="flex align-middle items-center mt-8 mb-6">
-      <p className="text-[14px] leading-5 text-saurface-800 font-texts font-normal mr-1">{ config.conditions }</p>
+      <p className="text-[14px] leading-5 text-surface-800 font-texts font-normal mr-1">{ config.conditions }</p>
       <Link href={config.privacyLink.link} passHref target={"_blank"}>
-        <p className="text-[14px] font-texts font-normal text-sm text-saurface-800 underline">{config.privacyLink.label}</p>
+        <p className="text-[14px] font-texts font-normal text-sm text-surface-800 underline">{config.privacyLink.label}</p>
       </Link>
     </div>
     <div className="mb-6">
