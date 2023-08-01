@@ -97,7 +97,7 @@ const StepThree: FC<any> = ({ classNames, step, data, contacts, schedulers, onNe
     <div className="mt-6">
       <ProgressBar data={{ progress }} />
     </div>
-    <div className="flex mt-6 p-3 border-solid border rounded-lg border-[#9A9A9A]">
+    <div className="flex mt-6 p-3 border-solid border rounded-lg border-surface-300">
       <div className="flex flex-col grow">
         <h2 className="font-headings font-semibold text-[18px] leading-[22px] mb-2">{ config.description }</h2>
         <div className="flex">
