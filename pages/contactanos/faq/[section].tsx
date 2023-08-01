@@ -53,7 +53,7 @@ const FAQ: NextPageWithLayout<any> = ({ info, meta, sections }: any) => {
           
         </div>
         <div className="col-span-9 w-t:col-span-8 w-p:col-span-4 flex-grow overflow-y-auto">
-          <h1 className="font-headings font-bold text-[32px] text-primary-500 w-t:text-6 w-p:text-base w-p:my-6">{ sectionTitle }</h1>
+          <h1 className="font-headings font-bold text-6.5 text-primary-500 w-t:text-6 w-p:text-base w-p:my-6">{ sectionTitle }</h1>
           {
             info.map(({ questions }: any, i: number) => {
               if (!!questions.length) {

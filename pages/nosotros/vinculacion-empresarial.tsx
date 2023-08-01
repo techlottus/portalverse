@@ -113,7 +113,7 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
                       "w-p:col-span-4 py-[40px] w-t:py-[94px] w-p:flex w-p:flex-col w-p:p-6",
                       { "hidden w-p:hidden": tabActive !== i }
                     )}
-                    titleStyles="col-start-2 col-end-7 w-t:col-end-8 text-[32px] !leading-10"
+                    titleStyles="col-start-2 col-end-7 w-t:col-end-8 text-6.5 !leading-10"
                     descriptionStyles="col-start-2 col-end-7 w-t:col-end-8"
                   />
                   <img

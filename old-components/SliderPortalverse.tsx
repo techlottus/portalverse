@@ -281,7 +281,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
           </Aspect>
           <div className="p-4 flex flex-col space-y-6">
             <h2
-              className="font-headings font-bold w-t:font-normal text-6 w-t:text-[32px] leading-8 w-t:leading-10"
+              className="font-headings font-bold w-t:font-normal text-6 w-t:text-6.5 leading-8 w-t:leading-10"
             >
               {item.title}
             </h2>
