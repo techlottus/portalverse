@@ -20,7 +20,7 @@ const Numbers: FC<NumbersData> = memo(({ data, classNames, typeShadowColor="" }:
   }, [data]);// eslint-disable-line react-hooks/exhaustive-deps
   
   return <div className={cn("wrapperNumbers", classNames, {
-      "border border-[#CDCDCD]": data.bordered,
+      "border border-surface-300": data.bordered,
       "shadow-pastelBlueShadowLeft rounded": data.isShadowColor === true && typeShadowColor === 'blue-pastel-left',
       "shadow-pastelYellowShadowLeft rounded": data.isShadowColor === true && typeShadowColor === 'yellow-pastel-left',
       "shadow-pastelRedShadowLeft rounded": data.isShadowColor === true && typeShadowColor === 'red-pastel-left',

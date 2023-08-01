@@ -17,7 +17,7 @@ const Footer: FC<FooterPortalverseComponentData> = ({ privacyLink, certification
   return (
     <section className="w-full border-t-[1px] border-solid border-surface-800 mt-18 w-t:mt-12 w-p:mt-12">
       {/* Section logotype */}
-      <div className="p-6 w-p:hidden border-b-[1px] border-solid border-[#CDCDCD]">
+      <div className="p-6 w-p:hidden border-b-[1px] border-solid border-surface-300">
         <div className="flex justify-between items-center mb-6 cursor-pointer" onClick={onClickLogo}>
           <div className="w-36 h-10 bg-logo bg-cover bg-center"> </div>
           <div className="hidden">
@@ -41,7 +41,7 @@ const Footer: FC<FooterPortalverseComponentData> = ({ privacyLink, certification
           {/* <LinkIcons data={directorio} onClick={() => router.push(directorio.link)} /> */}
         </div>
       </div>
-      <div className="p-6 w-d:hidden w-t:hidden flex flex-col border-b-[1px] border-solid border-[#CDCDCD]">
+      <div className="p-6 w-d:hidden w-t:hidden flex flex-col border-b-[1px] border-solid border-surface-300">
         <div className="flex justify-between items-center mb-6">
           <div onClick={onClickLogo}>
             <div className="w-23 h-6 bg-logo bg-cover bg-center"> </div>
@@ -53,7 +53,7 @@ const Footer: FC<FooterPortalverseComponentData> = ({ privacyLink, certification
         </div>
       </div>
       {/* Section logotype */}
-      <div className="p-6 w-t:hidden w-p:hidden flex gap-24 border-b-[1px] border-solid border-[#CDCDCD]">
+      <div className="p-6 w-t:hidden w-p:hidden flex gap-24 border-b-[1px] border-solid border-surface-300">
         {
           sections.map((section: any[], i: number) => <div key={`sections-${i}`} className="flex flex-col gap-6 w-[252px]">
               {
@@ -90,7 +90,7 @@ const Footer: FC<FooterPortalverseComponentData> = ({ privacyLink, certification
         </div>
         {/* <LinkIcons data={directorio} onClick={() => router.push(directorio.link)} /> */}
       </div>
-      <div className="p-6 flex flex-col border-b-[1px] border-solid border-[#CDCDCD]">
+      <div className="p-6 flex flex-col border-b-[1px] border-solid border-surface-300">
         <p className="mb-5">{ certifications.title }</p>
         <div className="flex gap-12 w-p:flex-wrap">
           {
