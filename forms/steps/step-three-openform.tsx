@@ -99,7 +99,7 @@ const StepThree: FC<any> = ({ classNames, step, data, contacts, schedulers, onNe
     </div>
     <div className="flex mt-6 p-3 border-solid border rounded-lg border-surface-300">
       <div className="flex flex-col grow">
-        <h2 className="font-headings font-semibold text-[18px] leading-[22px] mb-2">{ config.description }</h2>
+        <h2 className="font-headings font-semibold text-4.5 leading-[22px] mb-2">{ config.description }</h2>
         <div className="flex">
           <h3 className="font-texts text-sm leading-[17px] font-bold mr-1">{ config.labelModality }</h3>
           <p className="font-texts text-sm leading-[17px] font-normal">{ data.modality }</p>
