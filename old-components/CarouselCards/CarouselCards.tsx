@@ -7,7 +7,7 @@ const CarouselCards: FC<any> = ({ data: { items }, classNames, classNameSlide }:
   const [ active, setActive ] = useState<number>(0);
   const [ countItems, setCountItems ] = useState<number>(0);
 
-  const stylesBaseControls = "material-icons select-none absolute top-[45%] p-1 rounded-lg text-[12px] w-p:hidden";
+  const stylesBaseControls = "material-icons select-none absolute top-[45%] p-1 rounded-lg text-xs w-p:hidden";
 
   useEffect(() => {
     setCountItems((items.length - 1));

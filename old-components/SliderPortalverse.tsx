@@ -27,7 +27,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
 ) => {
   const router = useRouter()
 
-  const stylesBaseControls = "w-p:hidden select-none absolute top-[45%] p-1 rounded-lg text-[12px]";
+  const stylesBaseControls = "w-p:hidden select-none absolute top-[45%] p-1 rounded-lg text-xs";
 
   const [active, setActive] = useState<number>(0);
   const [countItems, setCountItems] = useState<number>(0);
