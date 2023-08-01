@@ -23,7 +23,7 @@ const PonteEnContacto: NextPageWithLayout = ({ sections, meta }: any) => {
     <HeaderFooterLayout breadcrumbs={false}>
       <ContentFullLayout>
         <ContentInsideLayout classNames="mb-12">
-          <div className="col-span-5 w-t:col-span-8 w-p:col-span-4 bg-darkBlue text-surface-0 w-t:pb-6">
+          <div className="col-span-5 w-t:col-span-8 w-p:col-span-4 bg-surface-800 text-surface-0 w-t:pb-6">
             <ContentInsideLayout classNames="grid-cols-5 w-t:grid-cols-8">
               <div className="col-span-5 col-start-2 col-end-5 w-t:col-span-8 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 w-p:col-end-5">
                 <Breadcrumbs />

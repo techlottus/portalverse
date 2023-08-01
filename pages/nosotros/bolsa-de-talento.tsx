@@ -61,7 +61,7 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
           <Image src={sections.vinculacionEmpresas.image.src} alt={sections.vinculacionEmpresas.image.src} classNames="aspect-1/1" />
         </div>
       </ContentLayout>
-      <ContentFullLayout classNames="bg-darkBlue">
+      <ContentFullLayout classNames="bg-surface-800">
         <ContentLayout>
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-4 w-d:hidden">
             <p className="font-headings text-surface-0 font-bold leading-[125%] text-6.5 w-t:text-6 w-p:text-6">{sections.historiasExito.title}</p>
