@@ -88,7 +88,7 @@ const Alumnos: NextPageWithLayout = ({ sections, meta }: any) => {
             : null
         }      
       </ContentLayout>
-      <ContentFullLayout classNames="col-span-12 w-t:col-span-8 w-p:col-span-4 bg-[#F4F4F4] py-18 px-2">
+      <ContentFullLayout classNames="col-span-12 w-t:col-span-8 w-p:col-span-4 bg-surface-100 py-18 px-2">
         <ContentLayout>
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
             <p className="font-headings font-bold text-10 leading-12.5 col-span-12 mb-6 text-surface-800">{sections?.servicio?.title}</p>
