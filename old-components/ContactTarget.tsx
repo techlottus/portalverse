@@ -14,7 +14,7 @@ const ContactTarget: FC<ContactTargetComponentData> = (props: ContactTargetCompo
     classNames,
   } = props;
   return (
-    <div className={cn("bg-SC/Backgrounds/BG-GRAY flex col-span-4", classNames)}>
+    <div className={cn("bg-surface-100 flex col-span-4", classNames)}>
       {
         !!image
           ?

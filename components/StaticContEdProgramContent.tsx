@@ -49,7 +49,7 @@ const DetalleCursoEducacionContinua = ({ sections, meta }: any) => {
           }
         </section> */}
       </ContentLayout>
-      {/* <ContentFullLayout classNames="bg-SC/Backgrounds/BG-GRAY w-p:hidden hidden">
+      {/* <ContentFullLayout classNames="bg-surface-100 w-p:hidden hidden">
         <ContentLayout>
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
             <p className="font-headings font-bold text-10 pt-6">{sections.relatedCourses.title}</p>

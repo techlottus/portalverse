@@ -25,7 +25,7 @@ const ContactTargetCard: FC<ContactTargetCardData> = (props: ContactTargetCardDa
   } = props;
 
   return (
-    <div className={cn("bg-SC/Backgrounds/BG-GRAY flex", classNames)}>
+    <div className={cn("bg-surface-100 flex", classNames)}>
       {
         !!image
           ?
