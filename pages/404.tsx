@@ -18,7 +18,7 @@ const NotFound: NextPageWithLayout = _ => {
       <p className="text-surface-600 font-semibold text-5.5 w-t:text-6 w-p:text-base py-6 w-p:pt-6 w-p:pb-4 leading-7.15 w-t:leading-8">Esta página no está disponible</p>
       <Link
         href={'/'}
-        className="font-texts py-4 px-8 w-p:w-full w-p:text-center font-bold w-p:text-5 bg-black rounded-lg text-surface-0 text-base mb-13.75 w-t:mb-12 w-p:mb-16.5">
+        className="font-texts py-4 px-8 w-p:w-full w-p:text-center font-bold w-p:text-5 bg-surface-950 rounded-lg text-surface-0 text-base mb-13.75 w-t:mb-12 w-p:mb-16.5">
         Regresar al inicio
       </Link>
     </section>
