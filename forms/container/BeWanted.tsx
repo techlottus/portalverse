@@ -45,14 +45,14 @@ const BeWanted: FC<any> = ({ classNames, copies, pathThankyou, pathBeWanted }: a
   }
 
   return (
-    <section className={cn("p-6 shadow-15 bg-white relative w-d:max-w-[588px] w-t:max-w-[588px] w-t:mx-auto w-p:w-auto", classNames)}>
+    <section className={cn("p-6 shadow-15 bg-surface-0 relative w-d:max-w-[588px] w-t:max-w-[588px] w-t:mx-auto w-p:w-auto", classNames)}>
       <div className={cn("absolute w-full h-full z-10 flex justify-center items-center left-0 top-0", { "hidden": !isLoading, "block":isLoading })}>
         <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
       </div>
       {
         isError
           ? isErrorRegister && responseStatus === 409 // user already registered for this job pool
-            ? <div className="bg-white w-full h-full z-10 flex flex-col items-center space-y-6 aspect-2/1">
+            ? <div className="bg-surface-0 w-full h-full z-10 flex flex-col items-center space-y-6 aspect-2/1">
                 <h1 className="font-semibold text-6">Ya te registraste en la Bolsa de Talento</h1>
                 <p className="font-normal text-sm">Este correo ya está registrado en la bolsa de talento, si no recuerdas tu contraseña puedes restablecerla en la bolsa de talento de Bewanted y pulsar en la opción que dice: ¿Olvidaste tu contraseña?</p>
                 <div className="w-full max-w-[24rem]"> {/* Tailwind's 'max-w-sm' value isn't working for some reason u.u */}
@@ -63,7 +63,7 @@ const BeWanted: FC<any> = ({ classNames, copies, pathThankyou, pathBeWanted }: a
                   <Button dark onClick={() => window.open(pathBeWanted)} data={{...ButtonInit, title: "Visitar Bolsa de talento" }} />
                 </div>
               </div>
-            : <div className="bg-white w-full h-full p-4 z-10 flex flex-col aspect-2/1 justify-center items-center">
+            : <div className="bg-surface-0 w-full h-full p-4 z-10 flex flex-col aspect-2/1 justify-center items-center">
                 <h1 className="font-bold text-10 text-center leading-12 mb-9">
                 Lo sentimos
                 </h1>

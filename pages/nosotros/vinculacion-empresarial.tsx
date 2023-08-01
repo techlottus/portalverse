@@ -99,7 +99,7 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
           <TabsFeatured active={tabActive} tabs={sections.socialService.tabs.items} onActive={(active: number) => setTabActive(active)} />
         </section>
       </ContentFullLayout>
-      <ContentFullLayout classNames="bg-white py-6">
+      <ContentFullLayout classNames="bg-surface-0 py-6">
         <ContentLayout>
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
             <ContentInsideLayout classNames="gap-6">

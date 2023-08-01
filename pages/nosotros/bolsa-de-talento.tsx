@@ -34,7 +34,7 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
           <RichtText data={{ content: sections.descripcion.text.content }} />
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-          <BeWanted pathBeWanted="https://www.bewanted.com/acceso/candidatos" copies={{ ...OpenFormInit.steponebewanted }} pathThankyou={`/thank-you?type=egresados`} classNames="w-full h-auto bg-white bottom-0 rounded-lg" />
+          <BeWanted pathBeWanted="https://www.bewanted.com/acceso/candidatos" copies={{ ...OpenFormInit.steponebewanted }} pathThankyou={`/thank-you?type=egresados`} classNames="w-full h-auto bg-surface-0 bottom-0 rounded-lg" />
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:hidden">
           <p className="font-headings font-bold leading-[125%] text-10 w-t:text-6 w-p:text-6 mb-6">{sections.comoFunciona.title}</p>

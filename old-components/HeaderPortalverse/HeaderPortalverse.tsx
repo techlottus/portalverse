@@ -111,7 +111,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, l
 
   return <>
     {/* desktop menu */}
-    <section ref={navbarRef} className={cn("fixed w-t:hidden w-p:hidden w-full bg-white z-10 transition-transform", { "shadow-15": !activeMenu }, classNames)}>
+    <section ref={navbarRef} className={cn("fixed w-t:hidden w-p:hidden w-full bg-surface-0 z-10 transition-transform", { "shadow-15": !activeMenu }, classNames)}>
       <div className="flex p-1">
         <div className={cn("p-6 border-0 cursor-pointer border-solid border-SC/Actions/AC-300 border-r-2")} onClick={onClickLogo}>
           <div className="w-36 h-9 bg-logo bg-cover bg-center"> </div>
@@ -155,7 +155,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, l
         </div>
       </div>
       {/* menu suboptions */}
-      <div onMouseLeave={handleHoverOutOption} className={cn("w-full p-2 flex space-x-6 justify-center w-t:hidden w-p:hidden bg-white z-50", { "hidden": !activeMenu, "block shadow-15": activeMenu })}>
+      <div onMouseLeave={handleHoverOutOption} className={cn("w-full p-2 flex space-x-6 justify-center w-t:hidden w-p:hidden bg-surface-0 z-50", { "hidden": !activeMenu, "block shadow-15": activeMenu })}>
         {
           activeOptionMenu.map((item: any, i: number) => <div key={`submenu-${i}`} className={cn("py-1 px-6 z-20 border-solid border-SC/Actions/AC-300", { "border-r-2": activeOptionMenu.length > 1 })}>
               <Link href={item.route} passHref className="w-full">
@@ -182,7 +182,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, l
         <Icon name="search" className="w-6 h-6" />
       </div> */}
     </section>
-    <div className={cn("w-d:hidden w-full static left-0 top-0 bottom-0 h-screen bg-white flex flex-col p-2", { "hidden z-10": menuInvisible })}>
+    <div className={cn("w-d:hidden w-full static left-0 top-0 bottom-0 h-screen bg-surface-0 flex flex-col p-2", { "hidden z-10": menuInvisible })}>
       <div className="h-screen overflow-auto">
         <div className="overflow-y-auto h-[90%]">
           {

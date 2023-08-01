@@ -175,7 +175,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
           onClick={handlerClickControl}
           className={cn(
               "flex justify-center items-center z-20 left-8 w-14 h-14",
-              { "bg-white/50 cursor-pointer": countItems > 1 }
+              { "bg-surface-0/50 cursor-pointer": countItems > 1 }
               , stylesBaseControls
             )}
           >
@@ -262,7 +262,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
           onClick={handlerClickControl}
           className={cn(
               "flex justify-center items-center z-10 right-8 w-14 h-14",
-              { "bg-white/50 cursor-pointer": countItems > 1 }, stylesBaseControls
+              { "bg-surface-0/50 cursor-pointer": countItems > 1 }, stylesBaseControls
             )}
           >
             <span className="material-icons ml-0.5 pointer-events-none">arrow_forward_ios</span>

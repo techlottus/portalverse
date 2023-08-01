@@ -21,7 +21,7 @@ const Table:FC<TableData> = memo(({ data, classNames } : TableData) => {
         </th>
         </tr>
       </thead>
-      <tbody className='bg-white'>
+      <tbody className='bg-surface-0'>
         {
           data.rows.map((row: any, i: number)=>{
             return [<tr key={i} className='border-b border-[#8B9BA3]'><td className='px-6 py-2 font-texts text-sm'>{data.rows[i]}</td></tr>]

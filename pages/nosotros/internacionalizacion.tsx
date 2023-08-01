@@ -105,7 +105,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
               }
             </div>
           </div>
-          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 bg-white overflow-y-auto">
+          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 bg-surface-0 overflow-y-auto">
             <RichtText data={{
               content: infoModal?.description?.content
             }} />

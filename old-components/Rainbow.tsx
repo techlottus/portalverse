@@ -49,7 +49,7 @@ const Rainbow: FC<RainbowComponentConfig> = ({ sections, title, classNamesTitle 
                   className="w-full h-full"
                   style={{ backgroundColor: section?.color || "white" }}
                 ></div>
-                <div className="w-d:w-1/3 h-full bg-white"></div>
+                <div className="w-d:w-1/3 h-full bg-surface-0"></div>
               </div>
             </section>
           );

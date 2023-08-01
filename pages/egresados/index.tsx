@@ -36,7 +36,7 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
           }} />
         </div>
         <div className="col-span-6 w-t:col-span-4 w-p:col-span-4 w-p:order-1 relative">
-          {/* <BeWantedForm pathThankyou={`/thank-you?type=egresados`} classNames="absolute w-full h-auto bg-white bottom-0 rounded-lg" /> */}
+          {/* <BeWantedForm pathThankyou={`/thank-you?type=egresados`} classNames="absolute w-full h-auto bg-surface-0 bottom-0 rounded-lg" /> */}
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
           <Video dimensions={["330px", "400px", "200px"]} data={sections.video.video} />

@@ -236,7 +236,7 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, cur
   }
 
   return (
-    <section className={cn("p-6 shadow-15 bg-white relative", classNames)}>
+    <section className={cn("p-6 shadow-15 bg-surface-0 relative", classNames)}>
       <div>
         {
           isLoading
@@ -247,7 +247,7 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, cur
         }
         {
           isError
-            ? <div className="bg-white w-full h-full p-4 z-10 flex flex-col aspect-2/1 justify-center items-center left-0 top-0">
+            ? <div className="bg-surface-0 w-full h-full p-4 z-10 flex flex-col aspect-2/1 justify-center items-center left-0 top-0">
                 <h1 className="font-bold text-10 text-center leading-12 mb-9">
                 Lo sentimos
                 </h1>
