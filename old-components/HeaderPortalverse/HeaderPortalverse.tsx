@@ -113,7 +113,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, l
     {/* desktop menu */}
     <section ref={navbarRef} className={cn("fixed w-t:hidden w-p:hidden w-full bg-surface-0 z-10 transition-transform", { "shadow-15": !activeMenu }, classNames)}>
       <div className="flex p-1">
-        <div className={cn("p-6 border-0 cursor-pointer border-solid border-SC/Actions/AC-300 border-r-2")} onClick={onClickLogo}>
+        <div className={cn("p-6 border-0 cursor-pointer border-solid border-surface-200 border-r-2")} onClick={onClickLogo}>
           <div className="w-36 h-9 bg-logo bg-cover bg-center"> </div>
         </div>
         <div className={cn("flex flex-col flex-grow p-1")}>
@@ -126,7 +126,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, l
               <p className="font-bold text-primary-500">Egresados</p>
             </Link>
           </div>
-          <div className="flex flex-grow p-1 border-0 border-solid border-SC/Actions/AC-300 border-t-2">
+          <div className="flex flex-grow p-1 border-0 border-solid border-surface-200 border-t-2">
             <div className="flex flex-grow space-x-6">
               {
                 menus.map((item: any, i: number) => <div key={`menu-${i}`} className="cursor-pointer p-1 z-20 flex items-center">
@@ -145,7 +145,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, l
                   </div>)
               }
             </div>
-            {/* <div className="py-3 px-7 cursor-pointer border-solid border-SC/Actions/AC-300 border-x-2">
+            {/* <div className="py-3 px-7 cursor-pointer border-solid border-surface-200 border-x-2">
               <Icon name="search" className="w-6 h-6" />
             </div> */}
             <div className="px-6">
@@ -157,7 +157,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, l
       {/* menu suboptions */}
       <div onMouseLeave={handleHoverOutOption} className={cn("w-full p-2 flex space-x-6 justify-center w-t:hidden w-p:hidden bg-surface-0 z-50", { "hidden": !activeMenu, "block shadow-15": activeMenu })}>
         {
-          activeOptionMenu.map((item: any, i: number) => <div key={`submenu-${i}`} className={cn("py-1 px-6 z-20 border-solid border-SC/Actions/AC-300", { "border-r-2": activeOptionMenu.length > 1 })}>
+          activeOptionMenu.map((item: any, i: number) => <div key={`submenu-${i}`} className={cn("py-1 px-6 z-20 border-solid border-surface-200", { "border-r-2": activeOptionMenu.length > 1 })}>
               <Link href={item.route} passHref className="w-full">
 
                 <p className="font-texts font-normal text-sm">{item.label}</p>
@@ -172,13 +172,13 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, l
 
     {/* desktop tablet */}
     <section className={cn("w-d:hidden w-full flex p-1 relative shadow-md", classNames)}>
-      <div className="p-3 border-solid border-SC/Actions/AC-300 border-r-2" onClick={handleMenuMobile}>
+      <div className="p-3 border-solid border-surface-200 border-r-2" onClick={handleMenuMobile}>
         <Icon name="sort" className="w-6 h-6" />
       </div>
       <div className="flex justify-center items-center flex-grow" onClick={onClickLogo}>
           <div className="w-36 h-9 bg-logo bg-cover bg-center"> </div>
         </div>
-      {/* <div className="p-3 border-solid border-SC/Actions/AC-300 border-l-2">
+      {/* <div className="p-3 border-solid border-surface-200 border-l-2">
         <Icon name="search" className="w-6 h-6" />
       </div> */}
     </section>
