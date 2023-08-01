@@ -28,7 +28,7 @@ const PonteEnContacto: NextPageWithLayout = ({ sections, meta }: any) => {
               <div className="col-span-5 col-start-2 col-end-5 w-t:col-span-8 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 w-p:col-end-5">
                 <Breadcrumbs />
               </div>
-              <h1 className="col-span-5 col-start-2 col-end-5 w-t:col-span-8 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 w-p:col-end-5 text-10 w-p:text-[30px] w-p:m-6 font-bold font-headings leading-[125%]">{ sections.head.title }</h1>
+              <h1 className="col-span-5 col-start-2 col-end-5 w-t:col-span-8 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 w-p:col-end-5 text-10 w-p:text-7.5 w-p:m-6 font-bold font-headings leading-[125%]">{ sections.head.title }</h1>
               {
                 sections.medios.map((medio: any, i: number) => <p key={`item-media-${i}`} className="col-span-5 col-start-2 col-end-5 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 text-base font-headings w-d:mt-6 w-t:mt-6 w-p:mt-2 w-p:mx-6 leading-[24px] w-t:leading-[125%] w-p:leading-3[130%] flex items-center font-normal"><span className="material-icons mr-2">{ medio.icon }</span>{ medio.text }</p>)
               }
