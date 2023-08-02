@@ -148,7 +148,7 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, cur
   const isError = isErrorToken || isErrorEO || isErrorSD;
 
   const handleFetchEducativeOffer = (modality: string) => {
-    setLevelsOffer([]);
+    // setLevelsOffer([]);
     setFilteredPrograms([]);
     setFilteredCampus([]);
     const businessLineToFetchFrom = getBusinessLineToFetchFrom(businessUnit, modality);
@@ -312,7 +312,7 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, cur
                   onNext={(info: any) => handleNextStep(info, 2)}
                   controls={{ ...controlsConfig }}
                 />
-                {/* <StepThree
+                <StepThree
                   onReturnStep={(step: number) => handleReturnedStep(step)}
                   contacts={contacts}
                   schedulers={schedulers}
@@ -324,8 +324,8 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, cur
                     level: infoForm.step2.level,
                     campus: infoForm.step2.nombreCampus,
                   }}
-                  classNames={cn({ hidden: step !== 3 })}
-                /> */}
+                  // classNames={cn({ hidden: step !== 3 })}
+                />
               </>
         }
       </div>

@@ -175,7 +175,7 @@ const StepTwo: FC<any> = ({
     </div> */}
     {/* <form> */}
       <div className={cn("flex flex-col", { "hidden": controlsConfig?.modality?.hidden })}>
-        <p className="font-Nunito font-normal text-[14px] leading-5 text-[#282828] mt-6">{ config.modality }</p>
+        <p className="font-Nunito font-normal text-[14px] leading-5 text-[#282828] mt-6 mb-2">{ config.modality }</p>
           <div className="flex justify-start gap-6 flex-wrap">
             {
               dataModalities?.map((modalityData, i) => {

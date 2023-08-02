@@ -101,7 +101,7 @@ const buttonConfigOpenFormStepOne = {
 const buttonConfigOpenFormStepThree = {
   ...ButtonInit,
   isExpand: false,
-  title: "Solicita información"
+  title: "Enviar"
 };
 const buttonConfigSend = {
   ...ButtonInit,
