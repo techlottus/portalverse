@@ -189,6 +189,7 @@ const StepTwo: FC<any> = ({
                       setDataModalities(Modalities.map((item: any) => ({ ...item, active: item.value === modality })));
                       onChangeModality(modality);
                       setActiveModalityPill(i);
+                      setActiveLevelPill(-1)
                       setErrorControls({ ...errorControls, modality: validateControl(modality, infoControlsTouched.modality) });
                     }}
                     key={`pill-${i}`}
