@@ -15,7 +15,7 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
     <HeaderFooterLayout>
       <ContentLayout>
         <div className="w-d:col-span-7 w-t:col-span-7 w-p:col-span-4">
-          <h1 className="text-13 w-t:text-8.25 w-p:text-6 font-headings font-bold leading-tight w-t:leading-[111%] mb-6">{ sections.head.title }</h1>
+          <h1 className="text-13 w-t:text-8.25 w-p:text-6 font-headings font-bold leading-tight w-t:semi-tight mb-6">{ sections.head.title }</h1>
           <RichtText data={{
             content: sections.head.description
           }} />

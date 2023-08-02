@@ -25,7 +25,7 @@ const SomosUteg: NextPageWithLayout = ({ sections, meta }: any) => {
     <HeaderFooterLayout breadcrumbs={true}>
       <ContentLayout>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-7.5 leading-tight w-t:leading-[111%] mb-6">{sections?.head?.title}</p>
+          <p className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-7.5 leading-tight w-t:semi-tight mb-6">{sections?.head?.title}</p>
           <p className="font-headings font-bold text-5.5 mb-6">{sections?.head?.subtitle}</p>
           <RichtText data={{
             content: sections?.head?.description

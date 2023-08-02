@@ -90,7 +90,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
       </Head>
       <ContentLayout>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12">
-          <h1 className="text-13 font-bold font-headings leading-13 w-t:leading-[111%] w-p:leading-tight w-t:text-8.5 w-p:text-7.5 mb-6">{title}</h1>
+          <h1 className="text-13 font-bold font-headings leading-13 w-t:semi-tight w-p:leading-tight w-t:text-8.5 w-p:text-7.5 mb-6">{title}</h1>
           <RichtText data={{
             content: description
           }} />

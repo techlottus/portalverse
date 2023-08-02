@@ -45,7 +45,7 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
     <HeaderFooterLayout breadcrumbs={true}>
       <ContentLayout>
         <div className="col-span-8 w-p:col-span-4 w-d:mb-12 w-t:mb-6 w-p:mb-6">
-          <h1 className="text-13 w-t:text-8.25 w-p:text-6 font-headings font-bold leading-tight w-t:leading-[111%] mb-5">{ sections.head.title }</h1>
+          <h1 className="text-13 w-t:text-8.25 w-p:text-6 font-headings font-bold leading-tight w-t:semi-tight mb-5">{ sections.head.title }</h1>
           <RichtText data={{
             content: sections.head.description
           }} />

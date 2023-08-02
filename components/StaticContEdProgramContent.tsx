@@ -16,7 +16,7 @@ const DetalleCursoEducacionContinua = ({ sections, meta }: any) => {
     <Fragment>
       <ContentLayout classNames="gap-6">
         <div className="col-span-6 w-t:col-span-4 w-p:col-span-4">
-          <p className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-7.5 leading-13 w-t:leading-[111%] w-p:leading-tight mb-6">{sections.head.title}</p>
+          <p className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-7.5 leading-13 w-t:semi-tight w-p:leading-tight mb-6">{sections.head.title}</p>
           <RichtText data={{
             content: sections.head.description
           }} />
