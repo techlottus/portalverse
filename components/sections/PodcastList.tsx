@@ -9,7 +9,7 @@ const PodcastList = (props: PodcastListSection) => {
     <section>
       <Container>
         {title ? (
-          <p className="font-headings font-bold text-10 w-t:text-7.5 w-p:text-7.5 leading-[125%] mb-6">
+          <p className="font-headings font-bold text-10 w-t:text-7.5 w-p:text-7.5 leading-tight mb-6">
             {title}
           </p>
         ) : null}

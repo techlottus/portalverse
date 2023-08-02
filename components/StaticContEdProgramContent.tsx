@@ -16,7 +16,7 @@ const DetalleCursoEducacionContinua = ({ sections, meta }: any) => {
     <Fragment>
       <ContentLayout classNames="gap-6">
         <div className="col-span-6 w-t:col-span-4 w-p:col-span-4">
-          <p className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-7.5 leading-13 w-t:leading-[111%] w-p:leading-[125%] mb-6">{sections.head.title}</p>
+          <p className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-7.5 leading-13 w-t:leading-[111%] w-p:leading-tight mb-6">{sections.head.title}</p>
           <RichtText data={{
             content: sections.head.description
           }} />
@@ -39,7 +39,7 @@ const DetalleCursoEducacionContinua = ({ sections, meta }: any) => {
           {/* <EducacionContinuaForm pathThankyou="/thank-you" image={{ src: "https://assets.staging.bedu.org/UTEG/admisiones_pedir_informacion_avatar_6738c707b5.jpg", alt:"image-person" }} copies={{...OpenFormInit.steponecontinuos, subtitle: OpenFormInit.steponecontinuos.subtitle + meta.title}} defaultProgram={sections.head.title} /> */}
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:hidden w-t:hidden hidden">
-          <p className="font-headings font-bold text-10 pt-6 w-t:text-8.5 w-p:text-7.5 leading-[125%]">{sections.relatedCourses.title}</p>
+          <p className="font-headings font-bold text-10 pt-6 w-t:text-8.5 w-p:text-7.5 leading-tight">{sections.relatedCourses.title}</p>
         </div>
         {/* <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mb-12 w-d:hidden w-t:hidden hidden">
           {

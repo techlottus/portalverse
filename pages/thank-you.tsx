@@ -45,9 +45,9 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
         <ContentInsideLayout>
           <div className="col-span-5 w-t:col-span-8 w-p:col-span-4 bg-surface-800 text-surface-0 w-t:pb-6">
             <ContentInsideLayout>
-              <h1 className="col-span-12 col-start-3 col-end-11 w-t:col-span-8 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 w-p:col-end-5 text-10 w-p:text-7.5 w-p:m-6 font-bold font-headings mt-[72px] leading-[125%]">{ messages[flow].title }</h1>
-              <p className="col-span-12 col-start-3 col-end-11 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 text-base font-semibold font-texts w-d:mt-6 w-t:mt-6 w-p:mt-2 w-p:mx-6 leading-[24px] w-t:leading-[125%] w-p:leading-3[130%]">{ messages[flow].subtitle }</p>
-              <p className="col-span-12 col-start-3 col-end-11 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1  text-4.5 font-semibold font-headings w-d:mt-12 w-t:mt-6 w-p:mt-6 w-p:ml-6 leading-[125%]">{ sections.agradecimiento.title }</p>
+              <h1 className="col-span-12 col-start-3 col-end-11 w-t:col-span-8 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 w-p:col-end-5 text-10 w-p:text-7.5 w-p:m-6 font-bold font-headings mt-[72px] leading-tight">{ messages[flow].title }</h1>
+              <p className="col-span-12 col-start-3 col-end-11 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 text-base font-semibold font-texts w-d:mt-6 w-t:mt-6 w-p:mt-2 w-p:mx-6 leading-[24px] w-t:leading-tight w-p:leading-3[130%]">{ messages[flow].subtitle }</p>
+              <p className="col-span-12 col-start-3 col-end-11 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1  text-4.5 font-semibold font-headings w-d:mt-12 w-t:mt-6 w-p:mt-6 w-p:ml-6 leading-tight">{ sections.agradecimiento.title }</p>
               <section className="grid w-d:grid-cols-4 w-t:grid-cols-4 w-p:grid-cols-4 col-start-3 col-end-11 w-t:col-start-2 w-t:col-end-6 w-p:col-start-1 w-p:col-end-4 w-d:mt-[38px] w-t:mt-[38px] w-p:my-[20px] w-p:ml-6">
                 {
                   sections.agradecimiento.social.map((item: any, i: number) => <Link key={`social-${i}`} href={item.link} passHref target={"_blank"}>

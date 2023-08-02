@@ -48,7 +48,7 @@ const NumbersPortalverse: FC<NumbersPortalverseData> = memo(({data, classNames }
         }
         {
           data?.prefix ?
-            <p className="font-headings text-10 w-t:text-6 w-p:text-6 font-bold leading-[125%] pr-2">{data?.prefix}</p>
+            <p className="font-headings text-10 w-t:text-6 w-p:text-6 font-bold leading-tight pr-2">{data?.prefix}</p>
           : null
         }
         <CountUp separator="," start={0} end={data?.maxNumber} onEnd={() => setFinishedCount(true)} >
@@ -60,11 +60,11 @@ const NumbersPortalverse: FC<NumbersPortalverseData> = memo(({data, classNames }
               }}
               delayedCall
             >
-              <span className="font-headings text-10 w-t:text-6 w-p:text-6 font-semibold leading-[125%] pr-2" ref={countUpRef} />
+              <span className="font-headings text-10 w-t:text-6 w-p:text-6 font-semibold leading-tight pr-2" ref={countUpRef} />
             </VisibilitySensor>
           )}
         </CountUp>
-        <p className="font-headings text-10 w-t:text-6 w-p:text-6 font-bold leading-[125%] pr-2">{data.suffix}</p>
+        <p className="font-headings text-10 w-t:text-6 w-p:text-6 font-bold leading-tight pr-2">{data.suffix}</p>
       </div>
       <div className= {cn("pb-4 wrapperNumbers", classNames, {
         "pt-0" : data.isShadowColor === false && data.container === false && data.bordered === false && data.boxShadow === false

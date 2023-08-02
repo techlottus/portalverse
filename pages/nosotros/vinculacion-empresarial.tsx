@@ -77,7 +77,7 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
           />
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%] w-d:mb-6">{sections.alliances.title}</p>
+          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight w-d:mb-6">{sections.alliances.title}</p>
           <div className="w-d:col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mb-6 ">
             {
               sections?.alliances?.carrousel?.map((item: any, i: number) => <section key={`section-numbers-${i}`}>
@@ -186,7 +186,7 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
       </ContentLayout>
       <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-12 w-t:mt-6 w-p:mt-6">
-          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%] mb-6">{sections.experiences.title}</p>
+          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6">{sections.experiences.title}</p>
           <Mosaic data={sections.experiences.images} />
         </div>
       </ContentLayout>

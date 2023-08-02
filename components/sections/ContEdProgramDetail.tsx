@@ -32,7 +32,7 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
         <div className="flex flex-col gap-6">
           {
             name ?
-              <h1 className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-7.5 leading-13 w-t:leading-[111%] w-p:leading-[125%]">{name}</h1>
+              <h1 className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-7.5 leading-13 w-t:leading-[111%] w-p:leading-tight">{name}</h1>
               : null
           }
           {

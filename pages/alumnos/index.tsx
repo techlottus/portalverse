@@ -29,7 +29,7 @@ const Alumnos: NextPageWithLayout = ({ sections, meta }: any) => {
     <HeaderFooterLayout>
       <ContentLayout>
         <div className="col-span-6 w-p:col-span-4 mb-12 w-t:mb-6 w-p:mb-6">
-          <p className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-7.5 leading-13 w-t:leading-[111%] w-p:leading-[125%] mb-6">{sections.head.title}</p>
+          <p className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-7.5 leading-13 w-t:leading-[111%] w-p:leading-tight mb-6">{sections.head.title}</p>
           <RichtText data={{
             content: sections.head.description
           }} />
@@ -46,7 +46,7 @@ const Alumnos: NextPageWithLayout = ({ sections, meta }: any) => {
             sections.directorio.map(({ name: title, description, contacts }: SectionData, i: number) => <section key={`section-directory-${i}`} className="mb-9">
               <ContentInsideLayout>
                 <p className="font-headings font-bold text-10 leading-12.5 col-span-12 mb-6">{title}</p>
-                <p className="font-texts font-normal text-base w-t:text-3.5 w-p:text-base col-span-7 leading-[125%]">{description}</p>
+                <p className="font-texts font-normal text-base w-t:text-3.5 w-p:text-base col-span-7 leading-tight">{description}</p>
               </ContentInsideLayout>
               <ContentInsideLayout classNames="mt-6 gap-6">
                 {

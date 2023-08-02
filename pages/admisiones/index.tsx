@@ -68,7 +68,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
           />
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mt-[72px] w-p:my-6 w-t:my-6">
-          <p className="font-headings text-10 font-bold leading-[125%] w-t:text-6 w-p:text-6">{sections.requirements.title}</p>
+          <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{sections.requirements.title}</p>
         </div>
         <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center w-d:mb-2">
           <TabsFeatured tabs={sections.requirements.tabs.items} onActive={(active: number) => setTabActive(active)} />
@@ -143,7 +143,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
 
       <ContentLayout classNames="mt-12 w-d:mt-[72px]">
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings text-10 font-bold leading-[125%] w-t:text-6 w-p:text-6 mb-6">{sections.egresados.title}</p>
+          <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6 mb-6">{sections.egresados.title}</p>
           <RichtText data={{
             content: sections.egresados.description
           }} />
@@ -167,7 +167,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
           <Video dimensions={["330px", "400px", "200px"]} data={sections.egresados.video} />
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings text-10 font-bold leading-[125%] w-t:text-6 w-p:text-6">{sections.FAQ.title}</p>
+          <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{sections.FAQ.title}</p>
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 flex-grow overflow-y-auto mb-12 w-t:mb-6 w-p:mb-6">
           {
