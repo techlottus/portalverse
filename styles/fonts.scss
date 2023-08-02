@@ -86,10 +86,10 @@
     @apply font-headings font-bold text-4.5 leading-[22.5px] text-surface-0;
   }
   .ac-type-h6-bold-solid-poppins-tablet {
-    @apply font-headings font-bold text-3.5 leading-[17.5px] text-surface-950;
+    @apply font-headings font-bold text-3.5 leading-4 text-surface-950;
   }
   .ac-type-h6-white-bold-solid-poppins-tablet {
-    @apply font-headings font-bold text-3.5 leading-[17.5px] text-surface-0;
+    @apply font-headings font-bold text-3.5 leading-4 text-surface-0;
   }
 
   // Bodies
@@ -101,10 +101,10 @@
     @apply font-texts font-normal text-base leading-5 text-surface-0;
   }
   .ac-type-body-positive-solid-nunitosans-tabmob {
-    @apply font-texts font-normal text-sm leading-[17.5px] text-surface-800;
+    @apply font-texts font-normal text-sm leading-4 text-surface-800;
   }
   .ac-type-body-negative-solid-nunitosans-tabmob {
-    @apply font-texts font-normal text-sm leading-[17.5px] text-surface-0;
+    @apply font-texts font-normal text-sm leading-4 text-surface-0;
   }
   
   // negative
@@ -115,10 +115,10 @@
     @apply font-texts font-normal text-base leading-5 text-surface-0;
   }
   .ac-type-body-positive-solid-nunitosans-tabmob {
-    @apply font-texts font-normal text-sm leading-[17.5px] text-surface-800;
+    @apply font-texts font-normal text-sm leading-4 text-surface-800;
   }
   .ac-type-body-negative-solid-nunitosans-tabmob {
-    @apply font-texts font-normal text-sm leading-[17.5px] text-surface-0;
+    @apply font-texts font-normal text-sm leading-4 text-surface-0;
   }
 
 }

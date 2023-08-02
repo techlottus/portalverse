@@ -76,7 +76,7 @@ const CintilloContent = (props: CintilloData) => {
           <h3
             className={cn(
               "font-texts font-normal",
-              "w-d:leading-5 w-t:leading-[17.5px] w-p:leading-[17.5px]",
+              "w-d:leading-5 w-t:leading-4 w-p:leading-4",
               "w-d:text-base w-t:text-3.5 w-p:text-3.5",
               "text-surface-950 w-p:text-surface-0",
               {

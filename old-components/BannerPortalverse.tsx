@@ -78,7 +78,7 @@ const BannerPortalverse: FC<BannerPortalverseComponentData> = memo((props: Banne
                   {
                     data?.subtitle
                       ? <h3
-                          className={cn("font-texts font-normal w-d:leading-5 w-t:leading-[17.5px] w-p:leading-[17.5px] w-d:text-base w-t:text-3.5 w-p:text-3.5", classNames, { "text-surface-0": data.overlayDak || data.font === "light" })}
+                          className={cn("font-texts font-normal w-d:leading-5 w-t:leading-4 w-p:leading-4 w-d:text-base w-t:text-3.5 w-p:text-3.5", classNames, { "text-surface-0": data.overlayDak || data.font === "light" })}
                           dangerouslySetInnerHTML={{ __html: String(data.subtitle) }}
                         />
                       : null
@@ -220,7 +220,7 @@ const BannerContent = (props: BannerPortalverseComponentData) => {
                   classNames,
                   {
                     "text-surface-0": data.overlayDak || data.font === "light",
-                    "w-d:leading-6 w-t:leading-[17.5px] w-p:leading-[17.5px] w-d:text-base w-t:text-3.5 w-p:text-3.5": variant === "lg",
+                    "w-d:leading-6 w-t:leading-4 w-p:leading-4 w-d:text-base w-t:text-3.5 w-p:text-3.5": variant === "lg",
                     "w-d:leading-5 w-t:leading-5 w-p:leading-4 w-d:text-sm w-t:text-3.5 w-p:text-3.5": variant === "md",
                     "w-d:leading-5 w-t:leading-5 w-p:leading-4 w-d:text-xs w-t:text-3.5 w-p:text-3.5": variant === "sm"
                   }
