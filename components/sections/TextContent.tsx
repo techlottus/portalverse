@@ -20,7 +20,7 @@ const TextContent = (props: TextContentSection) => {
                 : null}
             {
               subtitle
-                ? <p className="font-headings font-semibold leading-[130%] w-p:text-4 w-t:text-4.5 text-5.5">
+                ? <p className="font-headings font-semibold leading-tight w-p:text-4 w-t:text-4.5 text-5.5">
                     {subtitle}
                   </p>
                 : null

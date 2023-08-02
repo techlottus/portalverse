@@ -95,7 +95,7 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
       <ContentLayout>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12">
           <h1 className="text-13 font-bold font-headings leading-13 w-t:leading-[111%] w-p:leading-tight w-t:text-8.5 w-p:text-7.5 w-d:mb-6 w-t:mb-4 w-p:mb-3">{sections.head.title}</h1>
-          <p className="text-5.5  font-bold font-headings leading-[130%] w-t:leading-tight w-p:leading-tight w-t:text-4.5 w-p:text-4.5 w-d:mb-6 w-t:mb-4 w-p:mb-3">{sections.head.subtitle}</p>
+          <p className="text-5.5  font-bold font-headings leading-tight w-t:leading-tight w-p:leading-tight w-t:text-4.5 w-p:text-4.5 w-d:mb-6 w-t:mb-4 w-p:mb-3">{sections.head.subtitle}</p>
           <RichtText data={{
             content: sections.head.description
           }} />
@@ -138,7 +138,7 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
           <OpenForm pathThankyou={`/thank-you`} image={{ src: "https://assets.staging.bedu.org/UTEG/admisiones_pedir_informacion_avatar_6738c707b5.jpg", alt: "image-person" }} />
         </div>
         <div className="col-span-5 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings font-bold leading-[130%] text-5.5 mb-[30px]">{sections.llamanos.title}</p>
+          <p className="font-headings font-bold leading-tight text-5.5 mb-[30px]">{sections.llamanos.title}</p>
           <CardWebsitePortalverse data={sections.llamanos.card} />
         </div>
       </ContentLayout>

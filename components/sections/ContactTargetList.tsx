@@ -20,7 +20,7 @@ const ContactTargetList: FC<ContactTargetListSection> = memo((props: ContactTarg
                   title ? <h3 className="font-headings text-10 font-bold leading-tight w-t:text-8.5 w-p:text-6">{title}</h3> : null
                 }
                 {
-                  subtitle ? <p className="font-headings font-semibold leading-[130%] text-5.5 w-t:text-4.5 w-p:text-4">{subtitle}</p> : null
+                  subtitle ? <p className="font-headings font-semibold leading-tight text-5.5 w-t:text-4.5 w-p:text-4">{subtitle}</p> : null
                 }
                 {
                   richTextMarkup

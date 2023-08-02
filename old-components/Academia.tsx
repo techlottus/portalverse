@@ -21,8 +21,8 @@ const Academia: FC<AcademiaComponentData> = ({ data, result, classNames, select:
 
   return <section className={classNames}>
     <div>
-      <h1 className="text-5.5 w-t:text-base w-p:text-base font-headings font-bold leading-[130%]">{data.title}</h1>
-      <p className="text-base w-t:invisible w-p:invisible font-texts font-bold leading-[130%]">{data.subtitle}</p>
+      <h1 className="text-5.5 w-t:text-base w-p:text-base font-headings font-bold leading-tight">{data.title}</h1>
+      <p className="text-base w-t:invisible w-p:invisible font-texts font-bold leading-tight">{data.subtitle}</p>
       <p className="text-base w-t:text-3.5 w-p:text-3.5 font-texts leading-tight w-t:leading-[19px] mt-[17px]">{data.select.title}</p>
       <Select onClick={(option: CustomEvent) => console.log("option", option)} data={newConfig} options={newOptions} />
     </div>
@@ -30,7 +30,7 @@ const Academia: FC<AcademiaComponentData> = ({ data, result, classNames, select:
       <div className="grid gap-6">
         <div>
           <p className="text-base w-t:text-3.5 w-p:text-3.5 font-headings leading-tight">{result.title}</p>
-          <p className="text-base w-t:text-3.5 w-p:text-3.5 font-texts font-bold leading-[130%] w-t:leading-tight w-p:leading-tight">{result.plan}</p>
+          <p className="text-base w-t:text-3.5 w-p:text-3.5 font-texts font-bold leading-tight w-t:leading-tight w-p:leading-tight">{result.plan}</p>
         </div>
         <div>
           <span className="text-base w-t:text-3.5 w-p:text-3.5 leading[125%] font-texts">{result.initText}</span>

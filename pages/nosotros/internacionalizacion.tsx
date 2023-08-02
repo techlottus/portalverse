@@ -127,7 +127,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
       <ContentLayout classNames="mt-6 w-d:mt-18">
         <div className="col-span-8 w-t:col-span-8 w-p:col-span-4">
           <p className="font-headings font-bold text-10 w-t:text.8.5 w-p:text-6 mb-6 leading-tight w-t:leading-[111%]">{sections.head.title}</p>
-          <p className="font-headings font-bold text-5.5 w-t:text-4.5 w-p:text-base mb-6 leading-[130%] w-t:leading-tight">{sections.head.subtitle}</p>
+          <p className="font-headings font-bold text-5.5 w-t:text-4.5 w-p:text-base mb-6 leading-tight w-t:leading-tight">{sections.head.subtitle}</p>
           <RichtText classNames="" data={{
             content: sections.head.description
           }} />
