@@ -293,6 +293,7 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, cur
                   onNext={(info: any) => handleNextStep(info, 1)}
                 />
                 <StepTwo
+                  isLoading={isLoading}
                   academicData={academicData}
                   setAcademicData={setAcademicData}
                   campus={filteredCampus}

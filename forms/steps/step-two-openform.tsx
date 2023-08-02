@@ -25,7 +25,8 @@ const StepTwo: FC<any> = ({
   programDefault,
   levelDefault,
   academicData,
-  setAcademicData
+  setAcademicData,
+  isLoading
 }: any) => {
 
   const [ config, setConfig ] = useState<any>({ ...OpenFormInit.steptwo });
@@ -219,7 +220,7 @@ const StepTwo: FC<any> = ({
                     <OptionPill
                       onClick={(value: string) => handleSelect(i, level.disabled, value)}
                       key={`pill-${i}`}
-                      data={{ ...level }}
+                      data={{ ...level, disabled: !!isLoading }}
                       active={i === activeLevelPill}
                     />
                   ))
