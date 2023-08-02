@@ -50,7 +50,7 @@ const buttonConfigStepTwo = {
 const inputNameOpenFormStepOne = {
   ...InputInit,
   iconLeft: "person",
-  label: "Nombre",
+  label: "Nombre(s)",
   test: "name",
   name: "name",
 };

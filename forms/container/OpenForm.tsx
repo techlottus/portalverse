@@ -100,6 +100,24 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, cur
   const [ schedulers, setSchedulers ] = useState<string>("");
   const [ returnedStep, setReturnedStep ] = useState<boolean>(false);
 
+  const [personalData, setPersonalData] = useState({
+    name: "",
+    surname: "",
+    phone: "",
+    email: "",
+    modality: "",
+  });
+
+  const [academicData, setAcademicData] = useState({
+    modality: "",
+    level: "",
+    program: "",
+    campus: ""
+  });
+
+  console.log("personalData", personalData);
+  console.log("academicData", academicData);
+
 
   const {
     isLoading: isLoadingToken,
@@ -246,7 +264,7 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, cur
             : null
         }
         {
-          isError
+          false
             ? <div className="bg-white w-full h-full p-4 z-10 flex flex-col aspect-2/1 justify-center items-center left-0 top-0">
                 <h1 className="font-bold text-10 text-center leading-12 mb-9">
                 Lo sentimos
@@ -265,14 +283,18 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, cur
               </div>
             : <>
                 <StepOne
+                  personalData={personalData}
+                  setPersonalData={setPersonalData}
                   config={config}
                   data={data}
                   step={30}
-                  classNames={cn({ hidden: step !== 1 })}
+                  // classNames={cn({ hidden: step !== 1 })}
                   image={image}
                   onNext={(info: any) => handleNextStep(info, 1)}
                 />
                 <StepTwo
+                  academicData={academicData}
+                  setAcademicData={setAcademicData}
                   campus={filteredCampus}
                   programs={filteredPrograms}
                   onChangeProgram={(program: string) =>
@@ -285,11 +307,11 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, cur
                   modality={infoForm.step1.modality}
                   levels={levelsOffer}
                   step={60}
-                  classNames={cn({ hidden: step !== 2 })}
+                  // classNames={cn({ hidden: step !== 2 })}
                   onNext={(info: any) => handleNextStep(info, 2)}
                   controls={{ ...controlsConfig }}
                 />
-                <StepThree
+                {/* <StepThree
                   onReturnStep={(step: number) => handleReturnedStep(step)}
                   contacts={contacts}
                   schedulers={schedulers}
@@ -302,7 +324,7 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, cur
                     campus: infoForm.step2.nombreCampus,
                   }}
                   classNames={cn({ hidden: step !== 3 })}
-                />
+                /> */}
               </>
         }
       </div>
