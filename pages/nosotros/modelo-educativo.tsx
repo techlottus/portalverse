@@ -27,7 +27,7 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
           <Image alt={ sections.modelo.mobile.alt } src={ sections.modelo.mobile.src } classNames="aspect-3/4"/>
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <h3 className="font-headings font-bold text-10 leading-[50px] w-t:text-6 w-t:leading-[30px] w-p:text-6 w-p:leading-[30px]">{ sections.descripcion.title }</h3>
+          <h3 className="font-headings font-bold text-10 leading-[50px] w-t:text-6 w-t:leading-8 w-p:text-6 w-p:leading-8">{ sections.descripcion.title }</h3>
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           <RichtText data={{
