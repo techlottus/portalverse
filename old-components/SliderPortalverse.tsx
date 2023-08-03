@@ -244,7 +244,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
                   item?.overlayWhite || item?.overlayDak ?
                     <div className={cn("absolute w-full h-full", classNames, {
                       "bg-surface-0 opacity-50": item.overlayWhite,
-                      "bg-[#00000080]": item.overlayDak
+                      "bg-surface-950 opacity-50": item.overlayDak
                     })}></div>
                   : null
                 }

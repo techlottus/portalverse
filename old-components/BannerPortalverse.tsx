@@ -29,7 +29,7 @@ const BannerPortalverse: FC<BannerPortalverseComponentData> = memo((props: Banne
                 data?.overlayDak || data?.overlayWhite ?
                   <div className={cn("absolute w-full h-full", classNames, {
                     "bg-surface-0 opacity-50": data.overlayWhite,
-                    "bg-[#00000080]": data.overlayDak
+                    "bg-surface-950 opacity-50": data.overlayDak
                   })}></div>
                   : null
               }
@@ -48,7 +48,7 @@ const BannerPortalverse: FC<BannerPortalverseComponentData> = memo((props: Banne
                 data?.overlayDak || data?.overlayWhite ?
                   <div className={cn("absolute w-full h-full", classNames, {
                     "bg-surface-0 opacity-50": data.overlayWhite,
-                    "bg-[#00000080]": data.overlayDak
+                    "bg-surface-950 opacity-50": data.overlayDak
                   })}></div>
                   : null
               }
@@ -65,7 +65,7 @@ const BannerPortalverse: FC<BannerPortalverseComponentData> = memo((props: Banne
               <Image classNamesImg="object-cover" classNames="w-full h-full w-d:hidden w-t:hidden" src={data.image?.mobile!} alt="image" />
               <div className={cn("absolute w-full h-full", classNames, {
                 "bg-surface-0 opacity-50": data.overlayWhite,
-                "bg-[#00000080]": data.overlayDak
+                "bg-surface-950 opacity-50": data.overlayDak
               })}></div>
               <div className={cn("absolute w-full h-full flex justify-start items-start", classNames)}
               >
