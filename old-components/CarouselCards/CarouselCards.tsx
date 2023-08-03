@@ -41,7 +41,7 @@ const CarouselCards: FC<any> = ({ data: { items }, classNames, classNameSlide }:
   }
 
   return <section className={cn("flex h-full relative w-full", classNames)}>
-    <span aria-label="prev" onClick={handlerClickControl} className={cn("z-10 left-0", { "bg-[#808080]": items.length === 1, "bg-surface-0 cursor-pointer": items.length > 1 }, stylesBaseControls)}>arrow_back_ios</span>
+    <span aria-label="prev" onClick={handlerClickControl} className={cn("z-10 left-0", { "bg-surface-500": items.length === 1, "bg-surface-0 cursor-pointer": items.length > 1 }, stylesBaseControls)}>arrow_back_ios</span>
     <section className="overflow-x-auto flex gap-6 w-d:w-[80%] w-t:w-[95%] w-p:w-[95%] mx-auto">
       {
         items.map((item: any, i: number) => <section key={`card-item-${i}`} className="grow w-full h-10 bg-[red]">
@@ -49,7 +49,7 @@ const CarouselCards: FC<any> = ({ data: { items }, classNames, classNameSlide }:
         </section>)
       }
     </section>
-    <span aria-label="next" onClick={handlerClickControl} className={cn("right-0", { "bg-[#808080]": items.length === 1, "bg-surface-0 cursor-pointer": items.length > 1 }, stylesBaseControls)}>arrow_forward_ios</span>
+    <span aria-label="next" onClick={handlerClickControl} className={cn("right-0", { "bg-surface-500": items.length === 1, "bg-surface-0 cursor-pointer": items.length > 1 }, stylesBaseControls)}>arrow_forward_ios</span>
   </section>
 }
 export default CarouselCards

@@ -42,11 +42,11 @@ const Slider: FC<SliderPortalverseComponentData> = ({ data: { items }, className
   }
 
   return <section className={cn("flex h-full relative", classNames)}>
-    <span aria-label="prev" onClick={handlerClickControl} className={cn("z-10 left-0", { "bg-[#808080]": items.length === 1, "bg-white cursor-pointer": items.length > 1 }, stylesBaseControls)}>arrow_back_ios</span>
+    <span aria-label="prev" onClick={handlerClickControl} className={cn("z-10 left-0", { "bg-surface-500": items.length === 1, "bg-white cursor-pointer": items.length > 1 }, stylesBaseControls)}>arrow_back_ios</span>
     {
       items.map(({ src, alt }: ItemSliderPortalverse, i: number) => <Image classNames={cn("w-full h-full", classNameSlide, { "hidden": i !== active })} key={`slide-image-${i}`} src={src} alt={alt} />)
     }
-    <span aria-label="next" onClick={handlerClickControl} className={cn("right-0", { "bg-[#808080]": items.length === 1, "bg-white cursor-pointer": items.length > 1 }, stylesBaseControls)}>arrow_forward_ios</span>
+    <span aria-label="next" onClick={handlerClickControl} className={cn("right-0", { "bg-surface-500": items.length === 1, "bg-white cursor-pointer": items.length > 1 }, stylesBaseControls)}>arrow_forward_ios</span>
   </section>
 }
 
