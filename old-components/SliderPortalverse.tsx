@@ -297,7 +297,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
     </section>
     <div className={cn("w-full flex justify-center space-x-2 mt-4 pb-5 w-t:pb-4 w-d:hidden w-t:hidden")}>
       {
-        slides?.map((_: any, i: number) => <div key={`bullet-item-${i}`} onClick={() => activeBulletSlide(i)} className={cn("h-4 bg-[#DDDDDD] rounded-full cursor-pointer", { "w-4": i !== active, "w-8": i === active })} />)
+        slides?.map((_: any, i: number) => <div key={`bullet-item-${i}`} onClick={() => activeBulletSlide(i)} className={cn("h-4 bg-surface-50 rounded-full cursor-pointer", { "w-4": i !== active, "w-8": i === active })} />)
       }
     </div>
     {/* mobile */}
