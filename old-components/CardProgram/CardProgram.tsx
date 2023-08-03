@@ -15,7 +15,7 @@ const CardProgram: FC<CardProgramData> = memo(({ title, link, image, classNames 
           ? <Aspect ratio="2/1">
               <Image classNames="w-full h-full" classNamesImg="w-full h-full object-cover" alt="contact-image" src={image.src} />
             </Aspect>
-          : <div className="bg-[gray] rounded w-22 h-22" />
+          : <div className="bg-surface-500 rounded w-22 h-22" />
       }
       </div>
       <div className="flex flex-col h-full">

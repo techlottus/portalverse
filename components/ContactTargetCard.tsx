@@ -40,7 +40,7 @@ const ContactTargetCard: FC<ContactTargetCardData> = (props: ContactTargetCardDa
             alt="contact-image"
             src={image}
           />
-          : <div className="bg-[gray] rounded w-22 h-22" />
+          : <div className="bg-surface-500 rounded w-22 h-22" />
       }
       <div className="w-full flex flex-col justify-center p-3 overflow-hidden">
         <p className="font-headings font-bold text-sm leading-5">{title}</p>
