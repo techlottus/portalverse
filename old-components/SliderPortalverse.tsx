@@ -208,7 +208,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
                   <div className="flex flex-col z-10 w-d:w-[500px] w-t:w-[392px] space-y-4">
                     <h2
                       className={cn(
-                        "font-headings font-bold w-d:text-10 w-d:leading-[50px] w-t:text-7.5 w-t:leading-9",
+                        "font-headings font-bold w-d:text-10 w-d:leading-12 w-t:text-7.5 w-t:leading-9",
                         textPositionClasses
                       )}
                     >
