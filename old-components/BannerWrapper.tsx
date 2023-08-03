@@ -43,7 +43,7 @@ const BannerWrapper: FC<BannerWrapperData> = memo(({ data: { urlImage, title, su
               }
             </div>
             <div className={cn("absolute w-full h-full", classNames, {
-          "bg-[#ffffff80]": overlayWhite,
+          "bg-surface-0 opacity-50": overlayWhite,
           "bg-[#00000080]": overlayDark
           })}></div>
         </div>
