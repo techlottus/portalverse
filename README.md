@@ -2,6 +2,8 @@
 
 Portalverse is a project developed as a base for the different brands of lottus, the development is carried out using NextJS.
 
+Ejemplo: Ajuste de onboarding
+
 
 # Pre requirements
 For the operation of this project, the installation of the following dependencies is required.
