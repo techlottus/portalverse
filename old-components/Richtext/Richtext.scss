@@ -7,7 +7,7 @@ lottus-rich-text {
       @apply font-bold #{!important};
     }
     h1, h2 {
-      @apply leading-[36px] w-d:leading-[60px] w-p:text-7.5 w-t:text-8.5 w-d:text-13 #{!important};
+      @apply leading-9 w-d:leading-[60px] w-p:text-7.5 w-t:text-8.5 w-d:text-13 #{!important};
     }
     h3 {
       @apply leading-8 w-d:leading-12 w-p:text-6 w-t:text-8.5 text-10 #{!important};
