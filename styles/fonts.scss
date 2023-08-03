@@ -1,9 +1,9 @@
 @layer components {
   .ac-type-h1-bold-solid-poppins-desktop {
-    @apply font-headings font-bold text-13.5 leading-[81.25px] text-surface-950;
+    @apply font-headings font-bold text-13.5 leading-20 text-surface-950;
   }
   .ac-type-h1-negative-bold-solid-poppins-desktop {
-    @apply font-headings font-bold text-13.5 leading-[81.25px] text-surface-0;
+    @apply font-headings font-bold text-13.5 leading-20 text-surface-0;
   }
   .ac-type-h1-bold-solid-poppins-tablet {
     @apply font-headings font-bold text-13 leading-[65px] text-surface-950;
