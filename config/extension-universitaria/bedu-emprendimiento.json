@@ -1,12 +1,12 @@
 {
-  "meta":{
-    "title": "BEDU Curso en Emprendimiento",
+  "meta": {
+    "title": "Curso en Emprendimiento",
     "description": "",
     "keywords": ""
   },
-  "sections":{
-    "head":{
-      "title": "BEDU Curso en Emprendimiento",
+  "sections": {
+    "head": {
+      "title": "Curso en Emprendimiento",
       "image": {
         "alt": "imagen",
         "src": "https://assets.staging.bedu.org/UTEG/extencion_universitaria_b_emprendimiento_desk_a7b8a876d9.jpg"
@@ -15,19 +15,19 @@
       "price": "$3,000.00",
       "email": "extension@uteg.edu.mx"
     },
-    "relatedCourses":{
+    "relatedCourses": {
       "title": "Cursos relacionados",
       "courses": [
         {
           "id": "123",
           "title": "Análisis de datos",
-          "link":{
+          "link": {
             "text": "Ver más",
             "size": "large",
             "isBold": false,
             "disabled": false,
-            "id":"",
-            "icon":"arrow_forward"
+            "id": "",
+            "icon": "arrow_forward"
           },
           "image": {
             "desk": {
