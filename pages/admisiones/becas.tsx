@@ -138,7 +138,7 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
           <OpenForm pathThankyou={`/thank-you`} image={{ src: "https://assets.staging.bedu.org/UTEG/admisiones_pedir_informacion_avatar_6738c707b5.jpg", alt: "image-person" }} />
         </div>
         <div className="col-span-5 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings font-bold leading-tight text-5.5 mb-[30px]">{sections.llamanos.title}</p>
+          <p className="font-headings font-bold leading-tight text-5.5 mb-8">{sections.llamanos.title}</p>
           <CardWebsitePortalverse data={sections.llamanos.card} />
         </div>
       </ContentLayout>
