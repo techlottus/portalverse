@@ -19,7 +19,7 @@ const Leaderboard = (props: LeaderboardSection) => {
     <section>
       <Container classNames="w-t:!p-0">
         <div
-          className={cn("relative w-p:px-10 w-p:py-7 w-t:px-15 w-t:py-6 px-20 py-10 w-p:min-h-[236px] min-h-[212px]", {
+          className={cn("relative w-p:px-10 w-p:py-7 w-t:px-15 w-t:py-6 px-20 py-10 w-p:min-h-[236px] min-h-54", {
             "text-surface-0": contentVariant === "light",
           })}
         >
