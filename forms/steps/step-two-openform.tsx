@@ -164,10 +164,6 @@ const StepTwo: FC<any> = ({
     return touched ? !value : false;
   };
 
-  console.log("levels", levels);
-
-  console.log("dataModalitites", dataModalities);
-
   return <section className={cn(classNames)}>
     {/* <h1>{ config.title }</h1>
     <div className="mb-6">
@@ -179,13 +175,11 @@ const StepTwo: FC<any> = ({
           <div className="flex justify-start gap-6 flex-wrap">
             {
               dataModalities?.map((modalityData, i) => {
-                console.log("modalityData", modalityData);
                 return (
                   <OptionPill
                     onClick={() => {
                       const modality = modalityData?.value;
-                      console.log("modality", modality);
-                      setAcademicData({ ...academicData, modality, program: "", campus: "" });
+                      setAcademicData({ ...academicData, modality, level: "", program: "", campus: "" });
                       setDataModalities(Modalities.map((item: any) => ({ ...item, active: item.value === modality })));
                       onChangeModality(modality);
                       setActiveModalityPill(i);

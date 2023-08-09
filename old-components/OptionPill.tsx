@@ -4,8 +4,6 @@ import OptionPillConfigComponent from "@/types/OptionPilll.types"
 
 const OptionPill: FC<OptionPillConfigComponent> = ({ data, active, onClick }: OptionPillConfigComponent) => {
 
-  console.log("inside option pill, data:", data);
-
   const handleClick = () => {
     if (!!data.disabled) return;
     onClick(data.search);
