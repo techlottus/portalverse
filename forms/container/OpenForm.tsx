@@ -7,10 +7,12 @@ import StepThree from "@/forms/steps/step-three-openform"
 import { FormConfig } from "@/forms/fixtures/openform"
 import { getTokenForms } from "@/utils/getTokenForms"
 import { getEducativeOffer } from "@/utils/getEducativeOffer"
-import { saveDataForms } from "@/utils/saveDataForms"
+import { formatWebToLeadCampus, saveDataForms, setRegisterBot } from "@/utils/saveDataForms"
 import Image from "@/old-components/Image"
 import Button from "@/old-components/Button/Button"
 import { ButtonInit } from "@/old-components/fixture"
+import configControls from "@/forms/fixtures/controls"
+import axios from "axios"
 
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
 
@@ -105,8 +107,21 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, cur
     surname: "",
     phone: "",
     email: "",
-    modality: "",
   });
+
+  const [personalDataTouched, setPersonalDataTouched] = useState({
+    name: false,
+    surname: false,
+    phone: false,
+    email: false,
+  })
+
+  const [personalDataErrors, setPersonalDataErrors] = useState({
+    name: false,
+    surname: false,
+    phone: false,
+    email: false,
+  })
 
   const [academicData, setAcademicData] = useState({
     modality: "",
@@ -115,9 +130,25 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, cur
     campus: ""
   });
 
+  const [academicDataTouched, setAcademicDataTouched] = useState({
+    modality: false,
+    level: false,
+    program: false,
+    campus: false
+  });
+
+  const [academicDataErrors, setAcademicDataErrors] = useState({
+    modality: false,
+    level: false,
+    program: false,
+    campus: false
+  })
+
   console.log("personalData", personalData);
   console.log("academicData", academicData);
 
+  const [isLoadingLead, setIsLoadingLead] = useState(false);
+  const [isErrorLead, setIsErrorLead] = useState(false);
 
   const {
     isLoading: isLoadingToken,
@@ -144,8 +175,8 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, cur
     saveData,
   } = saveDataForms();
 
-  const isLoading = isLoadingToken || isLoadingEO || isLoadingSD;
-  const isError = isErrorToken || isErrorEO || isErrorSD;
+  const isLoading = isLoadingToken || isLoadingEO || isLoadingSD || isLoadingLead;
+  const isError = isErrorToken || isErrorEO || isErrorSD || isErrorLead;
 
   const handleFetchEducativeOffer = (modality: string) => {
     // setLevelsOffer([]);
@@ -253,6 +284,118 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, cur
     setStep(step);
   }
 
+  const validatePersonalDataControl = (control: string, value: string, touched: boolean) => {
+    if (control === 'email') {
+      return touched ? !value.match(configControls.patternEmail) : false;
+    }
+    if (control === 'phone') {
+      return touched ? !(value.trim() && value.trim().length === 10) : false;
+    }
+    return touched ? !value.trim() : false;
+  };
+
+  const validateAcademicDataControl = (value: string, touched: boolean) => {
+    return touched ? !value : false;
+  };
+
+  const validatePersonalDataControls = () => !Object.entries(personalData).map((value: any) => {
+    if(value[0] === 'email') {
+      return !!value[1].match(configControls.patternEmail) ? !!value[1].match(configControls.patternEmail).length : true
+    }
+    if(value[0] === 'phone') {
+      return value[1].trim().length === 10
+    }
+    return !!value[1].trim();
+  }).includes(false)
+
+  const validateAcademicDataControls = () => !Object.entries(academicData).map((value: any) => {
+    return !!value[1];
+  }).includes(false)
+
+  const handleSubmit = async () => {
+
+    setPersonalDataTouched({
+      name: true,
+      surname: true,
+      phone: true,
+      email: true,
+    });
+
+    setAcademicDataTouched({
+      modality: true,
+      level: true,
+      program: true,
+      campus: true
+    });
+
+    const newPersonalDataValidation = {
+      name: validatePersonalDataControl("name", personalData.name, true),
+      surname: validatePersonalDataControl("surname", personalData.surname, true),
+      phone: validatePersonalDataControl("phone", personalData.phone, true),
+      email: validatePersonalDataControl("email", personalData.email, true),
+    }
+
+    const newAcademicDataValidation = {
+      modality: validateAcademicDataControl(academicData.modality, true),
+      level: validateAcademicDataControl(academicData.level, true),
+      program: validateAcademicDataControl(academicData.program, true),
+      campus: validateAcademicDataControl(academicData.campus, true)
+    };
+
+    setPersonalDataErrors({ ...newPersonalDataValidation });
+    setAcademicDataErrors({ ...newAcademicDataValidation });
+
+    if(!validatePersonalDataControls() || !validateAcademicDataControls()) return;
+
+    const endpoint = "https://lottus--desarrollo.sandbox.my.salesforce.com/services/apexrest/captacion_prospecto";
+
+    const medio = queryParams?.utm_medium;
+    const campana = queryParams?.utm_campaign;
+
+    const { idPrograma: programa } = sourceData?.[academicData?.program]?.filter((campus: any) => {
+      return campus.idCampus === academicData?.campus;
+    })[0];
+
+    const selectedProgramData = getDataByProgramEC(infoForm.step2.nameProgram, infoForm.step2.campusId);
+
+    let nombre = personalData?.name;
+    let apellidos = personalData?.surname;
+    let telefono = personalData?.phone;
+    let email = personalData?.email;
+    let modalidad = academicData?.modality === "Presencial" ? "Presencial" : "Online";
+    let nivel = academicData?.level;
+    let campus;
+
+    const lineaNegocio = selectedProgramData?.lineaNegocio || "";
+    const validaRegistroBoot = setRegisterBot();
+
+    const source = `portal${businessUnit}`;
+    const canal = process.env.NEXT_PUBLIC_CANAL;
+
+    const params = `nombre=${nombre}&apellidos=${apellidos}&telefono=${telefono}&email=${email}&lineaNegocio=${lineaNegocio}&modalidad=${modalidad}&nivel=${nivel}&campus=${campus}&programa=${programa}&avisoPrivacidad=true&leadSource=Digital&validaRegistroBoot=${validaRegistroBoot}&source=${source}&canal=${canal}${medio ? `&medio=${medio}` : ""}${campana ? `&campana=${campana}` : ""}`;
+
+    await axios.post(`${endpoint}?${params}`,{},{
+      headers: {
+        Authorization: tokenActive,
+        'Content-Type': 'application/json;charset=UTF-8'
+      }
+    })
+      .then((res: any) => {
+        if (res.data.Exitoso === "False") {
+          setIsErrorLead(true);
+          setIsLoadingLead(false);
+        } else {
+          setIsErrorLead(false);
+          setIsLoadingLead(false);
+        }
+      })
+      .catch((err: any) => {
+        // console.log("err", err)
+        setIsLoadingLead(false);
+        setIsErrorLead(true);
+      })
+  }
+
   return (
     <section className={cn("p-6 shadow-15 bg-white relative", classNames)}>
       <div>
@@ -264,7 +407,7 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, cur
             : null
         }
         {
-          false
+          isError
             ? <div className="bg-white w-full h-full p-4 z-10 flex flex-col aspect-2/1 justify-center items-center left-0 top-0">
                 <h1 className="font-bold text-10 text-center leading-12 mb-9">
                 Lo sentimos
@@ -290,7 +433,11 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, cur
                   step={30}
                   // classNames={cn({ hidden: step !== 1 })}
                   image={image}
-                  onNext={(info: any) => handleNextStep(info, 1)}
+                  infoControlsTouched={personalDataTouched}
+                  setInfoControlsTouched={setPersonalDataTouched}
+                  errorControls={personalDataErrors}
+                  setErrorControls={setPersonalDataErrors}
+                  // onNext={(info: any) => handleNextStep(info, 1)}
                 />
                 <StepTwo
                   isLoading={isLoading}
@@ -309,10 +456,17 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, cur
                   levels={levelsOffer}
                   step={60}
                   // classNames={cn({ hidden: step !== 2 })}
-                  onNext={(info: any) => handleNextStep(info, 2)}
+                  // onNext={(info: any) => handleNextStep(info, 2)}
                   controls={{ ...controlsConfig }}
+                  infoControlsTouched={academicDataTouched}
+                  setInfoControlsTouched={setAcademicDataTouched}
+                  errorControls={academicDataErrors}
+                  setErrorControls={setAcademicDataErrors}
                 />
-                <StepThree
+                <div className="mt-6">
+                  <Button dark onClick={handleSubmit} data={ configControls.buttonConfigOpenFormStepThree } />
+                </div>
+                {/* <StepThree
                   onReturnStep={(step: number) => handleReturnedStep(step)}
                   contacts={contacts}
                   schedulers={schedulers}
@@ -325,7 +479,7 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, cur
                     campus: infoForm.step2.nombreCampus,
                   }}
                   // classNames={cn({ hidden: step !== 3 })}
-                />
+                /> */}
               </>
         }
       </div>

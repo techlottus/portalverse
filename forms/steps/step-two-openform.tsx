@@ -26,7 +26,11 @@ const StepTwo: FC<any> = ({
   levelDefault,
   academicData,
   setAcademicData,
-  isLoading
+  isLoading,
+  infoControlsTouched,
+  setInfoControlsTouched,
+  errorControls,
+  setErrorControls
 }: any) => {
 
   const [ config, setConfig ] = useState<any>({ ...OpenFormInit.steptwo });
@@ -40,19 +44,19 @@ const StepTwo: FC<any> = ({
   //   program: "",
   //   campus: ""
   // });
-  
-  const [ infoControlsTouched, setInfoControlsTouched ] = useState<any>({
-    modality: false,
-    level: false,
-    program: false,
-    campus: false
-  });
-  const [ errorControls, setErrorControls ] = useState<any>({
-    modality: false,
-    level: false,
-    program: false,
-    campus: false
-  });
+
+  // const [ infoControlsTouched, setInfoControlsTouched ] = useState<any>({
+  //   modality: false,
+  //   level: false,
+  //   program: false,
+  //   campus: false
+  // });
+  // const [ errorControls, setErrorControls ] = useState<any>({
+  //   modality: false,
+  //   level: false,
+  //   program: false,
+  //   campus: false
+  // });
   const [ dataModalities, setDataModalities ] = useState<Array<any>>([]);
   const [ dataPrograms, setDataPrograms ] = useState<Array<any>>([]);
   const [ dataCampus, setDataCampus ] = useState<Array<any>>([]);
@@ -133,14 +137,14 @@ const StepTwo: FC<any> = ({
     }
   }
 
-  const handleChangeModality = (option: CustomEvent) => {
-    const { detail: modality } = option;
-    setAcademicData({ ...academicData, modality, level: !!defaultValues.level ? defaultValues.level : "", program: "", campus: "" });
-    setDataModalities(Modalities.map((item: any) => ({ ...item, active: item.value === modality })));
-    onChangeModality(modality);
-    setActiveModalityPill(-1);
-    setErrorControls({ ...errorControls, modality: validateControl(modality, infoControlsTouched.modality) });
-  }
+  // const handleChangeModality = (option: CustomEvent) => {
+  //   const { detail: modality } = option;
+  //   setAcademicData({ ...academicData, modality, level: !!defaultValues.level ? defaultValues.level : "", program: "", campus: "" });
+  //   setDataModalities(Modalities.map((item: any) => ({ ...item, active: item.value === modality })));
+  //   onChangeModality(modality);
+  //   setActiveModalityPill(-1);
+  //   setErrorControls({ ...errorControls, modality: validateControl(modality, infoControlsTouched.modality) });
+  // }
 
   const handleChangeProgram = (option: CustomEvent) => {
     const { detail: program } = option;

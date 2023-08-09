@@ -10,7 +10,20 @@ import Button from "@/old-components/Button/Button"
 import { SelectInit } from "@/old-components/fixture"
 import Link from "next/link"
 
-const StepOne: FC<any> = ({ classNames, data, image, onNext, step, config: stepOneConfig, personalData, setPersonalData }: any) => {
+const StepOne: FC<any> = ({
+  classNames,
+  data,
+  image,
+  onNext,
+  step,
+  config: stepOneConfig,
+  personalData,
+  setPersonalData,
+  infoControlsTouched,
+  setInfoControlsTouched,
+  errorControls,
+  setErrorControls
+}: any) => {
 
   const [ config, setConfig ] = useState<any>( stepOneConfig ? {...stepOneConfig} : {...OpenFormInit.stepone });
   const [ progress, setProgress ] = useState<number>(0);
@@ -21,20 +34,20 @@ const StepOne: FC<any> = ({ classNames, data, image, onNext, step, config: stepO
   //   email: "",
   //   modality: "",
   // });
-  const [ infoControlsTouched, setInfoControlsTouched ] = useState<any>({
-    name: false,
-    surname: false,
-    phone: false,
-    email: false,
-    modality: false,
-  });
-  const [ errorControls, setErrorControls ] = useState<any>({
-    name: false,
-    surname: false,
-    phone: false,
-    email: false,
-    modality: false,
-  });
+  // const [ infoControlsTouched, setInfoControlsTouched ] = useState<any>({
+  //   name: false,
+  //   surname: false,
+  //   phone: false,
+  //   email: false,
+  //   modality: false,
+  // });
+  // const [ errorControls, setErrorControls ] = useState<any>({
+  //   name: false,
+  //   surname: false,
+  //   phone: false,
+  //   email: false,
+  //   modality: false,
+  // });
   // const [ dataModalities, setDataModalities ] = useState<Array<any>>([])
 
   // console.log("Step one infoControls", infoControls);
