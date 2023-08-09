@@ -31,7 +31,7 @@ const ContactTargetCard: FC<ContactTargetCardData> = (props: ContactTargetCardDa
           ?
           <Image
             classNames={cn(
-              "min-w-[96px] min-h-[84px]",
+              "min-w-24 min-h-[84px]",
               "w-d:min-w-[120px] w-d:min-h-[105px]",
               "h-full flex shrink-0 oject-cover"
               )
