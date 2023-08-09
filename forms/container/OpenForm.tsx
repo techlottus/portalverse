@@ -365,12 +365,12 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, cur
     const selectedProgramData = getDataByProgramEC(infoForm.step2.nameProgram, infoForm.step2.campusId);
 
     let nombre = personalData?.name;
-    let apellidos = personalData?.surname;
+    let apellidoPaterno = personalData?.surname;
     let telefono = personalData?.phone;
     let email = personalData?.email;
     let modalidad = academicData?.modality === "Presencial" ? "Presencial" : "Online";
     let nivel = academicData?.level;
-    let campus;
+    let campus = academicData?.campus;
 
     const lineaNegocio = selectedProgramData?.lineaNegocio || "";
     const validaRegistroBoot = setRegisterBot();
@@ -378,7 +378,7 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, cur
     const source = `portal${businessUnit}`;
     const canal = process.env.NEXT_PUBLIC_CANAL;
 
-    const params = `nombre=${nombre}&apellidos=${apellidos}&telefono=${telefono}&email=${email}&lineaNegocio=${lineaNegocio}&modalidad=${modalidad}&nivel=${nivel}&campus=${campus}&programa=${programa}&avisoPrivacidad=true&leadSource=Digital&validaRegistroBoot=${validaRegistroBoot}&source=${source}&canal=${canal}${medio ? `&medio=${medio}` : ""}${campana ? `&campana=${campana}` : ""}`;
+    const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&telefono=${telefono}&email=${email}&lineaNegocio=${lineaNegocio}&modalidad=${modalidad}&nivel=${nivel}&campus=${campus}&programa=${programa}&avisoPrivacidad=true&leadSource=Digital&validaRegistroBoot=${validaRegistroBoot}&source=${source}&canal=${canal}${medio ? `&medio=${medio}` : ""}${campana ? `&campana=${campana}` : ""}`;
 
     await axios.post(`${endpoint}?${params}`,{},{
       headers: {
