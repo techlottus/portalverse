@@ -1,47 +1,52 @@
 {
-    "meta":{
+  "meta": {
+    "title": "Curso Habilidades Interpesonales",
+    "description": "",
+    "keywords": ""
+  },
+  "sections": {
+    "head": {
       "title": "Curso Habilidades Interpesonales",
-      "description": "",
-      "keywords": ""
-    },
-    "sections":{
-      "head":{
-        "title": "Curso Habilidades Interpesonales",
-        "image": {
-          "alt": "imagen",
-          "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_habilidades_interpersonales_desk_a61877bc14.jpg"
-        },
-        "description": "Duración aproximada: 40 horas\n\nPerfil del participante: Alumnos con baja adecuación de acuerdo a la evaluación Ubicación de perfil profesional (Proveedor Pyxomm de PSW Global), aplicación en electrónico.\n\nCarreras afines: Todas las áreas\n\nObjetivo: Ayudar a los estudiantes con resultados de baja adecuación y con reservas en el diagnóstico UPP a nivelarse de acuerdo a las competencias necesarias para su perfil profesional. Esto les permitirá avanzar en su carrera universitaria de manera favorable.\n\nTemas a abordar:\n\nEl curso de habilidades interpersonales se centra en el autoconocimiento y la identificación de emociones, así como en la comunicación efectiva y asertiva.\n\nRecursos de aprendizaje:\n1. Virtual plataforma Moodle\n2. 12 horas sincronicas y 28 asincronicas\n\nEvaluación:\nLa evaluación de los cursos de nivelación se basa en los entregables de actividades en la plataforma Moodle, la asistencia a las sesiones virtuales con el docente asignado y la participación en las sesiones virtuales.\n\n Moodle se utiliza para el material académico y los entregables, mientras que Meet se utiliza para las sesiones virtuales entre el docente y los alumnos.\n\n *Curso que se genera de acuerdo a evaluación de Diagnostica Estudiantil al ingreso a cada uno de sus perfiles",
-        "price": "$700.00*",
-        "email": "extension@uteg.edu.mx"
+      "image": {
+        "alt": "imagen",
+        "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_habilidades_interpersonales_desk_a61877bc14.jpg"
       },
-      "relatedCourses":{
-        "title": "Cursos relacionados",
-        "courses": [
-          {
-            "id": "123",
-            "title": "Análisis de datos",
-            "link":{
-              "text": "Ver más",
-              "size": "large",
-              "isBold": false,
-              "disabled": false,
-              "id":"",
-              "icon":"arrow_forward"
-            },
-            "image": {
-              "desk": {
-                "alt": "imagen",
-                "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
-              },
-              "mobile": {
-                "alt": "imagen",
-                "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
-              }
-            },
-            "redirect": "oferta-educativa"
-          }
-        ]
+      "description": "Duración aproximada: 40 horas\n\nPerfil del participante: Alumnos con baja adecuación de acuerdo a la evaluación Ubicación de perfil profesional (Proveedor Pyxomm de PSW Global), aplicación en electrónico.\n\nCarreras afines: Todas las áreas\n\nObjetivo: Ayudar a los estudiantes con resultados de baja adecuación y con reservas en el diagnóstico UPP a nivelarse de acuerdo a las competencias necesarias para su perfil profesional. Esto les permitirá avanzar en su carrera universitaria de manera favorable.\n\nTemas a abordar:\n\nEl curso de habilidades interpersonales se centra en el autoconocimiento y la identificación de emociones, así como en la comunicación efectiva y asertiva.\n\nRecursos de aprendizaje:\n1. Virtual plataforma Moodle\n2. 12 horas sincronicas y 28 asincronicas\n\nEvaluación:\nLa evaluación de los cursos de nivelación se basa en los entregables de actividades en la plataforma Moodle, la asistencia a las sesiones virtuales con el docente asignado y la participación en las sesiones virtuales.\n\n Moodle se utiliza para el material académico y los entregables, mientras que Meet se utiliza para las sesiones virtuales entre el docente y los alumnos.\n\n *Curso que se genera de acuerdo a evaluación de Diagnostica Estudiantil al ingreso a cada uno de sus perfiles",
+      "price": "$700.00*",
+      "textLink": {
+        "description": "Solicita información en el siguiente correo:",
+        "href": "mailto:extension@uteg.edu.mx",
+        "text": "extension@uteg.edu.mx",
+        "target": "__blank"
       }
+    },
+    "relatedCourses": {
+      "title": "Cursos relacionados",
+      "courses": [
+        {
+          "id": "123",
+          "title": "Análisis de datos",
+          "link": {
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id": "",
+            "icon": "arrow_forward"
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        }
+      ]
     }
   }
+}

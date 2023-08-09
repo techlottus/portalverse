@@ -1,11 +1,11 @@
 {
-  "meta":{
+  "meta": {
     "title": "Certificación Oficial Adobe After Effects",
     "description": "",
     "keywords": ""
   },
-  "sections":{
-    "head":{
+  "sections": {
+    "head": {
       "title": "Certificación Oficial Adobe After Effects",
       "image": {
         "alt": "imagen",
@@ -13,21 +13,26 @@
       },
       "description": "Duración aproximada: 20 horas\n\nPerfil del participante: Este curso está dirigido para aquellas personas que requieren manipular videos y aplicaciones de efectos visuales.\n\nCarreras afines: Todas las áreas\n\nObjetivo: Obtener la certificación oficial de Adobe After Effects, aprender a manipular videos y la aplicación de efectos visuales.\n\nTemas a abordar:\n1. Nueva Interfaz de Adobe After Effects\n2. Animación.\n3. Efectos Básicos.\n4. Animación de Texto.\n5. Publicación y Salida.\n\nRecursos de aprendizaje:\n1. Presencial\n\nEvaluación: La evaluación se realizará por medio de un proyecto donde se pone en práctica lo aprendido.\n\n",
       "price": "$2600.00*",
-      "email": "extension@uteg.edu.mx"
+      "textLink": {
+        "description": "Solicita información en el siguiente correo:",
+        "href": "mailto:extension@uteg.edu.mx",
+        "text": "extension@uteg.edu.mx",
+        "target": "__blank"
+      }
     },
-    "relatedCourses":{
+    "relatedCourses": {
       "title": "Cursos relacionados",
       "courses": [
         {
           "id": "123",
           "title": "Análisis de datos",
-          "link":{
+          "link": {
             "text": "Ver más",
             "size": "large",
             "isBold": false,
             "disabled": false,
-            "id":"",
-            "icon":"arrow_forward"
+            "id": "",
+            "icon": "arrow_forward"
           },
           "image": {
             "desk": {
@@ -44,13 +49,13 @@
         {
           "id": "123",
           "title": "Derecho de Autor y Propiedad Intelectual",
-          "link":{
+          "link": {
             "text": "Ver más",
             "size": "large",
             "isBold": false,
             "disabled": false,
-            "id":"",
-            "icon":""
+            "id": "",
+            "icon": ""
           },
           "image": {
             "desk": {
@@ -67,13 +72,13 @@
         {
           "id": "123",
           "title": "Estrategias de tiendas en línea",
-          "link":{
+          "link": {
             "text": "Ver más",
             "size": "large",
             "isBold": false,
             "disabled": false,
-            "id":"",
-            "icon":""
+            "id": "",
+            "icon": ""
           },
           "image": {
             "desk": {
@@ -90,13 +95,13 @@
         {
           "id": "123",
           "title": "Mega tendencias Globales",
-          "link":{
+          "link": {
             "text": "Ver más",
             "size": "large",
             "isBold": false,
             "disabled": false,
-            "id":"",
-            "icon":""
+            "id": "",
+            "icon": ""
           },
           "image": {
             "desk": {

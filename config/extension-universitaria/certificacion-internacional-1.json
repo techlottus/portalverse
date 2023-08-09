@@ -1,11 +1,11 @@
 {
-  "meta":{
+  "meta": {
     "title": "Certificación Internacional (Nivel 1) Papel",
     "description": "",
     "keywords": ""
   },
-  "sections":{
-    "head":{
+  "sections": {
+    "head": {
       "title": "Certificación Internacional (Nivel 1) Papel",
       "image": {
         "alt": "imagen",
@@ -13,21 +13,26 @@
       },
       "description": "Duración aproximada: 3 horas 15 minutos\n\nPerfil del participante: Aquella persona que necesite un certificado de su nivel del idioma inglés. Es una certificacion con valor internacional. \n\nCarreras afines: Todas las áreas\n\nObjetivo: Que el aplicante conozca su nivel de inglés y que obtenga con esto una certificación de variedad internacional respaldado por Pearson.\n\nTemas a abordar:\nTemas  y reactivos según el nivel y examen solicitado para poder conocer el nivel del aspirante según el MCER (Marco Común Europeo de Referencia de las Lenguas)\n\nRecursos de aprendizaje:\nPresencial\n\nEvaluación:\nAutomática mediante Inteligencia Artificial Pearson English, resultados en 6 semanas.",
       "price": "$2593.31*",
-      "email": "extension@uteg.edu.mx"
+      "textLink": {
+        "description": "Solicita información en el siguiente correo:",
+        "href": "mailto:extension@uteg.edu.mx",
+        "text": "extension@uteg.edu.mx",
+        "target": "__blank"
+      }
     },
-    "relatedCourses":{
+    "relatedCourses": {
       "title": "Cursos relacionados",
       "courses": [
         {
           "id": "123",
           "title": "Análisis de datos",
-          "link":{
+          "link": {
             "text": "Ver más",
             "size": "large",
             "isBold": false,
             "disabled": false,
-            "id":"",
-            "icon":"arrow_forward"
+            "id": "",
+            "icon": "arrow_forward"
           },
           "image": {
             "desk": {
