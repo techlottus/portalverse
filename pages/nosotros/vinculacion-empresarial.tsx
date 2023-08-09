@@ -110,7 +110,7 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
                     description={description}
                     classNames={cn(
                       "col-span-7 grid grid-cols-7 gap-6 w-t:col-span-8 w-t:grid-cols-8",
-                      "w-p:col-span-4 py-[40px] w-t:py-[94px] w-p:flex w-p:flex-col w-p:p-6",
+                      "w-p:col-span-4 py-10 w-t:py-[94px] w-p:flex w-p:flex-col w-p:p-6",
                       { "hidden w-p:hidden": tabActive !== i }
                     )}
                     titleStyles="col-start-2 col-end-7 w-t:col-end-8 text-6.5 !leading-10"
