@@ -345,7 +345,13 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, cur
     setPersonalDataErrors({ ...newPersonalDataValidation });
     setAcademicDataErrors({ ...newAcademicDataValidation });
 
-    if(!validatePersonalDataControls() || !validateAcademicDataControls()) return;
+    const isValidPersonalData = validatePersonalDataControls();
+    const isValidAcademicData = validateAcademicDataControls();
+
+    console.log("isValidPersonalData", isValidPersonalData);
+    console.log("isValidAcademicData", isValidAcademicData);
+
+    if(!isValidPersonalData || !isValidAcademicData) return;
 
     const endpoint = "https://lottus--desarrollo.sandbox.my.salesforce.com/services/apexrest/captacion_prospecto";
 
