@@ -55,7 +55,7 @@ const BeWanted: FC<any> = ({ classNames, copies, pathThankyou, pathBeWanted }: a
             ? <div className="bg-surface-0 w-full h-full z-10 flex flex-col items-center space-y-6 aspect-2/1">
                 <h1 className="font-semibold text-6">Ya te registraste en la Bolsa de Talento</h1>
                 <p className="font-normal text-sm">Este correo ya está registrado en la bolsa de talento, si no recuerdas tu contraseña puedes restablecerla en la bolsa de talento de Bewanted y pulsar en la opción que dice: ¿Olvidaste tu contraseña?</p>
-                <div className="w-full max-w-[24rem]"> {/* Tailwind's 'max-w-sm' value isn't working for some reason u.u */}
+                <div className="w-full max-w-96"> {/* Tailwind's 'max-w-sm' value isn't working for some reason u.u */}
                   <img src="https://assets.staging.bedu.org/UTEG/404_318781b8aa.jpg" className="w-full" alt="error" />
                 </div>
                 <div className="w-full flex space-x-3 justify-between items-center">
@@ -67,7 +67,7 @@ const BeWanted: FC<any> = ({ classNames, copies, pathThankyou, pathBeWanted }: a
                 <h1 className="font-bold text-10 text-center leading-12 mb-9">
                 Lo sentimos
                 </h1>
-                <div className="w-full max-w-[24rem]"> {/* Tailwind's 'max-w-sm' value isn't working for some reason u.u */}
+                <div className="w-full max-w-96"> {/* Tailwind's 'max-w-sm' value isn't working for some reason u.u */}
                   <img src="https://assets.staging.bedu.org/UTEG/404_318781b8aa.jpg" className="w-full" alt="error" />
                 </div>
                 <p className="text-surface-600 font-semibold text-5.5 my-6">
