@@ -13,7 +13,7 @@ const BannerNumeralia: FC<any> = ({ data: { image, title, subtitle, statics }, c
       <h3 className="font-texts font-bold w-d:text-10 w-t:text-6 w-p:text-6 w-d:leading-12.5 w-t:leading-4 w-p:leading-4"><b>{ subtitle }</b></h3>
       <div className="w-d:flex w-t:flex w-p:grid w-p:grid-cols-2 gap-4 w-p:gap-3">
         {
-          statics?.map((item:any, i:number) => <section className={cn("max-w-[281px]", "w-p:mt-6")} key={`section-numbers-${i}`}>
+          statics?.map((item:any, i:number) => <section className={cn("max-w-72", "w-p:mt-6")} key={`section-numbers-${i}`}>
               <NumbersPortalverse data={item}/>
             </section>)
         }
