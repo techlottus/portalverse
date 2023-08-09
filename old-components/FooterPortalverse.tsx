@@ -55,7 +55,7 @@ const Footer: FC<FooterPortalverseComponentData> = ({ privacyLink, certification
       {/* Section logotype */}
       <div className="p-6 w-t:hidden w-p:hidden flex gap-24 border-b-[1px] border-solid border-surface-300">
         {
-          sections.map((section: any[], i: number) => <div key={`sections-${i}`} className="flex flex-col gap-6 w-[252px]">
+          sections.map((section: any[], i: number) => <div key={`sections-${i}`} className="flex flex-col gap-6 w-64">
               {
                 section.map((itemSection: any[], a: number) => {
                   return itemSection.map((item: any, j: number) => {
