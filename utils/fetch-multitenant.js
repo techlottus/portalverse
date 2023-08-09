@@ -261,6 +261,9 @@ async function populateTailwind  () {
       "pastelGrayShadowRight": '5px 5px 0px 0px #A2AFB5',
       "blueShadowRight": "5px 5px 0px 0px #00BEB4"
     },
+    minHeight: {
+      "22" : '5.25rem',
+    },
     backgroundImage: tailwindLogos.css
   }
   const [fóntfirst, ...fontrest] = tailwindFonts.tokens
