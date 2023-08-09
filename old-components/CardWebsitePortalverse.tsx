@@ -16,7 +16,7 @@ const CardWebsitePortalverse: FC<CardWebsitePortalverseData> = ({ data, classNam
               <Image classNames="w-full h-full" classNamesImg="w-full h-full object-cover" src={data.image} alt="image" />
             </Aspect>
           </div>
-          <div className={cn("px-3 flex flex-col h-full", classNames, { "border-l border-r-[1px] border-b-[1px] rounded-b-lg": data.border, "bg-surface-0": data.background })}>
+          <div className={cn("px-3 flex flex-col h-full", classNames, { "border-l border-r-[1px] border-b rounded-b-lg": data.border, "bg-surface-0": data.background })}>
             <h3 className="pt-3 mb-2 font-texts font-normal text-surface-500 text-xs">{data.subtitle?.toLocaleUpperCase()}</h3>
             <h1 className="mb-2 font-headings font-bold text-base">{data.title}</h1>
             <RichtText data={{
@@ -34,7 +34,7 @@ const CardWebsitePortalverse: FC<CardWebsitePortalverseData> = ({ data, classNam
         : data.type === "horizontal"
           ? <div className={cn("rounded-b-lg hover:shadow-2xl h-full flex")}>
             <Image classNames="w-full h-full aspect-3/4" src={data.image} alt="image" />
-            <div className={cn("px-2 flex flex-col break-words h-auto", classNames, { "border-t border-r-[1px] border-b-[1px] rounded-r-lg": data.border, "bg-surface-0": data.background })}>
+            <div className={cn("px-2 flex flex-col break-words h-auto", classNames, { "border-t border-r-[1px] border-b rounded-r-lg": data.border, "bg-surface-0": data.background })}>
               <p className="pt-3 mb-2 font-texts font-normal text-surface-500 text-xs">{data.subtitle?.toLocaleUpperCase()}</p>
               <p className="mb-2 font-headings font-bold text-base">{data.title}</p>
               <RichtText data={{
