@@ -32,7 +32,7 @@ const ContactTargetCard: FC<ContactTargetCardData> = (props: ContactTargetCardDa
           <Image
             classNames={cn(
               "min-w-24 min-h-22",
-              "w-d:min-w-[120px] w-d:min-h-[105px]",
+              "w-d:min-w-[120px] w-d:min-h-26",
               "h-full flex shrink-0 oject-cover"
               )
             }
@@ -40,7 +40,7 @@ const ContactTargetCard: FC<ContactTargetCardData> = (props: ContactTargetCardDa
             alt="contact-image"
             src={image}
           />
-          : <div className="bg-surface-500 rounded w-22 h-22" />
+          : <div className="bg-surface-500 min-h-26 rounded w-22 h-22" />
       }
       <div className="w-full flex flex-col justify-center p-3 overflow-hidden">
         <p className="font-headings font-bold text-sm leading-5">{title}</p>
