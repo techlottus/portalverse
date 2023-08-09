@@ -362,7 +362,7 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, cur
       return campus.idCampus === academicData?.campus;
     })[0];
 
-    const selectedProgramData = getDataByProgramEC(infoForm.step2.nameProgram, infoForm.step2.campusId);
+    const selectedProgramData = getDataByProgramEC(academicData?.program, academicData?.campus);
 
     let nombre = personalData?.name;
     let apellidoPaterno = personalData?.surname;
