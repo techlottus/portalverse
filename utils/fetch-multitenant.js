@@ -263,7 +263,8 @@ async function populateTailwind  () {
     },
     minHeight: {
       "22" : '5.25rem',
-      "26": '6.563rem'
+      "26": '6.563rem',
+      "54": '13.25rem'
     },
     backgroundImage: tailwindLogos.css
   }
