@@ -101,7 +101,7 @@ const Planteles = ({ sections, meta }: any) => {
                   <IconComponent name="eye" className="ml-1 w-4" />
                 </div>
               </div>
-              <Map coords={coords} classNames="w-t:hidden w-p:hidden col-span-4 w-t:col-span-3 w-p:col-span-4" classNamesMap="h-[214px]">
+              <Map coords={coords} classNames="w-t:hidden w-p:hidden col-span-4 w-t:col-span-3 w-p:col-span-4" classNamesMap="h-55">
                 {
                   ({ TileLayer, Marker, Popup }: any) => (
                     <>
