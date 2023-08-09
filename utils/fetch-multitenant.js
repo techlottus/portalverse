@@ -174,6 +174,7 @@ async function populateTailwind  () {
       "16.5": "4.125rem",
       18: "4.5rem",
       22: "5.5rem",
+      "55": '13.375rem',
       "58.5": "14.625rem",
       "59": '14.375rem',
       72: "18rem",
