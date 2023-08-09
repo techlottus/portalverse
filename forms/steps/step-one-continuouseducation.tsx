@@ -127,7 +127,7 @@ const StepOne: FC<any> = ({ classNames, data, image, onNext, programs }: any) =>
       <p className="font-texts font-normal text-3.5 leading-4">{ config.subtitle }</p>
     </div>
     <div className={"aspect-1/1 w-t:hidden w-p:hidden"} >
-      <Image classNamesImg="rounded-full" classNames="w-[112px] h-[112px]" src={image.src} alt={image.alt} />
+      <Image classNamesImg="rounded-full" classNames="w-28 h-[112px]" src={image.src} alt={image.alt} />
     </div>
   </div>
   <div className="flex align-middle items-center">
