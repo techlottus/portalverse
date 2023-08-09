@@ -28,7 +28,7 @@ const PaginatorPortalverse: FC<PaginatorPortalverseData> = memo(({ items, curren
          <li
             onClick={() => onPageChange(page)}
             key={page}
-            className={page === currentPage ? "flex justify-center items-center w-10 h-10 rounded-lg border-[1px] border-solid border-black cursor-pointer bg-surface-950 text-surface-0 m-2" : "flex justify-center items-center w-10 h-10 rounded-lg cursor-pointer m-2 hover:bg-surface-100"}
+            className={page === currentPage ? "flex justify-center items-center w-10 h-10 rounded-lg border border-solid border-black cursor-pointer bg-surface-950 text-surface-0 m-2" : "flex justify-center items-center w-10 h-10 rounded-lg cursor-pointer m-2 hover:bg-surface-100"}
           >
             <a className="cursor-pointer">
               {page}

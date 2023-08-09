@@ -41,7 +41,7 @@ const FAQ: NextPageWithLayout<any> = ({ info, meta, sections }: any) => {
             {
               info.map((section: any, i:number) => <Link key={`section-item${i}`} href={`${section.route}`}>
 
-                <li className={cn("font-headings font-bold flex py-2 w-t:py-4 w-p:py-4 w-t:px-6 w-p:px-6 w-t:border-solid w-t:border-[1px] w-p:border-solid w-p:border-[1px] items-center", { "text-primary-500": section.status, "text-surface-950": !section.status })}>
+                <li className={cn("font-headings font-bold flex py-2 w-t:py-4 w-p:py-4 w-t:px-6 w-p:px-6 w-t:border-solid w-t:border w-p:border-solid w-p:border items-center", { "text-primary-500": section.status, "text-surface-950": !section.status })}>
                   <span className="material-icons icon pr-3">{section.icon}</span>
                   <p>{ section.title }</p>
                 </li>
