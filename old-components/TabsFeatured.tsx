@@ -26,7 +26,7 @@ const TabsFeatured: FC<TabsComponentConfig> = ({ tabs, onActive, active }: TabsC
               <p className="text-center whitespace-nowrap">{ label }</p>
             </div>
             <div className={cn("flex justify-center relative", { "hidden": tabActive !== i })}>
-              <Image src="/images/triangle_tabs.png" alt="triangle" classNames="w-[44px] h-[30px] absolute -top-1" />
+              <Image src="/images/triangle_tabs.png" alt="triangle" classNames="w-11 h-[30px] absolute -top-1" />
             </div>
           </li>)
       }
