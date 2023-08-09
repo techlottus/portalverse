@@ -40,6 +40,7 @@ const StepTwo: FC<any> = ({
   //   program: "",
   //   campus: ""
   // });
+  
   const [ infoControlsTouched, setInfoControlsTouched ] = useState<any>({
     modality: false,
     level: false,
