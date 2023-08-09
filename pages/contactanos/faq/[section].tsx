@@ -63,7 +63,7 @@ const FAQ: NextPageWithLayout<any> = ({ info, meta, sections }: any) => {
             }) 
           }
         </div>
-        <div className="col-span-12 w-t:hidden w-p:hidden w-p:col-span-4 mt-[72px] w-p:mt-12">
+        <div className="col-span-12 w-t:hidden w-p:hidden w-p:col-span-4 mt-18 w-p:mt-12">
          {/* <Banner data={sections.banner} onBtn={()=> handleRedirect(sections.banner.redirect)}/> */}
          <BannerPortalverse data={sections?.banner} onClick={()=> handleRedirect(sections.banner.redirect)} />
         </div>
