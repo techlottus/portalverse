@@ -23,7 +23,7 @@ const Academia: FC<AcademiaComponentData> = ({ data, result, classNames, select:
     <div>
       <h1 className="text-5.5 w-t:text-base w-p:text-base font-headings font-bold leading-tight">{data.title}</h1>
       <p className="text-base w-t:invisible w-p:invisible font-texts font-bold leading-tight">{data.subtitle}</p>
-      <p className="text-base w-t:text-3.5 w-p:text-3.5 font-texts leading-tight w-t:leading-5 mt-[17px]">{data.select.title}</p>
+      <p className="text-base w-t:text-3.5 w-p:text-3.5 font-texts leading-tight w-t:leading-5 mt-4">{data.select.title}</p>
       <Select onClick={(option: CustomEvent) => console.log("option", option)} data={newConfig} options={newOptions} />
     </div>
     <div className="opacity-25">
