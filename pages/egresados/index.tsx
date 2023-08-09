@@ -98,7 +98,7 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
       </ContentFullLayout>
       {/* <ContentFullLayout classNames="bg-surface-100 w-t:bg-surface-200 w-p:bg-surface-200 mt-12">
         <ContentLayout>
-          <div className="col-span-12 pt-6 pb-[53px]">
+          <div className="col-span-12 pt-6 pb-14">
             <p className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6 mb-6">{ sections.noticias.title }</p>
             {
               <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-2 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
