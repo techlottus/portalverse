@@ -15,7 +15,7 @@ const Footer: FC<FooterPortalverseComponentData> = ({ privacyLink, certification
   }, []);
 
   return (
-    <section className="w-full border-t-[1px] border-solid border-surface-800 mt-18 w-t:mt-12 w-p:mt-12">
+    <section className="w-full border-t border-solid border-surface-800 mt-18 w-t:mt-12 w-p:mt-12">
       {/* Section logotype */}
       <div className="p-6 w-p:hidden border-b-[1px] border-solid border-surface-300">
         <div className="flex justify-between items-center mb-6 cursor-pointer" onClick={onClickLogo}>
