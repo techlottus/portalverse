@@ -53,7 +53,7 @@ const Planteles = ({ sections, meta }: any) => {
         <Modal isShow={isShow} onClose={handleVisibilityModal} data={{ icon: 'close', title: infoMap, tagOnClose: 'testOnClose', wrapper: true, }}>
           {
             !!coordsMap
-              ? <Map coords={coordsMap} zoom={15} scroll classNamesMap="w-d:h-[583px] w-t:h-[581px] w-p:h-[355px] w-full">
+              ? <Map coords={coordsMap} zoom={15} scroll classNamesMap="w-d:h-140.5 w-t:h-140.5 w-p:h-[355px] w-full">
                 {
                   ({ TileLayer, Marker, Popup }: any) => (
                     <>
