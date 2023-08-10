@@ -184,7 +184,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, l
     </section>
     <div className={cn("w-d:hidden w-full static left-0 top-0 bottom-0 h-screen bg-surface-0 flex flex-col p-2", { "hidden z-10": menuInvisible })}>
       <div className="h-screen overflow-auto">
-        <div className="overflow-y-auto h-[90%]">
+        <div className="overflow-y-auto h-full">
           {
             activeMenuList.map((item: any, i: number) => <div key={`submenu-mobile-${i}`} className="w-full flex flex-col justify-between p-1 z-20">
               <div className={cn("flex justify-between items-center p-1 border-b", { "cursor-pointer": !item.route, "flex-row-reverse": item.back })}>
