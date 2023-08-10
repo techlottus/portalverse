@@ -13,7 +13,12 @@
       },
       "description": "Imparte Escuela de Gobierno y Transformación Pública SKR\n\nDuración aproximada: 120 horas\n\nPerfil del participante: Estudiantes, graduados universitarios y a profesionales que operan dentro o en relación con el sector público, ofrece la posibilidad de conocer, con una visión de conjunto las diferentes técnicas y herramientas para hacer que las políticas públicas cumplan con el valor efectivo e innovador de transformación social en el que deben estar inspiradas.\n\nCarreras afines: Todas las áreas\n\nObjetivo: Conocer una visión de conjunto las diferentes técnicas y herramientas para hacer que las políticas públicas cumplan con el valor efectivo e innovador de transformación social en el que deben estar inspiradas.\n\nTemas a abordar:\n1. Problemas Públicos, Análisis del Entorno y Toma de Decisiones.\n2. Implementación Responsable e Innovadora de Iolíticas.\n3. Mapa de Actores y Juego de Influencias en la Agenda Pública.\n4. Evaluación de Impacto y Transformación Pública.\n\nRecursos de aprendizaje:\n1. Campus Online \n\nEvaluación: La evaluación se realizará por medio de actividades y exámenes.\n\n*SKR internacional<br/>Universidad Europea del Atlántico",
       "price": "$8000.00*",
-      "email": "extension@uteg.edu.mx"
+      "textLink": {
+        "description": "Solicita información en el siguiente correo:",
+        "href": "mailto:extension@uteg.edu.mx",
+        "text": "extension@uteg.edu.mx",
+        "target": "__blank"
+      }
     },
     "relatedCourses": {
       "title": "Cursos relacionados",

@@ -1,11 +1,11 @@
 {
-  "meta":{
+  "meta": {
     "title": "Diplomado en Globalización",
     "description": "",
     "keywords": ""
   },
-  "sections":{
-    "head":{
+  "sections": {
+    "head": {
       "title": "Diplomado en Globalización",
       "image": {
         "alt": "imagen",
@@ -13,21 +13,26 @@
       },
       "description": "Duración aproximada: 84 horas\n\nPerfil del participante: Aquellas personas que en que desean aprender los  principios de la Responsabilidad Social, contribuyen de manera importante en la búsqueda del Desarrollo Sustentable.\n\nCarreras afines: Todas las áreas\n\nObjetivo: El Diplomado en Globalización ofrece a los estudiantes incrementar su formación académica mediante dos materias que le aportarán conocimientos para comprender el concepto y funcionamiento de la globalización, así como el papel que cumplen las organizaciones en este proceso.\n\nTemas a abordar:\n\n1.- Economía para la globalización y la competitividad<br/>2.- Responsabilidad social para la sustentabilidad\n\nRecursos de aprendizaje:\nCampus Online\n\nEvaluación:\nLa evaluación se realizará por medio de actividades y exámenes. Para acreditar debes tener cuando menos 80 de calificación.\n\n*Materias que se pueden revalidar para cursar una maestrìa en UANE",
       "price": "Comunidad UTEG $3,400.00*<br/>Externos: $4,245.00*",
-      "email": "extension@uteg.edu.mx"
+      "textLink": {
+        "description": "Solicita información en el siguiente correo:",
+        "href": "mailto:extension@uteg.edu.mx",
+        "text": "extension@uteg.edu.mx",
+        "target": "__blank"
+      }
     },
-    "relatedCourses":{
+    "relatedCourses": {
       "title": "Cursos relacionados",
       "courses": [
         {
           "id": "123",
           "title": "Análisis de datos",
-          "link":{
+          "link": {
             "text": "Ver más",
             "size": "large",
             "isBold": false,
             "disabled": false,
-            "id":"",
-            "icon":"arrow_forward"
+            "id": "",
+            "icon": "arrow_forward"
           },
           "image": {
             "desk": {
