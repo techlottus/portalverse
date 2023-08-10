@@ -271,9 +271,13 @@ async function populateTailwind  () {
       "54": '13.25rem',
       "58": '14.75rem'
     },
+    minWidth: {
+      "130": '7.5rem',
+    },
     maxWidth: {
       "147": '36.75rem',
     },
+
     backgroundImage: tailwindLogos.css
   }
   const [fóntfirst, ...fontrest] = tailwindFonts.tokens
