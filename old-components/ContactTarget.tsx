@@ -21,7 +21,7 @@ const ContactTarget: FC<ContactTargetComponentData> = (props: ContactTargetCompo
           <Image
             classNames={cn(
               "min-w-24 min-h-22",
-              "w-d:min-w-[120px] w-d:min-h-26",
+              "w-d:min-w-130 w-d:min-h-26",
               "h-full flex shrink-0"
               )
             }
