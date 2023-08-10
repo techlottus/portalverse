@@ -380,6 +380,7 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, cur
 
     const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&telefono=${telefono}&email=${email}&lineaNegocio=${lineaNegocio}&modalidad=${modalidad}&nivel=${nivel}&campus=${campus}&programa=${programa}&avisoPrivacidad=true&leadSource=Digital&validaRegistroBoot=${validaRegistroBoot}&source=${source}&canal=${canal}${medio ? `&medio=${medio}` : ""}${campana ? `&campana=${campana}` : ""}`;
 
+    setIsLoadingLead(true);
     await axios.post(`${endpoint}?${params}`,{},{
       headers: {
         Authorization: tokenActive,
@@ -387,13 +388,10 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data, cur
       }
     })
       .then((res: any) => {
-        if (res.data.Exitoso === "False") {
-          setIsErrorLead(true);
-          setIsLoadingLead(false);
-        } else {
-          setIsErrorLead(false);
-          setIsLoadingLead(false);
+        if(res?.data?.Exitoso === "TRUE") {
+          return router.push(pathThankyou);
         }
+        throw new Error()
       })
       .catch((err: any) => {
         // console.log("err", err)
