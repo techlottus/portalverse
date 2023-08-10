@@ -205,7 +205,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
                   ["justify-center items-end"]: item?.textPosition === "center_bottom",
                   ["justify-end items-end"]: item?.textPosition === "right_bottom"
                 })}>
-                  <div className="flex flex-col z-10 w-d:w-[500px] w-t:w-96 space-y-4">
+                  <div className="flex flex-col z-10 w-d:w-125 w-t:w-96 space-y-4">
                     <h2
                       className={cn(
                         "font-headings font-bold w-d:text-10 w-d:leading-12 w-t:text-7.5 w-t:leading-9",
