@@ -166,6 +166,7 @@ async function populateTailwind  () {
     },
     maxWidth: {
       "d-base": "1200px",
+      "147": '36.75rem',
     },
     spacing: {
       "12.5": "3.125rem",
@@ -274,10 +275,6 @@ async function populateTailwind  () {
     minWidth: {
       "130": '7.5rem',
     },
-    maxWidth: {
-      "147": '36.75rem',
-    },
-
     backgroundImage: tailwindLogos.css
   }
   const [fóntfirst, ...fontrest] = tailwindFonts.tokens
