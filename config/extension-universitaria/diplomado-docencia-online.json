@@ -1,11 +1,11 @@
 {
-  "meta":{
+  "meta": {
     "title": "Diplomado en Docencia en Línea",
     "description": "",
     "keywords": ""
   },
-  "sections":{
-    "head":{
+  "sections": {
+    "head": {
       "title": "Diplomado en Docencia en Línea",
       "image": {
         "alt": "imagen",
@@ -13,21 +13,26 @@
       },
       "description": "Duración aproximada: 84 horas\n\nPerfil del participante: Aquellas personas que se dedican a su giro profesional que quieren desarrollarse dentro de la docencia.\n\nCarreras afines: Todas las áreas\n\nObjetivo: El diplomado tiene como objetivo desarrollar habilidades nuevas para enfrentar los retos que la educación plantea en los tiempos actuales y para mejorar las herramientas docentes, que permitan obtener rutas de acción y generar los cambios que enriquezcan el proceso educativo.\n\nTemas a abordar:\n\n1.- Métodos de aprendizaje activos<br/>2.- Tutoría en educación virtual\n\nRecursos de aprendizaje:\nCampus Online\n\nEvaluación:\nLa evaluación se realizará por medio de actividades y exámenes. Para acreditar debes tener cuando menos 80 de calificación.\n\n*Materias que se pueden revalidar para cursar una maestrìa en UANE",
       "price": "Comunidad UTEG $3,400.00*<br/>Externos: $4,245.00*",
-      "email": "extension@uteg.edu.mx"
+      "textLink": {
+        "description": "Solicita información en el siguiente correo:",
+        "href": "mailto:extension@uteg.edu.mx",
+        "text": "extension@uteg.edu.mx",
+        "target": "__blank"
+      }
     },
-    "relatedCourses":{
+    "relatedCourses": {
       "title": "Cursos relacionados",
       "courses": [
         {
           "id": "123",
           "title": "Análisis de datos",
-          "link":{
+          "link": {
             "text": "Ver más",
             "size": "large",
             "isBold": false,
             "disabled": false,
-            "id":"",
-            "icon":"arrow_forward"
+            "id": "",
+            "icon": "arrow_forward"
           },
           "image": {
             "desk": {
