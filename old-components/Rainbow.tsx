@@ -32,7 +32,7 @@ const Rainbow: FC<RainbowComponentConfig> = ({ sections, title, classNamesTitle 
                         <h3 className="ac-type-h3-bold-solid-poppins-desktop w-t:ac-type-h2-negative-bold-solid-poppins-mobile w-p:ac-type-h3-negative-bold-solid-poppins-tabmob text-surface-0">{ title }</h3>
                         <RichtText font="dark" classNames="ac-type-body-positive-solid-nunitosans-desktop w-t:ac-type-h6-bold-solid-poppins-tablet w-p:ac-type-body-positive-solid-nunitosans-tabmob" data={{ content: description }} />
                       </div>
-                      <div className="w-full w-d:w-1/2 max-w-[590px]">
+                      <div className="w-full w-d:w-1/2 max-w-147">
                         <Aspect ratio="2/1">
                           <Image src={image?.src} alt={image?.alt} classNames="w-full h-full" />
                         </Aspect>
