@@ -1,117 +1,121 @@
 {
-    "meta": {
+  "meta": {
+    "title": "Diseño Universal para el Aprendizaje y su Aplicación en el Aula (PRODIS)",
+    "description": "",
+    "keywords": ""
+  },
+  "sections": {
+    "head": {
       "title": "Diseño Universal para el Aprendizaje y su Aplicación en el Aula (PRODIS)",
-      "description": "",
-      "keywords": ""
-    },
-    "sections": {
-      "head": {
-        "title": "Diseño Universal para el Aprendizaje y su Aplicación en el Aula (PRODIS)",
-        "image": {
-          "alt": "imagen",
-          "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_PRODIS_diseno_universal_desk_9ed48b4fad.jpg"
-        },
-        "description": "Duración aproximada: 100 horas\n\nPerfil del participante: El curso está pensado tanto para profesionales en activo como para futuros: Maestros de educación Primaria e Infantil. Maestros de Educación Especial (PT y AL). Profesores de Educación Secundaria. Educadores sociales. Técnicos educativos. Orientadores, psicólogos, pedagogos y psicopedagogos. Otros profesionales de la educación.\n\nCarreras afines: Cualquier carrera o máster relacionado.\n\nObjetivo: En este curso se pretende generar un cambio de mirada hacia la inclusión educativa y poder enseñarte metodologías y herramientas que puedas llevar a cabo en tu práctica docente a través del Diseño Universal para el Aprendizaje.\n\nTemas a abordar: \n\n • La escuela Inclusiva, un cambio de mirada. \n\n • ¿Qué entendemos por diversidad en las aulas?.\n\n • Barreras en el aprendizaje y la participación\n\n • Camino de la Integración a la Inclusión\n\n • Inclusión educativa y escuelas\n\n • Claves para la escuela inclusiva \n\n • Buenas prácticas para la escuela inclusiva\n\n • Principios DUA y Redes neuronales del aprendizaje.\n\n • ¿Cómo podemos dar respuesta a la diversidad en las aulas?\n\n • Diseño Universal del Aprendizaje (DUA)\n\n • Redes neuronales implicadas en el aprendizaje\n\n • ¿Cómo entiende el DUA la forma de dar respuesta a las diferentes formas de aprendizaje de los alumnos?  Areas y principios DUA\n\n • Principio I:  proporcionar múltiples formas para la motivación.\n\n • Principio II: Proporcionar múltiples formas de representación.\n\n • Principio III: Proporcionar múltiples formas de expresión. Currículo DUA y Personalización\n\n • Condiciones previas: Haz tu aula accesible\n\n • Personalización del aprendizaje\n\n • Planifica tu acción docente\n\n • Realidad del Aula DUA\n\n • ¿Cómo lograr la inclusión en la práctica aplicando el DUA?\n\n • Diseño desde el ACCESO a la información\n\n • Diseño desde la CONSTRUCCIÓN de actividades\n\n • Diseño desde la iNTERNALIZACIÓN de lo aprendido\n\n • Ideas para el aula\n\nRecursos de aprendizaje: \n\n1. Online \n\n2. Cada bloque de contenido está compuesto por:\n\n • Manual en PDF\n\n • Videotutoriales\n\n • Vídeos grabados en entornos naturales donde observarás in situ la metodología propuesta.\n\n • Autoevalución\n\n • Actividad\n\nEvaluación: La evaluación será llevará a cabo a través de una actividad final que denominamos reto en la que pondrás en práctica lo aprendido durante el curso.",
-        "price": "$ 3,670.00",
-        "email": "extension@uteg.edu.mx"
+      "image": {
+        "alt": "imagen",
+        "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_PRODIS_diseno_universal_desk_9ed48b4fad.jpg"
       },
-      "relatedCourses": {
-        "title": "Cursos relacionados",
-        "courses": [
-          {
-            "id": "123",
-            "title": "Análisis de datos",
-            "link": {
-              "text": "Ver más",
-              "size": "large",
-              "isBold": false,
-              "disabled": false,
-              "id": "",
-              "icon": "arrow_forward"
-            },
-            "image": {
-              "desk": {
-                "alt": "imagen",
-                "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
-              },
-              "mobile": {
-                "alt": "imagen",
-                "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
-              }
-            },
-            "redirect": "oferta-educativa"
-          },
-          {
-            "id": "123",
-            "title": "Derecho de Autor y Propiedad Intelectual",
-            "link": {
-              "text": "Ver más",
-              "size": "large",
-              "isBold": false,
-              "disabled": false,
-              "id": "",
-              "icon": ""
-            },
-            "image": {
-              "desk": {
-                "alt": "imagen",
-                "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
-              },
-              "mobile": {
-                "alt": "imagen",
-                "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
-              }
-            },
-            "redirect": "oferta-educativa"
-          },
-          {
-            "id": "123",
-            "title": "Estrategias de tiendas en línea",
-            "link": {
-              "text": "Ver más",
-              "size": "large",
-              "isBold": false,
-              "disabled": false,
-              "id": "",
-              "icon": ""
-            },
-            "image": {
-              "desk": {
-                "alt": "imagen",
-                "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
-              },
-              "mobile": {
-                "alt": "imagen",
-                "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
-              }
-            },
-            "redirect": "oferta-educativa"
-          },
-          {
-            "id": "123",
-            "title": "Mega tendencias Globales",
-            "link": {
-              "text": "Ver más",
-              "size": "large",
-              "isBold": false,
-              "disabled": false,
-              "id": "",
-              "icon": ""
-            },
-            "image": {
-              "desk": {
-                "alt": "imagen",
-                "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
-              },
-              "mobile": {
-                "alt": "imagen",
-                "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
-              }
-            },
-            "redirect": "oferta-educativa"
-          }
-        ]
+      "description": "Duración aproximada: 100 horas\n\nPerfil del participante: El curso está pensado tanto para profesionales en activo como para futuros: Maestros de educación Primaria e Infantil. Maestros de Educación Especial (PT y AL). Profesores de Educación Secundaria. Educadores sociales. Técnicos educativos. Orientadores, psicólogos, pedagogos y psicopedagogos. Otros profesionales de la educación.\n\nCarreras afines: Cualquier carrera o máster relacionado.\n\nObjetivo: En este curso se pretende generar un cambio de mirada hacia la inclusión educativa y poder enseñarte metodologías y herramientas que puedas llevar a cabo en tu práctica docente a través del Diseño Universal para el Aprendizaje.\n\nTemas a abordar: \n\n • La escuela Inclusiva, un cambio de mirada. \n\n • ¿Qué entendemos por diversidad en las aulas?.\n\n • Barreras en el aprendizaje y la participación\n\n • Camino de la Integración a la Inclusión\n\n • Inclusión educativa y escuelas\n\n • Claves para la escuela inclusiva \n\n • Buenas prácticas para la escuela inclusiva\n\n • Principios DUA y Redes neuronales del aprendizaje.\n\n • ¿Cómo podemos dar respuesta a la diversidad en las aulas?\n\n • Diseño Universal del Aprendizaje (DUA)\n\n • Redes neuronales implicadas en el aprendizaje\n\n • ¿Cómo entiende el DUA la forma de dar respuesta a las diferentes formas de aprendizaje de los alumnos?  Areas y principios DUA\n\n • Principio I:  proporcionar múltiples formas para la motivación.\n\n • Principio II: Proporcionar múltiples formas de representación.\n\n • Principio III: Proporcionar múltiples formas de expresión. Currículo DUA y Personalización\n\n • Condiciones previas: Haz tu aula accesible\n\n • Personalización del aprendizaje\n\n • Planifica tu acción docente\n\n • Realidad del Aula DUA\n\n • ¿Cómo lograr la inclusión en la práctica aplicando el DUA?\n\n • Diseño desde el ACCESO a la información\n\n • Diseño desde la CONSTRUCCIÓN de actividades\n\n • Diseño desde la iNTERNALIZACIÓN de lo aprendido\n\n • Ideas para el aula\n\nRecursos de aprendizaje: \n\n1. Online \n\n2. Cada bloque de contenido está compuesto por:\n\n • Manual en PDF\n\n • Videotutoriales\n\n • Vídeos grabados en entornos naturales donde observarás in situ la metodología propuesta.\n\n • Autoevalución\n\n • Actividad\n\nEvaluación: La evaluación será llevará a cabo a través de una actividad final que denominamos reto en la que pondrás en práctica lo aprendido durante el curso.",
+      "price": "$ 3,670.00",
+      "textLink": {
+        "description": "Solicita información en el siguiente correo:",
+        "href": "mailto:extension@uteg.edu.mx",
+        "text": "extension@uteg.edu.mx",
+        "target": "__blank"
       }
+    },
+    "relatedCourses": {
+      "title": "Cursos relacionados",
+      "courses": [
+        {
+          "id": "123",
+          "title": "Análisis de datos",
+          "link": {
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id": "",
+            "icon": "arrow_forward"
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        },
+        {
+          "id": "123",
+          "title": "Derecho de Autor y Propiedad Intelectual",
+          "link": {
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id": "",
+            "icon": ""
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        },
+        {
+          "id": "123",
+          "title": "Estrategias de tiendas en línea",
+          "link": {
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id": "",
+            "icon": ""
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        },
+        {
+          "id": "123",
+          "title": "Mega tendencias Globales",
+          "link": {
+            "text": "Ver más",
+            "size": "large",
+            "isBold": false,
+            "disabled": false,
+            "id": "",
+            "icon": ""
+          },
+          "image": {
+            "desk": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
+            },
+            "mobile": {
+              "alt": "imagen",
+              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
+            }
+          },
+          "redirect": "oferta-educativa"
+        }
+      ]
     }
   }
-  
+}

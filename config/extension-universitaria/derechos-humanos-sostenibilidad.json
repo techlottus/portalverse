@@ -1,33 +1,38 @@
 {
-  "meta":{
-    "title": "Derechos Humanos y Sostenibilidad",
+  "meta": {
+    "title": "Diplomado Internacional en Derechos Humanos y Sostenibilidad",
     "description": "",
     "keywords": ""
   },
-  "sections":{
-    "head":{
-      "title": "Derechos Humanos y Sostenibilidad",
+  "sections": {
+    "head": {
+      "title": "Diplomado Internacional en Derechos Humanos y Sostenibilidad",
       "image": {
         "alt": "imagen",
         "src": "https://assets.staging.bedu.org/UTEG/extension_universitaria_derechos_humanos_sostenibilidad_desk_258038d7bc.jpg"
       },
-      "description": "Duración aproximada: 120 horas\n\nPerfil del participante: Estudiantes, graduados universitarios y agentes públicos y privados responsables, ofrece una visión de conjunto sobre las tendencias actuales de los derechos humanos, sus mecanismos de protección y la sostenibilidad en un entorno de gobernanza.\n\nCarreras afines: Todas las áreas\n\nObjetivo: Conocer y manipular las tendencias actuales de derechos humanos, sus mecanismos de protección y la sostenibilidad en un entorno de gobernanza.\n\nTemas a abordar:\n1. Gobernanza de DDHH y Sostenibilidad en la Agenda Internacional de Desarrollo.\n2. El Derecho Internacional de los Derechos Humanos.\n3. Ejercicio de DDHH e Implementación de Políticas Públicas.\n4. Políticas de Inclusión y Grupos Vulnerables.\n\nRecursos de aprendizaje:\n1. Campus Online\n\nEvaluación: La evaluación se realizará por medio de actividades y exámenes.\n\n*SKR internacional<br/>Universidad Europea del Atlántico",
+      "description": "Imparte Escuela de Gobierno y Transformación Pública SKR\n\nDuración aproximada: 120 horas\n\nPerfil del participante: Estudiantes, graduados universitarios y agentes públicos y privados responsables, ofrece una visión de conjunto sobre las tendencias actuales de los derechos humanos, sus mecanismos de protección y la sostenibilidad en un entorno de gobernanza.\n\nCarreras afines: Todas las áreas\n\nObjetivo: Conocer y manipular las tendencias actuales de derechos humanos, sus mecanismos de protección y la sostenibilidad en un entorno de gobernanza.\n\nTemas a abordar:\n1. Gobernanza de DDHH y Sostenibilidad en la Agenda Internacional de Desarrollo.\n2. El Derecho Internacional de los Derechos Humanos.\n3. Ejercicio de DDHH e Implementación de Políticas Públicas.\n4. Políticas de Inclusión y Grupos Vulnerables.\n\nRecursos de aprendizaje:\n1. Campus Online\n\nEvaluación: La evaluación se realizará por medio de actividades y exámenes.\n\n*SKR internacional<br/>Universidad Europea del Atlántico",
       "price": "$8,000.00*",
-      "email": "extension@uteg.edu.mx"
+      "textLink": {
+        "description": "Conoce más sobre SKR:",
+        "href": "https://skr.es/",
+        "text": "skr.es",
+        "target": "__blank"
+      }
     },
-    "relatedCourses":{
+    "relatedCourses": {
       "title": "Cursos relacionados",
       "courses": [
         {
           "id": "123",
           "title": "Análisis de datos",
-          "link":{
+          "link": {
             "text": "Ver más",
             "size": "large",
             "isBold": false,
             "disabled": false,
-            "id":"",
-            "icon":"arrow_forward"
+            "id": "",
+            "icon": "arrow_forward"
           },
           "image": {
             "desk": {
@@ -44,13 +49,13 @@
         {
           "id": "123",
           "title": "Derecho de Autor y Propiedad Intelectual",
-          "link":{
+          "link": {
             "text": "Ver más",
             "size": "large",
             "isBold": false,
             "disabled": false,
-            "id":"",
-            "icon":""
+            "id": "",
+            "icon": ""
           },
           "image": {
             "desk": {
@@ -67,13 +72,13 @@
         {
           "id": "123",
           "title": "Estrategias de tiendas en línea",
-          "link":{
+          "link": {
             "text": "Ver más",
             "size": "large",
             "isBold": false,
             "disabled": false,
-            "id":"",
-            "icon":""
+            "id": "",
+            "icon": ""
           },
           "image": {
             "desk": {
@@ -90,13 +95,13 @@
         {
           "id": "123",
           "title": "Mega tendencias Globales",
-          "link":{
+          "link": {
             "text": "Ver más",
             "size": "large",
             "isBold": false,
             "disabled": false,
-            "id":"",
-            "icon":""
+            "id": "",
+            "icon": ""
           },
           "image": {
             "desk": {
