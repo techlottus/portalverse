@@ -53,7 +53,7 @@ const Planteles = ({ sections, meta }: any) => {
         <Modal isShow={isShow} onClose={handleVisibilityModal} data={{ icon: 'close', title: infoMap, tagOnClose: 'testOnClose', wrapper: true, }}>
           {
             !!coordsMap
-              ? <Map coords={coordsMap} zoom={15} scroll classNamesMap="w-d:h-140.5 w-t:h-140.5 w-p:h-88 w-full">
+              ? <Map coords={coordsMap} zoom={15} scroll classNamesMap="w-d:h-[583px] w-t:h-[581px] w-p:h-[355px] w-full">
                 {
                   ({ TileLayer, Marker, Popup }: any) => (
                     <>
@@ -81,7 +81,7 @@ const Planteles = ({ sections, meta }: any) => {
           {
             sections.campus.map(({ title, coords, description, images: items }: any, i: number) => <ContentInsideLayout classNames="mb-8" key={`campus-data-${i}`}>
               <Image classNames="col-span-4 w-t:col-span-4 w-p:col-span-4 w-p:aspect-2/1" alt={items[0].alt} src={items[0].src} />
-              <div className="col-span-4 border w-t:col-span-4 w-p:col-span-4 border-gray-300 rounded pl-3">
+              <div className="col-span-4 border w-t:col-span-4 w-p:col-span-4 border-solid border-gray-300 rounded pl-3">
                 <p className="font-texts font-normal text-base leading-5 my-2">{description.state}</p>
                 <p className="font-headings font-semibold text-4.5 leading-5.625 my-2">{description.name}</p>
                 <ContentInsideLayout>

@@ -27,7 +27,7 @@ const DetalleCursoEducacionContinua = ({ sections, meta }: any) => {
               src={ sections.head.image.src }
               classNames="aspect-2/1 w-t:aspect-2/1 w-p:aspect-2/1 mb-6"
             />
-          <div className="flex flex-col p-2 border rounded-lg mb-6">
+          <div className="flex flex-col p-2 border border-solid border-surface-300 rounded-lg mb-6">
             <p className="font-texts font-normal text-base leading-5 text-surface-500">Precio:</p>
             <h1 className="font-headings font-semibold text-6.5 leading-10" dangerouslySetInnerHTML={{__html: sections.head.price}}/>
             <p className="font-texts font-normal text-sm leading-5 text-surface-950">Solicita información en el siguiente correo:</p>

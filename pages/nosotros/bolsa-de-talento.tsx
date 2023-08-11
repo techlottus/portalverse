@@ -93,7 +93,7 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
       </ContentLayout> */}
       </ContentFullLayout>
       <ContentLayout classNames="mb-12 w-t:mb-6 w-p:mb-6 w-d:mt-18 w-t:mt-8 w-p:mt-12">
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 border-solid border-2">
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           <Cintillo
             classNames="h-auto"
             {...sections?.contacto?.banner}

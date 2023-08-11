@@ -157,7 +157,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, l
       {/* menu suboptions */}
       <div onMouseLeave={handleHoverOutOption} className={cn("w-full p-2 flex space-x-6 justify-center w-t:hidden w-p:hidden bg-surface-0 z-50", { "hidden": !activeMenu, "block shadow-15": activeMenu })}>
         {
-          activeOptionMenu.map((item: any, i: number) => <div key={`submenu-${i}`} className={cn("py-1 px-6 z-20 border-solid border-surface-200", { "border-r-2": activeOptionMenu.length > 1 })}>
+          activeOptionMenu.map((item: any, i: number) => <div key={`submenu-${i}`} className={cn("py-1 px-6 z-20 border-solid border-surface-200", { "border-solid border-surface-200 border-r-2": activeOptionMenu.length > 1 })}>
               <Link href={item.route} passHref className="w-full">
 
                 <p className="font-texts font-normal text-sm">{item.label}</p>
@@ -187,7 +187,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, l
         <div className="overflow-y-auto h-full">
           {
             activeMenuList.map((item: any, i: number) => <div key={`submenu-mobile-${i}`} className="w-full flex flex-col justify-between p-1 z-20">
-              <div className={cn("flex justify-between items-center p-1 border-b", { "cursor-pointer": !item.route, "flex-row-reverse": item.back })}>
+              <div className={cn("flex justify-between items-center p-1 border-solid border-surface-250 border-b", { "cursor-pointer": !item.route, "flex-row-reverse": item.back })}>
                 {
                   !!item.route
                     ? <Link

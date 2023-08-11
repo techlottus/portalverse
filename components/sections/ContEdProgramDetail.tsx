@@ -56,7 +56,7 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
           </Aspect>
             : null
         }
-        <div className="flex flex-col gap-2 p-2 border rounded-lg my-6">
+        <div className="flex flex-col gap-2 p-2 border border-solid border-surface-300 rounded-lg my-6">
           {
             !!price ?
               <div className="flex flex-col">

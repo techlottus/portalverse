@@ -8,7 +8,7 @@ import cn from "classnames"
 
 const CardProgram: FC<CardProgramData> = memo(({ title, link, image, classNames , onClick, aspectImg = "aspect-2/1"}: CardProgramData) => {
 
-  return <div className={cn("cardProgram bg-surface-0 border-1 border-solid border rounded-md flex flex-col", classNames)}>
+  return <div className={cn("cardProgram bg-surface-0 border-1 border-solid border border-surface-200 rounded-md flex flex-col", classNames)}>
       <div>
       {
         !!image

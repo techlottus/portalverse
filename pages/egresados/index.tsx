@@ -26,7 +26,7 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
         </div>
       </ContentFullLayout>
       <ContentLayout>
-        <div className="head col-span-12 w-t:col-span-8 w-p:col-span-4 border-solid border-2 w-t:hidden w-p:hidden">
+        <div className="head col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:hidden w-p:hidden">
           <BannerNumeralia data={sections.head.banner} />
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-p:order-2">
