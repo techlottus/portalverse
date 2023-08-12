@@ -6,7 +6,7 @@ import Aspect from "@/components/Aspect"
 import cn from "classnames"
 
 
-const CardProgram: FC<CardProgramData> = memo(({ title, link, image, classNames , onClick, aspectImg = "aspect-2/1"}: CardProgramData) => {
+const CardProgram: FC<CardProgramData> = memo(({ title, subtitle, link, image, classNames , onClick, aspectImg = "aspect-2/1"}: CardProgramData) => {
 
   return <div className={cn("cardProgram bg-white border-1 border-solid border rounded-md flex flex-col", classNames)}>
       <div>
@@ -19,7 +19,11 @@ const CardProgram: FC<CardProgramData> = memo(({ title, link, image, classNames 
       }
       </div>
       <div className="flex flex-col h-full">
-      <p className="font-Nunito-Sans font-normal text-4.5 mt-3 mb-2 mx-3">{title}</p>
+      {subtitle ? 
+        <p className="font-Nunito-Sans font-normal text-gray-500 text-base mt-2 mb-1 mx-3">{subtitle}</p>
+      : null
+      }
+      <p className={cn("font-Nunito-Sans font-normal text-4.5 mb-2 mx-3", {"mt-3": !subtitle})}>{title}</p>
       <div className="w-full h-full flex justify-end pb-2 font-Nunito font-bold items-end">
         <LinkIcons data={link} onClick={onClick}/>
         <span className="material-icons icon">chevron_right</span>
