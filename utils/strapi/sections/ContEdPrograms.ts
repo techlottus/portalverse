@@ -47,7 +47,7 @@ export type ContEdProgramsSection = {
 
 export const CONT_ED_PROGRAMS = `
 ... on ComponentSectionsContEdPrograms {
-  knowledgeAreas {
+  knowledgeAreas (pagination: { start: 0, limit: -1 }){
     data {
       attributes {
         name
