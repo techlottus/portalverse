@@ -38,7 +38,7 @@ type ContinuousEducationKnowledgeArea = {
 export type ContEdProgramsSection = {
   type: "ComponentSectionsContEdPrograms";
   knowledgeAreas: {
-    data: Array<ContinuousEducationKnowledgeAreas>;
+    data: Array<ContinuousEducationKnowledgeArea>;
   };
   programParentPageSlug?: string;
 };
