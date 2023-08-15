@@ -26,7 +26,7 @@ type ContinuousEducationProgram = {
   };
 };
 
-type ContinuousEducationKnowledgeAreas = {
+type ContinuousEducationKnowledgeArea = {
   attributes: {
     name: string;
     programs: {
