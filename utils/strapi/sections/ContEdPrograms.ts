@@ -2,21 +2,19 @@ import { getDataPageFromJSON } from "@/utils/getDataPage";
 import getEducationalOfferingConfig from "@/utils/getEducationalOfferingConfig";
 import { normalizePath } from "@/utils/misc";
 import type { StrapiImage } from "@/types/strapi/common";
-import { ProgramLevel } from "@/utils/getProgramBySlug";
-
-type ComponentSectionsContEdProgramsCategoryName = {
-  data: {
-    attributes: {
-      name: string;
-    };
-  };
-};
+import type { ProgramLevel } from "@/utils/getProgramBySlug";
 
 type ContinuousEducationProgram = {
   attributes: {
     name: string;
     slug: string;
-    programCategory: ComponentSectionsContEdProgramsCategoryName;
+    programCategory: {
+      data: {
+        attributes: {
+          name: string;
+        }
+      }
+    }
     image: StrapiImage;
     level: {
       data: {
