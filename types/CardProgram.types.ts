@@ -4,6 +4,7 @@ import ImageComponentData from "@/types/Image.types";
 export type CardProgramData = {
   id?: string;
   title?: string;
+  subtitle?: string;
   link: LinkIconsConfig;
   classNames?: string;
   image?: ImageComponentData;
