@@ -120,7 +120,7 @@ export type StaticContinuousEducationCategory = {
 
 const formatStaticProgramCategory = (
   category: StaticContinuousEducationCategory
-): ContinuousEducationKnowledgeAreas => {
+): ContinuousEducationKnowledgeArea => {
   return {
     attributes: {
       name: category?.title,
