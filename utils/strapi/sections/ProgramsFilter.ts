@@ -66,7 +66,10 @@ export const PROGRAMS_FILTER = `
     data {
       attributes {
         title
-        programs(pagination: { start: 0, limit: -1 }, filters: { available: { eq: true } }) {
+        programs(
+          pagination: { start: 0, limit: -1 }, 
+          filters: { available: { eq: true }, publishedAt: { notNull: true } }
+        ) {
           data {
             attributes {
               name
@@ -113,9 +116,10 @@ export const PROGRAMS_FILTER = `
 }
 `;
 
-type StaticProgram = {
+export type StaticProgram = {
   title: string;
   config: {
+    hidden?: boolean;
     nombre: string;
     modalidad: Array<string>;
     areaConocimiento: Array<string>;
@@ -181,12 +185,13 @@ export const formatProgramsFilterSection = async (
 
   const staticProgramsData = await getDataPageFromJSON(`/oferta-educativa/${levelTitle?.toLowerCase()}.json`);
   const staticPrograms = staticProgramsData?.programs as Array<StaticProgram>;
+  const availableStaticPrograms = staticPrograms?.filter(program => !program?.config?.hidden);
 
   /**
    * Format programs coming from static JSON data into the program structure expected
    * from Stapi-captured programs.
    */
-  const formattedStaticPrograms: Array<FilterProgram> = staticPrograms?.map(formatStaticProgram);
+  const formattedStaticPrograms: Array<FilterProgram> = availableStaticPrograms?.map(formatStaticProgram);
 
   levelAttributes.programs.data = [
     ...programsData,
