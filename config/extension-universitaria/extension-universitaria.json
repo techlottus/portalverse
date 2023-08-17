@@ -25,29 +25,6 @@
       "nextCourses":[
         {
           "id": "123",
-          "title": "Adobe Photoshop",
-          "link":{
-            "text": "Ver más",
-            "size": "large",
-            "isBold": false,
-            "disabled": false,
-            "id":"",
-            "icon":"arrow_forward"
-          },
-          "image": {
-            "desk": {
-              "alt": "imagen",
-              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000"
-            },
-            "mobile": {
-              "alt": "imagen",
-              "src": "https://img.freepik.com/premium-photo/group-happy-young-students-university_85574-4531.jpg?w=2000g"
-            }
-          },
-          "redirect": "adobe-photoshop"
-        },
-        {
-          "id": "123",
           "title": "Politicas Publicas en Gobernanza",
           "link":{
             "text": "Ver más",
@@ -539,30 +516,6 @@
                 }
               },
               "redirect": "adobe-after-effects"
-            },
-            {
-              "hidden": true,
-              "id": "123",
-              "title": "Certificación Oficial Adobe Photoshop",
-              "link":{
-                "text": "Ver más",
-                "size": "large",
-                "isBold": false,
-                "disabled": false,
-                "id":"",
-                "icon":"arrow_forward"
-              },
-              "image": {
-                "desk": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1cnEGJSkqGrixFE_LnEuAq_-Dh-_4k4Zc"
-                },
-                "mobile": {
-                  "alt": "imagen",
-                  "src": "https://drive.google.com/uc?export=view&id=1cnEGJSkqGrixFE_LnEuAq_-Dh-_4k4Zc"
-                }
-              },
-              "redirect": "adobe-photoshop"
             },
             {
               "hidden": true,
