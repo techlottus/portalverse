@@ -16,7 +16,7 @@ export type LinkListSection = {
 export const LINK_LIST = `
 ...on ComponentSectionsLinkList {
     title
-    links {
+    links(pagination: {start: 0, limit: -1}) {
       text
       href
       target
