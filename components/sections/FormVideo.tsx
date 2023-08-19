@@ -41,10 +41,12 @@ const FormVideo = (props: FormVideoSection) => {
               {videoTitle}
             </p>
             {
-              <Video
-                dimensions={["330px", "400px", "200px"]}
-                data={{ options: { id: youtubeId, type: "", controls: true } }}
-              />
+              <div style={{maxHeight: "330px"}}>
+                <Video
+                  dimensions={["330px", "400px", "200px"]}
+                  data={{ options: { id: youtubeId, type: "", controls: true } }}
+                />
+              </div>
             }
           </div>
         </div>
