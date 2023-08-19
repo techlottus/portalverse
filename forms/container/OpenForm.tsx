@@ -113,9 +113,6 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data }: O
   console.log("personalData", personalData);
   console.log("academicData", academicData);
 
-  const [isLoadingLead, setIsLoadingLead] = useState(false);
-  const [isErrorLead, setIsErrorLead] = useState(false);
-
   const {
     isLoading: isLoadingToken,
     isError: isErrorToken,
@@ -205,6 +202,9 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data }: O
   /**
    * Form Submission
    */
+  const [isLoadingLead, setIsLoadingLead] = useState(false);
+  const [isErrorLead, setIsErrorLead] = useState(false);
+
   const sendLeadData = async () => {
     const endpoint = "https://lottus--desarrollo.sandbox.my.salesforce.com/services/apexrest/captacion_prospecto";
 
