@@ -110,9 +110,6 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data }: O
     campus: false
   })
 
-  console.log("personalData", personalData);
-  console.log("academicData", academicData);
-
   const {
     isLoading: isLoadingToken,
     isError: isErrorToken,
@@ -206,7 +203,7 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data }: O
   const [isErrorLead, setIsErrorLead] = useState(false);
 
   const sendLeadData = async () => {
-    const endpoint = "https://lottus--desarrollo.sandbox.my.salesforce.com/services/apexrest/captacion_prospecto";
+    const endpoint = process.env.NEXT_PUBLIC_CAPTACION_PROSPECTO;
 
     const selectedProgramData = getDataByProgramEC(academicData?.program, academicData?.campus);
 
