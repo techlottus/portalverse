@@ -12,10 +12,10 @@ const OpenFormInit = {
   },
   steptwo: {
     title: "Cuéntanos ¿Qué programa te interesa?",
-    modality: "Modalidad elegida",
-    level: "¿Qué nivel quieres estudiar?",
-    program: "¿Qué programa educativo deseas estudiar?",
-    campus: "¿En dónde te gustaría asistir?",
+    modality: "Selecciona una modalidad",
+    level: "Selecciona un nivel",
+    program: "Programa de interés",
+    campus: "Campus",
   },
   stepthree: {
     title: "Gracias por tu interés ",

@@ -93,7 +93,7 @@ const StepThree: FC<any> = ({ classNames, step, data, contacts, schedulers, onNe
   }
 
   return <section className={cn(classNames)}>
-    <h1>{ config.title }</h1>
+    {/* <h1>{ config.title }</h1>
     <div className="mt-6">
       <ProgressBar data={{ progress }} />
     </div>
@@ -136,7 +136,7 @@ const StepThree: FC<any> = ({ classNames, step, data, contacts, schedulers, onNe
         <Select onClick={(option: CustomEvent) => handleSelectHorario(option)} options={[...dataSchedulers]} data={{ ...SelectInit, textDefault: !!infoControls.horario ? " " : "Horarios disponibles", icon: "schedule" }}  />
         <p className={cn("text-[#e57565] text-xs px-3 mt-4", { "hidden": !errorControls.horario })}>{ configControls.errorMessagesStepThreeOpenForm.horario }</p>
       </div>
-    </form>
+    </form> */}
     <div className="mt-6">
       <Button dark onClick={handleNext} data={ configControls.buttonConfigOpenFormStepThree } />
     </div>
