@@ -190,8 +190,16 @@ export const getJSONProgramsPaths = async () => {
   const educationalOfferingParams = Routes["oferta-educativa"];
   const continuousEducationParams = Routes["extension-universitaria"];
 
-  const continuousEducationStaticPageData = await getDataPageFromJSON('extension-universitaria/extension-universitaria.json');
-  const continuousEducationStaticCategories = continuousEducationStaticPageData?.sections?.extension?.sections as Array<StaticContinuousEducationCategory>;
+  let continuousEducationStaticCategories: Array<StaticContinuousEducationCategory> = [];
+
+  try {
+    const continuousEducationStaticPageData = await getDataPageFromJSON('extension-universitaria/extension-universitaria.json');
+    continuousEducationStaticCategories = continuousEducationStaticPageData?.sections?.extension?.sections as Array<StaticContinuousEducationCategory>;
+    
+  } catch (error) {
+    // continuousEducationStaticCategories remains empty
+  }
+
   const hiddenContinuousEducationProgramsPaths =
     continuousEducationStaticCategories
       ?.reduce((programs, category) => { // merge all programs from all categories

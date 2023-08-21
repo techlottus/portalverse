@@ -174,11 +174,18 @@ const hasAtLeastOneProgram = (category: StaticContinuousEducationCategory) => {
 export const formatContEdProgramsSection = async (
   section: ContEdProgramsSection
 ) => {
-  const continuousEducationStaticPageData = await getDataPageFromJSON(
-    "extension-universitaria/extension-universitaria.json"
-  );
-  const staticCategories = continuousEducationStaticPageData?.sections
-    ?.extension?.sections as Array<StaticContinuousEducationCategory>;
+  let staticCategories: Array<StaticContinuousEducationCategory> = []
+
+  try {
+    const continuousEducationStaticPageData = await getDataPageFromJSON(
+      "extension-universitaria/extension-universitaria.json"
+    );
+    staticCategories = continuousEducationStaticPageData?.sections
+      ?.extension?.sections as Array<StaticContinuousEducationCategory>;
+  } catch (error) {
+    // staticCategories remains empty
+  }
+
   const formattedStaticCategories = staticCategories
     ?.map(excludeHiddenPrograms)
     ?.filter(hasAtLeastOneProgram)
