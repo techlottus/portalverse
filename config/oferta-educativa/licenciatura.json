@@ -696,31 +696,6 @@
       "route": "l-derecho"
     },
     {
-      "title": "Licenciatura en Ciencias Forenses: Criminalística y Criminología",
-      "config": {
-        "nombre": "Licenciatura en Ciencias Forenses: Criminalística y Criminología",
-        "modalidad": [
-          "Presencial"
-        ],
-        "areaConocimiento": [
-          "Jurídicas y Sociales"
-        ],
-        "campus": [
-          "Américas",
-          "Campus Washington",
-          "Río Nilo",
-          "Zapopan",
-          "Lázaro Cárdenas",
-          "Tlajomulco"
-        ],
-        "image": {
-          "src": "https://assets.staging.bedu.org/UTEG/card_licenciatura_ciencias_forenses_desk_526034da82.jpg",
-          "alt": "licenciatura"
-        }
-      },
-      "route": "ciencias-forenses"
-    },
-    {
       "title": "Licenciatura en Pedagogía",
       "config": {
         "nombre": "Licenciatura en Pedagogía",
