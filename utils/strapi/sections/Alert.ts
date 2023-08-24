@@ -19,7 +19,7 @@ export const ALERT = `
   ...on ComponentSectionsAlert {
     title
     text
-    links {
+    links(pagination: {start: 0, limit: -1}) {
       text
       href
       target

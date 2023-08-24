@@ -16,7 +16,7 @@ export type OverlayCardListSection = {
 export const OVERLAY_CARD_LIST = `
 ...on ComponentSectionsOverlayCardList {
   title
-  overlayCards {
+  overlayCards(pagination: {start: 0, limit: -1}) {
     title
     url
     overlayColor

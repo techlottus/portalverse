@@ -14,7 +14,7 @@ export const PROMO_LINK_LIST = `
 ...on ComponentSectionsPromoLinkList {
   id,
   title,
-  promoLinks {
+  promoLinks(pagination: {start: 0, limit: -1}) {
     id,
     text,
     link,
