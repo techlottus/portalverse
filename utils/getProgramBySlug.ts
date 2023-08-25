@@ -49,6 +49,13 @@ export type ProgramModalityDetail = {
 export type ProgramAttributes = {
   slug: string;
   name: string;
+  programCategory: {
+    data: {
+      attributes: {
+        name: string
+      }
+    }
+  }
   description: string;
   image: StrapiImage;
   detail: string;
@@ -89,6 +96,13 @@ query ProgramBySlug($slug: String!) {
       attributes {
         slug
         name
+        programCategory{
+          data{
+            attributes{
+              name
+            }
+          }
+        }
         description
         image {
           data {
