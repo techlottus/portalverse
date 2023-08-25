@@ -8,7 +8,7 @@ const TextContent = (props: TextContentSection) => {
   const richTextMarkup = parseEditorRawData(text);
 
   return (
-    <section>
+    <section className="overflow-hidden">
       <Container>
         <div className="grid w-p:grid-cols-4 w-t:grid-cols-8 w-d:grid-cols-12">
           <div className="w-p:col-span-4 w-t:col-span-8 w-d:col-span-8 flex flex-col space-y-4">
