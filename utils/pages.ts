@@ -94,12 +94,15 @@ export const getProgramDetailPageData = async (path: string): Promise<ProgramDet
   const programSlug = pathSegments?.slice(pathSegments?.length - 1, pathSegments?.length)?.[0];
 
   const staticProgramsByLevel = Routes["oferta-educativa"];
-  const continuousEducationPrograms = Routes["extension-universitaria"]?.params?.programs;
+  //@ts-ignore
+  const continuousEducationPrograms = Routes["extension-universitaria"]?.params?.programs || [];
 
   const isContinuousEducationProgram = levelSlug === "extension-universitaria";
 
   const isStaticProgram = isContinuousEducationProgram
+    //@ts-ignore
     ? continuousEducationPrograms?.some((program) => {
+        //@ts-ignore
         return program?.params?.program === programSlug;
       })
     : staticProgramsByLevel?.some((level) => {
@@ -190,8 +193,16 @@ export const getJSONProgramsPaths = async () => {
   const educationalOfferingParams = Routes["oferta-educativa"];
   const continuousEducationParams = Routes["extension-universitaria"];
 
-  const continuousEducationStaticPageData = await getDataPageFromJSON('extension-universitaria/extension-universitaria.json');
-  const continuousEducationStaticCategories = continuousEducationStaticPageData?.sections?.extension?.sections as Array<StaticContinuousEducationCategory>;
+  let continuousEducationStaticCategories: Array<StaticContinuousEducationCategory> = [];
+
+  try {
+    const continuousEducationStaticPageData = await getDataPageFromJSON('extension-universitaria/extension-universitaria.json');
+    continuousEducationStaticCategories = continuousEducationStaticPageData?.sections?.extension?.sections as Array<StaticContinuousEducationCategory>;
+    
+  } catch (error) {
+    // continuousEducationStaticCategories remains empty
+  }
+
   const hiddenContinuousEducationProgramsPaths =
     continuousEducationStaticCategories
       ?.reduce((programs, category) => { // merge all programs from all categories
@@ -220,11 +231,17 @@ export const getJSONProgramsPaths = async () => {
   }
 
   // Generate paths for every non hidden static Continuous Education program.
+
+  //@ts-ignore
   continuousEducationParams?.params?.programs
+    //@ts-ignore
     ?.filter((program) => {
+      //@ts-ignore
       return !hiddenContinuousEducationProgramsPaths?.includes(program?.params?.program)
     })
+    //@ts-ignore
     ?.forEach((program) => {
+      //@ts-ignore
       const path = `extension-universitaria/${program?.params?.program}`;
       paths?.push(path);
     });
