@@ -21,7 +21,7 @@ export const CARD_LIST = `
 ...on ComponentSectionsCardList {
   id
   title
-  cards {
+  cards(pagination: {start: 0, limit: -1}) {
     id
     title
     subtitle
