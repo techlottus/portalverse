@@ -110,7 +110,6 @@ const Routes = {
           { params: { "program": "contaduria-publica", "nameProgram": "Licenciatura en Contaduría Pública" } },
           { params: { "program": "contaduria-publica-proulex", "nameProgram": "Licenciatura en contaduría Pública con Certificación en Inglés Proulex" } },
           { params: { "program": "l-derecho", "nameProgram": "Licenciatura en Derecho" } },
-          { params: { "program": "ciencias-forenses", "nameProgram": "Licenciatura en Ciencias Forenses: Criminalística y Criminología" } },
           { params: { "program": "ingenieria-creacion-desarrollo-software-apps", "nameProgram": "Licenciatura en Ingeniería en Creación y Desarrollo de Software y Aplicaciones" } },
           { params: { "program": "pedagogia", "nameProgram": "Licenciatura en Pedagogía" } },
           { params: { "program": "quimico-farmaceutico-biologo-proulex", "nameProgram": "Licenciatura en Químico Farmaceutico Biólogo con Certificación en Inglés Proulex" } },

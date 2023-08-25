@@ -10,40 +10,55 @@ import Button from "@/old-components/Button/Button"
 import { SelectInit } from "@/old-components/fixture"
 import Link from "next/link"
 
-const StepOne: FC<any> = ({ classNames, data, image, onNext, step, config: stepOneConfig }: any) => {
+const StepOne: FC<any> = ({
+  classNames,
+  data,
+  image,
+  onNext,
+  step,
+  config: stepOneConfig,
+  personalData,
+  setPersonalData,
+  infoControlsTouched,
+  setInfoControlsTouched,
+  errorControls,
+  setErrorControls
+}: any) => {
 
   const [ config, setConfig ] = useState<any>( stepOneConfig ? {...stepOneConfig} : {...OpenFormInit.stepone });
   const [ progress, setProgress ] = useState<number>(0);
-  const [ infoControls, setInfoControls ] = useState<any>({
-    name: "",
-    surname: "",
-    phone: "",
-    email: "",
-    modality: "",
-  });
-  const [ infoControlsTouched, setInfoControlsTouched ] = useState<any>({
-    name: false,
-    surname: false,
-    phone: false,
-    email: false,
-    modality: false,
-  });
-  const [ errorControls, setErrorControls ] = useState<any>({
-    name: false,
-    surname: false,
-    phone: false,
-    email: false,
-    modality: false,
-  });
-  const [ dataModalities, setDataModalities ] = useState<Array<any>>([])
+  // const [ infoControls, setInfoControls ] = useState<any>({
+  //   name: "",
+  //   surname: "",
+  //   phone: "",
+  //   email: "",
+  //   modality: "",
+  // });
+  // const [ infoControlsTouched, setInfoControlsTouched ] = useState<any>({
+  //   name: false,
+  //   surname: false,
+  //   phone: false,
+  //   email: false,
+  //   modality: false,
+  // });
+  // const [ errorControls, setErrorControls ] = useState<any>({
+  //   name: false,
+  //   surname: false,
+  //   phone: false,
+  //   email: false,
+  //   modality: false,
+  // });
+  // const [ dataModalities, setDataModalities ] = useState<Array<any>>([])
+
+  // console.log("Step one infoControls", infoControls);
 
   useEffect(() => {
     setConfig({ ...config, ...data });
   }, [data]);
 
-  useEffect(() => {
-    setDataModalities([ ...Modalities ]);
-  }, [Modalities]);
+  // useEffect(() => {
+  //   setDataModalities([ ...Modalities ]);
+  // }, [Modalities]);
   
   useEffect(() => {
     setProgress(step);
@@ -51,50 +66,50 @@ const StepOne: FC<any> = ({ classNames, data, image, onNext, step, config: stepO
 
   const handleKeyPress = (e: CustomEvent, control: string ) => {
     const { detail: { value } } = e;
-    setInfoControls({ ...infoControls, [control]: value });
+    setPersonalData({ ...personalData, [control]: value });
     setErrorControls({ ...errorControls, [control]: validateControl(control, value, infoControlsTouched[control])});
   };
 
-  const handleNext = () => {
-    if (!!onNext) {
-      setInfoControlsTouched({
-        name: true,
-        surname: true,
-        phone: true,
-        email: true,
-        modality: true,
-      });
-      const newValidation = {
-        name: validateControl("name", infoControls.name, true),
-        surname: validateControl("surname", infoControls.surname, true),
-        phone: validateControl("phone", infoControls.phone, true),
-        email: validateControl("email", infoControls.email, true),
-        modality: validateControl("modality", infoControls.modality, true),
-      };
-      setErrorControls({ ...newValidation });
-      if (validateControls()) {
-        onNext(infoControls);
-      }
-    }
-  }
+  // const handleNext = () => {
+  //   if (!!onNext) {
+  //     setInfoControlsTouched({
+  //       name: true,
+  //       surname: true,
+  //       phone: true,
+  //       email: true,
+  //       modality: true,
+  //     });
+  //     const newValidation = {
+  //       name: validateControl("name", infoControls.name, true),
+  //       surname: validateControl("surname", infoControls.surname, true),
+  //       phone: validateControl("phone", infoControls.phone, true),
+  //       email: validateControl("email", infoControls.email, true),
+  //       modality: validateControl("modality", infoControls.modality, true),
+  //     };
+  //     setErrorControls({ ...newValidation });
+  //     if (validateControls()) {
+  //       onNext(infoControls);
+  //     }
+  //   }
+  // }
 
-  const handleOptionSelected = (option: CustomEvent) => {
-    const { detail: modality } = option;
-    setInfoControlsTouched({ ...infoControlsTouched, modality: true });
-    setInfoControls({ ...infoControls, modality });
-    setDataModalities( state => state.map((item: any) => ({ ...item, active: item.value === modality })) );
-    setErrorControls({ ...errorControls, modality: validateControl("modality", modality, infoControlsTouched[modality])});
-  }
+  // const handleOptionSelected = (option: CustomEvent) => {
+  //   const { detail: modality } = option;
+  //   setInfoControlsTouched({ ...infoControlsTouched, modality: true });
+  //   setInfoControls({ ...infoControls, modality });
+  //   setDataModalities( state => state.map((item: any) => ({ ...item, active: item.value === modality })) );
+  //   setErrorControls({ ...errorControls, modality: validateControl("modality", modality, infoControlsTouched[modality])});
+  // }
 
-  const validateControls = () => !Object.entries(infoControls).map((value: any) => {
-    if(value[0] === 'email') {
-      return !!value[1].match(configControls.patternEmail) ? !!value[1].match(configControls.patternEmail).length : true
-    }
-    if(value[0] === 'phone') {
-      return value[1].trim().length === 10
-    }
-    return !!value[1].trim();
-  }).includes(false)
+  // const validateControls = () => !Object.entries(infoControls).map((value: any) => {
+  //   if(value[0] === 'email') {
+  //     return !!value[1].match(configControls.patternEmail) ? !!value[1].match(configControls.patternEmail).length : true
+  //   }
+  //   if(value[0] === 'phone') {
+  //     return value[1].trim().length === 10
+  //   }
+  //   return !!value[1].trim();
+  // }).includes(false)
 
   const validateControl = (control: string, value: string, touched: boolean) => {
     if (control === 'email') {
@@ -108,7 +123,7 @@ const StepOne: FC<any> = ({ classNames, data, image, onNext, step, config: stepO
 
   const handleTouchedControl = (control: string) => {
     setInfoControlsTouched({ ...infoControlsTouched, [control]: true });
-    setErrorControls({ ...errorControls, [control]: validateControl(control, infoControls[control], infoControlsTouched[control])});
+    setErrorControls({ ...errorControls, [control]: validateControl(control, personalData[control], infoControlsTouched[control])});
   }
 
   return <section className={cn(classNames)}>
@@ -145,15 +160,15 @@ const StepOne: FC<any> = ({ classNames, data, image, onNext, step, config: stepO
       <div className="mt-6">
         <Input errorMessage={configControls.errorMessagesStepOneOpenForm.email} hasError={errorControls.email} eventFocus={() => handleTouchedControl("email")} data={ configControls.inputEmailOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "email")} />
       </div>
-      <div className="mt-6">
+      {/* <div className="mt-6">
         <p className="font-Nunito-Sans font-normal text-[14px] leading-5">{ config.modality }</p>
         <Select onClick={(option: CustomEvent) => handleOptionSelected(option)} options={[...dataModalities]} data={{ ...SelectInit, textDefault: !!infoControls.modality ? " " : "Elige una modalidad", icon: "school" }}  />
         <p className={cn("text-[#e57565] text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{ configControls.errorMessagesStepOneOpenForm.modality }</p>
-      </div>
+      </div> */}
     </form>
-    <div className="mt-6">
+    {/* <div className="mt-6">
       <Button dark onClick={handleNext} data={ configControls.buttonConfigOpenFormStepOne } />
-    </div>
+    </div> */}
   </section>
 }
 

@@ -8,65 +8,65 @@ export const stepsEndpoints: any = {
 
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
 
+type Modality = "Presencial" | "Online" | "Flex";
+
+const formatUANEWebToLeadCampus = (modality: Modality) => {
+  switch (modality) {
+    case "Presencial":
+      return null;
+    case "Flex":
+      return "UANE FLEX";
+    case "Online":
+      return "VIRTUALIDAD";
+    default:
+      return null;
+  }
+};
+
+const formatUTEGWebToLeadCampus = (modality: Modality) => {
+  switch (modality) {
+    case "Presencial":
+      return null;
+    case "Flex":
+      return "UTEG FLEX";
+    case "Online":
+      return "UTEG ONLINE";
+    default:
+      return null;
+  }
+};
+
+export const formatWebToLeadCampus = (businessUnit: string, modality: Modality) => {
+  switch (businessUnit) {
+    case "UANE":
+      return formatUANEWebToLeadCampus(modality);
+    case "UTEG":
+      return formatUTEGWebToLeadCampus(modality);
+    default:
+      return null;
+  }
+};
+
+export const setRegisterBot = () => {
+  const id = "F2D4"
+  const caracteres = "ABCDEFGHJKMNPQRTUVWXYZ12346789";
+  let random = "";
+  for (let i = 0; i < 4; i++){
+   random += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+  }  
+  let res= random.split("");
+  res.splice(Math.floor(Math.random() * res.length), 0, id);
+  const lead = res.join("");
+ return lead;
+}
+
 export const saveDataForms = () => {
   const [ isLoading, setIsLoading ] = useState<boolean>(false);
   const [ isError, setIsError ] = useState<boolean>(false);
   const [ data, setData ] = useState<any>({});
 
-  const setRegisterBot = () => {
-    const id = "F2D4"
-    const caracteres = "ABCDEFGHJKMNPQRTUVWXYZ12346789";
-    let random = "";
-    for (let i = 0; i < 4; i++){
-     random += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
-    }  
-    let res= random.split("");
-    res.splice(Math.floor(Math.random() * res.length), 0, id);
-    const lead = res.join("");
-   return lead;
-  }
-
   const UTM_MEDIUMS: Array<string> = ["Google", "Facebook"];
   const UTM_CAMPAIGNS: Array<string> = []; // list of possible values pending
-
-  type Modality = "Presencial" | "Online" | "Flex";
-
-  const formatUANEWebToLeadCampus = (modality: Modality) => {
-    switch (modality) {
-      case "Presencial":
-        return null;
-      case "Flex":
-        return "UANE FLEX";
-      case "Online":
-        return "VIRTUALIDAD";
-      default:
-        return null;
-    }
-  };
-
-  const formatUTEGWebToLeadCampus = (modality: Modality) => {
-    switch (modality) {
-      case "Presencial":
-        return null;
-      case "Flex":
-        return "UTEG FLEX";
-      case "Online":
-        return "UTEG ONLINE";
-      default:
-        return null;
-    }
-  };
-
-  const formatWebToLeadCampus = (businessUnit: string, modality: Modality) => {
-    switch (businessUnit) {
-      case "UANE":
-        return formatUANEWebToLeadCampus(modality);
-      case "UTEG":
-        return formatUTEGWebToLeadCampus(modality);
-      default:
-        return null;
-    }
-  };
 
   const saveData = async(step: string, data: any, Authorization: string, linea?: string, queryParams?: Record<string, any>) => {
 
