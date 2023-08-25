@@ -46,8 +46,8 @@ const BreadcrumbsLabels: any = {
     }, {})
     return {...prev, ...programList}
   }, {}),
-
-  ...Routes["extension-universitaria"]["params"]["programs"].reduce((prev:any, curr: any) => {
+  //@ts-ignore
+  ...(Routes?.["extension-universitaria"]?.["params"]?.["programs"] || []).reduce((prev:any, curr: any) => {
     const {params: {program, nameProgram}} = curr
     return {...prev, [program]: nameProgram}
   }, {})
