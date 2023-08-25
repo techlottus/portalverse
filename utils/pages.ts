@@ -10,8 +10,8 @@ import getProgramDetailSuperiorPageData from "@/utils/getProgramDetailSuperior";
 import getProgramDetailBachillerato from "@/utils/getProgramDetailBachillerato";
 import { getDataPageFromJSON } from "@/utils/getDataPage";
 import { isValidPath, normalizePath } from "@/utils/misc";
-import type { PageEntityResponse } from "@/utils/getPageDataById";
 import type { ProgramData } from "@/utils/getProgramBySlug";
+import type { StaticProgram } from "@/utils/strapi/sections/ProgramsFilter";
 import type {
   StaticContinuousEducationCategory,
   StaticContinuousEducationProgram,
@@ -202,12 +202,22 @@ export const getJSONProgramsPaths = async () => {
 
   const paths: Array<string> = [];
 
-  educationalOfferingParams?.forEach(level => {
-    level?.params?.programs?.forEach(program => {
-      const path = `${level?.params?.levelRoute}/${program?.params?.program}`;
-      paths?.push(path);
-    })
-  });
+  for (const levelParams of educationalOfferingParams){
+
+    const staticProgramsData = await getDataPageFromJSON(`/oferta-educativa/${levelParams?.params?.level}.json`);
+    const staticPrograms = staticProgramsData?.programs as Array<StaticProgram>;
+
+    const programsParams = levelParams?.params?.programs;
+
+    for (const program of programsParams){
+      const path = `${levelParams?.params?.levelRoute}/${program?.params?.program}`;
+
+      const programSlug = program?.params?.program;
+      const isProgramAvailable = !staticPrograms?.find(staticProgram => staticProgram?.route === programSlug)?.config?.hidden
+
+      if (isProgramAvailable) paths?.push(path);
+    }
+  }
 
   // Generate paths for every non hidden static Continuous Education program.
   continuousEducationParams?.params?.programs
