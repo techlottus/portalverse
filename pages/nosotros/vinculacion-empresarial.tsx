@@ -56,16 +56,16 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
     <HeaderFooterLayout breadcrumbs={true}>
       <ContentLayout classNames="gap-12">
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-Poppins font-bold text-13 w-t:text-8.5 w-p:text-7.5 w-d:mb-6 w-d:leading-13">{sections.head.title}</p>
-          <p className="font-Poppins font-bold text-5.5 mb-6">{sections.head.subtitle}</p>
+          <p className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-7.5 w-d:mb-6 w-d:leading-13">{sections.head.title}</p>
+          <p className="font-headings font-bold text-5.5 mb-6">{sections.head.subtitle}</p>
           <RichtText font="light" data={{
             content: sections.head.description
           }} classNames="mb-4" />
           <div className="flex sm:gap-2 md:gap-0 md:flex-row md:items-center">
-            <p className="font-Poppins font-bold mr-6">{sections.head.contactText}</p>
+            <p className="font-headings font-bold mr-6">{sections.head.contactText}</p>
             <div className="flex md:items-center">
-              <span className="material-icons text-SC/Blackandgrey/B-100 mr-2">mail</span>
-              <LinkContactTarget type={"email"} classNames="text-SC/Blackandgrey/B-100 underline" info={sections.head.contactLink} />
+              <span className="material-icons text-surface-950 mr-2">mail</span>
+              <LinkContactTarget type={"email"} classNames="text-surface-950 underline" info={sections.head.contactLink} />
             </div>
           </div>
         </div>
@@ -77,7 +77,7 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
           />
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%] w-d:mb-6">{sections.alliances.title}</p>
+          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight w-d:mb-6">{sections.alliances.title}</p>
           <div className="w-d:col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mb-6 ">
             {
               sections?.alliances?.carrousel?.map((item: any, i: number) => <section key={`section-numbers-${i}`}>
@@ -99,7 +99,7 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
           <TabsFeatured active={tabActive} tabs={sections.socialService.tabs.items} onActive={(active: number) => setTabActive(active)} />
         </section>
       </ContentFullLayout>
-      <ContentFullLayout classNames="bg-white py-6">
+      <ContentFullLayout classNames="bg-surface-0 py-6">
         <ContentLayout>
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
             <ContentInsideLayout classNames="gap-6">
@@ -110,10 +110,10 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
                     description={description}
                     classNames={cn(
                       "col-span-7 grid grid-cols-7 gap-6 w-t:col-span-8 w-t:grid-cols-8",
-                      "w-p:col-span-4 py-[40px] w-t:py-[94px] w-p:flex w-p:flex-col w-p:p-6",
+                      "w-p:col-span-4 py-10 w-t:py-24 w-p:flex w-p:flex-col w-p:p-6",
                       { "hidden w-p:hidden": tabActive !== i }
                     )}
-                    titleStyles="col-start-2 col-end-7 w-t:col-end-8 text-[32px] !leading-10"
+                    titleStyles="col-start-2 col-end-7 w-t:col-end-8 text-6.5 !leading-10"
                     descriptionStyles="col-start-2 col-end-7 w-t:col-end-8"
                   />
                   <img
@@ -131,12 +131,12 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 flex flex-col my-6">
           <Feedback data={sections.head.feedback}>
             <div slot="areaFeedbackContent">
-              <p className="font-normal font-Nunito text-base mb-6">{sections.head.feedback.title}</p>
+              <p className="font-normal font-headings text-base mb-6">{sections.head.feedback.title}</p>
               <RichtText data={{
                 content: sections.head.feedback.text
               }} classNames="mb-4" />
               <div className="flex align-middle items-center">
-                <span className="material-icons text-SC/Blackandgrey/B-60 mr-2">mail</span>
+                <span className="material-icons text-surface-500 mr-2">mail</span>
                 <LinkContactTarget classNames="!font-bold underline" type={"email"} info={sections.head.feedback.contact} />
               </div>
             </div>
@@ -145,7 +145,7 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
       </ContentLayout>
       <ContentLayout classNames="mt-6">
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-Poppins font-bold text-13 w-t:text-8.5 w-p:text-7.5 mb-18 w-p:m-6  w-d:leading-13">{sections.descriptionSection.title}</p>
+          <p className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-7.5 mb-18 w-p:m-6  w-d:leading-13">{sections.descriptionSection.title}</p>
           {
             sections.descriptionSection.textIcons.map((item: any, i: number) =>
               <div key={`icon-${i}`} className="flex mt-4 gap-6">
@@ -186,7 +186,7 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
       </ContentLayout>
       <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-12 w-t:mt-6 w-p:mt-6">
-          <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%] mb-6">{sections.experiences.title}</p>
+          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6">{sections.experiences.title}</p>
           <Mosaic data={sections.experiences.images} />
         </div>
       </ContentLayout>

@@ -23,27 +23,27 @@ const PonteEnContacto: NextPageWithLayout = ({ sections, meta }: any) => {
     <HeaderFooterLayout breadcrumbs={false}>
       <ContentFullLayout>
         <ContentInsideLayout classNames="mb-12">
-          <div className="col-span-5 w-t:col-span-8 w-p:col-span-4 bg-darkBlue text-white w-t:pb-6">
+          <div className="col-span-5 w-t:col-span-8 w-p:col-span-4 bg-surface-800 text-surface-0 w-t:pb-6">
             <ContentInsideLayout classNames="grid-cols-5 w-t:grid-cols-8">
               <div className="col-span-5 col-start-2 col-end-5 w-t:col-span-8 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 w-p:col-end-5">
                 <Breadcrumbs />
               </div>
-              <h1 className="col-span-5 col-start-2 col-end-5 w-t:col-span-8 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 w-p:col-end-5 text-10 w-p:text-[30px] w-p:m-6 font-bold font-Poppins leading-[125%]">{ sections.head.title }</h1>
+              <h1 className="col-span-5 col-start-2 col-end-5 w-t:col-span-8 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 w-p:col-end-5 text-10 w-p:text-7.5 w-p:m-6 font-bold font-headings leading-tight">{ sections.head.title }</h1>
               {
-                sections.medios.map((medio: any, i: number) => <p key={`item-media-${i}`} className="col-span-5 col-start-2 col-end-5 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 text-base font-Poppins w-d:mt-6 w-t:mt-6 w-p:mt-2 w-p:mx-6 leading-[24px] w-t:leading-[125%] w-p:leading-3[130%] flex items-center font-normal"><span className="material-icons mr-2">{ medio.icon }</span>{ medio.text }</p>)
+                sections.medios.map((medio: any, i: number) => <p key={`item-media-${i}`} className="col-span-5 col-start-2 col-end-5 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 text-base font-headings w-d:mt-6 w-t:mt-6 w-p:mt-2 w-p:mx-6 leading-6 w-t:leading-tight w-p:leading-3[130%] flex items-center font-normal"><span className="material-icons mr-2">{ medio.icon }</span>{ medio.text }</p>)
               }
               <section className="col-span-5 col-start-2 col-end-5 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1">
-                <p className="text-4.5 w-t:text-6 font-Poppins font-bold w-d:mt-6 w-t:mt-6 w-p:mt-2 w-p:mx-6 leading-[125%]">{sections.campus.title}</p>
+                <p className="text-4.5 w-t:text-6 font-headings font-bold w-d:mt-6 w-t:mt-6 w-p:mt-2 w-p:mx-6 leading-tight">{sections.campus.title}</p>
               </section>
               <section className="col-span-5 col-start-2 col-end-5 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 w-d:mb-18 mt-6">
                 <Button darkOutlined data={sections.campus.button} onClick={()=> router.push(sections.campus.button.redirect)}/>
               </section>
-              <p className="col-span-5 col-start-2 col-end-11 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1  text-4.5 font-bold font-Poppins w-d:mt-12 w-t:mt-18 w-p:mt-16 w-p:ml-6 leading-[125%]">Síguenos en redes sociales</p>
-              <section className="grid w-d:grid-cols-4 w-t:grid-cols- w-p:grid-cols-4 col-start-2 col-end-5 w-t:col-start-2 w-t:col-end-6 w-p:col-start-1 w-p:col-end-4 w-d:mt-[38px] w-t:mt-[38px] w-p:my-[20px] w-p:ml-6 w-d:mb-6 w-t:mb-[6.5rem] w-p:mb-13">
+              <p className="col-span-5 col-start-2 col-end-11 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1  text-4.5 font-bold font-headings w-d:mt-12 w-t:mt-18 w-p:mt-16 w-p:ml-6 leading-tight">Síguenos en redes sociales</p>
+              <section className="grid w-d:grid-cols-4 w-t:grid-cols- w-p:grid-cols-4 col-start-2 col-end-5 w-t:col-start-2 w-t:col-end-6 w-p:col-start-1 w-p:col-end-4 w-d:mt-10 w-t:mt-10 w-p:my-5 w-p:ml-6 w-d:mb-7 w-t:mb-28 w-p:mb-13">
               {
                 sections.sociales.map((social: any, i:number) => <Link key={`span-icons-${i}`} href={social.link} passHref target={"_blank"}>
 
-                  <Icon name={social.icon} className="w-8 h-8 text-white" />
+                  <Icon name={social.icon} className="w-8 h-8 text-surface-0" />
 
                 </Link>)
               }
