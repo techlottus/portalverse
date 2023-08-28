@@ -17,7 +17,7 @@ const SIAAF: NextPageWithLayout = ({ sections, meta }: any) => {
     <HeaderFooterLayout breadcrumbs={true}>
       <ContentLayout>
         <div className="w-d:col-span-7 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 w-t:mb-6 w-p:mb-6">
-          <h1 className="text-13 w-t:text-8.25 w-p:text-6 font-Poppins font-bold leading-[125%] w-t:leading-[111%] mb-5">{ sections.head.title }</h1>
+          <h1 className="text-13 w-t:text-8.25 w-p:text-6 font-headings font-bold leading-tight w-t:semi-tight mb-5">{ sections.head.title }</h1>
           <RichtText data={{
             content: sections.head.description
           }} />
@@ -25,7 +25,7 @@ const SIAAF: NextPageWithLayout = ({ sections, meta }: any) => {
         <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
           {
            sections.experiencias.cards.map((item:any, i:number) => <section key={`section-blog-${i}`}>
-              <CardWebsitePortalverse classNames="h-[230px]" data={item} onClick={() => router.push(item?.redirect)} />
+              <CardWebsitePortalverse classNames="h-59" data={item} onClick={() => router.push(item?.redirect)} />
             </section>)
           }
         </section>

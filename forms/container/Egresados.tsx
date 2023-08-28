@@ -29,7 +29,7 @@ const BeWantedForm: FC<EgresadosFormComponentData> = ({ classNames, pathThankyou
     setStep(newStep);
   }
 
-  return <section className={cn("p-6 shadow-15 bg-white", classNames)}>
+  return <section className={cn("p-6 shadow-15 bg-surface-0", classNames)}>
     <StepOne classNames={cn({ "hidden": step !== 1 })} onNext={(info: any) => handleNextStep(info, 1)} />
     <StepTwo onNext={(info: any) => handleNextStep(info, 2)} path={pathThankyou} enrollment={infoForm.step1.matricula} classNames={cn({ "hidden": step !== 2 })} />
   </section>

@@ -135,20 +135,21 @@ const setConfig = ({ styles_safelist, environment_variables }) => {
   return { safelist, variables }
 }
 
-async function fetchConfig(){
+// async function fetchConfig(){
 
-  const rawConfig = await
-  fetch(`${env.NEXT_PUBLIC_MULTITENANT_URL}/config?populate=styles_safelist,environment_variables`, {
-    headers: {
-      "Authorization": `Bearer ${env.NEXT_PUBLIC_MULTITENANT_TOKEN}`
-    }
-  })
+//   const rawConfig = await
+//   fetch(`${env.NEXT_PUBLIC_MULTITENANT_URL}/config?populate=styles_safelist,environment_variables`, {
+//     headers: {
+//       "Authorization": `Bearer ${env.NEXT_PUBLIC_MULTITENANT_TOKEN}`
+//     }
+//   })
+//   console.log("rawConfig", rawConfig)
+//   const Config = await rawConfig.json() 
+//   console.log("Config", Config)
+//   const { data : { attributes } } = Config
 
-  const Config = await rawConfig.json() 
-  const { data : { attributes } } = Config
-
-  return attributes
-}
+//   return attributes
+// }
 
 async function populateTailwind  () {
 
@@ -165,6 +166,7 @@ async function populateTailwind  () {
     },
     maxWidth: {
       "d-base": "1200px",
+      "147": '36.75rem',
     },
     spacing: {
       "12.5": "3.125rem",
@@ -173,12 +175,17 @@ async function populateTailwind  () {
       "16.5": "4.125rem",
       18: "4.5rem",
       22: "5.5rem",
+      "55": '13.375rem',
       "58.5": "14.625rem",
+      "59": '14.375rem',
       72: "18rem",
       78: "19.5rem",
+      "88": '22.188',
       96: "24rem",
       100: "25rem",
+      "125": '31.25rem',
       "135.5": "33.375rem",
+      "140.5": '36.438',
       "170.75": "42.688rem",
       "341.5": "85.375rem",
       "683": "170.75rem",
@@ -205,9 +212,12 @@ async function populateTailwind  () {
       "8.6": "2.172rem",
       "9.375": "2.344rem",
       "9.435": "2.359rem",
+      "12": "3rem",
       "12.5": "3.125rem",
       "13": "3.75rem",
+      "16": "4rem",
       "16.25": "4.063rem",
+      "semi-tight": "1.125"
     },
     colors: {
       "SC-Actions-AC-200": "#F2F2F2",
@@ -256,6 +266,15 @@ async function populateTailwind  () {
       "pastelRedShadowRight": '5px 5px 0px 0px #ED6A5F',
       "pastelGrayShadowRight": '5px 5px 0px 0px #A2AFB5',
       "blueShadowRight": "5px 5px 0px 0px #00BEB4"
+    },
+    minHeight: {
+      "22" : '5.25rem',
+      "26": '6.563rem',
+      "54": '13.25rem',
+      "58": '14.75rem'
+    },
+    minWidth: {
+      "130": '7.5rem',
     },
     backgroundImage: tailwindLogos.css
   }

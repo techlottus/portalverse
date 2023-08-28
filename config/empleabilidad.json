@@ -27,7 +27,7 @@
             "bordered": false,
             "typeShadowColor": "blue-pastel-right",
             "boxShadow": false,
-            "iconClassNames": "text-white"
+            "iconClassNames": "text-surface-0"
           },
           {
             "maxNumber": 11250,
@@ -41,7 +41,7 @@
             "bordered": false,
             "typeShadowColor": "blue-pastel-right",
             "boxShadow": false,
-            "iconClassNames": "text-white"
+            "iconClassNames": "text-surface-0"
           },
           {
             "maxNumber": 1100,
@@ -55,7 +55,7 @@
             "bordered": false,
             "typeShadowColor": "blue-pastel-right",
             "boxShadow": false,
-            "iconClassNames": "text-white"
+            "iconClassNames": "text-surface-0"
           },
           {
             "maxNumber": 4837,
@@ -69,7 +69,7 @@
             "bordered": false,
             "typeShadowColor": "blue-pastel-right",
             "boxShadow": false,
-            "iconClassNames": "text-white"
+            "iconClassNames": "text-surface-0"
           }
         ]
       }
