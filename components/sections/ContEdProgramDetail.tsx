@@ -15,6 +15,7 @@ const mxnCurrency = new Intl.NumberFormat("es-MX", {
 const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramAttributes) => {
   const { 
     name,
+    programCategory,
     detail,
     image,
     price,
@@ -28,7 +29,14 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
 
   return (
     <ContentLayout classNames="gap-6">
-      <div className="col-span-6 w-t:col-span-4 w-p:col-span-4">
+      <div className="col-span-6 w-t:col-span-4 w-p:col-span-4 ">
+        {
+          programCategory?.data?.attributes?.name ?
+          <div className="mb-4">
+            <h5 className="font-Poppins text-6 font-semibold">{programCategory?.data?.attributes?.name}</h5>
+          </div>
+          :null
+        }
         <div className="flex flex-col gap-6">
           {
             name ?
