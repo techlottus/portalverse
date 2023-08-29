@@ -1,0 +1,126 @@
+// keep till every scss file is removed
+
+@layer components {
+  .ac-type-h1-bold-solid-poppins-desktop {
+    @apply font-headings font-bold text-13.5 leading-20 text-surface-950;
+  }
+  .ac-type-h1-negative-bold-solid-poppins-desktop {
+    @apply font-headings font-bold text-13.5 leading-20 text-surface-0;
+  }
+  .ac-type-h1-bold-solid-poppins-tablet {
+    @apply font-headings font-bold text-13 leading-13 text-surface-950;
+  }
+  .ac-type-h1-negative-bold-solid-poppins-tablet {
+    @apply font-headings font-bold text-13 leading-13 text-surface-0;
+  }
+  .ac-type-h1-negative-bold-solid-poppins-mobile {
+    @apply font-headings font-bold text-8.5 leading-10 text-surface-0;
+  }
+
+  // Headings 
+  // h2
+  .ac-type-h2-bold-solid-poppins-desktop {
+    @apply font-headings font-bold text-13 leading-16 text-surface-950;
+  }
+  .ac-type-h2-negative-bold-solid-poppins-desktop {
+    @apply font-headings font-bold text-13 leading-16 text-surface-0;
+  }
+  .ac-type-h2-bold-solid-poppins-tablet {
+    @apply font-headings font-bold text-8.5 leading-9 text-surface-950;
+  }
+  .ac-type-h2-negative-bold-solid-poppins-tablet {
+    @apply font-headings font-bold text-8.5 leading-9 text-surface-0;
+  }
+  .ac-type-h2-bold-solid-poppins-mobile {
+    @apply font-headings font-bold text-7.5 leading-9 text-surface-950;
+  }
+  .ac-type-h2-negative-bold-solid-poppins-mobile {
+    @apply font-headings font-bold text-7.5 leading-9 text-surface-0;
+  }
+  
+  // h3
+  .ac-type-h3-bold-solid-poppins-desktop {
+    @apply font-headings font-bold text-10 leading-12 text-surface-950;
+  }
+  .ac-type-h3-negative-bold-solid-poppins-desktop {
+    @apply font-headings font-bold text-10 leading-12 text-surface-0;
+  }
+  .ac-type-h3-bold-solid-poppins-tabmob {
+    @apply font-headings font-bold text-5 leading-8 text-surface-950;
+  }
+  .ac-type-h3-negative-bold-solid-poppins-tabmob {
+    @apply font-headings font-bold text-5 leading-8 text-surface-0;
+  }
+  
+  // h4
+  .ac-type-h4-bold-solid-poppins-desktop {
+    @apply font-headings font-bold text-6.5 leading-10 text-surface-950;
+  }
+  .ac-type-h4-negative-bold-solid-poppins-desktop {
+    @apply font-headings font-bold text-6.5 leading-10 text-surface-0;
+  }
+  .ac-type-h4-bold-solid-poppins-tablet {
+    @apply font-headings font-bold text-5 leading-8 text-surface-950;
+  }
+  .ac-type-h4-negative-bold-solid-poppins-tablet {
+    @apply font-headings font-bold text-5 leading-8 text-surface-0;
+  }
+  
+  // h5
+  .ac-type-h5-bold-solid-poppins-desktop {
+    @apply font-headings font-bold text-5.5 leading-7 text-surface-950;
+  }
+  .ac-type-h5-negative-bold-solid-poppins-desktop {
+    @apply font-headings font-bold text-5.5 leading-7 text-surface-0;
+  }
+  .ac-type-h5-bold-solid-poppins-tablet {
+    @apply font-headings font-bold text-base leading-5 text-surface-950;
+  }
+  .ac-type-h5-negative-bold-solid-poppins-tablet {
+    @apply font-headings font-bold text-base leading-5 text-surface-0;
+  }
+  
+  // h6
+  .ac-type-h6-bold-solid-poppins-desktop {
+    @apply font-headings font-bold text-4.5 leading-6 text-surface-950;
+  }
+  .ac-type-h6-negative-bold-solid-poppins-desktop {
+    @apply font-headings font-bold text-4.5 leading-6 text-surface-0;
+  }
+  .ac-type-h6-bold-solid-poppins-tablet {
+    @apply font-headings font-bold text-3.5 leading-4 text-surface-950;
+  }
+  .ac-type-h6-white-bold-solid-poppins-tablet {
+    @apply font-headings font-bold text-3.5 leading-4 text-surface-0;
+  }
+
+  // Bodies
+  // positive
+  .ac-type-body-positive-solid-nunitosans-desktop {
+    @apply font-texts font-normal text-base leading-5 text-surface-800;
+  }
+  .ac-type-body-negative-solid-nunitosans-desktop {
+    @apply font-texts font-normal text-base leading-5 text-surface-0;
+  }
+  .ac-type-body-positive-solid-nunitosans-tabmob {
+    @apply font-texts font-normal text-sm leading-4 text-surface-800;
+  }
+  .ac-type-body-negative-solid-nunitosans-tabmob {
+    @apply font-texts font-normal text-sm leading-4 text-surface-0;
+  }
+  
+  // negative
+  .ac-type-body-positive-solid-nunitosans-desktop {
+    @apply font-texts font-normal text-base leading-5 text-surface-800;
+  }
+  .ac-type-body-negative-solid-nunitosans-desktop {
+    @apply font-texts font-normal text-base leading-5 text-surface-0;
+  }
+  .ac-type-body-positive-solid-nunitosans-tabmob {
+    @apply font-texts font-normal text-sm leading-4 text-surface-800;
+  }
+  .ac-type-body-negative-solid-nunitosans-tabmob {
+    @apply font-texts font-normal text-sm leading-4 text-surface-0;
+  }
+
+}
