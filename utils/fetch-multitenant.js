@@ -159,7 +159,7 @@ async function fetchColors(){
   
     return {primary, secondary, surface, ...restcontextual, ...complementaryColors}
   } catch (error) {
-    // console.error(error)
+    console.error(error)
     console.info('using lottus default colors')
     return lottusColors
   }
@@ -210,7 +210,7 @@ async function fetchFonts(){
     
     return fonts
   } catch (error) {
-    // console.error(error);
+    console.error(error);
     console.info('using lottus default fonts')
     return lottusFonts
   }
@@ -250,7 +250,7 @@ async function fetchLogos(){
       ...extraLogos
     }
   } catch (error) {
-    // console.error(error);
+    console.error(error);
     console.info('using lottus logos');
     return lottusLogos;
   }
@@ -351,15 +351,6 @@ async function populateTailwind  () {
       "semi-tight": "1.125"
     },
     colors: {
-      "SC-Actions-AC-200": "#F2F2F2",
-      "SC/Blackandgrey/B-60": "#686868",
-      "SC/Backgrounds/BG-GRAY": "#F2F2F2",
-      "Brands/UANE/Primary/UANE-P-00": "#B0003C",
-      "UNI-066": "#555555",
-      "SC/Blackandgrey/B-80": "#282828",
-      "darkBlue": "#2B2C34;",
-      "SC/Actions/AC-300": "#E6E6E6",
-      "SC/Blackandgrey/B-100": "#000000",
       ...tailwindColors
     },
     fontFamily: {
