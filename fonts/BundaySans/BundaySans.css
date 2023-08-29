@@ -1,0 +1,120 @@
+
+@font-face {
+  font-family: "Bunday Sans";
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  src: url("./BundaySans-Hair.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bunday Sans";
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+  src: url("./BundaySans-HairIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bunday Sans";
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+  src: url("./BundaySans-Thin.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bunday Sans";
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+  src: url("./BundaySans-ThinIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bunday Sans";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("./BundaySans-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bunday Sans";
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+  src: url("./BundaySans-LightIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bunday Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("./BundaySans-SemiLight.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bunday Sans";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("./BundaySans-SemiLightIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bunday Sans";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("./BundaySans-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bunday Sans";
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+  src: url("./BundaySans-RegularIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bunday Sans";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("./BundaySans-SemiBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bunday Sans";
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+  src: url("./BundaySans-SemiBoldIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bunday Sans";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("./BundaySans-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bunday Sans";
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  src: url("./BundaySans-BoldIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bunday Sans";
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url("./BundaySans-ExtraBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bunday Sans";
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+  src: url("./BundaySans-ExtraBoldIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bunday Sans";
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("./BundaySans-Heavy.otf") format("opentype");
+}

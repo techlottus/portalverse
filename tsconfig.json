@@ -32,6 +32,6 @@
       "@/lib/*": ["./lib/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next-sitemap.config.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next-sitemap.config.js", "utils/fetch-multitenant.js", "multitenant-images.ts"],
   "exclude": ["node_modules"]
 }

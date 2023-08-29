@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document"
+import { favicon } from "multitenant-images"
 
 export default function Document() {
   return (
@@ -6,6 +7,7 @@ export default function Document() {
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+        <link rel="icon" href={favicon} crossOrigin="true" />
       </Head>
       <body>
         
