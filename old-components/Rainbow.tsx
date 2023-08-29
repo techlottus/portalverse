@@ -28,11 +28,11 @@ const Rainbow: FC<RainbowComponentConfig> = ({ sections, title, classNamesTitle 
 
                   return (
                       <div className="flex flex-col items-center justify-center w-d:flex-row space-y-6 w-d:space-y-0 w-d:space-x-6 px-12 w-d:px-0" key={`section-detail${i}`}>
-                      <div className="w-full w-d:w-1/2 flex flex-col space-y-6 w-d:pl-24">
-                        <h3 className="ac-type-h3-bold-solid-poppins-desktop w-t:ac-type-h2-negative-bold-solid-poppins-mobile w-p:ac-type-h3-negative-bold-solid-poppins-tabmob text-surface-0">{ title }</h3>
+                      <div className="w-full w-d:w-1/2 flex flex-col space-y-6 w-d:pl-[100px]">
+                        <h3 className="ac-type-h3-bold-solid-poppins-desktop w-t:ac-type-h2-negative-bold-solid-poppins-mobile w-p:ac-type-h3-negative-bold-solid-poppins-tabmob text-white">{ title }</h3>
                         <RichtText font="dark" classNames="ac-type-body-positive-solid-nunitosans-desktop w-t:ac-type-h6-bold-solid-poppins-tablet w-p:ac-type-body-positive-solid-nunitosans-tabmob" data={{ content: description }} />
                       </div>
-                      <div className="w-full w-d:w-1/2 max-w-147">
+                      <div className="w-full w-d:w-1/2 max-w-[590px]">
                         <Aspect ratio="2/1">
                           <Image src={image?.src} alt={image?.alt} classNames="w-full h-full" />
                         </Aspect>
@@ -49,7 +49,7 @@ const Rainbow: FC<RainbowComponentConfig> = ({ sections, title, classNamesTitle 
                   className="w-full h-full"
                   style={{ backgroundColor: section?.color || "white" }}
                 ></div>
-                <div className="w-d:w-1/3 h-full bg-surface-0"></div>
+                <div className="w-d:w-1/3 h-full bg-white"></div>
               </div>
             </section>
           );

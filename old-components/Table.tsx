@@ -16,15 +16,15 @@ const Table:FC<TableData> = memo(({ data, classNames } : TableData) => {
     <table className="w-full">
       <thead>
         <tr>
-          <th className='text-surface-0 text-base font-texts bg-primary-200 px-4 py-2.5 border border-solid border-surface-100 rounded-trounded-t-lg flex justify-between'>
+          <th className='text-white text-base font-Nunito bg-[#8B9BA3] px-4 py-[10px] border border-[#8B9BA3] rounded-t-[8px] flex justify-between'>
           <span className=''>{data.head}</span><span className='material-icons'>{data.icon}</span>
         </th>
         </tr>
       </thead>
-      <tbody className='bg-surface-0'>
+      <tbody className='bg-white'>
         {
           data.rows.map((row: any, i: number)=>{
-            return [<tr key={i} className='border-b border-solid border-surface-100'><td className='px-6 py-2 font-texts text-sm'>{data.rows[i]}</td></tr>]
+            return [<tr key={i} className='border-b border-[#8B9BA3]'><td className='px-6 py-2 font-Nunito text-sm'>{data.rows[i]}</td></tr>]
           })
         }
       </tbody>

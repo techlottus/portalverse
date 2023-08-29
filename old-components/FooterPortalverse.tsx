@@ -15,11 +15,11 @@ const Footer: FC<FooterPortalverseComponentData> = ({ privacyLink, certification
   }, []);
 
   return (
-    <section className="w-full border-t border-solid border-surface-800 mt-18 w-t:mt-12 w-p:mt-12">
+    <section className="w-full border-t-[1px] border-solid border-[#282828] mt-18 w-t:mt-12 w-p:mt-12">
       {/* Section logotype */}
-      <div className="p-6 w-p:hidden border-b border-solid border-surface-300">
+      <div className="p-6 w-p:hidden border-b-[1px] border-solid border-[#CDCDCD]">
         <div className="flex justify-between items-center mb-6 cursor-pointer" onClick={onClickLogo}>
-          <div className="w-36 h-10 bg-logo bg-cover bg-center"> </div>
+          <Image classNamesImg="w-[143px] h-10" classNames="w-[143px] h-10" src={logotype.src} alt={logotype.alt} />
           <div className="hidden">
             <p>Suscríbete a nuestro newsletter</p>
           </div>
@@ -29,7 +29,7 @@ const Footer: FC<FooterPortalverseComponentData> = ({ privacyLink, certification
             {
               social.map((item: any, i: number) => <Link key={`social-${i}`} href={item.link} passHref target={"_blank"}>
 
-                <Icon name={item.name} className="w-8 h-8 text-surface-500" />
+                <Icon name={item.name} className="w-8 h-8 text-SC/Blackandgrey/B-60" />
 
               </Link>)
             }
@@ -41,10 +41,10 @@ const Footer: FC<FooterPortalverseComponentData> = ({ privacyLink, certification
           {/* <LinkIcons data={directorio} onClick={() => router.push(directorio.link)} /> */}
         </div>
       </div>
-      <div className="p-6 w-d:hidden w-t:hidden flex flex-col border-b border-solid border-surface-300">
+      <div className="p-6 w-d:hidden w-t:hidden flex flex-col border-b-[1px] border-solid border-[#CDCDCD]">
         <div className="flex justify-between items-center mb-6">
           <div onClick={onClickLogo}>
-            <div className="w-23 h-6 bg-logo bg-cover bg-center"> </div>
+            <Image classNamesImg="w-[92px] h-6" classNames="w-[92px] h-6" src={logotype.src} alt={logotype.alt} />
           </div>
           {/* <LinkIcons data={directorio} onClick={() => router.push(directorio.link)} /> */}
         </div>
@@ -53,9 +53,9 @@ const Footer: FC<FooterPortalverseComponentData> = ({ privacyLink, certification
         </div>
       </div>
       {/* Section logotype */}
-      <div className="p-6 w-t:hidden w-p:hidden flex gap-24 border-b border-solid border-surface-300">
+      <div className="p-6 w-t:hidden w-p:hidden flex gap-24 border-b-[1px] border-solid border-[#CDCDCD]">
         {
-          sections.map((section: any[], i: number) => <div key={`sections-${i}`} className="flex flex-col gap-6 w-64">
+          sections.map((section: any[], i: number) => <div key={`sections-${i}`} className="flex flex-col gap-6 w-[252px]">
               {
                 section.map((itemSection: any[], a: number) => {
                   return itemSection.map((item: any, j: number) => {
@@ -90,7 +90,7 @@ const Footer: FC<FooterPortalverseComponentData> = ({ privacyLink, certification
         </div>
         {/* <LinkIcons data={directorio} onClick={() => router.push(directorio.link)} /> */}
       </div>
-      <div className="p-6 flex flex-col border-b border-solid border-surface-300">
+      <div className="p-6 flex flex-col border-b-[1px] border-solid border-[#CDCDCD]">
         <p className="mb-5">{ certifications.title }</p>
         <div className="flex gap-12 w-p:flex-wrap">
           {
@@ -99,11 +99,11 @@ const Footer: FC<FooterPortalverseComponentData> = ({ privacyLink, certification
         </div>
       </div>
       <div className="p-6 w-t:p-2 w-p:p-4 flex justify-between">
-        <p className="w-t:hidden w-p:hidden font-texts font-normal italic text-sm leading-4 text-surface-500">Derechos reservados <span className="text-surface-950">Lottus Education { year }</span></p>
-        <p className="w-d:hidden font-texts font-normal italic text-sm leading-4 text-surface-500">&copy; <span className="text-surface-950">Lottus Education { year }</span></p>
+        <p className="w-t:hidden w-p:hidden font-Nunito font-normal italic text-sm leading-[17px] text-[#818181]">Derechos reservados <span className="text-[#000]">Lottus Education { year }</span></p>
+        <p className="w-d:hidden font-Nunito font-normal italic text-sm leading-[17px] text-[#818181]">&copy; <span className="text-[#000]">Lottus Education { year }</span></p>
         <Link href={privacyLink.link} passHref target={"_self"}>
 
-          <p className="font-texts font-normal italic text-sm leading-4 text-surface-800 ">{privacyLink.label}</p>
+          <p className="font-Nunito font-normal italic text-sm leading-[17px] text-[#282828]">{privacyLink.label}</p>
 
         </Link>
       </div>

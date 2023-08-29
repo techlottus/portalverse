@@ -42,13 +42,13 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
     <HeaderFooterLayout breadcrumbs={true}>
       <ContentLayout>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-7.5">{sections.head.title}</p>
+          <p className="font-Poppins font-bold text-13 w-t:text-8.5 w-p:text-7.5">{sections.head.title}</p>
           {
             sections.head.textIcons.map((item: any, i: number) => <div key={`icon-${i}`} className="flex items-center my-6">
               <div className="w-14 h-14 shrink-0">
               <Icon name={item.name} className="w-full h-full" />
               </div>
-              <p className="font-headings font-semibold text-4.5 w-p:text-base leading-6 ml-6">{item.text}</p>
+              <p className="font-Poppins font-semibold text-4.5 w-p:text-base leading-6 ml-6">{item.text}</p>
             </div>
             )
           }
@@ -67,8 +67,8 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
             classNames="aspect-2/1 w-t:aspect-2/1 w-p:aspect-2/1"
           />
         </div>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mt-18 w-p:my-6 w-t:my-6">
-          <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{sections.requirements.title}</p>
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mt-[72px] w-p:my-6 w-t:my-6">
+          <p className="font-Poppins text-10 font-bold leading-[125%] w-t:text-6 w-p:text-6">{sections.requirements.title}</p>
         </div>
         <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center w-d:mb-2">
           <TabsFeatured tabs={sections.requirements.tabs.items} onActive={(active: number) => setTabActive(active)} />
@@ -141,9 +141,9 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
       </ContentFullLayout>
 
 
-      <ContentLayout classNames="mt-12 w-d:mt-18">
+      <ContentLayout classNames="mt-12 w-d:mt-[72px]">
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6 mb-6">{sections.egresados.title}</p>
+          <p className="font-Poppins text-10 font-bold leading-[125%] w-t:text-6 w-p:text-6 mb-6">{sections.egresados.title}</p>
           <RichtText data={{
             content: sections.egresados.description
           }} />
@@ -167,7 +167,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
           <Video dimensions={["330px", "400px", "200px"]} data={sections.egresados.video} />
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{sections.FAQ.title}</p>
+          <p className="font-Poppins text-10 font-bold leading-[125%] w-t:text-6 w-p:text-6">{sections.FAQ.title}</p>
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 flex-grow overflow-y-auto mb-12 w-t:mb-6 w-p:mb-6">
           {

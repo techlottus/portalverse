@@ -40,18 +40,18 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
     <Modal isShow={isShow} onClose={handleVisibilityModal} data={{icon: 'close', title: "", tagOnClose: 'testOnClose', wrapper: true,}}>
       <section slot="areaModalContent" className="flex w-t:flex-col w-p:flex-col w-full h-auto">
       <ContentInsideLayout classNames="gap-6">
-          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 bg-surface-400 p-6">
-            <p className="text-surface-0 font-headings font-bold text-6 break-normal mb-16">{infoModal?.title?.title}</p>
+          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 bg-[#2B2C34] p-6">
+            <p className="text-white font-Poppins font-bold text-6 break-normal mb-16">{infoModal?.title?.title}</p>
             <div className="flex flex-col space-y-12">
               {
                 infoModal?.downloadables?.length > 0
                   ? <div>
-                      <span className="font-headings font-normal text-surface-0 mb-6">Descargas</span>
+                      <span className="font-Poppins font-normal text-white mb-6">Descargas</span>
                       {
                         (infoModal?.downloadables as Array<{ label: string; link: string; }>)?.map((redirect, index) => {
                           const children = (
                             <>
-                              <span className="font-texts font-normal underline underline-offset-4 mr-auto">{redirect?.label}</span>
+                              <span className="font-Nunito-Sans font-normal underline underline-offset-4 mr-auto">{redirect?.label}</span>
                               <span className="material-icons ml-3 mt-1">download</span>
                             </>
                           );
@@ -64,7 +64,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
                                 rel="noreferrer noopener"
                                 target="_blank"
                                 className={
-                                  cn("flex items-center text-surface-0 mt-6")
+                                  cn("flex items-center text-white mt-6")
                                 }
                               >
                                 {children}
@@ -74,7 +74,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
                             return (
                               <div
                                 key={index}
-                                className="flex items-center mt-6 text-surface-500 cursor-not-allowed"
+                                className="flex items-center mt-6 text-SC/Blackandgrey/B-60 cursor-not-allowed"
                               >
                                 {children}
                               </div>
@@ -88,16 +88,16 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
               {
                 infoModal?.redirect?.link  
                 ? <div>
-                    <span className="font-headings font-normal text-surface-0 mb-6">Visita el sitio de la universidad</span>
+                    <span className="font-Poppins font-normal text-white mb-6">Visita el sitio de la universidad</span>
                       <a
                         href={infoModal?.redirect?.link}
                         rel="noreferrer noopener"
                         target="_blank"
                         className={
-                          cn("flex items-center text-surface-0 mt-6")
+                          cn("flex items-center text-white mt-6")
                         }
                       >
-                        <span className="font-texts font-normal underline underline-offset-4 mr-auto">{infoModal?.redirect?.link}</span>
+                        <span className="font-Nunito-Sans font-normal underline underline-offset-4 mr-auto">{infoModal?.redirect?.link}</span>
                         <span className="material-icons ml-3 mt-1">chevron_right</span>
                       </a>
                   </div>
@@ -105,7 +105,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
               }
             </div>
           </div>
-          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 bg-surface-0 overflow-y-auto">
+          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 bg-white overflow-y-auto">
             <RichtText data={{
               content: infoModal?.description?.content
             }} />
@@ -126,8 +126,8 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
       </ContentLayout>
       <ContentLayout classNames="mt-6 w-d:mt-18">
         <div className="col-span-8 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings font-bold text-10 w-t:text.8.5 w-p:text-6 mb-6 leading-tight w-t:semi-tight">{sections.head.title}</p>
-          <p className="font-headings font-bold text-5.5 w-t:text-4.5 w-p:text-base mb-6 leading-tight w-t:leading-tight">{sections.head.subtitle}</p>
+          <p className="font-Poppins font-bold text-10 w-t:text.8.5 w-p:text-6 mb-6 leading-[125%] w-t:leading-[111%]">{sections.head.title}</p>
+          <p className="font-Poppins font-bold text-5.5 w-t:text-4.5 w-p:text-base mb-6 leading-[130%] w-t:leading-[125%]">{sections.head.subtitle}</p>
           <RichtText classNames="" data={{
             content: sections.head.description
           }} />
@@ -145,7 +145,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
       </ContentFullLayout>
       <ContentLayout classNames="mt-12 w-d:mt-18">
         <section className="col-span-12">
-          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6 w-d:mb-">{sections.videoSection.title}</p>
+          <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%] mb-6 w-d:mb-">{sections.videoSection.title}</p>
           <div className="grid w-d:grid-cols-2 w-p:grid-cols-1 gap-6">
             {
             sections.videoSection.videos.map((item:any, i:number) => <section key={`section-alliances-${i}`}>
@@ -157,7 +157,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
       </ContentLayout>
       <ContentLayout classNames="mt-6 w-d:mt-18">
         <div className="col-span-12">
-          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight">{sections.alliances.title}</p>
+          <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%]">{sections.alliances.title}</p>
           <section className="grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
           {
             sections.alliances.alliances.map((item:any, i:number) => <section key={`section-alliances-${i}`}>

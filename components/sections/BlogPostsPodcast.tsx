@@ -32,7 +32,7 @@ const BlogPostsPodcast = (props: BlogPostsPodcastSection) => {
             {
               listConfigData?.title
                 ? <div className="mb-6">
-                    <p className="font-headings font-bold text-10 w-t:text-7.5 w-p:text-7.5 leading-tight">
+                    <p className="font-Poppins font-bold text-10 w-t:text-7.5 w-p:text-7.5 leading-[125%]">
                       {listConfigData?.title}
                     </p>
                   </div> 

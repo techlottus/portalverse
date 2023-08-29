@@ -15,7 +15,7 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
     <HeaderFooterLayout>
       <ContentLayout>
         <div className="w-d:col-span-7 w-t:col-span-7 w-p:col-span-4">
-          <h1 className="text-13 w-t:text-8.25 w-p:text-6 font-headings font-bold leading-tight w-t:semi-tight mb-6">{ sections.head.title }</h1>
+          <h1 className="text-13 w-t:text-8.25 w-p:text-6 font-Poppins font-bold leading-[125%] w-t:leading-[111%] mb-6">{ sections.head.title }</h1>
           <RichtText data={{
             content: sections.head.description
           }} />
@@ -27,7 +27,7 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
           <Image alt={ sections.modelo.mobile.alt } src={ sections.modelo.mobile.src } classNames="aspect-3/4"/>
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <h3 className="font-headings font-bold text-10 leading-12 w-t:text-6 w-t:leading-8 w-p:text-6 w-p:leading-8">{ sections.descripcion.title }</h3>
+          <h3 className="font-Poppins font-bold text-10 leading-[50px] w-t:text-6 w-t:leading-[30px] w-p:text-6 w-p:leading-[30px]">{ sections.descripcion.title }</h3>
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           <RichtText data={{

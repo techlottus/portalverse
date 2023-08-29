@@ -97,7 +97,7 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
               ? <div className="flex flex-col space-y-3">
                   {
                     sectionTitle
-                      ? <h1 className="font-headings font-bold w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5 w-d:text-13 w-t:text-6 w-p:text-6">{ sectionTitle }</h1>
+                      ? <h1 className="font-Poppins font-bold w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5 w-d:text-13 w-t:text-6 w-p:text-6">{ sectionTitle }</h1>
                       : null 
                   }
                   {
@@ -131,7 +131,7 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
                     return (
                       <div
                         key={`program-${i}`}
-                        className={cn("flex hover:shadow-30 h-full border border-solid border-surface-200", {
+                        className={cn("flex hover:shadow-30 h-full border", {
                           "flex-col w-d:col-span-3 w-t:col-span-4 w-p:col-span-4":
                             mosaicActive,
                           "w-d:col-span-12 w-t:col-span-8 w-p:col-span-4":
@@ -150,13 +150,13 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
                           </Aspect>
                         </div>
                         <div className="flex flex-col h-full">
-                           <p className="font-texts font-normal text-4.5 mt-3 mx-3">
+                           <p className="font-Nunito-Sans font-normal text-4.5 mt-3 mx-3">
                             {programAttributes?.name}
                           </p>
-                          <div className="w-full h-full flex justify-end pb-2 font-texts font-bold items-end">
+                          <div className="w-full h-full flex justify-end pb-2 font-Nunito font-bold items-end">
                             <Link
                               href={`/oferta-educativa/${levelRoute}/${programAttributes?.slug}`}
-                              className="flex items-center justify-end font-texts font-bold"
+                              className="flex items-center justify-end font-Nunito font-bold"
                             >
                               <span className="mr-1">Ver más</span>
                               <span className="material-icons icon">chevron_right</span>

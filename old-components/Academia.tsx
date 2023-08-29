@@ -21,22 +21,22 @@ const Academia: FC<AcademiaComponentData> = ({ data, result, classNames, select:
 
   return <section className={classNames}>
     <div>
-      <h1 className="text-5.5 w-t:text-base w-p:text-base font-headings font-bold leading-tight">{data.title}</h1>
-      <p className="text-base w-t:invisible w-p:invisible font-texts font-bold leading-tight">{data.subtitle}</p>
-      <p className="text-base w-t:text-3.5 w-p:text-3.5 font-texts leading-tight w-t:leading-5 mt-4">{data.select.title}</p>
+      <h1 className="text-5.5 w-t:text-base w-p:text-base font-Nunito font-bold leading-[130%]">{data.title}</h1>
+      <p className="text-base w-t:invisible w-p:invisible font-Nunito font-bold leading-[130%]">{data.subtitle}</p>
+      <p className="text-base w-t:text-3.5 w-p:text-3.5 font-Nunito leading-[125%] w-t:leading-[19px] mt-[17px]">{data.select.title}</p>
       <Select onClick={(option: CustomEvent) => console.log("option", option)} data={newConfig} options={newOptions} />
     </div>
     <div className="opacity-25">
       <div className="grid gap-6">
         <div>
-          <p className="text-base w-t:text-3.5 w-p:text-3.5 font-headings leading-tight">{result.title}</p>
-          <p className="text-base w-t:text-3.5 w-p:text-3.5 font-texts font-bold leading-tight w-t:leading-tight w-p:leading-tight">{result.plan}</p>
+          <p className="text-base w-t:text-3.5 w-p:text-3.5 font-Nunito leading-[125%]">{result.title}</p>
+          <p className="text-base w-t:text-3.5 w-p:text-3.5 font-Nunito font-bold leading-[130%] w-t:leading-[125%] w-p:leading-[125%]">{result.plan}</p>
         </div>
         <div>
-          <span className="text-base w-t:text-3.5 w-p:text-3.5 leading[125%] font-texts">{result.initText}</span>
-          <span className="text-base w-t:text-3.5 w-p:text-3.5 leading[125%] font-texts font-bold">{result.initValue}</span>
-          <span className="text-base w-t:text-3.5 w-p:text-3.5 leading[125%] font-texts">{result.duracionText}</span>
-          <span className="text-base w-t:text-3.5 w-p:text-3.5 leading[125%] font-texts font-bold">{result.duracionValue}</span>
+          <span className="text-base w-t:text-3.5 w-p:text-3.5 leading[125%] font-Nunito">{result.initText}</span>
+          <span className="text-base w-t:text-3.5 w-p:text-3.5 leading[125%] font-Nunito font-bold">{result.initValue}</span>
+          <span className="text-base w-t:text-3.5 w-p:text-3.5 leading[125%] font-Nunito">{result.duracionText}</span>
+          <span className="text-base w-t:text-3.5 w-p:text-3.5 leading[125%] font-Nunito font-bold">{result.duracionValue}</span>
         </div>
       </div>
       <div>
