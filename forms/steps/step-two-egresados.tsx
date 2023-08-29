@@ -91,10 +91,10 @@ const StepTwo: FC<EgresadosStepComponentData> = ({ data, classNames, enrollment,
   }
 
   return <section className={cn(classNames)}>
-    <h1 className="font-Poppins font-semibold text-[22px] leading-7">{ config.title }</h1>
-    <p className="font-Nunito-Sans font-normal text-base leading-4 mt-6">{ config.subtitleStep2 }</p>
+    <h1 className="font-headings font-semibold text-5.5 leading-7">{ config.title }</h1>
+    <p className="font-texts font-normal text-base leading-4 mt-6">{ config.subtitleStep2 }</p>
     <div className="mt-6">
-      <p className="text-[#686868] text-[13px]">{ `${config.messageEnrollment}${enrollment}`}</p>
+      <p className="  text-surface-500 text-3.5">{ `${config.messageEnrollment}${enrollment}`}</p>
     </div>
     <div className="mt-8">
       <Input data={ inputMailConfig } errorMessage={configControls.errorMessagesFormEgresados.email} hasError={errorControls.email} eventFocus={() => handleTouchedControl("email")} eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "email")} />
@@ -112,7 +112,7 @@ const StepTwo: FC<EgresadosStepComponentData> = ({ data, classNames, enrollment,
           No <input onClick={handleActiveCompany} type="radio" name="work" value="no" />
         </span>
       </div>
-      <p className={cn("text-[#e57565] text-xs px-3 mt-4", { "hidden": errorControls.activeCompany  })}>{ configControls.errorMessagesFormEgresados.activeCompany }</p>
+      <p className={cn("text-error-500 text-xs px-3 mt-4", { "hidden": errorControls.activeCompany  })}>{ configControls.errorMessagesFormEgresados.activeCompany }</p>
     </div>
     <div className={cn({ "hidden": !activeCompany })}>
       <Input data={ inputCompanyConfig } errorMessage={configControls.errorMessagesFormEgresados.company} hasError={errorControls.company && activeCompany} eventFocus={() => handleTouchedControl("company")} eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "company")} />
