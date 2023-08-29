@@ -97,24 +97,24 @@ const StepThree: FC<any> = ({ classNames, step, data, contacts, schedulers, onNe
     <div className="mt-6">
       <ProgressBar data={{ progress }} />
     </div>
-    <div className="flex mt-6 p-3 border-solid border rounded-lg border-surface-300">
+    <div className="flex mt-6 p-3 border-solid border rounded-lg border-[#9A9A9A]">
       <div className="flex flex-col grow">
-        <h2 className="font-headings font-semibold text-4.5 leading-6 mb-2">{ config.description }</h2>
+        <h2 className="font-Poppins font-semibold text-[18px] leading-[22px] mb-2">{ config.description }</h2>
         <div className="flex">
-          <h3 className="font-texts text-sm leading-4 font-bold mr-1">{ config.labelModality }</h3>
-          <p className="font-texts text-sm leading-4 font-normal">{ data.modality }</p>
+          <h3 className="font-Nunito-Sans text-sm leading-[17px] font-bold mr-1">{ config.labelModality }</h3>
+          <p className="font-Nunito-Sans text-sm leading-[17px] font-normal">{ data.modality }</p>
         </div>
         <div className="flex">
-          <h3 className="font-texts text-sm leading-4 font-bold mr-1">{ config.labelNivel }</h3>
-          <p className="font-texts text-sm leading-4 font-normal">{ data.level }</p>
+          <h3 className="font-Nunito-Sans text-sm leading-[17px] font-bold mr-1">{ config.labelNivel }</h3>
+          <p className="font-Nunito-Sans text-sm leading-[17px] font-normal">{ data.level }</p>
         </div>
         <div className="flex">
-          <h3 className="font-texts text-sm leading-4 font-bold mr-1">{ config.labelProgram }</h3>
-          <p className="font-texts text-sm leading-4 font-normal">{ data.program }</p>
+          <h3 className="font-Nunito-Sans text-sm leading-[17px] font-bold mr-1">{ config.labelProgram }</h3>
+          <p className="font-Nunito-Sans text-sm leading-[17px] font-normal">{ data.program }</p>
         </div>
         <div className="flex">
-          <h3 className="font-texts text-sm leading-4 font-bold mr-1">{ config.labelCampus }</h3>
-          <p className="font-texts text-sm leading-4">{ data.campus }</p>
+          <h3 className="font-Nunito-Sans text-sm leading-[17px] font-bold mr-1">{ config.labelCampus }</h3>
+          <p className="font-Nunito-Sans text-sm leading-[17px]">{ data.campus }</p>
         </div>
       </div>
       <div className="cursor-pointer" onClick={handleChangeInfo}>
@@ -123,18 +123,18 @@ const StepThree: FC<any> = ({ classNames, step, data, contacts, schedulers, onNe
     </div>
     <form>
       <div className="mt-6 flex flex-col">
-        <p className="font-texts font-normal text-sm leading-5">{ config.contact }</p>
+        <p className="font-Nunito font-normal text-sm leading-5">{ config.contact }</p>
         <div className="w-full flex justify-start gap-6 flex-wrap mt-1">
           {
             dataContacts.map((level: any, i: number) => <OptionPill onClick={(value: string) => handleSelect(i, level.disabled, value)}  key={`pill-${i}`} data={{...level}} active={i === activePill} />)
           }
-          <p className={cn("text-error-500 text-xs px-3 mt-4", { "hidden": !errorControls.contacto })}>{ configControls.errorMessagesStepThreeOpenForm.contacto }</p>
+          <p className={cn("text-[#e57565] text-xs px-3 mt-4", { "hidden": !errorControls.contacto })}>{ configControls.errorMessagesStepThreeOpenForm.contacto }</p>
         </div>
       </div>
       <div className="mt-6 flex flex-col">
-        <p className="font-texts font-normal text-sm leading-5">{ config.schedule }</p>
+        <p className="font-Nunito font-normal text-sm leading-5">{ config.schedule }</p>
         <Select onClick={(option: CustomEvent) => handleSelectHorario(option)} options={[...dataSchedulers]} data={{ ...SelectInit, textDefault: !!infoControls.horario ? " " : "Horarios disponibles", icon: "schedule" }}  />
-        <p className={cn("text-error-500 text-xs px-3 mt-4", { "hidden": !errorControls.horario })}>{ configControls.errorMessagesStepThreeOpenForm.horario }</p>
+        <p className={cn("text-[#e57565] text-xs px-3 mt-4", { "hidden": !errorControls.horario })}>{ configControls.errorMessagesStepThreeOpenForm.horario }</p>
       </div>
     </form> */}
     <div className="mt-6">

@@ -11,10 +11,10 @@ const Alert: FC<AlertSection> = (props: AlertSection) => {
   return (
     <section>
       <Container>
-        <div className="border-2 border-solid border-surface-300 rounded-lg flex space-x-4 items-start p-4">
+        <div className="border-2 rounded-lg flex space-x-4 items-start p-4">
           {
             iconName
-              ? <span className="material-icons text-surface-500 text-4.5!">{iconName}</span>
+              ? <span className="material-icons text-SC/Blackandgrey/B-60 text-4.5!">{iconName}</span>
               : null
           }
           <div className="flex flex-col space-y-4">

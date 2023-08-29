@@ -134,7 +134,7 @@ const StepTwo: FC<any> = ({
         <p className={cn("text-[#e57565] text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{ configControls.errorMessagesStepTwoOpenForm.modality }</p>
       </div>
       <div className={cn("flex flex-col", { "hidden": controlsConfig?.level?.hidden })}>
-        <p className="font-texts font-normal text-3.5 leading-5 text-surface-800 mt-6 mb-1">{ config.level }</p>
+        <p className="font-Nunito font-normal text-[14px] leading-5 text-[#282828] mt-6 mb-1">{ config.level }</p>
         <div className="w-full flex flex-col mt-1">
           <div className="flex justify-start gap-6 flex-wrap">
             {
@@ -157,7 +157,7 @@ const StepTwo: FC<any> = ({
                   ))
             }
           </div>
-          <p className={cn("text-error-500 text-xs px-3 mt-4", { "hidden": !errorControls.level })}>{ configControls.errorMessagesStepTwoOpenForm.level }</p>
+          <p className={cn("text-[#e57565] text-xs px-3 mt-4", { "hidden": !errorControls.level })}>{ configControls.errorMessagesStepTwoOpenForm.level }</p>
         </div>
       </div>
       <div className={cn("flex flex-col", { "hidden": controlsConfig?.program?.hidden })}>

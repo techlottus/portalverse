@@ -53,7 +53,7 @@ const Planteles = ({ sections, meta }: any) => {
         <Modal isShow={isShow} onClose={handleVisibilityModal} data={{ icon: 'close', title: infoMap, tagOnClose: 'testOnClose', wrapper: true, }}>
           {
             !!coordsMap
-              ? <Map coords={coordsMap} zoom={15} scroll classNamesMap="w-d:h-[583px] w-t:h-[581px] w-p:h-[355px] w-full">
+              ? <Map coords={coordsMap} zoom={15} scroll classNamesMap="w-d:h-[583px] w-t:h-[581px] w-p:h-[355px] w-[100%]">
                 {
                   ({ TileLayer, Marker, Popup }: any) => (
                     <>
@@ -75,18 +75,18 @@ const Planteles = ({ sections, meta }: any) => {
           <Image alt="campus" src="https://viveloensaltillo.com/wp-content/uploads/2021/11/1254x851usne-768x521.png"></Image>
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings font-bold text-10 leading-12.5">{`¿En cuál de nuestros ${sections?.campus?.length} campus te gustaría estudiar?`}</p>
+          <p className="font-Poppins font-bold text-10 leading-12.5">{`¿En cuál de nuestros ${sections?.campus?.length} campus te gustaría estudiar?`}</p>
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           {
             sections.campus.map(({ title, coords, description, images: items }: any, i: number) => <ContentInsideLayout classNames="mb-8" key={`campus-data-${i}`}>
               <Image classNames="col-span-4 w-t:col-span-4 w-p:col-span-4 w-p:aspect-2/1" alt={items[0].alt} src={items[0].src} />
-              <div className="col-span-4 border w-t:col-span-4 w-p:col-span-4 border-solid border-gray-300 rounded pl-3">
-                <p className="font-texts font-normal text-base leading-5 my-2">{description.state}</p>
-                <p className="font-headings font-semibold text-4.5 leading-5.625 my-2">{description.name}</p>
+              <div className="col-span-4 border w-t:col-span-4 w-p:col-span-4 border-gray-300 rounded pl-3">
+                <p className="font-Nunito-Sans font-normal text-base leading-5 my-2">{description.state}</p>
+                <p className="font-Poppins font-semibold text-4.5 leading-5.625 my-2">{description.name}</p>
                 <ContentInsideLayout>
                   <IconComponent name="marker" className="col-span-1 w-t:col-span-1 w-p:col-span-1" />
-                  <p className="col-span-11 w-t:col-span-7 w-p:col-span-3 font-texts font-normal">{description.address}</p>
+                  <p className="col-span-11 w-t:col-span-7 w-p:col-span-3 font-Nunito-Sans font-normal">{description.address}</p>
                 </ContentInsideLayout>
                 <ContentInsideLayout classNames="items-center">
                   <IconComponent name="phone" className={cn("col-span-1 w-t:col-span-1 w-p:col-span-1 w-4 mt-2", { "hidden": !description?.phone })} />
@@ -97,11 +97,11 @@ const Planteles = ({ sections, meta }: any) => {
                   <LinkContactTarget type="email" info={description.email} classNames="col-span-11 w-t:col-span-7 w-p:col-span-3 mt-2" />
                 </ContentInsideLayout>
                 <div className="flex justify-end pr-3" onClick={() => handleOpenModal(coords, title)}>
-                  <p className="font-texts font-normal">Ver mapa</p>
+                  <p className="font-Nunito-Sans font-normal">Ver mapa</p>
                   <IconComponent name="eye" className="ml-1 w-4" />
                 </div>
               </div>
-              <Map coords={coords} classNames="w-t:hidden w-p:hidden col-span-4 w-t:col-span-3 w-p:col-span-4" classNamesMap="h-55">
+              <Map coords={coords} classNames="w-t:hidden w-p:hidden col-span-4 w-t:col-span-3 w-p:col-span-4" classNamesMap="h-[214px]">
                 {
                   ({ TileLayer, Marker, Popup }: any) => (
                     <>

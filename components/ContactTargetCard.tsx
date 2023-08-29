@@ -25,14 +25,14 @@ const ContactTargetCard: FC<ContactTargetCardData> = (props: ContactTargetCardDa
   } = props;
 
   return (
-    <div className={cn("bg-surface-100 flex", classNames)}>
+    <div className={cn("bg-SC/Backgrounds/BG-GRAY flex", classNames)}>
       {
         !!image
           ?
           <Image
             classNames={cn(
-              "min-w-24 min-h-22",
-              "w-d:min-w-130 w-d:min-h-26",
+              "min-w-[96px] min-h-[84px]",
+              "w-d:min-w-[120px] w-d:min-h-[105px]",
               "h-full flex shrink-0 oject-cover"
               )
             }
@@ -40,11 +40,11 @@ const ContactTargetCard: FC<ContactTargetCardData> = (props: ContactTargetCardDa
             alt="contact-image"
             src={image}
           />
-          : <div className="bg-surface-500 min-h-26 rounded w-22 h-22" />
+          : <div className="bg-[gray] rounded w-22 h-22" />
       }
       <div className="w-full flex flex-col justify-center p-3 overflow-hidden">
-        <p className="font-headings font-bold text-sm leading-5">{title}</p>
-        <a className="font-texts font-normal text-sm leading-5 text-surface-500 w-p:w-56 w-60 break-words" target="_blank" rel="noreferrer noopener" href={link}>{link}</a>
+        <p className="font-Nunito font-bold text-sm leading-5">{title}</p>
+        <a className="font-Nunito font-normal text-sm leading-5 text-SC/Blackandgrey/B-60 w-p:w-56 w-60 break-words" target="_blank" rel="noreferrer noopener" href={link}>{link}</a>
         <LinkContactTarget classNames="break-all" type="email" info={email} />
         <LinkContactTarget classNames="break-all" type="phone" info={phone} />
       </div>

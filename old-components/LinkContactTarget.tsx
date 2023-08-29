@@ -10,7 +10,7 @@ const LinkContactTarget: FC<LinkContactTargetComponentData> = ({ type, info, cla
     setManage(type === "email" ? "mailto:" : "tel:+")
   }, [type])
 
-  return <a className={cn("font-texts font-normal text-base leading-5 text-surface-500", classNames)} target="_blank" rel="noreferrer noopener" href={`${manage}${info}`}>{info}</a>
+  return <a className={cn("font-Nunito font-normal text-base leading-5 text-SC/Blackandgrey/B-60", classNames)} target="_blank" rel="noreferrer noopener" href={`${manage}${info}`}>{info}</a>
 }
 
 export default LinkContactTarget

@@ -16,8 +16,8 @@ const NumbersPortalverse: FC<NumbersPortalverseData> = memo(({data, classNames }
 
   return <>
     <div style={customStyles} className={cn("wrapperNumbers rounded-lg", classNames, {
-      "shadow-30 bg-surface-0": data.boxShadow,
-      "border border-solid border-surface-300": data.bordered,
+      "shadow-30 bg-white": data.boxShadow,
+      "border border-[#CDCDCD]": data.bordered,
       "rounded-lg": !!data?.isShadowColor,
       "shadow-pastelBlueShadowLeft": data.isShadowColor === true && data.typeShadowColor === 'blue-pastel-left',
       "shadow-pastelYellowShadowLeft": data.isShadowColor === true && data.typeShadowColor === 'yellow-pastel-left',
@@ -37,7 +37,7 @@ const NumbersPortalverse: FC<NumbersPortalverseData> = memo(({data, classNames }
           data?.icon ?
             <p
               className={cn(
-                "icono material-icons pr-2 !text-10 text-surface-500",
+                "icono material-icons pr-2 !text-10 text-SC/Blackandgrey/B-60",
                 `!${iconsClassNames}`,
                 "w-p:hidden w-p:invisible w-t:invisible w-p:w-0 w-t:w-0"
                 )}
@@ -48,7 +48,7 @@ const NumbersPortalverse: FC<NumbersPortalverseData> = memo(({data, classNames }
         }
         {
           data?.prefix ?
-            <p className="font-headings text-10 w-t:text-6 w-p:text-6 font-bold leading-tight pr-2">{data?.prefix}</p>
+            <p className="font-Poppins text-10 w-t:text-6 w-p:text-6 font-bold leading-[125%] pr-2">{data?.prefix}</p>
           : null
         }
         <CountUp separator="," start={0} end={data?.maxNumber} onEnd={() => setFinishedCount(true)} >
@@ -60,23 +60,23 @@ const NumbersPortalverse: FC<NumbersPortalverseData> = memo(({data, classNames }
               }}
               delayedCall
             >
-              <span className="font-headings text-10 w-t:text-6 w-p:text-6 font-semibold leading-tight pr-2" ref={countUpRef} />
+              <span className="font-Poppins text-10 w-t:text-6 w-p:text-6 font-semibold leading-[125%] pr-2" ref={countUpRef} />
             </VisibilitySensor>
           )}
         </CountUp>
-        <p className="font-headings text-10 w-t:text-6 w-p:text-6 font-bold leading-tight pr-2">{data.suffix}</p>
+        <p className="font-Poppins text-10 w-t:text-6 w-p:text-6 font-bold leading-[125%] pr-2">{data.suffix}</p>
       </div>
       <div className= {cn("pb-4 wrapperNumbers", classNames, {
         "pt-0" : data.isShadowColor === false && data.container === false && data.bordered === false && data.boxShadow === false
     })}>
         {
           data?.title ?
-            <p className="font-texts font-semibold text-lg leading-5 mb-2">{data?.title}</p>
+            <p className="font-Nunito-Sans font-semibold text-lg leading-5 mb-2">{data?.title}</p>
           : null
         }
         {
           data?.body ?
-            <p className="sub font-headings font-normal text-base w-t:text-sm w-p:text-sm">{data?.body}</p>
+            <p className="sub font-Poppins font-normal text-base w-t:text-sm w-p:text-sm">{data?.body}</p>
           : null
         }
       </div>

@@ -1,0 +1,21 @@
+@supports (font-variation-settings: "wght" 400) {
+  * {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-display: swap;
+  }
+}
+@supports (font-variation-settings: "wght" 600) {
+  * {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-display: swap;
+  }
+}
+@supports (font-variation-settings: "wght" 700) {
+  * {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-display: swap;
+  }
+}

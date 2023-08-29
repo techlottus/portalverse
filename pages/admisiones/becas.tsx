@@ -37,14 +37,14 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
     <Modal isShow={isShow} onClose={handleVisibilityModal} data={{ icon: 'close', title: "", tagOnClose: 'testOnClose', wrapper: true, }}>
       <section slot="areaModalContent" className="flex w-t:flex-col w-p:flex-col w-full h-auto">
         <ContentInsideLayout classNames="gap-6">
-          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 bg-surface-400 p-6">
-            <p className="text-surface-0 font-headings font-bold text-8 leading-10 break-normal mb-16">{infoModal?.title?.title}</p>
-            <span className="font-headings font-normal text-surface-0 mb-6">{infoModal?.redirectLabel}</span>
+          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 bg-[#2B2C34] p-6">
+            <p className="text-white font-Poppins font-bold text-8 leading-10 break-normal mb-16">{infoModal?.title?.title}</p>
+            <span className="font-Poppins font-normal text-white mb-6">{infoModal?.redirectLabel}</span>
             {
               (infoModal?.redirects as Array<{ label: string; link: string; external?: boolean; }>)?.map((redirect, index) => {
                 const children = (
                   <>
-                    <span className="font-texts font-normal underline underline-offset-4 mr-auto">{redirect?.label}</span>
+                    <span className="font-Nunito-Sans font-normal underline underline-offset-4 mr-auto">{redirect?.label}</span>
                     <span className="material-icons ml-3 mt-1">
                       {
                         redirect?.external ?
@@ -64,7 +64,7 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
                       rel="noreferrer noopener"
                       target="_blank"
                       className={
-                        cn("flex items-center text-surface-0 mt-6")
+                        cn("flex items-center text-white mt-6")
                       }
                     >
                       {children}
@@ -74,7 +74,7 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
                   return (
                     <div
                       key={index}
-                      className="flex items-center mt-6 text-surface-500 cursor-not-allowed"
+                      className="flex items-center mt-6 text-SC/Blackandgrey/B-60 cursor-not-allowed"
                     >
                       {children}
                     </div>
@@ -83,7 +83,7 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
               })
             }
           </div>
-          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 bg-surface-0 overflow-y-auto">
+          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 bg-white overflow-y-auto">
             <RichtText data={{
               content: infoModal?.description?.content
             }} />
@@ -94,8 +94,8 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
     <HeaderFooterLayout>
       <ContentLayout>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12">
-          <h1 className="text-13 font-bold font-headings leading-13 w-t:semi-tight w-p:leading-tight w-t:text-8.5 w-p:text-7.5 w-d:mb-6 w-t:mb-4 w-p:mb-3">{sections.head.title}</h1>
-          <p className="text-5.5  font-bold font-headings leading-tight w-t:leading-tight w-p:leading-tight w-t:text-4.5 w-p:text-4.5 w-d:mb-6 w-t:mb-4 w-p:mb-3">{sections.head.subtitle}</p>
+          <h1 className="text-13 font-bold font-Poppins leading-13 w-t:leading-[111%] w-p:leading-[125%] w-t:text-8.5 w-p:text-7.5 w-d:mb-6 w-t:mb-4 w-p:mb-3">{sections.head.title}</h1>
+          <p className="text-5.5  font-bold font-Poppins leading-[130%] w-t:leading-[125%] w-p:leading-[125%] w-t:text-4.5 w-p:text-4.5 w-d:mb-6 w-t:mb-4 w-p:mb-3">{sections.head.subtitle}</p>
           <RichtText data={{
             content: sections.head.description
           }} />
@@ -113,7 +113,7 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
       </ContentLayout>
       <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6 w-t:mb-12 w-p:mb-6">
-          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight">{sections?.becas?.title}</p>
+          <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%]">{sections?.becas?.title}</p>
         </div>
         <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mb-12 w-t:mb-12 w-p:mb-6">
           {
@@ -130,15 +130,15 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
       <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-12 w-t:mb-6 w-p:mb-6">
           <Feedback data={sections.feedback.feedback} >
-            <h1 className="font-texts font-normal text-base leading-6 text-surface-800 mb-3">{sections.feedback.title}</h1>
-            <p className="font-texts font-normal text-sm text-surface-800">{sections.feedback.text}</p>
+            <h1 className="font-Nunito-Sans font-normal text-base leading-6 text-SC/Blackandgrey/B-80 mb-3">{sections.feedback.title}</h1>
+            <p className="font-Nunito-Sans font-normal text-sm text-SC/Blackandgrey/B-80">{sections.feedback.text}</p>
           </Feedback>
         </div>
         <div className="col-span-7 w-t:col-span-8 w-p:col-span-4">
           <OpenForm pathThankyou={`/thank-you`} image={{ src: "https://assets.staging.bedu.org/UTEG/admisiones_pedir_informacion_avatar_6738c707b5.jpg", alt: "image-person" }} />
         </div>
         <div className="col-span-5 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings font-bold leading-tight text-5.5 mb-8">{sections.llamanos.title}</p>
+          <p className="font-Poppins font-bold leading-[130%] text-5.5 mb-[30px]">{sections.llamanos.title}</p>
           <CardWebsitePortalverse data={sections.llamanos.card} />
         </div>
       </ContentLayout>

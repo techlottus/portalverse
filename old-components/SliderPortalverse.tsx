@@ -27,7 +27,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
 ) => {
   const router = useRouter()
 
-  const stylesBaseControls = "w-p:hidden select-none absolute top-1/2 p-1 rounded-lg text-xs";
+  const stylesBaseControls = "w-p:hidden select-none absolute top-[45%] p-1 rounded-lg text-[12px]";
 
   const [active, setActive] = useState<number>(0);
   const [countItems, setCountItems] = useState<number>(0);
@@ -175,7 +175,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
           onClick={handlerClickControl}
           className={cn(
               "flex justify-center items-center z-20 left-8 w-14 h-14",
-              { "bg-surface-0/50 cursor-pointer": countItems > 1 }
+              { "bg-white/50 cursor-pointer": countItems > 1 }
               , stylesBaseControls
             )}
           >
@@ -194,7 +194,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
                 <Image classNames="w-t:hidden w-full h-full absolute z-1" classNamesImg="w-full h-full object-cover" src={item.urlImage.desktop} alt="image" />
                 <Image classNames="w-d:hidden w-full h-full absolute z-1" classNamesImg="w-full h-full object-cover" src={item.urlImage.tablet} alt="image" />
                 <div className={cn("flex absolute z-10 pt-12 pb-16 px-32 w-full h-full", {
-                  "text-surface-0": item?.contentVariant === "light",
+                  "text-white": item?.contentVariant === "light",
                   ["justify-start items-start"]: item?.textPosition === "left_top",
                   ["justify-center items-start"]: item?.textPosition === "center_top",
                   ["justify-end items-start"]: item?.textPosition === "right_top",
@@ -205,10 +205,10 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
                   ["justify-center items-end"]: item?.textPosition === "center_bottom",
                   ["justify-end items-end"]: item?.textPosition === "right_bottom"
                 })}>
-                  <div className="flex flex-col z-10 w-d:w-125 w-t:w-96 space-y-4">
+                  <div className="flex flex-col z-10 w-d:w-[500px] w-t:w-[392px] space-y-4">
                     <h2
                       className={cn(
-                        "font-headings font-bold w-d:text-10 w-d:leading-12 w-t:text-7.5 w-t:leading-9",
+                        "font-Poppins font-bold w-d:text-10 w-d:leading-[50px] w-t:text-[30px] w-t:leading-9",
                         textPositionClasses
                       )}
                     >
@@ -216,7 +216,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
                     </h2>
                     <p
                       className={cn(
-                        "font-headings font-semibold w-d:text-4.5 w-d:leading-6 w-t:text-base w-t:leading-5",
+                        "font-Poppins font-semibold w-d:text-4.5 w-d:leading-6 w-t:text-base w-t:leading-5",
                         textPositionClasses
                       )}
                     >
@@ -243,8 +243,8 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
                 {
                   item?.overlayWhite || item?.overlayDak ?
                     <div className={cn("absolute w-full h-full", classNames, {
-                      "bg-surface-0 opacity-50": item.overlayWhite,
-                      "bg-surface-950 opacity-50": item.overlayDak
+                      "bg-[#ffffff80]": item.overlayWhite,
+                      "bg-[#00000080]": item.overlayDak
                     })}></div>
                   : null
                 }
@@ -253,7 +253,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
           }
           <div className={cn("w-full flex justify-center absolute bottom-10 space-x-2 z-20")}>
             {
-              slides?.map((_: any, i: number) => <div key={`bullet-item-${i}`} onClick={() => activeBulletSlide(i)} className={cn("h-4 bg-surface-500 rounded-full cursor-pointer", { "w-4": i !== active, "w-8": i === active })} />)
+              slides?.map((_: any, i: number) => <div key={`bullet-item-${i}`} onClick={() => activeBulletSlide(i)} className={cn("h-4 bg-[#686868] rounded-full cursor-pointer", { "w-4": i !== active, "w-8": i === active })} />)
             }
           </div>
         </section>
@@ -262,7 +262,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
           onClick={handlerClickControl}
           className={cn(
               "flex justify-center items-center z-10 right-8 w-14 h-14",
-              { "bg-surface-0/50 cursor-pointer": countItems > 1 }, stylesBaseControls
+              { "bg-white/50 cursor-pointer": countItems > 1 }, stylesBaseControls
             )}
           >
             <span className="material-icons ml-0.5 pointer-events-none">arrow_forward_ios</span>
@@ -281,11 +281,11 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
           </Aspect>
           <div className="p-4 flex flex-col space-y-6">
             <h2
-              className="font-headings font-bold w-t:font-normal text-6 w-t:text-6.5 leading-8 w-t:leading-10"
+              className="font-Poppins font-bold w-t:font-normal text-6 w-t:text-[32px] leading-8 w-t:leading-10"
             >
               {item.title}
             </h2>
-            <p className="font-texts font-normal text-base leading-5">{item.text}</p>
+            <p className="font-Nunito-Sans font-normal text-base leading-5">{item.text}</p>
             {
               !!item?.action?.title
                 ? <Button data={{ ...item.action, isExpand: true }} dark onClick={() => router.push(`${item.action.redirect}`)} />
@@ -297,7 +297,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
     </section>
     <div className={cn("w-full flex justify-center space-x-2 mt-4 pb-5 w-t:pb-4 w-d:hidden w-t:hidden")}>
       {
-        slides?.map((_: any, i: number) => <div key={`bullet-item-${i}`} onClick={() => activeBulletSlide(i)} className={cn("h-4 bg-surface-50 rounded-full cursor-pointer", { "w-4": i !== active, "w-8": i === active })} />)
+        slides?.map((_: any, i: number) => <div key={`bullet-item-${i}`} onClick={() => activeBulletSlide(i)} className={cn("h-4 bg-[#DDDDDD] rounded-full cursor-pointer", { "w-4": i !== active, "w-8": i === active })} />)
       }
     </div>
     {/* mobile */}

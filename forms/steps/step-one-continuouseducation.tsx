@@ -123,18 +123,18 @@ const StepOne: FC<any> = ({ classNames, data, image, onNext, programs }: any) =>
   return <section className={cn(classNames)}>
   <div className="flex gap-6">
     <div className="flex flex-col gap-6">
-      <h1 className="font-texts font-bold text-5 leading-6">{ config.title }</h1>
-      <p className="font-texts font-normal text-3.5 leading-4">{ config.subtitle }</p>
+      <h1 className="font-Nunito-Sans font-bold text-5 leading-6">{ config.title }</h1>
+      <p className="font-Nunito font-normal text-[14px] leading-4">{ config.subtitle }</p>
     </div>
     <div className={"aspect-1/1 w-t:hidden w-p:hidden"} >
-      <Image classNamesImg="rounded-full" classNames="w-28 h-28" src={image.src} alt={image.alt} />
+      <Image classNamesImg="rounded-full" classNames="w-[112px] h-[112px]" src={image.src} alt={image.alt} />
     </div>
   </div>
   <div className="flex align-middle items-center">
-    <p className="mt-8 mb-6 text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">
+    <p className="mt-8 mb-6 text-[14px] leading-5 text-[#282828] font-Nunito-Sans font-normal mr-1">
       { config.conditions }{" "}
       <Link href={config?.privacyLink?.link || ""} passHref target={"_blank"}>
-        <span className="mt-8 mb-6 text-3.5 font-texts font-normal text-sm text-surface-800 ">{config?.privacyLink?.label}</span>
+        <span className="mt-8 mb-6 text-[14px] font-Nunito font-normal text-sm text-[#282828]">{config?.privacyLink?.label}</span>
       </Link>
     </p>
   </div>
@@ -153,9 +153,9 @@ const StepOne: FC<any> = ({ classNames, data, image, onNext, programs }: any) =>
     <Input errorMessage={configControls.errorMessagesStepOneOpenFormContinuous.email} hasError={errorControls.email} eventFocus={() => handleTouchedControl("email")} data={ configControls.inputEmailOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "email")} />
   </div>
   <div className="mt-6">
-    <p className="font-texts font-normal text-3.5 leading-5">{ config.programs }</p>
+    <p className="font-Nunito font-normal text-[14px] leading-5">{ config.programs }</p>
     <Select onClick={(option: CustomEvent) => handleOptionSelected(option)} options={dataPrograms} data={{ ...SelectInit, textDefault: !!infoControls.program ? "  " : "Elige un programa", disabled: !dataPrograms.length }}  />
-    <p className={cn("text-error-500 text-xs px-3 mt-4", { "hidden": !errorControls.program })}>{ configControls.errorMessagesStepOneOpenFormContinuous.program }</p>
+    <p className={cn("text-[#e57565] text-xs px-3 mt-4", { "hidden": !errorControls.program })}>{ configControls.errorMessagesStepOneOpenFormContinuous.program }</p>
   </div>
   <div className="mt-6">
     <Button dark onClick={handleNext} data={ configControls.buttonConfigOpenFormStepOne } />

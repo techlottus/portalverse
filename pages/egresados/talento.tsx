@@ -45,7 +45,7 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
     <HeaderFooterLayout breadcrumbs={true}>
       <ContentLayout>
         <div className="col-span-8 w-p:col-span-4 w-d:mb-12 w-t:mb-6 w-p:mb-6">
-          <h1 className="text-13 w-t:text-8.25 w-p:text-6 font-headings font-bold leading-tight w-t:semi-tight mb-5">{ sections.head.title }</h1>
+          <h1 className="text-13 w-t:text-8.25 w-p:text-6 font-Poppins font-bold leading-[125%] w-t:leading-[111%] mb-5">{ sections.head.title }</h1>
           <RichtText data={{
             content: sections.head.description
           }} />
@@ -56,7 +56,7 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
         <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
           {
            sections.experiencias.cards.map((item:any, i:number) => <section key={`section-blog-${i}`}>
-              <CardWebsitePortalverse classNames="h-59" data={item} onClick={() => handleClickTalent(item.video)} />
+              <CardWebsitePortalverse classNames="h-[230px]" data={item} onClick={() => handleClickTalent(item.video)} />
             </section>)
           }
         </section>
@@ -72,7 +72,7 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
             contentVariant={sections.aplica.banner.font}
             actionLink={
               <div slot="areaAction" className="flex align-middle items-center">
-                <Icon name={sections.aplica.banner.icon} className="w-6 h-6 mr-2 text-surface-0"/><Link className="font-texts font-normal text-base" href={sections.aplica.banner.redirecActionLink} passHref target={"_blank"}>{sections.aplica.banner.actionLink}</Link>
+                <Icon name={sections.aplica.banner.icon} className="w-6 h-6 mr-2 text-white"/><Link className="font-Nunito font-normal text-base" href={sections.aplica.banner.redirecActionLink} passHref target={"_blank"}>{sections.aplica.banner.actionLink}</Link>
               </div>
             }
           />
