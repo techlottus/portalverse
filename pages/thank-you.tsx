@@ -36,7 +36,7 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
     setFlow('gral')
   }, [router, flow])
   return <>
-    <script dangerouslySetInnerHTML={{ __html : `fbq('track', 'CompleteRegistration');`}}></script>
+    {/* <script dangerouslySetInnerHTML={{ __html : `fbq('track', 'CompleteRegistration');`}}></script> */}
     <Head>
       <title>{ meta.title }</title>
     </Head>
