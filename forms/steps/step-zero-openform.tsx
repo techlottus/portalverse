@@ -35,8 +35,8 @@ const StepZero: FC<any> = ({ classNames, step, onNext }: any) => {
   }
 
   return <section className={cn(classNames)}>
-    <h1 className="font-Poppins font-semibold text-[22px] leading-7">{ config.title }</h1>
-    <p className="font-Nunito-Sans font-normal text-base leading-4 my-6">{ config.subtitle }</p>
+    <h1 className="font-headings font-semibold text-5.5 leading-7">{ config.title }</h1>
+    <p className="font-texts font-normal text-base leading-4 my-6">{ config.subtitle }</p>
     <div className="mb-6">
         <ProgressBar data={{ progress }} />
       </div>
