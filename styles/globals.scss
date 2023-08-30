@@ -1,10 +1,11 @@
+@import '../fonts/local-fonts.css';
+@import './fonts.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import '../fonts/local-fonts.css';
+
 @import './utils.scss';
-@import './fonts.css';
 
 // TODO: Delete "old-components" import when components migration is completed
 @import '../old-components/index.scss';
