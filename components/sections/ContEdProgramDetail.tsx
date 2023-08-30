@@ -33,7 +33,7 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
         {
           programCategory?.data?.attributes?.name ?
           <div className="mb-4">
-            <h5 className="font-Poppins text-6 font-semibold">{programCategory?.data?.attributes?.name}</h5>
+            <h5 className="font-headings text-6 font-semibold">{programCategory?.data?.attributes?.name}</h5>
           </div>
           :null
         }
