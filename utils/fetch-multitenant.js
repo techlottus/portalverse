@@ -164,7 +164,21 @@ async function fetchColors(){
     return lottusColors
   }
 }
+const setFontVariation = (url, name) => {
+  first = url.split('@')
+  second = first[1] ? first[1].split('&') : second
+  const weights = second ? second[0].split(';') : [];
 
+  const variants = weights.map(weight => 
+`@supports (font-variation-settings: "wght" ${weight}) {
+  * {
+    font-family: '${name}';
+    font-weight: ${weight};
+    font-display: swap;
+  }
+}`)
+  return variants
+}
 const setFonts = (fonts) => {
   return Object.keys(fonts) .reduce((acc, token) => {
     const font = fonts[token]
@@ -181,7 +195,9 @@ const setFonts = (fonts) => {
         ...acc.fonts,
         [token]: font_names.map((font)=> font.name)
       }
-      acc.links = `${acc.links}\n@import url('${google_font_url}');`
+      const variants = setFontVariation(google_font_url, font_names[0].name).join('\n')
+      // console.log(`variant ${font_names[0].name} : `, variants);
+      acc.links = `${acc.links}\n@import url('${google_font_url}');\n\n${variants}`
     }
     
     return acc
