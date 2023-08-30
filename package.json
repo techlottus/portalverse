@@ -26,6 +26,7 @@
     "@editorjs/table": "^2.2.0",
     "@editorjs/warning": "^1.3.0",
     "@lottus23/lottus-elements-uane": "3.8.9",
+    "@next/font": "^13.4.19",
     "@svgr/webpack": "^6.4.0",
     "@types/editorjs__header": "^2.6.0",
     "axios": "^1.2.2",
