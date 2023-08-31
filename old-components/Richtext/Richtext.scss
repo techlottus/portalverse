@@ -28,7 +28,7 @@ lottus-rich-text {
           }
           @apply first:bg-[#F9F9F9] first:border-b first:border-[#D9D9D9] #{!important}
         }
-        @apply block w-full overflow-x-scroll #{!important}
+      @apply block overflow-x-auto mb-5 #{!important}
     }
   }
 }
