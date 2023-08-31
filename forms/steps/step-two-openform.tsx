@@ -108,7 +108,7 @@ const StepTwo: FC<any> = ({
 
   return <section className={cn(classNames)}>
       <div className={cn("flex flex-col", { "hidden": controlsConfig?.modality?.hidden })}>
-        <p className="font-Nunito font-normal text-[14px] leading-5 text-[#282828] mt-6 mb-2">{ config.modality }</p>
+        <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 mb-2">{ config.modality }</p>
           <div className="flex justify-start gap-6 flex-wrap">
             {
               dataModalities?.map((modalityData, i) => {
@@ -131,7 +131,7 @@ const StepTwo: FC<any> = ({
               })
             }
           </div>
-        <p className={cn("text-[#e57565] text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{ configControls.errorMessagesStepTwoOpenForm.modality }</p>
+        <p className={cn("text-error-400  text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{ configControls.errorMessagesStepTwoOpenForm.modality }</p>
       </div>
       <div className={cn("flex flex-col", { "hidden": controlsConfig?.level?.hidden })}>
         <p className="font-texts font-normal text-3.5 leading-5 text-surface-800 mt-6 mb-1">{ config.level }</p>
@@ -161,14 +161,14 @@ const StepTwo: FC<any> = ({
         </div>
       </div>
       <div className={cn("flex flex-col", { "hidden": controlsConfig?.program?.hidden })}>
-        <p className="font-Nunito font-normal text-[14px] leading-5 text-[#282828] mt-6">{ config.program }</p>
+        <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6">{ config.program }</p>
         <Select onClick={(option: CustomEvent) => handleChangeProgram(option)} options={[...dataPrograms]} data={{ ...SelectInit, textDefault: !!academicData.program ? " " : "Elige un programa", disabled: !dataPrograms.length, icon: "school" }}  />
-        <p className={cn("text-[#e57565] text-xs px-3 mt-4", { "hidden": !errorControls.program })}>{ configControls.errorMessagesStepTwoOpenForm.program }</p>
+        <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.program })}>{ configControls.errorMessagesStepTwoOpenForm.program }</p>
       </div>
       <div className={cn("flex flex-col", { "hidden": controlsConfig?.campus?.hidden })}>
-        <p className="font-Nunito font-normal text-[14px] leading-5 text-[#282828] mt-6">{ config.campus }</p>
+        <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6">{ config.campus }</p>
         <Select onClick={(option: CustomEvent) => handleChangeCampus(option)} options={[...dataCampus]} data={{ ...SelectInit, textDefault: !!academicData.campus ? " " : "Elige un campus", disabled: !dataCampus.length, icon: "apartment" }}  />
-        <p className={cn("text-[#e57565] text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>{ configControls.errorMessagesStepTwoOpenForm.campus }</p>
+        <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>{ configControls.errorMessagesStepTwoOpenForm.campus }</p>
       </div>
   </section>
 }

@@ -20,11 +20,11 @@ const CardProgram: FC<CardProgramData> = memo(({ title, subtitle, link, image, c
       </div>
       <div className="flex flex-col h-full">
       {subtitle ? 
-        <p className="font-Nunito-Sans font-normal text-gray-500 text-base mt-2 mb-1 mx-3">{subtitle}</p>
+        <p className="font-texts font-normal text-gray-500 text-base mt-2 mb-1 mx-3">{subtitle}</p>
       : null
       }
-      <p className={cn("font-Nunito-Sans font-normal text-4.5 mb-2 mx-3", {"mt-3": !subtitle})}>{title}</p>
-      <div className="w-full h-full flex justify-end pb-2 font-Nunito font-bold items-end">
+      <p className={cn("font-texts font-normal text-4.5 mb-2 mx-3", {"mt-3": !subtitle})}>{title}</p>
+      <div className="w-full h-full flex justify-end pb-2 font-texts font-bold items-end">
         <LinkIcons data={link} onClick={onClick}/>
         <span className="material-icons icon">chevron_right</span>
       </div>

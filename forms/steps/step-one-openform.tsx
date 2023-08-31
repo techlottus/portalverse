@@ -161,9 +161,9 @@ const StepOne: FC<any> = ({
         <Input errorMessage={configControls.errorMessagesStepOneOpenForm.email} hasError={errorControls.email} eventFocus={() => handleTouchedControl("email")} data={ configControls.inputEmailOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "email")} />
       </div>
       {/* <div className="mt-6">
-        <p className="font-Nunito-Sans font-normal text-[14px] leading-5">{ config.modality }</p>
+        <p className="font-texts font-normal text-sm leading-5">{ config.modality }</p>
         <Select onClick={(option: CustomEvent) => handleOptionSelected(option)} options={[...dataModalities]} data={{ ...SelectInit, textDefault: !!infoControls.modality ? " " : "Elige una modalidad", icon: "school" }}  />
-        <p className={cn("text-[#e57565] text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{ configControls.errorMessagesStepOneOpenForm.modality }</p>
+        <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{ configControls.errorMessagesStepOneOpenForm.modality }</p>
       </div> */}
     </form>
     {/* <div className="mt-6">
