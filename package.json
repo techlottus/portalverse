@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "node ./utils/fetchStaticContent.js",
     "dev": "next dev",
+    "prebuild": "node ./utils/fetchStaticContent.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -28,6 +30,7 @@
     "@types/editorjs__header": "^2.6.0",
     "axios": "^1.2.2",
     "classnames": "^2.3.2",
+    "dotenv": "^16.3.1",
     "editorjs-parser": "^1.5.3",
     "kbar": "^0.1.0-beta.39",
     "leaflet": "^1.9.2",
@@ -38,7 +41,8 @@
     "react-leaflet": "^4.1.0",
     "react-player": "^2.11.0",
     "react-visibility-sensor": "^5.1.1",
-    "sass": "^1.55.0"
+    "sass": "^1.55.0",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^13.1.2",
@@ -60,6 +64,6 @@
     "path": false
   },
   "engines": {
-    "node": ">=14.0.0 <= 18.16.1"
+    "node": ">=14.0.0 <= 18.17.1"
   }
 }
