@@ -15,6 +15,7 @@ div {
             // }
           }
           label {
+            @apply font-texts;
             font-weight: bold;
           }
         }
