@@ -146,7 +146,7 @@ const StepOne: FC<any> = ({
       <ProgressBar data={{ progress }} />
     </div>
     <form>
-      <div className="mt-6 flex w-p:flex-col gap-6">
+      <div className="mt-6 flex w-p:flex-col gap-6 font-normal">
         <div className="grow">
           <Input errorMessage={configControls.errorMessagesStepOneOpenForm.name} hasError={errorControls.name} eventFocus={() => handleTouchedControl("name")} data={ configControls.inputNameOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "name")} />
         </div>
