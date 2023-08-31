@@ -196,12 +196,12 @@ const setFonts = (fonts) => {
         [token]: font_names.map((font)=> font.name)
       }
       const variants = setFontVariation(google_font_url, font_names[0].name).join('\n')
-      // console.log(`variant ${font_names[0].name} : `, variants);
-      acc.links = `${acc.links}\n@import url('${google_font_url}');\n\n${variants}`
+      acc.variants = `${acc.variants}\n\n${variants}`
+      acc.links = [...acc.links, google_font_url]
     }
     
     return acc
-  }, { links: '', fonts: {}, tokens: [''] }) 
+  }, { links: [''], variants: '', fonts: {}, tokens: [''] }) 
  
 }
 
@@ -446,7 +446,7 @@ module.exports = {
       console.error(err);
     }
   });
-  fs.writeFile('./styles/fonts.css', `${tailwindFonts.links}
+  fs.writeFile('./styles/fonts.css', `${tailwindFonts.variants}
     \n@import url('https://fonts.googleapis.com/css2?&family=Poppins:wght@400;600;700&display=swap');
     @import url('https://fonts.googleapis.com/icon?family=Nunito+Sans:wght@400&display=swap');
     @import url('https://fonts.googleapis.com/icon?family=Nunito:wght@400&display=swap');
@@ -456,6 +456,14 @@ module.exports = {
     }
   });
   fs.writeFile('./multitenant-images.ts', tailwindLogos.img, 'utf-8', (err) => {
+    if (err) {
+      console.error(err);
+    }
+  });
+  const [fontsfirst, ...fontsrest] = tailwindFonts.links
+  const fontslinks = fontsrest
+
+  fs.writeFile('./fontlinks.ts', `const links = ${JSON.stringify(fontslinks)} \n export default links;`, 'utf-8', (err) => {
     if (err) {
       console.error(err);
     }
