@@ -9,7 +9,7 @@ import Image from "@/old-components/Image";
 import RichtText from "@/old-components/Richtext/Richtext";
 import TabsFeatured from "@/old-components/TabsFeatured";
 import DescriptionSection from "@/old-components/DescriptionSection";
-import Select from "@/old-components/Select";
+import Select from "@/old-components/Select/Select";
 import Video from "@/old-components/Video";
 import { ButtonInit, SelectInit } from "@/old-components/fixture";
 import Banner from "@/components/sections/Banner";

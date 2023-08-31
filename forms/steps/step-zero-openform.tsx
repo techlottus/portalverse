@@ -4,7 +4,7 @@ import Button from "@/old-components/Button/Button"
 import ProgressBar from "@/old-components/ProgressBar"
 import OpenFormInit, { QuestionStepZero } from "@/forms/fixtures/openform"
 import configControls from "@/forms/fixtures/controls"
-import Select from "@/old-components/Select"
+import Select from "@/old-components/Select/Select"
 import { SelectInit } from "@/old-components/fixture"
 
 const StepZero: FC<any> = ({ classNames, step, onNext }: any) => {

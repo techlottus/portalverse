@@ -6,7 +6,7 @@ import Button from "@/old-components/Button/Button";
 import Image from "@/old-components/Image";
 import RichtText from "@/old-components/Richtext/Richtext";
 import TabsFeatured from "@/old-components/TabsFeatured";
-import Select from "@/old-components/Select";
+import Select from "@/old-components/Select/Select";
 import { ButtonInit, SelectInit } from "@/old-components/fixture";
 import OutstandingContainer from "@/old-components/OutstandingContainerPortalverse";
 import Banner from "@/components/sections/Banner";

@@ -33,7 +33,7 @@ const Select: FC<SelectComponentData> = ({ data, options, onClick, flagHeight }:
     }
   }, [onClick]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  return <lottus-select className="font-texts font-bold" ref={selectRef}></lottus-select>
+  return <lottus-select class="font-texts font-semibold" ref={selectRef}></lottus-select>
 }
 
 export default Select

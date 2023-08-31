@@ -3,7 +3,7 @@ import ContentInsideLayout from "@/layouts/ContentInside.layout"
 import Table from "@/old-components/Table"
 import Button from "@/old-components/Button/Button"
 import AcademiaComponentData from "@/types/Academia.types"
-import Select from "@/old-components/Select"
+import Select from "@/old-components/Select/Select"
 import { SelectInit } from "@/old-components/fixture"
 
 const Academia: FC<AcademiaComponentData> = ({ data, result, classNames, select: { config, options } }: AcademiaComponentData) => {

@@ -4,7 +4,7 @@ import OpenFormInit from "@/forms/fixtures/openform"
 import ProgressBar from "@/old-components/ProgressBar"
 import Button from "@/old-components/Button/Button"
 import configControls from "@/forms/fixtures/controls"
-import Select from "@/old-components/Select"
+import Select from "@/old-components/Select/Select"
 import { SelectInit } from "@/old-components/fixture"
 import OptionPill from "@/old-components/OptionPill"
 

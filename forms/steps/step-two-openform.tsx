@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from "react"
 import cn from "classnames"
 import OpenFormInit, { Modalities } from "@/forms/fixtures/openform"
-import Select from "@/old-components/Select"
+import Select from "@/old-components/Select/Select"
 import { SelectInit } from "@/old-components/fixture"
 import Button from "@/old-components/Button/Button"
 import configControls from "@/forms/fixtures/controls"
