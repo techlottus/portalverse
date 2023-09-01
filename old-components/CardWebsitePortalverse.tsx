@@ -17,8 +17,8 @@ const CardWebsitePortalverse: FC<CardWebsitePortalverseData> = ({ data, classNam
             </Aspect>
           </div>
           <div className={cn("px-3 flex flex-col h-full", classNames, { "border-l border-r border-b rounded-b-lg border-surface-300 border-solid": data.border, "bg-surface-0": data.background })}>
-            <h3 className="pt-3 mb-2 font-texts font-normal text-surface-500 text-xs">{data.subtitle?.toLocaleUpperCase()}</h3>
-            <h1 className="mb-2 font-headings font-bold text-base">{data.title}</h1>
+            <p className="pt-3 mb-2 font-texts font-normal text-surface-500 text-xs">{data.subtitle?.toLocaleUpperCase()}</p>
+            <p className="mb-2 font-texts font-bold text-base">{data.title}</p>
             <RichtText data={{
               content: data.text
             }} classNames="mb-2" />
