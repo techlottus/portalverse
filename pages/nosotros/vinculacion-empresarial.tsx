@@ -131,7 +131,7 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 flex flex-col my-6">
           <Feedback data={sections.head.feedback}>
             <div slot="areaFeedbackContent">
-              <p className="font-normal font-headings text-base mb-6">{sections.head.feedback.title}</p>
+              <p className="font-normal font-texts text-base mb-6">{sections.head.feedback.title}</p>
               <RichtText data={{
                 content: sections.head.feedback.text
               }} classNames="mb-4" />

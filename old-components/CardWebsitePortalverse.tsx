@@ -36,7 +36,7 @@ const CardWebsitePortalverse: FC<CardWebsitePortalverseData> = ({ data, classNam
             <Image classNames="w-full h-full aspect-3/4" src={data.image} alt="image" />
             <div className={cn("px-2 flex flex-col break-words h-auto", classNames, { "border-r border-b rounded-r-lg": data.border, "bg-surface-0": data.background })}>
               <p className="pt-3 mb-2 font-texts font-normal text-surface-500 text-xs">{data.subtitle?.toLocaleUpperCase()}</p>
-              <p className="mb-2 font-headings font-bold text-base">{data.title}</p>
+              <p className="mb-2 font-texts font-bold text-base">{data.title}</p>
               <RichtText data={{
                 content: data.text
               }} classNames="mb-2 pb-2" />

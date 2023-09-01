@@ -29,7 +29,7 @@ const Academia: FC<AcademiaComponentData> = ({ data, result, classNames, select:
     <div className="opacity-25">
       <div className="grid gap-6">
         <div>
-          <p className="text-base w-t:text-3.5 w-p:text-3.5 font-headings leading-tight">{result.title}</p>
+          <p className="text-base w-t:text-3.5 w-p:text-3.5 font-texts leading-tight">{result.title}</p>
           <p className="text-base w-t:text-3.5 w-p:text-3.5 font-texts font-bold leading-tight w-t:leading-tight w-p:leading-tight">{result.plan}</p>
         </div>
         <div>
