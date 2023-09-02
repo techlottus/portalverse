@@ -29,7 +29,8 @@
       "@/forms/*": ["./forms/*"],
       "@/utils/*": ["./utils/*"],
       "@/config/*": ["./config/*"],
-      "@/lib/*": ["./lib/*"]
+      "@/lib/*": ["./lib/*"],
+      "@/api/*": ["./pages/api/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next-sitemap.config.js"],
