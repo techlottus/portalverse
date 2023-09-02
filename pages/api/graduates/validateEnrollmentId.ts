@@ -29,15 +29,9 @@ export default async function handler(
     res.status(405).end(`Method ${method} Not Allowed`);
   } else {
     try {
-      console.log("inside ValidateEnrollmentId");
       const { token, data: { enrollmentId } } = req.body as EnrollmentIdValidationRequestData;
 
       const body: RequestVariables = { matricula: enrollmentId };
-
-      console.log("token", token);
-      console.log("endpoint", endpoint);
-
-      console.log("body", body);
 
       const response = await fetch(endpoint, {
         method: "POST",
@@ -64,8 +58,6 @@ export default async function handler(
 
 const validateEnrollmentIdResponse = async (response: Response) => {
   const data = await response?.json();
-  console.log("Inside validateEnrollmentIdResponse");
-  console.log("data:", data);
 
   switch (businessUnit) {
     case "UANE": {

@@ -26,24 +26,13 @@ const useEnrollmentIdValidation = () => {
     enrollmentId: string = ""
   ): Promise<EnrollmentIdValidationResponseData | undefined> => {
 
-    console.log("inside validateEnrollmentId");
-
     if (!isAllowedEnrollmentIdValue(enrollmentId)) {
-
-      console.log("enrollmentIdValue is not allowed");
-
-      /**
-       * "0" and empty strings ("" and "   ") are valid enrollment id values that exist in the database for testing purposes,
-       * so we need to consider these as invalid.
-       */
       const data: EnrollmentIdValidationResponseData = {
         isValid: false,
       };
       setStatus({ ...status, data, isSuccess: true });
       return data;
     }
-
-    console.log("enrollmentIdValue is allowed");
 
     setStatus({ ...defaultStatus, isLoading: true });
 

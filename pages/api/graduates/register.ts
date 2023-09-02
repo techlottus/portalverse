@@ -32,8 +32,6 @@ export default async function handler(
 
       const body = formatRequestVariables(data);
 
-      console.log("body", body);
-
       if (!body) throw new Error();
 
       const response = await fetch(endpoint, {

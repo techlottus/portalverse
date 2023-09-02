@@ -35,19 +35,14 @@ const getToken = () => {
 }
 
 const getUANEToken = async () => {
-  console.log("inside getUANEToken");
-  console.log("endpoint", endpoint);
-  console.log("username", username);
-  console.log("password", password);
   try {
     const response = await fetch(`${endpoint}?Usuario=${username}&Contrasena=${password}`);
-    console.log("response:", response);
     const data = await response?.json();
-    console.log("data:", data);
     const token = data?.[0]?.token as string;
 
     if (!token) throw new Error();
     return token;
+    
   } catch {
     return null;
   }

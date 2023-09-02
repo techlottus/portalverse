@@ -67,23 +67,16 @@ const GraduatesForm = () => {
   };
 
   const validateStep = async () => {
-    console.log("inside validateStep");
     switch (currentStepIndex) {
       case 0: { // Step One
         const isValidStep = await trigger("enrollmentId");
-
-        console.log("isValidStep", isValidStep);
 
         if (!isValidStep) return;
 
         const tokenData = await getTokenData();
         const token = tokenData?.token;
 
-        console.log("Inside validateStep line 82");
-
         if (!token) return;
-
-        console.log("Inside validateStep line 86");
 
         await validateEnrollmentId(token, enrollmentId);
         
