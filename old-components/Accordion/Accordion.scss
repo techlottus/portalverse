@@ -15,7 +15,9 @@ div {
       }
       div.heading {
         div.left {
-          @apply font-headings
+          div.title {
+            @apply font-headings
+          }
         }
       }
     }
