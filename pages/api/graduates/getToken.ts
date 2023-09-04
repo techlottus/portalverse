@@ -22,7 +22,7 @@ export default async function handler(
 
     res.status(200).json(responseData);
   } catch {
-    res.status(500).json({ error: "No token" });
+    res.status(500).json({ error: "No token retrieved" });
   }
 }
 

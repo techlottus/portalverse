@@ -51,7 +51,7 @@ export default async function handler(
       res.status(200).json(responseData);
 
     } catch {
-      res.status(500).json({ error: "Error validating enrollment" });
+      res.status(500).json({ error: "Error validating enrollment id" });
     }
   }
 }
