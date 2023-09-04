@@ -411,12 +411,19 @@ const StepTwo = ({
           <p className="font-Nunito-Sans font-normal text-base leading-5">
             Asegúrate de haber ingresado correctamente los datos. En caso de que
             no recuerdes tu matrícula o que no puedas acceder ponte en contacto
-            con nosotros en el correo:{" "}
+            con nosotros en los correos:{" "}
             <a
-              href="mailto:egresados@uane.edu.mx"
               className="font-Nunito-Sans font-bold"
+              href="mailto:egresados@uteg.edu.mx"
             >
-              egresados@uane.edu.mx
+              egresados@uteg.edu.mx
+            </a>{" "}
+            y{" "}
+            <a
+              className="font-Nunito-Sans font-bold"
+              href="mailto:comunidad.de.egresados@uteg.edu.mx"
+            >
+              comunidad.de.egresados@uteg.edu.mx
             </a>
           </p>
           <div>
