@@ -11,6 +11,7 @@ type Status = {
 };
 
 const defaultStatus: Status = {
+  data: undefined,
   isLoading: false,
   isSuccess: false,
   isError: false
