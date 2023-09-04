@@ -13,6 +13,9 @@ div {
           }
         }
       }
+      div.heading {
+        @apply font-headings
+      }
     }
   }
 }
