@@ -32,8 +32,8 @@ const GraduatesForm = () => {
 
   const {
     data: enrollmentIdValidationData,
-    isLoading: isLoadingEnrollmentValidation,
-    isError: isErrorEnrollmentValidation,
+    isLoading: isLoadingEnrollmentIdValidation,
+    isError: isErrorEnrollmentIdValidation,
     validateEnrollmentId,
   } = useEnrollmentIdValidation();
   const isValidEnrollmentId = !!enrollmentIdValidationData?.isValid;
@@ -44,8 +44,15 @@ const GraduatesForm = () => {
     sendGraduateRegistrationData,
   } = useGraduateRegistration();
 
-  const isLoading = isLoadingToken || isLoadingEnrollmentValidation || isLoadingGraduateRegistration;
-  const isError = isErrorToken || isErrorEnrollmentValidation || isErrorGraduateRegistration;
+  const isLoading =
+    isLoadingToken ||
+    isLoadingEnrollmentIdValidation ||
+    isLoadingGraduateRegistration;
+    
+  const isError =
+    isErrorToken ||
+    isErrorEnrollmentIdValidation ||
+    isErrorGraduateRegistration;
 
   const methods = useForm<FormValues>({
     mode: "all",
