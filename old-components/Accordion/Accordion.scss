@@ -14,7 +14,9 @@ div {
         }
       }
       div.heading {
-        @apply font-headings
+        div.left {
+          @apply font-headings
+        }
       }
     }
   }
