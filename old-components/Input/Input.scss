@@ -12,12 +12,12 @@ div {
             
             &:focus {
               height: 2.625rem !important;
-              @apply border-primary-500;
+              @apply border-primary-500 #{!important};
               
             }
           }
           input:focus + label {
-            @apply font-texts text-primary-500;
+            @apply font-texts text-primary-500 #{!important};
             font-weight: bold;
           }
         }
