@@ -10,9 +10,9 @@ div {
               color: #282828 !important;
             }
           
-            // &:focus {
-              // height: 2.625rem !important;
-            // }
+            &:focus {
+              height: 2.625rem !important;
+            }
           }
           label {
             @apply font-texts;
