@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from "react"
 import cn from "classnames"
 import OpenFormInit from "@/forms/fixtures/openform"
-import ProgressBar from "@/old-components/ProgressBar"
+import ProgressBar from "@/old-components/ProgressBar/ProgressBar"
 import Button from "@/old-components/Button/Button"
 import configControls from "@/forms/fixtures/controls"
 import Select from "@/old-components/Select/Select"

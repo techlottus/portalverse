@@ -5,7 +5,7 @@ import Select from "@/old-components/Select/Select"
 import { SelectInit } from "@/old-components/fixture"
 import Button from "@/old-components/Button/Button"
 import configControls from "@/forms/fixtures/controls"
-import ProgressBar from "@/old-components/ProgressBar"
+import ProgressBar from "@/old-components/ProgressBar/ProgressBar"
 import OptionPill from "@/old-components/OptionPill"
 import { OpenFormControls } from "@/types/OpenFormControls.types"
 

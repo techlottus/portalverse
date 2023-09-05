@@ -39,7 +39,7 @@ const CardWebsitePortalverse: FC<CardWebsitePortalverseData> = ({ data, classNam
               <p className="mb-2 font-texts font-bold text-base">{data.title}</p>
               <RichtText data={{
                 content: data.text
-              }} classNames="mb-2 pb-2" />
+              }} classNames="mb-2 pb-2 text-surface-500" />
             </div>
             <div className="flex justify-end h-auto items-center mb-3">
               {
