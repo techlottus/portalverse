@@ -17,9 +17,10 @@ div {
             }
           }
           input:focus + label {
-            @apply font-texts text-primary-500 #{!important};
-            font-weight: bold;
+            @apply font-texts text-primary-500 font-bold #{!important};
+            
           }
+          @apply text-xs #{!important};
         }
       }
     }
