@@ -13,13 +13,13 @@ const TextContent = (props: TextContentSection) => {
         <div className="w-p:col-span-4 w-t:col-span-8 w-d:col-span-8 flex flex-col space-y-4">
           {
             title
-              ? <h3 className="font-Poppins font-bold leading-[125%] w-p:text-6 w-t:text-8.5 text-10">
+              ? <h3 className="font-headings font-bold leading-tight w-p:text-6 w-t:text-8.5 text-10">
                   {title}
                 </h3>
               : null}
           {
             subtitle
-              ? <p className="font-Poppins font-semibold leading-[130%] w-p:text-4 w-t:text-4.5 text-5.5">
+              ? <p className="font-headings font-semibold leading-tight w-p:text-4 w-t:text-4.5 text-5.5">
                   {subtitle}
                 </p>
               : null
