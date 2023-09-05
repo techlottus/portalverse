@@ -2,7 +2,7 @@
   .bar{
     .background{
       .content{
-        @apply bg-primary-500
+        @apply bg-primary-500 !important
       }
     }
   }
