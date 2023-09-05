@@ -8,6 +8,11 @@ div {
           }
         }
       }
+      .options {
+        .option.-active {
+          @apply text-primary-500
+        }
+      }
     }
   }
 }
