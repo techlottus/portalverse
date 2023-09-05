@@ -27,9 +27,8 @@ const Input: FC<InputComponentData> = memo(({ data, value, hasError, errorMessag
   }, [data]);// eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
-    if (!!value) {
-      (inputRef.current as any).value = value;
-    }
+    if (typeof value === "undefined" || value === null) return;
+    (inputRef.current as any).value = value;
   }, [value]);// eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {

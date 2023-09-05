@@ -9,14 +9,20 @@ div {
             &::placeholder {
               color: #282828 !important;
             }
-          
+            
             &:focus {
               height: 2.625rem !important;
+              @apply border-primary-500 #{!important};
+              
             }
           }
-        
+          input:focus + label {
+            @apply text-primary-500 #{!important};
+            
+          }
         }
       }
+      @apply text-xs font-texts font-bold #{!important};
     }
   }
 }

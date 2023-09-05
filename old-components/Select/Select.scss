@@ -1,0 +1,20 @@
+div {
+  lottus-select {
+    .select-container {
+      .selectbody {
+        .label {
+          .titleselect {
+            @apply font-texts font-bold;
+          }
+        }
+      }
+      .options {
+        .content {
+          .option.-active {
+            @apply text-primary-500 #{!important};
+          }
+        }
+      }
+    }
+  }
+}

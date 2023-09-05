@@ -27,6 +27,7 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # local env files
+.env
 .env*.local
 
 # vercel
@@ -42,3 +43,8 @@ next-env.d.ts
 # public files
 /public/robots.txt
 /public/sitemap*
+
+#multitenant
+/.env
+/multitenant-images.ts
+/tailwind.config.js
