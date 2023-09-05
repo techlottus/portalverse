@@ -9,8 +9,10 @@ div {
         }
       }
       .options {
-        .option.-active {
-          @apply text-primary-500
+        .content {
+          .option.-active {
+            @apply text-primary-500
+          }
         }
       }
     }
