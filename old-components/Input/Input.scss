@@ -3,22 +3,20 @@ div {
     div.input-wrapper {
       div.field {
         div.inputbody {
-          &:focus {
-            @apply border-primary-500 text-primary-500
-          }
           input {
             width: 100% !important;
             padding-top: 2.25rem !important;
             &::placeholder {
               color: #282828 !important;
             }
-          
+            
             &:focus {
               height: 2.625rem !important;
+              @apply border-primary-500;
             }
           }
           label {
-            @apply font-texts;
+            @apply font-texts text-primary-500;
             font-weight: bold;
           }
         }
