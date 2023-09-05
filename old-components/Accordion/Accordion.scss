@@ -16,7 +16,11 @@ div {
       div.heading {
         div.left {
           div.title {
-            @apply font-headings
+            @apply font-headings #{!important};
+            &.-bold {
+              @apply font-headings #{!important};
+
+            }
           }
         }
       }
