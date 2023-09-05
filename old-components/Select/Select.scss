@@ -11,7 +11,7 @@ div {
       .options {
         .content {
           .option.-active {
-            @apply text-primary-500;
+            @apply text-primary-500 #{!important};
           }
         }
       }
