@@ -34,7 +34,7 @@ const BlogEntryPageContent = (props: BlogEntryPageData) => {
         {
           blogPost?.title
             ? <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:col-start-1 w-d:col-end-8">
-                <p className="font-Poppins font-bold text-13 w-t:text-8.5 w-p:text-6 leading-[125%]">
+                <p className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-6 leading-tight">
                   {blogPost?.title}
                 </p>
               </div>
