@@ -9,7 +9,18 @@ div {
         }
         markdown {
           * {
-            @apply font-Nunito-Sans font-normal;
+            @apply font-texts font-normal;
+          }
+        }
+      }
+      div.heading {
+        div.left {
+          div.title {
+            @apply font-headings #{!important};
+            &.-bold {
+              @apply font-headings #{!important};
+
+            }
           }
         }
       }

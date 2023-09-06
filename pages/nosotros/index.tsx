@@ -25,8 +25,8 @@ const SomosUteg: NextPageWithLayout = ({ sections, meta }: any) => {
     <HeaderFooterLayout breadcrumbs={true}>
       <ContentLayout>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-Poppins font-bold text-13 w-t:text-8.5 w-p:text-7.5 leading-[125%] w-t:leading-[111%] mb-6">{sections?.head?.title}</p>
-          <p className="font-Poppins font-bold text-5.5 mb-6">{sections?.head?.subtitle}</p>
+          <p className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-7.5 leading-tight w-t:semi-tight mb-6">{sections?.head?.title}</p>
+          <p className="font-headings font-bold text-5.5 mb-6">{sections?.head?.subtitle}</p>
           <RichtText data={{
             content: sections?.head?.description
           }} />
@@ -39,7 +39,7 @@ const SomosUteg: NextPageWithLayout = ({ sections, meta }: any) => {
           />
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-12 w-t:mt-6 w-p:mt-6">
-          <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%]">{sections?.history?.title}</p>
+          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight">{sections?.history?.title}</p>
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
           <Image
@@ -54,10 +54,10 @@ const SomosUteg: NextPageWithLayout = ({ sections, meta }: any) => {
           }} />
         </div>
       </ContentLayout>
-      <ContentFullLayout classNames="bg-[#1B2D68] w-d:py-12 text-white mt-18 w-t:mt-3 w-p:mt-3">
+      <ContentFullLayout classNames="bg-primary-500 w-d:py-12 text-surface-0 mt-18 w-t:mt-3 w-p:mt-3">
         <ContentLayout classNames="w-d:my-6 flex items-center">
           <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-t:mt-6 w-p:mt-6 w-d:my-auto">
-            <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%]">{sections?.missionAndVission?.title}</p>
+            <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight">{sections?.missionAndVission?.title}</p>
             <RichtText font="dark" classNames="w-t:hidden w-p:hidden" data={{
               content: sections?.missionAndVission?.description
             }} />
@@ -85,7 +85,7 @@ const SomosUteg: NextPageWithLayout = ({ sections, meta }: any) => {
       </ContentFullLayout>
       <ContentLayout classNames="mt-12 w-t:mt-6 w-p:mt-6">
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 my-auto">
-          <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%]">{sections?.ourValues?.title}</p>
+          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight">{sections?.ourValues?.title}</p>
           {
             sections?.ourValues?.values?.map((item: any, i: number) => <section className="mt-6" key={`section-values-${i}`}>
               <CardWebsite data={item} />
@@ -102,7 +102,7 @@ const SomosUteg: NextPageWithLayout = ({ sections, meta }: any) => {
           </div>
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-12 w-t:mt-6 w-p:mt-6">
-          <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%]">{sections?.community?.title}</p>
+          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight">{sections?.community?.title}</p>
         </div>
         <div className="w-d:col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
           {
@@ -112,11 +112,11 @@ const SomosUteg: NextPageWithLayout = ({ sections, meta }: any) => {
           }
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-12 w-t:mt-6 w-p:mt-6">
-          <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%] mb-6">{sections?.experiences?.title}</p>
+          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6">{sections?.experiences?.title}</p>
           <Mosaic data={sections?.experiences?.images} />
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-12 w-t:mt-6 w-p:mt-6">
-          <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%] mb-6">{sections?.ourScholarships?.title}</p>
+          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6">{sections?.ourScholarships?.title}</p>
         </div>
         <div className="w-d:col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
           {
@@ -131,7 +131,7 @@ const SomosUteg: NextPageWithLayout = ({ sections, meta }: any) => {
       </ContentLayout>
       <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-12 w-t:mt-6 w-p:mt-6">
-          <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%]">{sections?.ourConventions?.title}</p>
+          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight">{sections?.ourConventions?.title}</p>
         </div>
         {
           sections?.ourConventions?.conventions?.map((item: any, i: number) => <section className="col-span-4" key={`section-conventions-${i}`}>
@@ -141,7 +141,7 @@ const SomosUteg: NextPageWithLayout = ({ sections, meta }: any) => {
       </ContentLayout>
       <ContentLayout classNames="mt-18 w-t:mt-6 w-p:mt-6">
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 my-auto">
-          <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%] mb-6">{sections?.ourCertifications?.title}</p>
+          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6">{sections?.ourCertifications?.title}</p>
           <RichtText data={{
             content: sections?.ourCertifications?.description
           }} />

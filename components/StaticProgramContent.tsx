@@ -8,7 +8,7 @@ import ContentInsideLayout from "@/layouts/ContentInside.layout"
 import RichtText from "@/old-components/Richtext/Richtext"
 import DescriptionSection from "@/old-components/DescriptionSection"
 import Button from "@/old-components/Button/Button"
-import Select from "@/old-components/Select"
+import Select from "@/old-components/Select/Select"
 import { SelectInit } from "@/old-components/fixture"
 import OutstandingContainer from "@/old-components/OutstandingContainerPortalverse"
 import TabsFeatured from "@/old-components/TabsFeatured"
@@ -83,7 +83,7 @@ const StaticProgramContent: NextPageWithLayout<any> = ({ level, program, meta, c
     <Fragment>
       <ContentLayout>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12">
-          <h1 className="text-13 font-bold font-Poppins leading-13 w-t:leading-[111%] w-p:leading-[125%] w-t:text-8.5 w-p:text-7.5 mb-6">{sections.head.title}</h1>
+          <h1 className="text-13 font-bold font-headings leading-13 w-t:semi-tight w-p:leading-tight w-t:text-8.5 w-p:text-7.5 mb-6">{sections.head.title}</h1>
           <RichtText data={{
             content: sections.head.description
           }} />
@@ -106,7 +106,7 @@ const StaticProgramContent: NextPageWithLayout<any> = ({ level, program, meta, c
       </ContentFullLayout>  
       <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6">
-          <p className="text-6.5 font-Poppins font-semibold leading-[125%] w-t:leading-[125%] w-p:leading-[125%] w-t:text-6 w-p:text-6">{sections.modalities.title}</p>
+          <p className="text-6.5 font-headings font-semibold leading-tight w-t:leading-tight w-p:leading-tight w-t:text-6 w-p:text-6">{sections.modalities.title}</p>
         </div>
         <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center">
           <TabsFeatured tabs={sections.modalities.tabs.items} onActive={(active: number) => handleSetActiveTab(active)} />
@@ -126,7 +126,7 @@ const StaticProgramContent: NextPageWithLayout<any> = ({ level, program, meta, c
                   <DescriptionSection
                     title={contentTitle}
                     description={contentDescription}
-                    classNames={cn("col-span-7 grid grid-cols-7 gap-6 w-t:col-span-8 w-t:grid-cols-8 w-p:col-span-4 py-[40px] w-t:py-[94px] w-p:flex w-p:flex-col w-p:p-6", { "hidden w-p:hidden": tabActive !== i, "w-d:order-2 w-t:order-1 w-p:order-1": j === 1 })}
+                    classNames={cn("col-span-7 grid grid-cols-7 gap-6 w-t:col-span-8 w-t:grid-cols-8 w-p:col-span-4 py-10 w-t:py-24 w-p:flex w-p:flex-col w-p:p-6", { "hidden w-p:hidden": tabActive !== i, "w-d:order-2 w-t:order-1 w-p:order-1": j === 1 })}
                     titleStyles="col-start-2 col-end-7 w-t:col-end-8"
                     descriptionStyles="col-start-2 col-end-7 w-t:col-end-8"
                   />
@@ -138,7 +138,7 @@ const StaticProgramContent: NextPageWithLayout<any> = ({ level, program, meta, c
                   />
                 </Fragment>)
               })
-            : contentTabs.map( (content: any, i: number) => <div key={`content-outstanding-${i}`} className={cn("col-span-12 w-t:col-span-8 w-p:col-span-4 text-white", { "hidden": i !== tabActive })}><OutstandingContainer items={content.cards} /></div>)
+            : contentTabs.map( (content: any, i: number) => <div key={`content-outstanding-${i}`} className={cn("col-span-12 w-t:col-span-8 w-p:col-span-4 text-surface-0", { "hidden": i !== tabActive })}><OutstandingContainer items={content.cards} /></div>)
         }
         </ContentInsideLayout>
       </ContentLayout>
@@ -151,7 +151,7 @@ const StaticProgramContent: NextPageWithLayout<any> = ({ level, program, meta, c
                   <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
                     <h1 className="ac-type-h5-bold-solid-poppins-desktop w-t:ac-type-h5-bold-solid-poppins-tabmob w-p:ac-type-h5-bold-solid-poppins-tabmob">Selecciona un campus para descargar tu plan de estudios en esta modalidad</h1>
                     <div className="my-6">
-                      <p className="font-Nunito-Sans font-normal text-xs mb-0">Los planes de estudio pueden variar por campus*</p>
+                      <p className="font-texts font-normal text-xs mb-0">Los planes de estudio pueden variar por campus*</p>
                       <Select onClick={(option: CustomEvent) => handleSelectOption(option)} data={{...SelectInit, textDefault: "Elige el campus de tu interés", icon: "apartment"}} options={selectData} flagHeight={true}/>
                     </div>
                     <div className="flex justify-center">
@@ -170,12 +170,12 @@ const StaticProgramContent: NextPageWithLayout<any> = ({ level, program, meta, c
           level === 'bachillerato'
             ? <>
                 <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6">
-                  <h4 className="text-6.5 font-Poppins font-semibold leading-[125%] w-t:leading-[125%] w-p:leading-[125%] w-t:text-6 w-p:text-6">{ sections.benefits.title }</h4>
+                  <h4 className="text-6.5 font-headings font-semibold leading-tight w-t:leading-tight w-p:leading-tight w-t:text-6 w-p:text-6">{ sections.benefits.title }</h4>
                 </div>
-                <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 leading-[125%] w-d:order-1 w-t:order-1">
+                <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 leading-tight w-d:order-1 w-t:order-1">
                   <RichtText font="light" data={{ content: sections.benefits.description }} />
                   <div className="my-6">
-                  <p className="font-Nunito-Sans font-normal text-xs mb-0">Los planes de estudio pueden variar por campus*</p>
+                  <p className="font-texts font-normal text-xs mb-0">Los planes de estudio pueden variar por campus*</p>
                     <Select onClick={(option: CustomEvent) => handleSelectOption(option)} data={{...SelectInit, textDefault: "Elige el campus de tu interés"}} options={selectData} flagHeight={true}/>
                   </div>
                   <Button dark data={{...sections.benefits.action , disabled: !fileSelected}} onClick={downloadFileProgram} />
