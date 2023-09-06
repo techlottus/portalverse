@@ -1,0 +1,13 @@
+div {
+  lottus-progress-bar {
+    .progress-container{
+      .bar{
+        .background{
+          .content{
+            @apply bg-primary-500 #{!important}
+          }
+        }
+      }
+    }
+  }
+}

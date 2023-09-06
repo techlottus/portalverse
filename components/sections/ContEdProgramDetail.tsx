@@ -33,14 +33,14 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
         {
           programCategory?.data?.attributes?.name ?
           <div className="mb-4">
-            <h5 className="font-Poppins text-6 font-semibold">{programCategory?.data?.attributes?.name}</h5>
+            <h5 className="font-headings text-6 font-semibold">{programCategory?.data?.attributes?.name}</h5>
           </div>
           :null
         }
         <div className="flex flex-col gap-6">
           {
             name ?
-              <h1 className="font-Poppins font-bold text-13 w-t:text-8.5 w-p:text-7.5 leading-13 w-t:leading-[111%] w-p:leading-[125%]">{name}</h1>
+              <h1 className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-7.5 leading-13 w-t:semi-tight w-p:leading-tight">{name}</h1>
               : null
           }
           {
@@ -64,15 +64,15 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
           </Aspect>
             : null
         }
-        <div className="flex flex-col gap-2 p-2 border rounded-lg my-6">
+        <div className="flex flex-col gap-2 p-2 border border-solid border-surface-300 rounded-lg my-6">
           {
             !!price ?
               <div className="flex flex-col">
-                <span className="font-Nunito-Sans font-normal text-base leading-5 text-[#818181]">Precio:</span>
+                <span className="font-texts font-normal text-base leading-5 text-surface-500">Precio:</span>
                 <div className="flex items-end gap-2">
                   <span
                     className={cn(
-                        "font-Poppins font-semibold",
+                        "font-headings font-semibold",
                         {
                           "text-8 leading-12": !offerPrice,
                           "text-2xl leading-10 line-through": !!offerPrice
