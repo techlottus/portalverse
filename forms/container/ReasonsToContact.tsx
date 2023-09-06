@@ -12,7 +12,7 @@ const ReasonsToContact: FC<any> = ({ classNames, pathThanyouOtherReason, pathTha
     setReason(value)
   }
 
-  return <section className={cn("shadow-15 bg-white", classNames, { "p-6": reason === "" || reason !== "programs", "p-0": reason === "programs" })}>
+  return <section className={cn("shadow-15 bg-surface-0", classNames, { "p-6": reason === "" || reason !== "programs", "p-0": reason === "programs" })}>
     <StepZero step={50} classNames={cn({ "hidden": !!reason })} onNext={(value: string) => handleReasonSelected(value) } />
     <OpenForm classNames={cn({ "hidden": reason === "" || reason !== "programs" })} pathThankyou={pathThanyouOpenForm} image={image} />
     <StepOtherReason pathThankyou={pathThanyouOtherReason} step={90} classNames={cn({ "hidden": reason === "" || reason === "programs" })} />

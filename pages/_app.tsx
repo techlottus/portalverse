@@ -55,9 +55,9 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
           `,
       }}/>
       {/* // // Meta Pixel Code (noscript) */}
-      <noscript>
+      {/* <noscript>
         <img height="1" width="1" style={{"display":"none","visibility":"hidden"}} src="https://www.facebook.com/tr?id=481987629436592&amp;ev=PageView&amp;noscript=1"/>
-      </noscript>
+      </noscript> */}
       {/* // //End Meta Pixel Code (noscript) */}
       {/* // // Google Tag Manager (noscript) */}
       <noscript>

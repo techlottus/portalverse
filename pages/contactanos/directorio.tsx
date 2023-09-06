@@ -15,11 +15,11 @@ const Directory: NextPageWithLayout<DirectoryComponentData> = ({ areas, meta }: 
       <title>{ meta.title }</title>
     </Head>
     <section className="mx-auto mt-6 w-full col-span-12 w-t:col-span-8 w-p:col-span-4">
-      <h1 className="font-Poppins font-bold text-13 w-t:text-8.5 w-p:text-6 leading-16.25 text-SC/Blackandgrey/B-80">Directorio Universitario</h1>
+      <h1 className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-6 leading-16.25 text-surface-800">Directorio Universitario</h1>
       <RichtText data={{ content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"}} />
       {
         areas.map(({ name, contacts }: SectionData, i: number) => <section key={`section-directory-${i}`}>
-            <h2 className="font-Poppins font-bold text-10 leading-12.5">{name}</h2>
+            <h2 className="font-headings font-bold text-10 leading-12.5">{name}</h2>
             <ContentInsideLayout classNames="mt-6 gap-6">
               {
                 contacts.map(({ name, email, phone, image = '' }: ContactData, j: number) =>
