@@ -9,7 +9,7 @@ const Home: NextPageWithLayout = ({ data: { sections, meta } }: any) => {
 
   return <>
     <Head>
-      <title>{meta?.title}</title>
+      <title>{meta?.metaTitle}</title>
     </Head>
     <HeaderFooterLayout breadcrumbs={false}>
       <div className="flex flex-col w-p:space-y-12 w-t:space-y-12 w-d:space-y-18 w-d:mt-18">
@@ -22,11 +22,10 @@ const Home: NextPageWithLayout = ({ data: { sections, meta } }: any) => {
 }
 
 export async function getStaticProps(context: any) {
-  // TODO: Get metadata from Strapi
-  const { meta } = await getDataPageFromJSON('home.json');
 
   const homePageData = await getHomePageData();
   const sections = homePageData?.homePage?.data?.attributes?.sections;
+  const meta = homePageData?.homePage?.data?.attributes?.seo;
 
   return {
     props: {
