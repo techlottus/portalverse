@@ -1,0 +1,11 @@
+.text-content-section {
+  markdown {
+    @apply grid w-p:grid-cols-4 w-t:grid-cols-8 w-d:grid-cols-12;
+    & > * {
+      @apply w-p:col-span-4 w-t:col-span-8 w-d:col-span-12;
+      &:not(table) {
+        @apply w-d:col-span-8;
+      }
+    }
+  }
+}
