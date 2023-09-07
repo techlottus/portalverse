@@ -163,5 +163,4 @@ export async function getStaticProps(context: any): Promise<{props: PageProps}> 
       notFound: true,
     };
   }
-
 }
