@@ -160,17 +160,23 @@ const SomosUteg: NextPageWithLayout = ({ sections, meta }: any) => {
 
 // `getStaticPaths` requires using `getStaticProps`
 export async function getStaticProps(context: any) {
-  const { sections, meta } = await getDataPageFromJSON('somos-uteg.json');
+  try {
+    const { sections, meta } = await getDataPageFromJSON('somos-uteg.json');
 
-  // redirect not avaliable page
-  if (!!meta.hidden) {
+    // redirect not avaliable page
+    if (!!meta.hidden) {
+      return {
+        notFound: true,
+      }
+    }
+
+    return {
+      props: { sections, meta }
+    }
+  } catch {
     return {
       notFound: true,
-    }
-  }
-
-  return {
-    props: { sections, meta }
+    };
   }
 };
 

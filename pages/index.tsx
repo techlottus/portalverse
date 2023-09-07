@@ -23,18 +23,24 @@ const Home: NextPageWithLayout = ({ data: { sections, meta } }: any) => {
 
 export async function getStaticProps(context: any) {
 
-  const homePageData = await getHomePageData();
-  const sections = homePageData?.homePage?.data?.attributes?.sections;
-  const meta = homePageData?.homePage?.data?.attributes?.seo;
+  try {
+    const homePageData = await getHomePageData();
+    const sections = homePageData?.homePage?.data?.attributes?.sections;
+    const meta = homePageData?.homePage?.data?.attributes?.seo;
 
-  return {
-    props: {
-      data: {
-        sections,
-        meta
+    return {
+      props: {
+        data: {
+          sections,
+          meta
+        },
       },
-    },
-  };
+    };
+  } catch {
+    return {
+      notFound: true,
+    };
+  }
 }
 
 export default Home;

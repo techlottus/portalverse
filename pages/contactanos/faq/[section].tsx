@@ -86,12 +86,18 @@ export function getStaticPaths() {
 }
 
 export async function getStaticProps(context: any) {
-  const { sections, meta } = await getDataPageFromJSON('faq.json');
-  const { params: { section } } = context;
-  const { questions }: any = sections.temas.filter((tema: any) => tema.id === section)[0]
-  const info = sections.temas.reduce((prev: any[], curr: any, i: number) => [ ...prev, { ...curr, questions: section === Routes["faq"][i].params.section ? [ ...questions ] : [], route: Routes["faq"][i].params.section, status: section === Routes["faq"][i].params.section } ], []);
-  return {
-    props: { sections, meta, info }
+  try {
+    const { sections, meta } = await getDataPageFromJSON('faq.json');
+    const { params: { section } } = context;
+    const { questions }: any = sections.temas.filter((tema: any) => tema.id === section)[0]
+    const info = sections.temas.reduce((prev: any[], curr: any, i: number) => [ ...prev, { ...curr, questions: section === Routes["faq"][i].params.section ? [ ...questions ] : [], route: Routes["faq"][i].params.section, status: section === Routes["faq"][i].params.section } ], []);
+    return {
+      props: { sections, meta, info }
+    }    
+  } catch {
+    return {
+      notFound: true,
+    };
   }
 }
 

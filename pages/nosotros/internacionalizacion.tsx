@@ -178,40 +178,46 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
 
 // `getStaticPaths` requires using `getStaticProps`
 export async function getStaticProps(context: any) {
-  const { sections, meta } = await getDataPageFromJSON('internacionalizacion.json');
+  try {
+    const { sections, meta } = await getDataPageFromJSON('internacionalizacion.json');
 
-  /**
-   * This is a representation of the section data that will come from Strapi once
-   * this page can be fully dynamically generated. This will show the 3 latest blog
-   * entries under the "Internacionalziación" category.
-   */
-  const blogPostsSection: BlogPostsSection = {
-    type: "ComponentSectionsBlogPosts",
-    title: "Artículos sobre UTEG 360",
-    subtitle: "",
-    description: "",
-    maxEntries: 3,
-    sort: "latest",
-    category: {
-      data: {
-        attributes: {
-          title: "Internacionalización",
+    /**
+     * This is a representation of the section data that will come from Strapi once
+     * this page can be fully dynamically generated. This will show the 3 latest blog
+     * entries under the "Internacionalziación" category.
+     */
+    const blogPostsSection: BlogPostsSection = {
+      type: "ComponentSectionsBlogPosts",
+      title: "Artículos sobre UTEG 360",
+      subtitle: "",
+      description: "",
+      maxEntries: 3,
+      sort: "latest",
+      category: {
+        data: {
+          attributes: {
+            title: "Internacionalización",
+          }
         }
       }
     }
-  }
 
-  const formattedBlogPostsSection = await formatBlogPostsSection(blogPostsSection);
+    const formattedBlogPostsSection = await formatBlogPostsSection(blogPostsSection);
 
-  // redirect not avaliable page
-  if (!!meta.hidden) {
+    // redirect not avaliable page
+    if (!!meta.hidden) {
+      return {
+        notFound: true,
+      }
+    }
+
+    return {
+      props: { sections, meta, blogPostsSection: formattedBlogPostsSection }
+    }
+  } catch {
     return {
       notFound: true,
-    }
-  }
-
-  return {
-    props: { sections, meta, blogPostsSection: formattedBlogPostsSection }
+    };
   }
 }
 
