@@ -88,70 +88,80 @@ export async function getStaticPaths() {
 
 // `getStaticPaths` requires using `getStaticProps`
 export async function getStaticProps(context: any): Promise<{props: PageProps}> {
-  const {
-    params: { slug },
-  } = context;
 
-  const path = slug?.join("/");
-  const pageType = await getPageType(path);
+  try {
+    const {
+      params: { slug },
+    } = context;
 
-  const breadcrumbs = await getDynamicPagesBreadcrumbs();
+    const path = slug?.join("/");
+    const pageType = await getPageType(path);
 
-  switch (pageType) {
-    case "programDetail": {
-      const programDetailPage = await getProgramDetailPageData(path);
+    const breadcrumbs = await getDynamicPagesBreadcrumbs();
 
-      if(programDetailPage?.type === "DynamicProgramDetail") {
-        // Add program breadcrumb. Static program breadcrumbs already exist in the Routes.ts file
-        const programAttributes = programDetailPage?.data?.program?.attributes;
-        const programSlug = programAttributes?.slug;
-        const programName = programAttributes?.name;
+    switch (pageType) {
+      case "programDetail": {
+        const programDetailPage = await getProgramDetailPageData(path);
 
-        breadcrumbs[programSlug] = programName;
-      }
+        if (programDetailPage?.type === "DynamicProgramDetail") {
+          // Add program breadcrumb. Static program breadcrumbs already exist in the Routes.ts file
+          const programAttributes =
+            programDetailPage?.data?.program?.attributes;
+          const programSlug = programAttributes?.slug;
+          const programName = programAttributes?.name;
 
-      return {
-        props: {
-          page: { ...programDetailPage },
-          breadcrumbs,
-        },
-      };
-    }
-    case "blogEntry": {
-      const blogEntryPageData = await getBlogEntryPageData();
-      const blogEntrySlug = slug?.[slug?.length - 1];
-      const blogEntryData = await getBlogEntryBySlug(blogEntrySlug);
-      blogEntryPageData.data.attributes.blogPost = { ...blogEntryData };
+          breadcrumbs[programSlug] = programName;
+        }
 
-      breadcrumbs[blogEntrySlug] = blogEntryData?.attributes?.title;
-
-      return {
-        props: {
-          page: {
-            type: "BlogEntryPageEntityResponse",
-            data: blogEntryPageData?.data,
+        return {
+          props: {
+            page: { ...programDetailPage },
+            breadcrumbs,
           },
-          breadcrumbs,
-        },
-      };
-    }
-    case "dynamic": {
-      const pageData = await getPageDataBySlug(path);
+        };
+      }
+      case "blogEntry": {
+        const blogEntryPageData = await getBlogEntryPageData();
+        const blogEntrySlug = slug?.[slug?.length - 1];
+        const blogEntryData = await getBlogEntryBySlug(blogEntrySlug);
+        blogEntryPageData.data.attributes.blogPost = { ...blogEntryData };
 
-      return {
-        props: {
-          page: { ...pageData },
-          breadcrumbs,
-        },
-      };
+        breadcrumbs[blogEntrySlug] = blogEntryData?.attributes?.title;
+
+        return {
+          props: {
+            page: {
+              type: "BlogEntryPageEntityResponse",
+              data: blogEntryPageData?.data,
+            },
+            breadcrumbs,
+          },
+        };
+      }
+      case "dynamic": {
+        const pageData = await getPageDataBySlug(path);
+
+        return {
+          props: {
+            page: { ...pageData },
+            breadcrumbs,
+          },
+        };
+      }
+      default: {
+        return {
+          props: {
+            page: {} as PageEntityResponse,
+            breadcrumbs: {},
+          },
+        };
+      }
     }
-    default: {
-      return {
-        props: {
-          page: {} as PageEntityResponse,
-          breadcrumbs: {},
-        },
-      };
-    }
+  } catch {
+    return {
+      //@ts-ignore
+      notFound: true,
+    };
   }
+
 }

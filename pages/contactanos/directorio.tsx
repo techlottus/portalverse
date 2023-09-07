@@ -35,18 +35,29 @@ const Directory: NextPageWithLayout<DirectoryComponentData> = ({ areas, meta }: 
 }
 
 export async function getStaticProps(context: any) {
-  const { sections: { areas, head }, meta } = await getDataPageFromJSON('directorio.json');
 
-  // redirect not avaliable page
-  if (!!meta.hidden) {
+  try {
+    const {
+      sections: { areas, head },
+      meta,
+    } = await getDataPageFromJSON("directorio.json");
+
+    // redirect not avaliable page
+    if (!!meta.hidden) {
+      return {
+        notFound: true,
+      };
+    }
+
+    return {
+      props: { areas, meta, head },
+    };
+  } catch {
     return {
       notFound: true,
-    }
+    };
   }
 
-  return {
-    props: { areas, meta, head }
-  }
 }
 
 Directory.getLayout = function getLayout(page: ReactElement) {
