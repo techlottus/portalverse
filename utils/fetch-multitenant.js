@@ -166,7 +166,7 @@ async function fetchColors(){
 }
 const setFontVariation = (url, name) => {
   first = url.split('@')
-  second = first[1] ? first[1].split('&') : second
+  second = first[1] ? first[1].split('&') : ""
   const weights = second ? second[0].split(';') : [];
 
   const variants = weights.map(weight => 

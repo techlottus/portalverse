@@ -89,17 +89,23 @@ const VidaEstudiantil: NextPageWithLayout = ({ sections, meta }: any) => {
 
 // `getStaticPaths` requires using `getStaticProps`
 export async function getStaticProps(context: any) {
-  const { sections, meta } = await getDataPageFromJSON('vida-estudiantil.json');
+  try {
+    const { sections, meta } = await getDataPageFromJSON('vida-estudiantil.json');
 
-  // redirect not avaliable page
-  if (!!meta.hidden) {
+    // redirect not avaliable page
+    if (!!meta.hidden) {
+      return {
+        notFound: true,
+      }
+    }
+
+    return {
+      props: { sections, meta }
+    }
+  } catch {
     return {
       notFound: true,
-    }
-  }
-
-  return {
-    props: { sections, meta }
+    };
   }
 }
 
