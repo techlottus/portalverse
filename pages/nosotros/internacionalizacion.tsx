@@ -18,6 +18,7 @@ import Video from "@/old-components/Video"
 import BlogPosts from "@/components/sections/BlogPosts"
 import { formatBlogPostsSection } from "@/utils/strapi/sections/BlogPosts"
 import type { BlogPostsSection } from "@/utils/strapi/sections/BlogPosts"
+import Image from "@/old-components/Image";
 
 const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: any, meta: any, blogPostsSection: BlogPostsSection}) => {
 
@@ -143,6 +144,125 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
           <Rainbow classNamesTitle="ml-6" sections={sections.rainbow.sections} title={sections.rainbow.title} />
         </div>
       </ContentFullLayout>
+      {
+        sections?.exchange ?
+          <ContentFullLayout classNames="bg-[#247269] w-d:py-12 text-white mt-18 w-t:mt-3 w-p:mt-3">
+            <ContentLayout classNames="w-d:my-6 flex items-center">
+              <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-t:mt-6 w-p:mt-6 w-d:my-auto">
+                <p className="font-Poppins font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%]">{sections?.exchange?.title}</p>
+                <RichtText font="dark" classNames="w-t:hidden w-p:hidden" data={{
+                  content: sections?.exchange?.description
+                }} />
+                <div className="w-t:hidden w-p:hidden">
+                  {
+                    sections?.exchange?.downloadables?.length > 0
+                      ? <div className="mb-6">
+                        <span className="font-Poppins font-normal text-white">Descargas</span>
+                        {
+                          (sections?.exchange?.downloadables as Array<{ label: string; link: string; }>)?.map((redirect, index) => {
+                            const children = (
+                              <>
+                                <span className="font-Nunito-Sans font-normal underline underline-offset-4 mr-auto">{redirect?.label}</span>
+                              </>
+                            );
+
+                            if (redirect?.link) {
+                              return (
+                                <a
+                                  key={index}
+                                  href={redirect?.link}
+                                  rel="noreferrer noopener"
+                                  target="_blank"
+                                  className={
+                                    cn("flex items-center text-white")
+                                  }
+                                >
+                                  {children}
+                                </a>
+                              )
+                            } else {
+                              return (
+                                <div
+                                  key={index}
+                                  className="flex items-center  text-white cursor-not-allowed"
+                                >
+                                  {children}
+                                </div>
+                              )
+                            }
+                          })
+                        }
+                      </div>
+                      : null
+                  }
+                </div>
+              </div>
+              <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:hidden">
+                <Image
+                  alt={sections?.exchange?.image?.desk?.alt}
+                  src={sections?.exchange?.image?.desk?.src}
+                  classNames="aspect-2/1 w-t:aspect-2/1 w-p:aspect-2/1"
+                />
+              </div>
+              <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-t:hidden w-p:hidden w-d:my-20">
+                <Image
+                  alt={sections?.exchange?.image?.desk?.alt}
+                  src={sections?.exchange?.image?.desk?.src}
+                  classNames="aspect-2/1 w-t:aspect-2/1 w-p:aspect-2/1"
+                />
+              </div>
+              <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:hidden">
+                <RichtText font="dark" data={{
+                  content: sections?.exchange?.description
+                }} />
+                <div className="w-d:hidden">
+                  {
+                    sections?.exchange?.downloadables?.length > 0
+                      ? <div className="mb-6">
+                        <span className="font-Poppins font-normal text-white">Descargas</span>
+                        {
+                          (sections?.exchange?.downloadables as Array<{ label: string; link: string; }>)?.map((redirect, index) => {
+                            const children = (
+                              <>
+                                <span className="font-Nunito-Sans font-normal underline underline-offset-4 mr-auto">{redirect?.label}</span>
+                              </>
+                            );
+
+                            if (redirect?.link) {
+                              return (
+                                <a
+                                  key={index}
+                                  href={redirect?.link}
+                                  rel="noreferrer noopener"
+                                  target="_blank"
+                                  className={
+                                    cn("flex items-center text-white")
+                                  }
+                                >
+                                  {children}
+                                </a>
+                              )
+                            } else {
+                              return (
+                                <div
+                                  key={index}
+                                  className="flex items-center  text-white cursor-not-allowed"
+                                >
+                                  {children}
+                                </div>
+                              )
+                            }
+                          })
+                        }
+                      </div>
+                      : null
+                  }
+                </div>
+              </div>
+            </ContentLayout>
+          </ContentFullLayout>
+          : null
+      }
       <ContentLayout classNames="mt-12 w-d:mt-18">
         <section className="col-span-12">
           <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6 w-d:mb-">{sections.videoSection.title}</p>
