@@ -38,8 +38,6 @@ export async function getStaticProps(context: any) {
     const notFoundPageData = await getNotFoundPageData();
     const sections = notFoundPageData?.notFoundPage?.data?.attributes?.sections;
     const meta = notFoundPageData?.notFoundPage?.data?.attributes?.seo;
-    console.log(sections);
-    
 
     return {
       props: {
@@ -48,8 +46,6 @@ export async function getStaticProps(context: any) {
       },
     };
   } catch(err) {
-    console.log(err);
-    
     return {
       props: {
         sections: [],

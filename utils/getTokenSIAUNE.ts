@@ -17,7 +17,7 @@ export const getTokenSIUANE = () => {
       }
     })
       .then( (res: any) => {
-        console.log("res", res)
+        // console.log("res", res)
         const [ data ] = res.data;
         const { token } = data;
         setToken(token);

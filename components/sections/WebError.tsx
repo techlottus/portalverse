@@ -11,7 +11,6 @@ type WebErrorComponent = {
 }
 
 const WebError: FC<WebErrorComponent> = (props: WebErrorComponent) => {
-  console.log(props);
   
   const { title, message, button, error_code = '404' } = props;
 
