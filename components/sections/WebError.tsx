@@ -6,7 +6,7 @@ import { LinkConfig } from "@/types/Link.types";
 type WebErrorComponent = {
   title?: string;
   message?: string;
-  button: LinkConfig;
+  button?: LinkConfig;
   error_code?: string;
 }
 
@@ -22,6 +22,7 @@ const WebError: FC<WebErrorComponent> = (props: WebErrorComponent) => {
       { button ? 
         <Link
           {...button}
+          href={button.href ? button.href : '/'}
           className="font-texts py-4 px-8 w-p:w-full w-p:text-center font-bold w-p:text-5 bg-surface-950 rounded-lg text-surface-0 text-base mb-13.75 w-t:mb-12 w-p:mb-16.5">
           { button?.text || "Regresar al inicio" }
         </Link>
