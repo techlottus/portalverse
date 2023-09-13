@@ -19,6 +19,7 @@ import PromoLinkList from "@/components/sections/PromoLinkList";
 import RichTextImage from "@/components/sections/RichTextImage";
 import StatisticsCardList from "@/components/sections/StatisticsCardList";
 import TextContent from "@/components/sections/TextContent";
+import WebError from "@/components/sections/WebError";
 import type { FC } from "react";
 
 type Renderer = {
@@ -47,6 +48,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsRichTextImage: RichTextImage,
   ComponentSectionsStatisticsCardList: StatisticsCardList,
   ComponentSectionsTextContent: TextContent,
+  ComponentSectionsWebError: WebError,
 };
 
 export default defaultRenderers;

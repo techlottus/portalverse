@@ -37,6 +37,7 @@ import type { PromoLinkListSection } from "@/utils/strapi/sections/PromoLinkList
 import type { RichTextImageSection } from "@/utils/strapi/sections/RichTextImage";
 import type { StatisticsCardListSection } from "@/utils/strapi/sections/StatisticsCardList";
 import type { TextContentSection } from "@/utils/strapi/sections/TextContent";
+import { WEB_ERROR, WebErrorSection } from "./sections/WebError";
 
 export type ComponentSection =
   | AccordionSection
@@ -58,6 +59,7 @@ export type ComponentSection =
   | RichTextImageSection
   | StatisticsCardListSection
   | TextContentSection
+  | WebErrorSection
 
 export const SECTIONS = `
   ${ACCORDION_SECTION}
@@ -80,4 +82,5 @@ export const SECTIONS = `
   ${RICH_TEXT_IMAGE}
   ${STATISTICS_CARD_LIST}
   ${TEXT_CONTENT}
+  ${WEB_ERROR}
 `;
