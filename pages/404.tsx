@@ -7,6 +7,7 @@ import ContentLayout from "@/layouts/Content.layout";
 import { WebErrorPage } from "@/utils/strapi/sections/WebError";
 import { getNotFoundPageData } from "@/utils/getNotFoundPageData";
 import WebError from "@/components/sections/WebError";
+import ContentGenerator from "@/utils/ContentGenerator";
 
 
 const NotFound: NextPageWithLayout<WebErrorPage> = ( props: WebErrorPage ) => {
@@ -16,7 +17,9 @@ const NotFound: NextPageWithLayout<WebErrorPage> = ( props: WebErrorPage ) => {
     <Head>
       <title>{ meta.metaTitle }</title>
     </Head>
-    <WebError {...sections[0]}></WebError>
+    {sections?.length > 0 ? (
+      <ContentGenerator blocks={sections} />
+    ) : null}
   </>;
 };
 
@@ -36,6 +39,8 @@ export async function getStaticProps(context: any) {
     const notFoundPageData = await getNotFoundPageData();
     const sections = notFoundPageData?.notFoundPage?.data?.attributes?.sections;
     const meta = notFoundPageData?.notFoundPage?.data?.attributes?.seo;
+    console.log(sections);
+    
 
     return {
       props: {
