@@ -1,10 +1,9 @@
 import { LinkConfig } from "@/types/Link.types";
-import { SEO, SeoData } from "./SEO";
-import defaultRenderers from '@/utils/Renderers'
-import { NotfoundSection } from "@/utils/getNotFoundPageData";
+import { SeoData } from "./SEO";
 
 
 export type WebErrorSection = {
+  type: 'ComponentSectionsWebError'
   title?: string;
   message?: string;
   error_code?: string;
@@ -15,32 +14,15 @@ export type WebErrorPage = {
   meta: SeoData
 };
 
-export const NOT_FOUND_SECTIONS = `
-  sections {
-    __typename
-    ...on ComponentSectionsWebError {
-      title
-      message  
-      button {
-        href
-        text
-        iconName
-        iconPosition
-      }
-    }
-  }
-`;
-export const NotFoundPage = `
-query NotFoundPage {
-  notFoundPage {
-    data {
-      attributes {
-        title
-        slug
-        ${NOT_FOUND_SECTIONS}
-        ${SEO}
-      }
-    }
+export const WEB_ERROR = `
+...on ComponentSectionsWebError {
+  title
+  message  
+  button {
+    href
+    text
+    iconName
+    iconPosition
   }
 }
 `;
