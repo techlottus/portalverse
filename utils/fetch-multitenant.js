@@ -482,7 +482,7 @@ module.exports = {
       console.error(err);
     }
   });
-  fs.writeFile('./multitenant-errors.ts', `const errors = ${JSON.stringify(tailwindLogos.errors)} \n export default errors`, 'utf-8', (err) => {
+  fs.writeFile('./multitenant-errors.ts', `const errors: {[key:string]: { error_code:string; default_message:string; default_title:string; image:string; }} = ${JSON.stringify(tailwindLogos.errors)} \n export default errors`, 'utf-8', (err) => {
     if (err) {
       console.error(err);
     }
