@@ -46,6 +46,7 @@ export async function getStaticProps(context: any) {
       },
     };
   } catch(err) {
+    console.log(err)
     return {
       props: {
         sections: [],
