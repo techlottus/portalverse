@@ -6,7 +6,6 @@ import NextPageWithLayout from "@/types/Layout.types";
 import ContentLayout from "@/layouts/Content.layout";
 import { WebErrorPage } from "@/utils/strapi/sections/WebError";
 import { getNotFoundPageData } from "@/utils/getNotFoundPageData";
-import WebError from "@/components/sections/WebError";
 import ContentGenerator from "@/utils/ContentGenerator";
 
 

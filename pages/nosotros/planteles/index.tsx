@@ -79,7 +79,7 @@ const Planteles = ({ sections, meta }: any) => {
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           {
-            sections.campus.map(({ title, coords, description, images: items }: any, i: number) => <ContentInsideLayout classNames="mb-8" key={`campus-data-${i}`}>
+            sections?.campus?.map(({ title, coords, description, images: items }: any, i: number) => <ContentInsideLayout classNames="mb-8" key={`campus-data-${i}`}>
               <Image classNames="col-span-4 w-t:col-span-4 w-p:col-span-4 w-p:aspect-2/1" alt={items[0].alt} src={items[0].src} />
               <div className="col-span-4 border w-t:col-span-4 w-p:col-span-4 border-solid border-gray-300 rounded pl-3">
                 <p className="font-texts font-normal text-base leading-5 my-2">{description.state}</p>
