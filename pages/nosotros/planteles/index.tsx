@@ -91,7 +91,7 @@ const Planteles = ({ sections, meta }: any) => {
             ></Image>
           </div>
           <section className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-            {sections.planteles.sections.map((item: any, i: number) => (
+            {sections?.planteles?.sections?.map((item: any, i: number) => (
               <>
                 <ContentLayout>
                   <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
