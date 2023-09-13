@@ -242,15 +242,12 @@ async function fetchFonts(){
 
 const setLogos = (logos) => {
   return Object.keys(logos) .reduce((acc, token) => {
-    console.log(token);
     if (token === "errorLogos") {
       logos[token].map(error => {
         const err = {[error.error_code]: error}
         acc.errors = { ...acc.errors, ...err}
         return err
       })
-      
-      console.log(acc);
     } else {
       acc.css[token] = `url('${logos[token]}')`
       acc.tokens = [...acc.tokens, `bg-${token}`]
@@ -270,7 +267,6 @@ async function fetchLogos(){
     })
   
     const Logos = await rawLogos.json() 
-    console.log(Logos.data.attributes.error_logos[0].error_image.data.attributes.url);
     const { data : { attributes: { logo, favicon, extra_logos, error_logos } } } = Logos
   
     
