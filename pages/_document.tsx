@@ -9,7 +9,7 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link rel="icon" href={favicon} crossOrigin="true" />
-        { links.map((value, i) => <link key={i} href={value} rel="stylesheet"></link>) }
+        { links.map((value: any, i: number) => <link key={i} href={value} rel="stylesheet"></link>) }
 
       </Head>
       <body>

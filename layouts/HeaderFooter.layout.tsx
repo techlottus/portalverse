@@ -19,7 +19,7 @@ export default function HeaderFooterLayout({ children, breadcrumbs = true }: Hea
   const clickCTA = () => router.push("/admisiones/pedir-informacion");
 
   return <>
-    <Header menus={menus} menusMobile={menuMobile} onClickLogo={logotypeClick} onClickCTA={clickCTA} logotype={logotype} />
+    <Header menus={menus} menusMobile={menuMobile} onClickLogo={logotypeClick} onClickCTA={clickCTA} />
     <div className="w-d:pt-24">
       <ContentLayout>
         <Breadcrumbs classNames="col-span-12 w-t:col-span-8 w-p:col-span-4" visible={breadcrumbs} />

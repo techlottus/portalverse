@@ -51,9 +51,12 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
           <RichtText data={{
             content: sections.video.descripcion
           }} />
-          <Button dark data={sections.video.accion} onClick={() => {
+        {sections?.video?.button ?
+          <Button dark data={sections.video.button} onClick={() => {
             router.push(`${router.pathname}/talento`)
           }} />
+          : null
+        }
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:hidden">
           <BannerPortalverse data={sections.bannerEmpleabilidad}
@@ -139,10 +142,16 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
 }
 
 export async function getStaticProps(context: any) {
-  const { sections, meta } = await getDataPageFromJSON('egresados.json');
+  try {
+    const { sections, meta } = await getDataPageFromJSON("egresados.json");
 
-  return {
-    props: { sections, meta }
+    return {
+      props: { sections, meta },
+    };
+  } catch {
+    return {
+      notFound: true,
+    };
   }
 }
 

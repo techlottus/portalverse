@@ -137,11 +137,19 @@ const Planteles = ({ sections, meta }: any) => {
 
 // `getStaticPaths` requires using `getStaticProps`
 export async function getStaticProps(context: any) {
-  const { sections, meta } = await getDataPageFromJSON('planteles.json');
 
-  return {
-    props: { sections, meta },
+  try {
+    const { sections, meta } = await getDataPageFromJSON("planteles.json");
+
+    return {
+      props: { sections, meta },
+    };
+  } catch {
+    return {
+      notFound: true,
+    };
   }
+
 };
 
 export default Planteles;

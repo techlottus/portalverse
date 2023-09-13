@@ -7,7 +7,7 @@ import { ButtonInit } from "@/old-components/fixture"
 import Icon from "@/old-components/Icon"
 import HeaderPortalverseComponentData from "@/types/HeaderPortalverse.types"
 
-const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, logotype, onClickCTA, menus, menusMobile }: HeaderPortalverseComponentData) => { 
+const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, onClickCTA, menus, menusMobile }: HeaderPortalverseComponentData) => { 
 
   const [ menuInvisible, setMenuInvisible ] = useState<boolean>(true);
   const [ activeMenu, setActiveMenu ] = useState<boolean>(false);

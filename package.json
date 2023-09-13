@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "predev": "node ./utils/fetch-multitenant.js",
+    "predev": "node ./utils/fetchStaticContent.js && node ./utils/fetch-multitenant.js",
     "dev": "next dev",
-    "prebuild": "node ./utils/fetch-multitenant.js",
+    "prebuild": "node ./utils/fetchStaticContent.js && node ./utils/fetch-multitenant.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -32,6 +32,7 @@
     "@types/editorjs__header": "^2.6.0",
     "axios": "^1.2.2",
     "classnames": "^2.3.2",
+    "dotenv": "^16.3.1",
     "editorjs-parser": "^1.5.3",
     "kbar": "^0.1.0-beta.39",
     "leaflet": "^1.9.2",
@@ -44,6 +45,7 @@
     "react-player": "^2.11.0",
     "react-visibility-sensor": "^5.1.1",
     "sass": "^1.55.0",
+    "yarn": "^1.22.19",
     "yup": "^1.2.0"
   },
   "devDependencies": {
