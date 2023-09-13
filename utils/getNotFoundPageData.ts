@@ -17,8 +17,13 @@ type NotfoundPageResponse = {
   };
 };
 export const getNotFoundPageData = async () => {
-  const data = await fetchStrapiGraphQL<NotfoundPageResponse>(NotFoundPage);
-  return data;
+  try {
+    
+    const data = await fetchStrapiGraphQL<NotfoundPageResponse>(NotFoundPage);
+    return data;
+  } catch (error:any) {
+    throw new Error(error)
+  }
 };
 
 export const NotFoundPage = `
