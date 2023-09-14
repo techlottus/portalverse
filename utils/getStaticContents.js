@@ -12,7 +12,7 @@ async function fetcher(url, query, token) {
     })
   });
 
-  const { data, errors } = await response.json();
+  const { data, error } = await response.json();
 
   if (response?.ok) {
     if (data) {
@@ -21,9 +21,8 @@ async function fetcher(url, query, token) {
       return Promise.reject(new Error("Failed to get data"));
     }
   } else {
-    // Handle the graphql errors
-    const error = new Error(errors?.map(error => error?.message).join('\n') ?? 'unknown')
-    return Promise.reject(error)
+    // Handle the graphql error
+    return Promise.reject(new Error(error.message))
   }
 }
 
