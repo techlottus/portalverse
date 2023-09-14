@@ -23,7 +23,6 @@ const NotFound: NextPageWithLayout<WebErrorPage> = ( props: WebErrorPage ) => {
 }
 
 // `getStaticPaths` requires using `getStaticProps`
-
 export async function getStaticProps(context: any) {
 
   try {
