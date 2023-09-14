@@ -34,19 +34,27 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   return getLayout(
     <>
-      <Pixel ID="google-tag-manager" script={`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      <Pixel 
+        ID="google-tag-manager"
+        script={`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-5ZVRHTS');`} pixel="https://www.googletagmanager.com/ns.html?id=GTM-5ZVRHTS"></Pixel>
-      <Pixel ID="meta-pixel" script={`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '481987629436592', {
-          page_path: window.location.pathname,
-        });
-      `} pixel="https://www.facebook.com/tr?id=481987629436592&amp;ev=PageView&amp;noscript=1"></Pixel>
+        })(window,document,'script','dataLayer','GTM-5ZVRHTS');`}
+        pixel="https://www.googletagmanager.com/ns.html?id=GTM-5ZVRHTS"
+        image={false}
+      ></Pixel>
+      <Pixel
+        ID="meta-pixel"
+        script={`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '481987629436592', {
+            page_path: window.location.pathname,
+          });`}
+          pixel="https://www.facebook.com/tr?id=481987629436592&amp;ev=PageView&amp;noscript=1"
+          image={true}
+        ></Pixel>
 
 
       <Component {...pageProps} />
