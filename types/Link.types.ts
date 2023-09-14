@@ -24,6 +24,7 @@ export type LinkConfig = {
    */
   icon?: string;
   test?: string;
+  href: string;
 }
 
 export type LinkData = {

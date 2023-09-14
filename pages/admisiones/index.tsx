@@ -207,7 +207,7 @@ export async function getStaticProps(context: any) {
       props: { sections, meta },
     };
   } catch {
-    console.log("inside catch block");
+    // console.log("inside catch block");
     return {
       //@ts-ignore
       notFound: true,
