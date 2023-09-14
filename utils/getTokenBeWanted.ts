@@ -45,7 +45,7 @@ export const getTokenBeWanted = () => {
         }
       })
       .then( (res: any) => {
-        console.log("LOGOUT COMPLETO")
+        // console.log("LOGOUT COMPLETO")
         setIsLoading(false);
         setIsError(false);
         setIsLogoutSuccess(true);

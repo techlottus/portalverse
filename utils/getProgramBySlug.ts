@@ -38,6 +38,7 @@ export type ProgramModalityDetail = {
       }
     }
   }
+  labelModality: string;
   admissionProfile: string;
   graduateProfile: string;
   laborField: string;
@@ -131,6 +132,7 @@ query ProgramBySlug($slug: String!) {
               }
             }
           }
+          labelModality
           admissionProfile
           graduateProfile
           laborField
