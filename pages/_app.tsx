@@ -54,9 +54,9 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
           t.src=v;s=b.getElementsByTagName(e)[0];
           s.parentNode.insertBefore(t,s)}(window, document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', 487461332128996);
+          fbq('init', 481987629436592);
           fbq('track', 'PageView');`}
-        pixel="https://www.facebook.com/tr?id=481987629436592&amp;ev=PageView&amp;noscript=1"
+        pixel="https://www.facebook.com/tr?id=481987629436592&ev=PageView&noscript=1"
         image={true}
         ></Pixel>
 
