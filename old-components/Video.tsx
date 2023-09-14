@@ -35,7 +35,7 @@ const Video: FC<VideoComponentData> = ({ dimensions, data }: VideoComponentData)
       if ( outerWidth < 600) {
         newH = confNewHeight[2];
       }
-      const newConf = {...data, dimensions: {...data.dimensions, height: newH}}
+      const newConf = {...data, dimensions: {...data?.dimensions, height: newH}}
       setConfVideo({...newConf})
       return
     }
