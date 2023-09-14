@@ -86,5 +86,4 @@ export const SECTIONS = `
   ${RICH_TEXT_VIDEO}
   ${STATISTICS_CARD_LIST}
   ${TEXT_CONTENT}
-  ${WEB_ERROR}
 `;
