@@ -96,7 +96,7 @@ const OpenFormBachillerato: FC<any> = ({ classNames, image, pathThankyou, contro
     
     if (step === 2) {
       const programa = getDataByProgramEC(info.program);
-      console.log("programa", programa)
+      // console.log("programa", programa)
       lineaNegocio = programa.lineaNegocio;
       setNewLineaNegocio(lineaNegocio);
       setNewModalidad(modalidad);
