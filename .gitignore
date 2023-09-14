@@ -48,3 +48,11 @@ next-env.d.ts
 /.env
 /multitenant-images.ts
 /tailwind.config.js
+fontlinks.ts
+multitenant-errors.ts
+styles/fonts.css
+routes/Routes.ts
+routes/actions.ts
+routes/breadcrumbs.labels.ts
+config/footer.json
+config/header.json

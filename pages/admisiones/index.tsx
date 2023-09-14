@@ -190,18 +190,30 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
 
 // `getStaticPaths` requires using `getStaticProps`
 export async function getStaticProps(context: any) {
-  const { sections, meta } = await getDataPageFromJSON('landing-admisiones.json');
 
-  // redirect not avaliable page
-  if (!!meta.hidden) {
-    return {
-      notFound: true,
+  try {
+    const { sections, meta } = await getDataPageFromJSON(
+      "landing-admisiones.json"
+    );
+
+    // redirect not avaliable page
+    if (!!meta.hidden) {
+      return {
+        notFound: true,
+      };
     }
-  }
 
-  return {
-    props: { sections, meta }
+    return {
+      props: { sections, meta },
+    };
+  } catch {
+    // console.log("inside catch block");
+    return {
+      //@ts-ignore
+      notFound: true,
+    };
   }
+  
 }
 
 export default LandindAdmissions

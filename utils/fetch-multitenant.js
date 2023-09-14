@@ -112,6 +112,14 @@ const lottusFonts = {
 const lottusLogos = {
   logo: '../public/images/lottus.png',
   favicon: '/public/images/lottus-favicon.png',
+  errorLogos: [
+    {
+      "error_code": "404",
+      "default_message": "hubo un error inesperado",
+      "default_title": "lo sentimos",
+      "image": "https://pro-portalverse-lottus.s3.amazonaws.com/UTEG/404_068eb52796.jpg" // TODO: change image to lottus error
+    }
+  ]
 }
 
 const setcolors = (colors) => {
@@ -166,7 +174,7 @@ async function fetchColors(){
 }
 const setFontVariation = (url, name) => {
   first = url.split('@')
-  second = first[1] ? first[1].split('&') : second
+  second = first[1] ? first[1].split('&') : ""
   const weights = second ? second[0].split(';') : [];
 
   const variants = weights.map(weight => 
@@ -234,24 +242,32 @@ async function fetchFonts(){
 
 const setLogos = (logos) => {
   return Object.keys(logos) .reduce((acc, token) => {
-    acc.css[token] = `url('${logos[token]}')`
-    acc.tokens = [...acc.tokens, `bg-${token}`]
-    acc.img = `${acc.img}\n export const ${token} = "${logos[token]}"`
+    if (token === "errorLogos") {
+      logos[token].map(error => {
+        const err = {[error.error_code]: error}
+        acc.errors = { ...acc.errors, ...err}
+        return err
+      })
+    } else {
+      acc.css[token] = `url('${logos[token]}')`
+      acc.tokens = [...acc.tokens, `bg-${token}`]
+      acc.img = `${acc.img}\n export const ${token} = "${logos[token]}"`
+    }
     return acc
-  }, { css: {}, img: '', tokens: [''] })
+  }, { css: {}, img: '', tokens: [''], errors: {} })
 }
 
 async function fetchLogos(){
   try {
     const rawLogos = await
-    fetch(`${env.NEXT_PUBLIC_MULTITENANT_URL}/logo?populate=logo,favicon,extra_logos,extra_logos.image`, {
+    fetch(`${env.NEXT_PUBLIC_MULTITENANT_URL}/logo?populate=logo,favicon,extra_logos,extra_logos.image,error_logos,error_logos.error_image`, {
       headers: {
         "Authorization": `Bearer ${env.NEXT_PUBLIC_MULTITENANT_TOKEN}`
       }
     })
   
     const Logos = await rawLogos.json() 
-    const { data : { attributes: { logo, favicon, extra_logos } } } = Logos
+    const { data : { attributes: { logo, favicon, extra_logos, error_logos } } } = Logos
   
     
     const extraLogos = extra_logos.reduce((acc, {logo_token, image}) => {    
@@ -259,11 +275,17 @@ async function fetchLogos(){
       acc = {...acc, [logo_token]: url}
       return acc
     }, {})
+    const errorLogos = error_logos.reduce((acc, { error_code, error_image: { data: { attributes: { url }}}, default_title, default_message }) => {    
+      acc = [ ...acc, { error_code, default_message, default_title, image: url }]
+      return acc
+    }, [])
+    errorLogos
   
     return {
       logo: logo.data.attributes.url,
       favicon: favicon.data.attributes.url,
-      ...extraLogos
+      ...extraLogos,
+      errorLogos
     }
   } catch (error) {
     console.error(error);
@@ -456,6 +478,11 @@ module.exports = {
     }
   });
   fs.writeFile('./multitenant-images.ts', tailwindLogos.img, 'utf-8', (err) => {
+    if (err) {
+      console.error(err);
+    }
+  });
+  fs.writeFile('./multitenant-errors.ts', `const errors: {[key:string]: { error_code:string; default_message:string; default_title:string; image:string; }} = ${JSON.stringify(tailwindLogos.errors)} \n export default errors`, 'utf-8', (err) => {
     if (err) {
       console.error(err);
     }

@@ -104,9 +104,11 @@ export const getProgramDetailPageData = async (path: string): Promise<ProgramDet
     ? continuousEducationPrograms?.some((program) => {
         //@ts-ignore
         return program?.params?.program === programSlug;
-      })
+      })//@ts-ignore
     : staticProgramsByLevel?.some((level) => {
+        //@ts-ignore
         return level?.params?.programs?.some((program) => {
+          //@ts-ignore
           return level?.params?.level === levelSlug && program?.params?.program === programSlug;
         });
       });
@@ -221,8 +223,9 @@ export const getJSONProgramsPaths = async () => {
     const programsParams = levelParams?.params?.programs;
 
     for (const program of programsParams){
+      //@ts-ignore
       const path = `${levelParams?.params?.levelRoute}/${program?.params?.program}`;
-
+//@ts-ignore
       const programSlug = program?.params?.program;
       const isProgramAvailable = !staticPrograms?.find(staticProgram => staticProgram?.route === programSlug)?.config?.hidden
 

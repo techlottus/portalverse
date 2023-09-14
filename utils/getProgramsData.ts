@@ -26,6 +26,7 @@ type ProgramModalitiesDetail = {
       }
     }
   }
+  labelModality: string;
   admissionProfile: string;
   graduateProfile: string;
   laborField: string;
@@ -86,6 +87,7 @@ query GetAllProgramsData {
           }
         }
         programModalities {
+          labelModality
           admissionProfile
           graduateProfile
           laborField

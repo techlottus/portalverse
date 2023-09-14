@@ -35,7 +35,7 @@ const StepOne: FC<EgresadosStepComponentData> = ({ data, classNames, onNext }: E
         matricula: validateControl("matricula", infoControls.matricula, true),
       };
       setErrorControls({ ...newValidation });
-      console.log(newValidation)
+      // console.log(newValidation)
       if (validateControls()) {
         onNext(infoControls)
       }

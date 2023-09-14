@@ -52,6 +52,7 @@ export const LinkInit: LinkConfig = {
   disabled: false,
   id: '123',
   icon: '',
+  href: '/'
 }
 
 export const SelectInit: SelectConfig = {

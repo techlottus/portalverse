@@ -196,17 +196,23 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
 
 // `getStaticPaths` requires using `getStaticProps`
 export async function getStaticProps(context: any) {
-  const { sections, meta } = await getDataPageFromJSON('vinculacion-empresarial.json');
+  try {
+    const { sections, meta } = await getDataPageFromJSON('vinculacion-empresarial.json');
 
-  // redirect not avaliable page
-  if (!!meta.hidden) {
+    // redirect not avaliable page
+    if (!!meta.hidden) {
+      return {
+        notFound: true,
+      }
+    }
+
+    return {
+      props: { sections, meta }
+    }
+  } catch {
     return {
       notFound: true,
-    }
-  }
-
-  return {
-    props: { sections, meta }
+    };
   }
 };
 

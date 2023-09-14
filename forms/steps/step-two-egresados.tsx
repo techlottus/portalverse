@@ -47,7 +47,7 @@ const StepTwo: FC<EgresadosStepComponentData> = ({ data, classNames, enrollment,
         company: activeCompany ? validateControl("company", infoControls.company, true) : true,
         activeCompany: activeCompany === null && !true
       };
-      console.log(newValidation)
+      // console.log(newValidation)
       setErrorControls({ ...newValidation });
       if (validateControls()) {
         onNext(infoControls)

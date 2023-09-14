@@ -139,10 +139,16 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
 }
 
 export async function getStaticProps(context: any) {
-  const { sections, meta } = await getDataPageFromJSON('egresados.json');
+  try {
+    const { sections, meta } = await getDataPageFromJSON("egresados.json");
 
-  return {
-    props: { sections, meta }
+    return {
+      props: { sections, meta },
+    };
+  } catch {
+    return {
+      notFound: true,
+    };
   }
 }
 
