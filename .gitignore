@@ -54,3 +54,4 @@ config/*
 routes/actions.ts
 routes/breadcrumbs.labels.ts
 routes/Routes.ts
+GeneralConfig.ts
