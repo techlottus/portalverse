@@ -3,7 +3,7 @@ import React from 'react'
 import Script from 'next/script'
 import Head from 'next/head'
 
-export default ({script, pixel, name}: { script?: string, pixel?: {src: string, element?: 'iframe' | 'img'}, name?: string  }) => {
+export default ({script, pixel, name}: { script?: string, pixel?: {src?: string, element?: 'iframe' | 'img'}, name?: string  }) => {
   return(
     <>
       { !!script && <Script id={name} strategy='afterInteractive' dangerouslySetInnerHTML={{ __html: script }}/>}
