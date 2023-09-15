@@ -124,7 +124,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-t:hidden">
           <BannerPortalverse data={sections?.empleabilidad?.banner} onClick={() => router.push(sections?.empleabilidad?.banner?.redirect)} />
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-t:hidden">?
+        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-t:hidden">
           <BannerPortalverse data={sections.becas.banner} onClick={() => router.push(sections.becas.banner.redirect)} />
         </div>
       </ContentLayout>
