@@ -1,0 +1,24 @@
+{
+    "meta": {
+      "title": "Not Found",
+      "description": "Nuestro equipo se pondrá en contacto pronto, Te invitamos a seguirnos en redes sociales para mantenerte enterado del mundo ULA.",
+      "keywords": ""
+    },
+    "sections": {
+      "title": "¡Qué pena! No encontré esta página...",
+      "errorMsj": "Pero puedes volver al Inicio",
+      "image": {
+        "desk": {
+          "src": "https://assets.staging.bedu.org/ULA/Web_ULA_Composicion_Error404_v2_1_8d356b614d.png",
+          "alt": "error"
+        }
+      },
+      "button": {
+        "title": "Vuelve al inicio",
+        "type": "primary",
+        "icon": "",
+        "isExpand": false,
+        "redirect": "/"
+      }
+  }
+}
