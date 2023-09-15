@@ -1,19 +1,25 @@
 
 import React from 'react'
 import Script from 'next/script'
+import Head from 'next/head'
 
-export default ({script, pixel, ID, image}: { script?: string, pixel?: string, ID?: string, image: boolean }) => {
+export default ({script, pixel, name}: { script?: string, pixel?: {src: string, element?: 'iframe' | 'img'}, name?: string  }) => {
   return(
     <>
-      { !!script && <Script id={ID} strategy='afterInteractive' dangerouslySetInnerHTML={{ __html: script }}/>}
+      { !!script && <Script id={name} strategy='afterInteractive' dangerouslySetInnerHTML={{ __html: script }}/>}
         { !!pixel &&
+        <Head>
           <noscript>
             {
-              !!image
-                ? <img height="1" width="1" style={{ display: 'none' }} src={pixel}/>
-                : <iframe src={pixel} height="0" width="0" style={{"display":"none","visibility":"hidden"}}></iframe>}
-      
+              pixel.element && 
+                (
+                  pixel.element === 'img' && <img height="1" width="1" style={{ display: 'none' }} src={pixel.src}/>
+                  ||
+                  pixel.element === 'iframe' && <iframe src={pixel.src} height="0" width="0" style={{"display":"none","visibility":"hidden"}}></iframe>
+                )
+            }
           </noscript>
+        </Head>
         }
     </>
   )
