@@ -5,12 +5,12 @@ import { AppPropsWithLayout } from "@/types/Layout.types"
 import * as gtag from "@/lib/gtag"
 import * as fbq from '@/lib/fb-pixel'
 import Pixel from "@/components/Pixel"
-import { getGeneralConfigData } from "@/utils/getGeneralConfigData"
 import { ScriptsPixels } from "@/utils/strapi/sections/ScriptPixel"
+import { scripts } from "GeneralConfig"
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const router = useRouter();
-  const [scripts, setScripts] = useState<any>();
+
   useEffect(() => {
     const handleRouteChange = (url: any) => {
       gtag.pageview(url);
@@ -25,12 +25,6 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   }, [router.events]);
 
   useEffect( () => {
-    const getConfigData = async () => {
-      const generalConfig = await getGeneralConfigData();
-      const scripts = generalConfig?.generalConfig?.data?.attributes?.scriptsPixels || [];
-      setScripts(scripts)
-    }
-   getConfigData()
   }, [])
   useEffect( () => {
     // we need import elements with commonJS
@@ -53,7 +47,6 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
         pixel={{src: pixel?.src, element: pixel.element}}
       ></Pixel>)
       }
-    
 
       <Component {...pageProps} />
     </>)
