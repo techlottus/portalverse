@@ -5,6 +5,7 @@ import Head from 'next/head'
 import "@/styles/globals.scss"
 import { AppPropsWithLayout } from "@/types/Layout.types"
 import * as gtag from "@/lib/gtag"
+import * as fbq from '@/lib/fb-pixel'
 import Pixel from "@/components/Pixel"
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
@@ -12,12 +13,13 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   useEffect(() => {
     const handleRouteChange = (url: any) => {
-    gtag.pageview(url);
-  };
+      gtag.pageview(url);
+      fbq.pageview();
+    };
 
-  router.events.on("routeChangeComplete", handleRouteChange);
+    router.events.on("routeChangeComplete", handleRouteChange);
 
-  return () => {
+    return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events]);
@@ -35,17 +37,16 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   return getLayout(
     <>
       <Pixel 
-        ID="google-tag-manager"
+        name="google-tag-manager"
         script={`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-5ZVRHTS');`}
-        pixel="https://www.googletagmanager.com/ns.html?id=GTM-5ZVRHTS"
-        image={false}
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-5ZVRHTS');`}
+        pixel={{src: "https://www.googletagmanager.com/ns.html?id=GTM-5ZVRHTS", element: "iframe"}}
       ></Pixel>
-      <Pixel
-        ID="meta-pixel"
+      {/* <Pixel
+        name="meta-pixel-pageView"
         script={`!function(f,b,e,v,n,t,s)
           {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
           n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -55,10 +56,10 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
           s.parentNode.insertBefore(t,s)}(window, document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
           fbq('init', 481987629436592);
-          fbq('track', 'PageView');`}
-        pixel="https://www.facebook.com/tr?id=481987629436592&ev=PageView&noscript=1"
-        image={true}
-        ></Pixel>
+          fbq('track', 'PageView');`
+        }
+        pixel={{src: "https://www.facebook.com/tr?id=481987629436592&ev=PageView&noscript=1", element:'img'}}
+      ></Pixel> */}
 
 
       <Component {...pageProps} />
