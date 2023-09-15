@@ -36,103 +36,179 @@ const Planteles = ({ sections, meta }: any) => {
     handleVisibilityModal();
   };
 
-  return <>
-    <Head>
-      <title>{meta.title}</title>
-    </Head>
-    <HeaderFooterLayout>
-      <ContentFullLayout classNames="w-d:hidden w-t:col-span-8 w-p:col-span-4">
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:hidden">
-          <BannerPortalverse data={sections.head.banner} />
-        </div>
-      </ContentFullLayout>
-      <ContentLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:hidden w-p:hidden">
-          <BannerPortalverse data={sections.head.banner} />
-        </div>
-        <Modal isShow={isShow} onClose={handleVisibilityModal} data={{ icon: 'close', title: infoMap, tagOnClose: 'testOnClose', wrapper: true, }}>
-          {
-            !!coordsMap
-              ? <Map coords={coordsMap} zoom={15} scroll classNamesMap="w-d:h-[583px] w-t:h-[581px] w-p:h-[355px] w-full">
-                {
-                  ({ TileLayer, Marker, Popup }: any) => (
-                    <>
-                      <TileLayer
-                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                      />
-                      <Marker position={coordsMap}>
-                        <Popup><b>{infoMap}</b></Popup>
-                      </Marker>
-                    </>
-                  )
-                }
+  return (
+    <>
+      <Head>
+        <title>{meta.title}</title>
+      </Head>
+      <HeaderFooterLayout>
+        <ContentFullLayout classNames="w-d:hidden w-t:col-span-8 w-p:col-span-4">
+          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:hidden">
+            <BannerPortalverse data={sections.head.banner} />
+          </div>
+        </ContentFullLayout>
+        <ContentLayout>
+          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:hidden w-p:hidden">
+            <BannerPortalverse data={sections.head.banner} />
+          </div>
+          <Modal
+            isShow={isShow}
+            onClose={handleVisibilityModal}
+            data={{
+              icon: "close",
+              title: infoMap,
+              tagOnClose: "testOnClose",
+              wrapper: true,
+            }}
+          >
+            {!!coordsMap ? (
+              <Map
+                coords={coordsMap}
+                zoom={15}
+                scroll
+                classNamesMap="w-d:h-[583px] w-t:h-[581px] w-p:h-[355px] w-[100%]"
+              >
+                {({ TileLayer, Marker, Popup }: any) => (
+                  <>
+                    <TileLayer
+                      attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    />
+                    <Marker position={coordsMap}>
+                      <Popup>
+                        <b>{infoMap}</b>
+                      </Popup>
+                    </Marker>
+                  </>
+                )}
               </Map>
-              : null
-          }
-        </Modal>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <Image alt="campus" src="https://viveloensaltillo.com/wp-content/uploads/2021/11/1254x851usne-768x521.png"></Image>
-        </div>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings font-bold text-10 leading-12.5">{`¿En cuál de nuestros ${sections?.campus?.length} campus te gustaría estudiar?`}</p>
-        </div>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          {
-            sections?.campus?.map(({ title, coords, description, images: items }: any, i: number) => <ContentInsideLayout classNames="mb-8" key={`campus-data-${i}`}>
-              <Image classNames="col-span-4 w-t:col-span-4 w-p:col-span-4 w-p:aspect-2/1" alt={items[0].alt} src={items[0].src} />
-              <div className="col-span-4 border w-t:col-span-4 w-p:col-span-4 border-solid border-gray-300 rounded pl-3">
-                <p className="font-texts font-normal text-base leading-5 my-2">{description.state}</p>
-                <p className="font-headings font-semibold text-4.5 leading-5.625 my-2">{description.name}</p>
-                <ContentInsideLayout>
-                  <IconComponent name="marker" className="col-span-1 w-t:col-span-1 w-p:col-span-1" />
-                  <p className="col-span-11 w-t:col-span-7 w-p:col-span-3 font-texts font-normal">{description.address}</p>
-                </ContentInsideLayout>
-                <ContentInsideLayout classNames="items-center">
-                  <IconComponent name="phone" className={cn("col-span-1 w-t:col-span-1 w-p:col-span-1 w-4 mt-2", { "hidden": !description?.phone })} />
-                  <LinkContactTarget type="phone" info={description.phone} classNames="col-span-11 w-t:col-span-7 w-p:col-span-3 mt-2" />
-                </ContentInsideLayout>
-                <ContentInsideLayout classNames="items-center">
-                  <IconComponent name="email" className={cn("col-span-1 w-t:col-span-1 w-p:col-span-1 w-4 mt-2", { "hidden": !description?.email })} />
-                  <LinkContactTarget type="email" info={description.email} classNames="col-span-11 w-t:col-span-7 w-p:col-span-3 mt-2" />
-                </ContentInsideLayout>
-                <div className="flex justify-end pr-3" onClick={() => handleOpenModal(coords, title)}>
-                  <p className="font-texts font-normal">Ver mapa</p>
-                  <IconComponent name="eye" className="ml-1 w-4" />
-                </div>
-              </div>
-              <Map coords={coords} classNames="w-t:hidden w-p:hidden col-span-4 w-t:col-span-3 w-p:col-span-4" classNamesMap="h-55">
-                {
-                  ({ TileLayer, Marker, Popup }: any) => (
-                    <>
-                      <TileLayer
-                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                      />
-                      <Marker position={coords}>
-                        <Popup><b>{description.name}</b></Popup>
-                      </Marker>
-                    </>
-                  )
-                }
-              </Map>
-            </ContentInsideLayout>
-            )
-          }
-        </div>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <Cintillo
-            classNames="h-auto"
-            image={sections.banner.image}
-            title={sections.banner.title}
-            email={sections.banner.email}
-            phone={sections.banner.phone}
-            contentVariant={sections.banner.contentVariant}
-          />
-        </div>
-      </ContentLayout>
-    </HeaderFooterLayout>
-  </>;
+            ) : null}
+          </Modal>
+          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+            <Image
+              alt="campus"
+              src="https://viveloensaltillo.com/wp-content/uploads/2021/11/1254x851usne-768x521.png"
+            ></Image>
+          </div>
+          <section className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+            {sections?.planteles?.sections?.map((item: any, i: number) => (
+              <>
+                <ContentLayout>
+                  <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+                    <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%]">
+                      {item.title}
+                    </p>
+                  </div>
+                  <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mb-[72px]">
+                    {item.campus.map(
+                      (
+                        { title, coords, description, images: items }: any,
+                        i: number
+                      ) => (
+                        <ContentInsideLayout
+                          classNames="mb-8"
+                          key={`campus-data-${i}`}
+                        >
+                          <Image
+                            classNames="col-span-4 w-t:col-span-4 w-p:col-span-4 w-p:aspect-2/1"
+                            alt={items[0].alt}
+                            src={items[0].src}
+                          />
+                          <div className="col-span-4 border w-t:col-span-4 w-p:col-span-4 border-gray-300 rounded pl-3">
+                            <p className="font-Nunito-Sans font-normal text-base leading-5 my-2">
+                              {description.state}
+                            </p>
+                            <p className="font-headings font-semibold text-4.5 leading-5.625 my-2">
+                              {description.name}
+                            </p>
+                            <ContentInsideLayout>
+                              <IconComponent
+                                name="marker"
+                                className="col-span-1 w-t:col-span-1 w-p:col-span-1"
+                              />
+                              <p className="col-span-11 w-t:col-span-7 w-p:col-span-3 font-Nunito-Sans font-normal">
+                                {description.address}
+                              </p>
+                            </ContentInsideLayout>
+                            <ContentInsideLayout classNames="items-center">
+                              <IconComponent
+                                name="phone"
+                                className={cn(
+                                  "col-span-1 w-t:col-span-1 w-p:col-span-1 w-4 mt-2",
+                                  { hidden: !description?.phone }
+                                )}
+                              />
+                              <LinkContactTarget
+                                type="phone"
+                                info={description.phone}
+                                classNames="col-span-11 w-t:col-span-7 w-p:col-span-3 mt-2"
+                              />
+                            </ContentInsideLayout>
+                            <ContentInsideLayout classNames="items-center">
+                              <IconComponent
+                                name="email"
+                                className={cn(
+                                  "col-span-1 w-t:col-span-1 w-p:col-span-1 w-4 mt-2",
+                                  { hidden: !description?.email }
+                                )}
+                              />
+                              <LinkContactTarget
+                                type="email"
+                                info={description.email}
+                                classNames="col-span-11 w-t:col-span-7 w-p:col-span-3 mt-2"
+                              />
+                            </ContentInsideLayout>
+                            <div
+                              className="flex justify-end pr-3"
+                              onClick={() => handleOpenModal(coords, title)}
+                            >
+                              <p className="font-Nunito-Sans font-normal">
+                                Ver mapa
+                              </p>
+                              <IconComponent name="eye" className="ml-1 w-4" />
+                            </div>
+                          </div>
+                          <Map
+                            coords={coords}
+                            classNames="w-t:hidden w-p:hidden col-span-4 w-t:col-span-3 w-p:col-span-4"
+                            classNamesMap="h-[214px]"
+                          >
+                            {({ TileLayer, Marker, Popup }: any) => (
+                              <>
+                                <TileLayer
+                                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                                />
+                                <Marker position={coords}>
+                                  <Popup>
+                                    <b>{description.name}</b>
+                                  </Popup>
+                                </Marker>
+                              </>
+                            )}
+                          </Map>
+                        </ContentInsideLayout>
+                      )
+                    )}
+                  </section>
+                </ContentLayout>
+              </>
+            ))}
+          </section>
+          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+            <Cintillo
+              classNames="h-auto"
+              image={sections.banner.image}
+              title={sections.banner.title}
+              email={sections.banner.email}
+              phone={sections.banner.phone}
+              contentVariant={sections.banner.contentVariant}
+            />
+          </div>
+        </ContentLayout>
+      </HeaderFooterLayout>
+    </>
+  );
 };
 
 // `getStaticPaths` requires using `getStaticProps`

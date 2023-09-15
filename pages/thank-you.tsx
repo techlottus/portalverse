@@ -16,12 +16,12 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
 
   const [messages] = useState<any>({
     egresados:{
-      title: "Gracias por actualizar tus datos",
-      subtitle: 'Ya puedes acceder a toda la información de tu universidad.',
+      title: sections?.titleEgresados,
+      subtitle: sections?.subtitleEgresados,
     }, 
     gral:{
-      title: "Gracias por tu interés",
-      subtitle: 'Nuestro equipo se pondrá en contacto contigo muy pronto. También puedes encontrar más información sobre UTEG  en nuestras redes sociales.',
+      title: sections?.titleGral,
+      subtitle: sections?.subtitleGral,
     }
   })
 

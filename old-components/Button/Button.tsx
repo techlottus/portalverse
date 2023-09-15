@@ -35,7 +35,7 @@ const Button: FC<ButtonComponentData> = memo(({ data, onClick, dark, darkOutline
 
   return <>
         {
-          data.disabled 
+          data?.disabled 
           ? <lottus-button ref={buttonPortalverseRef}></lottus-button> 
           : <lottus-button class={cn({ "dark": dark,  "darkOutlined" : darkOutlined})} ref={buttonPortalverseRef}></lottus-button>
         }  
