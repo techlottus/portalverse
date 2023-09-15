@@ -153,6 +153,13 @@ const SomosUteg: NextPageWithLayout = ({ sections, meta }: any) => {
             </section>)
           }
         </div>
+        {
+          sections?.ourCertifications?.link ? 
+          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+            <LinkIcons data={sections?.ourCertifications?.link} onClick={() => router.push(sections?.ourCertifications?.link?.redirect)} />
+          </div>
+          : null
+        }
       </ContentLayout>
     </HeaderFooterLayout>
   </>
@@ -161,7 +168,7 @@ const SomosUteg: NextPageWithLayout = ({ sections, meta }: any) => {
 // `getStaticPaths` requires using `getStaticProps`
 export async function getStaticProps(context: any) {
   try {
-    const { sections, meta } = await getDataPageFromJSON('somos-uteg.json');
+    const { sections, meta } = await getDataPageFromJSON('nosotros.json');
 
     // redirect not avaliable page
     if (!!meta.hidden) {
