@@ -39,13 +39,25 @@ const VidaEstudiantil: NextPageWithLayout = ({ sections, meta }: any) => {
       </ContentLayout>
       <ContentFullLayout classNames="bg-primary-500 text-surface-00 mt-18 w-t:mt-12 w-p:mt-12">
         <ContentLayout classNames="text-surface-0">
-          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 my-6">
-            <Video dimensions={["330px", "360px", "200px"]} data={ sections?.sportActivities?.video} />
-          </div>
-          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 my-auto text-surface-0">
-            <p className="font-headings font-bold text-6.5 w-t:text-6 w-p:text-6 leading-tight mb-6">{sections?.sportActivities?.title}</p>
+        {
+          sections?.sportActivities?.video ?
+            <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 my-6">
+              <Video dimensions={["330px", "400px", "200px"]} data={sections?.sportActivities?.video} />
+            </div>
+            : sections?.sportActivities?.image ?
+              <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 my-6">
+                <Image
+                  alt={sections?.sportActivities?.image?.desk?.alt}
+                  src={sections?.sportActivities?.image?.desk?.src}
+                  classNames="aspect-2/1 w-t:aspect-2/1 w-p:aspect-2/1"
+                />
+              </div>
+              : null
+        }
+          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 my-auto">
+            <p className="font-Poppins font-bold text-6.5 w-t:text-6 w-p:text-6 leading-[125%] mb-6">{sections.sportActivities.title}</p>
             <RichtText font="dark" data={{
-              content: sections?.sportActivities?.description
+              content: sections.sportActivities.description
             }} />
            <div className="mb-6">
             <p>{sections.sportActivities.moreInformation}<span className="ml-2"><LinkContactTarget type="email" info={sections.sportActivities.moreInformationLink} classNames="text-surface-0" /></span></p>
@@ -61,9 +73,21 @@ const VidaEstudiantil: NextPageWithLayout = ({ sections, meta }: any) => {
             }} />
             <p>{sections.culturalActivities.moreInformation}<LinkContactTarget type="email" info={sections.culturalActivities.moreInformationLink}/></p>
           </div>
-          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-            <Video dimensions={["330px", "360px", "200px"]} data={ sections.culturalActivities.video} />
-          </div>
+          {
+          sections.culturalActivities.video && sections.culturalActivities.video ?
+            <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-p:hidden w-t:hidden mb-12 mt-12 w-t:mbt-6 w-p:mt-6 w-t:mb-6 w-p:mb-6">
+              <Video dimensions={["330px", "400px", "200px"]} data={sections.culturalActivities.video} />
+            </div>
+            : sections?.culturalActivities?.image ?
+              <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mb-12 mt-12 w-t:mbt-6 w-p:mt-6 w-t:mb-6 w-p:mb-6">
+                <Image
+                  alt={sections?.culturalActivities?.image?.desk?.alt}
+                  src={sections?.culturalActivities?.image?.desk?.src}
+                  classNames="aspect-2/1 w-t:aspect-2/1 w-p:aspect-2/1"
+                />
+              </div>
+              : null
+        }
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mt-18">
           <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6">{ sections.lifeUANE.title}</p>
           <Mosaic data={sections.lifeUANE.images}/>
