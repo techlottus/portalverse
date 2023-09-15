@@ -7,7 +7,6 @@ export type ScriptsPixels = {
   pixel: Pixel
 };
 export type Pixel = {
-  type?: 'ComponentSectionsPixel'
   src?: string;
   element?:  'iframe' | 'img';
 }
