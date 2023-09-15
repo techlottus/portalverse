@@ -20,9 +20,18 @@ const NotFound: NextPageWithLayout<WebErrorPage> = ( props: WebErrorPage ) => {
       <ContentGenerator blocks={sections} />
     ) : null}
   </>;
-}
+};
 
-// `getStaticPaths` requires using `getStaticProps`
+NotFound.getLayout = function getLayout(page: ReactElement) {
+  return <HeaderFooterLayout breadcrumbs={false}>
+    <ContentFullLayout classNames="bg-surface-100">
+      <ContentLayout>
+        { page }
+      </ContentLayout>
+    </ContentFullLayout>
+  </HeaderFooterLayout>
+};
+
 export async function getStaticProps(context: any) {
 
   try {
