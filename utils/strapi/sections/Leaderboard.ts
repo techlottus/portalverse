@@ -19,6 +19,7 @@ export type LeaderboardSection = {
   tabletImage: StrapiImage;
   mobileImage: StrapiImage;
   leaderboardContentVariant: "light" | "dark"
+  button?: {label?:string, variant?:"primary"|"outlined"|"outlined_negative", iconName?:string, CTA:string, size?:"xs"|"sm"|"md"|"lg" }
 };
 
 export const LEADERBOARD = `
@@ -56,5 +57,12 @@ export const LEADERBOARD = `
     }
   }
   leaderboardContentVariant: contentVariant
+  button{
+    label
+    variant
+    size
+    iconName
+    CTA
+  }
 }
 `;

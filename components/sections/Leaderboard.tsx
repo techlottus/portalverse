@@ -2,6 +2,7 @@ import Container from "@/layouts/Container.layout"
 import Image from "@/old-components/Image";
 import cn from "classnames";
 import type { LeaderboardSection } from "@/utils/strapi/sections/Leaderboard"
+import Button from "@/old-components/Button/Button";
 
 const Leaderboard = (props: LeaderboardSection) => {
   const {
@@ -12,8 +13,14 @@ const Leaderboard = (props: LeaderboardSection) => {
     desktopImage,
     tabletImage,
     mobileImage,
-    leaderboardContentVariant: contentVariant
+    leaderboardContentVariant: contentVariant,
+    button
   } = props;
+
+  const myhref = (web: string) => {
+    if (!web) return;
+    window.location.href = web;
+  };
 
   return (
     <section>
@@ -67,8 +74,17 @@ const Leaderboard = (props: LeaderboardSection) => {
                   </div>
                 : null
             }
+            {button&& (
+            <Button  darkOutlined= {button.variant === "outlined_negative"} dark={button.variant==="primary"} data={{
+              title: button?.label,
+              type: button?.variant,
+              icon: button?.iconName,
+              isExpand: false,            
+            }}
+            onClick={() =>{ myhref(button.CTA)}} />
+          )}
             {
-              links?.length > 0
+              !button && links?.length > 0
                 ? <div
                     className={
                       cn(
