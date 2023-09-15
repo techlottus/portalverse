@@ -6,7 +6,7 @@ import * as gtag from "@/lib/gtag"
 import * as fbq from '@/lib/fb-pixel'
 import Pixel from "@/components/Pixel"
 import { ScriptsPixels } from "@/utils/strapi/sections/ScriptPixel"
-import { scripts } from "GeneralConfig"
+import { scripts } from "../GeneralConfig"
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const router = useRouter();
