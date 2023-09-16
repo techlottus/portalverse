@@ -9,7 +9,7 @@ async function createGeneralData  () {
   let scripts = []
   try {
     const generalConfig = await getGeneralConfigData();
-    scripts = generalConfig?.attributes?.scriptsPixels;
+    scripts = generalConfig?.attributes?.scriptsPixels || [];
   } catch (error) {
     console.log(error);
   }
