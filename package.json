@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "predev": "node ./utils/fetchStaticContent.js && node ./utils/fetch-multitenant.js",
+    "predev": "node ./utils/fetchStaticContent.js && node ./utils/fetch-multitenant.js && node ./utils/fetchGeneralData.js",
     "dev": "next dev",
-    "prebuild": "node ./utils/fetchStaticContent.js && node ./utils/fetch-multitenant.js",
+    "prebuild": "node ./utils/fetchStaticContent.js && node ./utils/fetch-multitenant.js && node ./utils/fetchGeneralData.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
