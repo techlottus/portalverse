@@ -50,9 +50,8 @@ next-env.d.ts
 /tailwind.config.js
 fontlinks.ts
 multitenant-errors.ts
-styles/fonts.css
-routes/Routes.ts
+config/*
 routes/actions.ts
 routes/breadcrumbs.labels.ts
-config/footer.json
-config/header.json
+routes/Routes.ts
+GeneralConfig.ts
