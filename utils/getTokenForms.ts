@@ -29,10 +29,19 @@ export const getTokenForms = () => {
       })
   }
 
+  console.log("process.env.NEXT_PUBLIC_TOKEN", process.env.NEXT_PUBLIC_TOKEN);
+  console.log("process.env.NEXT_PUBLIC_CLIENT_ID", process.env.NEXT_PUBLIC_CLIENT_ID);
+  console.log("process.env.NEXT_PUBLIC_CLIENT_SECRET", process.env.NEXT_PUBLIC_CLIENT_SECRET);
+  console.log("process.env.NEXT_PUBLIC_USERNAME", process.env.NEXT_PUBLIC_USERNAME);
+  console.log("process.env.NEXT_PUBLIC_PASSWORD", process.env.NEXT_PUBLIC_PASSWORD);
+  console.log("process.env.NEXT_PUBLIC_GRANT_TYPE", process.env.NEXT_PUBLIC_GRANT_TYPE);
+
   const validateData = () => setIsValidateData(!!process.env.NEXT_PUBLIC_TOKEN && !!process.env.NEXT_PUBLIC_CLIENT_ID && !!process.env.NEXT_PUBLIC_CLIENT_SECRET && !!process.env.NEXT_PUBLIC_USERNAME && !!process.env.NEXT_PUBLIC_PASSWORD && !!process.env.NEXT_PUBLIC_GRANT_TYPE);
 
   useEffect(() => {
+    console.log("inside useEffect[isValidateData]");
     if(isValidateData) {
+      console.log("isValidateData is true");
       fetchData();
     }
   }, [isValidateData]);
