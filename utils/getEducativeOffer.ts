@@ -39,6 +39,7 @@ export const getEducativeOffer = () => {
       .then( (res: any) => {
         const { data: programs } = res;
         let dataPrograms: Array<any> = [];
+        console.log("programs", programs);
         if(!!programs && !!programs.length) {
           setAllPrograms([ ...programs ])
           switch(modalidad) {

@@ -33,6 +33,9 @@ const getBusinessLineToFetchFrom = (businessLine: string, modality: string) => {
         default: return "UTEG"
       }
     }
+    case "ULA": {
+      return "ULA"
+    }
     default: return ""
   }
 }
