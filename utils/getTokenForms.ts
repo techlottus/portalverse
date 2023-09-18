@@ -8,18 +8,21 @@ export const getTokenForms = () => {
   const [ isValidateData, setIsValidateData ] = useState<boolean>(false);
   
   const fetchData= async () => {
+    console.log("Inside getTokenForms fetchData");
     const params = `client_id=${process.env.NEXT_PUBLIC_CLIENT_ID!}&client_secret=${process.env.NEXT_PUBLIC_CLIENT_SECRET!}&username=${process.env.NEXT_PUBLIC_USERNAME!}&password=${process.env.NEXT_PUBLIC_PASSWORD!}&grant_type=${process.env.NEXT_PUBLIC_GRANT_TYPE!}`;
 
     setIsLoading(true);
     setIsError(false);
     await axios.post(`${process.env.NEXT_PUBLIC_TOKEN!}?${params}`)
       .then( (res: any) => {
+        console.log("inside then block");
         const { data: { access_token, token_type } } = res;
         setToken({ access_token, token_type });
         setIsError(false);
         setIsLoading(false);
       })
       .catch( (err: any) => {
+        console.log("inside catch block");
         setToken({});
         setIsError(true)
         setIsLoading(false);
