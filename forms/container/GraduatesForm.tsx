@@ -14,6 +14,7 @@ import useToken from "@/utils/forms/graduates/hooks/useToken";
 import useEnrollmentIdValidation from "@/utils/forms/graduates/hooks/useEnrollmentIdValidation";
 import useGraduateRegistration from "@/utils/forms/graduates/hooks/useGraduateRegistration";
 import { FormSchema } from "@/utils/forms/graduates/schema";
+import GRADUATES_FORM_COPIES from "@/forms/fixtures/graduates";
 import cn from "classnames";
 import type { FormValues } from "@/utils/forms/graduates/schema";
 
@@ -168,11 +169,11 @@ const StepOne = ({ validateStep }: { validateStep: () => Promise<void> }) => {
 
   return (
     <div className="flex flex-col space-y-6">
-      <p className="font-Poppins text-5 font-semibold leading-7">
+      <p className="font-headings text-5 font-semibold leading-7">
         Descubre y disfruta los servicios y eventos creados para nuestra
         comunidad de egresados.
       </p>
-      <p className="font-Nunito-Sans font-normal text-base leading-5">
+      <p className="font-texts font-normal text-base leading-5">
         Actualiza tus datos y únete a nuestra comunidad de egresados.
       </p>
       <div>
@@ -202,9 +203,9 @@ const StepOne = ({ validateStep }: { validateStep: () => Promise<void> }) => {
           )}
         />
       </div>
-      <p className="font-Nunito-Sans font-normal text-base leading-5">
-        ¿No recuerdas tu matrícula? Solicítala con tu comprobante de estudios en los correos: <a className="font-Nunito-Sans font-bold" href="mailto:egresados@uteg.edu.mx">egresados@uteg.edu.mx</a> y <a className="font-Nunito-Sans font-bold" href="mailto:comunidad.de.egresados@uteg.edu.mx">comunidad.de.egresados@uteg.edu.mx</a>
-      </p>
+      <div className="font-texts font-normal text-base leading-5">
+        <p dangerouslySetInnerHTML={{__html: GRADUATES_FORM_COPIES?.message}}></p>
+      </div>
       <div>
         <Button
           dark
@@ -249,15 +250,15 @@ const StepTwo = ({
     <div>
       {isValidEnrollmentId ? (
         <div className="flex flex-col space-y-6">
-          <p className="font-Poppins text-5 font-semibold leading-7">
+          <p className="font-headings text-5 font-semibold leading-7">
             Descubre y disfruta los servicios y eventos creados para nuestra
             comunidad de egresados.
           </p>
-          <p className="font-Nunito-Sans font-normal text-base leading-5">
+          <p className="font-texts font-normal text-base leading-5">
             Revisa que tu matrícula sea la correcta y actualiza tus datos a
             continuación
           </p>
-          <p className="font-Nunito font-normal text-xs leading-3 text-SC/Blackandgrey/B-60 p-3 border rounded-lg">
+          <p className="font-texts font-normal text-xs leading-3 text-SC/Blackandgrey/B-60 p-3 border rounded-lg">
             Matrícula: {enrollmentId}
           </p>
           <div>
@@ -322,7 +323,7 @@ const StepTwo = ({
             />
           </div>
           <div>
-            <p className="font-Nunito-Sans font-normal text-base leading-5 mb-4">
+            <p className="font-texts font-normal text-base leading-5 mb-4">
               ¿Estás trabajando actualmente?
             </p>
             <div className="flex space-x-6">
@@ -332,7 +333,7 @@ const StepTwo = ({
                 render={({ field: { value, onChange, onBlur } }) => (
                   <>
                     <span className="flex items-center space-x-2">
-                      <span className="font-Nunito-Sans font-normal text-base leading-5">
+                      <span className="font-texts font-normal text-base leading-5">
                         Si
                       </span>
                       <input
@@ -344,7 +345,7 @@ const StepTwo = ({
                       />
                     </span>
                     <span className="flex items-center space-x-2">
-                      <span className="font-Nunito-Sans font-normal text-base leading-5">
+                      <span className="font-texts font-normal text-base leading-5">
                         No
                       </span>
                       <input
@@ -360,7 +361,7 @@ const StepTwo = ({
               />
             </div>
             {errors?.isWorking?.message && (
-              <span className="inline-block font-Nunito text-xs text-[#E57565] font-bold pl-3 text-red mt-3.5">
+              <span className="inline-block font-texts text-xs text-[#E57565] font-bold pl-3 text-red mt-3.5">
                 Campo requerido
               </span>
             )}
@@ -409,30 +410,15 @@ const StepTwo = ({
         </div>
       ) : (
         <div className="flex flex-col space-y-6">
-          <p className="font-Poppins text-5 font-semibold leading-7">
+          <p className="font-headings text-5 font-semibold leading-7">
             Matrícula no encontrada
           </p>
-          <p className="font-Nunito font-normal text-xs leading-3 text-SC/Blackandgrey/B-60 p-3 border rounded-lg">
+          <p className="font-texts font-normal text-xs leading-3 text-SC/Blackandgrey/B-60 p-3 border rounded-lg">
             No encontramos la matrícula: {enrollmentId}
           </p>
-          <p className="font-Nunito-Sans font-normal text-base leading-5">
-            Asegúrate de haber ingresado correctamente los datos. En caso de que
-            no recuerdes tu matrícula o que no puedas acceder ponte en contacto
-            con nosotros en los correos:{" "}
-            <a
-              className="font-Nunito-Sans font-bold"
-              href="mailto:egresados@uteg.edu.mx"
-            >
-              egresados@uteg.edu.mx
-            </a>{" "}
-            y{" "}
-            <a
-              className="font-Nunito-Sans font-bold"
-              href="mailto:comunidad.de.egresados@uteg.edu.mx"
-            >
-              comunidad.de.egresados@uteg.edu.mx
-            </a>
-          </p>
+          <div className="font-texts font-normal text-base leading-5">
+            <p dangerouslySetInnerHTML={{__html: GRADUATES_FORM_COPIES?.enrollmentIdNotFoundMessage}}></p>
+          </div>
           <div>
             <Button
               dark
