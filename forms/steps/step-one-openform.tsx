@@ -25,7 +25,7 @@ const StepOne: FC<any> = ({
   setErrorControls
 }: any) => {
 
-  const [ config, setConfig ] = useState<any>( stepOneConfig ? {...stepOneConfig} : {...OpenFormInit.stepone });
+  const [ config, setConfig ] = useState<any>( stepOneConfig ? {...OpenFormInit.stepone, ...stepOneConfig} : {...OpenFormInit.stepone });
   const [ progress, setProgress ] = useState<number>(0);
   // const [ infoControls, setInfoControls ] = useState<any>({
   //   name: "",
@@ -133,12 +133,12 @@ const StepOne: FC<any> = ({
         <p className="font-texts font-normal text-3.5 leading-4">{ config.subtitle }</p>
       </div>
       <div className="w-p:hidden">
-        <Image classNamesImg="w-full h-full object-cover" classNames="w-28 h-28 rounded-full overflow-hidden" src={image.src} alt={image.alt} />
+        <Image classNamesImg="w-full h-full object-cover" classNames="w-28 h-28 rounded-full overflow-hidden" src={config?.image} alt="image-person" />
       </div>
     </div>
     <div className="flex align-middle items-center mt-8 mb-6">
       <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">{ config.conditions }</p>
-      <Link href={config.privacyLink.link} passHref target={"_blank"}>
+      <Link href={config?.privacyLink?.link} passHref target={"_blank"}>
         <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">{config.privacyLink.label}</p>
       </Link>
     </div>

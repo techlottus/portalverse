@@ -42,6 +42,7 @@ type OpenFormConfig = {
   subtitle: string;
   conditions: string;
   privacyLink: { link: string; label: string };
+  image?: { src: string; alt: string };
 };
 
 type OpenForm = {
@@ -57,7 +58,7 @@ type OpenForm = {
   config?: OpenFormConfig
 }
 
-const OpenForm = ({ config, classNames, image, pathThankyou, controls, data }: OpenForm) => {
+const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm) => {
 
   const router = useRouter();
   const queryParams = router?.query;
@@ -325,7 +326,6 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data }: O
                   config={config}
                   data={data}
                   step={30}
-                  image={image}
                   infoControlsTouched={personalDataTouched}
                   setInfoControlsTouched={setPersonalDataTouched}
                   errorControls={personalDataErrors}
