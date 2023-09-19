@@ -11,6 +11,7 @@ import HeroSlider from "@/components/sections/HeroSlider";
 import Leaderboard from "@/components/sections/Leaderboard";
 import LinkList from "@/components/sections/LinkList";
 import Listconfig from "@/components/sections/Listconfig";
+import Outstanding from "@/components/sections/Outstanding";
 import OverlayCardList from "@/components/sections/OverlayCardList";
 import Paragraph from "@/components/Paragraph";
 import PodcastList from "@/components/sections/PodcastList";
@@ -42,6 +43,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsLeaderboard: Leaderboard,
   ComponentSectionsLinkList: LinkList,
   ComponentSectionsListconfig: Listconfig,
+  ComponentSectionsOutstandingRainbow: Outstanding,
   ComponentSectionsOverlayCardList: OverlayCardList,
   ComponentSectionsPodcastList: PodcastList,
   ComponentSectionsProgramsFilter: ProgramsFilter,

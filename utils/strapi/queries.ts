@@ -32,6 +32,7 @@ import type { HeroSliderSection } from "@/utils/strapi/sections/HeroSlider";
 import type { LeaderboardSection } from "@/utils/strapi/sections/Leaderboard";
 import type { LinkListSection } from "@/utils/strapi/sections/LinkList";
 import type { ListconfigSection } from "@/utils/strapi/sections/Listconfig";
+import { OUTSTANDING, OutstandingSection } from "@/utils/strapi/sections/Outstanding";
 import type { PodcastListSection } from "@/utils/strapi/sections/PodcastList";
 import type { ProgramsFilterSection } from "@/utils/strapi/sections/ProgramsFilter";
 import type { PromoLinkListSection } from "@/utils/strapi/sections/PromoLinkList";
@@ -40,6 +41,7 @@ import type { RichTextVideoSection } from "@/utils/strapi/sections/RichTextVideo
 import type { StatisticsCardListSection } from "@/utils/strapi/sections/StatisticsCardList";
 import type { TextContentSection } from "@/utils/strapi/sections/TextContent";
 import { WEB_ERROR, WebErrorSection } from "./sections/WebError";
+
 
 export type ComponentSection =
   | AccordionSection
@@ -55,6 +57,7 @@ export type ComponentSection =
   | LeaderboardSection
   | LinkListSection
   | ListconfigSection
+  | OutstandingSection
   | PodcastListSection
   | ProgramsFilterSection
   | PromoLinkListSection
@@ -78,6 +81,7 @@ export const SECTIONS = `
   ${LINK_LIST}
   ${LIST_CONFIG}
   ${LEADERBOARD}
+  ${OUTSTANDING}
   ${OVERLAY_CARD_LIST}
   ${PODCAST_LIST}
   ${PROMO_LINK_LIST}
