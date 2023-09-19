@@ -64,16 +64,12 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
           <Cintillo
             classNames="auto"
             {...sections?.aplica?.banner}
-            image={sections.aplica.banner.image}
-            title={sections.aplica.banner.title}
-            subtitle={sections.aplica.banner.subtitle}
-            phone={sections.aplica.banner.phone}
-            email={sections.aplica.banner.email}
-            contentVariant={sections.aplica.banner.font}
             actionLink={
-              <div slot="areaAction" className="flex align-middle items-center">
-                <Icon name={sections.aplica.banner.icon} className="w-6 h-6 mr-2 text-surface-0"/><Link className="font-texts font-normal text-base" href={sections.aplica.banner.redirecActionLink} passHref target={"_blank"}>{sections.aplica.banner.actionLink}</Link>
-              </div>
+              sections?.aplica?.banner?.icon ?
+                <div slot="areaAction" className="flex align-middle items-center">
+                  <Icon name={sections.aplica.banner.icon} className="w-6 h-6 mr-2 text-surface-0"/><Link className="font-texts font-normal text-base" href={sections.aplica.banner.redirecActionLink} passHref target={"_blank"}>{sections.aplica.banner.actionLink}</Link>
+                </div>
+              : null
             }
           />
         </div>
