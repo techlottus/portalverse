@@ -263,18 +263,20 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
           </ContentFullLayout>
           : null
       }
-      <ContentLayout classNames="mt-12 w-d:mt-18">
-        <section className="col-span-12">
-          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6 w-d:mb-">{sections?.videoSection.title}</p>
-          <div className="grid w-d:grid-cols-2 w-p:grid-cols-1 gap-6">
-            {
-            sections?.videoSection.videos.map((item:any, i:number) => <section key={`section-alliances-${i}`}>
-              <Video dimensions={["330px","400px","200px"]} data={ item } />
-            </section>)
-            }
-          </div>
-        </section>
-      </ContentLayout>
+      {
+        sections?.videoSection && <ContentLayout classNames="mt-12 w-d:mt-18">
+          <section className="col-span-12">
+            <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6 w-d:mb-">{sections?.videoSection.title}</p>
+            <div className="grid w-d:grid-cols-2 w-p:grid-cols-1 gap-6">
+              {
+              sections?.videoSection.videos.map((item:any, i:number) => <section key={`section-alliances-${i}`}>
+                <Video dimensions={["330px","400px","200px"]} data={ item } />
+              </section>)
+              }
+            </div>
+          </section>
+        </ContentLayout>
+      }
       <ContentLayout classNames="mt-6 w-d:mt-18">
         <div className="col-span-12">
           <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight">{sections?.alliances.title}</p>
