@@ -117,31 +117,31 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
     <HeaderFooterLayout breadcrumbs={true}>
       <ContentFullLayout classNames="gap-6 w-d:hidden">
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <Slider data={{ ...sections.head.slider }} mobile = {true}/>
+          <Slider data={{ ...sections?.head.slider }} mobile = {true}/>
         </div>
       </ContentFullLayout>
       <ContentLayout>
         <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <Slider data={{ ...sections.head.slider, height: "600px" }} mobile = {false}/>
+          <Slider data={{ ...sections?.head.slider, height: "600px" }} mobile = {false}/>
         </div>
       </ContentLayout>
       <ContentLayout classNames="mt-6 w-d:mt-18">
         <div className="col-span-8 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings font-bold text-10 w-t:text.8.5 w-p:text-6 mb-6 leading-tight w-t:semi-tight">{sections.head.title}</p>
-          <p className="font-headings font-bold text-5.5 w-t:text-4.5 w-p:text-base mb-6 leading-tight w-t:leading-tight">{sections.head.subtitle}</p>
+          <p className="font-headings font-bold text-10 w-t:text.8.5 w-p:text-6 mb-6 leading-tight w-t:semi-tight">{sections?.head.title}</p>
+          <p className="font-headings font-bold text-5.5 w-t:text-4.5 w-p:text-base mb-6 leading-tight w-t:leading-tight">{sections?.head.subtitle}</p>
           <RichtText classNames="" data={{
-            content: sections.head.description
+            content: sections?.head.description
           }} />
         </div>
       </ContentLayout>
       <ContentLayout classNames="hidden w-d:grid mt-12 w-d:mt-18">
         <div className="w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <Rainbow sections={sections.rainbow.sections} title={sections.rainbow.title} />
+          <Rainbow sections={sections?.rainbow.sections} title={sections?.rainbow.title} />
         </div>
       </ContentLayout>
       <ContentFullLayout classNames="w-d:hidden mt-12 w-d:mt-18">
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <Rainbow classNamesTitle="ml-6" sections={sections.rainbow.sections} title={sections.rainbow.title} />
+          <Rainbow classNamesTitle="ml-6" sections={sections?.rainbow.sections} title={sections?.rainbow.title} />
         </div>
       </ContentFullLayout>
       {
@@ -263,24 +263,26 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
           </ContentFullLayout>
           : null
       }
-      <ContentLayout classNames="mt-12 w-d:mt-18">
-        <section className="col-span-12">
-          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6 w-d:mb-">{sections.videoSection.title}</p>
-          <div className="grid w-d:grid-cols-2 w-p:grid-cols-1 gap-6">
-            {
-            sections.videoSection.videos.map((item:any, i:number) => <section key={`section-alliances-${i}`}>
-              <Video dimensions={["330px","400px","200px"]} data={ item } />
-            </section>)
-            }
-          </div>
-        </section>
-      </ContentLayout>
+      {
+        sections?.videoSection && <ContentLayout classNames="mt-12 w-d:mt-18">
+          <section className="col-span-12">
+            <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6 w-d:mb-">{sections?.videoSection.title}</p>
+            <div className="grid w-d:grid-cols-2 w-p:grid-cols-1 gap-6">
+              {
+              sections?.videoSection.videos.map((item:any, i:number) => <section key={`section-alliances-${i}`}>
+                <Video dimensions={["330px","400px","200px"]} data={ item } />
+              </section>)
+              }
+            </div>
+          </section>
+        </ContentLayout>
+      }
       <ContentLayout classNames="mt-6 w-d:mt-18">
         <div className="col-span-12">
-          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight">{sections.alliances.title}</p>
+          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight">{sections?.alliances.title}</p>
           <section className="grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
           {
-            sections.alliances.alliances.map((item:any, i:number) => <section key={`section-alliances-${i}`}>
+            sections?.alliances.alliances.map((item:any, i:number) => <section key={`section-alliances-${i}`}>
               <PromoLink data={item} onClick={() => {
                 handleOpenModal(item.content)
               }}/>
