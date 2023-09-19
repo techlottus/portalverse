@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import ContentInsideLayout from "@/layouts/ContentInside.layout";
@@ -15,11 +15,42 @@ import CardWebsitePortalverse from "@/old-components/CardWebsitePortalverse";
 import PromoLink from "@/old-components/PromoLink";
 import Modal from "@/old-components/Modal/Modal";
 import cn from "classnames";
+import TabsFeatured from "@/old-components/TabsFeatured";
+import DescriptionSection from "@/old-components/DescriptionSection";
+import Button from "@/old-components/Button/Button";
 
 const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
   const router = useRouter()
-
+  const [tabActive, setTabActive] = useState<number>(0);
+  const [contentTabs, setContentTabs] = useState<any>([]);
   const [allTabsId, setAllTabsId] = useState<Array<string>>([]);
+
+  const setTabByQueryParam = (param: any, tabsIds: Array<string>) => {
+    if (!!param) {
+      const { type } = router.query
+      const idTab = tabsIds.findIndex((tab: string) => tab === type)
+      setTabActive(idTab === -1 ? 0 : idTab)
+    }
+  }
+
+  useEffect(() => {
+    if(sections?.becas?.tabs?.items){
+      const { contents, ids } = sections.becas.tabs.items.reduce((prev: any, curr: any) => {
+        const { content, id } = curr;
+        return { ...prev, contents: [...prev.contents, content], ids: [...prev.ids, id] };
+      }, { contents: [], ids: [] });
+      setContentTabs([...contents]);
+      setAllTabsId([...ids]);
+    }
+  }, [sections.becas.tabs]);// eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
+    if (!!Object.keys(router.query).length && router.query.hasOwnProperty('type') && !!allTabsId.length) {
+      const { type } = router.query
+      setTabByQueryParam(type, allTabsId)
+    }
+  }, [router.query, allTabsId]);// eslint-disable-line react-hooks/exhaustive-deps
+
 
   const [isShow, setIsShow] = useState(false);
   const [infoModal, setInfoModal] = useState<any>({});
@@ -48,9 +79,9 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
                     <span className="material-icons ml-3 mt-1">
                       {
                         redirect?.external ?
-                        "chevron_right"
-                        :
-                        "download"
+                          "chevron_right"
+                          :
+                          "download"
                       }
                     </span>
                   </>
@@ -107,11 +138,56 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
             classNames="aspect-2/1 w-t:aspect-2/1 w-p:aspect-2/1"
           />
         </div>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:col-start-2 w-t:col-end-8 mb-12 w-t:mb-6 w-p:mb-6">
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:col-start-2 w-t:col-end-8 mb-6 w-t:mb-6 w-p:mb-6">
           <NumbersComponent data={sections.estadisticas} />
         </div>
+        {
+          sections?.becas?.tabs?.items ?
+            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-12">
+              <div id="becas" className="flex justify-center w-d:mb-2">
+                <TabsFeatured active={tabActive} tabs={sections.becas.tabs.items} onActive={(active: number) => setTabActive(active)} />
+              </div>
+              <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+                <ContentInsideLayout classNames="gap-6">
+                  {
+                    contentTabs.map(({ image: { src, alt }, content: { title, description, action = null } }: any, i: number) => <Fragment key={`description-beca-${i}`}>
+                      <DescriptionSection
+                        title={title}
+                        description={description}
+                        classNames={cn("col-span-7 grid grid-cols-7 gap-6 w-t:col-span-8 w-t:grid-cols-8 w-p:col-span-4 py-[40px] w-t:py-[94px] w-p:flex w-p:flex-col w-p:p-6", { "hidden w-p:hidden": tabActive !== i })}
+                        titleStyles="col-start-2 col-end-7 w-t:col-end-8"
+                        descriptionStyles="col-start-2 col-end-7 w-t:col-end-8"
+                        action={
+                          !!action
+                            ? <div slot="actionDescription" className="mt-4">
+                              <Button data={action} darkOutlined onClick={() => window.open(`${action.route}`)} />
+                            </div>
+                            : null
+                        }
+                      />
+                      <Image
+                        alt={alt}
+                        src={src}
+                        classNames={cn("aspect-4/3 col-span-5 w-t:col-start-2 w-t:col-end-8 w-p:col-span-4", { "hidden": tabActive !== i })}
+                      />
+                      {/* <DescriptionSection
+                          mode="transparent"
+                          title="hola proceso"
+                          description="jejeje"
+                          classNames={cn("col-span-12 grid grid-cols-12 gap-6 w-t:col-span-8 w-t:grid-cols-8 w-p:col-span-4 py-[40px] w-t:py-[94px] w-p:flex w-p:flex-col w-p:p-6 hidden", { "hidden w-p:hidden": tabActive !== i })}
+                          titleStyles="col-start-2 col-end-12 w-t:col-end-8"
+                          descriptionStyles="col-start-2 col-end-12 w-t:col-end-8" /> */}
+                    </Fragment>)
+                  }
+                </ContentInsideLayout>
+              </div>
+            </div>
+            : null
+        }
       </ContentLayout>
-      <ContentLayout>
+      {
+        sections?.becas?.scholarships  ?
+        <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6 w-t:mb-12 w-p:mb-6">
           <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight">{sections?.becas?.title}</p>
         </div>
@@ -127,6 +203,8 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
           }
         </section>
       </ContentLayout>
+      : null
+      }
       <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-12 w-t:mb-6 w-p:mb-6">
           <Feedback data={sections.feedback.feedback} >
