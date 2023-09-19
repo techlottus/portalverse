@@ -1,5 +1,4 @@
 import { FC } from "react";
-import Container from "@/layouts/Container.layout";
 import Image from "@/old-components/Image";
 import parseEditorRawData from "@/utils/parseEditorRawData";
 import RichtText from "@/old-components/Richtext/Richtext";
@@ -49,9 +48,9 @@ const Outstanding: FC<OutstandingSection> = (props: OutstandingSection) => {
             <div className="w-full w-d:w-1/2 flex flex-col space-y-6 w-d:pl-24">
               <h3 className="ac-type-h3-bold-solid-poppins-desktop w-t:ac-type-h2-negative-bold-solid-poppins-mobile w-p:ac-type-h3-negative-bold-solid-poppins-tabmob text-surface-0">{title}</h3>
               {
-                richTextMarkup && <div className="dark"><RichtText font={contentVariant === "light" ? "dark" : "light"} data={{ content: richTextMarkup }} /></div>
+                richTextMarkup ? <div className="dark"><RichtText font={contentVariant === "light" ? "dark" : "light"} data={{ content: richTextMarkup }} /></div> : null
               }
-              {button && (
+              {button ? (
                 <Button darkOutlined={button.variant === "outlined_negative"} dark={button.variant === "primary"} data={{
                   title: button?.label,
                   type: button?.variant,
@@ -59,7 +58,7 @@ const Outstanding: FC<OutstandingSection> = (props: OutstandingSection) => {
                   isExpand: false,
                 }}
                   onClick={() => { myhref(button.CTA) }} />
-              )}
+              ) : null}
 
             </div>
             <div className="w-full w-d:w-1/2 max-w-147">
