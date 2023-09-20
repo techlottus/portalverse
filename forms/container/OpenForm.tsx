@@ -12,6 +12,7 @@ import Button from "@/old-components/Button/Button"
 import { ButtonInit } from "@/old-components/fixture"
 import configControls from "@/forms/fixtures/controls"
 import axios from "axios"
+import errors from "../../multitenant-errors"
 
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
 
@@ -42,6 +43,7 @@ type OpenFormConfig = {
   subtitle: string;
   conditions: string;
   privacyLink: { link: string; label: string };
+  image?: { src: string; alt: string };
 };
 
 type OpenForm = {
@@ -57,7 +59,7 @@ type OpenForm = {
   config?: OpenFormConfig
 }
 
-const OpenForm = ({ config, classNames, image, pathThankyou, controls, data }: OpenForm) => {
+const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm) => {
 
   const router = useRouter();
   const queryParams = router?.query;
@@ -307,7 +309,7 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data }: O
                 Lo sentimos
                 </h1>
                 <div className="w-full max-w-96"> {/* Tailwind's 'max-w-sm' value isn't working for some reason u.u */}
-                  <img src="https://assets.staging.bedu.org/UTEG/404_318781b8aa.jpg" className="w-full" alt="error" />
+                  <img src={errors["404"].image} className="w-full" alt="error" />
                 </div>
                 <h2 className="text-surface-600 font-semibold text-5.5 my-6">
                 Esta página no está disponible
@@ -325,7 +327,6 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data }: O
                   config={config}
                   data={data}
                   step={30}
-                  image={image}
                   infoControlsTouched={personalDataTouched}
                   setInfoControlsTouched={setPersonalDataTouched}
                   errorControls={personalDataErrors}
