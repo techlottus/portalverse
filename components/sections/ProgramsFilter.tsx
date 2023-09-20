@@ -6,6 +6,7 @@ import Filter from "@/old-components/Filter/Filter";
 import Image from "@/old-components/Image";
 import Aspect from "@/components/Aspect";
 import { normalizeString } from "@/utils/misc";
+import routesConfig from "routesConfig.json";
 import cn from "classnames";
 import type { FilterProgram, ProgramsFilterSection } from "@/utils/strapi/sections/ProgramsFilter";
 
@@ -23,7 +24,8 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
 
   const levelAttributes = props?.level?.data?.attributes;
   const levelTitle = levelAttributes?.title;
-  const levelRoute = normalizeString(levelTitle)?.toLowerCase()
+
+  const levelRoute = routesConfig?.educationalLevels?.find(educationalLevel => educationalLevel?.name === levelTitle)?.path;
 
   const programs = levelAttributes?.programs?.data;
   const sortedPrograms = programs?.slice()?.sort((a, b) => a?.attributes?.name?.localeCompare(b?.attributes?.name));
@@ -155,7 +157,7 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
                           </p>
                           <div className="w-full h-full flex justify-end pb-2 font-texts font-bold items-end">
                             <Link
-                              href={`/oferta-educativa/${levelRoute}/${programAttributes?.slug}`}
+                              href={`${levelRoute}/${programAttributes?.slug}`}
                               className="flex items-center justify-end font-texts font-bold"
                             >
                               <span className="mr-1">Ver más</span>
