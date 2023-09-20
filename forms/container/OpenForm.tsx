@@ -34,6 +34,9 @@ const getBusinessLineToFetchFrom = (businessLine: string, modality: string) => {
         default: return "UTEG"
       }
     }
+    case "ULA": {
+      return "ULA"
+    }
     default: return ""
   }
 }
@@ -156,7 +159,11 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
     setFilteredPrograms([]);
     setFilteredCampus([]);
     const programsByLevel = filterByLevel(level);
-    setFilteredPrograms([ ...programsByLevel ]);
+    setFilteredPrograms([
+      ...programsByLevel?.sort((a, b) => // sort programs alphabetically
+        a?.text < b?.text ? -1 : a?.text > b?.text ? 1 : 0
+      ),
+    ]);
   }
 
   const handleProgramSelected = (program: string) => {
