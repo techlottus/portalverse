@@ -23,8 +23,7 @@ const Rainbow: FC<RainbowSection> = memo((props: RainbowSection) => {
 
                     return (
                       <div key={i} className="w-full">
-                        <Outstanding
-                          //@ts-ignore
+                        <Outstanding type="ComponentSectionsOutstandingRainbow"
                           {...outs} />
                       </div>
                     )

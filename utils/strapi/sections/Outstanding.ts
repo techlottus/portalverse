@@ -1,6 +1,7 @@
 import { StrapiImage } from "@/types/strapi/common";
 
 export type OutstandingSection = {
+  type: "ComponentSectionsOutstandingRainbow";
   title: string;
   content: string;
   outstandingContentVariant: "light" | "dark";
