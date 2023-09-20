@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from "react"
 import cn from "classnames"
-import OpenFormInit, { getModalities } from "@/forms/fixtures/openform"
+import OpenFormInit from "@/forms/fixtures/openform"
 import Select from "@/old-components/Select/Select"
 import { SelectInit } from "@/old-components/fixture"
 import Button from "@/old-components/Button/Button"
@@ -8,6 +8,52 @@ import configControls from "@/forms/fixtures/controls"
 import ProgressBar from "@/old-components/ProgressBar/ProgressBar"
 import OptionPill from "@/old-components/OptionPill"
 import { OpenFormControls } from "@/types/OpenFormControls.types"
+import { SelectOptionConfig } from "@/types/Select.types"
+
+const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
+
+const getAvailableModalities = (): Array<SelectOptionConfig> => {
+  switch (businessUnit) {
+    case "ULA": {
+      return [
+        {
+          value: "Presencial",
+          active: false,
+          text: "Presencial",
+        },
+        {
+          value: "Online",
+          active: false,
+          text: "Online",
+        },
+        {
+          value: "Semipresencial",
+          active: false,
+          text: "Semipresencial",
+        },
+      ];
+    }
+    default: {
+      return [
+        {
+          value: "Presencial",
+          active: false,
+          text: "Presencial",
+        },
+        {
+          value: "Online",
+          active: false,
+          text: "Online",
+        },
+        {
+          value: "Flex",
+          active: false,
+          text: "Flex",
+        },
+      ];
+    }
+  }
+};
 
 const StepTwo: FC<any> = ({
   classNames,
@@ -42,7 +88,7 @@ const StepTwo: FC<any> = ({
   const [ defaultValues, setDefaultValues ] = useState<any>({});
 
   useEffect(() => {
-    setDataModalities(getModalities());
+    setDataModalities(getAvailableModalities());
   }, [])
 
   useEffect(() => {
