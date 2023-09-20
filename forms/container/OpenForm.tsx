@@ -157,7 +157,11 @@ const OpenForm = ({ config, classNames, image, pathThankyou, controls, data }: O
     setFilteredPrograms([]);
     setFilteredCampus([]);
     const programsByLevel = filterByLevel(level);
-    setFilteredPrograms([ ...programsByLevel ]);
+    setFilteredPrograms([
+      ...programsByLevel?.sort((a, b) => // sort programs alphabetically
+        a?.text < b?.text ? -1 : a?.text > b?.text ? 1 : 0
+      ),
+    ]);
   }
 
   const handleProgramSelected = (program: string) => {
