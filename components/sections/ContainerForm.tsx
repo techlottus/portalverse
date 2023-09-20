@@ -68,7 +68,9 @@ const ContainerForm: FC<ContainerFormComponent> = (props: ContainerFormComponent
             break;
         }
       })
+      return step.form.selectForms
     })
+    return steps
   }
   return (
     <section>
@@ -88,20 +90,27 @@ const ContainerForm: FC<ContainerFormComponent> = (props: ContainerFormComponent
           <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">{ privacyPolicy.linkText }</p>
         </Link>
       </div>
-      { showProgress && <div className="mb-6">
+      { 
+        showProgress && <div className="mb-6">
           <ProgressBar data={{ progress: 30 }} />
         </div>
       }
-       <div className="mt-6">
-       <Button darkOutlined={button.variant === "outlined_negative"} dark={button.variant === "primary"} data={{
-          title: button?.label,
-          type: button?.variant,
-          icon: button?.iconName,
-          isExpand: false,
-        }}
-          onClick={() => {handleSubmit}}
+      <div className="mt-6">
+        <Button darkOutlined={button.variant === "outlined_negative"} dark={button.variant === "primary"}
+          data={{
+            title: button?.label,
+            type: button?.variant,
+            icon: button?.iconName,
+            isExpand: false,
+          }}
+          // onClick={() => }}
         />
-        </div>
+      </div>
+      <>
+        {
+          getSteps()
+        }
+      </>
     </section>
   );
 }
