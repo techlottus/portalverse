@@ -11,10 +11,12 @@ import { HERO_SLIDER } from "@/utils/strapi/sections/HeroSlider";
 import { LEADERBOARD } from "@/utils/strapi/sections/Leaderboard";
 import { LINK_LIST } from "@/utils/strapi/sections/LinkList";
 import { LIST_CONFIG } from "@/utils/strapi/sections/Listconfig";
+import { OUTSTANDING } from "@/utils/strapi/sections/Outstanding";
 import { OVERLAY_CARD_LIST } from "@/utils/strapi/sections/OverlayCardList";
 import { PODCAST_LIST } from "@/utils/strapi/sections/PodcastList";
 import { PROGRAMS_FILTER } from "@/utils/strapi/sections/ProgramsFilter";
 import { PROMO_LINK_LIST } from "@/utils/strapi/sections/PromoLinkList";
+import { RAINBOW } from "@/utils/strapi/sections/Rainbow";
 import { RICH_TEXT_IMAGE } from "@/utils/strapi/sections/RichTextImage";
 import { RICH_TEXT_VIDEO } from "@/utils/strapi/sections/RichTextVideo";
 import { STATISTICS_CARD_LIST } from "@/utils/strapi/sections/StatisticsCardList";
@@ -32,7 +34,7 @@ import type { HeroSliderSection } from "@/utils/strapi/sections/HeroSlider";
 import type { LeaderboardSection } from "@/utils/strapi/sections/Leaderboard";
 import type { LinkListSection } from "@/utils/strapi/sections/LinkList";
 import type { ListconfigSection } from "@/utils/strapi/sections/Listconfig";
-import { OUTSTANDING, OutstandingSection } from "@/utils/strapi/sections/Outstanding";
+import type { OutstandingSection } from "@/utils/strapi/sections/Outstanding";
 import type { PodcastListSection } from "@/utils/strapi/sections/PodcastList";
 import type { ProgramsFilterSection } from "@/utils/strapi/sections/ProgramsFilter";
 import type { PromoLinkListSection } from "@/utils/strapi/sections/PromoLinkList";
@@ -41,6 +43,7 @@ import type { RichTextVideoSection } from "@/utils/strapi/sections/RichTextVideo
 import type { StatisticsCardListSection } from "@/utils/strapi/sections/StatisticsCardList";
 import type { TextContentSection } from "@/utils/strapi/sections/TextContent";
 import { WEB_ERROR, WebErrorSection } from "./sections/WebError";
+import type { RainbowSection } from "@/utils/strapi/sections/Rainbow";
 
 
 export type ComponentSection =
@@ -61,6 +64,7 @@ export type ComponentSection =
   | PodcastListSection
   | ProgramsFilterSection
   | PromoLinkListSection
+  | RainbowSection
   | RichTextImageSection
   | RichTextVideoSection
   | StatisticsCardListSection
@@ -86,6 +90,7 @@ export const SECTIONS = `
   ${PODCAST_LIST}
   ${PROMO_LINK_LIST}
   ${PROGRAMS_FILTER}
+  ${RAINBOW}
   ${RICH_TEXT_IMAGE}
   ${RICH_TEXT_VIDEO}
   ${STATISTICS_CARD_LIST}
