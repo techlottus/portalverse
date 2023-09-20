@@ -16,7 +16,7 @@ async function createGeneralData  () {
 
  
   fs.writeFile('./GeneralConfig.ts', `
-  export const scripts: [{type: "ComponentSectionsScriptPixel"; name: string; script: string; pixel: { src?: string; element?:  'iframe' | 'img'; }, enabled: boolean, triggerOnRouteChange:"gtagPageview" | "fbq.Pageview" }] | []  = ${JSON.stringify(scripts)} \n;
+  export const scripts: [{type: "ComponentSectionsScriptPixel"; name: string; script: string; pixel: { src?: string; element?:  'iframe' | 'img'; }, enabled: boolean, triggerOnRouteChange:"gtagPageview" | "fbqPageview" }] | []  = ${JSON.stringify(scripts)} \n;
   `, 'utf-8', (err) => {
     if (err) {
       console.error(err);
