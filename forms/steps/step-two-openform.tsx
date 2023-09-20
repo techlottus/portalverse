@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from "react"
 import cn from "classnames"
-import OpenFormInit, { Modalities } from "@/forms/fixtures/openform"
+import OpenFormInit, { getModalities } from "@/forms/fixtures/openform"
 import Select from "@/old-components/Select/Select"
 import { SelectInit } from "@/old-components/fixture"
 import Button from "@/old-components/Button/Button"
@@ -42,8 +42,8 @@ const StepTwo: FC<any> = ({
   const [ defaultValues, setDefaultValues ] = useState<any>({});
 
   useEffect(() => {
-    setDataModalities([ ...Modalities ]);
-  }, [Modalities, modality]);
+    setDataModalities(getModalities());
+  }, [])
 
   useEffect(() => {
     setDataPrograms([ ...programs ]);
@@ -117,7 +117,7 @@ const StepTwo: FC<any> = ({
                     onClick={() => {
                       const modality = modalityData?.value;
                       setAcademicData({ ...academicData, modality, level: "", program: "", campus: "" });
-                      setDataModalities(Modalities.map((item: any) => ({ ...item, active: item.value === modality })));
+                      setDataModalities(dataModalities?.map((item: any) => ({ ...item, active: item.value === modality })));
                       onChangeModality(modality);
                       setActiveModalityPill(i);
                       setActiveLevelPill(-1)

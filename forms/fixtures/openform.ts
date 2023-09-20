@@ -2,6 +2,8 @@ import { OpenFormControls } from "@/types/OpenFormControls.types";
 import { OptionConfig } from "@/types/OptionPilll.types";
 import { SelectOptionConfig } from "@/types/Select.types"
 
+const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
+
 const OpenFormInit = {
   stepone: {
     title: "¿Quieres saber más sobre UTEG?",
@@ -101,6 +103,49 @@ export const contacts: Array<OptionConfig> = [
     disabled: false,
   },
 ];
+
+export const getModalities = (): Array<SelectOptionConfig> => {
+  switch (businessUnit) {
+    case "ULA": {
+      return [
+        {
+          value: "Presencial",
+          active: false,
+          text: "Presencial",
+        },
+        {
+          value: "Online",
+          active: false,
+          text: "Online",
+        },
+        {
+          value: "Semipresencial",
+          active: false,
+          text: "Semipresencial",
+        },
+      ];
+    }
+    default: {
+      return [
+        {
+          value: "Presencial",
+          active: false,
+          text: "Presencial",
+        },
+        {
+          value: "Online",
+          active: false,
+          text: "Online",
+        },
+        {
+          value: "Flex",
+          active: false,
+          text: "Flex",
+        },
+      ];
+    }
+  }
+};
 
 export const Modalities: Array<SelectOptionConfig> = [
   {
