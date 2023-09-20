@@ -5,6 +5,8 @@ export type ScriptsPixels = {
   name: string;
   script: string;
   pixel: Pixel
+  enabled: boolean;
+  triggerOnRouteChange: "gtagPageview" | "fbq.Pageview"
 };
 export type Pixel = {
   src?: string;
@@ -20,5 +22,7 @@ export const SCRIPTS_PIXELS = `
     src
     element
   }
+  enabled
+  triggerOnRouteChange
 }
 `;

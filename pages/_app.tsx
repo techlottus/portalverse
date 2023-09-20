@@ -11,21 +11,6 @@ import { scripts } from "../GeneralConfig"
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const router = useRouter();
 
-  useEffect(() => {
-    const handleRouteChange = (url: any) => {
-      gtag.pageview(url);
-      fbq.pageview();
-    };
-
-    router.events.on("routeChangeComplete", handleRouteChange);
-
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events]);
-
-  useEffect( () => {
-  }, [])
   useEffect( () => {
     // we need import elements with commonJS
     if (typeof window !== 'undefined') {
@@ -40,12 +25,14 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   return getLayout(
     <>
       {
-        scripts && scripts.map(({name, script, pixel}: ScriptsPixels, i: number) => <Pixel
-        key={i}
-        name={name}
-        script={script}
-        pixel={{src: pixel?.src, element: pixel.element}}
-      ></Pixel>)
+        scripts && scripts.map(({name, script, pixel, enabled, triggerOnRouteChange}: ScriptsPixels, i: number) => <Pixel
+          key={i}
+          name={name}
+          script={script}
+          pixel={{src: pixel?.src, element: pixel.element}}
+          enabled={enabled}
+          triggerOnRouteChange={triggerOnRouteChange}
+        ></Pixel>)
       }
 
       <Component {...pageProps} />

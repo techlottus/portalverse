@@ -1,13 +1,41 @@
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import Script from 'next/script'
 import Head from 'next/head'
+import { useRouter } from 'next/router';
+import * as gtag from "@/lib/gtag"
+import * as fbq from '@/lib/fb-pixel'
 
-export default ({script, pixel, name}: { script?: string, pixel?: {src?: string, element?: 'iframe' | 'img'}, name?: string  }) => {
+export default ({script, pixel, name, enabled = true, triggerOnRouteChange}: { script?: string, pixel?: {src?: string, element?: 'iframe' | 'img'}, name?: string, enabled: boolean, triggerOnRouteChange: string }) => {
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url: any) => {
+      switch (triggerOnRouteChange) {
+        case "gtagPageview":
+          gtag.pageview(url);
+          break;
+          case "fbqPageview":
+          fbq.pageview();
+          break;
+        default:
+          break;
+      }
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
+  useEffect( () => {
+  }, [])
   return(
     <>
-      { !!script && <Script id={name} strategy='afterInteractive' dangerouslySetInnerHTML={{ __html: script }}/>}
-        { !!pixel &&
+      { enabled && !!script && <Script id={name} strategy='afterInteractive' dangerouslySetInnerHTML={{ __html: script }}/>}
+        { enabled && !!pixel &&
         <Head>
           <noscript>
             {
