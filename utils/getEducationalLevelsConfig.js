@@ -36,28 +36,24 @@ async function fetchStrapiGraphQL(query) {
   return data;
 };
 
-async function getGeneralConfigData() {
-  const response = await fetchStrapiGraphQL(GENERAL_CONFIG);
-
-  return await response?.generalConfig?.data;
+async function getEducationalLevelsConfig() {
+  const response = await fetchStrapiGraphQL(EDUCATIONAL_OFFERING_CONFIG);
+  return response?.educationalOffering?.data?.attributes?.levelsConfig;
 };
 
-const GENERAL_CONFIG = `
-query GeneralConfig {
-  generalConfig {
+const EDUCATIONAL_OFFERING_CONFIG = `
+query EducationalOfferingConfig {
+  educationalOffering {
     data {
       attributes {
-        scriptsPixels {
-          ...on ComponentSectionsScriptPixel {
-            type: __typename
-            name
-            script
-            pixel {
-              src
-              element
+        levelsConfig {
+          slug
+          level {
+            data {
+              attributes {
+                title
+              }
             }
-            enabled
-            triggerOnRouteChange
           }
         }
       }
@@ -67,5 +63,5 @@ query GeneralConfig {
 `;
 
 module.exports = {
-  getGeneralConfigData
+  getEducationalLevelsConfig
 };
