@@ -29,7 +29,6 @@ const Outstanding: FC<OutstandingSection> = (props: OutstandingSection) => {
   return (
     <section
       className={cn({
-        "w-p:py-10 w-t:py-6 w-d:py-10": !!backgroundColor,
         "text-surface-0": outstandingContentVariant === "light",
         "relative w-full z-0": backgroundWidth === "w_3_4"
       })}
@@ -81,7 +80,7 @@ const Outstanding: FC<OutstandingSection> = (props: OutstandingSection) => {
         {/* Section's background color */}
         <div className="absolute top-0 left-0 w-full h-full flex bg-surface-0 max-w-d-base mx-auto w-d-base:px-6 w-p:!p-0 w-t:!p-0">
           <div
-            className={cn("h-full ", { "w-full": backgroundWidth === "w_full", "w-3/4": backgroundWidth === "w_3_4" })}
+            className={cn("h-full ", { "w-full": backgroundWidth === "w_full", "w-d:w-3/4 w-full": backgroundWidth === "w_3_4" })}
             style={{ backgroundColor: backgroundColor || "white" }}
           ></div>
         </div>
