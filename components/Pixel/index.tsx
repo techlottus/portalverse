@@ -16,7 +16,7 @@ export default ({script, pixel, name, enabled = true, triggerOnRouteChange}: Scr
         case "gtagPageview":
           gtag.pageview(url);
           break;
-          case "fbqPageview":
+        case "fbqPageview":
           fbq.pageview();
           break;
         default:
@@ -31,8 +31,6 @@ export default ({script, pixel, name, enabled = true, triggerOnRouteChange}: Scr
     };
   }, [router.events]);
 
-  useEffect( () => {
-  }, [])
   return(
     <>
       { enabled && !!script && <Script id={name} strategy='afterInteractive' dangerouslySetInnerHTML={{ __html: script }}/>}
@@ -40,11 +38,11 @@ export default ({script, pixel, name, enabled = true, triggerOnRouteChange}: Scr
         <Head>
           <noscript>
             {
-              pixel?.element && 
+              !!pixel.element && 
                 (
-                  pixel?.element === 'img' && <img height="1" width="1" style={{ display: 'none' }} src={pixel?.src}/>
+                  pixel.element === 'img' && <img height="1" width="1" style={{ display: 'none' }} src={pixel.src}/>
                   ||
-                  pixel?.element === 'iframe' && <iframe src={pixel?.src} height="0" width="0" style={{"display":"none","visibility":"hidden"}}></iframe>
+                  pixel.element === 'iframe' && <iframe src={pixel.src} height="0" width="0" style={{"display":"none","visibility":"hidden"}}></iframe>
                 )
             }
           </noscript>
