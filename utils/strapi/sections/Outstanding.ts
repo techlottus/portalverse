@@ -4,27 +4,28 @@ export type OutstandingSection = {
   type: "ComponentSectionsOutstanding";
   title: string;
   content: string;
-  contentVariant: "light" | "dark";
-  image: StrapiImage;
-  imagePosition: "left" | "right";
+  outstandingContentVariant: "light" | "dark";
+  outstandingImage: StrapiImage;
+  outstandingImagePosition: "left" | "right";
   button: {label?:string, variant?:"primary"|"outlined"|"outlined_negative", iconName?:string, CTA:string, size?:"xs"|"sm"|"md"|"lg" }
   backgroundColor: string;
-  backgroundWidth:"outstanding"|"rainbow"
+  backgroundWidth:"w_3_4"|"w_full"
 };
   
 export const OUTSTANDING = `
 ... on ComponentSectionsOutstandingRainbow {
   title
   content
-  contentVariant            
-  image {
+  outstandingContentVariant:contentVariant            
+  outstandingImage:image {
     data {
       attributes {
         url
+        alternativeText
       }
     }
   }            
-  imagePosition
+  outstandingImagePosition:imagePosition
   button{
     label
     variant
@@ -32,7 +33,7 @@ export const OUTSTANDING = `
     iconName
     CTA
   }
-  backgroundColor
+  backgroundColor 
   backgroundWidth  
 }
 `;
