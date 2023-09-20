@@ -5,7 +5,7 @@
   "scripts": {
     "predev": "node ./utils/fetchStaticContent.js && node ./utils/fetchRoutesConfig.js && node ./utils/fetch-multitenant.js && node ./utils/fetchGeneralData.js",
     "dev": "next dev",
-    "prebuild": "node ./utils/fetchStaticContent.js && node ./utils/fetch-multitenant.js && node ./utils/fetchGeneralData.js",
+    "prebuild": "node ./utils/fetchStaticContent.js && node ./utils/fetchRoutesConfig.js && node ./utils/fetch-multitenant.js && node ./utils/fetchGeneralData.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
