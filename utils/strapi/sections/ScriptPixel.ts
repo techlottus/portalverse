@@ -6,7 +6,7 @@ export type ScriptsPixels = {
   script: string;
   pixel: Pixel
   enabled: boolean;
-  triggerOnRouteChange: "gtagPageview" | "fbq.Pageview"
+  triggerOnRouteChange: "gtagPageview" | "fbqPageview"
 };
 export type Pixel = {
   src?: string;
