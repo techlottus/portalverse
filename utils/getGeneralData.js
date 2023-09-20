@@ -56,6 +56,8 @@ query GeneralConfig {
               src
               element
             }
+            enabled
+            triggerOnRouteChange
           }
         }
       }

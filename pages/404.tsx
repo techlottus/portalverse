@@ -36,8 +36,10 @@ export async function getStaticProps(context: any) {
 
   try {
     const notFoundPageData = await getNotFoundPageData();
-    const sections = notFoundPageData?.notFoundPage?.data?.attributes?.sections;
-    const meta = notFoundPageData?.notFoundPage?.data?.attributes?.seo;
+    const sections = notFoundPageData?.notFoundPage?.data?.attributes?.sections || [];
+    const meta = notFoundPageData?.notFoundPage?.data?.attributes?.seo || {
+      metaTitle: 'Not Found'
+    };
 
     return {
       props: {
