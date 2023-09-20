@@ -60,7 +60,7 @@ const VidaEstudiantil: NextPageWithLayout = ({ sections, meta }: any) => {
               content: sections.sportActivities.description
             }} />
            <div className="mb-6">
-            <p>{sections.sportActivities.moreInformation}<span className="ml-2"><LinkContactTarget type="email" info={sections.sportActivities.moreInformationLink} classNames="text-surface-0" /></span></p>
+            <p>{sections.sportActivities.moreInformation}<span className="ml-2"><LinkContactTarget type="email" info={sections.sportActivities.moreInformationLink} classNames="text-white" /></span></p>
            </div>
           </div>
         </ContentLayout>
