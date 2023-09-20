@@ -3,13 +3,17 @@
 export type PixelComponent = {
   name: string;
   script: string;
-  pixel: Pixel
+  pixel: Pixel | null
   enabled: boolean;
   triggerOnRouteChange: "gtagPageview" | "fbqPageview" | null
 }
-export type ScriptsPixels<PixelComponent> = {
+export type ScriptsPixels  = {
   type: 'ComponentSectionsScriptPixel'
-  ...PixelComponent
+  name: string;
+  script: string;
+  pixel: Pixel | null
+  enabled: boolean;
+  triggerOnRouteChange: "gtagPageview" | "fbqPageview" | null
 };
 export type Pixel = {
   src?: string;
