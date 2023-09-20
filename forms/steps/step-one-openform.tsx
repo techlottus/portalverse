@@ -132,7 +132,7 @@ const StepOne: FC<any> = ({
         <h1 className="font-texts font-bold text-5 leading-6">{ config.title }</h1>
         <p className="font-texts font-normal text-3.5 leading-4">{ config.subtitle }</p>
       </div>
-      <div className="w-p:hidden">
+      <div className={cn("w-p:hidden", { "hidden": !config?.image })}>
         <Image classNamesImg="w-full h-full object-cover" classNames="w-28 h-28 rounded-full overflow-hidden" src={config?.image} alt="image-person" />
       </div>
     </div>
