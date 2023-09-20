@@ -14,9 +14,9 @@ async function createGeneralData  () {
     console.log(error);
   }
 
- 
+  const scriptTypes = `{ type?: 'ComponentSectionsScriptPixel'; name: string; script?: string; pixel?: { src?: string; element?:  'iframe' | 'img' | null; } | null; enabled?: boolean; triggerOnRouteChange?: "gtagPageview" | "fbqPageview" | null; } `
   fs.writeFile('./GeneralConfig.ts', `
-  export const scripts: [{type: "ComponentSectionsScriptPixel"; name: string; script: string; pixel: { src?: string; element?:  'iframe' | 'img'; }, enabled: boolean, triggerOnRouteChange: "gtagPageview" | "fbqPageview" | null }] | []  = ${JSON.stringify(scripts)} \n;
+  export const scripts: ${scriptTypes}[] | [] = ${JSON.stringify(scripts)} \n;
   `, 'utf-8', (err) => {
     if (err) {
       console.error(err);
