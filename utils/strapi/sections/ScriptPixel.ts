@@ -11,13 +11,13 @@ export type ScriptsPixels  = {
   type: 'ComponentSectionsScriptPixel'
   name: string;
   script?: string;
-  pixel?: Pixel | null
+  pixel?: Pixel | null;
   enabled?: boolean;
-  triggerOnRouteChange?: "gtagPageview" | "fbqPageview" | null
+  triggerOnRouteChange?: "gtagPageview" | "fbqPageview" | null;
 };
 export type Pixel = {
   src?: string;
-  element?:  'iframe' | 'img';
+  element?:  'iframe' | 'img' | null;
 }
 
 export const SCRIPTS_PIXELS = `
