@@ -39,7 +39,12 @@ import DocumentoFirma from "@/icons/documento-firma-uteg.svg";
 import ula47 from "@/icons/ula-admisiones-icono-47.svg";
 import ulaAlumnos from "@/icons/ula-admisiones-icono-alumnos.svg";
 import ulaConvenios from "@/icons/ula-admisiones-icono-convenios.svg";
-import ulaEgresados from "@/icons/ula-admisiones-icono-egresados.svg"
+import ulaEgresados from "@/icons/ula-admisiones-icono-egresados.svg";
+import ulaBirrete from "@/icons/ula_birrete.svg";
+import ulaCV from "@/icons/ula_cv.svg";
+import ulaGrupo from "@/icons/ula_grupo.svg";
+import ulaLupa from "@/icons/ula_lupa.svg";
+import ulaPortafolio from "@/icons/ula_portafolio.svg";
 
 const iconTypes: any = {
   search: SearchIcon,
@@ -81,7 +86,12 @@ const iconTypes: any = {
   ULAAniversario47: ula47,
   ULAConvenios: ulaConvenios,
   ULAAlumnos: ulaAlumnos,
-  ULAEgresados: ulaEgresados
+  ULAEgresados: ulaEgresados,
+  ula_birrete: ulaBirrete,
+  ula_cv: ulaCV,
+  ula_grupo: ulaGrupo,
+  ula_lupa: ulaLupa,
+  ula_portafolio: ulaPortafolio
 };
 
 const IconComponent: FC<any> = memo(({ name, ...props }: any) => {

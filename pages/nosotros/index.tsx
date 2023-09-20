@@ -145,6 +145,13 @@ const SomosUteg: NextPageWithLayout = ({ sections, meta }: any) => {
           <RichtText data={{
             content: sections?.ourCertifications?.description
           }} />
+                  {
+          sections?.ourCertifications?.link ? 
+          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+            <LinkIcons data={sections?.ourCertifications?.link} onClick={() => router.push(sections?.ourCertifications?.link?.redirect)} />
+          </div>
+          : null
+        }
         </div>
         <div id={sections?.ourCertifications?.id} className="col-span-6 w-t:col-span-8 w-p:col-span-4">
           {
@@ -153,13 +160,6 @@ const SomosUteg: NextPageWithLayout = ({ sections, meta }: any) => {
             </section>)
           }
         </div>
-        {
-          sections?.ourCertifications?.link ? 
-          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-            <LinkIcons data={sections?.ourCertifications?.link} onClick={() => router.push(sections?.ourCertifications?.link?.redirect)} />
-          </div>
-          : null
-        }
       </ContentLayout>
     </HeaderFooterLayout>
   </>
