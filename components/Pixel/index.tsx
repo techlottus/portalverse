@@ -5,8 +5,9 @@ import Head from 'next/head'
 import { useRouter } from 'next/router';
 import * as gtag from "@/lib/gtag"
 import * as fbq from '@/lib/fb-pixel'
+import { ScriptsPixels } from '@/utils/strapi/sections/ScriptPixel';
 
-export default ({script, pixel, name, enabled = true, triggerOnRouteChange}: { script?: string, pixel?: {src?: string, element?: 'iframe' | 'img'}, name?: string, enabled: boolean, triggerOnRouteChange: string }) => {
+export default ({script, pixel, name, enabled = true, triggerOnRouteChange}: ScriptsPixels) => {
   const router = useRouter();
 
   useEffect(() => {
