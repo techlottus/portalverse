@@ -1,12 +1,15 @@
 
 
-export type ScriptsPixels = {
-  type: 'ComponentSectionsScriptPixel'
+export type PixelComponent = {
   name: string;
   script: string;
   pixel: Pixel
   enabled: boolean;
   triggerOnRouteChange: "gtagPageview" | "fbqPageview" | null
+}
+export type ScriptsPixels<PixelComponent> = {
+  type: 'ComponentSectionsScriptPixel'
+  ...PixelComponent
 };
 export type Pixel = {
   src?: string;

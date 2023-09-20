@@ -5,9 +5,9 @@ import Head from 'next/head'
 import { useRouter } from 'next/router';
 import * as gtag from "@/lib/gtag"
 import * as fbq from '@/lib/fb-pixel'
-import { ScriptsPixels } from '@/utils/strapi/sections/ScriptPixel';
+import { PixelComponent } from '@/utils/strapi/sections/ScriptPixel';
 
-export default ({script, pixel, name, enabled = true, triggerOnRouteChange}: ScriptsPixels) => {
+export default ({script, pixel, name, enabled = true, triggerOnRouteChange}: PixelComponent) => {
   const router = useRouter();
 
   useEffect(() => {
