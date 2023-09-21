@@ -4,6 +4,8 @@ import HeaderFooterLayout from "@/layouts/HeaderFooter.layout"
 import { getDataPageFromJSON } from "@/utils/getDataPage"
 import ContentGenerator from "@/utils/ContentGenerator"
 import { getHomePageData } from "@/utils/getHomePageData"
+import DentalClinics from "@/forms/container/DentalClinics"
+import ContainerForm from "@/components/sections/ContainerForm"
 
 const Home: NextPageWithLayout = ({ data: { sections, meta } }: any) => {
 
@@ -12,6 +14,17 @@ const Home: NextPageWithLayout = ({ data: { sections, meta } }: any) => {
       <title>{meta?.metaTitle}</title>
     </Head>
     <HeaderFooterLayout breadcrumbs={false}>
+      <div className="mt-20">
+
+        <ContainerForm
+        
+          button={{ variant: 'primary', CTA: 'submit', label: 'Enviar', size: 'sm', iconName: 'upload'}}
+        
+          form="Clinicas Dentales"
+          showProgress={false}
+          ></ContainerForm>
+      </div>
+        {/* <DentalClinics button={{ variant: 'primary', CTA: 'submit', label: 'Enviar', size: 'sm', iconName: 'upload'}}></DentalClinics> */}
       <div className="flex flex-col w-p:space-y-12 w-t:space-y-12 w-d:space-y-18 w-d:mt-18">
         {sections?.length > 0 ? (
           <ContentGenerator blocks={sections} />
