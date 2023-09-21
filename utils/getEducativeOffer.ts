@@ -12,6 +12,33 @@ const getCampusList = (businessUnit: string) => {
   return CAMPUS_LIST[businessUnit] || [];
 }
 
+// Modalidad Presencial (UANE, UTEG, ULA)
+const filterOnSitePrograms = (programs: any) => {
+  return programs?.reduce((prev: any, item: any) => item?.modalidad === "Presencial" ? [...prev, item] : [...prev], []);
+}
+
+const filterOnlinePrograms = (programs: any) => {
+  switch(businessUnit) {
+    case "ULA": {
+      return programs.filter((item: any) => item?.nivel !== "Educación Continua").reduce((prev: any, item: any) => item?.lineaNegocio === "ULA" && item?.nombreCampus === "ONLINE" ? [...prev, item] : [...prev], []);
+    }
+    default: { // UANE, UTEG
+      programs.reduce((prev: any, item: any) => (item?.lineaNegocio === process.env.NEXT_PUBLIC_LINEA && item?.modalidad === "Online") || (item?.lineaNegocio === "ULA" && (item?.nombreCampus === `${process.env.NEXT_PUBLIC_LINEA} ONLINE` && item?.modalidad === "Online")) ? [...prev, item] : [...prev], []);
+    }
+  }
+}
+
+// Modalidad Flex (UANE, UTEG)
+const filterFlexPrograms = (programs: any) => {
+  const campusList = getCampusList(businessUnit);
+  return programs.reduce((prev: any, item: any) => item?.lineaNegocio === "ULA" && item?.modalidad === 'Online' && campusList?.includes(item?.nombreCampus) ? [...prev, item] : [...prev], [])
+}
+
+// Modalidad Semipresencial (ULA)
+const filterHybridPrograms = (programs: any) => {
+  return programs.reduce((prev: any, item: any) => item?.lineaNegocio === "ULA" && item?.modalidad === "Semipresencial" ? [...prev, item] : [...prev], [])
+}
+
 export const getEducativeOffer = () => {
   const [ isLoading, setIsLoading ] = useState<boolean>(false);
   const [ isError, setIsError ] = useState<boolean>(false);
@@ -39,20 +66,25 @@ export const getEducativeOffer = () => {
       .then( (res: any) => {
         const { data: programs } = res;
         let dataPrograms: Array<any> = [];
+        console.log("programs", programs);
+        console.log("programs Licenciatura", programs?.filter((program: any) => program?.nivel === "Licenciatura"))
         if(!!programs && !!programs.length) {
           setAllPrograms([ ...programs ])
           switch(modalidad) {
             case 'Presencial': {
-              dataPrograms = programs.reduce((prev: any, item: any) => item.modalidad === "Presencial" ? [...prev, item] : [...prev], [])
+              dataPrograms = filterOnSitePrograms(programs);
               break;
             }
             case 'Online': {
-              dataPrograms = programs.reduce((prev: any, item: any) => (item.lineaNegocio === process.env.NEXT_PUBLIC_LINEA && item.modalidad === "Online") || (item.lineaNegocio === "ULA" && (item.nombreCampus === `${process.env.NEXT_PUBLIC_LINEA} ONLINE` && item.modalidad === "Online")) ? [...prev, item] : [...prev], [])
+              dataPrograms = filterOnlinePrograms(programs);
               break;
             }
             case 'Flex': {
-              const campusList = getCampusList(businessUnit);
-              dataPrograms = programs.reduce((prev: any, item: any) => item.lineaNegocio === "ULA" && item.modalidad === 'Online' && campusList?.includes(item.nombreCampus) ? [...prev, item] : [...prev], [])
+              dataPrograms = filterFlexPrograms(programs);
+              break;
+            }
+            case 'Semipresencial': {
+              dataPrograms = filterHybridPrograms(programs);
               break;
             }
             default: {
@@ -109,10 +141,10 @@ export const getEducativeOffer = () => {
 
   const getDataByProgramEC = (program: string, campusId?: string ) => {
     if(campusId) {
-      const programInfo = filterPrograms.find((item: any) => item.nombrePrograma === program && item.idCampus === campusId);
+      const programInfo = filterPrograms?.find((item: any) => item?.nombrePrograma === program && item?.idCampus === campusId);
       return { ...programInfo }
     } else {
-      const programInfo = filterPrograms.filter((item: any) => item.nombrePrograma === program)[0];
+      const programInfo = filterPrograms?.filter((item: any) => item?.nombrePrograma === program)?.[0];
       return { ...programInfo }
     }
   }

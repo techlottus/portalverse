@@ -11,7 +11,7 @@ const Rainbow: FC<RainbowComponentConfig> = ({ sections, title, classNamesTitle 
     <section className="relative w-full z-0">
       <h1
         className={cn(
-          "mb-6 ac-type-h3-bold-solid-poppins-desktop w-t:ac-type-h2-bold-solid-poppins-mobile w-p:ac-type-h3-bold-solid-poppins-tabmob",
+          "mb-6 font-headings text-10 w-t:text-3xl w-p:text-6",
           classNamesTitle
         )}
       >
@@ -29,7 +29,7 @@ const Rainbow: FC<RainbowComponentConfig> = ({ sections, title, classNamesTitle 
                   return (
                       <div className="flex flex-col items-center justify-center w-d:flex-row space-y-6 w-d:space-y-0 w-d:space-x-6 px-12 w-d:px-0" key={`section-detail${i}`}>
                       <div className="w-full w-d:w-1/2 flex flex-col space-y-6 w-d:pl-24">
-                        <h3 className="ac-type-h3-bold-solid-poppins-desktop w-t:ac-type-h2-negative-bold-solid-poppins-mobile w-p:ac-type-h3-negative-bold-solid-poppins-tabmob text-surface-0">{ title }</h3>
+                        <h3 className="font-headings text-surface-0 text-10 w-t:text-3xl w-p:text-6">{ title }</h3>
                         <RichtText font="dark" classNames="ac-type-body-positive-solid-nunitosans-desktop w-t:ac-type-h6-bold-solid-poppins-tablet w-p:ac-type-body-positive-solid-nunitosans-tabmob" data={{ content: description }} />
                       </div>
                       <div className="w-full w-d:w-1/2 max-w-147">

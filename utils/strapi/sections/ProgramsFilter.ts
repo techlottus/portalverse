@@ -182,9 +182,14 @@ export const formatProgramsFilterSection = async (
 
   const levelTitle = normalizeString(levelAttributes?.title);
   const programsData = levelAttributes?.programs?.data;
-
-  const staticProgramsData = await getDataPageFromJSON(`/oferta-educativa/${levelTitle?.toLowerCase()}.json`);
-  const staticPrograms = staticProgramsData?.programs as Array<StaticProgram>;
+  let staticPrograms: Array<StaticProgram> = [];
+  try {
+    const staticProgramsData = await getDataPageFromJSON(`/oferta-educativa/${levelTitle?.toLowerCase()}.json`);
+    staticPrograms = staticProgramsData?.programs as Array<StaticProgram>;
+  }
+  catch {
+    //static programs is empty for this level
+  }
   const availableStaticPrograms = staticPrograms?.filter(program => !program?.config?.hidden);
 
   /**
