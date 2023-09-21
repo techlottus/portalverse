@@ -11,6 +11,7 @@ import TabsFeatured from "@/old-components/TabsFeatured";
 import DescriptionSection from "@/old-components/DescriptionSection";
 import Select from "@/old-components/Select/Select";
 import Video from "@/old-components/Video";
+import Aspect from "@/components/Aspect";
 import { ButtonInit, SelectInit } from "@/old-components/fixture";
 import Banner from "@/components/sections/Banner";
 import { formatModalityDataBachillerato } from "@/utils/programDetail";
@@ -96,21 +97,26 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
           }} />
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 w-p:hidden mb-10 mt-6">
-          <Image
-            alt={"image"}
-            src={imageProgram}
-            classNamesImg="w-full !h-auto !relative"
-            classNames="w-full h-fit"
-          />
+          <Aspect ratio={"2/1"}> 
+            <Image
+              alt={"image"}
+              src={imageProgram}
+              classNamesImg="w-full h-full object-cover"
+              classNames="w-full h-full"
+            />
+          </Aspect>
         </div>
       </ContentLayout>
       <ContentFullLayout>
         <div className="w-d:hidden w-t:hidden col-span-4 mb-10 mt-6">
-          <Image
-            alt={"image"}
-            src={imageProgram}
-            classNamesImg="w-full !h-auto !relative"
-            classNames="w-full h-fit" />
+          <Aspect ratio={"4/3"}> 
+            <Image
+              alt={"image"}
+              src={imageProgram}
+              classNamesImg="w-full h-full object-cover"
+              classNames="w-full h-full"
+            />
+          </Aspect>
         </div>
       </ContentFullLayout>
       <ContentLayout>

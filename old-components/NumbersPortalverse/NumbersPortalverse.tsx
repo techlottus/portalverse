@@ -15,7 +15,7 @@ const NumbersPortalverse: FC<NumbersPortalverseData> = memo(({data, classNames }
   const iconsClassNames = data?.iconClassNames;
 
   return <>
-    <div style={customStyles} className={cn("wrapperNumbers rounded-lg", classNames, {
+    <div style={customStyles} className={cn("wrapperNumbers rounded-lg h-full", classNames, {
       "shadow-30 bg-surface-0": data.boxShadow,
       "border border-solid border-surface-300": data.bordered,
       "rounded-lg": !!data?.isShadowColor,
