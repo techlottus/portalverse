@@ -16,11 +16,11 @@ import Button from "@/old-components/Button/Button";
 const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
   
   const { title, privacyPolicy, image, description, progress = 30, button, form, errors } = props
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
   const [isValid, setIsValid] = useState(false);
   const [submit, setSubmit] = useState(false);
-  // const [ progress, setProgress ] = useState<number>(0);
+  // const [ progress, setProgress ] = useState<number>(progress);
 
   // useEffect(() => {
   //   setProgress(step);
