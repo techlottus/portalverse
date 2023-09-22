@@ -1,24 +1,74 @@
-import { LinkConfig } from "@/types/Link.types";
-import { SeoData } from "./SEO";
-
-
+import { StrapiImage } from "@/types/strapi/common";
+import { WebErrorSection } from "./WebError";
+type privacyPolicy = {
+  text: string;
+  linkText: string;
+  file: any
+}
 export type ContainerForm = {
   type: 'ComponentSectionsFormContainer'
-  title?: string;
-  message?: string;
-  error_code?: string;
-  button: LinkConfig
+  title: string;
+  description: string;
+  image: StrapiImage;
+  extraText: string;
+  form: string;
+  progress: number;
+  privacyPolicy : privacyPolicy
+  button: {
+    label: string
+    variant: string
+    size: string
+    CTA: string
+    iconName: string
+  }
+  errors: WebErrorSection[]
 };
 
-export const WEB_ERROR = `
+export const FORM_CONTAINER = `
 ...on ComponentSectionsFormContainer {
   title
-  message  
-  button {
-    href
-    text
-    iconName
-    iconPosition
+  description
+  image {
+    data {
+      attributes {
+        url
+      }
+    }
   }
+  extraText
+  form
+  progress
+  privacyPolicy {
+    text
+    linkText
+    file {
+      data {
+        attributes {
+          url
+        }
+      }
+    }
+  }
+  button {
+    label
+    variant
+    size
+    CTA
+    iconName
+  }
+  errors {
+    title
+    message
+    error_code
+    button {
+      text
+      href
+      target
+      iconName
+      iconPosition
+      disabled
+    }
+  }
+
 }
 `;

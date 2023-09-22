@@ -40,6 +40,7 @@ import type { RichTextVideoSection } from "@/utils/strapi/sections/RichTextVideo
 import type { StatisticsCardListSection } from "@/utils/strapi/sections/StatisticsCardList";
 import type { TextContentSection } from "@/utils/strapi/sections/TextContent";
 import { WEB_ERROR, WebErrorSection } from "./sections/WebError";
+import { FORM_CONTAINER } from "./sections/ContainerForm";
 
 export type ComponentSection =
   | AccordionSection
@@ -86,4 +87,5 @@ export const SECTIONS = `
   ${RICH_TEXT_VIDEO}
   ${STATISTICS_CARD_LIST}
   ${TEXT_CONTENT}
+  ${FORM_CONTAINER}
 `;
