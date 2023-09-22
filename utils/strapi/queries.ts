@@ -7,6 +7,7 @@ import { CONTACT_TARGET_LIST } from "@/utils/strapi/sections/ContactTargetList";
 import { CONT_ED_PROGRAMS } from "@/utils/strapi/sections/ContEdPrograms";
 import { FAQ_SECTION } from "@/utils/strapi/sections/FAQ";
 import { FORM_VIDEO } from "@/utils/strapi/sections/FormVideo";
+import { GOOGLE_MAP } from "@/utils/strapi/sections/GoogleMap";
 import { HERO_SLIDER } from "@/utils/strapi/sections/HeroSlider";
 import { LEADERBOARD } from "@/utils/strapi/sections/Leaderboard";
 import { LINK_LIST } from "@/utils/strapi/sections/LinkList";
@@ -28,6 +29,7 @@ import type { ContactTargetListSection } from "@/utils/strapi/sections/ContactTa
 import type { ContEdProgramsSection } from "@/utils/strapi/sections/ContEdPrograms";
 import type { FAQSection } from "@/utils/strapi/sections/FAQ";
 import type { FormVideoSection } from "@/utils/strapi/sections/FormVideo";
+import type {GoogleMapSection } from "@/utils/strapi/sections/GoogleMap";
 import type { HeroSliderSection } from "@/utils/strapi/sections/HeroSlider";
 import type { LeaderboardSection } from "@/utils/strapi/sections/Leaderboard";
 import type { LinkListSection } from "@/utils/strapi/sections/LinkList";
@@ -51,6 +53,7 @@ export type ComponentSection =
   | ContEdProgramsSection
   | FAQSection
   | FormVideoSection
+  | GoogleMapSection
   | HeroSliderSection
   | LeaderboardSection
   | LinkListSection
@@ -74,6 +77,7 @@ export const SECTIONS = `
   ${CONT_ED_PROGRAMS}
   ${FAQ_SECTION}
   ${FORM_VIDEO}
+  ${GOOGLE_MAP}
   ${HERO_SLIDER}
   ${LINK_LIST}
   ${LIST_CONFIG}
