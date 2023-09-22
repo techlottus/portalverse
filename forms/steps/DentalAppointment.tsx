@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react"
+import { FC, KeyboardEventHandler, useEffect, useState } from "react"
 import OpenFormInit from "@/forms/fixtures/openform"
 import Input from "@/old-components/Input/Input"
 import configControls from "@/forms/fixtures/controls"
@@ -35,8 +35,11 @@ const DentalAppointment: FC<any> = ({
     setConfig({ ...config, ...data });
   }, [data]);
 
-  const handleKeyPress = (e: CustomEvent, control: string ) => {
-    const { detail: { value } } = e;
+  const handleKeyPress = (e: any, control: string ) => {
+    console.log(e);
+    
+    const value = e.target.value
+    // // const { detail: { value } } = e;
     setAppointmentData({ ...appointmentData, [control]: value });
     setErrorControls({ ...errorControls, [control]: validateControl(control, value, infoControlsTouched[control])});
   };
@@ -71,8 +74,19 @@ const DentalAppointment: FC<any> = ({
       <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>Selecciona un campus para continuar</p>
     </div>
     <div className="mt-6">
+      <textarea
+        className="mt-6 rounded-t-lg border border-surface-300 border-solid w-full focus:outline-none font-medium font-texts p-4 placeholder-surface-900 border-b border-b-surface-500"
+        placeholder="Agrega el motivo de tu consulta"
+        maxLength={100} name=""
+        id=""
+        cols={30}
+        rows={4}
+        onFocus={() => handleTouchedControl("comments")}
+        onKeyUp={(event: any) => {handleKeyPress(event , "comments")}}
+      ></textarea>
+      <p className="text-surface-500 font-normal text-sm">{appointmentData.comments.length}/100</p>
       
-      <Input eventFocus={() => handleTouchedControl("comments")} data={ {...configControls.inputEmailOpenFormStepOne, label:"Agrega el motivo de tu consulta", iconLeft:''} } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "comments")} />
+      {/* <Input  data={ {...configControls.inputEmailOpenFormStepOne, label:"Agrega el motivo de tu consulta", iconLeft:''} }  /> */}
       {/* <Input errorMessage={configControls.errorMessagesStepOneOpenForm.email} hasError={errorControls.email} eventFocus={() => handleTouchedControl("email")} data={ configControls.inputEmailOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "email")} /> */}
     </div>
   </>
