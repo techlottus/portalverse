@@ -2,6 +2,7 @@ import { FC, useEffect, useState } from "react"
 import OpenFormInit from "@/forms/fixtures/openform"
 import Input from "@/old-components/Input/Input"
 import configControls from "@/forms/fixtures/controls"
+import { InputInit } from "@/old-components/fixture"
 
 
 const PersonalData: FC<any> = ({
@@ -44,6 +45,17 @@ const PersonalData: FC<any> = ({
     setErrorControls({ ...errorControls, [control]: validateControl(control, personalData[control], infoControlsTouched[control])});
   }
 
+  const phoneData = {
+    ...InputInit,
+    iconLeft: "call",
+    label: "Número telefónico",
+    alphanumeric: false,
+    alphabetical: false,
+    onlyNumbers: true,
+    maxlength: '10',
+    test: "phone",
+    name: "phone",
+  };
   return <>
     <div className="mt-6 flex w-p:flex-col gap-6 font-normal">
       <div className="grow">
@@ -54,7 +66,7 @@ const PersonalData: FC<any> = ({
       </div>
     </div>
     <div className="mt-6">
-      <Input errorMessage={configControls.errorMessagesStepOneOpenForm.phone} hasError={errorControls.phone} eventFocus={() => handleTouchedControl("phone")} data={ configControls.inputPhoneOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "phone")} />
+      <Input errorMessage={configControls.errorMessagesStepOneOpenForm.phone} hasError={errorControls.phone} eventFocus={() => handleTouchedControl("phone")} data={ phoneData } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "phone")} />
     </div>
     <div className="mt-6">
       <Input errorMessage={configControls.errorMessagesStepOneOpenForm.email} hasError={errorControls.email} eventFocus={() => handleTouchedControl("email")} data={ configControls.inputEmailOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "email")} />
