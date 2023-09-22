@@ -33,8 +33,14 @@ const CardWebsitePortalverse: FC<CardWebsitePortalverseData> = ({ data, classNam
         </div>
         : data.type === "horizontal"
           ? <div className={cn("rounded-b-lg hover:shadow-2xl h-full flex")}>
-            <Image classNames="w-full h-full aspect-3/4" src={data.image} alt="image" />
-            <div className={cn("px-2 flex flex-col break-words h-auto", classNames, { "border-r border-b rounded-r-lg": data.border, "bg-surface-0": data.background })}>
+            <Image
+              alt={"image"}
+              src={data.image}
+              classNamesImg="w-full h-full object-cover"
+              classNames="w-1/3 h-full"
+            />
+            {/* <Image classNames="w-full h-full aspect-3/4" src={data.image} alt="image" /> */}
+            <div className={cn("px-2 flex flex-col break-words h-auto w-full", classNames, { "border-r border-b border-t rounded-r-lg": data.border, "bg-surface-0": data.background })}>
               <p className="pt-3 mb-2 font-texts font-normal text-surface-500 text-xs">{data.subtitle?.toLocaleUpperCase()}</p>
               <p className="mb-2 font-texts font-bold text-base">{data.title}</p>
               <RichtText data={{
