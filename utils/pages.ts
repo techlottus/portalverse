@@ -256,21 +256,25 @@ export const getDynamicProgramsPaths = async () => {
   const levelsConfig = await getEducationalOfferingConfig();
 
   const programsPaths: Array<string> = [];
-
-  for (const levelConfig of levelsConfig){
-    const levelSlug = levelConfig?.slug;
-    const normalizedLevelSlug = normalizePath(levelSlug);
-    const level = levelConfig?.level?.data?.attributes?.title;
-    const programs = await getProgramsByLevel(level);
-
-    for (const program of programs){
-      const programSlug = program?.attributes?.slug;
-      const programPath = `${normalizedLevelSlug}/${programSlug}`;
-      programsPaths?.push(programPath);
+  if (levelsConfig) {
+    
+    for (const levelConfig of levelsConfig){
+      const levelSlug = levelConfig?.slug;
+      const normalizedLevelSlug = normalizePath(levelSlug);
+      const level = levelConfig?.level?.data?.attributes?.title;
+      const programs = await getProgramsByLevel(level);
+  
+      for (const program of programs){
+        const programSlug = program?.attributes?.slug;
+        const programPath = `${normalizedLevelSlug}/${programSlug}`;
+        programsPaths?.push(programPath);
+      }
     }
+  
+    return programsPaths;
+  } else {
+    return []
   }
-
-  return programsPaths;
 }
 
 export const getProgramDetailPagesPaths = async () => {
