@@ -1,14 +1,8 @@
 import { useEffect, useState } from "react"
-import { useRouter } from "next/router"
-import cn from "classnames"
-import { FormConfig } from "@/forms/fixtures/openform"
-import { getTokenForms } from "@/utils/getTokenForms"
-import Image from "@/old-components/Image"
-import Button from "@/old-components/Button/Button"
 import configControls from "@/forms/fixtures/controls"
 import PersonalData from "../steps/PersonalData"
-import WebError from "@/components/sections/WebError"
 import DentalAppointment from "../steps/DentalAppointment"
+import axios from "axios"
 
 type OpenFormConfig = {
   title: string;
@@ -18,30 +12,25 @@ type OpenFormConfig = {
 };
 
 type DentalClinics = {
+  status: (status:{ loading: boolean, error: boolean, valid: boolean}) => void
+  submit: boolean
   classNames?: string;
   pathThankyou?: string;
   controls?: any;
   data?: any;
   config?: OpenFormConfig
-  button: {
-    label: string 	
-    variant: string 	
-    size: string 	
-    iconName: string 	
-    CTA: string 
-  }
 }
 
-const DentalClinics = ({ config, classNames, controls, data, button }: DentalClinics) => {
+const DentalClinics = (props: DentalClinics) => {
+  
+  const { config, classNames, controls, data, status, submit } = props
 
-  const router = useRouter();
-  const queryParams = router?.query;
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [isValid, setIsValid] = useState(false);
 
-  const [ controlsConfig, setControlsConfig ] = useState({ ...FormConfig });
-  const [ tokenActive, setTokenActive ] = useState<string>("");
-  const [ levelsOffer, setLevelsOffer ] = useState<any>([]);
-  const [ filteredPrograms, setFilteredPrograms ] = useState<any>([]);
-  const [ filteredCampus, setFilteredCampus ] = useState<any>([]);
+  const [ controlsConfig, setControlsConfig ] = useState({ campus: {hidden: false} });
+
 
   const [personalData, setPersonalData] = useState({
     name: "",
@@ -79,23 +68,30 @@ const DentalClinics = ({ config, classNames, controls, data, button }: DentalCli
     campus: false
   })
 
-  const {
-    isLoading: isLoadingToken,
-    isError: isErrorToken,
-    token,
-  } = getTokenForms();
-
-  useEffect(() => {
-    if (!isLoadingToken && !isErrorToken && !!Object.keys(token).length) {
-      setTokenActive(`${token.token_type} ${token.access_token}`);
-    }
-  }, [isLoadingToken, isErrorToken, token]);
-
-
   useEffect(() => {
     setControlsConfig({ ...controls });
-  }, [controls]);
+    setIsLoading(true)
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 5000);
+    setTimeout(() => {
+      setIsError(true)
+    }, 10000);
 
+  }, [controls]);
+ 
+  useEffect(() => {
+    if (submit) {
+      handleSubmit()
+    }
+  }, [submit]);
+ 
+  useEffect(() => {
+    setIsValid(validateAppointmentDataControls() && validatePersonalDataControls())
+  }, [personalDataErrors, appointmentDataErrors]);
+  useEffect(() => {
+    status({loading: isLoading, error: isError, valid: isValid })
+  }, [isLoading, isError, isValid]);
 
 
   /**
@@ -133,55 +129,25 @@ const DentalClinics = ({ config, classNames, controls, data, button }: DentalCli
   /**
    * Form Submission
    */
-  // const [isLoadingLead, setIsLoadingLead] = useState(false);
-  // const [isErrorLead, setIsErrorLead] = useState(false);
 
-  // const sendLeadData = async () => {
-  //   const endpoint = process.env.NEXT_PUBLIC_CAPTACION_PROSPECTO;
+  const sendData = async () => {
+    const endpoint = process.env.NEXT_PUBLIC_CAPTACION_PROSPECTO || '';
+    setIsLoading(true);
 
-  //   const selectedProgramData = getDataByProgramEC(appointmentData?.program, appointmentData?.campus);
-
-  //   // query params
-  //   const nombre = personalData?.name;
-  //   const apellidoPaterno = personalData?.surname;
-  //   const telefono = personalData?.phone;
-  //   const email = personalData?.email;
-  //   const lineaNegocio = selectedProgramData?.lineaNegocio || "";
-  //   const modalidad = appointmentData?.modality === "Presencial" ? "Presencial" : "Online";
-  //   const nivel = appointmentData?.level;
-  //   const campus = appointmentData?.campus;
-  //   const { idPrograma: programa } = sourceData?.[appointmentData?.program]?.filter((campus: any) => {
-  //     return campus.idCampus === appointmentData?.campus;
-  //   })[0];
-  //   const validaRegistroBoot = setRegisterBot();
-  //   const source = `portal${businessUnit}`;
-  //   const canal = process.env.NEXT_PUBLIC_CANAL;
-  //   const medio = queryParams?.utm_medium;
-  //   const campana = queryParams?.utm_campaign;
-
-  //   const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&telefono=${telefono}&email=${email}&lineaNegocio=${lineaNegocio}&modalidad=${modalidad}&nivel=${nivel}&campus=${campus}&programa=${programa}&avisoPrivacidad=true&leadSource=Digital&validaRegistroBoot=${validaRegistroBoot}&source=${source}&canal=${canal}${medio ? `&medio=${medio}` : ""}${campana ? `&campana=${campana}` : ""}`;
-
-  //   setIsLoadingLead(true);
-
-  //   await axios.post(`${endpoint}?${params}`,{},{
-  //     headers: {
-  //       Authorization: tokenActive,
-  //       'Content-Type': 'application/json;charset=UTF-8'
-  //     }
-  //   })
-  //     .then((res: any) => {
-  //       if(res?.data?.Exitoso !== "TRUE") {
-  //         throw new Error();
-  //       }
-  //       router.push(pathThankyou);
-  //     })
-  //     .catch((err: any) => {
-  //       setIsLoadingLead(false);
-  //       setIsErrorLead(true);
-  //     })
-  // }
-
-  const handleSubmit = async () => {
+    await axios.post(endpoint,{},{
+      
+    })
+      .then((res: any) => {
+        if(res?.data?.Exitoso !== "TRUE") {
+          throw new Error();
+        }
+      })
+      .catch((err: any) => {
+        setIsLoading(false);
+        setIsError(true);
+      })
+  }
+  const Validate = ( ) => {
     setPersonalDataTouched({
       name: true,
       surname: true,
@@ -212,65 +178,41 @@ const DentalClinics = ({ config, classNames, controls, data, button }: DentalCli
     setAppointmentDataErrors({ ...newAppointmentDataValidation });
 
     const isValidAppointmentData = validateAppointmentDataControls();
-
-    debugger
-    if(!isValidPersonalData || !isValidAppointmentData) return;
-    // dispatch post to service
+    setIsValid(isValidAppointmentData && isValidPersonalData)
   }
 
-  const isLoading = isLoadingToken
-  const isError = isErrorToken
+  const handleSubmit = async () => {
+    // Validate()
+    if (isValid) {
+      // dispatch post to service
+      // sendData()
+    }
+  }
 
   return (
-    <div>
-      {
-        isLoading
-          ? <div className="absolute w-full h-full z-10 flex justify-center items-center left-0 top-0">
-              <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
-            </div>
-          : null
-      }
-      {
-        // isError
-        false
-          ? <WebError></WebError>
-          : <>
-              <PersonalData
-                personalData={personalData}
-                setPersonalData={setPersonalData}
-                config={config}
-                data={data}
-                infoControlsTouched={personalDataTouched}
-                setInfoControlsTouched={setPersonalDataTouched}
-                errorControls={personalDataErrors}
-                setErrorControls={setPersonalDataErrors}
-              ></PersonalData>
-              <DentalAppointment
-                  appointmentData={appointmentData}
-                  setAppointmentData={setAppointmentData}
-                  config={config}
-                  data={data}
-                  infoControlsTouched={appointmentDataTouched}
-                  setInfoControlsTouched={setAppointmentDataTouched}
-                  errorControls={appointmentDataErrors}
-                  setErrorControls={setAppointmentDataErrors}
-              ></DentalAppointment>
-
-              <div className="mt-6">
-                {/* <Button dark onClick={handleSubmit} data={ configControls.buttonConfigOpenFormStepThree } /> */}
-                <Button darkOutlined={button.variant === "outlined_negative"} dark={button.variant === "primary"}
-                  data={{
-                    title: button?.label,
-                    type: button?.variant,
-                    icon: button?.iconName,
-                    isExpand: false,
-                  }}
-                  onClick={() => handleSubmit}
-                />
-              </div>
-            </>
-      }
-    </div>
+     <form>
+      <PersonalData
+        personalData={personalData}
+        setPersonalData={setPersonalData}
+        config={config}
+        data={data}
+        infoControlsTouched={personalDataTouched}
+        setInfoControlsTouched={setPersonalDataTouched}
+        errorControls={personalDataErrors}
+        setErrorControls={setPersonalDataErrors}
+      ></PersonalData>
+      <DentalAppointment
+          appointmentData={appointmentData}
+          setAppointmentData={setAppointmentData}
+          config={config}
+          data={data}
+          infoControlsTouched={appointmentDataTouched}
+          setInfoControlsTouched={setAppointmentDataTouched}
+          errorControls={appointmentDataErrors}
+          setErrorControls={setAppointmentDataErrors}
+      ></DentalAppointment>
+    </form>
+      
   )
 };
 
