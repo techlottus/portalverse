@@ -41,13 +41,6 @@ const DentalAppointment: FC<any> = ({
     setErrorControls({ ...errorControls, [control]: validateControl(control, value, infoControlsTouched[control])});
   };
 
-  const handleOptionSelected = (option: SelectOptions) => {
-    console.log(option);
-    
-    setAppointmentData({ ...appointmentData, "campus": option.value });
-
-  }
-
   const validateControl = (control: string, value: string, touched: boolean) => {
     return touched ? !!value : false;
   };
@@ -63,14 +56,13 @@ const DentalAppointment: FC<any> = ({
     setErrorControls({ ...errorControls, campus: validateControl("campus", appointmentData["campus"], infoControlsTouched.campus) });
   }
   const selectData: SelectConfig = {
-    textDefault:  !!appointmentData.campus ? " " : "Elige un campus",
+    textDefault:  !!appointmentData.campus ? "¿A qué clínica te gustaría acudir?" : "Elige un campus",
     disabled: false,
-    icon: '',
+    icon: 'domain',
     zindexOptions: 10,
     reset: false,
     isLabel: false
   }
-
 
   return <>
     <div className="mt-6">
@@ -80,7 +72,7 @@ const DentalAppointment: FC<any> = ({
     </div>
     <div className="mt-6">
       
-      <Input eventFocus={() => handleTouchedControl("comments")} data={ {...configControls.inputEmailOpenFormStepOne, label:"comentarios", icon:'comment'} } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "comments")} />
+      <Input eventFocus={() => handleTouchedControl("comments")} data={ {...configControls.inputEmailOpenFormStepOne, label:"Agrega el motivo de tu consulta", iconLeft:''} } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "comments")} />
       {/* <Input errorMessage={configControls.errorMessagesStepOneOpenForm.email} hasError={errorControls.email} eventFocus={() => handleTouchedControl("email")} data={ configControls.inputEmailOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "email")} /> */}
     </div>
   </>
