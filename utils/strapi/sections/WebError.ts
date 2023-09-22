@@ -3,11 +3,11 @@ import { SeoData } from "./SEO";
 
 
 export type WebErrorSection = {
-  type: 'ComponentSectionsWebError'
+  type?: 'ComponentSectionsWebError'
   title?: string;
   message?: string;
   error_code?: string;
-  button: LinkConfig
+  button?: LinkConfig
 };
 export type WebErrorPage = {
   sections: Array<WebErrorSection>; 
@@ -17,7 +17,8 @@ export type WebErrorPage = {
 export const WEB_ERROR = `
 ...on ComponentSectionsWebError {
   title
-  message  
+  message
+  error_code
   button {
     href
     text
