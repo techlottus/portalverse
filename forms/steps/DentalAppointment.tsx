@@ -1,11 +1,8 @@
-import { FC, KeyboardEventHandler, useEffect, useState } from "react"
+import { FC, useEffect, useState } from "react"
 import OpenFormInit from "@/forms/fixtures/openform"
-import Input from "@/old-components/Input/Input"
-import configControls from "@/forms/fixtures/controls"
 import Select from "@/old-components/Select/Select"
 import { SelectConfig } from "@/types/Select.types"
 import cn from "classnames"
-import { SelectInit } from "@/old-components/fixture"
 
 
 type SelectOptions ={ value: string, text: string, active: boolean }
@@ -17,12 +14,13 @@ const DentalAppointment: FC<any> = ({
   infoControlsTouched,
   setInfoControlsTouched,
   errorControls,
-  setErrorControls
+  setErrorControls,
+  validateControl
 }: any) => {
   let selectOptions : SelectOptions[] = [
-    {value:'campus 1', text: 'campus 1', active: false},
-    {value:'campus 2', text: 'campus 2', active: false},
-    {value:'campus 3', text: 'campus 3', active: false},
+    {value:'valle', text: 'Valle', active: appointmentData.campus === 'valle'},
+    {value:'norte', text: 'Norte', active: appointmentData.campus === 'norte'},
+    {value:'cuernavaca', text: 'Cuernavaca', active: appointmentData.campus === 'cuernavaca'},
   ]
 
   const [ dataCampus, setDataCampus ] = useState<Array<any>>([]);
@@ -30,33 +28,28 @@ const DentalAppointment: FC<any> = ({
   const [ config, setConfig ] = useState<any>( stepOneConfig ? {...stepOneConfig} : {...OpenFormInit.stepone });
   useEffect(() => {
     setDataCampus([ ...selectOptions ]);
-  }, [])
+  }, [appointmentData.campus])
   useEffect(() => {
     setConfig({ ...config, ...data });
   }, [data]);
 
   const handleKeyPress = (e: any, control: string ) => {
-    console.log(e);
-    
-    const value = e.target.value
-    // // const { detail: { value } } = e;
-    setAppointmentData({ ...appointmentData, [control]: value });
-    setErrorControls({ ...errorControls, [control]: validateControl(control, value, infoControlsTouched[control])});
-  };
 
-  const validateControl = (control: string, value: string, touched: boolean) => {
-    return touched ? !!value : false;
+    const value = e.target.value
+    setAppointmentData({ ...appointmentData, [control]: value });
+    setErrorControls({ ...errorControls, [control]: !validateControl(value) && infoControlsTouched.reason});
   };
 
   const handleTouchedControl = (control: string) => {
     setInfoControlsTouched({ ...infoControlsTouched, [control]: true });
-    setErrorControls({ ...errorControls, [control]: validateControl(control, appointmentData.campus, infoControlsTouched[control])});
+    setErrorControls({ ...errorControls, [control]: !validateControl(appointmentData[control]) && infoControlsTouched.reason});
   }
   const handleChangeCampus = (option: CustomEvent) => {
     const { detail: campus } = option;
+    setInfoControlsTouched({ ...infoControlsTouched, campus: true });
     setAppointmentData({ ...appointmentData, campus });
     setDataCampus(dataCampus.map((item: any) => ({ ...item, active: item.value === campus })))
-    setErrorControls({ ...errorControls, campus: validateControl("campus", appointmentData["campus"], infoControlsTouched.campus) });
+    setErrorControls({ ...errorControls, campus: !validateControl(appointmentData["campus"]) && infoControlsTouched.reason});
   }
   const selectData: SelectConfig = {
     textDefault:  !!appointmentData.campus ? "¿A qué clínica te gustaría acudir?" : "Elige un campus",
@@ -81,14 +74,15 @@ const DentalAppointment: FC<any> = ({
         id=""
         cols={30}
         rows={4}
-        onFocus={() => handleTouchedControl("comments")}
-        onKeyUp={(event: any) => {handleKeyPress(event , "comments")}}
+        onFocus={() => handleTouchedControl("reason")}
+        onKeyUp={(event: any) => { handleKeyPress(event , "reason"); }}
+        onFocusCapture={() => handleTouchedControl("reason")}
+        onClick={() => handleTouchedControl("reason")}
       ></textarea>
-      <p className="text-surface-500 font-normal text-sm">{appointmentData.comments.length}/100</p>
+      <p className="text-surface-500 font-normal text-sm">{appointmentData.reason.length}/100</p>
+      <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.reason })}>Agrega un motivo de tu cita</p>
       
-      {/* <Input  data={ {...configControls.inputEmailOpenFormStepOne, label:"Agrega el motivo de tu consulta", iconLeft:''} }  /> */}
-      {/* <Input errorMessage={configControls.errorMessagesStepOneOpenForm.email} hasError={errorControls.email} eventFocus={() => handleTouchedControl("email")} data={ configControls.inputEmailOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "email")} /> */}
-    </div>
+      </div>
   </>
 }
 

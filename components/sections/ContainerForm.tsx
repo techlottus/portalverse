@@ -1,4 +1,4 @@
-import { FC, useState} from "react"
+import { FC, useEffect, useState} from "react"
 import Link from "next/link";
 import OpenForm from "@/forms/container/OpenForm";
 import ProgressBar from "@/old-components/ProgressBar/ProgressBar";
@@ -9,36 +9,49 @@ import { ContainerForm as ContainerFormType } from "@/utils/strapi/sections/Cont
 import WebError from "./WebError";
 import cn from "classnames";
 import Button from "@/old-components/Button/Button";
-
-
+import { useRouter } from "next/router";
+import { WebErrorSection } from "@/utils/strapi/sections/WebError";
 
 
 const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
+  const router = useRouter()
   
   const { title, privacyPolicy, image, description, progress = 30, button, form, errors } = props
   const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
+  const [error, setError] = useState('');
+  const [currentError, setCurrentError] = useState<WebErrorSection | null>(null);
   const [isValid, setIsValid] = useState(false);
   const [submit, setSubmit] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
   // const [ progress, setProgress ] = useState<number>(progress);
 
   // useEffect(() => {
   //   setProgress(step);
   // }, [step]);
+  
+  useEffect(() => {
+    const errorData = errors.reduce((acc, curr) => { if (curr.error_code === error) acc = curr; return acc }, {})
+    setCurrentError(errorData)
+  }, [error]);
+  useEffect(() => {
+    if (isSuccess) router.push('/thank-you')
+  }, [isSuccess]);
 
-  const checkStatus = ({loading, error, valid}: { loading: boolean, error: boolean, valid: boolean}) => {
+  const setStatus = ({loading, error, valid, success}: { loading: boolean, error: string, valid: boolean, success: boolean}) => {
     setIsLoading(loading)
-    setIsError(error)
+    setError(error)
     setIsValid(valid)
+    setIsSuccess(success)
   }
   
   const getForm = () => {
     switch (form) {
       case "Clinicas_Dentales":
-        return <DentalClinics submit={submit} status={checkStatus} />;
+        return <DentalClinics submit={submit} setStatus={setStatus} />;
         case "OpenForm":
         return <OpenForm image={{src: '', alt: ''}} pathThankyou="" ></OpenForm>;
       default:
+        setError('404')
         return null;
     }
   }
@@ -57,8 +70,8 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
                   : null
               }
               {
-                isError
-                  ? <WebError {...errors[0]}></WebError>
+                !!error
+                  ? <WebError { ...currentError }></WebError>
                   : <section>
                       <div className="flex gap-6">
                         <div className="flex flex-col gap-6">
@@ -96,12 +109,14 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
                                 title: button?.label,
                                 icon: button?.iconName,
                                 isExpand: false,
+                                disabled: !isValid
                               }}
                               onClick={() => setSubmit(true)}
                             />
                           </div>
                       }
                     </section>
+                  
               }
             </section>
           </div>
