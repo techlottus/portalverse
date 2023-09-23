@@ -6,7 +6,7 @@ import Image from "@/old-components/Image"
 import DentalClinics from "@/forms/container/DentalClinics";
 import Container from "@/layouts/Container.layout";
 import { ContainerForm as ContainerFormType } from "@/utils/strapi/sections/ContainerForm";
-import WebError from "./WebError";
+import WebError, { WebErrorComponent } from "./WebError";
 import cn from "classnames";
 import Button from "@/old-components/Button/Button";
 import { useRouter } from "next/router";
@@ -19,7 +19,7 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
   const { title, privacyPolicy, image, description, progress = 30, button, form, errors } = props
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
-  const [currentError, setCurrentError] = useState<WebErrorSection | null>(null);
+  const [currentError, setCurrentError] = useState<WebErrorComponent | null>(null);
   const [isValid, setIsValid] = useState(false);
   const [submit, setSubmit] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -48,8 +48,6 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
     switch (form) {
       case "Clinicas_Dentales":
         return <DentalClinics submit={submit} setStatus={setStatus} />;
-        case "OpenForm":
-        return <OpenForm image={{src: '', alt: ''}} pathThankyou="" ></OpenForm>;
       default:
         setError('404')
         return null;

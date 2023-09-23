@@ -3,7 +3,7 @@ import { SeoData } from "./SEO";
 
 
 export type WebErrorSection = {
-  type?: 'ComponentSectionsWebError'
+  type: 'ComponentSectionsWebError'
   title?: string;
   message?: string;
   errorCode?: string;

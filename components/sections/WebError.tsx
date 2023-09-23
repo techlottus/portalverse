@@ -1,9 +1,15 @@
 import { FC } from "react"
 import Link from "next/link";
 import errors from "../../multitenant-errors";
-import { WebErrorSection } from "@/utils/strapi/sections/WebError";
+import { LinkConfig } from "@/types/Link.types";
 
-const WebError: FC<WebErrorSection> = (props: WebErrorSection) => {
+export type WebErrorComponent = {
+  title?: string;
+  message?: string;
+  errorCode?: string;
+  button?: LinkConfig
+};
+const WebError: FC<WebErrorComponent> = (props: WebErrorComponent) => {
 
   const { title, message, button, errorCode = '404' } = props;
 
