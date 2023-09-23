@@ -6,7 +6,7 @@ export type WebErrorSection = {
   type?: 'ComponentSectionsWebError'
   title?: string;
   message?: string;
-  error_code?: string;
+  errorCode?: string;
   button?: LinkConfig
 };
 export type WebErrorPage = {
@@ -18,7 +18,7 @@ export const WEB_ERROR = `
 ...on ComponentSectionsWebError {
   title
   message
-  error_code
+  errorCode
   button {
     href
     text
