@@ -56,3 +56,4 @@ routes/breadcrumbs.labels.ts
 routes/Routes.ts
 GeneralConfig.ts
 forms/fixtures/openform.ts
+routesConfig.json
