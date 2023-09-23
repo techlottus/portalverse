@@ -14,7 +14,7 @@ export type ContainerForm = {
   form: string;
   progress: number;
   privacyPolicy : privacyPolicy
-  button: {
+  button?: {
     label: string
     variant: string
     size: string
@@ -59,7 +59,7 @@ export const FORM_CONTAINER = `
   errors {
     title
     message
-    error_code
+    errorCode
     button {
       text
       href
