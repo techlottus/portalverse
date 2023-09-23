@@ -30,7 +30,7 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
   // }, [step]);
   
   useEffect(() => {
-    const errorData = errors.reduce((acc, curr) => { if (curr.error_code === error) acc = curr; return acc }, {})
+    const errorData = errors.reduce((acc, curr) => { if (curr.errorCode === error) acc = curr; return acc }, {})
     setCurrentError(errorData)
   }, [error]);
   useEffect(() => {
