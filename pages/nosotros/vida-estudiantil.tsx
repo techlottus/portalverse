@@ -75,7 +75,7 @@ const VidaEstudiantil: NextPageWithLayout = ({ sections, meta }: any) => {
           </div>
           {
           sections.culturalActivities.video && sections.culturalActivities.video ?
-            <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-p:hidden w-t:hidden mb-12 mt-12 w-t:mbt-6 w-p:mt-6 w-t:mb-6 w-p:mb-6 max-h-80 h-80">
+            <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-p:hidden w-t:hidden mb-12 mt-12 w-t:mbt-6 w-p:mt-6 w-t:mb-6 w-p:mb-6 h-80">
               <Video data={sections.culturalActivities.video} />
             </div>
             : sections?.culturalActivities?.image ?
