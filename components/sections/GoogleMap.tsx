@@ -63,11 +63,15 @@ const GoogleMap: FC<GoogleMapSection> = (props: GoogleMapSection) => {
                   <span className="font-normal text-surface-400 hover:underline">{schedule}</span>
                 </div>}
               </div>
-              <div className="w-d:w-3/5 w-full h-auto ">
-                <Aspect ratio="4/3">
-                  {validSrc ? renderMap(src) : null}
-                </Aspect>
-              </div>
+              {
+                validSrc ?
+                  <div className="w-d:w-3/5 w-full h-auto ">
+                    <Aspect ratio="4/3">
+                      {renderMap(src)}
+                    </Aspect>
+                  </div>
+                  : null
+              }
             </div>)
             :
             <div className="w-d:px-4 flex flex-col space-y-4">
