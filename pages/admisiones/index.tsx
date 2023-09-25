@@ -163,7 +163,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
             <Button dark data={sections?.egresados?.button} onClick={() => router.push(sections?.egresados?.button?.redirect)} />
           </div>
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-p:hidden w-t:hidden mb-12 w-t:mb-6 w-p:mb-6 h-125">
+        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-p:hidden w-t:hidden mb-12 w-t:mb-6 w-p:mb-6 h-80">
           <Video data={sections?.egresados?.video} />
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
