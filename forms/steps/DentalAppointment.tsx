@@ -74,9 +74,9 @@ const DentalAppointment: FC<any> = ({
         id=""
         cols={30}
         rows={4}
-        onFocus={() => handleTouchedControl("reason")}
+        onBlur={() => handleTouchedControl("reason")}
         onKeyUp={(event: any) => { handleKeyPress(event , "reason"); }}
-        onFocusCapture={() => handleTouchedControl("reason")}
+        onBlurCapture={() => handleTouchedControl("reason")}
         onClick={() => handleTouchedControl("reason")}
       ></textarea>
       <p className="text-surface-500 font-normal text-sm">{appointmentData.reason.length}/100</p>
