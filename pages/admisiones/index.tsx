@@ -148,7 +148,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
             content: sections?.egresados?.description
           }} />
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:hidden max-h-80 h-80">
+        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:hidden h-80">
           <Video data={sections?.egresados?.video} />
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
