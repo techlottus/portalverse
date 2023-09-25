@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { GoogleMapSection } from "@/utils/strapi/sections/GoogleMap";
-import Aspect from "../Aspect";
+import Aspect from "@/components/Aspect";
 import cn from "classnames";
 const GoogleMap: FC<GoogleMapSection> = (props: GoogleMapSection) => {
   const {
