@@ -39,7 +39,7 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:hidden">
           <p className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6 mb-6">{sections.comoFunciona.title}</p>
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mt-auto mb-auto max-h-80 h-80">
+        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mt-auto mb-auto h-80">
           <Video data={sections.comoFunciona.video} />
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-t:hidden w-p:hidden my-auto ">
