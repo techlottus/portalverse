@@ -71,19 +71,19 @@ const GoogleMap: FC<GoogleMapSection> = (props: GoogleMapSection) => {
               <div className="flex place-content-between w-d:flex-row flex-col ">
                 <h1 className="font-Poppins text-10 pb-4 font-bold leading-[125%] w-t:text-8.5 w-p:text-6">{name}</h1>
                 <div className="flex flex-col items-start space-y-4 w-d:w-2/5 right-0">
-                  {address && <div className="flex items-start space-y-2">
+                  {address && <div className="flex items-center space-y-2 space-x-2 ">
                     <span className="material-icons font-normal">location_on</span>
                     <span className="font-normal text-surface-400 hover:underline">{address}</span>
                   </div>}
-                  {admissionPhone && <div className="flex  items-start space-y-2">
+                  {admissionPhone && <div className="flex  items-center space-y-2 space-x-2">
                     <span className="material-icons font-normal">call</span>
                     <span className="font-normal text-surface-400 hover:underline">{admissionPhone}</span>
                   </div>}
-                  {receptionPhone && <div className="flex  items-start space-y-2">
+                  {receptionPhone && <div className="flex  items-center space-y-2 space-x-2">
                     <span className="material-icons font-normal">call</span>
                     <span className="font-normal text-surface-400 hover:underline">{receptionPhone}</span>
                   </div>}
-                  {schedule && <div className="flex items-start space-y-2">
+                  {schedule && <div className="flex items-center space-y-2 space-x-2">
                     <span className="material-icons font-normal">event_available</span>
                     <span className="font-normal text-surface-400 hover:underline">{schedule}</span>
                   </div>}</div>
