@@ -181,7 +181,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
               </div>
           }
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 w-d:order-1 w-t:order-2 max-h-100 h-100">
+        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 w-d:order-1 w-t:order-2 h-100">
           <Video data={{ options: { id: videoId, type: 'single', controls: true } }} />
         </div>
       </ContentLayout>
