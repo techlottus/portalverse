@@ -68,7 +68,7 @@ const DentalAppointment: FC<any> = ({
     </div>
     <div className="mt-6">
       <textarea
-        className="mt-6 rounded-t-lg border border-surface-300 border-solid w-full focus:outline-none font-medium font-texts p-4 placeholder-surface-900 border-b border-b-surface-500"
+        className={cn("mt-6 rounded-t-lg border border-surface-300 border-solid w-full focus:outline-none font-medium font-texts p-4 placeholder-surface-900 border-b border-b-surface-500 focus:placeholder-primary-500 focus:border-b-primary-500",{"border-b-error-500 placeholder-error-500" : errorControls.reason } )}
         placeholder="Agrega el motivo de tu consulta"
         maxLength={100} name=""
         id=""
