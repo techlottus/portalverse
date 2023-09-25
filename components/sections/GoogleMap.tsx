@@ -14,7 +14,10 @@ const GoogleMap: FC<GoogleMapSection> = (props: GoogleMapSection) => {
     detailPosition
   } = props;
 
-  const renderMap = () => {
+  const srcRegex = /[https://www.google.com/maps/embed/]*/g;
+  const validSrc = srcRegex.test(src);
+
+  const renderMap = (src: string) => {
     return (
       <iframe
         className="w-full h-full"
@@ -31,7 +34,7 @@ const GoogleMap: FC<GoogleMapSection> = (props: GoogleMapSection) => {
       {
         variant === 'map' ?
           <div className="w-full h-full">
-            <Aspect ratio='2/1'>{renderMap()}</Aspect>
+            <Aspect ratio='2/1'>{validSrc ? renderMap(src) : null}</Aspect>
           </div>
           :
           variant === 'tour' && detailPosition !== 'top' ?
@@ -62,7 +65,7 @@ const GoogleMap: FC<GoogleMapSection> = (props: GoogleMapSection) => {
               </div>
               <div className="w-d:w-3/5 w-full h-auto ">
                 <Aspect ratio="4/3">
-                  {renderMap()}
+                  {validSrc ? renderMap(src) : null}
                 </Aspect>
               </div>
             </div>)
@@ -90,7 +93,7 @@ const GoogleMap: FC<GoogleMapSection> = (props: GoogleMapSection) => {
               </div>
               <div className="w-full">
                 <Aspect ratio="2/1">
-                  {renderMap()}
+                  {validSrc ? renderMap(src) : null}
                 </Aspect>
               </div>
             </div>
