@@ -6,7 +6,6 @@ export type VideoComponentConf = {
 }
 
 type VideoComponentData = {
-  dimensions: Array<string>;
   data: VideoComponentConf;
 }
 

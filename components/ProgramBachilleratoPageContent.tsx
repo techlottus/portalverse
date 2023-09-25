@@ -99,7 +99,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 w-p:hidden mb-10 mt-6">
           <Aspect ratio={"2/1"}> 
             <Image
-              alt={"image"}
+              alt={title || "Programa de Bachillerato"}
               src={imageProgram}
               classNamesImg="w-full h-full object-cover"
               classNames="w-full h-full"
@@ -111,7 +111,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
         <div className="w-d:hidden w-t:hidden col-span-4 mb-10 mt-6">
           <Aspect ratio={"4/3"}> 
             <Image
-              alt={"image"}
+              alt={title || "Programa de Bachillerato"}
               src={imageProgram}
               classNamesImg="w-full h-full object-cover"
               classNames="w-full h-full"
@@ -181,8 +181,8 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
               </div>
           }
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 w-d:order-1 w-t:order-2">
-          <Video dimensions={["450px", "400px", "200px"]} data={{ options: { id: videoId, type: 'single', controls: true }, dimensions: { height: '330px', width: '100%' } }} />
+        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 w-d:order-1 w-t:order-2 h-100">
+          <Video data={{ options: { id: videoId, type: 'single', controls: true } }} />
         </div>
       </ContentLayout>
       <div className="order-last col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6">
