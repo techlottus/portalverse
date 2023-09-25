@@ -1,25 +1,25 @@
-import Outstanding from "@/components/sections/Outstanding";
-import { StrapiImage } from "@/types/strapi/common";
+import { ContentVariant, StrapiButton, StrapiImage } from "@/types/strapi/common";
 
-type Outstanding = {
+
+export type OutstandingSection = {
   title: string;
   content: string;
-  outstandingContentVariant: "light" | "dark";
+  outstandingContentVariant: ContentVariant;
   outstandingImage: StrapiImage;
   outstandingImagePosition: "left" | "right";
-  button: {label?:string, variant?:"primary"|"outlined"|"outlined_negative", iconName?:string, CTA:string, size?:"xs"|"sm"|"md"|"lg" }
+  button: StrapiButton;
   backgroundColor: string;
   backgroundWidth:"w_3_4"|"w_full"
 };
 
-export type RainbowSection = {
-  type: "ComponentSectionsContainerRainbow";
+export type OutstandingListSection = {
+  type: "ComponentSectionsContainerOutstandingList";
   title: string;
-  outstandings: Array<Outstanding>;
+  outstandings: Array<OutstandingSection>;
 };
 
-export const RAINBOW = `
-...on ComponentSectionsContainerRainbow {
+export const OUTSTANDING_LIST = `
+...on ComponentSectionsContainerOutstandingList {
     title
     outstandings(pagination: {start: 0, limit: -1}) {
       title

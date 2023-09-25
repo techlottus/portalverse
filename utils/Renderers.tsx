@@ -11,7 +11,7 @@ import HeroSlider from "@/components/sections/HeroSlider";
 import Leaderboard from "@/components/sections/Leaderboard";
 import LinkList from "@/components/sections/LinkList";
 import Listconfig from "@/components/sections/Listconfig";
-import Outstanding from "@/components/sections/Outstanding";
+import OutstandingList from "@/components/sections/OutstandingList";
 import OverlayCardList from "@/components/sections/OverlayCardList";
 import Paragraph from "@/components/Paragraph";
 import PodcastList from "@/components/sections/PodcastList";
@@ -23,7 +23,6 @@ import StatisticsCardList from "@/components/sections/StatisticsCardList";
 import TextContent from "@/components/sections/TextContent";
 import WebError from "@/components/sections/WebError";
 import type { FC } from "react";
-import Rainbow from "@/components/sections/Rainbow";
 
 type Renderer = {
   [key: string]: FC<any>;
@@ -44,7 +43,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsLeaderboard: Leaderboard,
   ComponentSectionsLinkList: LinkList,
   ComponentSectionsListconfig: Listconfig,
-  ComponentSectionsOutstandingRainbow: Outstanding,
+  ComponentSectionsContainerOutstandingList: OutstandingList,
   ComponentSectionsOverlayCardList: OverlayCardList,
   ComponentSectionsPodcastList: PodcastList,
   ComponentSectionsProgramsFilter: ProgramsFilter,
@@ -53,7 +52,6 @@ const defaultRenderers: Renderer = {
   ComponentSectionsStatisticsCardList: StatisticsCardList,
   ComponentSectionsTextContent: TextContent,
   ComponentSectionsWebError: WebError,
-  ComponentSectionsContainerRainbow: Rainbow,
   ComponentSectionsRichTextVideo: RichTextVideo,
 };
 

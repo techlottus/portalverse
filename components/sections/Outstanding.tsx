@@ -3,27 +3,26 @@ import Image from "@/old-components/Image";
 import parseEditorRawData from "@/utils/parseEditorRawData";
 import RichtText from "@/old-components/Richtext/Richtext";
 import cn from "classnames";
-import type { OutstandingSection } from "@/utils/strapi/sections/Outstanding";
 import Button from "@/old-components/Button/Button";
 import Aspect from "@/components/Aspect";
+import { OutstandingSection } from "@/utils/strapi/sections/OutstandingList";
 
 const Outstanding: FC<OutstandingSection> = (props: OutstandingSection) => {
-  const {
-    title,
-    content,
-    outstandingContentVariant = "dark",
-    outstandingImage,
-    outstandingImagePosition = "right",
-    button,
-    backgroundColor,
-    backgroundWidth
-  } = props;
+
+  const title = props?.title || ""
+  const content = props?.content || ""
+  const outstandingImage = props?.outstandingImage || null
+  const outstandingImagePosition = props?.outstandingImagePosition || "right"
+  const outstandingContentVariant = props?.outstandingContentVariant || "dark"
+  const button = props?.button || null
+  const backgroundColor = props?.backgroundColor || ""
+  const backgroundWidth = props?.backgroundWidth || "w-full"
 
   const richTextMarkup = parseEditorRawData(content);
 
-  const myhref = (web: string) => {
-    if (!web) return;
-    window.location.href = web;
+  const hrefRouter = (url: string) => {
+    if (!url) return;
+    window.location.href = url;
   };
 
   return (
@@ -35,13 +34,13 @@ const Outstanding: FC<OutstandingSection> = (props: OutstandingSection) => {
     >
       <section className="relative  max-w-d-base mx-auto w-d-base:px-6 w-t:!p-0">
         <div className="relative flex flex-col space-y-12 py-12 z-10">
-          <div className="flex flex-col items-center justify-center w-d:flex-row space-y-6 w-d:space-y-0 w-d:space-x-6 px-12 w-d:px-0">
+          <div className="flex flex-col items-center justify-center w-d:flex-row space-y-6 w-d:space-y-0 w-d:space-x-6 px-6 w-d:px-0">
             {outstandingImagePosition === 'left' && <div className="w-full w-d:w-1/2 max-w-147">
               <Aspect ratio="2/1">
                 <Image src={outstandingImage?.data?.attributes?.url} alt="image" classNames="w-full h-full" />
               </Aspect>
             </div>}
-            <div className="w-full w-d:w-1/2 flex flex-col space-y-6 w-d:pl-24">
+            <div className="w-full w-d:w-1/2 flex flex-col space-y-6 w-d:px-12">
               {
                 title
                   ? <h4
@@ -65,11 +64,11 @@ const Outstanding: FC<OutstandingSection> = (props: OutstandingSection) => {
                   icon: button?.iconName,
                   isExpand: false,
                 }}
-                  onClick={() => { myhref(button.CTA) }} />
+                  onClick={() => { hrefRouter(button.CTA) }} />
               ) : null}
 
             </div>
-            {outstandingImagePosition === 'right' && <div className="w-full w-d:w-1/2 max-w-147">
+            {outstandingImagePosition === 'right' && <div className="w-full w-d:w-1/2 max-w-147 w-d:px-6">
               <Aspect ratio="2/1">
                 <Image src={outstandingImage?.data?.attributes?.url} alt="image" classNames="w-full h-full" />
               </Aspect>
@@ -78,7 +77,7 @@ const Outstanding: FC<OutstandingSection> = (props: OutstandingSection) => {
         </div>
 
         {/* Section's background color */}
-        <div className="absolute top-0 left-0 w-full h-full flex bg-surface-0 max-w-d-base mx-auto w-d-base:px-6 w-p:!p-0 w-t:!p-0">
+        <div className="absolute top-0 left-0 w-full h-full flex bg-surface-0 max-w-d-base mx-auto  w-p:!p-0 w-t:!p-0">
           <div
             className={cn("h-full ", { "w-full": backgroundWidth === "w_full", "w-d:w-3/4 w-full": backgroundWidth === "w_3_4" })}
             style={{ backgroundColor: backgroundColor || "white" }}
