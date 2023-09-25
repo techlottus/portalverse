@@ -41,7 +41,7 @@ const VidaEstudiantil: NextPageWithLayout = ({ sections, meta }: any) => {
         <ContentLayout classNames="text-surface-0">
         {
           sections?.sportActivities?.video ?
-            <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 my-6 max-h-80 h-80">
+            <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 my-6 h-80">
               <Video data={sections?.sportActivities?.video} />
             </div>
             : sections?.sportActivities?.image ?
