@@ -73,7 +73,7 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
           <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mb-6 w-d:hidden">
             <RichtText font="dark" data={{ content: sections.historiasExito.description.content }} />
           </div>
-          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mt-6 mb-6 max-h-80 h-80">
+          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mt-6 mb-6 h-80">
             <Video data={sections.historiasExito.video} />
           </div>
         </ContentLayout>
