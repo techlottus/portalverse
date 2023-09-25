@@ -47,7 +47,7 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
             )
           }
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 max-h-80 h-80">
+        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 h-80">
           <Video data={sections.video.video} />
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
