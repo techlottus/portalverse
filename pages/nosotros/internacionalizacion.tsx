@@ -269,7 +269,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
             <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6 w-d:mb-">{sections?.videoSection.title}</p>
             <div className="grid w-d:grid-cols-2 w-p:grid-cols-1 gap-6">
               {
-              sections?.videoSection.videos.map((item:any, i:number) => <section className="max-h-80 h-80" key={`section-alliances-${i}`}>
+              sections?.videoSection.videos.map((item:any, i:number) => <section className="h-80" key={`section-alliances-${i}`}>
                 <Video data={ item } />
               </section>)
               }
