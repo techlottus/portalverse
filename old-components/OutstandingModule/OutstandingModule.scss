@@ -4,7 +4,7 @@ section {
       div.outstandingmoduledescription {
         color: white;
         span {
-          font-family: Poppins !important;
+          @apply font-headings #{!important};
           font-size: 22px !important;
           font-weight: 600 !important;
           line-height: 28px !important;
