@@ -111,7 +111,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
         <div className="w-d:hidden w-t:hidden col-span-4 mb-10 mt-6">
           <Aspect ratio={"4/3"}> 
             <Image
-              alt={title}
+              alt={title || "Programa de Bachillerato"}
               src={imageProgram}
               classNamesImg="w-full h-full object-cover"
               classNames="w-full h-full"
