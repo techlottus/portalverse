@@ -61,7 +61,7 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
         }
         {
           sections?.comoFunciona ?
-            <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mt-auto mb-auto max-h-80 h-80">
+            <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mt-auto mb-auto h-80">
               <Video data={sections?.comoFunciona?.video} />
             </div>
             : null
