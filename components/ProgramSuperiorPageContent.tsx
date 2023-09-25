@@ -10,6 +10,7 @@ import Select from "@/old-components/Select/Select";
 import { ButtonInit, SelectInit } from "@/old-components/fixture";
 import OutstandingContainer from "@/old-components/OutstandingContainerPortalverse";
 import Banner from "@/components/sections/Banner";
+import Aspect from "@/components/Aspect";
 import { formatModalityDataSuperior } from "@/utils/programDetail";
 import type { DynamicProgramDetailData } from "@/utils/pages";
 import type { ProgramDetailSuperiorData } from "@/utils/getProgramDetailSuperior";
@@ -93,21 +94,26 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           }} />
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 w-p:hidden mb-10 mt-6">
-          <Image
-            alt={"image"}
-            src={imageProgram}
-            classNamesImg="w-full !h-auto !relative"
-            classNames="w-full h-fit"
-          />
+          <Aspect ratio={"2/1"}> 
+            <Image
+              alt={title || "Programa de Nivel Superior"}
+              src={imageProgram}
+              classNamesImg="w-full h-full object-cover"
+              classNames="w-full h-full"
+            />
+          </Aspect>
         </div>
       </ContentLayout>
       <ContentFullLayout classNames="w-d:hidden w-t:hidden mb-10 mt-6">
         <div className="w-d:hidden w-t:hidden col-span-4 mb-10 mt-6">
-          <Image
-            alt={"image"}
-            src={imageProgram}
-            classNamesImg="w-full !h-auto !relative"
-            classNames="w-full h-fit" />
+          <Aspect ratio={"4/3"}> 
+            <Image
+              alt={title || "Programa de Nivel Superior"}
+              src={imageProgram}
+              classNamesImg="w-full h-full object-cover"
+              classNames="w-full h-full"
+            />
+          </Aspect>
         </div>
       </ContentFullLayout>
       <ContentLayout>
@@ -134,7 +140,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
             {
               hasCampuses ?
                 <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-                  <h1 className="ac-type-h5-bold-solid-poppins-desktop w-t:ac-type-h5-bold-solid-poppins-tabmob w-p:ac-type-h5-bold-solid-poppins-tabmob">Selecciona un campus para descargar tu plan de estudios en esta modalidad</h1>
+                  <h1 className="font-headings">Selecciona un campus para descargar tu plan de estudios en esta modalidad</h1>
                   <div className="my-6">
                     <p className="font-texts font-normal text-xs mb-0">Los planes de estudio pueden variar por campus*</p>
                     <Select onClick={(option: CustomEvent) => handleSelectOption(option)} data={{ ...SelectInit, textDefault: "Elige el campus de tu interés", icon: "apartment" }} options={optionsSelect} flagHeight={true} />

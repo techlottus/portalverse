@@ -108,7 +108,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
                 <section className={cn("col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1", { "hidden w-p:hidden": tabActive !== i })}>
                   {
                     cards.map((item: any, i: number) => <section key={`section-blog-${i}`}>
-                      <CardWebsite data={item}/>
+                      <CardWebsitePortalverse data={item}/>
                     </section>)
                   }
                 </section>
@@ -148,8 +148,8 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
             content: sections?.egresados?.description
           }} />
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:hidden">
-          <Video dimensions={["330px", "400px", "200px"]} data={sections?.egresados?.video} />
+        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:hidden h-80">
+          <Video data={sections?.egresados?.video} />
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
           <section className="grid w-d:grid-cols-2 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
@@ -163,8 +163,8 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
             <Button dark data={sections?.egresados?.button} onClick={() => router.push(sections?.egresados?.button?.redirect)} />
           </div>
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-p:hidden w-t:hidden mb-12 w-t:mb-6 w-p:mb-6">
-          <Video dimensions={["330px", "400px", "200px"]} data={sections?.egresados?.video} />
+        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-p:hidden w-t:hidden mb-12 w-t:mb-6 w-p:mb-6 h-80">
+          <Video data={sections?.egresados?.video} />
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{sections?.FAQ?.title}</p>

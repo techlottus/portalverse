@@ -37,14 +37,18 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
               content: sections.introduccion.descripcion
             }} />
           </div>
-          <div className="w-p:col-span-2 w-p:order-1">
-            <div className="w-p:-mt-56 -mt-40 w-t:mr-6 w-d:mr-6">
-              <GraduatesForm />
-            </div>
-          </div>
+          {
+            !sections?.form?.hidden && (
+              <div className="w-p:col-span-2 w-p:order-1">
+                <div className="w-p:-mt-56 -mt-40 w-t:mr-6 w-d:mr-6">
+                  <GraduatesForm />
+                </div>
+              </div>
+            )
+          }
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-          <Video dimensions={["330px", "400px", "200px"]} data={sections.video.video} />
+        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 h-80">
+          <Video data={sections.video.video} />
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
           <p className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6 mb-6"> {sections.video.title}</p>
