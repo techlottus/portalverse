@@ -11,12 +11,9 @@ const Youtube: FC<YoutubeComponentData> = memo(({ data }: YoutubeComponentData) 
     if (!!data?.options?.id) {
       setURL(() => `https://youtu.be/${data?.options?.id}` )
     }
-    if (!!data?.dimensions?.height) {
-      setNewHeight(data?.dimensions?.height);
-    }
   }, [data?.options?.id]);// eslint-disable-line react-hooks/exhaustive-deps
 
-  return <ReactPlayer width='100%' height={newHeight} url={url} />
+  return <ReactPlayer width='100%' height="100%" url={url} />
 })
 
 export default Youtube

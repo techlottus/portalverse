@@ -57,7 +57,7 @@ const RichTextVideo: FC<RichTextVideoSection> = (props: RichTextVideoSection) =>
             {
               richTextMarkup
                 && ( <div className="dark ">
-                  { title && <h3 className="font-Poppins text-10 pb-4 font-bold leading-[125%] w-t:text-8.5 w-p:text-6">{title}</h3>}
+                  { title && <h3 className="font-headings text-10 pb-4 font-bold leading-tight w-t:text-8.5 w-p:text-6">{title}</h3>}
                    <RichtText font={contentVariant === "light" ? "dark" : "light"} data={{content: richTextMarkup}}/>
                   </div>)
             }

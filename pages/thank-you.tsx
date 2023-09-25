@@ -59,8 +59,8 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
               </section>
             </ContentInsideLayout>
           </div>
-          <div className="col-span-7 w-t:col-span-12 w-p:col-span-12">
-            <Video dimensions={["500px", "430px", "200px"]} data={ sections.video } />
+          <div className="col-span-7 w-t:col-span-12 w-p:col-span-12 h-125">
+            <Video data={ sections.video } />
           </div>
         </ContentInsideLayout>
       </ContentFullLayout>

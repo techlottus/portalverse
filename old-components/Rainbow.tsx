@@ -30,7 +30,7 @@ const Rainbow: FC<RainbowComponentConfig> = ({ sections, title, classNamesTitle 
                       <div className="flex flex-col items-center justify-center w-d:flex-row space-y-6 w-d:space-y-0 w-d:space-x-6 px-12 w-d:px-0" key={`section-detail${i}`}>
                       <div className="w-full w-d:w-1/2 flex flex-col space-y-6 w-d:pl-24">
                         <h3 className="font-headings text-surface-0 text-10 w-t:text-3xl w-p:text-6">{ title }</h3>
-                        <RichtText font="dark" classNames="ac-type-body-positive-solid-nunitosans-desktop w-t:ac-type-h6-bold-solid-poppins-tablet w-p:ac-type-body-positive-solid-nunitosans-tabmob" data={{ content: description }} />
+                        <RichtText font="dark" classNames="font-headings" data={{ content: description }} />
                       </div>
                       <div className="w-full w-d:w-1/2 max-w-147">
                         <Aspect ratio="2/1">
