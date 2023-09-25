@@ -10,8 +10,8 @@ const GoogleMap: FC<GoogleMapSection> = (props: GoogleMapSection) => {
     receptionPhone,
     admissionPhone,
     schedule,
-    variant,
-    detailPosition
+    variant = 'map',
+    detailPosition = 'top'
   } = props;
 
   const srcRegex = /[https://www.google.com/maps/embed/]*/g;
