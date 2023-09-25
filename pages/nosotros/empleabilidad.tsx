@@ -69,7 +69,7 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
         {
           sections?.comoFunciona ?
             <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-t:hidden w-p:hidden my-auto ">
-              <p className="font-headings font-bold leading-[125%] text-10 w-t:text-6 w-p:text-6 mb-6">{sections.comoFunciona.title}</p>
+              <p className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6 mb-6">{sections.comoFunciona.title}</p>
               <RichtText data={{ content: sections.comoFunciona.description.content }} />
             </div>
             : null
