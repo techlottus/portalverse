@@ -6,10 +6,6 @@ div {
           input {
             width: 100% !important;
             padding-top: 2.25rem !important;
-            &::placeholder {
-              color: #282828 !important;
-            }
-            
             &:focus {
               height: 2.625rem !important;
               @apply border-primary-500 #{!important};
@@ -20,9 +16,11 @@ div {
             @apply text-primary-500 #{!important};
             
           }
+          label {
+            @apply font-texts font-normal  #{!important};
+          }
         }
       }
-      @apply text-xs font-texts font-normal #{!important};
     }
   }
 }
