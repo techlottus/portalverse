@@ -162,7 +162,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
                           (sections?.exchange?.downloadables as Array<{ label: string; link: string; }>)?.map((redirect, index) => {
                             const children = (
                               <>
-                                <span className="font-Nunito-Sans font-normal underline underline-offset-4 mr-auto">{redirect?.label}</span>
+                                <span className="font-texts font-normal underline underline-offset-4 mr-auto">{redirect?.label}</span>
                               </>
                             );
 
@@ -224,7 +224,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
                           (sections?.exchange?.downloadables as Array<{ label: string; link: string; }>)?.map((redirect, index) => {
                             const children = (
                               <>
-                                <span className="font-Nunito-Sans font-normal underline underline-offset-4 mr-auto">{redirect?.label}</span>
+                                <span className="font-texts font-normal underline underline-offset-4 mr-auto">{redirect?.label}</span>
                               </>
                             );
 
@@ -269,8 +269,8 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
             <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6 w-d:mb-">{sections?.videoSection.title}</p>
             <div className="grid w-d:grid-cols-2 w-p:grid-cols-1 gap-6">
               {
-              sections?.videoSection.videos.map((item:any, i:number) => <section key={`section-alliances-${i}`}>
-                <Video dimensions={["330px","400px","200px"]} data={ item } />
+              sections?.videoSection.videos.map((item:any, i:number) => <section className="max-h-80 h-80" key={`section-alliances-${i}`}>
+                <Video data={ item } />
               </section>)
               }
             </div>

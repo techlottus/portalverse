@@ -149,7 +149,7 @@ const StaticProgramContent: NextPageWithLayout<any> = ({ level, program, meta, c
               <ContentLayout>
                 <ContentInsideLayout classNames="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6">
                   <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-                    <h1 className="ac-type-h5-bold-solid-poppins-desktop w-t:ac-type-h5-bold-solid-poppins-tabmob w-p:ac-type-h5-bold-solid-poppins-tabmob">Selecciona un campus para descargar tu plan de estudios en esta modalidad</h1>
+                    <h1 className="font-headings">Selecciona un campus para descargar tu plan de estudios en esta modalidad</h1>
                     <div className="my-6">
                       <p className="font-texts font-normal text-xs mb-0">Los planes de estudio pueden variar por campus*</p>
                       <Select onClick={(option: CustomEvent) => handleSelectOption(option)} data={{...SelectInit, textDefault: "Elige el campus de tu interés", icon: "apartment"}} options={selectData} flagHeight={true}/>
@@ -180,8 +180,8 @@ const StaticProgramContent: NextPageWithLayout<any> = ({ level, program, meta, c
                   </div>
                   <Button dark data={{...sections.benefits.action , disabled: !fileSelected}} onClick={downloadFileProgram} />
                 </div>
-                <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 w-d:order-1 w-t:order-2">
-                  <Video dimensions={["450px", "400px", "200px"]} data={{ options: { id: sections.benefits.video, type: 'single', controls: true}, dimensions: { height: '330px', width: '100%'} }} />
+                <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 w-d:order-1 w-t:order-2 max-h-125 h-100">
+                  <Video data={{ options: { id: sections.benefits.video, type: 'single', controls: true}, dimensions: { height: '330px', width: '100%'} }} />
                 </div>
               </>
             : null

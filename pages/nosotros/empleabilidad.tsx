@@ -61,15 +61,15 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
         }
         {
           sections?.comoFunciona ?
-            <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mt-auto mb-auto">
-              <Video dimensions={["330px", "350px", "200px"]} data={sections?.comoFunciona?.video} />
+            <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mt-auto mb-auto max-h-80 h-80">
+              <Video data={sections?.comoFunciona?.video} />
             </div>
             : null
         }
         {
           sections?.comoFunciona ?
             <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-t:hidden w-p:hidden my-auto ">
-              <p className="font-Poppins font-bold leading-[125%] text-10 w-t:text-6 w-p:text-6 mb-6">{sections.comoFunciona.title}</p>
+              <p className="font-headings font-bold leading-[125%] text-10 w-t:text-6 w-p:text-6 mb-6">{sections.comoFunciona.title}</p>
               <RichtText data={{ content: sections.comoFunciona.description.content }} />
             </div>
             : null
@@ -128,8 +128,8 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
           <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mb-6 w-d:hidden">
             <RichtText font="dark" data={{ content: sections.historiasExito.description.content }} />
           </div>
-          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mt-6 mb-6">
-            <Video dimensions={["400px", "350px", "200px"]} data={sections.historiasExito.video} />
+          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mt-6 mb-6 max-h-80 h-80">
+            <Video data={sections.historiasExito.video} />
           </div>
         </ContentLayout>
       </ContentFullLayout>

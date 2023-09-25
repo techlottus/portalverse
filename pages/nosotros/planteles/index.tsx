@@ -115,7 +115,7 @@ const Planteles = ({ sections, meta }: any) => {
                             src={items[0].src}
                           />
                           <div className="col-span-4 border w-t:col-span-4 w-p:col-span-4 border-gray-300 rounded pl-3">
-                            <p className="font-Nunito-Sans font-normal text-base leading-5 my-2">
+                            <p className="font-texts font-normal text-base leading-5 my-2">
                               {description.state}
                             </p>
                             <p className="font-headings font-semibold text-4.5 leading-5.625 my-2">
@@ -126,7 +126,7 @@ const Planteles = ({ sections, meta }: any) => {
                                 name="marker"
                                 className="col-span-1 w-t:col-span-1 w-p:col-span-1"
                               />
-                              <p className="col-span-11 w-t:col-span-7 w-p:col-span-3 font-Nunito-Sans font-normal">
+                              <p className="col-span-11 w-t:col-span-7 w-p:col-span-3 font-texts font-normal">
                                 {description.address}
                               </p>
                             </ContentInsideLayout>
@@ -162,7 +162,7 @@ const Planteles = ({ sections, meta }: any) => {
                               className="flex justify-end pr-3"
                               onClick={() => handleOpenModal(coords, title)}
                             >
-                              <p className="font-Nunito-Sans font-normal">
+                              <p className="font-texts font-normal">
                                 Ver mapa
                               </p>
                               <IconComponent name="eye" className="ml-1 w-4" />
