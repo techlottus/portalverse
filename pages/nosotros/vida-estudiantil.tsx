@@ -55,7 +55,7 @@ const VidaEstudiantil: NextPageWithLayout = ({ sections, meta }: any) => {
               : null
         }
           <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 my-auto">
-            <p className="font-headings font-bold text-6.5 w-t:text-6 w-p:text-6 leading-[125%] mb-6">{sections.sportActivities.title}</p>
+            <p className="font-headings font-bold text-6.5 w-t:text-6 w-p:text-6 leading-tight mb-6">{sections.sportActivities.title}</p>
             <RichtText font="dark" data={{
               content: sections.sportActivities.description
             }} />
