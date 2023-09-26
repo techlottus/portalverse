@@ -4,7 +4,7 @@ import "@/styles/globals.scss"
 import { AppPropsWithLayout } from "@/types/Layout.types"
 import Pixel from "@/components/Pixel"
 import { ScriptsPixels } from "@/utils/strapi/sections/ScriptPixel"
-import { scripts } from "../GeneralConfig"
+import { scripts } from "@/general-config"
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const router = useRouter();

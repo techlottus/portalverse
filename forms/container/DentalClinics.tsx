@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import configControls from "@/forms/fixtures/controls"
-import PersonalData from "../steps/PersonalData"
-import DentalAppointment from "../steps/DentalAppointment"
+import PersonalData from "@/forms/steps/PersonalData"
+import DentalAppointment from "@/forms/steps/DentalAppointment"
 import axios from "axios";
 
 type OpenFormConfig = {
