@@ -33,7 +33,7 @@ const getAvailableModalities = (): Array<SelectOptionConfig> => {
         },
       ];
     }
-    default: {
+    default: { // cases "UANE" and "UTEG"
       return [
         {
           value: "Presencial",
