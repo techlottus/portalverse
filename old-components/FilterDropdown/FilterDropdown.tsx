@@ -75,7 +75,7 @@ const FilterDropdown: FC<FilterDropdownComponentData> = memo(({ data: { config, 
           </div>)
       }
       <div>
-        <Button data={buttonConfig} onClick={applySelection}/>
+        <Button dark data={buttonConfig} onClick={applySelection}/>
       </div>
     </section>
   </section>
