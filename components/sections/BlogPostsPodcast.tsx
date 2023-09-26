@@ -32,7 +32,7 @@ const BlogPostsPodcast = (props: BlogPostsPodcastSection) => {
             {
               listConfigData?.title
                 ? <div className="mb-6">
-                    <p className="font-headings font-bold text-10 w-t:text-7.5 w-p:text-7.5 leading-tight">
+                    <p className="font-headings font-bold text-10 w-t:text-7.5 w-p:text-7.5 leading-[125%]">
                       {listConfigData?.title}
                     </p>
                   </div> 
@@ -83,14 +83,20 @@ const BlogPostsPodcast = (props: BlogPostsPodcastSection) => {
           </div>
 
           {/* Sidebar */}
-          <div className="col-span-4 w-t:col-span-8 w-p:col-span-4 w-d-base:-mx-6">
+          <div className="col-span-4 w-t:col-span-8 w-p:col-span-4 flex flex-col space-y-6">
             
             {/* Podcast Items */}
-            <PodcastList
-              type="ComponentSectionsPodcastList"
-              title={podcastItemsTitle}
-              podcastItems={podcastItems}
-            />
+            {
+              podcastItems?.length > 0
+                ? <div className="w-d-base:-mx-6">
+                    <PodcastList
+                      type="ComponentSectionsPodcastList"
+                      title={podcastItemsTitle}
+                      podcastItems={podcastItems}
+                    />
+                  </div>
+                : null
+            }
 
             {/* Banners */}
             {
