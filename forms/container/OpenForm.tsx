@@ -41,6 +41,18 @@ const getBusinessLineToFetchFrom = (businessLine: string, modality: string) => {
   }
 }
 
+const getLeadModality = (
+  modality: string // "Presencial" | "Online" | "Flex" | "Semipresencial"
+) => {
+  switch (modality) {
+    case "Presencial": return "Presencial";
+    case "Online": return "Online";
+    case "Flex": return "Online"; // Applies to "UANE" and "UTEG" offer.
+    case "Semipresencial": return "Semipresencial"; // Applies to "ULA" offer.
+    default: return "";
+  }
+};
+
 type OpenFormConfig = {
   title: string;
   subtitle: string;
@@ -222,7 +234,7 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
     const telefono = personalData?.phone;
     const email = personalData?.email;
     const lineaNegocio = selectedProgramData?.lineaNegocio || "";
-    const modalidad = academicData?.modality === "Presencial" ? "Presencial" : "Online";
+    const modalidad = getLeadModality(academicData?.modality);
     const nivel = academicData?.level;
     const campus = academicData?.campus;
     const { idPrograma: programa } = sourceData?.[academicData?.program]?.filter((campus: any) => {
