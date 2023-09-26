@@ -1,4 +1,4 @@
-import { StrapiImage } from "@/types/strapi/common";
+import { StrapiButton, StrapiImage } from "@/types/strapi/common";
 
 type LeaderboardLink = {
   text: string;
@@ -19,7 +19,7 @@ export type LeaderboardSection = {
   tabletImage: StrapiImage;
   mobileImage: StrapiImage;
   leaderboardContentVariant: "light" | "dark"
-  button?: {label?:string, variant?:"primary"|"outlined"|"outlined_negative", iconName?:string, CTA:string, size?:"xs"|"sm"|"md"|"lg" }
+  button?: StrapiButton;
 };
 
 export const LEADERBOARD = `

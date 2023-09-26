@@ -7,10 +7,12 @@ import ContactTargetList from "@/components/sections/ContactTargetList";
 import ContEdPrograms from "@/components/sections/ContEdPrograms";
 import FAQ from "@/components/sections/FAQ";
 import FormVideo from "@/components/sections/FormVideo";
+import GoogleMap from "@/components/sections/GoogleMap";
 import HeroSlider from "@/components/sections/HeroSlider";
 import Leaderboard from "@/components/sections/Leaderboard";
 import LinkList from "@/components/sections/LinkList";
 import Listconfig from "@/components/sections/Listconfig";
+import OutstandingList from "@/components/sections/OutstandingList";
 import OverlayCardList from "@/components/sections/OverlayCardList";
 import Paragraph from "@/components/Paragraph";
 import PodcastList from "@/components/sections/PodcastList";
@@ -38,10 +40,12 @@ const defaultRenderers: Renderer = {
   ComponentSectionsContEdPrograms: ContEdPrograms,
   ComponentSectionsFaqSection: FAQ,
   ComponentSectionsFormVideo: FormVideo,
+  ComponentSectionsGoogleMap: GoogleMap,
   ComponentSectionsHeroSlider: HeroSlider,
   ComponentSectionsLeaderboard: Leaderboard,
   ComponentSectionsLinkList: LinkList,
   ComponentSectionsListconfig: Listconfig,
+  ComponentSectionsContainerOutstandingList: OutstandingList,
   ComponentSectionsOverlayCardList: OverlayCardList,
   ComponentSectionsPodcastList: PodcastList,
   ComponentSectionsProgramsFilter: ProgramsFilter,

@@ -83,14 +83,20 @@ const BlogPostsPodcast = (props: BlogPostsPodcastSection) => {
           </div>
 
           {/* Sidebar */}
-          <div className="col-span-4 w-t:col-span-8 w-p:col-span-4 w-d-base:-mx-6">
+          <div className="col-span-4 w-t:col-span-8 w-p:col-span-4 flex flex-col space-y-6">
             
             {/* Podcast Items */}
-            <PodcastList
-              type="ComponentSectionsPodcastList"
-              title={podcastItemsTitle}
-              podcastItems={podcastItems}
-            />
+            {
+              podcastItems?.length > 0
+                ? <div className="w-d-base:-mx-6">
+                    <PodcastList
+                      type="ComponentSectionsPodcastList"
+                      title={podcastItemsTitle}
+                      podcastItems={podcastItems}
+                    />
+                  </div>
+                : null
+            }
 
             {/* Banners */}
             {

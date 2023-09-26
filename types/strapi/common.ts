@@ -21,3 +21,5 @@ export type TextPosition =
 export type OverlayColor = "black" | "white" | "none";
 
 export type ContentVariant = "dark" | "light";
+
+export type StrapiButton = {label?:string, variant?:"primary"|"outlined"|"outlined_negative", iconName?:string, CTA:string, size?:"xs"|"sm"|"md"|"lg" }
