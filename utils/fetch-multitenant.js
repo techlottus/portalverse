@@ -334,6 +334,8 @@ async function populateTailwind  () {
       "w-d-base": {"max": '1300px'}
     },
     maxWidth: {
+      "72": "18rem",
+      "96": "24rem",
       "d-base": "1200px",
       "147": '36.75rem',
     },

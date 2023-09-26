@@ -66,8 +66,6 @@ export const getEducativeOffer = () => {
       .then( (res: any) => {
         const { data: programs } = res;
         let dataPrograms: Array<any> = [];
-        console.log("programs", programs);
-        console.log("programs Licenciatura", programs?.filter((program: any) => program?.nivel === "Licenciatura"))
         if(!!programs && !!programs.length) {
           setAllPrograms([ ...programs ])
           switch(modalidad) {
@@ -79,11 +77,11 @@ export const getEducativeOffer = () => {
               dataPrograms = filterOnlinePrograms(programs);
               break;
             }
-            case 'Flex': {
+            case 'Flex': { // Applies to "UANE" and "UTEG" offer
               dataPrograms = filterFlexPrograms(programs);
               break;
             }
-            case 'Semipresencial': {
+            case 'Semipresencial': { // Applies to "ULA" offer
               dataPrograms = filterHybridPrograms(programs);
               break;
             }
