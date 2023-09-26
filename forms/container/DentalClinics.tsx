@@ -65,13 +65,6 @@ const DentalClinics = (props: DentalClinics) => {
   })
 
   useEffect(() => {
-    // setIsLoading(true)
-    // setTimeout(() => {
-    //   setIsLoading(false)
-    // }, 5000);
-    // setTimeout(() => {
-    //   setIsError(true)
-    // }, 10000);
   }, []);
  
   useEffect(() => {
@@ -80,15 +73,8 @@ const DentalClinics = (props: DentalClinics) => {
  
   useEffect(() => {
     Validate()
-    // console.log('personalData: ', personalData);
-    // console.log('appointmentData: ', appointmentData);
-    // console.log('personalDataErrors: ', personalDataErrors);
-    // console.log('appointmentDataErrors: ', appointmentDataErrors);
   }, [personalData, appointmentData]);
-  useEffect(() => {
-    // console.log('isValid: ', isValid);
-    // console.log('isError: ', isError);
-    
+  useEffect(() => {    
     setStatus({loading: isLoading, error: isError, valid: isValid, success: isSuccess })
   }, [isLoading, isError, isValid, isSuccess]);
 
@@ -118,7 +104,6 @@ const DentalClinics = (props: DentalClinics) => {
   
   const validateAppointmentDataControls = () => !Object.entries(appointmentData).map(([key, value]: any) => {
     const validity = validateAppointmentDataControl(value)
-    // console.log('value from validate controls',key, value, validity)
     return validity
   }).includes(false)
 
@@ -179,12 +164,7 @@ const DentalClinics = (props: DentalClinics) => {
   const handleSubmit = async () => {
     Validate()
     if (isValid && !isError) {
-      // console.log(`is valid sending data`);
-      
-      // dispatch post to service
       sendData()
-    } else {
-      // console.log(`is not valid`);
     }
   }
 
