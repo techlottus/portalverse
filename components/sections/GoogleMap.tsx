@@ -2,6 +2,7 @@ import { FC } from "react";
 import { GoogleMapSection } from "@/utils/strapi/sections/GoogleMap";
 import Aspect from "@/components/Aspect";
 import cn from "classnames";
+import Container from "@/layouts/Container.layout";
 const GoogleMap: FC<GoogleMapSection> = (props: GoogleMapSection) => {
   const {
     src,
@@ -30,80 +31,82 @@ const GoogleMap: FC<GoogleMapSection> = (props: GoogleMapSection) => {
 
 
   return (
-    <section className="px-12">
-      {
-        variant === 'map' ?
-          <div className="w-full h-full">
-            <Aspect ratio='2/1'>{validSrc ? renderMap(src) : null}</Aspect>
-          </div>
-          :
-          variant === 'tour' && detailPosition !== 'top' ?
-            (<div className={cn("flex w-d:flex-row flex-col ", { 'w-d:flex-row-reverse': detailPosition === "right" })}>
-              <div className="flex flex-col items-start space-y-4 w-d:w-2/5 w-full w-d:px-4 pb-4">
-                <h1>{name}</h1>
-                {address && <div className="flex flex-col items-start space-y-2">
-                  <span className="material-icons font-normal">location_on</span>
-                  <span className="font-bold text-surface-400">Dirección</span>
-                  <span className="font-normal text-surface-400 hover:underline">{address}</span>
-                </div>}
-                {admissionPhone &&
-                  <div className="flex flex-col items-start space-y-2">
-                    <span className="material-icons font-normal">call</span>
-                    <span className="font-bold text-surface-400">Teléfono Admisiones:</span>
-                    <span className="font-normal text-surface-400 hover:underline">{admissionPhone}</span>
+    <section >
+      <Container>
+        {
+          variant === 'map' ?
+            <div className="w-full h-full">
+              <Aspect ratio='2/1'>{validSrc ? renderMap(src) : null}</Aspect>
+            </div>
+            :
+            variant === 'tour' && detailPosition !== 'top' ?
+              (<div className={cn("flex w-d:flex-row flex-col ", { 'w-d:flex-row-reverse': detailPosition === "right" })}>
+                <div className={cn("flex flex-col items-start space-y-4 w-d:w-2/5 w-full w-d:p-0 pb-4", { "w-d:px-6": detailPosition === 'right' })}>
+                  <h1>{name}</h1>
+                  {address && <div className="flex flex-col items-start space-y-2">
+                    <span className="material-icons font-normal">location_on</span>
+                    <span className="font-bold text-surface-600">Dirección</span>
+                    <span className="font-normal text-surface-600 hover:underline">{address}</span>
                   </div>}
-                {receptionPhone && <div className="flex flex-col items-start space-y-2">
-                  <span className="material-icons font-normal">call</span>
-                  <span className="font-bold text-surface-400">Teléfono Admisiones:</span>
-                  <span className="font-normal text-surface-400 hover:underline">{receptionPhone}</span>
-                </div>}
-                {schedule && <div className="flex flex-col items-start space-y-2">
-                  <span className="material-icons font-normal">event_available</span>
-                  <span className="font-bold text-surface-400">Horarios:</span>
-                  <span className="font-normal text-surface-400 hover:underline">{schedule}</span>
-                </div>}
-              </div>
-              {
-                validSrc ?
-                  <div className="w-d:w-3/5 w-full h-auto ">
-                    <Aspect ratio="4/3">
+                  {admissionPhone &&
+                    <div className="flex flex-col items-start space-y-2">
+                      <span className="material-icons font-normal">call</span>
+                      <span className="font-bold text-surface-600">Teléfono Admisiones:</span>
+                      <span className="font-normal text-surface-600 hover:underline">{admissionPhone}</span>
+                    </div>}
+                  {receptionPhone && <div className="flex flex-col items-start space-y-2">
+                    <span className="material-icons font-normal">call</span>
+                    <span className="font-bold text-surface-600">Teléfono Admisiones:</span>
+                    <span className="font-normal text-surface-600 hover:underline">{receptionPhone}</span>
+                  </div>}
+                  {schedule && <div className="flex flex-col items-start space-y-2">
+                    <span className="material-icons font-normal">event_available</span>
+                    <span className="font-bold text-surface-600">Horarios:</span>
+                    <span className="font-normal text-surface-600 hover:underline">{schedule}</span>
+                  </div>}
+                </div>
+                {
+                  validSrc ?
+                    <div className="w-d:w-3/5 w-full h-auto ">
+                      <Aspect ratio="4/3">
+                        {renderMap(src)}
+                      </Aspect>
+                    </div>
+                    : null
+                }
+              </div>)
+              :
+              <div className="w-d:px-16 flex flex-col space-y-4">
+                <div className="flex place-content-between w-d:flex-row flex-col ">
+                  <h1 className="font-Poppins text-10 pb-4 font-bold leading-[125%] w-t:text-8.5 w-p:text-6">{name}</h1>
+                  <div className="flex flex-col items-start space-y-4 w-d:w-2/5 right-0">
+                    {address && <div className="flex items-center space-y-2 space-x-2 ">
+                      <span className="material-icons font-normal">location_on</span>
+                      <span className="font-normal text-surface-600 hover:underline">{address}</span>
+                    </div>}
+                    {admissionPhone && <div className="flex  items-center space-y-2 space-x-2">
+                      <span className="material-icons font-normal">call</span>
+                      <span className="font-normal text-surface-600 hover:underline">{admissionPhone}</span>
+                    </div>}
+                    {receptionPhone && <div className="flex  items-center space-y-2 space-x-2">
+                      <span className="material-icons font-normal">call</span>
+                      <span className="font-normal text-surface-600 hover:underline">{receptionPhone}</span>
+                    </div>}
+                    {schedule && <div className="flex items-center space-y-2 space-x-2">
+                      <span className="material-icons font-normal">event_available</span>
+                      <span className="font-normal text-surface-600 hover:underline">{schedule}</span>
+                    </div>}</div>
+                </div>
+                {validSrc ?
+                  <div className="w-full">
+                    <Aspect ratio="2/1">
                       {renderMap(src)}
                     </Aspect>
                   </div>
-                  : null
-              }
-            </div>)
-            :
-            <div className="w-d:px-4 flex flex-col space-y-4">
-              <div className="flex place-content-between w-d:flex-row flex-col ">
-                <h1 className="font-Poppins text-10 pb-4 font-bold leading-[125%] w-t:text-8.5 w-p:text-6">{name}</h1>
-                <div className="flex flex-col items-start space-y-4 w-d:w-2/5 right-0">
-                  {address && <div className="flex items-center space-y-2 space-x-2 ">
-                    <span className="material-icons font-normal">location_on</span>
-                    <span className="font-normal text-surface-400 hover:underline">{address}</span>
-                  </div>}
-                  {admissionPhone && <div className="flex  items-center space-y-2 space-x-2">
-                    <span className="material-icons font-normal">call</span>
-                    <span className="font-normal text-surface-400 hover:underline">{admissionPhone}</span>
-                  </div>}
-                  {receptionPhone && <div className="flex  items-center space-y-2 space-x-2">
-                    <span className="material-icons font-normal">call</span>
-                    <span className="font-normal text-surface-400 hover:underline">{receptionPhone}</span>
-                  </div>}
-                  {schedule && <div className="flex items-center space-y-2 space-x-2">
-                    <span className="material-icons font-normal">event_available</span>
-                    <span className="font-normal text-surface-400 hover:underline">{schedule}</span>
-                  </div>}</div>
+                  : null}
               </div>
-              {validSrc ?
-                <div className="w-full">
-                  <Aspect ratio="2/1">
-                    {renderMap(src)}
-                  </Aspect>
-                </div>
-                : null}
-            </div>
-      }
+        }
+      </Container>
     </section>
   )
 }
