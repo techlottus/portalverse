@@ -24,6 +24,7 @@ import StatisticsCardList from "@/components/sections/StatisticsCardList";
 import TextContent from "@/components/sections/TextContent";
 import WebError from "@/components/sections/WebError";
 import type { FC } from "react";
+import ContainerForm from "@/components/sections/ContainerForm";
 
 type Renderer = {
   [key: string]: FC<any>;
@@ -55,6 +56,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsTextContent: TextContent,
   ComponentSectionsWebError: WebError,
   ComponentSectionsRichTextVideo: RichTextVideo,
+  ComponentSectionsFormContainer: ContainerForm,
 };
 
 export default defaultRenderers;

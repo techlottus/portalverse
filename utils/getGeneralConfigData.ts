@@ -1,9 +1,6 @@
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
-import { SEO, type SeoData } from "@/utils/strapi/sections/SEO";
-import { WEB_ERROR, WebErrorSection } from "./strapi/sections/WebError";
 import { Pixel, SCRIPTS_PIXELS } from "./strapi/sections/ScriptPixel";
 
-// export type NotfoundSection = WebErrorSection
 
 type generalConfigResponse = {
   generalConfig: {

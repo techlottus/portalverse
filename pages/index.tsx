@@ -1,7 +1,6 @@
 import Head from "next/head"
 import NextPageWithLayout from "@/types/Layout.types"
 import HeaderFooterLayout from "@/layouts/HeaderFooter.layout"
-import { getDataPageFromJSON } from "@/utils/getDataPage"
 import ContentGenerator from "@/utils/ContentGenerator"
 import { getHomePageData } from "@/utils/getHomePageData"
 
