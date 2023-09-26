@@ -16,6 +16,7 @@ import { OVERLAY_CARD_LIST } from "@/utils/strapi/sections/OverlayCardList";
 import { PODCAST_LIST } from "@/utils/strapi/sections/PodcastList";
 import { PROGRAMS_FILTER } from "@/utils/strapi/sections/ProgramsFilter";
 import { PROMO_LINK_LIST } from "@/utils/strapi/sections/PromoLinkList";
+import { OUTSTANDING_LIST } from "@/utils/strapi/sections/OutstandingList";
 import { RICH_TEXT_IMAGE } from "@/utils/strapi/sections/RichTextImage";
 import { RICH_TEXT_VIDEO } from "@/utils/strapi/sections/RichTextVideo";
 import { STATISTICS_CARD_LIST } from "@/utils/strapi/sections/StatisticsCardList";
@@ -34,6 +35,7 @@ import type { HeroSliderSection } from "@/utils/strapi/sections/HeroSlider";
 import type { LeaderboardSection } from "@/utils/strapi/sections/Leaderboard";
 import type { LinkListSection } from "@/utils/strapi/sections/LinkList";
 import type { ListconfigSection } from "@/utils/strapi/sections/Listconfig";
+import type { OutstandingListSection } from "@/utils/strapi/sections/OutstandingList";
 import type { PodcastListSection } from "@/utils/strapi/sections/PodcastList";
 import type { ProgramsFilterSection } from "@/utils/strapi/sections/ProgramsFilter";
 import type { PromoLinkListSection } from "@/utils/strapi/sections/PromoLinkList";
@@ -42,6 +44,7 @@ import type { RichTextVideoSection } from "@/utils/strapi/sections/RichTextVideo
 import type { StatisticsCardListSection } from "@/utils/strapi/sections/StatisticsCardList";
 import type { TextContentSection } from "@/utils/strapi/sections/TextContent";
 import { WEB_ERROR, WebErrorSection } from "./sections/WebError";
+
 
 export type ComponentSection =
   | AccordionSection
@@ -61,6 +64,7 @@ export type ComponentSection =
   | PodcastListSection
   | ProgramsFilterSection
   | PromoLinkListSection
+  | OutstandingListSection
   | RichTextImageSection
   | RichTextVideoSection
   | StatisticsCardListSection
@@ -82,6 +86,7 @@ export const SECTIONS = `
   ${LINK_LIST}
   ${LIST_CONFIG}
   ${LEADERBOARD}
+  ${OUTSTANDING_LIST}
   ${OVERLAY_CARD_LIST}
   ${PODCAST_LIST}
   ${PROMO_LINK_LIST}
