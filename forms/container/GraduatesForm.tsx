@@ -15,7 +15,7 @@ import useEnrollmentIdValidation from "@/utils/forms/graduates/hooks/useEnrollme
 import useGraduateRegistration from "@/utils/forms/graduates/hooks/useGraduateRegistration";
 import { FormSchema } from "@/utils/forms/graduates/schema";
 import GRADUATES_FORM_COPIES from "@/forms/fixtures/graduates";
-import errors from "../../multitenant-errors";
+import errors from "@/multitenant-errors";
 import cn from "classnames";
 import type { FormValues } from "@/utils/forms/graduates/schema";
 

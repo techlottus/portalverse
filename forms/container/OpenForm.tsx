@@ -12,7 +12,7 @@ import Button from "@/old-components/Button/Button"
 import { ButtonInit } from "@/old-components/fixture"
 import configControls from "@/forms/fixtures/controls"
 import axios from "axios"
-import errors from "../../multitenant-errors"
+import errors from "@/multitenant-errors"
 
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
 

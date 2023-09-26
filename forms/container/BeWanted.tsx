@@ -7,7 +7,7 @@ import Button from "@/old-components/Button/Button"
 import { ButtonInit } from "@/old-components/fixture"
 import { RegisterBeWantedAccount } from "@/utils/registerBeWantedAccount"
 import { getTokenBeWanted } from "@/utils/getTokenBeWanted"
-import errors from "../../multitenant-errors"
+import errors from "@/multitenant-errors"
 
 const BeWanted: FC<any> = ({ classNames, copies, pathThankyou, pathBeWanted }: any) => {
 
