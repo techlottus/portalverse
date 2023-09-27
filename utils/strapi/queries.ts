@@ -45,7 +45,6 @@ import type { RichTextImageSection } from "@/utils/strapi/sections/RichTextImage
 import type { RichTextVideoSection } from "@/utils/strapi/sections/RichTextVideo";
 import type { StatisticsCardListSection } from "@/utils/strapi/sections/StatisticsCardList";
 import type { TextContentSection } from "@/utils/strapi/sections/TextContent";
-import { WEB_ERROR, WebErrorSection } from "./sections/WebError";
 import { ContainerForm, FORM_CONTAINER } from "./sections/ContainerForm";
 
 
@@ -73,7 +72,6 @@ export type ComponentSection =
   | RichTextVideoSection
   | StatisticsCardListSection
   | TextContentSection
-  | WebErrorSection
   | ContainerForm
 
 export const SECTIONS = `
