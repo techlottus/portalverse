@@ -3,6 +3,14 @@ import { normalizeString } from "@/utils/misc";
 import parseEditorRawData from "@/utils/parseEditorRawData";
 import type { StrapiImage } from "@/types/strapi/common";
 
+type Level = {
+  data: {
+    attributes: {
+      title: string;
+    };
+  };
+};
+
 type CurriculumByCampus = {
   campus: {
     data: {
@@ -36,6 +44,7 @@ export type FilterProgram = {
     name: string;
     slug: string;
     image: StrapiImage;
+    level: Level;
     knowledgeAreas: {
       data: Array<KnowledgeArea>;
     };
@@ -80,6 +89,13 @@ export const PROGRAMS_FILTER = `
                   attributes {
                     url
                     alternativeText
+                  }
+                }
+              }
+              level {
+                data {
+                  attributes {
+                    title
                   }
                 }
               }
@@ -134,7 +150,7 @@ export type StaticProgram = {
   route: string;
 };
 
-const formatStaticProgram = (program: StaticProgram): FilterProgram => {
+const formatStaticProgram = (program: StaticProgram, level: string): FilterProgram => {
   return {
     attributes: {
       name: program?.title,
@@ -146,6 +162,13 @@ const formatStaticProgram = (program: StaticProgram): FilterProgram => {
             alternativeText: program?.config?.image?.alt,
           },
         },
+      },
+      level: {
+        data: {
+          attributes: {
+            title: level
+          }
+        }
       },
       knowledgeAreas: {
         data: program?.config?.areaConocimiento?.map(
@@ -187,7 +210,7 @@ export const formatProgramsFilterSection = async (
   let staticPrograms: Array<StaticProgram> = [];
   try {
     const staticProgramsData = await getDataPageFromJSON(`/oferta-educativa/${levelTitle?.toLowerCase()}.json`);
-    staticPrograms = staticProgramsData?.programs as Array<StaticProgram>;
+    staticPrograms = staticProgramsData?.programs || [];
   }
   catch {
     //static programs is empty for this level
@@ -198,7 +221,9 @@ export const formatProgramsFilterSection = async (
    * Format programs coming from static JSON data into the program structure expected
    * from Stapi-captured programs.
    */
-  const formattedStaticPrograms: Array<FilterProgram> = availableStaticPrograms?.map(formatStaticProgram);
+  const formattedStaticPrograms: Array<FilterProgram> = availableStaticPrograms?.map((staticProgram) => {
+    return formatStaticProgram(staticProgram, levelAttributes?.title)
+  });
 
   levelAttributes.programs.data = [
     ...programsData,
