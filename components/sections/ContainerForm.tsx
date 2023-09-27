@@ -16,7 +16,7 @@ import { WebErrorSection } from "@/utils/strapi/sections/WebError";
 const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
   const router = useRouter()
   
-  const { title, privacyPolicy, image, description, progress = 30, button, form, errors } = props
+  const { title, privacyPolicy, image, description, progress = 30, button, form, errors, position, width } = props
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const [currentError, setCurrentError] = useState<WebErrorComponent | null>(null);
@@ -56,7 +56,15 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
   }
   
   return (
-    <section>
+    <section className={cn('flex', {
+      "w-full" : width === 'w-full',
+      "w-3/4" : width === 'w-3/4',
+      "w-1/2" : width === 'w-1/2',
+      "w-1/4" : width === 'w-1/4',
+      "flex-center" : width === 'center',
+      "flex-start" : width === 'left',
+      "right" : width === 'right',
+    })}>
       <Container>
         <div className="grid grid-cols-12-gap w-t:grid-cols-8-gap w-p:grid-cols-4-gap gap-grid-gap">
           <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
