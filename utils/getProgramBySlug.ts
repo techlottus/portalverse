@@ -35,6 +35,7 @@ export type ProgramModalityDetail = {
     data: {
       attributes: {
         name: string;
+        label?: string;
       }
     }
   }
@@ -129,6 +130,7 @@ query ProgramBySlug($slug: String!) {
             data {
               attributes {
                 name
+                label
               }
             }
           }

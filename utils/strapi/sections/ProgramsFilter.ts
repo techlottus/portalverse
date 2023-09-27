@@ -24,6 +24,7 @@ type ProgramModality = {
     data: {
       attributes: {
         name: string;
+        label?: string;
       };
     };
   };
@@ -94,6 +95,7 @@ export const PROGRAMS_FILTER = `
                   data {
                     attributes {
                       name
+                      label
                     }
                   }
                 }

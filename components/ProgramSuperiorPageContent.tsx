@@ -121,13 +121,13 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           <p className="text-6.5 font-headings font-semibold leading-tight w-t:leading-tight w-p:leading-tight w-t:text-6 w-p:text-6">{`${titleTabs} ${levelProgram}`}</p>
         </div>
         <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8' w-p:col-span-4 flex justify-center">
-          <TabsFeatured tabs={modalities?.map((modality) => ({ label: modality?.labelModality ? modality?.labelModality : modality?.modality?.data?.attributes?.name}))} onActive={(active: number) => handleSetActiveTab(active)} />
+          <TabsFeatured tabs={modalities?.map((modality) => ({ label: modality?.labelModality || modality?.modality?.data?.attributes?.label || modality?.modality?.data?.attributes?.name}))} onActive={(active: number) => handleSetActiveTab(active)} />
         </div>
       </ContentLayout>
       <ContentFullLayout>
         <div className="col-span-12 w-t:col-span-8' w-p:col-span-4 flex justify-center">
           <section className="w-d:hidden">
-            <TabsFeatured tabs={modalities?.map((modality) => ({ label: modality?.labelModality ? modality?.labelModality : modality?.modality?.data?.attributes?.name}))} onActive={(active: number) => handleSetActiveTab(active)} />
+            <TabsFeatured tabs={modalities?.map((modality) => ({ label: modality?.labelModality || modality?.modality?.data?.attributes?.label || modality?.modality?.data?.attributes?.name}))} onActive={(active: number) => handleSetActiveTab(active)} />
           </section>
         </div>
       </ContentFullLayout>
