@@ -1,4 +1,4 @@
-import type { StrapiImage } from "@/types/strapi/common";
+import type { FilterProgram } from "@/utils/strapi/sections/ProgramsFilter";
 
 export type KnowledgeAreaFilterSection = {
   type: "ComponentSectionsKnowledgeAreaFilter";
@@ -7,20 +7,7 @@ export type KnowledgeAreaFilterSection = {
       attributes: {
         name: string;
         programs: {
-          data: Array<{
-            attributes: {
-              name: string;
-              image: StrapiImage;
-              level: {
-                data: {
-                  attributes: {
-                    title: string;
-                  };
-                };
-              };
-              slug: string;
-            };
-          }>;
+          data: Array<FilterProgram>;
         };
       };
     };
@@ -43,6 +30,7 @@ export const KNOWLEDGE_AREA_FILTER = `
           data {
             attributes {
               name
+              slug
               image {
                 data {
                   attributes {
@@ -58,7 +46,32 @@ export const KNOWLEDGE_AREA_FILTER = `
                   }
                 }
               }
-              slug
+              knowledgeAreas {
+                data {
+                  attributes {
+                    name
+                  }
+                }
+              }
+              programModalities {
+                modality {
+                  data {
+                    attributes {
+                      name
+                      label
+                    }
+                  }
+                }
+                curriculums {
+                  campus {
+                    data {
+                      attributes {
+                        name
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }
