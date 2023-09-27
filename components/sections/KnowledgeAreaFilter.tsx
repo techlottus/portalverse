@@ -8,6 +8,8 @@ import Aspect from "@/components/Aspect";
 import type { FilterProgram } from "@/utils/strapi/sections/ProgramsFilter";
 import type { KnowledgeAreaFilterSection } from "@/utils/strapi/sections/KnowledgeAreaFilter";
 
+const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
+
 /**
  * Exclude "Educación Continua" programs. Programs will also be displayed in this order.
  */
@@ -54,7 +56,7 @@ const KnowledgeAreaFilter = (props: KnowledgeAreaFilterSection) => {
     return {
       campuses: {
         config: {
-          label: "Planteles",
+          label: BUSINESS_UNIT === "ULA" ? "Campus" : "Planteles",
           icon: "apartment",
         },
         options: sortedCampuses?.map((campus) => ({
