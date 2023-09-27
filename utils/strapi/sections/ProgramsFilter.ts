@@ -77,8 +77,11 @@ export const PROGRAMS_FILTER = `
       attributes {
         title
         programs(
-          pagination: { start: 0, limit: -1 }, 
-          filters: { available: { eq: true }, publishedAt: { notNull: true } }
+          pagination: { start: 0, limit: -1 }
+          filters: {
+            available: { eq: true }
+            publishedAt: { notNull: true }
+          }
         ) {
           data {
             attributes {
