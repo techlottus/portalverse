@@ -123,7 +123,7 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
           }
         </div>
         {
-          filterPrograms?.length > 0
+          filteredPrograms?.length > 0
             ? <div className="grid grid-cols-12 w-t:grid-cols-8 w-p:grid-cols-4 gap-6 mt-12">
                 {
                   filteredPrograms?.map((program, i) => {      
