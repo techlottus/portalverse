@@ -181,6 +181,9 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
 };
 
 const getProgramCampuses = (program: FilterProgram) => {
+
+  if (!program) return [];
+
   const campuses: Array<string> = [];
 
   const programModalities = program?.attributes?.programModalities;
@@ -198,7 +201,10 @@ const getProgramCampuses = (program: FilterProgram) => {
   return campuses;
 };
 
-const getProgramsCampuses = (programs: Array<FilterProgram>) => {
+const getProgramsCampuses = (programs: Array<FilterProgram> = []) => {
+
+  if (programs?.length < 1) return [];
+
   const campuses: Array<string> = [];
 
   programs?.forEach((program) => {
@@ -213,6 +219,9 @@ const getProgramsCampuses = (programs: Array<FilterProgram>) => {
 };
 
 const getProgramKnowledgeAreas = (program: FilterProgram) => {
+
+  if (!program) return [];
+
   const knowledgeAreas: Array<string> = [];
 
   const programKnowledgeAreas = program?.attributes?.knowledgeAreas?.data;
@@ -228,7 +237,10 @@ const getProgramKnowledgeAreas = (program: FilterProgram) => {
   return knowledgeAreas;
 };
 
-const getProgramsKnowledgeAreas = (programs: Array<FilterProgram>) => {
+const getProgramsKnowledgeAreas = (programs: Array<FilterProgram> = []) => {
+
+  if (programs?.length < 1) return [];
+
   const knowledgeAreas: Array<string> = [];
 
   programs?.forEach((program) => {
@@ -244,6 +256,9 @@ const getProgramsKnowledgeAreas = (programs: Array<FilterProgram>) => {
 };
 
 const getProgramModalities = (program: FilterProgram) => {
+
+  if (!program) return [];
+
   const modalities: Array<{name: string, label: string}> = [];
 
   const programModalities = program?.attributes?.programModalities;
@@ -261,7 +276,10 @@ const getProgramModalities = (program: FilterProgram) => {
   return modalities;
 };
 
-const getProgramsModalities = (programs: Array<FilterProgram>) => {
+const getProgramsModalities = (programs: Array<FilterProgram> = []) => {
+
+  if (programs?.length < 1) return [];
+
   const modalities: Array<{name: string, label: string}> = [];
 
   programs?.forEach((program) => {
@@ -276,7 +294,9 @@ const getProgramsModalities = (programs: Array<FilterProgram>) => {
   return modalities;
 };
 
-const filterPrograms = (programs: Array<FilterProgram>, filter: Filter) => {
+const filterPrograms = (programs: Array<FilterProgram> = [], filter: Filter) => {
+
+  if (programs?.length < 1) return [];
   if (!filter) return programs;
 
   return Object.keys(filter)?.reduce((acc, currentKey) => {

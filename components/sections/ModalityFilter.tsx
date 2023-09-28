@@ -230,6 +230,7 @@ const getProgramsKnowledgeAreas = (programs: Array<FilterProgram> = []) => {
 };
 
 const filterPrograms = (programs: Array<FilterProgram> = [], filter: Filter) => {
+
   if (programs?.length < 1) return [];
   if (!filter) return programs;
 
