@@ -25,9 +25,9 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
   const [contentTabs, setContentTabs] = useState<any>([]);
   const [allTabsId, setAllTabsId] = useState<Array<string>>([]);
 
-  const setTabByQueryParam = (param: any, tabsIds:Array<string>) => {
-    if(!!param){
-      const {type} = router.query
+  const setTabByQueryParam = (param: any, tabsIds: Array<string>) => {
+    if (!!param) {
+      const { type } = router.query
       const idTab = tabsIds.findIndex((tab: string) => tab === type)
       setTabActive(idTab === -1 ? 0 : idTab)
     }
@@ -35,18 +35,18 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
 
   useEffect(() => {
     if(sections?.becas?.tabs?.items){
-      const {contents, ids} = sections.becas.tabs.items.reduce((prev: any, curr: any) => { 
+      const { contents, ids } = sections.becas.tabs.items.reduce((prev: any, curr: any) => { 
         const { content, id } = curr;
-        return  {...prev, contents: [...prev.contents, content], ids:[ ...prev.ids, id ] };
-      }, {contents: [], ids:[]});
+        return  { ...prev, contents: [...prev.contents, content], ids: [ ...prev.ids, id ] };
+      }, { contents: [], ids: [] });
       setContentTabs([...contents]);
       setAllTabsId([...ids]);
     }
   }, [sections.becas.tabs]);// eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
-    if(!!Object.keys(router.query).length && router.query.hasOwnProperty('type') && !!allTabsId.length){
-      const {type} = router.query
+    if (!!Object.keys(router.query).length && router.query.hasOwnProperty('type') && !!allTabsId.length) {
+      const { type } = router.query
       setTabByQueryParam(type, allTabsId)
     }
   }, [router.query, allTabsId]);// eslint-disable-line react-hooks/exhaustive-deps
