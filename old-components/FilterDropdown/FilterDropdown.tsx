@@ -21,9 +21,9 @@ const FilterDropdown: FC<FilterDropdownComponentData> = memo(({ data: { config, 
 
   const getOptionSelected = (evt: CustomEvent, position: number) => {
     const { data: { selected } } = (evt.target as any);
-    const option = optionsCollection[position].label;
+    const option = optionsCollection[position].value;
     setOptionsList((state: string[]) => selected ? [...state, option] : state.filter((item: string) => item !== option))
-    setOptionsCollection(() => optionsCollection.map((item: any, i: number) => ({ label: item.label, disabled: item.active, selected: position === i ? selected : item.selected })));
+    setOptionsCollection(() => optionsCollection.map((item: any, i: number) => ({ value: item.value, label: item.label, disabled: item.active, selected: position === i ? selected : item.selected })));
   }
   
   const applySelection = () => {
@@ -45,7 +45,7 @@ const FilterDropdown: FC<FilterDropdownComponentData> = memo(({ data: { config, 
   
   useEffect(() => {
     setAllOptions([ ...options ]);
-    setOptionsCollection(() => options.map((item: any) => ({ label: item.label, disabled: item.active, selected: false  })));
+    setOptionsCollection(() => options.map((item: any) => ({ value: item.value, label: item.label, disabled: item.active, selected: false })));
   }, [options]);// eslint-disable-line react-hooks/exhaustive-deps
   
   useEffect(() => {

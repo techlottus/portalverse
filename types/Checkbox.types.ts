@@ -20,6 +20,7 @@ export type CheckboxConfig = {
    * Tag output click on check
    */
   tagOnCheck?: string;
+  value: string;
 };
 
 type CheckboxComponentData = {

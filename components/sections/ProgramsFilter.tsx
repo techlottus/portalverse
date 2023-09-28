@@ -31,7 +31,7 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
   const sortedPrograms = programs?.slice()?.sort((a, b) => a?.attributes?.name?.localeCompare(b?.attributes?.name));
 
   const modalities = getProgramsModalities(programs);
-  const sortedModalities = modalities?.slice()?.sort((a, b) => b?.localeCompare(a));
+  const sortedModalities = modalities?.slice()?.sort((a, b) => a?.label?.localeCompare(b?.label));
 
   const campuses = getProgramsCampuses(programs);
   const sortedCampuses = campuses?.slice()?.sort((a, b) => a?.localeCompare(b));
@@ -48,9 +48,9 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
           icon: "edit_note",
         },
         options: sortedModalities?.map((modality) => ({
-          value: modality,
+          value: modality?.name,
           active: false,
-          label: modality,
+          label: modality?.label,
         })),
       },
       campuses: {
@@ -123,7 +123,7 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
           }
         </div>
         {
-          filterPrograms?.length > 0
+          filteredPrograms?.length > 0
             ? <div className="grid grid-cols-12 w-t:grid-cols-8 w-p:grid-cols-4 gap-6 mt-12">
                 {
                   filteredPrograms?.map((program, i) => {      
@@ -242,31 +242,31 @@ const getProgramsKnowledgeAreas = (programs: Array<FilterProgram>) => {
 };
 
 const getProgramModalities = (program: FilterProgram) => {
-  const modalities: Array<string> = [];
+  const modalities: Array<{name: string, label: string}> = [];
 
   const programModalities = program?.attributes?.programModalities;
 
   programModalities?.forEach((programModality) => {
-    const programModalityName =
-      programModality?.modality?.data?.attributes?.name;
+    const programModalityName = programModality?.modality?.data?.attributes?.name;
+    const programModalityLabel = programModality?.modality?.data?.attributes?.label || programModalityName;
 
-    if (!programModalityName || modalities?.includes(programModalityName))
+    if (!programModalityName || modalities?.some(modality => modality?.name === programModalityName))
       return;
 
-    modalities?.push(programModalityName);
+    modalities?.push({name: programModalityName, label: programModalityLabel});
   });
 
   return modalities;
 };
 
 const getProgramsModalities = (programs: Array<FilterProgram>) => {
-  const modalities: Array<string> = [];
+  const modalities: Array<{name: string, label: string}> = [];
 
   programs?.forEach((program) => {
     const programModalities = getProgramModalities(program);
 
     programModalities?.forEach((programModality) => {
-      if (!programModality || modalities?.includes(programModality)) return;
+      if (!programModality?.name || modalities?.some(modality => modality.name === programModality?.name )) return;
       modalities?.push(programModality);
     });
   });
@@ -287,7 +287,7 @@ const filterPrograms = (programs: Array<FilterProgram>, filter: Filter) => {
           const filterModalities = filter?.[currentKey];
           const programModalities = getProgramModalities(program);
           return programModalities?.some((programModality) =>
-            filterModalities?.includes(programModality)
+            filterModalities?.includes(programModality?.name)
           );
         }
         case "campuses": {
