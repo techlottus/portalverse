@@ -29,6 +29,12 @@ const BlogEntryPageContent = (props: BlogEntryPageData) => {
       <Head>
         <title>{blogPost?.title}</title>
         {/* TODO: Add SEO */}
+        <meta property="og:title" content={ blogPost?.seo?.metaTitle }/>
+        <meta property="title" content={ blogPost?.seo?.metaTitle }/>
+        <meta property="og:description" content={ blogPost?.seo?.metaDescription }/>
+        <meta name="description" content={blogPost?.seo?.metaDescription} key="desc" />
+        <meta property="og:image" content={blogPost?.seo?.metaImage?.data?.attributes?.url}/>
+        <meta property="image" content={blogPost?.seo?.metaImage?.data?.attributes?.url}/>
       </Head>
       <ContentLayout>
         {

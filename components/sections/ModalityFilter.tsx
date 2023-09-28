@@ -6,33 +6,16 @@ import Filter from "@/old-components/Filter/Filter";
 import Image from "@/old-components/Image";
 import Aspect from "@/components/Aspect";
 import type { FilterProgram } from "@/utils/strapi/sections/ProgramsFilter";
-import type { KnowledgeAreaFilterSection } from "@/utils/strapi/sections/KnowledgeAreaFilter";
+import type { ModalityFilterSection } from "@/utils/strapi/sections/ModalityFilter";
 
 const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
 
 /**
  * Exclude "Educación Continua" programs. Programs will also be displayed in this order.
  */
-const AVAILABLE_EDUCATIONAL_LEVELS = [
-  {
-    name: "Licenciatura",
-    pluralLabel: "Licenciaturas",
-  },
-  {
-    name: "Maestría",
-    pluralLabel: "Maestrías",
-  },
-  {
-    name: "Doctorado",
-    pluralLabel: "Doctorados",
-  },
-  {
-    name: "Especialidad",
-    pluralLabel: "Especialidades",
-  },
-];
+const AVAILABLE_EDUCATIONAL_LEVELS = ["Preparatoria", "Bachillerato", "Licenciatura", "Especialidad", "Maestría", "Doctorado"];
 
-type FilterKey = "modalities" | "campuses";
+type FilterKey = "campuses" | "knowledgeAreas";
 
 type Filter =
   | {
@@ -40,17 +23,18 @@ type Filter =
     }
   | null;
 
-const KnowledgeAreaFilter = (props: KnowledgeAreaFilterSection) => {
-  const knowledgeArea = props?.area?.data?.attributes;
-  const programs = props?.area?.data?.attributes?.programs?.data;
+const ModalityFilter = (props: ModalityFilterSection) => {
+  
+  const modality = props?.modality?.data?.attributes;
+  const programs = modality?.programs?.data;
 
   const [currentFilter, setCurrentFilter] = useState<Filter>(null);
 
-  const modalities = getProgramsModalities(programs);
-  const sortedModalities = modalities?.slice()?.sort((a, b) => a?.label?.localeCompare(b?.label));
-
   const campuses = getProgramsCampuses(programs);
   const sortedCampuses = campuses?.slice()?.sort((a, b) => a?.localeCompare(b));
+
+  const knowledgeAreas = getProgramsKnowledgeAreas(programs);
+  const sortedKnowledgeAreas = knowledgeAreas?.slice()?.sort((a, b) => a?.localeCompare(b));
 
   const filterConfig = useMemo(() => {
     return {
@@ -65,15 +49,15 @@ const KnowledgeAreaFilter = (props: KnowledgeAreaFilterSection) => {
           label: campus,
         })),
       },
-      modalities: {
+      knowledgeAreas: {
         config: {
-          label: "Modalidades",
-          icon: "edit_note",
+          label: "Área de Conocimiento",
+          icon: "school",
         },
-        options: sortedModalities?.map((modality) => ({
-          value: modality?.name,
+        options: sortedKnowledgeAreas?.map((knowledgeArea) => ({
+          value: knowledgeArea,
           active: false,
-          label: modality?.label
+          label: knowledgeArea,
         })),
       },
     };
@@ -97,7 +81,7 @@ const KnowledgeAreaFilter = (props: KnowledgeAreaFilterSection) => {
           <div className="flex flex-col space-y-12 w-d:space-y-18">
             {
               AVAILABLE_EDUCATIONAL_LEVELS?.map((currentLevel, i) => {
-                const programsByLevel = programs?.filter((program) => program?.attributes?.level?.data?.attributes?.title === currentLevel?.name);
+                const programsByLevel = programs?.filter((program) => program?.attributes?.level?.data?.attributes?.title === currentLevel);
 
                 const filteredPrograms = filterPrograms(
                   programsByLevel,
@@ -107,13 +91,13 @@ const KnowledgeAreaFilter = (props: KnowledgeAreaFilterSection) => {
                 if (filteredPrograms?.length < 1) return null;
 
                 const levelRoute = RoutesConfig?.educationalLevels?.find(
-                  (level) => level?.name === currentLevel?.name
+                  (level) => level?.name === currentLevel
                 )?.path;
 
                 return (
                   <div key={`level-${i}`} className="flex flex-col space-y-6">
                     <h3 className="font-headings font-bold w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5 w-d:text-13 w-t:text-6 w-p:text-6">
-                      {currentLevel?.pluralLabel} del área {knowledgeArea?.name}
+                      {currentLevel} {modality?.label || modality?.name}
                     </h3>
 
                     <div className="grid grid-cols-12 w-t:grid-cols-8 w-p:grid-cols-4 gap-6">
@@ -154,7 +138,6 @@ const KnowledgeAreaFilter = (props: KnowledgeAreaFilterSection) => {
                                   </Link>
                                 </div>
                               </div>
-                              {/* S */}
                             </div>
                           );
                         })
@@ -209,47 +192,46 @@ const getProgramsCampuses = (programs: Array<FilterProgram> = []) => {
   return campuses;
 };
 
-const getProgramModalities = (program: FilterProgram) => {
+const getProgramKnowledgeAreas = (program: FilterProgram) => {
 
   if (!program) return [];
 
-  const modalities: Array<{name: string, label: string}> = [];
+  const knowledgeAreas: Array<string> = [];
 
-  const programModalities = program?.attributes?.programModalities;
+  const programKnowledgeAreas = program?.attributes?.knowledgeAreas?.data;
 
-  programModalities?.forEach((programModality) => {
-    const programModalityName = programModality?.modality?.data?.attributes?.name;
-    const programModalityLabel = programModality?.modality?.data?.attributes?.label || programModalityName;
+  programKnowledgeAreas?.forEach((knowledgeArea) => {
+    const knowledgeAreaName = knowledgeArea?.attributes?.name;
 
-    if (!programModalityName || modalities?.some(modality => modality?.name === programModalityName))
+    if (!knowledgeAreaName || knowledgeAreas?.includes(knowledgeAreaName))
       return;
 
-    modalities?.push({name: programModalityName, label: programModalityLabel});
+    knowledgeAreas?.push(knowledgeAreaName);
   });
-
-  return modalities;
+  return knowledgeAreas;
 };
 
-const getProgramsModalities = (programs: Array<FilterProgram> = []) => {
+const getProgramsKnowledgeAreas = (programs: Array<FilterProgram> = []) => {
 
   if (programs?.length < 1) return [];
 
-  const modalities: Array<{name: string, label: string}> = [];
+  const knowledgeAreas: Array<string> = [];
 
   programs?.forEach((program) => {
-    const programModalities = getProgramModalities(program);
+    const programKnowledgeAreas = getProgramKnowledgeAreas(program);
 
-    programModalities?.forEach((programModality) => {
-      if (!programModality?.name || modalities?.some(modality => modality.name === programModality?.name )) return;
-      modalities?.push(programModality);
+    programKnowledgeAreas?.forEach((knowledgeArea) => {
+      if (!knowledgeArea || knowledgeAreas?.includes(knowledgeArea)) return;
+      knowledgeAreas?.push(knowledgeArea);
     });
   });
-  return modalities;
+
+  return knowledgeAreas;
 };
 
 const filterPrograms = (programs: Array<FilterProgram> = [], filter: Filter) => {
 
-  if (programs?.length < 1) return [];
+  if (programs?.length < 1) return [];
   if (!filter) return programs;
 
   return Object.keys(filter)?.reduce((acc, currentKey) => {
@@ -258,18 +240,18 @@ const filterPrograms = (programs: Array<FilterProgram> = [], filter: Filter) => 
 
     return acc?.filter((program) => {
       switch (currentKey) {
-        case "modalities": {
-          const filterModalities = filter?.[currentKey];
-          const programModalities = getProgramModalities(program);
-          return programModalities?.some((programModality) =>
-            filterModalities?.includes(programModality?.name)
-          );
-        }
         case "campuses": {
           const filterCampuses = filter?.[currentKey];
           const programCampuses = getProgramCampuses(program);
           return programCampuses?.some((programCampus) =>
             filterCampuses?.includes(programCampus)
+          );
+        }
+        case "knowledgeAreas": {
+          const filterKnowledgeAreas = filter?.[currentKey];
+          const programKnowledgeAreas = getProgramKnowledgeAreas(program);
+          return programKnowledgeAreas?.some((programKnowledgeArea) =>
+            filterKnowledgeAreas?.includes(programKnowledgeArea)
           );
         }
         default: {
@@ -280,4 +262,4 @@ const filterPrograms = (programs: Array<FilterProgram> = [], filter: Filter) => 
   }, programs);
 };
 
-export default KnowledgeAreaFilter;
+export default ModalityFilter;

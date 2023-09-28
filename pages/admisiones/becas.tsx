@@ -217,7 +217,9 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
         </div>
         <div className="col-span-5 w-t:col-span-8 w-p:col-span-4">
           <p className="font-headings font-bold leading-tight text-5.5 mb-8">{sections.llamanos.title}</p>
+          <div>
           <CardWebsitePortalverse data={sections.llamanos.card} />
+          </div>
         </div>
       </ContentLayout>
     </HeaderFooterLayout>

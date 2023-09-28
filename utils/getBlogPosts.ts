@@ -30,6 +30,11 @@ export type BlogPost = {
     title: string;
     abstract: string;
     slug: string;
+    seo: {
+      metaTitle: string;
+      metaDescription: string;
+      metaImage: StrapiImage;
+    }
     body: string;
     publication_date: string;
     featured_image: StrapiImage;
@@ -54,6 +59,17 @@ query BlogPosts ($start: Int, $limit: Int, $sort: [String], $category: String) {
         title
         abstract
         slug
+        seo {
+          metaTitle
+          metaDescription
+          metaImage {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+        }
         body
         publication_date
         featured_image {

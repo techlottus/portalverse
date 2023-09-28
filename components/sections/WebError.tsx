@@ -10,8 +10,9 @@ export type WebErrorComponent = {
   button?: LinkConfig
 };
 const WebError: FC<WebErrorComponent> = (props: WebErrorComponent) => {
-
-  const { title, message, button, errorCode = '404' } = props;
+  
+  const { title, message, button } = props;
+  const errorCode = props?.errorCode || '404'
 
   return (
     <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-full flex font-headings justify-center items-center flex-col mx-auto">

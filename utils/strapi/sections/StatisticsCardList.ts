@@ -16,7 +16,7 @@ export type StatisticsCardListSection = {
 
 export const STATISTICS_CARD_LIST = `
 ...on ComponentSectionsStatisticsCardList {
-  statisticsCards: cards {
+  statisticsCards: cards(pagination: {start: 0, limit: -1}) {
     title
     body
     maxNumber

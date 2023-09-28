@@ -19,7 +19,7 @@ export type PodcastListSection = {
 export const PODCAST_LIST = `
 ...on ComponentSectionsPodcastList {
   title
-  podcastItems {
+  podcastItems(pagination: {start: 0, limit: -1}) {
     format
     podcastItem {
       data {

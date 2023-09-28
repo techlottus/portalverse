@@ -25,7 +25,7 @@ export type HeroSliderSection = {
 
 export const HERO_SLIDER = `
 ...on ComponentSectionsHeroSlider {
-  slides: slide {
+  slides: slide(pagination: {start: 0, limit: -1}) {
     title
     subtitle
     ctaText

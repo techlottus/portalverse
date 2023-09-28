@@ -16,7 +16,7 @@ export const ACCORDION_SECTION = `
   title
   subtitle
   description
-  accordionItems {
+  accordionItems(pagination: {start: 0, limit: -1}) {
     title
     content
   }

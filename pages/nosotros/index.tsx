@@ -119,9 +119,10 @@ const SomosUteg: NextPageWithLayout = ({ sections, meta }: any) => {
           <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6">{sections?.ourScholarships?.title}</p>
         </div>
         <div className="w-d:col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
-          {
-            sections?.ourScholarships?.scholarships?.map((item: any, i: number) => <section key={`section-schoolarships-${i}`}>
-              <PromoLink data={item} onClick={() => { router?.push(item?.redirect) }} shadowColor={item?.shadowColor} />
+        {
+            sections.ourScholarships.scholarships.map((item:any, i:number) => <section key={`section-schoolarships-${i}`}>
+              <PromoLink data={item} onClick={()=> {
+                router.push(item?.param ? item?.redirect?.concat(`?type=${item?.param}#becas`) : item?.redirect) }} typeShadowColor={item.shadowColor}/>
             </section>)
           }
         </div>
