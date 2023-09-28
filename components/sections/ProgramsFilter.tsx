@@ -10,6 +10,8 @@ import routesConfig from "routesConfig.json";
 import cn from "classnames";
 import type { FilterProgram, ProgramsFilterSection } from "@/utils/strapi/sections/ProgramsFilter";
 
+const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
+
 type FilterKey = "modalities" | "campuses" | "knowledgeAreas";
 
 type Filter =
@@ -55,7 +57,7 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
       },
       campuses: {
         config: {
-          label: "Planteles",
+          label: BUSINESS_UNIT === "ULA" ? "Campus" : "Planteles",
           icon: "apartment",
         },
         options: sortedCampuses?.map((campus) => ({
@@ -66,7 +68,7 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
       },
       knowledgeAreas: {
         config: {
-          label: "Áreas de Conocimiento",
+          label: "Área de Conocimiento",
           icon: "school",
         },
         options: sortedKnowledgeAreas?.map((knowledgeArea) => ({
