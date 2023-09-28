@@ -21,7 +21,7 @@ export const CONTACT_TARGET_LIST = `
     title
     subtitle
     description
-    cards {
+    cards(pagination: {start: 0, limit: -1}) {
       image {
         data {
           attributes {

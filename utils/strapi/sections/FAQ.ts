@@ -28,7 +28,7 @@ export const FAQ_SECTION = `
   faqCategory {
     data {
       attributes {
-        faqs {
+        faqs(pagination:{start: 0, limit: -1}) {
           data {
             attributes {
               question

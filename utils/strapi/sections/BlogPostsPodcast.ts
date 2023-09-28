@@ -38,7 +38,7 @@ export const BLOG_POSTS_PODCAST = `
     sortdate
   }
   podcastItemsTitle
-  podcastItems {
+  podcastItems(pagination: {start: 0, limit: -1}) {
     podcastItem {
       data {
         attributes {
@@ -52,7 +52,7 @@ export const BLOG_POSTS_PODCAST = `
   }
   ctaText
   ctaUrl
-  banners {
+  banners(pagination: {start: 0, limit: -1}) {
     desktopImage {
       data {
         attributes {
