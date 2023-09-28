@@ -94,7 +94,7 @@ const KnowledgeAreaFilter = (props: KnowledgeAreaFilterSection) => {
               onSelectionItems={onFilterChange}
             />
           </div>
-          <div className="flex flex-col space-y-6">
+          <div className="flex flex-col space-y-12 w-d:space-y-18">
             {
               AVAILABLE_EDUCATIONAL_LEVELS?.map((currentLevel, i) => {
                 const programsByLevel = programs?.filter((program) => program?.attributes?.level?.data?.attributes?.title === currentLevel?.name);
