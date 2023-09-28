@@ -96,7 +96,7 @@ const KnowledgeAreaFilter = (props: KnowledgeAreaFilterSection) => {
           </div>
           <div className="flex flex-col space-y-6">
             {
-              AVAILABLE_EDUCATIONAL_LEVELS?.map((currentLevel) => {
+              AVAILABLE_EDUCATIONAL_LEVELS?.map((currentLevel, i) => {
                 const programsByLevel = programs?.filter((program) => program?.attributes?.level?.data?.attributes?.title === currentLevel?.name);
 
                 const filteredPrograms = filterPrograms(
@@ -111,7 +111,7 @@ const KnowledgeAreaFilter = (props: KnowledgeAreaFilterSection) => {
                 )?.path;
 
                 return (
-                  <div className="flex flex-col space-y-6">
+                  <div key={`level-${i}`} className="flex flex-col space-y-6">
                     <h3 className="font-headings font-bold w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5 w-d:text-13 w-t:text-6 w-p:text-6">
                       {currentLevel?.pluralLabel} del área {knowledgeArea?.name}
                     </h3>
