@@ -21,6 +21,7 @@ div {
           }
         }
       }
+      @apply text-xs font-texts font-normal #{!important};
     }
   }
 }
