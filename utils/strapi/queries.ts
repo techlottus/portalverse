@@ -13,6 +13,7 @@ import { KNOWLEDGE_AREA_FILTER } from "@/utils/strapi/sections/KnowledgeAreaFilt
 import { LEADERBOARD } from "@/utils/strapi/sections/Leaderboard";
 import { LINK_LIST } from "@/utils/strapi/sections/LinkList";
 import { LIST_CONFIG } from "@/utils/strapi/sections/Listconfig";
+import { MODALITY_FILTER } from "@/utils/strapi/sections/ModalityFilter";
 import { OVERLAY_CARD_LIST } from "@/utils/strapi/sections/OverlayCardList";
 import { PODCAST_LIST } from "@/utils/strapi/sections/PodcastList";
 import { PROGRAMS_FILTER } from "@/utils/strapi/sections/ProgramsFilter";
@@ -37,6 +38,7 @@ import type { KnowledgeAreaFilterSection } from "@/utils/strapi/sections/Knowled
 import type { LeaderboardSection } from "@/utils/strapi/sections/Leaderboard";
 import type { LinkListSection } from "@/utils/strapi/sections/LinkList";
 import type { ListconfigSection } from "@/utils/strapi/sections/Listconfig";
+import type { ModalityFilterSection } from "@/utils/strapi/sections/ModalityFilter";
 import type { OutstandingListSection } from "@/utils/strapi/sections/OutstandingList";
 import type { PodcastListSection } from "@/utils/strapi/sections/PodcastList";
 import type { ProgramsFilterSection } from "@/utils/strapi/sections/ProgramsFilter";
@@ -64,6 +66,7 @@ export type ComponentSection =
   | LeaderboardSection
   | LinkListSection
   | ListconfigSection
+  | ModalityFilterSection
   | PodcastListSection
   | ProgramsFilterSection
   | PromoLinkListSection
@@ -90,6 +93,7 @@ export const SECTIONS = `
   ${LINK_LIST}
   ${LIST_CONFIG}
   ${LEADERBOARD}
+  ${MODALITY_FILTER}
   ${OUTSTANDING_LIST}
   ${OVERLAY_CARD_LIST}
   ${PODCAST_LIST}
