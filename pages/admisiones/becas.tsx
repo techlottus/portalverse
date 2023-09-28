@@ -35,9 +35,9 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
 
   useEffect(() => {
     if(sections?.becas?.tabs?.items){
-      const { contents, ids } = sections.becas.tabs.items.reduce((prev: any, curr: any) => { 
+      const { contents, ids } = sections.becas.tabs.items.reduce((prev: any, curr: any) => {
         const { content, id } = curr;
-        return  { ...prev, contents: [...prev.contents, content], ids: [ ...prev.ids, id ] };
+        return { ...prev, contents: [...prev.contents, content], ids: [...prev.ids, id] };
       }, { contents: [], ids: [] });
       setContentTabs([...contents]);
       setAllTabsId([...ids]);
