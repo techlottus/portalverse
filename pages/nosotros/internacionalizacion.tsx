@@ -157,12 +157,12 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
                   {
                     sections?.exchange?.downloadables?.length > 0
                       ? <div className="mb-6">
-                        <span className="font-headings font-normal text-white">Descargas</span>
+                        <span className="font-texts font-bold text-white">Descargas</span>
                         {
                           (sections?.exchange?.downloadables as Array<{ label: string; link: string; }>)?.map((redirect, index) => {
                             const children = (
                               <>
-                                <span className="font-texts font-normal underline underline-offset-4 mr-auto">{redirect?.label}</span>
+                                <span className="font-texts font-bold underline underline-offset-4 mr-auto">{redirect?.label}</span>
                               </>
                             );
 

@@ -32,6 +32,17 @@ query BlogEntryBySlug($slug: String) {
             }
           }
         }
+        seo {
+          metaImage {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+          metaTitle
+          metaDescription
+        }
       }
     }
   }
