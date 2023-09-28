@@ -92,7 +92,7 @@ const Footer: FC<FooterPortalverseComponentData> = ({ privacyLink, certification
       </div>
       <div className="p-6 flex flex-col border-b  border-0 border-solid border-surface-300">
         <p className="mb-5">{ certifications.title }</p>
-        <div className="flex gap-12 w-p:flex-wrap">
+        <div className="flex gap-12 flex-wrap">
           {
             certifications.certificaciones.map(({ src, alt }: any, i: number) => <Image key={`certification-${i}`} classNamesImg="!w-auto !h-12 !relative" src={src} alt={alt} />)
           }

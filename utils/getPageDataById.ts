@@ -3,6 +3,7 @@ import { SECTIONS } from "@/utils/strapi/queries";
 import { formatBlogPostsPodcastSection } from "@/utils/strapi/sections/BlogPostsPodcast";
 import { formatContEdProgramsSection } from "@/utils/strapi/sections/ContEdPrograms";
 import { formatListconfigSection } from "@/utils/strapi/sections/Listconfig";
+import { formatModalityFilterSection } from "@/utils/strapi/sections/ModalityFilter";
 import { formatProgramsFilterSection } from "@/utils/strapi/sections/ProgramsFilter";
 import type { ComponentSection } from "@/utils/strapi/queries";
 
@@ -44,6 +45,10 @@ const formatPageData = async (data: PageResponse): Promise<PageResponse> => {
         }
         case "ComponentSectionsListconfig": {
           const formattedData = await formatListconfigSection(section);
+          return formattedData;
+        }
+        case "ComponentSectionsModalityFilter": {
+          const formattedData = await formatModalityFilterSection(section);
           return formattedData;
         }
         case "ComponentSectionsProgramsFilter": {

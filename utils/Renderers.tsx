@@ -13,6 +13,7 @@ import KnowledgeAreaFilter from "@/components/sections/KnowledgeAreaFilter";
 import Leaderboard from "@/components/sections/Leaderboard";
 import LinkList from "@/components/sections/LinkList";
 import Listconfig from "@/components/sections/Listconfig";
+import ModalityFilter from "@/components/sections/ModalityFilter";
 import OutstandingList from "@/components/sections/OutstandingList";
 import OverlayCardList from "@/components/sections/OverlayCardList";
 import Paragraph from "@/components/Paragraph";
@@ -48,6 +49,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsLeaderboard: Leaderboard,
   ComponentSectionsLinkList: LinkList,
   ComponentSectionsListconfig: Listconfig,
+  ComponentSectionsModalityFilter: ModalityFilter,
   ComponentSectionsContainerOutstandingList: OutstandingList,
   ComponentSectionsOverlayCardList: OverlayCardList,
   ComponentSectionsPodcastList: PodcastList,
