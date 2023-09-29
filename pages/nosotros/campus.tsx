@@ -13,6 +13,7 @@ import ContentFullLayout from "@/layouts/ContentFull.layout";
 import BannerPortalverse from "@/old-components/BannerPortalverse";
 import { getDataPageFromJSON } from "@/utils/getDataPage";
 import Cintillo from "@/old-components/Cintillo";
+import Link from "next/link";
 
 const Planteles = ({ sections, meta }: any) => {
 
@@ -118,9 +119,11 @@ const Planteles = ({ sections, meta }: any) => {
                             <p className="font-texts font-normal text-base leading-5 my-2">
                               {description.state}
                             </p>
-                            <p className="font-headings font-semibold text-4.5 leading-5.625 my-2">
+                            <a href={description?.redirect} className={cn("font-headings font-semibold text-4.5 leading-5.625 my-2", {
+                              "hover:underline": description?.redirect,
+                              })}>
                               {description.name}
-                            </p>
+                            </a>
                             <ContentInsideLayout>
                               <IconComponent
                                 name="marker"
@@ -162,7 +165,7 @@ const Planteles = ({ sections, meta }: any) => {
                               className="flex justify-end pr-3"
                               onClick={() => handleOpenModal(coords, title)}
                             >
-                              <p className="font-texts font-normal">
+                              <p className="font-texts font-normal hover:cursor-pointer">
                                 Ver mapa
                               </p>
                               <IconComponent name="eye" className="ml-1 w-4" />
