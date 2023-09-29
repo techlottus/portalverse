@@ -17,6 +17,9 @@ const DynamicProgramContent = (props: DynamicProgramDetailData) => {
       case "Bachillerato": {
         return <ProgramBachilleratoPageContent {...props}/>
       }
+      case "Preparatoria": {
+        return <ProgramBachilleratoPageContent {...props}/>
+      }
       default: {
         return <ProgramSuperiorPageContent {...props}/>
       }
