@@ -13,9 +13,8 @@ import ContentFullLayout from "@/layouts/ContentFull.layout";
 import BannerPortalverse from "@/old-components/BannerPortalverse";
 import { getDataPageFromJSON } from "@/utils/getDataPage";
 import Cintillo from "@/old-components/Cintillo";
-import Link from "next/link";
 
-const Planteles = ({ sections, meta }: any) => {
+const Campus = ({ sections, meta }: any) => {
 
   // Modal functionality begin
   const [isShow, setIsShow] = useState(false);
@@ -119,11 +118,15 @@ const Planteles = ({ sections, meta }: any) => {
                             <p className="font-texts font-normal text-base leading-5 my-2">
                               {description.state}
                             </p>
-                            <a href={description?.redirect} className={cn("font-headings font-semibold text-4.5 leading-5.625 my-2", {
-                              "hover:underline": description?.redirect,
-                              })}>
-                              {description.name}
-                            </a>
+                            {
+                              description?.redirect
+                                ? <a href={description?.redirect} className={cn("font-headings font-semibold text-4.5 leading-5.625 my-2", {
+                                    "hover:underline": description?.redirect,
+                                    })}>
+                                    {description.name}
+                                  </a>
+                                : <p className="font-headings font-semibold text-4.5 leading-5.625 my-2">{description.name}</p>
+                            }
                             <ContentInsideLayout>
                               <IconComponent
                                 name="marker"
@@ -231,4 +234,4 @@ export async function getStaticProps(context: any) {
 
 };
 
-export default Planteles;
+export default Campus;
