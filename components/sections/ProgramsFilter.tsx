@@ -5,12 +5,26 @@ import RichtText from "@/old-components/Richtext/Richtext";
 import Filter from "@/old-components/Filter/Filter";
 import Image from "@/old-components/Image";
 import Aspect from "@/components/Aspect";
-import { normalizeString } from "@/utils/misc";
 import routesConfig from "routesConfig.json";
 import cn from "classnames";
 import type { FilterProgram, ProgramsFilterSection } from "@/utils/strapi/sections/ProgramsFilter";
 
-const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
+const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
+
+export const FilterConfig = {
+  UANE: {
+    campusLabel: "Campus",
+  },
+  UTEG: {
+    campusLabel: "Planteles",
+  },
+  ULA: {
+    campusLabel: "Campus",
+  },
+  default: {
+    campusLabel: "Campus"
+  }
+};
 
 type FilterKey = "modalities" | "campuses" | "knowledgeAreas";
 
@@ -25,9 +39,9 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
   const { title: sectionTitle, description: sectionDescription } = props;
 
   const levelAttributes = props?.level?.data?.attributes;
-  const levelTitle = levelAttributes?.title;
+  const levelName = levelAttributes?.title;
 
-  const levelRoute = routesConfig?.educationalLevels?.find(educationalLevel => educationalLevel?.name === levelTitle)?.path;
+  const levelRoute = routesConfig?.educationalLevels?.find(educationalLevel => educationalLevel?.name === levelName)?.path;
 
   const programs = levelAttributes?.programs?.data;
   const sortedPrograms = programs?.slice()?.sort((a, b) => a?.attributes?.name?.localeCompare(b?.attributes?.name));
@@ -57,7 +71,8 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
       },
       campuses: {
         config: {
-          label: BUSINESS_UNIT === "ULA" ? "Campus" : "Planteles",
+          //@ts-ignore
+          label: FilterConfig?.[BUSINESS_UNIT]?.campusLabel || FilterConfig?.default?.campusLabel,
           icon: "apartment",
         },
         options: sortedCampuses?.map((campus) => ({
@@ -115,7 +130,7 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
               : null
           }
           {
-            levelTitle?.toLowerCase() !== "bachillerato"
+            levelName !== "Bachillerato" && levelName !== "Preparatoria"
               ? <Filter
                   color={"#282828"}
                   data={filterConfig}

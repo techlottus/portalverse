@@ -5,6 +5,7 @@ import Container from "@/layouts/Container.layout";
 import Filter from "@/old-components/Filter/Filter";
 import Image from "@/old-components/Image";
 import Aspect from "@/components/Aspect";
+import { FilterConfig } from "@/components/sections/ProgramsFilter";
 import type { FilterProgram } from "@/utils/strapi/sections/ProgramsFilter";
 import type { KnowledgeAreaFilterSection } from "@/utils/strapi/sections/KnowledgeAreaFilter";
 
@@ -56,7 +57,8 @@ const KnowledgeAreaFilter = (props: KnowledgeAreaFilterSection) => {
     return {
       campuses: {
         config: {
-          label: BUSINESS_UNIT === "ULA" ? "Campus" : "Planteles",
+          //@ts-ignore
+          label: FilterConfig?.[BUSINESS_UNIT]?.campusLabel || FilterConfig?.default?.campusLabel,
           icon: "apartment",
         },
         options: sortedCampuses?.map((campus) => ({

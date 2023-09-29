@@ -118,9 +118,15 @@ const Planteles = ({ sections, meta }: any) => {
                             <p className="font-texts font-normal text-base leading-5 my-2">
                               {description.state}
                             </p>
-                            <p className="font-headings font-semibold text-4.5 leading-5.625 my-2">
-                              {description.name}
-                            </p>
+                            {
+                              description?.redirect
+                                ? <a href={description?.redirect} className={cn("font-headings font-semibold text-4.5 leading-5.625 my-2", {
+                                    "hover:underline": description?.redirect,
+                                    })}>
+                                    {description.name}
+                                  </a>
+                                : <p className="font-headings font-semibold text-4.5 leading-5.625 my-2">{description.name}</p>
+                            }
                             <ContentInsideLayout>
                               <IconComponent
                                 name="marker"
@@ -162,7 +168,7 @@ const Planteles = ({ sections, meta }: any) => {
                               className="flex justify-end pr-3"
                               onClick={() => handleOpenModal(coords, title)}
                             >
-                              <p className="font-texts font-normal">
+                              <p className="font-texts font-normal hover:cursor-pointer">
                                 Ver mapa
                               </p>
                               <IconComponent name="eye" className="ml-1 w-4" />

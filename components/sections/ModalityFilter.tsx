@@ -5,6 +5,7 @@ import Container from "@/layouts/Container.layout";
 import Filter from "@/old-components/Filter/Filter";
 import Image from "@/old-components/Image";
 import Aspect from "@/components/Aspect";
+import { FilterConfig } from "@/components/sections/ProgramsFilter";
 import type { FilterProgram } from "@/utils/strapi/sections/ProgramsFilter";
 import type { ModalityFilterSection } from "@/utils/strapi/sections/ModalityFilter";
 
@@ -40,7 +41,8 @@ const ModalityFilter = (props: ModalityFilterSection) => {
     return {
       campuses: {
         config: {
-          label: BUSINESS_UNIT === "ULA" ? "Campus" : "Planteles",
+          //@ts-ignore
+          label: FilterConfig?.[BUSINESS_UNIT]?.campusLabel || FilterConfig?.default?.campusLabel,
           icon: "apartment",
         },
         options: sortedCampuses?.map((campus) => ({

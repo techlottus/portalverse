@@ -64,7 +64,7 @@ const FilterDropdown: FC<FilterDropdownComponentData> = memo(({ data: { config, 
 
   return <section className="relative">
     <section className="dropdown" onClick={onOpenClose}>
-      <span className={cn(`material-icons icon text-primary-500`)}>{ configComponent.icon }</span>
+      <span className= "material-icons icon text-primary-500 w-p:!hidden">{ configComponent.icon }</span>
       <p className={cn(`font-texts font-normal text-surface-950`)}>{ configComponent.label }</p>
       <span className="material-icons icon" onClick={onOpenClose}>expand_{ open ? 'less' : 'more' }</span>
     </section>
