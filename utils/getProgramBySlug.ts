@@ -7,6 +7,7 @@ import type { StrapiImage } from "@/types/strapi/common";
  */
 export type ProgramLevel =
   | "Bachillerato"
+  | "Preparatoria"
   | "Licenciatura"
   | "Maestría"
   | "Doctorado"
