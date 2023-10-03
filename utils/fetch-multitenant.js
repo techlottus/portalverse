@@ -150,7 +150,6 @@ const axios = require('axios');
 
 async function downloadImage(url, filename, path = '') {
   const response = await axios.get(url, { responseType: 'arraybuffer' });
-
   fs.writeFile(`${path}${filename}`, response.data, (err) => {
     if (err) throw err;
     console.log('Image downloaded successfully!');
@@ -281,7 +280,8 @@ async function fetchLogos(){
     const { data : { attributes: { logo, favicon, extra_logos, error_logos } } } = Logos
   
     if (favicon) {
-      downloadImage(favicon?.data?.attributes?.url, 'favicon.ico', '/public/');
+      console.log(favicon?.data?.attributes?.url)
+      downloadImage(favicon?.data?.attributes?.url, 'favicon.ico', 'public/');
     }
     
     const extraLogos = extra_logos.reduce((acc, {logo_token, image}) => {    
