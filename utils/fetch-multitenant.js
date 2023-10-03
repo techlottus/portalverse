@@ -269,6 +269,9 @@ async function fetchLogos(){
     const Logos = await rawLogos.json() 
     const { data : { attributes: { logo, favicon, extra_logos, error_logos } } } = Logos
   
+    if (favicon) {
+      downloadImage(favicon.data.attributes.url, 'favicon.ico', '/public/');
+    }
     
     const extraLogos = extra_logos.reduce((acc, {logo_token, image}) => {    
       const { data: { id, attributes: { url } } } = image
