@@ -280,7 +280,6 @@ async function fetchLogos(){
     const { data : { attributes: { logo, favicon, extra_logos, error_logos } } } = Logos
   
     if (favicon) {
-      console.log(favicon?.data?.attributes?.url)
       downloadImage(favicon?.data?.attributes?.url, 'favicon.ico', 'public/');
     }
     
