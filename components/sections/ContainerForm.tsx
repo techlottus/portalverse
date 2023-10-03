@@ -1,6 +1,5 @@
 import { FC, useEffect, useState} from "react"
 import Link from "next/link";
-import OpenForm from "@/forms/container/OpenForm";
 import ProgressBar from "@/old-components/ProgressBar/ProgressBar";
 import Image from "@/old-components/Image"
 import DentalClinics from "@/forms/container/DentalClinics";
@@ -10,7 +9,6 @@ import WebError, { WebErrorComponent } from "./WebError";
 import cn from "classnames";
 import Button from "@/old-components/Button/Button";
 import { useRouter } from "next/router";
-import { WebErrorSection } from "@/utils/strapi/sections/WebError";
 
 
 const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
@@ -56,18 +54,22 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
   }
   
   return (
-    <section className={cn('flex', {
-      "w-full" : width === 'w-full',
-      "w-3/4" : width === 'w-3/4',
-      "w-1/2" : width === 'w-1/2',
-      "w-1/4" : width === 'w-1/4',
-      "flex-center" : width === 'center',
-      "flex-start" : width === 'left',
-      "right" : width === 'right',
-    })}>
+    <section >
       <Container>
-        <div className="grid grid-cols-12-gap w-t:grid-cols-8-gap w-p:grid-cols-4-gap gap-grid-gap">
-          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
+        <div className={cn('flex', {
+          "justify-center" : position === 'center',
+          "justify-start" : position === 'left',
+          "justify-end" : position === 'right',
+        })}>
+          <div className={cn('w-p:w-full', {
+          "w-12/12" : width === 'w_12_12',
+          "w-11/12" : width === 'w_11_12',
+          "w-10/12" : width === 'w_10_12',
+          "w-9/12" : width === 'w_9_12',
+          "w-8/12" : width === 'w_8_12',
+          "w-7/12" : width === 'w_7_12',
+          "w-6/12" : width === 'w_6_12'
+        })}>
             <section className="p-6 shadow-15 bg-surface-0 relative" >
               {
                 isLoading
