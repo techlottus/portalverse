@@ -68,8 +68,9 @@ const StaticProgramContent: NextPageWithLayout<any> = ({ level, program, meta, c
       setSelectData(optionsSelect[key]);
     }
   }
-
-  const downloadFileProgram = () => window.open(`https://assets.staging.bedu.org/UTEG/${fileSelected}`, "_blank")
+  const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
+  const ASSETS_URL= process.env.NEXT_PUBLIC_ASSETS_URL
+  const downloadFileProgram = () => window.open(`${ASSETS_URL}/${BUSINESS_UNIT}/${fileSelected}`, "_blank")
 
   const handleSelectOption = async ({ detail }: CustomEvent) => {
     setFileSelected(detail);
