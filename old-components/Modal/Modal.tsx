@@ -37,7 +37,7 @@ const Modal: FC<ModalData> = memo(({ data, isShow, children, className, onBtn, o
 
   return <section>
     <lottus-modal class="overflow-y-auto" ref={modalPortalverseRef}>
-      <div slot='areaModalContent' className={cn(className, "overflow-y-auto")}>
+      <div slot='areaModalContent' className={cn(className, "overflow-y-auto overflow-x-hidden h-135.5")}>
         { children }
       </div>
     </lottus-modal>
