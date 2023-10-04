@@ -21,7 +21,9 @@ export type ContainerForm = {
     CTA: string
     iconName: string
   }
-  errors: WebErrorSection[]
+  errors: WebErrorSection[],
+  position: string;
+  width: string;
 };
 
 export const FORM_CONTAINER = `
@@ -69,6 +71,8 @@ export const FORM_CONTAINER = `
       disabled
     }
   }
+  position
+  width
 
 }
 `;
