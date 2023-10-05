@@ -310,9 +310,9 @@ export async function getStaticProps(context: any) {
      */
     const blogPostsSection: BlogPostsSection = {
       type: "ComponentSectionsBlogPosts",
-      title: "Artículos sobre UTEG 360",
-      subtitle: "",
-      description: "",
+      title: sections?.blogPostSection?.title || "",
+      subtitle: sections?.blogPostSection?.subtitle || "",
+      description: sections?.blogPostSection?.description || "",
       maxEntries: 3,
       sort: "latest",
       category: {
