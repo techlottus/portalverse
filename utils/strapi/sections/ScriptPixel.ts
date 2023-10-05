@@ -3,7 +3,7 @@ export type ScriptsPixels  = {
   type?: 'ComponentSectionsScriptPixel'
   name: string;
   script?: string;
-  src?: string;
+  src?: string | null;
   async?: boolean;
   pixel?: Pixel | null;
   enabled?: boolean;
