@@ -33,7 +33,9 @@ export default ({script, pixel, src, async, name, enabled = true, triggerOnRoute
 
   return(
     <>
-      { enabled && !!script && <Script src={src} async={async} id={name} strategy='afterInteractive' dangerouslySetInnerHTML={{ __html: script }}/>}
+      { enabled && (!!src && !script) && <Script src={src} async={async} id={name} strategy='afterInteractive'/>}
+      { enabled && (!!script && !src) && <Script async={async} id={name} strategy='afterInteractive' dangerouslySetInnerHTML={{ __html: script }}/>}
+      { enabled && (!!script && !!src) && <Script src={src} async={async} id={name} strategy='afterInteractive' dangerouslySetInnerHTML={{ __html: script }}/>}
         { enabled && !!pixel &&
         <Head>
           <noscript>

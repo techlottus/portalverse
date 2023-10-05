@@ -4,7 +4,7 @@ export type ScriptsPixels  = {
   name: string;
   script?: string;
   src?: string;
-  async: boolean;
+  async?: boolean;
   pixel?: Pixel | null;
   enabled?: boolean;
   triggerOnRouteChange?: "gtagPageview" | "fbqPageview" | null;
