@@ -16,11 +16,11 @@ async function createGeneralData  () {
     console.log(error);
   }
 
-  const scriptTypes = `{ type?: 'ComponentSectionsScriptPixel'; name: string; script?: string; pixel?: { src?: string; element?:  'iframe' | 'img' | null; } | null; enabled?: boolean; triggerOnRouteChange?: "gtagPageview" | "fbqPageview" | null; } `
+  const scriptTypes = `{ type?: 'ComponentSectionsScriptPixel'; name: string; script?: string; src?: string; async: boolean; pixel?: { src?: string; element?:  'iframe' | 'img' | null; } | null; enabled?: boolean; triggerOnRouteChange?: "gtagPageview" | "fbqPageview" | null; } `
   const sendWhatsappTypes = `{ type?: 'ComponentMiscSendWhatsapp'; hidden: boolean; phone: number } `
   fs.writeFile('./GeneralConfig.ts', `
   export const scripts: ${scriptTypes}[] | [] = ${JSON.stringify(scripts)} \n;
-  export const sendwhatsapp: ${sendWhatsappTypes}[] | [] = ${JSON.stringify(sendWhatsapp)} \n;
+  export const sendWhatsapp: ${sendWhatsappTypes} | null = ${JSON.stringify(sendWhatsapp)} \n;
   `, 'utf-8', (err) => {
     if (err) {
       console.error(err);

@@ -52,6 +52,8 @@ query GeneralConfig {
             type: __typename
             name
             script
+            src
+            async
             pixel {
               src
               element

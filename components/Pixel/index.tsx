@@ -7,7 +7,7 @@ import * as gtag from "@/lib/gtag"
 import * as fbq from '@/lib/fb-pixel'
 import { ScriptsPixels } from '@/utils/strapi/sections/ScriptPixel';
 
-export default ({script, pixel, name, enabled = true, triggerOnRouteChange}: ScriptsPixels) => {
+export default ({script, pixel, src, async, name, enabled = true, triggerOnRouteChange}: ScriptsPixels) => {
   const router = useRouter();
 
   useEffect(() => {
@@ -33,7 +33,7 @@ export default ({script, pixel, name, enabled = true, triggerOnRouteChange}: Scr
 
   return(
     <>
-      { enabled && !!script && <Script id={name} strategy='afterInteractive' dangerouslySetInnerHTML={{ __html: script }}/>}
+      { enabled && !!script && <Script src={src} async={async} id={name} strategy='afterInteractive' dangerouslySetInnerHTML={{ __html: script }}/>}
         { enabled && !!pixel &&
         <Head>
           <noscript>
