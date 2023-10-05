@@ -52,12 +52,21 @@ query GeneralConfig {
             type: __typename
             name
             script
+            src
+            async
             pixel {
               src
               element
             }
             enabled
             triggerOnRouteChange
+          }
+        }
+        sendWhatsapp {
+          ...on ComponentMiscSendWhatsapp {
+            type: __typename
+            hidden
+            phone
           }
         }
       }
