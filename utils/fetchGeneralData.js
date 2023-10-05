@@ -16,7 +16,7 @@ async function createGeneralData  () {
     console.log(error);
   }
 
-  const scriptTypes = `{ type?: 'ComponentSectionsScriptPixel'; name: string; script?: string; src?: string; async: boolean; pixel?: { src?: string; element?:  'iframe' | 'img' | null; } | null; enabled?: boolean; triggerOnRouteChange?: "gtagPageview" | "fbqPageview" | null; } `
+  const scriptTypes = `{ type?: 'ComponentSectionsScriptPixel'; name: string; script?: string; src?: string; async: boolean; pixel?: { src?: string | null; element?:  'iframe' | 'img' | null; } | null; enabled?: boolean; triggerOnRouteChange?: "gtagPageview" | "fbqPageview" | null; } `
   const sendWhatsappTypes = `{ type?: 'ComponentMiscSendWhatsapp'; hidden: boolean; phone: number } `
   fs.writeFile('./GeneralConfig.ts', `
   export const scripts: ${scriptTypes}[] | [] = ${JSON.stringify(scripts)} \n;
