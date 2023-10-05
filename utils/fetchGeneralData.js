@@ -7,16 +7,20 @@ const { getGeneralConfigData } = require("./getGeneralData")
 
 async function createGeneralData  () {
   let scripts = []
+  sendWhatsapp = null
   try {
     const generalConfig = await getGeneralConfigData();
     scripts = generalConfig?.attributes?.scriptsPixels || [];
+    sendWhatsapp = generalConfig?.attributes?.sendWhatsapp || null;
   } catch (error) {
     console.log(error);
   }
 
   const scriptTypes = `{ type?: 'ComponentSectionsScriptPixel'; name: string; script?: string; pixel?: { src?: string; element?:  'iframe' | 'img' | null; } | null; enabled?: boolean; triggerOnRouteChange?: "gtagPageview" | "fbqPageview" | null; } `
+  const sendWhatsappTypes = `{ type?: 'ComponentMiscSendWhatsapp'; hidden: boolean; phone: number } `
   fs.writeFile('./GeneralConfig.ts', `
   export const scripts: ${scriptTypes}[] | [] = ${JSON.stringify(scripts)} \n;
+  export const sendwhatsapp: ${sendWhatsappTypes}[] | [] = ${JSON.stringify(sendWhatsapp)} \n;
   `, 'utf-8', (err) => {
     if (err) {
       console.error(err);

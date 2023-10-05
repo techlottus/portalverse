@@ -60,6 +60,13 @@ query GeneralConfig {
             triggerOnRouteChange
           }
         }
+        sendWhatsapp {
+          ...on ComponentMiscSendWhatsapp {
+            type: __typename
+            hidden
+            phone
+          }
+        }
       }
     }
   }
