@@ -111,7 +111,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, o
 
   return <>
     {/* desktop menu */}
-    <section ref={navbarRef} className={cn("fixed w-t:hidden w-p:hidden w-full bg-surface-0 z-50 transition-transform", { "shadow-15": !activeMenu }, classNames)}>
+    <section ref={navbarRef} className={cn("fixed w-t:hidden w-p:hidden w-full bg-surface-0 z-15 transition-transform", { "shadow-15": !activeMenu }, classNames)}>
       <div className="flex p-1">
         <div className={cn("p-6 cursor-pointer border-0 border-solid border-surface-200 border-r-2")} onClick={onClickLogo}>
           <div className="w-36 h-9 bg-logo bg-cover bg-center"> </div>
@@ -155,7 +155,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, o
         </div>
       </div>
       {/* menu suboptions */}
-      <div onMouseLeave={handleHoverOutOption} className={cn("w-full p-2 flex space-x-6 justify-center w-t:hidden w-p:hidden bg-surface-0 z-50", { "hidden": !activeMenu, "block shadow-15": activeMenu })}>
+      <div onMouseLeave={handleHoverOutOption} className={cn("w-full p-2 flex space-x-6 justify-center w-t:hidden w-p:hidden bg-surface-0 z-15", { "hidden": !activeMenu, "block shadow-15": activeMenu })}>
         {
           activeOptionMenu.map((item: any, i: number) => <div key={`submenu-${i}`} className={cn("py-1 px-6 z-20 border-0 border-solid border-surface-200", { "border-solid border-surface-200 border-r-2": activeOptionMenu.length > 1 })}>
               <Link href={item.route} passHref className="w-full">

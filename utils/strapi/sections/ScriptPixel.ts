@@ -3,6 +3,8 @@ export type ScriptsPixels  = {
   type?: 'ComponentSectionsScriptPixel'
   name: string;
   script?: string;
+  src?: string | null;
+  async?: boolean;
   pixel?: Pixel | null;
   enabled?: boolean;
   triggerOnRouteChange?: "gtagPageview" | "fbqPageview" | null;
@@ -17,6 +19,8 @@ export const SCRIPTS_PIXELS = `
   type: __typename
   name
   script
+  src
+  async
   pixel {
     src
     element
