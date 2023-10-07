@@ -48,6 +48,8 @@ import type { RichTextVideoSection } from "@/utils/strapi/sections/RichTextVideo
 import type { StatisticsCardListSection } from "@/utils/strapi/sections/StatisticsCardList";
 import type { TextContentSection } from "@/utils/strapi/sections/TextContent";
 import { ContainerForm, FORM_CONTAINER } from "./sections/ContainerForm";
+import { ROCKSTAR_INFO, RockstarInfoSection } from "./sections/RockstarInfo";
+import { ROCKSTARINFO_LIST, RockstarInfoListSection } from "./sections/RockstarInfloList";
 
 
 export type ComponentSection =
@@ -73,6 +75,8 @@ export type ComponentSection =
   | OutstandingListSection
   | RichTextImageSection
   | RichTextVideoSection
+  | RockstarInfoSection
+  | RockstarInfoListSection
   | StatisticsCardListSection
   | TextContentSection
   | ContainerForm
@@ -101,6 +105,8 @@ export const SECTIONS = `
   ${PROGRAMS_FILTER}
   ${RICH_TEXT_IMAGE}
   ${RICH_TEXT_VIDEO}
+  ${ROCKSTAR_INFO}
+  ${ROCKSTARINFO_LIST}
   ${STATISTICS_CARD_LIST}
   ${TEXT_CONTENT}
   ${FORM_CONTAINER}
