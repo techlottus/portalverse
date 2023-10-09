@@ -3,8 +3,8 @@ import Aspect from '@/components/Aspect';
 import Image from "@/old-components/Image";
 import Modal from '@/old-components/Modal/Modal';
 import RichtText from '@/old-components/Richtext/Richtext';
-import { RockstarInfoSection } from '@/utils/strapi/sections/RockstarInfo';
 import parseEditorRawData from '@/utils/parseEditorRawData';
+import type { RockstarInfoSection } from '@/utils/strapi/sections/RockstarInfloList';
 
 
 const RockstarIcon = ({ className = "" }) => {
