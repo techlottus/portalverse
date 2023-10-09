@@ -340,6 +340,9 @@ async function populateTailwind  () {
   const tailwindLogos = setLogos(await fetchLogos())
   // const config = setConfig(await fetchConfig())
   const tailwindExtend = {
+    zIndex: {
+      '15': '15',
+    },
     screens: {      
       "w-p": {"max": '599px'},
       "w-t": {"min": '600px', "max": "1023px"},

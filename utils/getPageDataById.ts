@@ -5,6 +5,7 @@ import { formatContEdProgramsSection } from "@/utils/strapi/sections/ContEdProgr
 import { formatListconfigSection } from "@/utils/strapi/sections/Listconfig";
 import { formatModalityFilterSection } from "@/utils/strapi/sections/ModalityFilter";
 import { formatProgramsFilterSection } from "@/utils/strapi/sections/ProgramsFilter";
+import { formatOfferAccordionListSection } from "@/utils/strapi/sections/ProgramAccordionItems";
 import type { ComponentSection } from "@/utils/strapi/queries";
 
 type PageVariables = {
@@ -53,6 +54,10 @@ const formatPageData = async (data: PageResponse): Promise<PageResponse> => {
         }
         case "ComponentSectionsProgramsFilter": {
           const formattedData = await formatProgramsFilterSection(section);
+          return formattedData;
+        }
+        case "ComponentSectionsProgramAccordionList": {
+          const formattedData = await formatOfferAccordionListSection(section);
           return formattedData;
         }
         default:
