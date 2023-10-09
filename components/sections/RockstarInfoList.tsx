@@ -25,11 +25,11 @@ const RockstarInfoList: FC<RockstarInfoListSection> = (props: RockstarInfoListSe
             : null
         }
         {
-          rockstars.length > 0 ?
+          rockstars?.length > 0 ?
             <div>
               <section className="col-span-12 grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-2">
                 {
-                  rockstars.map((item: any, i: number) => <section key={`section-blog-${i}`}>
+                  rockstars?.map((item: any, i: number) => <section key={`section-blog-${i}`}>
                     <RockstarInfo name={item?.name} image={item?.image?.data?.attributes?.url} campus={item?.campus} detail={item?.detail} type={"ComponentSectionsRockstarInfo"} />
                   </section>)
                 }
