@@ -1,7 +1,7 @@
 import { StrapiImage } from "@/types/strapi/common";
 
 export type RockstarInfoSection = {
-    type?: "ComponentSectionsRockstarInfo";
+    type: "ComponentSectionsRockstarInfo";
     name: string;
     image: StrapiImage;
     campus: {
