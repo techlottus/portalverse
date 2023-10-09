@@ -4,6 +4,7 @@ import Banner from "@/components/sections/Banner";
 import BlogPostsPodcast from "@/components/sections/BlogPostsPodcast";
 import CardList from "@/components/sections/CardList";
 import ContactTargetList from "@/components/sections/ContactTargetList";
+import ContainerForm from "@/components/sections/ContainerForm";
 import ContEdPrograms from "@/components/sections/ContEdPrograms";
 import FAQ from "@/components/sections/FAQ";
 import FormVideo from "@/components/sections/FormVideo";
@@ -18,6 +19,7 @@ import OutstandingList from "@/components/sections/OutstandingList";
 import OverlayCardList from "@/components/sections/OverlayCardList";
 import Paragraph from "@/components/Paragraph";
 import PodcastList from "@/components/sections/PodcastList";
+import ProgramAccordionList from "@/components/sections/ProgramAccordionList";
 import ProgramsFilter from "@/components/sections/ProgramsFilter";
 import PromoLinkList from "@/components/sections/PromoLinkList";
 import RichTextImage from "@/components/sections/RichTextImage";
@@ -26,7 +28,6 @@ import StatisticsCardList from "@/components/sections/StatisticsCardList";
 import TextContent from "@/components/sections/TextContent";
 import WebError from "@/components/sections/WebError";
 import type { FC } from "react";
-import ContainerForm from "@/components/sections/ContainerForm";
 
 type Renderer = {
   [key: string]: FC<any>;
@@ -42,6 +43,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsContactTargetList: ContactTargetList,
   ComponentSectionsContEdPrograms: ContEdPrograms,
   ComponentSectionsFaqSection: FAQ,
+  ComponentSectionsFormContainer: ContainerForm,
   ComponentSectionsFormVideo: FormVideo,
   ComponentSectionsGoogleMap: GoogleMap,
   ComponentSectionsHeroSlider: HeroSlider,
@@ -53,14 +55,14 @@ const defaultRenderers: Renderer = {
   ComponentSectionsContainerOutstandingList: OutstandingList,
   ComponentSectionsOverlayCardList: OverlayCardList,
   ComponentSectionsPodcastList: PodcastList,
+  ComponentSectionsProgramAccordionList: ProgramAccordionList,
   ComponentSectionsProgramsFilter: ProgramsFilter,
   ComponentSectionsPromoLinkList: PromoLinkList,
   ComponentSectionsRichTextImage: RichTextImage,
+  ComponentSectionsRichTextVideo: RichTextVideo,
   ComponentSectionsStatisticsCardList: StatisticsCardList,
   ComponentSectionsTextContent: TextContent,
-  ComponentSectionsWebError: WebError,
-  ComponentSectionsRichTextVideo: RichTextVideo,
-  ComponentSectionsFormContainer: ContainerForm,
+  ComponentSectionsWebError: WebError
 };
 
 export default defaultRenderers;
