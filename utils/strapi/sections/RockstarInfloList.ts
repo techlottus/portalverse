@@ -25,7 +25,7 @@ export const ROCKSTARINFO_LIST = `
 ...on ComponentSectionsRockstarInfoList {
     title
     description
-    rockstars(sort: "name:asc") {
+    rockstars(pagination:{ start: 0, limit: -1 }) {
       name
       detail
       campus {

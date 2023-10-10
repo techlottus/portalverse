@@ -9,6 +9,10 @@ import { RockstarInfoListSection } from "@/utils/strapi/sections/RockstarInfloLi
 const RockstarInfoList: FC<RockstarInfoListSection> = (props: RockstarInfoListSection) => {
   const { title, description, rockstars } = props;
 
+  rockstars?.sort((a, b) => // sort programs alphabetically
+    a?.name < b?.name ? -1 : a?.name > b?.name ? 1 : 0
+  )
+
   return (
     <section className="bg-surface-200 pb-14">
       <Container>
@@ -30,7 +34,7 @@ const RockstarInfoList: FC<RockstarInfoListSection> = (props: RockstarInfoListSe
               <section className="col-span-12 grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-2">
                 {
                   rockstars?.map((item: any, i: number) => <section key={`section-blog-${i}`}>
-                    <RockstarInfo name={item?.name} image={item?.image?.data?.attributes?.url} campus={item?.campus} detail={item?.detail} type={"ComponentSectionsRockstarInfo"} />
+                    <RockstarInfo {...item} type={"ComponentSectionsRockstarInfo"} />
                   </section>)
                 }
               </section>
