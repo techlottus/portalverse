@@ -28,6 +28,9 @@ import StatisticsCardList from "@/components/sections/StatisticsCardList";
 import TextContent from "@/components/sections/TextContent";
 import WebError from "@/components/sections/WebError";
 import type { FC } from "react";
+import RockstarInfo from "@/components/sections/RockstarInfo";
+import RockstarInfoList from "@/components/sections/RockstarInfoList";
+
 
 type Renderer = {
   [key: string]: FC<any>;
@@ -60,9 +63,11 @@ const defaultRenderers: Renderer = {
   ComponentSectionsPromoLinkList: PromoLinkList,
   ComponentSectionsRichTextImage: RichTextImage,
   ComponentSectionsRichTextVideo: RichTextVideo,
+  ComponentSectionsRockstarInfo: RockstarInfo,
+  ComponentSectionsRockstarInfoList: RockstarInfoList,
   ComponentSectionsStatisticsCardList: StatisticsCardList,
   ComponentSectionsTextContent: TextContent,
-  ComponentSectionsWebError: WebError
+  ComponentSectionsWebError: WebError,
 };
 
 export default defaultRenderers;
