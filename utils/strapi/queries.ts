@@ -23,6 +23,7 @@ import { PROGRAMS_FILTER } from "@/utils/strapi/sections/ProgramsFilter";
 import { PROMO_LINK_LIST } from "@/utils/strapi/sections/PromoLinkList";
 import { RICH_TEXT_IMAGE } from "@/utils/strapi/sections/RichTextImage";
 import { RICH_TEXT_VIDEO } from "@/utils/strapi/sections/RichTextVideo";
+import { ROCKSTARINFO_LIST } from "@/utils/strapi/sections/RockstarInfloList";
 import { STATISTICS_CARD_LIST } from "@/utils/strapi/sections/StatisticsCardList";
 import { TEXT_CONTENT } from "@/utils/strapi/sections/TextContent";
 import type {AccordionSection} from "@/utils/strapi/sections/Accordion";
@@ -49,9 +50,9 @@ import type { ProgramsFilterSection } from "@/utils/strapi/sections/ProgramsFilt
 import type { PromoLinkListSection } from "@/utils/strapi/sections/PromoLinkList";
 import type { RichTextImageSection } from "@/utils/strapi/sections/RichTextImage";
 import type { RichTextVideoSection } from "@/utils/strapi/sections/RichTextVideo";
+import type { RockstarInfoListSection } from "@/utils/strapi/sections/RockstarInfloList";
 import type { StatisticsCardListSection } from "@/utils/strapi/sections/StatisticsCardList";
 import type { TextContentSection } from "@/utils/strapi/sections/TextContent";
-
 
 export type ComponentSection =
   | AccordionSection
@@ -78,6 +79,7 @@ export type ComponentSection =
   | PromoLinkListSection
   | RichTextImageSection
   | RichTextVideoSection
+  | RockstarInfoListSection
   | StatisticsCardListSection
   | TextContentSection
 
@@ -107,6 +109,7 @@ export const SECTIONS = `
   ${PROMO_LINK_LIST}
   ${RICH_TEXT_IMAGE}
   ${RICH_TEXT_VIDEO}
+  ${ROCKSTARINFO_LIST}
   ${STATISTICS_CARD_LIST}
   ${TEXT_CONTENT}
 `;
