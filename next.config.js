@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+const redirectsData = require("./redirectsConfig.json")
 
 const { env } = require('process');
 
@@ -12,6 +13,9 @@ const securityHeaders = [
 const strapiUrl = env.NEXT_PUBLIC_STRAPI_URL
 
 const nextConfig = {
+  async redirects() {
+    return redirectsData?.redirects
+  },
   swcMinify: true,
   images: {
     unoptimized: true,
