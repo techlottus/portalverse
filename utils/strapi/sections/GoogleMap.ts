@@ -1,6 +1,7 @@
 
 export type GoogleMapSection = {
   type: "ComponentSectionsGoogleMap";
+  title?: string;
   src: string;
   name?:string;
   address?:string;
@@ -13,6 +14,7 @@ export type GoogleMapSection = {
   
 export const GOOGLE_MAP = `
 ... on ComponentSectionsGoogleMap{
+  title
   src
   name
   address
