@@ -102,8 +102,13 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
         {
           sections?.sliderNotices ? 
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <Slider data={{ ...sections?.sliderNotices }} mobile={true} />
-        </div>
+            {
+              sections?.sliderNotices?.title ?
+              <p className="w-d:mb-6 font-headings text-6 w-d:text-10 leading-13 font-bold">{sections?.sliderNotices?.title}</p>
+              : null
+            }
+            <Slider data={{ ...sections?.sliderNotices }} mobile={true} />
+          </div>
           : null
         }
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mt-auto mb-auto">
