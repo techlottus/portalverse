@@ -74,11 +74,11 @@ const RockstarInfo: FC<RockstarInfoSection> = (props: RockstarInfoSection) => {
           </div>
         </div>
         <div className="flex justify-center">
-          <p className="mt-4 font-headings text-5 w-p:text-base font-semibold leading-6 w-p:leading-4">
+          <p className="mt-2 font-headings text-center text-5 w-p:text-base font-semibold leading-6 w-p:leading-4">
             {name}
           </p>
         </div>
-        <div className="flex justify-center mt-4 text-primary-500">
+        <div className="flex justify-center mt-2 text-primary-500">
           <span
             onClick={() => {
               handleOpenModal(detail);
