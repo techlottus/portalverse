@@ -11,15 +11,12 @@ const MosaicSection: FC<MosaicSection> = (props: MosaicSection) => {
 
   const formattedDescription = parseEditorRawData(description);
 
-  const arrayImages: { id: string; image: string; }[] = []
-
-  images?.map((item, index) => {
+  const arrayImages = images?.map((item, index) => {
     const img = {
       id: index.toString(),
       image: item?.image?.data?.attributes?.url
     }
-    arrayImages?.push(img)
-    return
+    return img
   })
 
   return (
