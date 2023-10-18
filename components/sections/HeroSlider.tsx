@@ -15,7 +15,7 @@ const HeroSlider = (props: HeroSliderSection) => {
             : null
         }
         {
-          props.description ?
+          props?.description ?
             <RichtText data={{ content: formattedDescription }} />
             : null
         }
