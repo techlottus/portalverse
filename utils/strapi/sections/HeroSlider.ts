@@ -21,10 +21,14 @@ export type Slide = {
 export type HeroSliderSection = {
   type: "ComponentSectionsHeroSlider";
   slides: Array<Slide>;
+  title: string;
+  description: string;
 };
 
 export const HERO_SLIDER = `
 ...on ComponentSectionsHeroSlider {
+  title
+  description
   slides: slide(pagination: {start: 0, limit: -1}) {
     title
     subtitle
