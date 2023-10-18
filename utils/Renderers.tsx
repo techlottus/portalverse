@@ -15,6 +15,7 @@ import Leaderboard from "@/components/sections/Leaderboard";
 import LinkList from "@/components/sections/LinkList";
 import Listconfig from "@/components/sections/Listconfig";
 import ModalityFilter from "@/components/sections/ModalityFilter";
+import MosaicSection from "@/components/sections/MosaicSection";
 import OutstandingList from "@/components/sections/OutstandingList";
 import OverlayCardList from "@/components/sections/OverlayCardList";
 import Paragraph from "@/components/Paragraph";
@@ -30,7 +31,6 @@ import WebError from "@/components/sections/WebError";
 import type { FC } from "react";
 import RockstarInfo from "@/components/sections/RockstarInfo";
 import RockstarInfoList from "@/components/sections/RockstarInfoList";
-
 
 type Renderer = {
   [key: string]: FC<any>;
@@ -55,6 +55,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsLinkList: LinkList,
   ComponentSectionsListconfig: Listconfig,
   ComponentSectionsModalityFilter: ModalityFilter,
+  ComponentSectionsMosaic: MosaicSection,
   ComponentSectionsContainerOutstandingList: OutstandingList,
   ComponentSectionsOverlayCardList: OverlayCardList,
   ComponentSectionsPodcastList: PodcastList,
