@@ -15,6 +15,7 @@ import { LEADERBOARD } from "@/utils/strapi/sections/Leaderboard";
 import { LINK_LIST } from "@/utils/strapi/sections/LinkList";
 import { LIST_CONFIG } from "@/utils/strapi/sections/Listconfig";
 import { MODALITY_FILTER } from "@/utils/strapi/sections/ModalityFilter";
+import { MOSAIC } from "@/utils/strapi/sections/Mosaic";
 import { OUTSTANDING_LIST } from "@/utils/strapi/sections/OutstandingList";
 import { OVERLAY_CARD_LIST } from "@/utils/strapi/sections/OverlayCardList";
 import { PODCAST_LIST } from "@/utils/strapi/sections/PodcastList";
@@ -43,6 +44,7 @@ import type { LeaderboardSection } from "@/utils/strapi/sections/Leaderboard";
 import type { LinkListSection } from "@/utils/strapi/sections/LinkList";
 import type { ListconfigSection } from "@/utils/strapi/sections/Listconfig";
 import type { ModalityFilterSection } from "@/utils/strapi/sections/ModalityFilter";
+import type { MosaicSection } from "@/utils/strapi/sections/Mosaic";
 import type { ProgramAccordionListSection } from "@/utils/strapi/sections/ProgramAccordionItems";
 import type { OutstandingListSection } from "@/utils/strapi/sections/OutstandingList";
 import type { PodcastListSection } from "@/utils/strapi/sections/PodcastList";
@@ -72,6 +74,7 @@ export type ComponentSection =
   | LinkListSection
   | ListconfigSection
   | ModalityFilterSection
+  | MosaicSection
   | OutstandingListSection
   | PodcastListSection
   | ProgramAccordionListSection
@@ -112,4 +115,5 @@ export const SECTIONS = `
   ${ROCKSTARINFO_LIST}
   ${STATISTICS_CARD_LIST}
   ${TEXT_CONTENT}
+  ${MOSAIC}
 `;
