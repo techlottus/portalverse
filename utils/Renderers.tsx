@@ -23,6 +23,7 @@ import PodcastList from "@/components/sections/PodcastList";
 import ProgramAccordionList from "@/components/sections/ProgramAccordionList";
 import ProgramsFilter from "@/components/sections/ProgramsFilter";
 import PromoLinkList from "@/components/sections/PromoLinkList";
+import RepeatableBannerSection from "@/components/sections/RepeatableBannerSection";
 import RichTextImage from "@/components/sections/RichTextImage";
 import RichTextVideo from "@/components/sections/RichTextVideo";
 import StatisticsCardList from "@/components/sections/StatisticsCardList";
@@ -62,6 +63,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsProgramAccordionList: ProgramAccordionList,
   ComponentSectionsProgramsFilter: ProgramsFilter,
   ComponentSectionsPromoLinkList: PromoLinkList,
+  ComponentSectionsRepeatableBanner: RepeatableBannerSection,
   ComponentSectionsRichTextImage: RichTextImage,
   ComponentSectionsRichTextVideo: RichTextVideo,
   ComponentSectionsRockstarInfo: RockstarInfo,
