@@ -1,7 +1,6 @@
 import AccordionComponent from "@/components/sections/AccordionSection";
 import Alert from "@/components/sections/Alert";
 import Banner from "@/components/sections/Banner";
-import BannerNumeraliaSection from "@/components/sections/BannerNumeraliaSection";
 import BlogPostsPodcast from "@/components/sections/BlogPostsPodcast";
 import CardList from "@/components/sections/CardList";
 import ContactTargetList from "@/components/sections/ContactTargetList";
@@ -32,6 +31,7 @@ import WebError from "@/components/sections/WebError";
 import type { FC } from "react";
 import RockstarInfo from "@/components/sections/RockstarInfo";
 import RockstarInfoList from "@/components/sections/RockstarInfoList";
+import BannerNumeraliaSection from "@/components/sections/BannerNumeraliaSection";
 
 type Renderer = {
   [key: string]: FC<any>;
@@ -42,6 +42,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsAccordion: AccordionComponent,
   ComponentSectionsAlert: Alert,
   ComponentSectionsBanner: Banner,
+  ComponentSectionsBannerNumeralia: BannerNumeraliaSection,
   ComponentSectionsBlogPostsPodcast: BlogPostsPodcast,
   ComponentSectionsCardList: CardList,
   ComponentSectionsContactTargetList: ContactTargetList,
@@ -70,7 +71,6 @@ const defaultRenderers: Renderer = {
   ComponentSectionsStatisticsCardList: StatisticsCardList,
   ComponentSectionsTextContent: TextContent,
   ComponentSectionsWebError: WebError,
-  ComponentSectionsBannerNumeralia: BannerNumeraliaSection
 };
 
 export default defaultRenderers;

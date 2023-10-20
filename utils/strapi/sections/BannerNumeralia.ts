@@ -1,7 +1,7 @@
 import { StrapiImage } from "@/types/strapi/common";
 import { StatisticsCard } from "./StatisticsCardList";
 
-export type BannerNumeraliaSection = {
+export type BannerNumeraliaData = {
   type: "ComponentSectionsBannerNumeralia"
   title: string;
   subtitle?: string;
@@ -46,6 +46,5 @@ export const BANNER_NUMERALIA = `
       }
     }
   }
-
-    
+} 
 `

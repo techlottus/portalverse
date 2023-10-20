@@ -1,17 +1,22 @@
 import { FC } from "react";
 import ContentLayout from "@/layouts/Content.layout";
 import ContentFullLayout from "@/layouts/ContentFull.layout";
-import type { BannerNumeraliaSection } from "@/utils/strapi/sections/BannerNumeralia";
+import { BannerNumeraliaData } from "@/utils/strapi/sections/BannerNumeralia";
 import BannerNumeralia from "@/old-components/BannerNumeralia/BannerNumeralia";
 import Container from "@/layouts/Container.layout";
 
-const BannerNumeraliaSection: FC<BannerNumeraliaSection> = (props: BannerNumeraliaSection) => {
+const BannerNumeraliaSection: FC<BannerNumeraliaData> = (props: BannerNumeraliaData) => {
   const { title, subtitle, statistics, desktopImage, tabletImage, mobileImage } = props;
 
-  const dataBannerNumeralia = {
+  const formattedStatistics = statistics?.map((item, index) => {
+    const statics = {...statistics?.[index], icon: item?.iconName, iconClassNames:"text-white"}
+    return statics
+  })
+
+  const dataNumeralia = {
     title: title,
     subtitle: subtitle,
-    statics: statistics,
+    statics: formattedStatistics,
     image: {
       desktop: desktopImage?.data?.attributes?.url,
       tablet: tabletImage?.data?.attributes?.url,
@@ -21,8 +26,8 @@ const BannerNumeraliaSection: FC<BannerNumeraliaSection> = (props: BannerNumeral
 
   return (
     <section>
-      <Container classNames={"w-p:!p-0 w-t:!p-0"}>
-        <BannerNumeralia data={dataBannerNumeralia} />
+      <Container classNames="w-p:!p-0 w-t:!p-0">
+        <BannerNumeralia data={dataNumeralia}/>
       </Container>
     </section>
   );
