@@ -27,10 +27,10 @@ const RepeatableBannerSection: FC<RepeatableBanner> = (props: RepeatableBanner) 
               : null
           }
           {
-            banners.length > 0 ?
+            banners?.length > 0 ?
               <section className="grid w-d:grid-cols-2 gap-6 w-t:grid-cols-1 w-p:grid-cols-1">
                 {
-                  banners.map((item: any, i: number) => <section key={`section-blog-${i}`}>
+                  banners?.map((item: any, i: number) => <section key={`section-banners-${i}`}>
                     <BannerPortalverseWrapper data={item} />
                   </section>)
                 }
