@@ -1,6 +1,7 @@
 import AccordionComponent from "@/components/sections/AccordionSection";
 import Alert from "@/components/sections/Alert";
 import Banner from "@/components/sections/Banner";
+import BannerNumeraliaSection from "@/components/sections/BannerNumeraliaSection";
 import BlogPostsPodcast from "@/components/sections/BlogPostsPodcast";
 import CardList from "@/components/sections/CardList";
 import ContactTargetList from "@/components/sections/ContactTargetList";
@@ -69,6 +70,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsStatisticsCardList: StatisticsCardList,
   ComponentSectionsTextContent: TextContent,
   ComponentSectionsWebError: WebError,
+  ComponentSectionsBannerNumeralia: BannerNumeraliaSection
 };
 
 export default defaultRenderers;

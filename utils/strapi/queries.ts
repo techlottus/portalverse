@@ -1,6 +1,7 @@
 import { ACCORDION_SECTION } from "@/utils/strapi/sections/Accordion";
 import { ALERT } from "@/utils/strapi/sections/Alert";
 import { BANNER } from "@/utils/strapi/sections/Banner";
+import { BANNER_NUMERALIA } from "@/utils/strapi/sections/BannerNumeralia";
 import { BLOG_POSTS_PODCAST } from "@/utils/strapi/sections/BlogPostsPodcast";
 import { CARD_LIST } from "@/utils/strapi/sections/CardList";
 import { CONTACT_TARGET_LIST } from "@/utils/strapi/sections/ContactTargetList";
@@ -55,11 +56,13 @@ import type { RichTextVideoSection } from "@/utils/strapi/sections/RichTextVideo
 import type { RockstarInfoListSection } from "@/utils/strapi/sections/RockstarInfloList";
 import type { StatisticsCardListSection } from "@/utils/strapi/sections/StatisticsCardList";
 import type { TextContentSection } from "@/utils/strapi/sections/TextContent";
+import type { BannerNumeraliaSection } from "@/utils/strapi/sections/BannerNumeralia";
 
 export type ComponentSection =
   | AccordionSection
   | AlertSection
   | BannerSection
+  | BannerNumeraliaSection
   | BlogPostsPodcastSection
   | CardListSection
   | ContactTargetListSection
@@ -90,6 +93,7 @@ export const SECTIONS = `
   ${ACCORDION_SECTION}
   ${ALERT}
   ${BANNER}
+  ${BANNER_NUMERALIA}
   ${BLOG_POSTS_PODCAST}
   ${CARD_LIST} 
   ${CONTACT_TARGET_LIST}
