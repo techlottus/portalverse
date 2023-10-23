@@ -53,7 +53,20 @@ const RockstarInfoList: FC<RockstarInfoListSection> = (props: RockstarInfoListSe
         }
         {
           rockstars?.length > 0 ?
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 w-d:hidden w-t:hidden">
+              <section className="grid w-p:grid-cols-2 w-p:gap-7">
+                {
+                  rockstarsData?.map((item: any, i: number) => <div key={`section-blog-${i}`}>
+                    <RockstarInfo {...item} type={"ComponentSectionsRockstarInfo"} />
+                  </div>)
+                }
+              </section>
+            </div>
+            : null
+        }
+        {
+          rockstars?.length > 0 ?
+            <div className="flex flex-col gap-4 w-p:hidden">
               <section className="col-span-12 grid w-d:grid-cols-4 w-t:grid-cols-2 w-p:grid-cols-2 w-p:gap-7 w-t:gap-10 w-d:gap-10">
                 {
                   paginatedItems?.map((item: any, i: number) => <div key={`section-blog-${i}`}>
