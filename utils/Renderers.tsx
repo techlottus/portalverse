@@ -10,6 +10,7 @@ import FAQ from "@/components/sections/FAQ";
 import FormVideo from "@/components/sections/FormVideo";
 import GoogleMap from "@/components/sections/GoogleMap";
 import HeroSlider from "@/components/sections/HeroSlider";
+import IntroductionImage from "@/components/sections/IntroductionImage";
 import KnowledgeAreaFilter from "@/components/sections/KnowledgeAreaFilter";
 import Leaderboard from "@/components/sections/Leaderboard";
 import LinkList from "@/components/sections/LinkList";
@@ -50,6 +51,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsFormVideo: FormVideo,
   ComponentSectionsGoogleMap: GoogleMap,
   ComponentSectionsHeroSlider: HeroSlider,
+  ComponentSectionsIntroductionImage: IntroductionImage,
   ComponentSectionsKnowledgeAreaFilter: KnowledgeAreaFilter,
   ComponentSectionsLeaderboard: Leaderboard,
   ComponentSectionsLinkList: LinkList,

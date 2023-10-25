@@ -11,6 +11,7 @@ import { FORM_VIDEO } from "@/utils/strapi/sections/FormVideo";
 import { GOOGLE_MAP } from "@/utils/strapi/sections/GoogleMap";
 import { HERO_SLIDER } from "@/utils/strapi/sections/HeroSlider";
 import { KNOWLEDGE_AREA_FILTER } from "@/utils/strapi/sections/KnowledgeAreaFilter";
+import { INTRODUCTION_IMAGE_SECTION } from "@/utils/strapi/sections/IntroductionImage";
 import { LEADERBOARD } from "@/utils/strapi/sections/Leaderboard";
 import { LINK_LIST } from "@/utils/strapi/sections/LinkList";
 import { LIST_CONFIG } from "@/utils/strapi/sections/Listconfig";
@@ -39,6 +40,7 @@ import type { FAQSection } from "@/utils/strapi/sections/FAQ";
 import type { FormVideoSection } from "@/utils/strapi/sections/FormVideo";
 import type { GoogleMapSection } from "@/utils/strapi/sections/GoogleMap";
 import type { HeroSliderSection } from "@/utils/strapi/sections/HeroSlider";
+import type { IntroductionImageSection } from "@/utils/strapi/sections/IntroductionImage";
 import type { KnowledgeAreaFilterSection } from "@/utils/strapi/sections/KnowledgeAreaFilter";
 import type { LeaderboardSection } from "@/utils/strapi/sections/Leaderboard";
 import type { LinkListSection } from "@/utils/strapi/sections/LinkList";
@@ -69,6 +71,7 @@ export type ComponentSection =
   | FormVideoSection
   | GoogleMapSection
   | HeroSliderSection
+  | IntroductionImageSection
   | KnowledgeAreaFilterSection
   | LeaderboardSection
   | LinkListSection
@@ -99,6 +102,7 @@ export const SECTIONS = `
   ${FORM_VIDEO}
   ${GOOGLE_MAP}
   ${HERO_SLIDER}
+  ${INTRODUCTION_IMAGE_SECTION}
   ${KNOWLEDGE_AREA_FILTER}
   ${LINK_LIST}
   ${LIST_CONFIG}
