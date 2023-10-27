@@ -1,6 +1,6 @@
 import type { StrapiImage } from "@/types/strapi/common";
 
-type Card = {
+export type Card = {
   title: string;
   subtitle: string;
   type: string;

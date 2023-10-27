@@ -3,6 +3,7 @@ import Alert from "@/components/sections/Alert";
 import Banner from "@/components/sections/Banner";
 import BlogPostsPodcast from "@/components/sections/BlogPostsPodcast";
 import CardList from "@/components/sections/CardList";
+import CardsStatistics from "@/components/sections/CardsStatistics";
 import ContactTargetList from "@/components/sections/ContactTargetList";
 import ContainerForm from "@/components/sections/ContainerForm";
 import ContEdPrograms from "@/components/sections/ContEdPrograms";
@@ -43,6 +44,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsBanner: Banner,
   ComponentSectionsBlogPostsPodcast: BlogPostsPodcast,
   ComponentSectionsCardList: CardList,
+  ComponentSectionsCardsStatistics: CardsStatistics,
   ComponentSectionsContactTargetList: ContactTargetList,
   ComponentSectionsContEdPrograms: ContEdPrograms,
   ComponentSectionsFaqSection: FAQ,
