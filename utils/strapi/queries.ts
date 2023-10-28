@@ -23,6 +23,7 @@ import { PODCAST_LIST } from "@/utils/strapi/sections/PodcastList";
 import { PROGRAM_ACCORDION_LIST,  } from "@/utils/strapi/sections/ProgramAccordionItems";
 import { PROGRAMS_FILTER } from "@/utils/strapi/sections/ProgramsFilter";
 import { PROMO_LINK_LIST } from "@/utils/strapi/sections/PromoLinkList";
+import { REPEATABLE_BANNER } from "@/utils/strapi/sections/RepeatableBanner";
 import { RICH_TEXT_IMAGE } from "@/utils/strapi/sections/RichTextImage";
 import { RICH_TEXT_VIDEO } from "@/utils/strapi/sections/RichTextVideo";
 import { ROCKSTARINFO_LIST } from "@/utils/strapi/sections/RockstarInfloList";
@@ -52,6 +53,7 @@ import type { OutstandingListSection } from "@/utils/strapi/sections/Outstanding
 import type { PodcastListSection } from "@/utils/strapi/sections/PodcastList";
 import type { ProgramsFilterSection } from "@/utils/strapi/sections/ProgramsFilter";
 import type { PromoLinkListSection } from "@/utils/strapi/sections/PromoLinkList";
+import type { RepeatableBanner } from "@/utils/strapi/sections/RepeatableBanner";
 import type { RichTextImageSection } from "@/utils/strapi/sections/RichTextImage";
 import type { RichTextVideoSection } from "@/utils/strapi/sections/RichTextVideo";
 import type { RockstarInfoListSection } from "@/utils/strapi/sections/RockstarInfloList";
@@ -83,6 +85,7 @@ export type ComponentSection =
   | ProgramAccordionListSection
   | ProgramsFilterSection
   | PromoLinkListSection
+  | RepeatableBanner
   | RichTextImageSection
   | RichTextVideoSection
   | RockstarInfoListSection
@@ -115,6 +118,7 @@ export const SECTIONS = `
   ${PROGRAM_ACCORDION_LIST}
   ${PROGRAMS_FILTER}
   ${PROMO_LINK_LIST}
+  ${REPEATABLE_BANNER}
   ${RICH_TEXT_IMAGE}
   ${RICH_TEXT_VIDEO}
   ${ROCKSTARINFO_LIST}
