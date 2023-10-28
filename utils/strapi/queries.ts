@@ -1,6 +1,7 @@
 import { ACCORDION_SECTION } from "@/utils/strapi/sections/Accordion";
 import { ALERT } from "@/utils/strapi/sections/Alert";
 import { BANNER } from "@/utils/strapi/sections/Banner";
+import { BANNER_NUMERALIA } from "@/utils/strapi/sections/BannerNumeralia";
 import { BLOG_POSTS_PODCAST } from "@/utils/strapi/sections/BlogPostsPodcast";
 import { CARD_LIST } from "@/utils/strapi/sections/CardList";
 import { CONTACT_TARGET_LIST } from "@/utils/strapi/sections/ContactTargetList";
@@ -30,6 +31,7 @@ import { TEXT_CONTENT } from "@/utils/strapi/sections/TextContent";
 import type {AccordionSection} from "@/utils/strapi/sections/Accordion";
 import type { AlertSection } from "@/utils/strapi/sections/Alert";
 import type { BannerSection } from "@/utils/strapi/sections/Banner";
+import type { BannerNumeraliaData } from "@/utils/strapi/sections/BannerNumeralia";
 import type { BlogPostsPodcastSection } from "@/utils/strapi/sections/BlogPostsPodcast";
 import type { CardListSection } from "@/utils/strapi/sections/CardList";
 import type { ContactTargetListSection } from "@/utils/strapi/sections/ContactTargetList";
@@ -60,6 +62,7 @@ export type ComponentSection =
   | AccordionSection
   | AlertSection
   | BannerSection
+  | BannerNumeraliaData
   | BlogPostsPodcastSection
   | CardListSection
   | ContactTargetListSection
@@ -90,6 +93,7 @@ export const SECTIONS = `
   ${ACCORDION_SECTION}
   ${ALERT}
   ${BANNER}
+  ${BANNER_NUMERALIA}
   ${BLOG_POSTS_PODCAST}
   ${CARD_LIST} 
   ${CONTACT_TARGET_LIST}
@@ -104,6 +108,7 @@ export const SECTIONS = `
   ${LIST_CONFIG}
   ${LEADERBOARD}
   ${MODALITY_FILTER}
+  ${MOSAIC}
   ${OUTSTANDING_LIST}
   ${OVERLAY_CARD_LIST}
   ${PODCAST_LIST}
@@ -115,5 +120,4 @@ export const SECTIONS = `
   ${ROCKSTARINFO_LIST}
   ${STATISTICS_CARD_LIST}
   ${TEXT_CONTENT}
-  ${MOSAIC}
 `;

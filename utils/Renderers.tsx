@@ -31,6 +31,7 @@ import WebError from "@/components/sections/WebError";
 import type { FC } from "react";
 import RockstarInfo from "@/components/sections/RockstarInfo";
 import RockstarInfoList from "@/components/sections/RockstarInfoList";
+import BannerNumeraliaSection from "@/components/sections/BannerNumeraliaSection";
 
 type Renderer = {
   [key: string]: FC<any>;
@@ -41,6 +42,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsAccordion: AccordionComponent,
   ComponentSectionsAlert: Alert,
   ComponentSectionsBanner: Banner,
+  ComponentSectionsBannerNumeralia: BannerNumeraliaSection,
   ComponentSectionsBlogPostsPodcast: BlogPostsPodcast,
   ComponentSectionsCardList: CardList,
   ComponentSectionsContactTargetList: ContactTargetList,
