@@ -18,7 +18,7 @@ const IntroductionImage: FC<IntroductionImageSection> = (props: IntroductionImag
 				{
 					title ?
 						<p className="font-headings text-10 leading-12 w-p:text-6 w-p:leading-7">{title}</p>
-						: null
+					: null
 				}
 				{
 					description ?
@@ -27,14 +27,14 @@ const IntroductionImage: FC<IntroductionImageSection> = (props: IntroductionImag
 								content: formattedDescription
 							}} />
 						</div>
-						: null
+					: null
 				}
 				{
 					images?.length > 0 ?
-						<section className="grid gap-6 col-span-1">
+						<div className="grid gap-6 col-span-1">
 							{
 								images?.map((item, i) => {
-									return (<section key={`section-image-${i}`} >
+									return (<div key={`section-image-${i}`} >
 										<div className="w-p:hidden w-t:hidden">
 											<Aspect ratio={item?.desktopRatio}>
 												<div className="absolute w-full h-full">
@@ -68,11 +68,11 @@ const IntroductionImage: FC<IntroductionImageSection> = (props: IntroductionImag
 												</div>
 											</Aspect>
 										</div>
-									</section>)
+									</div>)
 								})
 							}
-						</section>
-						: null
+						</div>
+					: null
 				}
 			</Container>
 		</section>
