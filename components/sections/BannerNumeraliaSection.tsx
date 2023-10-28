@@ -1,9 +1,8 @@
 import { FC } from "react";
-import ContentLayout from "@/layouts/Content.layout";
-import ContentFullLayout from "@/layouts/ContentFull.layout";
-import { BannerNumeraliaData } from "@/utils/strapi/sections/BannerNumeralia";
 import BannerNumeralia from "@/old-components/BannerNumeralia/BannerNumeralia";
 import Container from "@/layouts/Container.layout";
+import type { BannerNumeraliaData } from "@/utils/strapi/sections/BannerNumeralia";
+
 
 const BannerNumeraliaSection: FC<BannerNumeraliaData> = (props: BannerNumeraliaData) => {
   const { title, subtitle, statistics, desktopImage, tabletImage, mobileImage } = props;
