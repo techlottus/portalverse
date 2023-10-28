@@ -1,6 +1,7 @@
 import { ACCORDION_SECTION } from "@/utils/strapi/sections/Accordion";
 import { ALERT } from "@/utils/strapi/sections/Alert";
 import { BANNER } from "@/utils/strapi/sections/Banner";
+import { BANNER_NUMERALIA } from "@/utils/strapi/sections/BannerNumeralia";
 import { BLOG_POSTS_PODCAST } from "@/utils/strapi/sections/BlogPostsPodcast";
 import { CARD_LIST } from "@/utils/strapi/sections/CardList";
 import { CONTACT_TARGET_LIST } from "@/utils/strapi/sections/ContactTargetList";
@@ -23,14 +24,17 @@ import { PODCAST_LIST } from "@/utils/strapi/sections/PodcastList";
 import { PROGRAM_ACCORDION_LIST,  } from "@/utils/strapi/sections/ProgramAccordionItems";
 import { PROGRAMS_FILTER } from "@/utils/strapi/sections/ProgramsFilter";
 import { PROMO_LINK_LIST } from "@/utils/strapi/sections/PromoLinkList";
+import { REPEATABLE_BANNER } from "@/utils/strapi/sections/RepeatableBanner";
 import { RICH_TEXT_IMAGE } from "@/utils/strapi/sections/RichTextImage";
 import { RICH_TEXT_VIDEO } from "@/utils/strapi/sections/RichTextVideo";
 import { ROCKSTARINFO_LIST } from "@/utils/strapi/sections/RockstarInfloList";
 import { STATISTICS_CARD_LIST } from "@/utils/strapi/sections/StatisticsCardList";
 import { TEXT_CONTENT } from "@/utils/strapi/sections/TextContent";
+import { VIDEOS_SECTION } from "@/utils/strapi/sections/Videos";
 import type {AccordionSection} from "@/utils/strapi/sections/Accordion";
 import type { AlertSection } from "@/utils/strapi/sections/Alert";
 import type { BannerSection } from "@/utils/strapi/sections/Banner";
+import type { BannerNumeraliaData } from "@/utils/strapi/sections/BannerNumeralia";
 import type { BlogPostsPodcastSection } from "@/utils/strapi/sections/BlogPostsPodcast";
 import type { CardListSection } from "@/utils/strapi/sections/CardList";
 import type { ContactTargetListSection } from "@/utils/strapi/sections/ContactTargetList";
@@ -52,16 +56,19 @@ import type { OutstandingListSection } from "@/utils/strapi/sections/Outstanding
 import type { PodcastListSection } from "@/utils/strapi/sections/PodcastList";
 import type { ProgramsFilterSection } from "@/utils/strapi/sections/ProgramsFilter";
 import type { PromoLinkListSection } from "@/utils/strapi/sections/PromoLinkList";
+import type { RepeatableBanner } from "@/utils/strapi/sections/RepeatableBanner";
 import type { RichTextImageSection } from "@/utils/strapi/sections/RichTextImage";
 import type { RichTextVideoSection } from "@/utils/strapi/sections/RichTextVideo";
 import type { RockstarInfoListSection } from "@/utils/strapi/sections/RockstarInfloList";
 import type { StatisticsCardListSection } from "@/utils/strapi/sections/StatisticsCardList";
 import type { TextContentSection } from "@/utils/strapi/sections/TextContent";
+import type { VideosSectionData } from "@/utils/strapi/sections/Videos";
 
 export type ComponentSection =
   | AccordionSection
   | AlertSection
   | BannerSection
+  | BannerNumeraliaData
   | BlogPostsPodcastSection
   | CardListSection
   | ContactTargetListSection
@@ -83,16 +90,19 @@ export type ComponentSection =
   | ProgramAccordionListSection
   | ProgramsFilterSection
   | PromoLinkListSection
+  | RepeatableBanner
   | RichTextImageSection
   | RichTextVideoSection
   | RockstarInfoListSection
   | StatisticsCardListSection
   | TextContentSection
+  | VideosSectionData
 
 export const SECTIONS = `
   ${ACCORDION_SECTION}
   ${ALERT}
   ${BANNER}
+  ${BANNER_NUMERALIA}
   ${BLOG_POSTS_PODCAST}
   ${CARD_LIST} 
   ${CONTACT_TARGET_LIST}
@@ -108,16 +118,18 @@ export const SECTIONS = `
   ${LIST_CONFIG}
   ${LEADERBOARD}
   ${MODALITY_FILTER}
+  ${MOSAIC}
   ${OUTSTANDING_LIST}
   ${OVERLAY_CARD_LIST}
   ${PODCAST_LIST}
   ${PROGRAM_ACCORDION_LIST}
   ${PROGRAMS_FILTER}
   ${PROMO_LINK_LIST}
+  ${REPEATABLE_BANNER}
   ${RICH_TEXT_IMAGE}
   ${RICH_TEXT_VIDEO}
   ${ROCKSTARINFO_LIST}
   ${STATISTICS_CARD_LIST}
   ${TEXT_CONTENT}
-  ${MOSAIC}
+  ${VIDEOS_SECTION}
 `;

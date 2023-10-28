@@ -1,6 +1,7 @@
 import AccordionComponent from "@/components/sections/AccordionSection";
 import Alert from "@/components/sections/Alert";
 import Banner from "@/components/sections/Banner";
+import BannerNumeraliaSection from "@/components/sections/BannerNumeraliaSection";
 import BlogPostsPodcast from "@/components/sections/BlogPostsPodcast";
 import CardList from "@/components/sections/CardList";
 import ContactTargetList from "@/components/sections/ContactTargetList";
@@ -24,6 +25,7 @@ import PodcastList from "@/components/sections/PodcastList";
 import ProgramAccordionList from "@/components/sections/ProgramAccordionList";
 import ProgramsFilter from "@/components/sections/ProgramsFilter";
 import PromoLinkList from "@/components/sections/PromoLinkList";
+import RepeatableBannerSection from "@/components/sections/RepeatableBannerSection";
 import RichTextImage from "@/components/sections/RichTextImage";
 import RichTextVideo from "@/components/sections/RichTextVideo";
 import StatisticsCardList from "@/components/sections/StatisticsCardList";
@@ -32,6 +34,7 @@ import WebError from "@/components/sections/WebError";
 import type { FC } from "react";
 import RockstarInfo from "@/components/sections/RockstarInfo";
 import RockstarInfoList from "@/components/sections/RockstarInfoList";
+import VideosSection from "@/components/sections/VideosSection";
 
 type Renderer = {
   [key: string]: FC<any>;
@@ -42,6 +45,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsAccordion: AccordionComponent,
   ComponentSectionsAlert: Alert,
   ComponentSectionsBanner: Banner,
+  ComponentSectionsBannerNumeralia: BannerNumeraliaSection,
   ComponentSectionsBlogPostsPodcast: BlogPostsPodcast,
   ComponentSectionsCardList: CardList,
   ComponentSectionsContactTargetList: ContactTargetList,
@@ -64,12 +68,14 @@ const defaultRenderers: Renderer = {
   ComponentSectionsProgramAccordionList: ProgramAccordionList,
   ComponentSectionsProgramsFilter: ProgramsFilter,
   ComponentSectionsPromoLinkList: PromoLinkList,
+  ComponentSectionsRepeatableBanner: RepeatableBannerSection,
   ComponentSectionsRichTextImage: RichTextImage,
   ComponentSectionsRichTextVideo: RichTextVideo,
   ComponentSectionsRockstarInfo: RockstarInfo,
   ComponentSectionsRockstarInfoList: RockstarInfoList,
   ComponentSectionsStatisticsCardList: StatisticsCardList,
   ComponentSectionsTextContent: TextContent,
+  ComponentSectionsVideos: VideosSection,
   ComponentSectionsWebError: WebError,
 };
 
