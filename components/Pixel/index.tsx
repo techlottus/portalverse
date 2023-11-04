@@ -1,14 +1,26 @@
 
-import React, { useEffect } from 'react'
-import Script from 'next/script'
-import Head from 'next/head'
-import { useRouter } from 'next/router';
-import * as gtag from "@/lib/gtag"
-import * as fbq from '@/lib/fb-pixel'
-import { ScriptsPixels } from '@/utils/strapi/sections/ScriptPixel';
+import React, { useEffect } from "react";
+import Script from "next/script";
+import Head from "next/head";
+import { useRouter } from "next/router";
+import * as gtag from "@/lib/gtag";
+import * as fbq from "@/lib/fb-pixel";
+import type { ScriptsPixels } from "@/utils/strapi/sections/ScriptPixel";
 
-export default ({script, pixel, src, async, name, enabled = true, triggerOnRouteChange}: ScriptsPixels) => {
+const Pixel = (props: ScriptsPixels) => {
   const router = useRouter();
+  const {
+    script,
+    pixel,
+    src,
+    async,
+    name,
+    enabled = true,
+    triggerOnRouteChange,
+    crossorigin = false,
+    integrity = null,
+    strategy = "afterInteractive"
+  } = props;
 
   useEffect(() => {
     const handleRouteChange = (url: any) => {
@@ -31,25 +43,61 @@ export default ({script, pixel, src, async, name, enabled = true, triggerOnRoute
     };
   }, [router.events]);
 
-  return(
+  return (
     <>
-      { enabled && (!!src && !script) && <Script src={src} async={async} id={name} strategy='afterInteractive'/>}
-      { enabled && (!!script && !src) && <Script async={async} id={name} strategy='afterInteractive' dangerouslySetInnerHTML={{ __html: script }}/>}
-      { enabled && (!!script && !!src) && <Script src={src} async={async} id={name} strategy='afterInteractive' dangerouslySetInnerHTML={{ __html: script }}/>}
-        { enabled && !!pixel &&
+      {
+        enabled && (!!src && !script) &&
+        <Script
+          id={name}
+          src={src}
+          async={async}
+          crossOrigin={String(crossorigin)}
+          strategy={strategy}
+          //@ts-ignore
+          integrity={integrity}
+        />
+      }
+      {
+        enabled && (!!script && !src) &&
+        <Script
+          id={name}
+          async={async}
+          crossOrigin={String(crossorigin)}
+          dangerouslySetInnerHTML={{ __html: script }}
+          strategy={strategy}
+          //@ts-ignore
+          integrity={integrity}
+        />
+      }
+      {
+        enabled && (!!script && !!src) &&
+        <Script
+          id={name}
+          src={src}
+          async={async}
+          crossOrigin={String(crossorigin)}
+          dangerouslySetInnerHTML={{ __html: script }}
+          strategy={strategy}
+          //@ts-ignore
+          integrity={integrity}
+        />
+      }
+      {enabled && !!pixel &&
         <Head>
           <noscript>
             {
-              !!pixel.element && 
-                (
-                  pixel.element === 'img' && <img height="1" width="1" style={{ display: 'none' }} src={pixel.src}/>
-                  ||
-                  pixel.element === 'iframe' && <iframe src={pixel.src} height="0" width="0" style={{"display":"none","visibility":"hidden"}}></iframe>
-                )
+              !!pixel.element &&
+              (
+                pixel.element === 'img' && <img height="1" width="1" style={{ display: 'none' }} src={pixel.src} />
+                ||
+                pixel.element === 'iframe' && <iframe src={pixel.src} height="0" width="0" style={{ "display": "none", "visibility": "hidden" }}></iframe>
+              )
             }
           </noscript>
         </Head>
-        }
+      }
     </>
   )
-}
+};
+
+export default Pixel;
