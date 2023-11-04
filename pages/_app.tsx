@@ -12,37 +12,34 @@ import WhatsappButton from "@/components/WhatsappButton"
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const router = useRouter();
 
-  useEffect( () => {
+  useEffect(() => {
     // we need import elements with commonJS
     if (typeof window !== 'undefined') {
       require("@lottus23/lottus-elements-uane/elements")
     }
   }, [])
-  
+
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout ?? ((page) => page)
-  
+
 
   return getLayout(
     <>
       {
-        scripts && scripts.map(({name, script, pixel, enabled, triggerOnRouteChange, async, src }: ScriptsPixels, i: number) => <Pixel
-          key={i}
-          name={name}
-          src={src}
-          async={async}
-          script={script}
-          pixel={pixel}
-          enabled={enabled}
-          triggerOnRouteChange={triggerOnRouteChange}
-        ></Pixel>)
+        scripts && scripts?.map((props: ScriptsPixels, i: number) => {
+          return (
+            <Pixel
+              key={i}
+              {...props}
+            />
+          )
+        })
       }
-
       <Component {...pageProps} />
       {
         (sendWhatsapp && !sendWhatsapp?.hidden) && <WhatsappButton phone={sendWhatsapp?.phone}></WhatsappButton>
       }
-      
+
     </>)
 }
 
