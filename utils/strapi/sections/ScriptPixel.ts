@@ -8,6 +8,9 @@ export type ScriptsPixels  = {
   pixel?: Pixel | null;
   enabled?: boolean;
   triggerOnRouteChange?: "gtagPageview" | "fbqPageview" | null;
+  crossorigin?: boolean;
+  integrity?: string | null;
+  strategy: "afterInteractive" | "beforeInteractive" | "lazyOnload" | "worker";
 };
 export type Pixel = {
   src?: string;
@@ -21,6 +24,9 @@ export const SCRIPTS_PIXELS = `
   script
   src
   async
+  crossorigin
+  integrity
+  strategy
   pixel {
     src
     element
