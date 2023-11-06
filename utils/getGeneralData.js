@@ -54,6 +54,9 @@ query GeneralConfig {
             script
             src
             async
+            integrity
+            crossorigin
+            strategy
             pixel {
               src
               element
