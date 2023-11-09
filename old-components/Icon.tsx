@@ -45,6 +45,11 @@ import ulaCV from "@/icons/ula_cv.svg";
 import ulaGrupo from "@/icons/ula_grupo.svg";
 import ulaLupa from "@/icons/ula_lupa.svg";
 import ulaPortafolio from "@/icons/ula_portafolio.svg";
+import BecasPreferenciales from "@/icons/becas-preferenciales.svg";
+import JobPlacement from "@/icons/job-placement.svg";
+import SemilleroDeTalento from "@/icons/semillero-de-talento.svg";
+import EducacionContinua from "@/icons/educacion-continua.svg";
+import EventosInstitucionales from "@/icons/eventos-institucionales.svg";
 
 const iconTypes: any = {
   search: SearchIcon,
@@ -91,7 +96,12 @@ const iconTypes: any = {
   ula_cv: ulaCV,
   ula_grupo: ulaGrupo,
   ula_lupa: ulaLupa,
-  ula_portafolio: ulaPortafolio
+  ula_portafolio: ulaPortafolio,
+  utc_becas_preferenciales: BecasPreferenciales,
+  utc_job_placement: JobPlacement,
+  utc_semillero_talento: SemilleroDeTalento,
+  utc_educacion_continua: EducacionContinua,
+  utc_eventos_institucionales: EventosInstitucionales
 };
 
 const IconComponent: FC<any> = memo(({ name, ...props }: any) => {
