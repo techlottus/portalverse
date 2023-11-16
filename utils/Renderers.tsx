@@ -36,6 +36,7 @@ import type { FC } from "react";
 import RockstarInfo from "@/components/sections/RockstarInfo";
 import RockstarInfoList from "@/components/sections/RockstarInfoList";
 import VideosSection from "@/components/sections/VideosSection";
+import CardsDetailContent from "@/components/sections/CardsDetailContent";
 
 type Renderer = {
   [key: string]: FC<any>;
@@ -79,6 +80,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsTextContent: TextContent,
   ComponentSectionsVideos: VideosSection,
   ComponentSectionsWebError: WebError,
+  ComponentSectionsCardsDetailContent: CardsDetailContent
 };
 
 export default defaultRenderers;
