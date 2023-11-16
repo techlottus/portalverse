@@ -32,6 +32,7 @@ import { ROCKSTARINFO_LIST } from "@/utils/strapi/sections/RockstarInfloList";
 import { STATISTICS_CARD_LIST } from "@/utils/strapi/sections/StatisticsCardList";
 import { TEXT_CONTENT } from "@/utils/strapi/sections/TextContent";
 import { VIDEOS_SECTION } from "@/utils/strapi/sections/Videos";
+import { CARDS_DETAIL_CONTENT } from "./sections/CardsDetailContent";
 import type {AccordionSection} from "@/utils/strapi/sections/Accordion";
 import type { AlertSection } from "@/utils/strapi/sections/Alert";
 import type { BannerSection } from "@/utils/strapi/sections/Banner";
@@ -65,6 +66,7 @@ import type { RockstarInfoListSection } from "@/utils/strapi/sections/RockstarIn
 import type { StatisticsCardListSection } from "@/utils/strapi/sections/StatisticsCardList";
 import type { TextContentSection } from "@/utils/strapi/sections/TextContent";
 import type { VideosSectionData } from "@/utils/strapi/sections/Videos";
+import type { CardsDetailContentData } from "./sections/CardsDetailContent";
 
 export type ComponentSection =
   | AccordionSection
@@ -100,6 +102,7 @@ export type ComponentSection =
   | StatisticsCardListSection
   | TextContentSection
   | VideosSectionData
+  | CardsDetailContentData
 
 export const SECTIONS = `
   ${ACCORDION_SECTION}
@@ -136,4 +139,5 @@ export const SECTIONS = `
   ${STATISTICS_CARD_LIST}
   ${TEXT_CONTENT}
   ${VIDEOS_SECTION}
+  ${CARDS_DETAIL_CONTENT}
 `;
