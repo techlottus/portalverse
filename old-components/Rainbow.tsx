@@ -5,8 +5,8 @@ import Image from "@/old-components/Image"
 import RainbowComponentConfig from "@/types/Rainbow.types"
 import Aspect from "@/components/Aspect"
 
-const Rainbow: FC<RainbowComponentConfig> = ({ sections, title, classNamesTitle }: RainbowComponentConfig) => {
-
+const Rainbow: FC<RainbowComponentConfig> = ({ sections, title, classNamesTitle, contentVariant }: RainbowComponentConfig) => {
+  const colorVariant = contentVariant === "dark" || contentVariant === undefined ? "dark" : ""
   return (
     <section className="relative w-full z-0">
       <h1
@@ -22,25 +22,25 @@ const Rainbow: FC<RainbowComponentConfig> = ({ sections, title, classNamesTitle 
           return (
             <section key={`section-container${i}`} className="relative">
               <div className="relative flex flex-col space-y-12 py-12 z-10">
-              {
-                section?.sections?.map((section, i ) => {
-                  const { title, description, image } = section;
+                {
+                  section?.sections?.map((section, i ) => {
+                    const { title, description, image } = section;
 
-                  return (
+                    return (
                       <div className="flex flex-col items-center justify-center w-d:flex-row space-y-6 w-d:space-y-0 w-d:space-x-6 px-12 w-d:px-0" key={`section-detail${i}`}>
-                      <div className="w-full w-d:w-1/2 flex flex-col space-y-6 w-d:pl-24">
-                        <h3 className="font-headings text-surface-0 text-10 w-t:text-3xl w-p:text-6">{ title }</h3>
-                        <RichtText font="dark" classNames="font-headings" data={{ content: description }} />
+                        <div className="w-full w-d:w-1/2 flex flex-col space-y-6 w-d:pl-24">
+                          <h3 className={cn("font-headings text-10 w-t:text-3xl w-p:text-6", {"text-surface-0" : contentVariant === "dark" || contentVariant === undefined})}>{title}</h3>
+                          <RichtText font={colorVariant} classNames="font-headings" data={{ content: description }} />
+                        </div>
+                        <div className="w-full w-d:w-1/2 max-w-147">
+                          <Aspect ratio="2/1">
+                            <Image src={image?.src} alt={image?.alt} classNames="w-full h-full" />
+                          </Aspect>
+                        </div>
                       </div>
-                      <div className="w-full w-d:w-1/2 max-w-147">
-                        <Aspect ratio="2/1">
-                          <Image src={image?.src} alt={image?.alt} classNames="w-full h-full" />
-                        </Aspect>
-                      </div>
-                    </div>
-                  )
-                })
-              }
+                    )
+                  })
+                }
               </div>
 
               {/* Section's background color */}

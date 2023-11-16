@@ -11,6 +11,7 @@ type LeaderboardLink = {
 
 export type LeaderboardSection = {
   type: "ComponentSectionsLeaderboard";
+  overlayLeaderboard?: string;
   title: string;
   subtitleIcon: string;
   subtitleText: string;
@@ -27,6 +28,7 @@ export const LEADERBOARD = `
   title
   subtitleIcon
   subtitleText
+  overlayLeaderboard: overlay
   links {
     text
     href

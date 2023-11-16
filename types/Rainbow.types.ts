@@ -25,6 +25,7 @@ type RainbowComponentConfig = {
   sections: Array<RainbowSectionComponentConfig>;
   title: string;
   classNamesTitle?: string;
+  contentVariant?: string;
 }
 
 export default RainbowComponentConfig
