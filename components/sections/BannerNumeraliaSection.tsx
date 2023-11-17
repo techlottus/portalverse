@@ -5,16 +5,17 @@ import type { BannerNumeraliaData } from "@/utils/strapi/sections/BannerNumerali
 
 
 const BannerNumeraliaSection: FC<BannerNumeraliaData> = (props: BannerNumeraliaData) => {
-  const { title, subtitle, statistics, desktopImage, tabletImage, mobileImage } = props;
+  const { title, subtitle, statistics, desktopImage, tabletImage, mobileImage, overlayBannerNumeralia } = props;
 
   const formattedStatistics = statistics?.map((item, index) => {
-    const statics = {...statistics?.[index], icon: item?.iconName, iconClassNames:"text-white"}
+    const statics = {...statistics?.[index], icon: item?.iconName}
     return statics
   })
 
   const dataNumeralia = {
     title: title,
     subtitle: subtitle,
+    overlay: overlayBannerNumeralia,
     statics: formattedStatistics,
     image: {
       desktop: desktopImage?.data?.attributes?.url,

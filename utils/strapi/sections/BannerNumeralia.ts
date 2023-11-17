@@ -9,12 +9,14 @@ export type BannerNumeraliaData = {
   desktopImage: StrapiImage;
   tabletImage?: StrapiImage;
   mobileImage?: StrapiImage;
+  overlayBannerNumeralia: string;
 }
 
 export const BANNER_NUMERALIA = `
-...on ComponentSectionsBannerNumeralia{
+... on ComponentSectionsBannerNumeralia {
   title
   subtitle
+  overlayBannerNumeralia: overlay
   statistics {
     title
     body
@@ -46,5 +48,5 @@ export const BANNER_NUMERALIA = `
       }
     }
   }
-} 
+}
 `
