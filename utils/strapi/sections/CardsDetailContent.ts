@@ -2,7 +2,7 @@ import type { LinkComponentConfig } from "@/types/LinkListComponentS";
 import type { Card } from "@/utils/strapi/sections/CardList";
 
 export type CardsDetailContentData = {
-  typename: 'ComponentSectionsCardsDetailContent';
+  type: 'ComponentSectionsCardsDetailContent';
   title: string;
   description: string;
   links: Array<LinkComponentConfig>;
