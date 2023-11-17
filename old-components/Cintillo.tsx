@@ -49,6 +49,7 @@ const CintilloContent = (props: CintilloData) => {
     actionLink,
     classNames,
     contentVariant = "dark",
+    overlay
   } = props;
 
   const redirectWhats = `https://api.whatsapp.com/send?phone=${whatsApp}`;
@@ -59,6 +60,14 @@ const CintilloContent = (props: CintilloData) => {
         <Image classNames="w-full h-full w-p:hidden w-t:hidden" src={image?.desktop!} alt="image" />
         <Image classNames="w-full h-full w-d:hidden w-p:hidden" src={image?.tablet!} alt="image" />
         <Image classNames="w-full h-full w-d:hidden w-t:hidden" src={image?.mobile!} alt="image" />
+        {
+          overlay ?
+            <div className={cn("absolute w-full h-full top-0 left-0 ", {
+              "bg-surface-0 opacity-50": overlay === "white",
+              "bg-surface-950 opacity-50": overlay === "dark"
+            })}></div>
+            : null
+        }
         <div className="absolute p-10">
           <h1
             className={cn(
@@ -67,7 +76,8 @@ const CintilloContent = (props: CintilloData) => {
               "w-d:text-6.5 w-t:text-6 w-p:text-6",
               "text-surface-950 w-p:text-surface-0",
               {
-                "!text-surface-0": contentVariant === "light"
+                "!text-surface-0": contentVariant === "light" || overlay === "dark",
+                "!text-surface-950": overlay === "white",
               }
             )}
           >
@@ -80,7 +90,8 @@ const CintilloContent = (props: CintilloData) => {
               "w-d:text-base w-t:text-3.5 w-p:text-3.5",
               "text-surface-950 w-p:text-surface-0",
               {
-                "text-surface-0": contentVariant === "light"
+                "!text-surface-0": contentVariant === "light" || overlay === "dark",
+                "!text-surface-950": overlay === "white",
               }
             )}
           >
@@ -93,13 +104,17 @@ const CintilloContent = (props: CintilloData) => {
                   className={cn(
                     "material-icons pr-2 pt-1 text-2 text-surface-950 w-p:text-surface-0",
                     {
-                      "!text-surface-0": contentVariant === "light"
+                      "!text-surface-0": contentVariant === "light" || overlay === "dark",
+                      "!text-surface-950": overlay === "white"
                     }
                   )}
                 >
                   mail
                 </span>
-                <LinkContactTarget classNames={cn("text-surface-950 w-p:text-surface-0", { "!text-surface-0": contentVariant === "light" })} type="email" info={email} />
+                <LinkContactTarget classNames={cn("text-surface-950 w-p:text-surface-0", {
+                  "!text-surface-0": contentVariant === "light" || overlay === "dark",
+                  "!text-surface-950": overlay === "white"
+                })} type="email" info={email} />
               </div>
               : null
           }
@@ -110,19 +125,20 @@ const CintilloContent = (props: CintilloData) => {
                   className={cn(
                     "material-icons pr-2 pt-1 text-2 text-surface-950 w-p:text-surface-0",
                     {
-                      "!text-surface-0": contentVariant === "light"
+                      "!text-surface-0": contentVariant === "light" || overlay === "dark",
+                      "!text-surface-950": overlay === "white"
                     }
                   )}
                 >
                   phone
                 </span>
-                <LinkContactTarget classNames={cn("text-surface-950 w-p:text-surface-0", { "!text-surface-0": contentVariant === "light" })} type="phone" info={phone} />
+                <LinkContactTarget classNames={cn("text-surface-950 w-p:text-surface-0", { "!text-surface-0": contentVariant === "light" || overlay === "dark", "!text-surface-950": overlay === "white" })} type="phone" info={phone} />
               </div>
               : null
           }
           {
             !!whatsApp
-              ? <div className={cn("flex align-middle items-center space-x-2 text-surface-950 w-p:text-surface-0", { "!text-surface-0": contentVariant === "light" })}>
+              ? <div className={cn("flex align-middle items-center space-x-2 text-surface-950 w-p:text-surface-0", { "!text-surface-0": contentVariant === "light", "!text-surface-950": overlay === "white" })}>
                 <span className="w-6 h-6">
                   <Icon name="whatsapp" />
                 </span>
