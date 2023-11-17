@@ -9,7 +9,6 @@ import RichtText from "@/old-components/Richtext/Richtext";
 const CardsDetailContent: FC<CardsDetailContentData> = (props: CardsDetailContentData) => {
  const { title, description, links, cards, textPositionCardsDetailGroup } = props
  const formatDescription = parseEditorRawData(description)
- console.log(textPositionCardsDetailGroup, "position")
 
  const formattedCards = cards?.map((item, index) => {
   const card = {
