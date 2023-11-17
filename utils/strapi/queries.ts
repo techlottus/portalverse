@@ -5,6 +5,7 @@ import { BANNER_NUMERALIA } from "@/utils/strapi/sections/BannerNumeralia";
 import { BLOG_POSTS_PODCAST } from "@/utils/strapi/sections/BlogPostsPodcast";
 import { CARD_LIST } from "@/utils/strapi/sections/CardList";
 import { CARD_STATISTICS } from "@/utils/strapi/sections/CardsStatistics";
+import { CARDS_DETAIL_CONTENT } from "@/utils/strapi/sections/CardsDetailContent";
 import { CONTACT_TARGET_LIST } from "@/utils/strapi/sections/ContactTargetList";
 import { CONT_ED_PROGRAMS } from "@/utils/strapi/sections/ContEdPrograms";
 import { FAQ_SECTION } from "@/utils/strapi/sections/FAQ";
@@ -22,7 +23,7 @@ import { MOSAIC } from "@/utils/strapi/sections/Mosaic";
 import { OUTSTANDING_LIST } from "@/utils/strapi/sections/OutstandingList";
 import { OVERLAY_CARD_LIST } from "@/utils/strapi/sections/OverlayCardList";
 import { PODCAST_LIST } from "@/utils/strapi/sections/PodcastList";
-import { PROGRAM_ACCORDION_LIST,  } from "@/utils/strapi/sections/ProgramAccordionItems";
+import { PROGRAM_ACCORDION_LIST, } from "@/utils/strapi/sections/ProgramAccordionItems";
 import { PROGRAMS_FILTER } from "@/utils/strapi/sections/ProgramsFilter";
 import { PROMO_LINK_LIST } from "@/utils/strapi/sections/PromoLinkList";
 import { REPEATABLE_BANNER } from "@/utils/strapi/sections/RepeatableBanner";
@@ -32,12 +33,13 @@ import { ROCKSTARINFO_LIST } from "@/utils/strapi/sections/RockstarInfloList";
 import { STATISTICS_CARD_LIST } from "@/utils/strapi/sections/StatisticsCardList";
 import { TEXT_CONTENT } from "@/utils/strapi/sections/TextContent";
 import { VIDEOS_SECTION } from "@/utils/strapi/sections/Videos";
-import type {AccordionSection} from "@/utils/strapi/sections/Accordion";
+import type { AccordionSection } from "@/utils/strapi/sections/Accordion";
 import type { AlertSection } from "@/utils/strapi/sections/Alert";
 import type { BannerSection } from "@/utils/strapi/sections/Banner";
 import type { BannerNumeraliaData } from "@/utils/strapi/sections/BannerNumeralia";
 import type { BlogPostsPodcastSection } from "@/utils/strapi/sections/BlogPostsPodcast";
 import type { CardListSection } from "@/utils/strapi/sections/CardList";
+import type { CardsDetailContentData } from "@/utils/strapi/sections/CardsDetailContent";
 import type { CardsStatisticsData } from "@/utils/strapi/sections/CardsStatistics";
 import type { ContactTargetListSection } from "@/utils/strapi/sections/ContactTargetList";
 import type { ContainerForm } from "@/utils/strapi/sections/ContainerForm";
@@ -73,6 +75,7 @@ export type ComponentSection =
   | BannerNumeraliaData
   | BlogPostsPodcastSection
   | CardListSection
+  | CardsDetailContentData
   | CardsStatisticsData
   | ContactTargetListSection
   | ContainerForm
@@ -109,6 +112,7 @@ export const SECTIONS = `
   ${BLOG_POSTS_PODCAST}
   ${CARD_LIST} 
   ${CARD_STATISTICS}
+  ${CARDS_DETAIL_CONTENT}
   ${CONTACT_TARGET_LIST}
   ${CONT_ED_PROGRAMS}
   ${FAQ_SECTION}

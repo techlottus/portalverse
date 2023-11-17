@@ -18,7 +18,6 @@ import BannerPortalverse from "@/old-components/BannerPortalverse";
 import RichtText from "@/old-components/Richtext/Richtext";
 import CardWebsitePortalverse from "@/old-components/CardWebsitePortalverse";
 import Icon from "@/old-components/Icon";
-import CardWebsite from "@/old-components/CardWebsite";
 
 const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
 
