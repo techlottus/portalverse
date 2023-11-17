@@ -1,10 +1,10 @@
 import { FC } from "react"
 import cn from "classnames";
-import { CardsDetailContentData } from "@/utils/strapi/sections/CardsDetailContent";
 import parseEditorRawData from "@/utils/parseEditorRawData";
 import CardWebsite from "@/old-components/CardWebsite";
 import Container from "@/layouts/Container.layout";
 import RichtText from "@/old-components/Richtext/Richtext";
+import type { CardsDetailContentData } from "@/utils/strapi/sections/CardsDetailContent";
 
 const CardsDetailContent: FC<CardsDetailContentData> = (props: CardsDetailContentData) => {
  const { title, description, links, cards, textPositionCardsDetailGroup } = props
@@ -12,7 +12,7 @@ const CardsDetailContent: FC<CardsDetailContentData> = (props: CardsDetailConten
 
  const formattedCards = cards?.map((item, index) => {
   const card = {
-   id: index.toString(),
+   id: index?.toString(),
    urlImage: item?.image?.data?.attributes?.url,
    subtitle: item?.subtitle,
    title: item?.title,
