@@ -15,7 +15,7 @@ import type { CardWebsitePortalverseConfig } from "@/types/CardWebsitePortalvers
 import Cintillo from "@/old-components/Cintillo";
 
 const ServicioSocial = ({ sections, meta }: any) => {
-  
+
   const [tabActive, setTabActive] = useState<number>(0);
 
   const testTabs = sections?.socialServices?.tabs?.items;
@@ -126,8 +126,8 @@ const ServicioSocial = ({ sections, meta }: any) => {
                             selectedTab?.steps?.map((item: { title: string, subtitle: string, description: string, image: { src: string } }, i: number) => {
                               return <section key={`section-steps-${i}`} className="grid grid-cols-1 mb-2 bg-slate-50">
                                 <div className="flex w-p:flex-col w-t:flex-col gap-6">
-                                  <div className="w-d:w-1/2 my-auto px-6 w-d:py-8 w-p:py-6">
-                                    <p className="font-headings font-bold text-6.5 w-p:text-6 leading-10 mb-2 ">{item?.title}</p>
+                                  <div className="w-d:w-1/2 my-auto px-6 w-d:py-8 w-t:py-6 w-p:py-6">
+                                    <p className="font-headings font-bold text-6.5 w-p:text-6 leading-10 mb-2">{item?.title}</p>
                                     <RichtText data={{
                                       content: item?.description
                                     }} />
