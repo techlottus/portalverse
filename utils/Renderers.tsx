@@ -5,6 +5,8 @@ import BannerNumeraliaSection from "@/components/sections/BannerNumeraliaSection
 import BlogPostsPodcast from "@/components/sections/BlogPostsPodcast";
 import CardList from "@/components/sections/CardList";
 import CardsStatistics from "@/components/sections/CardsStatistics";
+import CardsDetailContent from "@/components/sections/CardsDetailContent";
+import CardsVideoContent from "@/components/sections/CardsVideoContent";
 import ContactTargetList from "@/components/sections/ContactTargetList";
 import ContainerForm from "@/components/sections/ContainerForm";
 import ContEdPrograms from "@/components/sections/ContEdPrograms";
@@ -36,7 +38,6 @@ import type { FC } from "react";
 import RockstarInfo from "@/components/sections/RockstarInfo";
 import RockstarInfoList from "@/components/sections/RockstarInfoList";
 import VideosSection from "@/components/sections/VideosSection";
-import CardsDetailContent from "@/components/sections/CardsDetailContent";
 
 type Renderer = {
   [key: string]: FC<any>;
@@ -51,6 +52,8 @@ const defaultRenderers: Renderer = {
   ComponentSectionsBlogPostsPodcast: BlogPostsPodcast,
   ComponentSectionsCardList: CardList,
   ComponentSectionsCardsStatistics: CardsStatistics,
+  ComponentSectionsCardsDetailContent: CardsDetailContent,
+  ComponentSectionsCardsVideoContent: CardsVideoContent,
   ComponentSectionsContactTargetList: ContactTargetList,
   ComponentSectionsContEdPrograms: ContEdPrograms,
   ComponentSectionsFaqSection: FAQ,
@@ -80,7 +83,6 @@ const defaultRenderers: Renderer = {
   ComponentSectionsTextContent: TextContent,
   ComponentSectionsVideos: VideosSection,
   ComponentSectionsWebError: WebError,
-  ComponentSectionsCardsDetailContent: CardsDetailContent
 };
 
 export default defaultRenderers;
