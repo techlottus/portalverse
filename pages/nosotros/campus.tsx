@@ -121,10 +121,10 @@ const Campus = ({ sections, meta }: any) => {
                             {
                               description?.redirect
                                 ? <a href={description?.redirect} className={cn("font-headings font-semibold text-4.5 leading-5.625 my-2", {
-                                    "hover:underline": description?.redirect,
-                                    })}>
-                                    {description.name}
-                                  </a>
+                                  "hover:underline": description?.redirect,
+                                })}>
+                                  {description.name}
+                                </a>
                                 : <p className="font-headings font-semibold text-4.5 leading-5.625 my-2">{description.name}</p>
                             }
                             <ContentInsideLayout>
@@ -136,39 +136,55 @@ const Campus = ({ sections, meta }: any) => {
                                 {description.address}
                               </p>
                             </ContentInsideLayout>
-                            <ContentInsideLayout classNames="items-center">
-                              <IconComponent
-                                name="phone"
-                                className={cn(
-                                  "col-span-1 w-t:col-span-1 w-p:col-span-1 w-4 mt-2",
-                                  { hidden: !description?.phone }
-                                )}
-                              />
-                              <LinkContactTarget
-                                type="phone"
-                                info={description.phone}
-                                classNames="col-span-11 w-t:col-span-7 w-p:col-span-3 mt-2"
-                              />
-                            </ContentInsideLayout>
-                            <ContentInsideLayout classNames="items-center">
-                              <IconComponent
-                                name="email"
-                                className={cn(
-                                  "col-span-1 w-t:col-span-1 w-p:col-span-1 w-4 mt-2",
-                                  { hidden: !description?.email }
-                                )}
-                              />
-                              <LinkContactTarget
-                                type="email"
-                                info={description.email}
-                                classNames="col-span-11 w-t:col-span-7 w-p:col-span-3 mt-2"
-                              />
-                            </ContentInsideLayout>
+                            {
+                              description?.phone ?
+                                <ContentInsideLayout classNames="items-center">
+                                  <IconComponent
+                                    name="phone"
+                                    className={cn(
+                                      "col-span-1 w-t:col-span-1 w-p:col-span-1 w-4 mt-2",
+                                      { hidden: !description?.phone }
+                                    )}
+                                  />
+                                  <LinkContactTarget
+                                    type="phone"
+                                    info={description.phone}
+                                    classNames="col-span-11 w-t:col-span-7 w-p:col-span-3 mt-2"
+                                  />
+                                </ContentInsideLayout>
+                                : null
+                            }
+                            {
+                              description?.email ?
+                                <ContentInsideLayout classNames="items-center">
+                                  <IconComponent
+                                    name="email"
+                                    className={cn(
+                                      "col-span-1 w-t:col-span-1 w-p:col-span-1 w-4 mt-2",
+                                      { hidden: !description?.email }
+                                    )}
+                                  />
+                                  <LinkContactTarget
+                                    type="email"
+                                    alternativeText={description?.alternativeText}
+                                    info={description.email}
+                                    classNames="col-span-11 w-t:col-span-7 w-p:col-span-3 mt-2"
+                                  />
+                                </ContentInsideLayout>
+                                : null
+                            }
+                            {
+                              description?.link ?
+                                <ContentInsideLayout classNames="items-center">
+                                  <span className="material-icons col-span-1 w-t:col-span-1 w-p:col-span-1 w-4 mt-2 text-surface-500">{description?.link?.icon}</span>
+                                  <span className="col-span-11 w-t:col-span-7 w-p:col-span-3 mt-2 font-texts font-normal text-base leading-5 text-surface-500"><a className="hover:underline" target="_blank" rel="noreferrer noopener" href={description?.link?.redirect}>{description?.link?.text}</a></span>
+                                </ContentInsideLayout>
+                                : null
+                            }
                             <div
                               className="flex justify-end pr-3"
-                              onClick={() => handleOpenModal(coords, title)}
                             >
-                              <p className="font-texts font-normal hover:cursor-pointer">
+                              <p className="font-texts font-normal hover:cursor-pointer" onClick={() => handleOpenModal(coords, title)}>
                                 Ver mapa
                               </p>
                               <IconComponent name="eye" className="ml-1 w-4" />
@@ -203,12 +219,7 @@ const Campus = ({ sections, meta }: any) => {
           </section>
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
             <Cintillo
-              classNames="h-auto"
-              image={sections.banner.image}
-              title={sections.banner.title}
-              email={sections.banner.email}
-              phone={sections.banner.phone}
-              contentVariant={sections.banner.contentVariant}
+              {...sections?.banner}
             />
           </div>
         </ContentLayout>
