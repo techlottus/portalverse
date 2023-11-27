@@ -39,17 +39,17 @@ const Planteles = ({ sections, meta }: any) => {
   return (
     <>
       <Head>
-        <title>{meta.title}</title>
+        <title>{meta?.title}</title>
       </Head>
       <HeaderFooterLayout>
         <ContentFullLayout classNames="w-d:hidden w-t:col-span-8 w-p:col-span-4">
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:hidden">
-            <BannerPortalverse data={sections.head.banner} />
+            <BannerPortalverse data={sections?.head?.banner} />
           </div>
         </ContentFullLayout>
         <ContentLayout>
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:hidden w-p:hidden">
-            <BannerPortalverse data={sections.head.banner} />
+            <BannerPortalverse data={sections?.head?.banner} />
           </div>
           <Modal
             isShow={isShow}
@@ -96,11 +96,11 @@ const Planteles = ({ sections, meta }: any) => {
                 <ContentLayout>
                   <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
                     <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%]">
-                      {item.title}
+                      {item?.title}
                     </p>
                   </div>
                   <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mb-[72px]">
-                    {item.campus.map(
+                    {item?.campus?.map(
                       (
                         { title, coords, description, images: items }: any,
                         i: number
@@ -111,21 +111,21 @@ const Planteles = ({ sections, meta }: any) => {
                         >
                           <Image
                             classNames="col-span-4 w-t:col-span-4 w-p:col-span-4 w-p:aspect-2/1"
-                            alt={items[0].alt}
-                            src={items[0].src}
+                            alt={items[0]?.alt}
+                            src={items[0]?.src}
                           />
                           <div className="col-span-4 border w-t:col-span-4 w-p:col-span-4 border-gray-300 rounded pl-3">
                             <p className="font-texts font-normal text-base leading-5 my-2">
-                              {description.state}
+                              {description?.state}
                             </p>
                             {
                               description?.redirect
                                 ? <a href={description?.redirect} className={cn("font-headings font-semibold text-4.5 leading-5.625 my-2", {
                                   "hover:underline": description?.redirect,
                                 })}>
-                                  {description.name}
+                                  {description?.name}
                                 </a>
-                                : <p className="font-headings font-semibold text-4.5 leading-5.625 my-2">{description.name}</p>
+                                : <p className="font-headings font-semibold text-4.5 leading-5.625 my-2">{description?.name}</p>
                             }
                             <ContentInsideLayout>
                               <IconComponent
@@ -133,7 +133,7 @@ const Planteles = ({ sections, meta }: any) => {
                                 className="col-span-1 w-t:col-span-1 w-p:col-span-1"
                               />
                               <p className="col-span-11 w-t:col-span-7 w-p:col-span-3 font-texts font-normal">
-                                {description.address}
+                                {description?.address}
                               </p>
                             </ContentInsideLayout>
                             {
@@ -148,7 +148,7 @@ const Planteles = ({ sections, meta }: any) => {
                                   />
                                   <LinkContactTarget
                                     type="phone"
-                                    info={description.phone}
+                                    info={description?.phone}
                                     classNames="col-span-11 w-t:col-span-7 w-p:col-span-3 mt-2"
                                   />
                                 </ContentInsideLayout>
@@ -167,7 +167,7 @@ const Planteles = ({ sections, meta }: any) => {
                                   <LinkContactTarget
                                     type="email"
                                     alternativeText={description?.alternativeText}
-                                    info={description.email}
+                                    info={description?.email}
                                     classNames="col-span-11 w-t:col-span-7 w-p:col-span-3 mt-2"
                                   />
                                 </ContentInsideLayout>
@@ -203,7 +203,7 @@ const Planteles = ({ sections, meta }: any) => {
                                 />
                                 <Marker position={coords}>
                                   <Popup>
-                                    <b>{description.name}</b>
+                                    <b>{description?.name}</b>
                                   </Popup>
                                 </Marker>
                               </>
