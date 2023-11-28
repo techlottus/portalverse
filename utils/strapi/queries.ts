@@ -6,6 +6,7 @@ import { BLOG_POSTS_PODCAST } from "@/utils/strapi/sections/BlogPostsPodcast";
 import { CARD_LIST } from "@/utils/strapi/sections/CardList";
 import { CARD_STATISTICS } from "@/utils/strapi/sections/CardsStatistics";
 import { CARDS_DETAIL_CONTENT } from "@/utils/strapi/sections/CardsDetailContent";
+import { CARDS_VIDEO_CONTENT } from "@/utils/strapi/sections/CardsVideoContent";
 import { CONTACT_TARGET_LIST } from "@/utils/strapi/sections/ContactTargetList";
 import { CONT_ED_PROGRAMS } from "@/utils/strapi/sections/ContEdPrograms";
 import { FAQ_SECTION } from "@/utils/strapi/sections/FAQ";
@@ -41,6 +42,7 @@ import type { BlogPostsPodcastSection } from "@/utils/strapi/sections/BlogPostsP
 import type { CardListSection } from "@/utils/strapi/sections/CardList";
 import type { CardsDetailContentData } from "@/utils/strapi/sections/CardsDetailContent";
 import type { CardsStatisticsData } from "@/utils/strapi/sections/CardsStatistics";
+import type { CardsVideoContentData } from "@/utils/strapi/sections/CardsVideoContent";
 import type { ContactTargetListSection } from "@/utils/strapi/sections/ContactTargetList";
 import type { ContainerForm } from "@/utils/strapi/sections/ContainerForm";
 import type { ContEdProgramsSection } from "@/utils/strapi/sections/ContEdPrograms";
@@ -77,6 +79,7 @@ export type ComponentSection =
   | CardListSection
   | CardsDetailContentData
   | CardsStatisticsData
+  | CardsVideoContentData
   | ContactTargetListSection
   | ContainerForm
   | ContEdProgramsSection
@@ -104,7 +107,7 @@ export type ComponentSection =
   | TextContentSection
   | VideosSectionData
 
-export const SECTIONS = `
+  export const SECTIONS = `
   ${ACCORDION_SECTION}
   ${ALERT}
   ${BANNER}
@@ -113,6 +116,7 @@ export const SECTIONS = `
   ${CARD_LIST} 
   ${CARD_STATISTICS}
   ${CARDS_DETAIL_CONTENT}
+  ${CARDS_VIDEO_CONTENT}
   ${CONTACT_TARGET_LIST}
   ${CONT_ED_PROGRAMS}
   ${FAQ_SECTION}
