@@ -136,12 +136,12 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
       </ContentLayout>
       <ContentLayout classNames="hidden w-d:grid mt-12 w-d:mt-18">
         <div className="font-headings w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <Rainbow sections={sections.rainbow.sections} title={sections.rainbow.title} />
+          <Rainbow sections={sections.rainbow.sections} title={sections.rainbow.title} contentVariant={sections?.rainbow?.contentVariant}/>
         </div>
       </ContentLayout>
       <ContentFullLayout classNames="w-d:hidden mt-12 w-d:mt-18">
         <div className="font-headings col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <Rainbow classNamesTitle="ml-6" sections={sections.rainbow.sections} title={sections.rainbow.title} />
+          <Rainbow classNamesTitle="ml-6" sections={sections.rainbow.sections} title={sections.rainbow.title} contentVariant={sections?.rainbow?.contentVariant} />
         </div>
       </ContentFullLayout>
       {

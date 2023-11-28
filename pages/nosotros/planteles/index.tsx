@@ -39,17 +39,17 @@ const Planteles = ({ sections, meta }: any) => {
   return (
     <>
       <Head>
-        <title>{meta.title}</title>
+        <title>{meta?.title}</title>
       </Head>
       <HeaderFooterLayout>
         <ContentFullLayout classNames="w-d:hidden w-t:col-span-8 w-p:col-span-4">
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:hidden">
-            <BannerPortalverse data={sections.head.banner} />
+            <BannerPortalverse data={sections?.head?.banner} />
           </div>
         </ContentFullLayout>
         <ContentLayout>
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:hidden w-p:hidden">
-            <BannerPortalverse data={sections.head.banner} />
+            <BannerPortalverse data={sections?.head?.banner} />
           </div>
           <Modal
             isShow={isShow}
@@ -96,11 +96,11 @@ const Planteles = ({ sections, meta }: any) => {
                 <ContentLayout>
                   <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
                     <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%]">
-                      {item.title}
+                      {item?.title}
                     </p>
                   </div>
                   <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mb-[72px]">
-                    {item.campus.map(
+                    {item?.campus?.map(
                       (
                         { title, coords, description, images: items }: any,
                         i: number
@@ -111,21 +111,21 @@ const Planteles = ({ sections, meta }: any) => {
                         >
                           <Image
                             classNames="col-span-4 w-t:col-span-4 w-p:col-span-4 w-p:aspect-2/1"
-                            alt={items[0].alt}
-                            src={items[0].src}
+                            alt={items[0]?.alt}
+                            src={items[0]?.src}
                           />
                           <div className="col-span-4 border w-t:col-span-4 w-p:col-span-4 border-gray-300 rounded pl-3">
                             <p className="font-texts font-normal text-base leading-5 my-2">
-                              {description.state}
+                              {description?.state}
                             </p>
                             {
                               description?.redirect
                                 ? <a href={description?.redirect} className={cn("font-headings font-semibold text-4.5 leading-5.625 my-2", {
-                                    "hover:underline": description?.redirect,
-                                    })}>
-                                    {description.name}
-                                  </a>
-                                : <p className="font-headings font-semibold text-4.5 leading-5.625 my-2">{description.name}</p>
+                                  "hover:underline": description?.redirect,
+                                })}>
+                                  {description?.name}
+                                </a>
+                                : <p className="font-headings font-semibold text-4.5 leading-5.625 my-2">{description?.name}</p>
                             }
                             <ContentInsideLayout>
                               <IconComponent
@@ -133,42 +133,58 @@ const Planteles = ({ sections, meta }: any) => {
                                 className="col-span-1 w-t:col-span-1 w-p:col-span-1"
                               />
                               <p className="col-span-11 w-t:col-span-7 w-p:col-span-3 font-texts font-normal">
-                                {description.address}
+                                {description?.address}
                               </p>
                             </ContentInsideLayout>
-                            <ContentInsideLayout classNames="items-center">
-                              <IconComponent
-                                name="phone"
-                                className={cn(
-                                  "col-span-1 w-t:col-span-1 w-p:col-span-1 w-4 mt-2",
-                                  { hidden: !description?.phone }
-                                )}
-                              />
-                              <LinkContactTarget
-                                type="phone"
-                                info={description.phone}
-                                classNames="col-span-11 w-t:col-span-7 w-p:col-span-3 mt-2"
-                              />
-                            </ContentInsideLayout>
-                            <ContentInsideLayout classNames="items-center">
-                              <IconComponent
-                                name="email"
-                                className={cn(
-                                  "col-span-1 w-t:col-span-1 w-p:col-span-1 w-4 mt-2",
-                                  { hidden: !description?.email }
-                                )}
-                              />
-                              <LinkContactTarget
-                                type="email"
-                                info={description.email}
-                                classNames="col-span-11 w-t:col-span-7 w-p:col-span-3 mt-2"
-                              />
-                            </ContentInsideLayout>
+                            {
+                              description?.phone ?
+                                <ContentInsideLayout classNames="items-center">
+                                  <IconComponent
+                                    name="phone"
+                                    className={cn(
+                                      "col-span-1 w-t:col-span-1 w-p:col-span-1 w-4 mt-2",
+                                      { hidden: !description?.phone }
+                                    )}
+                                  />
+                                  <LinkContactTarget
+                                    type="phone"
+                                    info={description?.phone}
+                                    classNames="col-span-11 w-t:col-span-7 w-p:col-span-3 mt-2"
+                                  />
+                                </ContentInsideLayout>
+                                : null
+                            }
+                            {
+                              description?.email ?
+                                <ContentInsideLayout classNames="items-center">
+                                  <IconComponent
+                                    name="email"
+                                    className={cn(
+                                      "col-span-1 w-t:col-span-1 w-p:col-span-1 w-4 mt-2",
+                                      { hidden: !description?.email }
+                                    )}
+                                  />
+                                  <LinkContactTarget
+                                    type="email"
+                                    alternativeText={description?.alternativeText}
+                                    info={description?.email}
+                                    classNames="col-span-11 w-t:col-span-7 w-p:col-span-3 mt-2"
+                                  />
+                                </ContentInsideLayout>
+                                : null
+                            }
+                            {
+                              description?.link ?
+                                <ContentInsideLayout classNames="items-center">
+                                  <span className="material-icons col-span-1 w-t:col-span-1 w-p:col-span-1 w-4 mt-2 text-surface-500">{description?.link?.icon}</span>
+                                  <span className="col-span-11 w-t:col-span-7 w-p:col-span-3 mt-2 font-texts font-normal text-base leading-5 text-surface-500"><a className="hover:underline" target="_blank" rel="noreferrer noopener" href={description?.link?.redirect}>{description?.link?.text}</a></span>
+                                </ContentInsideLayout>
+                                : null
+                            }
                             <div
                               className="flex justify-end pr-3"
-                              onClick={() => handleOpenModal(coords, title)}
                             >
-                              <p className="font-texts font-normal hover:cursor-pointer">
+                              <p className="font-texts font-normal hover:cursor-pointer" onClick={() => handleOpenModal(coords, title)}>
                                 Ver mapa
                               </p>
                               <IconComponent name="eye" className="ml-1 w-4" />
@@ -187,7 +203,7 @@ const Planteles = ({ sections, meta }: any) => {
                                 />
                                 <Marker position={coords}>
                                   <Popup>
-                                    <b>{description.name}</b>
+                                    <b>{description?.name}</b>
                                   </Popup>
                                 </Marker>
                               </>
@@ -203,12 +219,7 @@ const Planteles = ({ sections, meta }: any) => {
           </section>
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
             <Cintillo
-              classNames="h-auto"
-              image={sections.banner.image}
-              title={sections.banner.title}
-              email={sections.banner.email}
-              phone={sections.banner.phone}
-              contentVariant={sections.banner.contentVariant}
+              {...sections?.banner}
             />
           </div>
         </ContentLayout>
