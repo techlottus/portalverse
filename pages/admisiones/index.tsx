@@ -18,7 +18,6 @@ import BannerPortalverse from "@/old-components/BannerPortalverse";
 import RichtText from "@/old-components/Richtext/Richtext";
 import CardWebsitePortalverse from "@/old-components/CardWebsitePortalverse";
 import Icon from "@/old-components/Icon";
-import CardWebsite from "@/old-components/CardWebsite";
 
 const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
 
@@ -74,7 +73,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
           <TabsFeatured tabs={sections?.requirements?.tabs?.items} onActive={(active: number) => setTabActive(active)} />
         </div>
       </ContentLayout>
-      <ContentFullLayout classNames="w-d:hidden">?
+      <ContentFullLayout classNames="w-d:hidden">
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:flex w-t:justify-center">
             <div className="">
               <TabsFeatured tabs={sections?.requirements?.tabs?.items} onActive={(active: number) => setTabActive(active)} />

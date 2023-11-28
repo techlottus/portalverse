@@ -13,6 +13,7 @@ export type CintilloData = {
   desktopRatio?: string;
   tabletRatio?: string;
   mobileRatio?: string;
+  overlay?: "white" | "dark";
 }
 
 export default CintilloData

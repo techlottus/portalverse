@@ -1,4 +1,4 @@
-type VideoItem= {
+export type VideoItem= {
   provider: string;
   providerId: string;
 }

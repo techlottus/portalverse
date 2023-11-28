@@ -50,6 +50,10 @@ import JobPlacement from "@/icons/job-placement.svg";
 import SemilleroDeTalento from "@/icons/semillero-de-talento.svg";
 import EducacionContinua from "@/icons/educacion-continua.svg";
 import EventosInstitucionales from "@/icons/eventos-institucionales.svg";
+import UtcAdmisionesEmpresas from "@/icons/utc-admisiones-empresas.svg";
+import UtcAdmisionesEgresados from "@/icons/utc-admisiones-egresados.svg";
+import UtcAdmisionesAlumnos from "@/icons/utc-admisiones-alumnos.svg";
+import UtcAdmisiones25 from "@/icons/utc-admisiones-25-anios.svg";
 
 const iconTypes: any = {
   search: SearchIcon,
@@ -101,7 +105,11 @@ const iconTypes: any = {
   utc_job_placement: JobPlacement,
   utc_semillero_talento: SemilleroDeTalento,
   utc_educacion_continua: EducacionContinua,
-  utc_eventos_institucionales: EventosInstitucionales
+  utc_eventos_institucionales: EventosInstitucionales,
+  utc_admisiones_empresas: UtcAdmisionesEmpresas,
+  utc_admisiones_egresados: UtcAdmisionesEgresados,
+  utc_admisiones_alumnos: UtcAdmisionesAlumnos,
+  utc_admisiones_25_años: UtcAdmisiones25
 };
 
 const IconComponent: FC<any> = memo(({ name, ...props }: any) => {
