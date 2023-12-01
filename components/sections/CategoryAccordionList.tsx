@@ -26,7 +26,7 @@ const CategoryAccordionList: FC<CategoryAccordionListData> = (props: CategoryAcc
   return <>
     <section>
       <Container>
-        <div className="w-d:w-1/2 flex flex-col justify-center pb-4">
+        <div className="w-d:w-1/2 flex flex-col justify-center">
           {
             title ?
               <div>
@@ -43,7 +43,7 @@ const CategoryAccordionList: FC<CategoryAccordionListData> = (props: CategoryAcc
           }
         </div>
         <div className='w-d:flex gap-6'>
-          <div className="w-d:w-1/4 flex flex-col justify-center pb-4">
+          <div className="w-d:w-1/4 flex flex-col pt-4">
             {
               CategoryList ?
                 CategoryList?.map((item, index) =>
