@@ -14,6 +14,7 @@ import Aspect from "@/components/Aspect";
 import { formatModalityDataSuperior } from "@/utils/programDetail";
 import type { DynamicProgramDetailData } from "@/utils/pages";
 import type { ProgramDetailSuperiorData } from "@/utils/getProgramDetailSuperior";
+import IntroductionProgram from "@/old-components/IntroducctionProgram";
 
 const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const program = props?.program;
@@ -33,6 +34,28 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
 
   const modalities = program?.attributes?.programModalities
   const selectedModality = modalities?.[tabActive]
+
+  const label = program?.attributes?.programCategory;
+  const certificationMessage = program?.attributes?.certificationMessage;
+  const offerPrice = program?.attributes?.offerPrice;
+  const price = program?.attributes?.price;
+  const discount = program?.attributes?.discount;
+  const discountPercentageText = program?.attributes?.discountPercentageText;
+  const periodicity = program?.attributes?.periodicity;
+
+  const checkoutUrl = program?.attributes?.checkoutUrl && modalities?.[tabActive]?.modality?.data?.attributes?.name === "Online" ? program?.attributes?.checkoutUrl : "";
+
+  const checkoutUrlText = program?.attributes?.checkoutUrlText && modalities?.[tabActive]?.modality?.data?.attributes?.name === "Online" ? program?.attributes?.checkoutUrlText: "";
+
+  const programPerks = modalities?.[tabActive]?.programPerks;
+
+  console.log("perks",programPerks)
+
+  const brands = program?.attributes?.brands
+
+  const programModalityDescription = modalities?.[tabActive]?.modalityDescription ? modalities?.[tabActive]?.modalityDescription : description
+
+  console.log(selectedModality)
 
   const formattedModalityData = formatModalityDataSuperior(selectedModality, layout)
   const campusDetail = formattedModalityData?.curriculumsByCampus
@@ -86,7 +109,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
       <Head>
         <title>{title}</title>
       </Head>
-      <ContentLayout>
+      {/* <ContentLayout>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12">
           <h1 className="text-13 font-bold font-headings leading-13 w-t:semi-tight w-p:leading-tight w-t:text-8.5 w-p:text-7.5 mb-6">{title}</h1>
           <RichtText data={{
@@ -102,6 +125,28 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
               classNames="w-full h-full"
             />
           </Aspect>
+        </div>
+      </ContentLayout> */}
+        <ContentLayout>
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mb-12">
+        <IntroductionProgram 
+            title={title}
+            brands={brands?.data}
+            checkoutUrlText={checkoutUrlText}
+            label={label?.data?.attributes?.name}
+            description={programModalityDescription}
+            periodicity={periodicity}
+            certificationMessage={certificationMessage}
+            price={price}
+            offerPrice={offerPrice}
+            discount={discount}
+            checkoutUrl={checkoutUrl}
+            discountPercentajeText={discountPercentageText}
+            image={{
+              alt: title,
+              src: imageProgram
+            }} 
+            programPerks={programPerks?.data} />
         </div>
       </ContentLayout>
       <ContentFullLayout classNames="w-d:hidden w-t:hidden mb-10 mt-6">

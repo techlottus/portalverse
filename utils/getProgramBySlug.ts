@@ -40,6 +40,10 @@ export type ProgramModalityDetail = {
       }
     }
   }
+  modalityDescription: string;
+  programPerks: {
+    data: Array<ProgramPerk>
+  };
   labelModality: string;
   admissionProfile: string;
   graduateProfile: string;
@@ -47,6 +51,20 @@ export type ProgramModalityDetail = {
   admissionRequirements: string;
   curriculumDescription: string;
   curriculums: Array<CurriculumDetail>
+
+}
+
+export type ProgramPerk = {
+  attributes: {
+    title: string;
+    subtitle: string;
+    iconName: string
+  }
+}
+export type programBrand = {
+  attributes: {
+    contact: string;
+  }
 }
 
 export type ProgramAttributes = {
@@ -62,6 +80,18 @@ export type ProgramAttributes = {
   description: string;
   image: StrapiImage;
   detail: string;
+  certificationMessage: string;
+  discountPercentageText: string;
+  discount: number;
+  periodicity: string;
+  checkoutUrl: string;
+  checkoutUrlText: string;
+  brands: {
+    data: Array<programBrand>
+  }
+  programPerks: {
+    data: Array<ProgramPerk>
+  };
   programModalities: Array<ProgramModalityDetail>;
   level: {
     data: {
@@ -87,7 +117,7 @@ type ProgramBySlugResponse = {
 };
 
 const getProgramBySlug = async (slug: string = "") => {
-  const response = await fetchStrapiGraphQL<ProgramBySlugResponse>(PROGRAM_BY_SLUG, {slug});
+  const response = await fetchStrapiGraphQL<ProgramBySlugResponse>(PROGRAM_BY_SLUG, { slug });
   return response?.programs?.data?.[0];
 };
 
@@ -107,6 +137,28 @@ query ProgramBySlug($slug: String!) {
           }
         }
         description
+        certificationMessage
+        discountPercentageText
+        discount
+        periodicity
+        checkoutUrl
+        checkoutUrlText
+        brands {
+          data {
+            attributes {
+              contact
+            }
+          }
+        }
+        programPerks {
+          data {
+            attributes {
+              title
+              subtitle
+              iconName
+            }
+          }
+        }
         image {
           data {
             attributes {
@@ -130,8 +182,19 @@ query ProgramBySlug($slug: String!) {
           modality {
             data {
               attributes {
+                description
                 name
                 label
+              }
+            }
+          }
+          modalityDescription
+          programPerks{
+            data {
+              attributes {
+                iconName
+                title
+                subtitle
               }
             }
           }

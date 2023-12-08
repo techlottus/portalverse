@@ -5,7 +5,7 @@ import RichtText from "@/old-components/Richtext/Richtext";
 import parseEditorRawData from "@/utils/parseEditorRawData";
 import type { FC } from "react";
 import type { ProgramAttributes } from "@/utils/getProgramBySlug";
-import cn from "classnames";
+import IntroductionProgram from "@/old-components/IntroducctionProgram";
 
 const mxnCurrency = new Intl.NumberFormat("es-MX", {
   style: "currency",
@@ -17,19 +17,30 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
     name,
     programCategory,
     detail,
+    description,
     image,
+    certificationMessage,
     price,
     offerPrice,
-    priceDetail
+    priceDetail,
+    discount,
+    discountPercentageText,
+    periodicity,
+    checkoutUrl,
+    checkoutUrlText,
+    programPerks,
+    brands
    } = props;
 
+   console.log("inside program", brands)
+  const programDescription = description
   const programDetail = parseEditorRawData(detail);
   const programImage = image?.data?.attributes;
   const programPriceDetail = parseEditorRawData(priceDetail);
 
   return (
     <ContentLayout classNames="gap-6">
-      <div className="col-span-6 w-t:col-span-4 w-p:col-span-4 ">
+      {/* <div className="col-span-6 w-t:col-span-4 w-p:col-span-4 ">
         {
           programCategory?.data?.attributes?.name ?
           <div className="mb-4">
@@ -99,7 +110,36 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
               : null
           }
         </div>
+      </div> */}
+      <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+          <IntroductionProgram 
+          title={name} 
+          brands={brands?.data}
+          programPerks={programPerks?.data}
+          checkoutUrlText={checkoutUrlText}
+          label={programCategory?.data?.attributes?.name} 
+          description={programDescription} 
+          periodicity={periodicity} 
+          certificationMessage={certificationMessage} 
+          price={price} 
+          offerPrice={offerPrice}  
+          discount={discount}
+          checkoutUrl={checkoutUrl}
+          discountPercentajeText={discountPercentageText}
+          image={{
+          alt: name,
+          src: programImage?.url
+        }} />
       </div>
+      {
+            programDetail ?
+             <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
+               <RichtText data={{
+                content: programDetail
+              }} />
+             </div>
+              : null
+          }
     </ContentLayout>
   );
 }
