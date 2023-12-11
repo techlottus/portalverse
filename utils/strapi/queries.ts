@@ -7,6 +7,7 @@ import { CARD_LIST } from "@/utils/strapi/sections/CardList";
 import { CARD_STATISTICS } from "@/utils/strapi/sections/CardsStatistics";
 import { CARDS_DETAIL_CONTENT } from "@/utils/strapi/sections/CardsDetailContent";
 import { CARDS_VIDEO_CONTENT } from "@/utils/strapi/sections/CardsVideoContent";
+import { COLOR_CARD_LIST } from "@/utils/strapi/sections/colorCardList";
 import { CONTACT_TARGET_LIST } from "@/utils/strapi/sections/ContactTargetList";
 import { CONT_ED_PROGRAMS } from "@/utils/strapi/sections/ContEdPrograms";
 import { FAQ_SECTION } from "@/utils/strapi/sections/FAQ";
@@ -69,6 +70,7 @@ import type { RockstarInfoListSection } from "@/utils/strapi/sections/RockstarIn
 import type { StatisticsCardListSection } from "@/utils/strapi/sections/StatisticsCardList";
 import type { TextContentSection } from "@/utils/strapi/sections/TextContent";
 import type { VideosSectionData } from "@/utils/strapi/sections/Videos";
+import type { ColorCardList } from "@/utils/strapi/sections/colorCardList";
 
 export type ComponentSection =
   | AccordionSection
@@ -80,6 +82,7 @@ export type ComponentSection =
   | CardsDetailContentData
   | CardsStatisticsData
   | CardsVideoContentData
+  | ColorCardList
   | ContactTargetListSection
   | ContainerForm
   | ContEdProgramsSection
@@ -117,6 +120,7 @@ export type ComponentSection =
   ${CARD_STATISTICS}
   ${CARDS_DETAIL_CONTENT}
   ${CARDS_VIDEO_CONTENT}
+  ${COLOR_CARD_LIST}
   ${CONTACT_TARGET_LIST}
   ${CONT_ED_PROGRAMS}
   ${FAQ_SECTION}
@@ -144,4 +148,4 @@ export type ComponentSection =
   ${STATISTICS_CARD_LIST}
   ${TEXT_CONTENT}
   ${VIDEOS_SECTION}
-`;
+  `;
