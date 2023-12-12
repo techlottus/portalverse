@@ -34,7 +34,7 @@ const ColorCardList: FC<ColorCardList> = (props: ColorCardList) => {
           cards?.length > 0 ? 
           <div className="grid grid-cols-3 w-t:grid-cols-1 w-p:grid-cols-1">
             {
-              cards?.map((item) => <section className={cn("p-6", item?.classNames)}>
+              cards?.map((item, i) => <section key={`colorCard-${i}`} className={cn("p-6", item?.classNames)}>
                 <div>
                 {
                   item?.headline ?
