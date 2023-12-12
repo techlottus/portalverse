@@ -1,7 +1,7 @@
 import { FC } from "react"
 import Container from "@/layouts/Container.layout";
 import cn from "classnames";
-import type { ColorCardList } from "@/utils/strapi/sections/colorCardList";
+import type { ColorCardList } from "@/utils/strapi/sections/ColorCardList";
 import parseEditorRawData from "@/utils/parseEditorRawData";
 import RichtText from "@/old-components/Richtext/Richtext";
 

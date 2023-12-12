@@ -7,7 +7,7 @@ import { CARD_LIST } from "@/utils/strapi/sections/CardList";
 import { CARD_STATISTICS } from "@/utils/strapi/sections/CardsStatistics";
 import { CARDS_DETAIL_CONTENT } from "@/utils/strapi/sections/CardsDetailContent";
 import { CARDS_VIDEO_CONTENT } from "@/utils/strapi/sections/CardsVideoContent";
-import { COLOR_CARD_LIST } from "@/utils/strapi/sections/colorCardList";
+import { COLOR_CARD_LIST } from "@/utils/strapi/sections/ColorCardList";
 import { CONTACT_TARGET_LIST } from "@/utils/strapi/sections/ContactTargetList";
 import { CONT_ED_PROGRAMS } from "@/utils/strapi/sections/ContEdPrograms";
 import { FAQ_SECTION } from "@/utils/strapi/sections/FAQ";
@@ -70,7 +70,7 @@ import type { RockstarInfoListSection } from "@/utils/strapi/sections/RockstarIn
 import type { StatisticsCardListSection } from "@/utils/strapi/sections/StatisticsCardList";
 import type { TextContentSection } from "@/utils/strapi/sections/TextContent";
 import type { VideosSectionData } from "@/utils/strapi/sections/Videos";
-import type { ColorCardList } from "@/utils/strapi/sections/colorCardList";
+import type { ColorCardList } from "@/utils/strapi/sections/ColorCardList";
 
 export type ComponentSection =
   | AccordionSection
