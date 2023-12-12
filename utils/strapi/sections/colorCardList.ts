@@ -7,6 +7,7 @@ type colorCard = {
 }
 
 export type ColorCardList = {
+  type: "ComponentSectionsColorCardList"
   title: string;
   description: string;
   cards: Array<colorCard>;  
