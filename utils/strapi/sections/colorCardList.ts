@@ -1,4 +1,4 @@
-type colorCard = {
+type ColorCard = {
   headline: string;
   title: string;
   subtitle: string;
@@ -6,11 +6,11 @@ type colorCard = {
   classNames: string;
 }
 
-export type ColorCardList = {
+export type ColorCardListData = {
   type: "ComponentSectionsColorCardList"
   title: string;
   description: string;
-  cards: Array<colorCard>;  
+  cards: Array<ColorCard>;  
 }
 
 export const COLOR_CARD_LIST = `
