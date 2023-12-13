@@ -132,7 +132,7 @@ const GraduatesForm = () => {
             style={{ maxWidth: "24rem" }}
             className="w-full flex justify-center"
           >
-            <img src={errors["404"].image} alt="error" />
+            <img src={errors?.["404"]?.image} alt="error" />
           </div>
           <div className="text-center">
             <h1>Ha ocurrido un error al procesar tu información</h1>
