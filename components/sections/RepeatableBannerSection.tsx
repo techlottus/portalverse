@@ -4,6 +4,7 @@ import parseEditorRawData from "@/utils/parseEditorRawData";
 import BannerPortalverseWrapper from "@/components/BannerPortalverseWrapper";
 import RichtText from "@/old-components/Richtext/Richtext";
 import type { RepeatableBanner } from "@/utils/strapi/sections/RepeatableBanner";
+import router from "next/router";
 
 const RepeatableBannerSection: FC<RepeatableBanner> = (props: RepeatableBanner) => {
   const { title, description, banners } = props
@@ -31,7 +32,9 @@ const RepeatableBannerSection: FC<RepeatableBanner> = (props: RepeatableBanner) 
               <div className="grid w-d:grid-cols-2 gap-6 w-t:grid-cols-1 w-p:grid-cols-1">
                 {
                   banners?.map((item: any, i: number) => <div key={`section-banners-${i}`}>
-                    <BannerPortalverseWrapper data={item} />
+                    <BannerPortalverseWrapper data={item} onClick={() => {
+                      router.push(item?.ctaUrl);
+                    }}/>
                   </div>)
                 }
               </div>
