@@ -92,6 +92,13 @@ export type ProgramAttributes = {
   programPerks: {
     data: Array<ProgramPerk>
   };
+  knowledgeAreas?: {
+    data: Array<{
+      attributes: {
+        name: string;
+      }
+    }>
+  };
   programModalities: Array<ProgramModalityDetail>;
   level: {
     data: {
@@ -178,6 +185,13 @@ query ProgramBySlug($slug: String!) {
         price
         offerPrice
         priceDetail
+        knowledgeAreas(pagination: { pageSize: 1}) {
+          data {
+            attributes {
+              name
+            }
+          }
+        }
         programModalities {
           modality {
             data {
