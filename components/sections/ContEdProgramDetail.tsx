@@ -32,7 +32,6 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
     brands
    } = props;
 
-   console.log("inside program", brands)
   const programDescription = description
   const programDetail = parseEditorRawData(detail);
   const programImage = image?.data?.attributes;
