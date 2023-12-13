@@ -4,17 +4,22 @@ import ContentLayout from "@/layouts/Content.layout";
 import ContentFullLayout from "@/layouts/ContentFull.layout";
 import Button from "@/old-components/Button/Button";
 import Image from "@/old-components/Image";
-import RichtText from "@/old-components/Richtext/Richtext";
 import TabsFeatured from "@/old-components/TabsFeatured";
 import Select from "@/old-components/Select/Select";
 import { ButtonInit, SelectInit } from "@/old-components/fixture";
 import OutstandingContainer from "@/old-components/OutstandingContainerPortalverse";
 import Banner from "@/components/sections/Banner";
+import IntroductionProgram from "@/old-components/IntroducctionProgram";
 import Aspect from "@/components/Aspect";
 import { formatModalityDataSuperior } from "@/utils/programDetail";
 import type { DynamicProgramDetailData } from "@/utils/pages";
 import type { ProgramDetailSuperiorData } from "@/utils/getProgramDetailSuperior";
-import IntroductionProgram from "@/old-components/IntroducctionProgram";
+
+type SelectItem = {
+  value: string;
+  text: string;
+  active: boolean;
+};
 
 const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const program = props?.program;
@@ -27,15 +32,16 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const bannerData = singleTypeAttributes?.banner;
 
   const titleTabs = levelProgram === "Doctorado" ? "Modalidades disponibles en este" : "Modalidades disponibles en esta"
-
   //estado para información
   const [optionsSelect, setOptionsSelect] = useState<Array<SelectItem>>([]);
   const [tabActive, setTabActive] = useState<number>(0);
 
   const modalities = program?.attributes?.programModalities
-  const selectedModality = modalities?.[tabActive]
 
-  const label = program?.attributes?.programCategory;
+  const selectedModality = modalities?.[tabActive]
+  const selectedModalityName = selectedModality?.modality?.data?.attributes?.name?.toLowerCase();;
+  const programSubtitle = selectedModalityName === "a tu ritmo" ? selectedModality?.modality?.data?.attributes?.name : levelProgram === "Bachillerato" ? levelProgram : program?.attributes?.knowledgeAreas?.data?.[0]?.attributes?.name;
+
   const certificationMessage = program?.attributes?.certificationMessage;
   const offerPrice = program?.attributes?.offerPrice;
   const price = program?.attributes?.price;
@@ -44,18 +50,13 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const periodicity = program?.attributes?.periodicity;
 
   const checkoutUrl = program?.attributes?.checkoutUrl && modalities?.[tabActive]?.modality?.data?.attributes?.name === "Online" ? program?.attributes?.checkoutUrl : "";
-
-  const checkoutUrlText = program?.attributes?.checkoutUrlText && modalities?.[tabActive]?.modality?.data?.attributes?.name === "Online" ? program?.attributes?.checkoutUrlText: "";
+  const checkoutUrlText = program?.attributes?.checkoutUrlText && modalities?.[tabActive]?.modality?.data?.attributes?.name === "Online" ? program?.attributes?.checkoutUrlText : "";
 
   const programPerks = modalities?.[tabActive]?.programPerks;
-
-  console.log("perks",programPerks)
 
   const brands = program?.attributes?.brands
 
   const programModalityDescription = modalities?.[tabActive]?.modalityDescription ? modalities?.[tabActive]?.modalityDescription : description
-
-  console.log(selectedModality)
 
   const formattedModalityData = formatModalityDataSuperior(selectedModality, layout)
   const campusDetail = formattedModalityData?.curriculumsByCampus
@@ -67,16 +68,9 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const isOptionSelected = !!selectedOption
 
   //Obtener información para el nivel
-
-  type SelectItem = {
-    value: string;
-    text: string;
-    active: boolean;
-  }
-  
   const handleSetActiveTab = (active: number) => {
     setTabActive(active);
-  }
+  };
 
   useEffect(() => {
     const options: Array<SelectItem> = campusDetail?.map(campusName => ({ value: campusName?.campusName, text: campusName?.campusName, active: false }));
@@ -109,49 +103,48 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
       <Head>
         <title>{title}</title>
       </Head>
-      {/* <ContentLayout>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12">
-          <h1 className="text-13 font-bold font-headings leading-13 w-t:semi-tight w-p:leading-tight w-t:text-8.5 w-p:text-7.5 mb-6">{title}</h1>
-          <RichtText data={{
-            content: description
-          }} />
-        </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 w-p:hidden mb-10 mt-6">
-          <Aspect ratio={"2/1"}> 
-            <Image
-              alt={title || "Programa de Nivel Superior"}
-              src={imageProgram}
-              classNamesImg="w-full h-full object-cover"
-              classNames="w-full h-full"
-            />
-          </Aspect>
-        </div>
-      </ContentLayout> */}
-        <ContentLayout>
+      <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mb-12">
-        <IntroductionProgram 
-            title={title}
-            brands={brands?.data}
-            checkoutUrlText={checkoutUrlText}
-            label={label?.data?.attributes?.name}
-            description={programModalityDescription}
-            periodicity={periodicity}
-            certificationMessage={certificationMessage}
-            price={price}
-            offerPrice={offerPrice}
-            discount={discount}
-            checkoutUrl={checkoutUrl}
-            discountPercentajeText={discountPercentageText}
-            image={{
-              alt: title,
-              src: imageProgram
-            }} 
-            programPerks={programPerks?.data} />
+          {
+            selectedModalityName === "online" || selectedModalityName === "a tu ritmo" ?
+              <IntroductionProgram
+                title={title}
+                brands={brands?.data}
+                checkoutUrlText={checkoutUrlText}
+                label={programSubtitle}
+                description={programModalityDescription}
+                periodicity={periodicity}
+                certificationMessage={certificationMessage}
+                price={price}
+                offerPrice={offerPrice}
+                discount={discount}
+                checkoutUrl={checkoutUrl}
+                discountPercentajeText={discountPercentageText}
+                image={{
+                  alt: title,
+                  src: imageProgram
+                }}
+                programPerks={programPerks?.data}
+              />
+              :
+              <IntroductionProgram
+                title={title}
+                label={programSubtitle}
+                description={programModalityDescription}
+                periodicity={periodicity}
+                certificationMessage={certificationMessage}
+                image={{
+                  alt: title,
+                  src: imageProgram
+                }}
+                programPerks={programPerks?.data}
+              />
+          }
         </div>
       </ContentLayout>
       <ContentFullLayout classNames="w-d:hidden w-t:hidden mb-10 mt-6">
         <div className="w-d:hidden w-t:hidden col-span-4 mb-10 mt-6">
-          <Aspect ratio={"4/3"}> 
+          <Aspect ratio={"4/3"}>
             <Image
               alt={title || "Programa de Nivel Superior"}
               src={imageProgram}
@@ -166,13 +159,13 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           <p className="text-6.5 font-headings font-semibold leading-tight w-t:leading-tight w-p:leading-tight w-t:text-6 w-p:text-6">{`${titleTabs} ${levelProgram}`}</p>
         </div>
         <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8' w-p:col-span-4 flex justify-center">
-          <TabsFeatured tabs={modalities?.map((modality) => ({ label: modality?.labelModality || modality?.modality?.data?.attributes?.label || modality?.modality?.data?.attributes?.name}))} onActive={(active: number) => handleSetActiveTab(active)} />
+          <TabsFeatured tabs={modalities?.map((modality) => ({ label: modality?.labelModality || modality?.modality?.data?.attributes?.label || modality?.modality?.data?.attributes?.name }))} onActive={(active: number) => handleSetActiveTab(active)} />
         </div>
       </ContentLayout>
       <ContentFullLayout>
         <div className="col-span-12 w-t:col-span-8' w-p:col-span-4 flex justify-center">
           <section className="w-d:hidden">
-            <TabsFeatured tabs={modalities?.map((modality) => ({ label: modality?.labelModality || modality?.modality?.data?.attributes?.label || modality?.modality?.data?.attributes?.name}))} onActive={(active: number) => handleSetActiveTab(active)} />
+            <TabsFeatured tabs={modalities?.map((modality) => ({ label: modality?.labelModality || modality?.modality?.data?.attributes?.label || modality?.modality?.data?.attributes?.name }))} onActive={(active: number) => handleSetActiveTab(active)} />
           </section>
         </div>
       </ContentFullLayout>
@@ -202,9 +195,13 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           </div>
         </div>
       </ContentLayout>
-      <div className="order-last col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6 w-d:mt-18">
-        <Banner type={"ComponentSectionsBanner"} {...bannerData} />
-      </div>
+      {
+        bannerData?.desktopImage ?
+          <div className="order-last col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6 w-d:mt-18">
+            <Banner type={"ComponentSectionsBanner"} {...bannerData} />
+          </div>
+          : null
+      }
     </Fragment>
   );
 };
