@@ -4,6 +4,7 @@ export type OustandingModuleConfig = {
   text: string;
   backgroundColor?: string;
   direction: string;
+  contentVariant?: string;
 }
 
 export type Image = {
