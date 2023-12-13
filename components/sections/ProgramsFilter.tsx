@@ -100,7 +100,14 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
   };
 
   const filteredPrograms = filterPrograms(sortedPrograms, currentFilter);
+  
+  const modalityNames = modalities?.map(modality => modality?.name?.toLowerCase())?.filter((value, index, self) => {
+    return self?.indexOf(value) === index;
+  });
 
+  const isOnlyATuRitmoModality = modalityNames?.length === 1 && modalityNames?.[0] === "a tu ritmo";
+  
+  const shouldRenderFilters = levelName !== "Bachillerato" && levelName !== "Preparatoria" && !isOnlyATuRitmoModality;
   /**
    * This is a flag that toggles between mosaic and list view. Since list view is yet to be implemented/polished,
    * mosaicActive is set to true. 
@@ -130,7 +137,7 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
               : null
           }
           {
-            levelName !== "Bachillerato" && levelName !== "Preparatoria"
+            shouldRenderFilters
               ? <Filter
                   color={"#282828"}
                   data={filterConfig}

@@ -1,5 +1,6 @@
 import { getDataPageFromJSON } from "@/utils/getDataPage";
 import { normalizeString } from "@/utils/misc";
+import { getFilteredProgramsDetail } from "@/utils/getFilteredProgramsDetail";
 import parseEditorRawData from "@/utils/parseEditorRawData";
 import type { StrapiImage } from "@/types/strapi/common";
 
@@ -56,6 +57,14 @@ export type ProgramsFilterSection = {
   type: "ComponentSectionsProgramsFilter";
   title?: string;
   description?: string;
+  modalities?: {
+    data: Array<{
+      id: string;
+      attributes: {
+        name: string;
+      }
+    }>;
+  };
   level: {
     data: {
       attributes: {
@@ -72,6 +81,14 @@ export const PROGRAMS_FILTER = `
 ... on ComponentSectionsProgramsFilter {
   title
   description
+  modalities {
+    data {
+      id
+      attributes {
+        name
+      }
+    }
+  }
   level {
     data {
       attributes {
@@ -209,7 +226,10 @@ export const formatProgramsFilterSection = async (
   const levelAttributes = section?.level?.data?.attributes;
 
   const levelTitle = normalizeString(levelAttributes?.title);
-  const programsData = levelAttributes?.programs?.data;
+  
+  const programModalityNames = section?.modalities?.data?.map(modality => modality?.attributes?.name);
+  const programsData = await getFilteredProgramsDetail({ level: levelAttributes?.title, modalities: programModalityNames });
+
   let staticPrograms: Array<StaticProgram> = [];
   try {
     const staticProgramsData = await getDataPageFromJSON(`/oferta-educativa/${levelTitle?.toLowerCase()}.json`);

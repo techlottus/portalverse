@@ -328,7 +328,7 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
                 Lo sentimos
                 </h1>
                 <div className="w-full max-w-96"> {/* Tailwind's 'max-w-sm' value isn't working for some reason u.u */}
-                  <img src={errors["404"].image} className="w-full" alt="error" />
+                  <img src={errors?.["404"]?.image} className="w-full" alt="error" />
                 </div>
                 <h2 className="text-surface-600 font-semibold text-5.5 my-6">
                 Esta página no está disponible

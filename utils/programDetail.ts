@@ -50,7 +50,8 @@ export const formatModalityDataSuperior = (modalityData: ProgramModalityDetail, 
       text: parseEditorRawData(modalityData?.[key]),
       //@ts-ignore
       backgroundColor: layout?.attributes?.[dictionarySuperior?.[key]?.backgroundColorKey],
-      direction: ""
+      direction: "",
+      contentVariant: layout?.attributes?.contentVariant || "dark"
     }
   })
   const curriculumsByModality = modalityData?.curriculums;
