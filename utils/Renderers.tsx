@@ -31,6 +31,7 @@ import PromoLinkList from "@/components/sections/PromoLinkList";
 import RepeatableBannerSection from "@/components/sections/RepeatableBannerSection";
 import RichTextImage from "@/components/sections/RichTextImage";
 import RichTextVideo from "@/components/sections/RichTextVideo";
+import RvoeAccordionList from "@/components/sections/RvoeAccordionList";
 import StatisticsCardList from "@/components/sections/StatisticsCardList";
 import TextContent from "@/components/sections/TextContent";
 import WebError from "@/components/sections/WebError";
@@ -79,10 +80,11 @@ const defaultRenderers: Renderer = {
   ComponentSectionsRichTextVideo: RichTextVideo,
   ComponentSectionsRockstarInfo: RockstarInfo,
   ComponentSectionsRockstarInfoList: RockstarInfoList,
+  ComponentSectionsRvoeAccordionList: RvoeAccordionList,
   ComponentSectionsStatisticsCardList: StatisticsCardList,
   ComponentSectionsTextContent: TextContent,
   ComponentSectionsVideos: VideosSection,
-  ComponentSectionsWebError: WebError,
+  ComponentSectionsWebError: WebError
 };
 
 export default defaultRenderers;
