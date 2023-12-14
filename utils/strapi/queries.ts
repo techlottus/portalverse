@@ -31,6 +31,7 @@ import { REPEATABLE_BANNER } from "@/utils/strapi/sections/RepeatableBanner";
 import { RICH_TEXT_IMAGE } from "@/utils/strapi/sections/RichTextImage";
 import { RICH_TEXT_VIDEO } from "@/utils/strapi/sections/RichTextVideo";
 import { ROCKSTARINFO_LIST } from "@/utils/strapi/sections/RockstarInfloList";
+import { RVOE_ACCORDION_CONTENT } from "./sections/RvoeAccordionList";
 import { STATISTICS_CARD_LIST } from "@/utils/strapi/sections/StatisticsCardList";
 import { TEXT_CONTENT } from "@/utils/strapi/sections/TextContent";
 import { VIDEOS_SECTION } from "@/utils/strapi/sections/Videos";
@@ -66,6 +67,7 @@ import type { RepeatableBanner } from "@/utils/strapi/sections/RepeatableBanner"
 import type { RichTextImageSection } from "@/utils/strapi/sections/RichTextImage";
 import type { RichTextVideoSection } from "@/utils/strapi/sections/RichTextVideo";
 import type { RockstarInfoListSection } from "@/utils/strapi/sections/RockstarInfloList";
+import type { RvoeAccordionListData } from "./sections/RvoeAccordionList";
 import type { StatisticsCardListSection } from "@/utils/strapi/sections/StatisticsCardList";
 import type { TextContentSection } from "@/utils/strapi/sections/TextContent";
 import type { VideosSectionData } from "@/utils/strapi/sections/Videos";
@@ -103,6 +105,7 @@ export type ComponentSection =
   | RichTextImageSection
   | RichTextVideoSection
   | RockstarInfoListSection
+  | RvoeAccordionListData
   | StatisticsCardListSection
   | TextContentSection
   | VideosSectionData
@@ -141,6 +144,7 @@ export type ComponentSection =
   ${RICH_TEXT_IMAGE}
   ${RICH_TEXT_VIDEO}
   ${ROCKSTARINFO_LIST}
+  ${RVOE_ACCORDION_CONTENT}
   ${STATISTICS_CARD_LIST}
   ${TEXT_CONTENT}
   ${VIDEOS_SECTION}
