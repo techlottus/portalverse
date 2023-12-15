@@ -1,6 +1,7 @@
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
 import type { BannerData } from "@/utils/strapi/sections/Banner";
 import type { StrapiImage } from "@/types/strapi/common";
+import type { ContentVariant } from "@/types/strapi/common";
 
 export type ProgramDetailSuperiorData = {
   attributes: {
@@ -12,6 +13,7 @@ export type ProgramDetailSuperiorData = {
     laborFieldBackgroundColor: string;
     admissionRequirementsImage: StrapiImage;
     admissionRequirementsBackgroundColor: string;
+    contentVariant: ContentVariant;
     banner: BannerData;
   }
 }
@@ -66,6 +68,7 @@ query ProgramDetailSuperior {
           }
         }
         admissionRequirementsBackgroundColor
+        contentVariant
         banner {
           ctaText
           ctaUrl

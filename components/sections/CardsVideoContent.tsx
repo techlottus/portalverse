@@ -13,7 +13,6 @@ const CardsVideoContent: FC<CardsVideoContentData> = (props: CardsVideoContentDa
  const { title, subtitle, cards, textPositionCardsVideoContent, videoItem, button } = props
  const formatDescription = parseEditorRawData(subtitle)
  const router = useRouter();
- console.log(props, "props")
 
  const formattedCards = cards?.map((item, index) => {
   const card = {
