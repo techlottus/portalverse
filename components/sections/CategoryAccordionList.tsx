@@ -47,7 +47,7 @@ const CategoryAccordionList: FC<CategoryAccordionListData> = (props: CategoryAcc
             {
               CategoryList ?
                 CategoryList?.map((item, index) =>
-                  <div className="flex justify-start mb-5">
+                  <div className="flex justify-start mb-5" key={index}>
                     {
                       item.iconName
                         ? <span className={cn("material-icons text-4.5! mr-2", { "text-primary-500": index === optionSelect })}>{item.iconName}</span>
