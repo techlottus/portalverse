@@ -7,6 +7,7 @@ import CardList from "@/components/sections/CardList";
 import CardsStatistics from "@/components/sections/CardsStatistics";
 import CardsDetailContent from "@/components/sections/CardsDetailContent";
 import CardsVideoContent from "@/components/sections/CardsVideoContent";
+import CategoryAccordionList from "@/components/sections/CategoryAccordionList";
 import ColorCardList from "@/components/sections/ColorCardsList";
 import ContactTargetList from "@/components/sections/ContactTargetList";
 import ContainerForm from "@/components/sections/ContainerForm";
@@ -55,6 +56,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsCardsStatistics: CardsStatistics,
   ComponentSectionsCardsDetailContent: CardsDetailContent,
   ComponentSectionsCardsVideoContent: CardsVideoContent,
+  ComponentSectionsCategoryAccordionList: CategoryAccordionList,
   ComponentSectionsColorCardList: ColorCardList,
   ComponentSectionsContactTargetList: ContactTargetList,
   ComponentSectionsContEdPrograms: ContEdPrograms,
