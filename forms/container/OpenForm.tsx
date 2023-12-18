@@ -37,6 +37,9 @@ const getBusinessLineToFetchFrom = (businessLine: string, modality: string) => {
     case "ULA": {
       return "ULA"
     }
+    case "UTC": {
+      return "UTC"
+    }
     default: return ""
   }
 }
