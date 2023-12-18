@@ -82,9 +82,14 @@ const OpenFormBachillerato: FC<any> = ({ classNames, image, pathThankyou, contro
     }
   }, [isLoadingEO, isErrorEO, dataEO])
 
+  console.log("newLineaNegocio: ", newLineaNegocio);
+  console.log("newModalidad: ", newModalidad);
+
   const handleNextStep = (info: any, step: number) => {
-    let modalidad = info.modality;
+    let modalidad = info?.modality;
     let lineaNegocio = `${process.env.NEXT_PUBLIC_LINEA!}`;
+    console.log("modalidad: ", info.modality)
+    console.log("LINEA NEGOCIO: ", process.env.NEXT_PUBLIC_LINEA)
 
     if (step === 1 && modalidad === 'Flex') {
       lineaNegocio = "ULA";
@@ -96,8 +101,8 @@ const OpenFormBachillerato: FC<any> = ({ classNames, image, pathThankyou, contro
     
     if (step === 2) {
       const programa = getDataByProgramEC(info.program);
-      // console.log("programa", programa)
-      lineaNegocio = programa.lineaNegocio;
+      console.log("programa", programa)
+      lineaNegocio = programa?.lineaNegocio;
       setNewLineaNegocio(lineaNegocio);
       setNewModalidad(modalidad);
     }
