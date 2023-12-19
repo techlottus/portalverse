@@ -120,10 +120,6 @@ const OpenFormSuperior: FC<any> = ({ classNames, image, pathThankyou, controls, 
     setReturnedStep(false);
     let modalidad = modality;
     let lineaNegocio = `${process.env.NEXT_PUBLIC_LINEA!}`;
-    
-    console.log("process.env: ", process.env);
-    console.log("modalidad: ", modalidad);
-    console.log("lineaNegocio: ", lineaNegocio);
 
     if (step === 2 && modality === 'Flex') {
       lineaNegocio = "ULA"
@@ -140,8 +136,6 @@ const OpenFormSuperior: FC<any> = ({ classNames, image, pathThankyou, controls, 
   const handleNextStep = (info: any, step: number) => {
     let modalidad = info.modality;
     let lineaNegocio = `${process.env.NEXT_PUBLIC_LINEA!}`;
-    console.log("handleNextStep (modalidad): ", modalidad)
-    console.log("handleNextStep (lineaNegocio): ", lineaNegocio)
 
     if (step === 1 && modalidad === 'Flex') {
       lineaNegocio = "ULA";

@@ -79,14 +79,10 @@ const getQuery = (variables: FilteredProgramsVariables) => {
 
 export const getFilteredProgramsDetail = async (variables: FilteredProgramsVariables) => {
   const query = getQuery(variables);
-  console.log("query: ", query);
-  console.log("variables: ", variables)
   const data = await fetchStrapiGraphQL<FilteredProgramsResponse>(
     query,
     variables
   );
-
-  console.log("data: ", data);
 
   return data?.programs?.data;
 };

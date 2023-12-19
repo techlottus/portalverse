@@ -36,7 +36,7 @@ const filterFlexPrograms = (programs: any) => {
 
 // Modalidad Semipresencial (ULA)
 const filterHybridPrograms = (programs: any) => {
-  return programs.reduce((prev: any, item: any) => item?.lineaNegocio === "ULA" && item?.modalidad === "Semipresencial" ? [...prev, item] : [...prev], [])
+  return programs.reduce((prev: any, item: any) => (item?.lineaNegocio === "ULA" || item?.lineaNegocio === "UTC") && item?.modalidad === "Semipresencial" ? [...prev, item] : [...prev], [])
 }
 
 export const getEducativeOffer = () => {
@@ -48,16 +48,8 @@ export const getEducativeOffer = () => {
   const [ sourceData, setSourceData ] = useState<any>({});
 
   const fetchData = async (url: string, modalidad: string, linea: string, Authorization: string) => {
-
-    console.log("fetchData (url): ", url)
-    console.log("fetchData (modalidad): ", modalidad)
-    console.log("fetchData (linea): ", linea)
-    console.log("fetchData (Authorization): ", Authorization)
-
     setIsLoading(true);
     setIsError(false);
-    
-    console.log("Linea: ", linea)
 
     await axios.get(
       `${url}`, {
@@ -73,8 +65,7 @@ export const getEducativeOffer = () => {
       .then( (res: any) => {
         const { data: programs } = res;
         let dataPrograms: Array<any> = [];
-        console.log("res: ", res);
-        console.log("dataPrograms: ", dataPrograms);
+
         if(!!programs && !!programs.length) {
           setAllPrograms([ ...programs ])
           switch(modalidad) {
