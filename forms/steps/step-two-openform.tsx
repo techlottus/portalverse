@@ -33,6 +33,25 @@ const getAvailableModalities = (): Array<SelectOptionConfig> => {
         },
       ];
     }
+    case "UTC": {
+      return [
+        {
+          value: "Presencial",
+          active: false,
+          text: "Presencial",
+        },
+        {
+          value: "Online",
+          active: false,
+          text: "A distancia",
+        },
+        {
+          value: "Semipresencial",
+          active: false,
+          text: "Semipresencial",
+        },
+      ];
+    }
     default: { // cases "UANE" and "UTEG"
       return [
         {
