@@ -57,7 +57,7 @@ export const RVOE_ACCORDION_CONTENT = `
 ... on ComponentSectionsRvoeAccordionList {
   title
   subtitle
-  rvoeList {
+  rvoeList(pagination: { start: 0, limit: -1 }) {
     label
     iconName
     modalityCategory {
@@ -70,7 +70,7 @@ export const RVOE_ACCORDION_CONTENT = `
               attributes {
                 name
                 label                                                  
-                programRvoes {
+                programRvoes(pagination: { start: 0, limit: -1 }) {
                   data {
                     attributes {
                       name
