@@ -77,6 +77,8 @@ const StaticProgramContent: NextPageWithLayout<any> = ({ level, program, meta, c
     setSelectData((state: any) => state.map((item: any) => ({ ...item, active: item.value === detail })));
   }
 
+  const campusLabel = BUSINESS_UNIT === "UTEG" || BUSINESS_UNIT === "UTC" ? "plantel" : "campus";
+
   return <>
     <Head>
       <title>{ meta.title }</title>
@@ -150,10 +152,10 @@ const StaticProgramContent: NextPageWithLayout<any> = ({ level, program, meta, c
               <ContentLayout>
                 <ContentInsideLayout classNames="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6">
                   <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-                    <h1 className="font-headings">Selecciona un campus para descargar tu plan de estudios en esta modalidad</h1>
+                    <h1 className="font-headings">Selecciona un {campusLabel} para descargar tu plan de estudios en esta modalidad</h1>
                     <div className="my-6">
-                      <p className="font-texts font-normal text-xs mb-0">Los planes de estudio pueden variar por campus*</p>
-                      <Select onClick={(option: CustomEvent) => handleSelectOption(option)} data={{...SelectInit, textDefault: "Elige el campus de tu interés", icon: "apartment"}} options={selectData} flagHeight={true}/>
+                      <p className="font-texts font-normal text-xs mb-0">Los planes de estudio pueden variar por {campusLabel}*</p>
+                      <Select onClick={(option: CustomEvent) => handleSelectOption(option)} data={{...SelectInit, textDefault: `Elige el ${campusLabel} de tu interés`, icon: "apartment"}} options={selectData} flagHeight={true}/>
                     </div>
                     <div className="flex justify-center">
                       <Button dark data={{...sections.descarga, disabled: !fileSelected}} onClick={downloadFileProgram} />
@@ -176,8 +178,8 @@ const StaticProgramContent: NextPageWithLayout<any> = ({ level, program, meta, c
                 <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 leading-tight w-d:order-1 w-t:order-1">
                   <RichtText font="light" data={{ content: sections.benefits.description }} />
                   <div className="my-6">
-                  <p className="font-texts font-normal text-xs mb-0">Los planes de estudio pueden variar por campus*</p>
-                    <Select onClick={(option: CustomEvent) => handleSelectOption(option)} data={{...SelectInit, textDefault: "Elige el campus de tu interés"}} options={selectData} flagHeight={true}/>
+                  <p className="font-texts font-normal text-xs mb-0">Los planes de estudio pueden variar por {campusLabel}*</p>
+                    <Select onClick={(option: CustomEvent) => handleSelectOption(option)} data={{...SelectInit, textDefault: `Elige el ${campusLabel} de tu interés`}} options={selectData} flagHeight={true}/>
                   </div>
                   <Button dark data={{...sections.benefits.action , disabled: !fileSelected}} onClick={downloadFileProgram} />
                 </div>
