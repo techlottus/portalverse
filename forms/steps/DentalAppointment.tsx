@@ -33,6 +33,9 @@ const DentalAppointment: FC<any> = ({
     setConfig({ ...config, ...data });
   }, [data]);
 
+  const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
+  const campusLabel = BUSINESS_UNIT === "UTEG" || BUSINESS_UNIT === "UTC" ? "plantel" : "campus";
+
   const handleKeyPress = (e: any, control: string ) => {
 
     const value = e.target.value
@@ -52,7 +55,7 @@ const DentalAppointment: FC<any> = ({
     setErrorControls({ ...errorControls, campus: !validateControl(appointmentData["campus"]) && infoControlsTouched.reason});
   }
   const selectData: SelectConfig = {
-    textDefault:  !!appointmentData.campus ? "¿A qué clínica te gustaría acudir?" : "Elige un campus",
+    textDefault:  !!appointmentData.campus ? "¿A qué clínica te gustaría acudir?" : `Elige un ${campusLabel}`,
     disabled: false,
     icon: 'domain',
     zindexOptions: 10,
@@ -64,7 +67,7 @@ const DentalAppointment: FC<any> = ({
     <div className="mt-6">
       <Select options={[...dataCampus]} data={selectData} onClick={(option: CustomEvent) => handleChangeCampus(option)} ></Select>
 
-      <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>Selecciona un campus para continuar</p>
+      <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>Selecciona un {campusLabel} para continuar</p>
     </div>
     <div className="mt-6">
       <textarea
