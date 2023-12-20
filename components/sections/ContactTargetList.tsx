@@ -34,7 +34,7 @@ const ContactTargetList: FC<ContactTargetListSection> = memo((props: ContactTarg
             cards?.length > 0 ?
               <div className="grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
                 {
-                  cards?.map(({ title, email, phone, link = '', image }, j: number) =>
+                  cards?.map(({ title, email, phone, link = '', image, textLink }, j: number) =>
                     <ContactTargetCard
                       key={`card-item-${j}`}
                       image={image?.data?.attributes?.url}
@@ -42,6 +42,7 @@ const ContactTargetList: FC<ContactTargetListSection> = memo((props: ContactTarg
                       email={email}
                       phone={phone}
                       link={link}
+                      textLink={textLink}
                     />)
                 }
               </div>
