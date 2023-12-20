@@ -70,69 +70,72 @@ const RvoeAccordionList: FC<RvoeAccordionListData> = (props: RvoeAccordionListDa
           }
           <div className="flex flex-col justify-center gap-6 w-full">
             <h3 className="font-headings text-primary-400 font-bold text-6 md:text-8 md:leading-10">{rvoeList?.[optionSelect]?.label}</h3>
-            {
-              allLevels?.map((level: string, index: number) => {
-                return (
-                  <div key={index} className="border">
-                    <Disclosure>
-                      {({ open }) => (
-                        <>
-                          <Disclosure.Button className="flex flex-row justify-between w-full border-b p-5">
-                            <p className="font-texts text-sm	lg:text-base">Nivel {level}</p>
-                            <span className={open ? 'rotate-180 transform material-icons' : 'material-icons'} >expand_more</span>
-                          </Disclosure.Button>
-                          <Disclosure.Panel className="p-2 lg:p-5 bg-gray-100">
-                            <table className="w-full bg-white table-auto">
-                              <thead className="text-xs md:text-base lg:text-base">
-                                <tr className="bg-gray-100">
-                                  <th className="text-left font-texts font-normal w-1/4 w-d:w-2/6 pt-5 pb-8 md:pl-4">Programa</th>
-                                  <th className="text-left font-texts font-normal w-1/4 w-d:w-1/6 pt-5 pb-8">Fecha</th>
-                                  <th className="text-left font-texts font-normal w-1/4 w-d:w-1/6 pt-5 pb-8">RVOE</th>
-                                  <th className="text-left font-texts font-normal w-1/4 w-d:w-2/6 pt-5 pb-8 md:pr-4">Área de conocimiento</th>
-                                </tr>
-                                {
-                                  items ?
-                                    items?.map((item: any) => {
-                                      if (item?.level === level) {
-                                        return (
-                                          <tr className="w-full font-texts font-semibold text-xs md:text-base lg:text-base" key={item?.rvoe}>
-                                            {
-                                              item?.program
-                                                ? <td className="py-3 md:pl-4">{item?.program}</td>
-                                                : null
-                                            }
-                                            {
-                                              item?.date
-                                                ? <td className="py-3">{new Intl.DateTimeFormat('es-MX').format(new Date(item?.date))}</td>
-                                                : null
-                                            }
-                                            {
-                                              item?.rvoe
-                                                ? <td className="py-3">{item?.rvoe}</td>
-                                                : null
-                                            }
-                                            {
-                                              item?.knowledgeArea
-                                                ? <td className="md:pr-4">{item?.knowledgeArea}</td>
-                                                : null
-                                            }
-                                          </tr>
-                                        )
+            <div>
+
+              {
+                allLevels?.map((level: string, index: number) => {
+                  return (
+                    <div key={index} className="border">
+                      <Disclosure>
+                        {({ open }) => (
+                          <>
+                            <Disclosure.Button className="flex flex-row justify-between w-full border-b p-5">
+                              <p className="font-texts text-sm	lg:text-base">Nivel {level}</p>
+                              <span className={open ? 'rotate-180 transform material-icons' : 'material-icons'} >expand_more</span>
+                            </Disclosure.Button>
+                            <Disclosure.Panel className="p-2 lg:p-5 bg-gray-100">
+                              <table className="w-full bg-white table-auto">
+                                <thead className="text-xs md:text-base lg:text-base">
+                                  <tr className="bg-gray-100">
+                                    <th className="text-left font-texts font-normal w-1/4 w-d:w-2/6 pt-5 pb-8 md:pl-4">Programa</th>
+                                    <th className="text-left font-texts font-normal w-1/4 w-d:w-1/6 pt-5 pb-8">Fecha</th>
+                                    <th className="text-left font-texts font-normal w-1/4 w-d:w-1/6 pt-5 pb-8">RVOE</th>
+                                    <th className="text-left font-texts font-normal w-1/4 w-d:w-2/6 pt-5 pb-8 md:pr-4">Área de conocimiento</th>
+                                  </tr>
+                                  {
+                                    items ?
+                                      items?.map((item: any) => {
+                                        if (item?.level === level) {
+                                          return (
+                                            <tr className="w-full font-texts font-semibold text-xs md:text-base lg:text-base" key={item?.rvoe}>
+                                              {
+                                                item?.program
+                                                  ? <td className="py-3 md:pl-4">{item?.program}</td>
+                                                  : null
+                                              }
+                                              {
+                                                item?.date
+                                                  ? <td className="py-3">{new Intl.DateTimeFormat('es-MX').format(new Date(item?.date))}</td>
+                                                  : null
+                                              }
+                                              {
+                                                item?.rvoe
+                                                  ? <td className="py-3">{item?.rvoe}</td>
+                                                  : null
+                                              }
+                                              {
+                                                item?.knowledgeArea
+                                                  ? <td className="md:pr-4">{item?.knowledgeArea}</td>
+                                                  : null
+                                              }
+                                            </tr>
+                                          )
+                                        }
                                       }
-                                    }
-                                    )
-                                    : null
-                                }
-                              </thead>
-                            </table>
-                          </Disclosure.Panel>
-                        </>
-                      )}
-                    </Disclosure>
-                  </div>
-                )
-              })
-            }
+                                      )
+                                      : null
+                                  }
+                                </thead>
+                              </table>
+                            </Disclosure.Panel>
+                          </>
+                        )}
+                      </Disclosure>
+                    </div>
+                  )
+                })
+              }
+            </div>
           </div>
         </div>
       </Container>
