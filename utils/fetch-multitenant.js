@@ -477,7 +477,7 @@ module.exports = {
     "./forms/**/*.{js,ts,jsx,tsx}",
     "./public/icons/**/*.{svg,jsx}"
   ],
-  safelist: ${JSON.stringify([ ...fonttokens, ...logostokens])},
+  safelist: ${JSON.stringify([ ...fonttokens, ...logostokens, "bg-primary-0","bg-primary-50", "bg-primary-100", "bg-primary-200", "bg-primary-300", "bg-primary-400", "bg-primary-500"])},
   theme: {
     extend: ${JSON.stringify(tailwindExtend, null, 3)}
   },
