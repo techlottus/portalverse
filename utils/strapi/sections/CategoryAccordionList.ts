@@ -32,7 +32,7 @@ export const CATEGORY_ACCORDION_CONTENT = `
   CategoryList {
     label
     iconName
-    faq_category(pagination: { start: 0, limit: -1 }) {
+    faq_category {
       data {
         attributes {
           title
