@@ -134,7 +134,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
       </ContentLayout>
       <ContentLayout classNames="hidden w-d:grid mt-12 w-d:mt-18">
         <div className="font-headings w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <Rainbow sections={sections.rainbow.sections} title={sections.rainbow.title} contentVariant={sections?.rainbow?.contentVariant}/>
+          <Rainbow classNamesTitle="font-bold" sections={sections.rainbow.sections} title={sections.rainbow.title} contentVariant={sections?.rainbow?.contentVariant}/>
         </div>
       </ContentLayout>
       <ContentFullLayout classNames="w-d:hidden mt-12 w-d:mt-18">
@@ -278,7 +278,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
       <ContentLayout classNames="mt-6 w-d:mt-18">
         <div className="col-span-12">
           <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight">{sections?.alliances.title}</p>
-          <section className="grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
+          <section className="grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mt-6">
           {
             sections?.alliances.alliances.map((item:any, i:number) => <section key={`section-alliances-${i}`}>
               <PromoLink data={item} onClick={() => {

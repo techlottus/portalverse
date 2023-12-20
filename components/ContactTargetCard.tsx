@@ -10,6 +10,7 @@ type ContactTargetCardData = {
   email: string;
   phone: string;
   link?: string;
+  textLink?: string;
   classNames?: string;
 }
 
@@ -21,8 +22,11 @@ const ContactTargetCard: FC<ContactTargetCardData> = (props: ContactTargetCardDa
     email,
     phone,
     link,
+    textLink,
     classNames,
   } = props;
+
+  const linkText = textLink ? textLink : link
 
   return (
     <div className={cn("bg-surface-100 flex", classNames)}>
@@ -44,7 +48,7 @@ const ContactTargetCard: FC<ContactTargetCardData> = (props: ContactTargetCardDa
       }
       <div className="w-full flex flex-col justify-center p-3 overflow-hidden">
         <p className="font-texts font-bold text-sm leading-5">{title}</p>
-        <a className="font-texts font-normal text-sm leading-5 text-surface-500 w-p:w-56 w-60 break-words" target="_blank" rel="noreferrer noopener" href={link}>{link}</a>
+        <a className="font-texts font-normal text-sm leading-5 text-surface-500 w-p:w-56 w-60 break-words" target="_blank" rel="noreferrer noopener" href={link}>{linkText}</a>
         <LinkContactTarget classNames="break-all" type="email" info={email} />
         <LinkContactTarget classNames="break-all" type="phone" info={phone} />
       </div>

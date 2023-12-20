@@ -46,11 +46,11 @@ const CardWebsitePortalverse: FC<CardWebsitePortalverseData> = ({ data, classNam
               <RichtText data={{
                 content: data.text
               }} classNames="mb-2 pb-2 text-surface-500" />
-            </div>
-            <div className="flex justify-end h-auto items-center mb-3">
               {
                 data.isLink === true
-                  ? <LinkIcons data={data.link} onClick={onClick} />
+                  ? <div className="flex justify-end h-full pb-2 items-end">
+                    <LinkIcons data={data?.link} onClick={onClick} />
+                  </div>
                   : null
               }
             </div>

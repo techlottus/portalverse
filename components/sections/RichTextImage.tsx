@@ -45,7 +45,7 @@ const RichTextImage: FC<RichTextImageSection> = (props: RichTextImageSection) =>
           }
           <div className="grid w-p:grid-cols-1 w-t:grid-cols-1 grid-cols-2 gap-6">
             <div
-              className={cn({
+              className={cn("my-auto",{
                 "w-d:hidden": imagePosition !== "left",
                 "w-p:hidden w-t:hidden": !title
               })}
@@ -54,11 +54,11 @@ const RichTextImage: FC<RichTextImageSection> = (props: RichTextImageSection) =>
             </div>
             {
               richTextMarkup
-                ? <div className="dark"><RichtText font={contentVariant === "light" ? "dark" : "light"} data={{content: richTextMarkup}}/></div>
+                ? <div className="dark my-auto"><RichtText font={contentVariant === "light" ? "dark" : "light"} data={{content: richTextMarkup}}/></div>
                 : null
             }
             <div
-              className={cn({
+              className={cn("my-auto",{
                 "w-d:hidden": imagePosition !== "right",
                 "w-p:hidden w-t:hidden": !!title
               })}
