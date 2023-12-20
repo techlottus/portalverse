@@ -48,7 +48,7 @@ const getAvailableModalities = (): Array<SelectOptionConfig> => {
         {
           value: "Semipresencial",
           active: false,
-          text: "Semipresencial",
+          text: "Ejecutiva",
         },
       ];
     }
