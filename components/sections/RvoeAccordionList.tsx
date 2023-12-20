@@ -1,22 +1,29 @@
 import { FC, useState } from "react"
 import Container from "@/layouts/Container.layout";
-import cn from "classnames"
 import { RvoeAccordionListData } from "@/utils/strapi/sections/RvoeAccordionList";
+import { Disclosure } from '@headlessui/react'
+import cn from "classnames"
 
 const RvoeAccordionList: FC<RvoeAccordionListData> = (props: RvoeAccordionListData) => {
-  const { title, subtitle, RvoeList } = props
+  const { title, subtitle, rvoeList } = props
   const [optionSelect, setOptionSelect] = useState<number>(0)
-  const Rvoes: any = RvoeList[optionSelect].program_rvoes.data
-  const items = Rvoes.map((item: any) => {
+  const modalities: any = rvoeList?.[optionSelect]?.modalityCategory?.data?.attributes?.modalities?.data
+  const getAllRvoes = modalities.reduce(function (totalRvoes: any, modalities: any) {
+    return Array.from(new Set([...totalRvoes, ...modalities?.attributes?.programRvoes?.data]));
+  }, []);
+  const items = getAllRvoes.map((item: any) => {
     const formattedItem = {
-      modality: item?.attributes.modality.data.attributes.name,
-      program: item?.attributes.program.data.attributes.name,
-      date: item?.attributes.date,
-      rvoe: item?.attributes.name,
-      level: item?.attributes.program.data.attributes.level.data.attributes.title
+      program: item?.attributes?.program?.data?.attributes?.name,
+      date: item?.attributes?.date,
+      rvoe: item?.attributes?.name,
+      level: item?.attributes?.program?.data?.attributes?.level?.data?.attributes?.title,
+      knowledgeArea: item?.attributes?.knowledgeArea?.data?.attributes?.name
     }
     return formattedItem;
   });
+
+  const allLevels = items?.map((item: any) => item?.level)
+    ?.filter((level: string, index: number, array: string[]) => array?.indexOf(level) === index);
 
   return <>
     <section>
@@ -29,30 +36,28 @@ const RvoeAccordionList: FC<RvoeAccordionListData> = (props: RvoeAccordionListDa
               </div>
               : null
           }
-          {
-            subtitle ?
-              <div>
-                <p className="text-5 leading-12">{subtitle}</p>
-              </div>
-              : null
-          }
         </div>
         <div className='w-d:flex gap-6'>
           {
-            <div className="w-d:w-1/4 flex flex-col pt-4">
+            <div className="w-d:w-1/5 flex flex-col">
               {
-                RvoeList ?
-                  RvoeList?.map((item, index) =>
-                    <div className="flex justify-start mb-5" key={item.label}>
+                subtitle ?
+                  <p className="text-5 leading-12 mb-5">{subtitle}</p>
+                  : null
+              }
+              {
+                rvoeList ?
+                  rvoeList?.map((item, index) =>
+                    <div className="flex justify-start mb-5 border-b pb-2 lg:border-0" key={item?.label}>
                       {
-                        item.iconName
-                          ? <span className={cn("material-icons text-4.5! mr-2", { "text-primary-500": index === optionSelect })}>{item.iconName}</span>
+                        item?.iconName
+                          ? <span className={cn("material-icons text-4.5! mr-2", { "text-primary-500": index === optionSelect })}>{item?.iconName}</span>
                           : null
                       }
-                      <button className={cn({ "text-primary-500": index === optionSelect })} onClick={() => {
+                      <button className={cn("text-base font-Poppins font-semibold", { "text-primary-500": index === optionSelect })} onClick={() => {
                         setOptionSelect(index)
                       }}>
-                        {item.label}
+                        {item?.label}
                       </button>
                     </div>
                   )
@@ -60,142 +65,71 @@ const RvoeAccordionList: FC<RvoeAccordionListData> = (props: RvoeAccordionListDa
               }
             </div>
           }
-          <div className="w-d:w-3/4 flex flex-col justify-center pb-4">
-            <div className="p-4 b" style={{ backgroundColor: "#E6E6E6" }}>
-              <p className="font-headings text-primary-500 font-bold text-5 leading-12 w-p:text-6 w-p:leading-7 mb-1">{RvoeList[optionSelect].label}</p>
-              <p className="font-headings font-bold text-5 leading-12 w-p:text-6 w-p:leading-7 mb-1">Licenciatura</p>
-              <table className="w-full">
-                <thead>
-                  <tr>
-                    <th className="text-left ">Modalidad</th>
-                    <th className="text-left px-5">Programa</th>
-                    <th className="text-left px-5">Fecha</th>
-                    <th className="text-left px-5">Rvoe</th>
-                  </tr>
-                  {
-                    items ?
-                      items?.map((item: any) => {
-                        if (item.level === 'Licenciatura') {
-                          return (
-                            <tr className="w-full" key={item.rvoe}>
-                              {
-                                item.modality
-                                  ? <td className="py-2">{item.modality}</td>
-                                  : null
-                              }
-                              {
-                                item.program
-                                  ? <td className="px-5">{item.program}</td>
-                                  : null
-                              }
-                              {
-                                item.date
-                                  ? <td className="px-5">{item.date}</td>
-                                  : null
-                              }
-                              {
-                                item.rvoe
-                                  ? <td className="px-5">{item.rvoe}</td>
-                                  : null
-                              }
-                            </tr>
-                          )
-                        }
-                      }
-                      )
-                      : null
-                  }
-                </thead>
-              </table>
-              <p className="font-headings font-bold text-5 leading-12 w-p:text-6 w-p:leading-7 mb-1">Bachillerato</p>
-              <table className="w-full">
-                <thead>
-                  <tr>
-                    <th className="text-left ">Modalidad</th>
-                    <th className="text-left px-5">Programa</th>
-                    <th className="text-left px-5">Fecha</th>
-                    <th className="text-left px-5">Rvoe</th>
-                  </tr>
-                  {
-                    items ?
-                      items?.map((item: any) => {
-                        if (item.level === 'Bachillerato') {
-                          return (
-                            <tr className="w-full" key={item.rvoe}>
-                              {
-                                item.modality
-                                  ? <td className="py-2">{item.modality}</td>
-                                  : null
-                              }
-                              {
-                                item.program
-                                  ? <td className="px-5" style={{ minWidth: "360px" }}>{item.program}</td>
-                                  : null
-                              }
-                              {
-                                item.date
-                                  ? <td className="px-5">{item.date}</td>
-                                  : null
-                              }
-                              {
-                                item.rvoe
-                                  ? <td className="px-5">{item.rvoe}</td>
-                                  : null
-                              }
-                            </tr>
-                          )
-                        }
-                      }
-                      )
-                      : null
-                  }
-                </thead>
-              </table>
-              <p className="font-headings font-bold text-5 leading-12 w-p:text-6 w-p:leading-7 mb-1">Maestría</p>
-              <table className="w-full">
-                <thead>
-                  <tr>
-                    <th className="text-left">Modalidad</th>
-                    <th className="text-left px-5">Programa</th>
-                    <th className="text-left px-5">Fecha</th>
-                    <th className="text-left px-5">Rvoe</th>
-                  </tr>
-                  {
-                    items ?
-                      items?.map((item: any) => {
-                        if (item.level === 'Maestría') {
-                          return (
-                            <tr className="w-full" key={item.rvoe}>
-                              {
-                                item.modality
-                                  ? <td className="py-2">{item.modality}</td>
-                                  : null
-                              }
-                              {
-                                item.program
-                                  ? <td className="px-5" style={{ minWidth: "360px" }}>{item.program}</td>
-                                  : null
-                              }
-                              {
-                                item.date
-                                  ? <td className="px-5">{item.date}</td>
-                                  : null
-                              }
-                              {
-                                item.rvoe
-                                  ? <td className="px-5">{item.rvoe}</td>
-                                  : null
-                              }
-                            </tr>
-                          )
-                        }
-                      }
-                      )
-                      : null
-                  }
-                </thead>
-              </table>
-            </div>
+          <div className="w-d:w-4/5 flex flex-col justify-center pb-4">
+            <p className="text-lg	lg:text-2xl text-primary-500 font-bold text-5 mb-5">{rvoeList?.[optionSelect]?.label}</p>
+            {
+              allLevels?.map((level: string, index: number) => {
+                return (
+                  <div key={index} className="border">
+                    <Disclosure>
+                      {({ open }) => (
+                        <>
+                          <Disclosure.Button className="flex flex-row justify-between w-full border-b p-5">
+                            <p className="text-sm	lg:text-base font-sans">Nivel {level}</p>
+                            <span className={open ? 'rotate-180 transform material-icons' : 'material-icons'} >expand_more</span>
+                          </Disclosure.Button>
+                          <Disclosure.Panel className="p-2 lg:p-5 bg-gray-100">
+                            <table className="w-full bg-white table-auto">
+                              <thead className="text-xs md:text-base lg:text-base">
+                                <tr className="bg-gray-100">
+                                  <th className="text-left font-texts font-normal w-1/4 w-d:w-2/6 py-3">Programa</th>
+                                  <th className="text-left font-texts font-normal w-1/4 w-d:w-1/6">Fecha</th>
+                                  <th className="text-left font-texts font-normal w-1/4 w-d:w-1/6">RVOE</th>
+                                  <th className="text-left font-texts font-normal w-1/4 w-d:w-2/6">Área de conocimiento</th>
+                                </tr>
+                                {
+                                  items ?
+                                    items?.map((item: any) => {
+                                      if (item?.level === level) {
+                                        return (
+                                          <tr className="w-full font-texts font-semibold text-xs md:text-base lg:text-base" key={item?.rvoe}>
+                                            {
+                                              item?.program
+                                                ? <td className="py-3">{item?.program}</td>
+                                                : null
+                                            }
+                                            {
+                                              item?.date
+                                                ? <td>{new Intl.DateTimeFormat('es-MX').format(new Date(item?.date))}</td>
+                                                : null
+                                            }
+                                            {
+                                              item?.rvoe
+                                                ? <td>{item?.rvoe}</td>
+                                                : null
+                                            }
+                                            {
+                                              item?.knowledgeArea
+                                                ? <td>{item?.knowledgeArea}</td>
+                                                : null
+                                            }
+                                          </tr>
+                                        )
+                                      }
+                                    }
+                                    )
+                                    : null
+                                }
+                              </thead>
+                            </table>
+                          </Disclosure.Panel>
+                        </>
+                      )}
+                    </Disclosure>
+                  </div>
+                )
+              })
+            }
           </div>
         </div>
       </Container>
