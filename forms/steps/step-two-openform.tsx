@@ -174,6 +174,9 @@ const StepTwo: FC<any> = ({
   const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
   const campusLabel = BUSINESS_UNIT === "UTEG" || BUSINESS_UNIT === "UTC" ? "plantel" : "campus";
 
+  const commonLevels = ["Preparatoria", "Licenciatura", "Maestría"];
+  const defaultLevels = BUSINESS_UNIT === "UTC" ? commonLevels : [...commonLevels, "Doctorado"]
+
   return <section className={cn(classNames)}>
       <div className={cn("flex flex-col", { "hidden": controlsConfig?.modality?.hidden })}>
         <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 mb-2">{ config.modality }</p>
@@ -207,7 +210,7 @@ const StepTwo: FC<any> = ({
           <div className="flex justify-start gap-6 flex-wrap">
             {
               levels?.length < 1
-                ? ["Preparatoria", "Licenciatura", "Maestría", "Doctorado"].map((level, i) => (
+                ? defaultLevels?.map((level, i) => (
                     <OptionPill
                       onClick={() => {}}
                       key={`pill-${i}`}
