@@ -15,6 +15,7 @@ export type CategoryAccordionListData = {
     faq_category: {
       data: {
         attributes: {
+          title: string;
           faqs: {
             data: Array<FaqItem>;
           };
@@ -34,6 +35,7 @@ export const CATEGORY_ACCORDION_CONTENT = `
     faq_category {
       data {
         attributes {
+          title
           faqs {
             data {
               attributes {
