@@ -60,7 +60,7 @@ const NumbersPortalverse: FC<NumbersPortalverseData> = memo(({data, classNames }
               }}
               delayedCall
             >
-              <span className="font-headings text-10 w-t:text-6 w-p:text-6 font-semibold leading-tight pr-2" ref={countUpRef} />
+              <span className="font-headings text-10 w-t:text-6 w-p:text-6 font-bold leading-tight pr-2" ref={countUpRef} />
             </VisibilitySensor>
           )}
         </CountUp>

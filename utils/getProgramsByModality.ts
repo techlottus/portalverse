@@ -60,7 +60,7 @@ query ProgramsByModality($modality: String!) {
               }
             }
           }
-          curriculums {
+          curriculums (pagination: { start: 0, limit: -1 }){
             campus {
               data {
                 attributes {

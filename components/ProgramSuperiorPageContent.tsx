@@ -31,6 +31,13 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const singleTypeAttributes = layout?.attributes;
   const bannerData = singleTypeAttributes?.banner;
 
+  const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
+  let campusLabel = "plantel";
+
+  if (BUSINESS_UNIT === "UANE" || BUSINESS_UNIT === "ULA") {
+    campusLabel = "campus";
+  }
+
   const titleTabs = levelProgram === "Doctorado" ? "Modalidades disponibles en este" : "Modalidades disponibles en esta"
   //estado para información
   const [optionsSelect, setOptionsSelect] = useState<Array<SelectItem>>([]);
@@ -178,10 +185,18 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
             {
               hasCampuses ?
                 <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-                  <h1 className="font-headings">Selecciona un campus para descargar tu plan de estudios en esta modalidad</h1>
+                  <div className="flex gap-1">
+                    <span className="font-headings">Selecciona un</span>
+                    <span className="font-headings">{campusLabel}</span>
+                    <span className="font-headings">para descargar tu plan de estudios en esta modalidad</span>
+                  </div>
                   <div className="my-6">
-                    <p className="font-texts font-normal text-xs mb-0">Los planes de estudio pueden variar por campus*</p>
-                    <Select onClick={(option: CustomEvent) => handleSelectOption(option)} data={{ ...SelectInit, textDefault: "Elige el campus de tu interés", icon: "apartment" }} options={optionsSelect} flagHeight={true} />
+                    <div className="flex gap-1">
+                      <p className="font-texts font-normal text-xs mb-0">Los planes de estudio pueden variar por</p>
+                      <span className="font-texts font-normal text-xs mb-0">{campusLabel}</span>
+                      <span className="font-texts font-normal text-xs mb-0">*</span>
+                    </div>
+                    <Select onClick={(option: CustomEvent) => handleSelectOption(option)} data={{ ...SelectInit, textDefault: `Elige el ${campusLabel} de tu interés`, icon: "apartment" }} options={optionsSelect} flagHeight={true} />
                   </div>
                   <div className="flex justify-center">
                     <Button dark data={{ ...ButtonInit, title: "Descarga el plan de estudios", disabled: !isOptionSelected, icon: "download" }} onClick={downloadFileProgram} />

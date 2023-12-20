@@ -21,6 +21,9 @@ export const FilterConfig = {
   ULA: {
     campusLabel: "Campus",
   },
+  UTC: {
+    campusLabel: "Planteles",
+  },
   default: {
     campusLabel: "Campus"
   }

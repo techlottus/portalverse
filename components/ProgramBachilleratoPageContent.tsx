@@ -29,6 +29,13 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
   const bannerData = singleTypeAttributes?.banner;
   const videoId = singleTypeAttributes?.videoId;
 
+  const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
+  let campusLabel = "plantel";
+
+  if (BUSINESS_UNIT === "UANE" || BUSINESS_UNIT === "ULA") {
+    campusLabel = "campus";
+  }
+
   //estado para información
   const [optionsSelect, setSelectOptions] = useState<Array<SelectItem>>([]);
   const [tabActive, setTabActive] = useState<number>(0);
@@ -97,7 +104,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
           }} />
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 w-p:hidden mb-10 mt-6">
-          <Aspect ratio={"2/1"}> 
+          <Aspect ratio={"2/1"}>
             <Image
               alt={title || "Programa de Bachillerato"}
               src={imageProgram}
@@ -109,7 +116,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
       </ContentLayout>
       <ContentFullLayout>
         <div className="w-d:hidden w-t:hidden col-span-4 mb-10 mt-6">
-          <Aspect ratio={"4/3"}> 
+          <Aspect ratio={"4/3"}>
             <Image
               alt={title || "Programa de Bachillerato"}
               src={imageProgram}
@@ -124,13 +131,13 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
           <p className="text-6.5 font-headings font-semibold leading-tight w-t:leading-tight w-p:leading-tight w-t:text-6 w-p:text-6">{`Para cursar ${title} necesitas: `} </p>
         </div>
         <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center">
-          <TabsFeatured tabs={modalities?.map((modality) => ({ label: modality?.labelModality || modality?.modality?.data?.attributes?.label || modality?.modality?.data?.attributes?.name}))} onActive={(active: number) => handleSetActiveTab(active)} />
+          <TabsFeatured tabs={modalities?.map((modality) => ({ label: modality?.labelModality || modality?.modality?.data?.attributes?.label || modality?.modality?.data?.attributes?.name }))} onActive={(active: number) => handleSetActiveTab(active)} />
         </div>
       </ContentLayout>
       <ContentFullLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:flex w-t:justify-center">
           <section className="w-d:hidden">
-            <TabsFeatured tabs={modalities?.map((modality) => ({ label: modality?.labelModality || modality?.modality?.data?.attributes?.label || modality?.modality?.data?.attributes?.name}))} onActive={(active: number) => handleSetActiveTab(active)} />
+            <TabsFeatured tabs={modalities?.map((modality) => ({ label: modality?.labelModality || modality?.modality?.data?.attributes?.label || modality?.modality?.data?.attributes?.name }))} onActive={(active: number) => handleSetActiveTab(active)} />
           </section>
         </div>
       </ContentFullLayout>
@@ -164,15 +171,19 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 leading-tight w-d:order-1 w-t:order-1">
           {
             formattedModalityData?.curriculumDescription
-            ? <RichtText font="light" data={{ content: formattedModalityData?.curriculumDescription }} />
-            : null
+              ? <RichtText font="light" data={{ content: formattedModalityData?.curriculumDescription }} />
+              : null
           }
           {
             hasCampuses ?
               <>
                 <div className="my-6">
-                  <p className="font-texts font-normal text-xs mb-0">Los planes de estudio pueden variar por campus*</p>
-                  <Select onClick={(option: CustomEvent) => handleSelectOption(option)} data={{ ...SelectInit, textDefault: "Elige el campus de tu interés" }} options={optionsSelect} flagHeight={true} />
+                  <div className="flex gap-1">
+                    <p className="font-texts font-normal text-xs mb-0">Los planes de estudio pueden variar por</p>
+                    <span className="font-texts font-normal text-xs mb-0">{campusLabel}</span>
+                    <span className="font-texts font-normal text-xs mb-0">*</span>
+                  </div>
+                  <Select onClick={(option: CustomEvent) => handleSelectOption(option)} data={{ ...SelectInit, textDefault: `Elige el ${campusLabel} de tu interés` }} options={optionsSelect} flagHeight={true} />
                 </div>
                 <Button dark data={{ ...ButtonInit, title: "Descarga el plan de estudios", disabled: !isOptionSelected, icon: "download" }} onClick={downloadFileProgram} />
               </>
@@ -182,11 +193,11 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
           }
         </div>
         {
-          videoId ? 
+          videoId ?
             <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 w-d:order-1 w-t:order-2 h-100">
               <Video data={{ options: { id: videoId, type: 'single', controls: true } }} />
             </div>
-          : null
+            : null
         }
       </ContentLayout>
       {
@@ -194,7 +205,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
           <div className="order-last col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6">
             <Banner type={"ComponentSectionsBanner"} {...bannerData} />
           </div>
-        : null
+          : null
       }
     </Fragment>
   );

@@ -93,7 +93,7 @@ query GetAllProgramsData {
           laborField
           admissionRequirements
           curriculumDescription
-          curriculums {
+          curriculums (pagination: { start: 0, limit: -1 }) {
             campus {
               data {
                 attributes {

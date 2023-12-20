@@ -6,6 +6,7 @@ export type ContactTargetCard = {
   email: string;
   phone: string;
   link: string;
+  textLink: string;
 };
 
 export type ContactTargetListSection = {
@@ -33,6 +34,7 @@ export const CONTACT_TARGET_LIST = `
       email
       phone
       link
+      textLink
     }
   }
 `;

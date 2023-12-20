@@ -40,7 +40,7 @@ const RockstarInfoList: FC<RockstarInfoListSection> = (props: RockstarInfoListSe
     <section className="bg-surface-200 pb-14">
       <Container>
         {
-          title ? <div className="py-14 w-p:py-6"><h3 className="font-headings text-10 leading-12 w-p:text-6 w-p:leading-7">{title}</h3></div> : null
+          title ? <div className="py-14 w-p:py-6"><h3 className="font-headings font-bold text-10 leading-12 w-p:text-6 w-p:leading-7">{title}</h3></div> : null
         }
         {
           description ?
