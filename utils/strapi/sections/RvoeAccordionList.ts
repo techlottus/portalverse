@@ -1,87 +1,111 @@
 export type RvoeAccordionListData = {
- type: 'ComponentSectionsRvoeAccordionList';
- title: string;
- subtitle: string;
- RvoeList: Array<{
-  label: string;
-  iconName: string;
-  program_rvoes: {
-    data: {
-      attributes: {
-       name: string,
-       date: string,
-       knowledgeArea: string,
-       modality: string,
-       program: {
-        name: string,
-        level: string
-       }
-       campus: string,
-       relatedCampuses: string,       
+  type: 'ComponentSectionsRvoeAccordionList';
+  title: string;
+  subtitle: string;
+  rvoeList: Array<{
+    label: string;
+    iconName: string;
+    modalityCategory: {
+      data: {
+        attributes: {
+          name: string,
+          label: string,
+          modalities: {
+            data: Array<{
+              attributes: {
+                name: string,
+                label: string,
+                programRvoes: {
+                  data: {
+                    attributes: {
+                      name: string
+                      date: string
+                      modality: {
+                        data: {
+                          attributes: {
+                            name: string,
+                          }
+                        }
+                      }
+                      knowledgeArea: {
+                        data: {
+                          attributes: {
+                            name: string
+                          }
+                        }
+                      }
+                      program: {
+                        data: {
+                          attributes: {
+                            name: string,
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }>
+          }
+        };
       };
     };
-  };
-}> 
+  }>
 };
 
 export const RVOE_ACCORDION_CONTENT = `
 ... on ComponentSectionsRvoeAccordionList {
   title
   subtitle
-  RvoeList {
+  rvoeList {
     label
     iconName
-    program_rvoes {
+    modalityCategory {
       data {
         attributes {
           name
-          date
-          knowledgeArea {
+          label
+          modalities {
             data {
               attributes {
                 name
-                programs {
+                label                                                  
+                programRvoes {
                   data {
                     attributes {
-                      name                              
+                      name
+                      date
+                      modality {
+                        data {
+                          attributes {
+                            name
+                          }
+                        }
+                      }
+                      knowledgeArea {
+                        data {
+                          attributes {
+                            name
+                          }
+                        }
+                      }
+                      program {
+                        data {
+                          attributes {
+                            name 
+                            level {
+                              data {
+                                attributes {
+                                  title
+                                }
+                              }
+                            } 
+                          }
+                        }
+                      }
                     }
                   }
                 }
-              }
-            }
-          }
-          modality {
-            data {
-              attributes {
-                name
-              }
-            }
-          }
-          program {
-            data {
-              attributes {
-                name
-                level {
-                  data {
-                    attributes {
-                      title
-                    }
-                  }
-                }
-              }
-            }
-          }
-          campus {
-            data {
-              attributes {
-                name
-              }
-            }
-          }
-          relatedCampuses {
-            data {
-              attributes {
-                name
               }
             }
           }
