@@ -171,6 +171,12 @@ const StepTwo: FC<any> = ({
     return touched ? !value : false;
   };
 
+  const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
+  const campusLabel = BUSINESS_UNIT === "UTEG" || BUSINESS_UNIT === "UTC" ? "plantel" : "campus";
+
+  const commonLevels = ["Preparatoria", "Licenciatura", "Maestría"];
+  const defaultLevels = BUSINESS_UNIT === "UTC" ? commonLevels : [...commonLevels, "Doctorado"]
+
   return <section className={cn(classNames)}>
       <div className={cn("flex flex-col", { "hidden": controlsConfig?.modality?.hidden })}>
         <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 mb-2">{ config.modality }</p>
@@ -204,7 +210,7 @@ const StepTwo: FC<any> = ({
           <div className="flex justify-start gap-6 flex-wrap">
             {
               levels?.length < 1
-                ? ["Preparatoria", "Licenciatura", "Maestría", "Doctorado"].map((level, i) => (
+                ? defaultLevels?.map((level, i) => (
                     <OptionPill
                       onClick={() => {}}
                       key={`pill-${i}`}
@@ -231,8 +237,8 @@ const StepTwo: FC<any> = ({
         <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.program })}>{ configControls.errorMessagesStepTwoOpenForm.program }</p>
       </div>
       <div className={cn("flex flex-col", { "hidden": controlsConfig?.campus?.hidden })}>
-        <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6">{ config.campus }</p>
-        <Select onClick={(option: CustomEvent) => handleChangeCampus(option)} options={[...dataCampus]} data={{ ...SelectInit, textDefault: !!academicData.campus ? " " : "Elige un campus", disabled: !dataCampus.length, icon: "apartment" }}  />
+        <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6">{ campusLabel || config?.campus }</p>
+        <Select onClick={(option: CustomEvent) => handleChangeCampus(option)} options={[...dataCampus]} data={{ ...SelectInit, textDefault: !!academicData.campus ? " " : `Elige un ${campusLabel}`, disabled: !dataCampus.length, icon: "apartment" }}  />
         <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>{ configControls.errorMessagesStepTwoOpenForm.campus }</p>
       </div>
   </section>
