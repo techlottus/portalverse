@@ -237,7 +237,7 @@ const StepTwo: FC<any> = ({
         <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.program })}>{ configControls.errorMessagesStepTwoOpenForm.program }</p>
       </div>
       <div className={cn("flex flex-col", { "hidden": controlsConfig?.campus?.hidden })}>
-        <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6">{ campusLabel || config?.campus }</p>
+        <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">{ campusLabel || config?.campus }</p>
         <Select onClick={(option: CustomEvent) => handleChangeCampus(option)} options={[...dataCampus]} data={{ ...SelectInit, textDefault: !!academicData.campus ? " " : `Elige un ${campusLabel}`, disabled: !dataCampus.length, icon: "apartment" }}  />
         <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>{ configControls.errorMessagesStepTwoOpenForm.campus }</p>
       </div>
