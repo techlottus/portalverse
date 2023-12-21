@@ -92,6 +92,22 @@ export type ProgramAttributes = {
   programPerks: {
     data: Array<ProgramPerk>
   };
+  relatedPrograms: {
+    data: Array<{
+      attributes: {
+        name: string;
+        slug: string;
+        level: {
+          data: {
+            attributes: {
+              title: ProgramLevel;
+            }
+          }
+        }
+        image: StrapiImage;
+      }
+    }>
+  };
   knowledgeAreas?: {
     data: Array<{
       attributes: {
@@ -163,6 +179,29 @@ query ProgramBySlug($slug: String!) {
               title
               subtitle
               iconName
+            }
+          }
+        }
+        relatedPrograms {
+          data {
+            attributes {
+              name
+              image {
+                data {
+                  attributes {
+                    url
+                    alternativeText
+                  }
+                }
+              }
+              slug 
+              level {
+                data {
+                  attributes {
+                    title
+                  }
+                }
+              }
             }
           }
         }
