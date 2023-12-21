@@ -23,11 +23,7 @@ const RvoeAccordionList: FC<RvoeAccordionListData> = (props: RvoeAccordionListDa
   });
 
   const allLevels = items?.map((item: any) => item?.level)?.filter((level: string, index: number, array: string[]) => array?.indexOf(level) === index);
-
-  console.log("rvoeList: ", rvoeList);
-  console.log("modalities: ", modalities);
-  console.log("getAllRvoes: ", getAllRvoes);
-  console.log("items: ", items);
+  
   return <>
     <section>
       <Container>

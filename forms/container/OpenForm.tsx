@@ -38,7 +38,12 @@ const getBusinessLineToFetchFrom = (businessLine: string, modality: string) => {
       return "ULA"
     }
     case "UTC": {
-      return "UTC"
+      switch(modality) {
+        case "Presencial": return "UTC";
+        case "Semipresencial": return "UTC,ULA";
+        case "Online": return "UTC";
+        default: return "UTC"
+      }
     }
     default: return ""
   }
