@@ -36,8 +36,12 @@ const filterFlexPrograms = (programs: any) => {
 
 // Modalidad Semipresencial (ULA, UTEG)
 const filterHybridPrograms = (programs: any) => {
+  console.log("here")
+  console.log("programs: ", programs);
   switch(businessUnit) {
     case "UTC": {
+      console.log("businessUnit: ", businessUnit);
+      console.log("case UTC: ")
       return programs.reduce((prev: any, item: any) => ((item?.lineaNegocio === "ULA" && item?.nombreCampus === "ZONA ROSA") || item?.lineaNegocio === "UTC") && item?.modalidad === "Semipresencial" ? [...prev, item] : [...prev], [])
     }
     default: {
@@ -75,6 +79,7 @@ export const getEducativeOffer = () => {
 
         if(!!programs && !!programs.length) {
           setAllPrograms([ ...programs ])
+          console.log("modalidad: ", modalidad);
           switch(modalidad) {
             case 'Presencial': {
               dataPrograms = filterOnSitePrograms(programs);
