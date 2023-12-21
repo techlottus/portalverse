@@ -316,9 +316,10 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                     title="Plan Anual"
                     subtitle="Un solo pago cada año"
                     checkoutUrl={checkoutUrl}
-                    price="1,399"
+                    price="Próximamente"
                     period="por año"
                     priceText="Oferta de lanzamiento"
+                    hidePriceElements
                     disabled
                   />
                 </div>
@@ -347,7 +348,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           </Container>
           : null
       }
-            {
+      {
         selectedModalityName === "a tu ritmo" ?
           <ContentFullLayout classNames="bg-primary-0 mt-24 md:-mt-28">
             <Container classNames="">
@@ -376,6 +377,7 @@ const BenefitCard = (props: {
   period: string,
   priceText: string,
   disabled?: boolean,
+  hidePriceElements?: boolean,
 }) => {
   const {
     title,
@@ -385,6 +387,7 @@ const BenefitCard = (props: {
     period = "mes",
     priceText = "",
     disabled = false,
+    hidePriceElements = false
   } = props;
 
   return (
@@ -421,8 +424,15 @@ const BenefitCard = (props: {
         </div>
         <div className="flex flex-col gap-1.5">
           <div className="flex flex-row items-end gap-1">
-            <span className="font-headings font-bold text-6 leading-7 text-surface-900">${price} MXN</span>
-            <span className="font-texts font-normal !text-4.5 text-surface-800">/{period}</span>
+            {
+              hidePriceElements ?
+                <span className="font-headings font-bold text-6 leading-7 text-surface-900">{price}</span>
+              :
+              <>
+                <span className="font-headings font-bold text-6 leading-7 text-surface-900">${price} MXN</span>
+                <span className="font-texts font-normal !text-4.5 text-surface-800">/{period}</span>
+              </>
+            }
           </div>
           <div className="flex flex-row items-center gap-1.5">
             <span className={cn("material-icons !text-4.5 text-secondary-400 select-none", { "text-surface-900": disabled })}>school</span>

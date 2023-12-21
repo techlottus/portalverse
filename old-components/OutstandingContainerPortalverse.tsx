@@ -14,11 +14,11 @@ const OutstandingContainer: FC<OutstandingContainerPortalverseComponentData> = (
       const textContainer = cardContainer?.children?.[0]?.children?.[1];
 
       if (textContainer) {
-        textContainer.classList.add("overflow-y-visible", `${items?.[0]?.contentVariant === "light" ? "text-black" : "text-white"}`)
+        textContainer.classList.add("overflow-y-visible", `${items?.[0]?.contentVariant === "light" ? "!text-black" : "!text-white"}`)
       }
 
       if (titleContainer) {
-        titleContainer.classList.add(`${items?.[0]?.contentVariant === "light" ? "!text-black" : "text-white"}`)
+        titleContainer.classList.add(`${items?.[0]?.contentVariant === "light" ? "!text-black" : "!text-white"}`)
       }
 
       if (cardContainer) {
