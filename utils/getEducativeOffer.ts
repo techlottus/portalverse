@@ -34,9 +34,16 @@ const filterFlexPrograms = (programs: any) => {
   return programs.reduce((prev: any, item: any) => item?.lineaNegocio === "ULA" && item?.modalidad === 'Online' && campusList?.includes(item?.nombreCampus) ? [...prev, item] : [...prev], [])
 }
 
-// Modalidad Semipresencial (ULA)
+// Modalidad Semipresencial (ULA, UTEG)
 const filterHybridPrograms = (programs: any) => {
-  return programs.reduce((prev: any, item: any) => (item?.lineaNegocio === "ULA" || item?.lineaNegocio === "UTC") && item?.modalidad === "Semipresencial" ? [...prev, item] : [...prev], [])
+  switch(businessUnit) {
+    case "UTC": {
+      return programs.reduce((prev: any, item: any) => ((item?.lineaNegocio === "ULA" && item?.nombreCampus === "ZONA ROSA") || item?.lineaNegocio === "UTC") && item?.modalidad === "Semipresencial" ? [...prev, item] : [...prev], [])
+    }
+    default: {
+      return programs.reduce((prev: any, item: any) => (item?.lineaNegocio === "ULA" || item?.lineaNegocio === "UTC") && item?.modalidad === "Semipresencial" ? [...prev, item] : [...prev], [])
+    }
+  }
 }
 
 export const getEducativeOffer = () => {
