@@ -10,7 +10,9 @@ const CardWebsitePortalverse: FC<CardWebsitePortalverseData> = ({ data, classNam
   return <>
     {
       data.type === "vertical"
-        ? <div className={cn("rounded-b-lg hover:shadow-2xl flex flex-col h-full")}>
+        ? <div className={cn("rounded-b-lg flex flex-col h-full ",{
+          "cursor-pointer hover:shadow-2xl": !!onClick
+        })} onClick={onClick}>
           <div>
             <Aspect ratio="2/1">
               <Image classNames="w-full h-full" classNamesImg="w-full h-full object-cover" src={data.image} alt="image" />
@@ -32,7 +34,7 @@ const CardWebsitePortalverse: FC<CardWebsitePortalverseData> = ({ data, classNam
           </div>
         </div>
         : data.type === "horizontal"
-          ? <div className={cn("rounded-b-lg hover:shadow-2xl h-full flex")}>
+          ? <div className={cn("rounded-b-lg h-full flex cursor-pointer", {"cursor-pointer hover:shadow-2xl": !!onClick})} onClick={onClick}>
             <Image
               alt={"image"}
               src={data.image}
