@@ -8,6 +8,7 @@ import Aspect from "@/components/Aspect";
 import { FilterConfig } from "@/components/sections/ProgramsFilter";
 import type { FilterProgram } from "@/utils/strapi/sections/ProgramsFilter";
 import type { ModalityFilterSection } from "@/utils/strapi/sections/ModalityFilter";
+import { useRouter } from "next/router";
 
 const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
 
@@ -36,6 +37,7 @@ const ModalityFilter = (props: ModalityFilterSection) => {
 
   const knowledgeAreas = getProgramsKnowledgeAreas(programs);
   const sortedKnowledgeAreas = knowledgeAreas?.slice()?.sort((a, b) => a?.localeCompare(b));
+  const router = useRouter();
 
   const filterConfig = useMemo(() => {
     return {
@@ -110,8 +112,9 @@ const ModalityFilter = (props: ModalityFilterSection) => {
 
                           return (
                             <div
+                              onClick={()=>{router.push(`${levelRoute}/${programAttributes?.slug}`)}}
                               key={`program-${i}`}
-                              className="flex flex-col w-d:col-span-3 w-t:col-span-4 w-p:col-span-4 hover:shadow-30 h-full border border-solid border-surface-200"
+                              className="flex flex-col w-d:col-span-3 w-t:col-span-4 w-p:col-span-4 hover:shadow-30 h-full border border-solid border-surface-200 cursor-pointer"
                             >
                               <div>
                                 {/* TODO: Handle mosaic view dimensions */}

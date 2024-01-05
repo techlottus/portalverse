@@ -8,6 +8,7 @@ import Aspect from "@/components/Aspect";
 import routesConfig from "routesConfig.json";
 import cn from "classnames";
 import type { FilterProgram, ProgramsFilterSection } from "@/utils/strapi/sections/ProgramsFilter";
+import { useRouter } from "next/router";
 
 const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
 
@@ -103,6 +104,7 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
   };
 
   const filteredPrograms = filterPrograms(sortedPrograms, currentFilter);
+  const router = useRouter();
   
   const modalityNames = modalities?.map(modality => modality?.name?.toLowerCase())?.filter((value, index, self) => {
     return self?.indexOf(value) === index;
@@ -158,10 +160,10 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
                     const image = programAttributes?.image;
 
                     return (
-                      <div
+                      <div onClick={()=>{router.push(`${levelRoute}/${programAttributes?.slug}`)}}
                         key={`program-${i}`}
                         className={cn("flex hover:shadow-30 h-full border border-solid border-surface-200", {
-                          "flex-col w-d:col-span-3 w-t:col-span-4 w-p:col-span-4":
+                          "flex-col w-d:col-span-3 w-t:col-span-4 w-p:col-span-4 cursor-pointer":
                             mosaicActive,
                           "w-d:col-span-12 w-t:col-span-8 w-p:col-span-4":
                             !mosaicActive,
