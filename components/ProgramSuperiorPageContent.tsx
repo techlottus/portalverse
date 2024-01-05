@@ -164,7 +164,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           }
         </div>
       </ContentLayout>
-      <ContentFullLayout classNames="w-d:hidden w-t:hidden mb-10 mt-6">
+      {/* <ContentFullLayout classNames="w-d:hidden w-t:hidden mb-10 mt-6">
         <div className="w-d:hidden w-t:hidden col-span-4 mb-10 mt-6">
           <Aspect ratio={"4/3"}>
             <Image
@@ -175,7 +175,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
             />
           </Aspect>
         </div>
-      </ContentFullLayout>
+      </ContentFullLayout> */}
       {
         selectedModalityName !== "a tu ritmo" ?
           <>

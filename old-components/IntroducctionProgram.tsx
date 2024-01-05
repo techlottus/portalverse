@@ -33,7 +33,7 @@ const IntroductionProgram: FC<IntroductionProgramData> = (props: IntroductionPro
     <section className="my-0 mb-4 md:my-6">
       <Container classNames="w-p:!p-0 w-t:!p-0 w-d-base:!px-0">
         <div className="flex w-p:flex-col w-t:flex-col gap-18">
-          <div className="flex flex-col w-d:w-2/3 w-full my-auto gap-6">
+          <div className="flex flex-col w-d:w-1/2 w-full my-auto gap-6">
             <div className="flex flex-col gap-6 md:gap-8">
               <div className="flex flex-col gap-4">
                 <div className="flex flex-col gap-1">
@@ -228,8 +228,8 @@ const IntroductionProgram: FC<IntroductionProgramData> = (props: IntroductionPro
           </div>
           {
             image ?
-              <div className="w-d:w-1/3 w-full flex items-center w-p:hidden w-t:hidden">
-                <Aspect ratio={"5/4"}>
+              <div className="w-d:w-1/2 w-full flex items-center w-p:hidden w-t:hidden">
+                <Aspect ratio={"2/1"}>
                   <Image
                     alt={"title"}
                     src={image?.src}
