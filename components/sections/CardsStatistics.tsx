@@ -59,7 +59,7 @@ const CardsStatistics: FC<CardsStatisticsData> = (props: CardsStatisticsData) =>
         {
           title ?
             <div>
-              <h3 className="font-headings text-10 leading-12 w-p:text-6 w-p:leading-7 mb-6">{title}</h3>
+              <h3 className="font-headings font-bold text-10 leading-12 w-p:text-6 w-p:leading-7 mb-6">{title}</h3>
             </div>
           : null
         }
@@ -77,7 +77,7 @@ const CardsStatistics: FC<CardsStatisticsData> = (props: CardsStatisticsData) =>
             cards ?
               <div className="w-d:w-1/2 flex flex-col justify-center">
                 {
-                  titleCards ? <h3 className="font-headings text-10 leading-12 w-p:text-6 w-p:leading-7 mb-6">{titleCards}</h3> : null
+                  titleCards ? <h3 className="font-headings font-bold text-10 leading-12 w-p:text-6 w-p:leading-7 mb-6">{titleCards}</h3> : null
                 }
                 {
                   descriptionCards ? <div className="pb-6"><RichtText data={{ content: formattedDescriptionCards }} /></div> : null
@@ -101,7 +101,7 @@ const CardsStatistics: FC<CardsStatisticsData> = (props: CardsStatisticsData) =>
             statistics ?
               <div className="w-d:w-1/2 flex flex-col justify-center">
                 {
-                  titleStatistics ? <h3 className="font-headings text-10 leading-12 w-p:text-6 w-p:leading-7 mb-6">{titleStatistics}</h3> : null
+                  titleStatistics ? <h3 className="font-headings font-bold text-10 leading-12 w-p:text-6 w-p:leading-7 mb-6">{titleStatistics}</h3> : null
                 }
                 {
                   descriptionStatistics ? <div className="pb-6"><RichtText data={{ content: formattedDescriptionStatistics }} /></div> : null
