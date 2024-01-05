@@ -26,6 +26,7 @@ const CardList: FC<CardListSection> = (props: CardListSection) => {
                   cards?.map((card, index) => {
                     const urlImage = card?.image?.data?.attributes?.url;
                     const cardContent = parseEditorRawData(card?.content);
+                    const cardPosition = card?.type
                     const {
                       linkText,
                       linkUrl
@@ -37,7 +38,7 @@ const CardList: FC<CardListSection> = (props: CardListSection) => {
                             //@ts-ignore
                             data={{
                               ...card,
-                              type: "vertical",
+                              type: cardPosition,
                               urlImage,
                               text: cardContent,
                               wrapper: true,
@@ -49,12 +50,12 @@ const CardList: FC<CardListSection> = (props: CardListSection) => {
                               } : null,
                               link: true,
                             }}
-                            onClick={() => {
+                            onClick={linkUrl ? () => {
                               if (!!linkUrl) {
                                 return window?.open(linkUrl, "_self")
                               }
                               return null
-                            }}
+                            }: undefined}
                           />
                       </div>
                     )

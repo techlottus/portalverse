@@ -3,6 +3,7 @@ import CardWebsiteComponentData from "@/types/CardWebsite.types"
 import Link from "@/old-components/Link"
 import { LinkInit } from "@/old-components/fixture"
 import RichtText from "@/old-components/Richtext/Richtext"
+import cn from "classnames"
 
 const CardWebsite: FC<CardWebsiteComponentData> = memo(({ data, onClick }: CardWebsiteComponentData) => {
   const cardWebsitePortalverseRef = createRef();
@@ -49,7 +50,8 @@ const CardWebsite: FC<CardWebsiteComponentData> = memo(({ data, onClick }: CardW
     }
   }, [onClick]);// eslint-disable-line react-hooks/exhaustive-deps
 
-  return <lottus-card-website-portalverse ref={cardWebsitePortalverseRef}>
+  return <a className={cn({"cursor-pointer": !!onClick})} onClick={onClick}>
+    <lottus-card-website-portalverse ref={cardWebsitePortalverseRef}>
     <div slot="areaCardWebsiteLink">
       <Link data={linkTextData} onClick={onClick} />
     </div>
@@ -62,6 +64,7 @@ const CardWebsite: FC<CardWebsiteComponentData> = memo(({ data, onClick }: CardW
       <RichtText data={{content}} classNames="font-normal"/>
     </div>
   </lottus-card-website-portalverse>
+  </a>
 });
 
 export default CardWebsite;
