@@ -6,7 +6,7 @@ import RichtText from "@/old-components/Richtext/Richtext";
 import parseEditorRawData from "@/utils/parseEditorRawData";
 
 const IconTextListImage: FC<IconTextListImage> = (props: IconTextListImage) => {
-  const { title, description, iconTextList, imageDesk, tabletImage, mobileImage, positionImage } = props
+  const { title, description, iconTextList, imageDesk, tabletImage, mobileImage, positionImage = "right" } = props
 
   return (
     <section>
@@ -52,7 +52,7 @@ const IconTextListImage: FC<IconTextListImage> = (props: IconTextListImage) => {
           <div className="w-d:w-1/2">
             {
               imageDesk ?
-                <div className={cn("w-t:hidden w-p:hidden flex justify-start", {"justify-end" : positionImage === "right"})}>
+                <div className={cn("w-t:hidden w-p:hidden flex justify-start", {"justify-end" : positionImage === "right" || !positionImage})}>
                   <img
                     alt={""}
                     src={imageDesk?.data?.attributes?.url}
