@@ -6,23 +6,41 @@ import RichtText from "@/old-components/Richtext/Richtext";
 import parseEditorRawData from "@/utils/parseEditorRawData";
 
 const IconTextListImage: FC<IconTextListImage> = (props: IconTextListImage) => {
-  const { title, description, iconTextList, imageDesk, tabletImage, mobileImage, positionImage = "right" } = props
+  const { title, description, iconTextList, imageDesk, tabletImage, mobileImage, positionImage = "right", iconClassNames = "" } = props
 
   return (
     <section>
       <Container>
-        <section className={cn('w-d:flex gap-6', { "flex-row-reverse": positionImage === "left" })}>
+        <section className="w-d:hidden">
+          {
+            title ?
+              <div>
+                <h3 className="font-headings text-10 font-bold leading-12 w-t:text-8.5 w-p:text-6 w-d:mb-6">{title}</h3>
+              </div>
+              : null
+          }
+          {
+            description ?
+              <div className="w-d:mb-12">
+                <RichtText data={{
+                  content: parseEditorRawData(description)
+                }} />
+              </div>
+              : null
+          }
+        </section>
+        <section className={cn('flex gap-6 w-t:flex-col-reverse w-p:flex-col-reverse', { "flex-row-reverse": positionImage === "left" })}>
           <div className="w-d:w-1/2 my-auto">
             {
               title ?
-                <div>
+                <div className="w-p:hidden w-t:hidden">
                   <h3 className="font-headings text-10 font-bold leading-12 w-t:text-8.5 w-p:text-6 w-d:mb-6">{title}</h3>
                 </div>
                 : null
             }
             {
               description ?
-                <div className="w-d:mb-12">
+                <div className="w-d:mb-12 w-p:hidden w-t:hidden">
                   <RichtText data={{
                     content: parseEditorRawData(description)
                   }} />
@@ -35,7 +53,7 @@ const IconTextListImage: FC<IconTextListImage> = (props: IconTextListImage) => {
                   iconTextList?.map((item: any, i: number) =>
                     <div key={`icon-${i}`} className="flex gap-6">
                       <div className="my-auto">
-                        <span className="material-icons text-primary-500 !text-13.5">{item?.icon}</span>
+                        <span className={cn("material-icons text-primary-500 !text-16", iconClassNames)}>{item?.icon}</span>
                       </div>
                       <div className="">
                         <p className="font-headings font-bold">{item?.title}</p>
@@ -52,7 +70,7 @@ const IconTextListImage: FC<IconTextListImage> = (props: IconTextListImage) => {
           <div className="w-d:w-1/2">
             {
               imageDesk ?
-                <div className={cn("w-t:hidden w-p:hidden flex justify-start", {"justify-end" : positionImage === "right" || !positionImage})}>
+                <div className={cn("w-t:hidden w-p:hidden flex justify-start", { "justify-end": positionImage === "right" || !positionImage })}>
                   <img
                     alt={""}
                     src={imageDesk?.data?.attributes?.url}

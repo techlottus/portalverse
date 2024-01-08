@@ -15,6 +15,7 @@ export type IconTextListImage = {
   imageDesk: StrapiImage;
   tabletImage: StrapiImage;
   mobileImage: StrapiImage;
+  iconClassNames?: string;
 }
 
 export const ICON_TEXT_LIST_IMAGE = `
