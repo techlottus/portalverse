@@ -36,13 +36,12 @@ const filterFlexPrograms = (programs: any) => {
 
 // Modalidad Semipresencial (ULA, UTEG)
 const filterHybridPrograms = (programs: any) => {
-  console.log("programs: ", programs);
   switch(businessUnit) {
     case "UTC": {
       return programs.reduce((prev: any, item: any) => ((item?.lineaNegocio === "ULA" && item?.nombreCampus === "ZONA ROSA") || item?.lineaNegocio === "UTC") && item?.modalidad === "Semipresencial" ? [...prev, item] : [...prev], [])
     }
     default: {
-      return programs.reduce((prev: any, item: any) => (item?.lineaNegocio === "ULA" || item?.lineaNegocio === "UTC") && item?.modalidad === "Semipresencial" ? [...prev, item] : [...prev], [])
+      return programs.reduce((prev: any, item: any) => (item?.lineaNegocio === "ULA" || item?.lineaNegocio === "UTC") && item?.modalidad === "Semipresencial" && !["NEZA", "TLALPAN", "ECATEPEC", "TLALNEPANTLA", "ZONA ROSA"]?.includes(item?.nombreCampus) ? [...prev, item] : [...prev], [])
     }
   }
 }
