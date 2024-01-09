@@ -16,6 +16,7 @@ import FAQ from "@/components/sections/FAQ";
 import FormVideo from "@/components/sections/FormVideo";
 import GoogleMap from "@/components/sections/GoogleMap";
 import HeroSlider from "@/components/sections/HeroSlider";
+import IconTextListImage from "@/components/sections/IconTextImageList";
 import IntroductionImage from "@/components/sections/IntroductionImage";
 import KnowledgeAreaFilter from "@/components/sections/KnowledgeAreaFilter";
 import Leaderboard from "@/components/sections/Leaderboard";
@@ -66,6 +67,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsFormVideo: FormVideo,
   ComponentSectionsGoogleMap: GoogleMap,
   ComponentSectionsHeroSlider: HeroSlider,
+  ComponentSectionsIconTextListImage: IconTextListImage,
   ComponentSectionsIntroductionImage: IntroductionImage,
   ComponentSectionsKnowledgeAreaFilter: KnowledgeAreaFilter,
   ComponentSectionsLeaderboard: Leaderboard,
@@ -88,7 +90,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsStatisticsCardList: StatisticsCardList,
   ComponentSectionsTextContent: TextContent,
   ComponentSectionsVideos: VideosSection,
-  ComponentSectionsWebError: WebError
+  ComponentSectionsWebError: WebError,
 };
 
 export default defaultRenderers;
