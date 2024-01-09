@@ -254,7 +254,11 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
     const medio = queryParams?.utm_medium;
     const campana = queryParams?.utm_campaign;
 
+    console.log("queryParams: ", queryParams);
+
     const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&telefono=${telefono}&email=${email}&lineaNegocio=${lineaNegocio}&modalidad=${modalidad}&nivel=${nivel}&campus=${campus}&programa=${programa}&avisoPrivacidad=true&leadSource=Digital&validaRegistroBoot=${validaRegistroBoot}&source=${source}&canal=${canal}${medio ? `&medio=${medio}` : ""}${campana ? `&campana=${campana}` : ""}`;
+
+    console.log("params: ", params)
 
     setIsLoadingLead(true);
 
