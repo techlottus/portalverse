@@ -175,7 +175,7 @@ const StepTwo: FC<any> = ({
   const campusLabel = BUSINESS_UNIT === "UTEG" || BUSINESS_UNIT === "UTC" ? "plantel" : "campus";
 
   const commonLevels = ["Preparatoria", "Licenciatura", "Maestría"];
-  const defaultLevels = BUSINESS_UNIT === "UTC" ? commonLevels : [...commonLevels, "Doctorado"]
+  const defaultLevels = BUSINESS_UNIT === "UTC" ? commonLevels : BUSINESS_UNIT === "ULA" ? [...commonLevels, "Doctorado", "Educación Continua"] : [...commonLevels, "Doctorado"]
 
   return <section className={cn(classNames)}>
       <div className={cn("flex flex-col", { "hidden": controlsConfig?.modality?.hidden })}>
