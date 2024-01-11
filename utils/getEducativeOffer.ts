@@ -20,7 +20,7 @@ const filterOnSitePrograms = (programs: any) => {
 const filterOnlinePrograms = (programs: any) => {
   switch(businessUnit) {
     case "ULA": {
-      return programs.filter((item: any) => item?.nivel !== "Educación Continua").reduce((prev: any, item: any) => item?.lineaNegocio === "ULA" && item?.nombreCampus === "ONLINE" ? [...prev, item] : [...prev], []);
+      return programs.reduce((prev: any, item: any) => item?.lineaNegocio === "ULA" && item?.nombreCampus === "ONLINE" ? [...prev, item] : [...prev], []);
     }
     default: { // UANE, UTEG
       return programs.reduce((prev: any, item: any) => (item?.lineaNegocio === process.env.NEXT_PUBLIC_LINEA && item?.modalidad === "Online") || (item?.lineaNegocio === "ULA" && (item?.nombreCampus === `${process.env.NEXT_PUBLIC_LINEA} ONLINE` && item?.modalidad === "Online")) ? [...prev, item] : [...prev], []);
