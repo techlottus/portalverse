@@ -13,7 +13,7 @@ const OptionPill: FC<OptionPillConfigComponent> = ({ data, active, onClick }: Op
     <div className={cn("radio-option rounded-[50%] w-4 h-4 flex items-center justify-center mr-3 ml-4 w-p:hidden", { 'border border-primary-500 bg-primary-500': active && !data?.disabled, 'bg-surface-500': !active })}>
       <div className={cn("rounded-[50%] w-2 h-2 bg-surface-100")}></div>
     </div>
-    <span className="my-3 mr-6 w-p:pl-3">{ data.name }</span>
+    <span className="my-3 mr-6 w-p:pl-3">{ data?.name === "Educación Continua" ? "Extensión Universitaria" : data?.name }</span>
     {data?.disabled && <div className="absolute w-full h-full bg-white top-0 left-0 opacity-50"></div>}
   </section>
 }
