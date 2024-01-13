@@ -1,5 +1,7 @@
 import AccordionComponent from "@/components/sections/AccordionSection";
 import Alert from "@/components/sections/Alert";
+import AtrProgramInfo from "@/components/sections/AtrProgramInfo";
+import AtrProgramPerks from "@/components/sections/AtrProgramPerks";
 import Banner from "@/components/sections/Banner";
 import BannerNumeraliaSection from "@/components/sections/BannerNumeraliaSection";
 import BlogPostsPodcast from "@/components/sections/BlogPostsPodcast";
@@ -35,14 +37,14 @@ import RepeatableBannerSection from "@/components/sections/RepeatableBannerSecti
 import RichTextImage from "@/components/sections/RichTextImage";
 import RichTextImageBgImage from "@/components/sections/RichTextImageBgImage";
 import RichTextVideo from "@/components/sections/RichTextVideo";
+import RockstarInfo from "@/components/sections/RockstarInfo";
+import RockstarInfoList from "@/components/sections/RockstarInfoList";
 import RvoeAccordionList from "@/components/sections/RvoeAccordionList";
 import StatisticsCardList from "@/components/sections/StatisticsCardList";
 import TextContent from "@/components/sections/TextContent";
+import VideosSection from "@/components/sections/VideosSection";
 import WebError from "@/components/sections/WebError";
 import type { FC } from "react";
-import RockstarInfo from "@/components/sections/RockstarInfo";
-import RockstarInfoList from "@/components/sections/RockstarInfoList";
-import VideosSection from "@/components/sections/VideosSection";
 
 type Renderer = {
   [key: string]: FC<any>;
@@ -52,6 +54,8 @@ const defaultRenderers: Renderer = {
   paragraph: Paragraph,
   ComponentSectionsAccordion: AccordionComponent,
   ComponentSectionsAlert: Alert,
+  ComponentSectionsAtrProgramInfo: AtrProgramInfo,
+  ComponentSectionsAtrProgramPerks: AtrProgramPerks,
   ComponentSectionsBanner: Banner,
   ComponentSectionsBannerNumeralia: BannerNumeraliaSection,
   ComponentSectionsBlogPostsPodcast: BlogPostsPodcast,
