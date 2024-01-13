@@ -33,6 +33,7 @@ import ProgramsFilter from "@/components/sections/ProgramsFilter";
 import PromoLinkList from "@/components/sections/PromoLinkList";
 import RepeatableBannerSection from "@/components/sections/RepeatableBannerSection";
 import RichTextImage from "@/components/sections/RichTextImage";
+import RichTextImageBgImage from "@/components/sections/RichTextImageBgImage";
 import RichTextVideo from "@/components/sections/RichTextVideo";
 import RvoeAccordionList from "@/components/sections/RvoeAccordionList";
 import StatisticsCardList from "@/components/sections/StatisticsCardList";
@@ -83,6 +84,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsPromoLinkList: PromoLinkList,
   ComponentSectionsRepeatableBanner: RepeatableBannerSection,
   ComponentSectionsRichTextImage: RichTextImage,
+  ComponentSectionsRichTextImageBgImage: RichTextImageBgImage,
   ComponentSectionsRichTextVideo: RichTextVideo,
   ComponentSectionsRockstarInfo: RockstarInfo,
   ComponentSectionsRockstarInfoList: RockstarInfoList,

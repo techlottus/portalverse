@@ -32,6 +32,7 @@ import { PROGRAMS_FILTER } from "@/utils/strapi/sections/ProgramsFilter";
 import { PROMO_LINK_LIST } from "@/utils/strapi/sections/PromoLinkList";
 import { REPEATABLE_BANNER } from "@/utils/strapi/sections/RepeatableBanner";
 import { RICH_TEXT_IMAGE } from "@/utils/strapi/sections/RichTextImage";
+import { RICHTEXTIMAGE_BGIMAGE } from "@/utils/strapi/sections/RichTextImageBgImage";
 import { RICH_TEXT_VIDEO } from "@/utils/strapi/sections/RichTextVideo";
 import { ROCKSTARINFO_LIST } from "@/utils/strapi/sections/RockstarInfloList";
 import { RVOE_ACCORDION_CONTENT } from "./sections/RvoeAccordionList";
@@ -71,6 +72,7 @@ import type { ProgramsFilterSection } from "@/utils/strapi/sections/ProgramsFilt
 import type { PromoLinkListSection } from "@/utils/strapi/sections/PromoLinkList";
 import type { RepeatableBanner } from "@/utils/strapi/sections/RepeatableBanner";
 import type { RichTextImageSection } from "@/utils/strapi/sections/RichTextImage";
+import type { RichTextImageBgImageSection } from "@/utils/strapi/sections/RichTextImageBgImage";
 import type { RichTextVideoSection } from "@/utils/strapi/sections/RichTextVideo";
 import type { RockstarInfoListSection } from "@/utils/strapi/sections/RockstarInfloList";
 import type { RvoeAccordionListData } from "./sections/RvoeAccordionList";
@@ -112,6 +114,7 @@ export type ComponentSection =
   | PromoLinkListSection
   | RepeatableBanner
   | RichTextImageSection
+  | RichTextImageBgImageSection
   | RichTextVideoSection
   | RockstarInfoListSection
   | RvoeAccordionListData
@@ -154,6 +157,7 @@ export type ComponentSection =
   ${PROMO_LINK_LIST}
   ${REPEATABLE_BANNER}
   ${RICH_TEXT_IMAGE}
+  ${RICHTEXTIMAGE_BGIMAGE}
   ${RICH_TEXT_VIDEO}
   ${ROCKSTARINFO_LIST}
   ${RVOE_ACCORDION_CONTENT}
