@@ -112,7 +112,7 @@ const IntroductionProgram: FC<IntroductionProgramData> = (props: IntroductionPro
                               offerPrice && offerPrice !== 0 ?
                                 <div className="flex">
                                   <div className="flex items-center gap-0.5">
-                                    <span className="font-headings text-7 leading-9 font-bold">${offerPrice?.toLocaleString()} MXN</span>
+                                    <span className="font-headings text-7 leading-9 font-bold">${offerPrice?.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})} MXN</span>
                                     {
                                       periodicity ?
                                         <span className="font-texts font-normal text-lg leading-6 text-surface-900 my-auto">/{periodicity}</span>
@@ -129,7 +129,7 @@ const IntroductionProgram: FC<IntroductionProgramData> = (props: IntroductionPro
                                 </div>
                                 : price !== 0 ?
                                   <div className="flex gap-1">
-                                    <span className="text-headings text-6 leading-9 font-bold">${price?.toLocaleString()}</span>
+                                    <span className="text-headings text-6 leading-9 font-bold">${price?.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>
                                     <span className="text-headings text-6 leading-9 font-bold">MXN</span>
                                     {
                                       periodicity ?
