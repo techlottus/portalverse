@@ -115,23 +115,23 @@ const BenefitCard = (props: {
           <p className="font-texts font-bold text-sm text-surface-900">Beneficios:</p>
           <div className="flex flex-col gap-2">
             <div className="flex flex-row items-center gap-2">
-              <span className="material-icons !text-4.5 text-primary-400 select-none">book_2</span>
+              <span className="material-symbols-outlined !text-4.5 text-primary-400 select-none">book_2</span>
               <span className="font-texts font-normal text-sm text-surface-900">Aprendizaje autogestivo</span>
             </div>
             <div className="flex flex-row items-center gap-2">
-              <span className="material-icons !text-4.5 text-primary-400 select-none">card_membership</span>
+              <span className="material-symbols-outlined !text-4.5 text-primary-400 select-none">card_membership</span>
               <span className="font-texts font-normal text-sm text-surface-900">Título con Validez Oficial (SEP)</span>
             </div>
             <div className="flex flex-row items-center gap-2">
-              <span className="material-icons !text-4.5 text-primary-400 select-none">schedule</span>
+              <span className="material-symbols-outlined !text-4.5 text-primary-400 select-none">schedule</span>
               <span className="font-texts font-normal text-sm text-surface-900">Concluye en menos tiempo</span>
             </div>
             <div className="flex flex-row items-center gap-2">
-              <span className="material-icons !text-4.5 text-primary-400 select-none">savings</span>
+              <span className="material-symbols-outlined !text-4.5 text-primary-400 select-none">savings</span>
               <span className="font-texts font-normal text-sm text-surface-900">Único pago por suscripción mensual </span>
             </div>
             <div className="flex flex-row items-center gap-2">
-              <span className="material-icons !text-4.5 text-primary-400 select-none">school</span>
+              <span className="material-symbols-outlined !text-4.5 text-primary-400 select-none">school</span>
               <span className="font-texts font-normal text-sm text-surface-900">2 años mínimo</span>
             </div>
           </div>
@@ -151,7 +151,7 @@ const BenefitCard = (props: {
           <div className="flex flex-row items-center gap-1.5">
             {
               priceIcon ?
-                <span className={cn("material-icons !text-4.5 text-secondary-400 select-none", { "text-surface-900": disabled })}>{priceIcon}</span>
+                <span className={cn("material-symbols-outlined !text-4.5 text-secondary-400 select-none", { "text-surface-900": disabled })}>{priceIcon}</span>
               : null
             }
             <span className={cn("font-texts font-normal text-secondary-400", { "text-surface-900": disabled })}>{priceText}</span>

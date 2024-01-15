@@ -24,7 +24,7 @@ const LinkList: FC<LinkListSection> = memo((props: LinkListSection) => {
                           ? <a key={i} href={link?.href} target={link?.target === "blank" ? "_blank" : "_self"} rel={link?.target === "blank" ? "noreferrer" : undefined} className="flex items-center space-x-2">
                               {
                                 link?.iconName && link?.iconPosition === "left"
-                                  ? <span className="material-icons font-normal">{link?.iconName}</span>
+                                  ? <span className="material-symbols-outlined font-normal">{link?.iconName}</span>
                                   : null
                               }
                               {
@@ -34,7 +34,7 @@ const LinkList: FC<LinkListSection> = memo((props: LinkListSection) => {
                               }
                               {
                                 link?.iconName && link?.iconPosition === "right"
-                                  ? <span className="material-icons font-normal">{link?.iconName}</span>
+                                  ? <span className="material-symbols-outlined font-normal">{link?.iconName}</span>
                                   : null
                               }
                             </a>

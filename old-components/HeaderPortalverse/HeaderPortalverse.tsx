@@ -140,7 +140,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, o
                       : <p className="font-texts font-bold text-sm">{item.label}</p>
                   }
                   <p className={cn("flex items-center justify-center", { "hidden": !item.items.length })} onClick={() => !activeMenu ? handleHoverOption(item.label): handleHoverOutOption()}>
-                    <span className={cn("material-icons ml-2")}>expand_more</span>
+                    <span className={cn("material-symbols-outlined ml-2")}>expand_more</span>
                   </p>
                   </div>)
               }
@@ -205,7 +205,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, o
                       </div>
                 }
                 <div className={cn("p-3", { "cursor-pointer": !!item.route })} onClick={() => handleEventNavigate(!!item.route, item.label, "arrow", !!item.back)}>
-                  <span className="material-icons icon">{ !item.back ? "arrow_forward_ios" : "arrow_back_ios" }</span>
+                  <span className="material-symbols-outlined icon">{ !item.back ? "arrow_forward_ios" : "arrow_back_ios" }</span>
                 </div>
               </div>
           </div>)

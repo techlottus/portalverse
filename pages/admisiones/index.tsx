@@ -105,18 +105,18 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
                 <TabsFeatured tabs={sections?.requirementsIcons?.tabs?.items} onActive={(active: number) => setTabActive(active)} />
               </div>
               <div className="col-span-12 w-t:col-span-12 w-p:col-span-4 w-p:mb-6 w-t:mb-12 w-d:mb-12">
-                <ContentInsideLayout classNames="gap-6">
+                <ContentInsideLayout classNames="gap-5">
                   {
                     contentTabsIcons?.map(({ image: { src, alt }, content: { iconTextList, action = null }, cards }: any, i: number) => <Fragment key={`description-beca-${i}`}>
-                      <section className={cn("col-span-7 w-t:col-span-12 w-p:col-span-12 w-t:flex-col-reverse w-p:flex-col-reverse", { "hidden w-p:hidden": tabActive !== i })}>
+                      <section className={cn("col-span-7 w-full w-t:col-span-12 w-p:col-span-12 w-t:flex-col-reverse w-p:flex-col-reverse", { "hidden w-p:hidden": tabActive !== i })}>
                         <div className="my-auto">
                           {
                             iconTextList ?
                               iconTextList?.length > 0 ?
                                 iconTextList?.map((item: any, i: number) =>
-                                  <div key={`icon-${i}`} className="flex gap-6">
+                                  <div key={`icon-${i}`} className="flex gap-6 mb-1">
                                     <div className="my-auto">
-                                      <span className={cn("material-icons text-primary-500 !text-14")}>{item?.icon}</span>
+                                      <span className={cn("material-symbols-outlined text-primary-500 !text-14")}>{item?.icon}</span>
                                     </div>
                                     <div className="my-auto">
                                       <p className="font-headings font-bold">{item?.title}</p>
@@ -127,18 +127,18 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
                                 : null
                               : null
                           }
-                          <div className={cn("justify-center flex mt-3", { "hidden w-p:hidden": tabActive !== i })}>
-                            <Button dark onClick={() => navigate(action?.route)} data={action} />
-                          </div>
                         </div>
                       </section>
-                      <section className={cn("col-span-5 w-t:col-span-12 mx-auto h-auto w-p:col-span-12", { "hidden": tabActive !== i })}>
+                      <section className={cn("col-span-5 w-full w-t:col-span-12 mx-auto w-p:col-span-12", { "hidden": tabActive !== i })}>
                         <img
                           alt={alt}
                           src={src}
-                          className="w-t:col-span-12 w-t:aspect-2/1 w-t:col-start-2 w-t:col-end-8 w-p:col-span-4"
+                          className="w-t:col-span-12 w-full w-t:aspect-2/1 w-t:col-start-2 w-t:col-end-8 w-p:col-span-4 h-full"
                         />
                       </section>
+                      <div className={cn("col-span-7 w-t:col-span-12 w-p:col-span-12 justify-center flex mb-3", { "hidden w-p:hidden": tabActive !== i })}>
+                        <Button dark onClick={() => navigate(action?.route)} data={action} />
+                      </div>
                       <section className={cn("col-span-12 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1", { "hidden w-p:hidden": tabActive !== i })}>
                         {
                           cards?.map((item: any, i: number) => <section key={`section-blog-${i}`}>
@@ -280,7 +280,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
         {
           sections?.FAQ?.faqImage ?
             <>
-              <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mb-12 w-t:mb-6 w-p:mb-6">
+              <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mb-12 w-t:mb-6 w-p:mb-6 w-t:hidden w-p:hidden">
                 <img className="w-full w-t:hidden w-p:hidden" src={sections?.FAQ?.faqImage} />
               </div>
               <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mb-12 w-t:mb-6 w-p:mb-6">

@@ -89,7 +89,7 @@ const IntroductionProgram: FC<IntroductionProgramData> = (props: IntroductionPro
                       {
                         programPerks?.map((item, i) => (<div key={i}>
                           <div className="flex items-center gap-2 p-2">
-                            <span className="material-icons my-auto text-surface-500 !text-[32px] select-none">{item?.attributes?.iconName}</span>
+                            <span className="material-symbols-outlined my-auto text-surface-500 !text-[32px] select-none">{item?.attributes?.iconName}</span>
                             <div className="flex flex-col">
                               <p className="font-texts font-normal text-xs leading-4">{item?.attributes?.title}</p>
                               <p className="font-texts font-bold text-base leading-5">{item?.attributes?.subtitle}</p>
@@ -162,7 +162,7 @@ const IntroductionProgram: FC<IntroductionProgramData> = (props: IntroductionPro
                                   {
                                     brands?.[0]?.attributes?.contact ?
                                       <div className="flex items-center gap-1">
-                                        <span className="material-icons !text-lg text-primary-500 select-none">email</span>
+                                        <span className="material-symbols-outlined !text-lg text-primary-500 select-none">email</span>
                                         <a
                                           className="font-texts font-bold text-base text-primary-500 leading-5 underline"
                                           target="_blank"
