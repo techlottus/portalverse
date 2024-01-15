@@ -28,7 +28,7 @@ const CardProgram: FC<CardProgramData> = memo(({ title, subtitle, link, image, c
       <p className={cn("font-texts font-normal text-4.5 mb-2 mx-3", {"mt-3": !subtitle})}>{title}</p>
       <div className="w-full h-full flex justify-end pb-2 font-texts font-bold items-end">
         <LinkIcons data={link} onClick={onClick}/>
-        <span className="material-icons icon">chevron_right</span>
+        <span className="material-symbols-outlined icon">chevron_right</span>
       </div>
       </div>
     </div>

@@ -116,7 +116,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
                                 iconTextList?.map((item: any, i: number) =>
                                   <div key={`icon-${i}`} className="flex gap-6">
                                     <div className="my-auto">
-                                      <span className={cn("material-icons text-primary-500 !text-14")}>{item?.icon}</span>
+                                      <span className={cn("material-symbols-outlined text-primary-500 !text-14")}>{item?.icon}</span>
                                     </div>
                                     <div className="my-auto">
                                       <p className="font-headings font-bold">{item?.title}</p>

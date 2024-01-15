@@ -51,7 +51,7 @@ const CategoryAccordionList: FC<CategoryAccordionListData> = (props: CategoryAcc
                       <div className="flex justify-start mb-5 gap-2.5 items-center" key={index}>
                         {
                           item?.iconName
-                            ? <span className={cn("material-icons flex-none !text-4.5 w-4", { "text-primary-500": index === optionSelect })}>{item?.iconName}</span>
+                            ? <span className={cn("material-symbols-outlined flex-none !text-4.5 w-4", { "text-primary-500": index === optionSelect })}>{item?.iconName}</span>
                             : null
                         }
                         <button className={cn("font-semibold font-headings text-left !text-4.5", { "text-primary-500": index === optionSelect })} onClick={() => {
