@@ -23,21 +23,21 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
   console.log(sections?.RichTextImageBgImage?.desktopBgImage?.data?.attributes?.url);
   return <>
     <Head>
-      <title>{meta.title}</title>
+      <title>{meta?.title}</title>
     </Head>
     <HeaderFooterLayout breadcrumbs={true}>
       <ContentFullLayout classNames="gap-6 w-d:hidden mb-6">
         <div className="head col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <BannerNumeralia data={sections.head.banner} />
+          <BannerNumeralia data={sections?.head?.banner} />
         </div>
       </ContentFullLayout>
       <ContentLayout classNames="gap-6">
         <div className="head col-span-12 w-t:hidden w-p:hidden">
-          <BannerNumeralia data={sections.head.banner} />
+          <BannerNumeralia data={sections?.head?.banner} />
         </div>
         <div className="col-span-6 mt-auto mb-auto w-t:col-span-8 w-p:col-span-4 w-t:hidden w-p:hidden">
-          <p className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6 mb-6"> {sections.descripcion.title}</p>
-          <RichtText data={{ content: sections.descripcion.text.content }} />
+          <p className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6 mb-6"> {sections?.descripcion?.title}</p>
+          <RichtText data={{ content: sections?.descripcion?.text?.content }} />
           {
             <div className="mt-18 w-t:mt-12 w-p:mt-6">
               {
@@ -70,15 +70,15 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
         {
           sections?.comoFunciona ?
             <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-t:hidden w-p:hidden my-auto ">
-              <p className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6 mb-6">{sections.comoFunciona.title}</p>
-              <RichtText data={{ content: sections.comoFunciona.description.content }} />
+              <p className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6 mb-6">{sections?.comoFunciona?.title}</p>
+              <RichtText data={{ content: sections?.comoFunciona?.description?.content }} />
             </div>
             : null
         }
         {
           sections?.comoFunciona ?
             <div className="w-t:col-span-8 w-p:col-span-4 w-d:hidden">
-              <RichtText data={{ content: sections.comoFunciona.description.content }} />
+              <RichtText data={{ content: sections?.comoFunciona?.description?.content }} />
             </div>
             : null
         }
@@ -116,11 +116,11 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
           sections?.vinculacionEmpresas ?
             <ContentInsideLayout classNames="col-span-12 w-t:col-span-8 w-p:col-span-4">
               <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mt-auto mb-auto">
-                <p className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6 mb-6">{sections.vinculacionEmpresas.title}</p>
-                <RichtText data={{ content: sections.vinculacionEmpresas.description.content }} />
+                <p className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6 mb-6">{sections?.vinculacionEmpresas?.title}</p>
+                <RichtText data={{ content: sections?.vinculacionEmpresas?.description?.content }} />
               </div>
               <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-                <Image src={sections.vinculacionEmpresas.image.src} alt={sections.vinculacionEmpresas.image.src} classNames="aspect-1/1" />
+                <Image src={sections.vinculacionEmpresas.image.src} alt={sections?.vinculacionEmpresas?.image?.src} classNames="aspect-1/1" />
               </div>
             </ContentInsideLayout>
             : null
@@ -153,17 +153,17 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
           <ContentFullLayout classNames="bg-surface-800">
             <ContentLayout>
               <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-4 w-d:hidden">
-                <p className="font-headings text-surface-0 font-bold leading-tight text-6.5 w-t:text-6 w-p:text-6">{sections.historiasExito.title}</p>
+                <p className="font-headings text-surface-0 font-bold leading-tight text-6.5 w-t:text-6 w-p:text-6">{sections?.historiasExito?.title}</p>
               </div>
               <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mt-auto mb-auto w-t:hidden w-p:hidden">
                 <p className="font-headings text-surface-0 font-bold leading-tight text-6.5 w-t:text-6 w-p:text-6 mb-6">{sections.historiasExito.title}</p>
-                <RichtText font="dark" data={{ content: sections.historiasExito.description.content }} />
+                <RichtText font="dark" data={{ content: sections?.historiasExito?.description?.content }} />
               </div>
               <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mb-6 w-d:hidden">
-                <RichtText font="dark" data={{ content: sections.historiasExito.description.content }} />
+                <RichtText font="dark" data={{ content: sections?.historiasExito?.description?.content }} />
               </div>
               <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mt-6 mb-6 h-80">
-                <Video data={sections.historiasExito.video} />
+                <Video data={sections?.historiasExito?.video} />
               </div>
             </ContentLayout>
           </ContentFullLayout>
@@ -188,12 +188,12 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
           <Cintillo
             classNames="h-auto"
             {...sections?.contacto?.banner}
-            contentVariant={sections.contacto.banner.contentVariant}
-            image={sections.contacto.banner.image}
-            title={sections.contacto.banner.title}
-            subtitle={sections.contacto.banner.subtitle}
-            phone={sections.contacto.banner.phone}
-            email={sections.contacto.banner.email}
+            contentVariant={sections?.contacto?.banner?.contentVariant}
+            image={sections?.contacto?.banner?.image}
+            title={sections?.contacto?.banner?.title}
+            subtitle={sections?.contacto?.banner?.subtitle}
+            phone={sections?.contacto?.banner?.phone}
+            email={sections?.contacto?.banner?.email}
           />
         </div>
       </ContentLayout>
