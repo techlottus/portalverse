@@ -37,7 +37,7 @@ const NumbersPortalverse: FC<NumbersPortalverseData> = memo(({data, classNames }
           data?.icon ?
             <p
               className={cn(
-                "icono material-icons pr-2 !text-10 text-surface-500",
+                "icono material-symbols-outlined pr-2 !text-10 text-surface-500",
                 `${iconsClassNames}`,
                 "w-p:hidden w-p:invisible w-t:invisible w-p:w-0 w-t:w-0"
                 )}

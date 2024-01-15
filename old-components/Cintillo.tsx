@@ -102,7 +102,7 @@ const CintilloContent = (props: CintilloData) => {
               ? <div className="flex my-4 items-center">
                 <span
                   className={cn(
-                    "material-icons pr-2 pt-1 text-2 text-surface-950 w-p:text-surface-0",
+                    "material-symbols-outlined pr-2 pt-1 text-2 text-surface-950 w-p:text-surface-0",
                     {
                       "!text-surface-0": contentVariant === "light" || overlay === "dark",
                       "!text-surface-950": overlay === "white"
@@ -123,7 +123,7 @@ const CintilloContent = (props: CintilloData) => {
               ? <div className="flex my-4 items-center">
                 <span
                   className={cn(
-                    "material-icons pr-2 pt-1 text-2 text-surface-950 w-p:text-surface-0",
+                    "material-symbols-outlined pr-2 pt-1 text-2 text-surface-950 w-p:text-surface-0",
                     {
                       "!text-surface-0": contentVariant === "light" || overlay === "dark",
                       "!text-surface-950": overlay === "white"

@@ -20,7 +20,7 @@ const PaginatorPortalverse: FC<PaginatorPortalverseData> = memo(({ items, curren
           }    
         }}> 
         <div className="flex justify-center items-center w-10 h-10 rounded-lg cursor-pointer m-2 hover:bg-surface-100">
-          <span className="material-icons">{iconPrevious}</span>
+          <span className="material-symbols-outlined">{iconPrevious}</span>
         </div>
       </li>
        {pages.map((page) => (
@@ -43,7 +43,7 @@ const PaginatorPortalverse: FC<PaginatorPortalverseData> = memo(({ items, curren
           }
         }}>
         <div className="flex justify-center items-center w-10 h-10 rounded-lg cursor-pointer m-2 hover:bg-surface-100">
-          <span className="material-icons">{iconNext}</span>
+          <span className="material-symbols-outlined">{iconNext}</span>
         </div>
       </li>
      </ul>

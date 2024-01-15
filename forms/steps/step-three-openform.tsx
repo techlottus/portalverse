@@ -118,7 +118,7 @@ const StepThree: FC<any> = ({ classNames, step, data, contacts, schedulers, onNe
         </div>
       </div>
       <div className="cursor-pointer" onClick={handleChangeInfo}>
-        <span className="material-icons icons">edit_square</span>
+        <span className="material-symbols-outlined icons">edit_square</span>
       </div>
     </div>
     <form>

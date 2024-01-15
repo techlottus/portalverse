@@ -49,7 +49,7 @@ const RvoeAccordionList: FC<RvoeAccordionListData> = (props: RvoeAccordionListDa
                       <div className="flex justify-start items-center mb-5 border-b pb-2 lg:border-0" key={item?.label}>
                         {
                           item?.iconName
-                            ? <span className={cn("material-icons text-4.5! mr-2", { "text-primary-500": index === optionSelect })}>{item?.iconName}</span>
+                            ? <span className={cn("material-symbols-outlined text-4.5! mr-2", { "text-primary-500": index === optionSelect })}>{item?.iconName}</span>
                             : null
                         }
                         <button className={cn("text-base font-Poppins font-semibold !text-4.5 text-left", { "text-primary-500": index === optionSelect })} onClick={() => {
@@ -77,7 +77,7 @@ const RvoeAccordionList: FC<RvoeAccordionListData> = (props: RvoeAccordionListDa
                           <>
                             <Disclosure.Button className="flex flex-row justify-between w-full border-b p-5">
                               <p className="font-texts text-sm	lg:text-base">Nivel {level}</p>
-                              <span className={open ? 'rotate-180 transform material-icons' : 'material-icons'} >expand_more</span>
+                              <span className={open ? 'rotate-180 transform material-symbols-outlined' : 'material-symbols-outlined'} >expand_more</span>
                             </Disclosure.Button>
                             <Disclosure.Panel className="p-2 lg:p-5 bg-gray-100">
                               <table className="w-full bg-white table-auto">
