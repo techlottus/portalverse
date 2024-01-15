@@ -22,6 +22,12 @@
                     font-size: 24px !important;
                   }
                 }
+                span.material-icons {
+                  font-size: 40px !important;
+                  @media (max-width: 599px) {
+                    font-size: 24px !important;
+                  }
+                }
               }
             }
             .body {
