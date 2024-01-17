@@ -51,7 +51,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
                           const children = (
                             <>
                               <span className="font-texts font-normal underline underline-offset-4 mr-auto">{redirect?.label}</span>
-                              <span className="material-symbols-outlined ml-3 mt-1">download</span>
+                              <span className="material-symbols-outlined ml-3 mt-1 select-none">download</span>
                             </>
                           );
 
@@ -97,7 +97,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
                         }
                       >
                         <span className="font-texts font-normal underline underline-offset-4 mr-auto">{infoModal?.redirect?.link}</span>
-                        <span className="material-symbols-outlined ml-3 mt-1">chevron_right</span>
+                        <span className="material-symbols-outlined ml-3 mt-1 select-none">chevron_right</span>
                       </a>
                   </div>
                 : null

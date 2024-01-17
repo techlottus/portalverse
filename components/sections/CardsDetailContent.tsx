@@ -80,7 +80,7 @@ const CardsDetailContent: FC<CardsDetailContentData> = (props: CardsDetailConten
              ? <a key={i} href={link?.href} target={link?.target === "blank" ? "_blank" : "_self"} rel={link?.target === "blank" ? "noreferrer" : undefined} className="flex text-bold items-center space-x-2 pb-3">
               {
                link?.iconName && link?.iconPosition === "left"
-                ? <span className="material-symbols-outlined font-normal">{link?.iconName}</span>
+                ? <span className="material-symbols-outlined select-none font-normal">{link?.iconName}</span>
                 : null
               }
               {
@@ -90,7 +90,7 @@ const CardsDetailContent: FC<CardsDetailContentData> = (props: CardsDetailConten
               }
               {
                link?.iconName && link?.iconPosition === "right"
-                ? <span className="material-symbols-outlined font-normal">{link?.iconName}</span>
+                ? <span className="material-symbols-outlinedselect-none select-none font-normal">{link?.iconName}</span>
                 : null
               }
              </a>

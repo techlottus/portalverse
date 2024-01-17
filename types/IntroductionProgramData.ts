@@ -1,7 +1,4 @@
 import { ProgramPerk, programBrand } from "@/utils/getProgramBySlug"
-import { ButtonConfig } from "./Button.types"
-import { LinkIconsConfig } from "./LinkLottus.types"
-
 
 export type IntroductionProgramData = {
   title?: string

@@ -37,7 +37,7 @@ const OutstandingContainer: FC<OutstandingContainerPortalverseComponentData> = (
           <article
             key={`outstanding-module-${i}`}
             className={cn(
-              "justify-self-stretch overflow-hidden pt-4 pb-9 border-b-4 border-primary-100",
+              "justify-self-stretch overflow-hidden border-b-4 border-primary-100",
               {
                 "!text-black": item?.contentVariant === "light",
                 "!text-white": item?.contentVariant === "dark"

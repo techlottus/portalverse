@@ -76,7 +76,7 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
                 const children = (
                   <>
                     <span className="font-texts font-normal underline underline-offset-4 mr-auto">{redirect?.label}</span>
-                    <span className="material-symbols-outlined ml-3 mt-1">
+                    <span className="material-symbols-outlined ml-3 mt-1 select-none">
                       {
                         redirect?.external ?
                           "chevron_right"

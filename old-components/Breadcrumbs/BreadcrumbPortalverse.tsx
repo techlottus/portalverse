@@ -6,7 +6,7 @@ import BreadcrumbsComponentData from "@/types/BreadcrumbsPortalverse.types"
 import StaticPagesBreadcrumbsLabels from "@/routes/breadcrumbs.labels"
 
 const Breadcrumbs: FC<BreadcrumbsComponentData> = ({ visible = true, classNames, breadcrumbs = {} }: BreadcrumbsComponentData) => {
-  const mainRoute = <span className="material-symbols-outlined mr-1">home</span>;
+  const mainRoute = <span className="material-symbols-outlined mr-1 select-none">home</span>;
   const { asPath } = useRouter();
   const [ allRoutes, setAllRoutes ] = useState<Array<string>>([]);
 
