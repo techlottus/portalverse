@@ -253,7 +253,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                   return (
                     <div
                       key={`program-${index}`}
-                      className={cn("flex hover:shadow-30 h-full border border-solid border-surface-200 ", {
+                      className={cn("flex hover:shadow-30 rounded-lg h-full border border-solid border-surface-200 overflow-hidden", {
                         "flex-col w-d:col-span-3 w-t:col-span-4 w-p:col-span-4":
                           mosaicActive,
                         "w-d:col-span-12 w-t:col-span-8 w-p:col-span-4":
@@ -275,7 +275,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                         <p className="font-texts font-normal text-4.5 mt-3 mx-3">
                           {programAttributes?.name}
                         </p>
-                        <div className="w-full h-full flex justify-end pb-2 font-texts font-bold items-end">
+                        <div className="w-full h-full flex justify-end pb-3 pr-1 font-texts font-bold items-end">
                           <Link
                             href={`${levelRoute}/${programAttributes?.slug}`}
                             className="flex items-center justify-end font-texts font-bold"
