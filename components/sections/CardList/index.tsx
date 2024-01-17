@@ -1,8 +1,8 @@
 import Container from "@/layouts/Container.layout";
-import CardWebsite from "@/old-components/CardWebsite";
+import CardWebsitePortalverse from "@/old-components/CardWebsitePortalverse";
+import parseEditorRawData from "@/utils/parseEditorRawData";
 import type { FC } from "react";
 import type { CardListSection } from "@/utils/strapi/sections/CardList";
-import parseEditorRawData from "@/utils/parseEditorRawData";
 
 const CardList: FC<CardListSection> = (props: CardListSection) => {
   const {
@@ -34,29 +34,40 @@ const CardList: FC<CardListSection> = (props: CardListSection) => {
 
                     return (
                       <div key={index} className="card">
-                          <CardWebsite
+                        <CardWebsitePortalverse
+                          //@ts-ignore
+                          data={{
+                            ...card,
+                            type: cardPosition,
+                            image: urlImage,
+                            text: cardContent,
+                            border: true,
+                            isLink: !!linkUrl,
+                            linkUrl: linkUrl,
+                            link: {
+                              text: card?.linkText,
+                              size: "medium",
+                              isBold: true,
+                              isUnderline: false,
+                              disabled: false,
+                              iconFirst: "",
+                              iconSecond: ""
+                            },
                             //@ts-ignore
-                            data={{
-                              ...card,
-                              type: cardPosition,
-                              urlImage,
-                              text: cardContent,
-                              wrapper: true,
-                              //@ts-ignore
-                              linkIcon: linkText ? {
-                                text: linkText,
-                                disabled: !linkUrl,
-                                size: "medium"
-                              } : null,
-                              link: true,
-                            }}
-                            onClick={linkUrl ? () => {
-                              if (!!linkUrl) {
-                                return window?.open(linkUrl, "_self")
-                              }
-                              return null
-                            }: undefined}
-                          />
+                            linkIcon: linkText ? {
+                              text: linkText,
+                              disabled: !linkUrl,
+                              size: "medium"
+                            } : null,
+
+                          }}
+                          onClick={linkUrl ? () => {
+                            if (!!linkUrl) {
+                              return window?.open(linkUrl, "_self")
+                            }
+                            return null
+                          } : undefined}
+                        />
                       </div>
                     )
                   })
