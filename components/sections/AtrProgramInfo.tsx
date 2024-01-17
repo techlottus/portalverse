@@ -59,7 +59,7 @@ const AtrProgramInfo = (props: AtrProgramInfoProps) => {
           </div>
           <div className="w-full md:w-1/2">
             <Aspect ratio={"4/3"}>
-              <iframe src="https://www.youtube.com/embed/_o5MbFaL7AM?si=MR-AkpRPVaNDpDH_" width="100%" height="320" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <iframe className="rounded-lg" src="https://www.youtube.com/embed/_o5MbFaL7AM?si=MR-AkpRPVaNDpDH_" width="100%" height="320" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             </Aspect>
           </div>
         </div>
@@ -72,7 +72,7 @@ const AtrProgramInfo = (props: AtrProgramInfoProps) => {
               <span className="font-texts font-normal text-surface-500 text-base leading-5 text-center">Título válido por la Secretaría de Educación Pública (SEP)</span>
             </div>
             <div className="flex flex-col md:flex-row items-center md:justify-center gap-6 md:gap-8">
-              <img src="https://assets.staging.bedu.org/UTC/certificado_con_foto_643f7c107b.png" alt="A tu ritmo" />
+              <img src="https://assets.staging.bedu.org/UTC/certificado_con_foto_643f7c107b.png" alt="A tu ritmo" className="select-none" />
             </div>
           </div>
         </Container>

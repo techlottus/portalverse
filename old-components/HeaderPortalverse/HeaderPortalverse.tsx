@@ -205,7 +205,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, o
                       </div>
                 }
                 <div className={cn("p-3", { "cursor-pointer": !!item.route })} onClick={() => handleEventNavigate(!!item.route, item.label, "arrow", !!item.back)}>
-                  <span className="material-symbols-outlined icon">{ !item.back ? "arrow_forward_ios" : "arrow_back_ios" }</span>
+                  <span className="material-symbols-outlined icon select-none">{ !item.back ? "arrow_forward_ios" : "arrow_back_ios" }</span>
                 </div>
               </div>
           </div>)

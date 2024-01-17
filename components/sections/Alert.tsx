@@ -14,7 +14,7 @@ const Alert: FC<AlertSection> = (props: AlertSection) => {
         <div className="border-2 border-solid border-surface-300 rounded-lg flex space-x-4 items-start p-4">
           {
             iconName
-              ? <span className="material-symbols-outlined text-surface-500 text-4.5!">{iconName}</span>
+              ? <span className="material-symbols-outlined select-none text-surface-500 text-4.5!">{iconName}</span>
               : null
           }
           <div className="flex flex-col space-y-4">
@@ -38,7 +38,7 @@ const Alert: FC<AlertSection> = (props: AlertSection) => {
                           ? <a key={i} href={link?.href} target={link?.target === "blank" ? "_blank" : "_self"} rel={link?.target === "blank" ? "noreferrer" : undefined} className="flex items-center space-x-2">
                               {
                                 link?.iconName && link?.iconPosition === "left"
-                                  ? <span className="material-symbols-outlined font-normal">{link?.iconName}</span>
+                                  ? <span className="material-symbols-outlined select-none font-normal">{link?.iconName}</span>
                                   : null
                               }
                               {
@@ -48,7 +48,7 @@ const Alert: FC<AlertSection> = (props: AlertSection) => {
                               }
                               {
                                 link?.iconName && link?.iconPosition === "right"
-                                  ? <span className="material-symbols-outlined font-normal">{link?.iconName}</span>
+                                  ? <span className="material-symbols-outlined select-none font-normal">{link?.iconName}</span>
                                   : null
                               }
                             </a>

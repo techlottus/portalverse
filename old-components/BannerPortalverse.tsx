@@ -182,6 +182,7 @@ const BannerContent = (props: BannerPortalverseComponentData) => {
     "justify-end text-right": data?.position === "right",
     "items-center": data?.position === "middle",
     "items-center text-center": data?.position === "middle-left",
+    "justify-start items-center": data?.position === "left-center",
     "justify-end items-center text-end": data?.position === "middle-right",
     "justify-center items-center text-center": data?.position === "middle-center",
     "justify-start items-end": data?.position === "left-bottom",

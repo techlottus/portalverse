@@ -47,23 +47,23 @@ const GoogleMap: FC<GoogleMapSection> = (props: GoogleMapSection) => {
                   <div className={cn("flex flex-col items-start space-y-4 w-d:w-2/5 w-full w-d:p-0 pb-4", { "w-d:px-6": detailPosition === 'right' })}>
                     <h1>{name}</h1>
                     {address && <div className="flex flex-col items-start space-y-2">
-                      <span className="material-symbols-outlined font-normal">location_on</span>
+                      <span className="material-symbols-outlined font-normal select-none">location_on</span>
                       <span className="font-bold text-surface-600">Dirección</span>
                       <span className="font-normal text-surface-600 hover:underline">{address}</span>
                     </div>}
                     {admissionPhone &&
                       <div className="flex flex-col items-start space-y-2">
-                        <span className="material-symbols-outlined font-normal">call</span>
+                        <span className="material-symbols-outlined font-normal select-none">call</span>
                         <span className="font-bold text-surface-600">Teléfono Admisiones:</span>
                         <span className="font-normal text-surface-600 hover:underline">{admissionPhone}</span>
                       </div>}
                     {receptionPhone && <div className="flex flex-col items-start space-y-2">
-                      <span className="material-symbols-outlined font-normal">call</span>
+                      <span className="material-symbols-outlined font-normal select-none">call</span>
                       <span className="font-bold text-surface-600">Teléfono Admisiones:</span>
                       <span className="font-normal text-surface-600 hover:underline">{receptionPhone}</span>
                     </div>}
                     {schedule && <div className="flex flex-col items-start space-y-2">
-                      <span className="material-symbols-outlined font-normal">event_available</span>
+                      <span className="material-symbols-outlined font-normal select-none">event_available</span>
                       <span className="font-bold text-surface-600">Horarios:</span>
                       <span className="font-normal text-surface-600 hover:underline">{schedule}</span>
                     </div>}
@@ -84,19 +84,19 @@ const GoogleMap: FC<GoogleMapSection> = (props: GoogleMapSection) => {
                     <h1 className="font-Poppins text-10 pb-4 font-bold leading-[125%] w-t:text-8.5 w-p:text-6">{name}</h1>
                     <div className="flex flex-col items-start space-y-4 w-d:w-2/5 right-0">
                       {address && <div className="flex items-center space-y-2 space-x-2 ">
-                        <span className="material-symbols-outlined font-normal">location_on</span>
+                        <span className="material-symbols-outlined font-normal select-none">location_on</span>
                         <span className="font-normal text-surface-600 hover:underline">{address}</span>
                       </div>}
                       {admissionPhone && <div className="flex  items-center space-y-2 space-x-2">
-                        <span className="material-symbols-outlined font-normal">call</span>
+                        <span className="material-symbols-outlined font-normal select-none">call</span>
                         <span className="font-normal text-surface-600 hover:underline">{admissionPhone}</span>
                       </div>}
                       {receptionPhone && <div className="flex  items-center space-y-2 space-x-2">
-                        <span className="material-symbols-outlined font-normal">call</span>
+                        <span className="material-symbols-outlined font-normal select-none">call</span>
                         <span className="font-normal text-surface-600 hover:underline">{receptionPhone}</span>
                       </div>}
                       {schedule && <div className="flex items-center space-y-2 space-x-2">
-                        <span className="material-symbols-outlined font-normal">event_available</span>
+                        <span className="material-symbols-outlined font-normal select-none">event_available</span>
                         <span className="font-normal text-surface-600 hover:underline">{schedule}</span>
                       </div>}</div>
                   </div>
