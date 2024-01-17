@@ -179,7 +179,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
               , stylesBaseControls
             )}
           >
-          <span className="material-icons ml-2 pointer-events-none">arrow_back_ios</span>
+          <span className="material-symbols-outlined ml-2 pointer-events-none">arrow_back_ios</span>
         </div>
         <section className="w-full h-full flex overflow-hidden">
           {
@@ -265,7 +265,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
               { "bg-surface-0/50 cursor-pointer": countItems > 1 }, stylesBaseControls
             )}
           >
-            <span className="material-icons ml-0.5 pointer-events-none">arrow_forward_ios</span>
+            <span className="material-symbols-outlined ml-0.5 pointer-events-none">arrow_forward_ios</span>
           </div>
         </div>
       </Aspect>

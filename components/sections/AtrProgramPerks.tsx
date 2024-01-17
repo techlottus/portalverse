@@ -24,7 +24,7 @@ const AtrProgramPerks = () => {
             {
               atrProgramPerks?.map((perk, i) => (
                 <div key={i} className="flex justify-center items-center gap-2 px-2.5 py-3 bg-white shadow-lg rounded-lg md:max-w-78">
-                  <span className="material-icons select-none !text-7 text-secondary-500">check_circle</span>
+                  <span className="material-symbols-outlined select-none !text-7 text-secondary-500">check_circle</span>
                   <div className="-mb-5 grow mr-2">
                     <RichtText data={{content: parseEditorRawData(perk)}} />
                   </div>

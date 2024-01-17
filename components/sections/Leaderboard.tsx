@@ -71,7 +71,7 @@ const Leaderboard = (props: LeaderboardSection) => {
                 ? <div className="flex items-center space-x-2">
                   {
                     subtitleIcon
-                      ? <span className={cn("material-icons font-normal", {
+                      ? <span className={cn("material-symbols-outlined font-normal", {
                         "text-surface-0": overlayLeaderboard === "dark",
                         "text-surface-950": overlayLeaderboard === "white"
                       })}>{subtitleIcon}</span>
@@ -124,7 +124,7 @@ const Leaderboard = (props: LeaderboardSection) => {
                         >
                           {
                             link?.iconName
-                              ? <span className={cn("material-icons font-normal", {
+                              ? <span className={cn("material-symbols-outlined font-normal", {
                                 "text-surface-0": overlayLeaderboard === "dark",
                                 "text-surface-950": overlayLeaderboard === "white"
                               })}>{link?.iconName}</span>

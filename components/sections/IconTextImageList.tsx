@@ -53,7 +53,7 @@ const IconTextListImage: FC<IconTextListImage> = (props: IconTextListImage) => {
                   iconTextList?.map((item: any, i: number) =>
                     <div key={`icon-${i}`} className="flex gap-6">
                       <div className="my-auto">
-                        <span className={cn("material-icons text-primary-500 !text-16", iconClassNames)}>{item?.icon}</span>
+                        <span className={cn("material-symbols-outlined text-primary-500 !text-16", iconClassNames)}>{item?.icon}</span>
                       </div>
                       <div className="">
                         <p className="font-headings font-bold">{item?.title}</p>

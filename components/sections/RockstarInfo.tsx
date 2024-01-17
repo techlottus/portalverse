@@ -83,7 +83,7 @@ const RockstarInfo: FC<RockstarInfoSection> = (props: RockstarInfoSection) => {
             onClick={() => {
               handleOpenModal(detail);
             }}
-            className="material-icons cursor-pointer text-6"
+            className="material-symbols-outlined cursor-pointer text-6"
           >
             add_circle
           </span>
