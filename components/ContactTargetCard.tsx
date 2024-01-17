@@ -29,7 +29,7 @@ const ContactTargetCard: FC<ContactTargetCardData> = (props: ContactTargetCardDa
   const linkText = textLink ? textLink : link
 
   return (
-    <div className={cn("bg-surface-100 flex", classNames)}>
+    <div className={cn("rounded-lg bg-surface-100 flex hover:shadow-30 overflow-hidden border border-surface-200", classNames)}>
       {
         !!image
           ?
