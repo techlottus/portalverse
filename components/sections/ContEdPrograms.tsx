@@ -30,7 +30,6 @@ const ContEdPrograms = (props: ContEdProgramsSection) => {
                           return (
                             <CardProgram
                               key={i}
-                              classNames="hover:shadow-15"
                               image={{
                                 src: program?.attributes?.image?.data?.attributes?.url,
                                 alt: program?.attributes?.image?.data?.attributes?.alternativeText || "",
