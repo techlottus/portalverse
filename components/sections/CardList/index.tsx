@@ -43,7 +43,6 @@ const CardList: FC<CardListSection> = (props: CardListSection) => {
                             text: cardContent,
                             border: true,
                             isLink: !!linkUrl,
-                            linkUrl: linkUrl,
                             link: {
                               text: card?.linkText,
                               size: "medium",
