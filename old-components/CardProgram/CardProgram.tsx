@@ -30,7 +30,7 @@ const CardProgram: FC<CardProgramData> = memo(({ title, subtitle, link, image, c
           className="flex items-center justify-end font-texts font-bold"
         >
           <span className="mr-1">Ver más</span>
-          <span className="material-symbols-outlined icon">chevron_right</span>
+          <span className="material-symbols-outlined icon select-none">chevron_right</span>
         </div>
       </div>
     </div>

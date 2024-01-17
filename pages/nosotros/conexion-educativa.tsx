@@ -64,7 +64,7 @@ const ConexionEducativa: NextPageWithLayout = ({ sections, meta }: any) => {
           <div className="flex sm:gap-2 md:gap-0 md:flex-row md:items-center">
             <p className="font-headings font-bold mr-6">{sections.head.contactText}</p>
             <div className="flex md:items-center">
-              <span className="material-symbols-outlined text-surface-950 mr-2">mail</span>
+              <span className="material-symbols-outlined text-surface-950 mr-2 select-none">mail</span>
               <LinkContactTarget type={"email"} classNames="text-surface-950 underline" info={sections.head.contactLink} />
             </div>
           </div>
@@ -136,7 +136,7 @@ const ConexionEducativa: NextPageWithLayout = ({ sections, meta }: any) => {
                 content: sections.head.feedback.text
               }} classNames="mb-4" />
               <div className="flex align-middle items-center">
-                <span className="material-symbols-outlined text-surface-500 mr-2">mail</span>
+                <span className="material-symbols-outlined text-surface-500 mr-2 select-none">mail</span>
                 <LinkContactTarget classNames="!font-bold underline" type={"email"} info={sections.head.feedback.contact} />
               </div>
             </div>

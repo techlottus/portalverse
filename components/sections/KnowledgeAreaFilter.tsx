@@ -153,7 +153,7 @@ const KnowledgeAreaFilter = (props: KnowledgeAreaFilterSection) => {
                                     className="flex items-center justify-end font-texts font-bold"
                                   >
                                     <span className="mr-1">Ver más</span>
-                                    <span className="material-symbols-outlined icon">
+                                    <span className="material-symbols-outlined icon select-none">
                                       chevron_right
                                     </span>
                                   </Link>
