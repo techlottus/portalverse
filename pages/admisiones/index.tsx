@@ -244,7 +244,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
                 <section className="grid w-d:grid-cols-2 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
                   {
                     sections?.egresados?.testimonyImages?.map((item: any, i: number) => <section key={`section-blog-${i}`}>
-                      <img className="w-full" src={item?.image} />
+                      <img className="w-full select-none" src={item?.image} />
                     </section>)
                   }
                 </section>
@@ -283,7 +283,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
           sections?.FAQ?.faqImage ?
             <>
               <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mb-12 w-t:mb-6 w-p:mb-6 w-t:hidden w-p:hidden">
-                <img className="w-full w-t:hidden w-p:hidden" src={sections?.FAQ?.faqImage} />
+                <img className="w-full w-t:hidden w-p:hidden select-none" src={sections?.FAQ?.faqImage} />
               </div>
               <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mb-12 w-t:mb-6 w-p:mb-6">
                 {
