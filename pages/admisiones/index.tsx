@@ -129,11 +129,11 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
                           }
                         </div>
                       </section>
-                      <section className={cn("col-span-5 w-full w-t:col-span-12 mx-auto w-p:col-span-12", { "hidden": tabActive !== i })}>
+                      <section className={cn("col-span-5 aspect-4/3 w-t:aspect-4/3 w-p:aspect-4/3 w-full w-t:col-span-12 mx-auto w-p:col-span-12", { "hidden": tabActive !== i })}>
                         <img
                           alt={alt}
                           src={src}
-                          className="w-t:col-span-12 w-full w-t:aspect-2/1 w-t:col-start-2 w-t:col-end-8 w-p:col-span-4 h-full"
+                          className="w-t:col-span-12 w-full w-t:col-start-2 w-t:col-end-8 h-full"
                         />
                       </section>
                       <div className={cn("col-span-7 w-t:col-span-12 w-p:col-span-12 justify-center flex mb-3", { "hidden w-p:hidden": tabActive !== i })}>
@@ -141,9 +141,11 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
                       </div>
                       <section className={cn("col-span-12 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1", { "hidden w-p:hidden": tabActive !== i })}>
                         {
-                          cards?.map((item: any, i: number) => <section key={`section-blog-${i}`}>
-                            <CardWebsitePortalverse data={item} onClick={() => { router.push(item?.redirect) }} />
-                          </section>)
+                          cards?.map((item: any, i: number) =>
+                            <section key={`section-blog-${i}`}>
+                              <CardWebsitePortalverse data={item} onClick={() => { router.push(item?.redirect) }} />
+                            </section>
+                          )
                         }
                       </section>
                     </Fragment>)
