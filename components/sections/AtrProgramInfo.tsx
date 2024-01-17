@@ -59,7 +59,7 @@ const AtrProgramInfo = (props: AtrProgramInfoProps) => {
           </div>
           <div className="w-full md:w-1/2">
             <Aspect ratio={"4/3"}>
-              <iframe src="https://www.youtube.com/embed/_o5MbFaL7AM?si=MR-AkpRPVaNDpDH_" width="100%" height="320" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <iframe className="rounded-lg" src="https://www.youtube.com/embed/_o5MbFaL7AM?si=MR-AkpRPVaNDpDH_" width="100%" height="320" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             </Aspect>
           </div>
         </div>
