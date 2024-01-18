@@ -32,7 +32,7 @@ const CardWebsitePortalverse: FC<CardWebsitePortalverseData> = ({ data, classNam
                     onClick={onClick}
                     className="flex items-center justify-end font-texts font-bold"
                   >
-                    <span className="mr-1 select-none">Ver más</span>
+                    <span className="mr-1 select-none">{data?.link?.text ? data?.link?.text : "Ver más"}</span>
                     <span className="material-symbols-outlined icon select-none">chevron_right</span>
                   </div>
                   : null
