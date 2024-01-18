@@ -62,7 +62,7 @@ const CardList: FC<CardListSection> = (props: CardListSection) => {
                           }}
                           onClick={linkUrl ? () => {
                             if (!!linkUrl) {
-                              return window?.open(linkUrl, "_self")
+                              return window?.open(linkUrl, linkUrl?.includes("https") ? "_blank" : "_self")
                             }
                             return null
                           } : undefined}
