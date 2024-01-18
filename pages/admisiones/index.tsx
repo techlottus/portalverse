@@ -407,4 +407,4 @@ export async function getStaticProps(context: any) {
 
 }
 
-export default LandindAdmissions;
+export default LandindAdmissions
