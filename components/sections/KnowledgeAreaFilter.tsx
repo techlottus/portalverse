@@ -129,7 +129,7 @@ const KnowledgeAreaFilter = (props: KnowledgeAreaFilterSection) => {
                           return (
                             <div
                               key={`program-${i}`}
-                              className="flex flex-col w-d:col-span-3 w-t:col-span-4 w-p:col-span-4 hover:shadow-30 h-full border border-solid border-surface-200 cursor-pointer"
+                              className="flex flex-col w-d:col-span-3 w-t:col-span-4 w-p:col-span-4 hover:shadow-30 h-full border border-solid border-surface-200 cursor-pointer overflow-hidden rounded-lg"
                               onClick={()=>{router.push(`${levelRoute}/${programAttributes?.slug}`)}}
                             >
                               <div>
