@@ -5,7 +5,7 @@ import type { FC } from "react";
 import type { PromoLinkListSection } from "@/utils/strapi/sections/PromoLinkList";
 
 const PromoLinkList: FC<PromoLinkListSection> = (props: PromoLinkListSection) => {
-  const { title, promoLinks } = props;
+  const { title, promoLinks, linkText, linkUrl } = props;
 
   return (
     <section>
@@ -60,6 +60,14 @@ const PromoLinkList: FC<PromoLinkListSection> = (props: PromoLinkListSection) =>
                     )
                   })
                 }
+              </div>
+              : null
+          }
+          {
+            linkUrl ?
+              <div className="flex text-3.5 w-d:text-base font-texts font-bold items-center">
+                <a className="hover:underline" href={linkUrl}>{linkText}</a>
+                <span className="material-symbols-outlined !text-base ml-1 select-none">chevron_right</span>
               </div>
               : null
           }
