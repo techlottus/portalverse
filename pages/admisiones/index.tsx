@@ -177,11 +177,11 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
           <div className="col-span-12 w-t:col-span-12 w-p:col-span-4 w-p:mb-6 w-t:mb-12 w-d:mb-12">
             <ContentInsideLayout classNames="gap-5">
               {
-                contentTabsIcons?.map(({ content: { requirementsList, desktopBgImage, tabletBgImage, mobileBgImage, backColor, action = null }, cards }: any, i: number) =>
+                contentTabsIcons?.map(({ content: { requirementsList, desktopBgImage, tabletBgImage, mobileBgImage, action = null }, cards }: any, i: number) =>
                   <Fragment key={`description-beca-${i}`}>
                     <section
                       //@ts-ignore
-                      style={{  backgroundColor: backColor, "--image-desk-url": `url(${desktopBgImage})`, "--image-tablet-url": `url(${tabletBgImage})`, "--image-mobile-url": `url(${mobileBgImage})` }}
+                      style={{ "--image-desk-url": `url(${desktopBgImage})`, "--image-tablet-url": `url(${tabletBgImage})`, "--image-mobile-url": `url(${mobileBgImage})` }}
                       className={cn("col-span-12 w-full justify-center bg-origin-border md:bg-center bg-no-repeat bg-cover py-16", "bg-[image:var(--image-mobile-url)]", "md:bg-[image:var(--image-tablet-url)]", "lg:bg-[image:var(--image-desk-url)]", { "hidden w-p:hidden": tabActive !== i })}
                     >
                       <Container>
@@ -305,7 +305,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
         {
           sections?.egresados?.testimonyImages ?
             <>
-              <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
+              <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 flex items-center">
                 <section className="grid w-d:grid-cols-2 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
                   {
                     sections?.egresados?.testimonyImages?.map((item: any, i: number) => <section key={`section-blog-${i}`}>
@@ -313,9 +313,6 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
                     </section>)
                   }
                 </section>
-                <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 object-center mt-6 flex justify-center mb-12 w-t:mb-6 w-p:mb-6">
-                  <Button dark data={sections?.egresados?.button} onClick={() => router.push(sections?.egresados?.button?.redirect)} />
-                </div>
               </div>
             </>
             : null
@@ -338,8 +335,11 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
             </>
             : null
         }
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-p:hidden w-t:hidden mb-12 w-t:mb-6 w-p:mb-6 h-80">
+        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-p:hidden w-t:hidden h-80">
           <Video data={sections?.egresados?.video} />
+        </div>
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 object-center flex justify-center mb-18 w-t:mb-6 w-p:mb-6">
+          <Button dark data={sections?.egresados?.button} onClick={() => router.push(sections?.egresados?.button?.redirect)} />
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{sections?.FAQ?.title}</p>
