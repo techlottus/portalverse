@@ -45,3 +45,13 @@
 .Twilio-RootContainer * {
   font-size: 16px !important;
 }
+
+button {
+  span {
+    user-select: none;
+  }
+}
+
+.material-icons {
+  user-select: none;
+}
