@@ -85,7 +85,7 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
         {
           sections?.someVacancies ?
             <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-18">
-              <p className="font-headings font-bold leading-tight text-10"> {sections?.someVacancies?.title}</p>
+              <p className="font-headings font-bold leading-tight w-d:text-10 text-6"> {sections?.someVacancies?.title}</p>
             </div>
             : null
         }

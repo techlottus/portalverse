@@ -13,11 +13,12 @@ import RichtText from "@/old-components/Richtext/Richtext"
 import Cintillo from "@/old-components/Cintillo"
 import CardWebsitePortalverse from "@/old-components/CardWebsitePortalverse"
 import Link from "next/link"
-import  Icon  from "@/old-components/Icon"
+import Icon from "@/old-components/Icon"
+import ContentInsideLayout from "@/layouts/ContentInside.layout"
 
 const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
 
-  const [ youtubeConfig, setYoutubeConfig ] = useState<YoutubeOptions>({
+  const [youtubeConfig, setYoutubeConfig] = useState<YoutubeOptions>({
     id: '',
     type: 'single',
     controls: true,
@@ -40,39 +41,58 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
 
   return <>
     <Head>
-      <title>{ meta.title }</title>
+      <title>{meta.title}</title>
     </Head>
     <HeaderFooterLayout breadcrumbs={true}>
       <ContentLayout>
-        <div className="col-span-8 w-p:col-span-4 w-d:mb-12 w-t:mb-6 w-p:mb-6">
-          <h1 className="text-13 w-t:text-8.25 w-p:text-6 font-headings font-bold leading-tight w-t:semi-tight mb-5">{ sections.head.title }</h1>
+        {/* <div className="col-span-8 w-p:col-span-4 w-d:mb-12 w-t:mb-6 w-p:mb-6">
+          <h1 className="text-13 w-t:text-8.25 w-p:text-6 font-headings font-bold leading-tight w-t:semi-tight ">{sections.head.title}</h1>
           <RichtText data={{
             content: sections.head.description
           }} />
+        </div> */}
+        <div className="col-span-12">
+          <ContentInsideLayout>
+            <div className="col-span-8 w-p:col-span-4 w-d:mb-12 mb-6">
+              <h1 className="text-13 w-t:text-8.25 w-p:text-6 font-headings font-bold leading-tight w-t:semi-tight ">{sections.head.title}</h1>
+              <RichtText data={{
+                content: sections.head.description
+              }} />
+            </div>
+            {
+              <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
+                {
+                  sections.experiencias.cards.map((item: any, i: number) => <section key={`section-blog-${i}`}>
+                    <CardWebsitePortalverse classNames="h-59" data={item} onClick={item?.video ? () => handleClickTalent(item.video) : undefined} />
+                  </section>)
+                }
+              </section>
+            }
+            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 wd:mb-18 w-t:mb-20 w-p:mb-4 w-d:mt-18 w-p:mt-12">
+              <Cintillo
+                classNames="auto"
+                {...sections?.aplica?.banner}
+                actionLink={
+                  sections?.aplica?.banner?.icon ?
+                    <div slot="areaAction" className="flex align-middle items-center">
+                      <Icon name={sections.aplica.banner.icon} className="w-6 h-6 mr-2 text-surface-0" /><Link className="font-texts font-normal text-base" href={sections.aplica.banner.redirecActionLink} passHref target={"_blank"}>{sections.aplica.banner.actionLink}</Link>
+                    </div>
+                    : null
+                }
+              />
+            </div>
+          </ContentInsideLayout>
         </div>
-        <Modal isShow={isShow} onClose={() => handleVisibilityModal('close')} data={{icon: 'close', title: 'Video de egresado', tagOnClose: 'testOnClose', wrapper: true,}}>
-          <Youtube data={{options: {...youtubeConfig}, dimensions: { height: "383px" }}} />
+        <Modal isShow={isShow} onClose={() => handleVisibilityModal('close')} data={{ icon: 'close', title: 'Video de egresado', tagOnClose: 'testOnClose', wrapper: true, }}>
+          <Youtube data={{ options: { ...youtubeConfig }, dimensions: { height: "383px" } }} />
         </Modal>
-        <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
+        {/* <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
           {
-           sections.experiencias.cards.map((item:any, i:number) => <section key={`section-blog-${i}`}>
-              <CardWebsitePortalverse classNames="h-59" data={item} onClick={ item?.video ? () => handleClickTalent(item.video) : undefined} />
+            sections.experiencias.cards.map((item: any, i: number) => <section key={`section-blog-${i}`}>
+              <CardWebsitePortalverse classNames="h-59" data={item} onClick={item?.video ? () => handleClickTalent(item.video) : undefined} />
             </section>)
           }
-        </section>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 wd:mb-18 w-t:mb-20 w-p:mb-4">
-          <Cintillo
-            classNames="auto"
-            {...sections?.aplica?.banner}
-            actionLink={
-              sections?.aplica?.banner?.icon ?
-                <div slot="areaAction" className="flex align-middle items-center">
-                  <Icon name={sections.aplica.banner.icon} className="w-6 h-6 mr-2 text-surface-0"/><Link className="font-texts font-normal text-base" href={sections.aplica.banner.redirecActionLink} passHref target={"_blank"}>{sections.aplica.banner.actionLink}</Link>
-                </div>
-              : null
-            }
-          />
-        </div>
+        </section> */}
       </ContentLayout>
     </HeaderFooterLayout>
   </>
