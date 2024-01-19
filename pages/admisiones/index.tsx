@@ -18,6 +18,8 @@ import BannerPortalverse from "@/old-components/BannerPortalverse";
 import RichtText from "@/old-components/Richtext/Richtext";
 import CardWebsitePortalverse from "@/old-components/CardWebsitePortalverse";
 import Icon from "@/old-components/Icon";
+import Container from "@/layouts/Container.layout";
+import parseEditorRawData from "@/utils/parseEditorRawData";
 
 const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
 
@@ -30,15 +32,15 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
       const { content } = curr;
       return [...prev, content];
     }, []);
-    if (sections?.requirementsIcons?.tabs?.items) {
-      const allContentsIcons = sections?.requirementsIcons?.tabs?.items.reduce((prev: any, curr: any) => {
+    if (sections?.AtrProgramPerks?.tabs?.items) {
+      const allContentsIcons = sections?.AtrProgramPerks?.tabs?.items.reduce((prev: any, curr: any) => {
         const { content } = curr;
         return [...prev, content];
       }, []);
       setContentTabsIcons([...allContentsIcons]);
     }
     setContentTabs([...allContents]);
-  }, [sections?.requirements?.tabs, sections?.requirementsIcons?.tabs]);
+  }, [sections?.requirements?.tabs, sections?.AtrProgramPerks?.tabs]);
 
   const navigate = (route: string) => router.push(route)
 
@@ -89,8 +91,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
             </>
             : null
         }
-
-        {
+        {/* 
           sections.requirementsIcons ?
             <>
               <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mt-7 w-p:my-6 w-t:my-6">
@@ -153,58 +154,122 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
                 </ContentInsideLayout>
               </div>
             </>
-            : sections.requirements ?
-              <>
-                <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mt-18 w-p:my-6 w-t:my-6">
-                  <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{sections?.requirements?.title}</p>
-                </div>
-                <div className="w-d:hidden col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:flex w-t:justify-center">
-                  <div className="">
-                    <TabsFeatured tabs={sections?.requirements?.tabs?.items} onActive={(active: number) => setTabActive(active)} />
-                  </div>
-                </div>
-                <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center w-d:mb-2">
-                  <TabsFeatured tabs={sections?.requirements?.tabs?.items} onActive={(active: number) => setTabActive(active)} />
-                </div>
-                <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-p:mb-6 w-t:mb-12 w-d:mb-12">
-                  <ContentInsideLayout classNames="gap-6">
-                    {
-                      contentTabs?.map(({ image: { src, alt }, content: { title, description, action = null }, cards }: any, i: number) => <Fragment key={`description-beca-${i}`}>
-                        <DescriptionSection
-                          mode="light"
-                          title={title}
-                          description={description}
-                          classNames={cn("col-span-7 grid grid-cols-7 gap-6 w-t:col-span-8 w-t:grid-cols-8 w-p:col-span-4 w-p:flex w-p:flex-col w-p:p-6", { "hidden w-p:hidden": tabActive !== i })}
-                          titleStyles="col-start-1 col-end-7 w-t:col-end-8 hidden"
-                          descriptionStyles="col-start-1 col-end-7 w-t:col-end-8"
-                          action={
-                            <div slot="actionDescription" className="w-t:hidden w-p:hidden flex justify-center mt-6 mb-12">
-                              <Button dark onClick={() => navigate(action?.route)} data={action} />
-                            </div>
-                          }
-                        />
-                        <Image
-                          alt={alt}
-                          src={src}
-                          classNames={cn("aspect-2/1 w-t:aspect-2/1 w-p:aspect-2/1 col-span-5 w-t:col-start-2 w-t:col-end-8 w-p:col-span-4", { "hidden": tabActive !== i })}
-                        />
-                        <section className={cn("col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1", { "hidden w-p:hidden": tabActive !== i })}>
-                          {
-                            cards.map((item: any, i: number) => <section key={`section-blog-${i}`}>
-                              <CardWebsitePortalverse data={item} onClick={() => { router.push(item?.redirect) }} />
-                            </section>)
-                          }
-                        </section>
-                      </Fragment>)
-                    }
-                  </ContentInsideLayout>
-                </div>
-              </>
-              : null
+            : null
+         */
         }
-
-
       </ContentLayout>
+      {sections?.AtrProgramPerks?.tabs ?
+        <>
+          <Container classNames="mt-16">
+            <div className="col-span-12 flex flex-col gap-1 items-center justify-center mb-4">
+              <h3 className="font-headings font-bold text-surface-900 text-7 leading-9 text-center"><span className="text-secondary-500">Requisitos </span> de admisión </h3>
+              <p className="font-texts font-normal text-surface-500 text-lg leading-6 text-center">Toda la documentación requerida deberá ser entregada en original, dos copias y en buen estado. </p>
+            </div>
+            <div className="w-d:hidden col-span-12 w-t:col-span-12 w-p:col-span-4 w-t:flex w-t:justify-center">
+              <div className="">
+                <TabsFeatured tabs={sections?.AtrProgramPerks?.tabs?.items} onActive={(active: number) => setTabActive(active)} />
+              </div>
+            </div>
+            <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-12 w-p:col-span-4 flex justify-center w-d:mb-2">
+              <TabsFeatured tabs={sections?.AtrProgramPerks?.tabs?.items} onActive={(active: number) => setTabActive(active)} />
+            </div>
+          </Container>
+          <div className="col-span-12 w-t:col-span-12 w-p:col-span-4 w-p:mb-6 w-t:mb-12 w-d:mb-12">
+            <ContentInsideLayout classNames="gap-5">
+              {
+                contentTabsIcons?.map(({ content: { requirementsList, desktopBgImage, tabletBgImage, mobileBgImage, backColor, action = null }, cards }: any, i: number) =>
+                  <Fragment key={`description-beca-${i}`}>
+                    <section
+                      //@ts-ignore
+                      style={{  backgroundColor: backColor, "--image-desk-url": `url(${desktopBgImage})`, "--image-tablet-url": `url(${tabletBgImage})`, "--image-mobile-url": `url(${mobileBgImage})` }}
+                      className={cn("col-span-12 w-full justify-center bg-origin-border md:bg-center bg-no-repeat bg-cover py-16", "bg-[image:var(--image-mobile-url)]", "md:bg-[image:var(--image-tablet-url)]", "lg:bg-[image:var(--image-desk-url)]", { "hidden w-p:hidden": tabActive !== i })}
+                    >
+                      <Container>
+                        <div className="flex flex-col gap-12 items-center justify-center">
+                          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-6">
+                            {
+                              requirementsList?.map((perk: any, i: number) => (
+                                <div key={i} className="flex justify-center items-center gap-2 px-2.5 py-3 min-h-20	w-p:min-h-16 bg-white shadow-lg rounded-lg md:max-w-78">
+                                  <span className="material-symbols-outlined select-none !text-7" style={{ color: perk?.colorIcon }}>{perk?.icon}</span>
+                                  <div className="-mb-5 grow mr-2">
+                                    <RichtText data={{ content: parseEditorRawData(perk?.content) }} />
+                                  </div>
+                                </div>
+                              ))
+                            }
+                          </div>
+                          <div className={cn("col-span-12 w-t:col-span-12 w-p:col-span-12 justify-center flex", { "hidden w-p:hidden": tabActive !== i })}>
+                            <Button dark onClick={() => navigate(action?.route)} data={action} />
+                          </div>
+                        </div>
+                      </Container>
+                    </section>
+                    <section className={cn("col-span-12 max-w-d-base mx-auto w-d-base:px-6", { "hidden w-p:hidden": tabActive !== i })}>
+                      <section className="grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
+                        {
+                          cards?.map((item: any, i: number) =>
+                            <section key={`section-blog-${i}`}>
+                              <CardWebsitePortalverse data={item} onClick={() => { router.push(item?.redirect) }} />
+                            </section>
+                          )
+                        }
+                      </section>
+                    </section>
+                  </Fragment>
+                )
+              }
+            </ContentInsideLayout>
+          </div>
+        </>
+        : sections.requirements ?
+          <ContentLayout>
+            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mt-18 w-p:my-6 w-t:my-6">
+              <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{sections?.requirements?.title}</p>
+            </div>
+            <div className="w-d:hidden col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:flex w-t:justify-center">
+              <div className="">
+                <TabsFeatured tabs={sections?.requirements?.tabs?.items} onActive={(active: number) => setTabActive(active)} />
+              </div>
+            </div>
+            <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center w-d:mb-2">
+              <TabsFeatured tabs={sections?.requirements?.tabs?.items} onActive={(active: number) => setTabActive(active)} />
+            </div>
+            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-p:mb-6 w-t:mb-12 w-d:mb-12">
+              <ContentInsideLayout classNames="gap-6">
+                {
+                  contentTabs?.map(({ image: { src, alt }, content: { title, description, action = null }, cards }: any, i: number) => <Fragment key={`description-beca-${i}`}>
+                    <DescriptionSection
+                      mode="light"
+                      title={title}
+                      description={description}
+                      classNames={cn("col-span-7 grid grid-cols-7 gap-6 w-t:col-span-8 w-t:grid-cols-8 w-p:col-span-4 w-p:flex w-p:flex-col w-p:p-6", { "hidden w-p:hidden": tabActive !== i })}
+                      titleStyles="col-start-1 col-end-7 w-t:col-end-8 hidden"
+                      descriptionStyles="col-start-1 col-end-7 w-t:col-end-8"
+                      action={
+                        <div slot="actionDescription" className="w-t:hidden w-p:hidden flex justify-center mt-6 mb-12">
+                          <Button dark onClick={() => navigate(action?.route)} data={action} />
+                        </div>
+                      }
+                    />
+                    <Image
+                      alt={alt}
+                      src={src}
+                      classNames={cn("aspect-2/1 w-t:aspect-2/1 w-p:aspect-2/1 col-span-5 w-t:col-start-2 w-t:col-end-8 w-p:col-span-4", { "hidden": tabActive !== i })}
+                    />
+                    <section className={cn("col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1", { "hidden w-p:hidden": tabActive !== i })}>
+                      {
+                        cards.map((item: any, i: number) => <section key={`section-blog-${i}`}>
+                          <CardWebsitePortalverse data={item} onClick={() => { router.push(item?.redirect) }} />
+                        </section>)
+                      }
+                    </section>
+                  </Fragment>)
+                }
+              </ContentInsideLayout>
+            </div>
+          </ ContentLayout>
+          : null
+      }
       <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:hidden">
           <BannerPortalverse data={sections?.internacionalizacion?.banner} onClick={() => router.push(sections?.internacionalizacion?.banner?.redirect)} />
