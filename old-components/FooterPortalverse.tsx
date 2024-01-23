@@ -15,7 +15,7 @@ const Footer: FC<FooterPortalverseComponentData> = ({ privacyLink, certification
   }, []);
 
   return (
-    <section className="w-full border-t  border-0 border-solid border-surface-800 mt-18 w-t:mt-12 w-p:mt-12">
+    <section className="w-full border-t border-0 border-solid border-surface-800 mt-18 w-t:mt-12 w-p:mt-12">
       {/* Section logotype */}
       <div className="p-6 w-p:hidden border-b  border-0 border-solid border-surface-300">
         <div className="flex justify-between items-center mb-6 cursor-pointer" onClick={onClickLogo}>
@@ -55,15 +55,15 @@ const Footer: FC<FooterPortalverseComponentData> = ({ privacyLink, certification
       {/* Section logotype */}
       <div className="p-6 w-t:hidden w-p:hidden flex gap-24 border-b  border-0 border-solid border-surface-300">
         {
-          sections.map((section: any[], i: number) => <div key={`sections-${i}`} className="flex flex-col gap-6 w-64">
+          sections?.map((section: any[], i: number) => <div key={`sections-${i}`} className="flex flex-col gap-6 w-64">
               {
-                section.map((itemSection: any[], a: number) => {
+                section?.map((itemSection: any[], a: number) => {
                   return itemSection.map((item: any, j: number) => {
                     return (
                       <Fragment key={`section-access-${j}`}>
                         {
-                          !!item.link
-                            ? <Link href={item.link} passHref target={!!item.external ? "_blank" : "_self"}><p className={cn({ "font-bold": item.principal, "font-normal": !item.principal })}>{item.label}</p></Link>
+                          !!item?.link
+                            ? <Link href={item.link} passHref target={!!item.external ? "_blank" : "_self"}><p className={cn({ "font-headings font-bold": item?.principal, "font-texts font-normal": !item?.principal })}>{item?.label}</p></Link>
                             : <p className={cn({ "font-bold": item.principal, "font-normal": !item.principal})}>{item.label}</p>
                         }
                       </Fragment>
