@@ -198,7 +198,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
                               ))
                             }
                           </div>
-                          <div className={cn("col-span-12 w-t:col-span-12 w-p:col-span-12 justify-center flex", { "hidden w-p:hidden": tabActive !== i })}>
+                          <div className="w-p:w-full bg-black rounded-lg justify-center flex">
                             <Button dark onClick={() => navigate(action?.route)} data={action} />
                           </div>
                         </div>
