@@ -4,10 +4,10 @@ import parseEditorRawData from "@/utils/parseEditorRawData";
 import cn from "classnames";
 
 const AtrProgramPerks = () => {
-  const desktopBgImage = "https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTC/back_utc_test_1_b69b27142f.jpg";
-  const tabletBgImage = "https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTC/back_utc_test_1_b69b27142f.jpg";
-  const mobileBgImage = "https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTC/mobile_fondo_prueba_25534f89ae.jpg";
-
+  const desktopBgImage = "https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTC/desk_fondo_pruebas_6pts_e79b16c033.jpg";
+  const tabletBgImage = "https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTC/desk_fondo_pruebas_6pts_e79b16c033.jpg";
+  const mobileBgImage = "https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTC/mobile_fondo_prueba_6pts_f62aacbbf8.jpg";                         
+                         
   return (
     <section
       //@ts-ignore
