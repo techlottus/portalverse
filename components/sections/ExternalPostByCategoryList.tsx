@@ -69,8 +69,8 @@ const ExternalPostByCategoryList: FC<ExternalPostListData> = (
           ) : null}
           {filterPost?.length > 0 ? (
             <div className="grid grid-cols-3 w-t:grid-cols-2 w-p:grid-cols-1 gap-6">
-              {paginatedItems?.map((item) => (
-                <div>
+              {paginatedItems?.map((item, i) => (
+                <div key={`externalPost-${i}`}>
                   <CardWebsitePortalverse
                     data={{
                       image: item?.featuredImage?.data?.attributes?.url,
