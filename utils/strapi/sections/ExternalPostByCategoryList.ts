@@ -14,6 +14,7 @@ export type ExternalPosts = {
 }
 
 export type ExternalPostListData = {
+  type: "ComponentSectionsExternalPostByCategoryList"
   title: string;
   description: string;
   externalPostCategories: {
