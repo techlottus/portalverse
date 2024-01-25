@@ -10,6 +10,7 @@ import { CARDS_VIDEO_CONTENT } from "@/utils/strapi/sections/CardsVideoContent";
 import { CATEGORY_ACCORDION_CONTENT } from "@/utils/strapi/sections/CategoryAccordionList";
 import { COLOR_CARD_LIST } from "@/utils/strapi/sections/ColorCardsList";
 import { CONTACT_TARGET_LIST } from "@/utils/strapi/sections/ContactTargetList";
+import { EXTERNAL_POST_BY_CATEGORY_LIST } from "@/utils/strapi/sections/ExternalPostByCategoryList";
 import { CONT_ED_PROGRAMS } from "@/utils/strapi/sections/ContEdPrograms";
 import { FAQ_SECTION } from "@/utils/strapi/sections/FAQ";
 import { FORM_CONTAINER } from "@/utils/strapi/sections/ContainerForm";
@@ -53,6 +54,7 @@ import type { ColorCardListData } from "@/utils/strapi/sections/ColorCardsList";
 import type { ContactTargetListSection } from "@/utils/strapi/sections/ContactTargetList";
 import type { ContainerForm } from "@/utils/strapi/sections/ContainerForm";
 import type { ContEdProgramsSection } from "@/utils/strapi/sections/ContEdPrograms";
+import type { ExternalPostListData } from "@/utils/strapi/sections/ExternalPostByCategoryList";
 import type { FAQSection } from "@/utils/strapi/sections/FAQ";
 import type { FormVideoSection } from "@/utils/strapi/sections/FormVideo";
 import type { GoogleMapSection } from "@/utils/strapi/sections/GoogleMap";
@@ -95,6 +97,7 @@ export type ComponentSection =
   | ContactTargetListSection
   | ContainerForm
   | ContEdProgramsSection
+  | ExternalPostListData
   | FAQSection
   | FormVideoSection
   | GoogleMapSection
@@ -136,6 +139,7 @@ export type ComponentSection =
   ${COLOR_CARD_LIST}
   ${CONTACT_TARGET_LIST}
   ${CONT_ED_PROGRAMS}
+  ${EXTERNAL_POST_BY_CATEGORY_LIST}
   ${FAQ_SECTION}
   ${FORM_CONTAINER}
   ${FORM_VIDEO}

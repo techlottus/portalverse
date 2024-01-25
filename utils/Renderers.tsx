@@ -14,6 +14,7 @@ import ColorCardList from "@/components/sections/ColorCardsList";
 import ContactTargetList from "@/components/sections/ContactTargetList";
 import ContainerForm from "@/components/sections/ContainerForm";
 import ContEdPrograms from "@/components/sections/ContEdPrograms";
+import ExternalPostByCategoryList from "@/components/sections/ExternalPostByCategoryList";
 import FAQ from "@/components/sections/FAQ";
 import FormVideo from "@/components/sections/FormVideo";
 import GoogleMap from "@/components/sections/GoogleMap";
@@ -67,6 +68,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsColorCardList: ColorCardList,
   ComponentSectionsContactTargetList: ContactTargetList,
   ComponentSectionsContEdPrograms: ContEdPrograms,
+  ComponentSectionsExternalPostByCategoryList: ExternalPostByCategoryList,
   ComponentSectionsFaqSection: FAQ,
   ComponentSectionsFormContainer: ContainerForm,
   ComponentSectionsFormVideo: FormVideo,
