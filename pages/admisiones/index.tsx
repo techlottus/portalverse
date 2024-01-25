@@ -205,6 +205,11 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
                       </Container>
                     </section>
                     <section className={cn("col-span-12 max-w-d-base mx-auto w-d-base:px-6 mt-18", { "hidden w-p:hidden": tabActive !== i })}>
+                      {
+                        sections?.AtrProgramPerks?.titleCards ?
+                          <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6 mb-6">{sections?.AtrProgramPerks?.titleCards}</p>
+                          : null
+                      }
                       <section className="grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
                         {
                           cards?.map((item: any, i: number) =>
@@ -338,9 +343,13 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-p:hidden w-t:hidden h-80">
           <Video data={sections?.egresados?.video} />
         </div>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 object-center flex justify-center mb-18 w-t:mb-6 w-p:mb-6">
-          <Button dark data={sections?.egresados?.button} onClick={() => router.push(sections?.egresados?.button?.redirect)} />
-        </div>
+        {
+          sections?.egresados?.testimonyImages ?
+            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 object-center flex justify-center mb-18 w-t:mb-6 w-p:mb-6">
+              <Button dark data={sections?.egresados?.button} onClick={() => router.push(sections?.egresados?.button?.redirect)} />
+            </div>
+            : null
+        }
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{sections?.FAQ?.title}</p>
         </div>
