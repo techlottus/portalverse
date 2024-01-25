@@ -75,7 +75,7 @@ const BlogEntryPageContent = (props: BlogEntryPageData) => {
 
           {/* TODO: Add related posts */}
 
-          <div className="flex justify-center mt-12">
+          <div className="w-p:hidden flex justify-center mt-12">
             <Button
               dark
               data={{
@@ -83,6 +83,21 @@ const BlogEntryPageContent = (props: BlogEntryPageData) => {
                 type: "primary",
                 icon: "",
                 isExpand: false,
+              }}
+              onClick={() => {
+                if (!parentSlug) return;
+                router.push(parentSlug);
+              }}
+            />
+          </div>
+          <div className="w-d:hidden w-t:hidden mt-12">
+            <Button
+              dark
+              data={{
+                title: "Ver más Artículos",
+                type: "primary",
+                icon: "",
+                isExpand: true,
               }}
               onClick={() => {
                 if (!parentSlug) return;

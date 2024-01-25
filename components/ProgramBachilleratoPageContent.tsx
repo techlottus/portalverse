@@ -97,18 +97,18 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
         <title>{title}</title>
       </Head>
       <ContentLayout>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12">
+        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 flex flex-col w-d:justify-center">
           <h1 className="text-13 font-bold font-headings leading-13 w-t:semi-tight w-p:leading-tight w-t:text-8.5 w-p:text-7.5 mb-6">{title}</h1>
           <RichtText data={{
             content: description
           }} />
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 w-p:hidden mb-10 mt-6">
+        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 w-p:hidden mb-10 mt-6 flex flex-col w-d:justify-center">
           <Aspect ratio={"2/1"}>
             <Image
               alt={title || "Programa de Bachillerato"}
               src={imageProgram}
-              classNamesImg="w-full h-full object-cover"
+              classNamesImg="w-full h-full object-cover rounded-lg"
               classNames="w-full h-full"
             />
           </Aspect>
@@ -120,7 +120,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
             <Image
               alt={title || "Programa de Bachillerato"}
               src={imageProgram}
-              classNamesImg="w-full h-full object-cover"
+              classNamesImg="w-full h-full object-cover rounded-lg"
               classNames="w-full h-full"
             />
           </Aspect>
@@ -177,7 +177,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
           {
             hasCampuses ?
               <>
-                <div className="my-6">
+                <div className="">
                   <div className="flex gap-1">
                     <p className="font-texts font-normal text-xs mb-0">Los planes de estudio pueden variar por</p>
                     <span className="font-texts font-normal text-xs mb-0">{campusLabel}</span>
@@ -185,7 +185,9 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
                   </div>
                   <Select onClick={(option: CustomEvent) => handleSelectOption(option)} data={{ ...SelectInit, textDefault: `Elige el ${campusLabel} de tu interés` }} options={optionsSelect} flagHeight={true} />
                 </div>
+                <div className="my-6">
                 <Button dark data={{ ...ButtonInit, title: "Descarga el plan de estudios", disabled: !isOptionSelected, icon: "download" }} onClick={downloadFileProgram} />
+                </div>
               </>
               : <div className="my-6">
                 <Button dark data={{ ...ButtonInit, title: "Descarga el plan de estudios", icon: "download" }} onClick={downloadFileProgram} />

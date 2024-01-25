@@ -171,60 +171,60 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
       <Aspect ratio="2/1">
         <div className="w-full h-full">
           <div
-          aria-label="prev"
-          onClick={handlerClickControl}
-          className={cn(
+            aria-label="prev"
+            onClick={handlerClickControl}
+            className={cn(
               "flex justify-center items-center z-20 left-8 w-14 h-14",
               { "bg-surface-0/50 cursor-pointer": countItems > 1 }
               , stylesBaseControls
             )}
           >
-          <span className="material-symbols-outlined ml-2 pointer-events-none select-none">arrow_back_ios</span>
-        </div>
-        <section className="w-full h-full flex overflow-hidden">
-          {
-            slides?.map((item: any, i: number) => {
-              const textPositionClasses = cn({
-                ["text-left"]: validateTextPosition(item?.textPosition, "left"),
-                ["text-center"]: validateTextPosition(item?.textPosition, "center"),
-                ["text-right"]: validateTextPosition(item?.textPosition, "right")
-              });
+            <span className="material-symbols-outlined ml-2 pointer-events-none select-none">arrow_back_ios</span>
+          </div>
+          <section className="w-full h-full flex overflow-hidden">
+            {
+              slides?.map((item: any, i: number) => {
+                const textPositionClasses = cn({
+                  ["text-left"]: validateTextPosition(item?.textPosition, "left"),
+                  ["text-center"]: validateTextPosition(item?.textPosition, "center"),
+                  ["text-right"]: validateTextPosition(item?.textPosition, "right")
+                });
 
-              return (<div key={`slide-item-${i}`} style={{ "transition": "left 0.5s ease-out", "left": `${active === 0 ? 0 : `-${active * 100}%`}` }} className={cn("w-full h-full relative flex flex-col shrink-0")}>
-                <Image classNames="w-t:hidden w-full h-full absolute z-1" classNamesImg="w-full h-full object-cover" src={item.urlImage.desktop} alt="image" />
-                <Image classNames="w-d:hidden w-full h-full absolute z-1" classNamesImg="w-full h-full object-cover" src={item.urlImage.tablet} alt="image" />
-                <div className={cn("flex absolute z-10 pt-12 pb-16 px-32 w-full h-full", {
-                  "text-surface-0": item?.contentVariant === "light",
-                  ["justify-start items-start"]: item?.textPosition === "left_top",
-                  ["justify-center items-start"]: item?.textPosition === "center_top",
-                  ["justify-end items-start"]: item?.textPosition === "right_top",
-                  ["justify-start items-center"]: item?.textPosition === "left_center",
-                  ["justify-center items-center"]: item?.textPosition === "center",
-                  ["justify-end items-center"]: item?.textPosition === "right_center",
-                  ["justify-start items-end"]: item?.textPosition === "left_bottom",
-                  ["justify-center items-end"]: item?.textPosition === "center_bottom",
-                  ["justify-end items-end"]: item?.textPosition === "right_bottom"
-                })}>
-                  <div className="flex flex-col z-10 w-d:w-125 w-t:w-96 space-y-4">
-                    <h2
-                      className={cn(
-                        "font-headings font-bold w-d:text-10 w-d:leading-12 w-t:text-7.5 w-t:leading-9",
-                        textPositionClasses
-                      )}
-                    >
-                      {item?.title}
-                    </h2>
-                    <p
-                      className={cn(
-                        "font-headings font-semibold w-d:text-4.5 w-d:leading-6 w-t:text-base w-t:leading-5",
-                        textPositionClasses
-                      )}
-                    >
-                      {item?.text}
-                    </p>
-                    {
-                      !!item?.action?.title
-                        ? <div className={cn("w-full flex", {
+                return (<div key={`slide-item-${i}`} style={{ "transition": "left 0.5s ease-out", "left": `${active === 0 ? 0 : `-${active * 100}%`}` }} className={cn("w-full h-full relative flex flex-col shrink-0")}>
+                  <Image classNames="w-t:hidden w-full h-full absolute z-1" classNamesImg="w-full h-full object-cover" src={item.urlImage.desktop} alt="image" />
+                  <Image classNames="w-d:hidden w-full h-full absolute z-1" classNamesImg="w-full h-full object-cover" src={item.urlImage.tablet} alt="image" />
+                  <div className={cn("flex absolute z-10 pt-12 pb-16 px-32 w-full h-full", {
+                    "text-surface-0": item?.contentVariant === "light",
+                    ["justify-start items-start"]: item?.textPosition === "left_top",
+                    ["justify-center items-start"]: item?.textPosition === "center_top",
+                    ["justify-end items-start"]: item?.textPosition === "right_top",
+                    ["justify-start items-center"]: item?.textPosition === "left_center",
+                    ["justify-center items-center"]: item?.textPosition === "center",
+                    ["justify-end items-center"]: item?.textPosition === "right_center",
+                    ["justify-start items-end"]: item?.textPosition === "left_bottom",
+                    ["justify-center items-end"]: item?.textPosition === "center_bottom",
+                    ["justify-end items-end"]: item?.textPosition === "right_bottom"
+                  })}>
+                    <div className="flex flex-col z-10 w-d:w-125 w-t:w-96 space-y-4">
+                      <h2
+                        className={cn(
+                          "font-headings font-bold w-d:text-10 w-d:leading-12 w-t:text-7.5 w-t:leading-9",
+                          textPositionClasses
+                        )}
+                      >
+                        {item?.title}
+                      </h2>
+                      <p
+                        className={cn(
+                          "font-headings font-semibold w-d:text-4.5 w-d:leading-6 w-t:text-base w-t:leading-5",
+                          textPositionClasses
+                        )}
+                      >
+                        {item?.text}
+                      </p>
+                      {
+                        !!item?.action?.title
+                          ? <div className={cn("w-full flex", {
                             ["justify-center"]: item?.textPosition === "center_top" || item?.textPosition === "center" || item?.textPosition === "center_bottom",
                             ["justify-start"]: item?.textPosition === "left_top" || item?.textPosition === "left_bottom",
                             ["justify-end"]: item?.textPosition === "right_top" || item?.textPosition === "right_bottom" || item?.textPosition === "right_center",
@@ -236,31 +236,31 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
                               onClick={() => router.push(`${item.action.redirect}`)}
                             />
                           </div>
-                        : null
-                    }
+                          : null
+                      }
+                    </div>
                   </div>
-                </div>
-                {
-                  item?.overlayWhite || item?.overlayDak ?
-                    <div className={cn("absolute w-full h-full", classNames, {
-                      "bg-surface-0 opacity-50": item.overlayWhite,
-                      "bg-surface-950 opacity-50": item.overlayDak
-                    })}></div>
-                  : null
-                }
-              </div>)
-            })
-          }
-          <div className={cn("w-full flex justify-center absolute bottom-10 space-x-2 z-20")}>
-            {
-              slides?.map((_: any, i: number) => <div key={`bullet-item-${i}`} onClick={() => activeBulletSlide(i)} className={cn("h-4 bg-surface-500 rounded-full cursor-pointer", { "w-4": i !== active, "w-8": i === active })} />)
+                  {
+                    item?.overlayWhite || item?.overlayDak ?
+                      <div className={cn("absolute w-full h-full", classNames, {
+                        "bg-surface-0 opacity-50": item.overlayWhite,
+                        "bg-surface-950 opacity-50": item.overlayDak
+                      })}></div>
+                      : null
+                  }
+                </div>)
+              })
             }
-          </div>
-        </section>
-        <div
-          aria-label="next"
-          onClick={handlerClickControl}
-          className={cn(
+            <div className={cn("w-full flex justify-center absolute bottom-10 space-x-2 z-20")}>
+              {
+                slides?.map((_: any, i: number) => <div key={`bullet-item-${i}`} onClick={() => activeBulletSlide(i)} className={cn("h-4 bg-surface-500 rounded-full cursor-pointer", { "w-4": i !== active, "w-8": i === active })} />)
+              }
+            </div>
+          </section>
+          <div
+            aria-label="next"
+            onClick={handlerClickControl}
+            className={cn(
               "flex justify-center items-center z-10 right-8 w-14 h-14",
               { "bg-surface-0/50 cursor-pointer": countItems > 1 }, stylesBaseControls
             )}
@@ -279,27 +279,35 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
           <Aspect ratio="1/1">
             <Image classNames="w-full h-full" classNamesImg="w-full h-full object-cover" src={item.urlImage.mobile} alt="image" />
           </Aspect>
-          <div className="p-4 flex flex-col space-y-6">
-            <h2
-              className="font-headings font-bold w-t:font-normal text-6 w-t:text-6.5 leading-8 w-t:leading-10"
-            >
-              {item.title}
-            </h2>
-            <p className="font-texts font-normal text-base leading-5">{item.text}</p>
-            {
-              !!item?.action?.title
-                ? <Button data={{ ...item.action, isExpand: true }} dark onClick={() => router.push(`${item.action.redirect}`)} />
-                : null
-            }
-          </div>
+          {
+            item?.title || item?.text ?
+              <div className="p-4 flex flex-col space-y-6">
+                {item?.title ? <h2
+                  className="font-headings font-bold w-t:font-normal text-6 w-t:text-6.5 leading-8 w-t:leading-10"
+                >
+                  {item.title}
+                </h2> : null}
+                {item?.text ? <p className="font-texts font-normal text-base leading-5">{item.text}</p> : null}
+                {
+                  !!item?.action?.title
+                    ? <Button data={{ ...item.action, isExpand: true }} dark onClick={() => router.push(`${item.action.redirect}`)} />
+                    : null
+                }
+              </div>
+              : null
+          }
         </div>)
       }
     </section>
-    <div className={cn("w-full flex justify-center space-x-2 mt-4 pb-5 w-t:pb-4 w-d:hidden w-t:hidden")}>
-      {
-        slides?.map((_: any, i: number) => <div key={`bullet-item-${i}`} onClick={() => activeBulletSlide(i)} className={cn("h-4 bg-surface-400 rounded-full cursor-pointer", { "w-4": i !== active, "w-8": i === active })} />)
+    {
+    slides.length > 1 ?
+      <div className={cn("w-full flex justify-center space-x-2 mt-4 pb-5 w-t:pb-4 w-d:hidden w-t:hidden")}>
+        {
+          slides?.map((_: any, i: number) => <div key={`bullet-item-${i}`} onClick={() => activeBulletSlide(i)} className={cn("h-4 bg-surface-400 rounded-full cursor-pointer", { "w-4": i !== active, "w-8": i === active })} />)
+        }
+      </div>
+      : null
       }
-    </div>
     {/* mobile */}
   </section>
 };
