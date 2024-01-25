@@ -205,6 +205,11 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
                       </Container>
                     </section>
                     <section className={cn("col-span-12 max-w-d-base mx-auto w-d-base:px-6 mt-18", { "hidden w-p:hidden": tabActive !== i })}>
+                      {
+                        sections?.AtrProgramPerks?.titleCards ?
+                          <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6 mb-6">{sections?.AtrProgramPerks?.titleCards}</p>
+                          : null
+                      }
                       <section className="grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
                         {
                           cards?.map((item: any, i: number) =>
