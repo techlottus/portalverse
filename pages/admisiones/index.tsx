@@ -338,9 +338,13 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-p:hidden w-t:hidden h-80">
           <Video data={sections?.egresados?.video} />
         </div>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 object-center flex justify-center mb-18 w-t:mb-6 w-p:mb-6">
-          <Button dark data={sections?.egresados?.button} onClick={() => router.push(sections?.egresados?.button?.redirect)} />
-        </div>
+        {
+          sections?.egresados?.testimonyImages ?
+            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 object-center flex justify-center mb-18 w-t:mb-6 w-p:mb-6">
+              <Button dark data={sections?.egresados?.button} onClick={() => router.push(sections?.egresados?.button?.redirect)} />
+            </div>
+            : null
+        }
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{sections?.FAQ?.title}</p>
         </div>
