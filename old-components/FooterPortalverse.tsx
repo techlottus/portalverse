@@ -64,7 +64,7 @@ const Footer: FC<FooterPortalverseComponentData> = ({ privacyLink, certification
                         {
                           !!item?.link
                             ? <Link href={item.link} passHref target={!!item.external ? "_blank" : "_self"}><p className={cn({ "font-headings font-bold": item?.principal, "font-texts font-normal": !item?.principal })}>{item?.label}</p></Link>
-                            : <p className={cn({ "font-bold": item.principal, "font-normal": !item.principal})}>{item.label}</p>
+                            : <p className={cn({ "font-headings font-bold": item.principal, "font-texts font-normal": !item.principal})}>{item.label}</p>
                         }
                       </Fragment>
                     );
