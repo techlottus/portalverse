@@ -111,7 +111,7 @@ const CintilloContent = (props: CintilloData) => {
                 >
                   mail
                 </span>
-                <LinkContactTarget classNames={cn("text-surface-950 w-p:text-surface-0", {
+                <LinkContactTarget classNames={cn("text-surface-950 w-p:text-surface-0 underline", {
                   "!text-surface-0": contentVariant === "light" || overlay === "dark",
                   "!text-surface-950": overlay === "white"
                 })} type="email" info={email} />
@@ -132,7 +132,7 @@ const CintilloContent = (props: CintilloData) => {
                 >
                   phone
                 </span>
-                <LinkContactTarget classNames={cn("text-surface-950 w-p:text-surface-0", { "!text-surface-0": contentVariant === "light" || overlay === "dark", "!text-surface-950": overlay === "white" })} type="phone" info={phone} />
+                <LinkContactTarget classNames={cn("text-surface-950 w-p:text-surface-0 underline", { "!text-surface-0": contentVariant === "light" || overlay === "dark", "!text-surface-950": overlay === "white" })} type="phone" info={phone} />
               </div>
               : null
           }
@@ -142,7 +142,7 @@ const CintilloContent = (props: CintilloData) => {
                 <span className="w-6 h-6">
                   <Icon name="whatsapp" />
                 </span>
-                <span><a target="_blank" rel="noreferrer noopener" className="font-texts font-normal text-base" href={redirectWhats}>{whatsApp}</a></span>
+                <span><a target="_blank" rel="noreferrer noopener" className="font-texts font-normal text-base underline" href={redirectWhats}>{whatsApp}</a></span>
               </div>
               : null
           }

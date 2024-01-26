@@ -53,8 +53,8 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
         </div> */}
         <div className="col-span-12">
           <ContentInsideLayout>
-            <div className="col-span-8 w-p:col-span-4 w-d:mb-12 w-p:mb-12 mb-6">
-              <h1 className="text-13 w-t:text-8.25 w-p:text-6 font-headings font-bold leading-tight w-t:semi-tight ">{sections.head.title}</h1>
+            <div className="col-span-8 w-p:col-span-4 w-d:mb-10 w-p:mb-3 mb-6">
+              <h1 className="text-13 w-t:text-8.25 w-p:text-6 font-headings font-bold leading-tight w-t:semi-tight mb-4">{sections.head.title}</h1>
               <RichtText data={{
                 content: sections.head.description
               }} />
