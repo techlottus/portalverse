@@ -4,7 +4,6 @@ import ContentFullLayout from "@/layouts/ContentFull.layout";
 import Aspect from "@/components/Aspect";
 import cn from "classnames";
 import Button from "@/old-components/Button/Button";
-import AtrProgramPerks from "@/components/sections/AtrProgramPerks";
 
 type AtrProgramInfoProps = {
   checkoutUrl?: string;
@@ -64,7 +63,7 @@ const AtrProgramInfo = (props: AtrProgramInfoProps) => {
           </div>
         </div>
       </Container>
-      <ContentFullLayout classNames="bg-primary-0 md:-mt-28">
+      <ContentFullLayout classNames="bg-primary-0 md:-mt-28 bg-center bg-no-repeat bg-cover bg-[url('https://assets.staging.bedu.org/UTC/fondo_mobile_bc58aa0037.jpg')] md:bg-[url('https://assets.staging.bedu.org/UTC/fondo_fb431073e5.jpg')]">
         <Container classNames="">
           <div className="flex flex-col justify-center items-center gap-6 py-8 md:p-12">
             <div className="flex flex-col gap-1 justify-center items-center">
