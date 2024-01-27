@@ -106,6 +106,7 @@ const ConexionEducativa: NextPageWithLayout = ({ sections, meta }: any) => {
               {
                 contentTabs.map(({ image: { src, alt }, content: { title, description }, process: { title: titleProcess, description: descripcionProcess, download } }: any, i: number) => <Fragment key={`description-serviceSocial-${i}`}>
                   <DescriptionSection
+                    mode="light"
                     title={title}
                     description={description}
                     classNames={cn(

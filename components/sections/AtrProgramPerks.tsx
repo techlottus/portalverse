@@ -4,9 +4,9 @@ import parseEditorRawData from "@/utils/parseEditorRawData";
 import cn from "classnames";
 
 const AtrProgramPerks = () => {
-  const desktopBgImage = "https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTC/desk_fondo_pruebas_6pts_e79b16c033.jpg";
-  const tabletBgImage = "https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTC/desk_fondo_pruebas_6pts_e79b16c033.jpg";
-  const mobileBgImage = "https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTC/mobile_fondo_prueba_6pts_f62aacbbf8.jpg";                         
+  const desktopBgImage = "https://assets.staging.bedu.org/UTC/desk_fondo_pruebas_6pts_e79b16c033.jpg";
+  const tabletBgImage = "https://assets.staging.bedu.org/UTC/desk_fondo_pruebas_6pts_e79b16c033.jpg";
+  const mobileBgImage = "https://assets.staging.bedu.org/UTC/fondo_atr_mobile_ventajas_d39bb3df66.png";                         
                          
   return (
     <section
