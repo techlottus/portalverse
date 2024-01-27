@@ -146,7 +146,8 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
           {
             formattedModalityData?.cards?.map((items, i: number) => {
               return <Fragment key={`section-${i}`}>
-                <DescriptionSection
+                <DescriptionSection 
+                  mode="light"
                   title=""
                   description={items?.text}
                   classNames={cn("col-span-7 grid grid-cols-7 gap-6 w-t:col-span-8 w-t:grid-cols-8 w-p:col-span-4 py-10 w-t:py-24 w-p:flex w-p:flex-col w-p:p-6", { "w-d:order-2 w-t:order-1 w-p:order-1": i === 1 })}
