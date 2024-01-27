@@ -220,12 +220,12 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                     <Select onClick={(option: CustomEvent) => handleSelectOption(option)} data={{ ...SelectInit, textDefault: `Elige el ${campusLabel} de tu interés`, icon: "apartment" }} options={optionsSelect} flagHeight={true} />
                   </div>
                   <div className="flex justify-center">
-                    <Button dark data={{ ...ButtonInit, title: "Descarga el plan de estudios", disabled: !isOptionSelected, icon: "download" }} onClick={downloadFileProgram} />
+                    <Button dark data={{ ...ButtonInit, title: "Descarga el plan de estudios", disabled: !isOptionSelected }} onClick={downloadFileProgram} />
                   </div>
                 </div> :
                 <>
                   <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center">
-                    <Button dark data={{ ...ButtonInit, title: "Descarga el plan de estudios", icon: "download" }} onClick={downloadFileProgram} />
+                    <Button dark data={{ ...ButtonInit, title: "Descarga el plan de estudios" }} onClick={downloadFileProgram} />
                   </div></>
             }
           </div>
