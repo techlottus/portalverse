@@ -28,9 +28,9 @@ div {
       div.heading {
         div.left {
           div.title {
-            @apply font-headings #{!important};
+            @apply font-texts #{!important};
             &.-bold {
-              @apply font-headings #{!important};
+              @apply font-texts #{!important};
 
             }
           }
