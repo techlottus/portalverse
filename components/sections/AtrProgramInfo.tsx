@@ -63,7 +63,7 @@ const AtrProgramInfo = (props: AtrProgramInfoProps) => {
           </div>
         </div>
       </Container>
-      <ContentFullLayout classNames="bg-primary-0 md:-mt-28 bg-center bg-no-repeat bg-cover bg-[url('https://assets.staging.bedu.org/UTC/fondo_mobile_bc58aa0037.jpg')] md:bg-[url('https://assets.staging.bedu.org/UTC/fondo_fb431073e5.jpg')]">
+      <ContentFullLayout classNames="bg-primary-0 mt-10 md:-mt-8 lg:-mt-28 bg-center bg-no-repeat bg-cover bg-[url('https://assets.staging.bedu.org/UTC/titulo_banner_mobile_0bd62788e4.png')] md:bg-[url('https://assets.staging.bedu.org/UTC/titulo_background_desk_06a400d611.jpg')]">
         <Container classNames="">
           <div className="flex flex-col justify-center items-center gap-6 py-8 md:p-12">
             <div className="flex flex-col gap-1 justify-center items-center">
