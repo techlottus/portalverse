@@ -5,8 +5,11 @@ import parseEditorRawData from "@/utils/parseEditorRawData";
 import RichtText from "@/old-components/Richtext/Richtext";
 import cn from "classnames";
 import type { RichTextImageSection } from "@/utils/strapi/sections/RichTextImage";
+import Button from "@/old-components/Button/Button";
+import { useRouter } from "next/router";
 
 const RichTextImage: FC<RichTextImageSection> = (props: RichTextImageSection) => {
+
   const {
     title,
     image,
@@ -14,8 +17,10 @@ const RichTextImage: FC<RichTextImageSection> = (props: RichTextImageSection) =>
     imagePosition = "right",
     backgroundColor,
     richTextImageContentVariant: contentVariant = "dark",
+    buttons
   } = props;
 
+  const router = useRouter();
   const richTextMarkup = parseEditorRawData(text);
 
   const renderImage = () => {
@@ -54,7 +59,32 @@ const RichTextImage: FC<RichTextImageSection> = (props: RichTextImageSection) =>
             </div>
             {
               richTextMarkup
-                ? <div className="dark my-auto"><RichtText font={contentVariant === "light" ? "dark" : "light"} data={{content: richTextMarkup}}/></div>
+                ? 
+                <div className="dark my-auto">
+                  <RichtText font={contentVariant === "light" ? "dark" : "light"} data={{content: richTextMarkup}}/>
+                  {
+                    buttons?.length > 0 ?
+                    <div className="grid gap-6 w-d:grid-cols-2 w-t:grid-cols-2">
+                    {
+                      buttons?.map((item, i) => {
+                        return (
+                          <Button dark data={{
+                            id: item?.id,
+                            type: item?.variant,
+                            title: item?.label,
+                            size: "small",
+                            lyIcon: false,
+                            disabled: false,
+                            isExpand: true,
+                          }}
+                          onClick={() => router?.push(item?.CTA)} />
+                        )}
+                      )
+                    }
+                  </div>
+                    : null
+                  }
+                </div>
                 : null
             }
             <div

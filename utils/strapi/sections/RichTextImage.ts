@@ -1,5 +1,13 @@
 import { StrapiImage } from "@/types/strapi/common";
 
+export type button = {
+  CTA: string;
+  label: string;
+  iconName: string;
+  variant: string;
+  id: string;
+  size: string;
+};
 export type RichTextImageSection = {
   type: "ComponentSectionsRichTextImage";
   title: string;
@@ -8,8 +16,9 @@ export type RichTextImageSection = {
   imagePosition: "left" | "right";
   backgroundColor: string;
   richTextImageContentVariant: "light" | "dark";
+  buttons: Array<any>;
 };
-  
+
 export const RICH_TEXT_IMAGE = `
 ...on ComponentSectionsRichTextImage{
   title
@@ -23,6 +32,14 @@ export const RICH_TEXT_IMAGE = `
   text
   imagePosition
   backgroundColor
-  richTextImageContentVariant: contentVariant
+  richTextImageContentVariant: contentVariant,
+  buttons {
+    CTA
+    label
+    iconName
+    variant
+    id
+    size
+  }
 }
 `;
