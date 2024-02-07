@@ -5,6 +5,8 @@ import RichtText from "@/old-components/Richtext/Richtext";
 import cn from "classnames";
 import type { RichTextVideoSection } from "@/utils/strapi/sections/RichTextVideo";
 import Aspect from "../Aspect";
+import Button from "@/old-components/Button/Button";
+import { useRouter } from "next/router";
 
 const RichTextVideo: FC<RichTextVideoSection> = (props: RichTextVideoSection) => {
   const {
@@ -14,9 +16,11 @@ const RichTextVideo: FC<RichTextVideoSection> = (props: RichTextVideoSection) =>
     backgroundColor,
     richTextVideoContentVariant: contentVariant = "dark",
     providerId,
-    provider
+    provider,
+    buttons
   } = props;
 
+  const router = useRouter();
   const richTextMarkup = parseEditorRawData(text);
 
   const renderVideo = () => {
@@ -59,6 +63,28 @@ const RichTextVideo: FC<RichTextVideoSection> = (props: RichTextVideoSection) =>
                 && ( <div className="dark ">
                   { title && <h3 className="font-headings text-10 pb-4 font-bold leading-tight w-t:text-8.5 w-p:text-6">{title}</h3>}
                    <RichtText font={contentVariant === "light" ? "dark" : "light"} data={{content: richTextMarkup}}/>
+                   {
+                    buttons?.length > 0 ?
+                    <div className="grid gap-6 w-d:grid-cols-2 w-t:grid-cols-2">
+                    {
+                      buttons?.map((item, i) => {
+                        return (
+                          <Button dark data={{
+                            id: item?.id,
+                            type: item?.variant,
+                            title: item?.label,
+                            size: "small",
+                            lyIcon: false,
+                            disabled: false,
+                            isExpand: true
+                          }}
+                          onClick={() => router?.push(item?.CTA)} />
+                        )}
+                      )
+                    }
+                  </div>
+                    : null
+                  }
                   </div>)
             }
             <div 

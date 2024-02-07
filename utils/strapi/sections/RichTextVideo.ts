@@ -1,3 +1,4 @@
+import { button } from "./RichTextImage";
 
 export type RichTextVideoSection = {
   type: "ComponentSectionsRichTextVideo";
@@ -8,6 +9,7 @@ export type RichTextVideoSection = {
   videoPosition: "left" | "right";
   backgroundColor: string;
   richTextVideoContentVariant: "light" | "dark";
+  buttons: Array<button>
 };
   
 export const RICH_TEXT_VIDEO = `
@@ -19,5 +21,13 @@ export const RICH_TEXT_VIDEO = `
   videoPosition
   backgroundColor
   richTextVideoContentVariant: contentVariant
+  buttons {
+    CTA
+    label
+    iconName
+    variant
+    id
+    size
+  }
 }
 `;
