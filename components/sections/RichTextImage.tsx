@@ -50,7 +50,7 @@ const RichTextImage: FC<RichTextImageSection> = (props: RichTextImageSection) =>
           }
           <div className="grid w-p:grid-cols-1 w-t:grid-cols-1 grid-cols-2 gap-6">
             <div
-              className={cn("my-auto",{
+              className={cn("my-auto", {
                 "w-d:hidden": imagePosition !== "left",
                 "w-p:hidden w-t:hidden": !title
               })}
@@ -59,36 +59,39 @@ const RichTextImage: FC<RichTextImageSection> = (props: RichTextImageSection) =>
             </div>
             {
               richTextMarkup
-                ? 
+                ?
                 <div className="dark my-auto">
-                  <RichtText font={contentVariant === "light" ? "dark" : "light"} data={{content: richTextMarkup}}/>
+                  <RichtText font={contentVariant === "light" ? "dark" : "light"} data={{ content: richTextMarkup }} />
                   {
-                    buttons?.length > 0 ?
-                    <div className="grid gap-6 w-d:grid-cols-2 w-t:grid-cols-2">
-                    {
-                      buttons?.map((item, i) => {
-                        return (
-                          <Button dark data={{
-                            id: item?.id,
-                            type: item?.variant,
-                            title: item?.label,
-                            size: "small",
-                            lyIcon: false,
-                            disabled: false,
-                            isExpand: true,
-                          }}
-                          onClick={() => router?.push(item?.CTA)} />
-                        )}
-                      )
-                    }
-                  </div>
-                    : null
+                    buttons && buttons?.length > 0 ?
+                      <div className="grid gap-6 w-d:grid-cols-2 w-t:grid-cols-2">
+                        {
+                          buttons?.map((item, i) => {
+                            return (
+                              <div key={`richTextImage-button-${i}`}>
+                                <Button dark data={{
+                                  id: item?.id,
+                                  type: item?.variant,
+                                  title: item?.label,
+                                  size: "small",
+                                  lyIcon: false,
+                                  disabled: false,
+                                  isExpand: true,
+                                }}
+                                  onClick={() => router?.push(item?.CTA)} />
+                              </div>
+                            )
+                          }
+                          )
+                        }
+                      </div>
+                      : null
                   }
                 </div>
                 : null
             }
             <div
-              className={cn("my-auto",{
+              className={cn("my-auto", {
                 "w-d:hidden": imagePosition !== "right",
                 "w-p:hidden w-t:hidden": !!title
               })}

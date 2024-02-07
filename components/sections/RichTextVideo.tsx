@@ -64,11 +64,12 @@ const RichTextVideo: FC<RichTextVideoSection> = (props: RichTextVideoSection) =>
                   { title && <h3 className="font-headings text-10 pb-4 font-bold leading-tight w-t:text-8.5 w-p:text-6">{title}</h3>}
                    <RichtText font={contentVariant === "light" ? "dark" : "light"} data={{content: richTextMarkup}}/>
                    {
-                    buttons?.length > 0 ?
+                    buttons && buttons?.length > 0 ?
                     <div className="grid gap-6 w-d:grid-cols-2 w-t:grid-cols-2">
                     {
                       buttons?.map((item, i) => {
                         return (
+                          <div key={`richTextVideo-button-${i}`}>
                           <Button dark data={{
                             id: item?.id,
                             type: item?.variant,
@@ -76,9 +77,10 @@ const RichTextVideo: FC<RichTextVideoSection> = (props: RichTextVideoSection) =>
                             size: "small",
                             lyIcon: false,
                             disabled: false,
-                            isExpand: true
+                            isExpand: true,
                           }}
-                          onClick={() => router?.push(item?.CTA)} />
+                            onClick={() => router?.push(item?.CTA)} />
+                        </div>
                         )}
                       )
                     }
