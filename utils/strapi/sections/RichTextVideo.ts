@@ -9,7 +9,7 @@ export type RichTextVideoSection = {
   videoPosition: "left" | "right";
   backgroundColor: string;
   richTextVideoContentVariant: "light" | "dark";
-  buttons: Array<button>
+  buttons?: Array<button>
 };
   
 export const RICH_TEXT_VIDEO = `

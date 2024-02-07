@@ -16,7 +16,7 @@ export type RichTextImageSection = {
   imagePosition: "left" | "right";
   backgroundColor: string;
   richTextImageContentVariant: "light" | "dark";
-  buttons: Array<any>;
+  buttons?: Array<button>;
 };
 
 export const RICH_TEXT_IMAGE = `
