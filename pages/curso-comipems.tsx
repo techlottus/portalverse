@@ -13,6 +13,7 @@ import Button from "@/old-components/Button/Button"
 import RichtText from "@/old-components/Richtext/Richtext"
 import RichTextVideo from "@/components/sections/RichTextVideo"
 import RichTextImage from "@/components/sections/RichTextImage"
+import Image from "@/old-components/Image"
 import type NextPageWithLayout from "@/types/Layout.types"
 
 const CursoComipems: NextPageWithLayout = ({ sections, meta }: any) => {
@@ -39,10 +40,10 @@ const CursoComipems: NextPageWithLayout = ({ sections, meta }: any) => {
           <Container>
             <div className="flex flex-col w-d:gap-12 gap-6 items-center justify-center">
               <div className="text-center">
-                <h3 className="font-headings font-semibold text-7 w-p:text-8 text-secondary-500">{sections?.bgImageSection?.title}</h3>
+                <h3 className="font-headings font-semibold text-7 w-p:text-8"><span className="font-headings font-semibold text-7 w-p:text-8 text-secondary-500 mr-2">{sections?.bgImageSection?.colorTitle}</span>{sections?.bgImageSection?.title}</h3>
                 <RichtText data={{
                   content: sections?.bgImageSection?.subtitle
-                }}/>
+                }} />
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-6">
                 {
@@ -67,23 +68,42 @@ const CursoComipems: NextPageWithLayout = ({ sections, meta }: any) => {
         </div>
       </ContentFullLayout>
       <ContentLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-12 w-d:mb-18">
-          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6 w-d:mb-">{sections?.videosCourseSection.title}</p>
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6 w-d:mb-18">
+          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6 ">{sections?.videosCourseSection.title}</p>
           <div className="grid w-d:grid-cols-2 w-p:grid-cols-1 gap-6">
             {
-              sections?.videosCourseSection.videos.map((item: any, i: number) => <section className="h-80" key={`section-alliances-${i}`}>
-                <Video data={item} />
-              </section>)
+              sections?.videosCourseSection.videos.map((item: any, i: number) => <div key={`section-videoCourses-${i}`}>
+                {
+                  item?.options?.id ?
+                    <div className="h-80">
+                      <Video data={item} />
+                    </div>
+                    : item?.src ?
+                      <div className="h-80">
+                        <Image
+                          alt={item?.alt}
+                          src={item?.src}
+                          classNames="w-full h-full"
+                          classNamesImg="w-full h-full object-cover"
+                        />
+                      </div>
+                      : null
+                }
+                <p className="text-base mt-4 font-headings font-semibold">{item?.title}</p>
+                <RichtText data={{
+                  content: item?.subtitle
+                }} />
+              </div>)
             }
           </div>
         </div>
       </ContentLayout>
       <ContentFullLayout>
-      <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6 w-d:mb-18">
-          <RichTextVideo {...sections?.richTextVideoOpinionsSection}/>
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6 w-d:mb-18">
+          <RichTextVideo {...sections?.richTextVideoOpinionsSection} />
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-12 w-d:mb-18">
-          <RichTextImage {...sections?.RichTextImageHowDoYouHelpSection}/>
+          <RichTextImage {...sections?.RichTextImageHowDoYouHelpSection} />
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           <RichTextVideo {...sections?.richTextVideoEncourageYourselfSection} />
