@@ -44,5 +44,13 @@ export const RICHTEXTIMAGE_BGIMAGE = `
       }
     }
     imagePosition
+    buttons {
+      CTA
+      label
+      iconName
+      variant
+      id
+      size
+    }
   }
 }`;
