@@ -78,6 +78,7 @@ const RichTextVideo: FC<RichTextVideoSection> = (props: RichTextVideoSection) =>
                             lyIcon: false,
                             disabled: false,
                             isExpand: true,
+                            icon: item?.iconName
                           }}
                             onClick={() => router?.push(item?.CTA)} />
                         </div>

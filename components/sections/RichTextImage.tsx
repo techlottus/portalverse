@@ -73,6 +73,7 @@ const RichTextImage: FC<RichTextImageSection> = (props: RichTextImageSection) =>
                                   id: item?.id,
                                   type: item?.variant,
                                   title: item?.label,
+                                  icon: item?.iconName,
                                   size: "small",
                                   lyIcon: false,
                                   disabled: false,
