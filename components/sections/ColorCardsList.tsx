@@ -7,7 +7,7 @@ import type { ColorCardListData } from "@/utils/strapi/sections/ColorCardsList";
 
 const ColorCardList: FC<ColorCardListData> = (props: ColorCardListData) => {
 
-  const {title, description, cards} = props;
+  const {title, description, cards, alternativeText} = props;
 
   const formattedDescription = parseEditorRawData(description)
 
@@ -64,6 +64,11 @@ const ColorCardList: FC<ColorCardListData> = (props: ColorCardListData) => {
           </div>
           : null
         }
+        <div className="flex justify-end mt-1">
+          <RichtText data={{
+            content:parseEditorRawData( alternativeText)
+          }} />
+        </div>
       </Container>
     </section>
   );
