@@ -64,11 +64,15 @@ const ColorCardList: FC<ColorCardListData> = (props: ColorCardListData) => {
           </div>
           : null
         }
-        <div className="flex justify-end mt-1">
-          <RichtText data={{
-            content:parseEditorRawData( alternativeText)
-          }} />
-        </div>
+        {
+          alternativeText ?
+            <div className="flex justify-end mt-1">
+              <RichtText data={{
+                content:parseEditorRawData(alternativeText)
+              }} />
+            </div>
+          : null
+        }
       </Container>
     </section>
   );
