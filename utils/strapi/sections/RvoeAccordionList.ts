@@ -2,6 +2,7 @@ export type RvoeAccordionListData = {
   type: 'ComponentSectionsRvoeAccordionList';
   title: string;
   subtitle: string;
+  description: string;
   rvoeList: Array<{
     label: string;
     iconName: string;
@@ -57,6 +58,7 @@ export const RVOE_ACCORDION_CONTENT = `
 ... on ComponentSectionsRvoeAccordionList {
   title
   subtitle
+  description
   rvoeList(pagination: { start: 0, limit: -1 }) {
     label
     iconName

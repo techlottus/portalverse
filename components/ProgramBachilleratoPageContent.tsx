@@ -12,6 +12,7 @@ import DescriptionSection from "@/old-components/DescriptionSection";
 import Select from "@/old-components/Select/Select";
 import Video from "@/old-components/Video";
 import Aspect from "@/components/Aspect";
+import Alert from "@/components/sections/Alert";
 import { ButtonInit, SelectInit } from "@/old-components/fixture";
 import Banner from "@/components/sections/Banner";
 import { formatModalityDataBachillerato } from "@/utils/programDetail";
@@ -28,6 +29,8 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
   const singleTypeAttributes = layout?.attributes;
   const bannerData = singleTypeAttributes?.banner;
   const videoId = singleTypeAttributes?.videoId;
+
+  const feedbackData = layout?.attributes?.feedback;
 
   const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
   let campusLabel = "plantel";
@@ -114,6 +117,15 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
           </Aspect>
         </div>
       </ContentLayout>
+      <ContentLayout classNames="w-d-base:px-0">
+      {
+          feedbackData ?
+            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6 mb-18 w-p:mb-6">
+              <Alert {...feedbackData} />
+            </div>
+            : null
+        }
+      </ContentLayout>
       <ContentFullLayout>
         <div className="w-d:hidden w-t:hidden col-span-4 mb-10 mt-6">
           <Aspect ratio={"4/3"}>
@@ -146,7 +158,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
           {
             formattedModalityData?.cards?.map((items, i: number) => {
               return <Fragment key={`section-${i}`}>
-                <DescriptionSection 
+                <DescriptionSection
                   mode="light"
                   title=""
                   description={items?.text}
@@ -187,7 +199,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
                   <Select onClick={(option: CustomEvent) => handleSelectOption(option)} data={{ ...SelectInit, textDefault: `Elige el ${campusLabel} de tu interés` }} options={optionsSelect} flagHeight={true} />
                 </div>
                 <div className="my-6">
-                <Button dark data={{ ...ButtonInit, title: "Descarga el plan de estudios", disabled: !isOptionSelected }} onClick={downloadFileProgram} />
+                  <Button dark data={{ ...ButtonInit, title: "Descarga el plan de estudios", disabled: !isOptionSelected }} onClick={downloadFileProgram} />
                 </div>
               </>
               : <div className="my-6">
