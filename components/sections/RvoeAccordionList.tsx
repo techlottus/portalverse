@@ -3,9 +3,11 @@ import Container from "@/layouts/Container.layout";
 import { RvoeAccordionListData } from "@/utils/strapi/sections/RvoeAccordionList";
 import { Disclosure } from '@headlessui/react'
 import cn from "classnames"
+import RichtText from "@/old-components/Richtext/Richtext";
+import parseEditorRawData from "@/utils/parseEditorRawData";
 
 const RvoeAccordionList: FC<RvoeAccordionListData> = (props: RvoeAccordionListData) => {
-  const { title, subtitle, rvoeList } = props;
+  const { title, subtitle, description, rvoeList } = props;
   const [optionSelect, setOptionSelect] = useState<number>(0);
   const modalities: any = rvoeList?.[optionSelect]?.modalityCategory?.data?.attributes?.modalities?.data
   const getAllRvoes = modalities?.reduce(function (totalRvoes: any, modalities: any) {
@@ -27,13 +29,22 @@ const RvoeAccordionList: FC<RvoeAccordionListData> = (props: RvoeAccordionListDa
   return <>
     <section>
       <Container>
-        <div className="w-d:w-1/2 flex flex-col justify-center mb-8">
+        <div className={cn("w-d:w-1/2 flex flex-col justify-center", {
+          "mb-8": !description
+        })}>
           {
             title ?
               <h3 className="font-headings font-bold text-10 leading-12 w-p:text-6 w-p:leading-7">{title}</h3>
               : null
           }
         </div>
+        {
+          <div className="mb-8">
+            <RichtText data={{
+              content: parseEditorRawData(description)
+            }} />
+          </div>
+        }
         <div className='w-d:flex gap-12 w-d:items-start'>
           {
             <div className="flex flex-col gap-6 w-72 max-w-72">
