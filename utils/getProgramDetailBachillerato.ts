@@ -1,12 +1,14 @@
 import { StrapiImage } from "@/types/strapi/common";
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
 import type { BannerData } from "@/utils/strapi/sections/Banner";
+import { AlertSection } from "./strapi/sections/Alert";
 
 export type ProgramDetailBachilleratoData = {
   attributes: {
     admissionProfileImage: StrapiImage;
     graduateProfileImage: StrapiImage;
     videoId: string;
+    feedback: AlertSection;
     banner: BannerData;
   }
 }
@@ -44,6 +46,19 @@ query ProgramDetailBachillerato {
           }
         }
         videoId
+        feedback {
+          title
+          text
+          iconName
+          links {
+            text
+            href
+            target
+            iconName
+            iconPosition
+            disabled
+          }
+        }
         banner {
           ctaText
           ctaUrl
