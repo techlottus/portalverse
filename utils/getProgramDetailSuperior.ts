@@ -2,6 +2,7 @@ import { fetchStrapiGraphQL } from "@/utils/getStrapi";
 import type { BannerData } from "@/utils/strapi/sections/Banner";
 import type { StrapiImage } from "@/types/strapi/common";
 import type { ContentVariant } from "@/types/strapi/common";
+import { RichTextImageSection } from "./strapi/sections/RichTextImage";
 
 export type ProgramDetailSuperiorData = {
   attributes: {
@@ -14,7 +15,11 @@ export type ProgramDetailSuperiorData = {
     admissionRequirementsImage: StrapiImage;
     admissionRequirementsBackgroundColor: string;
     contentVariant: ContentVariant;
+    richTextImage: RichTextImageSection;
     banner: BannerData;
+    rvoeTitle: string;
+    rvoeDescription: string;
+    rvoeImages: Array<{image:StrapiImage}>
   }
 }
 
@@ -69,6 +74,25 @@ query ProgramDetailSuperior {
         }
         admissionRequirementsBackgroundColor
         contentVariant
+        richTextImage {
+          image {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+          backgroundColor
+          text
+          title
+          imagePosition
+          buttons {
+            variant
+            CTA
+            iconName
+            label
+          }
+        }
         banner {
           ctaText
           ctaUrl
@@ -101,6 +125,17 @@ query ProgramDetailSuperior {
             }
           }
           desktopRatio
+        }
+        rvoeTitle
+        rvoeDescription
+        rvoeImages{
+          image {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
         }
       }
     }
