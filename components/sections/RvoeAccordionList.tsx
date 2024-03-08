@@ -107,12 +107,12 @@ const RvoeAccordionList: FC<RvoeAccordionListData> = (props: RvoeAccordionListDa
                                             <tr className="w-full font-texts font-semibold text-xs md:text-base lg:text-base" key={item?.rvoe}>
                                               {
                                                 item?.program
-                                                  ? <td className="py-3 md:pl-4">{item?.program}</td>
+                                                  ? <td className="py-3 md:pl-4 px-2">{item?.program}</td>
                                                   : null
                                               }
                                               {
                                                 item?.date
-                                                  ? <td className="py-3">{new Intl.DateTimeFormat('es-MX').format(new Date(item?.date))}</td>
+                                                  ? <td className="py-3">{item?.date?.replaceAll("-", "/")}</td>
                                                   : null
                                               }
                                               {
