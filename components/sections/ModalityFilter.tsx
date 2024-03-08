@@ -118,7 +118,7 @@ const ModalityFilter = (props: ModalityFilterSection) => {
                             >
                               <div>
                                 {/* TODO: Handle mosaic view dimensions */}
-                                <Aspect ratio="4/3">
+                                <Aspect ratio="2/1">
                                   <Image
                                     classNames="w-full h-full"
                                     classNamesImg="w-full h-full object-cover"
