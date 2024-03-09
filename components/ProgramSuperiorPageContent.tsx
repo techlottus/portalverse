@@ -589,7 +589,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
       {
         selectedModalityName !== "a tu ritmo" && testimonials?.testimonialsCards ?
           <ContentFullLayout>
-            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mt-18 mt-12">
               <TestimonialSlider {...testimonials} />
             </div>
           </ContentFullLayout>
