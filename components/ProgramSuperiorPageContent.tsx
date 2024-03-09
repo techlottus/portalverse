@@ -80,6 +80,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const characteristicsSubtitle = parseEditorRawData(selectedModality?.modality?.data?.attributes?.Characteristics?.subtitle);
   const characteristicsInformativeIcons = selectedModality?.modality?.data?.attributes?.Characteristics?.InformativeIcons;
   const summaries = selectedModality?.summaries;
+  const characteristicsModalityTitle = selectedModality?.modality?.data?.attributes?.label ? selectedModality?.modality?.data?.attributes?.label : selectedModality?.modality?.data?.attributes?.name
 
   //testimonials
   const testimonials = {
@@ -388,10 +389,10 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                       style={{ "--image-desk-url": `url(${characteristicsdesktopBgImage})`, "--image-tablet-url": `url(${characteristicsTabletBgImage})`, "--image-mobile-url": `url(${characteristicsMobileBgImage})` }}
                       className={cn("col-span-12 w-full justify-center bg-origin-border md:bg-center bg-no-repeat bg-cover py-16", "bg-[image:var(--image-mobile-url)]", "md:bg-[image:var(--image-tablet-url)]", "lg:bg-[image:var(--image-desk-url)]")}
                     >
-                      <Container>
+                      <Container classNames="p-6">
                         <div className="flex flex-col w-d:gap-8 items-center justify-center">
                           <div className="text-center flex flex-col items-center">
-                            <h3 className="font-headings font-semibold text-7 w-p:text-6 w-p:w-2/3 leading-9">{characteristicsTitle}<span className="font-headings font-semibold text-7 w-p:text-6 text-secondary-500 mr-2 leading-9">{selectedModality?.modality?.data?.attributes?.name}?</span></h3>
+                            <h3 className="font-headings font-semibold text-7 w-p:text-6 w-p:w-2/3 leading-9">{characteristicsTitle}<span className="font-headings font-semibold text-7 w-p:text-6 text-secondary-500 mr-2 leading-9">{characteristicsModalityTitle}?</span></h3>
                             <div className="flex justify-center">
                               <div className="w-2/3">
                                 <RichtText classNames="text-red-500!" data={{
@@ -401,7 +402,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                             </div>
                           </div>
                           {characteristicsInformativeIcons && characteristicsInformativeIcons?.length > 0 ?
-                            <section className="w-full grid w-d:grid-cols-3 w-t:grid-cols-2 w-p:grid-cols-1">
+                            <section className="w-full grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
                               {
                                 characteristicsInformativeIcons?.map((item: any, i: number) => <section className="text-center flex flex-col w-p:flex-row" key={`section-informativeIcons-${i}`}>
                                   <span className="material-symbols-outlined select-none text-surface-500 !text-16 w-p:!text-7 w-d:mb-2">{item?.iconName}</span>
