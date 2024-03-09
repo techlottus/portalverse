@@ -342,7 +342,6 @@ query ProgramBySlug($slug: String!) {
                     title
                     description
                     iconName
-                    iconColor
                   }
                 }
               }
