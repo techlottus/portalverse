@@ -1,7 +1,10 @@
 import { Fragment, useEffect, useState } from "react";
 import Head from "next/head";
+import cn from 'classnames';
+import Link from "next/link";
 import ContentLayout from "@/layouts/Content.layout";
 import ContentFullLayout from "@/layouts/ContentFull.layout";
+import Container from "@/layouts/Container.layout";
 import Button from "@/old-components/Button/Button";
 import Image from "@/old-components/Image";
 import TabsFeatured from "@/old-components/TabsFeatured";
@@ -12,20 +15,15 @@ import Banner from "@/components/sections/Banner";
 import IntroductionProgram from "@/old-components/IntroducctionProgram";
 import Aspect from "@/components/Aspect";
 import AtrProgramInfo from "@/components/sections/AtrProgramInfo";
-import { formatModalityDataSuperior } from "@/utils/programDetail";
-import cn from 'classnames';
-import Link from "next/link";
-import routesConfig from 'routesConfig.json';
-import Container from "@/layouts/Container.layout";
-import type { DynamicProgramDetailData } from "@/utils/pages";
-import type { ProgramDetailSuperiorData } from "@/utils/getProgramDetailSuperior";
 import RichtText from "@/old-components/Richtext/Richtext";
 import parseEditorRawData from "@/utils/parseEditorRawData";
-import GraduatesForm from "@/forms/container/GraduatesForm";
 import Modal from "@/old-components/Modal/Modal";
-import RichTextImage from "./sections/RichTextImage";
-import TestimonialCard from "@/old-components/TestimonialCard";
+import RichTextImage from "@/components/sections/RichTextImage";
 import TestimonialSlider from "@/components/sections/TestimonialSlider";
+import routesConfig from 'routesConfig.json';
+import { formatModalityDataSuperior } from "@/utils/programDetail";
+import type { DynamicProgramDetailData } from "@/utils/pages";
+import type { ProgramDetailSuperiorData } from "@/utils/getProgramDetailSuperior";
 
 type SelectItem = {
   value: string;
@@ -100,7 +98,15 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const RichtTextImageData = layout?.attributes?.richTextImage;
   //section laborfield
   const academicTitleName = program?.attributes?.academicTitleName;
-  const laborfieldTitle = academicTitleName ? `¿Cuál es el campo laboral de un ${academicTitleName}?` : "Campo Laboral"
+  const laborfieldTitle = academicTitleName ? `¿Cuál es el campo laboral de un ${academicTitleName}?` : "Campo Laboral";
+
+  //section certifications
+  const certifications = program?.attributes?.certifications;
+  const certificationsTitle = program?.attributes?.certificationsTitle;
+  const certificationsDescription = parseEditorRawData(program?.attributes?.certificationsDescription);
+
+  //section richTextImageCertifications
+  const generalCertifications = layout?.attributes?.richTextImageCertifications;
 
   // Modal functionality begin
   const [isShow, setIsShow] = useState(false);
@@ -215,29 +221,53 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         {
           selectedModalityName !== "a tu ritmo" && brands ?
             <>
-              <div className="col-span-7 w-t:col-span-8 w-p:col-span-4 mb-18">
+              <div className="col-span-7 w-t:col-span-8 w-p:col-span-4 w-d:mb-18">
                 {
                   brands?.data?.length > 0 ?
                     brands?.data?.map((item, index) => <section key={`section-aboutBrand-${index}`}>
-                      <div className="flex font-headings font-semibold text-[18px] mb-4">
-                        <p className="mr-1">Acerca de</p>
-                        <p>{item?.attributes?.name}</p>
-                      </div>
-                      <RichtText data={{
-                        content: parseEditorRawData(item?.attributes?.about)
-                      }} />
-                      <Link target="_blank" className="underline text-primary-500" href={item?.attributes?.website}>Conocer más sobre {item?.attributes?.name}</Link>
+                      {
+                        item?.attributes?.name ?
+                          <div className="flex font-headings font-semibold text-[18px] mb-4">
+                            <p className="mr-1">Acerca de</p>
+                            <p>{item?.attributes?.name}</p>
+                          </div>
+                          : null
+                      }
+                      {
+                        item?.attributes?.about ?
+                          <RichtText data={{
+                            content: parseEditorRawData(item?.attributes?.about)
+                          }} />
+                          : null
+                      }
+                      {
+                        item?.attributes?.website ?
+                          <Link target="_blank" className="underline text-primary-500" href={item?.attributes?.website}>Conocer más sobre {item?.attributes?.name}</Link>
+                          : null
+                      }
                     </section>)
                     : null
                 }
-                <div className="mt-5">
-                  <div className="font-headings font-semibold text-[18px] mb-4">
-                    <p className="mr-1">{titleLearn}<span className="ml-1">{levelProgram}</span><span>?</span></p>
-                  </div>
-                  <RichtText data={{
-                    content: parseEditorRawData(selectedModality?.admissionProfile)
-                  }} />
-                </div>
+                {
+                  selectedModality?.admissionProfile ?
+                    <div className="mt-5">
+                      {
+                        titleLearn ?
+                          <div className="font-headings font-semibold text-[18px] mb-4">
+                            <p className="mr-1">{titleLearn}<span className="ml-1">{levelProgram}</span><span>?</span></p>
+                          </div>
+                          : null
+                      }
+                      {
+                        selectedModality?.admissionProfile ?
+                          <RichtText data={{
+                            content: parseEditorRawData(selectedModality?.admissionProfile)
+                          }} />
+                          : null
+                      }
+                    </div>
+                    : null
+                }
                 <div>
                   {
                     rvoeTitle ?
@@ -254,8 +284,8 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                       : null
                   }
                   {
-                    rvoeImages ?
-                      <section className="w-full grid w-d:grid-cols-2 gap-6 w-t:grid-cols-1 w-p:grid-cols-1 mb-4">
+                    rvoeImages && rvoeImages?.length > 0 ?
+                      <section className="w-full grid w-d:grid-cols-2 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mb-4">
                         {
                           rvoeImages?.map((item, i: number) => <section key={`section-rvoeImages-${i}`}>
                             <Aspect ratio={"2/1"}>
@@ -271,21 +301,63 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                       </section>
                       : null
                   }
-
                 </div>
                 {
-                  selectedModality?.laborField ?
-                    <div>
-                      <div className="font-headings font-semibold text-[18px] mb-4">
-                        <p>{laborfieldTitle}</p>
-                      </div>
-                      <RichtText data={{
-                        content: parseEditorRawData(selectedModality?.laborField)
-                      }} />
+                  certifications?.data?.length > 0 ?
+                    <div className="my-6">
+                      {
+                        certificationsTitle ?
+                          <p className="font-headings font-semibold text-[18px] mb-4">{certificationsTitle}</p>
+                          : null
+                      }
+                      {
+                        certificationsDescription ?
+                          <RichtText data={{
+                            content: certificationsDescription
+                          }} />
+                          : null
+                      }
+                      {
+                        certifications?.data?.length > 0 ?
+                          <section className="w-full grid w-d:grid-cols-8 gap-6 w-t:grid-cols-8 w-p:grid-cols-4">
+                            {
+                              certifications?.data?.map((item, i) => <div key={`section-informativeIcons-${i}`}>
+                                <Aspect ratio={"1/1"}>
+                                  <Image
+                                    alt={""}
+                                    src={item?.attributes?.imgCertification?.data?.attributes?.url}
+                                    classNamesImg="w-full h-full object-cover rounded-full"
+                                    classNames="w-full h-full"
+                                  />
+                                </Aspect>
+                              </div>)
+                            }
+                          </section>
+                          : null
+                      }
                     </div>
                     : null
                 }
-
+                {
+                  selectedModality?.laborField ?
+                    <div>
+                      {
+                        laborfieldTitle ?
+                          <div className="font-headings font-semibold text-[18px]">
+                            <p>{laborfieldTitle}</p>
+                          </div>
+                          : null
+                      }
+                      {
+                        selectedModality?.laborField ?
+                          <RichtText data={{
+                            content: parseEditorRawData(selectedModality?.laborField)
+                          }} />
+                          : null
+                      }
+                    </div>
+                    : null
+                }
               </div>
             </>
             : null
@@ -293,7 +365,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         {
           selectedModalityName !== "a tu ritmo" ?
             <div className="col-span-5 mb-6 w-p:col-span-2 w-p:order-1 w-t:hidden w-p:hidden">
-              <div className="w-p:-mt-56 -mt-20 sticky top-10 border-2">
+              <div className="w-p:-mt-56 -mt-20 sticky top-10">
                 <p>aqui va el formulario</p>
                 <Button dark data={{ ...ButtonInit, title: "Descarga el plan de estudios", disabled: !isOptionSelected }} onClick={downloadFileProgram} />
               </div>
@@ -381,84 +453,90 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           }
           {
             selectedModalityName !== "a tu ritmo" ?
-              <div className="border-2 border-secondary-500">
+              <div>
                 {
-                  selectedModality?.modality?.data?.attributes?.Characteristics ?
-                    <section
-                      //@ts-ignore
-                      style={{ "--image-desk-url": `url(${characteristicsdesktopBgImage})`, "--image-tablet-url": `url(${characteristicsTabletBgImage})`, "--image-mobile-url": `url(${characteristicsMobileBgImage})` }}
-                      className={cn("col-span-12 w-full justify-center bg-origin-border md:bg-center bg-no-repeat bg-cover py-16", "bg-[image:var(--image-mobile-url)]", "md:bg-[image:var(--image-tablet-url)]", "lg:bg-[image:var(--image-desk-url)]")}
-                    >
-                      <Container classNames="p-6">
-                        <div className="flex flex-col w-d:gap-8 items-center justify-center">
-                          <div className="text-center flex flex-col items-center">
-                            <h3 className="font-headings font-semibold text-7 w-p:text-6 w-p:w-2/3 leading-9">{characteristicsTitle}<span className="font-headings font-semibold text-7 w-p:text-6 text-secondary-500 mr-2 leading-9">{characteristicsModalityTitle}?</span></h3>
-                            <div className="flex justify-center">
-                              <div className="w-2/3">
-                                <RichtText classNames="text-red-500!" data={{
-                                  content: characteristicsSubtitle
-                                }} />
-                              </div>
-                            </div>
-                          </div>
-                          {characteristicsInformativeIcons && characteristicsInformativeIcons?.length > 0 ?
-                            <section className="w-full grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
-                              {
-                                characteristicsInformativeIcons?.map((item: any, i: number) => <section className="text-center flex flex-col w-p:flex-row" key={`section-informativeIcons-${i}`}>
-                                  <span className="material-symbols-outlined select-none text-surface-500 !text-16 w-p:!text-7 w-d:mb-2">{item?.iconName}</span>
-                                  <div className="flex flex-col w-p:text-left w-p:ml-4">
-                                    <span className="font-headings font-semibold text-5 text-secondary-500 w-p:mb-2 mb-4">{item?.title}</span>
-                                    <RichtText data={{
-                                      content: parseEditorRawData(item?.description)
-                                    }} />
-                                  </div>
-                                </section>)
-                              }
-                            </section>
-                            : null
-                          }
-                        </div>
-                      </Container>
-                    </section>
-                    : null
-                }
-                {
-                  summaries ?
-                    <>
+                  characteristicsInformativeIcons?.length > 0 || summaries?.length > 0 ?
+                    <div className="border-2 border-secondary-500">
                       {
-                        summaries?.length > 0 ?
-                          <div className="my-6 text-center">
-                            <p className="font-semibold font-headings text-6">Plan de estudios</p>
-                          </div>
-                          : null
-                      }
-                      {
-                        summaries?.length > 0 ?
-                          <div className="grid w-d:grid-cols-3 gap-6 w-t:grid-cols-1 w-p:grid-cols-1 px-6 relative">
-                            <div className="w-p:hidden w-t:hidden absolute w-full h-full bg-gradient-to-t from-surface-0 from-15% z-10"></div>
-                            {
-                              summaries.map((item: any, i: number) => <section className="pb-5 px-6" key={`section-summarieTitle-${i}`}>
-                                <p className="font-headings text-5 text-secondary-500">{item?.title}</p>
-                                {
-                                  item?.subjects?.map((subject: { title: string }, i: number) => <section key={`section-summarie-${i}`}>
-                                    <div className="mb-3 relative before:absolute before:w-[1px] before:h-[150%] w-p:before:h-[120%] before:bg-secondary-500 before:left-[-16px] before:top-2 after:absolute after:w-2 after:h-2 after:rounded-[50%] after:bg-secondary-500 after:left-[-19px] after:top-[5px]">
-                                      <p>{subject?.title}</p>
+                        selectedModality?.modality?.data?.attributes?.Characteristics ?
+                          <section
+                            //@ts-ignore
+                            style={{ "--image-desk-url": `url(${characteristicsdesktopBgImage})`, "--image-tablet-url": `url(${characteristicsTabletBgImage})`, "--image-mobile-url": `url(${characteristicsMobileBgImage})` }}
+                            className={cn("col-span-12 w-full justify-center bg-origin-border md:bg-center bg-no-repeat bg-cover py-16", "bg-[image:var(--image-mobile-url)]", "md:bg-[image:var(--image-tablet-url)]", "lg:bg-[image:var(--image-desk-url)]")}
+                          >
+                            <Container classNames="p-6">
+                              <div className="flex flex-col w-d:gap-8 items-center justify-center">
+                                <div className="text-center flex flex-col items-center">
+                                  <h3 className="font-headings font-semibold text-7 w-p:text-6 w-p:w-2/3 leading-9">{characteristicsTitle}<span className="font-headings font-semibold text-7 w-p:text-6 text-secondary-500 mr-2 leading-9">{characteristicsModalityTitle}?</span></h3>
+                                  <div className="flex justify-center">
+                                    <div className="w-2/3">
+                                      <RichtText classNames="text-red-500!" data={{
+                                        content: characteristicsSubtitle
+                                      }} />
                                     </div>
-                                  </section>)
+                                  </div>
+                                </div>
+                                {characteristicsInformativeIcons && characteristicsInformativeIcons?.length > 0 ?
+                                  <section className="w-full grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
+                                    {
+                                      characteristicsInformativeIcons?.map((item: any, i: number) => <section className="text-center flex flex-col w-p:flex-row" key={`section-informativeIcons-${i}`}>
+                                        <span className="material-symbols-outlined select-none text-surface-500 !text-16 w-p:!text-7 w-d:mb-2">{item?.iconName}</span>
+                                        <div className="flex flex-col w-p:text-left w-p:ml-4">
+                                          <span className="font-headings font-semibold text-5 text-secondary-500 w-p:mb-2 mb-4">{item?.title}</span>
+                                          <RichtText data={{
+                                            content: parseEditorRawData(item?.description)
+                                          }} />
+                                        </div>
+                                      </section>)
+                                    }
+                                  </section>
+                                  : null
                                 }
-                              </section>)
-                            }
-                          </div>
+                              </div>
+                            </Container>
+                          </section>
                           : null
                       }
                       {
-                        summaries?.length > 0 ?
-                          <div className="flex justify-center pb-6">
-                            <Button dark data={{ ...ButtonInit, title: "Descarga el plan de estudios" }} onClick={() => handleVisibilityModal()} />
-                          </div>
+                        summaries ?
+                          <>
+                            {
+                              summaries?.length > 0 ?
+                                <div className="my-6 text-center">
+                                  <p className="font-semibold font-headings text-6">Plan de estudios</p>
+                                </div>
+                                : null
+                            }
+                            {
+                              summaries?.length > 0 ?
+                                <div className="grid w-d:grid-cols-3 gap-6 w-t:grid-cols-1 w-p:grid-cols-1 px-6 relative">
+                                  <div className="w-p:hidden w-t:hidden absolute w-full h-full bg-gradient-to-t from-surface-0 from-15% z-10"></div>
+                                  {
+                                    summaries.map((item: any, i: number) => <section className="pb-5 px-6" key={`section-summarieTitle-${i}`}>
+                                      <p className="font-headings text-5 text-secondary-500">{item?.title}</p>
+                                      {
+                                        item?.subjects?.map((subject: { title: string }, i: number) => <section key={`section-summarie-${i}`}>
+                                          <div className="mb-3 relative before:absolute before:w-[1px] before:h-[150%] w-p:before:h-[120%] before:bg-secondary-500 before:left-[-16px] before:top-2 after:absolute after:w-2 after:h-2 after:rounded-[50%] after:bg-secondary-500 after:left-[-19px] after:top-[5px]">
+                                            <p>{subject?.title}</p>
+                                          </div>
+                                        </section>)
+                                      }
+                                    </section>)
+                                  }
+                                </div>
+                                : null
+                            }
+                            {
+                              summaries?.length > 0 ?
+                                <div className="flex justify-center pb-6">
+                                  <Button dark data={{ ...ButtonInit, title: "Descarga el plan de estudios" }} onClick={() => handleVisibilityModal()} />
+                                </div>
+                                : null
+                            }
+                          </>
                           : null
                       }
-                    </>
+                    </div>
                     : null
                 }
               </div>
@@ -502,7 +580,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
       }
       {
         selectedModalityName !== "a tu ritmo" ?
-          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-18">
+          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mt-18">
             {
               RichtTextImageData ?
                 <RichTextImage type={"ComponentSectionsRichTextImage"} title={RichtTextImageData?.title} image={{
@@ -581,16 +659,22 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           </div>
           : null
       }
-      {/* {
+      {
         selectedModalityName !== "a tu ritmo" ?
-          <p>aqui va slider de certificaciones general</p>
+          <div className="w-d:mt-18 mt-12">
+            <RichTextImage {...generalCertifications} />
+          </div>
           : null
-      } */}
+      }
       {
         selectedModalityName !== "a tu ritmo" && testimonials?.testimonialsCards ?
           <ContentFullLayout>
             <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mt-18 mt-12">
-              <TestimonialSlider {...testimonials} />
+              {
+                testimonials?.testimonialsCards?.length > 0 ?
+                  <TestimonialSlider {...testimonials} />
+                  : null
+              }
             </div>
           </ContentFullLayout>
           : null

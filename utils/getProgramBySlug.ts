@@ -96,6 +96,16 @@ export type programBrand = {
 export type ProgramAttributes = {
   slug: string;
   name: string;
+  certificationsTitle: string;
+  certificationsDescription: string;
+  certifications: {
+    data: Array<{
+      attributes: {
+        name: string;
+        imgCertification: StrapiImage;
+      }
+    }>
+  }
   academicTitleName: string;
   programCategory: {
     data: {
@@ -187,6 +197,22 @@ query ProgramBySlug($slug: String!) {
       attributes {
         slug
         name
+        certificationsTitle
+        certificationsDescription
+        certifications {
+          data {
+            attributes {
+              name
+              imgCertification {
+                data {
+                  attributes {
+                    url
+                  }
+                }
+              }
+            }
+          }
+        }
         academicTitleName
         programCategory{
           data{

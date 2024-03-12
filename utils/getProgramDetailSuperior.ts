@@ -20,6 +20,7 @@ export type ProgramDetailSuperiorData = {
     rvoeTitle: string;
     rvoeDescription: string;
     rvoeImages: Array<{image:StrapiImage}>
+    richTextImageCertifications: RichTextImageSection;
   }
 }
 
@@ -135,6 +136,25 @@ query ProgramDetailSuperior {
                 url
               }
             }
+          }
+        }
+        richTextImageCertifications {
+          image {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+          imagePosition
+          backgroundColor
+          text
+          title
+          buttons {
+            variant
+            CTA
+            iconName
+            label
           }
         }
       }
