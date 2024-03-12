@@ -106,9 +106,9 @@ const TestimonialSlider: React.FC<TestimonialSliderData> = memo((props: Testimon
                   onClick={() => {
                     instanceRef.current?.moveToIdx(idx)
                   }}
-                  className={cn("dot m-2 rounded-full bg-primary-500  cursor-pointer", {
-                    "w-7 h-4": currentSlide === idx,
-                    "w-4 h-4": currentSlide !== idx
+                  className={cn("dot m-2 rounded-full cursor-pointer shadow-md", {
+                    "w-7 h-4 bg-primary-500 transition-all": currentSlide === idx,
+                    "w-4 h-4 bg-surface-0": currentSlide !== idx
                   })}
                 ></button>
               )
