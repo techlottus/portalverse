@@ -78,7 +78,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const characteristicsSubtitle = parseEditorRawData(selectedModality?.modality?.data?.attributes?.Characteristics?.subtitle);
   const characteristicsInformativeIcons = selectedModality?.modality?.data?.attributes?.Characteristics?.InformativeIcons;
   const summaries = selectedModality?.summaries;
-  const characteristicsModalityTitle = selectedModality?.modality?.data?.attributes?.label ? selectedModality?.modality?.data?.attributes?.label : selectedModality?.modality?.data?.attributes?.name
+  const characteristicsModalityTitle = selectedModality?.modality?.data?.attributes?.label ? selectedModality?.modality?.data?.attributes?.label : selectedModality?.modality?.data?.attributes?.name;
 
   //testimonials
   const testimonials = {
@@ -205,7 +205,9 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
               :
               <IntroductionProgram
                 title={title}
+                brands={brands?.data}
                 checkoutUrlText={checkoutUrlText}
+                checkoutUrl={checkoutUrl}
                 label={programSubtitle}
                 description={programModalityDescription}
                 periodicity={periodicity}
@@ -285,17 +287,10 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                   }
                   {
                     rvoeImages && rvoeImages?.length > 0 ?
-                      <section className="w-full grid w-d:grid-cols-2 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mb-4">
+                      <section className="w-full grid w-d:grid-cols-2 w-d:gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mb-4">
                         {
                           rvoeImages?.map((item, i: number) => <section key={`section-rvoeImages-${i}`}>
-                            <Aspect ratio={"2/1"}>
-                              <Image
-                                alt={""}
-                                src={item?.image?.data?.attributes?.url}
-                                classNamesImg="w-full h-full object-cover"
-                                classNames="w-full h-full"
-                              />
-                            </Aspect>
+                            <img src={item?.image?.data?.attributes?.url}></img>
                           </section>)
                         }
                       </section>
@@ -304,7 +299,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                 </div>
                 {
                   certifications?.data?.length > 0 ?
-                    <div className="my-6">
+                    <div className="mb-6">
                       {
                         certificationsTitle ?
                           <p className="font-headings font-semibold text-[18px] mb-4">{certificationsTitle}</p>
@@ -513,9 +508,15 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                                   <div className="w-p:hidden w-t:hidden absolute w-full h-full bg-gradient-to-t from-surface-0 from-15% z-10"></div>
                                   {
                                     summaries.map((item: any, i: number) => <section className="pb-5 px-6" key={`section-summarieTitle-${i}`}>
-                                      <p className="font-headings text-5 text-secondary-500">{item?.title}</p>
+                                      <div className="w-d:mb-6 w-t:mb-6 w-p:hidden">
+                                        <p className="font-headings font-semibold text-5 text-secondary-500">{item?.title}<span className="font-headings font-normal text-5 text-secondary-500 ml-1 ">{item?.subjects?.length}<span className="ml-1 font-normal">asignaturas</span></span></p>
+                                      </div>
+                                      <div className="w-d:hidden w-t:hidden mb-6">
+                                        <p className="font-headings font-semibold text-5 text-secondary-500">{item?.title}</p>
+                                        <span className="font-headings font-normal text-5 text-secondary-500 ml-1 ">{item?.subjects?.length}<span className="ml-1 font-normal">asignaturas</span></span>
+                                      </div>
                                       {
-                                        item?.subjects?.map((subject: { title: string }, i: number) => <section key={`section-summarie-${i}`}>
+                                        item?.subjects?.slice(0, 4).map((subject: { title: string }, i: number) => <section key={`section-summarie-${i}`}>
                                           <div className="mb-3 relative before:absolute before:w-[1px] before:h-[150%] w-p:before:h-[120%] before:bg-secondary-500 before:left-[-16px] before:top-2 after:absolute after:w-2 after:h-2 after:rounded-[50%] after:bg-secondary-500 after:left-[-19px] after:top-[5px]">
                                             <p>{subject?.title}</p>
                                           </div>
@@ -582,7 +583,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         selectedModalityName !== "a tu ritmo" ?
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mt-18 w-p:mt-6 w-t:mt-12">
             {
-              RichtTextImageData ?  
+              RichtTextImageData ?
                 <RichTextImage type={"ComponentSectionsRichTextImage"} title={RichtTextImageData?.title} image={{
                   data: {
                     attributes: {
