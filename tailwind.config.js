@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import * as tenantBase from "./tailwindBase.js";
+import * as tailwindBase from "@lottuseducation/tailwind-base/lib/tailwind-base.js";
 
 module.exports = {
   content: [
@@ -9,7 +11,8 @@ module.exports = {
     "./forms/**/*.{js,ts,jsx,tsx}",
     "./public/icons/**/*.{svg,jsx}"
   ],
-  safelist: ["font-headings","font-texts","bg-logo","bg-favicon", {pattern: /bg-[a-z]*-[0-9]*/g}],
+  safelist: [{pattern: /bg-[a-z]*-[0-9]*/g}],
+  presets: [tailwindBase.default, tenantBase.default],
   theme: {
     extend: {
    "zIndex": {
@@ -93,165 +96,6 @@ module.exports = {
       "16.25": "4.063rem",
       "semi-tight": "1.125"
    },
-   "colors": {
-      "primary": {
-         "0": "#E7EDF6",
-         "50": "#CFDBED",
-         "100": "#9FB7DA",
-         "200": "#6F93C8",
-         "300": "#4470B1",
-         "400": "#284280",
-         "500": "#1B2D68",
-         "600": "#172759",
-         "700": "#13204A",
-         "800": "#0F1A3B",
-         "900": "#0C132D",
-         "950": "#060917"
-      },
-      "secondary": {
-         "0": "#FBF0F2",
-         "50": "#F7E0E4",
-         "100": "#EFC1C8",
-         "200": "#EA9CA5",
-         "300": "#E17680",
-         "400": "#D44D5A",
-         "500": "#C31433",
-         "600": "#A3112A",
-         "700": "#820D22",
-         "800": "#620A19",
-         "900": "#410711",
-         "950": "#210408"
-      },
-      "surface": {
-         "0": "#FFFFFF",
-         "50": "#FAFAFA",
-         "100": "#F4F4F5",
-         "200": "#E4E4E7",
-         "300": "#D4D4D8",
-         "400": "#A1A1AA",
-         "500": "#71717A",
-         "600": "#52525B",
-         "700": "#3F3F46",
-         "800": "#27272A",
-         "900": "#18181B",
-         "950": "#000000"
-      },
-      "info": {
-         "0": "#EFF4FC",
-         "50": "#DFE9F9",
-         "100": "#C0D2F4",
-         "200": "#A0BCEE",
-         "300": "#80A6E8",
-         "400": "#618FE3",
-         "500": "#4179DD",
-         "600": "#2460CA",
-         "700": "#1D4DA2",
-         "800": "#163979",
-         "900": "#0E2651",
-         "950": "#071328"
-      },
-      "warning": {
-         "0": "#FDF9F0",
-         "50": "#FAF3E1",
-         "100": "#F6E8C3",
-         "200": "#F1DCA6",
-         "300": "#ECD088",
-         "400": "#ECD088",
-         "500": "#E3B94C",
-         "600": "#DAA722",
-         "700": "#AF861B",
-         "800": "#836414",
-         "900": "#57430D",
-         "950": "#2C2107"
-      },
-      "error": {
-         "0": "#FDF4F2",
-         "50": "#FBE8E5",
-         "100": "#F6D1CC",
-         "200": "#F2BAB2",
-         "300": "#EEA398",
-         "400": "#E98C7F",
-         "500": "#E57565",
-         "600": "#DD4B36",
-         "700": "#BC3320",
-         "800": "#8D2718",
-         "900": "#5E1A10",
-         "950": "#2F0D08"
-      },
-      "success": {
-         "0": "#EEF9EC",
-         "50": "#DDF2D9",
-         "100": "#BCE6B3",
-         "200": "#9AD98C",
-         "300": "#78CC66",
-         "400": "#56C040",
-         "500": "#459A33",
-         "600": "#39802A",
-         "700": "#2E6722",
-         "800": "#224D19",
-         "900": "#173311",
-         "950": "#0B1A08"
-      },
-      "inperson": {
-         "0": "#FDF7E8",
-         "50": "#FBEED0",
-         "100": "#F7DCA1",
-         "200": "#F5D081",
-         "300": "#F3C460",
-         "400": "#F0B73D",
-         "500": "#EEAA01",
-         "600": "#BE8801",
-         "700": "#8F6601",
-         "800": "#5F4400",
-         "900": "#302200",
-         "950": "#181100"
-      },
-      "online": {
-         "0": "#FBF0F2",
-         "50": "#F7E0E4",
-         "100": "#EFC1C8",
-         "200": "#EA9CA5",
-         "300": "#E17680",
-         "400": "#D44D5A",
-         "500": "#C31433",
-         "600": "#A3112A",
-         "700": "#820D22",
-         "800": "#620A19",
-         "900": "#410711",
-         "950": "#210408"
-      },
-      "hybrid": {
-         "0": "#E4EAF4",
-         "50": "#C8D6EA",
-         "100": "#ADC1DF",
-         "200": "#92ADD5",
-         "300": "#7698CA",
-         "400": "#5B84C0",
-         "500": "#4470B1",
-         "600": "#395D93",
-         "700": "#2D4B76",
-         "800": "#223859",
-         "900": "#17253B",
-         "950": "#0B131D"
-      }
-   },
-   "fontFamily": {
-      "Poppins": [
-         "Poppins"
-      ],
-      "Nunito": [
-         "Nunito"
-      ],
-      "Nunito-Sans": [
-         "Nunito Sans"
-      ],
-      "headings": [
-         "Poppins"
-      ],
-      "texts": [
-         "Nunito Sans"
-      ]
-   },
    "gridTemplateColumns": {
       "4": "repeat(4, 1fr)",
       "8": "repeat(8, 1fr)",
@@ -293,10 +137,6 @@ module.exports = {
    },
    "minWidth": {
       "130": "7.5rem"
-   },
-   "backgroundImage": {
-      "logo": "url('https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTEG/logotipo_38c0857c20.svg')",
-      "favicon": "url('https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTEG/favicon_e6d152887e.ico')"
    }
 }
   },
