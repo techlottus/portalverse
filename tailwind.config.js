@@ -96,6 +96,27 @@ module.exports = {
       "16.25": "4.063rem",
       "semi-tight": "1.125"
    },
+   "colors": {
+      "white": "#fff",
+      "transparent": "transparent"
+   },
+   "fontFamily": {
+      "Poppins": [
+         "Poppins"
+      ],
+      "Nunito": [
+         "Nunito"
+      ],
+      "Nunito-Sans": [
+         "Nunito Sans"
+      ],
+      "headings": [
+         "Poppins"
+      ],
+      "texts": [
+         "Nunito Sans"
+      ]
+   },
    "gridTemplateColumns": {
       "4": "repeat(4, 1fr)",
       "8": "repeat(8, 1fr)",
@@ -137,6 +158,10 @@ module.exports = {
    },
    "minWidth": {
       "130": "7.5rem"
+   },
+   "backgroundImage": {
+      "logo": "url('https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTEG/logotipo_38c0857c20.svg')",
+      "favicon": "url('https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTEG/favicon_e6d152887e.ico')"
    }
 }
   },
