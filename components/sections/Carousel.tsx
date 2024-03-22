@@ -1,18 +1,19 @@
 import React from "react";
 import { useState } from "react";
+import { useRouter } from "next/router";
 import cn from "classnames"
 import 'keen-slider/keen-slider.min.css'
 import { useKeenSlider } from 'keen-slider/react'
-import { CarouselData } from "@/utils/strapi/sections/Carousel";
+import Container from "@/layouts/Container.layout";
+import parseEditorRawData from "@/utils/parseEditorRawData";
 import CardWebsitePortalverse from "@/old-components/CardWebsitePortalverse";
 import RichtText from "@/old-components/Richtext/Richtext";
-import parseEditorRawData from "@/utils/parseEditorRawData";
-import Container from "@/layouts/Container.layout";
-import Aspect from "../Aspect";
+import Aspect from "@/components/Aspect";
 import Image from "@/old-components/Image";
 import Button from "@/old-components/Button/Button";
+import type { CarouselSection } from "@/utils/strapi/sections/Carousel";
 
-const Carousel = (props: CarouselData) => {
+const Carousel = (props: CarouselSection) => {
   const {
     title,
     description,
@@ -25,10 +26,12 @@ const Carousel = (props: CarouselData) => {
     button
   } = props;
 
+  const router = useRouter();
+
   const [currentSlide, setCurrentSlide] = React.useState(0)
   const [loaded, setLoaded] = useState(false)
 
-  const [sliderRef, instanceRefDesk] = useKeenSlider<HTMLDivElement>({
+  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel)
     },
@@ -66,7 +69,8 @@ const Carousel = (props: CarouselData) => {
         disabled: false,
         id: undefined,
         iconFirst: "",
-        iconSecond: ""
+        iconSecond: "",
+        linkUrl: item?.linkUrl
       },
       border: true,
       aspect: item?.imageAspectRatio,
@@ -103,8 +107,13 @@ const Carousel = (props: CarouselData) => {
                         <div ref={sliderRef} className="keen-slider">
                           {
                             cards && cards?.length > 0 ?
-                              formattedCards?.map((card, i) => <div key={`carouselCardDesk-${i}`} className="keen-slider__slide">
-                                <CardWebsitePortalverse data={card} />
+                              formattedCards?.map((card, i) => <div key={`carouselCard-${i}`} className="keen-slider__slide">
+                                <CardWebsitePortalverse data={card} onClick={card?.link?.linkUrl ? () => {
+                                  if (!!card?.link?.linkUrl) {
+                                    return window?.open(card?.link?.linkUrl, card?.link?.linkUrl?.includes("https") ? "_blank" : "_self")
+                                  }
+                                  return null
+                                } : undefined} />
                               </div>)
                               : null
                           }
@@ -116,11 +125,11 @@ const Carousel = (props: CarouselData) => {
                 {
                   typeCarousel === "image" ?
                     <>
-                      <div className="w-d:px-18 w-t:hidden w-p:hidden">
+                      <div className="w-t:hidden w-p:hidden">
                         <div ref={sliderRef} className="keen-slider">
                           {
                             images && images?.length > 0 ?
-                              images?.map((image, i) => <div key={`carouselImagesDesk-${i}`} className="keen-slider__slide">
+                              images?.map((image, i) => <div key={`carouselImage-${i}`} className="keen-slider__slide">
                                 <Aspect ratio={image?.desktopRatio}>
                                   <Image
                                     alt={image?.desktopImage?.data?.attributes?.url || ""}
@@ -177,11 +186,11 @@ const Carousel = (props: CarouselData) => {
                 {
                   typeCarousel === "video" ?
                     <>
-                      <div className="w-d:px-18">
+                      <div className="">
                         <div ref={sliderRef} className="keen-slider">
                           {
                             videos && videos?.length > 0 ?
-                              videos?.map((video, i) => <div key={`carouselVideoDesk-${i}`} className="keen-slider__slide">
+                              videos?.map((video, i) => <div key={`carouselVideo-${i}`} className="keen-slider__slide">
                                 <Aspect ratio="2/1">
                                   <iframe
                                     className="w-full h-full"
@@ -200,17 +209,17 @@ const Carousel = (props: CarouselData) => {
                 }
               </div>
             </div>
-            {loaded && instanceRefDesk.current && (cards && cards?.length > 0 || images && images?.length > 0 || videos && videos?.length > 0) && (
+            {loaded && instanceRef.current && ((typeCarousel === "card" && cards && cards?.length > 0) || (typeCarousel === "image" && images && images?.length > 0) || (typeCarousel === "video" && videos && videos?.length > 0)) && (
               <div className="dots text-center pt-6">
                 {[
                   //@ts-ignore
-                  ...Array(instanceRefDesk?.current?.track?.details?.slides?.length).keys(),
+                  ...Array(instanceRef?.current?.track?.details?.slides?.length).keys(),
                 ].map((idx) => {
                   return (
                     <button
                       key={idx}
                       onClick={() => {
-                        instanceRefDesk.current?.moveToIdx(idx)
+                        instanceRef.current?.moveToIdx(idx)
                       }}
                       className={cn("w-4 h-4 bg-primary-500 rounded-full m-2", {
                         "w-7 transition-all": currentSlide === idx
@@ -229,24 +238,34 @@ const Carousel = (props: CarouselData) => {
                       id: button?.id,
                       type: button?.variant,
                       title: button?.label,
-                      size: button?.size,
+                      size: "small",
                       icon: button?.iconName,
                       lyIcon: false,
                       disabled: false,
                       isExpand: false,
-                    }} />
+                    }} onClick={button?.CTA ? () => {
+                      if (!!button?.CTA) {
+                        return window?.open(button?.CTA, button?.CTA?.includes("https") ? "_blank" : "_self")
+                      }
+                      return null
+                    } : undefined}  />
                   </div>
                   <div className="w-d:hidden w-t:hidden mt-6">
                     <Button dark data={{
                       id: button?.id,
                       type: button?.variant,
                       title: button?.label,
-                      size: button?.size,
+                      size: "small",
                       icon: button?.iconName,
                       lyIcon: false,
                       disabled: false,
                       isExpand: true,
-                    }} />
+                    }} onClick={button?.CTA ? () => {
+                      if (!!button?.CTA) {
+                        return window?.open(button?.CTA, button?.CTA?.includes("https") ? "_blank" : "_self")
+                      }
+                      return null
+                    } : undefined}  />
                   </div>
                 </div>
                 : null

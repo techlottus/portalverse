@@ -1,8 +1,8 @@
 
-import { StrapiImage } from "@/types/strapi/common";
-import { Card } from "./CardList";
-import { VideoItem } from "./Videos";
-import { button } from "./RichTextImage";
+import type { StrapiImage } from "@/types/strapi/common";
+import type { Card } from "@/utils/strapi/sections/CardList";
+import type { VideoItem } from "@/utils/strapi/sections/Videos";
+import type { button } from "@/utils/strapi/sections/RichTextImage";
 
 type mediaQueryImage = {
   desktopRatio: string;
@@ -12,7 +12,7 @@ type mediaQueryImage = {
   mobileRatio: string;
   mobileImage: StrapiImage;
 }
-export type CarouselData = {
+export type CarouselSection = {
   type: "ComponentSectionsCarousel"
   title: string;
   description: string;
