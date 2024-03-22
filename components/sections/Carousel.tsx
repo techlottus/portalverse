@@ -125,56 +125,41 @@ const Carousel = (props: CarouselSection) => {
                 {
                   typeCarousel === "image" ?
                     <>
-                      <div className="w-t:hidden w-p:hidden">
+                      <div className="w-d:px-18">
                         <div ref={sliderRef} className="keen-slider">
                           {
                             images && images?.length > 0 ?
                               images?.map((image, i) => <div key={`carouselImage-${i}`} className="keen-slider__slide">
-                                <Aspect ratio={image?.desktopRatio}>
-                                  <Image
-                                    alt={image?.desktopImage?.data?.attributes?.url || ""}
-                                    src={image?.desktopImage?.data?.attributes?.url}
-                                    classNames="w-full h-full"
-                                    classNamesImg="w-full h-full object-cover"
-                                  />
-                                </Aspect>
-                              </div>)
-                              : null
-                          }
-                        </div>
-                      </div>
-                      <div className="w-d:hidden w-p:hidden">
-                        <div ref={sliderRef} className="keen-slider">
-                          {
-                            images && images?.length > 0 ?
-                              images?.map((image, i) => <div key={`carouselImagesTablet-${i}`} className="keen-slider__slide">
-                                <Aspect ratio={image?.tabletRatio}>
-                                  <Image
-                                    alt={image?.tabletImage?.data?.attributes?.url || ""}
-                                    src={image?.tabletImage?.data?.attributes?.url}
-                                    classNames="w-full h-full"
-                                    classNamesImg="w-full h-full object-cover"
-                                  />
-                                </Aspect>
-
-                              </div>)
-                              : null
-                          }
-                        </div>
-                      </div>
-                      <div className="w-d:hidden w-t:hidden">
-                        <div ref={sliderRef} className="keen-slider">
-                          {
-                            images && images?.length > 0 ?
-                              images?.map((image, i) => <div key={`carouselImagesMobile-${i}`} className="keen-slider__slide">
-                                <Aspect ratio={image?.mobileRatio}>
-                                  <Image
-                                    alt={image?.mobileImage?.data?.attributes?.url || ""}
-                                    src={image?.mobileImage?.data?.attributes?.url}
-                                    classNames="w-full h-full"
-                                    classNamesImg="w-full h-full object-cover"
-                                  />
-                                </Aspect>
+                                <div className="w-t:hidden w-p:hidden">
+                                  <Aspect ratio={image?.desktopRatio}>
+                                    <Image
+                                      alt={image?.desktopImage?.data?.attributes?.url || ""}
+                                      src={image?.desktopImage?.data?.attributes?.url}
+                                      classNames="w-full h-full"
+                                      classNamesImg="w-full h-full object-cover"
+                                    />
+                                  </Aspect>
+                                </div>
+                                <div className="w-d:hidden w-p:hidden">
+                                  <Aspect ratio={image?.tabletRatio}>
+                                    <Image
+                                      alt={image?.tabletImage?.data?.attributes?.url || ""}
+                                      src={image?.tabletImage?.data?.attributes?.url}
+                                      classNames="w-full h-full"
+                                      classNamesImg="w-full h-full object-cover"
+                                    />
+                                  </Aspect>
+                                </div>
+                                <div className="w-d:hidden w-t:hidden">
+                                  <Aspect ratio={image?.mobileRatio}>
+                                    <Image
+                                      alt={image?.mobileImage?.data?.attributes?.url || ""}
+                                      src={image?.mobileImage?.data?.attributes?.url}
+                                      classNames="w-full h-full"
+                                      classNamesImg="w-full h-full object-cover"
+                                    />
+                                  </Aspect>
+                                </div>
                               </div>)
                               : null
                           }
@@ -248,7 +233,7 @@ const Carousel = (props: CarouselSection) => {
                         return window?.open(button?.CTA, button?.CTA?.includes("https") ? "_blank" : "_self")
                       }
                       return null
-                    } : undefined}  />
+                    } : undefined} />
                   </div>
                   <div className="w-d:hidden w-t:hidden mt-6">
                     <Button dark data={{
@@ -265,7 +250,7 @@ const Carousel = (props: CarouselSection) => {
                         return window?.open(button?.CTA, button?.CTA?.includes("https") ? "_blank" : "_self")
                       }
                       return null
-                    } : undefined}  />
+                    } : undefined} />
                   </div>
                 </div>
                 : null
