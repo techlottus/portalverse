@@ -384,9 +384,13 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         selectedModalityName !== "a tu ritmo" ?
           <>
             <ContentLayout>
-              <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6">
-                <p className="text-6.5 font-headings font-semibold leading-tight w-t:leading-tight w-p:leading-tight w-t:text-6 w-p:text-6">{`${titleTabs} ${levelProgram}`}</p>
-              </div>
+              {
+                modalities?.length > 0 ?
+                  <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6">
+                    <p className="text-6.5 font-headings font-semibold leading-tight w-t:leading-tight w-p:leading-tight w-t:text-6 w-p:text-6">{`${titleTabs} ${levelProgram}`}</p>
+                  </div>
+                  : null
+              }
               {
                 modalities?.length > 1 ?
                   <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8' w-p:col-span-4 flex justify-center">
@@ -508,12 +512,8 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                                   <div className="w-p:hidden w-t:hidden absolute w-full h-full bg-gradient-to-t from-surface-0 from-15% z-10"></div>
                                   {
                                     summaries.map((item: any, i: number) => <section className="pb-5 px-6" key={`section-summarieTitle-${i}`}>
-                                      <div className="w-d:mb-6 w-t:mb-6 w-p:hidden">
-                                        <p className="font-headings font-semibold text-5 text-secondary-500">{item?.title}<span className="font-headings font-normal text-5 text-secondary-500 ml-1 ">{item?.subjects?.length}<span className="ml-1 font-normal">asignaturas</span></span></p>
-                                      </div>
-                                      <div className="w-d:hidden w-t:hidden mb-6">
+                                      <div className="mb-6 w-t:mb-6">
                                         <p className="font-headings font-semibold text-5 text-secondary-500">{item?.title}</p>
-                                        <span className="font-headings font-normal text-5 text-secondary-500 ml-1 ">{item?.subjects?.length}<span className="ml-1 font-normal">asignaturas</span></span>
                                       </div>
                                       {
                                         item?.subjects?.slice(0, 4).map((subject: { title: string }, i: number) => <section key={`section-summarie-${i}`}>
