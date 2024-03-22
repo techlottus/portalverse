@@ -27,6 +27,7 @@ const formatData = (props: BlogPostCardWrapperProps): CardWebsitePortalverseConf
       iconFirst: "",
       iconSecond: "chevron_right",
     },
+    aspect: "2/1"
   };
 
   return formattedData;

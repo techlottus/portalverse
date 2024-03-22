@@ -81,6 +81,7 @@ import type { RvoeAccordionListData } from "./sections/RvoeAccordionList";
 import type { StatisticsCardListSection } from "@/utils/strapi/sections/StatisticsCardList";
 import type { TextContentSection } from "@/utils/strapi/sections/TextContent";
 import type { VideosSectionData } from "@/utils/strapi/sections/Videos";
+import { CAROUSEL_SECTION, CarouselData } from "./sections/Carousel";
 
 export type ComponentSection =
   | AccordionSection
@@ -124,6 +125,7 @@ export type ComponentSection =
   | StatisticsCardListSection
   | TextContentSection
   | VideosSectionData
+  | CarouselData
 
   export const SECTIONS = `
   ${ACCORDION_SECTION}
@@ -168,4 +170,5 @@ export type ComponentSection =
   ${STATISTICS_CARD_LIST}
   ${TEXT_CONTENT}
   ${VIDEOS_SECTION}
+  ${CAROUSEL_SECTION}
   `;
