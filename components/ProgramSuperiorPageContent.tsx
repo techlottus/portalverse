@@ -226,7 +226,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
               <div className="col-span-7 w-t:col-span-8 w-p:col-span-4 w-d:mb-18">
                 {
                   brands?.data?.length > 0 ?
-                    brands?.data?.map((item, index) => <section key={`section-aboutBrand-${index}`}>
+                    brands?.data?.map((item, index) => <section className="mb-6" key={`section-aboutBrand-${index}`}>
                       {
                         item?.attributes?.name ?
                           <div className="flex font-headings font-semibold text-[18px] mb-4">
@@ -250,26 +250,6 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                     </section>)
                     : null
                 }
-                {
-                  selectedModality?.admissionProfile ?
-                    <div className="mt-5">
-                      {
-                        titleLearn ?
-                          <div className="font-headings font-semibold text-[18px] mb-4">
-                            <p className="mr-1">{titleLearn}<span className="ml-1">{levelProgram}</span><span>?</span></p>
-                          </div>
-                          : null
-                      }
-                      {
-                        selectedModality?.admissionProfile ?
-                          <RichtText data={{
-                            content: parseEditorRawData(selectedModality?.admissionProfile)
-                          }} />
-                          : null
-                      }
-                    </div>
-                    : null
-                }
                 <div>
                   {
                     rvoeTitle ?
@@ -287,7 +267,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                   }
                   {
                     rvoeImages && rvoeImages?.length > 0 ?
-                      <section className="w-full grid w-d:grid-cols-2 w-d:gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mb-4">
+                      <section className="w-full grid w-d:grid-cols-2 w-d:gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
                         {
                           rvoeImages?.map((item, i: number) => <section key={`section-rvoeImages-${i}`}>
                             <img src={item?.image?.data?.attributes?.url}></img>
@@ -334,7 +314,48 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                     : null
                 }
                 {
-                  selectedModality?.laborField ?
+                  <div className="mt-5">
+                    {/* { Uncomment when have expected learnings
+                        titleLearn ?
+                          <div className="font-headings font-semibold text-[18px] mb-4">
+                            <p className="mr-1">{titleLearn}<span className="ml-1">{levelProgram}</span><span>?</span></p>
+                          </div>
+                          : null
+                      } */}
+                    {
+                      modalities[0]?.admissionProfile ?
+                        <div className="font-headings font-semibold text-[18px] mb-4">
+                          <p className="mr-1 mb-4">Perfil de Ingreso</p>
+                          <RichtText data={{
+                            content: parseEditorRawData(modalities[0]?.admissionProfile)
+                          }} />
+                        </div>
+                        : null
+                    }
+                    {
+                      modalities[0]?.graduateProfile ?
+                        <div className="font-headings font-semibold text-[18px] mb-4">
+                          <p className="mr-1 mb-4">Perfil de Egreso</p>
+                          <RichtText data={{
+                            content: parseEditorRawData(modalities[0]?.graduateProfile)
+                          }} />
+                        </div>
+                        : null
+                    }
+                    {
+                      modalities[0]?.admissionRequirements ?
+                        <div className="font-headings font-semibold text-[18px] mb-4">
+                          <p className="mr-1 mb-4">Requisitos de Admisión</p>
+                          <RichtText data={{
+                            content: parseEditorRawData(modalities[0]?.admissionRequirements)
+                          }} />
+                        </div>
+                        : null
+                    }
+                  </div>
+                }
+                {
+                  modalities[0]?.laborField ?
                     <div>
                       {
                         laborfieldTitle ?
