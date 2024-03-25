@@ -12,7 +12,7 @@ import OpenForm from "@/forms/container/OpenForm";
 import { getDataPageFromJSON } from "@/utils/getDataPage";
 import RichtText from "@/old-components/Richtext/Richtext";
 import CardWebsitePortalverse from "@/old-components/CardWebsitePortalverse";
-import PromoLink from "@/old-components/PromoLink";
+import PromoLink from "@/old-components/PromoLink/PromoLink";
 import Modal from "@/old-components/Modal/Modal";
 import cn from "classnames";
 import TabsFeatured from "@/old-components/TabsFeatured";
