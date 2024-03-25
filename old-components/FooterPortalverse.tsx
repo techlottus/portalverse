@@ -99,8 +99,8 @@ const Footer: FC<FooterPortalverseComponentData> = ({ privacyLink, certification
         </div>
       </div>
       <div className="p-6 w-t:p-2 w-p:p-4 flex justify-between">
-        <p className="w-t:hidden w-p:hidden font-texts font-normal italic text-sm leading-4 text-surface-500">Derechos reservados <span className="text-surface-950">Lottus Education { year }</span></p>
-        <p className="w-d:hidden font-texts font-normal italic text-sm leading-4 text-surface-500">&copy; <span className="text-surface-950">Lottus Education { year }</span></p>
+        {/* <p className="w-t:hidden w-p:hidden font-texts font-normal italic text-sm leading-4 text-surface-500">Derechos reservados <span className="text-surface-950">Lottus Education { year }</span></p>
+        <p className="w-d:hidden font-texts font-normal italic text-sm leading-4 text-surface-500">&copy; <span className="text-surface-950">Lottus Education { year }</span></p> */}
         <Link href={privacyLink.link} passHref target={"_self"}>
 
           <p className="font-texts font-normal italic text-sm leading-4 text-surface-800 ">{privacyLink.label}</p>
