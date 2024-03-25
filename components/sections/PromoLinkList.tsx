@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Container from "@/layouts/Container.layout";
-import PromoLink from "@/old-components/PromoLink";
+import PromoLink from "@/old-components/PromoLink/PromoLink";
 import type { FC } from "react";
 import type { PromoLinkListSection } from "@/utils/strapi/sections/PromoLinkList";
 
