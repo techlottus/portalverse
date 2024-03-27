@@ -96,6 +96,10 @@ export type programBrand = {
 export type ProgramAttributes = {
   slug: string;
   name: string;
+  admissionProfile: string;
+  graduateProfile: string;
+  laborField: string;
+  admissionRequirements: string;
   certificationsTitle: string;
   certificationsDescription: string;
   certifications: {
@@ -197,6 +201,10 @@ query ProgramBySlug($slug: String!) {
       attributes {
         slug
         name
+        admissionProfile
+        graduateProfile
+        laborField
+        admissionRequirements
         certificationsTitle
         certificationsDescription
         certifications {

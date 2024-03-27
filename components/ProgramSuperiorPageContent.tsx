@@ -70,6 +70,12 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
 
   const programModality = modalities?.[tabActive]?.modality?.data?.attributes?.name?.toLowerCase();
 
+  //General Data program
+  const gralAdmissionProfile = program?.attributes?.admissionProfile;
+  const gralGraduateProfile = program?.attributes?.graduateProfile;
+  const gralLaborField = program?.attributes?.laborField;
+  const gralAdmissionRequirements = program?.attributes?.admissionRequirements
+
   //ModalityCharacteristics
   const characteristicsdesktopBgImage = selectedModality?.modality?.data?.attributes?.desktopImage?.data?.attributes?.url;
   const characteristicsTabletBgImage = selectedModality?.modality?.data?.attributes?.tabletImage?.data?.attributes?.url
@@ -117,7 +123,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const checkoutUrl = program?.attributes?.checkoutUrl && (programModality === "online" || programModality === "a tu ritmo") ? program?.attributes?.checkoutUrl : "";
   const checkoutUrlText = program?.attributes?.checkoutUrlText && (programModality === "online" || programModality === "a tu ritmo") ? program?.attributes?.checkoutUrlText : "";
 
-  const programPerks = modalities?.[tabActive]?.programPerks;
+  const programPerks = program?.attributes?.programPerks;
 
   const brands = program?.attributes?.brands
 
@@ -279,7 +285,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                 </div>
                 {
                   certifications?.data?.length > 0 ?
-                    <div className="mb-6">
+                    <div className="mt-6">
                       {
                         certificationsTitle ?
                           <p className="font-headings font-semibold text-[18px] mb-4">{certificationsTitle}</p>
@@ -323,31 +329,31 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                           : null
                       } */}
                     {
-                      modalities[0]?.admissionProfile ?
+                      gralAdmissionProfile ?
                         <div className="font-headings font-semibold text-[18px] mb-4">
                           <p className="mr-1 mb-4">Perfil de Ingreso</p>
                           <RichtText data={{
-                            content: parseEditorRawData(modalities[0]?.admissionProfile)
+                            content: parseEditorRawData(gralAdmissionProfile)
                           }} />
                         </div>
                         : null
                     }
                     {
-                      modalities[0]?.graduateProfile ?
+                      gralGraduateProfile ?
                         <div className="font-headings font-semibold text-[18px] mb-4">
                           <p className="mr-1 mb-4">Perfil de Egreso</p>
                           <RichtText data={{
-                            content: parseEditorRawData(modalities[0]?.graduateProfile)
+                            content: parseEditorRawData(gralGraduateProfile)
                           }} />
                         </div>
                         : null
                     }
                     {
-                      modalities[0]?.admissionRequirements ?
+                      gralAdmissionRequirements ?
                         <div className="font-headings font-semibold text-[18px] mb-4">
                           <p className="mr-1 mb-4">Requisitos de Admisión</p>
                           <RichtText data={{
-                            content: parseEditorRawData(modalities[0]?.admissionRequirements)
+                            content: parseEditorRawData(gralAdmissionRequirements)
                           }} />
                         </div>
                         : null
@@ -355,19 +361,19 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                   </div>
                 }
                 {
-                  modalities[0]?.laborField ?
+                  gralLaborField ?
                     <div>
                       {
-                        laborfieldTitle ?
-                          <div className="font-headings font-semibold text-[18px]">
+                        laborfieldTitle  ?
+                          <div className="font-headings font-semibold text-[18px] mb-4">
                             <p>{laborfieldTitle}</p>
                           </div>
                           : null
                       }
                       {
-                        selectedModality?.laborField ?
+                        gralLaborField ?
                           <RichtText data={{
-                            content: parseEditorRawData(selectedModality?.laborField)
+                            content: parseEditorRawData(gralLaborField)
                           }} />
                           : null
                       }
@@ -406,7 +412,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           <>
             <ContentLayout>
               {
-                modalities?.length > 0 ?
+                modalities?.length  > 0 && titleTabs ?
                   <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6">
                     <p className="text-6.5 font-headings font-semibold leading-tight w-t:leading-tight w-p:leading-tight w-t:text-6 w-p:text-6">{`${titleTabs} ${levelProgram}`}</p>
                   </div>
