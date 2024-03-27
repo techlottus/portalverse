@@ -54,6 +54,12 @@ const inputNameOpenFormStepOne = {
   test: "name",
   name: "name",
 };
+const inputNameProgramDetail = {
+  ...InputInit,
+  label: "Nivel",
+  test: "level",
+  name: "level",
+};
 const inputProgram = {
   ...InputInit,
   label: "Programa",
@@ -176,6 +182,7 @@ export default {
   inputCompanyConfig,
   buttonConfigStepTwo,
   inputNameOpenFormStepOne,
+  inputNameProgramDetail,
   inputProgram,
   inputSurnameOpenFormStepOne,
   inputPhoneOpenFormStepOne,
