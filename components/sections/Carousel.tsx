@@ -167,7 +167,7 @@ const Carousel = (props: CarouselSection) => {
                     : null
                 }
 
-                {
+                {/* {
                   typeCarousel === "video" ?
                     <>
                       <div className="">
@@ -190,10 +190,10 @@ const Carousel = (props: CarouselSection) => {
                       </div>
                     </>
                     : null
-                }
+                } */}
               </div>
             </div>
-            {loaded && instanceRef.current && ((typeCarousel === "card" && cards && cards?.length > 0) || (typeCarousel === "image" && images && images?.length > 0) || (typeCarousel === "video" && videos && videos?.length > 0)) && (
+            {loaded && instanceRef.current && ((typeCarousel === "card" && cards && cards?.length > 0) || (typeCarousel === "image" && images && images?.length > 0)) && (
               <div className="dots text-center pt-6">
                 {[
                   //@ts-ignore

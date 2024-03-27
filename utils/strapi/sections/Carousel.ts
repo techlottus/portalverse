@@ -18,7 +18,7 @@ export type CarouselSection = {
   description: string;
   backgroundColor: string;
   origin: "center" | "auto",
-  typeCarousel: "card" | "image" | "video";
+  typeCarousel: "card" | "image";
   cards?: Array<Card>
   images?: Array<mediaQueryImage>
   videos?: Array<VideoItem>
@@ -53,10 +53,6 @@ export const CAROUSEL_SECTION = `
         }
       }
     }
-  }
-  videos(pagination: { start: 0, limit: -1 }){
-    provider
-    providerId
   }
   images(pagination: { start: 0, limit: -1 }) {
     desktopRatio
