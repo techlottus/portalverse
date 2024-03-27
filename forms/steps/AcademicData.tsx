@@ -38,6 +38,10 @@ const AcademicData: FC<any> = ({
 
   const handleKeyPress = (e: CustomEvent, control: string) => {
     const { detail: { value } } = e;
+    // console.log('value: ', value);
+    // console.log('errorControls: ', errorControls);
+    // console.log(`errorControls[${control}]: `, errorControls[control]);
+    
     setInfoControlsTouched({ ...infoControlsTouched, [control]: true });
     setAcademicData({ ...academicData, [control]: value });
     setErrorControls({ ...errorControls, [control]: !validateControl(control, value, infoControlsTouched[control]) });
@@ -49,22 +53,40 @@ const AcademicData: FC<any> = ({
   }
 
   return <>
-    <div className="grow">
+    <div className="grow mt-6">
+      
       <Input eventFocus={() => handleTouchedControl("program")} data={configControls.inputProgram} eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "program")} />
     </div>
-    <div className="grow">
-      <Input eventFocus={() => handleTouchedControl("level")} data={configControls.inputNameOpenFormStepOne} eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "level")} />
+    <div className="grow mt-6">
+      <Input eventFocus={() => handleTouchedControl("level")} data={configControls.inputNameProgramDetail} eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "level")} />
     </div>
-    {/* <div className="flex flex-col">
+    <div className="flex flex-col">
       <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">Modalidad</p>
-      <Select onClick={(option: CustomEvent) => handleTouchedControl("modality")} options={[...modalityData]} data={{ ...SelectInit, textDefault: !!academicData.modality ? " " : `Elige un ${modality}`, disabled: !modalityData.length, icon: "school" }} />
+      <Select
+        onClick={(option: CustomEvent) => handleTouchedControl("modality")}
+        options={[{
+          value: '1',
+          text: 'one',
+          active: true
+        }]}
+        data={{ ...SelectInit, textDefault: !!academicData.modality ? " " : `Elige una modalidad`, icon: "school" }}
+      />
+      <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> 
+
     </div> 
-    {/* 
     <div className={cn("flex flex-col", { "hidden": controlsConfig?.campus?.hidden })}>
       <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">{campusLabel || config?.campus}</p>
-      <Select onClick={(option: CustomEvent) => handleTouchedControl("campus")} options={[...dataCampus]} data={{ ...SelectInit, textDefault: !!academicData.campus ? " " : `Elige un ${campusLabel}`, disabled: !dataCampus.length, icon: "apartment" }} />
+      <Select
+        onClick={(option: CustomEvent) => handleTouchedControl("campus")}
+        options={[{
+          value: '1',
+          text: 'one',
+          active: true
+        }]}
+        data={{ ...SelectInit, textDefault: !!academicData.campus ? " " : `Elige un ${campusLabel}`, icon: "apartment" }}
+      />
       <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p> 
-    </div> */}
+    </div>
 
   </>
 }

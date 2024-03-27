@@ -6,8 +6,6 @@ import { InputInit } from "@/old-components/fixture"
 
 
 const PersonalData: FC<any> = ({
-  data,
-  config: stepOneConfig,
   personalData,
   setPersonalData,
   infoControlsTouched,
@@ -17,11 +15,11 @@ const PersonalData: FC<any> = ({
   validateControl
 }: any) => {
 
-  const [ config, setConfig ] = useState<any>( stepOneConfig ? {...stepOneConfig} : {...OpenFormInit.stepone });
+  // const [ config, setConfig ] = useState<any>( stepOneConfig ? {...stepOneConfig} : {...OpenFormInit.stepone });
 
-  useEffect(() => {
-    setConfig({ ...config, ...data });
-  }, [data]);
+  // useEffect(() => {
+  //   setConfig({ ...config, ...data });
+  // }, [data]);
 
   const handleKeyPress = (e: CustomEvent, control: string ) => {
     const { detail: { value } } = e;
