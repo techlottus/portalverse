@@ -19,6 +19,7 @@ import routesConfig from 'routesConfig.json';
 import Container from "@/layouts/Container.layout";
 import type { DynamicProgramDetailData } from "@/utils/pages";
 import type { ProgramDetailSuperiorData } from "@/utils/getProgramDetailSuperior";
+import ContainerForm from "./sections/ContainerForm";
 
 type SelectItem = {
   value: string;
@@ -113,6 +114,12 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   }
 
   const relatedPrograms = program?.attributes?.relatedPrograms?.data;
+  const SFdata = {
+    program: '',
+    modalities: [{name: '', id: ''}],
+    level: '',
+    campuses: [{name: '', id: ''}],
+  }
 
   /**
    * This is a flag that toggles between mosaic and list view. Since list view is yet to be implemented/polished,
@@ -164,6 +171,55 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           }
         </div>
       </ContentLayout>
+      <ContainerForm
+        type="ComponentSectionsFormContainer"
+        title="titulo"
+        description=""
+        form="Detalle_de_programa"
+        progress={0}
+        position="right"
+        width="w_6_12"
+        extraText=""
+        errors={ [{
+          type: 'ComponentSectionsWebError',
+          title: '',
+          message: '',
+          errorCode: '',
+          button: {
+            text: 'string;',
+            size: '',
+            isBold: false,
+            disabled: false,
+            href: "",
+
+          }
+        }]}
+        prefilledData={ {
+          name: '',
+          last_name: '',
+          phone: '',
+          email: '',
+          level: '',
+          program: '',
+        }}
+        options={{
+          modalities: [
+            {
+              value: '',
+              text: '',
+              active: false
+            },
+          ],
+          campuses: [
+            {
+              value: '',
+              text: '',
+              active: false
+            }
+          ]
+        }}
+      ></ContainerForm>
+      {/* <ProgramDetailForm></ProgramDetailForm> */}
       {/* <ContentFullLayout classNames="w-d:hidden w-t:hidden mb-10 mt-6">
         <div className="w-d:hidden w-t:hidden col-span-4 mb-10 mt-6">
           <Aspect ratio={"4/3"}>
