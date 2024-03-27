@@ -10,13 +10,26 @@ import cn from "classnames";
 import Button from "@/old-components/Button/Button";
 import { useRouter } from "next/router";
 import OpenForm from "@/forms/container/OpenForm";
-import ProgramDetailForm from "./ProgramDetailForm";
+import ProgramDetailForm from "@/forms/container/ProgramDetailForm";
 
 
 const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
   const router = useRouter()
 
-  const { title, privacyPolicy, image, description, progress = 30, button, form, errors, position, width } = props
+  const {
+    title,
+    privacyPolicy,
+    image,
+    description,
+    progress = 30,
+    button,
+    form,
+    errors,
+    position,
+    width,
+    prefilledData,
+    options
+  } = props
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const [currentError, setCurrentError] = useState<WebErrorComponent | null>(null);
@@ -31,7 +44,7 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
   // }, [step]);
 
   useEffect(() => {
-    const errorData = errors.reduce((acc, curr) => { if (curr.errorCode === error) acc = curr; return acc }, {})
+    const errorData = errors?.reduce((acc, curr) => { if (curr.errorCode === error) acc = curr; return acc }, {}) || {}
     setCurrentError(errorData)
   }, [error]);
   useEffect(() => {
@@ -50,7 +63,7 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
       case "Clinicas_Dentales":
         return <DentalClinics submit={submit} setStatus={setStatus} />;
       case "Detalle_de_programa":
-        return <ProgramDetailForm submit={submit} setStatus={setStatus} />;
+        return <ProgramDetailForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
       default:
         setError('404')
         return null;
@@ -92,7 +105,7 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
                         {!!description && <p className="font-texts font-normal text-3.5 leading-4">{description}</p>}
                       </div>
                       {
-                        !!image.data && <div className="w-p:hidden">
+                        !!image?.data && <div className="w-p:hidden">
                           <Image classNamesImg="w-full h-full object-cover" classNames="w-28 h-28 rounded-full overflow-hidden" src={image.data?.attributes?.url} alt={image.data.attributes.alternativeText || ''} />
                         </div>
                       }
