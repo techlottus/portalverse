@@ -1,7 +1,7 @@
 import { FC, memo, useEffect, useState } from "react"
 import Link from "next/link"
 import cn from "classnames"
-import PromoLink from "@/old-components/PromoLink"
+import PromoLink from "@/old-components/PromoLink/PromoLink"
 
 const OfertaEducativa: FC<any> = memo(({ data, classNames } : any) => {
 

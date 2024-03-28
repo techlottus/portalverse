@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Container from "@/layouts/Container.layout";
-import PromoLink from "@/old-components/PromoLink";
+import PromoLink from "@/old-components/PromoLink/PromoLink";
 import Aspect from "@/components/Aspect";
 import cn from "classnames";
 import type { OverlayCardListSection } from "@/utils/strapi/sections/OverlayCardList";

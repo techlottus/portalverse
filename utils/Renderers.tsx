@@ -46,6 +46,7 @@ import TextContent from "@/components/sections/TextContent";
 import VideosSection from "@/components/sections/VideosSection";
 import WebError from "@/components/sections/WebError";
 import type { FC } from "react";
+import Carousel from "@/components/sections/Carousel";
 
 type Renderer = {
   [key: string]: FC<any>;
@@ -99,6 +100,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsTextContent: TextContent,
   ComponentSectionsVideos: VideosSection,
   ComponentSectionsWebError: WebError,
+  ComponentSectionsCarousel: Carousel
 };
 
 export default defaultRenderers;

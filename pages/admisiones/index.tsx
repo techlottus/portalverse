@@ -242,7 +242,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
             <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-p:mb-6 w-t:mb-12 w-d:mb-12">
               <ContentInsideLayout classNames="gap-6">
                 {
-                  contentTabs?.map(({ image: { src, alt }, content: { title, description, action = null }, cards }: any, i: number) => <Fragment key={`description-beca-${i}`}>
+                  contentTabs?.map(({ image: { src, alt }, content: { title, description, action = null }, cards, titleCards }: any, i: number) => <Fragment key={`description-beca-${i}`}>
                     <DescriptionSection
                       mode="light"
                       title={title}
@@ -251,7 +251,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
                       titleStyles="col-start-1 col-end-7 w-t:col-end-8 hidden"
                       descriptionStyles="col-start-1 col-end-7 w-t:col-end-8"
                       action={
-                        <div slot="actionDescription" className="w-t:hidden w-p:hidden flex justify-center mt-6 mb-12">
+                        <div slot="actionDescription" className="w-t:hidden w-p:hidden mt-6 mb-12">
                           <Button dark onClick={() => navigate(action?.route)} data={action} />
                         </div>
                       }
@@ -261,6 +261,13 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
                       src={src}
                       classNames={cn("aspect-2/1 w-t:aspect-2/1 w-p:aspect-2/1 col-span-5 w-t:col-start-2 w-t:col-end-8 w-p:col-span-4", { "hidden": tabActive !== i })}
                     />
+                    {
+                      titleCards ?
+                        <div className={cn("col-span-12 w-t:col-span-8 w-p:col-span-4", { "hidden": tabActive !== i })}>
+                          <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{titleCards}</p>
+                        </div>
+                        : null
+                    }
                     <section className={cn("col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1", { "hidden w-p:hidden": tabActive !== i })}>
                       {
                         cards.map((item: any, i: number) => <section key={`section-blog-${i}`}>
