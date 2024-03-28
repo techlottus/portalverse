@@ -7,6 +7,7 @@ import { CARD_LIST } from "@/utils/strapi/sections/CardList";
 import { CARD_STATISTICS } from "@/utils/strapi/sections/CardsStatistics";
 import { CARDS_DETAIL_CONTENT } from "@/utils/strapi/sections/CardsDetailContent";
 import { CARDS_VIDEO_CONTENT } from "@/utils/strapi/sections/CardsVideoContent";
+import { CAROUSEL_SECTION } from "@/utils/strapi/sections/Carousel";
 import { CATEGORY_ACCORDION_CONTENT } from "@/utils/strapi/sections/CategoryAccordionList";
 import { COLOR_CARD_LIST } from "@/utils/strapi/sections/ColorCardsList";
 import { CONTACT_TARGET_LIST } from "@/utils/strapi/sections/ContactTargetList";
@@ -49,6 +50,7 @@ import type { CardListSection } from "@/utils/strapi/sections/CardList";
 import type { CardsDetailContentData } from "@/utils/strapi/sections/CardsDetailContent";
 import type { CardsStatisticsData } from "@/utils/strapi/sections/CardsStatistics";
 import type { CardsVideoContentData } from "@/utils/strapi/sections/CardsVideoContent";
+import type { CarouselSection } from "@/utils/strapi/sections/Carousel";
 import type { CategoryAccordionListData } from "@/utils/strapi/sections/CategoryAccordionList";
 import type { ColorCardListData } from "@/utils/strapi/sections/ColorCardsList";
 import type { ContactTargetListSection } from "@/utils/strapi/sections/ContactTargetList";
@@ -124,6 +126,7 @@ export type ComponentSection =
   | StatisticsCardListSection
   | TextContentSection
   | VideosSectionData
+  | CarouselSection
 
   export const SECTIONS = `
   ${ACCORDION_SECTION}
@@ -168,4 +171,5 @@ export type ComponentSection =
   ${STATISTICS_CARD_LIST}
   ${TEXT_CONTENT}
   ${VIDEOS_SECTION}
+  ${CAROUSEL_SECTION}
   `;
