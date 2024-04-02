@@ -59,12 +59,15 @@ const inputNameProgramDetail = {
   label: "Nivel",
   test: "level",
   name: "level",
+  disabled:true
 };
 const inputProgram = {
   ...InputInit,
   label: "Programa",
   test: "program",
   name: "program",
+  disabled:true
+
 };
 const inputSurnameOpenFormStepOne = {
   ...InputInit,

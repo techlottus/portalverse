@@ -6,6 +6,8 @@ import { getTokenForms } from "@/utils/getTokenForms"
 import { getEducativeOffer } from "@/utils/getEducativeOffer"
 import { FormConfig } from "@/forms/fixtures/openform"
 import AcademicData from "@/forms/steps/AcademicData";
+import { setRegisterBot } from "@/utils/saveDataForms"
+import { useRouter } from "next/router";
 
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
 
@@ -58,13 +60,15 @@ const getLeadModality = (
 type ProgramDetailForm = {
   setStatus: (status: { loading: boolean, error: string, valid: boolean, success: boolean }) => void
   submit: boolean;
-  prefilledData?: {
+  prefilledData: {
     name?: string;
     last_name?: string;
     phone?: string;
     email?: string;
-    level?: string;
-    program?: string;
+    level: string;
+    program: string;
+    modality?: string;
+    campus?: string;
   };
   options: {
     modalities: {
@@ -85,7 +89,11 @@ type ProgramDetailForm = {
 
 const ProgramDetailForm = (props: ProgramDetailForm) => {
 
-  const { setStatus, submit } = props
+  const router = useRouter();
+  const queryParams = router?.query;
+  const { setStatus, submit, prefilledData, options } = props
+  // console.log(prefilledData);
+  
 
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState('');
@@ -120,17 +128,17 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   })
 
   const [academicData, setAcademicData] = useState({
-    modality: "",
-    level: "",
-    program: "",
-    campus: ""
+    modality: options.modalities.length === 1 ? options.modalities[0].value : "",
+    level: prefilledData.level,
+    program: prefilledData.program,
+    campus: options.campuses.length === 1 ? options.campuses[0].value : "",
   });
 
   const [academicDataTouched, setAcademicDataTouched] = useState({
-    modality: false,
-    level: false,
-    program: false,
-    campus: false
+    modality: options.modalities.length === 1,
+    level: !!prefilledData.level,
+    program: !!prefilledData.program,
+    campus: options.campuses.length === 1
   });
 
   const [academicDataErrors, setAcademicDataErrors] = useState({
@@ -139,6 +147,9 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     program: false,
     campus: false
   })
+  useEffect(() => {
+    if (submit) handleSubmit()
+  }, [submit]);
 
   const {
     fetchData: fetchEducativeOffer,
@@ -156,14 +167,42 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     isError: isErrorToken,
     token,
   } = getTokenForms();
-
   useEffect(() => {
-    if (submit) handleSubmit()
-  }, [submit]);
+    // console.log('prefilledData: ', prefilledData);
+    // console.log('options: ', options);
+    
+    setPersonalData({
+      ...personalData,
+      'name':  prefilledData?.name || "",
+      'last_name':  prefilledData?.last_name || "",
+      'phone':  prefilledData?.phone || "",
+      'email':  prefilledData?.email || "",
+      })
+    // setPersonalData({...personalData})
+    // setPersonalData({...personalData})
+    // setPersonalData({...personalData})
+    setAcademicData({
+      ...academicData,
+      'modality':  prefilledData?.modality || "",
+      'level':  prefilledData?.level || "",
+      'program':  prefilledData?.program || "",
+      'campus':  prefilledData?.campus || "",
+    })
+    setAcademicDataTouched({
+      ...academicDataTouched,
+      'modality':  !!prefilledData?.modality,
+      'level':  !!prefilledData?.level,
+      'program':  !!prefilledData?.program,
+      'campus':  !!prefilledData?.campus,
+    })
+    // setAcademicData({...academicData})
+    // setAcademicData({...academicData})
+    // setAcademicData({...academicData})
+  }, [prefilledData])
 
   useEffect(() => {
     Validate()
-  }, [personalData]);
+  }, [personalData, academicData]);
 
 
   useEffect(() => {
@@ -241,8 +280,8 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
 
   const sendData = async () => {
-    const endpoint = process.env.NEXT_PUBLIC_DENTAL_CLINIC_FORM_URL || '';
-    const token = process.env.NEXT_PUBLIC_DENTAL_CLINIC_FORM_TOKEN || '';
+    const endpoint = process.env.NEXT_PUBLIC_CAPTACION_PROSPECTO || '';
+    const token = tokenActive || '';
     setIsLoading(true);
 
     await axios.post(endpoint,
@@ -270,6 +309,56 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     })
   }
 
+    const sendLeadData = async () => {
+    const endpoint = process.env.NEXT_PUBLIC_CAPTACION_PROSPECTO;
+
+    const selectedProgramData = getDataByProgramEC(academicData?.program, academicData?.campus);
+
+    // query params
+    const nombre = personalData?.name;
+    const apellidoPaterno = personalData?.last_name;
+    const telefono = personalData?.phone;
+    const email = personalData?.email;
+    const lineaNegocio = selectedProgramData?.lineaNegocio || "";
+    const modalidad = getLeadModality(academicData?.modality);
+    const nivel = academicData?.level;
+    const campus = academicData?.campus;
+    const { idPrograma: programa } = sourceData?.[academicData?.program]?.filter((campus: any) => {
+      return campus.idCampus === academicData?.campus;
+    })[0];
+    const validaRegistroBoot = setRegisterBot();
+    const source = `portal${businessUnit}`;
+    const canal = process.env.NEXT_PUBLIC_CANAL;
+    const medio = queryParams?.utm_medium;
+    const campana = queryParams?.utm_campaign;
+
+    console.log("queryParams: ", queryParams);
+
+    const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&telefono=${telefono}&email=${email}&lineaNegocio=${lineaNegocio}&modalidad=${modalidad}&nivel=${nivel}&campus=${campus}&programa=${programa}&avisoPrivacidad=true&leadSource=Digital&validaRegistroBoot=${validaRegistroBoot}&source=${source}&canal=${canal}${medio ? `&medio=${medio}` : ""}${campana ? `&campana=${campana}` : ""}`;
+
+    console.log("params: ", params)
+
+    setIsLoading(true);
+
+    await axios.post(`${endpoint}?${params}`,{},{
+      headers: {
+        Authorization: tokenActive,
+        'Content-Type': 'application/json;charset=UTF-8'
+      }
+    })
+      .then((res: any) => {
+        if(res?.data?.Exitoso !== "TRUE") {
+          throw new Error();
+        }
+        router.push(`/thank-you`);
+      })
+      .catch((err: any) => {
+        setIsLoading(false);
+        setIsError('true');
+      })
+  }
+
+
   const Validate = () => {
     const newPersonalDataErrors = {
       name: !validatePersonalDataControl("name", personalData.name) && personalDataTouched.name,
@@ -291,9 +380,12 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
     const isValidPersonalData = validatePersonalDataControls();
     const isValidAcademicData = validateAcademicDataControls();
-
+  
+    console.log('isValidPersonalData: ', isValidPersonalData);
+    console.log('isValidAcademicData: ', isValidAcademicData);
 
     setIsValid(isValidPersonalData && isValidAcademicData)
+    console.log('isValid: ', isValid);
   }
 
   const handleSubmit = async () => {
@@ -321,6 +413,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       errorControls={academicDataErrors}
       setErrorControls={setAcademicDataErrors}
       validateControl={validateAcademicDataControl}
+      options={options}
     ></AcademicData>
   </form>
 };

@@ -26,6 +26,7 @@ const AcademicData: FC<any> = ({
   validateControl,
   academicData,
   setAcademicData,
+  options
 }: any) => {
 
   const [config, setConfig] = useState<any>(stepOneConfig ? { ...stepOneConfig } : { ...OpenFormInit.stepone });
@@ -33,11 +34,13 @@ const AcademicData: FC<any> = ({
   const [controlsConfig, setControlsConfig] = useState<OpenFormControls | null>(null);
 
   useEffect(() => {
+    console.log('academicData inner: ', academicData);
     setConfig({ ...config, ...data });
   }, [data]);
 
   const handleKeyPress = (e: CustomEvent, control: string) => {
     const { detail: { value } } = e;
+    
     // console.log('value: ', value);
     // console.log('errorControls: ', errorControls);
     // console.log(`errorControls[${control}]: `, errorControls[control]);
@@ -45,6 +48,40 @@ const AcademicData: FC<any> = ({
     setInfoControlsTouched({ ...infoControlsTouched, [control]: true });
     setAcademicData({ ...academicData, [control]: value });
     setErrorControls({ ...errorControls, [control]: !validateControl(control, value, infoControlsTouched[control]) });
+  };
+  const handleSelect = (e: CustomEvent, control: string) => {
+    // console.log('e: ', e);
+    const { detail } = e;
+    // console.log('detail: ', detail);
+    if (control === 'campus') {
+      
+      const option = options.campuses.map((option: any) => {
+        console.log(option);
+        option.active = option.value === detail
+
+        return option
+      })
+
+      console.log(option);
+    }
+    if (control === 'modality') {
+      
+      const option = options.modalities.map((option: any) => {
+        console.log(option);
+        option.active = option.value === detail
+
+        return option
+      })
+      console.log(option);
+      
+      // option.active = true
+    }
+    // console.log('errorControls: ', errorControls);
+    // console.log(`errorControls[${control}]: `, errorControls[control]);
+    
+    setInfoControlsTouched({ ...infoControlsTouched, [control]: true });
+    setAcademicData({ ...academicData, [control]: detail });
+    setErrorControls({ ...errorControls, [control]: !validateControl(control, detail, infoControlsTouched[control]) });
   };
 
   const handleTouchedControl = (control: string) => {
@@ -54,22 +91,27 @@ const AcademicData: FC<any> = ({
 
   return <>
     <div className="grow mt-6">
-      
-      <Input eventFocus={() => handleTouchedControl("program")} data={configControls.inputProgram} eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "program")} />
+      <Input
+        eventFocus={() => handleTouchedControl("program")}
+        data={configControls.inputProgram}
+        eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "program")}
+        value={academicData.program}
+      />
     </div>
     <div className="grow mt-6">
-      <Input eventFocus={() => handleTouchedControl("level")} data={configControls.inputNameProgramDetail} eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "level")} />
+      <Input
+        eventFocus={() => handleTouchedControl("level")}
+        data={configControls.inputNameProgramDetail}
+        eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "level")}
+        value={academicData.level}
+      />
     </div>
     <div className="flex flex-col">
       <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">Modalidad</p>
       <Select
-        onClick={(option: CustomEvent) => handleTouchedControl("modality")}
-        options={[{
-          value: '1',
-          text: 'one',
-          active: true
-        }]}
-        data={{ ...SelectInit, textDefault: !!academicData.modality ? " " : `Elige una modalidad`, icon: "school" }}
+        onClick={(option: CustomEvent) => handleSelect(option, "modality")}
+        options={options.modalities}
+        data={{ ...SelectInit, textDefault: `Elige una modalidad`, icon: "school" }}
       />
       <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> 
 
@@ -77,13 +119,9 @@ const AcademicData: FC<any> = ({
     <div className={cn("flex flex-col", { "hidden": controlsConfig?.campus?.hidden })}>
       <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">{campusLabel || config?.campus}</p>
       <Select
-        onClick={(option: CustomEvent) => handleTouchedControl("campus")}
-        options={[{
-          value: '1',
-          text: 'one',
-          active: true
-        }]}
-        data={{ ...SelectInit, textDefault: !!academicData.campus ? " " : `Elige un ${campusLabel}`, icon: "apartment" }}
+        onClick={(option: CustomEvent) => handleSelect(option, "campus")}
+        options={options.campuses}
+        data={{ ...SelectInit, textDefault: `Elige un ${campusLabel}`, icon: "apartment" }}
       />
       <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p> 
     </div>
