@@ -4409,11 +4409,11 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
     console.log('filterPrograms: ', filterPrograms);
     
   }, [filterPrograms])
-  // useEffect(() => {
-  //   // console.log('educativeOfferData: ', educativeOfferData);
-  //   // console.log('offer: ', offer);
+  useEffect(() => {
+    console.log('educativeOfferData: ', educativeOfferData);
+    // console.log('offer: ', offer);
     
-  // // }, [educativeOfferData])
+  }, [educativeOfferData])
   // }, [SFdata])
   const downloadFileProgram = () => {
     if (hasCampuses) {

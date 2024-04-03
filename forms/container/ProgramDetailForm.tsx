@@ -167,10 +167,11 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     isError: isErrorToken,
     token,
   } = getTokenForms();
+
   useEffect(() => {
     // console.log('prefilledData: ', prefilledData);
     // console.log('options: ', options);
-    
+
     setPersonalData({
       ...personalData,
       'name':  prefilledData?.name || "",
@@ -178,26 +179,20 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       'phone':  prefilledData?.phone || "",
       'email':  prefilledData?.email || "",
       })
-    // setPersonalData({...personalData})
-    // setPersonalData({...personalData})
-    // setPersonalData({...personalData})
     setAcademicData({
       ...academicData,
-      'modality':  prefilledData?.modality || "",
-      'level':  prefilledData?.level || "",
-      'program':  prefilledData?.program || "",
-      'campus':  prefilledData?.campus || "",
+      modality: options.modalities.length === 1 ? options.modalities[0].value : "",
+      level: prefilledData.level,
+      program: prefilledData.program,
+      campus: options.campuses.length === 1 ? options.campuses[0].value : "",
     })
     setAcademicDataTouched({
       ...academicDataTouched,
-      'modality':  !!prefilledData?.modality,
+      'modality':  options.modalities.length === 1,
       'level':  !!prefilledData?.level,
       'program':  !!prefilledData?.program,
-      'campus':  !!prefilledData?.campus,
+      'campus':  options.campuses.length === 1,
     })
-    // setAcademicData({...academicData})
-    // setAcademicData({...academicData})
-    // setAcademicData({...academicData})
   }, [prefilledData])
 
   useEffect(() => {
@@ -276,40 +271,8 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     fetchEducativeOffer(process.env.NEXT_PUBLIC_EDUCATIVE_OFFER!, modality, businessLineToFetchFrom, tokenActive);
   }
 
-  const selectedProgramData = getDataByProgramEC(academicData?.program, academicData?.campus);
 
-
-  const sendData = async () => {
-    const endpoint = process.env.NEXT_PUBLIC_CAPTACION_PROSPECTO || '';
-    const token = tokenActive || '';
-    setIsLoading(true);
-
-    await axios.post(endpoint,
-      {
-        "nombre": personalData?.name?.trim(),
-        "apellidos": personalData?.last_name?.trim(),
-        "telefono": personalData?.phone?.trim(),
-        "correo": personalData?.email?.trim(),
-        "programa": academicData?.program?.trim(),
-        "level": academicData?.level?.trim(),
-        "modalidad": academicData?.modality?.trim(),
-        "campus": academicData?.campus?.trim(),
-      }, {
-        headers: {
-            'x-token': token
-        }
-      }
-    ).then((res: any) => {
-        setIsLoading(false)
-        setIsSuccess(true)
-    })
-    .catch((err: any) => {
-        setIsLoading(false);
-        setIsError(`${err.response.status}`);
-    })
-  }
-
-    const sendLeadData = async () => {
+  const sendLeadData = async () => {
     const endpoint = process.env.NEXT_PUBLIC_CAPTACION_PROSPECTO;
 
     const selectedProgramData = getDataByProgramEC(academicData?.program, academicData?.campus);
@@ -323,20 +286,18 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     const modalidad = getLeadModality(academicData?.modality);
     const nivel = academicData?.level;
     const campus = academicData?.campus;
-    const { idPrograma: programa } = sourceData?.[academicData?.program]?.filter((campus: any) => {
-      return campus.idCampus === academicData?.campus;
-    })[0];
+    const programa = sourceData?.[academicData?.program]?.filter((campus: any) => campus.idCampus === academicData?.campus)[0].idPrograma;
     const validaRegistroBoot = setRegisterBot();
     const source = `portal${businessUnit}`;
     const canal = process.env.NEXT_PUBLIC_CANAL;
     const medio = queryParams?.utm_medium;
     const campana = queryParams?.utm_campaign;
 
-    console.log("queryParams: ", queryParams);
+    // console.log("queryParams: ", queryParams);
 
     const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&telefono=${telefono}&email=${email}&lineaNegocio=${lineaNegocio}&modalidad=${modalidad}&nivel=${nivel}&campus=${campus}&programa=${programa}&avisoPrivacidad=true&leadSource=Digital&validaRegistroBoot=${validaRegistroBoot}&source=${source}&canal=${canal}${medio ? `&medio=${medio}` : ""}${campana ? `&campana=${campana}` : ""}`;
 
-    console.log("params: ", params)
+    // console.log("params: ", params)
 
     setIsLoading(true);
 
@@ -354,7 +315,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       })
       .catch((err: any) => {
         setIsLoading(false);
-        setIsError('true');
+        setIsError(err.message);
       })
   }
 
@@ -391,7 +352,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   const handleSubmit = async () => {
     Validate()
     if (isValid && !isError) {
-      sendData()
+      sendLeadData()
     }
   }
 
