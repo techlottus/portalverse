@@ -89,6 +89,8 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const [ levelsOffer, setLevelsOffer ] = useState<any>([]);
   const [ filteredPrograms, setFilteredPrograms ] = useState<any>([]);
   const [ filteredCampus, setFilteredCampus ] = useState<any>([]);
+  const [ SFmodalities, setSFmodalities ] = useState<any>([]);
+  const [ SFcampuses, setSFcampuses ] = useState<any>([]);
   const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
 
   // .filter(program => program.idPrograma === SFprogram)[0]
@@ -199,11 +201,11 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   useEffect(() => {
     console.log('filterPrograms: ', filterPrograms);
     const offerByProgram = filterPrograms.filter((program: any) => program.idPrograma === SFprogram)
-    console.log('filterPrograms: ', filterPrograms);
-    const SFmodalities = filterByField(offerByProgram,'modalidad')
-    console.log('SFmodalities: ', SFmodalities);
-    const SFcampuses = filterByField(offerByProgram,'nombreCampus', ['nombreCampus', 'idCampus'])
-    console.log('SFcampuses: ', SFcampuses);
+    // console.log('filterPrograms: ', filterPrograms);
+    setSFmodalities(filterByField(offerByProgram,'modalidad'))
+    // console.log('SFmodalities: ', SFmodalities);
+    setSFcampuses(filterByField(offerByProgram,'nombreCampus', ['nombreCampus', 'idCampus']))
+    // console.log('SFcampuses: ', SFcampuses);
     
   }, [filterPrograms])
   useEffect(() => {
@@ -310,8 +312,8 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           }
         }]}
         prefilledData={ {
-          level: SFdata.filter(program => program.idPrograma === SFprogram)[0]?.nivel,
-          program: SFdata.filter(program => program.idPrograma === SFprogram)[0]?.idOfertaPrograma,
+          level: filterPrograms.filter((program: any) => program.idPrograma === SFprogram)[0]?.nivel,
+          program: filterPrograms.filter((program: any) => program.idPrograma === SFprogram)[0]?.idOfertaPrograma,
         }}
         options={{
           modalities: SFmodalities.map((mod: string) => {
