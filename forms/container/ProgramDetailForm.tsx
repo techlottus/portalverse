@@ -239,7 +239,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     if (control === 'modality') {
       
     }
-    return !!value.trim();
+    return !!value?.trim();
   };
 
   const validateAcademicDataControls = () => !Object.entries(academicData).map(([key, value]: any) => {
