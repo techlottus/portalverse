@@ -4508,7 +4508,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
             size: '',
             isBold: false,
             disabled: false,
-            href: "/oferta-academica/licenciatura/",
+            href: `/oferta-academica/licenciatura/${program.attributes.slug}`,
 
           }
         }]}
