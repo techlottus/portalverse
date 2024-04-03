@@ -4513,8 +4513,8 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           }
         }]}
         prefilledData={ {
-          level: SFdata.filter(program => program.idPrograma === SFprogram)[0].nivel,
-          program: SFdata.filter(program => program.idPrograma === SFprogram)[0].idOfertaPrograma,
+          level: SFdata.filter(program => program.idPrograma === SFprogram)[0]?.nivel,
+          program: SFdata.filter(program => program.idPrograma === SFprogram)[0]?.idOfertaPrograma,
         }}
         options={{
           modalities: SFmodalities.map((mod: string) => {
