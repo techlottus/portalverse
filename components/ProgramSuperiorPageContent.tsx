@@ -313,23 +313,23 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           }
         }]}
         prefilledData={ {
-          level: filterPrograms?.filter((program: any) => program.idPrograma === SFprogram)[0]?.nivel,
-          program: filterPrograms?.filter((program: any) => program.idPrograma === SFprogram)[0]?.idOfertaPrograma,
+          level: filteredPrograms?.filter((program: any) => program.idPrograma === SFprogram)[0]?.nivel,
+          program: filteredPrograms?.filter((program: any) => program.idPrograma === SFprogram)[0]?.idOfertaPrograma,
         }}
         options={{
-          modalities: !!SFmodalities ? SFmodalities?.map((mod: string) => {
+          modalities: SFmodalities?.map((mod: string) => {
             return  {
               value: mod,
               text: mod,
               active: SFmodalities?.length === 1
             }
             
-          }) : [],
-          campuses: !!SFcampuses ? SFcampuses?.map((campus: any) => ({
+          }),
+          campuses: SFcampuses?.map((campus: any) => ({
             value: campus?.idCampus,
             text: campus?.nombreCampus,
             active: SFcampuses?.length === 1
-          })) : []
+          }))
         }}
         button={{
           label: 'Enviar',
