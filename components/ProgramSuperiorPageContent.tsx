@@ -95,7 +95,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
 
   // .filter(program => program.idPrograma === SFprogram)[0]
   const filterByField = (data:any, filter: any, fields?: string[]) => {
-    return data.reduce((acc: any[], curr: any) => {
+    return data?.reduce((acc: any[], curr: any) => {
       if (!fields) {
         if (!acc.includes(curr[filter])) {
           acc = [...acc, curr[filter]]
