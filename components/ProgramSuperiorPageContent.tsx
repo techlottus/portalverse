@@ -201,6 +201,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   useEffect(() => {
     console.log('filterPrograms: ', filterPrograms);
     const offerByProgram = filterPrograms?.filter((program: any) => program.idPrograma === SFprogram)
+    setFilteredPrograms(offerByProgram)
     // console.log('filterPrograms: ', filterPrograms);
     setSFmodalities(filterByField(offerByProgram,'modalidad'))
     // console.log('SFmodalities: ', SFmodalities);
