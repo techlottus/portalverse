@@ -268,7 +268,8 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     console.log('isLoadingToken: ', isLoadingToken);
     console.log('isErrorToken: ', isErrorToken);
     
-    
+    setIsLoading(isLoadingToken)
+    setIsError(isErrorToken ? 'token error' : '')
     if (!isLoadingToken && !isErrorToken && !!Object.keys(token).length) {
       setTokenActive(`${token.token_type} ${token.access_token}`);
     }
