@@ -94,94 +94,9 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
 
   // .filter(program => program.idPrograma === SFprogram)[0]
-  const filterByField = (data:any, filter: any, fields?: string[]) => {
-    return data?.reduce((acc: any[], curr: any) => {
-      if (!fields) {
-        if (!acc.includes(curr[filter])) {
-          acc = [...acc, curr[filter]]
-        }
-      } else {
-        const fieldsResult = fields.reduce((fieldacc: any, field: any) => {
-          if (!Object.keys(fieldacc).includes(curr[filter])) {
-            fieldacc[field] = curr[field]
-          }
-          return fieldacc
-        }, {});
-        acc = [...acc, fieldsResult]
-      }
-      return acc
-      
-    }, [])
-  }
+ 
 
-  
 
-  const getBusinessLineToFetchFrom = (businessLine: string, modality: string) => {
-    switch(businessLine) {
-      case "UANE": {
-        switch(modality) {
-          case "Presencial": return "UANE";
-          case "Flex": return "ULA";
-          case "Online": return "UANE,ULA";
-          default: return "UANE"
-        }
-      }
-      case "UTEG": {
-        switch(modality) {
-          case "Presencial": return "UTEG";
-          case "Flex": return "ULA";
-          case "Online": return "ULA";
-          default: return "UTEG"
-        }
-      }
-      case "ULA": {
-        return "ULA"
-      }
-      case "UTC": {
-        switch(modality) {
-          case "Presencial": return "UTC";
-          case "Semipresencial": return "UTC,ULA";
-          case "Online": return "UTC";
-          default: return "UTC"
-        }
-      }
-      default: return ""
-    }
-  }
-
-  const handleFetchEducativeOffer = (modality: string) => {
-    // console.log('tokenActive: ', tokenActive);
-    
-    setFilteredPrograms([]);
-    setFilteredCampus([]);
-    const businessLineToFetchFrom = getBusinessLineToFetchFrom(businessUnit, modality);
-    fetchEducativeOffer(process.env.NEXT_PUBLIC_EDUCATIVE_OFFER!, modality, businessLineToFetchFrom, tokenActive);
-  }
-
-  
-  const {
-    isLoading: isLoadingToken,
-    isError: isErrorToken,
-    token,
-  } = getTokenForms();
-
-  useEffect(() => {
-    if (!isLoadingToken && !isErrorToken && !!Object.keys(token).length) {
-      setTokenActive(`${token.token_type} ${token.access_token}`);
-    }
-  }, [isLoadingToken, isErrorToken, token]);
-
-  const {
-    fetchData: fetchEducativeOffer,
-    filterByLevel,
-    filterByProgram,
-    getDataByProgramEC,
-    data: educativeOfferData,
-    isLoading: isLoadingEO,
-    isError: isErrorEO,
-    sourceData,
-    filterPrograms
-  } = getEducativeOffer();
 
 
   //Obtener información para el nivel
@@ -195,25 +110,9 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
     setOptionsSelect(options);
   }, [tabActive])
 
-  useEffect(() => {
-    handleFetchEducativeOffer('')
-  }, [tokenActive])
-  useEffect(() => {
-    console.log('filterPrograms: ', filterPrograms);
-    const offerByProgram = filterPrograms?.filter((program: any) => program.idPrograma === SFprogram)
-    setFilteredPrograms(offerByProgram)
-    // console.log('filterPrograms: ', filterPrograms);
-    setSFmodalities(filterByField(offerByProgram,'modalidad'))
-    // console.log('SFmodalities: ', SFmodalities);
-    setSFcampuses(filterByField(offerByProgram,'nombreCampus', ['nombreCampus', 'idCampus']))
-    // console.log('SFcampuses: ', SFcampuses);
-    
-  }, [filterPrograms])
-  useEffect(() => {
-    console.log('educativeOfferData: ', educativeOfferData);
-    // console.log('offer: ', offer);
-    
-  }, [educativeOfferData])
+
+
+
   // }, [SFdata])
   const downloadFileProgram = () => {
     if (hasCampuses) {
@@ -312,24 +211,8 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
 
           }
         }]}
-        prefilledData={ {
-          level: filteredPrograms?.filter((program: any) => program.idPrograma === SFprogram)[0]?.nivel,
-          program: filteredPrograms?.filter((program: any) => program.idPrograma === SFprogram)[0]?.idOfertaPrograma,
-        }}
-        options={{
-          modalities: SFmodalities?.map((mod: string) => {
-            return  {
-              value: mod,
-              text: mod,
-              active: SFmodalities?.length === 1
-            }
-            
-          }),
-          campuses: SFcampuses?.map((campus: any) => ({
-            value: campus?.idCampus,
-            text: campus?.nombreCampus,
-            active: SFcampuses?.length === 1
-          }))
+        prefilledData={{
+          program: SFprogram
         }}
         button={{
           label: 'Enviar',

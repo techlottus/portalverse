@@ -110,7 +110,7 @@ const AcademicData: FC<any> = ({
       <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">Modalidad</p>
       <Select
         onClick={(option: CustomEvent) => handleSelect(option, "modality")}
-        options={options.modalities}
+        options={options.modalities || []}
         data={{ ...SelectInit, textDefault: `Elige una modalidad`, icon: "school" }}
       />
       <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> 
@@ -120,7 +120,7 @@ const AcademicData: FC<any> = ({
       <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">{campusLabel || config?.campus}</p>
       <Select
         onClick={(option: CustomEvent) => handleSelect(option, "campus")}
-        options={options.campuses}
+        options={options.campuses || []}
         data={{ ...SelectInit, textDefault: `Elige un ${campusLabel}`, icon: "apartment" }}
       />
       <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p> 
