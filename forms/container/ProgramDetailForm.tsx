@@ -108,22 +108,9 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   const [filteredCampus, setFilteredCampus] = useState<any>([]);
   const [ SFmodalities, setSFmodalities ] = useState<any>([]);
   const [ SFcampuses, setSFcampuses ] = useState<any>([]);
+  const [ options, setOptions ] = useState<any>([]);
 
-  const options ={
-    modalities: SFmodalities?.map((mod: string) => {
-      return  {
-        value: mod,
-        text: mod,
-        active: SFmodalities?.length === 1
-      }
-      
-    }),
-    campuses: SFcampuses?.map((campus: any) => ({
-      value: campus?.idCampus,
-      text: campus?.nombreCampus,
-      active: SFcampuses?.length === 1
-    }))
-  }
+  
 
   const [personalData, setPersonalData] = useState({
     name: "",
@@ -259,10 +246,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     
   }, [educativeOfferData])
 
-
-
-
-
   useEffect(() => {
     console.log('token: ', token);
     console.log('isLoadingToken: ', isLoadingToken);
@@ -287,6 +270,21 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     // console.log('SFmodalities: ', SFmodalities);
     setSFcampuses(filterByField(offerByProgram,'nombreCampus', ['nombreCampus', 'idCampus']))
     // console.log('SFcampuses: ', SFcampuses);
+    setOptions({
+    modalities: SFmodalities?.map((mod: string) => {
+      return  {
+        value: mod,
+        text: mod,
+        active: SFmodalities?.length === 1
+      }
+      
+    }),
+    campuses: SFcampuses?.map((campus: any) => ({
+      value: campus?.idCampus,
+      text: campus?.nombreCampus,
+      active: SFcampuses?.length === 1
+    }))
+  })
     
   }, [filterPrograms])
   useEffect(() => {
