@@ -8,6 +8,7 @@ import { FormConfig } from "@/forms/fixtures/openform"
 import AcademicData from "@/forms/steps/AcademicData";
 import { setRegisterBot } from "@/utils/saveDataForms"
 import { useRouter } from "next/router";
+import { env } from "process";
 
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
 
@@ -282,7 +283,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     const apellidoPaterno = personalData?.last_name;
     const telefono = personalData?.phone;
     const email = personalData?.email;
-    const lineaNegocio = selectedProgramData?.lineaNegocio || "";
+    const lineaNegocio = selectedProgramData?.lineaNegocio || env.NEXT_PUBLIC_BUSINESS_UNIT;
     const modalidad = getLeadModality(academicData?.modality);
     const nivel = academicData?.level;
     const campus = academicData?.campus;
