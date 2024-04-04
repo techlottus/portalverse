@@ -110,8 +110,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   const [ SFcampuses, setSFcampuses ] = useState<any>([]);
   const [ options, setOptions ] = useState<any>(null);
 
-  setIsLoading(true)
-
   const [personalData, setPersonalData] = useState({
     name: "",
     last_name: "",
