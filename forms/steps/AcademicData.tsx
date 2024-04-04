@@ -32,10 +32,13 @@ const AcademicData: FC<any> = ({
   const [config, setConfig] = useState<any>(stepOneConfig ? { ...stepOneConfig } : { ...OpenFormInit.stepone });
 
   const [controlsConfig, setControlsConfig] = useState<OpenFormControls | null>(null);
+  const [Options, setOptions] = useState(options);
 
   useEffect(() => {
-    console.log('academicData inner: ', academicData);
     setConfig({ ...config, ...data });
+  }, [data]);
+  useEffect(() => {
+    setOptions(options);
   }, [data]);
 
   const handleKeyPress = (e: CustomEvent, control: string) => {
@@ -56,23 +59,23 @@ const AcademicData: FC<any> = ({
     if (control === 'campus') {
       
       const option = options?.campuses.map((option: any) => {
-        console.log(option);
+        // console.log(option);
         option.active = option.value === detail
 
         return option
       })
 
-      console.log(option);
+      // console.log(option);
     }
     if (control === 'modality') {
       
       const option = options?.modalities.map((option: any) => {
-        console.log(option);
+        // console.log(option);
         option.active = option.value === detail
 
         return option
       })
-      console.log(option);
+      // console.log(option);
       
       // option.active = true
     }
@@ -110,7 +113,7 @@ const AcademicData: FC<any> = ({
       <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">Modalidad</p>
       <Select
         onClick={(option: CustomEvent) => handleSelect(option, "modality")}
-        options={options?.modalities || []}
+        options={Options?.modalities || []}
         data={{ ...SelectInit, textDefault: `Elige una modalidad`, icon: "school" }}
       />
       <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> 
@@ -120,7 +123,7 @@ const AcademicData: FC<any> = ({
       <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">{campusLabel || config?.campus}</p>
       <Select
         onClick={(option: CustomEvent) => handleSelect(option, "campus")}
-        options={options?.campuses || []}
+        options={Options?.campuses || []}
         data={{ ...SelectInit, textDefault: `Elige un ${campusLabel}`, icon: "apartment" }}
       />
       <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p> 
