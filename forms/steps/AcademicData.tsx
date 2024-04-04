@@ -43,7 +43,7 @@ const AcademicData: FC<any> = ({
     setOptions(options);
   }, [options]);
   useEffect(() => {
-    if (!!Options) {
+    if (!!Options?.modalities && !!Options?.campuses) {
       setSelects(<>
           <div className="flex flex-col">
             <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">Modalidad</p>
