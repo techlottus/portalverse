@@ -40,7 +40,7 @@ const PromoLink: FC<PromoLinkData> = memo(({ data, classNames, typeShadowColor="
   };
 
   return <>
-    <div className={cn("h-full",classNames, {
+    <div className={cn('w-d:text-lg w-p:text-base h-full', classNames, {
       "shadow-pastelBlueShadowLeft rounded": data.isShadowColor === true && typeShadowColor === 'blue-pastel-left',
       "shadow-pastelYellowShadowLeft rounded": data.isShadowColor === true && typeShadowColor === 'yellow-pastel-left',
       "shadow-pastelRedShadowLeft rounded": data.isShadowColor === true && typeShadowColor === 'red-pastel-left',
