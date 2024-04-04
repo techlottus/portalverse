@@ -96,7 +96,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   // console.log(prefilledData);
   
 
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState('');
   const [isValid, setIsValid] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
