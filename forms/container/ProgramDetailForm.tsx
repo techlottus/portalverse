@@ -172,7 +172,8 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     isError: isErrorToken,
     token,
   } = getTokenForms();
-   const filterByField = (data:any, filter: any, fields?: string[]) => {
+
+  const filterByField = (data:any, filter: any, fields?: string[]) => {
     return data?.reduce((acc: any[], curr: any) => {
       if (!fields) {
         if (!acc.includes(curr[filter])) {
@@ -319,6 +320,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
 
   useEffect(() => {
+    if (isLoadingToken) setIsLoading(true)
     if (!isLoadingToken && !isErrorToken && !!Object.keys(token).length) {
       setTokenActive(`${token.token_type} ${token.access_token}`);
     }
