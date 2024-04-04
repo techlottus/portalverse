@@ -134,17 +134,17 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   })
 
   const [academicData, setAcademicData] = useState({
-    modality: options.modalities?.length === 1 ? options.modalities[0].value : "",
+    modality: options?.modalities?.length === 1 ? options?.modalities[0].value : "",
     level: prefilledData.level,
     program: prefilledData.program,
-    campus: options.campuses?.length === 1 ? options.campuses[0].value : "",
+    campus: options?.campuses?.length === 1 ? options?.campuses[0].value : "",
   });
 
   const [academicDataTouched, setAcademicDataTouched] = useState({
-    modality: options.modalities?.length === 1,
+    modality: options?.modalities?.length === 1,
     level: !!prefilledData.level,
     program: !!prefilledData.program,
-    campus: options.campuses?.length === 1
+    campus: options?.campuses?.length === 1
   });
 
   const [academicDataErrors, setAcademicDataErrors] = useState({
@@ -301,17 +301,17 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       })
     setAcademicData({
       ...academicData,
-      modality: options.modalities?.length === 1 ? options.modalities[0].value : "",
+      modality: options?.modalities?.length === 1 ? options?.modalities[0].value : "",
       level: prefilledData.level,
       program: prefilledData.program,
-      campus: options.campuses?.length === 1 ? options.campuses[0].value : "",
+      campus: options?.campuses?.length === 1 ? options?.campuses[0].value : "",
     })
     setAcademicDataTouched({
       ...academicDataTouched,
-      'modality':  options.modalities?.length === 1,
+      'modality':  options?.modalities?.length === 1,
       level: filteredPrograms?.filter((program: any) => program.idPrograma === prefilledData.program)[0]?.nivel,
       program: filteredPrograms?.filter((program: any) => program.idPrograma === prefilledData.program)[0]?.idOfertaPrograma,
-      'campus':  options.campuses?.length === 1,
+      'campus':  options?.campuses?.length === 1,
     })
   }, [prefilledData])
 
