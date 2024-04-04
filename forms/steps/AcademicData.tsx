@@ -39,7 +39,7 @@ const AcademicData: FC<any> = ({
   }, [data]);
   useEffect(() => {
     setOptions(options);
-  }, [data]);
+  }, [options]);
 
   const handleKeyPress = (e: CustomEvent, control: string) => {
     const { detail: { value } } = e;
@@ -58,7 +58,7 @@ const AcademicData: FC<any> = ({
     // console.log('detail: ', detail);
     if (control === 'campus') {
       
-      const option = options?.campuses.map((option: any) => {
+      const option = Options?.campuses.map((option: any) => {
         // console.log(option);
         option.active = option.value === detail
 
@@ -69,7 +69,7 @@ const AcademicData: FC<any> = ({
     }
     if (control === 'modality') {
       
-      const option = options?.modalities.map((option: any) => {
+      const option = Options?.modalities.map((option: any) => {
         // console.log(option);
         option.active = option.value === detail
 
