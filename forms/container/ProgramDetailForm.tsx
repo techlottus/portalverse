@@ -383,6 +383,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }
 
   const handleFetchEducativeOffer = (modality: string) => {
+    setIsLoading(true)
     setFilteredPrograms([]);
     setFilteredCampus([]);
     const businessLineToFetchFrom = getBusinessLineToFetchFrom(businessUnit, modality);
