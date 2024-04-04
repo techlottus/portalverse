@@ -96,7 +96,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   // console.log(prefilledData);
   
 
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState('');
   const [isValid, setIsValid] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -247,17 +247,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [educativeOfferData])
 
   useEffect(() => {
-    console.log('token: ', token);
-    console.log('isLoadingToken: ', isLoadingToken);
-    console.log('isErrorToken: ', isErrorToken);
-    
-    setIsLoading(isLoadingToken)
-    setIsError(isErrorToken ? 'token error' : '')
-    if (!isLoadingToken && !isErrorToken && !!Object.keys(token).length) {
-      setTokenActive(`${token.token_type} ${token.access_token}`);
-    }
-  }, [isLoadingToken, isErrorToken, token]);
-  useEffect(() => {
     handleFetchEducativeOffer('')
   }, [tokenActive])
 
@@ -287,6 +276,31 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   })
     
   }, [filterPrograms])
+  useEffect(() => {
+
+    // console.log('SFcampuses: ', SFcampuses);
+  setOptions({
+    modalities: SFmodalities?.map((mod: string) => {
+      return  {
+        value: mod,
+        text: mod,
+        active: SFmodalities?.length === 1
+      }
+      
+    }),
+    campuses: SFcampuses?.map((campus: any) => ({
+      value: campus?.idCampus,
+      text: campus?.nombreCampus,
+      active: SFcampuses?.length === 1
+    }))
+  })
+    
+  }, [SFcampuses, SFmodalities])
+  useEffect(() => {
+
+    setIsLoading(false)
+    
+  }, [options])
   useEffect(() => {
     // console.log('prefilledData: ', prefilledData);
     // console.log('options: ', options);
