@@ -96,7 +96,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   // console.log(prefilledData);
   
 
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState('');
   const [isValid, setIsValid] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -110,7 +110,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   const [ SFcampuses, setSFcampuses ] = useState<any>([]);
   const [ options, setOptions ] = useState<any>(null);
 
-  
+  setIsLoading(true)
 
   const [personalData, setPersonalData] = useState({
     name: "",
