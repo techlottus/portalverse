@@ -30,6 +30,7 @@ const AcademicData: FC<any> = ({
 }: any) => {
 
   const [config, setConfig] = useState<any>(stepOneConfig ? { ...stepOneConfig } : { ...OpenFormInit.stepone });
+  const [render, setRender] = useState<any>(false);
 
   const [controlsConfig, setControlsConfig] = useState<OpenFormControls | null>(null);
   const [Options, setOptions] = useState(options);
@@ -40,6 +41,9 @@ const AcademicData: FC<any> = ({
   useEffect(() => {
     setOptions(options);
   }, [options]);
+  useEffect(() => {
+    setRender(!!Options);
+  }, [Options]);
 
   const handleKeyPress = (e: CustomEvent, control: string) => {
     const { detail: { value } } = e;
@@ -136,7 +140,7 @@ const AcademicData: FC<any> = ({
       />
     </div>
     {
-      renderSelects()
+      render ? renderSelects() : null
     }
 
   </>
