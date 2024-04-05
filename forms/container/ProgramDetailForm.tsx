@@ -233,7 +233,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [filterPrograms])
   useEffect(() => {
     // console.log('SFcampuses: ', SFcampuses);
-    if (SFcampuses.length[0] && SFmodalities.length[0]) {
+    if (SFcampuses?.length > 0 && SFmodalities?.length > 0) {
       setOptions({
         modalities: SFmodalities,
         campuses: SFcampuses
