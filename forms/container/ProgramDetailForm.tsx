@@ -231,6 +231,30 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     // console.log('SFcampuses: ', SFcampuses);
     
   }, [filterPrograms])
+
+  useEffect(() => {
+    // console.log('filterPrograms: ', filterPrograms);
+    const mods = filterByField(filteredPrograms, 'modalidad')
+    // console.log('mods: ', mods);
+    setSFmodalities(mods?.map((mod: string) => {
+      return  {
+        value: mod,
+        text: mod,
+        active: mods?.length === 1 || mod === academicData.modality
+      }
+    }))
+    // console.log('SFmodalities: ', SFmodalities);
+    const camps = filterByField(filteredPrograms,'nombreCampus', ['nombreCampus', 'idCampus'])
+    // console.log('camps: ', camps);
+    setSFcampuses(camps?.map((campus: any) => ({
+      value: campus?.idCampus,
+      text: campus?.nombreCampus,
+      active: camps?.length === 1 || campus.idCampus === academicData.campus
+    })))
+    // console.log('SFcampuses: ', SFcampuses);
+    
+  }, [filteredPrograms])
+
   useEffect(() => {
     // console.log('SFcampuses: ', SFcampuses);
     if (SFcampuses?.length > 0 && SFmodalities?.length > 0) {
@@ -252,14 +276,13 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         ...academicData,
         modality: options?.modalities?.length === 1 ? options?.modalities[0].value : "",
         level: filteredPrograms && filteredPrograms[0] ? filteredPrograms[0]?.nivel : '',
-        program: filteredPrograms && filteredPrograms[0] ? filteredPrograms[0]?.idOfertaPrograma : '',
+        program: '',
         campus: options?.campuses?.length === 1 ? options?.campuses[0].value : "",
       })
       setAcademicDataTouched({
         ...academicDataTouched,
         modality:  options?.modalities?.length === 1,
         level: filteredPrograms && filteredPrograms[0] && filteredPrograms[0]?.nivel,
-        program: filteredPrograms && filteredPrograms[0] && filteredPrograms[0]?.idOfertaPrograma,
         campus:  options?.campuses?.length === 1,
       })
     }
@@ -318,6 +341,20 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }).includes(false)
 
   const validateAcademicDataControl = (control: string, value: string) => {
+    if (control === "modality") {
+      const offerByProgram = filteredPrograms?.filter((program: any) => {
+        return program.modalidad === value
+      })
+      // console.log('offerByProgram: ', offerByProgram);
+      setFilteredPrograms(offerByProgram)
+    }
+    if (control === 'campus') {
+      const offerByProgram = filteredPrograms?.filter((program: any) => {
+        return program.plantel === value
+      })
+      // console.log('offerByProgram: ', offerByProgram);
+      setFilteredPrograms(offerByProgram)
+    }
     return !!value?.trim();
   };
 
@@ -337,7 +374,8 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   const sendLeadData = async () => {
     const endpoint = process.env.NEXT_PUBLIC_CAPTACION_PROSPECTO;
-
+  console.log('filteredPrograms: ',  filteredPrograms);
+  
     const selectedProgramData = filteredPrograms[0];
 
     // query params
