@@ -195,7 +195,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         form="Detalle_de_programa"
         progress={0}
         position="right"
-        width="w_6_12"
+        width="w_4_12"
         extraText=""
         errors={ [{
           type: 'ComponentSectionsWebError',
