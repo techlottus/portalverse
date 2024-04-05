@@ -277,7 +277,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       
   }, [SFcampuses, SFmodalities])
   useEffect(() => {
-    if (options && (options?.modalities && options?.campuses)) {
+    if (options && (options?.modalities && options?.campuses) && (options?.modalities[0] && options?.campuses[0])) {
       console.log(options);
       console.log(options?.modalities);
       console.log(options?.campuses);
