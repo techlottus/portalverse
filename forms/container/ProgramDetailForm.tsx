@@ -12,38 +12,6 @@ import { env } from "process";
 
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
 
-const getBusinessLineToFetchFrom = (businessLine: string, modality: string) => {
-  switch (businessLine) {
-    case "UANE": {
-      switch (modality) {
-        case "Presencial": return "UANE";
-        case "Flex": return "ULA";
-        case "Online": return "UANE,ULA";
-        default: return "UANE"
-      }
-    }
-    case "UTEG": {
-      switch (modality) {
-        case "Presencial": return "UTEG";
-        case "Flex": return "ULA";
-        case "Online": return "ULA";
-        default: return "UTEG"
-      }
-    }
-    case "ULA": {
-      return "ULA"
-    }
-    case "UTC": {
-      switch (modality) {
-        case "Presencial": return "UTC";
-        case "Semipresencial": return "UTC,ULA";
-        case "Online": return "UTC";
-        default: return "UTC"
-      }
-    }
-    default: return ""
-  }
-}
 
 const getLeadModality = (
   modality: string // "Presencial" | "Online" | "Flex" | "Semipresencial"
@@ -132,17 +100,17 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   })
 
   const [academicData, setAcademicData] = useState({
-    modality: options?.modalities?.length === 1 ? options?.modalities[0].value : "",
-    level: prefilledData.level,
-    program: prefilledData.program,
-    campus: options?.campuses?.length === 1 ? options?.campuses[0].value : "",
+    modality: "",
+    level: "",
+    program: "",
+    campus: "",
   });
 
   const [academicDataTouched, setAcademicDataTouched] = useState({
-    modality: options?.modalities?.length === 1,
-    level: !!prefilledData.level,
-    program: !!prefilledData.program,
-    campus: options?.campuses?.length === 1
+    modality: false,
+    level: false,
+    program: false,
+    campus: false
   });
 
   const [academicDataErrors, setAcademicDataErrors] = useState({
@@ -151,7 +119,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     program: false,
     campus: false
   })
-
 
   useEffect(() => {
     setIsLoading(true)
@@ -164,11 +131,9 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     fetchData: fetchEducativeOffer,
     filterByLevel,
     filterByProgram,
-    getDataByProgramEC,
     data: educativeOfferData,
     isLoading: isLoadingEO,
     isError: isErrorEO,
-    sourceData,
     filterPrograms
   } = getEducativeOffer();
 
@@ -268,7 +233,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [filterPrograms])
   useEffect(() => {
     // console.log('SFcampuses: ', SFcampuses);
-    if (SFcampuses && SFmodalities) {
+    if (SFcampuses.length[0] && SFmodalities.length[0]) {
       setOptions({
         modalities: SFmodalities,
         campuses: SFcampuses
@@ -353,12 +318,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }).includes(false)
 
   const validateAcademicDataControl = (control: string, value: string) => {
-    if (control === 'campus') {
-      
-    }
-    if (control === 'modality') {
-      
-    }
     return !!value?.trim();
   };
 
@@ -366,24 +325,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     const validity = validateAcademicDataControl(key, value);
     return validity 
   }).includes(false)
-
-
-  const handleProgramSelected = (program: string) => {
-    setFilteredCampus([]);
-    const campusByProgram = filterByProgram(program);
-    setFilteredCampus([...campusByProgram]);
-  }
-
-  const handleLevelSelected = (level: string) => {
-    setFilteredPrograms([]);
-    setFilteredCampus([]);
-    const programsByLevel = filterByLevel(level);
-    setFilteredPrograms([
-      ...programsByLevel?.sort((a, b) => // sort programs alphabetically
-          a?.text < b?.text ? -1 : a?.text > b?.text ? 1 : 0
-      ),
-    ]);
-  }
 
   const handleFetchEducativeOffer = (modality: string) => {
     setIsLoading(true)
@@ -419,7 +360,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
     const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&telefono=${telefono}&email=${email}&lineaNegocio=${lineaNegocio}&modalidad=${modalidad}&nivel=${nivel}&campus=${campus}&programa=${programa}&avisoPrivacidad=true&leadSource=Digital&validaRegistroBoot=${validaRegistroBoot}&source=${source}&canal=${canal}${medio ? `&medio=${medio}` : ""}${campana ? `&campana=${campana}` : ""}`;
 
-    console.log("params: ", params)
+    // console.log("params: ", params)
 
     setIsLoading(true);
 
@@ -466,11 +407,11 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     const isValidPersonalData = validatePersonalDataControls();
     const isValidAcademicData = validateAcademicDataControls();
 
-    console.log('isValidPersonalData: ', isValidPersonalData);
-    console.log('isValidAcademicData: ', isValidAcademicData);
+    // console.log('isValidPersonalData: ', isValidPersonalData);
+    // console.log('isValidAcademicData: ', isValidAcademicData);
 
     setIsValid(isValidPersonalData && isValidAcademicData)
-    console.log('isValid: ', isValid);
+    // console.log('isValid: ', isValid);
   }
 
   const handleSubmit = async () => {
