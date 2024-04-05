@@ -8,8 +8,6 @@ import { FormConfig } from "@/forms/fixtures/openform"
 import AcademicData from "@/forms/steps/AcademicData";
 import { setRegisterBot } from "@/utils/saveDataForms"
 import { useRouter } from "next/router";
-import { config } from "dotenv";
-config()
 import { env } from "process";
 
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
