@@ -307,8 +307,8 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     setAcademicDataTouched({
       ...academicDataTouched,
       'modality':  options?.modalities?.length === 1,
-      level: !filteredPrograms?.filter((program: any) => program.idPrograma === prefilledData.program)[0]?.nivel,
-      program: !filteredPrograms?.filter((program: any) => program.idPrograma === prefilledData.program)[0]?.idOfertaPrograma,
+      level: filteredPrograms && filteredPrograms[0] && filteredPrograms[0]?.nivel,
+      program: filteredPrograms && filteredPrograms[0] && filteredPrograms[0]?.idOfertaPrograma,
       'campus':  options?.campuses?.length === 1,
     })
   }, [prefilledData])
