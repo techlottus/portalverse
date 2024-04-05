@@ -212,7 +212,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     setFilteredPrograms(offerByProgram)
     // console.log('filterPrograms: ', filterPrograms);
     const mods = filterByField(offerByProgram, 'modalidad')
-    console.log('mods: ', mods);
+    // console.log('mods: ', mods);
     setSFmodalities(mods?.map((mod: string) => {
       return  {
         value: mod,
@@ -222,7 +222,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     }))
     // console.log('SFmodalities: ', SFmodalities);
     const camps = filterByField(offerByProgram,'nombreCampus', ['nombreCampus', 'idCampus'])
-    console.log('camps: ', camps);
+    // console.log('camps: ', camps);
     setSFcampuses(camps?.map((campus: any) => ({
       value: campus?.idCampus,
       text: campus?.nombreCampus,
@@ -243,9 +243,9 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [SFcampuses, SFmodalities])
   useEffect(() => {
     if (options && (options?.modalities && options?.campuses) && (options?.modalities[0] && options?.campuses[0])) {
-      console.log(options);
-      console.log(options?.modalities);
-      console.log(options?.campuses);
+      // console.log(options);
+      // console.log(options?.modalities);
+      // console.log(options?.campuses);
       
       setIsLoading(false)
       setAcademicData({
@@ -371,7 +371,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       }
     })
       .then((res: any) => {
-        console.log(res);
+        // console.log(res);
         
         if(res?.data?.Exitoso !== "TRUE") {
           throw new Error();
