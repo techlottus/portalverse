@@ -199,14 +199,14 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   useEffect(() => {
     // console.log('tokenActive: ', tokenActive);
     if (!!tokenActive) {
-      handleFetchEducativeOffer('')
+      handleFetchEducativeOffer()
     }
 
   }, [tokenActive])
 
   useEffect(() => {
     const offerByProgram = filterPrograms?.filter((program: any) => {
-      return program.idPrograma === prefilledData.program
+      return program.nombrePrograma === prefilledData.program
     })
     // console.log('offerByProgram: ', offerByProgram);
     setFilteredPrograms(offerByProgram)
@@ -326,12 +326,12 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     return validity 
   }).includes(false)
 
-  const handleFetchEducativeOffer = (modality: string) => {
+  const handleFetchEducativeOffer = () => {
     setIsLoading(true)
     setFilteredPrograms([]);
     setFilteredCampus([]);
-    const businessLineToFetchFrom = getBusinessLineToFetchFrom(businessUnit, modality);
-    fetchEducativeOffer(process.env.NEXT_PUBLIC_EDUCATIVE_OFFER!, modality, businessLineToFetchFrom, tokenActive);
+    const businessLineToFetchFrom = getBusinessLineToFetchFrom(businessUnit, '');
+    fetchEducativeOffer(process.env.NEXT_PUBLIC_EDUCATIVE_OFFER!, '', businessLineToFetchFrom, tokenActive);
   }
 
 
