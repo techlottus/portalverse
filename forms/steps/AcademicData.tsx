@@ -183,7 +183,7 @@ const AcademicData: FC<any> = ({
             <label>Elige una modalidad</label>
             <select onChange={(event: any) => handleSelect(event, "modality")}>
               {
-                Options.modalities.map((mod: any) => <option selected={mod.active} value={mod.value}>{mod.text}</option>)
+                Options?.modalities?.map((mod: any) => <option selected={mod.active} value={mod.value}>{mod.text}</option>)
               }
             </select>
             <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> 
@@ -194,7 +194,7 @@ const AcademicData: FC<any> = ({
             <label>{`Elige un ${campusLabel}`}</label>
             <select onChange={(event: any) => handleSelect(event, "campus")}>
               {
-                Options.campuses.map((camp: any) => <option selected={camp.active} value={camp.value}>{camp.text}</option>)
+                Options?.campuses?.map((camp: any) => <option selected={camp.active} value={camp.value}>{camp.text}</option>)
               }
             </select>
             <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p> 
