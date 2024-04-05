@@ -241,13 +241,9 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   useEffect(() => {
     const offerByProgram = filterPrograms?.filter((program: any) => {
-      console.log('program.idPrograma: ', program.idPrograma);
-      console.log('prefilledData.program: ', prefilledData.program);
-      console.log('program.idPrograma === prefilledData.program: ', program.idPrograma === prefilledData.program);
-      
       return program.idPrograma === prefilledData.program
     })
-    console.log('offerByProgram: ', offerByProgram);
+    // console.log('offerByProgram: ', offerByProgram);
     setFilteredPrograms(offerByProgram)
     // console.log('filterPrograms: ', filterPrograms);
     const mods = filterByField(offerByProgram, 'modalidad')
@@ -283,6 +279,20 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     if (options) {
       
       setIsLoading(false)
+      setAcademicData({
+        ...academicData,
+        modality: options?.modalities?.length === 1 ? options?.modalities[0].value : "",
+        level: filteredPrograms && filteredPrograms[0] ? filteredPrograms[0]?.nivel : '',
+        program: filteredPrograms && filteredPrograms[0] ? filteredPrograms[0]?.idOfertaPrograma : '',
+        campus: options?.campuses?.length === 1 ? options?.campuses[0].value : "",
+      })
+      setAcademicDataTouched({
+        ...academicDataTouched,
+        modality:  options?.modalities?.length === 1,
+        level: filteredPrograms && filteredPrograms[0] && filteredPrograms[0]?.nivel,
+        program: filteredPrograms && filteredPrograms[0] && filteredPrograms[0]?.idOfertaPrograma,
+        campus:  options?.campuses?.length === 1,
+      })
     }
     
   }, [options])
@@ -297,20 +307,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       'phone':  prefilledData?.phone || "",
       'email':  prefilledData?.email || "",
     })
-    setAcademicData({
-      ...academicData,
-      modality: options?.modalities?.length === 1 ? options?.modalities[0].value : "",
-      level: filteredPrograms && filteredPrograms[0] ? filteredPrograms[0]?.nivel : '',
-      program: filteredPrograms && filteredPrograms[0] ? filteredPrograms[0]?.idOfertaPrograma : '',
-      campus: options?.campuses?.length === 1 ? options?.campuses[0].value : "",
-    })
-    setAcademicDataTouched({
-      ...academicDataTouched,
-      'modality':  options?.modalities?.length === 1,
-      level: filteredPrograms && filteredPrograms[0] && filteredPrograms[0]?.nivel,
-      program: filteredPrograms && filteredPrograms[0] && filteredPrograms[0]?.idOfertaPrograma,
-      'campus':  options?.campuses?.length === 1,
-    })
+
   }, [prefilledData])
 
   useEffect(() => {
