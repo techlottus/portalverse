@@ -1,13 +1,9 @@
 import { FC, useEffect, useState } from "react"
 import OpenFormInit from "@/forms/fixtures/openform"
 import configControls from "@/forms/fixtures/controls"
-import { InputInit } from "@/old-components/fixture"
 import Select from "@/old-components/Select/Select"
-import { OpenFormControls } from "@/types/OpenFormControls.types"
 import { SelectInit } from "@/old-components/fixture"
 import cn from "classnames"
-import OptionPill from "@/old-components/OptionPill"
-import { SelectOptionConfig } from "@/types/Select.types"
 import Input from "@/old-components/Input/Input"
 
 const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
@@ -30,10 +26,8 @@ const AcademicData: FC<any> = ({
 }: any) => {
 
   const [config, setConfig] = useState<any>(stepOneConfig ? { ...stepOneConfig } : { ...OpenFormInit.stepone });
-  const [render, setRender] = useState<any>(false);
 
-  const [controlsConfig, setControlsConfig] = useState<OpenFormControls | null>(null);
-  const [Options, setOptions] = useState(options);
+  const [Options, setOptions] = useState<{campuses: [], modalities: []}>({campuses: [], modalities: []});
 
   useEffect(() => {
     setConfig({ ...config, ...data });
@@ -121,7 +115,7 @@ const AcademicData: FC<any> = ({
       <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> 
 
     </div> 
-    <div className={cn("flex flex-col", { "hidden": controlsConfig?.campus?.hidden })}>
+    <div className="flex flex-col">
       <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">{campusLabel || config?.campus}</p>
       <Select
         onClick={(option: CustomEvent) => handleSelect(option, "campus")}
