@@ -397,7 +397,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   const sendLeadData = async () => {
     const endpoint = process.env.NEXT_PUBLIC_CAPTACION_PROSPECTO;
 
-    const selectedProgramData = getDataByProgramEC(academicData?.program, academicData?.campus);
+    const selectedProgramData = filteredPrograms[0];
 
     // query params
     const nombre = personalData?.name;
