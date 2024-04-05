@@ -240,11 +240,11 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [tokenActive])
 
   useEffect(() => {
-    console.log('filterPrograms: ', filterPrograms);
     const offerByProgram = filterPrograms?.filter((program: any) => program.idPrograma === prefilledData.program)
+    console.log('offerByProgram: ', offerByProgram);
     setFilteredPrograms(offerByProgram)
     // console.log('filterPrograms: ', filterPrograms);
-    const mods = filterByField(offerByProgram,'modalidad')
+    const mods = filterByField(offerByProgram, 'modalidad', ['modalidad'])
     console.log('mods: ', mods);
     setSFmodalities(mods?.map((mod: string) => {
       return  {
