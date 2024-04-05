@@ -151,6 +151,11 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     program: false,
     campus: false
   })
+
+
+  useEffect(() => {
+    setIsLoading(true)
+  }, [])
   useEffect(() => {
     if (submit) handleSubmit()
   }, [submit]);
