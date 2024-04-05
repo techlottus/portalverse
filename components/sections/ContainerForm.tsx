@@ -85,7 +85,11 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
             "w-9/12": width === 'w_9_12',
             "w-8/12": width === 'w_8_12',
             "w-7/12": width === 'w_7_12',
-            "w-6/12": width === 'w_6_12'
+            "w-6/12": width === 'w_6_12',
+            "w-5/12": width === 'w_5_12',
+            "w-4/12": width === 'w_4_12',
+            "w-3/12": width === 'w_3_12',
+            "w-2/12": width === 'w_2_12',
           })}>
             <section className="p-6 shadow-15 bg-surface-0 relative" >
               {
