@@ -193,8 +193,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     }, [])
   }
 
-  
-
   const getBusinessLineToFetchFrom = (businessLine: string, modality: string) => {
     switch(businessLine) {
       case "UANE": {
@@ -228,10 +226,12 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     }
   }
 
-
-
   useEffect(() => {
-    handleFetchEducativeOffer('')
+    console.log('tokenActive: ', tokenActive);
+    if (tokenActive) {
+      handleFetchEducativeOffer('')
+    }
+
   }, [tokenActive])
 
   useEffect(() => {
@@ -246,7 +246,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         text: mod,
         active: SFmodalities?.length === 1
       }
-      
     }))
     // console.log('SFmodalities: ', SFmodalities);
     const camps = filterByField(offerByProgram,'nombreCampus', ['nombreCampus', 'idCampus'])
@@ -307,6 +306,10 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
 
   useEffect(() => {
+    console.log('isLoadingToken: ', isLoadingToken);
+    console.log('isErrorToken: ', isErrorToken);
+    console.log('token: ', token);
+    
     if (isLoadingToken) setIsLoading(true)
     if (!isLoadingToken && !isErrorToken && !!Object.keys(token).length) {
       setTokenActive(`${token.token_type} ${token.access_token}`);
@@ -449,7 +452,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
     const isValidPersonalData = validatePersonalDataControls();
     const isValidAcademicData = validateAcademicDataControls();
-  
+
     console.log('isValidPersonalData: ', isValidPersonalData);
     console.log('isValidAcademicData: ', isValidAcademicData);
 
