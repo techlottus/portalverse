@@ -227,8 +227,8 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }
 
   useEffect(() => {
-    console.log('tokenActive: ', tokenActive);
-    if (tokenActive) {
+    // console.log('tokenActive: ', tokenActive);
+    if (!!tokenActive) {
       handleFetchEducativeOffer('')
     }
 
@@ -260,11 +260,11 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   useEffect(() => {
 
     // console.log('SFcampuses: ', SFcampuses);
-  setOptions({
-    modalities: SFmodalities,
-    campuses: SFcampuses
-  })
-    
+    setOptions({
+      modalities: SFmodalities,
+      campuses: SFcampuses
+    })
+      
   }, [SFcampuses, SFmodalities])
   useEffect(() => {
     if (options) {
@@ -306,9 +306,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
 
   useEffect(() => {
-    console.log('isLoadingToken: ', isLoadingToken);
-    console.log('isErrorToken: ', isErrorToken);
-    console.log('token: ', token);
     
     if (isLoadingToken) setIsLoading(true)
     if (!isLoadingToken && !isErrorToken && !!Object.keys(token).length) {
