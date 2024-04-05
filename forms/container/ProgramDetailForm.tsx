@@ -250,7 +250,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     console.log('offerByProgram: ', offerByProgram);
     setFilteredPrograms(offerByProgram)
     // console.log('filterPrograms: ', filterPrograms);
-    const mods = filterByField(offerByProgram, 'modalidad', ['modalidad'])
+    const mods = filterByField(offerByProgram, 'modalidad')
     console.log('mods: ', mods);
     setSFmodalities(mods?.map((mod: string) => {
       return  {
