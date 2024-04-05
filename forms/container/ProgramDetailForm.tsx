@@ -240,7 +240,13 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [tokenActive])
 
   useEffect(() => {
-    const offerByProgram = filterPrograms?.filter((program: any) => program.idPrograma === prefilledData.program)
+    const offerByProgram = filterPrograms?.filter((program: any) => {
+      console.log('program.idPrograma: ', program.idPrograma);
+      console.log('prefilledData.program: ', prefilledData.program);
+      console.log('program.idPrograma === prefilledData.program: ', program.idPrograma === prefilledData.program);
+      
+      return program.idPrograma === prefilledData.program
+    })
     console.log('offerByProgram: ', offerByProgram);
     setFilteredPrograms(offerByProgram)
     // console.log('filterPrograms: ', filterPrograms);
