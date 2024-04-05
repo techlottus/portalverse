@@ -269,10 +269,13 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   useEffect(() => {
 
     // console.log('SFcampuses: ', SFcampuses);
-    setOptions({
-      modalities: SFmodalities,
-      campuses: SFcampuses
-    })
+    if (SFcampuses && SFmodalities) {
+      
+      setOptions({
+        modalities: SFmodalities,
+        campuses: SFcampuses
+      })
+    }
       
   }, [SFcampuses, SFmodalities])
   useEffect(() => {
