@@ -239,44 +239,31 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     const offerByProgram = filterPrograms?.filter((program: any) => program.idPrograma === prefilledData.program)
     setFilteredPrograms(offerByProgram)
     // console.log('filterPrograms: ', filterPrograms);
-    setSFmodalities(filterByField(offerByProgram,'modalidad'))
-    // console.log('SFmodalities: ', SFmodalities);
-    setSFcampuses(filterByField(offerByProgram,'nombreCampus', ['nombreCampus', 'idCampus']))
-    // console.log('SFcampuses: ', SFcampuses);
-    setOptions({
-    modalities: SFmodalities?.map((mod: string) => {
+    const mods = filterByField(offerByProgram,'modalidad')
+    setSFmodalities(mods?.map((mod: string) => {
       return  {
         value: mod,
         text: mod,
         active: SFmodalities?.length === 1
       }
       
-    }),
-    campuses: SFcampuses?.map((campus: any) => ({
+    }))
+    // console.log('SFmodalities: ', SFmodalities);
+    const camps = filterByField(offerByProgram,'nombreCampus', ['nombreCampus', 'idCampus'])
+    setSFcampuses(camps?.map((campus: any) => ({
       value: campus?.idCampus,
       text: campus?.nombreCampus,
       active: SFcampuses?.length === 1
-    }))
-  })
+    })))
+    // console.log('SFcampuses: ', SFcampuses);
     
   }, [filterPrograms])
   useEffect(() => {
 
     // console.log('SFcampuses: ', SFcampuses);
   setOptions({
-    modalities: SFmodalities?.map((mod: string) => {
-      return  {
-        value: mod,
-        text: mod,
-        active: SFmodalities?.length === 1
-      }
-      
-    }),
-    campuses: SFcampuses?.map((campus: any) => ({
-      value: campus?.idCampus,
-      text: campus?.nombreCampus,
-      active: SFcampuses?.length === 1
-    }))
+    modalities: SFmodalities,
+    campuses: SFcampuses
   })
     
   }, [SFcampuses, SFmodalities])
@@ -297,7 +284,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       'last_name':  prefilledData?.last_name || "",
       'phone':  prefilledData?.phone || "",
       'email':  prefilledData?.email || "",
-      })
+    })
     setAcademicData({
       ...academicData,
       modality: options?.modalities?.length === 1 ? options?.modalities[0].value : "",
