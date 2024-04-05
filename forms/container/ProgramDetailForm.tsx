@@ -245,6 +245,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     setFilteredPrograms(offerByProgram)
     // console.log('filterPrograms: ', filterPrograms);
     const mods = filterByField(offerByProgram,'modalidad')
+    console.log('mods: ', mods);
     setSFmodalities(mods?.map((mod: string) => {
       return  {
         value: mod,
@@ -254,6 +255,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     }))
     // console.log('SFmodalities: ', SFmodalities);
     const camps = filterByField(offerByProgram,'nombreCampus', ['nombreCampus', 'idCampus'])
+    console.log('camps: ', camps);
     setSFcampuses(camps?.map((campus: any) => ({
       value: campus?.idCampus,
       text: campus?.nombreCampus,
