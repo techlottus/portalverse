@@ -217,7 +217,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       return  {
         value: mod,
         text: mod,
-        active: SFmodalities?.length === 1
+        active: mods?.length === 1
       }
     }))
     // console.log('SFmodalities: ', SFmodalities);
@@ -226,7 +226,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     setSFcampuses(camps?.map((campus: any) => ({
       value: campus?.idCampus,
       text: campus?.nombreCampus,
-      active: SFcampuses?.length === 1
+      active: camps?.length === 1
     })))
     // console.log('SFcampuses: ', SFcampuses);
     
