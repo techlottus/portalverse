@@ -34,7 +34,6 @@ const AcademicData: FC<any> = ({
 
   const [controlsConfig, setControlsConfig] = useState<OpenFormControls | null>(null);
   const [Options, setOptions] = useState(options);
-  const [Selects, setSelects] = useState<any>(<></>);
 
   useEffect(() => {
     setConfig({ ...config, ...data });
@@ -42,45 +41,7 @@ const AcademicData: FC<any> = ({
   useEffect(() => {
     setOptions(options);
   }, [options]);
-  useEffect(() => {
-    console.log('Options: ', Options);
-    
-    if (Options?.modalities?.length > 0 && Options?.campuses?.length > 0) {
-      setSelects(
-        <>
-          <div className="flex flex-col">
-            <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">Modalidad</p>
-            <Select
-              onClick={(option: CustomEvent) => handleSelect(option, "modality")}
-              options={Options.modalities}
-              data={{ ...SelectInit, textDefault: `Elige una modalidad`, icon: "school" }}
-            />
-            <select onChange={(event: any) => handleSelect(event, "modality")}>
-              {
-                Options.modalities.map((mod: any) => <option selected={mod.active} value={mod.value}>{mod.text}</option>)
-              }
-            </select>
-            <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> 
 
-          </div> 
-          <div className={cn("flex flex-col", { "hidden": controlsConfig?.campus?.hidden })}>
-            <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">{campusLabel || config?.campus}</p>
-            <Select
-              onClick={(option: CustomEvent) => handleSelect(option, "campus")}
-              options={Options.campuses}
-              data={{ ...SelectInit, textDefault: `Elige un ${campusLabel}`, icon: "apartment" }}
-            />
-            <select onChange={(event: any) => handleSelect(event, "campus")}>
-              {
-                Options.campuses.map((camp: any) => <option selected={camp.active} value={camp.value}>{camp.text}</option>)
-              }
-            </select>
-            <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p> 
-          </div>
-        </>
-      )
-    }
-  }, [Options]);
 
   const handleKeyPress = (e: CustomEvent, control: string) => {
     const { detail: { value } } = e;
@@ -133,32 +94,6 @@ const AcademicData: FC<any> = ({
     setErrorControls({ ...errorControls, [control]: !validateControl(control, academicData[control], true) && infoControlsTouched[control] });
   }
 
-  // const renderSelects = () => {
-  //   return Options?.modalities?.length > 0 && Options?.campuses?.length > 0
-  //     ? <>
-  //         <div className="flex flex-col">
-  //           <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">Modalidad</p>
-  //           <Select
-  //             onClick={(option: CustomEvent) => handleSelect(option, "modality")}
-  //             options={Options.modalities}
-  //             data={{ ...SelectInit, textDefault: `Elige una modalidad`, icon: "school" }}
-  //           />
-  //           <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> 
-
-  //         </div> 
-  //         <div className={cn("flex flex-col", { "hidden": controlsConfig?.campus?.hidden })}>
-  //           <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">{campusLabel || config?.campus}</p>
-  //           <Select
-  //             onClick={(option: CustomEvent) => handleSelect(option, "campus")}
-  //             options={Options.campuses}
-  //             data={{ ...SelectInit, textDefault: `Elige un ${campusLabel}`, icon: "apartment" }}
-  //           />
-  //           <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p> 
-  //         </div>
-  //       </>
-  //     : <></>
-  // }
-
   return <>
     <div className="grow mt-6">
       <Input
@@ -176,32 +111,25 @@ const AcademicData: FC<any> = ({
         value={academicData.level}
       />
     </div>
-    {/* {
-      Selects
-    } */}
-     <>
-          <div className="flex flex-col">
-            <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">Modalidad</p>
-            <label>Elige una modalidad</label>
-            <select onChange={(event: any) => handleSelect(event, "modality")}>
-              {
-                Options?.modalities?.map((mod: any) => <option selected={mod.active} value={mod.value}>{mod.text}</option>)
-              }
-            </select>
-            <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> 
+    <div className="flex flex-col">
+      <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">Modalidad</p>
+      <Select
+        onClick={(option: CustomEvent) => handleSelect(option, "modality")}
+        options={Options.modalities}
+        data={{ ...SelectInit, textDefault: `Elige una modalidad`, icon: "school" }}
+      />
+      <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> 
 
-          </div> 
-          <div className={cn("flex flex-col", { "hidden": controlsConfig?.campus?.hidden })}>
-            <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">{campusLabel || config?.campus}</p>
-            <label>{`Elige un ${campusLabel}`}</label>
-            <select onChange={(event: any) => handleSelect(event, "campus")}>
-              {
-                Options?.campuses?.map((camp: any) => <option selected={camp.active} value={camp.value}>{camp.text}</option>)
-              }
-            </select>
-            <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p> 
-          </div>
-        </>
+    </div> 
+    <div className={cn("flex flex-col", { "hidden": controlsConfig?.campus?.hidden })}>
+      <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">{campusLabel || config?.campus}</p>
+      <Select
+        onClick={(option: CustomEvent) => handleSelect(option, "campus")}
+        options={Options.campuses}
+        data={{ ...SelectInit, textDefault: `Elige un ${campusLabel}`, icon: "apartment" }}
+      />
+      <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p> 
+    </div>
 
   </>
 }

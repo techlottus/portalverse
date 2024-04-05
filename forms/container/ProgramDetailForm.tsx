@@ -300,15 +300,15 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     setAcademicData({
       ...academicData,
       modality: options?.modalities?.length === 1 ? options?.modalities[0].value : "",
-      level: prefilledData.level,
-      program: prefilledData.program,
+      level: filteredPrograms && filteredPrograms[0] ? filteredPrograms[0]?.nivel : '',
+      program: filteredPrograms && filteredPrograms[0] ? filteredPrograms[0]?.idOfertaPrograma : '',
       campus: options?.campuses?.length === 1 ? options?.campuses[0].value : "",
     })
     setAcademicDataTouched({
       ...academicDataTouched,
       'modality':  options?.modalities?.length === 1,
-      level: filteredPrograms?.filter((program: any) => program.idPrograma === prefilledData.program)[0]?.nivel,
-      program: filteredPrograms?.filter((program: any) => program.idPrograma === prefilledData.program)[0]?.idOfertaPrograma,
+      level: !filteredPrograms?.filter((program: any) => program.idPrograma === prefilledData.program)[0]?.nivel,
+      program: !filteredPrograms?.filter((program: any) => program.idPrograma === prefilledData.program)[0]?.idOfertaPrograma,
       'campus':  options?.campuses?.length === 1,
     })
   }, [prefilledData])
