@@ -44,7 +44,8 @@ const AcademicData: FC<any> = ({
   }, [options]);
   useEffect(() => {
     if (Options?.modalities?.length > 0 && Options?.campuses?.length > 0) {
-      setSelects(<>
+      setSelects(
+        <>
           <div className="flex flex-col">
             <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">Modalidad</p>
             <Select
@@ -52,6 +53,11 @@ const AcademicData: FC<any> = ({
               options={Options.modalities}
               data={{ ...SelectInit, textDefault: `Elige una modalidad`, icon: "school" }}
             />
+            <select onChange={(event: any) => handleSelect(event, "modality")}>
+              {
+                Options.modalities.map((mod: any) => <option selected={mod.active} value={mod.value}>{mod.text}</option>)
+              }
+            </select>
             <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> 
 
           </div> 
@@ -62,9 +68,15 @@ const AcademicData: FC<any> = ({
               options={Options.campuses}
               data={{ ...SelectInit, textDefault: `Elige un ${campusLabel}`, icon: "apartment" }}
             />
+            <select onChange={(event: any) => handleSelect(event, "campus")}>
+              {
+                Options.campuses.map((camp: any) => <option selected={camp.active} value={camp.value}>{camp.text}</option>)
+              }
+            </select>
             <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p> 
           </div>
-        </>)
+        </>
+      )
     }
   }, [Options]);
 
@@ -162,9 +174,32 @@ const AcademicData: FC<any> = ({
         value={academicData.level}
       />
     </div>
-    {
+    {/* {
       Selects
-    }
+    } */}
+     <>
+          <div className="flex flex-col">
+            <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">Modalidad</p>
+            <label>Elige una modalidad</label>
+            <select onChange={(event: any) => handleSelect(event, "modality")}>
+              {
+                Options.modalities.map((mod: any) => <option selected={mod.active} value={mod.value}>{mod.text}</option>)
+              }
+            </select>
+            <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> 
+
+          </div> 
+          <div className={cn("flex flex-col", { "hidden": controlsConfig?.campus?.hidden })}>
+            <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">{campusLabel || config?.campus}</p>
+            <label>{`Elige un ${campusLabel}`}</label>
+            <select onChange={(event: any) => handleSelect(event, "campus")}>
+              {
+                Options.campuses.map((camp: any) => <option selected={camp.active} value={camp.value}>{camp.text}</option>)
+              }
+            </select>
+            <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p> 
+          </div>
+        </>
 
   </>
 }
