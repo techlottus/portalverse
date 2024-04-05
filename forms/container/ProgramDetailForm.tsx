@@ -404,11 +404,11 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     const apellidoPaterno = personalData?.last_name;
     const telefono = personalData?.phone;
     const email = personalData?.email;
-    const lineaNegocio = selectedProgramData?.lineaNegocio || env.NEXT_PUBLIC_BUSINESS_UNIT;
+    const lineaNegocio = env.NEXT_PUBLIC_BUSINESS_UNIT;
     const modalidad = getLeadModality(academicData?.modality);
     const nivel = academicData?.level;
     const campus = academicData?.campus;
-    const programa = sourceData?.[academicData?.program]?.filter((campus: any) => campus.idCampus === academicData?.campus)[0].idPrograma;
+    const programa = academicData?.program;
     const validaRegistroBoot = setRegisterBot();
     const source = `portal${businessUnit}`;
     const canal = process.env.NEXT_PUBLIC_CANAL;
@@ -419,7 +419,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
     const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&telefono=${telefono}&email=${email}&lineaNegocio=${lineaNegocio}&modalidad=${modalidad}&nivel=${nivel}&campus=${campus}&programa=${programa}&avisoPrivacidad=true&leadSource=Digital&validaRegistroBoot=${validaRegistroBoot}&source=${source}&canal=${canal}${medio ? `&medio=${medio}` : ""}${campana ? `&campana=${campana}` : ""}`;
 
-    // console.log("params: ", params)
+    console.log("params: ", params)
 
     setIsLoading(true);
 
@@ -430,6 +430,8 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       }
     })
       .then((res: any) => {
+        console.log(res);
+        
         if(res?.data?.Exitoso !== "TRUE") {
           throw new Error();
         }
