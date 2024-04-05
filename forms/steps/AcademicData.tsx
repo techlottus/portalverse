@@ -43,6 +43,8 @@ const AcademicData: FC<any> = ({
     setOptions(options);
   }, [options]);
   useEffect(() => {
+    console.log('Options: ', Options);
+    
     if (Options?.modalities?.length > 0 && Options?.campuses?.length > 0) {
       setSelects(
         <>
