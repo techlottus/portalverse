@@ -277,6 +277,9 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [SFcampuses, SFmodalities])
   useEffect(() => {
     if (options) {
+      console.log(options);
+      console.log(options?.modalities[0].value);
+      console.log(options?.campuses[0].value);
       
       setIsLoading(false)
       setAcademicData({
