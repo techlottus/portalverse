@@ -71,7 +71,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   const [controlsConfig, setControlsConfig] = useState({ ...FormConfig });
   const [tokenActive, setTokenActive] = useState<string>("");
-  const [levelsOffer, setLevelsOffer] = useState<any>([]);
+  const [ filteredModalities, setFilteredModalities ] = useState<any>([]);
   const [filteredPrograms, setFilteredPrograms] = useState<any>([]);
   const [filteredCampus, setFilteredCampus] = useState<any>([]);
   const [ SFmodalities, setSFmodalities ] = useState<any>([]);
@@ -305,6 +305,26 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   useEffect(() => {
     Validate()
   }, [personalData, academicData]);
+  useEffect(() => {
+      const modalititesByProgram = filteredPrograms?.filter((program: any) => {
+        console.log('program.modalidad: ', program.modalidad);
+        // console.log('value: ', value);
+        
+        return program.modalidad === academicData.modality 
+      })
+      console.log('modalititesByProgram: ', modalititesByProgram);
+      setFilteredModalities(modalititesByProgram)
+
+
+      const campusByProgram = filteredPrograms?.filter((program: any) => {
+        console.log('program.plantel: ', program.plantel);
+        // console.log('value: ', value);
+        return program.idCampus === academicData.campus
+      })
+      console.log('campusByProgram: ', campusByProgram);
+      setFilteredCampus(campusByProgram)
+
+  }, [academicData]);
 
 
   useEffect(() => {
@@ -314,12 +334,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       setTokenActive(`${token.token_type} ${token.access_token}`);
     }
   }, [isLoadingToken, isErrorToken, token]);
-
-  useEffect(() => {
-    if (!isLoadingEO && !isErrorEO) {
-      setLevelsOffer(Object.entries(educativeOfferData).map(([_, level]: any) => level))
-    }
-  }, [isLoadingEO, isErrorEO, educativeOfferData]);
 
   useEffect(() => {
     setStatus({ loading: isLoading, error: isError, valid: isValid, success: isSuccess })
@@ -341,25 +355,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }).includes(false)
 
   const validateAcademicDataControl = (control: string, value: string) => {
-    if (control === "modality") {
-      const offerByProgram = filteredPrograms?.filter((program: any) => {
-        console.log('program.modalidad: ', program.modalidad);
-        console.log('value: ', value);
-        
-        return program.modalidad === value
-      })
-      console.log('offerByProgram: ', offerByProgram);
-      setFilteredPrograms(offerByProgram)
-    }
-    if (control === 'campus') {
-      const offerByProgram = filteredPrograms?.filter((program: any) => {
-        console.log('program.plantel: ', program.plantel);
-        console.log('value: ', value);
-        return program.plantel === value
-      })
-      console.log('offerByProgram: ', offerByProgram);
-      setFilteredPrograms(offerByProgram)
-    }
     return !!value?.trim();
   };
 
