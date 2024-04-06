@@ -71,9 +71,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   const [controlsConfig, setControlsConfig] = useState({ ...FormConfig });
   const [tokenActive, setTokenActive] = useState<string>("");
-  const [ filteredModalities, setFilteredModalities ] = useState<any>([]);
   const [filteredPrograms, setFilteredPrograms] = useState<any>([]);
-  const [filteredCampus, setFilteredCampus] = useState<any>([]);
   const [ SFmodalities, setSFmodalities ] = useState<any>([]);
   const [ SFcampuses, setSFcampuses ] = useState<any>([]);
   const [ options, setOptions ] = useState<any>(null);
@@ -313,7 +311,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         return program.modalidad === academicData.modality 
       })
       console.log('modalititesByProgram: ', modalititesByProgram);
-      setFilteredModalities(modalititesByProgram)
+      setSFmodalities(modalititesByProgram)
 
 
       const campusByProgram = filteredPrograms?.filter((program: any) => {
@@ -322,7 +320,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         return program.idCampus === academicData.campus
       })
       console.log('campusByProgram: ', campusByProgram);
-      setFilteredCampus(campusByProgram)
+      setSFcampuses(campusByProgram)
 
   }, [academicData]);
 
@@ -366,7 +364,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   const handleFetchEducativeOffer = () => {
     setIsLoading(true)
     setFilteredPrograms([]);
-    setFilteredCampus([]);
+    // setFilteredCampus([]);
     const businessLineToFetchFrom = getBusinessLineToFetchFrom(businessUnit, '');
     fetchEducativeOffer(process.env.NEXT_PUBLIC_EDUCATIVE_OFFER!, '', businessLineToFetchFrom, tokenActive);
   }
