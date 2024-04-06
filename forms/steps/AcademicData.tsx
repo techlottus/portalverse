@@ -49,9 +49,9 @@ const AcademicData: FC<any> = ({
     setErrorControls({ ...errorControls, [control]: !validateControl(control, value, infoControlsTouched[control]) });
   };
   const handleSelect = (e: CustomEvent, control: string) => {
-    // console.log('e: ', e);
+    console.log('e: ', e);
     const { detail } = e;
-    // console.log('detail: ', detail);
+    console.log('detail: ', detail);
     if (control === 'campus') {
       
       const option = Options?.campuses?.map((option: any) => {
