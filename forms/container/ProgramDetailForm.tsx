@@ -361,7 +361,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   useEffect(() => {
     if (!!selectedProgram) {
-      setAcademicData({...academicData, program: selectedProgram?.idPrograma})
+      setAcademicData({...academicData, program: selectedProgram?.idOfertaPrograma})
     }
   }, [selectedProgram]);
   useEffect(() => {
