@@ -304,25 +304,29 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     Validate()
   }, [personalData, academicData]);
   useEffect(() => {
-      const modalititesByProgram = filteredPrograms?.filter((program: any) => {
+      const programsByModality = filteredPrograms?.filter((program: any) => {
         console.log('program.modalidad: ', program.modalidad);
-        // console.log('value: ', value);
+        console.log('academicData.modality: ', academicData.modality);
         
         return program.modalidad === academicData.modality 
       })
-      console.log('modalititesByProgram: ', modalititesByProgram);
-      setSFmodalities(modalititesByProgram)
+      console.log('programsByModality: ', programsByModality);
 
+      setFilteredPrograms(programsByModality)
 
-      const campusByProgram = filteredPrograms?.filter((program: any) => {
-        console.log('program.plantel: ', program.plantel);
-        // console.log('value: ', value);
+  }, [academicData.modality]);
+  useEffect(() => {
+      const programsByCampus = filteredPrograms?.filter((program: any) => {
+        console.log('program.idCampus: ', program.idCampus);
+        console.log('academicData.campus: ', academicData.campus);
         return program.idCampus === academicData.campus
       })
-      console.log('campusByProgram: ', campusByProgram);
-      setSFcampuses(campusByProgram)
+      // console.log('campusByProgram: ', campusByProgram);
+      // setSFprograms(campusByProgram)
+      setFilteredPrograms(programsByCampus)
 
-  }, [academicData]);
+  }, [academicData.campus]);
+
 
 
   useEffect(() => {

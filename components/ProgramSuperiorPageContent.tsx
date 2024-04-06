@@ -20,8 +20,6 @@ import Container from "@/layouts/Container.layout";
 import type { DynamicProgramDetailData } from "@/utils/pages";
 import type { ProgramDetailSuperiorData } from "@/utils/getProgramDetailSuperior";
 import ContainerForm from "./sections/ContainerForm";
-import { getTokenForms } from "@/utils/getTokenForms";
-import { getEducativeOffer } from "@/utils/getEducativeOffer";
 
 type SelectItem = {
   value: string;
@@ -84,16 +82,6 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
 
   //bandera para habilitar botón de descarga hasta que se seleccione un campus
   const isOptionSelected = !!selectedOption
-
-  const [ tokenActive, setTokenActive ] = useState<string>("");
-  const [ levelsOffer, setLevelsOffer ] = useState<any>([]);
-  const [ filteredPrograms, setFilteredPrograms ] = useState<any>([]);
-  const [ filteredCampus, setFilteredCampus ] = useState<any>([]);
-  const [ SFmodalities, setSFmodalities ] = useState<any>([]);
-  const [ SFcampuses, setSFcampuses ] = useState<any>([]);
-  const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
-
-  // .filter(program => program.idPrograma === SFprogram)[0]
  
 
 
