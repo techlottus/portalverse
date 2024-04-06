@@ -233,7 +233,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [filterPrograms])
 
   useEffect(() => {
-    // console.log('filterPrograms: ', filterPrograms);
+    console.log('filteredPrograms: ', filteredPrograms);
     const mods = filterByField(filteredPrograms, 'modalidad')
     // console.log('mods: ', mods);
     setSFmodalities(mods?.map((mod: string) => {
