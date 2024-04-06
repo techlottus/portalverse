@@ -321,7 +321,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         console.log('academicData.campus: ', academicData.campus);
         return program.idCampus === academicData.campus
       })
-      // console.log('campusByProgram: ', campusByProgram);
+      console.log('programsByCampus: ', programsByCampus);
       // setSFprograms(campusByProgram)
       setFilteredPrograms(programsByCampus)
 
