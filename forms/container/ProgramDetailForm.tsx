@@ -100,7 +100,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   const [academicData, setAcademicData] = useState({
     modality: "",
     level: "",
-    program: selectedProgram,
+    program: selectedProgram?.idPrograma || "",
     campus: "",
   });
 
@@ -306,29 +306,32 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     Validate()
   }, [personalData, academicData]);
   useEffect(() => {
-    console.log('academicData.modality: ', academicData.modality);
-    
-      // setFilteredPrograms(programsByModality)
-    const programsByModality = filteredPrograms?.filter((program: any) => {
-      console.log('program.modalidad: ', program.modalidad);
+    if (academicData.modality) {
+      
       console.log('academicData.modality: ', academicData.modality);
       
-      return program.modalidad === academicData.modality 
-    })
-    console.log('programsByModality: ', programsByModality);
-    const camps = filterByField(programsByModality,'nombreCampus', ['nombreCampus', 'idCampus'])
-    console.log('camps: ', camps);
-    setSFcampuses(camps?.map((campus: any) => ({
-      value: campus?.idCampus,
-      text: campus?.nombreCampus,
-      active: camps?.length === 1 || campus.idCampus === academicData.campus
-    })))
+        // setFilteredPrograms(programsByModality)
+      const programsByModality = filteredPrograms?.filter((program: any) => {
+        console.log('program.modalidad: ', program.modalidad);
+        console.log('academicData.modality: ', academicData.modality);
+        
+        return program.modalidad === academicData.modality 
+      })
+      console.log('programsByModality: ', programsByModality);
+      const camps = filterByField(programsByModality,'nombreCampus', ['nombreCampus', 'idCampus'])
+      console.log('camps: ', camps);
+      setSFcampuses(camps?.map((campus: any) => ({
+        value: campus?.idCampus,
+        text: campus?.nombreCampus,
+        active: camps?.length === 1 || campus.idCampus === academicData.campus
+      })))
+    }
 
   }, [academicData.modality]);
 
   useEffect(() => {
     console.log('academicData.campus: ', academicData.campus);
-
+    if (academicData.campus) {
       const programsByModality = filteredPrograms?.filter((program: any) => {
         console.log('program.modalidad: ', program.modalidad);
         console.log('academicData.modality: ', academicData.modality);
@@ -348,6 +351,8 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       // setAcademicData({...academicData, program: selectedProgramData?.idPrograma})
 
       setselectedProgram(selectedProgramData)
+    }
+
   }, [academicData.campus]);
 
   useEffect(() => {
