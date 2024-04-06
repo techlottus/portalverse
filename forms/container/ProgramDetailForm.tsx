@@ -348,14 +348,16 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         
         return program.modalidad === value
       })
-      // console.log('offerByProgram: ', offerByProgram);
+      console.log('offerByProgram: ', offerByProgram);
       setFilteredPrograms(offerByProgram)
     }
     if (control === 'campus') {
       const offerByProgram = filteredPrograms?.filter((program: any) => {
+        console.log('program.plantel: ', program.plantel);
+        console.log('value: ', value);
         return program.plantel === value
       })
-      // console.log('offerByProgram: ', offerByProgram);
+      console.log('offerByProgram: ', offerByProgram);
       setFilteredPrograms(offerByProgram)
     }
     return !!value?.trim();
