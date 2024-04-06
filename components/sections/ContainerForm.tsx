@@ -141,7 +141,13 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
                             isExpand: false,
                             disabled: !isValid
                           }}
-                          onClick={() => setSubmit(true)}
+                          onClick={() => {
+                            setSubmit(true);
+                            setTimeout(() => {
+                            
+                              setSubmit(false)
+                            }, 100);
+                          }}
                         />
                       </div>
                     }
