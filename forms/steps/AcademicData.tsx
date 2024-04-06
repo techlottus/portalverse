@@ -89,7 +89,7 @@ const AcademicData: FC<any> = ({
   }
 
   return <>
-    <div className="grow mt-6 hidden">
+    <div className="grow mt-2 hidden">
       <Input
         eventFocus={() => handleTouchedControl("program")}
         data={configControls.inputProgram}
@@ -97,7 +97,7 @@ const AcademicData: FC<any> = ({
         value={academicData.program}
       />
     </div>
-    <div className="grow mt-6 hidden">
+    <div className="grow mt-2 hidden">
       <Input
         eventFocus={() => handleTouchedControl("level")}
         data={configControls.inputNameProgramDetail}
@@ -106,7 +106,7 @@ const AcademicData: FC<any> = ({
       />
     </div>
     <div className="flex flex-col">
-      <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">Modalidad</p>
+      <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-2 capitalize">Modalidad</p>
       <Select
         onClick={(option: CustomEvent) => handleSelect(option, "modality")}
         options={Options?.modalities || []}
@@ -116,7 +116,7 @@ const AcademicData: FC<any> = ({
 
     </div> 
     <div className="flex flex-col">
-      <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">{campusLabel || config?.campus}</p>
+      <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-2 capitalize">{campusLabel || config?.campus}</p>
       <Select
         onClick={(option: CustomEvent) => handleSelect(option, "campus")}
         options={Options?.campuses || []}
