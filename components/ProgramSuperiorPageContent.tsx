@@ -176,40 +176,6 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           }
         </div>
       </ContentLayout>
-      <ContainerForm
-        type="ComponentSectionsFormContainer"
-        title="titulo"
-        description=""
-        form="Detalle_de_programa"
-        progress={0}
-        position="right"
-        width="w_4_12"
-        extraText=""
-        errors={ [{
-          type: 'ComponentSectionsWebError',
-          title: '',
-          message: '',
-          errorCode: '',
-          button: {
-            text: 'string;',
-            size: '',
-            isBold: false,
-            disabled: false,
-            href: `/oferta-academica/licenciatura/${program.attributes.slug}`,
-
-          }
-        }]}
-        prefilledData={{
-          program: SFprogram
-        }}
-        button={{
-          label: 'Enviar',
-          size: '',
-          variant: 'primary',
-          CTA: 'submit',
-          iconName: 'send'
-        }}
-      ></ContainerForm>
       {/* <ProgramDetailForm></ProgramDetailForm> */}
       {/* <ContentFullLayout classNames="w-d:hidden w-t:hidden mb-10 mt-6">
         <div className="w-d:hidden w-t:hidden col-span-4 mb-10 mt-6">
@@ -278,6 +244,43 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           </div>
         </div>
       </ContentLayout>
+      <div className="mt-16">
+
+        <ContainerForm
+          type="ComponentSectionsFormContainer"
+          title="titulo"
+          description=""
+          form="Detalle_de_programa"
+          progress={0}
+          position="center"
+          width="w_6_12"
+          extraText=""
+          errors={ [{
+            type: 'ComponentSectionsWebError',
+            title: '',
+            message: '',
+            errorCode: '',
+            button: {
+              text: 'string;',
+              size: '',
+              isBold: false,
+              disabled: false,
+              href: `/oferta-academica/licenciatura/${program.attributes.slug}`,
+
+            }
+          }]}
+          prefilledData={{
+            program: SFprogram
+          }}
+          button={{
+            label: 'Enviar',
+            size: '',
+            variant: 'primary',
+            CTA: 'submit',
+            iconName: 'send'
+          }}
+        ></ContainerForm>
+      </div>
       {
         bannerData?.desktopImage ?
           <div className="order-last col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6 w-d:mt-18">
