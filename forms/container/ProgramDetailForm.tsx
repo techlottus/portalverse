@@ -69,7 +69,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   const [isValid, setIsValid] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const [controlsConfig, setControlsConfig] = useState({ ...FormConfig });
+  const [selectedProgram, setselectedProgram] = useState<any>();
   const [tokenActive, setTokenActive] = useState<string>("");
   const [filteredPrograms, setFilteredPrograms] = useState<any>([]);
   const [ SFmodalities, setSFmodalities ] = useState<any>([]);
@@ -323,11 +323,15 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       })
       console.log('programsByCampus: ', programsByCampus);
       // setSFprograms(campusByProgram)
-      setFilteredPrograms(programsByCampus)
+      // setFilteredPrograms(programsByCampus)
+      
+      const selectedProgramData = programsByCampus.sort((a: any,b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[filteredPrograms.length - 1];
+      setAcademicData({...academicData, program: selectedProgram.idPrograma})
+
+      setselectedProgram(selectedProgramData)
+
 
   }, [academicData.campus]);
-
-
 
   useEffect(() => {
     
@@ -378,14 +382,14 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     const endpoint = process.env.NEXT_PUBLIC_CAPTACION_PROSPECTO;
   console.log('filteredPrograms: ',  filteredPrograms);
   
-    const selectedProgramData = filteredPrograms[0];
+  console.log('selectedProgram: ',  selectedProgram);
 
     // query params
     const nombre = personalData?.name;
     const apellidoPaterno = personalData?.last_name;
     const telefono = personalData?.phone;
     const email = personalData?.email;
-    const lineaNegocio = selectedProgramData?.lineaNegocio || env.NEXT_PUBLIC_BUSINESS_UNIT;
+    const lineaNegocio = selectedProgram?.lineaNegocio || env.NEXT_PUBLIC_BUSINESS_UNIT;
     const modalidad = getLeadModality(academicData?.modality);
     const nivel = academicData?.level;
     const campus = academicData?.campus;
