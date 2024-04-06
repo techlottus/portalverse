@@ -326,7 +326,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       // setFilteredPrograms(programsByCampus)
       
       const selectedProgramData = programsByCampus.sort((a: any,b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[programsByCampus.length - 1];
-      setAcademicData({...academicData, program: selectedProgramData.idPrograma})
+      setAcademicData({...academicData, program: selectedProgramData?.idPrograma})
 
       setselectedProgram(selectedProgramData)
 
