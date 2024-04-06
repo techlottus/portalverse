@@ -127,11 +127,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   const {
     fetchData: fetchEducativeOffer,
-    filterByLevel,
-    filterByProgram,
-    data: educativeOfferData,
-    isLoading: isLoadingEO,
-    isError: isErrorEO,
     filterPrograms
   } = getEducativeOffer();
 
@@ -255,14 +250,22 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   useEffect(() => {
     // console.log('SFcampuses: ', SFcampuses);
-    if (SFcampuses?.length > 0 && SFmodalities?.length > 0) {
+    if (SFmodalities?.length > 0) {
       setOptions({
-        modalities: SFmodalities,
+        modalities: SFmodalities
+      })
+    }
+      
+  }, [SFmodalities])
+  useEffect(() => {
+    // console.log('SFcampuses: ', SFcampuses);
+    if (SFcampuses?.length > 0) {
+      setOptions({
         campuses: SFcampuses
       })
     }
       
-  }, [SFcampuses, SFmodalities])
+  }, [SFcampuses])
   useEffect(() => {
     if (options && (options?.modalities && options?.campuses) && (options?.modalities[0] && options?.campuses[0])) {
       // console.log(options);
@@ -274,7 +277,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         ...academicData,
         modality: options?.modalities?.length === 1 ? options?.modalities[0].value : "",
         level: filteredPrograms && filteredPrograms[0] ? filteredPrograms[0]?.nivel : '',
-        program: '',
         campus: options?.campuses?.length === 1 ? options?.campuses[0].value : "",
       })
       setAcademicDataTouched({
@@ -304,17 +306,18 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     Validate()
   }, [personalData, academicData]);
   useEffect(() => {
-
+    console.log('academicData.modality: ', academicData.modality);
+    
       // setFilteredPrograms(programsByModality)
-      const programsByModality = filteredPrograms?.filter((program: any) => {
-        console.log('program.modalidad: ', program.modalidad);
-        console.log('academicData.modality: ', academicData.modality);
-        
-        return program.modalidad === academicData.modality 
-      })
-      console.log('programsByModality: ', programsByModality);
-      const camps = filterByField(programsByModality,'nombreCampus', ['nombreCampus', 'idCampus'])
-    // console.log('camps: ', camps);
+    const programsByModality = filteredPrograms?.filter((program: any) => {
+      console.log('program.modalidad: ', program.modalidad);
+      console.log('academicData.modality: ', academicData.modality);
+      
+      return program.modalidad === academicData.modality 
+    })
+    console.log('programsByModality: ', programsByModality);
+    const camps = filterByField(programsByModality,'nombreCampus', ['nombreCampus', 'idCampus'])
+    console.log('camps: ', camps);
     setSFcampuses(camps?.map((campus: any) => ({
       value: campus?.idCampus,
       text: campus?.nombreCampus,
@@ -322,7 +325,10 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     })))
 
   }, [academicData.modality]);
+
   useEffect(() => {
+    console.log('academicData.campus: ', academicData.campus);
+
       const programsByModality = filteredPrograms?.filter((program: any) => {
         console.log('program.modalidad: ', program.modalidad);
         console.log('academicData.modality: ', academicData.modality);
@@ -342,8 +348,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       // setAcademicData({...academicData, program: selectedProgramData?.idPrograma})
 
       setselectedProgram(selectedProgramData)
-
-
   }, [academicData.campus]);
 
   useEffect(() => {
@@ -393,9 +397,9 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   const sendLeadData = async () => {
     const endpoint = process.env.NEXT_PUBLIC_CAPTACION_PROSPECTO;
-  console.log('filteredPrograms: ',  filteredPrograms);
-  
-  console.log('selectedProgram: ',  selectedProgram);
+    console.log('filteredPrograms: ',  filteredPrograms);
+    
+    console.log('selectedProgram: ',  selectedProgram);
 
     // query params
     const nombre = personalData?.name;
