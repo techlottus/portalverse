@@ -343,6 +343,9 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   const validateAcademicDataControl = (control: string, value: string) => {
     if (control === "modality") {
       const offerByProgram = filteredPrograms?.filter((program: any) => {
+        console.log('program.modalidad: ', program.modalidad);
+        console.log('value: ', value);
+        
         return program.modalidad === value
       })
       // console.log('offerByProgram: ', offerByProgram);
