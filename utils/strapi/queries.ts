@@ -40,6 +40,7 @@ import { ROCKSTARINFO_LIST } from "@/utils/strapi/sections/RockstarInfloList";
 import { RVOE_ACCORDION_CONTENT } from "./sections/RvoeAccordionList";
 import { STATISTICS_CARD_LIST } from "@/utils/strapi/sections/StatisticsCardList";
 import { TEXT_CONTENT } from "@/utils/strapi/sections/TextContent";
+import { TEXT_FORM } from "@/utils/strapi/sections/TextForm";
 import { VIDEOS_SECTION } from "@/utils/strapi/sections/Videos";
 import type { AccordionSection } from "@/utils/strapi/sections/Accordion";
 import type { AlertSection } from "@/utils/strapi/sections/Alert";
@@ -82,6 +83,7 @@ import type { RockstarInfoListSection } from "@/utils/strapi/sections/RockstarIn
 import type { RvoeAccordionListData } from "./sections/RvoeAccordionList";
 import type { StatisticsCardListSection } from "@/utils/strapi/sections/StatisticsCardList";
 import type { TextContentSection } from "@/utils/strapi/sections/TextContent";
+import type { TextFormSection } from "@/utils/strapi/sections/TextForm";
 import type { VideosSectionData } from "@/utils/strapi/sections/Videos";
 
 export type ComponentSection =
@@ -125,6 +127,7 @@ export type ComponentSection =
   | RvoeAccordionListData
   | StatisticsCardListSection
   | TextContentSection
+  | TextFormSection
   | VideosSectionData
   | CarouselSection
 
@@ -170,6 +173,7 @@ export type ComponentSection =
   ${RVOE_ACCORDION_CONTENT}
   ${STATISTICS_CARD_LIST}
   ${TEXT_CONTENT}
+  ${TEXT_FORM}
   ${VIDEOS_SECTION}
   ${CAROUSEL_SECTION}
   `;

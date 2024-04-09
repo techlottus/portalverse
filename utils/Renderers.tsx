@@ -43,6 +43,7 @@ import RockstarInfoList from "@/components/sections/RockstarInfoList";
 import RvoeAccordionList from "@/components/sections/RvoeAccordionList";
 import StatisticsCardList from "@/components/sections/StatisticsCardList";
 import TextContent from "@/components/sections/TextContent";
+import TextForm from "@/components/sections/TextForm";
 import VideosSection from "@/components/sections/VideosSection";
 import WebError from "@/components/sections/WebError";
 import type { FC } from "react";
@@ -100,7 +101,8 @@ const defaultRenderers: Renderer = {
   ComponentSectionsTextContent: TextContent,
   ComponentSectionsVideos: VideosSection,
   ComponentSectionsWebError: WebError,
-  ComponentSectionsCarousel: Carousel
+  ComponentSectionsCarousel: Carousel,
+  ComponentSectionsContainerTextForm: TextForm
 };
 
 export default defaultRenderers;
