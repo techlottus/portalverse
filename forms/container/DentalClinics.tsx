@@ -4,23 +4,23 @@ import PersonalData from "@/forms/steps/PersonalData"
 import DentalAppointment from "@/forms/steps/DentalAppointment"
 import axios from "axios";
 
-type OpenFormConfig = {
-  title: string;
-  subtitle: string;
-  conditions: string;
-  privacyLink: { link: string; label: string };
-};
 
 type DentalClinics = {
   setStatus: (status:{ loading: boolean, error: string, valid: boolean, success: boolean }) => void
   submit: boolean
-  data?: any;
-  config?: OpenFormConfig
+  prefilledData?: {
+    name: string;
+    last_name: string;
+    phone: string;
+    email: string;
+    reason: string;
+    campus: string;
+  };
 }
 
 const DentalClinics = (props: DentalClinics) => {
   
-  const { config, data, setStatus, submit } = props
+  const { setStatus, submit } = props
 
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState('');
@@ -173,8 +173,6 @@ const DentalClinics = (props: DentalClinics) => {
       <PersonalData
         personalData={personalData}
         setPersonalData={setPersonalData}
-        config={config}
-        data={data}
         infoControlsTouched={personalDataTouched}
         setInfoControlsTouched={setPersonalDataTouched}
         errorControls={personalDataErrors}
@@ -182,15 +180,13 @@ const DentalClinics = (props: DentalClinics) => {
         validateControl={validatePersonalDataControl}
       ></PersonalData>
       <DentalAppointment
-          appointmentData={appointmentData}
-          setAppointmentData={setAppointmentData}
-          config={config}
-          data={data}
-          validateControl={validateAppointmentDataControl}
-          infoControlsTouched={appointmentDataTouched}
-          setInfoControlsTouched={setAppointmentDataTouched}
-          errorControls={appointmentDataErrors}
-          setErrorControls={setAppointmentDataErrors}
+        appointmentData={appointmentData}
+        setAppointmentData={setAppointmentData}
+        validateControl={validateAppointmentDataControl}
+        infoControlsTouched={appointmentDataTouched}
+        setInfoControlsTouched={setAppointmentDataTouched}
+        errorControls={appointmentDataErrors}
+        setErrorControls={setAppointmentDataErrors}
       ></DentalAppointment>
     </form>
   )
