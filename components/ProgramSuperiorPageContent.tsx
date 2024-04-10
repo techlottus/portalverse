@@ -246,40 +246,42 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
       </ContentLayout>
       <div className="mt-16">
 
-        <ContainerForm
-          type="ComponentSectionsFormContainer"
-          title="titulo"
-          description=""
-          form="Detalle_de_programa"
-          progress={0}
-          position="center"
-          width="w_6_12"
-          extraText=""
-          errors={ [{
-            type: 'ComponentSectionsWebError',
-            title: '',
-            message: '',
-            errorCode: '',
-            button: {
-              text: 'string;',
-              size: '',
-              isBold: false,
-              disabled: false,
-              href: `/oferta-academica/licenciatura/${program.attributes.slug}`,
+        {
+          !!SFprogram && <ContainerForm
+            type="ComponentSectionsFormContainer"
+            title="titulo"
+            description=""
+            form="Detalle_de_programa"
+            progress={0}
+            position="center"
+            width="w_6_12"
+            extraText=""
+            errors={ [{
+              type: 'ComponentSectionsWebError',
+              title: '',
+              message: '',
+              errorCode: '',
+              button: {
+                text: 'string;',
+                size: '',
+                isBold: false,
+                disabled: false,
+                href: `/oferta-academica/licenciatura/${program.attributes.slug}`,
 
-            }
-          }]}
-          prefilledData={{
-            program: SFprogram
-          }}
-          button={{
-            label: 'Enviar',
-            size: '',
-            variant: 'primary',
-            CTA: 'submit',
-            iconName: 'send'
-          }}
-        ></ContainerForm>
+              }
+            }]}
+            prefilledData={{
+              program: SFprogram
+            }}
+            button={{
+              label: 'Enviar',
+              size: '',
+              variant: 'primary',
+              CTA: 'submit',
+              iconName: 'send'
+            }}
+          />
+        }
       </div>
       {
         bannerData?.desktopImage ?
@@ -298,7 +300,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                   const programAttributes = relatedProgram?.attributes;
                   const image = relatedProgram?.attributes?.image;
                   const programLevelName = relatedProgram?.attributes?.level?.data?.attributes?.title;
-                  const levelRoute = routesConfig?.educationalLevels?.find(educationalLevel => educationalLevel?.name === programLevelName)?.path;
+                  const levelRoute = (routesConfig as any)?.educationalLevels?.find((educationalLevel: any) => educationalLevel?.name === programLevelName)?.path;
 
                   return (
                     <div
