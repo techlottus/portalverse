@@ -249,13 +249,19 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         {
           !!SFprogram && <ContainerForm
             type="ComponentSectionsFormContainer"
-            title="titulo"
-            description=""
+            title={`Obtén más información sobre el curso de ${program.attributes.name}`}
+            description="Queremos acompañarte en tu elección. Comparte tus datos para que un asesor de admisiones pueda responder a todas tus preguntas."
             form="Detalle_de_programa"
             progress={0}
             position="center"
             width="w_6_12"
             extraText=""
+            privacyPolicy={{
+              text:'Al llenar tus datos aceptas nuestro ',
+              linkText: 'Aviso de privacidad',
+              file: null,
+              href: '/aviso-privacidad'
+            }}
             errors={ [{
               type: 'ComponentSectionsWebError',
               title: '',
@@ -267,7 +273,6 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                 isBold: false,
                 disabled: false,
                 href: `/oferta-academica/licenciatura/${program.attributes.slug}`,
-
               }
             }]}
             prefilledData={{
