@@ -3,7 +3,8 @@ import { WebErrorSection } from "./WebError";
 type privacyPolicy = {
   text: string;
   linkText: string;
-  file: any
+  file: any;
+  href?: string;
 }
 export type ContainerForm = {
   type: 'ComponentSectionsFormContainer'

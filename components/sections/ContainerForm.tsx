@@ -117,7 +117,7 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
                     {
                       !!privacyPolicy && <div className="flex align-middle items-center mt-8 mb-6">
                         <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">{privacyPolicy.text}</p>
-                        <Link href={privacyPolicy.file.data.attributes.url} passHref target={"_blank"}>
+                        <Link href={ privacyPolicy.file ? privacyPolicy.file.data.attributes.url : privacyPolicy.href } passHref target={"_blank"}>
                           <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">{privacyPolicy.linkText}</p>
                         </Link>
                       </div>
