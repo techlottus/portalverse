@@ -89,7 +89,8 @@ const AcademicData: FC<any> = ({
   }
 
   return <>
-    <div className="grow mt-2 hidden">
+    {/* <div className="grow mt-2 hidden"> */}
+    <div className="grow mt-2">
       <Input
         eventFocus={() => handleTouchedControl("program")}
         data={configControls.inputProgram}
@@ -97,7 +98,8 @@ const AcademicData: FC<any> = ({
         value={academicData.program}
       />
     </div>
-    <div className="grow mt-2 hidden">
+    {/* <div className="grow mt-2 hidden"> */}
+    <div className="grow mt-2">
       <Input
         eventFocus={() => handleTouchedControl("level")}
         data={configControls.inputNameProgramDetail}
