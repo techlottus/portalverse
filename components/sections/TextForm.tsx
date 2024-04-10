@@ -75,7 +75,7 @@ const TextForm: React.FC<TextFormSection> = (props: TextFormSection) => {
         // console.log('accent: ', accent);
         const splitTitle = base.split(accent)
         // console.log('splitTitle: ', splitTitle);
-        acc = `${ splitTitle[0] }<span class="text-primary-500">${accent} </span>${ splitTitle[1] }`
+        acc = `${ splitTitle[0] }<span class="text-primary-500">${accent}</span>${ splitTitle[1] }`
         return acc
       }, '')
 
