@@ -248,7 +248,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                   const programAttributes = relatedProgram?.attributes;
                   const image = relatedProgram?.attributes?.image;
                   const programLevelName = relatedProgram?.attributes?.level?.data?.attributes?.title;
-                  const levelRoute = routesConfig?.educationalLevels?.find(educationalLevel => educationalLevel?.name === programLevelName)?.path;
+                  const levelRoute = (routesConfig as any)?.educationalLevels?.find((educationalLevel: any) => educationalLevel?.name === programLevelName)?.path;
 
                   return (
                     <div
