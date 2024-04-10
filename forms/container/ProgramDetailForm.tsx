@@ -122,7 +122,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     setIsLoading(true)
   }, [])
   useEffect(() => {
-    console.log('submit: ', submit);
+    // console.log('submit: ', submit);
     
     if (submit) handleSubmit()
   }, [submit]);
@@ -306,7 +306,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [prefilledData])
 
   useEffect(() => {
-    console.log('academicData: ', academicData);
+    // console.log('academicData: ', academicData);
     
     Validate()
   }, [personalData, academicData]);
@@ -334,8 +334,8 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     if (!!academicData.campus) {
       // console.log('academicData.campus: ', academicData.campus);
       // const programsByModality = filteredPrograms?.filter((program: any) => {
-      //   console.log('program.modalidad: ', program.modalidad);
-      //   console.log('academicData.modality: ', academicData.modality);
+      // console.log('program.modalidad: ', program.modalidad);
+      // console.log('academicData.modality: ', academicData.modality);
         
       //   return program.modalidad === academicData.modality 
       // })
@@ -492,9 +492,9 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   const handleSubmit = async () => {
     setIsLoading(true)
     Validate()
-    console.log('isValid: ', isValid);
-    console.log('!isError: ', !isError);
-    console.log('isValid && !isError: ', isValid && !isError);
+    // console.log('isValid: ', isValid);
+    // console.log('!isError: ', !isError);
+    // console.log('isValid && !isError: ', isValid && !isError);
     
     if (isValid && !isError) {
       sendLeadData()
