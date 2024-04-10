@@ -228,7 +228,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [filterPrograms])
 
   useEffect(() => {
-    console.log('filteredPrograms: ', filteredPrograms);
+    // console.log('filteredPrograms: ', filteredPrograms);
     const mods = filterByField(filteredPrograms, 'modalidad')
     // console.log('mods: ', mods);
     setSFmodalities(mods?.map((mod: string) => {
@@ -404,8 +404,8 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     setIsLoading(true)
     setFilteredPrograms([]);
     // setFilteredCampus([]);
-    const businessLineToFetchFrom = getBusinessLineToFetchFrom(businessUnit, '');
-    fetchEducativeOffer(process.env.NEXT_PUBLIC_EDUCATIVE_OFFER!, '', businessLineToFetchFrom, tokenActive);
+    const businessLineToFetchFrom = getBusinessLineToFetchFrom(businessUnit, academicData.modality)
+    fetchEducativeOffer(process.env.NEXT_PUBLIC_EDUCATIVE_OFFER!, academicData.modality, businessLineToFetchFrom, tokenActive);
   }
 
 
