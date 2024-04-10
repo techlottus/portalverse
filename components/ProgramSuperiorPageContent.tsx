@@ -279,7 +279,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
               program: SFprogram
             }}
             button={{
-              label: 'Enviar',
+              label: 'Solicitar información',
               size: '',
               variant: 'primary',
               CTA: 'submit',
