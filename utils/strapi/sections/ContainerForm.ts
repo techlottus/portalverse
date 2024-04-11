@@ -3,17 +3,18 @@ import { WebErrorSection } from "./WebError";
 type privacyPolicy = {
   text: string;
   linkText: string;
-  file: any
+  file: any;
+  href?: string;
 }
 export type ContainerForm = {
   type: 'ComponentSectionsFormContainer'
   title: string;
-  description: string;
-  image: StrapiImage;
-  extraText: string;
+  description?: string;
+  image?: StrapiImage;
+  extraText?: string;
   form: string;
-  progress: number;
-  privacyPolicy : privacyPolicy
+  progress?: number;
+  privacyPolicy? : privacyPolicy
   button?: {
     label: string
     variant: string
@@ -21,9 +22,11 @@ export type ContainerForm = {
     CTA: string
     iconName: string
   }
-  errors: WebErrorSection[],
-  position: string;
-  width: string;
+  errors?: WebErrorSection[],
+  position?: string;
+  width?: string;
+  prefilledData?: any;
+  options?: any
 };
 
 export const FORM_CONTAINER = `
