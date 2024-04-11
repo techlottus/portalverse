@@ -29,7 +29,7 @@ type SelectItem = {
 
 const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const program = props?.program;
-  const SFprogram = program.attributes.salesforceId
+  const SFprogram = program.attributes.nombreProgramaSalesforce
   const layout = props?.layout as ProgramDetailSuperiorData;
   const title = program?.attributes?.name;
   const description = program?.attributes?.description;
