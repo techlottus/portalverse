@@ -7,8 +7,6 @@ import cn from "classnames"
 
 type SelectOptions ={ value: string, text: string, active: boolean }
 const DentalAppointment: FC<any> = ({
-  data,
-  config: stepOneConfig,
   appointmentData,
   setAppointmentData,
   infoControlsTouched,
@@ -25,13 +23,9 @@ const DentalAppointment: FC<any> = ({
 
   const [ dataCampus, setDataCampus ] = useState<Array<any>>([]);
 
-  const [ config, setConfig ] = useState<any>( stepOneConfig ? {...stepOneConfig} : {...OpenFormInit.stepone });
   useEffect(() => {
     setDataCampus([ ...selectOptions ]);
   }, [appointmentData.campus])
-  useEffect(() => {
-    setConfig({ ...config, ...data });
-  }, [data]);
 
   const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
   const campusLabel = BUSINESS_UNIT === "UTEG" || BUSINESS_UNIT === "UTC" ? "plantel" : "campus";

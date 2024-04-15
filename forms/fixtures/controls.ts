@@ -1,6 +1,6 @@
 import { ButtonInit, InputInit } from "@/old-components/fixture";
 
-const patternEmail =  /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z0-9]{2,4}$/i;
+const patternEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z0-9]{2,4}$/i;
 
 const inputConfig = {
   ...InputInit,
@@ -53,6 +53,21 @@ const inputNameOpenFormStepOne = {
   label: "Nombre(s)",
   test: "name",
   name: "name",
+};
+const inputNameProgramDetail = {
+  ...InputInit,
+  label: "Nivel",
+  test: "level",
+  name: "level",
+  disabled:true
+};
+const inputProgram = {
+  ...InputInit,
+  label: "Programa",
+  test: "program",
+  name: "program",
+  disabled:true
+
 };
 const inputSurnameOpenFormStepOne = {
   ...InputInit,
@@ -170,6 +185,8 @@ export default {
   inputCompanyConfig,
   buttonConfigStepTwo,
   inputNameOpenFormStepOne,
+  inputNameProgramDetail,
+  inputProgram,
   inputSurnameOpenFormStepOne,
   inputPhoneOpenFormStepOne,
   inputEmailOpenFormStepOne,
