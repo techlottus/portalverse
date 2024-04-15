@@ -115,7 +115,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     program: false,
     campus: false
   })
-
+  const ulaCampuses = ['Online', 'NORTE', 'VALLE']
   useEffect(() => {
     setIsLoading(true)
   }, [])
@@ -199,7 +199,14 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   useEffect(() => {
     const offerByProgram = filterPrograms?.filter((program: any) => {
-      return program.nombrePrograma === prefilledData.program
+      if (env.NEXT_PUBLIC_BUSINESS_UNIT === 'ULA') {
+        console.log('program.nombreCampus: ', program.nombreCampus);
+        console.log('ulaCampuses.includes(program.nombreCampus): ', ulaCampuses.includes(program.nombreCampus));
+        
+        return program.nombrePrograma === prefilledData.program && ulaCampuses.includes(program.nombreCampus)
+      } else {
+        return program.nombrePrograma === prefilledData.program
+      }
     })
     // console.log('offerByProgram: ', offerByProgram);
     setFilteredPrograms(offerByProgram)
@@ -279,7 +286,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   useEffect(() => {
       // console.log(options);
-    if (options && (options?.modalities && options?.campuses && options?.levels) && (options?.modalities[0] && options?.campuses[0] && options?.levels[0])) {
+    if (options && (options?.modalities && options?.campuses ) && (options?.modalities[0] && options?.campuses[0] )) {
       setIsLoading(false)
       // console.log(options?.modalities);
       // console.log(options?.campuses);
