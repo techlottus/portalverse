@@ -27,7 +27,7 @@ const AcademicData: FC<any> = ({
 
   const [config, setConfig] = useState<any>(stepOneConfig ? { ...stepOneConfig } : { ...OpenFormInit.stepone });
 
-  const [Options, setOptions] = useState<{campuses: [], modalities: []}>({campuses: [], modalities: []});
+  const [Options, setOptions] = useState<{campuses: [], modalities: [], levels: []}>({campuses: [], modalities: [], levels: []});
 
   useEffect(() => {
     setConfig({ ...config, ...data });
@@ -75,6 +75,18 @@ const AcademicData: FC<any> = ({
       
       // option.active = true
     }
+    if (control === 'level') {
+      
+      const option = Options?.levels?.map((option: any) => {
+        // console.log(option);
+        option.active = option.value === detail
+
+        return option
+      })
+      // console.log(option);
+      
+      // option.active = true
+    }
     // console.log('errorControls: ', errorControls);
     // console.log(`errorControls[${control}]: `, errorControls[control]);
     
@@ -106,11 +118,21 @@ const AcademicData: FC<any> = ({
       />
     </div>
     <div className="flex flex-col">
+      <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-2 capitalize">Nivel</p>
+      <Select
+        onClick={(option: CustomEvent) => handleSelect(option, "level")}
+        options={Options?.levels || []}
+        data={{ ...SelectInit, textDefault: `Elige un nivel`, icon: "" }}
+      />
+      <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> 
+
+    </div> 
+    <div className="flex flex-col">
       <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-2 capitalize">Modalidad</p>
       <Select
         onClick={(option: CustomEvent) => handleSelect(option, "modality")}
         options={Options?.modalities || []}
-        data={{ ...SelectInit, textDefault: `Elige una modalidad`, icon: "school" }}
+        data={{ ...SelectInit, textDefault: `Elige una modalidad`, icon: "school", disabled: !academicData.level }}
       />
       <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> 
 
