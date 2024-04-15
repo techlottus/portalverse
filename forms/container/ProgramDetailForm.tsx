@@ -263,6 +263,14 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         modalities: SFmodalities,
         levels: SFlevels
       })
+      setAcademicData({
+        ...academicData,
+        modality: SFmodalities?.length === 1 ? SFmodalities[0].value : academicData.modality
+      })
+      setAcademicDataTouched({
+        ...academicDataTouched,
+        modality: SFmodalities?.length === 1 || academicDataTouched.modality
+      })
       // console.log('options: ', options);
     }
       
@@ -277,6 +285,14 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         modalities: SFmodalities,
         levels: SFlevels
       })
+      setAcademicDataTouched({
+        ...academicDataTouched,
+        campus: SFcampuses?.length === 1 || academicDataTouched.campus
+      })
+      setAcademicData({
+        ...academicData,
+        campus: SFcampuses?.length === 1 ? SFcampuses[0].value : academicData.campus
+      })
     }
       
   }, [SFcampuses])
@@ -289,6 +305,14 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         campuses: SFcampuses,
         modalities: SFmodalities,
         levels: SFlevels
+      })
+      setAcademicData({
+        ...academicData,
+        level: SFlevels?.length === 1 ? SFlevels[0].value : academicData.level
+      })
+      setAcademicDataTouched({
+        ...academicDataTouched,
+        level: SFlevels?.length === 1 || academicDataTouched.level
       })
     }
       
