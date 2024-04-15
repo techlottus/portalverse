@@ -7,6 +7,7 @@ import { getEducativeOffer } from "@/utils/getEducativeOffer"
 import AcademicData from "@/forms/steps/AcademicData";
 import { setRegisterBot } from "@/utils/saveDataForms"
 import { useRouter } from "next/router";
+import { config } from "dotenv";
 import { env } from "process";
 
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
@@ -115,7 +116,14 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     program: false,
     campus: false
   })
-  const ulaCampuses = ['Online', 'NORTE', 'VALLE']
+  const ulaCampuses = [
+    'ONLINE',
+    'CUAUTITLÁN IZCALLI',
+    'CUERNAVACA',
+    'FLORIDA',
+    'NORTE',
+    'VALLE',
+  ]
   useEffect(() => {
     setIsLoading(true)
   }, [])
@@ -198,12 +206,14 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [tokenActive])
 
   useEffect(() => {
+    // console.log('filterPrograms: ', filterPrograms);
     const offerByProgram = filterPrograms?.filter((program: any) => {
-      if (env.NEXT_PUBLIC_BUSINESS_UNIT === 'ULA') {
-        console.log('program.nombreCampus: ', program.nombreCampus);
-        console.log('ulaCampuses.includes(program.nombreCampus): ', ulaCampuses.includes(program.nombreCampus));
+      if (businessUnit === 'ULA') {
+        // console.log('program.nombreCampus: ', program.nombreCampus);
+        // console.log('ulaCampuses.includes(program.nombreCampus): ', ulaCampuses.includes(program.nombreCampus));
         
         return program.nombrePrograma === prefilledData.program && ulaCampuses.includes(program.nombreCampus)
+        // return program.nombrePrograma === prefilledData.program
       } else {
         return program.nombrePrograma === prefilledData.program
       }
