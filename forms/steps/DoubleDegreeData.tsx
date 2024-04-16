@@ -12,6 +12,54 @@ const campusLabel = BUSINESS_UNIT === "UTEG" || BUSINESS_UNIT === "UTC" ? "plant
 const commonLevels = ["Preparatoria", "Licenciatura", "Maestría"];
 const defaultLevels = BUSINESS_UNIT === "UTC" ? commonLevels : BUSINESS_UNIT === "ULA" ? [...commonLevels, "Doctorado", "Educación Continua"] : [...commonLevels, "Doctorado"]
 
+const optionsProgram = [
+  {
+    value: 'Arquitectura + Diseño Gráfico',
+    text: 'Arquitectura + Diseño Gráfico',
+    active: false
+  },
+  {
+    value: 'Contaduría + Administración',
+    text: 'Contaduría + Administración',
+    active: false
+  },
+  {
+    value: 'Contaduría + Mercadotecnia',
+    text: 'Contaduría + Mercadotecnia',
+    active: false
+  },
+  {
+    value: 'Mercadotecnia + Diseño Gráfico',
+    text: 'Mercadotecnia + Diseño Gráfico',
+    active: false
+  },
+  {
+    value: 'Administración + Mercadotecnia',
+    text: 'Administración + Mercadotecnia',
+    active: false
+  },
+  {
+    value: 'Derecho + Pedagogía',
+    text: 'Derecho + Pedagogía',
+    active: false
+  },
+  {
+    value: 'Comercio Internacional + Mercadotecnia',
+    text: 'Comercio Internacional + Mercadotecnia',
+    active: false
+  },
+  {
+    value: 'Comercio Internacional + Contaduría',
+    text: 'Comercio Internacional + Contaduría',
+    active: false
+  },
+  {
+    value: 'Administración + Comercio Internacional',
+    text: 'Administración + Comercio Internacional',
+    active: false
+  }
+]
+
 const DoubleDegreeData: FC<any> = ({
   data,
   config: stepOneConfig,
@@ -129,8 +177,8 @@ const DoubleDegreeData: FC<any> = ({
       </div>
       <div className="grow w-full">
         <Select
-          onClick={(option: CustomEvent) => handleSelect(option, "modality")}
-          options={Options?.modalities || []}
+          onClick={(option: CustomEvent) => handleSelect(option, "program")}
+          options={optionsProgram || []}
           data={{ ...SelectInit, textDefault: `Programa`, icon: "school", disabled: !academicData.level }}
         />
         <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p>
