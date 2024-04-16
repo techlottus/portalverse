@@ -11,6 +11,7 @@ import Button from "@/old-components/Button/Button";
 import { useRouter } from "next/router";
 import OpenForm from "@/forms/container/OpenForm";
 import ProgramDetailForm from "@/forms/container/ProgramDetailForm";
+import { DoubleDegreeForm } from "@/forms/container/DoubleDegreeForm";
 
 
 const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
@@ -64,6 +65,8 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
         return <DentalClinics submit={submit} setStatus={setStatus} />;
       case "Detalle_de_programa":
         return <ProgramDetailForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
+      case "Doble_Titulacion":
+        return <DoubleDegreeForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
       default:
         setError('404')
         return null;
@@ -117,7 +120,7 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
                     {
                       !!privacyPolicy && <div className="flex align-middle items-center mt-8 mb-6">
                         <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">{privacyPolicy.text}</p>
-                        <Link href={ privacyPolicy.file ? privacyPolicy.file.data.attributes.url : privacyPolicy.href } passHref target={"_blank"}>
+                        <Link href={privacyPolicy.file ? privacyPolicy.file.data.attributes.url : privacyPolicy.href} passHref target={"_blank"}>
                           <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">{privacyPolicy.linkText}</p>
                         </Link>
                       </div>
@@ -144,7 +147,7 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
                           onClick={() => {
                             setSubmit(true);
                             setTimeout(() => {
-                            
+
                               setSubmit(false)
                             }, 100);
                           }}
