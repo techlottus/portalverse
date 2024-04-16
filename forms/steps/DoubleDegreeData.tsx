@@ -149,7 +149,8 @@ const DoubleDegreeData: FC<any> = ({
   }
 
   return <>
-    <div className="grow mt-2 hidden">
+    {/*  
+   <div className="grow mt-2 hidden">
       <Input
         eventFocus={() => handleTouchedControl("program")}
         data={configControls.inputProgram}
@@ -164,7 +165,8 @@ const DoubleDegreeData: FC<any> = ({
         eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "level")}
         value={academicData.level}
       />
-    </div>
+    </div> 
+    */}
 
     <div className="flex w-p:flex-col w-p:gap-0 gap-6 font-normal">
       <div className="grow w-full">
@@ -175,11 +177,12 @@ const DoubleDegreeData: FC<any> = ({
         />
         <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p>
       </div>
+      
       <div className="grow w-full">
         <Select
           onClick={(option: CustomEvent) => handleSelect(option, "program")}
           options={optionsProgram || []}
-          data={{ ...SelectInit, textDefault: `Programa`, icon: "school", disabled: !academicData.level }}
+          data={{ ...SelectInit, textDefault: `Programa`, icon: "school" }}
         />
         <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p>
       </div>
