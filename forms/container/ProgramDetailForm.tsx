@@ -320,7 +320,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   useEffect(() => {
       // console.log(options);
-    if (options && (options?.modalities && options?.campuses ) && (options?.modalities[0] && options?.campuses[0] )) {
+    if (options && (options?.modalities && options?.campuses  && options?.levels) && (options?.modalities[0] && options?.campuses[0] && options?.levels[0])) {
       setIsLoading(false)
       // console.log(options?.modalities);
       // console.log(options?.campuses);
