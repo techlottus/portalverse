@@ -73,6 +73,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   const [selectedProgram, setselectedProgram] = useState<any>();
   const [tokenActive, setTokenActive] = useState<string>("");
   const [filteredPrograms, setFilteredPrograms] = useState<any>([]);
+  const [ SFlevels, setSFlevels ] = useState<any>([]);
   const [ SFmodalities, setSFmodalities ] = useState<any>([]);
   const [ SFcampuses, setSFcampuses ] = useState<any>([]);
   const [ options, setOptions ] = useState<any>(null);
