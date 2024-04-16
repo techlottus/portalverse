@@ -4,7 +4,6 @@ import configControls from "@/forms/fixtures/controls"
 import axios from "axios";
 import { getTokenForms } from "@/utils/getTokenForms"
 import { getEducativeOffer } from "@/utils/getEducativeOffer"
-import { FormConfig } from "@/forms/fixtures/openform"
 import AcademicData from "@/forms/steps/AcademicData";
 import { setRegisterBot } from "@/utils/saveDataForms"
 import { useRouter } from "next/router";
@@ -52,8 +51,6 @@ type ProgramDetailForm = {
       active: boolean
     }[];
   }
-  
-
   controls?: any;
 }
 
@@ -102,7 +99,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   const [academicData, setAcademicData] = useState({
     modality: "",
     level: "",
-    program: selectedProgram?.idPrograma || "",
+    program: "",
     campus: "",
   });
 
@@ -223,25 +220,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     })
     // console.log('offerByProgram: ', offerByProgram);
     setFilteredPrograms(offerByProgram)
-    // console.log('filterPrograms: ', filterPrograms);
-    const mods = filterByField(offerByProgram, 'modalidad')
-    // console.log('mods: ', mods);
-    setSFmodalities(mods?.map((mod: string) => {
-      return  {
-        value: mod,
-        text: mod,
-        active: mods?.length === 1
-      }
-    }))
-    // console.log('SFmodalities: ', SFmodalities);
-    const camps = filterByField(offerByProgram,'nombreCampus', ['nombreCampus', 'idCampus'])
-    // console.log('camps: ', camps);
-    setSFcampuses(camps?.map((campus: any) => ({
-      value: campus?.idCampus,
-      text: campus?.nombreCampus,
-      active: camps?.length === 1
-    })))
-    // console.log('SFcampuses: ', SFcampuses);
     
   }, [filterPrograms])
 
@@ -264,7 +242,15 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       text: campus?.nombreCampus,
       active: camps?.length === 1 || campus.idCampus === academicData.campus
     })))
-    // console.log('SFcampuses: ', SFcampuses);
+    // console.log('filteredPrograms: ', filteredPrograms);
+    const levels = filterByField(filteredPrograms,'nivel')
+    // console.log('levels: ', levels);
+    setSFlevels(levels?.map((level: any) => ({
+      value: level,
+      text: level,
+      active: levels?.length === 1 || level.idCampus === academicData.level
+    })))
+    // console.log('SFlevels: ', SFlevels);
     
   }, [filteredPrograms])
 
@@ -274,7 +260,8 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       // console.log('options: ', options);
       setOptions({
         campuses: SFcampuses,
-        modalities: SFmodalities
+        modalities: SFmodalities,
+        levels: SFlevels
       })
       setAcademicData({
         ...academicData,
@@ -288,13 +275,15 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     }
       
   }, [SFmodalities])
+
   useEffect(() => {
     if (SFcampuses?.length > 0) {
       // console.log('SFcampuses: ', SFcampuses);
       // console.log('options: ', options);
       setOptions({
         campuses: SFcampuses,
-        modalities: SFmodalities
+        modalities: SFmodalities,
+        levels: SFlevels
       })
       setAcademicDataTouched({
         ...academicDataTouched,
@@ -307,6 +296,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     }
       
   }, [SFcampuses])
+
   useEffect(() => {
     if (SFlevels?.length > 0) {
       // console.log('SFlevels: ', SFlevels);
@@ -331,12 +321,10 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   useEffect(() => {
       // console.log(options);
     if (options && (options?.modalities && options?.campuses  && options?.levels) && (options?.modalities[0] && options?.campuses[0] && options?.levels[0])) {
-
       setIsLoading(false)
       // console.log(options?.modalities);
       // console.log(options?.campuses);
     }
-    
   }, [options])
   useEffect(() => {
     // console.log('prefilledData: ', prefilledData);
