@@ -50,7 +50,7 @@ const PersonalData: FC<any> = ({
       <div className="grow">
         <Input errorMessage={configControls.errorMessagesStepOneOpenForm.name} hasError={errorControls.name} eventFocus={() => handleTouchedControl("name")} data={configControls.inputNameOpenFormStepOne} eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "name")} />
       </div>
-      <div className="grow">
+      <div className="grow mobile:mt-3">
         <Input errorMessage={configControls.errorMessagesStepOneOpenForm.surname} hasError={errorControls.last_name} eventFocus={() => handleTouchedControl("last_name")} data={configControls.inputSurnameOpenFormStepOne} eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "last_name")} />
       </div>
     </div>
