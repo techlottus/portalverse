@@ -44,7 +44,7 @@ const PersonalData: FC<any> = ({
   };
 
   return <>
-    <div className="mt-2 flex w-p:flex-col gap-6 font-normal">
+    <div className="mt-2 flex w-p:flex-col gap-4 font-normal">
       <div className="grow">
         <Input errorMessage={configControls.errorMessagesStepOneOpenForm.name} hasError={errorControls.name} eventFocus={() => handleTouchedControl("name")} data={ configControls.inputNameOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "name")} />
       </div>

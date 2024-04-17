@@ -58,12 +58,12 @@ const DentalAppointment: FC<any> = ({
   }
 
   return <>
-    <div className="mt-6">
+    <div className="">
       <Select options={[...dataCampus]} data={selectData} onClick={(option: CustomEvent) => handleChangeCampus(option)} ></Select>
 
       <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>Selecciona un {campusLabel} para continuar</p>
     </div>
-    <div className="mt-6">
+    <div className="">
       <textarea
         className={cn("mt-6 rounded-t-lg border border-surface-300 border-solid w-full focus:outline-none font-medium font-texts p-4 border-b focus:placeholder-primary-500 focus:border-b-primary-500",{"border-b-error-500 placeholder-error-500" : errorControls.reason, " border-b-surface-500 placeholder-surface-900" : !errorControls.reason } )}
         placeholder="Agrega el motivo de tu consulta"
