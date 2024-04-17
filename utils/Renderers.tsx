@@ -13,6 +13,7 @@ import CategoryAccordionList from "@/components/sections/CategoryAccordionList";
 import ColorCardList from "@/components/sections/ColorCardsList";
 import ContactTargetList from "@/components/sections/ContactTargetList";
 import ContainerForm from "@/components/sections/ContainerForm";
+import ContainerTextForm from "@/components/sections/ContainerTextForm";
 import ContEdPrograms from "@/components/sections/ContEdPrograms";
 import ExternalPostByCategoryList from "@/components/sections/ExternalPostByCategoryList";
 import FAQ from "@/components/sections/FAQ";
@@ -100,7 +101,8 @@ const defaultRenderers: Renderer = {
   ComponentSectionsTextContent: TextContent,
   ComponentSectionsVideos: VideosSection,
   ComponentSectionsWebError: WebError,
-  ComponentSectionsCarousel: Carousel
+  ComponentSectionsCarousel: Carousel,
+  ComponentSectionsContainerTextForm: ContainerTextForm
 };
 
 export default defaultRenderers;
