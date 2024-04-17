@@ -75,7 +75,6 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
 
   return (
     <section >
-      <Container>
         <div className={cn('flex', {
           "justify-center": position === 'center',
           "justify-start": position === 'left',
@@ -160,7 +159,6 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
             </section>
           </div>
         </div>
-      </Container>
     </section>
   );
 }

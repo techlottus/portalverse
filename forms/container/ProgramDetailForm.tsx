@@ -7,6 +7,7 @@ import { getEducativeOffer } from "@/utils/getEducativeOffer"
 import AcademicData from "@/forms/steps/AcademicData";
 import { setRegisterBot } from "@/utils/saveDataForms"
 import { useRouter } from "next/router";
+import { config } from "dotenv";
 import { env } from "process";
 
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
@@ -115,7 +116,14 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     program: false,
     campus: false
   })
-
+  const ulaCampuses = [
+    'ONLINE',
+    'CUAUTITLÁN IZCALLI',
+    'CUERNAVACA',
+    'FLORIDA',
+    'NORTE',
+    'VALLE',
+  ]
   useEffect(() => {
     setIsLoading(true)
   }, [])
@@ -198,8 +206,17 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [tokenActive])
 
   useEffect(() => {
+    // console.log('filterPrograms: ', filterPrograms);
     const offerByProgram = filterPrograms?.filter((program: any) => {
-      return program.nombrePrograma === prefilledData.program
+      if (businessUnit === 'ULA') {
+        // console.log('program.nombreCampus: ', program.nombreCampus);
+        // console.log('ulaCampuses.includes(program.nombreCampus): ', ulaCampuses.includes(program.nombreCampus));
+        
+        return program.nombrePrograma === prefilledData.program && ulaCampuses.includes(program.nombreCampus)
+        // return program.nombrePrograma === prefilledData.program
+      } else {
+        return program.nombrePrograma === prefilledData.program
+      }
     })
     // console.log('offerByProgram: ', offerByProgram);
     setFilteredPrograms(offerByProgram)
@@ -246,6 +263,14 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         modalities: SFmodalities,
         levels: SFlevels
       })
+      setAcademicData({
+        ...academicData,
+        modality: SFmodalities?.length === 1 ? SFmodalities[0].value : academicData.modality
+      })
+      setAcademicDataTouched({
+        ...academicDataTouched,
+        modality: SFmodalities?.length === 1 || academicDataTouched.modality
+      })
       // console.log('options: ', options);
     }
       
@@ -260,6 +285,14 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         modalities: SFmodalities,
         levels: SFlevels
       })
+      setAcademicDataTouched({
+        ...academicDataTouched,
+        campus: SFcampuses?.length === 1 || academicDataTouched.campus
+      })
+      setAcademicData({
+        ...academicData,
+        campus: SFcampuses?.length === 1 ? SFcampuses[0].value : academicData.campus
+      })
     }
       
   }, [SFcampuses])
@@ -273,13 +306,21 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         modalities: SFmodalities,
         levels: SFlevels
       })
+      setAcademicData({
+        ...academicData,
+        level: SFlevels?.length === 1 ? SFlevels[0].value : academicData.level
+      })
+      setAcademicDataTouched({
+        ...academicDataTouched,
+        level: SFlevels?.length === 1 || academicDataTouched.level
+      })
     }
       
   }, [SFlevels])
 
   useEffect(() => {
       // console.log(options);
-    if (options && (options?.modalities && options?.campuses && options?.levels) && (options?.modalities[0] && options?.campuses[0] && options?.levels[0])) {
+    if (options && (options?.modalities && options?.campuses  && options?.levels) && (options?.modalities[0] && options?.campuses[0] && options?.levels[0])) {
       setIsLoading(false)
       // console.log(options?.modalities);
       // console.log(options?.campuses);
