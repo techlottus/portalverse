@@ -1,8 +1,7 @@
-import RichTextComponentData from '@/types/RichText.types';
-import { ContainerForm, FORM_CONTAINER } from './ContainerForm'
+import { ContainerForm } from './ContainerForm'
 import { StrapiImage } from '@/types/strapi/common';
 
-export type TextFormSection = {
+export type ContainerTextFormSection = {
   type: "ComponentSectionsContainerTextForm";
   title: string;
   title_accents: Array<string>
@@ -16,7 +15,7 @@ export type TextFormSection = {
   mob: StrapiImage
 };
 
-export const TEXT_FORM = `
+export const CONTAINER_TEXT_FORM = `
 ... on ComponentSectionsContainerTextForm {
   title
   title_accents {

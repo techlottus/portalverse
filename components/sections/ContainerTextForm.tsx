@@ -1,12 +1,12 @@
 import React from 'react'
 import Container from "../../layouts/Container.layout";
-import { TextFormSection } from "../../utils/strapi/sections/TextForm";
+import { ContainerTextFormSection } from "../../utils/strapi/sections/ContainerTextForm";
 import ContainerForm from './ContainerForm';
 import RichtText from '@/old-components/Richtext/Richtext';
 import parseEditorRawData from '@/utils/parseEditorRawData';
 import classNames from 'classnames';
 
-const TextForm: React.FC<TextFormSection> = (props: TextFormSection) => {
+const ContainerTextForm: React.FC<ContainerTextFormSection> = (props: ContainerTextFormSection) => {
   const {
     title,
     description,
@@ -111,4 +111,4 @@ const TextForm: React.FC<TextFormSection> = (props: TextFormSection) => {
     </section>
 };
 
-export default TextForm;
+export default ContainerTextForm;

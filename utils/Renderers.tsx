@@ -13,6 +13,7 @@ import CategoryAccordionList from "@/components/sections/CategoryAccordionList";
 import ColorCardList from "@/components/sections/ColorCardsList";
 import ContactTargetList from "@/components/sections/ContactTargetList";
 import ContainerForm from "@/components/sections/ContainerForm";
+import ContainerTextForm from "@/components/sections/ContainerTextForm";
 import ContEdPrograms from "@/components/sections/ContEdPrograms";
 import ExternalPostByCategoryList from "@/components/sections/ExternalPostByCategoryList";
 import FAQ from "@/components/sections/FAQ";
@@ -43,7 +44,6 @@ import RockstarInfoList from "@/components/sections/RockstarInfoList";
 import RvoeAccordionList from "@/components/sections/RvoeAccordionList";
 import StatisticsCardList from "@/components/sections/StatisticsCardList";
 import TextContent from "@/components/sections/TextContent";
-import TextForm from "@/components/sections/TextForm";
 import VideosSection from "@/components/sections/VideosSection";
 import WebError from "@/components/sections/WebError";
 import type { FC } from "react";
@@ -102,7 +102,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsVideos: VideosSection,
   ComponentSectionsWebError: WebError,
   ComponentSectionsCarousel: Carousel,
-  ComponentSectionsContainerTextForm: TextForm
+  ComponentSectionsContainerTextForm: ContainerTextForm
 };
 
 export default defaultRenderers;
