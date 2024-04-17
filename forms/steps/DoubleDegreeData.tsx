@@ -12,7 +12,13 @@ const campusLabel = BUSINESS_UNIT === "UTEG" || BUSINESS_UNIT === "UTC" ? "plant
 const commonLevels = ["Preparatoria", "Licenciatura", "Maestría"];
 const defaultLevels = BUSINESS_UNIT === "UTC" ? commonLevels : BUSINESS_UNIT === "ULA" ? [...commonLevels, "Doctorado", "Educación Continua"] : [...commonLevels, "Doctorado"]
 
-const optionsProgram = [
+type optionsProgramsType = {
+  value?: string;
+  text?: string;
+  active?: boolean;
+}
+
+const optionsProgramsUTC: optionsProgramsType[] = [
   {
     value: 'Arquitectura + Diseño Gráfico',
     text: 'Arquitectura + Diseño Gráfico',
@@ -60,6 +66,26 @@ const optionsProgram = [
   }
 ]
 
+const optionsProgramsULA: optionsProgramsType[] = [
+  {
+    value: 'Administración + Marketing',
+    text: 'Administración + Marketing',
+    active: false
+  },
+  {
+    value: 'Diseño gráfico + Arquitectura',
+    text: 'Diseño gráfico + Arquitectura',
+    active: false
+  },
+  {
+    value: 'Dirección de hoteles + Turismo',
+    text: 'Dirección de hoteles + Turismo',
+    active: false
+  }
+]
+
+console.log(BUSINESS_UNIT, "Marca")
+
 const DoubleDegreeData: FC<any> = ({
   data,
   config: stepOneConfig,
@@ -74,16 +100,22 @@ const DoubleDegreeData: FC<any> = ({
 }: any) => {
 
   const [config, setConfig] = useState<any>(stepOneConfig ? { ...stepOneConfig } : { ...OpenFormInit.stepone });
+  const [programs, setPrograms] = useState<optionsProgramsType | any>();
 
   const [Options, setOptions] = useState<{ campuses: [], modalities: [], levels: [] }>({ campuses: [], modalities: [], levels: [] });
 
   useEffect(() => {
     setConfig({ ...config, ...data });
+    if (BUSINESS_UNIT == 'UTC') {
+      setPrograms(optionsProgramsUTC)
+    }
+    if (BUSINESS_UNIT == 'ULA') {
+      setPrograms(optionsProgramsULA)
+    }
   }, [data]);
   useEffect(() => {
     setOptions(options);
   }, [options]);
-
 
   const handleKeyPress = (e: CustomEvent, control: string) => {
     const { detail: { value } } = e;
@@ -125,7 +157,7 @@ const DoubleDegreeData: FC<any> = ({
     }
     if (control === 'program') {
 
-      const option = optionsProgram?.map((option: any) => {
+      const option = programs?.map((option: any) => {
         // console.log(option);
         option.active = option.value === detail
 
@@ -162,7 +194,7 @@ const DoubleDegreeData: FC<any> = ({
       <div className="grow w-full my-3">
         <Select
           onClick={(option: CustomEvent) => handleSelect(option, "program")}
-          options={optionsProgram || []}
+          options={programs || []}
           data={{ ...SelectInit, textDefault: `Programa`, icon: "school" }}
         />
         <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p>
