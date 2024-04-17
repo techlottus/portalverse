@@ -159,7 +159,7 @@ const DoubleDegreeData: FC<any> = ({
         />
         <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p>
       </div>
-      <div className="grow w-full">
+      <div className="grow w-full my-3">
         <Select
           onClick={(option: CustomEvent) => handleSelect(option, "program")}
           options={optionsProgram || []}

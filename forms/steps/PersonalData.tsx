@@ -55,10 +55,10 @@ const PersonalData: FC<any> = ({
       </div>
     </div>
     <div className={cn({ "flex w-p:flex-col  w-p:gap-0 gap-6 font-normal": compact == true })}>
-      <div className={cn("mt-2", { "grow": compact == true })}>
+      <div className={cn("mt-2", { "grow mt-5": compact == true })}>
         <Input errorMessage={configControls.errorMessagesStepOneOpenForm.phone} hasError={errorControls.phone} eventFocus={() => handleTouchedControl("phone")} data={phoneData} eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "phone")} />
       </div>
-      <div className={cn("mt-2", { "grow": compact == true })}>
+      <div className={cn("mt-2", { "grow mt-5": compact == true })}>
         <Input errorMessage={configControls.errorMessagesStepOneOpenForm.email} hasError={errorControls.email} eventFocus={() => handleTouchedControl("email")} data={configControls.inputEmailOpenFormStepOne} eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "email")} />
       </div>
     </div>
