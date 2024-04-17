@@ -84,8 +84,6 @@ const optionsProgramsULA: optionsProgramsType[] = [
   }
 ]
 
-console.log(BUSINESS_UNIT, "Marca")
-
 const DoubleDegreeData: FC<any> = ({
   data,
   config: stepOneConfig,
