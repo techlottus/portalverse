@@ -60,6 +60,19 @@ const optionsProgram = [
   }
 ]
 
+const optionsLevels = [
+  {
+    value: 'Licenciatura',
+    text: 'Licenciatura',
+    active: false
+  },
+  {
+    value: 'Doctorado',
+    text: 'Doctorado',
+    active: false
+  }
+]
+
 const DoubleDegreeData: FC<any> = ({
   data,
   config: stepOneConfig,
@@ -125,7 +138,19 @@ const DoubleDegreeData: FC<any> = ({
     }
     if (control === 'level') {
 
-      const option = Options?.levels?.map((option: any) => {
+      const option = optionsLevels?.map((option: any) => {
+        // console.log(option);
+        option.active = option.value === detail
+
+        return option
+      })
+      // console.log(option);
+
+      // option.active = true
+    }
+    if (control === 'program') {
+
+      const option = optionsProgram?.map((option: any) => {
         // console.log(option);
         option.active = option.value === detail
 
@@ -143,41 +168,17 @@ const DoubleDegreeData: FC<any> = ({
     setErrorControls({ ...errorControls, [control]: !validateControl(control, detail, infoControlsTouched[control]) });
   };
 
-  const handleTouchedControl = (control: string) => {
-    setInfoControlsTouched({ ...infoControlsTouched, [control]: true });
-    setErrorControls({ ...errorControls, [control]: !validateControl(control, academicData[control], true) && infoControlsTouched[control] });
-  }
-
   return <>
-    {/*  
-   <div className="grow mt-2 hidden">
-      <Input
-        eventFocus={() => handleTouchedControl("program")}
-        data={configControls.inputProgram}
-        eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "program")}
-        value={academicData.program}
-      />
-    </div>
-    <div className="grow mt-2 hidden">
-      <Input
-        eventFocus={() => handleTouchedControl("level")}
-        data={configControls.inputNameProgramDetail}
-        eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "level")}
-        value={academicData.level}
-      />
-    </div> 
-    */}
-
     <div className="flex w-p:flex-col w-p:gap-0 gap-6 font-normal">
       <div className="grow w-full">
         <Select
           onClick={(option: CustomEvent) => handleSelect(option, "level")}
-          options={Options?.levels || []}
+          options={optionsLevels || []}
           data={{ ...SelectInit, textDefault: `Nivel`, icon: "" }}
         />
         <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p>
       </div>
-      
+
       <div className="grow w-full">
         <Select
           onClick={(option: CustomEvent) => handleSelect(option, "program")}
