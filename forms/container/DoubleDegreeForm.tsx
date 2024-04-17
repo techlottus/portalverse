@@ -8,7 +8,6 @@ import { setRegisterBot } from "@/utils/saveDataForms"
 import { useRouter } from "next/router";
 import { env } from "process";
 import { DoubleDegreeData } from "../steps/DoubleDegreeData";
-import data from "@/dummy/licenciatura";
 
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
 
@@ -54,9 +53,6 @@ const DoubleDegreeForm = (props: DoubleDegreeForm) => {
   const [selectedProgram, setselectedProgram] = useState<any>();
   const [tokenActive, setTokenActive] = useState<string>("");
   const [filteredPrograms, setFilteredPrograms] = useState<any>([]);
-  const [SFlevels, setSFlevels] = useState<any>([]);
-  const [SFmodalities, setSFmodalities] = useState<any>([]);
-  const [SFcampuses, setSFcampuses] = useState<any>([]);
   const [options, setOptions] = useState<any>(null);
 
   const [personalData, setPersonalData] = useState({
@@ -81,12 +77,12 @@ const DoubleDegreeForm = (props: DoubleDegreeForm) => {
   })
 
   const [academicData, setAcademicData] = useState({
-    level: "",
+    level: "Licenciatura",
     program: ""
   });
 
   const [academicDataTouched, setAcademicDataTouched] = useState({
-    level: false,
+    level: true,
     program: false
   });
 
@@ -111,59 +107,6 @@ const DoubleDegreeForm = (props: DoubleDegreeForm) => {
     isError: isErrorToken,
     token,
   } = getTokenForms();
-
-  const filterByField = (data: any, filter: any, fields?: string[]) => {
-    return data?.reduce((acc: any[], curr: any) => {
-      if (!fields) {
-        if (!acc.includes(curr[filter])) {
-          acc = [...acc, curr[filter]]
-        }
-      } else {
-        const fieldsResult = fields.reduce((fieldacc: any, field: any) => {
-          if (!Object.keys(fieldacc).includes(curr[filter])) {
-            fieldacc[field] = curr[field]
-          }
-          return fieldacc
-        }, {});
-        acc = [...acc, fieldsResult]
-      }
-      return acc
-
-    }, [])
-  }
-
-  const getBusinessLineToFetchFrom = (businessLine: string, modality: string) => {
-    switch (businessLine) {
-      case "UANE": {
-        switch (modality) {
-          case "Presencial": return "UANE";
-          case "Flex": return "ULA";
-          case "Online": return "UANE,ULA";
-          default: return "UANE"
-        }
-      }
-      case "UTEG": {
-        switch (modality) {
-          case "Presencial": return "UTEG";
-          case "Flex": return "ULA";
-          case "Online": return "ULA";
-          default: return "UTEG"
-        }
-      }
-      case "ULA": {
-        return "ULA"
-      }
-      case "UTC": {
-        switch (modality) {
-          case "Presencial": return "UTC";
-          case "Semipresencial": return "UTC,ULA";
-          case "Online": return "UTC";
-          default: return "UTC"
-        }
-      }
-      default: return ""
-    }
-  }
 
   useEffect(() => {
     // console.log('tokenActive: ', tokenActive);
@@ -290,17 +233,16 @@ const DoubleDegreeForm = (props: DoubleDegreeForm) => {
 
     await axios.post(`${endpoint}`, body, {
       headers: {
-        Authorization: process.env.NEXT_PUBLIC_STRAPI_TRACKING_FORMS_API_TOKEN,
+        Authorization: api_token,
         'Content-Type': 'application/json;charset=UTF-8',
       },
     })
       .then((res: any) => {
-        // console.log(res);
-
-        if (res?.data?.Exitoso !== "TRUE") {
+        if (res?.status == 200) {
+          router.push(`/thank-you`);
+        } else {
           throw new Error();
         }
-        router.push(`/thank-you`);
       })
       .catch((err: any) => {
         setIsLoading(false);
@@ -319,7 +261,7 @@ const DoubleDegreeForm = (props: DoubleDegreeForm) => {
     setPersonalDataErrors({ ...newPersonalDataErrors });
     const newAcademicDataErrors = {
       program: !validateAcademicDataControl('program', academicData.program) && academicDataTouched.program,
-      level: !validateAcademicDataControl('level', academicData.level) && academicDataTouched.level,
+      level: !validateAcademicDataControl('level', academicData.program) && academicDataTouched.program,
     }
 
     setAcademicDataErrors({ ...newAcademicDataErrors });
