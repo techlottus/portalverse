@@ -7,9 +7,7 @@ import { getEducativeOffer } from "@/utils/getEducativeOffer"
 import AcademicData from "@/forms/steps/AcademicData";
 import { setRegisterBot } from "@/utils/saveDataForms"
 import { useRouter } from "next/router";
-import { config } from "dotenv";
 import { env } from "process";
-import { SelectOptionConfig } from "@/types/Select.types";
 
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
 
@@ -24,69 +22,6 @@ const getLeadModality = (modality: string) => {
     default: return "";
   }
 };
-
-const getAvailableModalities = (): Array<SelectOptionConfig> => {
-  switch (businessUnit) {
-  case "ULA": {
-    return [
-      {
-        value: "Presencial",
-        active: false,
-        text: "Presencial",
-      },
-      {
-        value: "Online",
-        active: false,
-        text: "Online",
-      },
-      {
-        value: "Semipresencial",
-        active: false,
-        text: "Semipresencial",
-      },
-    ];
-  }
-  case "UTC": {
-    return [
-      {
-        value: "Presencial",
-        active: false,
-        text: "Presencial",
-      },
-      {
-        value: "Online",
-        active: false,
-        text: "A distancia",
-      },
-      {
-        value: "Semipresencial",
-        active: false,
-        text: "Ejecutiva",
-      },
-    ];
-  }
-  default: { // cases "UANE" and "UTEG"
-    return [
-      {
-        value: "Presencial",
-        active: false,
-        text: "Presencial",
-      },
-      {
-        value: "Online",
-        active: false,
-        text: "Online",
-      },
-      {
-        value: "Flex",
-        active: false,
-        text: "Flex",
-      },
-    ];
-  }
-  }
-};
-
 
 type ProgramDetailForm = {
   setStatus: (status: { loading: boolean, error: string, valid: boolean, success: boolean }) => void
@@ -249,13 +184,9 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     if (!!tokenActive) {
         handleFetchEducativeOffer()
       }
-   setSFmodalities(props.options.modalities)
   }, [tokenActive])
 
   useEffect(() => {
-    console.log('filterPrograms: ', filterPrograms);
-
-    
     const offerByProgram = filterPrograms?.filter((program: any) => {
 
       if (businessUnit === 'ULA') {
@@ -263,7 +194,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         // console.log('ulaCampuses.includes(program.nombreCampus): ', ulaCampuses.includes(program.nombreCampus));
         
         return program.nombrePrograma === prefilledData.program && ulaCampuses.includes(program.nombreCampus)
-        // return program.nombrePrograma === prefilledData.program
       } else {
         // console.log('program.nombrePrograma: ', program.nombrePrograma);
         // console.log('prefilledData.program: ', prefilledData.program);
@@ -278,7 +208,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         return true
       }
     })
-    console.log('offerByProgram: ', offerByProgram);
+    // console.log('offerByProgram: ', offerByProgram);
     setFilteredPrograms(offerByProgram)
     
   }, [filterPrograms])
@@ -288,19 +218,24 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       
       // console.log('filteredPrograms: ', filteredPrograms);
       // const mods = filterByField(filteredPrograms, 'modalidad')
-      const mods =  filterByField(filteredPrograms, 'modalidad')
-      console.log('mods: ', mods);
+      const programs = filteredPrograms.map((program: any) => {
+        return businessUnit !== 'ULA' && program.lineaNegocio === 'ULA' && program.modalidad === 'Online'
+          ? {...program, modalidad: 'Flex'}
+          : program
+      })
+      const mods =  filterByField(programs, 'modalidad')
+      // console.log('programs: ', programs);
+      // console.log('mods: ', mods);
       
-      // // console.log('mods: ', mods);
-      // setSFmodalities(mods?.map((mod: string) => {
-      //   return  {
-      //     value: mod,
-      //     text: mod,
-      //     active: mods?.length === 1 || mod === academicData.modality
-      //   }
-      // }))
+      // console.log('mods: ', mods);
+      setSFmodalities(mods?.map((mod: string) => {
+        return  {
+          value: mod,
+          text: mod,
+          active: mods?.length === 1 || mod === academicData.modality
+        }
+      }))
       // console.log('SFmodalities: ', SFmodalities);
-      // && Number(program.nombrePeriodo) === currentPeriod
 
       const periods = filteredPrograms?.reduce((acc: any, program: any, index: number, arr: any[]) => {
         if (!acc.includes(program.nombrePeriodo)) {
@@ -309,7 +244,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         return acc
       }, [])
       const currentPeriod = periods?.sort((a: any,b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[periods.length - 1]
-      console.log('currentPeriod: ', currentPeriod);
+      // console.log('currentPeriod: ', currentPeriod);
 
       const periodPrograms = filteredPrograms?.filter((program: any) => {
         // console.log('program.nombrePeriodo: ', program.nombrePeriodo);
@@ -318,7 +253,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
         return program.nombrePeriodo === currentPeriod
       })
-      console.log(periodPrograms);
+      // console.log(periodPrograms);
 
       const camps = filterByField(periodPrograms,'nombreCampus', ['nombreCampus', 'idCampus'])
       // console.log('camps: ', camps);
@@ -433,23 +368,18 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [personalData, academicData]);
   useEffect(() => {
     if (!!academicData.modality) {
-      if (!!tokenActive) {
-        handleFetchEducativeOffer()
-      }
-      console.log('academicData.modality: ', academicData.modality);
+      // console.log('academicData.modality: ', academicData.modality);
       
       const programsByModality = filteredPrograms?.filter((program: any) => {
         // console.log('program.modalidad: ', program.modalidad);
         // console.log('academicData.modality: ', academicData.modality);
         if (academicData.modality === 'Flex') {
-          
           return program.modalidad === 'Online' && program.lineaNegocio === 'ULA'
         } else {
-
-          return program.modalidad === academicData.modality 
+          return program.modalidad === academicData.modality && program.lineaNegocio === businessUnit
         }
       })
-      setFilteredPrograms(programsByModality)
+      // setFilteredPrograms(programsByModality)
 
       // console.log('programsByModality: ', programsByModality);
       const camps = filterByField(programsByModality,'nombreCampus', ['nombreCampus', 'idCampus'])
@@ -487,8 +417,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     }
 
   }, [academicData.campus]);
-
- 
 
   useEffect(() => {
     if (!!selectedProgram) {
@@ -534,9 +462,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   const handleFetchEducativeOffer = () => {
     setIsLoading(true)
     setFilteredPrograms([]);
-    // setFilteredCampus([]);
     const businessLineToFetchFrom = getBusinessLineToFetchFrom(businessUnit, academicData.modality)
-    console.log('businessLineToFetchFrom: ', businessLineToFetchFrom);
     
     fetchEducativeOffer(process.env.NEXT_PUBLIC_EDUCATIVE_OFFER!, '', businessLineToFetchFrom, tokenActive);
   }
