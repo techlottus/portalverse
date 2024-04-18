@@ -84,7 +84,66 @@ const optionsProgramsULA: optionsProgramsType[] = [
   }
 ]
 
-console.log(BUSINESS_UNIT, "Marca")
+const optionsProgramsUANE: optionsProgramsType[] = [
+  {
+    value: 'Mercadotecnia + Administración',
+    text: 'Mercadotecnia + Administración',
+    active: false
+  },
+  {
+    value: 'Contaduría + Administración',
+    text: 'Contaduría + Administración',
+    active: false
+  }
+]
+
+const optionsProgramsUTEG: optionsProgramsType[] = [
+  {
+    value: 'Administración y Liderazgo Empresarial + Mercadotecnia',
+    text: 'Administración y Liderazgo Empresarial + Mercadotecnia',
+    active: false
+  },
+  {
+    value: 'Administración y Liderazgo Empresarial + Contaduría',
+    text: 'Administración y Liderazgo Empresarial + Contaduría',
+    active: false
+  },
+  {
+    value: 'Administración y Liderazgo Empresarial + Negocios Internacionales',
+    text: 'Administración y Liderazgo Empresarial + Negocios Internacionales',
+    active: false
+  },
+  {
+    value: 'Administración y Liderazgo Empresarial + Turismo',
+    text: 'Administración y Liderazgo Empresarial + Turismo',
+    active: false
+  },
+  {
+    value: 'Contaduría + Mercadotecnia',
+    text: 'Contaduría + Mercadotecnia',
+    active: false
+  },
+  {
+    value: 'Negocios Internacionales + Contaduría',
+    text: 'Negocios Internacionales + Contaduría',
+    active: false
+  },
+  {
+    value: 'Negocios Internacionales + Turismo',
+    text: 'Negocios Internacionales + Turismo',
+    active: false
+  },
+  {
+    value: 'Contaduría + Administración',
+    text: 'Contaduría + Administración',
+    active: false
+  },
+  {
+    value: 'Ingeniería en Sistemas + Ingeniería Industrial en Producción',
+    text: 'Ingeniería en Sistemas + Ingeniería Industrial en Producción',
+    active: false
+  }
+]
 
 const DoubleDegreeData: FC<any> = ({
   data,
@@ -101,7 +160,6 @@ const DoubleDegreeData: FC<any> = ({
 
   const [config, setConfig] = useState<any>(stepOneConfig ? { ...stepOneConfig } : { ...OpenFormInit.stepone });
   const [programs, setPrograms] = useState<optionsProgramsType | any>();
-
   const [Options, setOptions] = useState<{ campuses: [], modalities: [], levels: [] }>({ campuses: [], modalities: [], levels: [] });
 
   useEffect(() => {
@@ -111,6 +169,12 @@ const DoubleDegreeData: FC<any> = ({
     }
     if (BUSINESS_UNIT == 'ULA') {
       setPrograms(optionsProgramsULA)
+    }
+    if (BUSINESS_UNIT == 'UANE') {
+      setPrograms(optionsProgramsUANE)
+    }
+    if (BUSINESS_UNIT == 'UTEG') {
+      setPrograms(optionsProgramsUTEG)
     }
   }, [data]);
   useEffect(() => {
