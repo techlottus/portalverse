@@ -231,9 +231,9 @@ const DoubleDegreeForm = (props: DoubleDegreeForm) => {
       }
     }
 
-    await axios.post(`${endpoint}`, body, {
+    await axios.post(`${endpoint}/general-forms`, body, {
       headers: {
-        Authorization: api_token,
+        Authorization: `Bearer ${api_token}`,
         'Content-Type': 'application/json;charset=UTF-8',
       },
     })
