@@ -131,6 +131,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const mosaicActive = true;
   // console.log('modalities: ', modalities);
   // console.log('campuses: ', campuses);
+      // console.log('program.attributes: ', program.attributes);
   
   return (
     <Fragment>
@@ -284,6 +285,13 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
               variant: 'primary',
               CTA: 'submit',
               iconName: 'send'
+            }}
+            options={{
+              modalities: modalities.map(mod => ({
+                value: mod.modality.data.attributes.name,
+                active: false,
+                text: mod.modality.data.attributes.name
+              }))
             }}
           />
         }
