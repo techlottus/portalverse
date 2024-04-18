@@ -187,6 +187,8 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [tokenActive])
 
   useEffect(() => {
+    // console.log('filterPrograms: ', filterPrograms);
+
     const offerByProgram = filterPrograms?.filter((program: any) => {
 
       if (businessUnit === 'ULA') {
@@ -197,7 +199,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       } else {
         // console.log('program.nombrePrograma: ', program.nombrePrograma);
         // console.log('prefilledData.program: ', prefilledData.program);
-        console.log('program.nombrePrograma === prefilledData.program: ', program.nombrePrograma === prefilledData.program);
+        // console.log('program.nombrePrograma === prefilledData.program: ', program.nombrePrograma === prefilledData.program);
         if (program.lineaNegocio === 'ULA') {
           
           return businessUnit === 'UTC'

@@ -132,7 +132,7 @@ const AcademicData: FC<any> = ({
       <Select
         onClick={(option: CustomEvent) => handleSelect(option, "campus")}
         options={Options?.campuses || []}
-        data={{ ...SelectInit, textDefault: `Elige un ${campusLabel}`, icon: "apartment", disabled: !academicData.level }}
+        data={{ ...SelectInit, textDefault: `Elige un ${campusLabel}`, icon: "apartment", disabled: !academicData.level && !academicData.modality }}
       />
       <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p> 
     </div>
