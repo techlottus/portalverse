@@ -95,67 +95,64 @@ const Campus = ({ sections, meta }: any) => {
               <>
                 <ContentLayout>
                   <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-                    <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%]">
+                    <p className="font-headings font-bold text-center text-10 w-t:text-6 w-p:text-6 leading-[125%]">
                       {item?.title}
                     </p>
                   </div>
-                  <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mb-[72px]">
+                  <section className="col-span-12 grid grid-cols-2 gap-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-[72px]">
                     {item?.campus?.map(
                       (
                         { title, coords, description, images: items }: any,
                         i: number
                       ) => (
                         <ContentInsideLayout
-                          classNames="mb-8"
+                          classNames="col-span-1"
                           key={`campus-data-${i}`}
                         >
-                          <Image
-                            classNames="col-span-4 w-t:col-span-4 w-p:col-span-4 w-p:aspect-2/1"
-                            alt={items[0]?.alt}
-                            src={items[0]?.src}
-                          />
-                          <div className="col-span-4 border w-t:col-span-4 w-p:col-span-4 border-gray-300 rounded pl-3">
-                            <p className="font-texts font-normal text-base leading-5 my-2">
+                          <div className="p-6	col-span-7 border w-t:col-span-4 w-p:col-span-4 border-gray-300 rounded-l-lg border-r-0 grid gap-y-2">
+                            <p className="font-texts font-bold text-sm leading-5">
                               {description?.state}
                             </p>
                             {
                               description?.redirect
-                                ? <a href={description?.redirect} className={cn("font-headings font-semibold text-4.5 leading-5.625 my-2", {
+                                ? <a href={description?.redirect} className={cn("font-headings font-semibold underline text-4.5 leading-5.625", {
                                   "hover:underline": description?.redirect,
                                 })}>
                                   {description?.name}
                                 </a>
-                                : <p className="font-headings font-semibold text-4.5 leading-5.625 my-2">{description?.name}</p>
+                                : <p className="font-headings font-bold text-4.5 leading-5.625">{description?.name}</p>
                             }
                             <ContentInsideLayout>
+                              {/* 
                               <IconComponent
                                 name="marker"
                                 className="col-span-1 w-t:col-span-1 w-p:col-span-1"
-                              />
-                              <p className="col-span-11 w-t:col-span-7 w-p:col-span-3 font-texts font-normal">
+                              /> 
+                              */}
+                              <p className="col-span-11  w-t:col-span-7 w-p:col-span-3 font-texts font-normal text-sm">
                                 {description?.address}
                               </p>
                             </ContentInsideLayout>
                             {
                               description?.phone ?
                                 <ContentInsideLayout classNames="items-center">
-                                  <IconComponent
+                                  {/* <IconComponent
                                     name="phone"
                                     className={cn(
                                       "col-span-1 w-t:col-span-1 w-p:col-span-1 w-4 mt-2",
                                       { hidden: !description?.phone }
                                     )}
-                                  />
+                                  /> */}
                                   <LinkContactTarget
                                     type="phone"
                                     info={description?.phone}
-                                    classNames="col-span-11 w-t:col-span-7 w-p:col-span-3 mt-2"
+                                    classNames="col-span-11 text-sm w-t:col-span-7 w-p:col-span-3 underline"
                                   />
                                 </ContentInsideLayout>
                                 : null
                             }
                             {
-                              description?.email ?
+                              /* description?.email ?
                                 <ContentInsideLayout classNames="items-center">
                                   <IconComponent
                                     name="email"
@@ -171,7 +168,7 @@ const Campus = ({ sections, meta }: any) => {
                                     classNames="col-span-11 w-t:col-span-7 w-p:col-span-3 mt-2"
                                   />
                                 </ContentInsideLayout>
-                                : null
+                                : null */
                             }
                             {
                               description?.link ?
@@ -181,16 +178,28 @@ const Campus = ({ sections, meta }: any) => {
                                 </ContentInsideLayout>
                                 : null
                             }
-                            <div
+                            <div className="items-center flex">
+                              <a className="text-primary-500" href="">
+                                Agendar visita
+                              </a>
+                              <span className="text-primary-500 material-symbols-outlined select-non text-lg">calendar_month</span>
+                            </div>
+                            {/* <div
                               className="flex justify-end pr-3"
                             >
                               <p className="font-texts font-normal hover:cursor-pointer" onClick={() => handleOpenModal(coords, title)}>
                                 Ver mapa
                               </p>
                               <IconComponent name="eye" className="ml-1 w-4" />
-                            </div>
+                            </div> */}
                           </div>
-                          <Map
+                          <Image
+                            classNames="col-span-5 w-t:col-span-4 w-p:col-span-4 w-p:aspect-2/1"
+                            alt={items[0]?.alt}
+                            src={items[0]?.src}
+                            classNamesImg="rounded-r-lg"
+                          />
+                          {/* <Map
                             coords={coords}
                             classNames="w-t:hidden w-p:hidden col-span-4 w-t:col-span-3 w-p:col-span-4"
                             classNamesMap="h-[214px]"
@@ -208,7 +217,7 @@ const Campus = ({ sections, meta }: any) => {
                                 </Marker>
                               </>
                             )}
-                          </Map>
+                          </Map> */}
                         </ContentInsideLayout>
                       )
                     )}
