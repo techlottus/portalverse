@@ -240,7 +240,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
       
       // console.log('filteredPrograms: ', filteredPrograms);
-      
     }
     
   }, [filteredPrograms])
@@ -251,9 +250,8 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       // console.log('SFmodalities[0].value: ', SFmodalities[0].value);
       // console.log('options: ', options);
       setOptions({
-        campuses: SFcampuses,
+        ...options,
         modalities: SFmodalities,
-        levels: SFlevels
       })
       setAcademicData({
         ...academicData,
@@ -270,52 +268,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       // console.log('newAcademicDataTouched: ', newAcademicDataTouched);
       setAcademicDataTouched(newAcademicDataTouched)
       // console.log('options: ', options);
-      const periods = filteredPrograms?.reduce((acc: any, program: any, index: number, arr: any[]) => {
-        if (!acc.includes(program.nombrePeriodo)) {
-          acc = [...acc, program.nombrePeriodo]
-        }
-        return acc
-      }, [])
-      const currentPeriod = periods?.sort((a: any,b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[periods.length - 1]
-      // console.log('currentPeriod: ', currentPeriod);
-
-      const periodPrograms = filteredPrograms?.filter((program: any) => {
-        // console.log('program.nombrePeriodo: ', program.nombrePeriodo);
-        // console.log('currentPeriod: ', currentPeriod);
-        // console.log('program.nombrePeriodo === currentPeriod: ', program.nombrePeriodo === currentPeriod);
-
-        return program.nombrePeriodo === currentPeriod
-      })
-      // console.log(periodPrograms);
-
-      const camps = filterByField(periodPrograms,'nombreCampus', ['nombreCampus', 'idCampus'])
-      // console.log('camps: ', camps);
-      setSFcampuses(camps?.map((campus: any) => ({
-        value: campus?.idCampus,
-        text: campus?.nombreCampus,
-        active: camps?.length === 1 || campus.idCampus === academicData.campus
-      })))
-    }
       
-  }, [SFmodalities])
-
-  useEffect(() => {
-    if (SFcampuses?.length > 0) {
-      // console.log('SFcampuses: ', SFcampuses);
-      // console.log('options: ', options);
-      setOptions({
-        campuses: SFcampuses,
-        modalities: SFmodalities,
-        levels: SFlevels
-      })
-      setAcademicDataTouched({
-        ...academicDataTouched,
-        campus: SFcampuses?.length === 1 || academicDataTouched.campus
-      })
-      setAcademicData({
-        ...academicData,
-        campus: SFcampuses?.length === 1 ? SFcampuses[0].value : academicData.campus
-      })
       const periods = filteredPrograms?.reduce((acc: any, program: any, index: number, arr: any[]) => {
         if (!acc.includes(program.nombrePeriodo)) {
           acc = [...acc, program.nombrePeriodo]
@@ -342,6 +295,26 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       // console.log('SFlevels: ', SFlevels);
     }
       
+  }, [SFmodalities])
+
+  useEffect(() => {
+    if (SFcampuses?.length > 0) {
+      // console.log('SFcampuses: ', SFcampuses);
+      // console.log('options: ', options);
+      setOptions({
+        ...options,
+        campuses: SFcampuses
+      })
+      setAcademicDataTouched({
+        ...academicDataTouched,
+        campus: SFcampuses?.length === 1 || academicDataTouched.campus
+      })
+      setAcademicData({
+        ...academicData,
+        campus: SFcampuses?.length === 1 ? SFcampuses[0].value : academicData.campus
+      })
+    }
+      
   }, [SFcampuses])
 
   useEffect(() => {
@@ -349,8 +322,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       // console.log('SFlevels: ', SFlevels);
       // console.log('options: ', options);
       setOptions({
-        campuses: SFcampuses,
-        modalities: SFmodalities,
+        ...options,
         levels: SFlevels
       })
       setAcademicData({
@@ -361,6 +333,28 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         ...academicDataTouched,
         level: SFlevels?.length === 1 || academicDataTouched.level
       })
+      const periods = filteredPrograms?.reduce((acc: any, program: any, index: number, arr: any[]) => {
+        if (!acc.includes(program.nombrePeriodo)) {
+          acc = [...acc, program.nombrePeriodo]
+        }
+        return acc
+      }, [])
+      const currentPeriod = periods?.sort((a: any,b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[periods.length - 1]
+      // console.log('currentPeriod: ', currentPeriod);
+
+      const camps = filterByField(filteredPrograms?.filter((program: any) => {
+          // console.log('program.nombrePeriodo: ', program.nombrePeriodo);
+          // console.log('currentPeriod: ', currentPeriod);
+          // console.log('program.nombrePeriodo === currentPeriod: ', program.nombrePeriodo === currentPeriod);
+
+          return program.nombrePeriodo === currentPeriod
+        }),'nombreCampus', ['nombreCampus', 'idCampus'])
+      // console.log('camps: ', camps);
+      setSFcampuses(camps?.map((campus: any) => ({
+        value: campus?.idCampus,
+        text: campus?.nombreCampus,
+        active: camps?.length === 1 || campus.idCampus === academicData.campus
+      })))
     }
       
   }, [SFlevels])
