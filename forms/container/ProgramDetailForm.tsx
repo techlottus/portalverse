@@ -366,7 +366,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [SFlevels])
 
   useEffect(() => {
-      console.log(options);
+      // console.log(options);
       setIsLoading(false)
     if (options && (options?.modalities && options?.campuses  && options?.levels) && (options?.modalities[0] && options?.campuses[0] && options?.levels[0])) {
       // console.log(options?.modalities);
