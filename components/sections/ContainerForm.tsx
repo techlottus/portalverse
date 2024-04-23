@@ -37,6 +37,7 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
   const [isValid, setIsValid] = useState(false);
   const [submit, setSubmit] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   // for future devolpment of progress managemente, base state to hold progress of form
   // const [ progress, setProgress ] = useState<number>(progress);
 
@@ -53,10 +54,12 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
   }, [isSuccess]);
 
   const setStatus = ({ loading, error, valid, success }: { loading: boolean, error: string, valid: boolean, success: boolean }) => {
+    setIsVisible(!loading && !error)
     setIsLoading(loading)
     setError(error)
     setIsValid(valid)
     setIsSuccess(success)
+
   }
 
   const getForm = () => {
@@ -72,9 +75,8 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
         return null;
     }
   }
-
   return (
-    <section className={cn({'hidden': isLoading && !!error})}>
+    <section className={cn({'hidden': !isVisible})}>
       <div className={cn('flex', {
         "justify-center": position === 'center',
         "justify-start": position === 'left',
