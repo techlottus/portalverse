@@ -22,7 +22,7 @@ const GoogleMap: FC<GoogleMapSection> = (props: GoogleMapSection) => {
   const renderMap = (src: string) => {
     return (
       <iframe
-        className="w-full h-full rounded-xl w-t:w-2/3 w-t:h-2/3 w-t:mx-auto"
+        className="w-full h-full rounded-xl w-t:w-4/5 w-t:h-2/3 w-t:mx-auto"
         src={src}
         style={{ border: 0 }}
         loading="lazy" ></iframe>
@@ -43,8 +43,8 @@ const GoogleMap: FC<GoogleMapSection> = (props: GoogleMapSection) => {
               </div>
               :
               variant === 'tour' && detailPosition !== 'top' ?
-                (<div className={cn("flex w-d:flex-row flex-col my-auto px-16", { 'w-d:flex-row-reverse': detailPosition === "right" })}>
-                  <div className={cn("flex flex-col items-start w-d:w-3/6 w-t:w-3/5 mx-auto pb-4 my-auto w-d:px-12", { "": detailPosition === 'right' })}>
+                (<div className={cn("flex w-d:flex-row flex-col my-auto px-16 w-p:px-0", { 'w-d:flex-row-reverse': detailPosition === "right" })}>
+                  <div className={cn("flex flex-col items-start w-d:w-3/6 w-t:w-4/5 mx-auto pb-4 my-auto w-d:px-12", { "": detailPosition === 'right' })}>
                     <h1>{name}</h1>
                     {address && <div className="flex flex-col items-start">
                       <div className="flex">

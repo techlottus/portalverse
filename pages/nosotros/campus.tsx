@@ -13,6 +13,8 @@ import ContentFullLayout from "@/layouts/ContentFull.layout";
 import BannerPortalverse from "@/old-components/BannerPortalverse";
 import { getDataPageFromJSON } from "@/utils/getDataPage";
 import Cintillo from "@/old-components/Cintillo";
+import RichtText from "@/old-components/Richtext/Richtext";
+import PromoLink from "@/old-components/PromoLink/PromoLink";
 
 const Campus = ({ sections, meta }: any) => {
 
@@ -29,6 +31,7 @@ const Campus = ({ sections, meta }: any) => {
 
   const [coordsMap, setCoordsMap] = useState<any>(null);
   const [infoMap, setInfoMap] = useState<string>("");
+  const [infoModal, setInfoModal] = useState<any>({});
 
   const handleOpenModal = (coords: any, title: string) => {
     setCoordsMap(coords);
@@ -41,6 +44,82 @@ const Campus = ({ sections, meta }: any) => {
       <Head>
         <title>{meta?.title}</title>
       </Head>
+      <Modal isShow={isShow} onClose={handleVisibilityModal} data={{ icon: 'close', title: "", tagOnClose: 'testOnClose', wrapper: true, }}>
+        <section slot="areaModalContent" className="flex w-t:flex-col w-p:flex-col w-full h-auto">
+          <ContentInsideLayout classNames="gap-6">
+            <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 bg-surface-800 p-6">
+              <p className="text-surface-0 font-headings font-bold text-6 break-normal mb-16">{infoModal?.title?.title}</p>
+              <div className="flex flex-col space-y-12">
+                {
+                  infoModal?.downloadables?.length > 0
+                    ? <div>
+                      <span className="font-headings font-normal text-surface-0 mb-6">Descargas</span>
+                      {
+                        (infoModal?.downloadables as Array<{ label: string; link: string; }>)?.map((redirect, index) => {
+                          const children = (
+                            <>
+                              <span className="font-texts font-normal underline underline-offset-4 mr-auto">{redirect?.label}</span>
+                              <span className="material-symbols-outlined ml-3 mt-1 select-none">download</span>
+                            </>
+                          );
+
+                          if (redirect?.link) {
+                            return (
+                              <a
+                                key={index}
+                                href={redirect?.link}
+                                rel="noreferrer noopener"
+                                target="_blank"
+                                className={
+                                  cn("flex items-center text-surface-0 mt-6")
+                                }
+                              >
+                                {children}
+                              </a>
+                            )
+                          } else {
+                            return (
+                              <div
+                                key={index}
+                                className="flex items-center mt-6 text-surface-500 cursor-not-allowed"
+                              >
+                                {children}
+                              </div>
+                            )
+                          }
+                        })
+                      }
+                    </div>
+                    : null
+                }
+                {
+                  infoModal?.redirect?.link
+                    ? <div>
+                      <span className="font-headings font-normal text-surface-0 mb-6">Visita el sitio de la universidad</span>
+                      <a
+                        href={infoModal?.redirect?.link}
+                        rel="noreferrer noopener"
+                        target="_blank"
+                        className={
+                          cn("flex items-center text-surface-0 mt-6")
+                        }
+                      >
+                        <span className="font-texts font-normal underline underline-offset-4 mr-auto">{infoModal?.redirect?.link}</span>
+                        <span className="material-symbols-outlined ml-3 mt-1 select-none">chevron_right</span>
+                      </a>
+                    </div>
+                    : null
+                }
+              </div>
+            </div>
+            <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 bg-surface-0 overflow-y-auto">
+              <RichtText data={{
+                content: infoModal?.description?.content
+              }} />
+            </div>
+          </ContentInsideLayout>
+        </section>
+      </Modal>
       <HeaderFooterLayout>
         <ContentFullLayout classNames="w-d:hidden w-t:col-span-8 w-p:col-span-4">
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:hidden">
@@ -182,6 +261,7 @@ const Campus = ({ sections, meta }: any) => {
                               <a className="text-primary-400 font-bold" href="">
                                 Agendar visita
                               </a>
+
                               <span className="text-primary-400 material-symbols-outlined select-non text-lg ms-1">calendar_month</span>
                             </div>
                             {/* <div
@@ -197,7 +277,7 @@ const Campus = ({ sections, meta }: any) => {
                             classNames="col-span-5 w-t:col-span-4 w-p:col-span-12 w-p:aspect-2/1"
                             alt={items[0]?.alt}
                             src={items[0]?.src}
-                            classNamesImg="w-d: w-p:rounded-b-lg w-p:min-h-44"
+                            classNamesImg="w-d:rounded-r-lg w-t:rounded-r-lg w-p:rounded-b-lg w-p:min-h-44"
                           />
                           {/* <Map
                             coords={coords}
