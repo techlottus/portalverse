@@ -31,7 +31,7 @@ type ProgramDetailForm = {
     last_name?: string;
     phone?: string;
     email?: string;
-    level: string;
+    levels: [{level:string}];
     program: string;
     modality?: string;
     campus?: string;
@@ -121,8 +121,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     'VALLE',
   ]
   useEffect(() => {
-    // console.log('submit: ', submit);
-    
     if (submit) handleSubmit()
   }, [submit]);
 
@@ -158,9 +156,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }
 
 
-  const getBusinessLineToFetchFrom = (businessLine: string, modality: string) => {
-    // console.log('businessLine: ', businessLine);
-    // console.log('modality: ', modality);
+  const getBusinessLineToFetchFrom = (businessLine: string) => {
     
     switch(businessLine) {
       case "UANE": {
@@ -180,21 +176,24 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }
 
   useEffect(() => {
-    // console.log('tokenActive: ', tokenActive);
     if (!!tokenActive) {
         handleFetchEducativeOffer()
       }
   }, [tokenActive])
 
   useEffect(() => {
-    // console.log('filterPrograms: ', filterPrograms);
     if (filterPrograms) {
+
+      const prefilledLevels = prefilledData?.levels?.map(level => level.level)
+      const preFilteredPrograms = !!prefilledLevels && prefilledLevels.length > 0
+        ? filterPrograms?.filter((program: any)=> {
+            return prefilledLevels.includes(program.nivel)
+          })
+        : filterPrograms
       
-      const offerByProgram = filterPrograms?.filter((program: any) => {
+      const offerByProgram = preFilteredPrograms?.filter((program: any) => {
 
         if (businessUnit === 'ULA') {
-          // console.log('program.nombreCampus: ', program.nombreCampus);
-          // console.log('ulaCampuses.includes(program.nombreCampus): ', ulaCampuses.includes(program.nombreCampus));
           return program.nombrePrograma === prefilledData.program && ulaCampuses.includes(program.nombreCampus)
         } else {
           if (program.lineaNegocio === 'ULA') {
@@ -206,8 +205,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
           }
         }
       })
-      // console.log('offerByProgram: ', offerByProgram);
-      // console.log('prefilledData.program: ', prefilledData.program);
       if (!offerByProgram || offerByProgram?.length === 0) {
         console.log(`no se encontro en SF el programa ${prefilledData.program}`);
         setIsError('404')
@@ -216,26 +213,16 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         setFilteredPrograms(offerByProgram)
       }
     }
-    // if (!filterPrograms || filterPrograms?.length === 0) {
-    // }
-    
   }, [filterPrograms])
 
   useEffect(() => {
     if (filteredPrograms) {
-      
-      // console.log('filteredPrograms: ', filteredPrograms);
-      // const mods = filterByField(filteredPrograms, 'modalidad')
       const programs = filteredPrograms.map((program: any) => {
         return businessUnit !== 'ULA' && program.lineaNegocio === 'ULA' && program.modalidad === 'Online'
           ? {...program, modalidad: 'Flex'}
           : program
       })
       const mods =  filterByField(programs, 'modalidad')
-      // console.log('programs: ', programs);
-      // console.log('mods: ', mods);
-      
-      // console.log('mods: ', mods);
       setSFmodalities(mods?.map((mod: string) => {
         return  {
           value: mod,
@@ -243,19 +230,12 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
           active: mods?.length === 1 || mod === academicData.modality
         }
       }))
-      // console.log('SFmodalities: ', SFmodalities);
-
-      
-      // console.log('filteredPrograms: ', filteredPrograms);
     }
     
   }, [filteredPrograms])
 
   useEffect(() => {
     if (SFmodalities?.length > 0) {
-      // console.log('SFmodalities: ', SFmodalities);
-      // console.log('SFmodalities[0].value: ', SFmodalities[0].value);
-      // console.log('options: ', options);
       setOptions({
         ...options,
         modalities: SFmodalities,
@@ -264,52 +244,18 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         ...academicData,
         modality: SFmodalities?.length === 1 ? SFmodalities[0].value : academicData.modality
       })
-      // console.log('SFmodalities?.length === 1: ', SFmodalities?.length === 1);
-      // console.log('academicDataTouched: ', academicDataTouched);
       const modality = SFmodalities?.length === 1
       const newAcademicDataTouched = {
         ...academicDataTouched,
         modality
       }
-      // console.log('modality: ', modality);
-      // console.log('newAcademicDataTouched: ', newAcademicDataTouched);
       setAcademicDataTouched(newAcademicDataTouched)
-      // console.log('options: ', options);
-      
-      const periods = filteredPrograms?.reduce((acc: any, program: any, index: number, arr: any[]) => {
-        if (!acc.includes(program.nombrePeriodo)) {
-          acc = [...acc, program.nombrePeriodo]
-        }
-        return acc
-      }, [])
-       const currentPeriod = periods?.sort((a: any,b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[periods.length - 1]
-      // console.log('currentPeriod: ', currentPeriod);
-
-      const periodPrograms = filteredPrograms?.filter((program: any) => {
-        // console.log('program.nombrePeriodo: ', program.nombrePeriodo);
-        // console.log('currentPeriod: ', currentPeriod);
-        // console.log('program.nombrePeriodo === currentPeriod: ', program.nombrePeriodo === currentPeriod);
-
-        return program.nombrePeriodo === currentPeriod
-      })
-
-      // console.log('periodPrograms: ', periodPrograms);
-      const levels = filterByField(periodPrograms,'nivel')
-      // console.log('levels: ', levels);
-      setSFlevels(levels?.map((level: any) => ({
-        value: level,
-        text: level,
-        active: levels?.length === 1 || level.idCampus === academicData.level
-      })))
-      // console.log('SFlevels: ', SFlevels);
     }
       
   }, [SFmodalities])
 
   useEffect(() => {
     if (SFcampuses?.length > 0) {
-      // console.log('SFcampuses: ', SFcampuses);
-      // console.log('options: ', options);
       setOptions({
         ...options,
         campuses: SFcampuses
@@ -328,8 +274,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   useEffect(() => {
     if (SFlevels?.length > 0) {
-      // console.log('SFlevels: ', SFlevels);
-      // console.log('options: ', options);
       setOptions({
         ...options,
         levels: SFlevels
@@ -342,42 +286,16 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         ...academicDataTouched,
         level: SFlevels?.length === 1 || academicDataTouched.level
       })
-      const periods = filteredPrograms?.reduce((acc: any, program: any, index: number, arr: any[]) => {
-        if (!acc.includes(program.nombrePeriodo)) {
-          acc = [...acc, program.nombrePeriodo]
-        }
-        return acc
-      }, [])
-      const currentPeriod = periods?.sort((a: any,b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[periods.length - 1]
-      // console.log('currentPeriod: ', currentPeriod);
-
-      const camps = filterByField(filteredPrograms?.filter((program: any) => {
-          // console.log('program.nombrePeriodo: ', program.nombrePeriodo);
-          // console.log('currentPeriod: ', currentPeriod);
-          // console.log('program.nombrePeriodo === currentPeriod: ', program.nombrePeriodo === currentPeriod);
-
-          return program.nombrePeriodo === currentPeriod
-        }),'nombreCampus', ['nombreCampus', 'idCampus'])
-      // console.log('camps: ', camps);
-      setSFcampuses(camps?.map((campus: any) => ({
-        value: campus?.idCampus,
-        text: campus?.nombreCampus,
-        active: camps?.length === 1 || campus.idCampus === academicData.campus
-      })))
     }
       
   }, [SFlevels])
 
   useEffect(() => {
-    if (options && (options?.modalities && options?.campuses  && options?.levels) && (options?.modalities[0] && options?.campuses[0] && options?.levels[0])) {
+    if (options && (options?.modalities) && (options?.modalities[0])) {
       setIsLoading(false)
-      // console.log(options?.modalities);
-      // console.log(options?.campuses);
     }
   }, [options])
   useEffect(() => {
-    // console.log('prefilledData: ', prefilledData);
-    // console.log('options: ', options);
 
     setPersonalData({
       ...personalData,
@@ -390,25 +308,22 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [prefilledData])
 
   useEffect(() => {
-    // console.log('academicData: ', academicData);
-    
     Validate()
   }, [personalData, academicData]);
   useEffect(() => {
     if (!!academicData.modality) {
-      // console.log('academicData.modality: ', academicData.modality);
-      
+      setSFcampuses([])
+      setAcademicData({
+        ...academicData,
+        level: ''
+      })
       const programsByModality = filteredPrograms?.filter((program: any) => {
-        // console.log('program.modalidad: ', program.modalidad);
-        // console.log('academicData.modality: ', academicData.modality);
         if (academicData.modality === 'Flex') {
           return program.modalidad === 'Online' && program.lineaNegocio === 'ULA'
         } else {
           return program.modalidad === academicData.modality && program.lineaNegocio === businessUnit
         }
       })
-      // setFilteredPrograms(programsByModality)
-
       const periods = programsByModality?.reduce((acc: any, program: any, index: number, arr: any[]) => {
         if (!acc.includes(program.nombrePeriodo)) {
           acc = [...acc, program.nombrePeriodo]
@@ -416,19 +331,20 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         return acc
       }, [])
        const currentPeriod = periods?.sort((a: any,b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[periods.length - 1]
-      // console.log('currentPeriod: ', currentPeriod);
 
       const periodPrograms = programsByModality?.filter((program: any) => {
-        // console.log('program.nombrePeriodo: ', program.nombrePeriodo);
-        // console.log('currentPeriod: ', currentPeriod);
-        // console.log('program.nombrePeriodo === currentPeriod: ', program.nombrePeriodo === currentPeriod);
 
         return program.nombrePeriodo === currentPeriod
       })
 
-      // console.log('periodPrograms: ', periodPrograms);
       const levels = filterByField(periodPrograms,'nivel')
-      // console.log('levels: ', levels);
+      if (levels?.length === 1) {
+        setAcademicData({
+          ...academicData,
+          level: levels[0]
+        })
+      }
+      
       setSFlevels(levels?.map((level: any) => ({
         value: level,
         text: level,
@@ -450,11 +366,11 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   }, [academicData.campus]);
   useEffect(() => {
+    
     if (!!academicData.level) {
       const programsByLevel = filteredPrograms?.filter((program: any) => {
           return program.nivel === academicData.level
       })
-      // console.log('programsByLevel: ', programsByLevel);
 
       const periods = programsByLevel?.reduce((acc: any, program: any, index: number, arr: any[]) => {
         if (!acc.includes(program.nombrePeriodo)) {
@@ -463,16 +379,12 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         return acc
       }, [])
       const currentPeriod = periods?.sort((a: any,b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[periods.length - 1]
-      // console.log('currentPeriod: ', currentPeriod);
+      const periodPrograms = programsByLevel?.filter((program: any) => {
 
-      const camps = filterByField(programsByLevel?.filter((program: any) => {
-          // console.log('program.nombrePeriodo: ', program.nombrePeriodo);
-          // console.log('currentPeriod: ', currentPeriod);
-          // console.log('program.nombrePeriodo === currentPeriod: ', program.nombrePeriodo === currentPeriod);
+        return program.nombrePeriodo === currentPeriod
+      })
+      const camps = filterByField(periodPrograms,'nombreCampus', ['nombreCampus', 'idCampus'])
 
-          return program.nombrePeriodo === currentPeriod
-        }),'nombreCampus', ['nombreCampus', 'idCampus'])
-      // console.log('camps: ', camps);
       setSFcampuses(camps?.map((campus: any) => ({
         value: campus?.idCampus,
         text: campus?.nombreCampus,
@@ -488,17 +400,12 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     }
   }, [selectedProgram]);
   useEffect(() => {
-    
-    // if (isLoadingToken) setIsLoading(true)
     if (!isLoadingToken && !isErrorToken && !!Object.keys(token).length) {
       setTokenActive(`${token.token_type} ${token.access_token}`);
     }
   }, [isLoadingToken, isErrorToken, token]);
 
   useEffect(() => {
-    // console.log('isLoading: ', isLoading);
-    // console.log('isError : ', isError );
-    
     setStatus({ loading: isLoading, error: isError, valid: isValid, success: isSuccess })
   }, [isLoading, isError, isValid, isSuccess]);
 
@@ -529,7 +436,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   const handleFetchEducativeOffer = () => {
     setIsLoading(true)
     setFilteredPrograms([]);
-    const businessLineToFetchFrom = getBusinessLineToFetchFrom(businessUnit, academicData.modality)
+    const businessLineToFetchFrom = getBusinessLineToFetchFrom(businessUnit)
     
     fetchEducativeOffer(process.env.NEXT_PUBLIC_EDUCATIVE_OFFER!, '', businessLineToFetchFrom, tokenActive);
   }
@@ -537,11 +444,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   const sendLeadData = async () => {
     const endpoint = process.env.NEXT_PUBLIC_CAPTACION_PROSPECTO;
-    // console.log('filteredPrograms: ',  filteredPrograms);
-    
-    // console.log('selectedProgram: ',  selectedProgram);
 
-    // query params
     const nombre = personalData?.name;
     const apellidoPaterno = personalData?.last_name;
     const telefono = personalData?.phone;
@@ -556,12 +459,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     const canal = process.env.NEXT_PUBLIC_CANAL;
     const medio = queryParams?.utm_medium;
     const campana = queryParams?.utm_campaign;
-
-    // console.log("queryParams: ", queryParams);
-
     const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&telefono=${telefono}&email=${email}&lineaNegocio=${lineaNegocio}&modalidad=${modalidad}&nivel=${nivel}&campus=${campus}&programa=${programa}&avisoPrivacidad=true&leadSource=Digital&validaRegistroBoot=${validaRegistroBoot}&source=${source}&canal=${canal}${medio ? `&medio=${medio}` : ""}${campana ? `&campana=${campana}` : ""}`;
-
-    // console.log("params: ", params)
 
     setIsLoading(true);
 
@@ -572,8 +470,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       }
     })
       .then((res: any) => {
-        // console.log(res);
-        
         if(res?.data?.Exitoso !== "TRUE") {
           throw new Error();
         }
@@ -608,20 +504,12 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     const isValidPersonalData = validatePersonalDataControls();
     const isValidAcademicData = validateAcademicDataControls();
 
-    // console.log('isValidPersonalData: ', isValidPersonalData);
-    // console.log('isValidAcademicData: ', isValidAcademicData);
-
     setIsValid(isValidPersonalData && isValidAcademicData)
-    // console.log('isValid: ', isValid);
   }
 
   const handleSubmit = async () => {
     setIsLoading(true)
     Validate()
-    // console.log('isValid: ', isValid);
-    // console.log('!isError: ', !isError);
-    // console.log('isValid && !isError: ', isValid && !isError);
-    
     if (isValid && !isError) {
       sendLeadData()
     }

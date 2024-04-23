@@ -169,6 +169,7 @@ export type ProgramAttributes = {
     data: {
       attributes: {
         title: ProgramLevel;
+        SFlevels: [{level: string}]
       }
     }
   }
@@ -330,6 +331,9 @@ query ProgramBySlug($slug: String!) {
           data {
             attributes {
               title
+              SFlevels {
+                level
+              }
             }
           }
         }
