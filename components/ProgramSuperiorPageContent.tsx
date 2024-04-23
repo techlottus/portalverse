@@ -201,8 +201,8 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           {
             !!SFprogram && <ContainerForm
               type="ComponentSectionsFormContainer"
-              title={`Obtén más información sobre el curso de ${program.attributes.name}`}
-              description="Queremos acompañarte en tu elección. Comparte tus datos para que un asesor de admisiones pueda responder a todas tus preguntas."
+              title={`Obtén más información sobre el programa de ${program.attributes.name}`}
+              description=""
               form="Detalle_de_programa"
               progress={0}
               position="center"
@@ -456,8 +456,8 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                   {
                     !!SFprogram &&  <ContainerForm
                       type="ComponentSectionsFormContainer"
-                      title={`Obtén más información sobre el curso de ${program.attributes.name}`}
-                      description="Queremos acompañarte en tu elección. Comparte tus datos para que un asesor de admisiones pueda responder a todas tus preguntas."
+                      title={`Obtén más información sobre el programa de ${program.attributes.name}`}
+                      description=""
                       form="Detalle_de_programa"
                       progress={0}
                       position="center"
