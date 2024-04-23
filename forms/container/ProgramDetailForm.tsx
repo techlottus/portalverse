@@ -58,7 +58,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   const { setStatus, submit, prefilledData } = props
   
 
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState('');
   const [isValid, setIsValid] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -173,7 +173,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         return "ULA"
       }
       case "UTC": {
-        return "UTC"
+        return "UTC,ULA"
       }
       default: return ""
     }
@@ -188,29 +188,35 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   useEffect(() => {
     // console.log('filterPrograms: ', filterPrograms);
+    if (filterPrograms) {
+      
+      const offerByProgram = filterPrograms?.filter((program: any) => {
 
-    const offerByProgram = filterPrograms?.filter((program: any) => {
-
-      if (businessUnit === 'ULA') {
-        // console.log('program.nombreCampus: ', program.nombreCampus);
-        // console.log('ulaCampuses.includes(program.nombreCampus): ', ulaCampuses.includes(program.nombreCampus));
-        
-        return program.nombrePrograma === prefilledData.program && ulaCampuses.includes(program.nombreCampus)
-      } else {
-        // console.log('program.nombrePrograma: ', program.nombrePrograma);
-        // console.log('prefilledData.program: ', prefilledData.program);
-        // console.log('program.nombrePrograma === prefilledData.program: ', program.nombrePrograma === prefilledData.program);
-        if (program.lineaNegocio === 'ULA') {
-          return businessUnit === 'UTC'
-            ? program.nombrePrograma === prefilledData.program && program.modalidad === `Semipresencial`
-            : program.nombrePrograma === prefilledData.program && program.nombreCampus === `${businessUnit} ONLINE`
+        if (businessUnit === 'ULA') {
+          // console.log('program.nombreCampus: ', program.nombreCampus);
+          // console.log('ulaCampuses.includes(program.nombreCampus): ', ulaCampuses.includes(program.nombreCampus));
+          return program.nombrePrograma === prefilledData.program && ulaCampuses.includes(program.nombreCampus)
         } else {
-          return program.nombrePrograma === prefilledData.program
+          if (program.lineaNegocio === 'ULA') {
+            return businessUnit === 'UTC'
+              ? program.nombrePrograma === prefilledData.program && [`Semipresencial`].includes(program.modalidad)
+              : program.nombrePrograma === prefilledData.program && program.nombreCampus === `${businessUnit} ONLINE`
+          } else {
+            return program.nombrePrograma === prefilledData.program
+          }
         }
+      })
+      // console.log('offerByProgram: ', offerByProgram);
+      if (!offerByProgram || offerByProgram?.length === 0) {
+        console.log(`no se encontro en SF el programa ${prefilledData.program}`);
+        setIsError('404')
+      } else {
+
+        setFilteredPrograms(offerByProgram)
       }
-    })
-    // console.log('offerByProgram: ', offerByProgram);
-    setFilteredPrograms(offerByProgram)
+    }
+    // if (!filterPrograms || filterPrograms?.length === 0) {
+    // }
     
   }, [filterPrograms])
 
@@ -285,6 +291,8 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
         return program.nombrePeriodo === currentPeriod
       })
+
+      // console.log('periodPrograms: ', periodPrograms);
       const levels = filterByField(periodPrograms,'nivel')
       // console.log('levels: ', levels);
       setSFlevels(levels?.map((level: any) => ({
@@ -360,9 +368,8 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [SFlevels])
 
   useEffect(() => {
-      // console.log(options);
-      setIsLoading(false)
     if (options && (options?.modalities && options?.campuses  && options?.levels) && (options?.modalities[0] && options?.campuses[0] && options?.levels[0])) {
+      setIsLoading(false)
       // console.log(options?.modalities);
       // console.log(options?.campuses);
     }
@@ -401,8 +408,69 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       })
       // setFilteredPrograms(programsByModality)
 
-      // console.log('programsByModality: ', programsByModality);
-      const camps = filterByField(programsByModality,'nombreCampus', ['nombreCampus', 'idCampus'])
+      const periods = programsByModality?.reduce((acc: any, program: any, index: number, arr: any[]) => {
+        if (!acc.includes(program.nombrePeriodo)) {
+          acc = [...acc, program.nombrePeriodo]
+        }
+        return acc
+      }, [])
+       const currentPeriod = periods?.sort((a: any,b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[periods.length - 1]
+      // console.log('currentPeriod: ', currentPeriod);
+
+      const periodPrograms = programsByModality?.filter((program: any) => {
+        // console.log('program.nombrePeriodo: ', program.nombrePeriodo);
+        // console.log('currentPeriod: ', currentPeriod);
+        // console.log('program.nombrePeriodo === currentPeriod: ', program.nombrePeriodo === currentPeriod);
+
+        return program.nombrePeriodo === currentPeriod
+      })
+
+      // console.log('periodPrograms: ', periodPrograms);
+      const levels = filterByField(periodPrograms,'nivel')
+      // console.log('levels: ', levels);
+      setSFlevels(levels?.map((level: any) => ({
+        value: level,
+        text: level,
+        active: levels?.length === 1 || level.idCampus === academicData.level
+      })))
+    }
+  }, [academicData.modality]);
+  useEffect(() => {
+    if (!!academicData.campus) {
+  
+      const programsByCampus = filteredPrograms?.filter((program: any) => {
+        return program.idCampus === academicData.campus
+      })
+      
+      const selectedProgramData = programsByCampus.sort((a: any,b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[programsByCampus.length - 1];
+
+      setselectedProgram(selectedProgramData)
+    }
+
+  }, [academicData.campus]);
+  useEffect(() => {
+    if (!!academicData.level) {
+      const programsByLevel = filteredPrograms?.filter((program: any) => {
+          return program.nivel === academicData.level
+      })
+      // console.log('programsByLevel: ', programsByLevel);
+
+      const periods = programsByLevel?.reduce((acc: any, program: any, index: number, arr: any[]) => {
+        if (!acc.includes(program.nombrePeriodo)) {
+          acc = [...acc, program.nombrePeriodo]
+        }
+        return acc
+      }, [])
+      const currentPeriod = periods?.sort((a: any,b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[periods.length - 1]
+      // console.log('currentPeriod: ', currentPeriod);
+
+      const camps = filterByField(programsByLevel?.filter((program: any) => {
+          // console.log('program.nombrePeriodo: ', program.nombrePeriodo);
+          // console.log('currentPeriod: ', currentPeriod);
+          // console.log('program.nombrePeriodo === currentPeriod: ', program.nombrePeriodo === currentPeriod);
+
+          return program.nombrePeriodo === currentPeriod
+        }),'nombreCampus', ['nombreCampus', 'idCampus'])
       // console.log('camps: ', camps);
       setSFcampuses(camps?.map((campus: any) => ({
         value: campus?.idCampus,
@@ -410,33 +478,8 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         active: camps?.length === 1 || campus.idCampus === academicData.campus
       })))
     }
-  }, [academicData.modality]);
-  useEffect(() => {
-    if (!!academicData.campus) {
-      // console.log('academicData.campus: ', academicData.campus);
-      // const programsByModality = filteredPrograms?.filter((program: any) => {
-      // console.log('program.modalidad: ', program.modalidad);
-      // console.log('academicData.modality: ', academicData.modality);
-        
-      //   return program.modalidad === academicData.modality 
-      // })
-      // console.log('programsByModality: ', programsByModality);
-      const programsByCampus = filteredPrograms?.filter((program: any) => {
-        // console.log('program.idCampus: ', program.idCampus);
-        // console.log('academicData.campus: ', academicData.campus);
-        return program.idCampus === academicData.campus
-      })
-      // console.log('programsByCampus: ', programsByCampus);
-      // setSFprograms(campusByProgram)
-      // setFilteredPrograms(programsByCampus)
-      
-      const selectedProgramData = programsByCampus.sort((a: any,b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[programsByCampus.length - 1];
-      // setAcademicData({...academicData, program: selectedProgramData?.idPrograma})
 
-      setselectedProgram(selectedProgramData)
-    }
-
-  }, [academicData.campus]);
+  }, [academicData.level]);
 
   useEffect(() => {
     if (!!selectedProgram) {
@@ -452,6 +495,9 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [isLoadingToken, isErrorToken, token]);
 
   useEffect(() => {
+    // console.log('isLoading: ', isLoading);
+    // console.log('isError : ', isError );
+    
     setStatus({ loading: isLoading, error: isError, valid: isValid, success: isSuccess })
   }, [isLoading, isError, isValid, isSuccess]);
 
