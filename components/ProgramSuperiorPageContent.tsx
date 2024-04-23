@@ -277,7 +277,8 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
               }
             }]}
             prefilledData={{
-              program: SFprogram
+              program: SFprogram,
+              levels: program.attributes.level.data.attributes.SFlevels
             }}
             button={{
               label: 'Solicitar información',
