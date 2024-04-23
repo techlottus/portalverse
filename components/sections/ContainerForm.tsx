@@ -3,13 +3,11 @@ import Link from "next/link";
 import ProgressBar from "@/old-components/ProgressBar/ProgressBar";
 import Image from "@/old-components/Image"
 import DentalClinics from "@/forms/container/DentalClinics";
-import Container from "@/layouts/Container.layout";
 import { ContainerForm as ContainerFormType } from "@/utils/strapi/sections/ContainerForm";
 import WebError, { WebErrorComponent } from "./WebError";
 import cn from "classnames";
 import Button from "@/old-components/Button/Button";
 import { useRouter } from "next/router";
-import OpenForm from "@/forms/container/OpenForm";
 import ProgramDetailForm from "@/forms/container/ProgramDetailForm";
 import { DoubleDegreeForm } from "@/forms/container/DoubleDegreeForm";
 

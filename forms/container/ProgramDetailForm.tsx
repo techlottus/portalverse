@@ -370,7 +370,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   useEffect(() => {
     if (options && (options?.modalities && options?.campuses  && options?.levels) && (options?.modalities[0] && options?.campuses[0] && options?.levels[0])) {
       setIsLoading(false)
-      console.log(options?.modalities);
+      // console.log(options?.modalities);
       // console.log(options?.campuses);
     }
   }, [options])
@@ -495,8 +495,8 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [isLoadingToken, isErrorToken, token]);
 
   useEffect(() => {
-    console.log('isLoading: ', isLoading);
-    console.log('isError : ', isError );
+    // console.log('isLoading: ', isLoading);
+    // console.log('isError : ', isError );
     
     setStatus({ loading: isLoading, error: isError, valid: isValid, success: isSuccess })
   }, [isLoading, isError, isValid, isSuccess]);
