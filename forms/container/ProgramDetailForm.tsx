@@ -121,8 +121,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     'VALLE',
   ]
   useEffect(() => {
-    // console.log('submit: ', submit);
-    
     if (submit) handleSubmit()
   }, [submit]);
 
@@ -185,6 +183,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   useEffect(() => {
     if (filterPrograms) {
+
       const prefilledLevels = prefilledData?.levels?.map(level => level.level)
       const preFilteredPrograms = !!prefilledLevels && prefilledLevels.length > 0
         ? filterPrograms?.filter((program: any)=> {
@@ -251,24 +250,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         modality
       }
       setAcademicDataTouched(newAcademicDataTouched)
-      
-      const periods = filteredPrograms?.reduce((acc: any, program: any, index: number, arr: any[]) => {
-        if (!acc.includes(program.nombrePeriodo)) {
-          acc = [...acc, program.nombrePeriodo]
-        }
-        return acc
-      }, [])
-       const currentPeriod = periods?.sort((a: any,b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[periods.length - 1]
-
-      const periodPrograms = filteredPrograms?.filter((program: any) => {
-        return program.nombrePeriodo === currentPeriod
-      })
-      const levels = filterByField(periodPrograms,'nivel')
-      setSFlevels(levels?.map((level: any) => ({
-        value: level,
-        text: level,
-        active: levels?.length === 1 || level.idCampus === academicData.level
-      })))
     }
       
   }, [SFmodalities])
@@ -305,28 +286,12 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         ...academicDataTouched,
         level: SFlevels?.length === 1 || academicDataTouched.level
       })
-      const periods = filteredPrograms?.reduce((acc: any, program: any, index: number, arr: any[]) => {
-        if (!acc.includes(program.nombrePeriodo)) {
-          acc = [...acc, program.nombrePeriodo]
-        }
-        return acc
-      }, [])
-      const currentPeriod = periods?.sort((a: any,b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[periods.length - 1]
-
-      const camps = filterByField(filteredPrograms?.filter((program: any) => {
-          return program.nombrePeriodo === currentPeriod
-        }),'nombreCampus', ['nombreCampus', 'idCampus'])
-      setSFcampuses(camps?.map((campus: any) => ({
-        value: campus?.idCampus,
-        text: campus?.nombreCampus,
-        active: camps?.length === 1 || campus.idCampus === academicData.campus
-      })))
     }
       
   }, [SFlevels])
 
   useEffect(() => {
-    if (options && (options?.modalities && options?.campuses  && options?.levels) && (options?.modalities[0] && options?.campuses[0] && options?.levels[0])) {
+    if (options && (options?.modalities) && (options?.modalities[0])) {
       setIsLoading(false)
     }
   }, [options])
@@ -347,6 +312,11 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [personalData, academicData]);
   useEffect(() => {
     if (!!academicData.modality) {
+      setSFcampuses([])
+      setAcademicData({
+        ...academicData,
+        level: ''
+      })
       const programsByModality = filteredPrograms?.filter((program: any) => {
         if (academicData.modality === 'Flex') {
           return program.modalidad === 'Online' && program.lineaNegocio === 'ULA'
@@ -368,6 +338,13 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       })
 
       const levels = filterByField(periodPrograms,'nivel')
+      if (levels?.length === 1) {
+        setAcademicData({
+          ...academicData,
+          level: levels[0]
+        })
+      }
+      
       setSFlevels(levels?.map((level: any) => ({
         value: level,
         text: level,
@@ -389,6 +366,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   }, [academicData.campus]);
   useEffect(() => {
+    
     if (!!academicData.level) {
       const programsByLevel = filteredPrograms?.filter((program: any) => {
           return program.nivel === academicData.level
@@ -401,11 +379,12 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         return acc
       }, [])
       const currentPeriod = periods?.sort((a: any,b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[periods.length - 1]
-
-      const camps = filterByField(programsByLevel?.filter((program: any) => {
+      const periodPrograms = programsByLevel?.filter((program: any) => {
 
         return program.nombrePeriodo === currentPeriod
-      }),'nombreCampus', ['nombreCampus', 'idCampus'])
+      })
+      const camps = filterByField(periodPrograms,'nombreCampus', ['nombreCampus', 'idCampus'])
+
       setSFcampuses(camps?.map((campus: any) => ({
         value: campus?.idCampus,
         text: campus?.nombreCampus,
