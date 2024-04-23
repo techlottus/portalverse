@@ -22,7 +22,7 @@ const GoogleMap: FC<GoogleMapSection> = (props: GoogleMapSection) => {
   const renderMap = (src: string) => {
     return (
       <iframe
-        className="w-full h-full"
+        className="w-full h-full rounded-xl w-t:w-2/3 w-t:h-2/3 w-t:mx-auto"
         src={src}
         style={{ border: 0 }}
         loading="lazy" ></iframe>
@@ -34,7 +34,7 @@ const GoogleMap: FC<GoogleMapSection> = (props: GoogleMapSection) => {
       <Container>
         <div className="flex flex-col space-y-6">
           {
-            title ? <h3 className="font-headings text-10 font-bold leading-tight w-t:text-8.5 w-p:text-6">{title}</h3> : null
+            title ? <h3 className="font-headings text-10 font-bold leading-tight text-center w-t:text-8.5 w-p:text-6">{title}</h3> : null
           }
           {
             variant === 'map' ?
@@ -43,34 +43,46 @@ const GoogleMap: FC<GoogleMapSection> = (props: GoogleMapSection) => {
               </div>
               :
               variant === 'tour' && detailPosition !== 'top' ?
-                (<div className={cn("flex w-d:flex-row flex-col ", { 'w-d:flex-row-reverse': detailPosition === "right" })}>
-                  <div className={cn("flex flex-col items-start space-y-4 w-d:w-2/5 w-full w-d:p-0 pb-4", { "w-d:px-6": detailPosition === 'right' })}>
+                (<div className={cn("flex w-d:flex-row flex-col my-auto px-16", { 'w-d:flex-row-reverse': detailPosition === "right" })}>
+                  <div className={cn("flex flex-col items-start w-d:w-3/6 w-t:w-3/5 mx-auto pb-4 my-auto w-d:px-12", { "": detailPosition === 'right' })}>
                     <h1>{name}</h1>
-                    {address && <div className="flex flex-col items-start space-y-2">
-                      <span className="material-symbols-outlined font-normal select-none">location_on</span>
-                      <span className="font-bold text-surface-600">Dirección</span>
-                      <span className="font-normal text-surface-600 hover:underline">{address}</span>
+                    {address && <div className="flex flex-col items-start">
+                      <div className="flex">
+                        <span className="material-symbols-outlined font-normal select-none mr-1">location_on</span>
+                        <span className="font-bold text-surface-600">Dirección</span>
+                      </div>
+                      <span className="font-normal text-surface-500 hover:underline">{address}</span>
+                    </div>}
+                    {schedule && <div className="flex flex-col items-start my-6">
+                      <div className="flex">
+                        <span className="material-symbols-outlined font-normal select-none mr-1">event_available</span>
+                        <span className="font-bold text-surface-600">Horarios:</span>
+                      </div>
+                      <span className="font-normal text-surface-500 hover:underline">{schedule}</span>
                     </div>}
                     {admissionPhone &&
-                      <div className="flex flex-col items-start space-y-2">
-                        <span className="material-symbols-outlined font-normal select-none">call</span>
-                        <span className="font-bold text-surface-600">Teléfono Admisiones:</span>
-                        <span className="font-normal text-surface-600 hover:underline">{admissionPhone}</span>
-                      </div>}
-                    {receptionPhone && <div className="flex flex-col items-start space-y-2">
-                      <span className="material-symbols-outlined font-normal select-none">call</span>
-                      <span className="font-bold text-surface-600">Teléfono Admisiones:</span>
-                      <span className="font-normal text-surface-600 hover:underline">{receptionPhone}</span>
-                    </div>}
-                    {schedule && <div className="flex flex-col items-start space-y-2">
-                      <span className="material-symbols-outlined font-normal select-none">event_available</span>
-                      <span className="font-bold text-surface-600">Horarios:</span>
-                      <span className="font-normal text-surface-600 hover:underline">{schedule}</span>
-                    </div>}
+                      <div>
+                        <div className="flex mb-1">
+                          <span className="material-symbols-outlined font-normal select-none mr-1">call</span>
+                          <span className="font-bold text-surface-600">Teléfonos</span>
+                        </div>
+                        <div className="flex flex-row items-start gap-6 w-p:gap-4">
+                          <div className="flex flex-col">
+                            <span className="font-bold text-surface-500">Admisiones</span>
+                            <span className="font-normal text-surface-500 underline">{admissionPhone}</span>
+                          </div>
+                          {receptionPhone &&
+                            <div className="flex flex-col">
+                              <span className="font-bold text-surface-500">Recepción</span>
+                              <span className="font-normal text-surface-500 underline">{receptionPhone}</span>
+                            </div>}
+                        </div>
+                      </div>
+                    }
                   </div>
                   {
                     validSrc ?
-                      <div className="w-d:w-3/5 w-full h-auto ">
+                      <div className="w-d:w-3/5 w-full h-auto rounded-lg">
                         <Aspect ratio="4/3">
                           {renderMap(src)}
                         </Aspect>
