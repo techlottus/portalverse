@@ -180,7 +180,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }
 
   useEffect(() => {
-    console.log('tokenActive: ', tokenActive);
+    // console.log('tokenActive: ', tokenActive);
     if (!!tokenActive) {
         handleFetchEducativeOffer()
       }
@@ -188,35 +188,35 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   useEffect(() => {
     // console.log('filterPrograms: ', filterPrograms);
-    if (!filterPrograms || filterPrograms?.length === 0) {
-      console.log(`no se encontro en SF el programa ${prefilledData.program}`);
-      setIsError('404')
-    }
-    const offerByProgram = filterPrograms?.filter((program: any) => {
+    if (filterPrograms) {
+      
+      const offerByProgram = filterPrograms?.filter((program: any) => {
 
-      if (businessUnit === 'ULA') {
-        // console.log('program.nombreCampus: ', program.nombreCampus);
-        // console.log('ulaCampuses.includes(program.nombreCampus): ', ulaCampuses.includes(program.nombreCampus));
-        return program.nombrePrograma === prefilledData.program && ulaCampuses.includes(program.nombreCampus)
-      } else {
-        if (program.lineaNegocio === 'ULA') {
-          return businessUnit === 'UTC'
-            ? program.nombrePrograma === prefilledData.program && [`Semipresencial`].includes(program.modalidad)
-            : program.nombrePrograma === prefilledData.program && program.nombreCampus === `${businessUnit} ONLINE`
+        if (businessUnit === 'ULA') {
+          // console.log('program.nombreCampus: ', program.nombreCampus);
+          // console.log('ulaCampuses.includes(program.nombreCampus): ', ulaCampuses.includes(program.nombreCampus));
+          return program.nombrePrograma === prefilledData.program && ulaCampuses.includes(program.nombreCampus)
         } else {
-          return program.nombrePrograma === prefilledData.program
+          if (program.lineaNegocio === 'ULA') {
+            return businessUnit === 'UTC'
+              ? program.nombrePrograma === prefilledData.program && [`Semipresencial`].includes(program.modalidad)
+              : program.nombrePrograma === prefilledData.program && program.nombreCampus === `${businessUnit} ONLINE`
+          } else {
+            return program.nombrePrograma === prefilledData.program
+          }
         }
-      }
-    })
-    // console.log('offerByProgram: ', offerByProgram);
-    if (offerByProgram?.length === 0) {
-      console.log(`no se encontro en SF el programa ${prefilledData.program}`);
-      setIsError('404')
-    } else {
-      setIsError('')
+      })
+      // console.log('offerByProgram: ', offerByProgram);
+      if (!offerByProgram || offerByProgram?.length === 0) {
+        console.log(`no se encontro en SF el programa ${prefilledData.program}`);
+        setIsError('404')
+      } else {
 
-      setFilteredPrograms(offerByProgram)
+        setFilteredPrograms(offerByProgram)
+      }
     }
+    // if (!filterPrograms || filterPrograms?.length === 0) {
+    // }
     
   }, [filterPrograms])
 
@@ -368,10 +368,10 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [SFlevels])
 
   useEffect(() => {
-      // console.log(options);
+      console.log(options);
     if (options && (options?.modalities && options?.campuses  && options?.levels) && (options?.modalities[0] && options?.campuses[0] && options?.levels[0])) {
       setIsLoading(false)
-      // console.log(options?.modalities);
+      console.log(options?.modalities);
       // console.log(options?.campuses);
     }
   }, [options])
@@ -496,6 +496,9 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [isLoadingToken, isErrorToken, token]);
 
   useEffect(() => {
+    console.log('isLoading: ', isLoading);
+    console.log('isError : ', isError );
+    
     setStatus({ loading: isLoading, error: isError, valid: isValid, success: isSuccess })
   }, [isLoading, isError, isValid, isSuccess]);
 
