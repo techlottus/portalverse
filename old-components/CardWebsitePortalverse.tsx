@@ -15,7 +15,7 @@ const CardWebsitePortalverse: FC<CardWebsitePortalverseData> = ({ data, classNam
           "cursor-pointer hover:shadow-2xl": !!onClick
         })} onClick={onClick}>
           <div>
-            <Aspect ratio="2/1">
+            <Aspect ratio={data?.aspect}>
               <Image classNames="w-full h-full" classNamesImg="w-full h-full object-cover" src={data?.image} alt="image" />
             </Aspect>
           </div>

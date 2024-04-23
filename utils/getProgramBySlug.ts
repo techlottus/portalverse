@@ -175,6 +175,7 @@ export type ProgramAttributes = {
   price: number;
   offerPrice: number;
   priceDetail: string;
+  nombreProgramaSalesforce?: string;
 };
 
 export type ProgramData = {
@@ -201,6 +202,7 @@ query ProgramBySlug($slug: String!) {
       attributes {
         slug
         name
+        nombreProgramaSalesforce
         admissionProfile
         graduateProfile
         laborField

@@ -11,7 +11,7 @@ export type CardWebsitePortalverseConfig = {
     type?: string;
     link: LinkIconsConfig;
     border?: boolean;
-    aspect?: string;
+    aspect: string;
     background?: boolean;
     isLink?: boolean;
 }

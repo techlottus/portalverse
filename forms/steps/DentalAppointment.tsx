@@ -7,8 +7,6 @@ import cn from "classnames"
 
 type SelectOptions ={ value: string, text: string, active: boolean }
 const DentalAppointment: FC<any> = ({
-  data,
-  config: stepOneConfig,
   appointmentData,
   setAppointmentData,
   infoControlsTouched,
@@ -25,13 +23,9 @@ const DentalAppointment: FC<any> = ({
 
   const [ dataCampus, setDataCampus ] = useState<Array<any>>([]);
 
-  const [ config, setConfig ] = useState<any>( stepOneConfig ? {...stepOneConfig} : {...OpenFormInit.stepone });
   useEffect(() => {
     setDataCampus([ ...selectOptions ]);
   }, [appointmentData.campus])
-  useEffect(() => {
-    setConfig({ ...config, ...data });
-  }, [data]);
 
   const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
   const campusLabel = BUSINESS_UNIT === "UTEG" || BUSINESS_UNIT === "UTC" ? "plantel" : "campus";
@@ -64,12 +58,12 @@ const DentalAppointment: FC<any> = ({
   }
 
   return <>
-    <div className="mt-6">
+    <div className="">
       <Select options={[...dataCampus]} data={selectData} onClick={(option: CustomEvent) => handleChangeCampus(option)} ></Select>
 
       <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>Selecciona un {campusLabel} para continuar</p>
     </div>
-    <div className="mt-6">
+    <div className="">
       <textarea
         className={cn("mt-6 rounded-t-lg border border-surface-300 border-solid w-full focus:outline-none font-medium font-texts p-4 border-b focus:placeholder-primary-500 focus:border-b-primary-500",{"border-b-error-500 placeholder-error-500" : errorControls.reason, " border-b-surface-500 placeholder-surface-900" : !errorControls.reason } )}
         placeholder="Agrega el motivo de tu consulta"

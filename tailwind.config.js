@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import * as tenantBase from "./tailwindBase.js";
+import * as tailwindBase from "@lottuseducation/tailwind-base/lib/tailwind-base.js";
 
 module.exports = {
   content: [
@@ -9,9 +11,16 @@ module.exports = {
     "./forms/**/*.{js,ts,jsx,tsx}",
     "./public/icons/**/*.{svg,jsx}"
   ],
-  safelist: ["font-headings","font-texts","font-Poppins","font-Nunito-Sans","bg-logo","bg-favicon"],
+  safelist: [{pattern: /bg-[a-z]*-[0-9]*/g}],
+  presets: [tailwindBase.default, tenantBase.default],
   theme: {
     extend: {
+   "zIndex": {
+      "15": "15"
+   },
+   "zIndex": {
+      "15": "15"
+   },
    "screens": {
       "w-p": {
          "max": "599px"
@@ -28,6 +37,12 @@ module.exports = {
       }
    },
    "maxWidth": {
+      "72": "18rem",
+      "78": "19.5rem",
+      "96": "24rem",
+      "72": "18rem",
+      "78": "19.5rem",
+      "96": "24rem",
       "147": "36.75rem",
       "d-base": "1200px"
    },
@@ -57,8 +72,16 @@ module.exports = {
    "fontSize": {
       "5": "1.25rem",
       "6": "1.5rem",
+      "7": "1.75rem",
+      "8": "2rem",
+      "7": "1.75rem",
+      "8": "2rem",
       "10": "2.5rem",
       "13": "3.25rem",
+      "14": "3.5rem",
+      "16": "4rem",
+      "14": "3.5rem",
+      "16": "4rem",
       "3.5": "0.875rem",
       "4.5": "1.125rem",
       "5.5": "1.375rem",
@@ -70,6 +93,8 @@ module.exports = {
    "lineHeight": {
       "12": "3rem",
       "13": "3.75rem",
+      "14": "3.5rem",
+      "14": "3.5rem",
       "16": "4rem",
       "5.2": "1.3rem",
       "5.625": "1.406rem",
@@ -83,178 +108,8 @@ module.exports = {
       "semi-tight": "1.125"
    },
    "colors": {
-      "primary": {
-         "0": "#F0FBF6",
-         "50": "#E1F6EC",
-         "100": "#C2ECD9",
-         "200": "#A4E3C6",
-         "300": "#7DC4AD",
-         "400": "#57A695",
-         "500": "#2B897E",
-         "600": "#247269",
-         "700": "#1D5B54",
-         "800": "#16443F",
-         "900": "#0E2E2A",
-         "950": "#071715"
-      },
-      "secondary": {
-         "0": "#F0FBF6",
-         "50": "#E1F6EC",
-         "100": "#C2ECD9",
-         "200": "#A4E3C6",
-         "300": "#7DC4AD",
-         "400": "#57A695",
-         "500": "#2B897E",
-         "600": "#247269",
-         "700": "#1D5B54",
-         "800": "#16443F",
-         "900": "#0E2E2A",
-         "950": "#071715"
-      },
-      "surface": {
-         "0": "#FFFFFF",
-         "50": "#FAFAFA",
-         "100": "#F4F4F5",
-         "200": "#E4E4E7",
-         "300": "#D4D4D8",
-         "400": "#A1A1AA",
-         "500": "#71717A",
-         "600": "#52525B",
-         "700": "#3F3F46",
-         "800": "#27272A",
-         "900": "#18181B",
-         "950": "#000000"
-      },
-      "info": {
-         "0": "#EFF4FC",
-         "50": "#DFE9F9",
-         "100": "#C0D2F4",
-         "200": "#A0BCEE",
-         "300": "#80A6E8",
-         "400": "#618FE3",
-         "500": "#4179DD",
-         "600": "#2460CA",
-         "700": "#1D4DA2",
-         "800": "#163979",
-         "900": "#0E2651",
-         "950": "#071328"
-      },
-      "warning": {
-         "0": "#FDF9F0",
-         "50": "#FAF3E1",
-         "100": "#F6E8C3",
-         "200": "#F1DCA6",
-         "300": "#F1DCA6",
-         "400": "#ECD088",
-         "500": "#E3B94C",
-         "600": "#DAA722",
-         "700": "#AF861B",
-         "800": "#836414",
-         "900": "#57430D",
-         "950": "#2C2107"
-      },
-      "error": {
-         "0": "#FDF4F2",
-         "50": "#FBE8E5",
-         "100": "#F6D1CC",
-         "200": "#F2BAB2",
-         "300": "#EEA398",
-         "400": "#E98C7F",
-         "500": "#E57565",
-         "600": "#DD4B36",
-         "700": "#BC3320",
-         "800": "#8D2718",
-         "900": "#5E1A10",
-         "950": "#2F0D08"
-      },
-      "success": {
-         "0": "#EEF9EC",
-         "50": "#DDF2D9",
-         "100": "#BCE6B3",
-         "200": "#9AD98C",
-         "300": "#78CC66",
-         "400": "#56C040",
-         "500": "#459A33",
-         "600": "#39802A",
-         "700": "#2E6722",
-         "800": "#224D19",
-         "900": "#173311",
-         "950": "#0B1A08"
-      },
-      "presencial": {
-         "0": "#F0FBF6",
-         "50": "#E1F6EC",
-         "100": "#C2ECD9",
-         "200": "#A4E3C6",
-         "300": "#7DC4AD",
-         "400": "#57A695",
-         "500": "#2B897E",
-         "600": "#247269",
-         "700": "#1D5B54",
-         "800": "#16443F",
-         "900": "#0E2E2A",
-         "950": "#071715"
-      },
-      "online": {
-         "0": "#F2EEFA",
-         "50": "#DFD7E5",
-         "100": "#BEAECC",
-         "200": "#9E86B2",
-         "300": "#8B62A5",
-         "400": "#7A3C96",
-         "500": "#71268E",
-         "600": "#61217A",
-         "700": "#511B65",
-         "800": "#411651",
-         "900": "#30103D",
-         "950": "#18081F"
-      },
-      "híbrida": {
-         "0": "#E6F3F7",
-         "50": "#CCE8EF",
-         "100": "#99D2DF",
-         "200": "#66BBCF",
-         "300": "#4B9FC0",
-         "400": "#3982AE",
-         "500": "#336699",
-         "600": "#2B5580",
-         "700": "#224466",
-         "800": "#19334D",
-         "900": "#112233",
-         "950": "#08111A"
-      },
-      "salud": {
-         "0": "#E7F6FE",
-         "50": "#CFEDFD",
-         "100": "#9FDBFB",
-         "200": "#6FC8F9",
-         "300": "#3FB6F6",
-         "400": "#01B7FF",
-         "500": "#07A6E5",
-         "600": "#086FA7",
-         "700": "#065985",
-         "800": "#044264",
-         "900": "#032C43",
-         "950": "#021622"
-      }
-   },
-   "fontFamily": {
-      "Poppins": [
-         "Poppins"
-      ],
-      "Nunito": [
-         "Nunito"
-      ],
-      "Nunito-Sans": [
-         "Nunito Sans"
-      ],
-      "headings": [
-         "Bunday Sans"
-      ],
-      "texts": [
-         "Nunito Sans",
-         "sans-serif"
-      ]
+      "white": "#fff",
+      "transparent": "transparent"
    },
    "gridTemplateColumns": {
       "4": "repeat(4, 1fr)",
@@ -297,10 +152,6 @@ module.exports = {
    },
    "minWidth": {
       "130": "7.5rem"
-   },
-   "backgroundImage": {
-      "logo": "url('https://bedu-staging-assets.s3.us-west-2.amazonaws.com/ULA/ULA_7ebac4d515.png')",
-      "favicon": "url('https://bedu-staging-assets.s3.us-west-2.amazonaws.com/ULA/favicon_ULA_afe3b4e9e9.png')"
    }
 }
   },

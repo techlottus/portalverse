@@ -7,6 +7,7 @@ import { CARD_LIST } from "@/utils/strapi/sections/CardList";
 import { CARD_STATISTICS } from "@/utils/strapi/sections/CardsStatistics";
 import { CARDS_DETAIL_CONTENT } from "@/utils/strapi/sections/CardsDetailContent";
 import { CARDS_VIDEO_CONTENT } from "@/utils/strapi/sections/CardsVideoContent";
+import { CAROUSEL_SECTION } from "@/utils/strapi/sections/Carousel";
 import { CATEGORY_ACCORDION_CONTENT } from "@/utils/strapi/sections/CategoryAccordionList";
 import { COLOR_CARD_LIST } from "@/utils/strapi/sections/ColorCardsList";
 import { CONTACT_TARGET_LIST } from "@/utils/strapi/sections/ContactTargetList";
@@ -39,6 +40,7 @@ import { ROCKSTARINFO_LIST } from "@/utils/strapi/sections/RockstarInfloList";
 import { RVOE_ACCORDION_CONTENT } from "./sections/RvoeAccordionList";
 import { STATISTICS_CARD_LIST } from "@/utils/strapi/sections/StatisticsCardList";
 import { TEXT_CONTENT } from "@/utils/strapi/sections/TextContent";
+import { CONTAINER_TEXT_FORM } from "@/utils/strapi/sections/ContainerTextForm";
 import { VIDEOS_SECTION } from "@/utils/strapi/sections/Videos";
 import type { AccordionSection } from "@/utils/strapi/sections/Accordion";
 import type { AlertSection } from "@/utils/strapi/sections/Alert";
@@ -49,6 +51,7 @@ import type { CardListSection } from "@/utils/strapi/sections/CardList";
 import type { CardsDetailContentData } from "@/utils/strapi/sections/CardsDetailContent";
 import type { CardsStatisticsData } from "@/utils/strapi/sections/CardsStatistics";
 import type { CardsVideoContentData } from "@/utils/strapi/sections/CardsVideoContent";
+import type { CarouselSection } from "@/utils/strapi/sections/Carousel";
 import type { CategoryAccordionListData } from "@/utils/strapi/sections/CategoryAccordionList";
 import type { ColorCardListData } from "@/utils/strapi/sections/ColorCardsList";
 import type { ContactTargetListSection } from "@/utils/strapi/sections/ContactTargetList";
@@ -80,6 +83,7 @@ import type { RockstarInfoListSection } from "@/utils/strapi/sections/RockstarIn
 import type { RvoeAccordionListData } from "./sections/RvoeAccordionList";
 import type { StatisticsCardListSection } from "@/utils/strapi/sections/StatisticsCardList";
 import type { TextContentSection } from "@/utils/strapi/sections/TextContent";
+import type { ContainerTextFormSection } from "@/utils/strapi/sections/ContainerTextForm";
 import type { VideosSectionData } from "@/utils/strapi/sections/Videos";
 
 export type ComponentSection =
@@ -123,7 +127,9 @@ export type ComponentSection =
   | RvoeAccordionListData
   | StatisticsCardListSection
   | TextContentSection
+  | ContainerTextFormSection
   | VideosSectionData
+  | CarouselSection
 
   export const SECTIONS = `
   ${ACCORDION_SECTION}
@@ -142,6 +148,7 @@ export type ComponentSection =
   ${EXTERNAL_POST_BY_CATEGORY_LIST}
   ${FAQ_SECTION}
   ${FORM_CONTAINER}
+  ${CONTAINER_TEXT_FORM}
   ${FORM_VIDEO}
   ${GOOGLE_MAP}
   ${HERO_SLIDER}
@@ -168,4 +175,5 @@ export type ComponentSection =
   ${STATISTICS_CARD_LIST}
   ${TEXT_CONTENT}
   ${VIDEOS_SECTION}
+  ${CAROUSEL_SECTION}
   `;

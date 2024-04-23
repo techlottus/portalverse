@@ -24,6 +24,7 @@ import routesConfig from 'routesConfig.json';
 import { formatModalityDataSuperior } from "@/utils/programDetail";
 import type { DynamicProgramDetailData } from "@/utils/pages";
 import type { ProgramDetailSuperiorData } from "@/utils/getProgramDetailSuperior";
+import ContainerForm from "./sections/ContainerForm";
 
 type SelectItem = {
   value: string;
@@ -33,6 +34,7 @@ type SelectItem = {
 
 const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const program = props?.program;
+  const SFprogram = program.attributes.nombreProgramaSalesforce
   const layout = props?.layout as ProgramDetailSuperiorData;
   const title = program?.attributes?.name;
   const description = program?.attributes?.description;
@@ -40,6 +42,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const imageProgram = program?.attributes?.image?.data?.attributes?.url;
   const singleTypeAttributes = layout?.attributes;
   const bannerData = singleTypeAttributes?.banner;
+  
 
   const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
   let campusLabel = "plantel";
@@ -56,7 +59,6 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const [tabActive, setTabActive] = useState<number>(0);
 
   const modalities = program?.attributes?.programModalities
-
   const selectedModality = modalities?.[tabActive]
   const selectedModalityName = selectedModality?.modality?.data?.attributes?.name?.toLowerCase();;
   const programSubtitle = selectedModalityName === "a tu ritmo" ? selectedModality?.modality?.data?.attributes?.name : levelProgram === "Bachillerato" ? levelProgram : program?.attributes?.knowledgeAreas?.data?.[0]?.attributes?.name;
@@ -137,6 +139,10 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
 
   //bandera para habilitar botón de descarga hasta que se seleccione un campus
   const isOptionSelected = !!selectedOption
+ 
+
+
+
 
   //Obtener información para el nivel
   const handleSetActiveTab = (active: number) => {
@@ -149,6 +155,10 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
     setOptionsSelect(options);
   }, [tabActive])
 
+
+
+
+  // }, [SFdata])
   const downloadFileProgram = () => {
     if (hasCampuses) {
       const selectedCampus = campusDetail?.find((element) => { return element?.campusName === selectedOption?.value })
@@ -176,14 +186,67 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
    * mosaicActive is set to true. 
    */
   const mosaicActive = true;
-
+  // console.log('modalities: ', modalities);
+  // console.log('campuses: ', campuses);
+      // console.log('program.attributes: ', program.attributes);
+  
   return (
     <Fragment>
       <Head>
         <title>{title}</title>
       </Head>
       <Modal isShow={isShow} onClose={() => handleVisibilityModal('close')} data={{ icon: 'close', title: "", tagOnClose: 'testOnClose', wrapper: true, }}>
-        <p>aqui va el form</p>
+        <div className="mt-16">
+
+          {
+            !!SFprogram && <ContainerForm
+              type="ComponentSectionsFormContainer"
+              title={`Obtén más información sobre el curso de ${program.attributes.name}`}
+              description="Queremos acompañarte en tu elección. Comparte tus datos para que un asesor de admisiones pueda responder a todas tus preguntas."
+              form="Detalle_de_programa"
+              progress={0}
+              position="center"
+              width="w_6_12"
+              extraText=""
+              privacyPolicy={{
+                text:'Al llenar tus datos aceptas nuestro ',
+                linkText: 'Aviso de privacidad',
+                file: null,
+                href: '/aviso-privacidad'
+              }}
+              errors={ [{
+                type: 'ComponentSectionsWebError',
+                title: '',
+                message: '',
+                errorCode: '',
+                button: {
+                  text: 'string;',
+                  size: '',
+                  isBold: false,
+                  disabled: false,
+                  href: `/oferta-academica/licenciatura/${program.attributes.slug}`,
+                }
+              }]}
+              prefilledData={{
+                program: SFprogram
+              }}
+              button={{
+                label: 'Solicitar información',
+                size: '',
+                variant: 'primary',
+                CTA: 'submit',
+                iconName: 'send'
+              }}
+              options={{
+                modalities: modalities.map(mod => ({
+                  value: mod.modality.data.attributes.name,
+                  active: false,
+                  text: mod.modality.data.attributes.name
+                }))
+              }}
+            />
+          }
+        </div>
       </Modal>
       <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
@@ -388,13 +451,63 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           selectedModalityName !== "a tu ritmo" ?
             <div className="col-span-5 mb-6 w-p:col-span-2 w-p:order-1 w-t:hidden w-p:hidden">
               <div className="w-p:-mt-56 -mt-20 sticky top-10">
-                <p>aqui va el formulario</p>
+                <div className="mt-16 mb-8">
+                  {
+                    !!SFprogram &&  <ContainerForm
+                      type="ComponentSectionsFormContainer"
+                      title={`Obtén más información sobre el curso de ${program.attributes.name}`}
+                      description="Queremos acompañarte en tu elección. Comparte tus datos para que un asesor de admisiones pueda responder a todas tus preguntas."
+                      form="Detalle_de_programa"
+                      progress={0}
+                      position="center"
+                      width="w_12_12"
+                      extraText=""
+                      privacyPolicy={{
+                        text:'Al llenar tus datos aceptas nuestro ',
+                        linkText: 'Aviso de privacidad',
+                        file: null,
+                        href: '/aviso-privacidad'
+                      }}
+                      errors={ [{
+                        type: 'ComponentSectionsWebError',
+                        title: '',
+                        message: '',
+                        errorCode: '',
+                        button: {
+                          text: 'string;',
+                          size: '',
+                          isBold: false,
+                          disabled: false,
+                          href: `/oferta-academica/licenciatura/${program.attributes.slug}`,
+                        }
+                      }]}
+                      prefilledData={{
+                        program: SFprogram
+                      }}
+                      button={{
+                        label: 'Solicitar información',
+                        size: '',
+                        variant: 'primary',
+                        CTA: 'submit',
+                        iconName: 'send'
+                      }}
+                      options={{
+                        modalities: modalities.map(mod => ({
+                          value: mod.modality.data.attributes.name,
+                          active: false,
+                          text: mod.modality.data.attributes.name
+                        }))
+                      }}
+                    />
+                  }
+                </div>
                 <Button dark data={{ ...ButtonInit, title: "Descarga el plan de estudios", disabled: !isOptionSelected }} onClick={downloadFileProgram} />
               </div>
             </div>
             : null
         }
       </ContentLayout>
+      {/* <ProgramDetailForm></ProgramDetailForm> */}
       {/* <ContentFullLayout classNames="w-d:hidden w-t:hidden mb-10 mt-6">
         <div className="w-d:hidden w-t:hidden col-span-4 mb-10 mt-6">
           <Aspect ratio={"4/3"}>
@@ -634,7 +747,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                   const programAttributes = relatedProgram?.attributes;
                   const image = relatedProgram?.attributes?.image;
                   const programLevelName = relatedProgram?.attributes?.level?.data?.attributes?.title;
-                  const levelRoute = routesConfig?.educationalLevels?.find(educationalLevel => educationalLevel?.name === programLevelName)?.path;
+                  const levelRoute = (routesConfig as any)?.educationalLevels?.find((educationalLevel: any) => educationalLevel?.name === programLevelName)?.path;
 
                   return (
                     <div
