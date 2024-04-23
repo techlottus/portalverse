@@ -94,23 +94,23 @@ const Campus = ({ sections, meta }: any) => {
             {sections?.planteles?.sections?.map((item: any, i: number) => (
               <>
                 <ContentLayout>
-                  <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+                  <div className="col-span-12 w-t:col-span-12 w-p:col-span-12">
                     <p className="font-headings font-bold text-center text-10 w-t:text-6 w-p:text-6 leading-[125%]">
                       {item?.title}
                     </p>
                   </div>
-                  <section className="col-span-12 grid grid-cols-2 gap-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-[72px]">
+                  <section className="col-span-12 grid grid-cols-2 gap-6 w-t:grid-cols-1 w-p:grid-cols-1 w-d:mb-[72px] w-t:mb-[72px] w-p:mb-[32px]">
                     {item?.campus?.map(
                       (
                         { title, coords, description, images: items }: any,
                         i: number
                       ) => (
                         <ContentInsideLayout
-                          classNames="col-span-1"
+                          classNames="col-span-1 w-p:mb-12"
                           key={`campus-data-${i}`}
                         >
-                          <div className="p-6	col-span-7 border w-t:col-span-4 w-p:col-span-4 border-gray-300 rounded-l-lg border-r-0 grid gap-y-2">
-                            <p className="font-texts font-bold text-sm leading-5">
+                          <div className="p-6	col-span-7 border w-t:col-span-4 w-p:col-span-12 border-surface-300 w-d:rounded-l-lg w-t:rounded-l-lg w-d:border-r-0 grid gap-y-2 w-p:rounded-t-lg w-p:border-r-1">
+                            <p className="font-texts font-bold text-sm leading-5 text-surface-500">
                               {description?.state}
                             </p>
                             {
@@ -129,7 +129,7 @@ const Campus = ({ sections, meta }: any) => {
                                 className="col-span-1 w-t:col-span-1 w-p:col-span-1"
                               /> 
                               */}
-                              <p className="col-span-11  w-t:col-span-7 w-p:col-span-3 font-texts font-normal text-sm">
+                              <p className="col-span-11  w-t:col-span-7 font-texts font-normal text-sm text-surface-500">
                                 {description?.address}
                               </p>
                             </ContentInsideLayout>
@@ -145,8 +145,8 @@ const Campus = ({ sections, meta }: any) => {
                                   /> */}
                                   <LinkContactTarget
                                     type="phone"
-                                    info={description?.phone}
-                                    classNames="col-span-11 text-sm w-t:col-span-7 w-p:col-span-3 underline"
+                                    info={description?.phone_text}
+                                    classNames="col-span-11 text-sm w-t:col-span-7 w-p:col-span-3 underline text-surface-900"
                                   />
                                 </ContentInsideLayout>
                                 : null
@@ -179,10 +179,10 @@ const Campus = ({ sections, meta }: any) => {
                                 : null
                             }
                             <div className="items-center flex">
-                              <a className="text-primary-500" href="">
+                              <a className="text-primary-400 font-bold" href="">
                                 Agendar visita
                               </a>
-                              <span className="text-primary-500 material-symbols-outlined select-non text-lg">calendar_month</span>
+                              <span className="text-primary-400 material-symbols-outlined select-non text-lg ms-1">calendar_month</span>
                             </div>
                             {/* <div
                               className="flex justify-end pr-3"
@@ -194,10 +194,10 @@ const Campus = ({ sections, meta }: any) => {
                             </div> */}
                           </div>
                           <Image
-                            classNames="col-span-5 w-t:col-span-4 w-p:col-span-4 w-p:aspect-2/1"
+                            classNames="col-span-5 w-t:col-span-4 w-p:col-span-12 w-p:aspect-2/1"
                             alt={items[0]?.alt}
                             src={items[0]?.src}
-                            classNamesImg="rounded-r-lg"
+                            classNamesImg="w-d: w-p:rounded-b-lg w-p:min-h-44"
                           />
                           {/* <Map
                             coords={coords}
@@ -226,6 +226,7 @@ const Campus = ({ sections, meta }: any) => {
               </>
             ))}
           </section>
+
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
             <Cintillo
               {...sections?.banner}
