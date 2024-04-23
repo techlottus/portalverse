@@ -74,7 +74,7 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
   }
 
   return (
-    <section >
+    <section className={cn({'hidden': isLoading && !!error})}>
       <div className={cn('flex', {
         "justify-center": position === 'center',
         "justify-start": position === 'left',
