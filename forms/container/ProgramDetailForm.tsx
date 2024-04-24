@@ -321,7 +321,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         if (academicData.modality === 'Flex') {
           return program.modalidad === 'Online' && program.lineaNegocio === 'ULA'
         } else {
-          return program.modalidad === academicData.modality && program.lineaNegocio === businessUnit
+          return program.modalidad === academicData.modality
         }
       })
       const periods = programsByModality?.reduce((acc: any, program: any, index: number, arr: any[]) => {
