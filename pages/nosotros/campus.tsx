@@ -18,25 +18,16 @@ import PromoLink from "@/old-components/PromoLink/PromoLink";
 
 const Campus = ({ sections, meta }: any) => {
 
-  // Modal functionality begin
-  const [isShow, setIsShow] = useState(false);
-  const handleVisibilityModal = () => {
-    if (isShow) {
-      setCoordsMap(null);
-      setInfoMap("");
-    }
-    setIsShow(!isShow);
-  };
-  // Modal functionality end
-
   const [coordsMap, setCoordsMap] = useState<any>(null);
   const [infoMap, setInfoMap] = useState<string>("");
   const [infoModal, setInfoModal] = useState<any>({});
+  const [isShow, setIsShow] = useState(false);
 
-  const handleOpenModal = (coords: any, title: string) => {
-    setCoordsMap(coords);
-    setInfoMap(title);
+  const handleVisibilityModal = () => setIsShow(!isShow);
+
+  const handleOpenModal = () => {
     handleVisibilityModal();
+
   };
 
   return (
@@ -47,76 +38,7 @@ const Campus = ({ sections, meta }: any) => {
       <Modal isShow={isShow} onClose={handleVisibilityModal} data={{ icon: 'close', title: "", tagOnClose: 'testOnClose', wrapper: true, }}>
         <section slot="areaModalContent" className="flex w-t:flex-col w-p:flex-col w-full h-auto">
           <ContentInsideLayout classNames="gap-6">
-            <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 bg-surface-800 p-6">
-              <p className="text-surface-0 font-headings font-bold text-6 break-normal mb-16">{infoModal?.title?.title}</p>
-              <div className="flex flex-col space-y-12">
-                {
-                  infoModal?.downloadables?.length > 0
-                    ? <div>
-                      <span className="font-headings font-normal text-surface-0 mb-6">Descargas</span>
-                      {
-                        (infoModal?.downloadables as Array<{ label: string; link: string; }>)?.map((redirect, index) => {
-                          const children = (
-                            <>
-                              <span className="font-texts font-normal underline underline-offset-4 mr-auto">{redirect?.label}</span>
-                              <span className="material-symbols-outlined ml-3 mt-1 select-none">download</span>
-                            </>
-                          );
-
-                          if (redirect?.link) {
-                            return (
-                              <a
-                                key={index}
-                                href={redirect?.link}
-                                rel="noreferrer noopener"
-                                target="_blank"
-                                className={
-                                  cn("flex items-center text-surface-0 mt-6")
-                                }
-                              >
-                                {children}
-                              </a>
-                            )
-                          } else {
-                            return (
-                              <div
-                                key={index}
-                                className="flex items-center mt-6 text-surface-500 cursor-not-allowed"
-                              >
-                                {children}
-                              </div>
-                            )
-                          }
-                        })
-                      }
-                    </div>
-                    : null
-                }
-                {
-                  infoModal?.redirect?.link
-                    ? <div>
-                      <span className="font-headings font-normal text-surface-0 mb-6">Visita el sitio de la universidad</span>
-                      <a
-                        href={infoModal?.redirect?.link}
-                        rel="noreferrer noopener"
-                        target="_blank"
-                        className={
-                          cn("flex items-center text-surface-0 mt-6")
-                        }
-                      >
-                        <span className="font-texts font-normal underline underline-offset-4 mr-auto">{infoModal?.redirect?.link}</span>
-                        <span className="material-symbols-outlined ml-3 mt-1 select-none">chevron_right</span>
-                      </a>
-                    </div>
-                    : null
-                }
-              </div>
-            </div>
-            <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 bg-surface-0 overflow-y-auto">
-              <RichtText data={{
-                content: infoModal?.description?.content
-              }} />
-            </div>
+            <p>Hola soy un modal</p>
           </ContentInsideLayout>
         </section>
       </Modal>
@@ -194,11 +116,15 @@ const Campus = ({ sections, meta }: any) => {
                             </p>
                             {
                               description?.redirect
-                                ? <a href={description?.redirect} className={cn("font-headings font-semibold underline text-4.5 leading-5.625", {
-                                  "hover:underline": description?.redirect,
-                                })}>
-                                  {description?.name}
-                                </a>
+                                ?
+                                <div className="flex items-center">
+                                  <a href={description?.redirect} target="_blank" className={cn("font-headings font-semibold underline text-4.5 leading-5.625", {
+                                    "hover:underline": description?.redirect,
+                                  })}>
+                                    {description?.name}
+                                  </a>
+                                  <span className="text-primary-400 material-symbols-outlined select-non !text-lg ms-1">open_in_new</span>
+                                </div>
                                 : <p className="font-headings font-bold text-4.5 leading-5.625">{description?.name}</p>
                             }
                             <ContentInsideLayout>
@@ -258,11 +184,12 @@ const Campus = ({ sections, meta }: any) => {
                                 : null
                             }
                             <div className="items-center flex">
-                              <a className="text-primary-400 font-bold" href="">
+                              <p className="text-primary-400 font-bold cursor-pointer" onClick={() => {
+                                handleOpenModal()
+                              }}>
                                 Agendar visita
-                              </a>
-
-                              <span className="text-primary-400 material-symbols-outlined select-non text-lg ms-1">calendar_month</span>
+                              </p>
+                              <span className="text-primary-400 material-symbols-outlined select-non !text-lg ms-1">calendar_month</span>
                             </div>
                             {/* <div
                               className="flex justify-end pr-3"
