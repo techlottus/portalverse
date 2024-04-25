@@ -32,8 +32,7 @@ const Campus = ({ sections, meta, prefilledData, options, program }: any) => {
       setCoordsMap(null);
       setInfoMap("");
     }
-
-    setIsShow(!isShow); setIsShow(!isShow);
+    setIsShow(!isShow);
   };
 
   const handleOpenModal = (coords: any, title: string) => {
