@@ -40,7 +40,7 @@ const Campus = ({ sections, meta, prefilledData, options, program }: any) => {
   const handleOpenModal = (coords: any, title: string) => {
     setCoordsMap(coords); setCoordsMap(coords);
     setInfoMap(title); setInfoMap(title);
-    handleVisibilityModal(); handleVisibilityModal();
+    handleVisibilityModal();
   };
 
   let [isOpen, setIsOpen] = useState(false)
