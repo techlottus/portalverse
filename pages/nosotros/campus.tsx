@@ -269,7 +269,7 @@ const Campus = ({ sections, meta, prefilledData, options, }: any) => {
                                   /> */}
                                   <LinkContactTarget
                                     type="phone"
-                                    info={description?.phone_text}
+                                    info={description?.phone}
                                     classNames="col-span-11 text-sm w-t:col-span-7 w-p:col-span-3 underline text-surface-900"
                                   />
                                 </ContentInsideLayout>
