@@ -277,10 +277,10 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
                             }
                             {
                               description?.link ?
-                                <ContentInsideLayout classNames="items-center">
-                                  <span className="material-symbols-outlined col-span-1 w-t:col-span-1 w-p:col-span-1 w-4 mt-2 text-surface-500 select-none">{description?.link?.icon}</span>
-                                  <span className="col-span-11 w-t:col-span-7 w-p:col-span-3 mt-2 font-texts font-normal text-base leading-5 text-surface-500"><a className="hover:underline" target="_blank" rel="noreferrer noopener" href={description?.link?.redirect}>{description?.link?.text}</a></span>
-                                </ContentInsideLayout>
+                                <div className="flex items-end">
+                                  <span className="text-primary-400 font-bold cursor-pointer"><a className="hover:underline" target="_blank" rel="noreferrer noopener" href={description?.link?.redirect}>{description?.link?.text}</a></span>
+                                  <span className="text-primary-400 material-symbols-outlined select-non !text-lg ms-1">{description?.link?.icon}</span>
+                                </div>
                                 : null
                             }
                             {/* 
