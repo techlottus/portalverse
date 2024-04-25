@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, Fragment } from "react";
 import Head from "next/head";
 import cn from "classnames";
 import IconComponent from "@/old-components/Icon";
@@ -11,37 +11,159 @@ import LinkContactTarget from "@/old-components/LinkContactTarget";
 import Modal from "@/old-components/Modal/Modal";
 import ContentFullLayout from "@/layouts/ContentFull.layout";
 import BannerPortalverse from "@/old-components/BannerPortalverse";
-import { getDataPageFromJSON } from "@/utils/getDataPage";
 import Cintillo from "@/old-components/Cintillo";
-import RichtText from "@/old-components/Richtext/Richtext";
-import PromoLink from "@/old-components/PromoLink/PromoLink";
+import { getDataPageFromJSON } from "@/utils/getDataPage";
+import { Dialog, Transition } from '@headlessui/react'
+import { DoubleDegreeForm } from "@/forms/container/DoubleDegreeForm";
+import Button from "@/old-components/Button/Button";
+import WebError, { WebErrorComponent } from "@/components/sections/WebError";
+import Link from "next/link";
+import Aspect from "@/components/Aspect";
 
-const Campus = ({ sections, meta }: any) => {
+const Campus = ({ sections, meta, prefilledData, options, }: any) => {
 
+  const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
   const [coordsMap, setCoordsMap] = useState<any>(null);
   const [infoMap, setInfoMap] = useState<string>("");
-  const [infoModal, setInfoModal] = useState<any>({});
+  const [currentError, setCurrentError] = useState<WebErrorComponent | null>(null);
   const [isShow, setIsShow] = useState(false);
+  const [isValid, setIsValid] = useState(false);
+  const [submit, setSubmit] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleVisibilityModal = () => setIsShow(!isShow);
+  const setStatus = ({ loading, error, valid, success }: { loading: boolean, error: string, valid: boolean, success: boolean }) => {
+    setIsLoading(loading)
+    setError(error)
+    setIsValid(valid)
+    setIsSuccess(success)
+  }
 
-  const handleOpenModal = () => {
-    handleVisibilityModal();
-
+  const handleVisibilityModal = () => {
+    if (isShow) {
+      if (isShow) {
+        setCoordsMap(null); setCoordsMap(null);
+        setInfoMap(""); setInfoMap("");
+      }
+    }
+    setIsShow(!isShow); setIsShow(!isShow);
   };
+
+  const handleOpenModal = (coords: any, title: string) => {
+    setCoordsMap(coords); setCoordsMap(coords);
+    setInfoMap(title); setInfoMap(title);
+    handleVisibilityModal(); handleVisibilityModal();
+  };
+
+  let [isOpen, setIsOpen] = useState(false)
+
+  function closeModal() {
+    setIsOpen(false)
+  }
+
+  function openModal() {
+    setIsOpen(true)
+  }
 
   return (
     <>
       <Head>
         <title>{meta?.title}</title>
       </Head>
-      <Modal isShow={isShow} onClose={handleVisibilityModal} data={{ icon: 'close', title: "", tagOnClose: 'testOnClose', wrapper: true, }}>
-        <section slot="areaModalContent" className="flex w-t:flex-col w-p:flex-col w-full h-auto">
-          <ContentInsideLayout classNames="gap-6">
-            <p>Hola soy un modal</p>
-          </ContentInsideLayout>
-        </section>
-      </Modal>
+      <>
+        <Transition appear show={isOpen} as={Fragment}>
+          <Dialog as="div" onClose={closeModal}>
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <div className="fixed inset-0 bg-black/25" />
+            </Transition.Child>
+
+            <div className="fixed inset-0 overflow-y-auto">
+              <div className="flex min-h-full items-center justify-center p-4 text-center">
+                <Transition.Child
+                  as={Fragment}
+                  enter="ease-out duration-300"
+                  enterFrom="opacity-0 scale-95"
+                  enterTo="opacity-100 scale-100"
+                  leave="ease-in duration-200"
+                  leaveFrom="opacity-100 scale-100"
+                  leaveTo="opacity-0 scale-95"
+                >
+                  <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                    <div className="flex justify-end">
+                      <p className="material-symbols-outlined font-normal select-none mr-1 cursor-pointer" onClick={closeModal} >
+                        close
+                      </p>
+                    </div>
+                    <section className="bg-surface-0 relative" >
+                      {
+                        isLoading
+                          ? <div className="absolute w-full h-full z-10 flex justify-center items-center left-0 top-0 bg-surface-0">
+                            <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
+                          </div>
+                          : null
+                      }
+                      {
+                        !!error
+                          ? <WebError {...currentError}></WebError>
+                          : <section>
+                            <div className="flex gap-6">
+                              <div className="flex flex-col gap-6">
+                                <h1 className="font-texts font-bold text-5 leading-6">Agenda tu visita</h1>
+                                <p className="font-texts font-normal text-3.5 leading-4">¡Descubre las instalaciones de {BUSINESS_UNIT} y conoce sus Happy Spaces!</p>
+                              </div>
+                              <div className="w-p:hidden">
+                                <Image classNamesImg="w-full h-full object-cover" classNames="w-28 h-28 rounded-full overflow-hidden" src="" alt="" />
+                              </div>
+                            </div>
+                            <div className="flex align-middle items-center mt-8 mb-6">
+                              <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">Al llenar tus datos aceptas nuestro</p>
+                              <Link href="" passHref target={"_blank"}>
+                                <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">Aviso de privacidad</p>
+                              </Link>
+                            </div>
+                            {/* {
+                              (!!progress && progress > 0) && <div className="mb-6">
+                                <ProgressBar data={{ progress }} />
+                              </div>
+                            } */}
+                            <DoubleDegreeForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />
+                            <div className="mt-6">
+                              <Button darkOutlined={true} dark={true}
+                                data={{
+                                  title: "Solicitar información",
+                                  icon: "",
+                                  isExpand: false,
+                                  disabled: !isValid
+                                }}
+                                onClick={() => {
+                                  setSubmit(true);
+                                  setTimeout(() => {
+
+                                    setSubmit(false)
+                                  }, 100);
+                                }}
+                              />
+                            </div>
+                          </section>
+
+                      }
+                    </section>
+                  </Dialog.Panel>
+                </Transition.Child>
+              </div>
+            </div>
+          </Dialog>
+        </Transition>
+      </>
       <HeaderFooterLayout>
         <ContentFullLayout classNames="w-d:hidden w-t:col-span-8 w-p:col-span-4">
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:hidden">
@@ -95,7 +217,7 @@ const Campus = ({ sections, meta }: any) => {
             {sections?.planteles?.sections?.map((item: any, i: number) => (
               <>
                 <ContentLayout>
-                  <div className="col-span-12 w-t:col-span-12 w-p:col-span-12">
+                  <div className="col-span-12 ">
                     <p className="font-headings font-bold text-center text-10 w-t:text-6 w-p:text-6 leading-[125%]">
                       {item?.title}
                     </p>
@@ -106,11 +228,8 @@ const Campus = ({ sections, meta }: any) => {
                         { title, coords, description, images: items }: any,
                         i: number
                       ) => (
-                        <ContentInsideLayout
-                          classNames="col-span-1 w-p:mb-12"
-                          key={`campus-data-${i}`}
-                        >
-                          <div className="p-6	col-span-7 border w-t:col-span-4 w-p:col-span-12 border-surface-300 w-d:rounded-l-lg w-t:rounded-l-lg w-d:border-r-0 grid gap-y-2 w-p:rounded-t-lg w-p:border-r-1">
+                        <div className="flex w-p:flex-col">
+                          <div className="p-6 w-3/5 grid gap-y-2 border border-surface-300 w-d:rounded-l-lg w-t:rounded-l-lg w-p:rounded-t-lg w-p:w-full">
                             <p className="font-texts font-bold text-sm leading-5 text-surface-500">
                               {description?.state}
                             </p>
@@ -183,49 +302,26 @@ const Campus = ({ sections, meta }: any) => {
                                 </ContentInsideLayout>
                                 : null
                             }
+                            {/* 
                             <div className="items-center flex">
-                              <p className="text-primary-400 font-bold cursor-pointer" onClick={() => {
-                                handleOpenModal()
-                              }}>
+                              <p className="text-primary-400 font-bold cursor-pointer" onClick={openModal}>
                                 Agendar visita
                               </p>
                               <span className="text-primary-400 material-symbols-outlined select-non !text-lg ms-1">calendar_month</span>
-                            </div>
-                            {/* <div
-                              className="flex justify-end pr-3"
-                            >
+                            </div> 
+                            */}
+                            <div className="flex pr-3">
                               <p className="font-texts font-normal hover:cursor-pointer" onClick={() => handleOpenModal(coords, title)}>
                                 Ver mapa
                               </p>
                               <IconComponent name="eye" className="ml-1 w-4" />
-                            </div> */}
+                            </div>
                           </div>
-                          <Image
-                            classNames="col-span-5 w-t:col-span-4 w-p:col-span-12 w-p:aspect-2/1"
-                            alt={items[0]?.alt}
-                            src={items[0]?.src}
-                            classNamesImg="w-d:rounded-r-lg w-t:rounded-r-lg w-p:rounded-b-lg w-p:min-h-44"
-                          />
-                          {/* <Map
-                            coords={coords}
-                            classNames="w-t:hidden w-p:hidden col-span-4 w-t:col-span-3 w-p:col-span-4"
-                            classNamesMap="h-[214px]"
-                          >
-                            {({ TileLayer, Marker, Popup }: any) => (
-                              <>
-                                <TileLayer
-                                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                                />
-                                <Marker position={coords}>
-                                  <Popup>
-                                    <b>{description.name}</b>
-                                  </Popup>
-                                </Marker>
-                              </>
-                            )}
-                          </Map> */}
-                        </ContentInsideLayout>
+                          <div className="w-2/5 h-full w-p:w-full">
+                            <img className="w-full h-full w-d:rounded-r-lg w-t:rounded-r-lg w-d:aspect-1/1 object-cover w-t:object-fill aspect-3/2 w-p:rounded-b-lg" alt={items[0]?.alt}
+                              src={items[0]?.src} />
+                          </div>
+                        </div>
                       )
                     )}
                   </section>
