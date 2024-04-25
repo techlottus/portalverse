@@ -228,7 +228,7 @@ const Campus = ({ sections, meta, prefilledData, options, }: any) => {
                         { title, coords, description, images: items }: any,
                         i: number
                       ) => (
-                        <div className="flex w-p:flex-col">
+                        <div className="flex w-p:flex-col" key={item.name}>
                           <div className="p-6 w-3/5 grid gap-y-2 border border-surface-300 w-d:rounded-l-lg w-t:rounded-l-lg w-p:rounded-t-lg w-p:w-full">
                             <p className="font-texts font-bold text-sm leading-5 text-surface-500">
                               {description?.state}
@@ -237,7 +237,7 @@ const Campus = ({ sections, meta, prefilledData, options, }: any) => {
                               description?.redirect
                                 ?
                                 <div className="flex items-center">
-                                  <a href={description?.redirect} target="_blank" className={cn("font-headings font-semibold underline text-4.5 leading-5.625", {
+                                  <a href={description?.redirect} target="_blank" rel="noreferrer noopener" className={cn("font-headings font-semibold underline text-4.5 leading-5.625", {
                                     "hover:underline": description?.redirect,
                                   })}>
                                     {description?.name}
