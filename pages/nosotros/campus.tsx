@@ -29,17 +29,16 @@ const Campus = ({ sections, meta, prefilledData, options, program }: any) => {
 
   const handleVisibilityModal = () => {
     if (isShow) {
-      if (isShow) {
-        setCoordsMap(null); setCoordsMap(null);
-        setInfoMap(""); setInfoMap("");
-      }
+      setCoordsMap(null);
+      setInfoMap("");
     }
+
     setIsShow(!isShow); setIsShow(!isShow);
   };
 
   const handleOpenModal = (coords: any, title: string) => {
-    setCoordsMap(coords); setCoordsMap(coords);
-    setInfoMap(title); setInfoMap(title);
+    setCoordsMap(coords);
+    setInfoMap(title);
     handleVisibilityModal();
   };
 
