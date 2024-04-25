@@ -14,31 +14,18 @@ import BannerPortalverse from "@/old-components/BannerPortalverse";
 import Cintillo from "@/old-components/Cintillo";
 import { getDataPageFromJSON } from "@/utils/getDataPage";
 import { Dialog, Transition } from '@headlessui/react'
-import { DoubleDegreeForm } from "@/forms/container/DoubleDegreeForm";
-import Button from "@/old-components/Button/Button";
-import WebError, { WebErrorComponent } from "@/components/sections/WebError";
-import Link from "next/link";
-import Aspect from "@/components/Aspect";
+import { WebErrorComponent } from "@/components/sections/WebError";
+import ContainerForm from "@/components/sections/ContainerForm";
 
-const Campus = ({ sections, meta, prefilledData, options, }: any) => {
+const Campus = ({ sections, meta, prefilledData, options, program }: any) => {
+
+  const SFprogram = program?.attributes?.nombreProgramaSalesforce
+  const modalities = program?.attributes?.programModalities
 
   const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
   const [coordsMap, setCoordsMap] = useState<any>(null);
   const [infoMap, setInfoMap] = useState<string>("");
-  const [currentError, setCurrentError] = useState<WebErrorComponent | null>(null);
   const [isShow, setIsShow] = useState(false);
-  const [isValid, setIsValid] = useState(false);
-  const [submit, setSubmit] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-
-  const setStatus = ({ loading, error, valid, success }: { loading: boolean, error: string, valid: boolean, success: boolean }) => {
-    setIsLoading(loading)
-    setError(error)
-    setIsValid(valid)
-    setIsSuccess(success)
-  }
 
   const handleVisibilityModal = () => {
     if (isShow) {
@@ -104,58 +91,53 @@ const Campus = ({ sections, meta, prefilledData, options, }: any) => {
                       </p>
                     </div>
                     <section className="bg-surface-0 relative" >
-                      {
-                        isLoading
-                          ? <div className="absolute w-full h-full z-10 flex justify-center items-center left-0 top-0 bg-surface-0">
-                            <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
-                          </div>
-                          : null
-                      }
-                      {
-                        !!error
-                          ? <WebError {...currentError}></WebError>
-                          : <section>
-                            <div className="flex gap-6">
-                              <div className="flex flex-col gap-6">
-                                <h1 className="font-texts font-bold text-5 leading-6">Agenda tu visita</h1>
-                                <p className="font-texts font-normal text-3.5 leading-4">¡Descubre las instalaciones de {BUSINESS_UNIT} y conoce sus Happy Spaces!</p>
-                              </div>
-                              <div className="w-p:hidden">
-                                <Image classNamesImg="w-full h-full object-cover" classNames="w-28 h-28 rounded-full overflow-hidden" src="" alt="" />
-                              </div>
-                            </div>
-                            <div className="flex align-middle items-center mt-8 mb-6">
-                              <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">Al llenar tus datos aceptas nuestro</p>
-                              <Link href="" passHref target={"_blank"}>
-                                <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">Aviso de privacidad</p>
-                              </Link>
-                            </div>
-                            {/* {
-                              (!!progress && progress > 0) && <div className="mb-6">
-                                <ProgressBar data={{ progress }} />
-                              </div>
-                            } */}
-                            <DoubleDegreeForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />
-                            <div className="mt-6">
-                              <Button darkOutlined={true} dark={true}
-                                data={{
-                                  title: "Solicitar información",
-                                  icon: "",
-                                  isExpand: false,
-                                  disabled: !isValid
-                                }}
-                                onClick={() => {
-                                  setSubmit(true);
-                                  setTimeout(() => {
-
-                                    setSubmit(false)
-                                  }, 100);
-                                }}
-                              />
-                            </div>
-                          </section>
-
-                      }
+                      <ContainerForm
+                        type="ComponentSectionsFormContainer"
+                        title={`Agenda tu visita ${""}`}
+                        description={`¡Descubre las instalaciones de ${BUSINESS_UNIT} y conoce sus Happy Spaces!`}
+                        form="Doble_Titulacion"
+                        progress={0}
+                        position="center"
+                        width="w_full"
+                        extraText=""
+                        privacyPolicy={{
+                          text: 'Al llenar tus datos aceptas nuestro ',
+                          linkText: 'Aviso de privacidad',
+                          file: null,
+                          href: '/aviso-privacidad'
+                        }}
+                        errors={[{
+                          type: 'ComponentSectionsWebError',
+                          title: '',
+                          message: '',
+                          errorCode: '',
+                          button: {
+                            text: 'string;',
+                            size: '',
+                            isBold: false,
+                            disabled: false,
+                            href: `/oferta-academica/licenciatura/${""}`,
+                          }
+                        }]}
+                        prefilledData={{
+                          program: SFprogram,
+                          levels: program?.attributes?.level?.data?.attributes?.SFlevels
+                        }}
+                        button={{
+                          label: 'Solicitar información',
+                          size: '',
+                          variant: 'primary',
+                          CTA: 'submit',
+                          iconName: 'send'
+                        }}
+                        options={{
+                          modalities: modalities?.map((mod: { modality: { data: { attributes: { name: any; }; }; }; }) => ({
+                            value: mod.modality.data.attributes.name,
+                            active: false,
+                            text: mod.modality.data.attributes.name
+                          }))
+                        }}
+                      />
                     </section>
                   </Dialog.Panel>
                 </Transition.Child>
@@ -311,6 +293,7 @@ const Campus = ({ sections, meta, prefilledData, options, }: any) => {
                               <span className="text-primary-400 material-symbols-outlined select-non !text-lg ms-1">calendar_month</span>
                             </div> 
                             */}
+
                             <div className="flex justify-end items-center pr-3">
                               <p className="font-texts font-normal hover:cursor-pointer" onClick={() => handleOpenModal(coords, title)}>
                                 Ver mapa
