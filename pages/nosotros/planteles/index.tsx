@@ -327,7 +327,7 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
 export async function getStaticProps(context: any) {
 
   try {
-    const { sections, meta } = await getDataPageFromJSON("campus.json");
+    const { sections, meta } = await getDataPageFromJSON("planteles.json");
 
     return {
       props: { sections, meta },
