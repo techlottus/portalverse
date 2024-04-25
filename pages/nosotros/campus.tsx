@@ -270,6 +270,7 @@ const Campus = ({ sections, meta, prefilledData, options, }: any) => {
                                   <LinkContactTarget
                                     type="phone"
                                     info={description?.phone}
+                                    alternativeText={"Tel. " + description?.phone}
                                     classNames="col-span-11 text-sm w-t:col-span-7 w-p:col-span-3 underline text-surface-900"
                                   />
                                 </ContentInsideLayout>
@@ -310,7 +311,7 @@ const Campus = ({ sections, meta, prefilledData, options, }: any) => {
                               <span className="text-primary-400 material-symbols-outlined select-non !text-lg ms-1">calendar_month</span>
                             </div> 
                             */}
-                            <div className="flex pr-3">
+                            <div className="flex justify-end items-center pr-3">
                               <p className="font-texts font-normal hover:cursor-pointer" onClick={() => handleOpenModal(coords, title)}>
                                 Ver mapa
                               </p>
