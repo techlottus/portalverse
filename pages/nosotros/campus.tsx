@@ -83,7 +83,7 @@ const Campus = ({ sections, meta, prefilledData, options, program }: any) => {
                   leaveFrom="opacity-100 scale-100"
                   leaveTo="opacity-0 scale-95"
                 >
-                  <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all">
+                  <Dialog.Panel className="w-full max-w-md transform rounded-2xl bg-white text-left align-middle shadow-xl transition-all">
                     <div className="flex justify-end">
                       <p className="pt-3 pr-3 material-symbols-outlined font-normal select-none mr-1 cursor-pointer" onClick={closeModal} >
                         close
