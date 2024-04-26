@@ -49,7 +49,7 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
   }
 
   function openModal(SFcampus: string) {
-    setCampus(SFcampus)    
+    setCampus(SFcampus)      
   }
 
   return (
@@ -69,7 +69,7 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <div className="fixed inset-0 bg-black/25" />
+              <div className="fixed inset-0 bg-surface-900 opacity-50" aria-hidden="true" />
             </Transition.Child>
 
             <div className="fixed inset-0 overflow-y-auto">
@@ -83,9 +83,9 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
                   leaveFrom="opacity-100 scale-100"
                   leaveTo="opacity-0 scale-95"
                 >
-                  <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                  <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all">
                     <div className="flex justify-end">
-                      <p className="material-symbols-outlined font-normal select-none mr-1 cursor-pointer" onClick={closeModal} >
+                      <p className="pt-3 pr-3 material-symbols-outlined font-normal select-none mr-1 cursor-pointer" onClick={closeModal} >
                         close
                       </p>
                     </div>
@@ -284,14 +284,15 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
                                 </ContentInsideLayout>
                                 : null
                             } */}
-                            <div className="items-center flex">
-                              <p className="text-primary-400 font-bold cursor-pointer" onClick={() => openModal(description?.SFcampus)}>
-                                Agendar visita
-                              </p>
-                              <span className="text-primary-400 material-symbols-outlined select-non !text-lg ms-1">calendar_month</span>
-                            </div>
-
-
+                            {
+                              description.SFcampus &&
+                              <div className="items-center flex">
+                                <p className="text-primary-400 font-bold cursor-pointer" onClick={() => openModal(description?.SFcampus)}>
+                                  Agendar visita
+                                </p>
+                                <span className="text-primary-400 material-symbols-outlined select-non !text-lg ms-1">calendar_month</span>
+                              </div>
+                            }
                             <div className="flex justify-end items-center pr-3">
                               <p className="font-texts font-normal hover:cursor-pointer" onClick={() => handleOpenModal(coords, title)}>
                                 Ver mapa

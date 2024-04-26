@@ -49,9 +49,7 @@ const Campus = ({ sections, meta, prefilledData, options, program }: any) => {
   }
 
   function openModal(SFcampus: string) {
-    setCampus(SFcampus)
-    console.log(SFcampus)
-    
+    setCampus(SFcampus)      
   }
 
   return (
