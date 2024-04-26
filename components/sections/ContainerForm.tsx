@@ -10,6 +10,7 @@ import Button from "@/old-components/Button/Button";
 import { useRouter } from "next/router";
 import ProgramDetailForm from "@/forms/container/ProgramDetailForm";
 import { DoubleDegreeForm } from "@/forms/container/DoubleDegreeForm";
+import ScheduleVisitForm from "@/forms/container/ScheduleVisitForm";
 
 
 const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
@@ -68,13 +69,15 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
         return <ProgramDetailForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
       case "Doble_Titulacion":
         return <DoubleDegreeForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
+      case "Agendar_Visita":
+        return <ScheduleVisitForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
       default:
         setError('404')
         return null;
     }
   }
   return (
-    <section className={cn({'hidden': !isVisible})}>
+    <section className={cn({ 'hidden': !isVisible })}>
       <div className={cn('flex', {
         "justify-center": position === 'center',
         "justify-start": position === 'left',
