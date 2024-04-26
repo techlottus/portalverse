@@ -83,7 +83,7 @@ const ScheduleVisitData: FC<any> = ({
       <Select
         onClick={(option: CustomEvent) => handleSelect(option, "level")}
         options={Options?.levels || []}
-        data={{ ...SelectInit, textDefault: `Elige un nivel`, icon: "" }}
+        data={{ ...SelectInit, textDefault: ` `, icon: " " }}
       />
       <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.level })}>{configControls.errorMessagesStepTwoOpenForm.level}</p>
     </div>
@@ -100,7 +100,7 @@ const ScheduleVisitData: FC<any> = ({
       <Select
         onClick={(option: CustomEvent) => handleSelect(option, "program")}
         options={Options?.programs || []}
-        data={{ ...SelectInit, textDefault: ` `, icon: "import_contacts" }}
+        data={{ ...SelectInit, textDefault: ` `, icon: " " }}
       />
       <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p>
     </div>
