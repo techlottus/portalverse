@@ -6,12 +6,6 @@ import { SelectInit } from "@/old-components/fixture"
 import cn from "classnames"
 import Input from "@/old-components/Input/Input"
 
-const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
-const campusLabel = BUSINESS_UNIT === "UTEG" || BUSINESS_UNIT === "UTC" ? "plantel" : "campus";
-
-const commonLevels = ["Preparatoria", "Licenciatura", "Maestría"];
-const defaultLevels = BUSINESS_UNIT === "UTC" ? commonLevels : BUSINESS_UNIT === "ULA" ? [...commonLevels, "Doctorado", "Educación Continua"] : [...commonLevels, "Doctorado"]
-
 const ScheduleVisitData: FC<any> = ({
   data,
   config: stepOneConfig,
@@ -20,14 +14,14 @@ const ScheduleVisitData: FC<any> = ({
   errorControls,
   setErrorControls,
   validateControl,
-  scheduleVist,
-  setScheduleVist,
+  scheduleVisitData,
+  setScheduleVisitData,
   options
 }: any) => {
 
   const [config, setConfig] = useState<any>(stepOneConfig ? { ...stepOneConfig } : { ...OpenFormInit.stepone });
 
-  const [Options, setOptions] = useState<{ campuses: [], modalities: [], levels: [] }>({ campuses: [], modalities: [], levels: [] });
+  const [Options, setOptions] = useState<{ programs: [], modalities: [], levels: [] }>({ programs: [], modalities: [], levels: [] });
 
   useEffect(() => {
     setConfig({ ...config, ...data });
@@ -36,116 +30,80 @@ const ScheduleVisitData: FC<any> = ({
     setOptions(options);
   }, [options]);
 
-
   const handleKeyPress = (e: CustomEvent, control: string) => {
     const { detail: { value } } = e;
-
-    // console.log('value: ', value);
-    // console.log('errorControls: ', errorControls);
-    // console.log(`errorControls[${control}]: `, errorControls[control]);
-
     setInfoControlsTouched({ ...infoControlsTouched, [control]: true });
-    setScheduleVist({ ...scheduleVist, [control]: value });
+    setScheduleVisitData({ ...scheduleVisitData, [control]: value });
     setErrorControls({ ...errorControls, [control]: !validateControl(control, value, infoControlsTouched[control]) });
   };
+
   const handleSelect = (e: CustomEvent, control: string) => {
-    // console.log('e: ', e);
     const { detail } = e;
-    // console.log('detail: ', detail);
-    if (control === 'campus') {
-
-      const option = Options?.campuses?.map((option: any) => {
-        // console.log(option);
+    if (control === 'program') {
+      const option = Options?.programs?.map((option: any) => {
         option.active = option.value === detail
-
         return option
       })
-
-      // console.log(option);
     }
     if (control === 'modality') {
-
       const option = Options?.modalities?.map((option: any) => {
-        // console.log(option);
         option.active = option.value === detail
-
         return option
       })
-      // console.log(option);
-
-      // option.active = true
     }
     if (control === 'level') {
-
       const option = Options?.levels?.map((option: any) => {
-        // console.log(option);
         option.active = option.value === detail
 
         return option
       })
-      // console.log(option);
-
-      // option.active = true
     }
-    // console.log('errorControls: ', errorControls);
-    // console.log(`errorControls[${control}]: `, errorControls[control]);
 
     setInfoControlsTouched({ ...infoControlsTouched, [control]: true });
-    setScheduleVist({ ...scheduleVist, [control]: detail });
+    setScheduleVisitData({ ...scheduleVisitData, [control]: detail });
     setErrorControls({ ...errorControls, [control]: !validateControl(control, detail, infoControlsTouched[control]) });
   };
 
   const handleTouchedControl = (control: string) => {
     setInfoControlsTouched({ ...infoControlsTouched, [control]: true });
-    setErrorControls({ ...errorControls, [control]: !validateControl(control, scheduleVist[control], true) && infoControlsTouched[control] });
+    setErrorControls({ ...errorControls, [control]: !validateControl(control, scheduleVisitData[control], true) && infoControlsTouched[control] });
   }
 
   return <>
     <div className="grow mt-2 hidden">
       <Input
-        eventFocus={() => handleTouchedControl("program")}
+        eventFocus={() => handleTouchedControl("modality")}
         data={configControls.inputProgram}
-        eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "program")}
-        value={scheduleVist?.program}
+        eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "modality")}
+        value={scheduleVisitData?.modality}
       />
-    </div>
-    <div className={cn("flex flex-col", { 'hidden': Options?.modalities?.length > 0 && Options?.modalities?.length < 2 })}>
-      <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-2 capitalize">Modalidad</p>
-      <Select
-        onClick={(option: CustomEvent) => handleSelect(option, "modality")}
-        options={Options?.modalities || []}
-        data={{ ...SelectInit, textDefault: `Elige una modalidad`, icon: "school" }}
-      />
-      <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p>
     </div>
     <div className={cn("flex flex-col", { '': Options?.levels?.length > 0 && Options?.levels?.length < 2 })}>
       <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-2 capitalize">Nivel</p>
       <Select
         onClick={(option: CustomEvent) => handleSelect(option, "level")}
         options={Options?.levels || []}
-        data={{ ...SelectInit, textDefault: `Elige un nivel`, icon: "", disabled: !scheduleVist?.modality }}
+        data={{ ...SelectInit, textDefault: `Elige un nivel`, icon: "" }}
       />
       <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.level })}>{configControls.errorMessagesStepTwoOpenForm.level}</p>
     </div>
+    <div className="grow mt-2 hidden">
+      <Input
+        eventFocus={() => handleTouchedControl("campus")}
+        data={configControls.inputProgram}
+        eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "campus")}
+        value={scheduleVisitData?.campus}
+      />
+    </div>
     <div className="flex flex-col">
-      <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-2 capitalize">{campusLabel || config?.campus}</p>
+      <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-2 capitalize">Programa</p>
       <Select
-        onClick={(option: CustomEvent) => handleSelect(option, "campus")}
-        options={Options?.campuses || []}
-        data={{ ...SelectInit, textDefault: `Elige un ${campusLabel}`, icon: "apartment", disabled: !scheduleVist?.level && !scheduleVist?.modality }}
+        onClick={(option: CustomEvent) => handleSelect(option, "program")}
+        options={Options?.programs || []}
+        data={{ ...SelectInit, textDefault: ` `, icon: "import_contacts" }}
       />
       <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p>
     </div>
-    <div className="flex flex-col">
-      <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-2 capitalize">{campusLabel || config?.campus}</p>
-      <Select
-        onClick={(option: CustomEvent) => handleSelect(option, "campus")}
-        options={Options?.campuses || []}
-        data={{ ...SelectInit, textDefault: `Elige un ${campusLabel}`, icon: "apartment", disabled: !scheduleVist?.level && !scheduleVist?.modality }}
-      />
-      <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p>
-    </div>
-
   </>
 }
 
