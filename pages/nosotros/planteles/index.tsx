@@ -128,6 +128,7 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
                           CTA: 'submit',
                           iconName: 'send'
                         }}
+                        shadow={false}
                         options={{
                           modalities: modalities?.map((mod: { modality: { data: { attributes: { name: any; }; }; }; }) => ({
                             value: mod.modality.data.attributes.name,
