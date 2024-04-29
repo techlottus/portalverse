@@ -177,7 +177,7 @@ const ScheduleVisitForm = (props: ScheduleVisitForm) => {
         setIsError('404')
       } else {
         setFilteredPrograms(offerByCampus)
-      }      
+      }
     }
   }, [filterPrograms])
 
@@ -188,7 +188,7 @@ const ScheduleVisitForm = (props: ScheduleVisitForm) => {
           ? { ...program, modalidad: 'Flex' }
           : program
       })
-      
+
       const periods = programs?.reduce((acc: any, program: any, index: number, arr: any[]) => {
         if (!acc.includes(program.nombrePeriodo)) {
           acc = [...acc, program.nombrePeriodo]
@@ -199,29 +199,29 @@ const ScheduleVisitForm = (props: ScheduleVisitForm) => {
       const periodPrograms = programs/* ?.filter((program: any) => {
         return program.nombrePeriodo === currentPeriod
       }) */
-      
+
       const levels = filterByField(periodPrograms, 'nivel')
-      
+
       setAcademicData({
         ...academicData,
         level: levels?.length === 1 ? levels[0] : academicData.level,
         campus: prefilledData.campus,
         modality: "Presencial"
       })
-      
+
       setAcademicDataTouched({
         ...academicDataTouched,
         level: levels?.length === 1,
         campus: !!prefilledData.campus,
         modality: true
       })
-      
+
       setSFlevels(levels?.map((level: any) => ({
         value: level,
         text: level,
         active: levels?.length === 1 || level.idCampus === academicData.level
       })))
-                  
+
     }
   }, [filteredPrograms])
 
@@ -317,10 +317,21 @@ const ScheduleVisitForm = (props: ScheduleVisitForm) => {
       })
 
       const programs = filterByField(periodPrograms, 'nombrePrograma', ['nombrePrograma', 'idOfertaPrograma'])
-      setSFprograms(programs?.map((program: any) => ({
+      console.log(programs, "programs")
+      const orderPrograms = programs.sort((a: any, b: any) => {
+        if (a.nombrePrograma < b.nombrePrograma) {
+          return -1;
+        }
+        if (a.nombrePrograma > b.nombrePrograma) {
+          return 1;
+        }
+        return 0;
+      })
+      console.log(orderPrograms, "orderPrograms")
+      setSFprograms(orderPrograms?.map((program: any) => ({
         value: program?.idOfertaPrograma,
         text: program?.nombrePrograma,
-        active: programs?.length === 1 || program.idOfertaPrograma === academicData.program
+        active: orderPrograms?.length === 1 || program.idOfertaPrograma === academicData.program
       })))
     }
 
