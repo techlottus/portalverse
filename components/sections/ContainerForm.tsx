@@ -72,13 +72,14 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
         return <DoubleDegreeForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
       case "Agendar_Visita":
         return <ScheduleVisitForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
+
       default:
         setError('404')
         return null;
     }
   }
   return (
-    <section className={cn({ 'hidden': !isVisible })}>
+    <section /* className={cn({ 'hidden': !isVisible })} */>
       <div className={cn('flex', {
         "justify-center": position === 'center',
         "justify-start": position === 'left',
@@ -137,7 +138,7 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
                     {
                       getForm()
                     }
-                  </>                  
+                  </>
                   {
                     !!button &&
                     <>
