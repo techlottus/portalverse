@@ -316,8 +316,7 @@ const ScheduleVisitForm = (props: ScheduleVisitForm) => {
         return program.nombrePeriodo === currentPeriod
       })
 
-      const programs = filterByField(periodPrograms, 'nombrePrograma', ['nombrePrograma', 'idOfertaPrograma'])
-      console.log(programs, "programs")
+      const programs = filterByField(periodPrograms, 'nombrePrograma', ['nombrePrograma', 'idOfertaPrograma'])      
       const orderPrograms = programs.sort((a: any, b: any) => {
         if (a.nombrePrograma < b.nombrePrograma) {
           return -1;
@@ -326,8 +325,7 @@ const ScheduleVisitForm = (props: ScheduleVisitForm) => {
           return 1;
         }
         return 0;
-      })
-      console.log(orderPrograms, "orderPrograms")
+      })      
       setSFprograms(orderPrograms?.map((program: any) => ({
         value: program?.idOfertaPrograma,
         text: program?.nombrePrograma,
