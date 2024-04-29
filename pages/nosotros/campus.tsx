@@ -26,6 +26,8 @@ const Campus = ({ sections, meta, prefilledData, options, program }: any) => {
   const [coordsMap, setCoordsMap] = useState<any>(null);
   const [infoMap, setInfoMap] = useState<string>("");
   const [isShow, setIsShow] = useState(false);
+  const [campus, setCampus] = useState("")
+
 
   const handleVisibilityModal = () => {
     if (isShow) {
@@ -41,14 +43,13 @@ const Campus = ({ sections, meta, prefilledData, options, program }: any) => {
     handleVisibilityModal();
   };
 
-  let [isOpen, setIsOpen] = useState(false)
 
   function closeModal() {
-    setIsOpen(false)
+    setCampus("")
   }
 
-  function openModal() {
-    setIsOpen(true)
+  function openModal(SFcampus: string) {
+    setCampus(SFcampus)      
   }
 
   return (
@@ -57,7 +58,7 @@ const Campus = ({ sections, meta, prefilledData, options, program }: any) => {
         <title>{meta?.title}</title>
       </Head>
       <>
-        <Transition appear show={isOpen} as={Fragment}>
+        <Transition appear show={!!campus} as={Fragment}>
           <Dialog as="div" onClose={closeModal}>
             <Transition.Child
               as={Fragment}
@@ -68,7 +69,7 @@ const Campus = ({ sections, meta, prefilledData, options, program }: any) => {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <div className="fixed inset-0 bg-black/25" />
+              <div className="fixed inset-0 bg-surface-900 opacity-50" aria-hidden="true" />
             </Transition.Child>
 
             <div className="fixed inset-0 overflow-y-auto">
@@ -82,9 +83,9 @@ const Campus = ({ sections, meta, prefilledData, options, program }: any) => {
                   leaveFrom="opacity-100 scale-100"
                   leaveTo="opacity-0 scale-95"
                 >
-                  <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                  <Dialog.Panel className="w-full max-w-md transform rounded-2xl bg-white text-left align-middle shadow-xl transition-all">
                     <div className="flex justify-end">
-                      <p className="material-symbols-outlined font-normal select-none mr-1 cursor-pointer" onClick={closeModal} >
+                      <p className="pt-3 pr-3 material-symbols-outlined font-normal select-none mr-1 cursor-pointer" onClick={closeModal} >
                         close
                       </p>
                     </div>
@@ -93,7 +94,7 @@ const Campus = ({ sections, meta, prefilledData, options, program }: any) => {
                         type="ComponentSectionsFormContainer"
                         title={`Agenda tu visita ${""}`}
                         description={`¡Descubre las instalaciones de ${BUSINESS_UNIT} y conoce sus Happy Spaces!`}
-                        form="Doble_Titulacion"
+                        form="Agendar_Visita"
                         progress={0}
                         position="center"
                         width="w_full"
@@ -118,8 +119,7 @@ const Campus = ({ sections, meta, prefilledData, options, program }: any) => {
                           }
                         }]}
                         prefilledData={{
-                          program: SFprogram,
-                          levels: program?.attributes?.level?.data?.attributes?.SFlevels
+                          campus
                         }}
                         button={{
                           label: 'Solicitar información',
@@ -128,6 +128,7 @@ const Campus = ({ sections, meta, prefilledData, options, program }: any) => {
                           CTA: 'submit',
                           iconName: 'send'
                         }}
+                        shadow={false}
                         options={{
                           modalities: modalities?.map((mod: { modality: { data: { attributes: { name: any; }; }; }; }) => ({
                             value: mod.modality.data.attributes.name,
@@ -275,23 +276,23 @@ const Campus = ({ sections, meta, prefilledData, options, program }: any) => {
                                 </ContentInsideLayout>
                                 : null */
                             }
-                            {
+                            {/* {
                               description?.link ?
                                 <ContentInsideLayout classNames="items-center">
                                   <span className="material-symbols-outlined col-span-1 w-t:col-span-1 w-p:col-span-1 w-4 mt-2 text-surface-500 select-none">{description?.link?.icon}</span>
                                   <span className="col-span-11 w-t:col-span-7 w-p:col-span-3 mt-2 font-texts font-normal text-base leading-5 text-surface-500"><a className="hover:underline" target="_blank" rel="noreferrer noopener" href={description?.link?.redirect}>{description?.link?.text}</a></span>
                                 </ContentInsideLayout>
                                 : null
+                            } */}
+                            {
+                              description.SFcampus &&
+                              <div className="items-center flex">
+                                <p className="text-primary-400 font-bold cursor-pointer" onClick={() => openModal(description?.SFcampus)}>
+                                  Agendar visita
+                                </p>
+                                <span className="text-primary-400 material-symbols-outlined select-non !text-lg ms-1">calendar_month</span>
+                              </div>
                             }
-                            {/* 
-                            <div className="items-center flex">
-                              <p className="text-primary-400 font-bold cursor-pointer" onClick={openModal}>
-                                Agendar visita
-                              </p>
-                              <span className="text-primary-400 material-symbols-outlined select-non !text-lg ms-1">calendar_month</span>
-                            </div> 
-                            */}
-
                             <div className="flex justify-end items-center pr-3">
                               <p className="font-texts font-normal hover:cursor-pointer" onClick={() => handleOpenModal(coords, title)}>
                                 Ver mapa
