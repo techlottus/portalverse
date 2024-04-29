@@ -171,7 +171,7 @@ const ScheduleVisitForm = (props: ScheduleVisitForm) => {
   useEffect(() => {
     if (filterPrograms) {
       const offerByCampus = filterPrograms?.filter((program: any) => {
-        return program.idCampus === prefilledData.campus
+        return program.idCampus === prefilledData?.campus
       })
       if (!offerByCampus || offerByCampus?.length === 0) {
         setIsError('404')
@@ -205,14 +205,14 @@ const ScheduleVisitForm = (props: ScheduleVisitForm) => {
       setAcademicData({
         ...academicData,
         level: levels?.length === 1 ? levels[0] : academicData.level,
-        campus: prefilledData.campus,
+        campus: prefilledData?.campus,
         modality: "Presencial"
       })
 
       setAcademicDataTouched({
         ...academicDataTouched,
         level: levels?.length === 1,
-        campus: !!prefilledData.campus,
+        campus: !!prefilledData?.campus,
         modality: true
       })
 
@@ -287,7 +287,7 @@ const ScheduleVisitForm = (props: ScheduleVisitForm) => {
     })
     setAcademicData({
       ...academicData,
-      campus: prefilledData.campus || ""
+      campus: prefilledData?.campus || ""
     })
 
   }, [prefilledData])
@@ -316,7 +316,7 @@ const ScheduleVisitForm = (props: ScheduleVisitForm) => {
         return program.nombrePeriodo === currentPeriod
       })
 
-      const programs = filterByField(periodPrograms, 'nombrePrograma', ['nombrePrograma', 'idOfertaPrograma'])      
+      const programs = filterByField(periodPrograms, 'nombrePrograma', ['nombrePrograma', 'idOfertaPrograma'])
       const orderPrograms = programs.sort((a: any, b: any) => {
         if (a.nombrePrograma < b.nombrePrograma) {
           return -1;
@@ -325,7 +325,7 @@ const ScheduleVisitForm = (props: ScheduleVisitForm) => {
           return 1;
         }
         return 0;
-      })      
+      })
       setSFprograms(orderPrograms?.map((program: any) => ({
         value: program?.idOfertaPrograma,
         text: program?.nombrePrograma,
