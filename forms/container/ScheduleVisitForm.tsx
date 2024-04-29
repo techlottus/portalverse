@@ -169,26 +169,26 @@ const ScheduleVisitForm = (props: ScheduleVisitForm) => {
   }, [tokenActive])
 
   useEffect(() => {
-    if (filterPrograms) {      
+    if (filterPrograms) {
       const offerByCampus = filterPrograms?.filter((program: any) => {
         return program.idCampus === prefilledData.campus
       })
-      if (!offerByCampus || offerByCampus?.length === 0) {        
+      if (!offerByCampus || offerByCampus?.length === 0) {
         setIsError('404')
       } else {
         setFilteredPrograms(offerByCampus)
-      }
+      }      
     }
   }, [filterPrograms])
 
   useEffect(() => {
-    if (filteredPrograms) {      
+    if (filteredPrograms) {
       const programs = filteredPrograms.map((program: any) => {
         return businessUnit !== 'ULA' && program.lineaNegocio === 'ULA' && program.modalidad === 'Online'
           ? { ...program, modalidad: 'Flex' }
           : program
       })
-
+      
       const periods = programs?.reduce((acc: any, program: any, index: number, arr: any[]) => {
         if (!acc.includes(program.nombrePeriodo)) {
           acc = [...acc, program.nombrePeriodo]
@@ -196,28 +196,32 @@ const ScheduleVisitForm = (props: ScheduleVisitForm) => {
         return acc
       }, [])
       const currentPeriod = periods?.sort((a: any, b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[periods.length - 1]
-      const periodPrograms = programs?.filter((program: any) => {
+      const periodPrograms = programs/* ?.filter((program: any) => {
         return program.nombrePeriodo === currentPeriod
-      })
-
+      }) */
+      
       const levels = filterByField(periodPrograms, 'nivel')
+      
       setAcademicData({
         ...academicData,
         level: levels?.length === 1 ? levels[0] : academicData.level,
         campus: prefilledData.campus,
         modality: "Presencial"
       })
+      
       setAcademicDataTouched({
         ...academicDataTouched,
         level: levels?.length === 1,
         campus: !!prefilledData.campus,
         modality: true
       })
+      
       setSFlevels(levels?.map((level: any) => ({
         value: level,
         text: level,
         active: levels?.length === 1 || level.idCampus === academicData.level
       })))
+                  
     }
   }, [filteredPrograms])
 
@@ -268,7 +272,7 @@ const ScheduleVisitForm = (props: ScheduleVisitForm) => {
       const selectedProgramData = filteredPrograms?.filter((program: any) => {
         return program.idOfertaPrograma === academicData.program
       })
-      setselectedProgram(selectedProgramData[0])      
+      setselectedProgram(selectedProgramData[0])
     }
 
   }, [academicData.program]);
@@ -297,22 +301,22 @@ const ScheduleVisitForm = (props: ScheduleVisitForm) => {
     if (!!academicData.level) {
       const programsByLevel = filteredPrograms?.filter((program: any) => {
         return program.nivel === academicData.level
-      })      
+      })
       const periods = programsByLevel?.reduce((acc: any, program: any, index: number, arr: any[]) => {
         if (!acc.includes(program.nombrePeriodo)) {
           acc = [...acc, program.nombrePeriodo]
         }
         return acc
-      }, [])      
-      const sortedPeriods = periods?.sort((a: any, b: any) => {        
+      }, [])
+      const sortedPeriods = periods?.sort((a: any, b: any) => {
         return Number(a) - Number(b)
-      })      
-      const currentPeriod = sortedPeriods[sortedPeriods.length - 1]      
+      })
+      const currentPeriod = sortedPeriods[sortedPeriods.length - 1]
       const periodPrograms = programsByLevel?.filter((program: any) => {
         return program.nombrePeriodo === currentPeriod
       })
 
-      const programs = filterByField(periodPrograms, 'nombrePrograma', ['nombrePrograma', 'idOfertaPrograma'])      
+      const programs = filterByField(periodPrograms, 'nombrePrograma', ['nombrePrograma', 'idOfertaPrograma'])
       setSFprograms(programs?.map((program: any) => ({
         value: program?.idOfertaPrograma,
         text: program?.nombrePrograma,
