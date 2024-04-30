@@ -218,7 +218,7 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
                               description?.redirect
                                 ?
                                 <div className="flex items-center">
-                                  <a href={description?.redirect} target="_blank" rel="noreferrer noopener" className={cn("font-headings font-semibold underline text-4.5 leading-5.625", {
+                                  <a href={description?.redirect} rel="noreferrer noopener" className={cn("font-headings font-semibold underline text-4.5 leading-5.625", {
                                     "hover:underline": description?.redirect,
                                   })}>
                                     {description?.name}
