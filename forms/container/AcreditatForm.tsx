@@ -4,23 +4,12 @@ import configControls from "@/forms/fixtures/controls"
 import axios from "axios";
 import { getTokenForms } from "@/utils/getTokenForms"
 import { getEducativeOffer } from "@/utils/getEducativeOffer"
-import ScheduleVisitData from "@/forms/steps/ScheduleVisitData";
 import { setRegisterBot } from "@/utils/saveDataForms"
 import { useRouter } from "next/router";
 import { env } from "process";
+import AcreditatData from "../steps/AcreditatData";
 
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
-
-// available modalities for prop modality = "Presencial" | "Online" | "Flex" | "Semipresencial"
-const getLeadModality = (modality: string) => {
-  switch (modality) {
-    case "Presencial": return "Presencial";
-    case "Online": return "Online";
-    case "Flex": return "Online"; // Applies to "UANE" and "UTEG" offer.
-    case "Semipresencial": return "Semipresencial"; // Applies to "ULA" offer.
-    default: return "";
-  }
-};
 
 type AcreditatForm = {
   setStatus: (status: { loading: boolean, error: string, valid: boolean, success: boolean }) => void
@@ -30,8 +19,9 @@ type AcreditatForm = {
     last_name?: string;
     phone?: string;
     email?: string;
+    level: string;
+    program: string;
     modality?: string;
-    campus: string;
   };
   options: {
     modalities: {
@@ -54,7 +44,7 @@ const AcreditatForm = (props: AcreditatForm) => {
   const queryParams = router?.query;
   const { setStatus, submit, prefilledData } = props
 
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState('');
   const [isValid, setIsValid] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -123,6 +113,16 @@ const AcreditatForm = (props: AcreditatForm) => {
     token,
   } = getTokenForms();
 
+  const getLeadModality = (modality: string) => {
+    switch (modality) {
+      case "Presencial": return "Presencial";
+      case "Online": return "Online";
+      case "Flex": return "Online"; // Applies to "UANE" and "UTEG" offer.
+      case "Semipresencial": return "Semipresencial"; // Applies to "ULA" offer.
+      default: return "";
+    }
+  };
+
   const filterByField = (data: any, filter: any, fields?: string[]) => {
     return data?.reduce((acc: any[], curr: any) => {
       if (!fields) {
@@ -170,14 +170,20 @@ const AcreditatForm = (props: AcreditatForm) => {
 
   useEffect(() => {
     if (filterPrograms) {
-      const offerByCampus = filterPrograms?.filter((program: any) => {
-        return program.idCampus === prefilledData?.campus
+      const offerByProgram = filterPrograms?.filter((program: any) => {
+        return program.nombrePrograma === prefilledData.program
+      })
+      console.log("prefilledData", prefilledData)
+      console.log("offerbyProgram", offerByProgram)
+      setFilteredPrograms(offerByProgram)
+      /* const offerByCampus = filterPrograms?.filter((program: any) => {
+        return program.idCampus === prefilledData.
       })
       if (!offerByCampus || offerByCampus?.length === 0) {
         setIsError('404')
       } else {
-        setFilteredPrograms(offerByCampus)
-      }
+        
+      }*/
     }
   }, [filterPrograms])
 
@@ -205,14 +211,14 @@ const AcreditatForm = (props: AcreditatForm) => {
       setAcademicData({
         ...academicData,
         level: levels?.length === 1 ? levels[0] : academicData.level,
-        campus: prefilledData?.campus,
+        /* campus: prefilledData?.campus, */
         modality: "Presencial"
       })
 
       setAcademicDataTouched({
         ...academicDataTouched,
         level: levels?.length === 1,
-        campus: !!prefilledData?.campus,
+        /* campus: !!prefilledData?.campus, */
         modality: true
       })
 
@@ -261,9 +267,9 @@ const AcreditatForm = (props: AcreditatForm) => {
   }, [SFprograms])
 
   useEffect(() => {
-    if (options && (options?.levels) && (options?.levels[0])) {
+    /* if (options && (options?.levels) && (options?.levels[0])) {
       setIsLoading(false)
-    }
+    } */
   }, [options])
 
   useEffect(() => {
@@ -287,7 +293,7 @@ const AcreditatForm = (props: AcreditatForm) => {
     })
     setAcademicData({
       ...academicData,
-      campus: prefilledData?.campus || ""
+      /* campus: prefilledData?.campus || "" */
     })
 
   }, [prefilledData])
@@ -370,7 +376,7 @@ const AcreditatForm = (props: AcreditatForm) => {
   }).includes(false)
 
   const handleFetchEducativeOffer = () => {
-    setIsLoading(true)
+    setIsLoading(false)
     setFilteredPrograms([]);
     const businessLineToFetchFrom = getBusinessLineToFetchFrom(businessUnit)
 
@@ -396,7 +402,7 @@ const AcreditatForm = (props: AcreditatForm) => {
     const campana = queryParams?.utm_campaign;
     const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&telefono=${telefono}&email=${email}&lineaNegocio=${lineaNegocio}&modalidad=${modalidad}&nivel=${nivel}&campus=${campus}&programa=${programa}&avisoPrivacidad=true&leadSource=Digital&validaRegistroBoot=${validaRegistroBoot}&source=${source}&canal=${canal}${medio ? `&medio=${medio}` : ""}${campana ? `&campana=${campana}` : ""}`;
 
-    setIsLoading(true);
+    setIsLoading(false);
 
     await axios.post(`${endpoint}?${params}`, {}, {
       headers: {
@@ -457,8 +463,17 @@ const AcreditatForm = (props: AcreditatForm) => {
       setErrorControls={setPersonalDataErrors}
       validateControl={validatePersonalDataControl}
     ></PersonalData>
-    
+    {/* <AcreditatData
+      scheduleVisitData={academicData}
+      setScheduleVisitData={setAcademicData}
+      infoControlsTouched={academicDataTouched}
+      setInfoControlsTouched={setAcademicDataTouched}
+      errorControls={academicDataErrors}
+      setErrorControls={setAcademicDataErrors}
+      validateControl={validateAcademicDataControl}
+      options={options}
+    ></AcreditatData> */}
   </form>
 };
 
-export default AcreditatForm;
+export { AcreditatForm };

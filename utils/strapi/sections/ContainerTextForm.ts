@@ -89,6 +89,7 @@ export const CONTAINER_TEXT_FORM = `
     }
     position
     width
+    prefilledData
   }
 }
 `;
