@@ -1,5 +1,6 @@
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
 import type { StrapiImage } from "@/types/strapi/common";
+import { TestimonialCardData } from "@/types/TestimonialCard";
 
 /**
  * These are the current program levels available in [UANE, UTEG] exactly as they appear in Salesforce.
@@ -31,15 +32,37 @@ type CurriculumDetail = {
   }
 }
 
+type InformativeIcons= {
+  title: string;
+  description: string;
+  iconName: string;
+}
+
+type Subject = {
+  title: string;
+}
+type Summary = {
+  title: string;
+  subjects: Array<Subject>
+}
 export type ProgramModalityDetail = {
   modality: {
     data: {
       attributes: {
         name: string;
         label?: string;
+        desktopImage: StrapiImage;
+        tabletImage: StrapiImage;
+        mobileImage: StrapiImage;
+        Characteristics: {
+          title: string;
+          subtitle: string;
+          InformativeIcons: Array<InformativeIcons>
+        }
       }
     }
   }
+  summaries: Array<Summary>
   modalityDescription: string;
   programPerks: {
     data: Array<ProgramPerk>
@@ -63,13 +86,31 @@ export type ProgramPerk = {
 }
 export type programBrand = {
   attributes: {
+    name: string;
     contact: string;
+    about: string;
+    website: string;
   }
 }
 
 export type ProgramAttributes = {
   slug: string;
   name: string;
+  admissionProfile: string;
+  graduateProfile: string;
+  laborField: string;
+  admissionRequirements: string;
+  certificationsTitle: string;
+  certificationsDescription: string;
+  certifications: {
+    data: Array<{
+      attributes: {
+        name: string;
+        imgCertification: StrapiImage;
+      }
+    }>
+  }
+  academicTitleName: string;
   programCategory: {
     data: {
       attributes: {
@@ -86,6 +127,14 @@ export type ProgramAttributes = {
   periodicity: string;
   checkoutUrl: string;
   checkoutUrlText: string;
+  testimonials: {
+    title: string,
+    description: string;
+    bgImageDesktop:StrapiImage;
+    bgImageTablet: StrapiImage;
+    bgImageMobile: StrapiImage;
+    testimonialCards: Array<TestimonialCardData>
+  }
   brands: {
     data: Array<programBrand>
   }
@@ -155,6 +204,27 @@ query ProgramBySlug($slug: String!) {
         slug
         name
         nombreProgramaSalesforce
+        admissionProfile
+        graduateProfile
+        laborField
+        admissionRequirements
+        certificationsTitle
+        certificationsDescription
+        certifications {
+          data {
+            attributes {
+              name
+              imgCertification {
+                data {
+                  attributes {
+                    url
+                  }
+                }
+              }
+            }
+          }
+        }
+        academicTitleName
         programCategory{
           data{
             attributes{
@@ -169,10 +239,50 @@ query ProgramBySlug($slug: String!) {
         periodicity
         checkoutUrl
         checkoutUrlText
+        testimonials {
+          title
+          description
+          testimonialCards {
+            title
+            subtitle
+            testimonialText
+            testimonialImage{
+              data{
+                attributes{
+                  url
+                }
+              }
+            }
+          }
+          bgImageDesktop{
+            data{
+              attributes{
+                url
+              }
+            }
+          }
+          bgImageTablet{
+            data{
+              attributes{
+                url
+              }
+            }
+          }
+          bgImageMobile{
+            data{
+              attributes{
+                url
+              }
+            }
+          }
+        }
         brands {
           data {
             attributes {
+              name
               contact
+              about
+              website
             }
           }
         }
@@ -244,7 +354,43 @@ query ProgramBySlug($slug: String!) {
                 description
                 name
                 label
+                desktopImage {
+                  data {
+                    attributes {
+                      url
+                    }
+                  }
+                }
+                tabletImage {
+                  data {
+                    attributes {
+                      url
+                    }
+                  }
+                }
+                mobileImage {
+                  data {
+                    attributes {
+                      url
+                    }
+                  }
+                }
+                Characteristics {
+                  title
+                  subtitle
+                  InformativeIcons {
+                    title
+                    description
+                    iconName
+                  }
+                }
               }
+            }
+          }
+          summaries {
+            title
+            subjects {
+              title
             }
           }
           modalityDescription
