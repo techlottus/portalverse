@@ -9,8 +9,8 @@ import cn from "classnames";
 import Button from "@/old-components/Button/Button";
 import { useRouter } from "next/router";
 import ProgramDetailForm from "@/forms/container/ProgramDetailForm";
-import { DoubleDegreeForm } from "@/forms/container/DoubleDegreeForm";
 import ScheduleVisitForm from "@/forms/container/ScheduleVisitForm";
+import { DoubleDegreeForm } from "@/forms/container/DoubleDegreeForm";
 
 
 const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
@@ -38,12 +38,7 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
   const [submit, setSubmit] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  // for future devolpment of progress managemente, base state to hold progress of form
-  // const [ progress, setProgress ] = useState<number>(progress);
-
-  // useEffect(() => {
-  //   setProgress(step);
-  // }, [step]);
+  
 
   useEffect(() => {
     const errorData = errors?.reduce((acc, curr) => { if (curr.errorCode === error) acc = curr; return acc }, {}) || {}
@@ -59,10 +54,9 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
     setError(error)
     setIsValid(valid)
     setIsSuccess(success)
-
   }
 
-  const getForm = () => {
+  const getForm = () => {    
     switch (form) {
       case "Clinicas_Dentales":
         return <DentalClinics submit={submit} setStatus={setStatus} />;
@@ -70,9 +64,10 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
         return <ProgramDetailForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
       case "Doble_Titulacion":
         return <DoubleDegreeForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
-      case "Agendar_Visita":
+     /*  case "Acreditate":
+        return <AcreditatForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />; */
+      case "Agendar_visita":
         return <ScheduleVisitForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
-
       default:
         setError('404')
         return null;
