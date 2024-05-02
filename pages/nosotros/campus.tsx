@@ -117,6 +117,7 @@ const Campus = ({ sections, meta, prefilledData, options, program }: any) => {
                             disabled: false,
                             href: `/oferta-academica/licenciatura/${""}`,
                           }
+                          
                         }]}
                         prefilledData={{
                           campus
