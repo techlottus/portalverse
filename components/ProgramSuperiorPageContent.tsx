@@ -139,10 +139,6 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
 
   //bandera para habilitar botón de descarga hasta que se seleccione un campus
   const isOptionSelected = !!selectedOption
- 
-
-
-
 
   //Obtener información para el nivel
   const handleSetActiveTab = (active: number) => {
@@ -154,9 +150,6 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
 
     setOptionsSelect(options);
   }, [tabActive])
-
-
-
 
   // }, [SFdata])
   const downloadFileProgram = () => {
@@ -714,6 +707,57 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           </div> */}
         </div>
       </ContentLayout>
+      <div className="mt-16">
+        {
+          !!SFprogram && <ContainerForm
+            type="ComponentSectionsFormContainer"
+            title={`Obtén más información sobre el curso de ${program.attributes.name}`}
+            description="Queremos acompañarte en tu elección. Comparte tus datos para que un asesor de admisiones pueda responder a todas tus preguntas."
+            form="Detalle_de_programa"
+            progress={0}
+            position="center"
+            width="w_4_12"
+            extraText=""
+            privacyPolicy={{
+              text:'Al llenar tus datos aceptas nuestro ',
+              linkText: 'Aviso de privacidad',
+              file: null,
+              href: '/aviso-privacidad'
+            }}
+            errors={ [{
+              type: 'ComponentSectionsWebError',
+              title: '',
+              message: '',
+              errorCode: '',
+              button: {
+                text: 'string;',
+                size: '',
+                isBold: false,
+                disabled: false,
+                href: `/oferta-academica/licenciatura/${program.attributes.slug}`,
+              }
+            }]}
+            prefilledData={{
+              program: SFprogram,
+              levels: program.attributes.level.data.attributes.SFlevels
+            }}
+            button={{
+              label: 'Solicitar información',
+              size: '',
+              variant: 'primary',
+              CTA: 'submit',
+              iconName: 'send'
+            }}
+            options={{
+              modalities: modalities.map(mod => ({
+                value: mod.modality.data.attributes.name,
+                active: false,
+                text: mod.modality.data.attributes.name
+              }))
+            }}
+          />
+        }
+      </div>
       {
         bannerData?.desktopImage ?
           <div className="order-last col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6 w-d:mt-18">

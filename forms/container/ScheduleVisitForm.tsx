@@ -4,13 +4,12 @@ import configControls from "@/forms/fixtures/controls"
 import axios from "axios";
 import { getTokenForms } from "@/utils/getTokenForms"
 import { getEducativeOffer } from "@/utils/getEducativeOffer"
-import AcademicData from "@/forms/steps/AcademicData";
+import ScheduleVisitData from "@/forms/steps/ScheduleVisitData";
 import { setRegisterBot } from "@/utils/saveDataForms"
 import { useRouter } from "next/router";
 import { env } from "process";
 
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
-
 
 // available modalities for prop modality = "Presencial" | "Online" | "Flex" | "Semipresencial"
 const getLeadModality = (modality: string) => {
@@ -23,7 +22,7 @@ const getLeadModality = (modality: string) => {
   }
 };
 
-type ProgramDetailForm = {
+type ScheduleVisitForm = {
   setStatus: (status: { loading: boolean, error: string, valid: boolean, success: boolean }) => void
   submit: boolean;
   prefilledData: {
@@ -31,10 +30,8 @@ type ProgramDetailForm = {
     last_name?: string;
     phone?: string;
     email?: string;
-    levels: [{level:string}];
-    program: string;
     modality?: string;
-    campus?: string;
+    campus: string;
   };
   options: {
     modalities: {
@@ -51,12 +48,11 @@ type ProgramDetailForm = {
   controls?: any;
 }
 
-const ProgramDetailForm = (props: ProgramDetailForm) => {
+const ScheduleVisitForm = (props: ScheduleVisitForm) => {
 
   const router = useRouter();
   const queryParams = router?.query;
   const { setStatus, submit, prefilledData } = props
-  
 
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState('');
@@ -66,10 +62,9 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   const [selectedProgram, setselectedProgram] = useState<any>();
   const [tokenActive, setTokenActive] = useState<string>("");
   const [filteredPrograms, setFilteredPrograms] = useState<any>([]);
-  const [ SFlevels, setSFlevels ] = useState<any>([]);
-  const [ SFmodalities, setSFmodalities ] = useState<any>([]);
-  const [ SFcampuses, setSFcampuses ] = useState<any>([]);
-  const [ options, setOptions ] = useState<any>(null);
+  const [SFlevels, setSFlevels] = useState<any>([]);
+  const [SFprograms, setSFprograms] = useState<any>([]);
+  const [options, setOptions] = useState<any>(null);
 
   const [personalData, setPersonalData] = useState({
     name: "",
@@ -112,14 +107,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     program: false,
     campus: false
   })
-  const ulaCampuses = [
-    'ONLINE',
-    'CUAUTITLÁN IZCALLI',
-    'CUERNAVACA',
-    'FLORIDA',
-    'NORTE',
-    'VALLE',
-  ]
+
   useEffect(() => {
     if (submit) handleSubmit()
   }, [submit]);
@@ -135,7 +123,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     token,
   } = getTokenForms();
 
-  const filterByField = (data:any, filter: any, fields?: string[]) => {
+  const filterByField = (data: any, filter: any, fields?: string[]) => {
     return data?.reduce((acc: any[], curr: any) => {
       if (!fields) {
         if (!acc.includes(curr[filter])) {
@@ -151,14 +139,13 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         acc = [...acc, fieldsResult]
       }
       return acc
-      
+
     }, [])
   }
 
-
   const getBusinessLineToFetchFrom = (businessLine: string) => {
-    
-    switch(businessLine) {
+
+    switch (businessLine) {
       case "UANE": {
         return "UANE,ULA"
       }
@@ -177,40 +164,19 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   useEffect(() => {
     if (!!tokenActive) {
-        handleFetchEducativeOffer()
-      }
+      handleFetchEducativeOffer()
+    }
   }, [tokenActive])
 
   useEffect(() => {
     if (filterPrograms) {
-
-      const prefilledLevels = prefilledData?.levels?.map(level => level.level)
-      const preFilteredPrograms = !!prefilledLevels && prefilledLevels.length > 0
-        ? filterPrograms?.filter((program: any)=> {
-            return prefilledLevels.includes(program.nivel)
-          })
-        : filterPrograms
-      
-      const offerByProgram = preFilteredPrograms?.filter((program: any) => {
-
-        if (businessUnit === 'ULA') {
-          return program.nombrePrograma === prefilledData.program && ulaCampuses.includes(program.nombreCampus)
-        } else {
-          if (program.lineaNegocio === 'ULA') {
-            return businessUnit === 'UTC'
-              ? program.nombrePrograma === prefilledData.program && [`Semipresencial`].includes(program.modalidad)
-              : program.nombrePrograma === prefilledData.program && program.nombreCampus === `${businessUnit} ONLINE`
-          } else {
-            return program.nombrePrograma === prefilledData.program
-          }
-        }
+      const offerByCampus = filterPrograms?.filter((program: any) => {
+        return program.idCampus === prefilledData?.campus
       })
-      if (!offerByProgram || offerByProgram?.length === 0) {
-        console.log(`no se encontro en SF el programa ${prefilledData.program}`);
+      if (!offerByCampus || offerByCampus?.length === 0) {
         setIsError('404')
       } else {
-
-        setFilteredPrograms(offerByProgram)
+        setFilteredPrograms(offerByCampus)
       }
     }
   }, [filterPrograms])
@@ -219,58 +185,45 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     if (filteredPrograms) {
       const programs = filteredPrograms.map((program: any) => {
         return businessUnit !== 'ULA' && program.lineaNegocio === 'ULA' && program.modalidad === 'Online'
-          ? {...program, modalidad: 'Flex'}
+          ? { ...program, modalidad: 'Flex' }
           : program
       })
-      const mods =  filterByField(programs, 'modalidad')
-      setSFmodalities(mods?.map((mod: string) => {
-        return  {
-          value: mod,
-          text: mod,
-          active: mods?.length === 1 || mod === academicData.modality
-        }
-      }))
-    }
-    
-  }, [filteredPrograms])
 
-  useEffect(() => {
-    if (SFmodalities?.length > 0) {
-      setOptions({
-        ...options,
-        modalities: SFmodalities,
-      })
+      const periods = programs?.reduce((acc: any, program: any, index: number, arr: any[]) => {
+        if (!acc.includes(program.nombrePeriodo)) {
+          acc = [...acc, program.nombrePeriodo]
+        }
+        return acc
+      }, [])
+      const currentPeriod = periods?.sort((a: any, b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[periods.length - 1]
+      const periodPrograms = programs/* ?.filter((program: any) => {
+        return program.nombrePeriodo === currentPeriod
+      }) */
+
+      const levels = filterByField(periodPrograms, 'nivel')
+
       setAcademicData({
         ...academicData,
-        modality: SFmodalities?.length === 1 ? SFmodalities[0].value : academicData.modality
+        level: levels?.length === 1 ? levels[0] : academicData.level,
+        campus: prefilledData?.campus,
+        modality: "Presencial"
       })
-      const modality = SFmodalities?.length === 1
-      const newAcademicDataTouched = {
-        ...academicDataTouched,
-        modality
-      }
-      setAcademicDataTouched(newAcademicDataTouched)
-    }
-      
-  }, [SFmodalities])
 
-  useEffect(() => {
-    if (SFcampuses?.length > 0) {
-      setOptions({
-        ...options,
-        campuses: SFcampuses
-      })
       setAcademicDataTouched({
         ...academicDataTouched,
-        campus: SFcampuses?.length === 1 || academicDataTouched.campus
+        level: levels?.length === 1,
+        campus: !!prefilledData?.campus,
+        modality: true
       })
-      setAcademicData({
-        ...academicData,
-        campus: SFcampuses?.length === 1 ? SFcampuses[0].value : academicData.campus
-      })
+
+      setSFlevels(levels?.map((level: any) => ({
+        value: level,
+        text: level,
+        active: levels?.length === 1 || level.idCampus === academicData.level
+      })))
+
     }
-      
-  }, [SFcampuses])
+  }, [filteredPrograms])
 
   useEffect(() => {
     if (SFlevels?.length > 0) {
@@ -287,22 +240,54 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         level: SFlevels?.length === 1 || academicDataTouched.level
       })
     }
-      
   }, [SFlevels])
 
   useEffect(() => {
-    if (options && (options?.modalities) && (options?.modalities[0])) {
+    if (SFprograms?.length > 0) {
+      setOptions({
+        ...options,
+        programs: SFprograms
+      })
+      setAcademicData({
+        ...academicData,
+        program: SFprograms?.length === 1 ? SFprograms[0].value : academicData.program
+      })
+      setAcademicDataTouched({
+        ...academicDataTouched,
+        program: SFprograms?.length === 1 || academicDataTouched.program
+      })
+    }
+
+  }, [SFprograms])
+
+  useEffect(() => {
+    if (options && (options?.levels) && (options?.levels[0])) {
       setIsLoading(false)
     }
   }, [options])
-  useEffect(() => {
 
+  useEffect(() => {
+    if (!!academicData.program) {
+
+      const selectedProgramData = filteredPrograms?.filter((program: any) => {
+        return program.idOfertaPrograma === academicData.program
+      })
+      setselectedProgram(selectedProgramData[0])
+    }
+
+  }, [academicData.program]);
+
+  useEffect(() => {
     setPersonalData({
       ...personalData,
-      'name':  prefilledData?.name || "",
-      'last_name':  prefilledData?.last_name || "",
-      'phone':  prefilledData?.phone || "",
-      'email':  prefilledData?.email || "",
+      'name': prefilledData?.name || "",
+      'last_name': prefilledData?.last_name || "",
+      'phone': prefilledData?.phone || "",
+      'email': prefilledData?.email || "",
+    })
+    setAcademicData({
+      ...academicData,
+      campus: prefilledData?.campus || ""
     })
 
   }, [prefilledData])
@@ -310,95 +295,46 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   useEffect(() => {
     Validate()
   }, [personalData, academicData]);
+
   useEffect(() => {
-    if (!!academicData.modality) {
-      setSFcampuses([])
-      setAcademicData({
-        ...academicData,
-        level: ''
-      })
-      const programsByModality = filteredPrograms?.filter((program: any) => {
-        if (academicData.modality === 'Flex') {
-          return program.modalidad === 'Online' && program.lineaNegocio === 'ULA'
-        } else {
-          return program.modalidad === academicData.modality
-        }
-      })
-      const periods = programsByModality?.reduce((acc: any, program: any, index: number, arr: any[]) => {
-        if (!acc.includes(program.nombrePeriodo)) {
-          acc = [...acc, program.nombrePeriodo]
-        }
-        return acc
-      }, [])
-       const currentPeriod = periods?.sort((a: any,b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[periods.length - 1]
 
-      const periodPrograms = programsByModality?.filter((program: any) => {
-
-        return program.nombrePeriodo === currentPeriod
-      })
-
-      const levels = filterByField(periodPrograms,'nivel')
-      if (levels?.length === 1) {
-        setAcademicData({
-          ...academicData,
-          level: levels[0]
-        })
-      }
-      
-      setSFlevels(levels?.map((level: any) => ({
-        value: level,
-        text: level,
-        active: levels?.length === 1 || level.idCampus === academicData.level
-      })))
-    }
-  }, [academicData.modality]);
-  useEffect(() => {
-    if (!!academicData.campus) {
-  
-      const programsByCampus = filteredPrograms?.filter((program: any) => {
-        return program.idCampus === academicData.campus
-      })
-      
-      const selectedProgramData = programsByCampus.sort((a: any,b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[programsByCampus.length - 1];
-
-      setselectedProgram(selectedProgramData)
-    }
-
-  }, [academicData.campus]);
-  useEffect(() => {
-    
     if (!!academicData.level) {
       const programsByLevel = filteredPrograms?.filter((program: any) => {
-          return program.nivel === academicData.level
+        return program.nivel === academicData.level
       })
-
       const periods = programsByLevel?.reduce((acc: any, program: any, index: number, arr: any[]) => {
         if (!acc.includes(program.nombrePeriodo)) {
           acc = [...acc, program.nombrePeriodo]
         }
         return acc
       }, [])
-      const currentPeriod = periods?.sort((a: any,b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[periods.length - 1]
+      const sortedPeriods = periods?.sort((a: any, b: any) => {
+        return Number(a) - Number(b)
+      })
+      const currentPeriod = sortedPeriods[sortedPeriods.length - 1]
       const periodPrograms = programsByLevel?.filter((program: any) => {
-
         return program.nombrePeriodo === currentPeriod
       })
-      const camps = filterByField(periodPrograms,'nombreCampus', ['nombreCampus', 'idCampus'])
 
-      setSFcampuses(camps?.map((campus: any) => ({
-        value: campus?.idCampus,
-        text: campus?.nombreCampus,
-        active: camps?.length === 1 || campus.idCampus === academicData.campus
+      const programs = filterByField(periodPrograms, 'nombrePrograma', ['nombrePrograma', 'idOfertaPrograma'])
+      const orderPrograms = programs.sort((a: any, b: any) => {
+        if (a.nombrePrograma < b.nombrePrograma) {
+          return -1;
+        }
+        if (a.nombrePrograma > b.nombrePrograma) {
+          return 1;
+        }
+        return 0;
+      })
+      setSFprograms(orderPrograms?.map((program: any) => ({
+        value: program?.idOfertaPrograma,
+        text: program?.nombrePrograma,
+        active: orderPrograms?.length === 1 || program.idOfertaPrograma === academicData.program
       })))
     }
 
   }, [academicData.level]);
 
-  useEffect(() => {
-    if (!!selectedProgram) {
-      setAcademicData({...academicData, program: selectedProgram?.idOfertaPrograma})
-    }
-  }, [selectedProgram]);
   useEffect(() => {
     if (!isLoadingToken && !isErrorToken && !!Object.keys(token).length) {
       setTokenActive(`${token.token_type} ${token.access_token}`);
@@ -430,17 +366,16 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   const validateAcademicDataControls = () => !Object.entries(academicData).map(([key, value]: any) => {
     const validity = validateAcademicDataControl(key, value);
-    return validity 
+    return validity
   }).includes(false)
 
   const handleFetchEducativeOffer = () => {
     setIsLoading(true)
     setFilteredPrograms([]);
     const businessLineToFetchFrom = getBusinessLineToFetchFrom(businessUnit)
-    
+
     fetchEducativeOffer(process.env.NEXT_PUBLIC_EDUCATIVE_OFFER!, '', businessLineToFetchFrom, tokenActive);
   }
-
 
   const sendLeadData = async () => {
     const endpoint = process.env.NEXT_PUBLIC_CAPTACION_PROSPECTO;
@@ -463,14 +398,14 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
     setIsLoading(true);
 
-    await axios.post(`${endpoint}?${params}`,{},{
+    await axios.post(`${endpoint}?${params}`, {}, {
       headers: {
         Authorization: tokenActive,
         'Content-Type': 'application/json;charset=UTF-8'
       }
     })
       .then((res: any) => {
-        if(res?.data?.Exitoso !== "TRUE") {
+        if (res?.data?.Exitoso !== "TRUE") {
           throw new Error();
         }
         router.push(`/thank-you`);
@@ -480,7 +415,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         setIsError(err.message);
       })
   }
-
 
   const Validate = () => {
     const newPersonalDataErrors = {
@@ -493,17 +427,15 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     setPersonalDataErrors({ ...newPersonalDataErrors });
 
     const newAcademicDataErrors = {
-      program: !validateAcademicDataControl( 'program', academicData.program) && academicDataTouched.program,
-      level: !validateAcademicDataControl( 'level', academicData.level) && academicDataTouched.level,
-      campus: !validateAcademicDataControl( 'campus', academicData.campus) && academicDataTouched.campus,
-      modality: !validateAcademicDataControl( 'modality', academicData.modality) && academicDataTouched.modality
+      program: !validateAcademicDataControl('program', academicData.program) && academicDataTouched.program,
+      level: !validateAcademicDataControl('level', academicData.level) && academicDataTouched.level,
+      campus: !validateAcademicDataControl('campus', academicData.campus) && academicDataTouched.campus,
+      modality: !validateAcademicDataControl('modality', academicData.modality) && academicDataTouched.modality
     }
 
     setAcademicDataErrors({ ...newAcademicDataErrors });
-
     const isValidPersonalData = validatePersonalDataControls();
     const isValidAcademicData = validateAcademicDataControls();
-
     setIsValid(isValidPersonalData && isValidAcademicData)
   }
 
@@ -525,17 +457,17 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       setErrorControls={setPersonalDataErrors}
       validateControl={validatePersonalDataControl}
     ></PersonalData>
-    <AcademicData
-      academicData={academicData}
-      setAcademicData={setAcademicData}
+    <ScheduleVisitData
+      scheduleVisitData={academicData}
+      setScheduleVisitData={setAcademicData}
       infoControlsTouched={academicDataTouched}
       setInfoControlsTouched={setAcademicDataTouched}
       errorControls={academicDataErrors}
       setErrorControls={setAcademicDataErrors}
       validateControl={validateAcademicDataControl}
       options={options}
-    ></AcademicData>
+    ></ScheduleVisitData>
   </form>
 };
 
-export default ProgramDetailForm;
+export default ScheduleVisitForm;

@@ -9,6 +9,7 @@ import cn from "classnames";
 import Button from "@/old-components/Button/Button";
 import { useRouter } from "next/router";
 import ProgramDetailForm from "@/forms/container/ProgramDetailForm";
+import ScheduleVisitForm from "@/forms/container/ScheduleVisitForm";
 import { DoubleDegreeForm } from "@/forms/container/DoubleDegreeForm";
 
 
@@ -27,7 +28,8 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
     position,
     width,
     prefilledData,
-    options
+    options,
+    shadow
   } = props
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
@@ -36,12 +38,7 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
   const [submit, setSubmit] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  // for future devolpment of progress managemente, base state to hold progress of form
-  // const [ progress, setProgress ] = useState<number>(progress);
-
-  // useEffect(() => {
-  //   setProgress(step);
-  // }, [step]);
+  
 
   useEffect(() => {
     const errorData = errors?.reduce((acc, curr) => { if (curr.errorCode === error) acc = curr; return acc }, {}) || {}
@@ -57,10 +54,9 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
     setError(error)
     setIsValid(valid)
     setIsSuccess(success)
-
   }
 
-  const getForm = () => {
+  const getForm = () => {    
     switch (form) {
       case "Clinicas_Dentales":
         return <DentalClinics submit={submit} setStatus={setStatus} />;
@@ -68,13 +64,17 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
         return <ProgramDetailForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
       case "Doble_Titulacion":
         return <DoubleDegreeForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
+     /*  case "Acreditate":
+        return <AcreditatForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />; */
+      case "Agendar_visita":
+        return <ScheduleVisitForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
       default:
         setError('404')
         return null;
     }
   }
   return (
-    <section className={cn({'hidden': !isVisible})}>
+    <section /* className={cn({ 'hidden': !isVisible })} */>
       <div className={cn('flex', {
         "justify-center": position === 'center',
         "justify-start": position === 'left',
@@ -93,7 +93,7 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
           "w-3/12": width === 'w_3_12',
           "w-2/12": width === 'w_2_12',
         })}>
-          <section className="p-6 shadow-15 bg-surface-0 relative" >
+          <section className={cn("p-6 shadow-15 bg-surface-0 relative", { "shadow-none": shadow == false })}>
             {
               isLoading
                 ? <div className="absolute w-full h-full z-10 flex justify-center items-center left-0 top-0 bg-surface-0">
@@ -135,23 +135,43 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
                     }
                   </>
                   {
-                    !!button && <div className="mt-6">
-                      <Button darkOutlined={button?.variant === "outlined_negative"} dark={true}
-                        data={{
-                          title: button?.label,
-                          icon: button?.iconName,
-                          isExpand: false,
-                          disabled: !isValid
-                        }}
-                        onClick={() => {
-                          setSubmit(true);
-                          setTimeout(() => {
+                    !!button &&
+                    <>
+                      <div className="mt-6 mobile:hidden">
+                        <Button darkOutlined={button?.variant === "outlined_negative"} dark={true}
+                          data={{
+                            title: button?.label,
+                            icon: button?.iconName,
+                            isExpand: false,
+                            disabled: !isValid
+                          }}
+                          onClick={() => {
+                            setSubmit(true);
+                            setTimeout(() => {
 
-                            setSubmit(false)
-                          }, 100);
-                        }}
-                      />
-                    </div>
+                              setSubmit(false)
+                            }, 100);
+                          }}
+                        />
+                      </div>
+                      <div className="mt-6 desktop:hidden tablet:hidden">
+                        <Button darkOutlined={button?.variant === "outlined_negative"} dark={true}
+                          data={{
+                            title: button?.label,
+                            icon: button?.iconName,
+                            isExpand: true,
+                            disabled: !isValid
+                          }}
+                          onClick={() => {
+                            setSubmit(true);
+                            setTimeout(() => {
+
+                              setSubmit(false)
+                            }, 100);
+                          }}
+                        />
+                      </div>
+                    </>
                   }
                 </section>
 
