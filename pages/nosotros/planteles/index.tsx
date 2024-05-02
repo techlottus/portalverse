@@ -94,7 +94,7 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
                         type="ComponentSectionsFormContainer"
                         title={`Agenda tu visita ${""}`}
                         description={`¡Descubre las instalaciones de ${BUSINESS_UNIT} y conoce sus Happy Spaces!`}
-                        form="Agendar_Visita"
+                        form="Agendar_visita"
                         progress={0}
                         position="center"
                         width="w_full"
