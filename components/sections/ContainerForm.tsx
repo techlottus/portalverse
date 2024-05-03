@@ -11,6 +11,7 @@ import { useRouter } from "next/router";
 import ProgramDetailForm from "@/forms/container/ProgramDetailForm";
 import { DoubleDegreeForm } from "@/forms/container/DoubleDegreeForm";
 import ScheduleVisitForm from "@/forms/container/ScheduleVisitForm";
+import { AcreditatForm } from "@/forms/container/AcreditatForm";
 
 
 const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
@@ -72,7 +73,8 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
         return <DoubleDegreeForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
       case "Agendar_Visita":
         return <ScheduleVisitForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
-
+        case "Acreditate":
+          return <AcreditatForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
       default:
         setError('404')
         return null;
