@@ -38,7 +38,7 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
   const [submit, setSubmit] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  
+
 
   useEffect(() => {
     const errorData = errors?.reduce((acc, curr) => { if (curr.errorCode === error) acc = curr; return acc }, {}) || {}
@@ -56,7 +56,7 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
     setIsSuccess(success)
   }
 
-  const getForm = () => {    
+  const getForm = () => {
     switch (form) {
       case "Clinicas_Dentales":
         return <DentalClinics submit={submit} setStatus={setStatus} />;
@@ -64,8 +64,8 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
         return <ProgramDetailForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
       case "Doble_Titulacion":
         return <DoubleDegreeForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
-     /*  case "Acreditate":
-        return <AcreditatForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />; */
+      /*  case "Acreditate":
+         return <AcreditatForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />; */
       case "Agendar_visita":
         return <ScheduleVisitForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
       default:
@@ -117,10 +117,10 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
                     }
                   </div>
                   {
-                    !!privacyPolicy && <div className="flex align-middle items-center mt-8 mb-6">
-                      <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">{privacyPolicy.text}</p>
+                    !!privacyPolicy && <div className="items-center my-6">
+                      <span className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">{privacyPolicy.text}</span>
                       <Link href={privacyPolicy.file ? privacyPolicy.file.data.attributes.url : privacyPolicy.href} passHref target={"_blank"}>
-                        <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">{privacyPolicy.linkText}</p>
+                        <span className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">{privacyPolicy.linkText}</span>
                       </Link>
                     </div>
                   }

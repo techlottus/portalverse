@@ -32,6 +32,7 @@ type ScheduleVisitForm = {
     email?: string;
     modality?: string;
     campus: string;
+    nameCampus: string;
   };
   options: {
     modalities: {
@@ -223,6 +224,13 @@ const ScheduleVisitForm = (props: ScheduleVisitForm) => {
       })))
 
     }
+    console.log("filterPrograms", filterPrograms)
+
+    const selectedProgramData = filterPrograms?.filter((program: any) => {
+      return program.idPrograma == "a0B4X00001Mhgk1UAB"
+    })
+
+    console.log("selectedProgramData", selectedProgramData)
   }, [filteredPrograms])
 
   useEffect(() => {
@@ -448,6 +456,10 @@ const ScheduleVisitForm = (props: ScheduleVisitForm) => {
   }
 
   return <form>
+    {
+      prefilledData?.nameCampus &&
+      <p>{prefilledData?.nameCampus}</p>
+    }
     <PersonalData
       personalData={personalData}
       setPersonalData={setPersonalData}
