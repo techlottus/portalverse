@@ -3,7 +3,7 @@ import OpenFormInit from "@/forms/fixtures/openform"
 import configControls from "@/forms/fixtures/controls"
 import Input from "@/old-components/Input/Input"
 
-const AcreditatData: FC<any> = ({
+const ProgramPageData: FC<any> = ({
   data,
   config: stepOneConfig,
   infoControlsTouched,
@@ -11,8 +11,8 @@ const AcreditatData: FC<any> = ({
   errorControls,
   setErrorControls,
   validateControl,
-  acreditatData,
-  setAcreditatData,
+  programData,
+  setProgramData,
   options
 }: any) => {
 
@@ -30,7 +30,7 @@ const AcreditatData: FC<any> = ({
   const handleKeyPress = (e: CustomEvent, control: string) => {
     const { detail: { value } } = e;
     setInfoControlsTouched({ ...infoControlsTouched, [control]: true });
-    setAcreditatData({ ...acreditatData, [control]: value });
+    setProgramData({ ...programData, [control]: value });
     setErrorControls({ ...errorControls, [control]: !validateControl(control, value, infoControlsTouched[control]) });
   };
 
@@ -57,13 +57,13 @@ const AcreditatData: FC<any> = ({
     }
 
     setInfoControlsTouched({ ...infoControlsTouched, [control]: true });
-    setAcreditatData({ ...AcreditatData, [control]: detail });
+    setProgramData({ ...programData, [control]: detail });
     setErrorControls({ ...errorControls, [control]: !validateControl(control, detail, infoControlsTouched[control]) });
   };
 
   const handleTouchedControl = (control: string) => {
     setInfoControlsTouched({ ...infoControlsTouched, [control]: true });
-    setErrorControls({ ...errorControls, [control]: !validateControl(control, acreditatData[control], true) && infoControlsTouched[control] });
+    setErrorControls({ ...errorControls, [control]: !validateControl(control, programData[control], true) && infoControlsTouched[control] });
   }
 
   return <>
@@ -72,7 +72,7 @@ const AcreditatData: FC<any> = ({
         eventFocus={() => handleTouchedControl("modality")}
         data={configControls.inputProgram}
         eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "modality")}
-        value={acreditatData?.modality}
+        value={programData?.modality}
       />
     </div>
     <div className="grow mt-2 hidden">
@@ -80,7 +80,7 @@ const AcreditatData: FC<any> = ({
         eventFocus={() => handleTouchedControl("program")}
         data={configControls.inputProgram}
         eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "program")}
-        value={acreditatData?.program}
+        value={programData?.program}
       />
     </div>
     <div className="grow mt-2 hidden">
@@ -88,10 +88,10 @@ const AcreditatData: FC<any> = ({
         eventFocus={() => handleTouchedControl("level")}
         data={configControls.inputProgram}
         eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "level")}
-        value={acreditatData?.level}
+        value={programData?.level}
       />
     </div>
   </>
 }
 
-export default AcreditatData
+export default ProgramPageData

@@ -7,11 +7,11 @@ import { getEducativeOffer } from "@/utils/getEducativeOffer"
 import { setRegisterBot } from "@/utils/saveDataForms"
 import { useRouter } from "next/router";
 import { env } from "process";
-import AcreditatData from "../steps/AcreditatData";
+import ProgramPageData from "../steps/ProgramPageData";
 
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
 
-type AcreditatForm = {
+type ProgramPageForm = {
   setStatus: (status: { loading: boolean, error: string, valid: boolean, success: boolean }) => void
   submit: boolean;
   prefilledData: {
@@ -33,7 +33,7 @@ type AcreditatForm = {
   controls?: any;
 }
 
-const AcreditatForm = (props: AcreditatForm) => {
+const ProgramPageForm = (props: ProgramPageForm) => {
 
   const router = useRouter();
   const queryParams = router?.query;
@@ -334,17 +334,17 @@ const AcreditatForm = (props: AcreditatForm) => {
       validateControl={validatePersonalDataControl}
       compact={true}
     ></PersonalData>
-    <AcreditatData
-      acreditatData={academicData}
-      setScheduleVisitData={setAcademicData}
+    <ProgramPageData
+      programData={academicData}
+      setProgramData={setAcademicData}
       infoControlsTouched={academicDataTouched}
       setInfoControlsTouched={setAcademicDataTouched}
       errorControls={academicDataErrors}
       setErrorControls={setAcademicDataErrors}
       validateControl={validateAcademicDataControl}
       options={options}
-    ></AcreditatData>
+    ></ProgramPageData>
   </form>
 };
 
-export { AcreditatForm };
+export { ProgramPageForm };
