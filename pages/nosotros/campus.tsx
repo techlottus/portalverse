@@ -90,7 +90,7 @@ const Campus = ({ sections, meta, prefilledData, options, program }: any) => {
                         close
                       </p>
                     </div>
-                    <section className="bg-surface-0 relative" >
+                    <section className="relative" >
                       <ContainerForm
                         type="ComponentSectionsFormContainer"
                         title={`Agenda tu visita ${""}`}
