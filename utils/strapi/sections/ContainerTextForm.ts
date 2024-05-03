@@ -12,7 +12,7 @@ export type ContainerTextFormSection = {
   mobileBgImage: StrapiImage
   desk: StrapiImage
   tab: StrapiImage
-  mob: StrapiImage
+  mob: StrapiImage  
 };
 
 export const CONTAINER_TEXT_FORM = `
