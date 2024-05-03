@@ -100,7 +100,7 @@ const ScheduleVisitData: FC<any> = ({
       <Select
         onClick={(option: CustomEvent) => handleSelect(option, "program")}
         options={Options?.programs || []}
-        data={{ ...SelectInit, textDefault: ` `, icon: " ", disabled: !scheduleVisitData.level, disabled: !Options?.programs }}
+        data={{ ...SelectInit, textDefault: ` `, icon: " ", disabled: !Options?.programs }}
       />
       <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p>
     </div>
