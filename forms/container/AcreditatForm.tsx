@@ -185,24 +185,24 @@ const AcreditatForm = (props: AcreditatForm) => {
       return program.nombrePeriodo === currentPeriod
     })
 
-    setselectedProgram(periodPrograms)    
+    setselectedProgram(periodPrograms[0])    
 
   }, [filteredPrograms])
 
   useEffect(() => {
     setAcademicData({
       ...academicData,
-      'level': selectedProgram[0]?.nivel || "",
-      'modality': selectedProgram[0]?.modalidad || "",
-      'program': selectedProgram[0]?.nombrePrograma || "",
-      'campus': selectedProgram[0]?.idCampus || "",
+      'level': selectedProgram?.nivel || "",
+      'modality': selectedProgram?.modalidad || "",
+      'program': selectedProgram?.nombrePrograma || "",
+      'campus': selectedProgram?.idCampus || "",
     })
 
     setAcademicDataTouched({
       ...academicDataTouched,
-      level: !!selectedProgram[0]?.nivel,
-      campus: !!selectedProgram[0]?.campus,
-      modality: !!selectedProgram[0]?.idCampus
+      level: !!selectedProgram?.nivel,
+      campus: !!selectedProgram?.campus,
+      modality: !!selectedProgram?.idCampus
     })
 
   }, [selectedProgram])
