@@ -57,7 +57,7 @@ const FilterDropdown: FC<FilterDropdownComponentData> = memo(({ data: { config, 
 
   useEffect(() => {
     if (onClear) {
-      setOptionsCollection(() => allOptions.map((item: any) => ({ label: item.label, disabled: item.active, selected: false  })));
+      setOptionsCollection(() => options.map((item: any) => ({ value: item.value, label: item.label, disabled: item.active, selected: false })));
       setOptionsList([]);
     }
   }, [onClear]);// eslint-disable-line react-hooks/exhaustive-deps
