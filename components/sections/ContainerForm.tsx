@@ -9,9 +9,9 @@ import cn from "classnames";
 import Button from "@/old-components/Button/Button";
 import { useRouter } from "next/router";
 import ProgramDetailForm from "@/forms/container/ProgramDetailForm";
-import ScheduleVisitForm from "@/forms/container/ScheduleVisitForm";
 import { DoubleDegreeForm } from "@/forms/container/DoubleDegreeForm";
-
+import ScheduleVisitForm from "@/forms/container/ScheduleVisitForm";
+import { ProgramPageForm } from "@/forms/container/ProgramPageForm";
 
 const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
   const router = useRouter()
@@ -68,6 +68,8 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
         return <AcreditatForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />; */
       case "Agendar_visita":
         return <ScheduleVisitForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
+        case "Pagina_programa":
+          return <ProgramPageForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
       default:
         setError('404')
         return null;
@@ -184,4 +186,9 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
 }
 
 export default ContainerForm
+
+
+
+
+
 
