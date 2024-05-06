@@ -190,7 +190,6 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
       </Head>
       <Modal isShow={isShow} onClose={() => handleVisibilityModal('close')} data={{ icon: 'close', title: "", tagOnClose: 'testOnClose', wrapper: true, }}>
         <div className="mt-16">
-
           {
             !!SFprogram && <ContainerForm
               type="ComponentSectionsFormContainer"
