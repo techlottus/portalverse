@@ -68,7 +68,7 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
         return <AcreditatForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />; */
       case "Agendar_visita":
         return <ScheduleVisitForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
-        case "Program_Page":
+        case "Pagina_programa":
           return <ProgramPageForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
       default:
         setError('404')
