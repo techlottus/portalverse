@@ -115,26 +115,6 @@ const ProgramPageForm = (props: ProgramPageForm) => {
     }
   };
 
-  const filterByField = (data: any, filter: any, fields?: string[]) => {
-    return data?.reduce((acc: any[], curr: any) => {
-      if (!fields) {
-        if (!acc.includes(curr[filter])) {
-          acc = [...acc, curr[filter]]
-        }
-      } else {
-        const fieldsResult = fields.reduce((fieldacc: any, field: any) => {
-          if (!Object.keys(fieldacc).includes(curr[filter])) {
-            fieldacc[field] = curr[field]
-          }
-          return fieldacc
-        }, {});
-        acc = [...acc, fieldsResult]
-      }
-      return acc
-
-    }, [])
-  }
-
   const getBusinessLineToFetchFrom = (businessLine: string) => {
 
     switch (businessLine) {
@@ -161,29 +141,26 @@ const ProgramPageForm = (props: ProgramPageForm) => {
   }, [tokenActive])
 
   useEffect(() => {
-    if (filterPrograms) {      
+    if (filterPrograms) {
+
       const offerByProgram = filterPrograms?.filter((program: any) => {
         return program.nombrePrograma === prefilledData?.program
-      })      
-      const periods = offerByProgram?.reduce((acc: any, program: any, index: number, arr: any[]) => {
-        if (!acc.includes(program.nombrePeriodo)) {
-          acc = [...acc, program.nombrePeriodo]
-        }
-        return acc
-      }, [])
-
-      const currentPeriod = periods?.sort((a: any, b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[periods.length - 1]
-
-      const offerbyPeriod = filteredPrograms?.filter((program: any) => {
-        return program.nombrePeriodo === currentPeriod
       })[0]
-      setselectedProgram(offerbyPeriod)
+      
+      setselectedProgram(offerByProgram)
       setAcademicData({
         ...academicData,
-        'level': offerbyPeriod?.nivel || "",
-        'modality': offerbyPeriod?.modalidad || "",
-        'program': offerbyPeriod?.idOfertaPrograma || "",
-        'campus': offerbyPeriod?.idCampus || "",
+        'level': offerByProgram?.nivel || "",
+        'modality': offerByProgram?.modalidad || "",
+        'program': offerByProgram?.idOfertaPrograma || "",
+        'campus': offerByProgram?.idCampus || "",
+      })
+      setAcademicDataTouched({
+        ...academicDataTouched,
+        'level': !!offerByProgram?.nivel,
+        'modality': !!offerByProgram?.modalidad,
+        'program': !!offerByProgram?.idOfertaPrograma,
+        'campus': !!offerByProgram?.idCampus,
       })
     }
   }, [filterPrograms])
