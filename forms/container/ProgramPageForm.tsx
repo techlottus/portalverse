@@ -15,8 +15,7 @@ type ProgramPageForm = {
   setStatus: (status: { loading: boolean, error: string, valid: boolean, success: boolean }) => void
   submit: boolean;
   prefilledData: {
-    nombrePeriodo: string;
-    nombrePrograma: string;    
+    program: string;
   };
   options: {
     modalities: {
@@ -163,49 +162,31 @@ const ProgramPageForm = (props: ProgramPageForm) => {
 
   useEffect(() => {
     if (filterPrograms) {      
-      const offerByPeriod = filterPrograms?.filter((program: any) => {
-        return program.nombrePrograma === prefilledData?.nombrePrograma
+      const offerByProgram = filterPrograms?.filter((program: any) => {
+        return program.nombrePrograma === prefilledData?.program
       })      
-      setFilteredPrograms(offerByPeriod)
+      const periods = offerByProgram?.reduce((acc: any, program: any, index: number, arr: any[]) => {
+        if (!acc.includes(program.nombrePeriodo)) {
+          acc = [...acc, program.nombrePeriodo]
+        }
+        return acc
+      }, [])
+
+      const currentPeriod = periods?.sort((a: any, b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[periods.length - 1]
+
+      const offerbyPeriod = filteredPrograms?.filter((program: any) => {
+        return program.nombrePeriodo === currentPeriod
+      })[0]
+      setselectedProgram(offerbyPeriod)
+      setAcademicData({
+        ...academicData,
+        'level': offerbyPeriod?.nivel || "",
+        'modality': offerbyPeriod?.modalidad || "",
+        'program': offerbyPeriod?.idOfertaPrograma || "",
+        'campus': offerbyPeriod?.idCampus || "",
+      })
     }
   }, [filterPrograms])
-
-  useEffect(() => {
-
-    const periods = filteredPrograms?.reduce((acc: any, program: any, index: number, arr: any[]) => {
-      if (!acc.includes(program.nombrePeriodo)) {
-        acc = [...acc, program.nombrePeriodo]
-      }
-      return acc
-    }, [])
-
-    const currentPeriod = periods?.sort((a: any, b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[periods.length - 1]
-
-    const periodPrograms = filteredPrograms?.filter((program: any) => {
-      return program.nombrePeriodo === currentPeriod
-    })
-
-    setselectedProgram(periodPrograms[0])    
-
-  }, [filteredPrograms])
-
-  useEffect(() => {
-    setAcademicData({
-      ...academicData,
-      'level': selectedProgram?.nivel || "",
-      'modality': selectedProgram?.modalidad || "",
-      'program': selectedProgram?.nombrePrograma || "",
-      'campus': selectedProgram?.idCampus || "",
-    })
-
-    setAcademicDataTouched({
-      ...academicDataTouched,
-      level: !!selectedProgram?.nivel,
-      campus: !!selectedProgram?.campus,
-      modality: !!selectedProgram?.idCampus
-    })
-
-  }, [selectedProgram])
 
   useEffect(() => {
     Validate()
