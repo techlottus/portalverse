@@ -63,9 +63,7 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
       case "Detalle_de_programa":
         return <ProgramDetailForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
       case "Doble_Titulacion":
-        return <DoubleDegreeForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
-     /*  case "Acreditate":
-        return <AcreditatForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />; */
+        return <DoubleDegreeForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;     
       case "Agendar_visita":
         return <ScheduleVisitForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
         case "Pagina_programa":
