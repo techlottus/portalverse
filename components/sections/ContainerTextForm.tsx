@@ -27,7 +27,7 @@ const ContainerTextForm: React.FC<ContainerTextFormSection> = (props: ContainerT
       // console.log('base: ', base);
       const accent = curr.accent
       // console.log('accent: ', accent);
-      const splitTitle = base.split(accent)
+      const splitTitle = base?.split(accent)
       // console.log('splitTitle: ', splitTitle);
       acc = `${splitTitle[0]}<span class="text-primary-500 font-headings">${accent}</span>${splitTitle[1]}`
       return acc

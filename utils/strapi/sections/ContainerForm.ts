@@ -27,6 +27,7 @@ export type ContainerForm = {
   width?: string;
   prefilledData?: any;
   options?: any
+  shadow?: any
 };
 
 export const FORM_CONTAINER = `
@@ -76,6 +77,6 @@ export const FORM_CONTAINER = `
   }
   position
   width
-
+  prefilledData
 }
 `;

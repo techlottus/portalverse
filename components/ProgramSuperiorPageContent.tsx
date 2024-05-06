@@ -139,10 +139,6 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
 
   //bandera para habilitar botón de descarga hasta que se seleccione un campus
   const isOptionSelected = !!selectedOption
- 
-
-
-
 
   //Obtener información para el nivel
   const handleSetActiveTab = (active: number) => {
@@ -154,9 +150,6 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
 
     setOptionsSelect(options);
   }, [tabActive])
-
-
-
 
   // }, [SFdata])
   const downloadFileProgram = () => {
@@ -461,7 +454,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                       form="Detalle_de_programa"
                       progress={0}
                       position="center"
-                      width="w_12_12"
+                      width="w_4_12"
                       extraText=""
                       privacyPolicy={{
                         text:'Al llenar tus datos aceptas nuestro ',
