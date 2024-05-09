@@ -27,7 +27,7 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
   const [infoMap, setInfoMap] = useState<string>("");
   const [isShow, setIsShow] = useState(false);
   const [campus, setCampus] = useState("")
-
+  const [nameCampus, setNameCampus] = useState("");
 
   const handleVisibilityModal = () => {
     if (isShow) {
@@ -48,8 +48,9 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
     setCampus("")
   }
 
-  function openModal(SFcampus: string) {
-    setCampus(SFcampus)      
+  function openModal(SFcampus: string, nameCampus: string) {
+    setCampus(SFcampus)
+    setNameCampus(nameCampus)
   }
 
   return (
@@ -119,7 +120,8 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
                           }
                         }]}
                         prefilledData={{
-                          campus
+                          campus,
+                          nameCampus
                         }}
                         button={{
                           label: 'Solicitar información',
@@ -287,7 +289,7 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
                             {
                               description.SFcampus &&
                               <div className="items-center flex">
-                                <p className="text-primary-400 font-bold cursor-pointer" onClick={() => openModal(description?.SFcampus)}>
+                                <p className="text-primary-400 font-bold cursor-pointer" onClick={() => openModal(description?.SFcampus, description?.name)}>
                                   Agendar visita
                                 </p>
                                 <span className="text-primary-400 material-symbols-outlined select-non !text-lg ms-1">calendar_month</span>
