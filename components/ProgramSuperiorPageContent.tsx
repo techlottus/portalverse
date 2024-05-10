@@ -198,7 +198,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
               form="Detalle_de_programa"
               progress={0}
               position="center"
-              width="w_6_12"
+              width="w_12_12"
               extraText=""
               privacyPolicy={{
                 text:'Al llenar tus datos aceptas nuestro ',
@@ -453,7 +453,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                       form="Detalle_de_programa"
                       progress={0}
                       position="center"
-                      width="w_4_12"
+                      width="w_12_12"
                       extraText=""
                       privacyPolicy={{
                         text:'Al llenar tus datos aceptas nuestro ',
