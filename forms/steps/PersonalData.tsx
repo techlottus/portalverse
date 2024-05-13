@@ -37,7 +37,7 @@ const PersonalData: FC<any> = ({
   const phoneData = {
     ...InputInit,
     iconLeft: "call",
-    label: "Número telefónico",
+    label: "Celular",
     alphanumeric: false,
     alphabetical: false,
     onlyNumbers: true,
