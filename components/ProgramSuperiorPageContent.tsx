@@ -124,7 +124,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const mosaicActive = true;
   // console.log('modalities: ', modalities);
   // console.log('campuses: ', campuses);
-      // console.log('program.attributes: ', program.attributes);
+  // console.log('program.attributes: ', program.attributes);
   
   return (
     <Fragment>
