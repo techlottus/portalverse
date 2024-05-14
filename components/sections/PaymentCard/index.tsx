@@ -60,9 +60,9 @@ const PaymentCard = (props: PaymentCardData) => {
           ? <div className="flex flex-col justify-center">
             <div className="grid gap-y-1">
               {
-                perks?.map((perk: any, i: any) => {
+                perks?.map((perk: any, i: number) => {
                   return (
-                    <div className="flex items-center">
+                    <div className="flex items-center" key={i}>
                       <span className="material-symbols-outlined !text-xs text-success-400 me-2">check_circle</span><p className="font-texts text-xs font-semibold">{perk?.accent}</p>
                     </div>
                   )
