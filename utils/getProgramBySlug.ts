@@ -77,6 +77,7 @@ export type ProgramAttributes = {
       }
     }
   }
+  price_list: any;
   description: string;
   image: StrapiImage;
   detail: string;
@@ -120,7 +121,7 @@ export type ProgramAttributes = {
     data: {
       attributes: {
         title: ProgramLevel;
-        SFlevels: [{level: string}]
+        SFlevels: [{ level: string }]
       }
     }
   }
@@ -155,10 +156,36 @@ query ProgramBySlug($slug: String!) {
         slug
         name
         nombreProgramaSalesforce
-        programCategory{
-          data{
-            attributes{
+        programCategory {
+          data {
+            attributes {
               name
+            }
+          }
+        }
+        price_list {
+          general_perks {
+            accent
+          }
+          price {
+            title
+            subtitle
+            perks {
+              accent
+            }
+            discount
+            checkout_url
+            price
+            discounted_price
+            total_payment
+            periodicity
+            featured_price
+            payment_provider_image {
+              data {
+                attributes {
+                  url                  
+                }
+              }
             }
           }
         }
@@ -197,7 +224,7 @@ query ProgramBySlug($slug: String!) {
                   }
                 }
               }
-              slug 
+              slug
               level {
                 data {
                   attributes {
@@ -230,7 +257,7 @@ query ProgramBySlug($slug: String!) {
         price
         offerPrice
         priceDetail
-        knowledgeAreas(pagination: { pageSize: 1}) {
+        knowledgeAreas(pagination: { pageSize: 1 }) {
           data {
             attributes {
               name
@@ -248,7 +275,7 @@ query ProgramBySlug($slug: String!) {
             }
           }
           modalityDescription
-          programPerks{
+          programPerks {
             data {
               attributes {
                 iconName
@@ -263,7 +290,7 @@ query ProgramBySlug($slug: String!) {
           laborField
           admissionRequirements
           curriculumDescription
-          curriculums (pagination: { start: 0, limit: -1 }){
+          curriculums(pagination: { start: 0, limit: -1 }) {
             campus {
               data {
                 attributes {
@@ -284,6 +311,7 @@ query ProgramBySlug($slug: String!) {
     }
   }
 }
+
 `;
 
 export default getProgramBySlug;
