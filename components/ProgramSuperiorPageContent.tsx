@@ -20,6 +20,7 @@ import Container from "@/layouts/Container.layout";
 import type { DynamicProgramDetailData } from "@/utils/pages";
 import type { ProgramDetailSuperiorData } from "@/utils/getProgramDetailSuperior";
 import ContainerForm from "./sections/ContainerForm";
+import PaymentCard, { PaymentCardData } from "./sections/PaymentCard";
 
 type SelectItem = {
   value: string;
@@ -37,7 +38,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const imageProgram = program?.attributes?.image?.data?.attributes?.url;
   const singleTypeAttributes = layout?.attributes;
   const bannerData = singleTypeAttributes?.banner;
-  
+  const price_list = program?.attributes?.price_list;
 
   const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
   let campusLabel = "plantel";
@@ -124,8 +125,8 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const mosaicActive = true;
   // console.log('modalities: ', modalities);
   // console.log('campuses: ', campuses);
-      // console.log('program.attributes: ', program.attributes);
-  
+  // console.log('program.attributes: ', program.attributes);
+
   return (
     <Fragment>
       <Head>
@@ -251,12 +252,12 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
             width="w_4_12"
             extraText=""
             privacyPolicy={{
-              text:'Al llenar tus datos aceptas nuestro ',
+              text: 'Al llenar tus datos aceptas nuestro ',
               linkText: 'Aviso de privacidad',
               file: null,
               href: '/aviso-privacidad'
             }}
-            errors={ [{
+            errors={[{
               type: 'ComponentSectionsWebError',
               title: '',
               message: '',
@@ -360,7 +361,35 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           </div>
           : null
       }
-    </Fragment>
+      {
+        price_list?.price?.length > 0
+          ? <ContentFullLayout classNames="bg-primary-0 mt-20">
+            <ContentLayout>
+              <div className="col-span-12 py-12 px-20 mobile:px-4">
+                <div className="col-span-12 text-center">
+                  <p className="font-headings text-2xl">¡Asegura tu lugar! Opciones de pago flexibles</p>
+                </div>
+                <div className="flex justify-center">
+                  <div className={cn("grid grid-cols-4 gap-4 my-8 mobile:grid-cols-1", { "!grid-cols-2": price_list?.price?.length === 2, "!grid-cols-3": price_list?.price?.length === 3 })}>
+                    {
+                      price_list?.price?.map((price: PaymentCardData, i: any) => {
+                        return (
+                          <PaymentCard {...price} />
+                        )
+                      })
+                    }
+                  </div>
+                </div>
+
+                <div className="col-span-12 text-center text-sm font-sm mobile:text-left">
+                  Nota importante: Los pagos parciales se efectúan en intervalos mensuales, cada 30 días a partir de la fecha de tu primer pago. El número de pagos corresponde al plan de parcialidades que hayas seleccionado al inscribirte. Esta secuencia se mantendrá hasta completar el costo total del curso.
+                </div>
+              </div>
+            </ContentLayout>
+          </ContentFullLayout>
+          : null
+      }
+    </Fragment >
   );
 };
 
