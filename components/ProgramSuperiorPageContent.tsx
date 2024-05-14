@@ -367,14 +367,32 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
             <ContentLayout>
               <div className="col-span-12 py-12 px-20 mobile:px-4">
                 <div className="col-span-12 text-center">
-                  <p className="font-headings text-2xl">¡Asegura tu lugar! Opciones de pago flexibles</p>
+                  <p className="font-headings text-2xl font-bold">¡Asegura tu lugar! <br /> Opciones de <span className="text-secondary-500">pago flexibles</span></p>
+                </div>
+                <div>
+                  {
+                    price_list?.general_perks?.length > 0                                      
+                    ? <div className="flex justify-center items-center gap-2 mt-3">                    
+                      {
+                        price_list?.general_perks?.map((perk: any, i: any) => {
+                          return (
+                            <div className="flex items-center">
+                              <span className="material-symbols-outlined !text-xs text-success-400 me-2">check_circle</span><p className="font-texts text-xs font-semibold">{perk?.accent}</p>
+                            </div>
+                          )
+                        }
+                        )
+                      }                    
+                  </div>                    
+                    : null
+                  }
                 </div>
                 <div className="flex justify-center">
                   <div className={cn("grid grid-cols-4 gap-4 my-8 mobile:grid-cols-1", { "!grid-cols-2": price_list?.price?.length === 2, "!grid-cols-3": price_list?.price?.length === 3 })}>
                     {
                       price_list?.price?.map((price: PaymentCardData, i: any) => {
                         return (
-                          <PaymentCard {...price} />
+                          <PaymentCard {...price} key={i} />
                         )
                       })
                     }
@@ -382,7 +400,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                 </div>
 
                 <div className="col-span-12 text-center text-sm font-sm mobile:text-left">
-                  Nota importante: Los pagos parciales se efectúan en intervalos mensuales, cada 30 días a partir de la fecha de tu primer pago. El número de pagos corresponde al plan de parcialidades que hayas seleccionado al inscribirte. Esta secuencia se mantendrá hasta completar el costo total del curso.
+                  <strong>Nota importante:</strong> Los pagos parciales se efectúan en intervalos mensuales, cada 30 días a partir de la fecha de tu primer pago. El número de pagos corresponde al plan de parcialidades que hayas seleccionado al inscribirte. Esta secuencia se mantendrá hasta completar el costo total del curso.
                 </div>
               </div>
             </ContentLayout>
