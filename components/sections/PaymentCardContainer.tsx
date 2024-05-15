@@ -18,9 +18,7 @@ export type PaymentCardContainerData = {
 
 const PaymentCardSection = (props: PaymentCardContainerData) => {
 
-  const { title, accent_title, price_list, text } = props;
-
-  console.log(price_list, "price_list_container")
+  const { title, accent_title, price_list, text } = props;  
 
   return (
     <ContentFullLayout classNames="bg-primary-0 mt-20">
