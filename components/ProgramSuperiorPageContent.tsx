@@ -202,12 +202,12 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
               width="w_12_12"
               extraText=""
               privacyPolicy={{
-                text:'Al llenar tus datos aceptas nuestro ',
+                text: 'Al llenar tus datos aceptas nuestro ',
                 linkText: 'Aviso de privacidad',
                 file: null,
                 href: '/aviso-privacidad'
               }}
-              errors={ [{
+              errors={[{
                 type: 'ComponentSectionsWebError',
                 title: '',
                 message: '',
@@ -421,7 +421,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                   gralLaborField ?
                     <div>
                       {
-                        laborfieldTitle  ?
+                        laborfieldTitle ?
                           <div className="font-headings font-semibold text-[18px] mb-4">
                             <p>{laborfieldTitle}</p>
                           </div>
@@ -447,7 +447,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
               <div className="w-p:-mt-56 -mt-20 sticky top-10">
                 <div className="mt-16 mb-8">
                   {
-                    !!SFprogram &&  <ContainerForm
+                    !!SFprogram && <ContainerForm
                       type="ComponentSectionsFormContainer"
                       title={`Obtén más información sobre el programa de ${program.attributes.name}`}
                       description=""
@@ -457,12 +457,12 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                       width="w_12_12"
                       extraText=""
                       privacyPolicy={{
-                        text:'Al llenar tus datos aceptas nuestro ',
+                        text: 'Al llenar tus datos aceptas nuestro ',
                         linkText: 'Aviso de privacidad',
                         file: null,
                         href: '/aviso-privacidad'
                       }}
-                      errors={ [{
+                      errors={[{
                         type: 'ComponentSectionsWebError',
                         title: '',
                         message: '',
@@ -520,7 +520,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           <>
             <ContentLayout>
               {
-                modalities?.length  > 0 && titleTabs ?
+                modalities?.length > 0 && titleTabs ?
                   <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6">
                     <p className="text-6.5 font-headings font-semibold leading-tight w-t:leading-tight w-p:leading-tight w-t:text-6 w-p:text-6">{`${titleTabs} ${levelProgram}`}</p>
                   </div>
@@ -789,6 +789,18 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           : null
       }
       {
+        /*  selectedModalityName === "a tu ritmo" && price_list?.price?.length > 0
+           ? <PaymentCardContainer
+             title={"¡Asegura tu lugar! Opciones de "}
+             accent_title={"pago flexibles"}
+             price_list={{
+               ...price_list
+             }}
+             text="Nota importante: Los pagos parciales se efectúan en intervalos mensuales, cada 30 días a partir de la fecha de tu primer pago. El número de pagos corresponde al plan de parcialidades que hayas seleccionado al inscribirte. Esta secuencia se mantendrá hasta completar el costo total del curso."
+           />
+           : null */
+      }
+      {
         selectedModalityName === "a tu ritmo" ?
           <div className="mt-20">
             <AtrProgramInfo checkoutUrl={checkoutUrl} />
@@ -816,7 +828,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           : null
       }
       {
-        price_list?.price?.length > 0
+        /* selectedModalityName === "a tu ritmo" && price_list?.price?.length > 0
           ? <PaymentCardContainer
             title={"¡Asegura tu lugar! Opciones de "}
             accent_title={"pago flexibles"}
@@ -825,7 +837,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
             }}
             text="Nota importante: Los pagos parciales se efectúan en intervalos mensuales, cada 30 días a partir de la fecha de tu primer pago. El número de pagos corresponde al plan de parcialidades que hayas seleccionado al inscribirte. Esta secuencia se mantendrá hasta completar el costo total del curso."
           />
-          : null
+          : null */
       }
     </Fragment >
   );
