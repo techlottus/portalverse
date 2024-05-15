@@ -37,7 +37,7 @@ const PaymentCardSection = (props: PaymentCardContainerData) => {
                     price_list?.general_perks?.map((perk: any, i: number) => {
                       return (
                         <div className="flex items-center" key={i}>
-                          <span className="material-symbols-outlined !text-xs text-success-400 me-2">check_circle</span><p className="font-texts text-xs font-semibold">{perk?.accent}</p>
+                          <span className="material-symbols-outlined !text-sm text-success-400 me-2">check_circle</span><p className="font-texts text-sm font-semibold">{perk?.accent}</p>
                         </div>
                       )
                     }
