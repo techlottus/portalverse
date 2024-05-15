@@ -85,8 +85,8 @@ const PaymentCard = (props: PaymentCardData) => {
 
         {
           discounted_price
-            ? <p className="font-headings font-bold text-xl">${discounted_price.toLocaleString('en-US')}MXN <span className="line-through text-surface-500 font-normal text-sm">${price}</span></p>
-            : <p className="font-headings font-bold text-xl">${price?.toLocaleString('en-US')}MXN <span className="text-surface-500 font-normal text-sm">{periodicity}</span></p>
+            ? <p className="font-headings font-bold text-xl">${discounted_price.toLocaleString('en-US')} MXN <span className="line-through text-surface-500 font-normal text-sm">${price}</span></p>
+            : <p className="font-headings font-bold text-xl">${price?.toLocaleString('en-US')} MXN <span className="text-surface-500 font-normal text-sm">{periodicity}</span></p>
         }
         {
           total_payment
