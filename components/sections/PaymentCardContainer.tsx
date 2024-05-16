@@ -16,9 +16,9 @@ export type PaymentCardContainerData = {
   text: string;
 }
 
-const PaymentCardSection = (props: PaymentCardContainerData) => {
+const PaymentCardContainer = (props: PaymentCardContainerData) => {
 
-  const { title, accent_title, price_list, text } = props;  
+  const { title, accent_title, price_list, text } = props;
 
   return (
     <ContentFullLayout classNames="bg-primary-0 mt-20">
@@ -65,4 +65,4 @@ const PaymentCardSection = (props: PaymentCardContainerData) => {
   );
 }
 
-export default PaymentCardSection
+export default PaymentCardContainer
