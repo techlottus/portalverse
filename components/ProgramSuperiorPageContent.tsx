@@ -34,6 +34,7 @@ type SelectItem = {
 };
 
 const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
+
   const program = props?.program;
   const SFprogram = program.attributes.nombreProgramaSalesforce
   const layout = props?.layout as ProgramDetailSuperiorData;
@@ -52,12 +53,18 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
     campusLabel = "campus";
   }
 
+
   const titleTabs = levelProgram === "Doctorado" ? "Modalidades disponibles en este" : "Modalidades disponibles en esta"
 
   const titleLearn = levelProgram === "Doctorado" ? "¿Que aprenderé en este" : "¿Que aprenderé en esta"
   //estado para información
   const [optionsSelect, setOptionsSelect] = useState<Array<SelectItem>>([]);
   const [tabActive, setTabActive] = useState<number>(0);
+  const [hideCards, setHideCards] = useState<boolean>(true);
+
+  if (!price_list) {
+    setHideCards(false)
+  }
 
   const modalities = program?.attributes?.programModalities
   const selectedModality = modalities?.[tabActive]
@@ -787,23 +794,23 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
             </div>
           </Container>
           : null
-      }
+      } 
       {
-        /*  selectedModalityName === "a tu ritmo" && price_list?.price?.length > 0
-           ? <PaymentCardContainer
-             title={"¡Asegura tu lugar! Opciones de "}
-             accent_title={"pago flexibles"}
-             price_list={{
-               ...price_list
-             }}
-             text="Nota importante: Los pagos parciales se efectúan en intervalos mensuales, cada 30 días a partir de la fecha de tu primer pago. El número de pagos corresponde al plan de parcialidades que hayas seleccionado al inscribirte. Esta secuencia se mantendrá hasta completar el costo total del curso."
-           />
-           : null */
+        selectedModalityName === "a tu ritmo" && price_list?.price?.length > 0
+          ? <PaymentCardContainer
+            title={"¡Asegura tu lugar! Opciones de "}
+            accent_title={"pago flexibles"}
+            price_list={{
+              ...price_list
+            }}
+            text="Nota importante: Los pagos parciales se efectúan en intervalos mensuales, cada 30 días a partir de la fecha de tu primer pago. El número de pagos corresponde al plan de parcialidades que hayas seleccionado al inscribirte. Esta secuencia se mantendrá hasta completar el costo total del curso."
+          />
+          : null
       }
       {
         selectedModalityName === "a tu ritmo" ?
           <div className="mt-20">
-            <AtrProgramInfo checkoutUrl={checkoutUrl} />
+            <AtrProgramInfo checkoutUrl={checkoutUrl} level={levelProgram} modality={selectedModalityName} hideCards={hideCards} />
           </div>
           : null
       }
@@ -826,19 +833,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
             </div>
           </ContentFullLayout>
           : null
-      }
-      {
-        /* selectedModalityName === "a tu ritmo" && price_list?.price?.length > 0
-          ? <PaymentCardContainer
-            title={"¡Asegura tu lugar! Opciones de "}
-            accent_title={"pago flexibles"}
-            price_list={{
-              ...price_list
-            }}
-            text="Nota importante: Los pagos parciales se efectúan en intervalos mensuales, cada 30 días a partir de la fecha de tu primer pago. El número de pagos corresponde al plan de parcialidades que hayas seleccionado al inscribirte. Esta secuencia se mantendrá hasta completar el costo total del curso."
-          />
-          : null */
-      }
+      }   
     </Fragment >
   );
 };
