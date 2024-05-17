@@ -60,11 +60,6 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   //estado para información
   const [optionsSelect, setOptionsSelect] = useState<Array<SelectItem>>([]);
   const [tabActive, setTabActive] = useState<number>(0);
-  const [hideCards, setHideCards] = useState<boolean>(true);
-
-  if (!price_list) {
-    setHideCards(false)
-  }
 
   const modalities = program?.attributes?.programModalities
   const selectedModality = modalities?.[tabActive]
@@ -810,7 +805,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
       {
         selectedModalityName === "a tu ritmo" ?
           <div className="mt-20">
-            <AtrProgramInfo checkoutUrl={checkoutUrl} level={levelProgram} modality={selectedModalityName} hideCards={hideCards} />
+            <AtrProgramInfo checkoutUrl={checkoutUrl} level={levelProgram} modality={selectedModalityName} hideCards={!!price_list} />
           </div>
           : null
       }
