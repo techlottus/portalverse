@@ -789,7 +789,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
             </div>
           </Container>
           : null
-      } 
+      }
       {
         selectedModalityName === "a tu ritmo" && price_list?.price?.length > 0
           ? <PaymentCardContainer
@@ -828,7 +828,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
             </div>
           </ContentFullLayout>
           : null
-      }   
+      }
     </Fragment >
   );
 };
