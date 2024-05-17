@@ -36,7 +36,7 @@ const PaymentCard = (props: PaymentCardData) => {
 
 
   return (
-    <div className={cn("gap-y-4 grid rounded-lg border border-surface-200 p-4 bg-white w-64 h-64 mobile:mx-auto", { "opacity-40": !checkout_url })}>
+    <div className={cn("keen-slider__slide gap-y-4 grid rounded-lg border border-surface-200 p-4 bg-white w-64 h-64 mobile:mx-auto", { "opacity-40": !checkout_url })}>
       <div>
         {
           payment_provider_image
@@ -96,7 +96,7 @@ const PaymentCard = (props: PaymentCardData) => {
       </div>
       {
         checkout_url
-          ? <div className="flex items-end">
+          ? <div className="flex items-end justify-center">
             <Button
               dark
               data={{
