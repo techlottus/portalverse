@@ -25,6 +25,7 @@ import { formatModalityDataSuperior } from "@/utils/programDetail";
 import type { DynamicProgramDetailData } from "@/utils/pages";
 import type { ProgramDetailSuperiorData } from "@/utils/getProgramDetailSuperior";
 import ContainerForm from "./sections/ContainerForm";
+import PaymentCardContainer from "./sections/PaymentCardContainer";
 
 type SelectItem = {
   value: string;
@@ -43,6 +44,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const imageProgram = program?.attributes?.image?.data?.attributes?.url;
   const singleTypeAttributes = layout?.attributes;
   const bannerData = singleTypeAttributes?.banner;
+  const price_list = program?.attributes?.price_list;
   const program_rvoes = program?.attributes?.program_rvoes;
 
   const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
@@ -807,7 +809,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
       {
         selectedModalityName === "a tu ritmo" ?
           <div className="mt-20">
-            <AtrProgramInfo checkoutUrl={checkoutUrl} level={levelProgram} modality={selectedModalityName} hideCards={!!price_list} />
+            <AtrProgramInfo checkoutUrl={checkoutUrl} level={levelProgram} modality={selectedModalityName} hideCards={!price_list} />
           </div>
           : null
       }
