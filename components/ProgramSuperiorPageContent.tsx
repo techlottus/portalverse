@@ -809,7 +809,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
       {
         selectedModalityName === "a tu ritmo" ?
           <div className="mt-20">
-            <AtrProgramInfo checkoutUrl={checkoutUrl} level={levelProgram} modality={selectedModalityName} hideCards={!price_list} />
+            <AtrProgramInfo checkoutUrl={checkoutUrl} level={levelProgram} modality={selectedModalityName} hideCards={!!price_list} />
           </div>
           : null
       }
