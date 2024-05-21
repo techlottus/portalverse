@@ -6,6 +6,8 @@ import parseEditorRawData from "@/utils/parseEditorRawData";
 import type { FC } from "react";
 import type { ProgramAttributes } from "@/utils/getProgramBySlug";
 import IntroductionProgram from "@/old-components/IntroducctionProgram";
+import PaymentCardContainer from "./PaymentCardContainer";
+import ContentFullLayout from "@/layouts/ContentFull.layout";
 
 const mxnCurrency = new Intl.NumberFormat("es-MX", {
   style: "currency",
@@ -13,7 +15,7 @@ const mxnCurrency = new Intl.NumberFormat("es-MX", {
 });
 
 const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramAttributes) => {
-  const { 
+  const {
     name,
     programCategory,
     detail,
@@ -29,8 +31,9 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
     checkoutUrl,
     checkoutUrlText,
     programPerks,
-    brands
-   } = props;
+    brands,
+    price_list
+  } = props;
 
   const programDescription = description
   const programDetail = parseEditorRawData(detail);
@@ -38,8 +41,9 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
   const programPriceDetail = parseEditorRawData(priceDetail);
 
   return (
-    <ContentLayout classNames="gap-6">
-      {/* <div className="col-span-6 w-t:col-span-4 w-p:col-span-4 ">
+    <ContentFullLayout>
+      <ContentLayout classNames="gap-6">
+        {/* <div className="col-span-6 w-t:col-span-4 w-p:col-span-4 ">
         {
           programCategory?.data?.attributes?.name ?
           <div className="mb-4">
@@ -110,36 +114,47 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
           }
         </div>
       </div> */}
-      <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <IntroductionProgram 
-          title={name} 
-          brands={brands?.data}
-          programPerks={programPerks?.data}
-          checkoutUrlText={checkoutUrlText}
-          label={programCategory?.data?.attributes?.name} 
-          description={programDescription} 
-          periodicity={periodicity} 
-          certificationMessage={certificationMessage} 
-          price={price} 
-          offerPrice={offerPrice}  
-          discount={discount}
-          checkoutUrl={checkoutUrl}
-          discountPercentajeText={discountPercentageText}
-          image={{
-          alt: name,
-          src: programImage?.url
-        }} />
-      </div>
-      {
-            programDetail ?
-             <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-               <RichtText data={{
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+          <IntroductionProgram
+            title={name}
+            brands={brands?.data}
+            programPerks={programPerks?.data}
+            checkoutUrlText={checkoutUrlText}
+            label={programCategory?.data?.attributes?.name}
+            description={programDescription}
+            periodicity={periodicity}
+            certificationMessage={certificationMessage}
+            price={price}
+            offerPrice={offerPrice}
+            discount={discount}
+            checkoutUrl={checkoutUrl}
+            discountPercentajeText={discountPercentageText}
+            image={{
+              alt: name,
+              src: programImage?.url
+            }} />
+        </div>
+
+        {
+          programDetail ?
+            <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
+              <RichtText data={{
                 content: programDetail
               }} />
-             </div>
-              : null
-          }
-    </ContentLayout>
+            </div>
+            : null
+        }
+      </ContentLayout>
+      <PaymentCardContainer
+        title={"¡Asegura tu lugar! Opciones de "}
+        accent_title={"pago flexibles"}
+        price_list={{
+          ...price_list
+        }}
+        text="Nota importante: Los pagos parciales se efectúan en intervalos mensuales, cada 30 días a partir de la fecha de tu primer pago. El número de pagos corresponde al plan de parcialidades que hayas seleccionado al inscribirte. Esta secuencia se mantendrá hasta completar el costo total del curso."
+      />
+    </ContentFullLayout>
+
   );
 }
 

@@ -7,46 +7,102 @@ import Button from "@/old-components/Button/Button";
 
 type AtrProgramInfoProps = {
   checkoutUrl?: string;
+  level?: string;
+  modality?: string;
+  hideCards?: boolean;
 };
 
 const AtrProgramInfo = (props: AtrProgramInfoProps) => {
   const {
     checkoutUrl,
+    level,
+    modality,
+    hideCards
   } = props;
-  
+
   return (
     <div className="flex flex-col gap-16 md:gap-24">
-      <ContentFullLayout classNames="bg-primary-0">
-        <Container classNames="">
-          <div className="flex flex-col justify-center items-center gap-6 py-8 md:p-12">
-            <div className="flex flex-col gap-1 justify-center items-center">
-              <span className="font-headings font-bold text-surface-900 text-6 leading-8">Nuestros planes</span>
-              <span className="font-texts font-normal text-surface-500 text-base leading-5">Empieza a estudiar hoy mismo</span>
-            </div>
-            <div className="flex flex-col md:flex-row items-center md:justify-center gap-6 md:gap-8">
-              <BenefitCard
-                title="Plan Mensual"
-                subtitle="Colegiatura fija toda tu carrera"
-                checkoutUrl={checkoutUrl}
-                price="399"
-                period="mes"
-                priceText="Colegiatura fija toda tu carrera"
-              />
-              <BenefitCard
-                title="Plan Anual"
-                subtitle="Un solo pago cada año"
-                checkoutUrl={checkoutUrl}
-                price="Próximamente"
-                period="por año"
-                priceIcon="fiber_new"
-                priceText="Oferta de lanzamiento"
-                hidePriceElements
-                disabled
-              />
-            </div>
-          </div>
-        </Container>
-      </ContentFullLayout>
+      {
+        modality != "a tu ritmo" || level != "Educación Continua" || "Extensión Universitaria"
+          ?
+          <ContentFullLayout classNames={cn("bg-primary-0", { "hidden": hideCards })} >
+            <Container classNames="">
+              <div className="flex flex-col justify-center items-center gap-6 py-8 md:p-12">
+                <div className="flex flex-col gap-1 justify-center items-center">
+                  <span className="font-headings font-bold text-surface-900 text-6 leading-8">Nuestros planes</span>
+                  <span className="font-texts font-normal text-surface-500 text-base leading-5">Empieza a estudiar hoy mismo</span>
+                </div>
+                <div className="flex flex-col md:flex-row items-center md:justify-center gap-6 md:gap-8">
+                  <div className="gap-y-4 grid rounded-lg border border-surface-200 p-4 bg-white w-64 h-64 mobile:mx-auto">
+                    <div>
+                      <p className="font-headings text-lg font-bold">Plan Mensual</p>
+                      <p className="font-texts text-xs font-semibold">Colegiatura fija toda tu carrera</p>
+                    </div>
+                    <div className="flex flex-col justify-center">
+                      <div className="grid gap-y-1">
+                        <div className="flex items-center">
+                          <span className="material-symbols-outlined !text-xs text-success-400 me-2">check_circle</span><p className="font-texts text-xs font-semibold">Aprendizaje autogestivo</p>
+                        </div>
+                        <div className="flex items-center">
+                          <span className="material-symbols-outlined !text-xs text-success-400 me-2">check_circle</span><p className="font-texts text-xs font-semibold">Título con Validez Oficial (SEP)</p>
+                        </div>
+                        <div className="flex items-center">
+                          <span className="material-symbols-outlined !text-xs text-success-400 me-2">check_circle</span><p className="font-texts text-xs font-semibold">Concluye en menos tiempo</p>
+                        </div>
+                        <div className="flex items-center">
+                          <span className="material-symbols-outlined !text-xs text-success-400 me-2">check_circle</span><p className="font-texts text-xs font-semibold">2 años mínimo</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className=" flex justify-center flex-col">
+                      <p className="font-headings font-bold text-xl">$349 MXN <span className="text-surface-500 font-normal text-sm">/por mes</span></p>
+                    </div>
+                    <div className="flex items-end">
+                    </div>
+                  </div>
+                  <div className="gap-y-4 grid rounded-lg border border-surface-200 p-4 bg-white w-64 h-64 mobile:mx-auto">
+                    <div>
+                      <p className="font-headings text-lg font-bold">Plan Mensual</p>
+                      <p className="font-texts text-xs font-semibold">Colegiatura fija toda tu carrera</p>
+                    </div>
+                    <div className="flex flex-col justify-center">
+                      <div className="grid gap-y-1">
+                        <div className="flex items-center">
+                          <span className="material-symbols-outlined !text-xs text-success-400 me-2">check_circle</span><p className="font-texts text-xs font-semibold">Aprendizaje autogestivo</p>
+                        </div>
+                        <div className="flex items-center">
+                          <span className="material-symbols-outlined !text-xs text-success-400 me-2">check_circle</span><p className="font-texts text-xs font-semibold">Título con Validez Oficial (SEP)</p>
+                        </div>
+                        <div className="flex items-center">
+                          <span className="material-symbols-outlined !text-xs text-success-400 me-2">check_circle</span><p className="font-texts text-xs font-semibold">Concluye en menos tiempo</p>
+                        </div>
+                        <div className="flex items-center">
+                          <span className="material-symbols-outlined !text-xs text-success-400 me-2">check_circle</span><p className="font-texts text-xs font-semibold">2 años mínimo</p>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div className=" flex justify-center flex-col">
+                      <div className="bg-secondary-500 rounded-2xl px-3 py-1 max-w-21 mb-1">
+                        <p className="text-white font-normal text-xs">50% Dcto.</p>
+                      </div>
+                      <p className="font-headings font-bold text-xl">$849 MXN <span className="line-through text-surface-500 font-normal text-sm">$699</span></p>
+                    </div>
+                    <div className="flex items-end">
+                    </div>
+                  </div>
+                </div>
+                <div className="col-span-12 text-center text-sm font-sm mobile:text-left">
+                  <p><strong>Nota importante:</strong> Al adquirir uno de nuestros planes, te suscribirás automáticamente a través de tu método de pago seleccionado. La suscripción se renovará de acuerdo con el plan elegido (mensual o anual). Puedes cancelar en cualquier momento antes de la renovación.</p>
+                </div>
+              </div>
+            </Container>
+          </ContentFullLayout>
+          : null
+      }
+
       <Container>
         <div className="flex flex-col md:flex-row gap-6 w-full">
           <div className="flex flex-col gap-6 w-full md:w-1/2 lg:mt-10">
@@ -76,7 +132,7 @@ const AtrProgramInfo = (props: AtrProgramInfoProps) => {
           </div>
         </Container>
       </ContentFullLayout>
-    </div>
+    </div >
   );
 };
 
@@ -140,18 +196,18 @@ const BenefitCard = (props: {
             {
               hidePriceElements ?
                 <span className="font-headings font-bold text-6 leading-7 text-surface-900">{price}</span>
-              :
-              <>
-                <span className="font-headings font-bold text-6 leading-7 text-surface-900">${price} MXN</span>
-                <span className="font-texts font-normal !text-4.5 text-surface-800">/{period}</span>
-              </>
+                :
+                <>
+                  <span className="font-headings font-bold text-6 leading-7 text-surface-900">${price} MXN</span>
+                  <span className="font-texts font-normal !text-4.5 text-surface-800">/{period}</span>
+                </>
             }
           </div>
           <div className="flex flex-row items-center gap-1.5">
             {
               priceIcon ?
                 <span className={cn("material-symbols-outlined !text-4.5 text-secondary-400 select-none", { "text-surface-900": disabled })}>{priceIcon}</span>
-              : null
+                : null
             }
             <span className={cn("font-texts font-normal text-secondary-400", { "text-surface-900": disabled })}>{priceText}</span>
           </div>

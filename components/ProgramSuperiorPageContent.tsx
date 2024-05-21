@@ -25,6 +25,7 @@ import { formatModalityDataSuperior } from "@/utils/programDetail";
 import type { DynamicProgramDetailData } from "@/utils/pages";
 import type { ProgramDetailSuperiorData } from "@/utils/getProgramDetailSuperior";
 import ContainerForm from "./sections/ContainerForm";
+import PaymentCardContainer from "./sections/PaymentCardContainer";
 
 type SelectItem = {
   value: string;
@@ -33,6 +34,7 @@ type SelectItem = {
 };
 
 const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
+
   const program = props?.program;
   const SFprogram = program.attributes.nombreProgramaSalesforce
   const layout = props?.layout as ProgramDetailSuperiorData;
@@ -42,7 +44,8 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const imageProgram = program?.attributes?.image?.data?.attributes?.url;
   const singleTypeAttributes = layout?.attributes;
   const bannerData = singleTypeAttributes?.banner;
-  
+  const price_list = program?.attributes?.price_list;
+  const program_rvoes = program?.attributes?.program_rvoes;
 
   const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
   let campusLabel = "plantel";
@@ -50,6 +53,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   if (BUSINESS_UNIT === "UANE" || BUSINESS_UNIT === "ULA") {
     campusLabel = "campus";
   }
+
 
   const titleTabs = levelProgram === "Doctorado" ? "Modalidades disponibles en este" : "Modalidades disponibles en esta"
 
@@ -182,7 +186,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   // console.log('modalities: ', modalities);
   // console.log('campuses: ', campuses);
   // console.log('program.attributes: ', program.attributes);
-  
+
   return (
     <Fragment>
       <Head>
@@ -201,12 +205,12 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
               width="w_12_12"
               extraText=""
               privacyPolicy={{
-                text:'Al llenar tus datos aceptas nuestro ',
+                text: 'Al llenar tus datos aceptas nuestro ',
                 linkText: 'Aviso de privacidad',
                 file: null,
                 href: '/aviso-privacidad'
               }}
-              errors={ [{
+              errors={[{
                 type: 'ComponentSectionsWebError',
                 title: '',
                 message: '',
@@ -312,33 +316,36 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                     </section>)
                     : null
                 }
-                <div>
-                  {
-                    rvoeTitle ?
-                      <p className="font-headings font-semibold text-[18px] mb-4">{rvoeTitle}</p>
-                      : null
-                  }
-                  {
-                    rvoeDescription ?
-                      <div>
-                        <RichtText data={{
-                          content: parseEditorRawData(rvoeDescription)
-                        }} />
-                      </div>
-                      : null
-                  }
-                  {
-                    rvoeImages && rvoeImages?.length > 0 ?
-                      <section className="w-full grid w-d:grid-cols-2 w-d:gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
-                        {
-                          rvoeImages?.map((item, i: number) => <section key={`section-rvoeImages-${i}`}>
-                            <img src={item?.image?.data?.attributes?.url}></img>
-                          </section>)
-                        }
-                      </section>
-                      : null
-                  }
-                </div>
+                {program_rvoes.data.length > 0
+                  ? <div>
+                    {
+                      rvoeTitle ?
+                        <p className="font-headings font-semibold text-[18px] mb-4">{rvoeTitle}</p>
+                        : null
+                    }
+                    {
+                      rvoeDescription ?
+                        <div>
+                          <RichtText data={{
+                            content: parseEditorRawData(rvoeDescription)
+                          }} />
+                        </div>
+                        : null
+                    }
+                    {
+                      rvoeImages && rvoeImages?.length > 0 ?
+                        <section className="w-full grid w-d:grid-cols-2 w-d:gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
+                          {
+                            rvoeImages?.map((item, i: number) => <section key={`section-rvoeImages-${i}`}>
+                              <img src={item?.image?.data?.attributes?.url}></img>
+                            </section>)
+                          }
+                        </section>
+                        : null
+                    }
+                  </div>
+                  : null
+                }
                 {
                   certifications?.data?.length > 0 ?
                     <div className="mt-6">
@@ -420,7 +427,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                   gralLaborField ?
                     <div>
                       {
-                        laborfieldTitle  ?
+                        laborfieldTitle ?
                           <div className="font-headings font-semibold text-[18px] mb-4">
                             <p>{laborfieldTitle}</p>
                           </div>
@@ -446,7 +453,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
               <div className="w-p:-mt-56 -mt-20 sticky top-10">
                 <div className="mt-16 mb-8">
                   {
-                    !!SFprogram &&  <ContainerForm
+                    !!SFprogram && <ContainerForm
                       type="ComponentSectionsFormContainer"
                       title={`Obtén más información sobre el programa de ${program.attributes.name}`}
                       description=""
@@ -456,12 +463,12 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                       width="w_12_12"
                       extraText=""
                       privacyPolicy={{
-                        text:'Al llenar tus datos aceptas nuestro ',
+                        text: 'Al llenar tus datos aceptas nuestro ',
                         linkText: 'Aviso de privacidad',
                         file: null,
                         href: '/aviso-privacidad'
                       }}
-                      errors={ [{
+                      errors={[{
                         type: 'ComponentSectionsWebError',
                         title: '',
                         message: '',
@@ -519,7 +526,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           <>
             <ContentLayout>
               {
-                modalities?.length  > 0 && titleTabs ?
+                modalities?.length > 0 && titleTabs ?
                   <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6">
                     <p className="text-6.5 font-headings font-semibold leading-tight w-t:leading-tight w-p:leading-tight w-t:text-6 w-p:text-6">{`${titleTabs} ${levelProgram}`}</p>
                   </div>
@@ -788,9 +795,21 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           : null
       }
       {
+        selectedModalityName === "a tu ritmo" && price_list?.price?.length > 0
+          ? <PaymentCardContainer
+            title={"¡Asegura tu lugar! Opciones de "}
+            accent_title={"pago flexibles"}
+            price_list={{
+              ...price_list
+            }}
+            text="Nota importante: Los pagos parciales se efectúan en intervalos mensuales, cada 30 días a partir de la fecha de tu primer pago. El número de pagos corresponde al plan de parcialidades que hayas seleccionado al inscribirte. Esta secuencia se mantendrá hasta completar el costo total del curso."
+          />
+          : null
+      }
+      {
         selectedModalityName === "a tu ritmo" ?
           <div className="mt-20">
-            <AtrProgramInfo checkoutUrl={checkoutUrl} />
+            <AtrProgramInfo checkoutUrl={checkoutUrl} level={levelProgram} modality={selectedModalityName} hideCards={!price_list} />
           </div>
           : null
       }
