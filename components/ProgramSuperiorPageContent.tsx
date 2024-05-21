@@ -25,7 +25,6 @@ import { formatModalityDataSuperior } from "@/utils/programDetail";
 import type { DynamicProgramDetailData } from "@/utils/pages";
 import type { ProgramDetailSuperiorData } from "@/utils/getProgramDetailSuperior";
 import ContainerForm from "./sections/ContainerForm";
-import PaymentCardContainer from "./sections/PaymentCardContainer";
 
 type SelectItem = {
   value: string;
@@ -43,7 +42,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const imageProgram = program?.attributes?.image?.data?.attributes?.url;
   const singleTypeAttributes = layout?.attributes;
   const bannerData = singleTypeAttributes?.banner;
-  const price_list = program?.attributes?.price_list;
+  const program_rvoes = program?.attributes?.program_rvoes;
 
   const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
   let campusLabel = "plantel";
@@ -313,33 +312,36 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                     </section>)
                     : null
                 }
-                <div>
-                  {
-                    rvoeTitle ?
-                      <p className="font-headings font-semibold text-[18px] mb-4">{rvoeTitle}</p>
-                      : null
-                  }
-                  {
-                    rvoeDescription ?
-                      <div>
-                        <RichtText data={{
-                          content: parseEditorRawData(rvoeDescription)
-                        }} />
-                      </div>
-                      : null
-                  }
-                  {
-                    rvoeImages && rvoeImages?.length > 0 ?
-                      <section className="w-full grid w-d:grid-cols-2 w-d:gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
-                        {
-                          rvoeImages?.map((item, i: number) => <section key={`section-rvoeImages-${i}`}>
-                            <img src={item?.image?.data?.attributes?.url}></img>
-                          </section>)
-                        }
-                      </section>
-                      : null
-                  }
-                </div>
+                {program_rvoes.data.length > 0
+                  ? <div>
+                    {
+                      rvoeTitle ?
+                        <p className="font-headings font-semibold text-[18px] mb-4">{rvoeTitle}</p>
+                        : null
+                    }
+                    {
+                      rvoeDescription ?
+                        <div>
+                          <RichtText data={{
+                            content: parseEditorRawData(rvoeDescription)
+                          }} />
+                        </div>
+                        : null
+                    }
+                    {
+                      rvoeImages && rvoeImages?.length > 0 ?
+                        <section className="w-full grid w-d:grid-cols-2 w-d:gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
+                          {
+                            rvoeImages?.map((item, i: number) => <section key={`section-rvoeImages-${i}`}>
+                              <img src={item?.image?.data?.attributes?.url}></img>
+                            </section>)
+                          }
+                        </section>
+                        : null
+                    }
+                  </div>
+                  : null
+                }
                 {
                   certifications?.data?.length > 0 ?
                     <div className="mt-6">

@@ -119,6 +119,7 @@ export type ProgramAttributes = {
     }
   }
   price_list: any;
+  program_rvoes: any;
   description: string;
   image: StrapiImage;
   detail: string;
@@ -233,6 +234,35 @@ query ProgramBySlug($slug: String!) {
             }
           }
         }
+        program_rvoes {
+          data {
+            attributes {
+              name
+              date
+              modality {
+                data {
+                  attributes {
+                    name,
+                  }
+                }
+              }
+              knowledgeArea {
+                data {
+                  attributes {
+                    name
+                  }
+                }
+              }
+              program {
+                data {
+                  attributes {
+                    name,
+                  }
+                }
+              }
+            }
+          }
+        }
         price_list {
           general_perks {
             accent
@@ -258,7 +288,7 @@ query ProgramBySlug($slug: String!) {
               }
             }
           }
-        }
+        }        
         description
         certificationMessage
         discountPercentageText
