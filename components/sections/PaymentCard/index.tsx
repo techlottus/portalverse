@@ -36,8 +36,15 @@ const PaymentCard = (props: PaymentCardData) => {
 
 
   return (
-    <div className={cn("gap-y-4 grid rounded-lg border border-surface-200 p-4 bg-white w-64 h-64 mobile:mx-auto", { "opacity-40": !checkout_url })}>
+    <div className={cn("keen-slider__slide gap-y-4 grid rounded-lg border border-surface-200 p-4 bg-white w-72 h-72 mobile:mx-auto", { "opacity-40": !checkout_url, "!border-primary-400": featured_price })}>
       <div>
+        {
+          featured_price
+            ? <div className="w-28 p-1 bg-primary-400 rounded-full absolute top-2 right-2">
+              <p className="text-center text-white text-xs font-bold">MÁS POPULAR</p>
+            </div>
+            : null
+        }
         {
           payment_provider_image
             ? <img className="w-11 mb-1 rounded-md" src={payment_provider_image?.data?.attributes?.url} alt="" />
@@ -96,7 +103,7 @@ const PaymentCard = (props: PaymentCardData) => {
       </div>
       {
         checkout_url
-          ? <div className="flex items-end">
+          ? <div className="flex items-end justify-center">
             <Button
               dark
               data={{
