@@ -143,10 +143,10 @@ const ProgramPageForm = (props: ProgramPageForm) => {
   useEffect(() => {
     if (filterPrograms) {
 
-      const offerByProgram = filterPrograms?.filter((program: any) => {
-        return program.nombrePrograma === prefilledData?.program
+      const offerByProgram = filterPrograms?.filter((program: any) => {        
+        return program.nombrePrograma === prefilledData?.program && program.lineaNegocio === businessUnit
       })[0]
-      
+
       setselectedProgram(offerByProgram)
       setAcademicData({
         ...academicData,
