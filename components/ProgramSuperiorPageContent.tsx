@@ -46,14 +46,14 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const bannerData = singleTypeAttributes?.banner;
   const price_list = program?.attributes?.price_list;
   const program_rvoes = program?.attributes?.program_rvoes;
+  const hasRvoe = program?.attributes?.HasRvoe;
 
   const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
   let campusLabel = "plantel";
 
   if (BUSINESS_UNIT === "UANE" || BUSINESS_UNIT === "ULA") {
     campusLabel = "campus";
-  }
-
+  }  
 
   const titleTabs = levelProgram === "Doctorado" ? "Modalidades disponibles en este" : "Modalidades disponibles en esta"
 
@@ -316,7 +316,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                     </section>)
                     : null
                 }
-                {program_rvoes.data.length > 0
+                {hasRvoe
                   ? <div>
                     {
                       rvoeTitle ?
