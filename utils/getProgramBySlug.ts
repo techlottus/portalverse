@@ -120,6 +120,7 @@ export type ProgramAttributes = {
   }
   price_list: any;
   program_rvoes: any;
+  HasRvoe: boolean;
   description: string;
   image: StrapiImage;
   detail: string;
@@ -234,6 +235,7 @@ query ProgramBySlug($slug: String!) {
             }
           }
         }
+        HasRvoe
         program_rvoes {
           data {
             attributes {
