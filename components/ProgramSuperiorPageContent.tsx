@@ -157,13 +157,16 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
 
   // }, [SFdata])
   const downloadFileProgram = () => {
-    if (hasCampuses) {
-      const selectedCampus = campusDetail?.find((element) => { return element?.campusName === selectedOption?.value })
-      const curriculum = selectedCampus?.curriculumUrl
-      if (!curriculum) return
-      window.open(curriculum, "_blank")
-    }
+    
+    // if (hasCampuses) {
+    //   const selectedCampus = campusDetail?.find((element) => { return element?.campusName === selectedOption?.value })
+    //   const curriculum = selectedCampus?.curriculumUrl
+    // console.log('curriculum: ', curriculum);
+    //   if (!curriculum) return
+    //   window.open(curriculum, "_blank")
+    // }
     const curriculum = campusDetail?.[0]?.curriculumUrl
+    
     if (!curriculum) return
     window.open(curriculum, "_blank")
   }
@@ -232,7 +235,10 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                 size: '',
                 variant: 'primary',
                 CTA: 'submit',
-                iconName: 'send'
+                iconName: 'send',
+                action: () =>  {
+                 return () => downloadFileProgram()
+                }
               }}
               options={{
                 modalities: modalities.map(mod => ({
@@ -490,7 +496,10 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                         size: '',
                         variant: 'primary',
                         CTA: 'submit',
-                        iconName: 'send'
+                        iconName: 'send',
+                        action: () =>  {
+                         return () => downloadFileProgram()
+                        }
                       }}
                       options={{
                         modalities: modalities.map(mod => ({
@@ -502,7 +511,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                     />
                   }
                 </div>
-                <Button dark data={{ ...ButtonInit, title: "Descarga el plan de estudios", disabled: !isOptionSelected }} onClick={downloadFileProgram} />
+                {/* <Button dark data={{ ...ButtonInit, title: "Descarga el plan de estudios", disabled: !isOptionSelected }} onClick={downloadFileProgram} /> */}
               </div>
             </div>
             : null
@@ -577,14 +586,15 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                           </div>
                           <Select onClick={(option: CustomEvent) => handleSelectOption(option)} data={{ ...SelectInit, textDefault: `Elige el ${campusLabel} de tu interés`, icon: "apartment" }} options={optionsSelect} flagHeight={true} />
                         </div>
-                        <div className="flex justify-center">
+                        {/* <div className="flex justify-center">
                           <Button dark data={{ ...ButtonInit, title: "Descarga el plan de estudios", disabled: !isOptionSelected }} onClick={downloadFileProgram} />
-                        </div>
+                        </div> */}
                       </div> :
                       <>
-                        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center">
+                        {/* <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center">
                           <Button dark data={{ ...ButtonInit, title: "Descarga el plan de estudios" }} onClick={downloadFileProgram} />
-                        </div></>
+                        </div> */}
+                      </>
                   }
                 </div>
               </>
