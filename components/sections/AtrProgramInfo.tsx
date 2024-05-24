@@ -61,10 +61,13 @@ const AtrProgramInfo = (props: AtrProgramInfoProps) => {
                     <div className="flex items-end">
                     </div>
                   </div>
-                  <div className="gap-y-4 grid rounded-lg border border-surface-200 p-4 bg-white w-64 h-64 mobile:mx-auto">
+                  <div className="gap-y-4 grid rounded-lg border border-primary-400 p-4 bg-white w-64 h-64 mobile:mx-auto relative">
+                    <div className="w-28 p-1 bg-primary-400 rounded-full absolute top-[-12px] right-[70px]">
+                      <p className="text-center text-white text-xs font-bold">MÁS POPULAR</p>
+                    </div>
                     <div>
-                      <p className="font-headings text-lg font-bold">Plan Mensual</p>
-                      <p className="font-texts text-xs font-semibold">Colegiatura fija toda tu carrera</p>
+                      <p className="font-headings text-lg font-bold">Plan Anual</p>
+                      <p className="font-texts text-xs font-semibold">Un solo pago cada año</p>
                     </div>
                     <div className="flex flex-col justify-center">
                       <div className="grid gap-y-1">
@@ -133,106 +136,6 @@ const AtrProgramInfo = (props: AtrProgramInfoProps) => {
         </Container>
       </ContentFullLayout>
     </div >
-  );
-};
-
-const BenefitCard = (props: {
-  title: string,
-  subtitle: string,
-  price: string,
-  period: string,
-  priceText: string,
-  checkoutUrl?: string,
-  disabled?: boolean,
-  hidePriceElements?: boolean,
-  priceIcon?: string,
-}) => {
-  const {
-    title,
-    subtitle,
-    checkoutUrl = null,
-    price,
-    period = "mes",
-    priceText = "",
-    priceIcon = "school",
-    disabled = false,
-    hidePriceElements = false
-  } = props;
-
-  return (
-    <div className={cn("bg-white flex flex-col gap-5 rounded-xl px-6 py-5 shadow-lg", { "select-none opacity-20": disabled })}>
-      <div className="flex flex-col gap-10">
-        <div className="flex flex-col">
-          <span className="font-headings font-bold text-6 leading-7 text-primary-400">{title}</span>
-          <span className="font-texts font-normal text-base leading-5 text-surface-500">{subtitle}</span>
-        </div>
-        <div className="flex flex-col gap-2">
-          <p className="font-texts font-bold text-sm text-surface-900">Beneficios:</p>
-          <div className="flex flex-col gap-2">
-            <div className="flex flex-row items-center gap-2">
-              <span className="material-symbols-outlined !text-4.5 text-primary-400 select-none">book_2</span>
-              <span className="font-texts font-normal text-sm text-surface-900">Aprendizaje autogestivo</span>
-            </div>
-            <div className="flex flex-row items-center gap-2">
-              <span className="material-symbols-outlined !text-4.5 text-primary-400 select-none">card_membership</span>
-              <span className="font-texts font-normal text-sm text-surface-900">Título con Validez Oficial (SEP)</span>
-            </div>
-            <div className="flex flex-row items-center gap-2">
-              <span className="material-symbols-outlined !text-4.5 text-primary-400 select-none">schedule</span>
-              <span className="font-texts font-normal text-sm text-surface-900">Concluye en menos tiempo</span>
-            </div>
-            <div className="flex flex-row items-center gap-2">
-              <span className="material-symbols-outlined !text-4.5 text-primary-400 select-none">savings</span>
-              <span className="font-texts font-normal text-sm text-surface-900">Único pago por suscripción mensual </span>
-            </div>
-            <div className="flex flex-row items-center gap-2">
-              <span className="material-symbols-outlined !text-4.5 text-primary-400 select-none">school</span>
-              <span className="font-texts font-normal text-sm text-surface-900">2 años mínimo</span>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col gap-1.5">
-          <div className="flex flex-row items-end gap-1">
-            {
-              hidePriceElements ?
-                <span className="font-headings font-bold text-6 leading-7 text-surface-900">{price}</span>
-                :
-                <>
-                  <span className="font-headings font-bold text-6 leading-7 text-surface-900">${price} MXN</span>
-                  <span className="font-texts font-normal !text-4.5 text-surface-800">/{period}</span>
-                </>
-            }
-          </div>
-          <div className="flex flex-row items-center gap-1.5">
-            {
-              priceIcon ?
-                <span className={cn("material-symbols-outlined !text-4.5 text-secondary-400 select-none", { "text-surface-900": disabled })}>{priceIcon}</span>
-                : null
-            }
-            <span className={cn("font-texts font-normal text-secondary-400", { "text-surface-900": disabled })}>{priceText}</span>
-          </div>
-        </div>
-      </div>
-      {
-        checkoutUrl ?
-          <Button
-            dark
-            data={{
-              "title": "Inscribirme",
-              "type": "outlined",
-              "icon": "shopping_cart",
-              "isExpand": true,
-              "disabled": !!disabled
-            }}
-            onClick={() => {
-              if (!disabled) {
-                router?.push(checkoutUrl)
-              }
-            }}
-          />
-          : null
-      }
-    </div>
   );
 };
 
