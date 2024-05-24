@@ -166,7 +166,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
     //   window.open(curriculum, "_blank")
     // }
     const curriculum = campusDetail?.[0]?.curriculumUrl
-console.log('curriculum: ', curriculum);
+    console.log('curriculum: ', curriculum);
     if (!curriculum) return
     window.open(curriculum, "_blank")
   }
