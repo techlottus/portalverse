@@ -15,13 +15,14 @@ type PriceListData = {
 export type PaymentCardContainerData = {
   title: string;
   accent_title: string;
+  subtitle: string;
   price_list: PriceListData;
   text: string;
 }
 
 const PaymentCardContainer = (props: PaymentCardContainerData) => {
 
-  const { title, accent_title, price_list, text } = props;
+  const { title, accent_title, subtitle, price_list, text } = props;
 
   const [currentSlide, setCurrentSlide] = React.useState(0)
   const [loaded, setLoaded] = useState(false)
@@ -54,8 +55,9 @@ const PaymentCardContainer = (props: PaymentCardContainerData) => {
     <ContentFullLayout classNames="bg-primary-0 mt-20">
       <ContentLayout>
         <div className="col-span-12 py-12 px-20 mobile:px-4">
-          <div className="col-span-12 text-center">
+          <div className="col-span-12 text-center">            
             <p className="font-headings text-2xl font-bold">{title}<span className="text-secondary-500">{accent_title}</span></p>
+            <p className="font-texts text-surface-500">{subtitle}</p>
           </div>
           <div>
             {
