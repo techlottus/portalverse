@@ -75,16 +75,29 @@ const PaymentCardContainer = (props: PaymentCardContainerData) => {
                 : null
             }
           </div>
-          <div className="relative">
-            <div ref={sliderRef} className={cn("keen-slider my-8")}>
-              {
-                price_list?.price?.map((price: PaymentCardData, i: Number) => {
-                  return (
-                    <PaymentCard key={`carouselCard-${i}`} {...price} />
-                  )
-                })
-              }
-            </div>
+          <div className="relative my-8">
+            {
+              price_list?.price?.length > 3
+                ? < div ref={sliderRef} className={cn("keen-slider")}>
+                  {
+                    price_list?.price?.map((price: PaymentCardData, i: Number) => {
+                      return (
+                        <PaymentCard key={`carouselCard-${i}`} {...price} />
+                      )
+                    })
+                  }
+                </div>
+                : < div className="flex justify-center gap-8 mobile:flex-col">
+                  {
+                    price_list?.price?.map((price: PaymentCardData, i: any) => {
+                      return (
+                        <PaymentCard key={i} {...price} />
+                      )
+                    })
+                  }
+                </div>
+            }
+
             {loaded && instanceRef.current && (
               <>
                 <Arrow
@@ -130,7 +143,7 @@ const PaymentCardContainer = (props: PaymentCardContainerData) => {
           </div>
         </div>
       </ContentLayout>
-    </ContentFullLayout>
+    </ContentFullLayout >
   );
 }
 
