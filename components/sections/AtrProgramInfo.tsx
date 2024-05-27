@@ -105,7 +105,8 @@ const AtrProgramInfo = (props: AtrProgramInfoProps) => {
                   </div>
                 </div>
                 <div className="col-span-12 text-center text-sm font-sm mobile:text-left">
-                  <p><strong>Nota importante:</strong> Al adquirir uno de nuestros planes, te suscribirás automáticamente a través de tu método de pago seleccionado. La suscripción se renovará de acuerdo con el plan elegido (mensual o anual). Puedes cancelar en cualquier momento antes de la renovación.</p>
+                  <p><strong>Nota importante:</strong> Al adquirir uno de nuestros planes, te suscribirás automáticamente a través de tu método de pago seleccionado. <br />
+                    La suscripción se renovará de acuerdo con el plan elegido (mensual o anual). Puedes cancelar en cualquier momento antes de la renovación.</p>
                 </div>
               </div>
             </Container>

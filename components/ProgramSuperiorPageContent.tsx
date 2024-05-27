@@ -803,7 +803,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
             price_list={{
               ...price_list
             }}
-            text="Nota importante: Al adquirir uno de nuestros planes, te suscribirás automáticamente a través de tu método de pago seleccionado. La suscripción se renovará de acuerdo con el plan elegido (mensual o anual). Puedes cancelar en cualquier momento antes de la renovación."
+            text={`Nota importante: Al adquirir uno de nuestros planes, te suscribirás automáticamente a través de tu método de pago seleccionado. \n\n La suscripción se renovará de acuerdo con el plan elegido (mensual o anual). Puedes cancelar en cualquier momento antes de la renovación.`}
           />
           : null
       }
