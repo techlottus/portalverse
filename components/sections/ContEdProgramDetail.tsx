@@ -148,6 +148,7 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
       <PaymentCardContainer
         title={"¡Asegura tu lugar! Opciones de "}
         accent_title={"pago flexibles"}
+        subtitle={""}
         price_list={{
           ...price_list
         }}

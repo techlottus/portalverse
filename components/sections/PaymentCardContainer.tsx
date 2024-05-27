@@ -15,13 +15,14 @@ type PriceListData = {
 export type PaymentCardContainerData = {
   title: string;
   accent_title: string;
+  subtitle: string;
   price_list: PriceListData;
   text: string;
 }
 
 const PaymentCardContainer = (props: PaymentCardContainerData) => {
 
-  const { title, accent_title, price_list, text } = props;
+  const { title, accent_title, subtitle, price_list, text } = props;
 
   const [currentSlide, setCurrentSlide] = React.useState(0)
   const [loaded, setLoaded] = useState(false)
@@ -54,8 +55,9 @@ const PaymentCardContainer = (props: PaymentCardContainerData) => {
     <ContentFullLayout classNames="bg-primary-0 mt-20">
       <ContentLayout>
         <div className="col-span-12 py-12 px-20 mobile:px-4">
-          <div className="col-span-12 text-center">
+          <div className="col-span-12 text-center">            
             <p className="font-headings text-2xl font-bold">{title}<span className="text-secondary-500">{accent_title}</span></p>
+            <p className="font-texts text-surface-500">{subtitle}</p>
           </div>
           <div>
             {
@@ -75,16 +77,29 @@ const PaymentCardContainer = (props: PaymentCardContainerData) => {
                 : null
             }
           </div>
-          <div className="relative">
-            <div ref={sliderRef} className={cn("keen-slider my-8")}>
-              {
-                price_list?.price?.map((price: PaymentCardData, i: Number) => {
-                  return (
-                    <PaymentCard key={`carouselCard-${i}`} {...price} />
-                  )
-                })
-              }
-            </div>
+          <div className="relative my-8">
+            {
+              price_list?.price?.length > 3
+                ? < div ref={sliderRef} className={cn("keen-slider")}>
+                  {
+                    price_list?.price?.map((price: PaymentCardData, i: Number) => {
+                      return (
+                        <PaymentCard key={`carouselCard-${i}`} {...price} />
+                      )
+                    })
+                  }
+                </div>
+                : < div className="flex justify-center gap-8 mobile:flex-col">
+                  {
+                    price_list?.price?.map((price: PaymentCardData, i: any) => {
+                      return (
+                        <PaymentCard key={i} {...price} />
+                      )
+                    })
+                  }
+                </div>
+            }
+
             {loaded && instanceRef.current && (
               <>
                 <Arrow
@@ -130,7 +145,7 @@ const PaymentCardContainer = (props: PaymentCardContainerData) => {
           </div>
         </div>
       </ContentLayout>
-    </ContentFullLayout>
+    </ContentFullLayout >
   );
 }
 

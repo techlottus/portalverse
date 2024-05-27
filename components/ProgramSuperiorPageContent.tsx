@@ -53,7 +53,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
 
   if (BUSINESS_UNIT === "UANE" || BUSINESS_UNIT === "ULA") {
     campusLabel = "campus";
-  }  
+  }
 
   const titleTabs = levelProgram === "Doctorado" ? "Modalidades disponibles en este" : "Modalidades disponibles en esta"
 
@@ -797,12 +797,13 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
       {
         selectedModalityName === "a tu ritmo" && price_list?.price?.length > 0
           ? <PaymentCardContainer
-            title={"¡Asegura tu lugar! Opciones de "}
-            accent_title={"pago flexibles"}
+            title={"Nuestros planes"}
+            accent_title={""}
+            subtitle={"Empieza a estudiar hoy mismo"}
             price_list={{
               ...price_list
             }}
-            text="Nota importante: Los pagos parciales se efectúan en intervalos mensuales, cada 30 días a partir de la fecha de tu primer pago. El número de pagos corresponde al plan de parcialidades que hayas seleccionado al inscribirte. Esta secuencia se mantendrá hasta completar el costo total del curso."
+            text={`Nota importante: Al adquirir uno de nuestros planes, te suscribirás automáticamente a través de tu método de pago seleccionado. \n\n La suscripción se renovará de acuerdo con el plan elegido (mensual o anual). Puedes cancelar en cualquier momento antes de la renovación.`}
           />
           : null
       }
