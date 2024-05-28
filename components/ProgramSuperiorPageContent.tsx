@@ -237,9 +237,9 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                 CTA: 'submit',
                 iconName: 'send',
                 action: () =>  {
-                  return () => setTimeout(() => {
+                  return () =>
                     downloadFileProgram()
-                  }, 500); 
+
                 }
               }}
               options={{
