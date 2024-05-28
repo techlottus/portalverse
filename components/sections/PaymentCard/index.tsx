@@ -84,8 +84,8 @@ const PaymentCard = (props: PaymentCardData) => {
       <div className=" flex justify-center flex-col">
         {
           discount
-            ? <div className="bg-secondary-500 rounded-2xl px-3 py-1 max-w-21 mb-1">
-              <p className="text-white font-normal text-xs">{discount}% Dcto.</p>
+            ? <div className="bg-secondary-500 rounded-2xl px-3 py-1 max-w-23 mb-1">
+              <p className="text-white font-normal text-xs">Ahorra {discount}%</p>
             </div>
             : null
         }
