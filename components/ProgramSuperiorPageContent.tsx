@@ -237,7 +237,9 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                 CTA: 'submit',
                 iconName: 'send',
                 action: () =>  {
-                  return () => downloadFileProgram()
+                  return () => setTimeout(() => {
+                    downloadFileProgram()
+                  }, 500); 
                 }
               }}
               options={{
@@ -497,9 +499,6 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                         variant: 'primary',
                         CTA: 'submit',
                         iconName: 'send',
-                        action: () =>  {
-                         return () => downloadFileProgram()
-                        }
                       }}
                       options={{
                         modalities: modalities.map(mod => ({
