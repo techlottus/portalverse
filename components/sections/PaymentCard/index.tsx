@@ -37,10 +37,10 @@ const PaymentCard = (props: PaymentCardData) => {
 
   return (
     <div className={cn("keen-slider__slide gap-y-4 grid rounded-lg border border-surface-200 p-4 bg-white w-72 h-72 mobile:mx-auto", { "opacity-40": !checkout_url, "!border-primary-400": featured_price })}>
-      <div>
+      <div className="relative">
         {
           featured_price
-            ? <div className="w-28 p-1 bg-primary-400 rounded-full absolute top-2 right-2">
+            ? <div className="w-28 p-1 bg-primary-400 rounded-full absolute top-[-27px] right-[70px]">
               <p className="text-center text-white text-xs font-bold">MÁS POPULAR</p>
             </div>
             : null
@@ -61,7 +61,6 @@ const PaymentCard = (props: PaymentCardData) => {
             : null
         }
       </div>
-
       {
         perks?.length > 0
           ? <div className="flex flex-col justify-center">
@@ -84,8 +83,8 @@ const PaymentCard = (props: PaymentCardData) => {
       <div className=" flex justify-center flex-col">
         {
           discount
-            ? <div className="bg-secondary-500 rounded-2xl px-3 py-1 max-w-21 mb-1">
-              <p className="text-white font-normal text-xs">{discount}% Dcto.</p>
+            ? <div className="bg-secondary-500 rounded-2xl px-3 py-1 max-w-23 mb-1">
+              <p className="text-white font-normal text-xs">Ahorra {discount}%</p>
             </div>
             : null
         }
