@@ -14,7 +14,84 @@ const CheckoutPage: NextPageWithLayout = () => {
     const postData = async () => {
       if (flywireAPI && flywireAPIKEY) {
         const response = await fetch("/api/generateFwLink", {
-          method: 'POST'
+          method: 'POST',
+          body: JSON.stringify(  {
+            "type": "one_off",
+            "charge_intent": {
+              "mode": "one_off"
+            },
+            "payor": {
+              "first_name": "SANDBOX_TO_DELIVERED_STATUS",
+              "last_name": "Thor",
+              "address": "Allen Street",
+              "city": "Valencia",
+              "country": "ES",
+              "state": "VA",
+              "email": "test@Thor.com",
+              "zip": "10002",
+              "phone": "+341123456789"
+            },
+            "options": {
+              "form": {
+                "action_button": "pay",
+                "locale": "en"
+              }
+            },
+            "recipient": {
+              "fields": [
+                {
+                  "id": "graduation_year",
+                  "value": "2020",
+                  "read_only": true
+                },
+                {
+                  "id": "program_of_study",
+                  "value": "SMTH"
+                },
+                {
+                  "id": "student_id",
+                  "value": "U12345678"
+                },
+                {
+                  "id": "student_first_name",
+                  "value": "Test",
+                  "read_only": true
+                },
+                {
+                  "id": "student_last_name",
+                  "value": "Thor&Hanna",
+                  "read_only": true
+                },
+                {
+                  "id": "relationship",
+                  "value": "lover",
+                  "read_only": true
+                },
+                {
+                  "id": "student_email",
+                  "value": "Thor@test.com",
+                  "read_only": true
+                },
+                {
+                  "id": "payment_type",
+                  "value": "Tuition",
+                  "read_only": true
+                }
+              ]
+            },
+            "items": [
+              {
+                "id": "default",
+                "amount": 350000,
+                "description": "My favourite item"
+              }
+            ],
+            "notifications_url": "https://webhook.site/6ff82c43-94f3-4651-b45d-80c9e02d97de",
+            "external_reference": "Test payment Thor",
+            "recipient_id": "KWR",
+            "payor_id": "payor_test_thor"
+          }
+    )
         });
         const res = await response.json()
         setFlywireLink(await res)
