@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Input from "@/old-components/Input/Input"
 import Link from "next/link";
 import Image from "@/old-components/Image"
@@ -6,6 +6,9 @@ import Container from "@/layouts/Container.layout";
 import OptionPill from "@/old-components/OptionPill";
 import Button from "@/old-components/Button/Button";
 import Checkbox from "@/old-components/Checkbox";
+import configControls from "@/forms/fixtures/controls"
+import { useForm } from "react-hook-form";
+
 
 type InscriptionFormData = {
 
@@ -13,11 +16,133 @@ type InscriptionFormData = {
 
 const InscriptionForm = (props: InscriptionFormData) => {
 
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    watch,
+    setValue,
+    reset,
+  } = useForm({
+
+  });
+
   const [residance, setResidance] = useState<boolean>()
   const [noResidance, setNoResidance] = useState<boolean>()
   const [hasCurp, setHasCurp] = useState<boolean>()
   const [noCurp, setNoCurp] = useState<boolean>()
   const [adviser, setAdviser] = useState<boolean>()
+  const [submit, setSubmit] = useState(false);
+  const [isValid, setIsValid] = useState(false);
+
+  const [personalData, setPersonalData] = useState({
+    name: "",
+    last_name: "",
+    second_last_name: "",
+    email: "",
+    phone: "",
+    birthdate: "",
+    birth_entity: "",
+    gender: "",
+    residence: "",
+    curp: "",
+  });
+
+  const [personalDataTouched, setPersonalDataTouched] = useState<{ [key: string]: boolean }>({
+    name: false,
+    last_name: false,
+    second_last_name: false,
+    email: false,
+    phone: false,
+    birthdate: false,
+    birth_entity: false,
+    gender: false,
+    residence: false,
+    curp: false,
+  })
+
+  const [personalDataErrors, setPersonalDataErrors] = useState({
+    name: false,
+    last_name: false,
+    second_last_name: false,
+    email: false,
+    phone: false,
+    birthdate: false,
+    birth_entity: false,
+    gender: false,
+    residence: false,
+    curp: false,
+  })
+
+  const validatePersonalDataControl = (control: string, value: string) => {
+    if (control === 'email') {
+      return !!value.match(configControls.patternEmail)
+    }
+    if (control === 'phone') {
+      return value.trim().length === 10
+    }
+    return !!value.trim()
+  };
+
+  const validatePersonalDataControls = () => !Object.entries(personalData).map(([key, value]: any) => {
+    const validity = validatePersonalDataControl(key, value)
+    return validity
+  }).includes(false)
+
+  const Validate = () => {
+    const newPersonalDataErrors = {
+      name: !validatePersonalDataControl("name", personalData.name) && personalDataTouched.name,
+      last_name: !validatePersonalDataControl("last_name", personalData.last_name) && personalDataTouched.last_name,
+      phone: !validatePersonalDataControl("phone", personalData.phone) && personalDataTouched.phone,
+      email: !validatePersonalDataControl("email", personalData.email) && personalDataTouched.email,
+      second_last_name: !validatePersonalDataControl("second_last_name", personalData.second_last_name) && personalDataTouched.second_last_name,
+      birthdate: !validatePersonalDataControl("birthdate", personalData.birthdate) && personalDataTouched.birthdate,
+      birth_entity: !validatePersonalDataControl("birth_entity", personalData.birth_entity) && personalDataTouched.birth_entity,
+      gender: !validatePersonalDataControl("gender", personalData.gender) && personalDataTouched.gender,
+      residence: !validatePersonalDataControl("residence", personalData.residence) && personalDataTouched.residence,
+      curp: !validatePersonalDataControl("curp", personalData.curp) && personalDataTouched.curp,
+    }
+
+    setPersonalDataErrors({ ...newPersonalDataErrors });
+
+    const isValidPersonalData = validatePersonalDataControls();
+
+    setIsValid(isValidPersonalData)
+  }
+
+  const onSubmit = handleSubmit((data) => {
+    console.log(personalData)
+    Validate()
+  })
+
+  const sendLeadData = async () => {
+
+    const endpoint = process.env.NEXT_PUBLIC_CAPTACION_PROSPECTO;
+    const nombre = personalData?.name;
+    const apellidoPaterno = personalData?.last_name;
+    const apellidoMaterno = personalData?.second_last_name;
+    const email = personalData?.email;
+    const telefono = personalData?.phone;
+    const fechaNacimiento = personalData?.birthdate;
+    const lugarNacimiento = personalData?.birth_entity;
+    const genero = personalData?.gender;
+    const residence = personalData?.residence;
+    const curp = personalData?.curp;
+    
+    const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&apellidoMaterno=${apellidoMaterno}&email=${email}&telefono=${telefono}&fechaNacimiento=${fechaNacimiento}&lugarNacimiento=${lugarNacimiento}&genero=${genero}&residence=${residence}&curp=${curp}`;
+    console.log("params", params)
+  }
+
+  const handleKeyPress = (e: CustomEvent, control: string) => {
+    const { detail: { value } } = e;
+    setPersonalDataTouched({ ...personalDataTouched, [control]: true });
+    setPersonalData({ ...personalData, [control]: value });
+  };
+
+  const handleTouchedControl = (control: string) => {
+    setPersonalDataTouched({ ...personalDataTouched, [control]: true });
+  }
 
   return (
 
@@ -65,20 +190,20 @@ const InscriptionForm = (props: InscriptionFormData) => {
             <div className="">
               <Input data={{
                 label: 'CURP',
-                name: 'name',
+                name: 'curp',
                 type: 'text',
                 typeButton: 'classic',
                 maxlength: '18',
                 onPaste: true,
-                placeholder: '',
                 autocomplete: 'off',
-                disabled: false,
-                alphanumeric: false,
-                alphabetical: true,
-                onlyNumbers: false,
-                upperCase: false,
+                alphanumeric: true,
                 pattern: '',
-              }} />
+              }}
+                eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "curp")}
+                eventFocus={() => handleTouchedControl("curp")}
+                errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                hasError={personalDataErrors.curp}
+              />
             </div>
             <p className="font-texts text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p>
           </>
@@ -123,20 +248,19 @@ const InscriptionForm = (props: InscriptionFormData) => {
             <div className="">
               <Input data={{
                 label: 'CURP',
-                name: 'name',
+                name: 'curp',
                 type: 'text',
                 typeButton: 'classic',
                 maxlength: '18',
                 onPaste: true,
-                placeholder: '',
-                autocomplete: 'off',
-                disabled: false,
-                alphanumeric: false,
-                alphabetical: true,
-                onlyNumbers: false,
-                upperCase: false,
+                alphanumeric: true,
                 pattern: '',
-              }} />
+              }}
+                eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "curp")}
+                eventFocus={() => handleTouchedControl("curp")}
+                errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                hasError={personalDataErrors.curp}
+              />
             </div>
             <p className="font-texts text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p></>
         }
@@ -151,15 +275,14 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   typeButton: 'classic',
                   maxlength: '',
                   onPaste: true,
-                  placeholder: '',
-                  autocomplete: 'off',
-                  disabled: false,
-                  alphanumeric: false,
                   alphabetical: true,
-                  onlyNumbers: false,
-                  upperCase: false,
                   pattern: '',
-                }} />
+                }}
+                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "name")}
+                  eventFocus={() => handleTouchedControl("name")}
+                  errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                  hasError={personalDataErrors.name}
+                />
               </div>
               <div className="">
                 <Input data={{
@@ -169,15 +292,14 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   typeButton: 'classic',
                   maxlength: '',
                   onPaste: true,
-                  placeholder: '',
-                  autocomplete: 'off',
-                  disabled: false,
-                  alphanumeric: false,
                   alphabetical: true,
-                  onlyNumbers: false,
-                  upperCase: false,
                   pattern: '',
-                }} />
+                }}
+                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "last_name")}
+                  eventFocus={() => handleTouchedControl("last_name")}
+                  errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                  hasError={personalDataErrors.last_name}
+                />
               </div>
               <div className="">
                 <Input data={{
@@ -187,15 +309,14 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   typeButton: 'classic',
                   maxlength: '',
                   onPaste: true,
-                  placeholder: '',
-                  autocomplete: 'off',
-                  disabled: false,
-                  alphanumeric: false,
                   alphabetical: true,
-                  onlyNumbers: false,
-                  upperCase: false,
                   pattern: '',
-                }} />
+                }}
+                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "second_last_name")}
+                  eventFocus={() => handleTouchedControl("second_last_name")}
+                  errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                  hasError={personalDataErrors.second_last_name}
+                />
               </div>
 
               <div className="">
@@ -206,15 +327,14 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   typeButton: 'classic',
                   maxlength: '',
                   onPaste: true,
-                  placeholder: '',
-                  autocomplete: 'off',
-                  disabled: false,
                   alphanumeric: false,
-                  alphabetical: true,
-                  onlyNumbers: false,
-                  upperCase: false,
                   pattern: '',
-                }} />
+                }}
+                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "email")}
+                  eventFocus={() => handleTouchedControl("email")}
+                  errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                  hasError={personalDataErrors.email}
+                />
               </div>
               <div className="">
                 <Input data={{
@@ -224,33 +344,31 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   typeButton: 'classic',
                   maxlength: '10',
                   onPaste: true,
-                  placeholder: '',
-                  autocomplete: 'off',
-                  disabled: false,
-                  alphanumeric: false,
-                  alphabetical: false,
                   onlyNumbers: true,
-                  upperCase: false,
                   pattern: '',
-                }} />
+                }}
+                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "phone")}
+                  eventFocus={() => handleTouchedControl("phone")}
+                  errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                  hasError={personalDataErrors.phone}
+                />
               </div>
               <div className="col-span-2">
                 <Input data={{
                   label: '',
-                  name: '',
+                  name: 'birthdate',
                   type: 'date',
                   typeButton: 'classic',
                   maxlength: '',
                   onPaste: true,
-                  placeholder: '',
-                  autocomplete: 'off',
-                  disabled: false,
-                  alphanumeric: false,
                   alphabetical: true,
-                  onlyNumbers: false,
-                  upperCase: false,
                   pattern: '',
-                }} />
+                }}
+                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "birthdate")}
+                  eventFocus={() => handleTouchedControl("birthdate")}
+                  errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                  hasError={personalDataErrors.birthdate}
+                />
               </div>
               <div className="">
                 <Input data={{
@@ -260,15 +378,14 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   typeButton: 'classic',
                   maxlength: '',
                   onPaste: true,
-                  placeholder: '',
-                  autocomplete: 'off',
-                  disabled: false,
-                  alphanumeric: false,
                   alphabetical: true,
-                  onlyNumbers: false,
-                  upperCase: false,
                   pattern: '',
-                }} />
+                }}
+                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "birth_entity")}
+                  eventFocus={() => handleTouchedControl("birth_entity")}
+                  errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                  hasError={personalDataErrors.birth_entity}
+                />
               </div>
               <div className="">
                 <Input data={{
@@ -278,17 +395,16 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   typeButton: 'classic',
                   maxlength: '',
                   onPaste: true,
-                  placeholder: '',
-                  autocomplete: 'off',
-                  disabled: false,
-                  alphanumeric: false,
                   alphabetical: true,
-                  onlyNumbers: false,
-                  upperCase: false,
                   pattern: '',
-                }} />
+                }}
+                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "gender")}
+                  eventFocus={() => handleTouchedControl("gender")}
+                  errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                  hasError={personalDataErrors.gender}
+                />
               </div>
-              <div className="hidden">
+              {/* <div className="hidden">
                 <Input data={{
                   label: 'Estado civil',
                   name: 'civil_status',
@@ -296,16 +412,15 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   typeButton: 'classic',
                   maxlength: '',
                   onPaste: true,
-                  placeholder: '',
-                  autocomplete: 'off',
-                  disabled: false,
-                  alphanumeric: false,
                   alphabetical: true,
-                  onlyNumbers: false,
-                  upperCase: false,
                   pattern: '',
-                }} />
-              </div>
+                }}
+                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "civil_status")}
+                  eventFocus={() => handleTouchedControl("civil_status")}
+                  errorMessage={configControls.errorMessagesStepOneOpenForm.name} 
+                  hasError={personalDataErrors.civil_status}
+                />
+              </div> */}
               <div className="hidden">
                 <Input data={{
                   label: 'Residencia',
@@ -314,15 +429,14 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   typeButton: 'classic',
                   maxlength: '',
                   onPaste: true,
-                  placeholder: '',
-                  autocomplete: 'off',
-                  disabled: false,
-                  alphanumeric: false,
                   alphabetical: true,
-                  onlyNumbers: false,
-                  upperCase: false,
                   pattern: '',
-                }} />
+                }}
+                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "residence")}
+                  eventFocus={() => handleTouchedControl("residence")}
+                  errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                  hasError={personalDataErrors.residence}
+                />
               </div>
               <div className="flex items-center">
                 <Checkbox data={{
@@ -371,6 +485,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
               disabled: false
             }}
             onClick={() => {
+              onSubmit()
             }}
           />
         </div>
