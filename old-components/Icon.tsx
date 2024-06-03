@@ -27,7 +27,7 @@ import student from "@/icons/student.svg";
 import trophy from "@/icons/trophy.svg";
 import work from "@/icons/work.svg";
 import Whatsapp from "@/icons/Whatsapp.svg";
-import Aniversario55 from "@/icons/55_aniversario.svg";
+import Aniversario55 from "@/icons/56_anos.svg";
 import Egresados from "@/icons/egresados.svg";
 import Internacionalizacion from "@/icons/internacionaizacion.svg";
 import Udg from "@/icons/udg.svg";
