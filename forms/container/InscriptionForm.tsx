@@ -110,29 +110,6 @@ const InscriptionForm = (props: InscriptionFormData) => {
   const onSubmit = handleSubmit(() => {
     console.log(personalData)
 
-    const data = {
-      idEndPoint: "48662deb-c14d-453e-9784-70832a7605e0",
-      params: [
-        { "name": "curp", "value": personalData.curp }
-      ]
-    };
-
-    const config = {
-      method: 'post',
-      url: 'https://services.scorce.io/api/apis/consume',
-      headers: {
-        'PublicApiKey': 'f2d61d88-aa49-46fc-a68e-87b246ece007'
-      },
-      data: data
-    };
-
-    axios(config)
-      .then(function (response: { data: any; }) {
-        console.log(JSON.stringify(response.data));
-      })
-      .catch(function (error: any) {
-        console.log(error);
-      });
     Validate()
   })
 
@@ -169,72 +146,13 @@ const InscriptionForm = (props: InscriptionFormData) => {
   return (
 
     <Container>
-      <div className="p-7 shadow-15 rounded-lg">
-        <div className="flex gap-6">
-          <div className="flex flex-col gap-6">
-            <h1 className="font-texts font-bold text-5.5 leading-6">Inicia tu inscripción ahora</h1>
-            <p className="font-texts text-4 font-bold">
-              1. ¿Eres mexicano?
-            </p>
-            <div className="flex gap-3 mb-5">
-              <OptionPill
-                data={{
-                  name: "Si",
-                  search: "",
-                  disabled: false
-                }}
-                active={residance === true}
-                onClick={() => {
-                  setResidance(true)
-                  setNoResidance(false)
-                  setHasCurp(false)
-                  setNoCurp(false)
-                }}
-              />
-              <p className="mt-2"></p>
-              <OptionPill data={{
-                name: "No",
-                search: "",
-                disabled: false
-              }} active={noResidance === true} onClick={() => {
-                setResidance(false)
-                setNoResidance(true)
-              }}
-              />
-            </div>
-          </div>
-          <div className="w-p:hidden">
-            <Image classNamesImg="w-full h-full object-cover" classNames="w-28 h-28 rounded-full overflow-hidden" src="" alt="" />
-          </div>
-        </div>
-        {
-          residance && <>
-            <div className="">
-              <Input data={{
-                label: 'CURP',
-                name: 'curp',
-                type: 'text',
-                typeButton: 'classic',
-                maxlength: '18',
-                onPaste: true,
-                autocomplete: 'off',
-                alphanumeric: true,
-                pattern: '',
-              }}
-                eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "curp")}
-                eventFocus={() => handleTouchedControl("curp")}
-                errorMessage={configControls.errorMessagesStepOneOpenForm.name}
-                hasError={personalDataErrors.curp}
-              />
-            </div>
-            <p className="font-texts text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p>
-          </>
-        }
-        {
-          noResidance && <>
+      <div className="grid grid-cols-2 p-6 gap-6">
+        <div className="p-7 shadow-15 rounded-lg">
+          <div className="flex gap-6">
             <div className="flex flex-col gap-6">
+              <h1 className="font-texts font-bold text-5.5 leading-6">Inicia tu inscripción ahora</h1>
               <p className="font-texts text-4 font-bold">
-                2. ¿Tienes CURP?
+                1. ¿Eres mexicano?
               </p>
               <div className="flex gap-3 mb-5">
                 <OptionPill
@@ -243,9 +161,11 @@ const InscriptionForm = (props: InscriptionFormData) => {
                     search: "",
                     disabled: false
                   }}
-                  active={hasCurp === true}
+                  active={residance === true}
                   onClick={() => {
-                    setHasCurp(true)
+                    setResidance(true)
+                    setNoResidance(false)
+                    setHasCurp(false)
                     setNoCurp(false)
                   }}
                 />
@@ -254,179 +174,237 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   name: "No",
                   search: "",
                   disabled: false
+                }} active={noResidance === true} onClick={() => {
+                  setResidance(false)
+                  setNoResidance(true)
                 }}
-                  active={noCurp === true}
-                  onClick={() => {
-                    setHasCurp(false)
-                    setNoCurp(true)
+                />
+              </div>
+            </div>
+            <div className="w-p:hidden">
+              <Image classNamesImg="w-full h-full object-cover" classNames="w-28 h-28 rounded-full overflow-hidden" src="" alt="" />
+            </div>
+          </div>
+          {
+            residance && <>
+              <div className="">
+                <Input data={{
+                  label: 'CURP',
+                  name: 'curp',
+                  type: 'text',
+                  typeButton: 'classic',
+                  maxlength: '18',
+                  onPaste: true,
+                  autocomplete: 'off',
+                  alphanumeric: true,
+                  pattern: '',
+                }}
+                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "curp")}
+                  eventFocus={() => handleTouchedControl("curp")}
+                  errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                  hasError={personalDataErrors.curp}
+                />
+              </div>
+              <p className="font-texts text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p>
+            </>
+          }
+          {
+            noResidance && <>
+              <div className="flex flex-col gap-6">
+                <p className="font-texts text-4 font-bold">
+                  2. ¿Tienes CURP?
+                </p>
+                <div className="flex gap-3 mb-5">
+                  <OptionPill
+                    data={{
+                      name: "Si",
+                      search: "",
+                      disabled: false
+                    }}
+                    active={hasCurp === true}
+                    onClick={() => {
+                      setHasCurp(true)
+                      setNoCurp(false)
+                    }}
+                  />
+                  <p className="mt-2"></p>
+                  <OptionPill data={{
+                    name: "No",
+                    search: "",
+                    disabled: false
                   }}
-                />
+                    active={noCurp === true}
+                    onClick={() => {
+                      setHasCurp(false)
+                      setNoCurp(true)
+                    }}
+                  />
+                </div>
               </div>
-            </div>
-          </>
-        }
-        {
-          hasCurp && <>
-            <div className="">
-              <Input data={{
-                label: 'CURP',
-                name: 'curp',
-                type: 'text',
-                typeButton: 'classic',
-                maxlength: '18',
-                onPaste: true,
-                alphanumeric: true,
-                pattern: '',
-              }}
-                eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "curp")}
-                eventFocus={() => handleTouchedControl("curp")}
-                errorMessage={configControls.errorMessagesStepOneOpenForm.name}
-                hasError={personalDataErrors.curp}
-              />
-            </div>
-            <p className="font-texts text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p></>
-        }
-        {
-          noCurp && <>
-            <div className="grid grid-cols-2 gap-x-6 gap-y-3">
-              <div className="col-span-2">
-                <Input data={{
-                  label: 'Nombre(s)',
-                  name: 'name',
-                  type: 'text',
-                  typeButton: 'classic',
-                  maxlength: '',
-                  onPaste: true,
-                  alphabetical: true,
-                  pattern: '',
-                }}
-                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "name")}
-                  eventFocus={() => handleTouchedControl("name")}
-                  errorMessage={configControls.errorMessagesStepOneOpenForm.name}
-                  hasError={personalDataErrors.name}
-                />
-              </div>
+            </>
+          }
+          {
+            hasCurp && <>
               <div className="">
                 <Input data={{
-                  label: 'Apellido paterno',
-                  name: 'last_name',
+                  label: 'CURP',
+                  name: 'curp',
                   type: 'text',
                   typeButton: 'classic',
-                  maxlength: '',
+                  maxlength: '18',
                   onPaste: true,
-                  alphabetical: true,
+                  alphanumeric: true,
                   pattern: '',
                 }}
-                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "last_name")}
-                  eventFocus={() => handleTouchedControl("last_name")}
+                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "curp")}
+                  eventFocus={() => handleTouchedControl("curp")}
                   errorMessage={configControls.errorMessagesStepOneOpenForm.name}
-                  hasError={personalDataErrors.last_name}
+                  hasError={personalDataErrors.curp}
                 />
               </div>
-              <div className="">
-                <Input data={{
-                  label: 'Apellido materno',
-                  name: 'second_last_name',
-                  type: 'text',
-                  typeButton: 'classic',
-                  maxlength: '',
-                  onPaste: true,
-                  alphabetical: true,
-                  pattern: '',
-                }}
-                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "second_last_name")}
-                  eventFocus={() => handleTouchedControl("second_last_name")}
-                  errorMessage={configControls.errorMessagesStepOneOpenForm.name}
-                  hasError={personalDataErrors.second_last_name}
-                />
-              </div>
+              <p className="font-texts text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p></>
+          }
+          {
+            noCurp && <>
+              <div className="grid grid-cols-2 gap-x-6 gap-y-3">
+                <div className="col-span-2">
+                  <Input data={{
+                    label: 'Nombre(s)',
+                    name: 'name',
+                    type: 'text',
+                    typeButton: 'classic',
+                    maxlength: '',
+                    onPaste: true,
+                    alphabetical: true,
+                    pattern: '',
+                  }}
+                    eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "name")}
+                    eventFocus={() => handleTouchedControl("name")}
+                    errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                    hasError={personalDataErrors.name}
+                  />
+                </div>
+                <div className="">
+                  <Input data={{
+                    label: 'Apellido paterno',
+                    name: 'last_name',
+                    type: 'text',
+                    typeButton: 'classic',
+                    maxlength: '',
+                    onPaste: true,
+                    alphabetical: true,
+                    pattern: '',
+                  }}
+                    eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "last_name")}
+                    eventFocus={() => handleTouchedControl("last_name")}
+                    errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                    hasError={personalDataErrors.last_name}
+                  />
+                </div>
+                <div className="">
+                  <Input data={{
+                    label: 'Apellido materno',
+                    name: 'second_last_name',
+                    type: 'text',
+                    typeButton: 'classic',
+                    maxlength: '',
+                    onPaste: true,
+                    alphabetical: true,
+                    pattern: '',
+                  }}
+                    eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "second_last_name")}
+                    eventFocus={() => handleTouchedControl("second_last_name")}
+                    errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                    hasError={personalDataErrors.second_last_name}
+                  />
+                </div>
 
-              <div className="">
-                <Input data={{
-                  label: 'Correo electrónico',
-                  name: 'email',
-                  type: 'text',
-                  typeButton: 'classic',
-                  maxlength: '',
-                  onPaste: true,
-                  alphanumeric: false,
-                  pattern: '',
-                }}
-                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "email")}
-                  eventFocus={() => handleTouchedControl("email")}
-                  errorMessage={configControls.errorMessagesStepOneOpenForm.name}
-                  hasError={personalDataErrors.email}
-                />
-              </div>
-              <div className="">
-                <Input data={{
-                  label: 'Celular',
-                  name: 'phone',
-                  type: 'text',
-                  typeButton: 'classic',
-                  maxlength: '10',
-                  onPaste: true,
-                  onlyNumbers: true,
-                  pattern: '',
-                }}
-                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "phone")}
-                  eventFocus={() => handleTouchedControl("phone")}
-                  errorMessage={configControls.errorMessagesStepOneOpenForm.name}
-                  hasError={personalDataErrors.phone}
-                />
-              </div>
-              <div className="col-span-2">
-                <Input data={{
-                  label: '',
-                  name: 'birthdate',
-                  type: 'date',
-                  typeButton: 'classic',
-                  maxlength: '',
-                  onPaste: true,
-                  alphabetical: true,
-                  pattern: '',
-                }}
-                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "birthdate")}
-                  eventFocus={() => handleTouchedControl("birthdate")}
-                  errorMessage={configControls.errorMessagesStepOneOpenForm.name}
-                  hasError={personalDataErrors.birthdate}
-                />
-              </div>
-              <div className="">
-                <Input data={{
-                  label: 'Lugar de nacimiento',
-                  name: 'birth_entity',
-                  type: 'text',
-                  typeButton: 'classic',
-                  maxlength: '',
-                  onPaste: true,
-                  alphabetical: true,
-                  pattern: '',
-                }}
-                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "birth_entity")}
-                  eventFocus={() => handleTouchedControl("birth_entity")}
-                  errorMessage={configControls.errorMessagesStepOneOpenForm.name}
-                  hasError={personalDataErrors.birth_entity}
-                />
-              </div>
-              <div className="">
-                <Input data={{
-                  label: 'Género',
-                  name: 'gender',
-                  type: 'text',
-                  typeButton: 'classic',
-                  maxlength: '',
-                  onPaste: true,
-                  alphabetical: true,
-                  pattern: '',
-                }}
-                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "gender")}
-                  eventFocus={() => handleTouchedControl("gender")}
-                  errorMessage={configControls.errorMessagesStepOneOpenForm.name}
-                  hasError={personalDataErrors.gender}
-                />
-              </div>
-              {/* <div className="hidden">
+                <div className="">
+                  <Input data={{
+                    label: 'Correo electrónico',
+                    name: 'email',
+                    type: 'text',
+                    typeButton: 'classic',
+                    maxlength: '',
+                    onPaste: true,
+                    alphanumeric: false,
+                    pattern: '',
+                  }}
+                    eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "email")}
+                    eventFocus={() => handleTouchedControl("email")}
+                    errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                    hasError={personalDataErrors.email}
+                  />
+                </div>
+                <div className="">
+                  <Input data={{
+                    label: 'Celular',
+                    name: 'phone',
+                    type: 'text',
+                    typeButton: 'classic',
+                    maxlength: '10',
+                    onPaste: true,
+                    onlyNumbers: true,
+                    pattern: '',
+                  }}
+                    eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "phone")}
+                    eventFocus={() => handleTouchedControl("phone")}
+                    errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                    hasError={personalDataErrors.phone}
+                  />
+                </div>
+                <div className="col-span-2">
+                  <Input data={{
+                    label: '',
+                    name: 'birthdate',
+                    type: 'date',
+                    typeButton: 'classic',
+                    maxlength: '',
+                    onPaste: true,
+                    alphabetical: true,
+                    pattern: '',
+                  }}
+                    eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "birthdate")}
+                    eventFocus={() => handleTouchedControl("birthdate")}
+                    errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                    hasError={personalDataErrors.birthdate}
+                  />
+                </div>
+                <div className="">
+                  <Input data={{
+                    label: 'Lugar de nacimiento',
+                    name: 'birth_entity',
+                    type: 'text',
+                    typeButton: 'classic',
+                    maxlength: '',
+                    onPaste: true,
+                    alphabetical: true,
+                    pattern: '',
+                  }}
+                    eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "birth_entity")}
+                    eventFocus={() => handleTouchedControl("birth_entity")}
+                    errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                    hasError={personalDataErrors.birth_entity}
+                  />
+                </div>
+                <div className="">
+                  <Input data={{
+                    label: 'Género',
+                    name: 'gender',
+                    type: 'text',
+                    typeButton: 'classic',
+                    maxlength: '',
+                    onPaste: true,
+                    alphabetical: true,
+                    pattern: '',
+                  }}
+                    eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "gender")}
+                    eventFocus={() => handleTouchedControl("gender")}
+                    errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                    hasError={personalDataErrors.gender}
+                  />
+                </div>
+                {/* <div className="hidden">
                 <Input data={{
                   label: 'Estado civil',
                   name: 'civil_status',
@@ -443,79 +421,104 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   hasError={personalDataErrors.civil_status}
                 />
               </div> */}
-              <div className="hidden">
-                <Input data={{
-                  label: 'Residencia',
-                  name: 'residence',
-                  type: 'text',
-                  typeButton: 'classic',
-                  maxlength: '',
-                  onPaste: true,
-                  alphabetical: true,
-                  pattern: '',
-                }}
-                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "residence")}
-                  eventFocus={() => handleTouchedControl("residence")}
-                  errorMessage={configControls.errorMessagesStepOneOpenForm.name}
-                  hasError={personalDataErrors.residence}
-                />
-              </div>
-              <div className="flex items-center">
-                <Checkbox data={{
-                  name: "adviser",
-                  disabled: false,
-                  label: "",
-                  selected: false,
-                  tagOnCheck: undefined,
-                  value: ""
-                }} onCheck={() => {
-                  setAdviser(!adviser)
-                }} />
-                <p className="font-texts font-bold">¿Tuviste ayuda de algún asesor? <span className="font-normal text-surface-500">(Opcional)</span></p>
-              </div>
-              {
-                adviser &&
-                <div className="col-span-2">
+                <div className="hidden">
                   <Input data={{
-                    label: 'Nombre del asesor',
+                    label: 'Residencia',
                     name: 'residence',
                     type: 'text',
                     typeButton: 'classic',
                     maxlength: '',
                     onPaste: true,
-                    placeholder: '',
-                    autocomplete: 'off',
-                    disabled: false,
-                    alphanumeric: false,
                     alphabetical: true,
-                    onlyNumbers: false,
-                    upperCase: false,
                     pattern: '',
-                  }} />
+                  }}
+                    eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "residence")}
+                    eventFocus={() => handleTouchedControl("residence")}
+                    errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                    hasError={personalDataErrors.residence}
+                  />
                 </div>
-              }
-            </div>
-          </>
-        }
-        <div className="flex flex-col mb-6 mt-2">
-          <Button
-            dark
-            data={{
-              type: "primary",
-              title: "Inscribirme ahora",
-              isExpand: true,
-              disabled: false
-            }}
-            onClick={() => {
-              onSubmit()
-            }}
-          />
+                <div className="flex items-center">
+                  <Checkbox data={{
+                    name: "adviser",
+                    disabled: false,
+                    label: "",
+                    selected: false,
+                    tagOnCheck: undefined,
+                    value: ""
+                  }} onCheck={() => {
+                    setAdviser(!adviser)
+                  }} />
+                  <p className="font-texts font-bold">¿Tuviste ayuda de algún asesor? <span className="font-normal text-surface-500">(Opcional)</span></p>
+                </div>
+                {
+                  adviser &&
+                  <div className="col-span-2">
+                    <Input data={{
+                      label: 'Nombre del asesor',
+                      name: 'residence',
+                      type: 'text',
+                      typeButton: 'classic',
+                      maxlength: '',
+                      onPaste: true,
+                      placeholder: '',
+                      autocomplete: 'off',
+                      disabled: false,
+                      alphanumeric: false,
+                      alphabetical: true,
+                      onlyNumbers: false,
+                      upperCase: false,
+                      pattern: '',
+                    }} />
+                  </div>
+                }
+              </div>
+            </>
+          }
+          <div className="flex flex-col mb-6 mt-2">
+            <Button
+              dark
+              data={{
+                type: "primary",
+                title: "Inscribirme ahora",
+                isExpand: true,
+                disabled: false
+              }}
+              onClick={() => {
+                onSubmit()
+              }}
+            />
+          </div>
+          <div className="flex">
+            <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">Al llenar tus datos aceptas nuestro</p>
+            <Link href="#" passHref target={"_blank"}>
+              <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">Aviso de Privacidad</p>
+            </Link>
+          </div>
         </div>
-        <div className="flex">
-          <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">Al llenar tus datos aceptas nuestro</p>
-          <Link href="#" passHref target={"_blank"}>
-            <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">Aviso de Privacidad</p>
-          </Link>
+        <div>
+          <div className="border border-surface-300 rounded-lg p-4">
+            <h3 className="font-texts font-bold text-5.5 leading-6">Diplomado en Análisis de Datos</h3>
+            <p className="text-white bg-primary-500 w-23 px-2 py-1 rounded-full text-center my-3">En línea</p>
+            <hr className="text-surface-300" />
+            <div className="flex justify-between mt-2">
+              <p>Opción de pago:</p>
+              <p className="text-surface-500">3 parcialidades</p>
+            </div>
+            <div className="flex justify-between my-1">
+              <p>Parcialidades:</p>
+              <p className="text-surface-500">$1,523.00 MXN</p>
+            </div>
+            <div className="flex justify-between mb-2">
+              <p>Costo total:</p>
+              <p className="text-surface-500">$4,569.00 MXN</p>
+            </div>
+            <hr className="text-surface-300" />
+            <div className="flex justify-between mt-2">
+              <p className="font-texts font-bold text-base leading-6">Parcialidad a pagar:</p>
+              <p className="text-base font-bold">$1,523.00 MXN</p>
+            </div>
+          </div>
         </div>
       </div>
     </Container>
