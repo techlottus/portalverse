@@ -9,13 +9,14 @@ import Checkbox from "@/old-components/Checkbox";
 import configControls from "@/forms/fixtures/controls"
 import { useForm } from "react-hook-form";
 
+const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
+const curpEndPoint = process.env.NEXT_PUBLIC_CURP_ID_END_POINT!;
 
 type InscriptionFormData = {
 
 }
 
 const InscriptionForm = (props: InscriptionFormData) => {
-
 
   const {
     handleSubmit,
@@ -90,9 +91,9 @@ const InscriptionForm = (props: InscriptionFormData) => {
     const newPersonalDataErrors = {
       name: !validatePersonalDataControl("name", personalData.name) && personalDataTouched.name,
       last_name: !validatePersonalDataControl("last_name", personalData.last_name) && personalDataTouched.last_name,
+      second_last_name: !validatePersonalDataControl("second_last_name", personalData.second_last_name) && personalDataTouched.second_last_name,
       phone: !validatePersonalDataControl("phone", personalData.phone) && personalDataTouched.phone,
       email: !validatePersonalDataControl("email", personalData.email) && personalDataTouched.email,
-      second_last_name: !validatePersonalDataControl("second_last_name", personalData.second_last_name) && personalDataTouched.second_last_name,
       birthdate: !validatePersonalDataControl("birthdate", personalData.birthdate) && personalDataTouched.birthdate,
       birth_entity: !validatePersonalDataControl("birth_entity", personalData.birth_entity) && personalDataTouched.birth_entity,
       gender: !validatePersonalDataControl("gender", personalData.gender) && personalDataTouched.gender,
@@ -110,6 +111,23 @@ const InscriptionForm = (props: InscriptionFormData) => {
   const onSubmit = handleSubmit(() => {
     console.log(personalData)
 
+    axios.post(`https://${businessUnit.toLowerCase() + curpEndPoint}/curp/validate`, {
+      curp: personalData?.curp,
+    })
+    .then(function (response: any) {
+      console.log(response, "response");
+      personalData.name = response?.data?.nombre;
+      personalData.last_name = response?.data?.apellidoPaterno;
+      personalData.second_last_name = response?.data?.apellidoMaterno;
+      personalData.birthdate = response?.data?.fechaNacimiento;
+      personalData.birth_entity = response?.data?.paisNacimiento;
+      personalData.gender = response?.data?.sexo;
+      personalData.curp = response?.data?.curp
+    })
+    .catch(function (error: any) {
+      console.log(error, "error");
+    });
+    console.log(personalData, "curp request")
     Validate()
   })
 
@@ -265,7 +283,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
               <p className="font-texts text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p></>
           }
           {
-            noCurp && <>
+            /* noCurp &&  */<>
               <div className="grid grid-cols-2 gap-x-6 gap-y-3">
                 <div className="col-span-2">
                   <Input data={{
