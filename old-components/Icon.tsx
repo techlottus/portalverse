@@ -27,7 +27,7 @@ import student from "@/icons/student.svg";
 import trophy from "@/icons/trophy.svg";
 import work from "@/icons/work.svg";
 import Whatsapp from "@/icons/Whatsapp.svg";
-import Aniversario55 from "@/icons/56_anos.svg";
+import Aniversario56 from "@/icons/56_anos.svg";
 import Egresados from "@/icons/egresados.svg";
 import Internacionalizacion from "@/icons/internacionaizacion.svg";
 import Udg from "@/icons/udg.svg";
@@ -83,7 +83,7 @@ const iconTypes: any = {
   studentIcon: student,
   workIcon: work,
   whatsapp: Whatsapp,
-  aniversario55: Aniversario55,
+  aniversario56: Aniversario56,
   egresados: Egresados,
   internacionalizacion: Internacionalizacion,
   udg: Udg,
