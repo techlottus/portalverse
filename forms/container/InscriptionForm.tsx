@@ -18,12 +18,8 @@ const InscriptionForm = (props: InscriptionFormData) => {
 
 
   const {
-    register,
     handleSubmit,
     formState: { errors },
-    watch,
-    setValue,
-    reset,
   } = useForm({
 
   });
@@ -111,8 +107,32 @@ const InscriptionForm = (props: InscriptionFormData) => {
     setIsValid(isValidPersonalData)
   }
 
-  const onSubmit = handleSubmit((data) => {
+  const onSubmit = handleSubmit(() => {
     console.log(personalData)
+
+    const data = {
+      idEndPoint: "48662deb-c14d-453e-9784-70832a7605e0",
+      params: [
+        { "name": "curp", "value": personalData.curp }
+      ]
+    };
+
+    const config = {
+      method: 'post',
+      url: 'https://services.scorce.io/api/apis/consume',
+      headers: {
+        'PublicApiKey': 'f2d61d88-aa49-46fc-a68e-87b246ece007'
+      },
+      data: data
+    };
+
+    axios(config)
+      .then(function (response: { data: any; }) {
+        console.log(JSON.stringify(response.data));
+      })
+      .catch(function (error: any) {
+        console.log(error);
+      });
     Validate()
   })
 
@@ -129,7 +149,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
     const genero = personalData?.gender;
     const residence = personalData?.residence;
     const curp = personalData?.curp;
-    
+
     const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&apellidoMaterno=${apellidoMaterno}&email=${email}&telefono=${telefono}&fechaNacimiento=${fechaNacimiento}&lugarNacimiento=${lugarNacimiento}&genero=${genero}&residence=${residence}&curp=${curp}`;
     console.log("params", params)
   }
@@ -143,6 +163,8 @@ const InscriptionForm = (props: InscriptionFormData) => {
   const handleTouchedControl = (control: string) => {
     setPersonalDataTouched({ ...personalDataTouched, [control]: true });
   }
+
+  const axios = require('axios');
 
   return (
 
