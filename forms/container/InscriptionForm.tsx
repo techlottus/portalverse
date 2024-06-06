@@ -192,44 +192,41 @@ const InscriptionForm = (props: InscriptionFormData) => {
   return (
 
     <Container>
-      <div className="grid grid-cols-2 p-6 gap-6">
-        <div className="p-7 rounded-lg">
-          <div className="flex gap-6">
-            <div className="flex flex-col gap-6">
-              <h3 className="font-texts font-bold text-5.5 leading-6">Estás a punto de iniciar tu curso</h3>
-              <p className="text-surface-500 font-texts">Te pedimos llenar tus datos como estudiante para inscribirte</p>
-              <p className="font-texts text-4 font-bold">
-                1. ¿Eres mexicano?
-              </p>
-              <div className="flex gap-3 mb-5">
-                <OptionPill
-                  data={{
-                    name: "Si",
-                    search: "",
-                    disabled: false
-                  }}
-                  active={residance === true}
-                  onClick={() => {
-                    setResidance(true)
-                    setNoResidance(false)
-                    setHasCurp(false)
-                    setNoCurp(false)
-                  }}
-                />
-                <p className="mt-2"></p>
-                <OptionPill data={{
-                  name: "No",
+      <div className="grid grid-cols-2 p-6 gap-x-30">
+        <div className="mobile:col-span-2 mb-4">
+          <div className="flex flex-col gap-6">
+            <div>
+              <h3 className="font-headings font-bold text-5.5 leading-6 mobile:text-lg">Estás a punto de iniciar tu curso</h3>
+              <p className="text-surface-500 font-texts text-base mobile:text-sm mt-1">Te pedimos llenar tus datos como estudiante para inscribirte</p>
+            </div>
+            <p className="font-headings text-4 font-bold">
+              1. ¿Eres mexicano?
+            </p>
+            <div className="flex gap-3 mb-5">
+              <OptionPill
+                data={{
+                  name: "Si",
                   search: "",
                   disabled: false
-                }} active={noResidance === true} onClick={() => {
-                  setResidance(false)
-                  setNoResidance(true)
                 }}
-                />
-              </div>
-            </div>
-            <div className="w-p:hidden">
-              <Image classNamesImg="w-full h-full object-cover" classNames="w-28 h-28 rounded-full overflow-hidden" src="" alt="" />
+                active={residance === true}
+                onClick={() => {
+                  setResidance(true)
+                  setNoResidance(false)
+                  setHasCurp(false)
+                  setNoCurp(false)
+                }}
+              />
+              <p className="mt-2"></p>
+              <OptionPill data={{
+                name: "No",
+                search: "",
+                disabled: false
+              }} active={noResidance === true} onClick={() => {
+                setResidance(false)
+                setNoResidance(true)
+              }}
+              />
             </div>
           </div>
           {
@@ -258,7 +255,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
           {
             noResidance && <>
               <div className="flex flex-col gap-6">
-                <p className="font-texts text-4 font-bold">
+                <p className="font-headings text-4 font-bold">
                   2. ¿Tienes CURP?
                 </p>
                 <div className="flex gap-3 mb-5">
@@ -420,22 +417,24 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   <Select options={[{
                     value: "male",
                     text: "Masculino",
-                    active: true
+                    active: false
                   }, {
                     value: "female",
                     text: "Femenino",
-                    active: true
+                    active: false
                   }, {
                     value: "other",
                     text: "Otro",
-                    active: true
+                    active: false
                   }]} data={{
                     textDefault: "Género",
                     disabled: false,
                     icon: " ",
-                    isLabel: undefined,
+                    isLabel: true,
                     reset: false,
-                    zindexOptions: 0
+                    zindexOptions: 10,
+                    tagOnClickList: 'testOnClickList',
+                    tagOnClickOption: 'testOnClickOption',
                   }} onClick={(option: CustomEvent) => handleSelect(option, "gender")} />
                 </div>
                 <div className="hidden">
@@ -492,36 +491,16 @@ const InscriptionForm = (props: InscriptionFormData) => {
               </div>
             </>
           }
-          <div className="flex flex-col mb-6 mt-2">
-            <Button
-              dark
-              data={{
-                type: "primary",
-                title: "Inscribirme ahora",
-                isExpand: true,
-                disabled: false
-              }}
-              onClick={() => {
-                onSubmit()
-              }}
-            />
-          </div>
-          <div className="flex">
-            <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">Al llenar tus datos aceptas nuestro</p>
-            <Link href="#" passHref target={"_blank"}>
-              <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">Aviso de Privacidad</p>
-            </Link>
-          </div>
           <div className="flex items-end">
             <span className="material-symbols-outlined select-none text-primary-500 text-4.5!">chevron_left</span>
-            <Link href="#" passHref target={"_blank"}>
+            <Link className="" href="#" passHref target={"_blank"}>
               <p className="text-3.5 font-texts font-bold text-sm text-primary-500 mt-3">Atrás</p>
             </Link>
           </div>
         </div>
-        <div>
+        <div className="mobile:col-span-2">
           <div className="border border-surface-300 rounded-lg p-4">
-            <h3 className="font-texts font-bold text-5.5 leading-6">Diplomado en Análisis de Datos</h3>
+            <h3 className="font-headings font-bold text-5.5 leading-6">Diplomado en Análisis de Datos</h3>
             <p className="text-white bg-primary-500 w-23 px-2 py-1 rounded-full text-center my-3">En línea</p>
             <hr className="text-surface-300" />
             <div className="flex justify-between mt-2">
@@ -541,6 +520,26 @@ const InscriptionForm = (props: InscriptionFormData) => {
               <p className="font-texts font-bold text-base leading-6">Parcialidad a pagar:</p>
               <p className="text-base font-bold">$1,523.00 MXN</p>
             </div>
+          </div>
+          <div className="flex flex-col my-6">
+            <Button
+              dark
+              data={{
+                type: "primary",
+                title: "Inscribirme ahora",
+                isExpand: true,
+                disabled: false
+              }}
+              onClick={() => {
+                onSubmit()
+              }}
+            />
+          </div>
+          <div className="flex">
+            <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">Al llenar tus datos aceptas nuestro</p>
+            <Link href="#" passHref target={"_blank"}>
+              <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">Aviso de Privacidad</p>
+            </Link>
           </div>
         </div>
       </div>
