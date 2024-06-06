@@ -8,6 +8,7 @@ import Button from "@/old-components/Button/Button";
 import Checkbox from "@/old-components/Checkbox";
 import configControls from "@/forms/fixtures/controls"
 import { useForm } from "react-hook-form";
+import Select from "@/old-components/Select/Select";
 
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
 const curpEndPoint = process.env.NEXT_PUBLIC_CURP_ID_END_POINT!;
@@ -114,19 +115,19 @@ const InscriptionForm = (props: InscriptionFormData) => {
     axios.post(`https://${businessUnit.toLowerCase() + curpEndPoint}/curp/validate`, {
       curp: personalData?.curp,
     })
-    .then(function (response: any) {
-      console.log(response, "response");
-      personalData.name = response?.data?.nombre;
-      personalData.last_name = response?.data?.apellidoPaterno;
-      personalData.second_last_name = response?.data?.apellidoMaterno;
-      personalData.birthdate = response?.data?.fechaNacimiento;
-      personalData.birth_entity = response?.data?.paisNacimiento;
-      personalData.gender = response?.data?.sexo;
-      personalData.curp = response?.data?.curp
-    })
-    .catch(function (error: any) {
-      console.log(error, "error");
-    });
+      .then(function (response: any) {
+        console.log(response, "response");
+        personalData.name = response?.data?.nombre;
+        personalData.last_name = response?.data?.apellidoPaterno;
+        personalData.second_last_name = response?.data?.apellidoMaterno;
+        personalData.birthdate = response?.data?.fechaNacimiento;
+        personalData.birth_entity = response?.data?.paisNacimiento;
+        personalData.gender = response?.data?.sexo;
+        personalData.curp = response?.data?.curp
+      })
+      .catch(function (error: any) {
+        console.log(error, "error");
+      });
     console.log(personalData, "curp request")
     Validate()
   })
@@ -149,6 +150,33 @@ const InscriptionForm = (props: InscriptionFormData) => {
     console.log("params", params)
   }
 
+  const optionsGender = [
+    {
+      value: "male",
+      text: "Masculino",
+      active: true
+    }, {
+      value: "female",
+      text: "Femenino",
+      active: true
+    }, {
+      value: "other",
+      text: "Otro",
+      active: true
+    }
+  ]
+
+  const handleSelect = (e: CustomEvent, control: string) => {
+    const { detail } = e;
+
+    const option = optionsGender?.map((option: any) => {
+      // console.log(option);
+      option.active = option.value === detail
+
+      return option
+    })
+  };
+
   const handleKeyPress = (e: CustomEvent, control: string) => {
     const { detail: { value } } = e;
     setPersonalDataTouched({ ...personalDataTouched, [control]: true });
@@ -165,10 +193,11 @@ const InscriptionForm = (props: InscriptionFormData) => {
 
     <Container>
       <div className="grid grid-cols-2 p-6 gap-6">
-        <div className="p-7 shadow-15 rounded-lg">
+        <div className="p-7 rounded-lg">
           <div className="flex gap-6">
             <div className="flex flex-col gap-6">
-              <h1 className="font-texts font-bold text-5.5 leading-6">Inicia tu inscripción ahora</h1>
+              <h3 className="font-texts font-bold text-5.5 leading-6">Estás a punto de iniciar tu curso</h3>
+              <p className="text-surface-500 font-texts">Te pedimos llenar tus datos como estudiante para inscribirte</p>
               <p className="font-texts text-4 font-bold">
                 1. ¿Eres mexicano?
               </p>
@@ -219,7 +248,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                 }}
                   eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "curp")}
                   eventFocus={() => handleTouchedControl("curp")}
-                  errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                  errorMessage={configControls.errorMessagesInscriptionForm.name}
                   hasError={personalDataErrors.curp}
                 />
               </div>
@@ -276,14 +305,14 @@ const InscriptionForm = (props: InscriptionFormData) => {
                 }}
                   eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "curp")}
                   eventFocus={() => handleTouchedControl("curp")}
-                  errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                  errorMessage={configControls.errorMessagesInscriptionForm.name}
                   hasError={personalDataErrors.curp}
                 />
               </div>
               <p className="font-texts text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p></>
           }
           {
-            /* noCurp &&  */<>
+            noCurp && <>
               <div className="grid grid-cols-2 gap-x-6 gap-y-3">
                 <div className="col-span-2">
                   <Input data={{
@@ -298,7 +327,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   }}
                     eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "name")}
                     eventFocus={() => handleTouchedControl("name")}
-                    errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                    errorMessage={configControls.errorMessagesInscriptionForm.name}
                     hasError={personalDataErrors.name}
                   />
                 </div>
@@ -315,7 +344,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   }}
                     eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "last_name")}
                     eventFocus={() => handleTouchedControl("last_name")}
-                    errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                    errorMessage={configControls.errorMessagesInscriptionForm.surname}
                     hasError={personalDataErrors.last_name}
                   />
                 </div>
@@ -332,11 +361,10 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   }}
                     eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "second_last_name")}
                     eventFocus={() => handleTouchedControl("second_last_name")}
-                    errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                    errorMessage={configControls.errorMessagesInscriptionForm.name}
                     hasError={personalDataErrors.second_last_name}
                   />
                 </div>
-
                 <div className="">
                   <Input data={{
                     label: 'Correo electrónico',
@@ -350,7 +378,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   }}
                     eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "email")}
                     eventFocus={() => handleTouchedControl("email")}
-                    errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                    errorMessage={configControls.errorMessagesInscriptionForm.email}
                     hasError={personalDataErrors.email}
                   />
                 </div>
@@ -367,11 +395,11 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   }}
                     eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "phone")}
                     eventFocus={() => handleTouchedControl("phone")}
-                    errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                    errorMessage={configControls.errorMessagesInscriptionForm.phone}
                     hasError={personalDataErrors.phone}
                   />
                 </div>
-                <div className="col-span-2">
+                <div className="">
                   <Input data={{
                     label: '',
                     name: 'birthdate',
@@ -384,61 +412,32 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   }}
                     eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "birthdate")}
                     eventFocus={() => handleTouchedControl("birthdate")}
-                    errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                    errorMessage={configControls.errorMessagesInscriptionForm.birthdate}
                     hasError={personalDataErrors.birthdate}
                   />
                 </div>
-                <div className="">
-                  <Input data={{
-                    label: 'Lugar de nacimiento',
-                    name: 'birth_entity',
-                    type: 'text',
-                    typeButton: 'classic',
-                    maxlength: '',
-                    onPaste: true,
-                    alphabetical: true,
-                    pattern: '',
-                  }}
-                    eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "birth_entity")}
-                    eventFocus={() => handleTouchedControl("birth_entity")}
-                    errorMessage={configControls.errorMessagesStepOneOpenForm.name}
-                    hasError={personalDataErrors.birth_entity}
-                  />
+                <div className="mt-[-1em]">
+                  <Select options={[{
+                    value: "male",
+                    text: "Masculino",
+                    active: true
+                  }, {
+                    value: "female",
+                    text: "Femenino",
+                    active: true
+                  }, {
+                    value: "other",
+                    text: "Otro",
+                    active: true
+                  }]} data={{
+                    textDefault: "Género",
+                    disabled: false,
+                    icon: " ",
+                    isLabel: undefined,
+                    reset: false,
+                    zindexOptions: 0
+                  }} onClick={(option: CustomEvent) => handleSelect(option, "gender")} />
                 </div>
-                <div className="">
-                  <Input data={{
-                    label: 'Género',
-                    name: 'gender',
-                    type: 'text',
-                    typeButton: 'classic',
-                    maxlength: '',
-                    onPaste: true,
-                    alphabetical: true,
-                    pattern: '',
-                  }}
-                    eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "gender")}
-                    eventFocus={() => handleTouchedControl("gender")}
-                    errorMessage={configControls.errorMessagesStepOneOpenForm.name}
-                    hasError={personalDataErrors.gender}
-                  />
-                </div>
-                {/* <div className="hidden">
-                <Input data={{
-                  label: 'Estado civil',
-                  name: 'civil_status',
-                  type: 'text',
-                  typeButton: 'classic',
-                  maxlength: '',
-                  onPaste: true,
-                  alphabetical: true,
-                  pattern: '',
-                }}
-                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "civil_status")}
-                  eventFocus={() => handleTouchedControl("civil_status")}
-                  errorMessage={configControls.errorMessagesStepOneOpenForm.name} 
-                  hasError={personalDataErrors.civil_status}
-                />
-              </div> */}
                 <div className="hidden">
                   <Input data={{
                     label: 'Residencia',
@@ -452,11 +451,11 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   }}
                     eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "residence")}
                     eventFocus={() => handleTouchedControl("residence")}
-                    errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+                    errorMessage={configControls.errorMessagesInscriptionForm.name}
                     hasError={personalDataErrors.residence}
                   />
                 </div>
-                <div className="flex items-center">
+                <div className="col-span-2 flex items-center">
                   <Checkbox data={{
                     name: "adviser",
                     disabled: false,
@@ -511,6 +510,12 @@ const InscriptionForm = (props: InscriptionFormData) => {
             <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">Al llenar tus datos aceptas nuestro</p>
             <Link href="#" passHref target={"_blank"}>
               <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">Aviso de Privacidad</p>
+            </Link>
+          </div>
+          <div className="flex items-end">
+            <span className="material-symbols-outlined select-none text-primary-500 text-4.5!">chevron_left</span>
+            <Link href="#" passHref target={"_blank"}>
+              <p className="text-3.5 font-texts font-bold text-sm text-primary-500 mt-3">Atrás</p>
             </Link>
           </div>
         </div>
