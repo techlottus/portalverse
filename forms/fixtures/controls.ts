@@ -177,6 +177,16 @@ const errorMessagesFormEgresados = {
   activeCompany: 'Debes seleccionar una opción'
 }
 
+const errorMessagesInscriptionForm = {
+  name: 'Ingresa un nombre',
+  surname: 'Ingresa tus apellidos',
+  email: 'Ingresa un correo electrónico válido',
+  phone: 'Ingresa un teléfono de 10 dígitos',
+  birthdate: 'Ingresa tu fecha de nacimiento',
+  birth_entity: 'Ingresa tu lugar de nacimiento',
+  gender: 'Ingresa tu género'
+}
+
 export default {
   inputConfig,
   buttonConfigStepOne,
@@ -201,5 +211,6 @@ export default {
   errorMessagesStepThreeOpenForm,
   errorMessagesStepOneOpenFormContinuous,
   errorMessagesFormEgresados,
-  inputPasswordOpenFormStepOne
+  inputPasswordOpenFormStepOne,
+  errorMessagesInscriptionForm
 }
