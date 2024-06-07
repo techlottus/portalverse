@@ -518,7 +518,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
           }
           <div className="flex">
             <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">Al llenar tus datos aceptas nuestro</p>
-            <Link href="#" passHref target={"_blank"}>
+            <Link href="terminos-y-condiciones" passHref target={"_blank"}>
               <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">Aviso de Privacidad</p>
             </Link>
           </div>
