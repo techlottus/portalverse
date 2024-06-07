@@ -9,6 +9,8 @@ import configControls from "@/forms/fixtures/controls"
 import { useForm } from "react-hook-form";
 import Select from "@/old-components/Select/Select";
 
+const axios = require('axios');
+
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
 const curpEndPoint = process.env.NEXT_PUBLIC_CURP_ID_END_POINT!;
 
@@ -25,8 +27,8 @@ const InscriptionForm = (props: InscriptionFormData) => {
 
   });
 
-  const [residance, setResidance] = useState<boolean>()
-  const [noResidance, setNoResidance] = useState<boolean>()
+  const [residence, setResidence] = useState<boolean>()
+  const [noResidence, setNoResidence] = useState<boolean>()
   const [hasCurp, setHasCurp] = useState<boolean>()
   const [noCurp, setNoCurp] = useState<boolean>()
   const [adviser, setAdviser] = useState<boolean>()
@@ -121,13 +123,11 @@ const InscriptionForm = (props: InscriptionFormData) => {
       curp: curp,
     })
       .then(function (response: any) {
-        console.log(response, "respuesta")
         personalData.name = response?.data?.nombre;
         personalData.last_name = response?.data?.apellidoPaterno;
         personalData.second_last_name = response?.data?.apellidoMaterno;
         personalData.birthdate = response?.data?.fechaNacimiento;
         personalData.gender = response?.data?.sexo;   
-        console.log(personalData)     
       })
       .catch(function (error: any) {
       });
@@ -168,8 +168,6 @@ const InscriptionForm = (props: InscriptionFormData) => {
     setPersonalDataTouched({ ...personalDataTouched, [control]: true });
   }
 
-  const axios = require('axios');
-
   return (
 
     <Container>
@@ -190,10 +188,10 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   search: "",
                   disabled: false
                 }}
-                active={residance === true}
+                active={residence === true}
                 onClick={() => {
-                  setResidance(true)
-                  setNoResidance(false)
+                  setResidence(true)
+                  setNoResidence(false)
                   setHasCurp(false)
                   setNoCurp(false)
                 }}
@@ -203,15 +201,15 @@ const InscriptionForm = (props: InscriptionFormData) => {
                 name: "No",
                 search: "",
                 disabled: false
-              }} active={noResidance === true} onClick={() => {
-                setResidance(false)
-                setNoResidance(true)
+              }} active={noResidence === true} onClick={() => {
+                setResidence(false)
+                setNoResidence(true)
               }}
               />
             </div>
           </div>
           {
-            residance && <>
+            residence && <>
               <div className="">
                 <Input data={{
                   label: 'CURP*',
@@ -236,7 +234,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
             </>
           }
           {
-            noResidance && <>
+            noResidence && <>
               <div className="flex flex-col gap-6">
                 <p className="font-headings text-4 font-bold">
                   2. ¿Tienes CURP?
@@ -485,7 +483,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
             </div>
           </div>
           {
-            residance &&
+            residence &&
             <div className="flex flex-col my-6">
             <Button
               dark
