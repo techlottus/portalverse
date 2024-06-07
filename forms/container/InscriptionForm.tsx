@@ -30,8 +30,22 @@ const InscriptionForm = (props: InscriptionFormData) => {
   const [hasCurp, setHasCurp] = useState<boolean>()
   const [noCurp, setNoCurp] = useState<boolean>()
   const [adviser, setAdviser] = useState<boolean>()
-  const [submit, setSubmit] = useState(false);
-  const [isValid, setIsValid] = useState(false);
+  const [submit, setSubmit] = useState<boolean>(false);
+  const [isValid, setIsValid] = useState<boolean>(false);
+  const [curp, setCurp] = useState<boolean>();
+  const [optionsGender, setOptionsGender] = useState([{
+    value: "male",
+    text: "Masculino",
+    active: false
+  }, {
+    value: "female",
+    text: "Femenino",
+    active: false
+  }, {
+    value: "other",
+    text: "Otro",
+    active: false
+  }]);
 
   const [personalData, setPersonalData] = useState({
     name: "",
@@ -71,12 +85,11 @@ const InscriptionForm = (props: InscriptionFormData) => {
       return value.trim().length === 10
     }
 
-    return !!value.trim()
+    return !!value?.trim()
   };
 
   const validatePersonalDataControls = () => !Object.entries(personalData).map(([key, value]: any) => {
     const validity = validatePersonalDataControl(key, value)
-    console.log(validity, "validez")
     return validity
   }).includes(false)
 
@@ -88,6 +101,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
       phone: !validatePersonalDataControl("phone", personalData.phone) && personalDataTouched.phone,
       email: !validatePersonalDataControl("email", personalData.email) && personalDataTouched.email,
       birthdate: !validatePersonalDataControl("birthdate", personalData.birthdate) && personalDataTouched.birthdate,
+      gender: !validatePersonalDataControl("gender", personalData.gender) && personalDataTouched.gender,
     }
 
     setPersonalDataErrors({ ...newPersonalDataErrors });
@@ -95,7 +109,6 @@ const InscriptionForm = (props: InscriptionFormData) => {
     const isValidPersonalData = validatePersonalDataControls();
 
     setIsValid(isValidPersonalData)
-    console.log(isValidPersonalData)
   }
 
   useEffect(() => {
@@ -105,15 +118,16 @@ const InscriptionForm = (props: InscriptionFormData) => {
   const onSubmit = handleSubmit(() => {
 
     axios.post(`https://${businessUnit.toLowerCase() + curpEndPoint}/curp/validate`, {
-      curp: personalData?.curp,
+      curp: curp,
     })
       .then(function (response: any) {
+        console.log(response, "respuesta")
         personalData.name = response?.data?.nombre;
         personalData.last_name = response?.data?.apellidoPaterno;
         personalData.second_last_name = response?.data?.apellidoMaterno;
         personalData.birthdate = response?.data?.fechaNacimiento;
-        personalData.gender = response?.data?.sexo;
-        personalData.curp = response?.data?.curp
+        personalData.gender = response?.data?.sexo;   
+        console.log(personalData)     
       })
       .catch(function (error: any) {
       });
@@ -130,38 +144,19 @@ const InscriptionForm = (props: InscriptionFormData) => {
     const telefono = personalData?.phone;
     const fechaNacimiento = personalData?.birthdate;
     const genero = personalData?.gender;
-    const curp = personalData?.curp;
 
     const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&apellidoMaterno=${apellidoMaterno}&email=${email}&telefono=${telefono}&fechaNacimiento=${fechaNacimiento}&genero=${genero}`;
   }
 
-  const optionsGender = [
-    {
-      value: "male",
-      text: "Masculino",
-      active: true
-    }, {
-      value: "female",
-      text: "Femenino",
-      active: true
-    }, {
-      value: "other",
-      text: "Otro",
-      active: true
-    }
-  ]
-
-  const handleSelect = ({ detail }: CustomEvent) => {
+  const handleSelect = async ({ detail }: CustomEvent) => {
     const selectedGender = detail;
-    console.log(selectedGender, "select")
-    const option = optionsGender?.filter((option: any) => {
-      if(option.value === selectedGender){
-        setPersonalDataTouched({ ...personalDataTouched, ["gender"]: true });
-        setPersonalData({ ...personalData, ["gender"]: selectedGender });
-        return option
-      }
+    const selectOptions = optionsGender?.map(option => {
+      return { ...option, active: option?.value === selectedGender }
     })
-  };
+    setOptionsGender(selectOptions)
+    setPersonalDataTouched({ ...personalDataTouched, ["gender"]: true });
+    setPersonalData({ ...personalData, ["gender"]: selectedGender });
+    };
 
   const handleKeyPress = (e: CustomEvent, control: string) => {
     const { detail: { value } } = e;
@@ -228,13 +223,14 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   autocomplete: 'off',
                   alphanumeric: true,
                   pattern: '',
-                  isRequired: true
+                  isRequired: true,
+                  upperCase: true
                 }}
-                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "curp")}
-                  eventFocus={() => handleTouchedControl("curp")}
+                  eventKeyPress={(e: CustomEvent) => {
+                    setCurp(e.detail.value) 
+                  }}
                   errorMessage={configControls.errorMessagesInscriptionForm.name}
-/*                   hasError={personalDataErrors.curp}
- */                />
+                />
               </div>
               <p className="font-texts text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p>
             </>
@@ -284,15 +280,17 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   typeButton: 'classic',
                   maxlength: '18',
                   onPaste: true,
+                  autocomplete: 'off',
                   alphanumeric: true,
                   pattern: '',
-                  isRequired: true
+                  isRequired: true,
+                  upperCase: true
                 }}
-                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "curp")}
-                  eventFocus={() => handleTouchedControl("curp")}
+                  eventKeyPress={(e: CustomEvent) => {
+                    setCurp(e.detail.value) 
+                  }}
                   errorMessage={configControls.errorMessagesInscriptionForm.name}
-/*                   hasError={personalDataErrors.curp}
- */                />
+                />
               </div>
               <p className="font-texts text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p></>
           }
@@ -391,16 +389,15 @@ const InscriptionForm = (props: InscriptionFormData) => {
                 </div>
                 <div className="">
                   <Input data={{
-                    placeholder: "DD/MM/AAAA",
-                    label: 'Fecha de nacimiento*',
+                    placeholder: "",
+                    label: '',
                     name: 'birthdate',
-                    type: 'text',
+                    type: 'date',
                     typeButton: 'classic',
-                    maxlength: '',
                     onPaste: true,
                     pattern: '',
-                    isRequired: true
-                  }}
+                    isRequired: true                
+                  }}              
                     eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "birthdate")}
                     eventFocus={() => handleTouchedControl("birthdate")}
                     errorMessage={configControls.errorMessagesInscriptionForm.birthdate}
@@ -408,19 +405,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   />
                 </div>
                 <div className="mt-[-1em]">
-                  <Select options={[{
-                    value: "male",
-                    text: "Masculino",
-                    active: false
-                  }, {
-                    value: "female",
-                    text: "Femenino",
-                    active: false
-                  }, {
-                    value: "other",
-                    text: "Otro",
-                    active: false
-                  }]} data={{
+                  <Select options={optionsGender} data={{
                     textDefault: "Género*",
                     disabled: false,
                     icon: " ",
@@ -499,7 +484,26 @@ const InscriptionForm = (props: InscriptionFormData) => {
               <p className="text-base font-bold">$1,523.00 MXN</p>
             </div>
           </div>
-          <div className="flex flex-col my-6">
+          {
+            residance &&
+            <div className="flex flex-col my-6">
+            <Button
+              dark
+              data={{
+                type: "primary",
+                title: "Inscribirme ahora",
+                isExpand: true,
+                disabled: false
+              }}
+              onClick={() => {
+                onSubmit()
+              }}
+            />
+          </div>
+          }
+          {
+            noCurp &&
+            <div className="flex flex-col my-6">
             <Button
               dark
               data={{
@@ -513,6 +517,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
               }}
             />
           </div>
+          }
           <div className="flex">
             <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">Al llenar tus datos aceptas nuestro</p>
             <Link href="#" passHref target={"_blank"}>
