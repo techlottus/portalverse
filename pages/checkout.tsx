@@ -4,6 +4,7 @@ import HeaderFooterLayout from "@/layouts/HeaderFooter.layout"
 import ContentFullLayout from "@/layouts/ContentFull.layout"
 import NextPageWithLayout from "@/types/Layout.types"
 import { useEffect, useMemo, useState } from "react"
+import { InscriptionForm } from "@/forms/container/InscriptionForm"
 
 const CheckoutPage: NextPageWithLayout = () => {
 
@@ -110,9 +111,10 @@ const CheckoutPage: NextPageWithLayout = () => {
     </Head>
     <HeaderFooterLayout breadcrumbs={false}>
       <ContentFullLayout>
+      <InscriptionForm />
         <ContentInsideLayout>
           <div className="flex w-full">
-          <div className="w-1/2 h-full mx-auto text-center align-middle">checkout</div>
+          <div className="w-1/2 h-full mx-auto text-center align-middle">checkout</div>          
           <div className="w-1/2 h-full">
           <iframe  width="600px" height="500px" src={flywireLink} title="Flywire form"></iframe></div>
           </div>
@@ -121,6 +123,8 @@ const CheckoutPage: NextPageWithLayout = () => {
     </HeaderFooterLayout>
   </>;
 }
+
+
 
 
 export default CheckoutPage

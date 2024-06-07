@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Input from "@/old-components/Input/Input"
 import Link from "next/link";
-import Image from "@/old-components/Image"
 import Container from "@/layouts/Container.layout";
 import OptionPill from "@/old-components/OptionPill";
 import Button from "@/old-components/Button/Button";
@@ -41,10 +40,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
     email: "",
     phone: "",
     birthdate: "",
-    birth_entity: "",
-    gender: "",
-    residence: "",
-    curp: "",
+    gender: ""
   });
 
   const [personalDataTouched, setPersonalDataTouched] = useState<{ [key: string]: boolean }>({
@@ -54,10 +50,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
     email: false,
     phone: false,
     birthdate: false,
-    birth_entity: false,
     gender: false,
-    residence: false,
-    curp: false,
   })
 
   const [personalDataErrors, setPersonalDataErrors] = useState({
@@ -67,10 +60,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
     email: false,
     phone: false,
     birthdate: false,
-    birth_entity: false,
-    gender: false,
-    residence: false,
-    curp: false,
+    gender: false
   })
 
   const validatePersonalDataControl = (control: string, value: string) => {
@@ -80,11 +70,13 @@ const InscriptionForm = (props: InscriptionFormData) => {
     if (control === 'phone') {
       return value.trim().length === 10
     }
+
     return !!value.trim()
   };
 
   const validatePersonalDataControls = () => !Object.entries(personalData).map(([key, value]: any) => {
     const validity = validatePersonalDataControl(key, value)
+    console.log(validity, "validez")
     return validity
   }).includes(false)
 
@@ -96,10 +88,6 @@ const InscriptionForm = (props: InscriptionFormData) => {
       phone: !validatePersonalDataControl("phone", personalData.phone) && personalDataTouched.phone,
       email: !validatePersonalDataControl("email", personalData.email) && personalDataTouched.email,
       birthdate: !validatePersonalDataControl("birthdate", personalData.birthdate) && personalDataTouched.birthdate,
-      birth_entity: !validatePersonalDataControl("birth_entity", personalData.birth_entity) && personalDataTouched.birth_entity,
-      gender: !validatePersonalDataControl("gender", personalData.gender) && personalDataTouched.gender,
-      residence: !validatePersonalDataControl("residence", personalData.residence) && personalDataTouched.residence,
-      curp: !validatePersonalDataControl("curp", personalData.curp) && personalDataTouched.curp,
     }
 
     setPersonalDataErrors({ ...newPersonalDataErrors });
@@ -107,28 +95,28 @@ const InscriptionForm = (props: InscriptionFormData) => {
     const isValidPersonalData = validatePersonalDataControls();
 
     setIsValid(isValidPersonalData)
+    console.log(isValidPersonalData)
   }
 
+  useEffect(() => {
+    Validate()
+  }, [personalData]);
+
   const onSubmit = handleSubmit(() => {
-    console.log(personalData)
 
     axios.post(`https://${businessUnit.toLowerCase() + curpEndPoint}/curp/validate`, {
       curp: personalData?.curp,
     })
       .then(function (response: any) {
-        console.log(response, "response");
         personalData.name = response?.data?.nombre;
         personalData.last_name = response?.data?.apellidoPaterno;
         personalData.second_last_name = response?.data?.apellidoMaterno;
         personalData.birthdate = response?.data?.fechaNacimiento;
-        personalData.birth_entity = response?.data?.paisNacimiento;
         personalData.gender = response?.data?.sexo;
         personalData.curp = response?.data?.curp
       })
       .catch(function (error: any) {
-        console.log(error, "error");
       });
-    console.log(personalData, "curp request")
     Validate()
   })
 
@@ -141,13 +129,10 @@ const InscriptionForm = (props: InscriptionFormData) => {
     const email = personalData?.email;
     const telefono = personalData?.phone;
     const fechaNacimiento = personalData?.birthdate;
-    const lugarNacimiento = personalData?.birth_entity;
     const genero = personalData?.gender;
-    const residence = personalData?.residence;
     const curp = personalData?.curp;
 
-    const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&apellidoMaterno=${apellidoMaterno}&email=${email}&telefono=${telefono}&fechaNacimiento=${fechaNacimiento}&lugarNacimiento=${lugarNacimiento}&genero=${genero}&residence=${residence}&curp=${curp}`;
-    console.log("params", params)
+    const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&apellidoMaterno=${apellidoMaterno}&email=${email}&telefono=${telefono}&fechaNacimiento=${fechaNacimiento}&genero=${genero}`;
   }
 
   const optionsGender = [
@@ -166,14 +151,15 @@ const InscriptionForm = (props: InscriptionFormData) => {
     }
   ]
 
-  const handleSelect = (e: CustomEvent, control: string) => {
-    const { detail } = e;
-
-    const option = optionsGender?.map((option: any) => {
-      // console.log(option);
-      option.active = option.value === detail
-
-      return option
+  const handleSelect = ({ detail }: CustomEvent) => {
+    const selectedGender = detail;
+    console.log(selectedGender, "select")
+    const option = optionsGender?.filter((option: any) => {
+      if(option.value === selectedGender){
+        setPersonalDataTouched({ ...personalDataTouched, ["gender"]: true });
+        setPersonalData({ ...personalData, ["gender"]: selectedGender });
+        return option
+      }
     })
   };
 
@@ -192,7 +178,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
   return (
 
     <Container>
-      <div className="grid grid-cols-2 p-6 gap-x-30">
+      <div className="grid grid-cols-2 p-6 gap-x-20">
         <div className="mobile:col-span-2 mb-4">
           <div className="flex flex-col gap-6">
             <div>
@@ -233,7 +219,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
             residance && <>
               <div className="">
                 <Input data={{
-                  label: 'CURP',
+                  label: 'CURP*',
                   name: 'curp',
                   type: 'text',
                   typeButton: 'classic',
@@ -242,12 +228,13 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   autocomplete: 'off',
                   alphanumeric: true,
                   pattern: '',
+                  isRequired: true
                 }}
                   eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "curp")}
                   eventFocus={() => handleTouchedControl("curp")}
                   errorMessage={configControls.errorMessagesInscriptionForm.name}
-                  hasError={personalDataErrors.curp}
-                />
+/*                   hasError={personalDataErrors.curp}
+ */                />
               </div>
               <p className="font-texts text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p>
             </>
@@ -291,7 +278,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
             hasCurp && <>
               <div className="">
                 <Input data={{
-                  label: 'CURP',
+                  label: 'CURP*',
                   name: 'curp',
                   type: 'text',
                   typeButton: 'classic',
@@ -299,12 +286,13 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   onPaste: true,
                   alphanumeric: true,
                   pattern: '',
+                  isRequired: true
                 }}
                   eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "curp")}
                   eventFocus={() => handleTouchedControl("curp")}
                   errorMessage={configControls.errorMessagesInscriptionForm.name}
-                  hasError={personalDataErrors.curp}
-                />
+/*                   hasError={personalDataErrors.curp}
+ */                />
               </div>
               <p className="font-texts text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p></>
           }
@@ -313,7 +301,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
               <div className="grid grid-cols-2 gap-x-6 gap-y-3">
                 <div className="col-span-2">
                   <Input data={{
-                    label: 'Nombre(s)',
+                    label: 'Nombre(s)*',
                     name: 'name',
                     type: 'text',
                     typeButton: 'classic',
@@ -321,6 +309,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                     onPaste: true,
                     alphabetical: true,
                     pattern: '',
+                    isRequired: true
                   }}
                     eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "name")}
                     eventFocus={() => handleTouchedControl("name")}
@@ -330,7 +319,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                 </div>
                 <div className="">
                   <Input data={{
-                    label: 'Apellido paterno',
+                    label: 'Apellido paterno*',
                     name: 'last_name',
                     type: 'text',
                     typeButton: 'classic',
@@ -338,6 +327,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                     onPaste: true,
                     alphabetical: true,
                     pattern: '',
+                    isRequired: true
                   }}
                     eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "last_name")}
                     eventFocus={() => handleTouchedControl("last_name")}
@@ -355,6 +345,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                     onPaste: true,
                     alphabetical: true,
                     pattern: '',
+                    isRequired: true
                   }}
                     eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "second_last_name")}
                     eventFocus={() => handleTouchedControl("second_last_name")}
@@ -364,7 +355,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                 </div>
                 <div className="">
                   <Input data={{
-                    label: 'Correo electrónico',
+                    label: 'Correo electrónico*',
                     name: 'email',
                     type: 'text',
                     typeButton: 'classic',
@@ -372,6 +363,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                     onPaste: true,
                     alphanumeric: false,
                     pattern: '',
+                    isRequired: true
                   }}
                     eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "email")}
                     eventFocus={() => handleTouchedControl("email")}
@@ -381,7 +373,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                 </div>
                 <div className="">
                   <Input data={{
-                    label: 'Celular',
+                    label: 'Celular*',
                     name: 'phone',
                     type: 'text',
                     typeButton: 'classic',
@@ -389,6 +381,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                     onPaste: true,
                     onlyNumbers: true,
                     pattern: '',
+                    isRequired: true
                   }}
                     eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "phone")}
                     eventFocus={() => handleTouchedControl("phone")}
@@ -398,14 +391,15 @@ const InscriptionForm = (props: InscriptionFormData) => {
                 </div>
                 <div className="">
                   <Input data={{
-                    label: '',
+                    placeholder: "DD/MM/AAAA",
+                    label: 'Fecha de nacimiento*',
                     name: 'birthdate',
-                    type: 'date',
+                    type: 'text',
                     typeButton: 'classic',
                     maxlength: '',
                     onPaste: true,
-                    alphabetical: true,
                     pattern: '',
+                    isRequired: true
                   }}
                     eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "birthdate")}
                     eventFocus={() => handleTouchedControl("birthdate")}
@@ -427,7 +421,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                     text: "Otro",
                     active: false
                   }]} data={{
-                    textDefault: "Género",
+                    textDefault: "Género*",
                     disabled: false,
                     icon: " ",
                     isLabel: true,
@@ -435,30 +429,13 @@ const InscriptionForm = (props: InscriptionFormData) => {
                     zindexOptions: 10,
                     tagOnClickList: 'testOnClickList',
                     tagOnClickOption: 'testOnClickOption',
-                  }} onClick={(option: CustomEvent) => handleSelect(option, "gender")} />
-                </div>
-                <div className="hidden">
-                  <Input data={{
-                    label: 'Residencia',
-                    name: 'residence',
-                    type: 'text',
-                    typeButton: 'classic',
-                    maxlength: '',
-                    onPaste: true,
-                    alphabetical: true,
-                    pattern: '',
-                  }}
-                    eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "residence")}
-                    eventFocus={() => handleTouchedControl("residence")}
-                    errorMessage={configControls.errorMessagesInscriptionForm.name}
-                    hasError={personalDataErrors.residence}
-                  />
+                  }} onClick={(option: CustomEvent) => handleSelect(option)} />
                 </div>
                 <div className="col-span-2 flex items-center">
                   <Checkbox data={{
                     name: "adviser",
                     disabled: false,
-                    label: "",
+                    label: "*",
                     selected: false,
                     tagOnCheck: undefined,
                     value: ""
@@ -471,7 +448,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   adviser &&
                   <div className="col-span-2">
                     <Input data={{
-                      label: 'Nombre del asesor',
+                      label: 'Nombre del asesor*',
                       name: 'residence',
                       type: 'text',
                       typeButton: 'classic',
@@ -485,6 +462,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                       onlyNumbers: false,
                       upperCase: false,
                       pattern: '',
+                      isRequired: true
                     }} />
                   </div>
                 }
@@ -504,16 +482,16 @@ const InscriptionForm = (props: InscriptionFormData) => {
             <p className="text-white bg-primary-500 w-23 px-2 py-1 rounded-full text-center my-3">En línea</p>
             <hr className="text-surface-300" />
             <div className="flex justify-between mt-2">
-              <p>Opción de pago:</p>
-              <p className="text-surface-500">3 parcialidades</p>
+              <p className="font-texts">Opción de pago:</p>
+              <p className="text-surface-500 font-texts">3 parcialidades</p>
             </div>
             <div className="flex justify-between my-1">
-              <p>Parcialidades:</p>
-              <p className="text-surface-500">$1,523.00 MXN</p>
+              <p className="font-texts">Parcialidades:</p>
+              <p className="text-surface-500 font-texts">$1,523.00 MXN</p>
             </div>
             <div className="flex justify-between mb-2">
-              <p>Costo total:</p>
-              <p className="text-surface-500">$4,569.00 MXN</p>
+              <p className="font-texts">Costo total:</p>
+              <p className="text-surface-500 font-texts">$4,569.00 MXN</p>
             </div>
             <hr className="text-surface-300" />
             <div className="flex justify-between mt-2">
@@ -528,7 +506,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                 type: "primary",
                 title: "Inscribirme ahora",
                 isExpand: true,
-                disabled: false
+                disabled: !isValid
               }}
               onClick={() => {
                 onSubmit()
