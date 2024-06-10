@@ -13,6 +13,7 @@ type PriceListData = {
 }
 
 export type PaymentCardContainerData = {
+  program?:number;
   title: string;
   accent_title: string;
   subtitle: string;
@@ -22,7 +23,7 @@ export type PaymentCardContainerData = {
 
 const PaymentCardContainer = (props: PaymentCardContainerData) => {
 
-  const { title, accent_title, subtitle, price_list, text } = props;
+  const {title, accent_title, subtitle, price_list, text, program } = props;
 
   const [currentSlide, setCurrentSlide] = React.useState(0)
   const [loaded, setLoaded] = useState(false)
@@ -84,7 +85,7 @@ const PaymentCardContainer = (props: PaymentCardContainerData) => {
                   {
                     price_list?.price?.map((price: PaymentCardData, i: Number) => {
                       return (
-                        <PaymentCard key={`carouselCard-${i}`} {...price} />
+                        <PaymentCard key={`carouselCard-${i}`} {...{program, ...price}} />
                       )
                     })
                   }
@@ -93,7 +94,7 @@ const PaymentCardContainer = (props: PaymentCardContainerData) => {
                   {
                     price_list?.price?.map((price: PaymentCardData, i: any) => {
                       return (
-                        <PaymentCard key={i} {...price} />
+                        <PaymentCard key={i} {...{program, ...price}} />
                       )
                     })
                   }
