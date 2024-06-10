@@ -5,6 +5,7 @@ import ContentFullLayout from "@/layouts/ContentFull.layout"
 import NextPageWithLayout from "@/types/Layout.types"
 import { useEffect, useMemo, useState } from "react"
 import getProgramById, { ProgramData } from "@/utils/getProgramById"
+import { InscriptionForm } from "@/forms/container/InscriptionForm"
 type PageProps = {
   program?: ProgramData;
   price: any;
@@ -14,30 +15,16 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props:PageProps) => {
   const flywireAPI = process.env.NEXT_PUBLIC_FLYWIRE_API
   const flywireAPIKEY = process.env.NEXT_PUBLIC_FLYWIRE_API_KEY
   const [flywireLink, setFlywireLink] = useState()
-  const priceAmount = price[0].price *10000;
-  console.log("program: ", program)
-  console.log("price: ", priceAmount)
-
+  const priceAmount = price?.price *100;
   useEffect(() => {
     const postData = async () => {
       if (flywireAPI && flywireAPIKEY) {
         const response = await fetch("/api/generateFwLink", {
           method: 'POST',
-          body: JSON.stringify({...price[0].config,
-            "payor": {
-                "first_name": "SANDBOX_TO_DELIVERED_STATUS",
-                "last_name": "Thor",
-                "address": "Allen Street",
-                "city": "Valencia",
-                "country": "ES",
-                "state": "VA",
-                "email": "test@Thor.com",
-                "zip": "10002",
-                "phone": "+341123456789"
-            },
+          body: JSON.stringify({...price?.config,
             "options": {
                 "form": {
-                    "action_button": "pay",
+                    "action_button": "save",
                     "locale": "en"
                 }
             },
@@ -46,6 +33,11 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props:PageProps) => {
                     {
                         "id": "graduation_year",
                         "value": "2020",
+                        "read_only": true
+                    },
+                    {
+                        "id": "metadata_lottus",
+                        "value":JSON.stringify(price?.metadata),
                         "read_only": true
                     },
                     {
@@ -101,6 +93,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props:PageProps) => {
   }, [])
   useEffect(() => {
   }, [flywireLink])
+  
 
 
   return <>
@@ -108,6 +101,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props:PageProps) => {
       title
     </Head>
     <HeaderFooterLayout breadcrumbs={false}>
+    <InscriptionForm />
       <ContentFullLayout>
         <ContentInsideLayout>
           <div className="flex w-full">
@@ -140,7 +134,8 @@ export async function getStaticProps(context: any): Promise<{ props: PageProps }
     params: { id, program },
   } = context;
   const programData = await getProgramById(program);
-  const price = programData.attributes.price_list.price.filter((price:any) => price.id === id)
+  const price = await programData.attributes.price_list.price.filter((price:any) => price.id === id)[0]
+  console.log("price",price)
   return {
     props: {
       program: programData,
