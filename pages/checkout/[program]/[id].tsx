@@ -121,7 +121,7 @@ export async function getStaticPaths() {
 }
 export async function getStaticProps(context: any): Promise<{ props: PageProps }> {
   const {
-    params: { id, program },
+    params: { id="", program={} },
   } = context;
   const programData = await getProgramById(program);
   const price = await programData.attributes.price_list.price.filter((price:any) => price.id === id)[0]

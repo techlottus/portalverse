@@ -158,7 +158,7 @@ const PaymentCard = (props: PaymentCardData) => {
             isExpand: true,
           }}
           onClick={() => {
-              router.push(`/checkout/${program}/${id}`);
+              program!==undefined && id!==undefined && router.push(`/checkout/${program}/${id}`) 
           }}
         />
       </div>
