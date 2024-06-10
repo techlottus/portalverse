@@ -31,21 +31,16 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props:PageProps) => {
             "recipient": {
                 "fields": [
                     {
-                        "id": "graduation_year",
-                        "value": "2020",
-                        "read_only": true
-                    },
-                    {
-                        "id": "metadata_lottus",
+                        "id": "metadatalottus",
                         "value":JSON.stringify(price?.metadata),
                         "read_only": true
                     },
                     {
-                        "id": "program_of_study",
+                        "id": "program_name",
                         "value": "SMTH"
                     },
                     {
-                        "id": "student_id",
+                        "id": "curp",
                         "value": "U12345678"
                     },
                     {
@@ -56,11 +51,6 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props:PageProps) => {
                     {
                         "id": "student_last_name",
                         "value": "Thor&Hanna",
-                        "read_only": true
-                    },
-                    {
-                        "id": "relationship",
-                        "value": "lover",
                         "read_only": true
                     },
                     {
