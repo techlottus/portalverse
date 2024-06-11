@@ -8,6 +8,8 @@ import { InscriptionForm } from "@/forms/container/InscriptionForm"
 import Link from "next/link"
 import Button from "@/old-components/Button/Button"
 import { useForm } from "react-hook-form"
+import cn from "classnames"
+import { WebErrorComponent } from "@/components/sections/WebError"
 
 const axios = require('axios');
 const curpEndPoint = process.env.NEXT_PUBLIC_CURP_ID_END_POINT!;
@@ -17,14 +19,38 @@ const CheckoutPage: NextPageWithLayout = () => {
 
   const flywireAPI = process.env.NEXT_PUBLIC_FLYWIRE_API
   const flywireAPIKEY = process.env.NEXT_PUBLIC_FLYWIRE_API_KEY
-  
+
   const [flywireLink, setFlywireLink] = useState()
-  const [residence, setResidence] = useState<boolean>()
-  const [noResidence, setNoResidence] = useState<boolean>()
-  const [hasCurp, setHasCurp] = useState<boolean>()
-  const [noCurp, setNoCurp] = useState<boolean>()
+  const [residence, setResidence] = useState<any>()
+  const [noResidence, setNoResidence] = useState<any>()
+  const [hasCurp, setHasCurp] = useState<any>()
+  const [noCurp, setNoCurp] = useState<any>()
   const [isValid, setIsValid] = useState<boolean>(false);
   const [curp, setCurp] = useState<boolean>();
+  const [submit, setSubmit] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
+  const [currentError, setCurrentError] = useState<WebErrorComponent | null>(null);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+
+  const setStatus = ({ loading, valid, success }: { loading: boolean, valid: boolean, success: boolean }) => {
+    setIsVisible(!loading && !error)
+    setIsLoading(loading)
+    setIsValid(valid)
+    setIsSuccess(success)
+  }
+
+  const [personalData, setPersonalData] = useState({
+    name: "",
+    last_name: "",
+    second_last_name: "",
+    email: "",
+    phone: "",
+    birthdate: "",
+    gender: ""
+  });
 
   useEffect(() => {
     const postData = async () => {
@@ -126,22 +152,37 @@ const CheckoutPage: NextPageWithLayout = () => {
 
   });
 
-  const onSubmit = handleSubmit(() => {
+  const onSubmitCurp = (() => {
 
     axios.post(`https://${businessUnit.toLowerCase() + curpEndPoint}/curp/validate`, {
       curp: curp,
     })
       .then(function (response: any) {
-        /* personalData.name = response?.data?.nombre; */
-        /* personalData.last_name = response?.data?.apellidoPaterno; */
-        /* personalData.second_last_name = response?.data?.apellidoMaterno; */
-        /* personalData.birthdate = response?.data?.fechaNacimiento; */
-        /* personalData.gender = response?.data?.sexo;    */
+        personalData.name = response?.data?.nombre;
+        personalData.last_name = response?.data?.apellidoPaterno;
+        personalData.second_last_name = response?.data?.apellidoMaterno;
+        personalData.birthdate = response?.data?.fechaNacimiento;
+        personalData.gender = response?.data?.sexo;
       })
       .catch(function (error: any) {
       });
     /* Validate() */
   })
+
+  const onSubmitForm = async () => {
+
+    const endpoint = process.env.NEXT_PUBLIC_CAPTACION_PROSPECTO;
+    const nombre = personalData?.name;
+    const apellidoPaterno = personalData?.last_name;
+    const apellidoMaterno = personalData?.second_last_name;
+    const email = personalData?.email;
+    const telefono = personalData?.phone;
+    const fechaNacimiento = personalData?.birthdate;
+    const genero = personalData?.gender;
+
+    const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&apellidoMaterno=${apellidoMaterno}&email=${email}&telefono=${telefono}&fechaNacimiento=${fechaNacimiento}&genero=${genero}`;
+    console.log("params", params)
+  }
 
   return <>
     <Head>
@@ -150,7 +191,22 @@ const CheckoutPage: NextPageWithLayout = () => {
     <HeaderFooterLayout breadcrumbs={false}>
       <ContentFullLayout>
         <div className="grid grid-cols-2 p-6">
-          <InscriptionForm />
+          <InscriptionForm
+            submit={submit}
+            setStatus={setStatus}
+            residence={residence}
+            noResidence={noResidence}
+            hasCurp={hasCurp}
+            noCurp={noCurp}
+            setResidence={setResidence}
+            setNoResidence={setNoResidence}
+            setHasCurp={setHasCurp}
+            setNoCurp={setNoCurp}
+            personalData={personalData}
+            setPersonalData={setPersonalData}
+            curp={curp}
+            setCurp={setCurp}
+          />
           <div className="mobile:col-span-2">
             <div className="border border-surface-300 rounded-lg p-4">
               <h3 className="font-headings font-bold text-5.5 leading-6">Diplomado en Análisis de Datos</h3>
@@ -186,7 +242,24 @@ const CheckoutPage: NextPageWithLayout = () => {
                     disabled: false
                   }}
                   onClick={() => {
-                    onSubmit()
+                    onSubmitCurp()
+                  }}
+                />
+              </div>
+            }
+            {
+              noResidence &&
+              <div className={cn("flex flex-col my-6", {"hidden": !hasCurp})}>
+                <Button
+                  dark
+                  data={{
+                    type: "primary",
+                    title: "Inscribirme ahora",
+                    isExpand: true,
+                    disabled: false
+                  }}
+                  onClick={() => {
+                    onSubmitCurp()
                   }}
                 />
               </div>
@@ -203,7 +276,7 @@ const CheckoutPage: NextPageWithLayout = () => {
                     disabled: !isValid
                   }}
                   onClick={() => {
-                    onSubmit()
+                    onSubmitForm()
                   }}
                 />
               </div>
@@ -227,8 +300,5 @@ const CheckoutPage: NextPageWithLayout = () => {
     </HeaderFooterLayout>
   </>;
 }
-
-
-
 
 export default CheckoutPage
