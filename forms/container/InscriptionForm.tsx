@@ -3,7 +3,6 @@ import Input from "@/old-components/Input/Input"
 import Link from "next/link";
 import Container from "@/layouts/Container.layout";
 import OptionPill from "@/old-components/OptionPill";
-import Button from "@/old-components/Button/Button";
 import Checkbox from "@/old-components/Checkbox";
 import configControls from "@/forms/fixtures/controls"
 import { useForm } from "react-hook-form";
@@ -171,7 +170,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
   return (
 
     <Container>
-      <div className="grid grid-cols-2 p-6 gap-x-20">
+      <div className="gap-x-20">
         <div className="mobile:col-span-2 mb-4">
           <div className="flex flex-col gap-6">
             <div>
@@ -458,71 +457,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
               <p className="text-3.5 font-texts font-bold text-sm text-primary-500 mt-3">Atrás</p>
             </Link>
           </div>
-        </div>
-        <div className="mobile:col-span-2">
-          <div className="border border-surface-300 rounded-lg p-4">
-            <h3 className="font-headings font-bold text-5.5 leading-6">Diplomado en Análisis de Datos</h3>
-            <p className="text-white bg-primary-500 w-23 px-2 py-1 rounded-full text-center my-3">En línea</p>
-            <hr className="text-surface-300" />
-            <div className="flex justify-between mt-2">
-              <p className="font-texts">Opción de pago:</p>
-              <p className="text-surface-500 font-texts">3 parcialidades</p>
-            </div>
-            <div className="flex justify-between my-1">
-              <p className="font-texts">Parcialidades:</p>
-              <p className="text-surface-500 font-texts">$1,523.00 MXN</p>
-            </div>
-            <div className="flex justify-between mb-2">
-              <p className="font-texts">Costo total:</p>
-              <p className="text-surface-500 font-texts">$4,569.00 MXN</p>
-            </div>
-            <hr className="text-surface-300" />
-            <div className="flex justify-between mt-2">
-              <p className="font-texts font-bold text-base leading-6">Parcialidad a pagar:</p>
-              <p className="text-base font-bold">$1,523.00 MXN</p>
-            </div>
-          </div>
-          {
-            residence &&
-            <div className="flex flex-col my-6">
-            <Button
-              dark
-              data={{
-                type: "primary",
-                title: "Inscribirme ahora",
-                isExpand: true,
-                disabled: false
-              }}
-              onClick={() => {
-                onSubmit()
-              }}
-            />
-          </div>
-          }
-          {
-            noCurp &&
-            <div className="flex flex-col my-6">
-            <Button
-              dark
-              data={{
-                type: "primary",
-                title: "Inscribirme ahora",
-                isExpand: true,
-                disabled: !isValid
-              }}
-              onClick={() => {
-                onSubmit()
-              }}
-            />
-          </div>
-          }
-          <div className="flex">
-            <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">Al llenar tus datos aceptas nuestro</p>
-            <Link href="terminos-y-condiciones" passHref target={"_blank"}>
-              <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">Aviso de Privacidad</p>
-            </Link>
-          </div>
-        </div>
+        </div>        
       </div>
     </Container>
   )
