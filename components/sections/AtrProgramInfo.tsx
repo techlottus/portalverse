@@ -54,19 +54,16 @@ const AtrProgramInfo = (props: AtrProgramInfoProps) => {
                         </div>
                       </div>
                     </div>
-
                     <div className=" flex justify-center flex-col">
                       <p className="font-headings font-bold text-xl">$399 MXN <span className="text-surface-500 font-normal text-sm">/por mes</span></p>
                     </div>
                     <div className="flex items-end">
                     </div>
                   </div>
-                  <div className="gap-y-4 grid rounded-lg border border-surface-200 p-4 bg-white w-64 h-64 mobile:mx-auto relative opacity-40">
-                    {/* 
+                  <div className="gap-y-4 grid rounded-lg border border-primary-400 p-4 bg-white w-64 h-64 mobile:mx-auto relative">
                     <div className="w-28 p-1 bg-primary-400 rounded-full absolute top-[-12px] right-[70px]">
                       <p className="text-center text-white text-xs font-bold">MÁS POPULAR</p>
-                    </div> 
-                    */}
+                    </div>
                     <div>
                       <p className="font-headings text-lg font-bold">Plan Anual</p>
                       <p className="font-texts text-xs font-semibold">Un solo pago cada año</p>
@@ -82,23 +79,13 @@ const AtrProgramInfo = (props: AtrProgramInfoProps) => {
                         <div className="flex items-center">
                           <span className="material-symbols-outlined !text-xs text-success-400 me-2">check_circle</span><p className="font-texts text-xs font-semibold">Concluye en menos tiempo</p>
                         </div>
-                        <div className="flex items-center">
-                          <span className="material-symbols-outlined !text-xs text-success-400 me-2">check_circle</span><p className="font-texts text-xs font-semibold">2 años mínimo</p>
-                        </div>
-
                       </div>
                     </div>
-
+                    <div className="bg-secondary-500 rounded-2xl px-3 pt-1 max-w-23">
+                      <p className="text-white font-normal text-xs mb-0">Ahorra 10%</p>
+                    </div>
                     <div className=" flex justify-center flex-col">
-                      {/* 
-                      <div className="bg-secondary-500 rounded-2xl px-3 py-1 max-w-21 mb-1">
-                        <p className="text-white font-normal text-xs">50% Dcto.</p>
-                      </div> 
-                      */}
-                      {/* 
-                      <p className="font-headings font-bold text-xl">$849 MXN <span className="line-through text-surface-500 font-normal text-sm">$699</span></p> 
-                      */}
-                      <p className="font-headings font-bold text-xl">Próximamente</p>
+                      <p className="font-headings font-bold text-xl">$4,310 MXN <span className="line-through text-surface-500 font-normal text-sm">$4,788</span></p>
                     </div>
                     <div className="flex items-end">
                     </div>
