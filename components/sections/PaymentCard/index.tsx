@@ -4,8 +4,8 @@ import { useRouter } from "next/router";
 import Button from "@/old-components/Button/Button";
 
 export type PaymentCardData = {
-  id?:string;
-  program?:number;
+  id?:string | null;
+  program?:number | null;
   title?: string;
   subtitle?: string;
   perks?: Array<any>;
@@ -158,7 +158,7 @@ const PaymentCard = (props: PaymentCardData) => {
             isExpand: true,
           }}
           onClick={() => {
-              program!==undefined && id!==undefined && router.push(`/checkout/${program}/${id}`) 
+              router.push(`/checkout/${program}/${id}`) 
           }}
         />
       </div>
