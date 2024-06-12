@@ -7,6 +7,7 @@ import Checkbox from "@/old-components/Checkbox";
 import configControls from "@/forms/fixtures/controls"
 import { useForm } from "react-hook-form";
 import Select from "@/old-components/Select/Select";
+import { getTokenForms } from "@/utils/getTokenForms";
 
 const axios = require('axios');
 
@@ -14,26 +15,48 @@ const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
 const curpEndPoint = process.env.NEXT_PUBLIC_CURP_ID_END_POINT!;
 
 type InscriptionFormData = {
+  setStatus: (status: { loading: boolean, valid: boolean, success: boolean }) => void
+  submit: boolean;
+  residence: any;
+  noResidence: any;
+  hasCurp: any;
+  noCurp: any;
+  setResidence: any;
+  setNoResidence: any;
+  setHasCurp: any;
+  setNoCurp: any;
+  personalData: any;
+  setPersonalData: any;
+  curp: any;
+  setCurp: any;
 
 }
 
 const InscriptionForm = (props: InscriptionFormData) => {
 
   const {
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
+    setStatus,
+    submit,
+    residence,
+    noResidence,
+    hasCurp,
+    noCurp,
+    setResidence,
+    setNoResidence,
+    setHasCurp,
+    setNoCurp,
+    personalData,
+    setPersonalData,
+    curp,
+    setCurp
+  } = props
 
-  });
-
-  const [residence, setResidence] = useState<boolean>()
-  const [noResidence, setNoResidence] = useState<boolean>()
-  const [hasCurp, setHasCurp] = useState<boolean>()
-  const [noCurp, setNoCurp] = useState<boolean>()
+  const [isLoading, setIsLoading] = useState(true);
+  const [isValid, setIsValid] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
   const [adviser, setAdviser] = useState<boolean>()
-  const [submit, setSubmit] = useState<boolean>(false);
-  const [isValid, setIsValid] = useState<boolean>(false);
-  const [curp, setCurp] = useState<boolean>();
+  const [tokenActive, setTokenActive] = useState<string>("");
+
   const [optionsGender, setOptionsGender] = useState([{
     value: "male",
     text: "Masculino",
@@ -47,16 +70,6 @@ const InscriptionForm = (props: InscriptionFormData) => {
     text: "Otro",
     active: false
   }]);
-
-  const [personalData, setPersonalData] = useState({
-    name: "",
-    last_name: "",
-    second_last_name: "",
-    email: "",
-    phone: "",
-    birthdate: "",
-    gender: ""
-  });
 
   const [personalDataTouched, setPersonalDataTouched] = useState<{ [key: string]: boolean }>({
     name: false,
@@ -116,22 +129,20 @@ const InscriptionForm = (props: InscriptionFormData) => {
     Validate()
   }, [personalData]);
 
-  const onSubmit = handleSubmit(() => {
 
-    axios.post(`https://${businessUnit.toLowerCase() + curpEndPoint}/curp/validate`, {
-      curp: curp,
-    })
-      .then(function (response: any) {
-        personalData.name = response?.data?.nombre;
-        personalData.last_name = response?.data?.apellidoPaterno;
-        personalData.second_last_name = response?.data?.apellidoMaterno;
-        personalData.birthdate = response?.data?.fechaNacimiento;
-        personalData.gender = response?.data?.sexo;   
-      })
-      .catch(function (error: any) {
-      });
+  const {
+    isLoading: isLoadingToken,
+    isError: isErrorToken,
+    token,
+  } = getTokenForms();
+
+  const handleSubmit = async () => {
+    setIsLoading(true)
     Validate()
-  })
+    if (isValid) {
+      sendLeadData()
+    }
+  }
 
   const sendLeadData = async () => {
 
@@ -155,7 +166,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
     setOptionsGender(selectOptions)
     setPersonalDataTouched({ ...personalDataTouched, ["gender"]: true });
     setPersonalData({ ...personalData, ["gender"]: selectedGender });
-    };
+  };
 
   const handleKeyPress = (e: CustomEvent, control: string) => {
     const { detail: { value } } = e;
@@ -166,6 +177,20 @@ const InscriptionForm = (props: InscriptionFormData) => {
   const handleTouchedControl = (control: string) => {
     setPersonalDataTouched({ ...personalDataTouched, [control]: true });
   }
+
+  useEffect(() => {
+    if (!isLoadingToken && !isErrorToken && !!Object.keys(token).length) {
+      setTokenActive(`${token.token_type} ${token.access_token}`);
+    }
+  }, [isLoadingToken, isErrorToken, token]);
+
+  useEffect(() => {
+    setStatus({ loading: isLoading, valid: isValid, success: isSuccess })
+  }, [isLoading, isValid, isSuccess]);
+
+  useEffect(() => {
+    if (submit) handleSubmit()
+  }, [submit]);
 
   return (
 
@@ -224,7 +249,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   upperCase: true
                 }}
                   eventKeyPress={(e: CustomEvent) => {
-                    setCurp(e.detail.value) 
+                    setCurp(e.detail.value)
                   }}
                   errorMessage={configControls.errorMessagesInscriptionForm.name}
                 />
@@ -248,7 +273,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                     active={hasCurp === true}
                     onClick={() => {
                       setHasCurp(true)
-                      setNoCurp(false)
+                      setNoCurp(false)                      
                     }}
                   />
                   <p className="mt-2"></p>
@@ -260,7 +285,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                     active={noCurp === true}
                     onClick={() => {
                       setHasCurp(false)
-                      setNoCurp(true)
+                      setNoCurp(true)                      
                     }}
                   />
                 </div>
@@ -284,7 +309,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   upperCase: true
                 }}
                   eventKeyPress={(e: CustomEvent) => {
-                    setCurp(e.detail.value) 
+                    setCurp(e.detail.value)
                   }}
                   errorMessage={configControls.errorMessagesInscriptionForm.name}
                 />
@@ -393,8 +418,8 @@ const InscriptionForm = (props: InscriptionFormData) => {
                     typeButton: 'classic',
                     onPaste: true,
                     pattern: '',
-                    isRequired: true                
-                  }}              
+                    isRequired: true
+                  }}
                     eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "birthdate")}
                     eventFocus={() => handleTouchedControl("birthdate")}
                     errorMessage={configControls.errorMessagesInscriptionForm.birthdate}
@@ -457,7 +482,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
               <p className="text-3.5 font-texts font-bold text-sm text-primary-500 mt-3">Atrás</p>
             </Link>
           </div>
-        </div>        
+        </div>
       </div>
     </Container>
   )
