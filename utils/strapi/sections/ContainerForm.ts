@@ -21,6 +21,7 @@ export type ContainerForm = {
     size: string
     CTA: string
     iconName: string
+    action?: () => () => void
   }
   errors?: WebErrorSection[],
   position?: string;

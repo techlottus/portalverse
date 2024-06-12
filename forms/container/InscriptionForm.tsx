@@ -3,11 +3,11 @@ import Input from "@/old-components/Input/Input"
 import Link from "next/link";
 import Container from "@/layouts/Container.layout";
 import OptionPill from "@/old-components/OptionPill";
-import Button from "@/old-components/Button/Button";
 import Checkbox from "@/old-components/Checkbox";
 import configControls from "@/forms/fixtures/controls"
 import { useForm } from "react-hook-form";
 import Select from "@/old-components/Select/Select";
+import { getTokenForms } from "@/utils/getTokenForms";
 
 const axios = require('axios');
 
@@ -15,26 +15,56 @@ const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
 const curpEndPoint = process.env.NEXT_PUBLIC_CURP_ID_END_POINT!;
 
 type InscriptionFormData = {
-
+  setStatus: (status: { loading: boolean, valid: boolean, success: boolean }) => void
+  submit: boolean;
+  residence: any;
+  noResidence: any;
+  hasCurp: any;
+  noCurp: any;
+  setResidence: any;
+  setNoResidence: any;
+  setHasCurp: any;
+  setNoCurp: any;
+  personalData: any;
+  setPersonalData: any;
+  curp: any;
+  setCurp: any;
+  isValidCurp: any;
+  setIsValidCurp: any;
+  curpError: any;
+  setCurpError: any;
 }
 
 const InscriptionForm = (props: InscriptionFormData) => {
 
   const {
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
+    setStatus,
+    submit,
+    residence,
+    noResidence,
+    hasCurp,
+    noCurp,
+    setResidence,
+    setNoResidence,
+    setHasCurp,
+    setNoCurp,
+    personalData,
+    setPersonalData,
+    curp,
+    setCurp,
+    isValidCurp,
+    setIsValidCurp,
+    curpError,
+    setCurpError
+  } = props
 
-  });
-
-  const [residence, setResidence] = useState<boolean>()
-  const [noResidence, setNoResidence] = useState<boolean>()
-  const [hasCurp, setHasCurp] = useState<boolean>()
-  const [noCurp, setNoCurp] = useState<boolean>()
+  const [isLoading, setIsLoading] = useState(true);
+  const [isValid, setIsValid] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
   const [adviser, setAdviser] = useState<boolean>()
-  const [submit, setSubmit] = useState<boolean>(false);
-  const [isValid, setIsValid] = useState<boolean>(false);
-  const [curp, setCurp] = useState<boolean>();
+  const [curpTouched, setCurpTouched] = useState<boolean>(false)
+  const [tokenActive, setTokenActive] = useState<string>("");
+
   const [optionsGender, setOptionsGender] = useState([{
     value: "male",
     text: "Masculino",
@@ -48,16 +78,6 @@ const InscriptionForm = (props: InscriptionFormData) => {
     text: "Otro",
     active: false
   }]);
-
-  const [personalData, setPersonalData] = useState({
-    name: "",
-    last_name: "",
-    second_last_name: "",
-    email: "",
-    phone: "",
-    birthdate: "",
-    gender: ""
-  });
 
   const [personalDataTouched, setPersonalDataTouched] = useState<{ [key: string]: boolean }>({
     name: false,
@@ -78,6 +98,26 @@ const InscriptionForm = (props: InscriptionFormData) => {
     birthdate: false,
     gender: false
   })
+
+  const validateCurpControl = (value: string) => {
+    return !!value?.match(configControls.patternCurp)
+  };
+
+  const validateCurpControls = () => {
+    const validity = validateCurpControl(curp)
+    return validity;
+  }
+
+  const validateCurp = () => {
+
+    const newCurpError = !validateCurpControl(curp)
+
+    setCurpError(newCurpError);
+
+    const isValidCurp = validateCurpControls();
+
+    setIsValidCurp(isValidCurp)
+  }
 
   const validatePersonalDataControl = (control: string, value: string) => {
     if (control === 'email') {
@@ -113,26 +153,19 @@ const InscriptionForm = (props: InscriptionFormData) => {
     setIsValid(isValidPersonalData)
   }
 
-  useEffect(() => {
-    Validate()
-  }, [personalData]);
+  const {
+    isLoading: isLoadingToken,
+    isError: isErrorToken,
+    token,
+  } = getTokenForms();
 
-  const onSubmit = handleSubmit(() => {
-
-    axios.post(`https://${businessUnit.toLowerCase() + curpEndPoint}/curp/validate`, {
-      curp: curp,
-    })
-      .then(function (response: any) {
-        personalData.name = response?.data?.nombre;
-        personalData.last_name = response?.data?.apellidoPaterno;
-        personalData.second_last_name = response?.data?.apellidoMaterno;
-        personalData.birthdate = response?.data?.fechaNacimiento;
-        personalData.gender = response?.data?.sexo;   
-      })
-      .catch(function (error: any) {
-      });
+  const handleSubmit = async () => {
+    setIsLoading(true)
     Validate()
-  })
+    if (isValid) {
+      sendLeadData()
+    }
+  }
 
   const sendLeadData = async () => {
 
@@ -156,7 +189,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
     setOptionsGender(selectOptions)
     setPersonalDataTouched({ ...personalDataTouched, ["gender"]: true });
     setPersonalData({ ...personalData, ["gender"]: selectedGender });
-    };
+  };
 
   const handleKeyPress = (e: CustomEvent, control: string) => {
     const { detail: { value } } = e;
@@ -168,10 +201,33 @@ const InscriptionForm = (props: InscriptionFormData) => {
     setPersonalDataTouched({ ...personalDataTouched, [control]: true });
   }
 
+  useEffect(() => {
+    if (!isLoadingToken && !isErrorToken && !!Object.keys(token).length) {
+      setTokenActive(`${token.token_type} ${token.access_token}`);
+    }
+  }, [isLoadingToken, isErrorToken, token]);
+
+  useEffect(() => {
+    setStatus({ loading: isLoading, valid: isValid, success: isSuccess })
+  }, [isLoading, isValid, isSuccess]);
+
+  useEffect(() => {
+    if (submit) handleSubmit()
+  }, [submit]);
+
+
+  useEffect(() => {
+    Validate()
+  }, [personalData]);
+
+  useEffect(() => {
+    validateCurp()
+  }, [curp]);
+
   return (
 
     <Container>
-      <div className="grid grid-cols-2 p-6 gap-x-20">
+      <div className="gap-x-20">
         <div className="mobile:col-span-2 mb-4">
           <div className="flex flex-col gap-6">
             <div>
@@ -225,9 +281,14 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   upperCase: true
                 }}
                   eventKeyPress={(e: CustomEvent) => {
-                    setCurp(e.detail.value) 
+                    const { detail: { value } } = e;
+                    setCurpTouched(true);
+                    setCurp(value);
+                    console.log(curp)
                   }}
-                  errorMessage={configControls.errorMessagesInscriptionForm.name}
+                  errorMessage={configControls.errorMessagesInscriptionForm.curp}
+                  eventFocus={() => setCurpTouched(true)}
+                  hasError={curpError}
                 />
               </div>
               <p className="font-texts text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p>
@@ -285,7 +346,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   upperCase: true
                 }}
                   eventKeyPress={(e: CustomEvent) => {
-                    setCurp(e.detail.value) 
+                    setCurp(e.detail.value)
                   }}
                   errorMessage={configControls.errorMessagesInscriptionForm.name}
                 />
@@ -394,8 +455,8 @@ const InscriptionForm = (props: InscriptionFormData) => {
                     typeButton: 'classic',
                     onPaste: true,
                     pattern: '',
-                    isRequired: true                
-                  }}              
+                    isRequired: true
+                  }}
                     eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "birthdate")}
                     eventFocus={() => handleTouchedControl("birthdate")}
                     errorMessage={configControls.errorMessagesInscriptionForm.birthdate}
@@ -456,70 +517,6 @@ const InscriptionForm = (props: InscriptionFormData) => {
             <span className="material-symbols-outlined select-none text-primary-500 text-4.5!">chevron_left</span>
             <Link className="" href="#" passHref target={"_blank"}>
               <p className="text-3.5 font-texts font-bold text-sm text-primary-500 mt-3">Atrás</p>
-            </Link>
-          </div>
-        </div>
-        <div className="mobile:col-span-2">
-          <div className="border border-surface-300 rounded-lg p-4">
-            <h3 className="font-headings font-bold text-5.5 leading-6">Diplomado en Análisis de Datos</h3>
-            <p className="text-white bg-primary-500 w-23 px-2 py-1 rounded-full text-center my-3">En línea</p>
-            <hr className="text-surface-300" />
-            <div className="flex justify-between mt-2">
-              <p className="font-texts">Opción de pago:</p>
-              <p className="text-surface-500 font-texts">3 parcialidades</p>
-            </div>
-            <div className="flex justify-between my-1">
-              <p className="font-texts">Parcialidades:</p>
-              <p className="text-surface-500 font-texts">$1,523.00 MXN</p>
-            </div>
-            <div className="flex justify-between mb-2">
-              <p className="font-texts">Costo total:</p>
-              <p className="text-surface-500 font-texts">$4,569.00 MXN</p>
-            </div>
-            <hr className="text-surface-300" />
-            <div className="flex justify-between mt-2">
-              <p className="font-texts font-bold text-base leading-6">Parcialidad a pagar:</p>
-              <p className="text-base font-bold">$1,523.00 MXN</p>
-            </div>
-          </div>
-          {
-            residence &&
-            <div className="flex flex-col my-6">
-            <Button
-              dark
-              data={{
-                type: "primary",
-                title: "Inscribirme ahora",
-                isExpand: true,
-                disabled: false
-              }}
-              onClick={() => {
-                onSubmit()
-              }}
-            />
-          </div>
-          }
-          {
-            noCurp &&
-            <div className="flex flex-col my-6">
-            <Button
-              dark
-              data={{
-                type: "primary",
-                title: "Inscribirme ahora",
-                isExpand: true,
-                disabled: !isValid
-              }}
-              onClick={() => {
-                onSubmit()
-              }}
-            />
-          </div>
-          }
-          <div className="flex">
-            <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">Al llenar tus datos aceptas nuestro</p>
-            <Link href="terminos-y-condiciones" passHref target={"_blank"}>
-              <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">Aviso de Privacidad</p>
             </Link>
           </div>
         </div>

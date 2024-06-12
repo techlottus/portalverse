@@ -148,9 +148,9 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
                             disabled: !isValid
                           }}
                           onClick={() => {
+                            !!button.action && button.action()()
                             setSubmit(true);
                             setTimeout(() => {
-
                               setSubmit(false)
                             }, 100);
                           }}
@@ -165,6 +165,7 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
                             disabled: !isValid
                           }}
                           onClick={() => {
+                            !!button.action && button.action()()
                             setSubmit(true);
                             setTimeout(() => {
 
