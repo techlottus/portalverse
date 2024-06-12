@@ -166,7 +166,7 @@ export async function getStaticPaths() {
 }
 export async function getStaticProps(context: any): Promise<{ props: PageProps }> {
   const {
-    params: { id="", program={} },
+    params: { id=null, program=null },
   } = context;
 
   if (program && Number(id)) {
