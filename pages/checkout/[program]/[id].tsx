@@ -155,8 +155,8 @@ export async function getStaticPaths() {
     paths: [
       {
         params: {
-          program: '4',
-          id: '2',
+          program: '0',
+          id: '0',
         },
       }, // See the "paths" section below
     ],
