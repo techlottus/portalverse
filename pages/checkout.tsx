@@ -7,9 +7,7 @@ import { useEffect, useMemo, useState } from "react"
 import { InscriptionForm } from "@/forms/container/InscriptionForm"
 import Link from "next/link"
 import Button from "@/old-components/Button/Button"
-import { useForm } from "react-hook-form"
 import cn from "classnames"
-import { WebErrorComponent } from "@/components/sections/WebError"
 
 const axios = require('axios');
 const curpEndPoint = process.env.NEXT_PUBLIC_CURP_ID_END_POINT!;
@@ -30,10 +28,10 @@ const CheckoutPage: NextPageWithLayout = () => {
   const [submit, setSubmit] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
-  const [currentError, setCurrentError] = useState<WebErrorComponent | null>(null);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-
+  const [isValidCurp, setIsValidCurp] = useState(false);
+  const [curpError, setCurpError] = useState(false);
 
   const setStatus = ({ loading, valid, success }: { loading: boolean, valid: boolean, success: boolean }) => {
     setIsVisible(!loading && !error)
@@ -145,13 +143,6 @@ const CheckoutPage: NextPageWithLayout = () => {
     console.log('flywireLink: ', flywireLink)
   }, [flywireLink])
 
-  const {
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-
-  });
-
   const onSubmitCurp = (() => {
 
     axios.post(`https://${businessUnit.toLowerCase() + curpEndPoint}/curp/validate`, {
@@ -163,15 +154,16 @@ const CheckoutPage: NextPageWithLayout = () => {
         personalData.second_last_name = response?.data?.apellidoMaterno;
         personalData.birthdate = response?.data?.fechaNacimiento;
         personalData.gender = response?.data?.sexo;
+        if (response.data.errorMessage) {
+          setIsValidCurp(false)
+          setCurpError(true)
+        }
       })
-      .catch(function (error: any) {
-      });
-    /* Validate() */
   })
 
   const onSubmitForm = async () => {
 
-    const endpoint = process.env.NEXT_PUBLIC_CAPTACION_PROSPECTO;
+    /* const endpoint = process.env.NEXT_PUBLIC_CAPTACION_PROSPECTO; */
     const nombre = personalData?.name;
     const apellidoPaterno = personalData?.last_name;
     const apellidoMaterno = personalData?.second_last_name;
@@ -206,6 +198,10 @@ const CheckoutPage: NextPageWithLayout = () => {
             setPersonalData={setPersonalData}
             curp={curp}
             setCurp={setCurp}
+            isValidCurp={isValidCurp}
+            setIsValidCurp={setIsValidCurp}
+            curpError={curpError}
+            setCurpError={setCurpError}
           />
           <div className="mobile:col-span-2">
             <div className="border border-surface-300 rounded-lg p-4">
@@ -239,7 +235,7 @@ const CheckoutPage: NextPageWithLayout = () => {
                     type: "primary",
                     title: "Inscribirme ahora",
                     isExpand: true,
-                    disabled: false
+                    disabled: !isValidCurp
                   }}
                   onClick={() => {
                     onSubmitCurp()
@@ -249,7 +245,7 @@ const CheckoutPage: NextPageWithLayout = () => {
             }
             {
               noResidence &&
-              <div className={cn("flex flex-col my-6", {"hidden": !hasCurp})}>
+              <div className={cn("flex flex-col my-6", { "hidden": !hasCurp })}>
                 <Button
                   dark
                   data={{

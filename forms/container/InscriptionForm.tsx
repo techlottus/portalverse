@@ -29,7 +29,10 @@ type InscriptionFormData = {
   setPersonalData: any;
   curp: any;
   setCurp: any;
-
+  isValidCurp: any;
+  setIsValidCurp: any;
+  curpError: any;
+  setCurpError: any;
 }
 
 const InscriptionForm = (props: InscriptionFormData) => {
@@ -48,13 +51,18 @@ const InscriptionForm = (props: InscriptionFormData) => {
     personalData,
     setPersonalData,
     curp,
-    setCurp
+    setCurp,
+    isValidCurp,
+    setIsValidCurp,
+    curpError,
+    setCurpError
   } = props
 
   const [isLoading, setIsLoading] = useState(true);
   const [isValid, setIsValid] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [adviser, setAdviser] = useState<boolean>()
+  const [curpTouched, setCurpTouched] = useState<boolean>(false)
   const [tokenActive, setTokenActive] = useState<string>("");
 
   const [optionsGender, setOptionsGender] = useState([{
@@ -91,6 +99,26 @@ const InscriptionForm = (props: InscriptionFormData) => {
     gender: false
   })
 
+  const validateCurpControl = (value: string) => {
+    return !!value?.match(configControls.patternCurp)
+  };
+
+  const validateCurpControls = () => {
+    const validity = validateCurpControl(curp)
+    return validity;
+  }
+
+  const validateCurp = () => {
+
+    const newCurpError = !validateCurpControl(curp)
+
+    setCurpError(newCurpError);
+
+    const isValidCurp = validateCurpControls();
+
+    setIsValidCurp(isValidCurp)
+  }
+
   const validatePersonalDataControl = (control: string, value: string) => {
     if (control === 'email') {
       return !!value.match(configControls.patternEmail)
@@ -124,11 +152,6 @@ const InscriptionForm = (props: InscriptionFormData) => {
 
     setIsValid(isValidPersonalData)
   }
-
-  useEffect(() => {
-    Validate()
-  }, [personalData]);
-
 
   const {
     isLoading: isLoadingToken,
@@ -192,6 +215,15 @@ const InscriptionForm = (props: InscriptionFormData) => {
     if (submit) handleSubmit()
   }, [submit]);
 
+
+  useEffect(() => {
+    Validate()
+  }, [personalData]);
+
+  useEffect(() => {
+    validateCurp()
+  }, [curp]);
+
   return (
 
     <Container>
@@ -249,9 +281,14 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   upperCase: true
                 }}
                   eventKeyPress={(e: CustomEvent) => {
-                    setCurp(e.detail.value)
+                    const { detail: { value } } = e;
+                    setCurpTouched(true);
+                    setCurp(value);
+                    console.log(curp)
                   }}
-                  errorMessage={configControls.errorMessagesInscriptionForm.name}
+                  errorMessage={configControls.errorMessagesInscriptionForm.curp}
+                  eventFocus={() => setCurpTouched(true)}
+                  hasError={curpError}
                 />
               </div>
               <p className="font-texts text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p>
@@ -273,7 +310,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                     active={hasCurp === true}
                     onClick={() => {
                       setHasCurp(true)
-                      setNoCurp(false)                      
+                      setNoCurp(false)
                     }}
                   />
                   <p className="mt-2"></p>
@@ -285,7 +322,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                     active={noCurp === true}
                     onClick={() => {
                       setHasCurp(false)
-                      setNoCurp(true)                      
+                      setNoCurp(true)
                     }}
                   />
                 </div>
