@@ -29,7 +29,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
   const [flywireLink, setFlywireLink] = useState('')
   const priceAmount = price?.price * 100 || 100000;
 
-    const [residence, setResidence] = useState<any>()
+  const [residence, setResidence] = useState<any>()
   const [noResidence, setNoResidence] = useState<any>()
   const [hasCurp, setHasCurp] = useState<any>()
   const [noCurp, setNoCurp] = useState<any>()
@@ -62,7 +62,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
 
   useEffect(() => {
     const postData = async () => {
-      if (flywireAPI && flywireAPIKEY) {
+      if (flywireAPI && flywireAPIKEY ) {
         const response = await fetch("/api/generateFwLink", {
           method: 'POST',
           body: JSON.stringify({
@@ -70,84 +70,44 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
             "options": {
               "form": {
                 "action_button": "save",
-                "locale": "en"
+                "locale": "es"
               }
             },
             "recipient": {
-              // "fields": [
-              //   {
-              //     "id": "metadatalottus",
-              //     "value": JSON.stringify(price?.metadata),
-              //     "read_only": true
-              //   },
-              //   {
-              //     "id": "program_name",
-              //     "value": "SMTH"
-              //   },
-              //   {
-              //     "id": "curp",
-              //     "value": "U12345678"
-              //   },
-              //   {
-              //     "id": "student_first_name",
-              //     "value": "Test",
-              //     "read_only": true
-              //   },
-              //   {
-              //     "id": "student_last_name",
-              //     "value": "Thor&Hanna",
-              //     "read_only": true
-              //   },
-              //   {
-              //     "id": "student_email",
-              //     "value": "Thor@test.com",
-              //     "read_only": true
-              //   },
-              //   {
-              //     "id": "payment_type",
-              //     "value": "Tuition",
-              //     "read_only": true
-              //   }
-              // ]
               "fields": [
                 {
-                    "id": "graduation_year",
-                    "value": "2020",
-                    "read_only": true
+                    "id": "program_name",
+                    "value": program?.attributes?.name
                 },
                 {
-                    "id": "program_of_study",
-                    "value": "SMTH"
-                },
-                {
-                    "id": "student_id",
-                    "value": "U12345678"
+                    "id": "metadatalottus",
+                    "value": price?.metadata
                 },
                 {
                     "id": "student_first_name",
-                    "value": "Test",
+                    "value": personalData?.name,
+                    "read_only": true
+                },
+                {
+                    "id": "student_middle_name",
+                    "value": personalData?.last_name,
                     "read_only": true
                 },
                 {
                     "id": "student_last_name",
-                    "value": "Thor&Hanna",
+                    "value": personalData?.second_last_name,
                     "read_only": true
                 },
                 {
-                    "id": "relationship",
-                    "value": "lover",
+                    "id": "curp",
+                    "value": curp,
                     "read_only": true
                 },
                 {
                     "id": "student_email",
-                    "value": "Thor@test.com",
+                    "value": personalData?.email,
                     "read_only": true
                 },
-                {
-                    "id": "payment_type",
-                    "value": "Tuition",
-                    "read_only": true
-                }
             ]
             },
             "items": [
@@ -313,13 +273,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
           </div>
         </div>
         <ContentInsideLayout>
-          <h1>checkout</h1>
-          <div className="flex w-full">
-            <div className="w-full h-full mx-auto text-center align-middle">checkout</div>
-            <div className="w-1/2 h-full">
               <iframe width="600px" height="500px" src={flywireLink} title="Flywire form" ></iframe>
-            </div>
-          </div>
         </ContentInsideLayout>
       </ContentFullLayout>
     </HeaderFooterLayout> 
