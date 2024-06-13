@@ -122,7 +122,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                   "description": "My favourite item"
                 }
               ],
-              "notifications_url": `"${process.env.NEXT_PUBLIC_PAYMENT_WEBHOOK}/flywire"`,
+              "notifications_url": `${process.env.NEXT_PUBLIC_PAYMENT_WEBHOOK}/flywire`,
             })
           });
           const res = await response.json()
