@@ -109,9 +109,7 @@ const PaymentCard = (props: PaymentCardData) => {
             : null
         }
       </div>
-      {/* {
-        checkout_url
-          ? <div className="flex items-end justify-center">
+      {checkout_url? <div className="flex items-end justify-center">
             <Button
               dark
               data={{
@@ -129,7 +127,7 @@ const PaymentCard = (props: PaymentCardData) => {
               }}
             />
           </div>
-          :  metadata && config ?<div className="flex items-end justify-center">
+          :  metadata && config ?(<div className="flex items-end justify-center">
           <Button
             dark
             data={{
@@ -138,31 +136,15 @@ const PaymentCard = (props: PaymentCardData) => {
               isExpand: true,
             }}
             onClick={() => {
-              if (checkout_url) {
                 router.push(`/checkout/${program}/${id}`);
-              } else {
-                return
               }
-            }}
+            }
           />
-        </div>:  <div className="flex items-center">
-            <p className="text-6 font-bold">Próximamente</p> */}
-          {/* </div> }*/}
-        <div className="flex items-end justify-center">
-        <Button
-          dark
-          data={{
-            type: "primary",
-            title: "Inscribirme ahora",
-            isExpand: true,
-          }}
-          onClick={() => {
-              router.push(`/checkout/${program}/${id}`) 
-          }}
-        />
+        </div>):  
+        (<div className="flex items-center">
+            <p className="text-6 font-bold">Próximamente</p> 
+           </div> )
+      }
       </div>
-    </div>
-  )
-
-};
+)}
 export default PaymentCard;

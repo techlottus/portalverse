@@ -43,6 +43,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
   const [isValidCurp, setIsValidCurp] = useState(false);
   const [curpError, setCurpError] = useState(false);
 
+
   const setStatus = ({ loading, valid, success }: { loading: boolean, valid: boolean, success: boolean }) => {
     setIsVisible(!loading && !error)
     setIsLoading(loading)
@@ -192,7 +193,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
           />
           <div className="mobile:col-span-2">
             <div className="border border-surface-300 rounded-lg p-4">
-              <h3 className="font-headings font-bold text-5.5 leading-6">Diplomado en Análisis de Datos</h3>
+              <h3 className="font-headings font-bold text-5.5 leading-6">{program?.attributes?.name}</h3>
               <p className="text-white bg-primary-500 w-23 px-2 py-1 rounded-full text-center my-3">En línea</p>
               <hr className="text-surface-300" />
               <div className="flex justify-between mt-2">
@@ -272,9 +273,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
             </div>
           </div>
         </div>
-        <ContentInsideLayout>
-              <iframe width="600px" height="500px" src={flywireLink} title="Flywire form" ></iframe>
-        </ContentInsideLayout>
+          <div>   <iframe width="600px" height="500px" src={flywireLink} title="Flywire form" ></iframe></div> 
       </ContentFullLayout>
     </HeaderFooterLayout> 
   </>);
