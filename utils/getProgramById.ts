@@ -188,20 +188,20 @@ export type ProgramData = {
   attributes: ProgramAttributes;
 };
 
-type ProgramBySlugResponse = {
+type ProgramByIdResponse = {
   programs: {
     data: Array<ProgramData>
   }
 };
 
-const getProgramBySlug = async (slug: string = "") => {
-  const response = await fetchStrapiGraphQL<ProgramBySlugResponse>(PROGRAM_BY_SLUG, { slug });
-  return response?.programs?.data?.[0];
+const getProgramById = async (id: number) => {
+  const response = await fetchStrapiGraphQL<ProgramByIdResponse>(PROGRAM_BY_ID, { id });
+  return response?.programs?.data[0]
 };
 
-const PROGRAM_BY_SLUG = `
-query ProgramBySlug($slug: String!) {
-  programs(filters: { slug: { eq: $slug } }) {
+const PROGRAM_BY_ID = `
+query ProgramById($id: ID!) {
+  programs(filters: { id: { eq: $id } }) {
     data {
       id
       attributes {
@@ -496,4 +496,4 @@ query ProgramBySlug($slug: String!) {
 
 `;
 
-export default getProgramBySlug;
+export default getProgramById;
