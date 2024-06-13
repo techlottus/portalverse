@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import Head from "next/head"
 import ContentInsideLayout from "@/layouts/ContentInside.layout"
 import HeaderFooterLayout from "@/layouts/HeaderFooter.layout"
@@ -14,7 +15,12 @@ const axios = require('axios');
 const curpEndPoint = process.env.NEXT_PUBLIC_CURP_ID_END_POINT!;
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
 
-const Wizard = ({ children, activePageIndex }) => {
+interface WizardProps {
+  children?: ReactNode
+  activePageIndex: number
+}
+
+const Wizard = ({ children, activePageIndex }: WizardProps) => {
 
   const pages = React.Children.toArray(children);
   const currentPage = pages[activePageIndex];
