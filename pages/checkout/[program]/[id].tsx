@@ -15,27 +15,6 @@ import React from "react"
 import axios from "axios";
 import { env } from "process"
 
-// const axios = require('axios');
-
-interface WizardProps {
-  children?: ReactNode
-  activePageIndex: number
-}
-
-const Wizard = ({ children, activePageIndex }: WizardProps) => {
-
-  const pages = React.Children.toArray(children);
-  const currentPage = pages[activePageIndex];
-
-  return (
-    <div className="wizard">
-      <div className="wizard__content">{currentPage}</div>
-      <div className="flex justify-around">
-      </div>
-    </div>
-  );
-};
-
 type PageProps = {
   program?: ProgramData | null;
   price: any;
@@ -66,11 +45,6 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
   const [curpError, setCurpError] = useState(false);
   const [activePageIndex, setActivePageIndex] = useState(0);
   const [errorResponse, setErrorResponse] = useState();
-
-  const goNextPage = () => {
-    setActivePageIndex((index) => index + 1);
-  };
-
 
   const setStatus = ({ loading, valid, success }: { loading: boolean, valid: boolean, success: boolean }) => {
     setIsVisible(!loading && !error)
@@ -174,7 +148,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
           personalData.second_last_name = response?.data?.apellidoMaterno;
           personalData.birthdate = response?.data?.fechaNacimiento;
           personalData.gender = response?.data?.sexo;
-          goNextPage()
+          setActivePageIndex(activePageIndex + 1)
         }
       })
   })
@@ -201,28 +175,36 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
       </Head>
       <HeaderFooterLayout breadcrumbs={false}>
         <ContentFullLayout>
-          <Wizard activePageIndex={activePageIndex}>
+          <ContentInsideLayout>
             <div className="grid grid-cols-2 p-6">
-              <InscriptionForm
-                submit={submit}
-                setStatus={setStatus}
-                residence={residence}
-                noResidence={noResidence}
-                hasCurp={hasCurp}
-                noCurp={noCurp}
-                setResidence={setResidence}
-                setNoResidence={setNoResidence}
-                setHasCurp={setHasCurp}
-                setNoCurp={setNoCurp}
-                personalData={personalData}
-                setPersonalData={setPersonalData}
-                curp={curp}
-                setCurp={setCurp}
-                isValidCurp={isValidCurp}
-                setIsValidCurp={setIsValidCurp}
-                curpError={curpError}
-                setCurpError={setCurpError}
-              />
+              <div className="flex w-full">
+                <div className={cn({'hidden': activePageIndex !== 0})}>
+
+                  <InscriptionForm
+                    submit={submit}
+                    setStatus={setStatus}
+                    residence={residence}
+                    noResidence={noResidence}
+                    hasCurp={hasCurp}
+                    noCurp={noCurp}
+                    setResidence={setResidence}
+                    setNoResidence={setNoResidence}
+                    setHasCurp={setHasCurp}
+                    setNoCurp={setNoCurp}
+                    personalData={personalData}
+                    setPersonalData={setPersonalData}
+                    curp={curp}
+                    setCurp={setCurp}
+                    isValidCurp={isValidCurp}
+                    setIsValidCurp={setIsValidCurp}
+                    curpError={curpError}
+                    setCurpError={setCurpError}
+                  />
+                </div>
+                <div className={cn("w-1/2 h-full", {'hidden': activePageIndex !== 1})}>
+                  <iframe width="600px" height="500px" src={flywireLink} title="Flywire form"></iframe>
+                </div>
+              </div>
               <div className="mobile:col-span-2">
                 <div className="border border-surface-300 rounded-lg p-4">
                   <h3 className="font-headings font-bold text-5.5 leading-6">{program?.attributes?.name}</h3>
@@ -279,33 +261,21 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                         }}
                         onClick={() => {
                           onSubmitForm()
-                          goNextPage()
                         }}
                       />
                     </div>
                   }
                   <div className="flex">
                     <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">Al llenar tus datos aceptas nuestro</p>
-                    <Link href="terminos-y-condiciones" passHref target={"_blank"}>
+                    <Link href="terminos-y-condiciones" passHref target={"_blank"}> {/* deberia ir a aviso de privacidad???*/}
                       <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">Aviso de Privacidad</p>
                     </Link>
                   </div>
                 </div>
               </div>
             </div>
-            <ContentInsideLayout>
-              <div className="flex w-full">
-                <div className="w-1/2 h-full mx-auto text-center align-middle">checkout</div>
-                <div className="w-1/2 h-full">
-                  <iframe width="600px" height="500px" src={flywireLink} title="Flywire form"></iframe></div>
-                <button onClick={() => goNextPage()}>Siguiente </button>
-              </div>
+              
             </ContentInsideLayout>
-            <div>
-              Thank You Page
-            </div>
-          </Wizard>
-          {/* <div>  {flywireLink !='' && <iframe width="600px" height="500px" src={ flywireLink} title="Flywire form" ></iframe>}</div>  */}
         </ContentFullLayout>
       </HeaderFooterLayout>
     </>);
