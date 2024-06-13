@@ -6,13 +6,13 @@ import type { DynamicProgramDetailData } from "@/utils/pages";
 
 const DynamicProgramContent = (props: DynamicProgramDetailData) => {
 
-  const programAttributes = props?.program?.attributes;
+  const programAttributes = {id: props.program.id, ...props?.program?.attributes};
   const level = programAttributes?.level?.data?.attributes?.title;
 
   const renderContent = () => {
     switch(level) {
       case "Educación Continua": {
-        return <ContinuousEducationProgramDetail {...programAttributes} />
+        return <ContinuousEducationProgramDetail {...programAttributes } />
       }
       case "Bachillerato": {
         return <ProgramBachilleratoPageContent {...props}/>

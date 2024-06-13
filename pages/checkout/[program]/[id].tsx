@@ -3,22 +3,32 @@ import ContentInsideLayout from "@/layouts/ContentInside.layout"
 import HeaderFooterLayout from "@/layouts/HeaderFooter.layout"
 import ContentFullLayout from "@/layouts/ContentFull.layout"
 import NextPageWithLayout from "@/types/Layout.types"
-import { useEffect, useMemo, useState } from "react"
+import { useEffect, useState } from "react"
+import getProgramById, { ProgramData } from "@/utils/getProgramById"
 import { InscriptionForm } from "@/forms/container/InscriptionForm"
+
 import Link from "next/link"
 import Button from "@/old-components/Button/Button"
 import cn from "classnames"
+import axios from "axios";
+import { env } from "process"
 
-const axios = require('axios');
-const curpEndPoint = process.env.NEXT_PUBLIC_CURP_ID_END_POINT!;
-const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
+// const axios = require('axios');
 
-const CheckoutPage: NextPageWithLayout = () => {
+type PageProps = {
+  program?: ProgramData | null;
+  price: any;
+};
+const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
 
+  const curpEndPoint = process.env.NEXT_PUBLIC_CURP_ID_END_POINT!;
+  const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
+  const { program=null, price={} } = props;
   const flywireAPI = process.env.NEXT_PUBLIC_FLYWIRE_API
   const flywireAPIKEY = process.env.NEXT_PUBLIC_FLYWIRE_API_KEY
+  const [flywireLink, setFlywireLink] = useState('')
+  const priceAmount = price?.price * 100 || 100000;
 
-  const [flywireLink, setFlywireLink] = useState()
   const [residence, setResidence] = useState<any>()
   const [noResidence, setNoResidence] = useState<any>()
   const [hasCurp, setHasCurp] = useState<any>()
@@ -32,6 +42,7 @@ const CheckoutPage: NextPageWithLayout = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isValidCurp, setIsValidCurp] = useState(false);
   const [curpError, setCurpError] = useState(false);
+
 
   const setStatus = ({ loading, valid, success }: { loading: boolean, valid: boolean, success: boolean }) => {
     setIsVisible(!loading && !error)
@@ -52,86 +63,63 @@ const CheckoutPage: NextPageWithLayout = () => {
 
   useEffect(() => {
     const postData = async () => {
-      if (flywireAPI && flywireAPIKEY) {
+      if (flywireAPI && flywireAPIKEY ) {
         const response = await fetch("/api/generateFwLink", {
           method: 'POST',
           body: JSON.stringify({
-            "type": "one_off",
-            "charge_intent": {
-              "mode": "one_off"
-            },
-            "payor": {
-              "first_name": "SANDBOX_TO_DELIVERED_STATUS",
-              "last_name": "Thor",
-              "address": "Allen Street",
-              "city": "Valencia",
-              "country": "ES",
-              "state": "VA",
-              "email": "test@Thor.com",
-              "zip": "10002",
-              "phone": "+341123456789"
-            },
+            ...price?.config,
             "options": {
               "form": {
-                "action_button": "pay",
-                "locale": "en"
+                "action_button": "save",
+                "locale": "es"
               }
             },
             "recipient": {
               "fields": [
                 {
-                  "id": "graduation_year",
-                  "value": "2020",
-                  "read_only": true
+                    "id": "program_name",
+                    "value": program?.attributes?.name
                 },
                 {
-                  "id": "program_of_study",
-                  "value": "SMTH"
+                    "id": "metadatalottus",
+                    "value": price?.metadata
                 },
                 {
-                  "id": "student_id",
-                  "value": "U12345678"
+                    "id": "student_first_name",
+                    "value": personalData?.name,
+                    "read_only": true
                 },
                 {
-                  "id": "student_first_name",
-                  "value": "Test",
-                  "read_only": true
+                    "id": "student_middle_name",
+                    "value": personalData?.last_name,
+                    "read_only": true
                 },
                 {
-                  "id": "student_last_name",
-                  "value": "Thor&Hanna",
-                  "read_only": true
+                    "id": "student_last_name",
+                    "value": personalData?.second_last_name,
+                    "read_only": true
                 },
                 {
-                  "id": "relationship",
-                  "value": "lover",
-                  "read_only": true
+                    "id": "curp",
+                    "value": curp,
+                    "read_only": true
                 },
                 {
-                  "id": "student_email",
-                  "value": "Thor@test.com",
-                  "read_only": true
+                    "id": "student_email",
+                    "value": personalData?.email,
+                    "read_only": true
                 },
-                {
-                  "id": "payment_type",
-                  "value": "Tuition",
-                  "read_only": true
-                }
-              ]
+            ]
             },
             "items": [
               {
                 "id": "default",
-                "amount": 350000,
+                "amount": priceAmount,
                 "description": "My favourite item"
               }
             ],
-            "notifications_url": "https://webhook.site/6ff82c43-94f3-4651-b45d-80c9e02d97de",
-            "external_reference": "Test payment Thor",
-            "recipient_id": "KWR",
-            "payor_id": "payor_test_thor"
-          }
-          )
+            "notifications_url": env.NEXT_PUBLIC_FW_WEBHOOK,
+          })
         });
         const res = await response.json()
         setFlywireLink(await res)
@@ -140,7 +128,6 @@ const CheckoutPage: NextPageWithLayout = () => {
     postData()
   }, [])
   useEffect(() => {
-    console.log('flywireLink: ', flywireLink)
   }, [flywireLink])
 
   const onSubmitCurp = (() => {
@@ -176,11 +163,12 @@ const CheckoutPage: NextPageWithLayout = () => {
     console.log("params", params)
   }
 
-  return <>
+  return (
+  <>
     <Head>
       title
     </Head>
-    <HeaderFooterLayout breadcrumbs={false}>
+   <HeaderFooterLayout breadcrumbs={false}>
       <ContentFullLayout>
         <div className="grid grid-cols-2 p-6">
           <InscriptionForm
@@ -205,7 +193,7 @@ const CheckoutPage: NextPageWithLayout = () => {
           />
           <div className="mobile:col-span-2">
             <div className="border border-surface-300 rounded-lg p-4">
-              <h3 className="font-headings font-bold text-5.5 leading-6">Diplomado en Análisis de Datos</h3>
+              <h3 className="font-headings font-bold text-5.5 leading-6">{program?.attributes?.name}</h3>
               <p className="text-white bg-primary-500 w-23 px-2 py-1 rounded-full text-center my-3">En línea</p>
               <hr className="text-surface-300" />
               <div className="flex justify-between mt-2">
@@ -285,16 +273,54 @@ const CheckoutPage: NextPageWithLayout = () => {
             </div>
           </div>
         </div>
-        <ContentInsideLayout>
-          <div className="flex w-full">
-            <div className="w-1/2 h-full mx-auto text-center align-middle">checkout</div>
-            <div className="w-1/2 h-full">
-              <iframe width="600px" height="500px" src={flywireLink} title="Flywire form"></iframe></div>
-          </div>
-        </ContentInsideLayout>
+          {/* <div>  {flywireLink !='' && <iframe width="600px" height="500px" src={ flywireLink} title="Flywire form" ></iframe>}</div>  */}
       </ContentFullLayout>
-    </HeaderFooterLayout>
-  </>;
+    </HeaderFooterLayout> 
+  </>);
+}
+
+
+
+export async function getStaticPaths() {
+
+  return {
+    paths: [
+      {
+        params: {
+          program: '0',
+          id: '0',
+        },
+      }, // See the "paths" section below
+    ],
+    fallback: true, // false or "blocking"
+
+  };
+}
+export async function getStaticProps(context: any): Promise<{ props: PageProps }> {
+  const {
+    params: { id=null, program=null },
+  } = context;
+
+  if (program && Number(id)) {
+    const programData = await getProgramById(program);
+    const price = await programData?.attributes.price_list.price.filter((price: any) => price.id === id)[0]
+    return {
+      props: {
+        program: programData,
+        price
+      },
+    };
+  } else {
+    const programData = null;
+    const price = null
+    return {
+      props: {
+        program: programData,
+        price
+      },
+    }
+  }
+
 }
 
 export default CheckoutPage
