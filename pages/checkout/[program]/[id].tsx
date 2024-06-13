@@ -292,17 +292,17 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                   </div>
                 </div>
               </div>
-              <ContentInsideLayout>
-                <div className="flex w-full">
-                  <div className="w-1/2 h-full mx-auto text-center align-middle">checkout</div>
-                  <div className="w-1/2 h-full">
-                    <iframe width="600px" height="500px" src={flywireLink} title="Flywire form"></iframe></div>
-                  <button onClick={() => goNextPage()}>Siguiente </button>
-                </div>
-              </ContentInsideLayout>
-              <div>
-                Thank You Page
+            </div>
+            <ContentInsideLayout>
+              <div className="flex w-full">
+                <div className="w-1/2 h-full mx-auto text-center align-middle">checkout</div>
+                <div className="w-1/2 h-full">
+                  <iframe width="600px" height="500px" src={flywireLink} title="Flywire form"></iframe></div>
+                <button onClick={() => goNextPage()}>Siguiente </button>
               </div>
+            </ContentInsideLayout>
+            <div>
+              Thank You Page
             </div>
           </Wizard>
           {/* <div>  {flywireLink !='' && <iframe width="600px" height="500px" src={ flywireLink} title="Flywire form" ></iframe>}</div>  */}
