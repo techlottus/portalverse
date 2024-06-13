@@ -13,7 +13,6 @@ import Button from "@/old-components/Button/Button"
 import cn from "classnames"
 import React from "react"
 import axios from "axios";
-import { env } from "process"
 
 type PageProps = {
   program?: ProgramData | null;
@@ -64,77 +63,80 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
   });
 
   useEffect(() => {
-    const postData = async () => {
-      if (flywireAPI && flywireAPIKEY) {
-        const response = await fetch("/api/generateFwLink", {
-          method: 'POST',
-          body: JSON.stringify({
-            ...price?.config,
-            "options": {
-              "form": {
-                "action_button": "save",
-                "locale": "es"
-              }
-            },
-            "recipient": {
-              "fields": [
+    console.log(activePageIndex);
+    
+    if (activePageIndex === 1) {
+      const postData = async () => {
+        if (flywireAPI && flywireAPIKEY) {
+          const response = await fetch("/api/generateFwLink", {
+            method: 'POST',
+            body: JSON.stringify({
+              ...price?.config,
+              "options": {
+                "form": {
+                  "action_button": "save",
+                  "locale": "es"
+                }
+              },
+              "recipient": {
+                "fields": [
+                  {
+                    "id": "program_name",
+                    "value": program?.attributes?.name
+                  },
+                  {
+                    "id": "metadatalottus",
+                    "value": price?.metadata
+                  },
+                  {
+                    "id": "student_first_name",
+                    "value": personalData?.name,
+                    "read_only": true
+                  },
+                  {
+                    "id": "student_middle_name",
+                    "value": personalData?.last_name,
+                    "read_only": true
+                  },
+                  {
+                    "id": "student_last_name",
+                    "value": personalData?.second_last_name,
+                    "read_only": true
+                  },
+                  {
+                    "id": "curp",
+                    "value": curp,
+                    "read_only": true
+                  },
+                  {
+                    "id": "student_email",
+                    "value": personalData?.email,
+                    "read_only": true
+                  },
+                ]
+              },
+              "items": [
                 {
-                  "id": "program_name",
-                  "value": program?.attributes?.name
-                },
-                {
-                  "id": "metadatalottus",
-                  "value": price?.metadata
-                },
-                {
-                  "id": "student_first_name",
-                  "value": personalData?.name,
-                  "read_only": true
-                },
-                {
-                  "id": "student_middle_name",
-                  "value": personalData?.last_name,
-                  "read_only": true
-                },
-                {
-                  "id": "student_last_name",
-                  "value": personalData?.second_last_name,
-                  "read_only": true
-                },
-                {
-                  "id": "curp",
-                  "value": curp,
-                  "read_only": true
-                },
-                {
-                  "id": "student_email",
-                  "value": personalData?.email,
-                  "read_only": true
-                },
-              ]
-            },
-            "items": [
-              {
-                "id": "default",
-                "amount": priceAmount,
-                "description": "My favourite item"
-              }
-            ],
-            "notifications_url": env.NEXT_PUBLIC_FW_WEBHOOK,
-          })
-        });
-        const res = await response.json()
-        setFlywireLink(await res)
+                  "id": "default",
+                  "amount": priceAmount,
+                  "description": "My favourite item"
+                }
+              ],
+              "notifications_url": `"${process.env.NEXT_PUBLIC_PAYMENT_WEBHOOK}/flywire"`,
+            })
+          });
+          const res = await response.json()
+          setFlywireLink(await res)
+        }
       }
+      postData()
     }
-    postData()
-  }, [])
+  }, [activePageIndex])
   useEffect(() => {
   }, [flywireLink])
 
   const onSubmitCurp = (async () => {
-
-    await axios.post(`https://${businessUnit.toLowerCase() + curpEndPoint}/curp/validate`, {
+    await axios.post(`${process.env.NEXT_PUBLIC_PAYMENT_WEBHOOK}/curp/validate`, {
       curp: curp,
     })
       .then(function (response: any) {
@@ -165,7 +167,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
     const genero = personalData?.gender;
 
     const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&apellidoMaterno=${apellidoMaterno}&email=${email}&telefono=${telefono}&fechaNacimiento=${fechaNacimiento}&genero=${genero}`;
-    console.log("params", params)
+
   }
 
   return (
@@ -175,107 +177,107 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
       </Head>
       <HeaderFooterLayout breadcrumbs={false}>
         <ContentFullLayout>
-          <ContentInsideLayout>
-            <div className="grid grid-cols-2 p-6">
-              <div className="flex w-full">
-                <div className={cn({'hidden': activePageIndex !== 0})}>
+          <div className="flex w-full justify-center py-12">
+            <div className={cn({'hidden': activePageIndex !== 0})}>
 
-                  <InscriptionForm
-                    submit={submit}
-                    setStatus={setStatus}
-                    residence={residence}
-                    noResidence={noResidence}
-                    hasCurp={hasCurp}
-                    noCurp={noCurp}
-                    setResidence={setResidence}
-                    setNoResidence={setNoResidence}
-                    setHasCurp={setHasCurp}
-                    setNoCurp={setNoCurp}
-                    personalData={personalData}
-                    setPersonalData={setPersonalData}
-                    curp={curp}
-                    setCurp={setCurp}
-                    isValidCurp={isValidCurp}
-                    setIsValidCurp={setIsValidCurp}
-                    curpError={curpError}
-                    setCurpError={setCurpError}
-                  />
+              <InscriptionForm
+                submit={submit}
+                setStatus={setStatus}
+                residence={residence}
+                noResidence={noResidence}
+                hasCurp={hasCurp}
+                noCurp={noCurp}
+                setResidence={setResidence}
+                setNoResidence={setNoResidence}
+                setHasCurp={setHasCurp}
+                setNoCurp={setNoCurp}
+                personalData={personalData}
+                setPersonalData={setPersonalData}
+                curp={curp}
+                setCurp={setCurp}
+                isValidCurp={isValidCurp}
+                setIsValidCurp={setIsValidCurp}
+                curpError={curpError}
+                setCurpError={setCurpError}
+              />
+            </div>
+            <div className={cn("w-1/2 h-full", {'hidden': activePageIndex !== 1})}>
+              {
+                !flywireLink
+                  ? <p>... loading</p>
+                  : <iframe width="600px" height="500px" src={flywireLink} title="Flywire form"></iframe>
+              }
+            </div>
+            
+            <div className="mobile:col-span-2 desktop:pl-6">
+              <div className="border border-surface-300 rounded-lg p-4">
+                <h3 className="font-headings font-bold text-5.5 leading-6">{program?.attributes?.name}</h3>
+                <p className="text-white bg-primary-500 w-23 px-2 py-1 rounded-full text-center my-3">En línea</p>
+                <hr className="text-surface-300" />
+                <div className="flex justify-between mt-2">
+                  <p className="font-texts">Opción de pago:</p>
+                  <p className="text-surface-500 font-texts">3 parcialidades</p>
                 </div>
-                <div className={cn("w-1/2 h-full", {'hidden': activePageIndex !== 1})}>
-                  <iframe width="600px" height="500px" src={flywireLink} title="Flywire form"></iframe>
-                </div>
-              </div>
-              <div className="mobile:col-span-2">
-                <div className="border border-surface-300 rounded-lg p-4">
-                  <h3 className="font-headings font-bold text-5.5 leading-6">{program?.attributes?.name}</h3>
-                  <p className="text-white bg-primary-500 w-23 px-2 py-1 rounded-full text-center my-3">En línea</p>
-                  <hr className="text-surface-300" />
-                  <div className="flex justify-between mt-2">
-                    <p className="font-texts">Opción de pago:</p>
-                    <p className="text-surface-500 font-texts">3 parcialidades</p>
+                {
+                  residence &&
+                  <div className="flex flex-col my-6">
+                    <Button
+                      dark
+                      data={{
+                        type: "primary",
+                        title: "Inscribirme ahora",
+                        isExpand: true,
+                        disabled: !isValidCurp
+                      }}
+                      onClick={() => {
+                        onSubmitCurp()
+                      }}
+                    />
                   </div>
-                  {
-                    residence &&
-                    <div className="flex flex-col my-6">
-                      <Button
-                        dark
-                        data={{
-                          type: "primary",
-                          title: "Inscribirme ahora",
-                          isExpand: true,
-                          disabled: !isValidCurp
-                        }}
-                        onClick={() => {
-                          onSubmitCurp()
-                        }}
-                      />
-                    </div>
-                  }
-                  {
-                    noResidence &&
-                    <div className={cn("flex flex-col my-6", { "hidden": !hasCurp })}>
-                      <Button
-                        dark
-                        data={{
-                          type: "primary",
-                          title: "Inscribirme ahora",
-                          isExpand: true,
-                          disabled: !isValidCurp
-                        }}
-                        onClick={() => {
-                          onSubmitCurp()
-                        }}
-                      />
-                    </div>
-                  }
-                  {
-                    noCurp &&
-                    <div className="flex flex-col my-6">
-                      <Button
-                        dark
-                        data={{
-                          type: "primary",
-                          title: "Inscribirme ahora",
-                          isExpand: true,
-                          disabled: !isValid
-                        }}
-                        onClick={() => {
-                          onSubmitForm()
-                        }}
-                      />
-                    </div>
-                  }
-                  <div className="flex">
-                    <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">Al llenar tus datos aceptas nuestro</p>
-                    <Link href="terminos-y-condiciones" passHref target={"_blank"}> {/* deberia ir a aviso de privacidad???*/}
-                      <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">Aviso de Privacidad</p>
-                    </Link>
+                }
+                {
+                  noResidence &&
+                  <div className={cn("flex flex-col my-6", { "hidden": !hasCurp })}>
+                    <Button
+                      dark
+                      data={{
+                        type: "primary",
+                        title: "Inscribirme ahora",
+                        isExpand: true,
+                        disabled: !isValidCurp
+                      }}
+                      onClick={() => {
+                        onSubmitCurp()
+                      }}
+                    />
                   </div>
+                }
+                {
+                  noCurp &&
+                  <div className="flex flex-col my-6">
+                    <Button
+                      dark
+                      data={{
+                        type: "primary",
+                        title: "Inscribirme ahora",
+                        isExpand: true,
+                        disabled: !isValid
+                      }}
+                      onClick={() => {
+                        onSubmitForm()
+                      }}
+                    />
+                  </div>
+                }
+                <div className="flex">
+                  <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">Al llenar tus datos aceptas nuestro</p>
+                  <Link href="terminos-y-condiciones" passHref target={"_blank"}> {/* deberia ir a aviso de privacidad???*/}
+                    <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">Aviso de Privacidad</p>
+                  </Link>
                 </div>
               </div>
             </div>
-              
-            </ContentInsideLayout>
+          </div>
         </ContentFullLayout>
       </HeaderFooterLayout>
     </>);
