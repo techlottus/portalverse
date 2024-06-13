@@ -284,7 +284,6 @@ const InscriptionForm = (props: InscriptionFormData) => {
                     const { detail: { value } } = e;
                     setCurpTouched(true);
                     setCurp(value);
-                    console.log(curp)
                   }}
                   errorMessage={configControls.errorMessagesInscriptionForm.curp}
                   eventFocus={() => setCurpTouched(true)}
@@ -346,9 +345,13 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   upperCase: true
                 }}
                   eventKeyPress={(e: CustomEvent) => {
-                    setCurp(e.detail.value)
+                    const { detail: { value } } = e;
+                    setCurpTouched(true);
+                    setCurp(value);
                   }}
-                  errorMessage={configControls.errorMessagesInscriptionForm.name}
+                  errorMessage={configControls.errorMessagesInscriptionForm.curp}
+                  eventFocus={() => setCurpTouched(true)}
+                  hasError={curpError}
                 />
               </div>
               <p className="font-texts text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p></>
