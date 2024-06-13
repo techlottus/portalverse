@@ -11,6 +11,7 @@ import Link from "next/link"
 import Button from "@/old-components/Button/Button"
 import cn from "classnames"
 import axios from "axios";
+import { env } from "process"
 
 // const axios = require('axios');
 
@@ -156,7 +157,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                 "description": "My favourite item"
               }
             ],
-            "notifications_url": "https://webhook.site/6ff82c43-94f3-4651-b45d-80c9e02d97de",
+            "notifications_url": env.NEXT_PUBLIC_FW_WEBHOOK,
           })
         });
         const res = await response.json()
