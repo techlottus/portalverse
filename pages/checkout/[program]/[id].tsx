@@ -273,7 +273,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
             </div>
           </div>
         </div>
-          <div>   <iframe width="600px" height="500px" src={flywireLink} title="Flywire form" ></iframe></div> 
+          {/* <div>  {flywireLink !='' && <iframe width="600px" height="500px" src={ flywireLink} title="Flywire form" ></iframe>}</div>  */}
       </ContentFullLayout>
     </HeaderFooterLayout> 
   </>);
