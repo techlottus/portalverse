@@ -181,7 +181,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
       </Head>
       <HeaderFooterLayout breadcrumbs={false}>
         <ContentFullLayout>
-          <div className="flex w-full justify-center py-12">
+          <div className="flex w-full mobile:flex-col justify-center py-12 gap-x-30">
             <div className={cn({ 'hidden': activePageIndex !== 0 })}>
 
               <InscriptionForm
@@ -212,7 +212,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                   : <iframe width="600px" height="500px" src={flywireLink} title="Flywire form"></iframe>
               }
             </div>
-            <div className="mobile:col-span-2 desktop:pl-6">
+            <div className="mobile: px-6">
               <div className="border border-surface-300 rounded-lg p-4">
                 <h3 className="font-headings font-bold text-5.5 leading-6">{program?.attributes?.name}</h3>
                 <p className="text-white bg-primary-500 w-23 px-2 py-1 rounded-full text-center my-3">En línea</p>
