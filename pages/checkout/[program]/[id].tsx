@@ -7,12 +7,12 @@ import NextPageWithLayout from "@/types/Layout.types"
 import { useEffect, useState } from "react"
 import getProgramById, { ProgramData } from "@/utils/getProgramById"
 import { InscriptionForm } from "@/forms/container/InscriptionForm"
-
 import Link from "next/link"
 import Button from "@/old-components/Button/Button"
 import cn from "classnames"
 import React from "react"
 import axios from "axios";
+import { useRouter } from "next/router";
 
 type PageProps = {
   program?: ProgramData | null;
@@ -44,6 +44,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
   const [curpError, setCurpError] = useState(false);
   const [activePageIndex, setActivePageIndex] = useState(0);
   const [errorResponse, setErrorResponse] = useState();
+  const router = useRouter();
 
   const setStatus = ({ loading, valid, success }: { loading: boolean, valid: boolean, success: boolean }) => {
     setIsVisible(!loading && !error)
@@ -64,7 +65,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
 
   useEffect(() => {
     console.log(activePageIndex);
-    
+
     if (activePageIndex === 1) {
       const postData = async () => {
         if (flywireAPI && flywireAPIKEY) {
@@ -131,6 +132,9 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
       }
       postData()
     }
+    if (activePageIndex === 2) {
+      router.push(`/thank-you-inscription`);
+    }
   }, [activePageIndex])
   useEffect(() => {
   }, [flywireLink])
@@ -178,7 +182,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
       <HeaderFooterLayout breadcrumbs={false}>
         <ContentFullLayout>
           <div className="flex w-full justify-center py-12">
-            <div className={cn({'hidden': activePageIndex !== 0})}>
+            <div className={cn({ 'hidden': activePageIndex !== 0 })}>
 
               <InscriptionForm
                 submit={submit}
@@ -201,14 +205,13 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                 setCurpError={setCurpError}
               />
             </div>
-            <div className={cn("w-1/2 h-full", {'hidden': activePageIndex !== 1})}>
+            <div className={cn("w-1/2 h-full", { 'hidden': activePageIndex !== 1 })}>
               {
                 !flywireLink
                   ? <p>... loading</p>
                   : <iframe width="600px" height="500px" src={flywireLink} title="Flywire form"></iframe>
               }
             </div>
-            
             <div className="mobile:col-span-2 desktop:pl-6">
               <div className="border border-surface-300 rounded-lg p-4">
                 <h3 className="font-headings font-bold text-5.5 leading-6">{program?.attributes?.name}</h3>
