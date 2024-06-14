@@ -71,7 +71,7 @@ const ThankYouPageInscription: NextPageWithLayout = ({ sections, meta }: any) =>
 // `getStaticPaths` requires using `getStaticProps`
 export async function getStaticProps(context: any) {
   try {
-    const { sections, meta } = await getDataPageFromJSON('thank-you-inscription.json');
+    const { sections, meta } = await getDataPageFromJSON('checkout-thank-you.json');
 
     // redirect not avaliable page
     if (!!meta.hidden) {
