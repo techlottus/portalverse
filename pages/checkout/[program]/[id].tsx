@@ -42,7 +42,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isValidCurp, setIsValidCurp] = useState(false);
   const [curpError, setCurpError] = useState(false);
-  const [activePageIndex, setActivePageIndex] = useState(2);
+  const [activePageIndex, setActivePageIndex] = useState(0);
   const [errorResponse, setErrorResponse] = useState();
   const router = useRouter();
 
