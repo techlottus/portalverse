@@ -1,5 +1,166 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-@import url('https://fonts.google.com/specimen/Nunito+Sans?query=nunito+sans');
-@import url('https://fonts.googleapis.com/css2?&family=Poppins:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/icon?family=Nunito+Sans:wght@400&display=swap');
+
+@supports (font-variation-settings: "wght" 0,100) {
+  * {
+    font-family: 'Nunito Sans';
+    font-weight: 0,100;
+    font-display: swap;
+  }
+}
+@supports (font-variation-settings: "wght" 0,200) {
+  * {
+    font-family: 'Nunito Sans';
+    font-weight: 0,200;
+    font-display: swap;
+  }
+}
+@supports (font-variation-settings: "wght" 0,300) {
+  * {
+    font-family: 'Nunito Sans';
+    font-weight: 0,300;
+    font-display: swap;
+  }
+}
+@supports (font-variation-settings: "wght" 0,400) {
+  * {
+    font-family: 'Nunito Sans';
+    font-weight: 0,400;
+    font-display: swap;
+  }
+}
+@supports (font-variation-settings: "wght" 0,500) {
+  * {
+    font-family: 'Nunito Sans';
+    font-weight: 0,500;
+    font-display: swap;
+  }
+}
+@supports (font-variation-settings: "wght" 0,600) {
+  * {
+    font-family: 'Nunito Sans';
+    font-weight: 0,600;
+    font-display: swap;
+  }
+}
+@supports (font-variation-settings: "wght" 0,700) {
+  * {
+    font-family: 'Nunito Sans';
+    font-weight: 0,700;
+    font-display: swap;
+  }
+}
+@supports (font-variation-settings: "wght" 0,800) {
+  * {
+    font-family: 'Nunito Sans';
+    font-weight: 0,800;
+    font-display: swap;
+  }
+}
+@supports (font-variation-settings: "wght" 0,900) {
+  * {
+    font-family: 'Nunito Sans';
+    font-weight: 0,900;
+    font-display: swap;
+  }
+}
+@supports (font-variation-settings: "wght" 1,100) {
+  * {
+    font-family: 'Nunito Sans';
+    font-weight: 1,100;
+    font-display: swap;
+  }
+}
+@supports (font-variation-settings: "wght" 1,300) {
+  * {
+    font-family: 'Nunito Sans';
+    font-weight: 1,300;
+    font-display: swap;
+  }
+}
+@supports (font-variation-settings: "wght" 1,400) {
+  * {
+    font-family: 'Nunito Sans';
+    font-weight: 1,400;
+    font-display: swap;
+  }
+}
+@supports (font-variation-settings: "wght" 1,500) {
+  * {
+    font-family: 'Nunito Sans';
+    font-weight: 1,500;
+    font-display: swap;
+  }
+}
+@supports (font-variation-settings: "wght" 1,600) {
+  * {
+    font-family: 'Nunito Sans';
+    font-weight: 1,600;
+    font-display: swap;
+  }
+}
+@supports (font-variation-settings: "wght" 1,700) {
+  * {
+    font-family: 'Nunito Sans';
+    font-weight: 1,700;
+    font-display: swap;
+  }
+}
+@supports (font-variation-settings: "wght" 1,800) {
+  * {
+    font-family: 'Nunito Sans';
+    font-weight: 1,800;
+    font-display: swap;
+  }
+}
+@supports (font-variation-settings: "wght" 1,900) {
+  * {
+    font-family: 'Nunito Sans';
+    font-weight: 1,900;
+    font-display: swap;
+  }
+}
+
+@supports (font-variation-settings: "wght" 400) {
+  * {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-display: swap;
+  }
+}
+@supports (font-variation-settings: "wght" 600) {
+  * {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-display: swap;
+  }
+}
+@supports (font-variation-settings: "wght" 700) {
+  * {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-display: swap;
+  }
+}
+
+@supports (font-variation-settings: "wght" 400) {
+  * {
+    font-family: 'Nunito Sans';
+    font-weight: 400;
+    font-display: swap;
+  }
+}
+@supports (font-variation-settings: "wght" 600) {
+  * {
+    font-family: 'Nunito Sans';
+    font-weight: 600;
+    font-display: swap;
+  }
+}
+@supports (font-variation-settings: "wght" 700) {
+  * {
+    font-family: 'Nunito Sans';
+    font-weight: 700;
+    font-display: swap;
+  }
+}
+

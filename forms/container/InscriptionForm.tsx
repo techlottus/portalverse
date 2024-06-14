@@ -108,15 +108,43 @@ const InscriptionForm = (props: InscriptionFormData) => {
     return validity;
   }
 
-  const validateCurp = () => {
+  const validateCurp =  () => {
 
     const newCurpError = !validateCurpControl(curp)
 
     setCurpError(newCurpError);
 
     const isValidCurp = validateCurpControls();
-
-    setIsValidCurp(isValidCurp)
+    
+    if (isValidCurp){
+      console.log("isValidCurp: ",isValidCurp)
+        console.log("curp: ",curp)
+        axios.post(`${process.env.NEXT_PUBLIC_PAYMENT_WEBHOOK}/curp/validate`, {
+          curp,
+        }).then(function (response: any) {
+          console.log("response: ",response)
+          
+            if (response.data.errorMessage) {
+              console.log("response.data.errorMessage: ", response.data.errorMessage)
+              setIsValidCurp(false)
+              setCurpError(true)
+            }
+            if (response.data.curp) {
+              console.log("response.data.curp: ", response.data.curp)
+              setPersonalData({
+                ...personalData, 
+                name : response?.data?.nombre,
+                last_name : response?.data?.apellidoPaterno,
+                second_last_name : response?.data?.apellidoMaterno,
+                birthdate : response?.data?.fechaNacimiento,
+                gender : response?.data?.sexo,
+              })
+              setIsValidCurp(true)
+            }
+          }).catch((err:any)=>{console.log("Error en el curp: ",err)})
+      
+    }
+    
   }
 
   const validatePersonalDataControl = (control: string, value: string) => {
@@ -129,6 +157,30 @@ const InscriptionForm = (props: InscriptionFormData) => {
 
     return !!value?.trim()
   };
+
+  //   const onSubmitCurp = async () => {
+  //   await axios.post(`${process.env.NEXT_PUBLIC_PAYMENT_WEBHOOK}/curp/validate`, {
+  //     curp: curp,
+  //   })
+  //     .then(function (response: any) {
+  //       if (response.data.errorMessage) {
+  //         setIsValidCurp(!isValidCurp)
+  //         setCurpError(!curpError)
+  //       }
+  //       if (response.data.curp) {
+  //         setPersonalData({
+  //           ...personalData, 
+  //           name : response?.data?.nombre,
+  //           last_name : response?.data?.apellidoPaterno,
+  //           second_last_name : response?.data?.apellidoMaterno,
+  //           birthdate : response?.data?.fechaNacimiento,
+  //           gender : response?.data?.sexo,
+  //         })
+  //         console.log("response: ",response)
+  //         setIsValidCurp(isValidCurp)
+  //       }
+  //     })
+  // }
 
   const validatePersonalDataControls = () => !Object.entries(personalData).map(([key, value]: any) => {
     const validity = validatePersonalDataControl(key, value)
@@ -149,8 +201,11 @@ const InscriptionForm = (props: InscriptionFormData) => {
     setPersonalDataErrors({ ...newPersonalDataErrors });
 
     const isValidPersonalData = validatePersonalDataControls();
-
+    console.log("isValidPersonalData",isValidPersonalData)
+    console.log("personalData",personalData)
     setIsValid(isValidPersonalData)
+    
+
   }
 
   const {
@@ -159,27 +214,27 @@ const InscriptionForm = (props: InscriptionFormData) => {
     token,
   } = getTokenForms();
 
-  const handleSubmit = async () => {
-    setIsLoading(true)
-    Validate()
-    if (isValid) {
-      sendLeadData()
-    }
-  }
+  // const handleSubmit = async () => {
+  //   setIsLoading(true)
+  //   Validate()
+  //   if (isValid) {
+  //     // sendLeadData()
+  //   }
+  // }
 
-  const sendLeadData = async () => {
+  // const sendLeadData = async () => {
 
-    const endpoint = process.env.NEXT_PUBLIC_CAPTACION_PROSPECTO;
-    const nombre = personalData?.name;
-    const apellidoPaterno = personalData?.last_name;
-    const apellidoMaterno = personalData?.second_last_name;
-    const email = personalData?.email;
-    const telefono = personalData?.phone;
-    const fechaNacimiento = personalData?.birthdate;
-    const genero = personalData?.gender;
+  //   const endpoint = process.env.NEXT_PUBLIC_CAPTACION_PROSPECTO;
+  //   const nombre = personalData?.name;
+  //   const apellidoPaterno = personalData?.last_name;
+  //   const apellidoMaterno = personalData?.second_last_name;
+  //   const email = personalData?.email;
+  //   const telefono = personalData?.phone;
+  //   const fechaNacimiento = personalData?.birthdate;
+  //   const genero = personalData?.gender;
 
-    const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&apellidoMaterno=${apellidoMaterno}&email=${email}&telefono=${telefono}&fechaNacimiento=${fechaNacimiento}&genero=${genero}`;
-  }
+  //   const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&apellidoMaterno=${apellidoMaterno}&email=${email}&telefono=${telefono}&fechaNacimiento=${fechaNacimiento}&genero=${genero}`;
+  // }
 
   const handleSelect = async ({ detail }: CustomEvent) => {
     const selectedGender = detail;
@@ -188,13 +243,15 @@ const InscriptionForm = (props: InscriptionFormData) => {
     })
     setOptionsGender(selectOptions)
     setPersonalDataTouched({ ...personalDataTouched, ["gender"]: true });
-    setPersonalData({ ...personalData, ["gender"]: selectedGender });
+    setPersonalData({ ...personalData, ["gender"]: selectedGender,["residence"]:residence?"Nacional":"Extranjero" });
   };
 
   const handleKeyPress = (e: CustomEvent, control: string) => {
     const { detail: { value } } = e;
+    console.log("control",control)
+    console.log("value",value)
     setPersonalDataTouched({ ...personalDataTouched, [control]: true });
-    setPersonalData({ ...personalData, [control]: value });
+    setPersonalData({ ...personalData, [control]: value, ["residence"]:residence?"Nacional":"Extranjero"});
   };
 
   const handleTouchedControl = (control: string) => {
@@ -209,11 +266,12 @@ const InscriptionForm = (props: InscriptionFormData) => {
 
   useEffect(() => {
     setStatus({ loading: isLoading, valid: isValid, success: isSuccess })
+    console.log("isValid: ",isValid)
   }, [isLoading, isValid, isSuccess]);
 
-  useEffect(() => {
-    if (submit) handleSubmit()
-  }, [submit]);
+  // useEffect(() => {
+  //   if (submit) handleSubmit()
+  // }, [submit]);
 
 
   useEffect(() => {
@@ -221,7 +279,9 @@ const InscriptionForm = (props: InscriptionFormData) => {
   }, [personalData]);
 
   useEffect(() => {
-    validateCurp()
+  
+       validateCurp()
+
   }, [curp]);
 
   return (
@@ -231,37 +291,39 @@ const InscriptionForm = (props: InscriptionFormData) => {
         <div className="mobile:col-span-2 mb-4">
           <div className="flex flex-col gap-6">
             <div>
-              <h3 className="font-headings font-bold text-5.5 leading-6 mobile:text-lg">Estás a punto de iniciar tu curso</h3>
-              <p className="text-surface-500 font-texts text-base mobile:text-sm mt-1">Te pedimos llenar tus datos como estudiante para inscribirte</p>
+              <h3 className="font-headings font-bold text-3xl text-surface-900  mobile:text-lg">Estás a punto de iniciar tu curso</h3>
+              <p className="text-surface-700 font-headings text-base mobile:text-sm mt-3">Te pedimos llenar tus datos como estudiante para inscribirte</p>
             </div>
-            <p className="font-headings text-4 font-bold">
-              1. ¿Eres mexicano?
-            </p>
-            <div className="flex gap-3 mb-5">
-              <OptionPill
-                data={{
-                  name: "Si",
+            <div>
+              <p className="font-texts text-base font-bold text-surface-950">
+                1. ¿Eres mexicano? <span className="text-warning-500">*</span>
+              </p>
+              <div className="flex space-x-3 mb-5 my-3">
+                <OptionPill
+                  data={{
+                    name: "Si",
+                    search: "",
+                    disabled: false
+                  }}
+                  active={residence === true}
+                  onClick={() => {
+                    setResidence(true)
+                    setNoResidence(false)
+                    setHasCurp(false)
+                    setNoCurp(false)
+                  }}
+                />
+                <p className="mt-2"></p>
+                <OptionPill data={{
+                  name: "No",
                   search: "",
                   disabled: false
+                }} active={noResidence === true} onClick={() => {
+                  setResidence(false)
+                  setNoResidence(true)
                 }}
-                active={residence === true}
-                onClick={() => {
-                  setResidence(true)
-                  setNoResidence(false)
-                  setHasCurp(false)
-                  setNoCurp(false)
-                }}
-              />
-              <p className="mt-2"></p>
-              <OptionPill data={{
-                name: "No",
-                search: "",
-                disabled: false
-              }} active={noResidence === true} onClick={() => {
-                setResidence(false)
-                setNoResidence(true)
-              }}
-              />
+                />
+              </div>
             </div>
           </div>
           {
@@ -291,8 +353,46 @@ const InscriptionForm = (props: InscriptionFormData) => {
                 />
               </div>
               <p className="font-texts text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p>
+              <div className="">
+                <Input data={{
+                  label: 'Correo electrónico*',
+                  name: 'email',
+                  type: 'text',
+                  typeButton: 'classic',
+                  maxlength: '',
+                  onPaste: true,
+                  alphanumeric: false,
+                  pattern: '',
+                  isRequired: true
+                }}
+                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "email")}
+                  eventFocus={() => handleTouchedControl("email")}
+                  errorMessage={configControls.errorMessagesInscriptionForm.email}
+                  hasError={personalDataErrors.email}
+                />
+              </div>
+              <div className="">
+                <Input data={{
+                  label: 'Celular*',
+                  name: 'phone',
+                  type: 'text',
+                  typeButton: 'classic',
+                  maxlength: '10',
+                  onPaste: true,
+                  onlyNumbers: true,
+                  pattern: '',
+                  isRequired: true
+                }}
+                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "phone")}
+                  eventFocus={() => handleTouchedControl("phone")}
+                  errorMessage={configControls.errorMessagesInscriptionForm.phone}
+                  hasError={personalDataErrors.phone}
+                />
+              </div>
             </>
+
           }
+
           {
             noResidence && <>
               <div className="flex flex-col gap-6">
