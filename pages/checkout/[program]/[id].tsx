@@ -181,7 +181,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
       </Head>
       <HeaderFooterLayout breadcrumbs={false}>
         <ContentFullLayout>
-          <div className="flex w-full mobile:flex-col justify-center py-12 gap-x-30">
+          <div className="flex w-full mobile:flex-col justify-center py-12 gap-x-30 tablet:gap-x-5">
             <div className={cn({ 'hidden': activePageIndex !== 0 })}>
 
               <InscriptionForm
@@ -310,7 +310,7 @@ export async function getStaticProps(context: any): Promise<{ props: PageProps }
 
   if (program && Number(id)) {
     const programData = await getProgramById(program);
-    const price = await programData?.attributes.price_list.price.filter((price: any) => price.id === id)[0]
+    const price = await programData?.attributes?.price_list?.price.filter((price: any) => price.id === id)[0]
     return {
       props: {
         program: programData,

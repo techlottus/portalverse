@@ -237,7 +237,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
               1. ¿Eres mexicano?
             </p>
             <div className="flex gap-3 mb-5">
-              <OptionPill
+              <OptionPill              
                 data={{
                   name: "Si",
                   search: "",
@@ -289,7 +289,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   hasError={curpError}
                 />
               </div>
-              <p className="font-texts text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p>
+              <p className="font-texts font-normal text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p>
             </>
           }
           {
