@@ -197,22 +197,22 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
               {/* se deja pendiente este badge, ya que cada programa cuenta con varias posibles modalidades y aqui solo podríamos elegir una */}
               {/* <p className="text-white bg-primary-500 w-23 px-2 py-1 rounded-full text-center my-3">En línea</p> */}
               <hr className="text-surface-300" />
-              {price?.config?.type == "recurring" && <div className="flex justify-between mt-2">
+              {price?.config?.type == "tokenization_and_pay" && <div className="flex justify-between mt-2">
                 <p className="font-texts">Opción de pago:</p>
                 <p className="text-surface-500 font-texts">{price?.title}</p>
               </div>}
-              {price?.config?.type == "recurring" && <div className="flex justify-between my-1">
+              {price?.config?.type == "tokenization_and_pay" && <div className="flex justify-between my-1">
                 <p className="font-texts">Parcialidades:</p>
                 <p className="text-surface-500 font-texts">{price.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN </p>
               </div>}
-              {price?.config?.type == "recurring" &&
+              {price?.config?.type == "tokenization_and_pay" &&
                 <div className="flex justify-between mb-2">
                   <p className="font-texts">Costo total:</p>
                   <p className="text-surface-500 font-texts">{price?.total_payment?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN</p>
                 </div>}
               <hr className="text-surface-300" />
               <div className="flex justify-between mt-2">
-                {price?.config?.type == "recurring" ? <><p className="font-texts font-bold text-base leading-6"> Parcialidad a pagar</p>
+                {price?.config?.type == "tokenization_and_pay" ? <><p className="font-texts font-bold text-base leading-6"> Parcialidad a pagar</p>
                   <p className="text-base font-bold">{price.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN</p></>
                   : <><p className="font-texts font-bold text-base leading-6"> Total a pagar</p>
                     <p className="text-base font-bold">{price?.total_payment?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN</p></>}
