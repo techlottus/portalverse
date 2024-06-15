@@ -267,27 +267,27 @@ const InscriptionForm = (props: InscriptionFormData) => {
             residence && <>
               <div className="">
                 <Input data={{
-                  label: undefined,
-                  name: undefined,
-                  icon: undefined,
-                  maxlength: undefined,
-                  onPaste: undefined,
-                  placeholder: undefined,
-                  autocomplete: undefined,
-                  disabled: undefined,
-                  typeButton: undefined,
-                  alphabetical: undefined,
-                  alphanumeric: undefined,
-                  onlyNumbers: undefined,
-                  upperCase: undefined,
-                  type: undefined,
-                  pattern: undefined,
-                  iconLeft: undefined,
-                  iconRight: undefined,
-                  isRequired: undefined,
-                  mask: undefined,
-                  test: undefined
-                }}                />
+                  label: 'CURP*',
+                  name: 'curp',
+                  type: 'text',
+                  typeButton: 'classic',
+                  maxlength: '18',
+                  onPaste: true,
+                  autocomplete: 'off',
+                  alphanumeric: true,
+                  pattern: '',
+                  isRequired: true,
+                  upperCase: true
+                }}
+                  eventKeyPress={(e: CustomEvent) => {
+                    const { detail: { value } } = e;
+                    setCurpTouched(true);
+                    setCurp(value);
+                  }}
+                  errorMessage={configControls.errorMessagesInscriptionForm.curp}
+                  eventFocus={() => setCurpTouched(true)}
+                  hasError={curpError}
+                />
               </div>
               <p className="font-texts font-normal text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p>
             </>
@@ -514,7 +514,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                 }
               </div>
             </>
-          }          
+          }
         </div>
       </div>
     </Container>
