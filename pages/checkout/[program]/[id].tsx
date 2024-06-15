@@ -33,8 +33,8 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
 
   const [residence, setResidence] = useState<any>()
   const [noResidence, setNoResidence] = useState<any>()
-  const [hasCurp, setHasCurp] = useState<any>()
-  const [noCurp, setNoCurp] = useState<any>()
+  const [hasCurp, setHasCurp] = useState<any>(false)
+  const [noCurp, setNoCurp] = useState<any>(true)
   const [isValid, setIsValid] = useState<boolean>(false);
   const [curp, setCurp] = useState<boolean>();
   const [submit, setSubmit] = useState(false);
@@ -158,20 +158,20 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
 
 
 
-  const onSubmitForm = async () => {
+  // const onSubmitForm = async () => {
 
-    /* const endpoint = process.env.NEXT_PUBLIC_CAPTACION_PROSPECTO; */
-    const nombre = personalData?.name;
-    const apellidoPaterno = personalData?.last_name;
-    const apellidoMaterno = personalData?.second_last_name;
-    const email = personalData?.email;
-    const telefono = personalData?.phone;
-    const fechaNacimiento = personalData?.birthdate;
-    const genero = personalData?.gender;
+  //   /* const endpoint = process.env.NEXT_PUBLIC_CAPTACION_PROSPECTO; */
+  //   const nombre = personalData?.name;
+  //   const apellidoPaterno = personalData?.last_name;
+  //   const apellidoMaterno = personalData?.second_last_name;
+  //   const email = personalData?.email;
+  //   const telefono = personalData?.phone;
+  //   const fechaNacimiento = personalData?.birthdate;
+  //   const genero = personalData?.gender;
 
-    const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&apellidoMaterno=${apellidoMaterno}&email=${email}&telefono=${telefono}&fechaNacimiento=${fechaNacimiento}&genero=${genero}`;
+  //   const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&apellidoMaterno=${apellidoMaterno}&email=${email}&telefono=${telefono}&fechaNacimiento=${fechaNacimiento}&genero=${genero}`;
 
-  }
+  // }
 //  console.log("program: ",program?.attributes)
 //  console.log("price: ",price)
   
@@ -180,7 +180,6 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
       <Head>
         title
       </Head>
-      <HeaderFooterLayout breadcrumbs={false}>
         <ContentFullLayout>
           <div className="flex w-full justify-center py-12">
             <div className={cn({'hidden': activePageIndex !== 0})}>
@@ -241,45 +240,8 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                 <p className="text-base font-bold">{price?.total_payment?.toLocaleString('es-MX',{style: 'currency',currency:'MXN'})} MXN</p></>}
               </div>
             </div>
-                {
-                  residence &&
-                  <div className="flex flex-col my-6">
-                    <Button
-                      dark
-                      data={{
-                        type: "primary",
-                        title: "Inscribirme ahora",
-                        isExpand: true,
-                        disabled: false
-                      }}
-                      onClick={() => {
-                        // onSubmitCurp()
-                        setActivePageIndex(activePageIndex + 1)
-                      }}
-                    />
-                  </div>
-                }
-                {
-                  noResidence &&
-                  <div className={cn("flex flex-col my-6", { "hidden": !hasCurp })}>
-                    <Button
-                      dark
-                      data={{
-                        type: "primary",
-                        title: "Inscribirme ahora",
-                        isExpand: true,
-                        disabled: false
-                      }}
-                      onClick={() => {
-                        // onSubmitCurp()
-                        setActivePageIndex(activePageIndex + 1)
-                      }}
-                    />
-                  </div>
-                }
-                {
-                  noCurp &&
-                  <div className="flex flex-col my-6">
+                
+                  <div className={cn("flex flex-col my-6",{["hidden"]:activePageIndex!==0})}>
                     <Button
                       dark
                       data={{
@@ -289,11 +251,11 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                         disabled: !isValid
                       }}
                       onClick={() => {
-                        onSubmitForm()
+                        // onSubmitCurp()
+                        setActivePageIndex(activePageIndex + 1)
                       }}
                     />
                   </div>
-                }
                 <div className="flex">
                   <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">Al llenar tus datos aceptas nuestro</p>
                   <Link href="terminos-y-condiciones" passHref target={"_blank"}> {/* deberia ir a aviso de privacidad???*/}
@@ -303,7 +265,6 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
               </div>
             </div>
         </ContentFullLayout>
-      </HeaderFooterLayout>
     </>);
 }
 

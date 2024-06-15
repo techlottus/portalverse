@@ -8,6 +8,8 @@ import configControls from "@/forms/fixtures/controls"
 import { useForm } from "react-hook-form";
 import Select from "@/old-components/Select/Select";
 import { getTokenForms } from "@/utils/getTokenForms";
+import cn from "classnames";
+import { date } from "yup";
 
 const axios = require('axios');
 
@@ -63,14 +65,14 @@ const InscriptionForm = (props: InscriptionFormData) => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [adviser, setAdviser] = useState<boolean>()
   const [curpTouched, setCurpTouched] = useState<boolean>(false)
-  const [tokenActive, setTokenActive] = useState<string>("");
+  // const [tokenActive, setTokenActive] = useState<string>("");
 
   const [optionsGender, setOptionsGender] = useState([{
-    value: "male",
+    value: "Hombre",
     text: "Masculino",
     active: false
   }, {
-    value: "female",
+    value: "Mujer",
     text: "Femenino",
     active: false
   }, {
@@ -108,43 +110,43 @@ const InscriptionForm = (props: InscriptionFormData) => {
     return validity;
   }
 
-  const validateCurp =  () => {
+  const validateCurp = () => {
 
-    const newCurpError = !validateCurpControl(curp)
+    const newCurpError = !validateCurpControl(curp) && curpTouched
 
     setCurpError(newCurpError);
 
     const isValidCurp = validateCurpControls();
-    
-    if (isValidCurp){
-      console.log("isValidCurp: ",isValidCurp)
-        console.log("curp: ",curp)
-        axios.post(`${process.env.NEXT_PUBLIC_PAYMENT_WEBHOOK}/curp/validate`, {
-          curp,
-        }).then(function (response: any) {
-          console.log("response: ",response)
-          
-            if (response.data.errorMessage) {
-              console.log("response.data.errorMessage: ", response.data.errorMessage)
-              setIsValidCurp(false)
-              setCurpError(true)
-            }
-            if (response.data.curp) {
-              console.log("response.data.curp: ", response.data.curp)
-              setPersonalData({
-                ...personalData, 
-                name : response?.data?.nombre,
-                last_name : response?.data?.apellidoPaterno,
-                second_last_name : response?.data?.apellidoMaterno,
-                birthdate : response?.data?.fechaNacimiento,
-                gender : response?.data?.sexo,
-              })
-              setIsValidCurp(true)
-            }
-          }).catch((err:any)=>{console.log("Error en el curp: ",err)})
-      
+
+    if (isValidCurp) {
+      console.log("isValidCurp: ", isValidCurp)
+      console.log("curp: ", curp)
+      axios.post(`${process.env.NEXT_PUBLIC_PAYMENT_WEBHOOK}/curp/validate`, {
+        curp,
+      }).then(function (response: any) {
+        console.log("response: ", response)
+
+        if (response.data.errorMessage) {
+          console.log("response.data.errorMessage: ", response.data.errorMessage)
+          setIsValidCurp(false)
+          setCurpError(true)
+        }
+        if (response.data.curp) {
+          console.log("response.data.curp: ", response.data.curp)
+          setPersonalData({
+            ...personalData,
+            name: response?.data?.nombre,
+            last_name: response?.data?.apellidoPaterno,
+            second_last_name: response?.data?.apellidoMaterno,
+            birthdate: response?.data?.fechaNacimiento,
+            gender: response?.data?.sexo,
+          })
+          setIsValidCurp(true)
+        }
+      }).catch((err: any) => { console.log("Error en el curp: ", err) })
+
     }
-    
+
   }
 
   const validatePersonalDataControl = (control: string, value: string) => {
@@ -154,33 +156,9 @@ const InscriptionForm = (props: InscriptionFormData) => {
     if (control === 'phone') {
       return value.trim().length === 10
     }
-
     return !!value?.trim()
   };
 
-  //   const onSubmitCurp = async () => {
-  //   await axios.post(`${process.env.NEXT_PUBLIC_PAYMENT_WEBHOOK}/curp/validate`, {
-  //     curp: curp,
-  //   })
-  //     .then(function (response: any) {
-  //       if (response.data.errorMessage) {
-  //         setIsValidCurp(!isValidCurp)
-  //         setCurpError(!curpError)
-  //       }
-  //       if (response.data.curp) {
-  //         setPersonalData({
-  //           ...personalData, 
-  //           name : response?.data?.nombre,
-  //           last_name : response?.data?.apellidoPaterno,
-  //           second_last_name : response?.data?.apellidoMaterno,
-  //           birthdate : response?.data?.fechaNacimiento,
-  //           gender : response?.data?.sexo,
-  //         })
-  //         console.log("response: ",response)
-  //         setIsValidCurp(isValidCurp)
-  //       }
-  //     })
-  // }
 
   const validatePersonalDataControls = () => !Object.entries(personalData).map(([key, value]: any) => {
     const validity = validatePersonalDataControl(key, value)
@@ -201,40 +179,12 @@ const InscriptionForm = (props: InscriptionFormData) => {
     setPersonalDataErrors({ ...newPersonalDataErrors });
 
     const isValidPersonalData = validatePersonalDataControls();
-    console.log("isValidPersonalData",isValidPersonalData)
-    console.log("personalData",personalData)
+    console.log("isValidPersonalData", isValidPersonalData)
+    console.log("personalData", personalData)
     setIsValid(isValidPersonalData)
-    
+
 
   }
-
-  const {
-    isLoading: isLoadingToken,
-    isError: isErrorToken,
-    token,
-  } = getTokenForms();
-
-  // const handleSubmit = async () => {
-  //   setIsLoading(true)
-  //   Validate()
-  //   if (isValid) {
-  //     // sendLeadData()
-  //   }
-  // }
-
-  // const sendLeadData = async () => {
-
-  //   const endpoint = process.env.NEXT_PUBLIC_CAPTACION_PROSPECTO;
-  //   const nombre = personalData?.name;
-  //   const apellidoPaterno = personalData?.last_name;
-  //   const apellidoMaterno = personalData?.second_last_name;
-  //   const email = personalData?.email;
-  //   const telefono = personalData?.phone;
-  //   const fechaNacimiento = personalData?.birthdate;
-  //   const genero = personalData?.gender;
-
-  //   const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&apellidoMaterno=${apellidoMaterno}&email=${email}&telefono=${telefono}&fechaNacimiento=${fechaNacimiento}&genero=${genero}`;
-  // }
 
   const handleSelect = async ({ detail }: CustomEvent) => {
     const selectedGender = detail;
@@ -243,46 +193,236 @@ const InscriptionForm = (props: InscriptionFormData) => {
     })
     setOptionsGender(selectOptions)
     setPersonalDataTouched({ ...personalDataTouched, ["gender"]: true });
-    setPersonalData({ ...personalData, ["gender"]: selectedGender,["residence"]:residence?"Nacional":"Extranjero" });
+    setPersonalData({ ...personalData, ["gender"]: selectedGender, ["residence"]: residence ? "Nacional" : "Extranjero" });
   };
 
   const handleKeyPress = (e: CustomEvent, control: string) => {
     const { detail: { value } } = e;
-    console.log("control",control)
-    console.log("value",value)
+    console.log("control", control)
+    console.log("value", value)
     setPersonalDataTouched({ ...personalDataTouched, [control]: true });
-    setPersonalData({ ...personalData, [control]: value, ["residence"]:residence?"Nacional":"Extranjero"});
+    setPersonalData({ ...personalData, [control]: value, ["residence"]: residence ? "Nacional" : "Extranjero" });
   };
 
   const handleTouchedControl = (control: string) => {
     setPersonalDataTouched({ ...personalDataTouched, [control]: true });
   }
 
-  useEffect(() => {
-    if (!isLoadingToken && !isErrorToken && !!Object.keys(token).length) {
-      setTokenActive(`${token.token_type} ${token.access_token}`);
-    }
-  }, [isLoadingToken, isErrorToken, token]);
+  // useEffect(() => {
+  //   if (!isLoadingToken && !isErrorToken && !!Object.keys(token).length) {
+  //     setTokenActive(`${token.token_type} ${token.access_token}`);
+  //   }
+  // }, [isLoadingToken, isErrorToken, token]);
 
   useEffect(() => {
     setStatus({ loading: isLoading, valid: isValid, success: isSuccess })
-    console.log("isValid: ",isValid)
+    console.log("isValid: ", isValid)
   }, [isLoading, isValid, isSuccess]);
-
-  // useEffect(() => {
-  //   if (submit) handleSubmit()
-  // }, [submit]);
-
 
   useEffect(() => {
     Validate()
   }, [personalData]);
 
   useEffect(() => {
-  
-       validateCurp()
+
+    validateCurp()
 
   }, [curp]);
+  const form = <div >
+    <div className="grid grid-cols-2 gap-x-6 gap-y-3">
+      <div className="col-span-2">
+        <Input value={personalData?.name} data={{
+          label: 'Nombre(s)*',
+          name: 'name',
+          type: 'text',
+          typeButton: 'classic',
+          maxlength: '',
+          onPaste: true,
+          alphabetical: true,
+          pattern: '',
+          isRequired: true,
+          disabled:hasCurp && !!personalData.name
+        }}
+          eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "name")}
+          eventFocus={() => handleTouchedControl("name")}
+          errorMessage={configControls.errorMessagesInscriptionForm.name}
+          hasError={personalDataErrors.name}
+        />
+      </div>
+      <div className="">
+        <Input value={personalData?.last_name} data={{
+          label: 'Apellido paterno*',
+          name: 'last_name',
+          type: 'text',
+          typeButton: 'classic',
+          maxlength: '',
+          onPaste: true,
+          alphabetical: true,
+          pattern: '',
+          isRequired: true,
+          disabled:hasCurp && !!personalData.last_name
+        }}
+          eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "last_name")}
+          eventFocus={() => handleTouchedControl("last_name")}
+          errorMessage={configControls.errorMessagesInscriptionForm.surname}
+          hasError={personalDataErrors.last_name}
+        />
+      </div>
+      <div className="">
+        <Input value={personalData?.second_last_name} data={{
+          label: 'Apellido materno',
+          name: 'second_last_name',
+          type: 'text',
+          typeButton: 'classic',
+          maxlength: '',
+          onPaste: true,
+          alphabetical: true,
+          pattern: '',
+          isRequired: true,
+          disabled:hasCurp && !!personalData.second_last_name
+        }}
+          eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "second_last_name")}
+          eventFocus={() => handleTouchedControl("second_last_name")}
+          errorMessage={configControls.errorMessagesInscriptionForm.name}
+          hasError={personalDataErrors.second_last_name}
+        />
+      </div>  
+      {noCurp ? 
+      <div className="">
+        <Input  data={{
+          label: 'Fecha de Nacimiento',
+          name: 'birthdate',
+          type: 'date',
+          typeButton: 'classic',
+          onPaste: true,
+          pattern: '',
+          isRequired: true,
+        }}
+          eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "birthdate")}
+          eventFocus={() => handleTouchedControl("birthdate")}
+          errorMessage={configControls.errorMessagesInscriptionForm.birthdate}
+          hasError={personalDataErrors.birthdate}
+        />
+      </div>:<div className="">
+        <Input value={personalData?.birthdate} data={{
+          label: 'Fecha de Nacimiento',
+          name: 'birthdate',
+          type: 'text',
+          typeButton: 'classic',
+          onPaste: true,
+          pattern: '',
+          isRequired: true,
+          disabled:hasCurp && !!personalData.birthdate
+        }}
+          eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "birthdate")}
+          eventFocus={() => handleTouchedControl("birthdate")}
+          errorMessage={configControls.errorMessagesInscriptionForm.birthdate}
+          hasError={personalDataErrors.birthdate}
+        />
+      </div>}
+      <div >
+       {noCurp  ?<div className="mt-[-1em]"> <Select  options={optionsGender} data={{
+          textDefault: "Género*",
+          disabled: false,
+          icon: " ",
+          isLabel: true,
+          reset: false,
+          zindexOptions: 0,
+          tagOnClickList: 'testOnClickList',
+          tagOnClickOption: 'testOnClickOption',
+        }} onClick={(option: CustomEvent) => handleSelect(option)} /></div>:
+        <Input value={personalData?.gender} data={{
+          label: 'Género',
+          name: 'gender',
+          type: 'text',
+          typeButton: 'classic',
+          maxlength: '',
+          onPaste: true,
+          alphanumeric: false,
+          pattern: '',
+          isRequired: true,
+          disabled:hasCurp && !!personalData.gender
+        }}
+          eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "gender")}
+          eventFocus={() => handleTouchedControl("gender")}
+          errorMessage={configControls.errorMessagesInscriptionForm.gender}
+          hasError={personalDataErrors.gender}
+        />
+        }
+      </div>
+      <div className="">
+        <Input data={{
+          label: 'Correo electrónico*',
+          name: 'email',
+          type: 'text',
+          typeButton: 'classic',
+          maxlength: '',
+          onPaste: true,
+          alphanumeric: false,
+          pattern: '',
+          isRequired: true
+        }}
+          eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "email")}
+          eventFocus={() => handleTouchedControl("email")}
+          errorMessage={configControls.errorMessagesInscriptionForm.email}
+          hasError={personalDataErrors.email}
+        />
+      </div>
+      <div className="">
+        <Input data={{
+          label: 'Celular*',
+          name: 'phone',
+          type: 'text',
+          typeButton: 'classic',
+          maxlength: '10',
+          onPaste: true,
+          onlyNumbers: true,
+          pattern: '',
+          isRequired: true
+        }}
+          eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "phone")}
+          eventFocus={() => handleTouchedControl("phone")}
+          errorMessage={configControls.errorMessagesInscriptionForm.phone}
+          hasError={personalDataErrors.phone}
+        />
+      </div>
+      <div className="col-span-2 flex items-center">
+        <Checkbox data={{
+          name: "adviser",
+          disabled: false,
+          label: "*",
+          selected: false,
+          tagOnCheck: undefined,
+          value: ""
+        }} onCheck={() => {
+          setAdviser(!adviser)
+        }} />
+        <p className="font-texts font-bold">¿Tuviste ayuda de algún asesor? <span className="font-normal text-surface-500">(Opcional)</span></p>
+      </div>
+      {
+        adviser &&
+        <div className="col-span-2">
+          <Input data={{
+            label: 'Nombre del asesor*',
+            name: 'residence',
+            type: 'text',
+            typeButton: 'classic',
+            maxlength: '',
+            onPaste: true,
+            placeholder: '',
+            autocomplete: 'off',
+            disabled: false,
+            alphanumeric: false,
+            alphabetical: true,
+            onlyNumbers: false,
+            upperCase: false,
+            pattern: '',
+            isRequired: true
+          }} />
+        </div>
+      }
+    </div>
+  </div>
 
   return (
 
@@ -309,7 +449,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   onClick={() => {
                     setResidence(true)
                     setNoResidence(false)
-                    setHasCurp(false)
+                    setHasCurp(true)
                     setNoCurp(false)
                   }}
                 />
@@ -326,73 +466,6 @@ const InscriptionForm = (props: InscriptionFormData) => {
               </div>
             </div>
           </div>
-          {
-            residence && <>
-              <div className="">
-                <Input data={{
-                  label: 'CURP*',
-                  name: 'curp',
-                  type: 'text',
-                  typeButton: 'classic',
-                  maxlength: '18',
-                  onPaste: true,
-                  autocomplete: 'off',
-                  alphanumeric: true,
-                  pattern: '',
-                  isRequired: true,
-                  upperCase: true
-                }}
-                  eventKeyPress={(e: CustomEvent) => {
-                    const { detail: { value } } = e;
-                    setCurpTouched(true);
-                    setCurp(value);
-                  }}
-                  errorMessage={configControls.errorMessagesInscriptionForm.curp}
-                  eventFocus={() => setCurpTouched(true)}
-                  hasError={curpError}
-                />
-              </div>
-              <p className="font-texts text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p>
-              <div className="">
-                <Input data={{
-                  label: 'Correo electrónico*',
-                  name: 'email',
-                  type: 'text',
-                  typeButton: 'classic',
-                  maxlength: '',
-                  onPaste: true,
-                  alphanumeric: false,
-                  pattern: '',
-                  isRequired: true
-                }}
-                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "email")}
-                  eventFocus={() => handleTouchedControl("email")}
-                  errorMessage={configControls.errorMessagesInscriptionForm.email}
-                  hasError={personalDataErrors.email}
-                />
-              </div>
-              <div className="">
-                <Input data={{
-                  label: 'Celular*',
-                  name: 'phone',
-                  type: 'text',
-                  typeButton: 'classic',
-                  maxlength: '10',
-                  onPaste: true,
-                  onlyNumbers: true,
-                  pattern: '',
-                  isRequired: true
-                }}
-                  eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "phone")}
-                  eventFocus={() => handleTouchedControl("phone")}
-                  errorMessage={configControls.errorMessagesInscriptionForm.phone}
-                  hasError={personalDataErrors.phone}
-                />
-              </div>
-            </>
-
-          }
-
           {
             noResidence && <>
               <div className="flex flex-col gap-6">
@@ -428,193 +501,35 @@ const InscriptionForm = (props: InscriptionFormData) => {
               </div>
             </>
           }
+          <div className={cn({ ["hidden"]: noCurp})}>
+            <Input data={{
+              label: 'CURP*',
+              name: 'curp',
+              type: 'text',
+              typeButton: 'classic',
+              maxlength: '18',
+              onPaste: true,
+              autocomplete: 'off',
+              alphanumeric: true,
+              pattern: '',
+              isRequired: true,
+              upperCase: true
+            }}
+              eventKeyPress={(e: CustomEvent) => {
+                const { detail: { value } } = e;
+                setCurpTouched(true);
+                setCurp(value);
+              }}
+              errorMessage={configControls.errorMessagesInscriptionForm.curp}
+               eventFocus={() => setCurpTouched(true)}
+              hasError={curpError}
+            />
+          <p className="font-texts text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p>
+          </div>
+          
+          {isValidCurp && form}
           {
-            hasCurp && <>
-              <div className="">
-                <Input data={{
-                  label: 'CURP*',
-                  name: 'curp',
-                  type: 'text',
-                  typeButton: 'classic',
-                  maxlength: '18',
-                  onPaste: true,
-                  autocomplete: 'off',
-                  alphanumeric: true,
-                  pattern: '',
-                  isRequired: true,
-                  upperCase: true
-                }}
-                  eventKeyPress={(e: CustomEvent) => {
-                    const { detail: { value } } = e;
-                    setCurpTouched(true);
-                    setCurp(value);
-                  }}
-                  errorMessage={configControls.errorMessagesInscriptionForm.curp}
-                  eventFocus={() => setCurpTouched(true)}
-                  hasError={curpError}
-                />
-              </div>
-              <p className="font-texts text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p></>
-          }
-          {
-            noCurp && <>
-              <div className="grid grid-cols-2 gap-x-6 gap-y-3">
-                <div className="col-span-2">
-                  <Input data={{
-                    label: 'Nombre(s)*',
-                    name: 'name',
-                    type: 'text',
-                    typeButton: 'classic',
-                    maxlength: '',
-                    onPaste: true,
-                    alphabetical: true,
-                    pattern: '',
-                    isRequired: true
-                  }}
-                    eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "name")}
-                    eventFocus={() => handleTouchedControl("name")}
-                    errorMessage={configControls.errorMessagesInscriptionForm.name}
-                    hasError={personalDataErrors.name}
-                  />
-                </div>
-                <div className="">
-                  <Input data={{
-                    label: 'Apellido paterno*',
-                    name: 'last_name',
-                    type: 'text',
-                    typeButton: 'classic',
-                    maxlength: '',
-                    onPaste: true,
-                    alphabetical: true,
-                    pattern: '',
-                    isRequired: true
-                  }}
-                    eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "last_name")}
-                    eventFocus={() => handleTouchedControl("last_name")}
-                    errorMessage={configControls.errorMessagesInscriptionForm.surname}
-                    hasError={personalDataErrors.last_name}
-                  />
-                </div>
-                <div className="">
-                  <Input data={{
-                    label: 'Apellido materno',
-                    name: 'second_last_name',
-                    type: 'text',
-                    typeButton: 'classic',
-                    maxlength: '',
-                    onPaste: true,
-                    alphabetical: true,
-                    pattern: '',
-                    isRequired: true
-                  }}
-                    eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "second_last_name")}
-                    eventFocus={() => handleTouchedControl("second_last_name")}
-                    errorMessage={configControls.errorMessagesInscriptionForm.name}
-                    hasError={personalDataErrors.second_last_name}
-                  />
-                </div>
-                <div className="">
-                  <Input data={{
-                    label: 'Correo electrónico*',
-                    name: 'email',
-                    type: 'text',
-                    typeButton: 'classic',
-                    maxlength: '',
-                    onPaste: true,
-                    alphanumeric: false,
-                    pattern: '',
-                    isRequired: true
-                  }}
-                    eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "email")}
-                    eventFocus={() => handleTouchedControl("email")}
-                    errorMessage={configControls.errorMessagesInscriptionForm.email}
-                    hasError={personalDataErrors.email}
-                  />
-                </div>
-                <div className="">
-                  <Input data={{
-                    label: 'Celular*',
-                    name: 'phone',
-                    type: 'text',
-                    typeButton: 'classic',
-                    maxlength: '10',
-                    onPaste: true,
-                    onlyNumbers: true,
-                    pattern: '',
-                    isRequired: true
-                  }}
-                    eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "phone")}
-                    eventFocus={() => handleTouchedControl("phone")}
-                    errorMessage={configControls.errorMessagesInscriptionForm.phone}
-                    hasError={personalDataErrors.phone}
-                  />
-                </div>
-                <div className="">
-                  <Input data={{
-                    placeholder: "",
-                    label: '',
-                    name: 'birthdate',
-                    type: 'date',
-                    typeButton: 'classic',
-                    onPaste: true,
-                    pattern: '',
-                    isRequired: true
-                  }}
-                    eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "birthdate")}
-                    eventFocus={() => handleTouchedControl("birthdate")}
-                    errorMessage={configControls.errorMessagesInscriptionForm.birthdate}
-                    hasError={personalDataErrors.birthdate}
-                  />
-                </div>
-                <div className="mt-[-1em]">
-                  <Select options={optionsGender} data={{
-                    textDefault: "Género*",
-                    disabled: false,
-                    icon: " ",
-                    isLabel: true,
-                    reset: false,
-                    zindexOptions: 10,
-                    tagOnClickList: 'testOnClickList',
-                    tagOnClickOption: 'testOnClickOption',
-                  }} onClick={(option: CustomEvent) => handleSelect(option)} />
-                </div>
-                <div className="col-span-2 flex items-center">
-                  <Checkbox data={{
-                    name: "adviser",
-                    disabled: false,
-                    label: "*",
-                    selected: false,
-                    tagOnCheck: undefined,
-                    value: ""
-                  }} onCheck={() => {
-                    setAdviser(!adviser)
-                  }} />
-                  <p className="font-texts font-bold">¿Tuviste ayuda de algún asesor? <span className="font-normal text-surface-500">(Opcional)</span></p>
-                </div>
-                {
-                  adviser &&
-                  <div className="col-span-2">
-                    <Input data={{
-                      label: 'Nombre del asesor*',
-                      name: 'residence',
-                      type: 'text',
-                      typeButton: 'classic',
-                      maxlength: '',
-                      onPaste: true,
-                      placeholder: '',
-                      autocomplete: 'off',
-                      disabled: false,
-                      alphanumeric: false,
-                      alphabetical: true,
-                      onlyNumbers: false,
-                      upperCase: false,
-                      pattern: '',
-                      isRequired: true
-                    }} />
-                  </div>
-                }
-              </div>
-            </>
+            noCurp && noResidence && !isValidCurp && form
           }
           <div className="flex items-end">
             <span className="material-symbols-outlined select-none text-primary-500 text-4.5!">chevron_left</span>

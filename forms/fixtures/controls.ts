@@ -184,7 +184,7 @@ const errorMessagesInscriptionForm = {
   surname: 'Ingresa tus apellidos',
   email: 'Ingresa un correo electrónico válido',
   phone: 'Ingresa un teléfono de 10 dígitos',
-  birthdate: 'Ingresa tu fecha de nacimiento',
+  birthdate: 'Ingresa tu fecha de nacimiento (DD/MM/YYYY)',
   birth_entity: 'Ingresa tu lugar de nacimiento',
   gender: 'Ingresa tu género'
 }
