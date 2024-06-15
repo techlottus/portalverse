@@ -5,7 +5,6 @@ import Container from "@/layouts/Container.layout";
 import OptionPill from "@/old-components/OptionPill";
 import Checkbox from "@/old-components/Checkbox";
 import configControls from "@/forms/fixtures/controls"
-import { useForm } from "react-hook-form";
 import Select from "@/old-components/Select/Select";
 import { getTokenForms } from "@/utils/getTokenForms";
 
@@ -238,7 +237,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
               1. ¿Eres mexicano?
             </p>
             <div className="flex gap-3 mb-5">
-              <OptionPill
+              <OptionPill              
                 data={{
                   name: "Si",
                   search: "",
@@ -290,7 +289,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                   hasError={curpError}
                 />
               </div>
-              <p className="font-texts text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p>
+              <p className="font-texts font-normal text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p>
             </>
           }
           {
@@ -516,12 +515,6 @@ const InscriptionForm = (props: InscriptionFormData) => {
               </div>
             </>
           }
-          <div className="flex items-end">
-            <span className="material-symbols-outlined select-none text-primary-500 text-4.5!">chevron_left</span>
-            <Link className="" href="#" passHref target={"_blank"}>
-              <p className="text-3.5 font-texts font-bold text-sm text-primary-500 mt-3">Atrás</p>
-            </Link>
-          </div>
         </div>
       </div>
     </Container>
