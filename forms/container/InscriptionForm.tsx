@@ -237,7 +237,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
               1. ¿Eres mexicano?
             </p>
             <div className="flex gap-3 mb-5">
-              <OptionPill              
+              <OptionPill
                 data={{
                   name: "Si",
                   search: "",
