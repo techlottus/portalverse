@@ -177,112 +177,116 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
   return (
     <>
       <Head>
-        title
+        Checkout
       </Head>
-      <HeaderFooterLayout breadcrumbs={false}>
-        <ContentFullLayout>
-          <div className="flex w-full mobile:flex-col justify-center py-12 gap-x-30 tablet:gap-x-5">
-            <div className={cn({ 'hidden': activePageIndex !== 0 })}>
+      <ContentFullLayout>
+        <section className="w-full bg-surface-0 z-15 transition-transform shadow-15">
+          <div className="p-6 cursor-pointer border-0 border-solid border-surface-200 border-r-2">
+          {/* <div className={cn("p-6 cursor-pointer border-0 border-solid border-surface-200 border-r-2")} onClick={onClickLogo}> */}
+            <div className="w-36 h-9 bg-logo bg-cover bg-center"> </div>
+          </div>
+        </section>
+        <div className="flex w-full mobile:flex-col justify-center py-12 gap-x-30 tablet:gap-x-5">
+          <div className={cn({ 'hidden': activePageIndex !== 0 })}>
 
-              <InscriptionForm
-                submit={submit}
-                setStatus={setStatus}
-                residence={residence}
-                noResidence={noResidence}
-                hasCurp={hasCurp}
-                noCurp={noCurp}
-                setResidence={setResidence}
-                setNoResidence={setNoResidence}
-                setHasCurp={setHasCurp}
-                setNoCurp={setNoCurp}
-                personalData={personalData}
-                setPersonalData={setPersonalData}
-                curp={curp}
-                setCurp={setCurp}
-                isValidCurp={isValidCurp}
-                setIsValidCurp={setIsValidCurp}
-                curpError={curpError}
-                setCurpError={setCurpError}
-              />
-            </div>
-            <div className={cn("w-1/2 h-full", { 'hidden': activePageIndex !== 1 })}>
+            <InscriptionForm
+              submit={submit}
+              setStatus={setStatus}
+              residence={residence}
+              noResidence={noResidence}
+              hasCurp={hasCurp}
+              noCurp={noCurp}
+              setResidence={setResidence}
+              setNoResidence={setNoResidence}
+              setHasCurp={setHasCurp}
+              setNoCurp={setNoCurp}
+              personalData={personalData}
+              setPersonalData={setPersonalData}
+              curp={curp}
+              setCurp={setCurp}
+              isValidCurp={isValidCurp}
+              setIsValidCurp={setIsValidCurp}
+              curpError={curpError}
+              setCurpError={setCurpError}
+            />
+          </div>
+          <div className={cn("w-1/2 h-full", { 'hidden': activePageIndex !== 1 })}>
+            {
+              !flywireLink
+                ? <p>... loading</p>
+                : <iframe width="600px" height="500px" src={flywireLink} title="Flywire form"></iframe>
+            }
+          </div>
+          <div className="mobile: px-6">
+            <div className="border border-surface-300 rounded-lg p-4">
+              <h3 className="font-headings font-bold text-5.5 leading-6">{program?.attributes?.name}</h3>
+              <p className="text-white bg-primary-500 w-23 px-2 py-1 rounded-full text-center my-3">En línea</p>
+              <hr className="text-surface-300" />
+              <div className="flex justify-between mt-2">
+                <p className="font-texts">Opción de pago:</p>
+                <p className="text-surface-500 font-texts">3 parcialidades</p>
+              </div>
               {
-                !flywireLink
-                  ? <p>... loading</p>
-                  : <iframe width="600px" height="500px" src={flywireLink} title="Flywire form"></iframe>
+                residence &&
+                <div className="flex flex-col my-6">
+                  <Button
+                    dark
+                    data={{
+                      type: "primary",
+                      title: "Inscribirme ahora",
+                      isExpand: true,
+                      disabled: !isValidCurp
+                    }}
+                    onClick={() => {
+                      onSubmitCurp()
+                    }}
+                  />
+                </div>
               }
-            </div>
-            <div className="mobile: px-6">
-              <div className="border border-surface-300 rounded-lg p-4">
-                <h3 className="font-headings font-bold text-5.5 leading-6">{program?.attributes?.name}</h3>
-                <p className="text-white bg-primary-500 w-23 px-2 py-1 rounded-full text-center my-3">En línea</p>
-                <hr className="text-surface-300" />
-                <div className="flex justify-between mt-2">
-                  <p className="font-texts">Opción de pago:</p>
-                  <p className="text-surface-500 font-texts">3 parcialidades</p>
+              {
+                noResidence &&
+                <div className={cn("flex flex-col my-6", { "hidden": !hasCurp })}>
+                  <Button
+                    dark
+                    data={{
+                      type: "primary",
+                      title: "Inscribirme ahora",
+                      isExpand: true,
+                      disabled: !isValidCurp
+                    }}
+                    onClick={() => {
+                      onSubmitCurp()
+                    }}
+                  />
                 </div>
-                {
-                  residence &&
-                  <div className="flex flex-col my-6">
-                    <Button
-                      dark
-                      data={{
-                        type: "primary",
-                        title: "Inscribirme ahora",
-                        isExpand: true,
-                        disabled: !isValidCurp
-                      }}
-                      onClick={() => {
-                        onSubmitCurp()
-                      }}
-                    />
-                  </div>
-                }
-                {
-                  noResidence &&
-                  <div className={cn("flex flex-col my-6", { "hidden": !hasCurp })}>
-                    <Button
-                      dark
-                      data={{
-                        type: "primary",
-                        title: "Inscribirme ahora",
-                        isExpand: true,
-                        disabled: !isValidCurp
-                      }}
-                      onClick={() => {
-                        onSubmitCurp()
-                      }}
-                    />
-                  </div>
-                }
-                {
-                  noCurp &&
-                  <div className="flex flex-col my-6">
-                    <Button
-                      dark
-                      data={{
-                        type: "primary",
-                        title: "Inscribirme ahora",
-                        isExpand: true,
-                        disabled: !isValid
-                      }}
-                      onClick={() => {
-                        onSubmitForm()
-                      }}
-                    />
-                  </div>
-                }
-                <div className="flex">
-                  <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">Al llenar tus datos aceptas nuestro</p>
-                  <Link href="terminos-y-condiciones" passHref target={"_blank"}> {/* deberia ir a aviso de privacidad???*/}
-                    <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">Aviso de Privacidad</p>
-                  </Link>
+              }
+              {
+                noCurp &&
+                <div className="flex flex-col my-6">
+                  <Button
+                    dark
+                    data={{
+                      type: "primary",
+                      title: "Inscribirme ahora",
+                      isExpand: true,
+                      disabled: !isValid
+                    }}
+                    onClick={() => {
+                      onSubmitForm()
+                    }}
+                  />
                 </div>
+              }
+              <div className="flex">
+                <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">Al llenar tus datos aceptas nuestro</p>
+                <Link href="terminos-y-condiciones" passHref target={"_blank"}> {/* deberia ir a aviso de privacidad???*/}
+                  <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">Aviso de Privacidad</p>
+                </Link>
               </div>
             </div>
           </div>
-        </ContentFullLayout>
-      </HeaderFooterLayout>
+        </div>
+      </ContentFullLayout>
     </>);
 }
 
