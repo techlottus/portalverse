@@ -61,15 +61,11 @@ const BlogEntryPageContent = (props: BlogEntryPageData) => {
                 : null
             }
             {
-              blogPostBody
-                ? <div>
-                    <Editor
-                      readOnly
-                      holder="editor"
-                      value={blogPostBody}
-                    />
-                  </div>
-                : null
+              blogPostBody && <Editor
+                readOnly
+                holder="editor"
+                value={blogPostBody}
+              />
             }
           </div>
 
