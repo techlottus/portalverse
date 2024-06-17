@@ -1,4 +1,5 @@
 import { FormValues } from "@/utils/forms/graduates/schema";
+import { createHmac } from "crypto";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 const flywireAPI = process.env.NEXT_PUBLIC_FLYWIRE_API!;
@@ -17,6 +18,7 @@ export default async function handler(
         headers: {
           "Content-Type": "application/json",
           "X-AUTHENTICATION-Key": flywireAPIKEY,
+          "X-Flywire-Digest":createHmac('sha256', process.env.NEXT_PUBLIC_FLYWIRE_SHARED_SECRET!).update(body).digest('base64')
         },
         body
       });
