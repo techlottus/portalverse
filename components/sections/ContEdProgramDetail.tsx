@@ -145,7 +145,7 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
             : null
         }
       </ContentLayout>
-      <PaymentCardContainer
+      {/* <PaymentCardContainer
         title={"¡Asegura tu lugar! Opciones de "}
         accent_title={"pago flexibles"}
         subtitle={""}
@@ -153,7 +153,7 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
           ...price_list
         }}
         text="Nota importante: Los pagos parciales se efectúan en intervalos mensuales, cada 30 días a partir de la fecha de tu primer pago. El número de pagos corresponde al plan de parcialidades que hayas seleccionado al inscribirte. Esta secuencia se mantendrá hasta completar el costo total del curso."
-      />
+      /> */}
     </ContentFullLayout>
 
   );
