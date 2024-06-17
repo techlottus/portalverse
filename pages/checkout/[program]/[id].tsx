@@ -156,9 +156,15 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
   return (
     <>
       <Head>
-        title
+        Checkout
       </Head>
       <ContentFullLayout>
+        <section className="w-full bg-surface-0 z-15 transition-transform shadow-15">
+          <div className="p-6 cursor-pointer border-0 border-solid border-surface-200 border-r-2">
+          {/* <div className={cn("p-6 cursor-pointer border-0 border-solid border-surface-200 border-r-2")} onClick={onClickLogo}> */}
+            <div className="w-36 h-9 bg-logo bg-cover bg-center"> </div>
+          </div>
+        </section>
         <div className="flex w-full mobile:flex-col justify-center py-12 gap-x-30 tablet:gap-x-5">
           <div className={cn({ 'hidden': activePageIndex !== 0 })}>
 
