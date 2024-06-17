@@ -207,11 +207,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
     setPersonalDataTouched({ ...personalDataTouched, [control]: true });
   }
 
-  // useEffect(() => {
-  //   if (!isLoadingToken && !isErrorToken && !!Object.keys(token).length) {
-  //     setTokenActive(`${token.token_type} ${token.access_token}`);
-  //   }
-  // }, [isLoadingToken, isErrorToken, token]);
+
 
   useEffect(() => {
     setStatus({ loading: isLoading, valid: isValid, success: isSuccess })
