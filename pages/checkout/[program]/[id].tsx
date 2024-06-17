@@ -182,7 +182,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
       <ContentFullLayout>
         <section className="w-full bg-surface-0 z-15 transition-transform shadow-15">
           <div className="p-6 cursor-pointer border-0 border-solid border-surface-200 border-r-2">
-          {/* <div className={cn("p-6 cursor-pointer border-0 border-solid border-surface-200 border-r-2")} onClick={onClickLogo}> */}
+            {/* <div className={cn("p-6 cursor-pointer border-0 border-solid border-surface-200 border-r-2")} onClick={onClickLogo}> */}
             <div className="w-36 h-9 bg-logo bg-cover bg-center"> </div>
           </div>
         </section>
@@ -226,63 +226,63 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                 <p className="font-texts">Opción de pago:</p>
                 <p className="text-surface-500 font-texts">3 parcialidades</p>
               </div>
-              {
-                residence &&
-                <div className="flex flex-col my-6">
-                  <Button
-                    dark
-                    data={{
-                      type: "primary",
-                      title: "Inscribirme ahora",
-                      isExpand: true,
-                      disabled: !isValidCurp
-                    }}
-                    onClick={() => {
-                      onSubmitCurp()
-                    }}
-                  />
-                </div>
-              }
-              {
-                noResidence &&
-                <div className={cn("flex flex-col my-6", { "hidden": !hasCurp })}>
-                  <Button
-                    dark
-                    data={{
-                      type: "primary",
-                      title: "Inscribirme ahora",
-                      isExpand: true,
-                      disabled: !isValidCurp
-                    }}
-                    onClick={() => {
-                      onSubmitCurp()
-                    }}
-                  />
-                </div>
-              }
-              {
-                noCurp &&
-                <div className="flex flex-col my-6">
-                  <Button
-                    dark
-                    data={{
-                      type: "primary",
-                      title: "Inscribirme ahora",
-                      isExpand: true,
-                      disabled: !isValid
-                    }}
-                    onClick={() => {
-                      onSubmitForm()
-                    }}
-                  />
-                </div>
-              }
-              <div className="flex">
-                <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">Al llenar tus datos aceptas nuestro</p>
-                <Link href="terminos-y-condiciones" passHref target={"_blank"}> {/* deberia ir a aviso de privacidad???*/}
-                  <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">Aviso de Privacidad</p>
-                </Link>
+            </div>
+            {
+              residence &&
+              <div className="flex flex-col my-6">
+                <Button
+                  dark
+                  data={{
+                    type: "primary",
+                    title: "Inscribirme ahora",
+                    isExpand: true,
+                    disabled: !isValidCurp
+                  }}
+                  onClick={() => {
+                    onSubmitCurp()
+                  }}
+                />
               </div>
+            }
+            {
+              noResidence &&
+              <div className={cn("flex flex-col my-6", { "hidden": !hasCurp })}>
+                <Button
+                  dark
+                  data={{
+                    type: "primary",
+                    title: "Inscribirme ahora",
+                    isExpand: true,
+                    disabled: !isValidCurp
+                  }}
+                  onClick={() => {
+                    onSubmitCurp()
+                  }}
+                />
+              </div>
+            }
+            {
+              noCurp &&
+              <div className="flex flex-col my-6">
+                <Button
+                  dark
+                  data={{
+                    type: "primary",
+                    title: "Inscribirme ahora",
+                    isExpand: true,
+                    disabled: !isValid
+                  }}
+                  onClick={() => {
+                    onSubmitForm()
+                  }}
+                />
+              </div>
+            }
+            <div className="flex mt-3 desktop:flex-row flex-col">
+              <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">Al llenar tus datos aceptas nuestro</p>
+              <Link href="terminos-y-condiciones" passHref target={"_blank"}> {/* deberia ir a aviso de privacidad???*/}
+                <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">Aviso de Privacidad</p>
+              </Link>
             </div>
           </div>
         </div>
