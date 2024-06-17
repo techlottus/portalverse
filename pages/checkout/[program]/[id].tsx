@@ -62,7 +62,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
   });
 
   useEffect(() => {
-    console.log("isValid: ", isValid)
+    // console.log("isValid: ", isValid)
   }, [isValid])
 
   useEffect(() => {
