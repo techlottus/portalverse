@@ -528,7 +528,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
           {
             noCurp && noResidence && !isValidCurp && form
           }
-          <div className="flex items-end">
+          <div className="flex items-end mobile:hidden">
             <span className="material-symbols-outlined select-none text-primary-500 text-4.5!">chevron_left</span>
             <Link className="" href="#" passHref target={"_blank"}>
               <p className="text-3.5 font-texts font-bold text-sm text-primary-500 mt-3">Atrás</p>

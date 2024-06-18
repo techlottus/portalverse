@@ -124,7 +124,7 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
             description={programDescription}
             periodicity={periodicity}
             certificationMessage={certificationMessage}
-            price={price}
+            price={price_list ? null : price}
             offerPrice={offerPrice}
             discount={discount}
             checkoutUrl={checkoutUrl}
@@ -150,7 +150,7 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
         title={"¡Asegura tu lugar! Opciones de "}
         accent_title={"pago flexibles"}
         subtitle={""}
-        price_list={{...price_list }}
+        price_list={{ ...price_list }}
         text="Nota importante: Los pagos parciales se efectúan en intervalos mensuales, cada 30 días a partir de la fecha de tu primer pago. El número de pagos corresponde al plan de parcialidades que hayas seleccionado al inscribirte. Esta secuencia se mantendrá hasta completar el costo total del curso."
       />
     </ContentFullLayout>

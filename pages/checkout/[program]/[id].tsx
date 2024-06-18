@@ -196,9 +196,9 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
             }
           </div>
 
-          <div className="mobile:col-span-2 desktop:pl-6">
+          <div className="mobile:col-span-2 pr-6 mobile:px-6">
             <div className="border border-surface-300 rounded-lg p-4">
-              <h3 className="font-headings font-bold text-5.5 leading-6">{program?.attributes?.name}</h3>
+              <h3 className="font-headings font-bold text-5.5 leading-6 mb-3">{program?.attributes?.name}</h3>
               {/* se deja pendiente este badge, ya que cada programa cuenta con varias posibles modalidades y aqui solo podríamos elegir una */}
               {/* <p className="text-white bg-primary-500 w-23 px-2 py-1 rounded-full text-center my-3">En línea</p> */}
               <hr className="text-surface-300" />
