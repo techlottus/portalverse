@@ -524,7 +524,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
           <p className="font-texts font-normal text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p>
           </div>
           
-          {isValidCurp && form}
+          {!!curp && form}
           {
             noCurp && noResidence && !isValidCurp && form
           }
