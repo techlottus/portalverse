@@ -23,17 +23,19 @@ export default async function handler(
       });
 
       const responseData = await response.json();
-      if (responseData && responseData.errors) {
-        console.log('responseData: ', responseData);
+        // console.log('responseData: ', responseData);
+      if (responseData && (responseData.errors || responseData.status === '401')) {
         
-        res.status(responseData?.status || 500).json(responseData.errors);
+        res.status(responseData?.status || 500).json(responseData.errors || responseData.detail);
       } else {
         res.status(200).json(responseData["hosted_form"].url);
       }
 
 
     } catch (err: any) {
-      res.status(err.response.status).json(err.response.data);
+      // console.log('err: ', err);
+      
+      res.status(err.response?.status || 500).json(err.response?.data);
     }
 
   } else {
