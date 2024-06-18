@@ -13,7 +13,7 @@ type PriceListData = {
 }
 
 export type PaymentCardContainerData = {
-  program?:number;
+  program?: number;
   title: string;
   accent_title: string;
   subtitle: string;
@@ -23,7 +23,7 @@ export type PaymentCardContainerData = {
 
 const PaymentCardContainer = (props: PaymentCardContainerData) => {
 
-  const {title, accent_title, subtitle, price_list, text, program } = props;
+  const { title, accent_title, subtitle, price_list, text, program } = props;
 
   const [currentSlide, setCurrentSlide] = React.useState(0)
   const [loaded, setLoaded] = useState(false)
@@ -55,8 +55,8 @@ const PaymentCardContainer = (props: PaymentCardContainerData) => {
   return (
     <ContentFullLayout classNames="bg-primary-0 mt-20">
       <ContentLayout>
-        <div className="col-span-12 py-12 px-20 mobile:px-4">
-          <div className="col-span-12 text-center">            
+        <div id="payment_cards" className="col-span-12 py-12 px-20 mobile:px-4">
+          <div className="col-span-12 text-center">
             <p className="font-headings text-2xl font-bold">{title}<span className="text-secondary-500">{accent_title}</span></p>
             <p className="font-texts text-surface-500">{subtitle}</p>
           </div>
@@ -85,7 +85,7 @@ const PaymentCardContainer = (props: PaymentCardContainerData) => {
                   {
                     price_list?.price?.map((price: PaymentCardData, i: Number) => {
                       return (
-                        <PaymentCard key={`carouselCard-${i}`} {...{program, ...price}} />
+                        <PaymentCard key={`carouselCard-${i}`} {...{ program, ...price }} />
                       )
                     })
                   }
@@ -94,7 +94,7 @@ const PaymentCardContainer = (props: PaymentCardContainerData) => {
                   {
                     price_list?.price?.map((price: PaymentCardData, i: any) => {
                       return (
-                        <PaymentCard key={i} {...{program, ...price}} />
+                        <PaymentCard key={i} {...{ program, ...price }} />
                       )
                     })
                   }
