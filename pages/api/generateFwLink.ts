@@ -23,7 +23,9 @@ export default async function handler(
 
       const responseData = await response.json();
       if (responseData && responseData.errors) {
-        res.status(responseData.status).json(responseData.errors);
+        console.log('responseData: ', responseData);
+        
+        res.status(responseData?.status || 500).json(responseData.errors);
       } else {
         res.status(200).json(responseData["hosted_form"].url);
       }
