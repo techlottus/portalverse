@@ -10,6 +10,8 @@ import { getTokenForms } from "@/utils/getTokenForms";
 import cn from "classnames";
 import { date } from "yup";
 
+import Image from "@/old-components/Image"
+
 const axios = require('axios');
 
 type InscriptionFormData = {
@@ -58,7 +60,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
 
   const [isLoading, setIsLoading] = useState(true);
   const [isValid, setIsValid] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(true);
   const [adviser, setAdviser] = useState<boolean>()
   const [curpTouched, setCurpTouched] = useState<boolean>(false)
 
@@ -112,7 +114,6 @@ const InscriptionForm = (props: InscriptionFormData) => {
         gender: "",
         residence: ""
       })
-      console.log(personalData)
     }
 
   }, [isValidCurp])
@@ -126,16 +127,13 @@ const InscriptionForm = (props: InscriptionFormData) => {
     const isValidCurp = validateCurpControl();
 
     if (isValidCurp) {
-      console.log("isValidCurp: ", isValidCurp)
-      console.log("curp: ", curp)
+      setIsLoading(true)
       axios.post(`${process.env.NEXT_PUBLIC_PAYMENT_WEBHOOK}/curp/validate`, {
-        curp,
+        curp
       }).then(function (response: any) {
-        console.log("response: ", response)
-
         if (response.data.errorMessage) {
-          console.log("response.data.errorMessage: ", response.data.errorMessage)
           setCurpError(true)
+          setIsSuccess(false)
           setPersonalData({
             name: "",
             last_name: "",
@@ -149,7 +147,6 @@ const InscriptionForm = (props: InscriptionFormData) => {
 
         }
         if (response.data.curp) {
-          console.log("response.data.curp: ", response.data.curp)
           setPersonalData({
             ...personalData,
             name: response?.data?.nombre,
@@ -158,7 +155,9 @@ const InscriptionForm = (props: InscriptionFormData) => {
             birthdate: response?.data?.fechaNacimiento,
             gender: response?.data?.sexo,
           })
+          setIsSuccess(true)
           setIsValidCurp(true)
+          setIsLoading(false)
         }
       }).catch((err: any) => { console.log("Error en el curp: ", err) })
 
@@ -174,9 +173,10 @@ const InscriptionForm = (props: InscriptionFormData) => {
         gender: "",
         residence: ""
       })
+      setIsLoading(false)
 
     }
-    console.log("isValidCurp: ", isValidCurp)
+
 
   }
 
@@ -210,8 +210,6 @@ const InscriptionForm = (props: InscriptionFormData) => {
     setPersonalDataErrors({ ...newPersonalDataErrors });
 
     const isValidPersonalData = validatePersonalDataControls();
-    console.log("isValidPersonalData", isValidPersonalData)
-    console.log("personalData", personalData)
     setIsValid(isValidPersonalData)
 
 
@@ -229,8 +227,6 @@ const InscriptionForm = (props: InscriptionFormData) => {
 
   const handleKeyPress = (e: CustomEvent, control: string) => {
     const { detail: { value } } = e;
-    console.log("control", control)
-    console.log("value", value)
     setPersonalDataTouched({ ...personalDataTouched, [control]: true });
     setPersonalData({ ...personalData, [control]: value, ["residence"]: residence ? "Nacional" : "Extranjero" });
   };
@@ -243,18 +239,15 @@ const InscriptionForm = (props: InscriptionFormData) => {
 
   useEffect(() => {
     setStatus({ loading: isLoading, valid: isValid, success: isSuccess })
-    console.log("isValid: ", isValid)
   }, [isLoading, isValid, isSuccess]);
 
 
   useEffect(() => {
     Validate()
-    console.log("isValidCurp: ", isValidCurp)
-    console.log(personalData)
   }, [personalData]);
 
   useEffect(() => {
-
+    setIsLoading(true)
     validateCurp()
 
   }, [curp]);
@@ -689,8 +682,15 @@ const InscriptionForm = (props: InscriptionFormData) => {
           <p className="font-texts font-normal text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p>
           </div>
           
-          {isValidCurp && formCurp}
-          {curp && !isValidCurp && formEmpty}
+            {
+              isLoading
+                ? <section className={cn("p-6 shadow-15 bg-surface-0 relative")}><div className="absolute w-full h-full z-10 flex justify-center items-center left-0 top-0 bg-surface-0">
+                  <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
+                </div></section>
+                : null
+            }  
+          {!isLoading && isValidCurp && formCurp}
+          {!isLoading && curp && !isValidCurp && formEmpty}
           {
             noCurp && noResidence && !isValidCurp && formEmpty
           }
