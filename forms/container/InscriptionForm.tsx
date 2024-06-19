@@ -108,6 +108,20 @@ const InscriptionForm = (props: InscriptionFormData) => {
     const validity = validateCurpControl(curp)
     return validity;
   }
+  useEffect(() => {
+    if(!isValidCurp){
+      setPersonalData({
+        name: "",
+        last_name: "",
+        second_last_name: "",
+        email: "",
+        phone: "",
+        birthdate: "",
+        gender: "",
+        residence: ""
+      })
+    }
+  }, [isValidCurp])
 
   const validateCurp = () => {
 
@@ -128,6 +142,17 @@ const InscriptionForm = (props: InscriptionFormData) => {
         if (response.data.errorMessage) {
           console.log("response.data.errorMessage: ", response.data.errorMessage)
           setCurpError(true)
+          setPersonalData({
+            name: "",
+            last_name: "",
+            second_last_name: "",
+            email: "",
+            phone: "",
+            birthdate: "",
+            gender: "",
+            residence: ""
+          })
+
         }
         if (response.data.curp) {
           console.log("response.data.curp: ", response.data.curp)
@@ -228,7 +253,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
   const form = <div >
     <div className="grid grid-cols-2 gap-x-6 gap-y-3">
       <div className="col-span-2">
-        <Input value={personalData?.name} data={{
+        <Input value={isValidCurp && personalData?.name} data={{
           label: 'Nombre(s)*',
           name: 'name',
           type: 'text',
@@ -238,7 +263,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
           alphabetical: true,
           pattern: '',
           isRequired: true,
-          disabled:hasCurp && !!personalData.name
+          disabled:hasCurp && !!personalData.name && isValidCurp
         }}
           eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "name")}
           eventFocus={() => handleTouchedControl("name")}
@@ -247,7 +272,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
         />
       </div>
       <div className="">
-        <Input value={personalData?.last_name} data={{
+        <Input value={isValidCurp && personalData?.last_name} data={{
           label: 'Apellido paterno*',
           name: 'last_name',
           type: 'text',
@@ -257,7 +282,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
           alphabetical: true,
           pattern: '',
           isRequired: true,
-          disabled:hasCurp && !!personalData.last_name
+          disabled:hasCurp && !!personalData.last_name && isValidCurp
         }}
           eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "last_name")}
           eventFocus={() => handleTouchedControl("last_name")}
@@ -266,7 +291,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
         />
       </div>
       <div className="">
-        <Input value={personalData?.second_last_name} data={{
+        <Input value={isValidCurp && personalData?.second_last_name} data={{
           label: 'Apellido materno',
           name: 'second_last_name',
           type: 'text',
@@ -276,7 +301,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
           alphabetical: true,
           pattern: '',
           isRequired: true,
-          disabled:hasCurp && !!personalData.second_last_name
+          disabled:hasCurp && !!personalData.second_last_name && isValidCurp
         }}
           eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "second_last_name")}
           eventFocus={() => handleTouchedControl("second_last_name")}
@@ -301,7 +326,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
           hasError={personalDataErrors.birthdate}
         />
       </div>:<div className="">
-        <Input value={personalData?.birthdate} data={{
+        <Input value={isValidCurp && personalData?.birthdate} data={{
           label: 'Fecha de Nacimiento',
           name: 'birthdate',
           type: 'text',
@@ -309,7 +334,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
           onPaste: true,
           pattern: '',
           isRequired: true,
-          disabled:hasCurp && !!personalData.birthdate
+          disabled:hasCurp && !!personalData.birthdate && isValidCurp
         }}
           eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "birthdate")}
           eventFocus={() => handleTouchedControl("birthdate")}
@@ -328,7 +353,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
           tagOnClickList: 'testOnClickList',
           tagOnClickOption: 'testOnClickOption',
         }} onClick={(option: CustomEvent) => handleSelect(option)} /></div>:
-        <Input value={personalData?.gender} data={{
+        <Input value={isValidCurp && personalData?.gender} data={{
           label: 'Género',
           name: 'gender',
           type: 'text',
@@ -338,7 +363,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
           alphanumeric: false,
           pattern: '',
           isRequired: true,
-          disabled:hasCurp && !!personalData.gender
+          disabled:hasCurp && !!personalData.gender && isValidCurp
         }}
           eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "gender")}
           eventFocus={() => handleTouchedControl("gender")}
@@ -524,7 +549,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
           <p className="font-texts font-normal text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p>
           </div>
           
-          {!!curp && form}
+          {isValidCurp && form}
           {
             noCurp && noResidence && !isValidCurp && form
           }

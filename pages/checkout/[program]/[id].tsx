@@ -49,8 +49,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
     setIsSuccess(success)
     console.log("Valid : ", valid)
   }
-
-  const [personalData, setPersonalData] = useState({
+  const initialData ={
     name: "",
     last_name: "",
     second_last_name: "",
@@ -59,11 +58,11 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
     birthdate: "",
     gender: "",
     residence: ""
-  });
+  }
 
-  useEffect(() => {
-    // console.log("isValid: ", isValid)
-  }, [isValid])
+  const [personalData, setPersonalData] = useState(initialData);
+
+
 
   useEffect(() => {
 
