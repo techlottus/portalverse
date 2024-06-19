@@ -10,6 +10,8 @@ import cn from "classnames"
 import React from "react"
 import Aspect from "@/components/Aspect";
 import { useRouter } from "next/router";
+import Image from "@/old-components/Image"
+import WebError from "@/components/sections/WebError";
 
 type PageProps = {
   program?: ProgramData | null;
@@ -138,9 +140,14 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
               "notifications_url": `${process.env.NEXT_PUBLIC_PAYMENT_WEBHOOK}/flywire/webhook`,
             })
           });
-
+          const regExpLink = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
           const res = await response.json()
-          setFlywireLink(await res)
+          if(regExpLink.test(res)){
+            setFlywireLink(await res)
+          }else{
+            setFlywireLink("error")
+          }
+          setIsSuccess(true)
         }
       }
       postData()
@@ -190,8 +197,12 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
           <div className={cn("w-1/2 h-full", { 'hidden': activePageIndex !== 1 })}>
             {
               !flywireLink
-                ? <p>... loading</p>
-                : <Aspect ratio="3/4"><iframe width="500px" height="500px" src={flywireLink} title="Flywire form"></iframe></Aspect>
+                ? <section className={cn("p-6 shadow-15 bg-surface-0 relative")}><div className="absolute w-full h-full z-10 flex justify-center items-center left-0 top-0 bg-surface-0">
+                <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
+              </div></section>
+                : flywireLink==="error"? <WebError title="Error" message="Error al conectar a flywire" errorCode="400"></WebError>
+                :<Aspect ratio="3/4"><iframe width="500px" height="500px" src={flywireLink} title="Flywire form"></iframe></Aspect>
+                
             }
           </div>
 
