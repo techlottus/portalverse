@@ -88,10 +88,12 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
           console.log("Confirm URL:", confirm_url.url);
           setActivePageIndex(2)
 
-        } else {
+        } else if (event.origin.indexOf(".vercel.live") > 0){
+          setActivePageIndex(2)
+        }
           // Handle failure accordingly
           // setActivePageIndex(3)
-          console.error("Session unsuccessful or confirm_url missing.");
+          else{console.error("Session unsuccessful or confirm_url missing.");
         }
       }
     });
