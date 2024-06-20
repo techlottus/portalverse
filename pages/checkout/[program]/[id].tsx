@@ -68,12 +68,14 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
    
 
     window.addEventListener("message", (event) => {
+      console.log("event: ",event)
       // IMPORTANT: Verify the origin of the data to ensure it is from Flywire
       // The use of indexOf ensures that the origin ends with ".flywire.com"
       if (event.origin.indexOf(".flywire.com") > 0) {
         // If the message was sent from Flywire:
         // Extract the data from the event
         const result = event.data;
+        console.log("event data:", result)
         console.log('result: ', result);
         
 
