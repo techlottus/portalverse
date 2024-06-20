@@ -39,7 +39,6 @@ const PaymentCard = (props: PaymentCardData) => {
     payment_provider_image, metadata, config } = props;
 
   const router = useRouter();
-  console.log(props, "props")
   return (
     <div className={cn("keen-slider__slide gap-y-4 grid rounded-lg border border-surface-200 p-4 bg-white w-72 h-72 mobile:mx-auto", { "opacity-40": !checkout_url && (!metadata && !config), "!border-primary-400": featured_price })}>
       <div className="">
