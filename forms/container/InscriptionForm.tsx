@@ -86,6 +86,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
     phone: false,
     birthdate: false,
     gender: false,
+    adviser:false
   })
 
   const [personalDataErrors, setPersonalDataErrors] = useState({
@@ -112,7 +113,8 @@ const InscriptionForm = (props: InscriptionFormData) => {
         phone: "",
         birthdate: "",
         gender: "",
-        residence: ""
+        residence: "",
+        adviser:""
       })
     }
 
@@ -142,7 +144,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
             phone: "",
             birthdate: "",
             gender: "",
-            residence: ""
+            residence: "",adviser:""
           })
 
         }
@@ -171,7 +173,8 @@ const InscriptionForm = (props: InscriptionFormData) => {
         phone: "",
         birthdate: "",
         gender: "",
-        residence: ""
+        residence: "",
+        adviser:""
       })
       setIsLoading(false)
 
@@ -205,6 +208,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
       email: !validatePersonalDataControl("email", personalData.email) && personalDataTouched.email,
       birthdate: !validatePersonalDataControl("birthdate", personalData.birthdate) && personalDataTouched.birthdate,
       gender: !validatePersonalDataControl("gender", personalData.gender) && personalDataTouched.gender,
+      adviser: !validatePersonalDataControl("adviser", personalData.adviser) && personalDataTouched.adviser,
     }
 
     setPersonalDataErrors({ ...newPersonalDataErrors });
@@ -228,7 +232,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
   const handleKeyPress = (e: CustomEvent, control: string) => {
     const { detail: { value } } = e;
     setPersonalDataTouched({ ...personalDataTouched, [control]: true });
-    setPersonalData({ ...personalData, [control]: value, ["residence"]: residence ? "Nacional" : "Extranjero" });
+    setPersonalData({ ...personalData, [control]: value, ["residence"]: residence ? "Nacional" : "Extranjero", ["adviser"]:value });
   };
 
   const handleTouchedControl = (control: string) => {
@@ -243,6 +247,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
 
 
   useEffect(() => {
+    console.log(personalData)
     Validate()
   }, [personalData]);
 
@@ -414,7 +419,10 @@ const InscriptionForm = (props: InscriptionFormData) => {
             upperCase: false,
             pattern: '',
             isRequired: true
-          }} />
+          }} 
+          eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "adviser")}
+          eventFocus={() => handleTouchedControl("adviser")}
+          />
         </div>
       }
     </div>
@@ -573,7 +581,9 @@ const InscriptionForm = (props: InscriptionFormData) => {
             upperCase: false,
             pattern: '',
             isRequired: true
-          }} />
+          }}
+          eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "adviser")}
+          eventFocus={() => handleTouchedControl("adviser")} />
         </div>
       }
     </div>
