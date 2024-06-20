@@ -81,7 +81,7 @@ const PaymentCardContainer = (props: PaymentCardContainerData) => {
           <div className="relative my-8">
             {
               price_list?.price?.length > 3
-                ? < div ref={sliderRef} className={cn("keen-slider overflow-visible")}>
+                ? < div ref={sliderRef} className={cn("keen-slider overflow-y-visible")}>
                   {
                     price_list?.price?.map((price: PaymentCardData, i: Number) => {
                       return (
@@ -90,7 +90,7 @@ const PaymentCardContainer = (props: PaymentCardContainerData) => {
                     })
                   }
                 </div>
-                : < div className="flex justify-center gap-8 mobile:flex-col">
+                : < div className="flex justify-center gap-8 mobile:flex-col ">
                   {
                     price_list?.price?.map((price: PaymentCardData, i: any) => {
                       return (
