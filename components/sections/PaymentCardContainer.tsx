@@ -45,7 +45,7 @@ const PaymentCardContainer = (props: PaymentCardContainerData) => {
         slides: { origin: "auto", perView: 2.8, spacing: 25 }
       },
       '(min-width: 1024px)': {
-        slides: { origin: "auto", perView: price_list?.price?.length <= 3 ? 3 : 3.8, spacing: 25 }
+        slides: { origin: "auto", perView: price_list?.price?.length <= 3 ? 3 : 3.6, spacing: 25 }
       },
     },
     mode: "free",
@@ -85,7 +85,7 @@ const PaymentCardContainer = (props: PaymentCardContainerData) => {
                   {
                     price_list?.price?.map((price: PaymentCardData, i: Number) => {
                       return (
-                        <PaymentCard key={`carouselCard-${i}`} {...{ program, ...price }} />
+                        <PaymentCard key={`carouselCard-${i}`} {...{ program, ...price }}/>
                       )
                     })
                   }
@@ -94,7 +94,7 @@ const PaymentCardContainer = (props: PaymentCardContainerData) => {
                   {
                     price_list?.price?.map((price: PaymentCardData, i: any) => {
                       return (
-                        <PaymentCard key={i} {...{ program, ...price }} />
+                        <PaymentCard key={i} {...{ program, ...price }}/>
                       )
                     })
                   }
