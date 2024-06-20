@@ -57,7 +57,7 @@ const PaymentCard = (props: PaymentCardData) => {
         }
         {
           payment_provider_image
-            ? <p className="font-headings text-lg font-bold">{title}</p>
+            ? <p className="font-headings text-xl font-bold">{title}</p>
             : null
         }
         {
@@ -95,12 +95,12 @@ const PaymentCard = (props: PaymentCardData) => {
         }
         {
           price && !discounted_price
-            ? <p className="font-headings font-bold text-xl">${price.toLocaleString('en-US')} MXN <span className="text-surface-500 font-normal text-sm">{periodicity}</span></p>
+            ? <p className="font-headings font-bold text-xl">${price.toLocaleString('en-US')} MXN <span className="text-surface-500 font-normal text-xs">{periodicity}</span></p>
             : null
         }
         {
           discounted_price
-            ? <p className="font-headings font-bold text-xl">${discounted_price.toLocaleString('en-US')} MXN <span className="line-through text-surface-500 font-normal text-sm">${price}</span></p>
+            ? <p className="font-headings font-bold text-xl">${discounted_price.toLocaleString('en-US')} MXN <span className="line-through text-surface-500 font-normal text-xs">${price}</span></p>
             : null
         }
         {
