@@ -4,8 +4,8 @@ import { useRouter } from "next/router";
 import Button from "@/old-components/Button/Button";
 
 export type PaymentCardData = {
-  id?:string | null;
-  program?:number | null;
+  id?: string | null;
+  program?: number | null;
   title?: string;
   subtitle?: string;
   perks?: Array<any>;
@@ -17,8 +17,8 @@ export type PaymentCardData = {
   periodicity?: string;
   featured_price?: boolean;
   payment_provider_image?: StrapiImage;
-  metadata?:any;
-  config?:any;
+  metadata?: any;
+  config?: any;
 }
 
 const PaymentCard = (props: PaymentCardData) => {
@@ -36,16 +36,16 @@ const PaymentCard = (props: PaymentCardData) => {
     total_payment,
     periodicity,
     featured_price,
-    payment_provider_image, metadata, config} = props;
+    payment_provider_image, metadata, config } = props;
 
   const router = useRouter();
-  
+  console.log(props, "props")
   return (
     <div className={cn("keen-slider__slide gap-y-4 grid rounded-lg border border-surface-200 p-4 bg-white w-72 h-72 mobile:mx-auto", { "opacity-40": !checkout_url && (!metadata && !config), "!border-primary-400": featured_price })}>
       <div className="">
         {
           featured_price
-            ? <div className="w-28 p-1 bg-primary-400 rounded-full  ">
+            ? <div className="w-28 p-1 bg-primary-400 rounded-full">
               <p className="text-center text-white text-xs font-bold">MÁS POPULAR</p>
             </div>
             : null
@@ -109,24 +109,24 @@ const PaymentCard = (props: PaymentCardData) => {
             : null
         }
       </div>
-      {checkout_url? <div className="flex items-end justify-center">
-            <Button
-              dark
-              data={{
-                type: "primary",
-                title: "Inscribirme ahora",
-                isExpand: true,
-              }}
-              onClick={() => {
-                if (checkout_url) {
-                  router.push(checkout_url);
-                } else {
-                  return
-                }
-              }}
-            />
-          </div>
-          :  metadata && config ?(<div className="flex items-end justify-center">
+      {checkout_url ? <div className="flex items-end justify-center">
+        <Button
+          dark
+          data={{
+            type: "primary",
+            title: "Inscribirme ahora",
+            isExpand: true,
+          }}
+          onClick={() => {
+            if (checkout_url) {
+              router.push(checkout_url);
+            } else {
+              return
+            }
+          }}
+        />
+      </div>
+        : metadata && config ? (<div className="flex items-end justify-center">
           <Button
             dark
             data={{
@@ -135,15 +135,16 @@ const PaymentCard = (props: PaymentCardData) => {
               isExpand: true,
             }}
             onClick={() => {
-                router.push(`/checkout/${program}/${id}`);
-              }
+              router.push(`/checkout/${program}/${id}`);
+            }
             }
           />
-        </div>):  
-        (<div className="flex items-center">
-            <p className="text-6 font-bold">Próximamente</p> 
-           </div> )
+        </div>) :
+          (<div className="flex items-center">
+            <p className="text-6 font-bold">Próximamente</p>
+          </div>)
       }
-      </div>
-)}
+    </div>
+  )
+}
 export default PaymentCard;
