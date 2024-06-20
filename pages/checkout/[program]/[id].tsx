@@ -59,7 +59,8 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
     phone: "",
     birthdate: "",
     gender: "",
-    residence: ""
+    residence: "",
+    adviser:""
   }
 
   const [personalData, setPersonalData] = useState(initialData);
@@ -160,6 +161,11 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                   {
                     "id": "residence",
                     "value": personalData?.residence,
+                    "read_only": true
+                  },
+                  {
+                    "id": "assessor_name",
+                    "value": personalData?.adviser,
                     "read_only": true
                   },
                 ]
