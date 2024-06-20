@@ -42,10 +42,10 @@ const PaymentCard = (props: PaymentCardData) => {
   
   return (
     <div className={cn("keen-slider__slide gap-y-4 grid rounded-lg border border-surface-200 p-4 bg-white w-72 h-72 mobile:mx-auto", { "opacity-40": !checkout_url && (!metadata && !config), "!border-primary-400": featured_price })}>
-      <div className="relative">
+      <div className="">
         {
           featured_price
-            ? <div className="w-28 p-1 bg-primary-400 rounded-full absolute top-[-27px] right-[70px]">
+            ? <div className="w-28 p-1 bg-primary-400 rounded-full  ">
               <p className="text-center text-white text-xs font-bold">MÁS POPULAR</p>
             </div>
             : null
