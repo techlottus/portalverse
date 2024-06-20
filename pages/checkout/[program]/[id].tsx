@@ -88,8 +88,9 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
           console.log("Confirm URL:", confirm_url.url);
           setActivePageIndex(2)
 
-        } else if (event.origin.indexOf(".vercel.live") > 0){
-          setActivePageIndex(2)
+        } else if (result.status){
+            //  setActivePageIndex(2)
+            console.log("status", result.status)
         }
           // Handle failure accordingly
           // setActivePageIndex(3)
