@@ -88,7 +88,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
           console.log("Confirm URL:", confirm_url.url);
           setActivePageIndex(2)
 
-        } else if (result.status){
+        } else if (result.status==="success"){
             //  setActivePageIndex(2)
             console.log("status", result.status)
         }
