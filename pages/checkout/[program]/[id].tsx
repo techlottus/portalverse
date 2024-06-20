@@ -51,7 +51,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
     setIsSuccess(success)
     console.log("Valid : ", valid)
   }
-  const initialData ={
+  const initialData = {
     name: "",
     last_name: "",
     second_last_name: "",
@@ -171,8 +171,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
           </div>
         </section>
         <div className="flex w-full mobile:flex-col justify-center py-12 gap-x-30 tablet:gap-x-5">
-          <div className={cn({ 'hidden': activePageIndex !== 0 })}>
-
+          <div className={cn("w-1/2 mobile:w-full flex desktop:pl-18", { 'hidden': activePageIndex !== 0 })}>
             <InscriptionForm
               submit={submit}
               setStatus={setStatus}
@@ -194,7 +193,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
               setCurpError={setCurpError}
             />
           </div>
-          <div className={cn("w-1/2 h-full", { 'hidden': activePageIndex !== 1 })}>
+          <div className={cn("w-1/2 pl-6 min-h-[512px]", { 'hidden': activePageIndex !== 1 })}>
             {
               !flywireLink
                 ? <section className={cn("p-6 shadow-15 bg-surface-0 relative")}><div className="absolute w-full h-full z-10 flex justify-center items-center left-0 top-0 bg-surface-0">
@@ -206,8 +205,8 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
             }
           </div>
 
-          <div className="mobile:col-span-2 pr-6 mobile:px-6">
-            <div className="border border-surface-300 rounded-lg p-4">
+          <div className="w-1/2 mobile:w-full pr-6 mobile:px-6">
+            <div className="border border-surface-300 rounded-lg p-4 max-w-sm">
               <h3 className="font-headings font-bold text-5.5 leading-6 mb-3">{program?.attributes?.name}</h3>
               {/* se deja pendiente este badge, ya que cada programa cuenta con varias posibles modalidades y aqui solo podríamos elegir una */}
               {/* <p className="text-white bg-primary-500 w-23 px-2 py-1 rounded-full text-center my-3">En línea</p> */}
@@ -234,7 +233,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
               </div>
             </div>
 
-            <div className={cn("flex flex-col my-6", { ["hidden"]: activePageIndex !== 0 })}>
+            <div className={cn("flex flex-col my-6 max-w-sm", { ["hidden"]: activePageIndex !== 0 })}>
               <Button
                 dark
                 data={{
@@ -248,7 +247,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                 }}
               />
             </div>
-            <div className="flex">
+            <div className="flex mt-3">
               <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">Al llenar tus datos aceptas nuestro</p>
               <Link href="terminos-y-condiciones" passHref target={"_blank"}> {/* deberia ir a aviso de privacidad???*/}
                 <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">Aviso de Privacidad</p>
