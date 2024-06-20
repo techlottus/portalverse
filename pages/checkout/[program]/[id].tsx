@@ -89,7 +89,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
           setActivePageIndex(2)
 
         } else if (result.status==="success"){
-            //  setActivePageIndex(2)
+            setActivePageIndex(2)
             console.log("status", result.status)
         }
           // Handle failure accordingly
