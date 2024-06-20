@@ -64,7 +64,36 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
 
   const [personalData, setPersonalData] = useState(initialData);
 
+  useEffect(() => {
+   
 
+    window.addEventListener("message", (event) => {
+      // IMPORTANT: Verify the origin of the data to ensure it is from Flywire
+      // The use of indexOf ensures that the origin ends with ".flywire.com"
+      if (event.origin.indexOf(".flywire.com") > 0) {
+        // If the message was sent from Flywire:
+        // Extract the data from the event
+        const result = event.data;
+        console.log('result: ', result);
+        
+
+        // Check if the session was successful and confirm_url is present:
+        if (result.success && result.confirm_url) {
+          // The session was successful and the confirm_url has been returned
+          const confirm_url = result.confirm_url;
+
+          // Use the confirm_url to confirm the Checkout Session
+          console.log("Confirm URL:", confirm_url.url);
+          setActivePageIndex(2)
+
+        } else {
+          // Handle failure accordingly
+          // setActivePageIndex(3)
+          console.error("Session unsuccessful or confirm_url missing.");
+        }
+      }
+    });
+  }, [])
 
   useEffect(() => {
 
