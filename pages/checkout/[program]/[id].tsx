@@ -111,7 +111,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
               "options": {
                 "form": {
                   "action_button": "save",
-                  "locale": "es"
+                  "locale": "es-ES"
                 }
               },
               "recipient": {
