@@ -81,7 +81,7 @@ const PaymentCardContainer = (props: PaymentCardContainerData) => {
           <div className="relative my-8">
             {
               price_list?.price?.length > 3
-                ? < div ref={sliderRef} className={cn("keen-slider")}>
+                ? < div ref={sliderRef} className={cn("keen-slider overflow-visible")}>
                   {
                     price_list?.price?.map((price: PaymentCardData, i: Number) => {
                       return (
