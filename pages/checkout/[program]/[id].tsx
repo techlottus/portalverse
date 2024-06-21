@@ -111,7 +111,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
             method: 'POST',
             body: JSON.stringify({
               ...price?.config,
-              "payor_id": "payor_test_thor",
+              "payor_id": personalData?.email,
               "options": {
                 "form": {
                   "action_button": "save",
