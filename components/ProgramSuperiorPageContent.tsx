@@ -803,6 +803,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           </Container>
           : null
       }
+
       {
         selectedModalityName === "a tu ritmo" && price_list?.price?.length > 0
           ? <PaymentCardContainer
