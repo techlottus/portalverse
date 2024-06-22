@@ -1,6 +1,7 @@
 import { ButtonInit, InputInit } from "@/old-components/fixture";
 
 const patternEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z0-9]{2,4}$/i;
+const patternCurp = /^([A-Z][AEIOUX][A-Z]{2}\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01])[HM](?:AS|B[CS]|C[CLMSH]|D[FG]|G[TR]|HG|JC|M[CNS]|N[ETL]|OC|PL|Q[TR]|S[PLR]|T[CSL]|VZ|YN|ZS)[B-DF-HJ-NP-TV-Z]{3}[A-Z\d])(\d)$/;
 
 const inputConfig = {
   ...InputInit,
@@ -177,6 +178,17 @@ const errorMessagesFormEgresados = {
   activeCompany: 'Debes seleccionar una opción'
 }
 
+const errorMessagesInscriptionForm = {
+  curp: 'Ingresa un curp válido',
+  name: 'Ingresa un nombre',
+  surname: 'Ingresa tus apellidos',
+  email: 'Ingresa un correo electrónico válido',
+  phone: 'Ingresa un teléfono de 10 dígitos',
+  birthdate: 'Ingresa tu fecha de nacimiento',
+  birth_entity: 'Ingresa tu lugar de nacimiento',
+  gender: 'Ingresa tu género'
+}
+
 export default {
   inputConfig,
   buttonConfigStepOne,
@@ -195,11 +207,13 @@ export default {
   inputCommentOpenFormStepOther,
   buttonConfigSend,
   patternEmail,
+  patternCurp,
   errorMessagesBeWantedForm,
   errorMessagesStepOneOpenForm,
   errorMessagesStepTwoOpenForm,
   errorMessagesStepThreeOpenForm,
   errorMessagesStepOneOpenFormContinuous,
   errorMessagesFormEgresados,
-  inputPasswordOpenFormStepOne
+  inputPasswordOpenFormStepOne,
+  errorMessagesInscriptionForm
 }
