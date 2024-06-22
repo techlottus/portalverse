@@ -16,6 +16,7 @@ const mxnCurrency = new Intl.NumberFormat("es-MX", {
 
 const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramAttributes) => {
   const {
+    id,
     name,
     programCategory,
     detail,
@@ -39,7 +40,6 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
   const programDetail = parseEditorRawData(detail);
   const programImage = image?.data?.attributes;
   const programPriceDetail = parseEditorRawData(priceDetail);
-
   return (
     <ContentFullLayout>
       <ContentLayout classNames="gap-6">
@@ -124,7 +124,7 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
             description={programDescription}
             periodicity={periodicity}
             certificationMessage={certificationMessage}
-            price={price}
+            price={price_list ? null : price}
             offerPrice={offerPrice}
             discount={discount}
             checkoutUrl={checkoutUrl}
@@ -145,15 +145,17 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
             : null
         }
       </ContentLayout>
-      {/* <PaymentCardContainer
-        title={"¡Asegura tu lugar! Opciones de "}
-        accent_title={"pago flexibles"}
-        subtitle={""}
-        price_list={{
-          ...price_list
-        }}
-        text="Nota importante: Los pagos parciales se efectúan en intervalos mensuales, cada 30 días a partir de la fecha de tu primer pago. El número de pagos corresponde al plan de parcialidades que hayas seleccionado al inscribirte. Esta secuencia se mantendrá hasta completar el costo total del curso."
-      /> */}
+      
+      {
+        !!price_list && <PaymentCardContainer
+          program={id}
+          title={"¡Asegura tu lugar! Opciones de "}
+          accent_title={"pago flexibles"}
+          subtitle={""}
+          price_list={{ ...price_list }}
+          text="Nota importante: Los pagos parciales se efectúan en intervalos mensuales, cada 30 días a partir de la fecha de tu primer pago. El número de pagos corresponde al plan de parcialidades que hayas seleccionado al inscribirte. Esta secuencia se mantendrá hasta completar el costo total del curso."
+        />
+      }
     </ContentFullLayout>
 
   );

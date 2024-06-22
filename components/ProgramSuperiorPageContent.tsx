@@ -803,7 +803,8 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           </Container>
           : null
       }
-      {/* 
+
+      {
         selectedModalityName === "a tu ritmo" && price_list?.price?.length > 0
           ? <PaymentCardContainer
             title={"Nuestros planes"}
@@ -815,7 +816,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
             text={`Nota importante: Al adquirir uno de nuestros planes, te suscribirás automáticamente a través de tu método de pago seleccionado. \n\n La suscripción se renovará de acuerdo con el plan elegido (mensual o anual). Puedes cancelar en cualquier momento antes de la renovación.`}
           />
           : null
-      */}
+      }
       {
         selectedModalityName === "a tu ritmo" ?
           <div className="mt-20">
