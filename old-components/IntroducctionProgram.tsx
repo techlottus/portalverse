@@ -26,9 +26,10 @@ const IntroductionProgram: FC<IntroductionProgramData> = (props: IntroductionPro
     image,
     discount,
     checkoutUrl,
-    checkoutUrlText = "Inscribirme ahora"
+    checkoutUrlText = "Inscribirme ahora",
+    price_list
   } = props
-
+  
   return (
     <section className="my-0 mb-4 md:my-6">
       <Container classNames="w-p:!p-0 w-t:!p-0 w-d-base:!px-0">
@@ -199,8 +200,13 @@ const IntroductionProgram: FC<IntroductionProgramData> = (props: IntroductionPro
                     isExpand: false,
                     tagOnClick: "",
                     test: ""
-                  }} onClick={() => {
-                    router.push("#payment_cards")
+                  }} onClick={() => {         
+                    if(price_list){
+                      router.push("#payment_cards")
+                    } else {
+                      router.push(checkoutUrl)
+                    }
+                    
                   }} />
                 </div>
                 : null

@@ -132,7 +132,11 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
             image={{
               alt: name,
               src: programImage?.url
-            }} />
+
+            }}
+            price_list={price_list?.price?.length > 0}
+          />
+
         </div>
 
         {
@@ -145,7 +149,7 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
             : null
         }
       </ContentLayout>
-      
+
       {
         !!price_list && <PaymentCardContainer
           program={id}

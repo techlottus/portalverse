@@ -19,4 +19,5 @@ export type IntroductionProgramData = {
   periodicity?: string | null
   programPerks: Array<ProgramPerk>
   brands?: Array<programBrand>
+  price_list?: Boolean
 }
