@@ -29,8 +29,6 @@ const IntroductionProgram: FC<IntroductionProgramData> = (props: IntroductionPro
     checkoutUrlText = "Inscribirme ahora",
     price_list
   } = props
-
-  console.log(props, "props program")
   
   return (
     <section className="my-0 mb-4 md:my-6">
