@@ -25,7 +25,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
   const flywireAPI = process.env.NEXT_PUBLIC_FLYWIRE_API
   const flywireAPIKEY = process.env.NEXT_PUBLIC_FLYWIRE_API_KEY
   const [flywireLink, setFlywireLink] = useState('')
-  const priceAmount = price?.price * 100 || 100000;
+  const priceAmount = Math.round(price?.price * 100) || 100000;
 
   const [residence, setResidence] = useState<any>()
   const [noResidence, setNoResidence] = useState<any>()
@@ -105,6 +105,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
 
     if (activePageIndex === 1) {
       const postData = async () => {
+
 
         if (flywireAPI && flywireAPIKEY) {
           const response = await fetch("/api/generateFwLink", {
