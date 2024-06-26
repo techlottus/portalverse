@@ -44,9 +44,9 @@ async function getRedirectsConfigData() {
 
 const REDIRECTS_CONFIG = `
   query redirects {
-    redirectsRedirects {
-      data{
-        attributes{
+    redirectsRedirects(pagination: { start: 0, limit: -1 }) {
+      data {
+        attributes {
           from
           to
           type
