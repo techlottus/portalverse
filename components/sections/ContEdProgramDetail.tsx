@@ -1,6 +1,5 @@
-import Image from "next/image";
-import Aspect from "@/components/Aspect";
 import ContentLayout from "@/layouts/Content.layout";
+import Head from "next/head";
 import RichtText from "@/old-components/Richtext/Richtext";
 import parseEditorRawData from "@/utils/parseEditorRawData";
 import type { FC } from "react";
@@ -33,15 +32,26 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
     checkoutUrlText,
     programPerks,
     brands,
-    price_list
+    price_list,
+    seo
   } = props;
 
   const programDescription = description
   const programDetail = parseEditorRawData(detail);
   const programImage = image?.data?.attributes;
   const programPriceDetail = parseEditorRawData(priceDetail);
+
   return (
     <ContentFullLayout>
+      <Head>
+        {/* TODO: Add SEO */}
+        <meta property="og:title" content={ seo?.metaTitle }/>
+        <meta property="title" content={ seo?.metaTitle }/>
+        <meta property="og:description" content={ seo?.metaDescription }/>
+        <meta name="description" content={seo?.metaDescription} key="desc" />
+        <meta property="og:image" content={seo?.metaImage?.data?.attributes?.url}/>
+        <meta property="image" content={seo?.metaImage?.data?.attributes?.url}/>
+      </Head>
       <ContentLayout classNames="gap-6">
         {/* <div className="col-span-6 w-t:col-span-4 w-p:col-span-4 ">
         {
