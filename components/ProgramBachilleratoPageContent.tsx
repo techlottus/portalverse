@@ -23,6 +23,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
 
   const program = props?.program;
   const layout = props?.layout as ProgramDetailBachilleratoData;
+  const seo = props?.program?.attributes?.seo
   const title = program?.attributes?.name;
   const description = program?.attributes?.description;
   const imageProgram = program?.attributes?.image?.data?.attributes?.url;
@@ -97,7 +98,13 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
   return (
     <Fragment>
       <Head>
-        <title>{title}</title>
+        <title>{title}hola</title>
+        <meta property="og:title" content={seo?.metaTitle} />
+        <meta property="title" content={seo?.metaTitle} />
+        <meta property="og:description" content={seo?.metaDescription} />
+        <meta name="description" content={seo?.metaDescription} key="desc" />
+        <meta property="og:image" content={seo?.metaImage?.data?.attributes?.url} />
+        <meta property="image" content={seo?.metaImage?.data?.attributes?.url} />
       </Head>
       <ContentLayout>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 flex flex-col w-d:justify-center">
@@ -118,7 +125,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
         </div>
       </ContentLayout>
       <ContentLayout classNames="w-d-base:px-0">
-      {
+        {
           feedbackData ?
             <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6 mb-18 w-p:mb-6">
               <Alert {...feedbackData} />
