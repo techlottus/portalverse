@@ -98,7 +98,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
   return (
     <Fragment>
       <Head>
-        <title>{title}hola</title>
+        <title>{title}</title>
         <meta property="og:title" content={seo?.metaTitle} />
         <meta property="title" content={seo?.metaTitle} />
         <meta property="og:description" content={seo?.metaDescription} />
