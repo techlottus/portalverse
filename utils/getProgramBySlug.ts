@@ -103,6 +103,11 @@ export type ProgramAttributes = {
   admissionRequirements: string;
   certificationsTitle: string;
   certificationsDescription: string;
+  seo: {
+    metaTitle: string;
+    metaDescription: string;
+    metaImage: StrapiImage;
+  }
   certifications: {
     data: Array<{
       attributes: {
@@ -233,6 +238,17 @@ query ProgramBySlug($slug: String!) {
           data {
             attributes {
               name
+            }
+          }
+        }
+        seo {
+          metaTitle
+          metaDescription
+          metaImage {
+            data {
+              attributes {
+                url
+              }
             }
           }
         }

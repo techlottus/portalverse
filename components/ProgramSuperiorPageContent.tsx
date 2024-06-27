@@ -38,6 +38,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const program = props?.program;
   const SFprogram = program.attributes.nombreProgramaSalesforce
   const layout = props?.layout as ProgramDetailSuperiorData;
+  const seo = props?.program?.attributes?.seo
   const title = program?.attributes?.name;
   const description = program?.attributes?.description;
   const levelProgram = program?.attributes?.level?.data?.attributes?.title;
@@ -193,7 +194,13 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   return (
     <Fragment>
       <Head>
-        <title>{title}</title>
+        <title>{title}hola</title>
+        <meta property="og:title" content={ seo?.metaTitle }/>
+        <meta property="title" content={ seo?.metaTitle }/>
+        <meta property="og:description" content={ seo?.metaDescription }/>
+        <meta name="description" content={seo?.metaDescription} key="desc" />
+        <meta property="og:image" content={seo?.metaImage?.data?.attributes?.url}/>
+        <meta property="image" content={seo?.metaImage?.data?.attributes?.url}/>
       </Head>
       <Modal isShow={isShow} onClose={() => handleVisibilityModal('close')} data={{ icon: 'close', title: "", tagOnClose: 'testOnClose', wrapper: true, }}>
         <div className="mt-16">
