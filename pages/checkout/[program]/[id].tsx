@@ -25,7 +25,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
   const flywireAPI = process.env.NEXT_PUBLIC_FLYWIRE_API
   const flywireAPIKEY = process.env.NEXT_PUBLIC_FLYWIRE_API_KEY
   const [flywireLink, setFlywireLink] = useState('')
-  const priceAmount = Math.round(price?.price * 100) || 100000;
+  const priceAmount = Math.round(price?.discounted_price * 100) || Math.round(price?.price * 100);
 
   const [residence, setResidence] = useState<any>()
   const [noResidence, setNoResidence] = useState<any>()
@@ -282,7 +282,13 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                 {price?.config?.type == "tokenization_and_pay" ? <><p className="font-texts font-bold text-base leading-6"> Parcialidad a pagar</p>
                   <p className="text-base font-bold">{price.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN</p></>
                   : <><p className="font-texts font-bold text-base leading-6"> Total a pagar</p>
-                    <p className="text-base font-bold">{price?.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN</p></>}
+                    <p className="text-base font-bold">{
+                    price.total_payment ? 
+                      (price?.total_payment?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }))
+                      : price.discounted_price ?
+                       (price?.discounted_price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })): 
+                       (price?.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }))
+                       } MXN</p></>}
               </div>
             </div>
 
