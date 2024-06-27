@@ -69,15 +69,15 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
    
 
     window.addEventListener("message", (event) => {
-      console.log("event: ",event)
+      // console.log("event: ",event)
       // IMPORTANT: Verify the origin of the data to ensure it is from Flywire
       // The use of indexOf ensures that the origin ends with ".flywire.com"
       if (event.origin.indexOf(".flywire.com") > 0) {
         // If the message was sent from Flywire:
         // Extract the data from the event
         const result = event.data;
-        console.log("event data:", result)
-        console.log('result: ', result);
+        // console.log("event data:", result)
+        // console.log('result: ', result);
         
 
         // Check if the session was successful and confirm_url is present:
@@ -86,16 +86,28 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
           const confirm_url = result.confirm_url;
 
           // Use the confirm_url to confirm the Checkout Session
-          console.log("Confirm URL:", confirm_url.url);
+          // console.log("Confirm URL:", confirm_url.url);
+          const postConfirm = async () => {
+              const response = await fetch("/api/confirmFw", {
+                method: "POST",
+                body: JSON.stringify({url:confirm_url.url})
+                })
+             
+              const res = await response.json()
+            };
+            
+            postConfirm()
+          
           setActivePageIndex(2)
 
         } else if (result.status==="success"){
             setActivePageIndex(2)
-            console.log("status", result.status)
+            // console.log("status", result.status)
         }
           // Handle failure accordingly
           // setActivePageIndex(3)
-          else{console.error("Session unsuccessful or confirm_url missing.");
+          else{
+            // console.error("Session unsuccessful or confirm_url missing.");
         }
       }
     });
