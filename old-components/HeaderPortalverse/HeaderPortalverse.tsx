@@ -192,7 +192,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, o
         <div className="overflow-y-auto h-full">
           {
             activeMenuList?.map((item: any, i: number) => <div key={`submenu-mobile-${i}`} className="w-full flex flex-col justify-between p-1 z-20">
-              <div className={cn("flex justify-between items-center p-1  border-0 border-solid border-surface-250 border-b", { "cursor-pointer": !item.route, "flex-row-reverse": item.back })}>
+              <div className={cn("flex justify-between items-center p-1  border-0 border-solid border-surface-200 border-b", { "cursor-pointer": !item.route, "flex-row-reverse": item.back })}>
                 {
                   !!item?.route
                     ? <Link
@@ -201,7 +201,6 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, o
                       className="w-full"
                       target={item?.external ? "_blank" : "_self"}
                       onClick={handleMenuMobile}>
-
                       <p className="font-texts font-bold text-sm leading-13">{item?.label}</p>
 
                     </Link>
@@ -211,7 +210,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, o
                 }
                 {
                   item?.children?.length > 0 || item?.back ?
-                    <div className={cn("p-3", { "cursor-pointer": !!item?.route })} onClick={() => handleEventNavigate(!!item?.route, item?.label, "arrow", !!item?.back)}>
+                    <div className={cn("px-3 py-2", { "cursor-pointer": !!item?.route, "border-l border-surface-200": item?.children && !item.back })} onClick={() => handleEventNavigate(!!item?.route, item?.label, "arrow", !!item?.back)}>
                       <span className="material-symbols-outlined icon select-none">{!item?.back ? "arrow_forward_ios" : "arrow_back_ios"}</span>
                     </div>
                     : null
