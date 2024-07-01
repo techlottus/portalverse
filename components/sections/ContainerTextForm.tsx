@@ -44,7 +44,7 @@ const ContainerTextForm: React.FC<ContainerTextFormSection> = (props: ContainerT
       <div
         style={styles}
         className={classNames(
-          "flex items-center justify-around w-full p-16 mobile:flex-col mobile:py-12 mobile:px-6  bg-origin-border md:bg-center bg-no-repeat bg-cover bg-secondary-0 tablet:block",
+          "flex items-center justify-around w-full p-16 mobile:flex-col mobile:py-12 mobile:px-6  bg-origin-border md:bg-center bg-no-repeat bg-cover tablet:block",
           "mobile:bg-[image:var(--image-mobile-url)]",
           "tablet:bg-[image:var(--image-tablet-url)]",
           "desktop:bg-[image:var(--image-desk-url)]"

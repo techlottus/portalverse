@@ -170,6 +170,7 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
           : null
       }
       <ContentFullLayout classNames="bg-surface-100 mt-18 w-t:mt-12 w-p:mt-12">
+        <></>
         {/* <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6">
           <p className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6">{ sections.noticias.title }</p>
