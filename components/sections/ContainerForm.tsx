@@ -70,9 +70,9 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
          return <AcreditatForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />; */
       case "Agendar_visita":
         return <ScheduleVisitForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
-/*       case "Pagina_programa":
-        return <ProgramPageForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />; */
       case "Pagina_programa":
+        return <ProgramPageForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
+      case "Empleabilidad":
         return <BeWanted pathBeWanted="https://www.bewanted.com/acceso/candidatos" copies={{ ...OpenFormInit.steponebewanted }} pathThankyou={`/thank-you?type=egresados`} classNames="w-full h-auto bg-surface-0 bottom-0 rounded-lg" />;
       default:
         setError('404')
