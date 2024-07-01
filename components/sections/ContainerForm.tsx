@@ -12,6 +12,8 @@ import ProgramDetailForm from "@/forms/container/ProgramDetailForm";
 import { DoubleDegreeForm } from "@/forms/container/DoubleDegreeForm";
 import ScheduleVisitForm from "@/forms/container/ScheduleVisitForm";
 import { ProgramPageForm } from "@/forms/container/ProgramPageForm";
+import BeWanted from "@/forms/container/BeWanted";
+import OpenFormInit from "@/forms/fixtures/openform"
 
 const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
   const router = useRouter()
@@ -38,7 +40,7 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
   const [submit, setSubmit] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  
+
 
   useEffect(() => {
     const errorData = errors?.reduce((acc, curr) => { if (curr.errorCode === error) acc = curr; return acc }, {}) || {}
@@ -56,7 +58,7 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
     setIsSuccess(success)
   }
 
-  const getForm = () => {    
+  const getForm = () => {
     switch (form) {
       case "Clinicas_Dentales":
         return <DentalClinics submit={submit} setStatus={setStatus} />;
@@ -64,12 +66,14 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
         return <ProgramDetailForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
       case "Doble_Titulacion":
         return <DoubleDegreeForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
-     /*  case "Acreditate":
-        return <AcreditatForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />; */
+      /*  case "Acreditate":
+         return <AcreditatForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />; */
       case "Agendar_visita":
         return <ScheduleVisitForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
-        case "Pagina_programa":
-          return <ProgramPageForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />;
+/*       case "Pagina_programa":
+        return <ProgramPageForm prefilledData={prefilledData} options={options} submit={submit} setStatus={setStatus} />; */
+      case "Pagina_programa":
+        return <BeWanted pathBeWanted="https://www.bewanted.com/acceso/candidatos" copies={{ ...OpenFormInit.steponebewanted }} pathThankyou={`/thank-you?type=egresados`} classNames="w-full h-auto bg-surface-0 bottom-0 rounded-lg" />;
       default:
         setError('404')
         return null;
