@@ -46,7 +46,7 @@ const BeWanted: FC<any> = ({ classNames, copies, pathThankyou, pathBeWanted }: a
   }
 
   return (
-    <section className={cn("p-6 bg-surface-0 relative w-d:max-w-147 w-t:max-w-147 w-t:mx-auto w-p:w-auto", classNames)}>
+    <section className={cn("bg-surface-0 relative w-d:max-w-147 w-t:max-w-147 w-t:mx-auto w-p:w-auto", classNames)}>
       <div className={cn("absolute w-full h-full z-10 flex justify-center items-center left-0 top-0", { "hidden": !isLoading, "block":isLoading })}>
         <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
       </div>
