@@ -11,7 +11,7 @@ const ListconfigVacancies = (props: ListconfigData) => {
   if (relatesto !== "vacancies") return null;
 
   const vacancies = data?.vacancies || [];
-  console.log(vacancies)
+
   return (
     <section>
       <Container>
@@ -43,7 +43,7 @@ const ListconfigVacancies = (props: ListconfigData) => {
                           background: true,
                           border: true,
                           type: "vertical",
-                          isLink: !!vacant?.attributes?.slug,
+                          isLink: !!vacant?.attributes?.redirect,
                           link: {
                             text: "Ver más",
                             size: "large",
@@ -56,8 +56,8 @@ const ListconfigVacancies = (props: ListconfigData) => {
                           },
                           aspect: "2/1"
                         }}                        
-                         onClick={!!vacant?.attributes?.slug ? () => {                          
-                            router.push(vacant?.attributes?.slug)
+                         onClick={!!vacant?.attributes?.redirect ? () => {                          
+                            router.push(vacant?.attributes?.redirect)
                         } : undefined
                         
                         }

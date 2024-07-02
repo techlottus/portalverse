@@ -26,7 +26,7 @@ export type Vacancies = {
   attributes: {
     title: string;
     abstract: string;
-    slug: string;
+    redirect: string;
     seo: {
       metaTitle: string;
       metaDescription: string;
@@ -54,7 +54,7 @@ query vacancies ($start: Int, $limit: Int, $sort: [String]) {
       attributes {
         title
         abstract
-        slug
+        redirect
         seo {
           metaTitle
           metaDescription
