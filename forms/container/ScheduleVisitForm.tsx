@@ -302,22 +302,22 @@ const ScheduleVisitForm = (props: ScheduleVisitForm) => {
       const programsByLevel = filteredPrograms?.filter((program: any) => {
         return program.nivel === academicData.level
       })
-      const periods = programsByLevel?.reduce((acc: any, program: any, index: number, arr: any[]) => {
-        if (!acc.includes(program.nombrePeriodo)) {
-          acc = [...acc, program.nombrePeriodo]
+      const data:any[]=[] //como reduce funciona con un solo valor a la vez, inicie un array donde ir guardando los datos
+      programsByLevel?.reduce((acc: any, program: any) => {
+        // acc-->valor anterior, program-->valor actual
+        // se consulta si el valor del nombre de programa en el objeto program actual existe en acc, si no existe, lo agrega al arr acc y a parte agrega program a la data
+         if(!acc.includes(program.nombrePrograma)){
+          acc= [...acc,program.nombrePrograma]
+          data.push(program)
+         }
+         
+         //este no lo usamos pero no funciona si retornan data
+         return acc
         }
-        return acc
-      }, [])
-      const sortedPeriods = periods?.sort((a: any, b: any) => {
-        return Number(a) - Number(b)
-      })
-      const currentPeriod = sortedPeriods[sortedPeriods.length - 1]
-      const periodPrograms = programsByLevel?.filter((program: any) => {
-        return program.nombrePeriodo === currentPeriod
-      })
-
-      const programs = filterByField(periodPrograms, 'nombrePrograma', ['nombrePrograma', 'idOfertaPrograma'])
-      const orderPrograms = programs.sort((a: any, b: any) => {
+        
+      ,[])
+       //usamos data para obtener los programas ordenados alfabeticamente
+      const orderPrograms = data.sort((a: any, b: any) => {
         if (a.nombrePrograma < b.nombrePrograma) {
           return -1;
         }
@@ -329,7 +329,7 @@ const ScheduleVisitForm = (props: ScheduleVisitForm) => {
       setSFprograms(orderPrograms?.map((program: any) => ({
         value: program?.idOfertaPrograma,
         text: program?.nombrePrograma,
-        active: orderPrograms?.length === 1 || program.idOfertaPrograma === academicData.program
+        active: programsByLevel?.length === 1 || program.idOfertaPrograma === academicData.program
       })))
     }
 
