@@ -226,7 +226,11 @@ const IntroductionProgram: FC<IntroductionProgramData> = (props: IntroductionPro
                     tagOnClick: "",
                     test: ""
                   }} onClick={() => {
-                    router.push(checkoutUrl)
+                    if(price_list){
+                      router.push("#payment_cards")
+                    } else {
+                      router.push(checkoutUrl)
+                    }
                   }} />
                 </div>
                 : null
