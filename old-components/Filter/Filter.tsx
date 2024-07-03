@@ -7,11 +7,11 @@ import FilterComponentConfig from "@/types/Filter.types"
 
 const Filter: FC<FilterComponentConfig> = memo(({ data, color = "#000", onSelectionItems, onChangeView }: FilterComponentConfig) => {
 
-  const [active, setActive] = useState<boolean>(false);
-  const [config, setConfig] = useState<any[]>([])
-  const [selectedOptions, setSelectedOptions] = useState<any>({});
-  const [mosaicActive, setMosaicActive] = useState<boolean>(true);
-  const [activeClear, setActiveClear] = useState<boolean>(false);
+  const [ active, setActive ] = useState<boolean>(false);
+  const [ config, setConfig ] = useState<any[]>([])
+  const [ selectedOptions, setSelectedOptions ] = useState<any>({});
+  const [ mosaicActive, setMosaicActive ] = useState<boolean>(true);
+  const [ activeClear, setActiveClear ] = useState<boolean>(false);
 
   const linkLottusConfig = { ...LinkIconsInit, text: 'Eliminar filtros', iconFirst: 'close' };
 
@@ -22,8 +22,8 @@ const Filter: FC<FilterComponentConfig> = memo(({ data, color = "#000", onSelect
   }
 
   useEffect(() => {
-    const items = Object.entries(data).map(([key, config]: any) => ({ key, config }));
-    setConfig([...items]);
+    const items = Object.entries(data).map(([ key, config ]: any) => ({ key, config }));
+    setConfig([ ...items ]);
   }, [data]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const Filter: FC<FilterComponentConfig> = memo(({ data, color = "#000", onSelect
   }
 
   const handleOnSelectedOptions = (options: string[], key: string) => {
-    setSelectedOptions((state: any) => ({ ...state, [key]: [...options] }));
+    setSelectedOptions((state: any) => ({ ...state, [key]: [ ...options ] }));
     setActive(true);
     if (!options.length) {
       setActiveClear(false);
@@ -45,25 +45,26 @@ const Filter: FC<FilterComponentConfig> = memo(({ data, color = "#000", onSelect
   }
 
   return <section className="container-filter w-full flex flex-col">
-    <div className="flex">
-      <p className="font-texts font-normal">Filtrar programas:</p>
-      <span>
-        <LinkIcons data={linkLottusConfig} onClick={clearAllFilters} />
-      </span>
-    </div>
-    <section className="flex py-3 w-t:flex-col w-p:flex-col border-t border-b birder-solid border-surface-200">
-      {
-        config.map(({ key, config }: any, i: number) => <div key={`filter-${i}`} className={cn("px-1 flex flex-col", { "border-solid border-surface-200 border-r": i < 2 })}>
-          <FilterDropdown color={color} data={config} onSelectedOptions={(options: string[]) => handleOnSelectedOptions(options, key)} onClearOptions={() => { }} onClear={activeClear} />
-        </div>
-        )
-      }
-    </section>
-    {/* <div className="flex items-center justify-end cursor-pointer mt-6" onClick={changeMosaicView}>
+      <div className="flex">
+        <p className="font-texts font-normal">Filtrar programas:</p>
+        <span>
+          <LinkIcons data={linkLottusConfig} onClick={clearAllFilters}/>
+        </span>
+      </div>
+      <section className="flex py-3 w-t:flex-col w-p:flex-col border-t border-b birder-solid border-surface-200">
+        {
+          config.map( ({ key, config }: any, i: number) =>
+            <div key={`filter-${i}`} className={cn("px-1 flex flex-col", { "border-solid border-surface-200 border-r": i < 2 })}>
+              <FilterDropdown color={color} data={config} onSelectedOptions={(options: string[]) => handleOnSelectedOptions(options, key)} onClearOptions={() => {}} onClear={activeClear} />
+            </div>
+          )
+        }
+      </section>
+      {/* <div className="flex items-center justify-end cursor-pointer mt-6" onClick={changeMosaicView}>
         <span className="mr-1 font-texts font-normal">Ver en { mosaicActive ? "lista" : "mosaico" }</span>
         <span className="material-symbols-outlined icon">{ mosaicActive ? "format_list_bulleted" : "space_dashboard" }</span>
       </div> */}
-  </section>
+    </section>
 });
 
 export default Filter
