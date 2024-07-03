@@ -7,15 +7,14 @@ import { ButtonInit } from "@/old-components/fixture"
 import { CheckboxConfig } from "@/types/Checkbox.types"
 
 const FilterDropdown: FC<FilterDropdownComponentData> = memo(({ data: { config, options }, onSelectedOptions, color, onClear }: FilterDropdownComponentData) => {
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState(false);
+  const [optionsList, setOptionsList] = useState<any[]>([])
+  const [buttonConfig, setButtonConfig] = useState({ ...ButtonInit, title: 'Aplicar', type: 'outlined', disabled: true });
 
-  const [ open, setOpen ] = useState(false);
-  const [ active, setActive ] = useState(false);
-  const [ optionsList, setOptionsList ] = useState<any[]>([])
-  const [ buttonConfig, setButtonConfig ] = useState({ ...ButtonInit, title: 'Aplicar', type: 'outlined', disabled: true });
-
-  const [ allOptions, setAllOptions ] = useState<any>([]);
-  const [ optionsCollection, setOptionsCollection ] = useState<CheckboxConfig[]>([]);
-  const [ configComponent, setConfigComponent ] = useState<FilterDropdownConfig>({ label: "" });
+  const [allOptions, setAllOptions] = useState<any>([]);
+  const [optionsCollection, setOptionsCollection] = useState<CheckboxConfig[]>([]);
+  const [configComponent, setConfigComponent] = useState<FilterDropdownConfig>({ label: "" });
 
   const onOpenClose = () => setOpen(!open)
 
@@ -25,7 +24,7 @@ const FilterDropdown: FC<FilterDropdownComponentData> = memo(({ data: { config, 
     setOptionsList((state: string[]) => selected ? [...state, option] : state.filter((item: string) => item !== option))
     setOptionsCollection(() => optionsCollection.map((item: any, i: number) => ({ value: item.value, label: item.label, disabled: item.active, selected: position === i ? selected : item.selected })));
   }
-  
+
   const applySelection = () => {
     setOptionsList((state: string[]) => {
       if (active) {
@@ -34,23 +33,23 @@ const FilterDropdown: FC<FilterDropdownComponentData> = memo(({ data: { config, 
           onOpenClose();
         }
       }
-      return state; 
+      return state;
     });
     setActive(true);
   }
-  
+
   useEffect(() => {
     setConfigComponent(() => ({ ...config }));
   }, [config]);// eslint-disable-line react-hooks/exhaustive-deps
-  
+
   useEffect(() => {
-    setAllOptions([ ...options ]);
+    setAllOptions([...options]);
     setOptionsCollection(() => options.map((item: any) => ({ value: item.value, label: item.label, disabled: item.active, selected: false })));
   }, [options]);// eslint-disable-line react-hooks/exhaustive-deps
-  
+
   useEffect(() => {
     setButtonConfig({ ...buttonConfig, disabled: !optionsList.length })
-    if( !optionsList.length ) {
+    if (!optionsList.length) {
       applySelection();
     }
   }, [optionsList]);// eslint-disable-line react-hooks/exhaustive-deps
@@ -62,22 +61,20 @@ const FilterDropdown: FC<FilterDropdownComponentData> = memo(({ data: { config, 
     }
   }, [onClear]);// eslint-disable-line react-hooks/exhaustive-deps
 
-  return <section className="relative" onMouseLeave={() => setOpen(false)}>
+  return <section className="relative">
     <section className="dropdown" onClick={onOpenClose}>
-      <span className= "material-symbols-outlined icon text-primary-500 w-p:!hidden">{ configComponent.icon }</span>
-      <p className={cn(`font-texts font-normal text-surface-950`)}>{ configComponent.label }</p>
-      <span className="material-symbols-outlined icon select-none !font-normal" onClick={onOpenClose}>{ open ? 'expand_less' : 'expand_more' }</span>
+      <span className="material-symbols-outlined icon text-primary-500 w-p:!hidden">{configComponent.icon}</span>
+      <p className={cn(`font-texts font-normal text-surface-950`)}>{configComponent.label}</p>
+      <span className="material-symbols-outlined icon select-none !font-normal" onClick={onOpenClose}>{open ? 'expand_less' : 'expand_more'}</span>
     </section>
-    <section className={cn("dropdown-list w-d:absolute w-full top-11 bg-surface-0 w-d:z-10",{
-      "w-p:z-10": open,
-    })} style={{ display: open ? 'flex' : 'none' }}>
+    <section className={cn("dropdown-list w-d:absolute w-full top-11 bg-surface-0 z-10")} style={{ display: open ? 'flex' : 'none' }}>
       {
         optionsCollection.map((option: CheckboxConfig, i: number) => <div key={`optionDropdown-${i}`}>
-            <Checkbox data={option} onCheck={(evt: CustomEvent) => getOptionSelected(evt, i)} />
-          </div>)
+          <Checkbox data={option} onCheck={(evt: CustomEvent) => getOptionSelected(evt, i)} />
+        </div>)
       }
       <div>
-        <Button dark data={buttonConfig} onClick={applySelection}/>
+        <Button dark data={buttonConfig} onClick={applySelection} />
       </div>
     </section>
   </section>

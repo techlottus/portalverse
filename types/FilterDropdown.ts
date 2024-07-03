@@ -11,7 +11,7 @@ export type FilterDropdownConfig = {
 
 type FilterDropdownComponentData = {
   data: {
-    config: FilterDropdownConfig;
+    config: FilterDropdownConfig; 
     options: OptionDropdownItem[];
   };
   color?: string;
