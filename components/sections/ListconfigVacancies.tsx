@@ -38,7 +38,7 @@ const ListconfigVacancies = (props: ListconfigData) => {
                         data={{
                           ...vacant,
                           image: vacant?.attributes?.featured_image?.data?.attributes?.url,
-                          text: parseEditorRawData(vacant?.attributes.body),
+                          text: parseEditorRawData(vacant?.attributes?.body),
                           title: vacant?.attributes?.title,
                           background: true,
                           border: true,
