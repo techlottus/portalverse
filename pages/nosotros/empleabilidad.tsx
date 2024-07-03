@@ -168,22 +168,7 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
             </ContentLayout>
           </ContentFullLayout>
           : null
-      }
-      <ContentFullLayout classNames="bg-surface-100 mt-18 w-t:mt-12 w-p:mt-12">
-        <></>
-        {/* <ContentLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6">
-          <p className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6">{ sections.noticias.title }</p>
-        </div>
-        <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-2 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mb-6">
-          {
-            sections.noticias.news.map((item:any, i:number) => <section key={`section-blog-${i}`}>
-            <CardWebsite data={item}/>
-            </section>)
-          }
-        </section>
-      </ContentLayout> */}
-      </ContentFullLayout>
+      }      
       <ContentLayout classNames="mb-12 w-t:mb-6 w-p:mb-6 w-d:mt-18 w-t:mt-8 w-p:mt-12">
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           <Cintillo
