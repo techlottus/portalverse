@@ -62,13 +62,13 @@ const FilterDropdown: FC<FilterDropdownComponentData> = memo(({ data: { config, 
     }
   }, [onClear]);// eslint-disable-line react-hooks/exhaustive-deps
 
-  return <section className="relative">
+  return <section className="relative" onMouseLeave={() => setOpen(false)} >
     <section className="dropdown" onClick={onOpenClose}>
       <span className= "material-symbols-outlined icon text-primary-500 w-p:!hidden">{ configComponent.icon }</span>
       <p className={cn(`font-texts font-normal text-surface-950`)}>{ configComponent.label }</p>
       <span className="material-symbols-outlined icon select-none !font-normal" onClick={onOpenClose}>{ open ? 'expand_less' : 'expand_more' }</span>
     </section>
-    <section className="dropdown-list absolute w-full top-11 bg-surface-0 z-10" style={{ display: open ? 'flex' : 'none' }}>
+    <section className="dropdown-list w-d:absolute w-full top-11 bg-surface-0 w-d:z-10" style={{ display: open ? 'flex' : 'none' }}>
       {
         optionsCollection.map((option: CheckboxConfig, i: number) => <div key={`optionDropdown-${i}`}>
             <Checkbox data={option} onCheck={(evt: CustomEvent) => getOptionSelected(evt, i)} />
