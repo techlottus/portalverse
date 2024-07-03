@@ -88,8 +88,8 @@ const StepOne = ( { onNext, copies }: any ) => {
   }
 
   return <section>
-    <h1 className="font-headings font-semibold text-5.5 leading-7 mb-6">{ copies.title }</h1>
-    <p className="font-texts font-normal text-sm leading-4">{ copies.description }</p>
+    <h1 className="font-headings font-semibold text-5.5 leading-7 mb-6">{ copies?.title }</h1>
+    <p className="font-texts font-normal text-sm leading-4">{ copies?.description }</p>
     <form>
       <div className="mt-6 flex w-p:flex-col gap-6">
         <div className="grow">
