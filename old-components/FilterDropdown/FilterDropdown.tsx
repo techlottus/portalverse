@@ -62,7 +62,7 @@ const FilterDropdown: FC<FilterDropdownComponentData> = memo(({ data: { config, 
     }
   }, [onClear]);// eslint-disable-line react-hooks/exhaustive-deps
 
-  return <section className="relative" onMouseLeave={() => setOpen(false)} >
+  return <section className="relative" >
     <section className="dropdown" onClick={onOpenClose}>
       <span className= "material-symbols-outlined icon text-primary-500 w-p:!hidden">{ configComponent.icon }</span>
       <p className={cn(`font-texts font-normal text-surface-950`)}>{ configComponent.label }</p>
