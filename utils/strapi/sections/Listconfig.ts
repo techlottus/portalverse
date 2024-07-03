@@ -75,16 +75,7 @@ export const formatListconfigSection = async (
       }
 
       break;
-    }
-    case "podcasts": {
-      const podcastEpisodes = await getPodcastEpisodes({
-        limit: section?.maxentries,
-        sort:
-          section?.sortdate === "latest"
-            ? "publicationDate:desc"
-            : "publicationDate:asc",
-      });
-      section.data = podcastEpisodes?.podcasts?.data;
+
     }
     case "vacancies": {
       const vacanciesData = await getVacancies({
@@ -105,6 +96,17 @@ export const formatListconfigSection = async (
 
       break;
     }
+    case "podcasts": {
+      const podcastEpisodes = await getPodcastEpisodes({
+        limit: section?.maxentries,
+        sort:
+          section?.sortdate === "latest"
+            ? "publicationDate:desc"
+            : "publicationDate:asc",
+      });
+      section.data = podcastEpisodes?.podcasts?.data;
+    }
+
     default:
       return section;
   }
