@@ -49,7 +49,6 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
     setIsLoading(loading)
     setIsValid(valid)
     setIsSuccess(success)
-    console.log("Valid : ", valid)
   }
   const initialData = {
     name: "",
@@ -220,7 +219,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
       <ContentFullLayout>
         <section className="w-full bg-surface-0 z-15 transition-transform shadow-15">
           <div className="p-6  border-0 border-solid border-surface-200 border-r-2">
-            <div className="w-36 h-9 bg-logo bg-cover bg-center"> </div>
+            <div className="w-36 h-9 bg-logo bg-cover bg-center mobile:mx-auto"> </div>
           </div>
         </section>
         <div className="flex w-full mobile:flex-col justify-center py-12 gap-x-30 tablet:gap-x-5">
@@ -246,19 +245,21 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
               setCurpError={setCurpError}
             />
           </div>
-          <div className={cn("w-1/2 pl-6 min-h-[512px]", { 'hidden': activePageIndex !== 1 })}>
+          <div className={cn("w-1/2 desktop:pl-30 tablet:pl-12 mobile:px-6 min-h-[512px]", { 'hidden': activePageIndex !== 1 })}>
             {
               !flywireLink
                 ? <section className={cn("p-6 shadow-15 bg-surface-0 relative")}><div className="absolute w-full h-full z-10 flex justify-center items-center left-0 top-0 bg-surface-0">
                 <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
               </div></section>
                 : flywireLink==="error"? <WebError title="Error" message="Error al conectar a flywire" errorCode="400"></WebError>
-                :<Aspect ratio="3/4"><iframe width="500px" height="500px" src={flywireLink} title="Flywire form"></iframe></Aspect>
-                
+                :<Aspect ratio="3/4">
+                  <iframe className="mobile:hidden tablet:hidden" width="530px" height="500px" src={flywireLink} title="Flywire form"></iframe>
+                  <iframe className="desktop:hidden" width="350px" height="500px" src={flywireLink} title="Flywire form"></iframe>
+                  </Aspect>
             }
           </div>
 
-          <div className="w-1/2 mobile:w-full pr-6 mobile:px-6">
+          <div className={cn("w-1/2 mobile:w-full pr-6 mobile:px-6 mobile:mb-7", {"mobile:hidden": flywireLink})}>
             <div className="border border-surface-300 rounded-lg p-4 max-w-sm">
               <h3 className="font-headings font-bold text-5.5 leading-6 mb-3">{program?.attributes?.name}</h3>
               {/* se deja pendiente este badge, ya que cada programa cuenta con varias posibles modalidades y aqui solo podríamos elegir una */}
@@ -358,7 +359,7 @@ export async function getStaticProps(context: any): Promise<{ props: PageProps }
         price
       },
     }
-  }
+    }
 
 }
 
