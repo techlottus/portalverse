@@ -245,17 +245,18 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
               setCurpError={setCurpError}
             />
           </div>
-          <div className={cn("w-1/2 desktop:pl-30 tablet:pl-12 mobile:px-6 min-h-[512px]", { 'hidden': activePageIndex !== 1 })}>
+          <div className={cn("w-1/2 desktop:pl-30 tablet:pl-12 mobile:px-6 min-h-[512px]", { 'hidden': activePageIndex !== 1 }, { 'w-full': flywireLink==="error" })}>
             {
               !flywireLink
                 ? <section className={cn("p-6 shadow-15 bg-surface-0 relative")}><div className="absolute w-full h-full z-10 flex justify-center items-center left-0 top-0 bg-surface-0">
                 <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
               </div></section>
-                : flywireLink==="error"? <WebError title="Error" message="Error al conectar a flywire" errorCode="400"></WebError>
-                :<Aspect ratio="3/4">
+                : flywireLink==="error"
+                ?<Aspect ratio="3/4">
                   <iframe className="mobile:hidden tablet:hidden" width="530px" height="500px" src={flywireLink} title="Flywire form"></iframe>
                   <iframe className="desktop:hidden" width="350px" height="500px" src={flywireLink} title="Flywire form"></iframe>
                   </Aspect>
+                : <WebError title="Error" message="Error al conectar a flywireeee" errorCode="400"></WebError>
             }
           </div>
 
