@@ -259,7 +259,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                   </section>
                   : flywireLink === "error"
                     ? <WebError title="Error" message="Error al conectar a flywire" errorCode="400"></WebError>
-                    : <div className="w-full mobile:pl-4">
+                    : <div className="w-full mobile:px-4">
                       <iframe className="mobile:hidden tablet:hidden w-full h-full" src={flywireLink} title="Flywire form"></iframe>
                       <iframe className="desktop:hidden w-full h-full" src={flywireLink} title="Flywire form"></iframe>
                     </div>
