@@ -223,7 +223,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
           </div>
         </section>
         <div className="flex w-full mobile:flex-col justify-center py-12 gap-x-30 tablet:gap-x-5">
-          <div className={cn("w-1/2 mobile:w-full px-6 flex justify-center desktop:pl-30", { 'hidden': activePageIndex !== 0 })}>
+          <div className={cn("w-1/2 mobile:w-full flex justify-center desktop:pl-30", { 'hidden': activePageIndex !== 0 })}>
             <InscriptionForm
               submit={submit}
               setStatus={setStatus}
@@ -245,7 +245,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
               setCurpError={setCurpError}
             />
           </div>
-          <div className={cn("w-1/2 mobile:w-full flex justify-center desktop:pl-30 tablet:pl-12 min-h-[512px] ", { 'hidden': activePageIndex !== 1 }, { 'w-full': flywireLink === "error" })}>
+          <div className={cn("w-1/2 mobile:w-full flex justify-center desktop:pl-30  tablet:pl-12 min-h-[512px] ", { 'hidden': activePageIndex !== 1 }, { 'w-full': flywireLink === "error" })}>
             {
               !flywireLink
                 ? <section className={cn("bg-surface-0")}>
@@ -255,9 +255,9 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                 </section>
                 : flywireLink === "error"
                   ? <WebError title="Error" message="Error al conectar a flywire" errorCode="400"></WebError>
-                  : <div>
+                  : <div className="w-full pl-2">
                     <iframe className="mobile:hidden tablet:hidden" width="530px" height="500px" src={flywireLink} title="Flywire form"></iframe>
-                    <iframe className="desktop:hidden" width="350px" height="500px" src={flywireLink} title="Flywire form"></iframe>
+                    <iframe className="desktop:hidden w-full h-full" src={flywireLink} title="Flywire form"></iframe>
                   </div>
             }
           </div>
