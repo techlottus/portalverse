@@ -12,6 +12,8 @@ import Aspect from "@/components/Aspect";
 import { useRouter } from "next/router";
 import Image from "@/old-components/Image"
 import WebError from "@/components/sections/WebError";
+import ContentLayout from "@/layouts/Content.layout"
+import Container from "@/layouts/Container.layout"
 
 type PageProps = {
   program?: ProgramData | null;
@@ -216,108 +218,112 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
       <Head>
         Checkout
       </Head>
+
       <ContentFullLayout>
         <section className="w-full bg-surface-0 z-15 transition-transform shadow-15">
-          <div className="p-6  border-0 border-solid border-surface-200 border-r-2">
+          <div className="p-6 border-0 border-solid border-surface-200 border-r-2">
             <div className="w-36 h-9 bg-logo bg-cover bg-center mobile:mx-auto"> </div>
           </div>
         </section>
-        <div className="flex w-full mobile:flex-col justify-center py-12 gap-x-30 tablet:gap-x-5">
-          <div className={cn("w-1/2 mobile:w-full flex justify-center desktop:pl-30", { 'hidden': activePageIndex !== 0 })}>
-            <InscriptionForm
-              submit={submit}
-              setStatus={setStatus}
-              residence={residence}
-              noResidence={noResidence}
-              hasCurp={hasCurp}
-              noCurp={noCurp}
-              setResidence={setResidence}
-              setNoResidence={setNoResidence}
-              setHasCurp={setHasCurp}
-              setNoCurp={setNoCurp}
-              personalData={personalData}
-              setPersonalData={setPersonalData}
-              curp={curp}
-              setCurp={setCurp}
-              isValidCurp={isValidCurp}
-              setIsValidCurp={setIsValidCurp}
-              curpError={curpError}
-              setCurpError={setCurpError}
-            />
-          </div>
-          <div className={cn("w-1/2 mobile:w-full flex justify-center desktop:pl-30  tablet:pl-12 min-h-[512px] ", { 'hidden': activePageIndex !== 1 }, { 'w-full': flywireLink === "error" })}>
-            {
-              !flywireLink
-                ? <section className={cn("bg-surface-0")}>
-                  <div className="w-full h-full bg-surface-0">
-                    <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
-                  </div>
-                </section>
-                : flywireLink === "error"
-                  ? <WebError title="Error" message="Error al conectar a flywire" errorCode="400"></WebError>
-                  : <div className="w-full pl-2">
-                    <iframe className="mobile:hidden tablet:hidden" width="530px" height="500px" src={flywireLink} title="Flywire form"></iframe>
-                    <iframe className="desktop:hidden w-full h-full" src={flywireLink} title="Flywire form"></iframe>
-                  </div>
-            }
-          </div>
-
-          <div className={cn("w-1/2 mobile:w-full pr-6 mobile:px-6 mobile:mb-7", { "mobile:hidden": flywireLink })}>
-            <div className="border border-surface-300 rounded-lg p-4 max-w-sm">
-              <h3 className="font-headings font-bold text-5.5 leading-6 mb-3">{program?.attributes?.name}</h3>
-              {/* se deja pendiente este badge, ya que cada programa cuenta con varias posibles modalidades y aqui solo podríamos elegir una */}
-              {/* <p className="text-white bg-primary-500 w-23 px-2 py-1 rounded-full text-center my-3">En línea</p> */}
-              <hr className="text-surface-300" />
-              <div className="flex justify-between mt-2">
-                <p className="font-texts">Opción de pago:</p>
-                <p className="text-surface-500 font-texts">{price?.title}</p>
-              </div>
-              {price?.config?.type == "tokenization_and_pay" && <div className="flex justify-between my-1">
-                <p className="font-texts">Parcialidades:</p>
-                <p className="text-surface-500 font-texts">{price.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN </p>
-              </div>}
-              {price?.config?.type == "tokenization_and_pay" &&
-                <div className="flex justify-between mb-2">
-                  <p className="font-texts">Costo total:</p>
-                  <p className="text-surface-500 font-texts">{price?.total_payment?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN</p>
-                </div>}
-              <hr className="text-surface-300" />
-              <div className="flex justify-between mt-2">
-                {price?.config?.type == "tokenization_and_pay" ? <><p className="font-texts font-bold text-base leading-6"> Parcialidad a pagar</p>
-                  <p className="text-base font-bold">{price.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN</p></>
-                  : <><p className="font-texts font-bold text-base leading-6"> Total a pagar</p>
-                    <p className="text-base font-bold">{
-                      price?.total_payment ?
-                        (price?.total_payment?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }))
-                        : price?.discounted_price ?
-                          (price?.discounted_price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })) :
-                          (price?.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }))
-                    } MXN</p></>}
-              </div>
-            </div>
-
-            <div className={cn("flex flex-col my-6 max-w-sm", { ["hidden"]: activePageIndex !== 0 })}>
-              <Button
-                dark
-                data={{
-                  type: "primary",
-                  title: "Inscribirme ahora",
-                  isExpand: true,
-                  disabled: !isValid
-                }}
-                onClick={() => {
-                  setActivePageIndex(activePageIndex + 1)
-                }}
+        <Container classNames="flex mobile:!px-0 mobile:flex-col tablet:flex-col tablet:!px-0 desktop:gap-30 desktop:mt-12 mobile:mt-6 tablet:mt-6">
+          <div className="desktop:w-1/2">
+            <div className={cn("mobile:w-full", { 'hidden': activePageIndex !== 0 })}>
+              <InscriptionForm
+                submit={submit}
+                setStatus={setStatus}
+                residence={residence}
+                noResidence={noResidence}
+                hasCurp={hasCurp}
+                noCurp={noCurp}
+                setResidence={setResidence}
+                setNoResidence={setNoResidence}
+                setHasCurp={setHasCurp}
+                setNoCurp={setNoCurp}
+                personalData={personalData}
+                setPersonalData={setPersonalData}
+                curp={curp}
+                setCurp={setCurp}
+                isValidCurp={isValidCurp}
+                setIsValidCurp={setIsValidCurp}
+                curpError={curpError}
+                setCurpError={setCurpError}
               />
             </div>
-            <div className="flex mt-3">
-              <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">Al llenar tus datos aceptas nuestro</p>
-              <Link href="terminos-y-condiciones" passHref target={"_blank"}> {/* deberia ir a aviso de privacidad???*/}
-                <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">Aviso de Privacidad</p>
-              </Link>
+            <div className={cn("mobile:w-full flex justify-center min-h-[512px]", { 'hidden': activePageIndex !== 1 }, { 'w-full': flywireLink === "error" })}>
+              {
+                !flywireLink
+                  ? <section className={cn("bg-surface-0")}>
+                    <div className="w-full h-full bg-surface-0">
+                      <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
+                    </div>
+                  </section>
+                  : flywireLink === "error"
+                    ? <WebError title="Error" message="Error al conectar a flywire" errorCode="400"></WebError>
+                    : <div className="w-full mobile:pl-4">
+                      <iframe className="mobile:hidden tablet:hidden w-full h-full" src={flywireLink} title="Flywire form"></iframe>
+                      <iframe className="desktop:hidden w-full h-full" src={flywireLink} title="Flywire form"></iframe>
+                    </div>
+              }
             </div>
           </div>
-        </div>
+          <div className="desktop:w-1/2 mobile:mt-7">
+            <div className={cn("mobile:w-full mobile:px-6 mobile:mb-7", { "mobile:hidden tablet:hidden": flywireLink })}>
+              <div className="w-full border border-surface-300 rounded-lg p-4">
+                <h3 className="font-headings font-bold text-5.5 leading-6 mb-3">{program?.attributes?.name}</h3>
+                {/* se deja pendiente este badge, ya que cada programa cuenta con varias posibles modalidades y aqui solo podríamos elegir una */}
+                {/* <p className="text-white bg-primary-500 w-23 px-2 py-1 rounded-full text-center my-3">En línea</p> */}
+                <hr className="text-surface-300" />
+                <div className="flex justify-between mt-2">
+                  <p className="font-texts">Opción de pago:</p>
+                  <p className="text-surface-500 font-texts">{price?.title}</p>
+                </div>
+                {price?.config?.type == "tokenization_and_pay" && <div className="flex justify-between my-1">
+                  <p className="font-texts">Parcialidades:</p>
+                  <p className="text-surface-500 font-texts">{price.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN </p>
+                </div>}
+                {price?.config?.type == "tokenization_and_pay" &&
+                  <div className="flex justify-between mb-2">
+                    <p className="font-texts">Costo total:</p>
+                    <p className="text-surface-500 font-texts">{price?.total_payment?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN</p>
+                  </div>}
+                <hr className="text-surface-300" />
+                <div className="flex justify-between mt-2">
+                  {price?.config?.type == "tokenization_and_pay" ? <><p className="font-texts font-bold text-base leading-6"> Parcialidad a pagar</p>
+                    <p className="text-base font-bold">{price.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN</p></>
+                    : <><p className="font-texts font-bold text-base leading-6"> Total a pagar</p>
+                      <p className="text-base font-bold">{
+                        price?.total_payment ?
+                          (price?.total_payment?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }))
+                          : price?.discounted_price ?
+                            (price?.discounted_price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })) :
+                            (price?.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }))
+                      } MXN</p></>}
+                </div>
+              </div>
+
+              <div className={cn("flex flex-col my-6", { ["hidden"]: activePageIndex !== 0 })}>
+                <Button
+                  dark
+                  data={{
+                    type: "primary",
+                    title: "Inscribirme ahora",
+                    isExpand: true,
+                    disabled: !isValid
+                  }}
+                  onClick={() => {
+                    setActivePageIndex(activePageIndex + 1)
+                  }}
+                />
+              </div>
+              <div className="flex mt-3">
+                <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">Al llenar tus datos aceptas nuestro</p>
+                <Link href="terminos-y-condiciones" passHref target={"_blank"}> {/* deberia ir a aviso de privacidad???*/}
+                  <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">Aviso de Privacidad</p>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </Container>
       </ContentFullLayout>
     </>);
 }
