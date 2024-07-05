@@ -8,11 +8,9 @@ import Link from "next/link"
 import Button from "@/old-components/Button/Button"
 import cn from "classnames"
 import React from "react"
-import Aspect from "@/components/Aspect";
 import { useRouter } from "next/router";
 import Image from "@/old-components/Image"
 import WebError from "@/components/sections/WebError";
-import ContentLayout from "@/layouts/Content.layout"
 import Container from "@/layouts/Container.layout"
 
 type PageProps = {
