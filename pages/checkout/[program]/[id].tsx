@@ -59,13 +59,13 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
     birthdate: "",
     gender: "",
     residence: "",
-    adviser:""
+    adviser: ""
   }
 
   const [personalData, setPersonalData] = useState(initialData);
 
   useEffect(() => {
-   
+
 
     window.addEventListener("message", (event) => {
       // console.log("event: ",event)
@@ -77,7 +77,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
         const result = event.data;
         // console.log("event data:", result)
         // console.log('result: ', result);
-        
+
 
         // Check if the session was successful and confirm_url is present:
         if (result.success && result.confirm_url) {
@@ -87,26 +87,26 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
           // Use the confirm_url to confirm the Checkout Session
           // console.log("Confirm URL:", confirm_url.url);
           const postConfirm = async () => {
-              const response = await fetch("/api/confirmFw", {
-                method: "POST",
-                body: JSON.stringify({url:confirm_url.url})
-                })
-             
-              const res = await response.json()
-            };
-            
-            postConfirm()
-          
+            const response = await fetch("/api/confirmFw", {
+              method: "POST",
+              body: JSON.stringify({ url: confirm_url.url })
+            })
+
+            const res = await response.json()
+          };
+
+          postConfirm()
+
           setActivePageIndex(2)
 
-        } else if (result.status==="success"){
-            setActivePageIndex(2)
-            // console.log("status", result.status)
+        } else if (result.status === "success") {
+          setActivePageIndex(2)
+          // console.log("status", result.status)
         }
-          // Handle failure accordingly
-          // setActivePageIndex(3)
-          else{
-            // console.error("Session unsuccessful or confirm_url missing.");
+        // Handle failure accordingly
+        // setActivePageIndex(3)
+        else {
+          // console.error("Session unsuccessful or confirm_url missing.");
         }
       }
     });
@@ -194,9 +194,9 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
           });
           const regExpLink = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
           const res = await response.json()
-          if(regExpLink.test(res)){
+          if (regExpLink.test(res)) {
             setFlywireLink(await res)
-          }else{
+          } else {
             setFlywireLink("error")
           }
           setIsSuccess(true)
@@ -245,28 +245,28 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
               setCurpError={setCurpError}
             />
           </div>
-          <div className={cn("w-1/2 desktop:pl-30 tablet:pl-12 mobile:px-6 min-h-[512px]", { 'hidden': activePageIndex !== 1 }, { 'w-full': flywireLink==="error" })}>
+          <div className={cn("w-1/2 desktop:pl-30 tablet:pl-12 mobile:px-6 min-h-[512px]", { 'hidden': activePageIndex !== 1 }, { 'w-full': flywireLink === "error" })}>
             {
               !flywireLink
                 ? <section className={cn("p-6 shadow-15 bg-surface-0 relative")}><div className="absolute w-full h-full z-10 flex justify-center items-center left-0 top-0 bg-surface-0">
-                <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
-              </div></section>
-                : flywireLink==="error"
-                ?<Aspect ratio="3/4">
-                  <iframe className="mobile:hidden tablet:hidden" width="530px" height="500px" src={flywireLink} title="Flywire form"></iframe>
-                  <iframe className="desktop:hidden" width="350px" height="500px" src={flywireLink} title="Flywire form"></iframe>
+                  <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
+                </div></section>
+                : flywireLink === "error"
+                  ? <WebError title="Error" message="Error al conectar a flywireeee" errorCode="400"></WebError>
+                  : <Aspect ratio="3/4">
+                    <iframe className="mobile:hiddßen tablet:hidden" width="530px" height="500px" src={flywireLink} title="Flywire form"></iframe>
+                    <iframe className="desktop:hidden" width="350px" height="500px" src={flywireLink} title="Flywire form"></iframe>
                   </Aspect>
-                : <WebError title="Error" message="Error al conectar a flywireeee" errorCode="400"></WebError>
             }
           </div>
 
-          <div className={cn("w-1/2 mobile:w-full pr-6 mobile:px-6 mobile:mb-7", {"mobile:hidden": flywireLink})}>
+          <div className={cn("w-1/2 mobile:w-full pr-6 mobile:px-6 mobile:mb-7", { "mobile:hidden": flywireLink })}>
             <div className="border border-surface-300 rounded-lg p-4 max-w-sm">
               <h3 className="font-headings font-bold text-5.5 leading-6 mb-3">{program?.attributes?.name}</h3>
               {/* se deja pendiente este badge, ya que cada programa cuenta con varias posibles modalidades y aqui solo podríamos elegir una */}
               {/* <p className="text-white bg-primary-500 w-23 px-2 py-1 rounded-full text-center my-3">En línea</p> */}
               <hr className="text-surface-300" />
-               <div className="flex justify-between mt-2">
+              <div className="flex justify-between mt-2">
                 <p className="font-texts">Opción de pago:</p>
                 <p className="text-surface-500 font-texts">{price?.title}</p>
               </div>
@@ -285,12 +285,12 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                   <p className="text-base font-bold">{price.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN</p></>
                   : <><p className="font-texts font-bold text-base leading-6"> Total a pagar</p>
                     <p className="text-base font-bold">{
-                    price?.total_payment ? 
-                      (price?.total_payment?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }))
-                      : price?.discounted_price ?
-                       (price?.discounted_price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })): 
-                       (price?.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }))
-                       } MXN</p></>}
+                      price?.total_payment ?
+                        (price?.total_payment?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }))
+                        : price?.discounted_price ?
+                          (price?.discounted_price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })) :
+                          (price?.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }))
+                    } MXN</p></>}
               </div>
             </div>
 
@@ -360,7 +360,7 @@ export async function getStaticProps(context: any): Promise<{ props: PageProps }
         price
       },
     }
-    }
+  }
 
 }
 
