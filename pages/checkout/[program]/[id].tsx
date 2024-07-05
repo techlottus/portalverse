@@ -317,7 +317,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
               </div>
               <div className="flex mt-3">
                 <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">Al llenar tus datos aceptas nuestro</p>
-                <Link href="terminos-y-condiciones" passHref target={"_blank"}> {/* deberia ir a aviso de privacidad???*/}
+                <Link href="/terminos-y-condiciones" passHref target={"_blank"}> {/* deberia ir a aviso de privacidad???*/}
                   <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">Aviso de Privacidad</p>
                 </Link>
               </div>
