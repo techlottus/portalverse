@@ -22,7 +22,6 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout ?? ((page) => page)
 
-
   return getLayout(
     <>
       {
@@ -37,7 +36,9 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
       }
       <Component {...pageProps} />
       {
-        (sendWhatsapp && !sendWhatsapp?.hidden) && <WhatsappButton phone={sendWhatsapp?.phone}></WhatsappButton>
+        pageProps?.program?.attributes?.price_list
+        ? null 
+        : (sendWhatsapp && !sendWhatsapp?.hidden) && <WhatsappButton phone={sendWhatsapp?.phone}></WhatsappButton>
       }
 
     </>)
