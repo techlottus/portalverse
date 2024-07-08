@@ -216,17 +216,18 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
   );
 };
 
-const getProgramCampuses = (program: FilterProgram) => {
+const getProgramCampuses = (program: FilterProgram, modality: any ) => {
 
   if (!program) return [];
 
   const campuses: Array<string> = [];
 
-  const programModalities = program?.attributes?.programModalities;
+  const programModalities = modality && modality.length > 0 ? program?.attributes?.programModalities.filter((element) => modality.includes(element?.modality?.data?.attributes?.name)) : program?.attributes?.programModalities;
+
 
   programModalities?.forEach((programModality) => {
     const curriculumByCampus = programModality?.curriculums;
-
+    
     curriculumByCampus?.forEach((curriculumByCampus) => {
       const campusName = curriculumByCampus?.campus?.data?.attributes?.name;
       if (!campusName || campuses?.includes(campusName)) return;
@@ -244,7 +245,7 @@ const getProgramsCampuses = (programs: Array<FilterProgram> = []) => {
   const campuses: Array<string> = [];
 
   programs?.forEach((program) => {
-    const programCampuses = getProgramCampuses(program);
+    const programCampuses = getProgramCampuses(program, "");
     programCampuses?.forEach((campus) => {
       if (!campus || campuses?.includes(campus)) return;
       campuses?.push(campus);
@@ -337,20 +338,21 @@ const filterPrograms = (programs: Array<FilterProgram> = [], filter: Filter) => 
 
   return Object.keys(filter)?.reduce((acc, currentKey) => {
     //@ts-ignore
+
     if (filter?.[currentKey]?.length < 1) return acc;
 
-    return acc?.filter((program) => {
+    const filtradoProgramas = acc?.filter((program) => {
       switch (currentKey) {
         case "modalities": {
           const filterModalities = filter?.[currentKey];
-          const programModalities = getProgramModalities(program);
+          const programModalities = getProgramModalities(program);          
           return programModalities?.some((programModality) =>
             filterModalities?.includes(programModality?.name)
           );
         }
         case "campuses": {
           const filterCampuses = filter?.[currentKey];
-          const programCampuses = getProgramCampuses(program);
+          const programCampuses = getProgramCampuses(program, filter?.["modalities"]);
           return programCampuses?.some((programCampus) =>
             filterCampuses?.includes(programCampus)
           );
@@ -367,6 +369,7 @@ const filterPrograms = (programs: Array<FilterProgram> = [], filter: Filter) => 
         }
       }
     });
+    return filtradoProgramas
   }, programs);
 };
 
