@@ -273,16 +273,16 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                 <hr className="text-surface-300" />
                 <div className="flex justify-between mt-2">
                   <p className="font-texts">Opción de pago:</p>
-                  <p className="text-surface-500 font-texts">{price?.title}</p>
+                  <p className="text-surface-500 font-texts font-normal">{price?.title}</p>
                 </div>
                 {price?.config?.type == "tokenization_and_pay" && <div className="flex justify-between my-1">
                   <p className="font-texts">Parcialidades:</p>
-                  <p className="text-surface-500 font-texts">{price.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN </p>
+                  <p className="text-surface-500 font-texts font-normal">{price.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN </p>
                 </div>}
                 {price?.config?.type == "tokenization_and_pay" &&
                   <div className="flex justify-between mb-2">
                     <p className="font-texts">Costo total:</p>
-                    <p className="text-surface-500 font-texts">{price?.total_payment?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN</p>
+                    <p className="text-surface-500 font-texts font-normal">{price?.total_payment?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN</p>
                   </div>}
                 <hr className="text-surface-300" />
                 <div className="flex justify-between mt-2">
