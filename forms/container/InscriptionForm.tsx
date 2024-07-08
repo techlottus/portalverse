@@ -601,7 +601,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
             </div>
             <div>
               <p className="font-texts text-base font-bold text-surface-950">
-                1. ¿Eres mexicano? <span className="text-warning-500">*</span>
+                1. ¿Eres mexicano? <span className="text-[#D50D19]">*</span>
               </p>
               <div className="flex space-x-3 mb-5 my-3">
                 <OptionPill
