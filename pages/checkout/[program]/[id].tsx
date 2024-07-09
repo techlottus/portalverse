@@ -273,16 +273,16 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                 <hr className="text-surface-300" />
                 <div className="flex justify-between mt-2">
                   <p className="font-texts">Opción de pago:</p>
-                  <p className="text-surface-500 font-texts">{price?.title}</p>
+                  <p className="text-surface-500 font-texts font-normal">{price?.title}</p>
                 </div>
                 {price?.config?.type == "tokenization_and_pay" && <div className="flex justify-between my-1">
                   <p className="font-texts">Parcialidades:</p>
-                  <p className="text-surface-500 font-texts">{price.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN </p>
+                  <p className="text-surface-500 font-texts font-normal">{price.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN </p>
                 </div>}
                 {price?.config?.type == "tokenization_and_pay" &&
                   <div className="flex justify-between mb-2">
                     <p className="font-texts">Costo total:</p>
-                    <p className="text-surface-500 font-texts">{price?.total_payment?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN</p>
+                    <p className="text-surface-500 font-texts font-normal">{price?.total_payment?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN</p>
                   </div>}
                 <hr className="text-surface-300" />
                 <div className="flex justify-between mt-2">
@@ -314,10 +314,13 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                 />
               </div>
               <div className="flex mt-3">
-                <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">Al llenar tus datos aceptas nuestro</p>
-                <Link href="/terminos-y-condiciones" passHref target={"_blank"}> {/* deberia ir a aviso de privacidad???*/}
-                  <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">Aviso de Privacidad</p>
-                </Link>
+                <span className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">
+                  Al llenar tus datos aceptas nuestro <a className="text-3.5 font-texts font-normal text-sm text-surface-800 underline"
+                    href="/terminos-y-condiciones"
+                    target="_blank">
+                    Aviso de Privacidad
+                  </a>
+                </span>
               </div>
             </div>
           </div>
