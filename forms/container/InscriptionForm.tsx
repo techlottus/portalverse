@@ -597,11 +597,11 @@ const InscriptionForm = (props: InscriptionFormData) => {
           <div className="flex flex-col gap-6">
             <div>
               <h3 className="font-headings font-bold text-3xl text-surface-900  mobile:text-lg">Estás a punto de iniciar tu curso</h3>
-              <p className="text-surface-700 font-headings text-base mobile:text-sm mt-3">Te pedimos llenar tus datos como estudiante para inscribirte</p>
+              <p className="text-surface-500 font-texts text-base mt-3">Te pedimos llenar tus datos como estudiante para inscribirte</p>
             </div>
             <div>
               <p className="font-texts text-base font-bold text-surface-950">
-                1. ¿Eres mexicano? <span className="text-warning-500">*</span>
+                1. ¿Eres mexicano? <span className="text-error-500">*</span>
               </p>
               <div className="flex space-x-3 mb-5 my-3">
                 <OptionPill
