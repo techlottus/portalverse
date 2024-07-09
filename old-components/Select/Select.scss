@@ -19,7 +19,8 @@ div {
   }
 }
 
-.select-container .options {
-  max-height: 9rem !important;
-
+@media only screen and (min-width: 992px) {
+  .select-container .options {
+    max-height: 9rem !important;    
+  }
 }
