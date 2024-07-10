@@ -26,8 +26,6 @@ const BlogEntryPageContent = (props: BlogEntryPageData) => {
 
   const structuredData = JSON.stringify(blogPost?.seo?.structuredData)
 
-  console.log(props)
-
   return (
     <Fragment>
       <Head>
