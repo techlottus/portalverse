@@ -159,7 +159,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
 
   // }, [SFdata])
   const downloadFileProgram = () => {
-    
+
     // if (hasCampuses) {
     //   const selectedCampus = campusDetail?.find((element) => { return element?.campusName === selectedOption?.value })
     //   const curriculum = selectedCampus?.curriculumUrl
@@ -274,7 +274,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                 variant: 'primary',
                 CTA: 'submit',
                 iconName: 'send',
-                action: () =>  {
+                action: () => {
                   return () =>
                     downloadFileProgram()
 
