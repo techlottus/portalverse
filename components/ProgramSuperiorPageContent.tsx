@@ -39,6 +39,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   const SFprogram = program.attributes.nombreProgramaSalesforce
   const layout = props?.layout as ProgramDetailSuperiorData;
   const seo = props?.program?.attributes?.seo
+  const structuredData = JSON.stringify(seo?.structuredData)
   const title = program?.attributes?.name;
   const description = program?.attributes?.description;
   const levelProgram = program?.attributes?.level?.data?.attributes?.title;
@@ -194,13 +195,43 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   return (
     <Fragment>
       <Head>
-        <title>{title}</title>
-        <meta property="og:title" content={ seo?.metaTitle }/>
-        <meta property="title" content={ seo?.metaTitle }/>
-        <meta property="og:description" content={ seo?.metaDescription }/>
-        <meta name="description" content={seo?.metaDescription} key="desc" />
-        <meta property="og:image" content={seo?.metaImage?.data?.attributes?.url}/>
-        <meta property="image" content={seo?.metaImage?.data?.attributes?.url}/>
+        {/* THIS DATA COMES FROM STRAPI SEO */}
+        <meta property="title" content={seo?.metaTitle} />{/* metaTitle */}
+        <meta name="description" content={seo?.metaDescription} key="desc" />{/* metaDescription */}
+        <meta property="image" content={seo?.metaImage?.data?.attributes?.url} />{/* metaImage */}
+        {/* metaSocial */}
+        {/* ARRAY COULD BRING FACEBOOK OR TWITTER */}
+        {
+          seo?.metaSocial?.map((metasocial) => {
+            if (metasocial?.socialNetwork === "Facebook") {
+              return (
+                <>
+                  <meta property="og:title" content={metasocial?.title} />
+                  <meta property="og:description" content={metasocial?.description} />
+                  <meta property="og:image" content={metasocial?.image?.data?.attributes?.url} />
+                </>
+              )
+            } if (metasocial?.socialNetwork === "Twitter") {
+              return (
+                <>
+                  <meta property="twitter:title" content={metasocial?.title} />
+                  <meta property="twitter:description" content={metasocial?.description} />
+                  <meta property="twitter:image" content={metasocial?.image?.data?.attributes?.url} />
+                </>
+              )
+            }
+          })
+        }
+        {/* keywords */}
+        <meta name="keywords" content={seo?.keywords} />
+        {/* metaRobots */}
+        <meta name="robots" content={seo?.metaRobots} />
+        {/* metaViewport */}
+        <meta name="viewport" content={seo?.metaViewport} />
+        {/* canonicalURL */}
+        <link rel="canonical" href={seo?.canonicalURL} />
+        {/* structuredData */}
+        <script type="application/ld+json">{structuredData}</script>
       </Head>
       <Modal isShow={isShow} onClose={() => handleVisibilityModal('close')} data={{ icon: 'close', title: "", tagOnClose: 'testOnClose', wrapper: true, }}>
         <div className="mt-16">
