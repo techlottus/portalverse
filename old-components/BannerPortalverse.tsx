@@ -193,7 +193,7 @@ const BannerContent = (props: BannerPortalverseComponentData) => {
 
   return (
     <div className={desktopTabletContainerClasses}>
-      <div className="p-10">
+      <div className="p-10 desktop:w-1/2 tablet:w-2/3">
         {
           data?.title
             ? <h1
