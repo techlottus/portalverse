@@ -161,7 +161,7 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
                         action={
                           !!action
                             ? <div slot="actionDescription" className="mt-4">
-                              <Button data={action} darkOutlined onClick={() => window.open(`${action.route}`)} />
+                              <Button data={action} dark onClick={() => window.open(`${action.route}`)} />
                             </div>
                             : null
                         }
