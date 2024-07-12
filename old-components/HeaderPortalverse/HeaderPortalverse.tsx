@@ -78,10 +78,6 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, o
     setActiveMenuList([...menusMobile])
   }, [menusMobile]);
 
-
-  /**
-   * Animated Fixed Navbar
-   */
   const navbarRef = useRef<HTMLElement>(null);
   const prevScrollPosRef = useRef(0);
 
@@ -176,7 +172,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, o
     {/* desktop menu */}
 
     {/* desktop tablet */}
-    <section className={cn("sticky top-0 bg-surface-0 z-15 w-d:hidden w-full flex p-1 shadow-md", classNames)}>
+    <section ref={navbarRef} className={cn("fixed top-0 bg-surface-0 z-15 transition-transform w-d:hidden w-full flex p-1 shadow-md", classNames)}>
       <div className="p-3  border-0 border-solid border-surface-200 border-r-2" onClick={handleMenuMobile}>
         <Icon name="sort" className="w-6 h-6" />
       </div>
