@@ -24,7 +24,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, o
       let confItems = [{ ...newItems, children: undefined, back: true }, ...newItems?.children]
       setActiveMenuList([...confItems])
     }
-  }
+  } 
 
   const handleNavigateArrow = (active: boolean, label: string) => {
     if (active) {
@@ -79,6 +79,8 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, o
   }, [menusMobile]);
 
   const navbarRef = useRef<HTMLElement>(null);
+  const menuRef = useRef<HTMLElement>(null);
+
   const prevScrollPosRef = useRef(0);
 
   useEffect(() => {
@@ -105,6 +107,29 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, o
     }
   }, []);
 
+  useEffect(() => {
+    const onScroll = () => {
+      const menuEl = menuRef?.current;
+
+      if (!menuEl) return;
+
+      const prevScrollPos = prevScrollPosRef?.current;
+      const currentScrollPos = window?.pageYOffset;
+
+      if (prevScrollPos > currentScrollPos) {
+        menuEl.style.transform = "translateY(0)";
+      } else if (currentScrollPos > 10 && prevScrollPos < currentScrollPos) {
+        menuEl.style.transform = "translateY(0)";
+      }
+      prevScrollPosRef.current = currentScrollPos;
+    }
+
+    window?.addEventListener("scroll", onScroll);
+
+    return () => {
+      window?.removeEventListener("scroll", onScroll);
+    }
+  }, []);
   return <>
     {/* desktop menu */}
     <section ref={navbarRef} className={cn("fixed w-t:hidden w-p:hidden w-full bg-surface-0 z-15 transition-transform", { "shadow-15": !activeMenu }, classNames)}>
@@ -169,10 +194,9 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, o
       </div>
       {/* menu suboptions */}
     </section>
-    {/* desktop menu */}
 
-    {/* desktop tablet */}
-    <section ref={navbarRef} className={cn("fixed top-0 bg-surface-0 z-15 transition-transform w-d:hidden w-full flex p-1 shadow-md", classNames)}>
+    {/* tablet & mobile */}
+    <section ref={navbarRef} className={cn("bg-white fixed top-0 w-full w-d:hidden transition-transform z-15 flex p-1 shadow-md", classNames)}>
       <div className="p-3  border-0 border-solid border-surface-200 border-r-2" onClick={handleMenuMobile}>
         <Icon name="sort" className="w-6 h-6" />
       </div>
@@ -183,7 +207,8 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, o
         <Icon name="search" className="w-6 h-6" />
       </div> */}
     </section>
-    <div className={cn("w-d:hidden w-full static left-0 top-0 bottom-0 h-screen bg-surface-0 flex flex-col p-2", { "hidden z-10": menuInvisible })}>
+    {/* tablet & mobile */}
+    <section ref={menuRef} className={cn("w-d:hidden w-full fixed left-0 top-0 bottom-0 h-screen bg-surface-0 flex flex-col px-2 pb-2 pt-14 z-10", { "hidden": menuInvisible })}>
       <div className="h-screen overflow-auto">
         <div className="overflow-y-auto h-full">
           {
@@ -216,7 +241,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, o
           }
         </div>
       </div>
-    </div>
+    </section>
     {/* desktop tablet */}
   </>;
 }
