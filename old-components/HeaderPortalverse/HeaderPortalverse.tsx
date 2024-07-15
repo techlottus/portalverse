@@ -208,7 +208,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, o
       </div> */}
     </section>
     {/* tablet & mobile */}
-    <section ref={menuRef} className={cn("w-d:hidden w-full fixed left-0 top-14 bottom-0 h-screen bg-surface-0 flex flex-col p-2 z-10", { "hidden close": menuInvisible })}>
+    <section ref={menuRef} className={cn("w-d:hidden w-full fixed left-0 top-0 bottom-0 h-screen bg-surface-0 flex flex-col px-2 pb-2 pt-14 z-10", { "hidden": menuInvisible })}>
       <div className="h-screen overflow-auto">
         <div className="overflow-y-auto h-full">
           {
