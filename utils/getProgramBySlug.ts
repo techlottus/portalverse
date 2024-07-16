@@ -93,6 +93,19 @@ export type programBrand = {
   }
 }
 
+export type metaSocial = {
+  socialNetwork: String;
+  title: string;
+  description: string;
+  image: {
+    data: {
+      attributes: {
+        url: string;
+      }
+    }
+  }
+}
+
 export type ProgramAttributes = {
   id?:number;
   slug: string;
@@ -107,6 +120,12 @@ export type ProgramAttributes = {
     metaTitle: string;
     metaDescription: string;
     metaImage: StrapiImage;
+    keywords: string;
+    metaRobots: string;
+    metaViewport: string;
+    canonicalURL: string;
+    structuredData: JSON;
+    metaSocial?: Array<metaSocial>
   }
   certifications: {
     data: Array<{
@@ -248,6 +267,23 @@ query ProgramBySlug($slug: String!) {
             data {
               attributes {
                 url
+              }
+            }
+          }
+          keywords
+          metaRobots
+          metaViewport
+          canonicalURL
+          structuredData
+          metaSocial {
+            socialNetwork
+            title
+            description
+            image {
+              data {
+                attributes {
+                  url
+                }
               }
             }
           }
