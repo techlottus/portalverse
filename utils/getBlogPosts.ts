@@ -1,5 +1,6 @@
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
 import type { StrapiImage } from "@/types/strapi/common";
+import { ReactNode } from "react";
 
 export type BlogPostsVariables = {
   start?: number;
@@ -9,7 +10,7 @@ export type BlogPostsVariables = {
 };
 
 const getBlogPosts = async (variables: BlogPostsVariables = {}) => {
-  
+
   const start = variables?.start || 0;
   const limit = variables?.limit;
   const sort = variables?.sort || "publication_date:desc";
@@ -25,6 +26,19 @@ const getBlogPosts = async (variables: BlogPostsVariables = {}) => {
   return data;
 };
 
+export type metaSocial = {
+  socialNetwork: String;
+  title: string;
+  description: string;
+  image: {
+    data: {
+      attributes: {
+        url: string;
+      }
+    }
+  }
+}
+
 export type BlogPost = {
   attributes: {
     title: string;
@@ -34,6 +48,12 @@ export type BlogPost = {
       metaTitle: string;
       metaDescription: string;
       metaImage: StrapiImage;
+      keywords: string;
+      metaRobots: string;
+      metaViewport: string;
+      canonicalURL: string;
+      structuredData: JSON;
+      metaSocial?: Array<metaSocial>
     }
     body: string;
     publication_date: string;
@@ -66,6 +86,23 @@ query BlogPosts ($start: Int, $limit: Int, $sort: [String], $category: String) {
             data {
               attributes {
                 url
+              }
+            }
+          }
+          keywords
+          metaRobots
+          metaViewport
+          canonicalURL
+          structuredData
+          metaSocial {
+            socialNetwork
+            title
+            description
+            image {
+              data {
+                attributes {
+                  url
+                }
               }
             }
           }
