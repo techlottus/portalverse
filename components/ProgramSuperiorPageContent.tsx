@@ -182,7 +182,6 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   }
 
   const relatedPrograms = program?.attributes?.relatedPrograms?.data;
-
   /**
    * This is a flag that toggles between mosaic and list view. Since list view is yet to be implemented/polished,
    * mosaicActive is set to true. 
@@ -583,7 +582,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
               {
                 modalities?.length > 1 ?
                   <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8' w-p:col-span-4 flex justify-center">
-                    <TabsFeatured tabs={modalities?.map((modality) => ({ label: modality?.labelModality || modality?.modality?.data?.attributes?.label || modality?.modality?.data?.attributes?.name }))} onActive={(active: number) => handleSetActiveTab(active)} />
+                    <TabsFeatured tabs={modalities?.map((modality) => ({ label: modality.modality.data.attributes.label ? modality.modality.data.attributes.label : modality?.modality?.data?.attributes?.name }))} onActive={(active: number) => handleSetActiveTab(active)} />
                   </div>
                   : null
               }
@@ -593,7 +592,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                 <ContentFullLayout>
                   <div className="col-span-12 w-t:col-span-8' w-p:col-span-4 flex justify-center">
                     <section className="w-d:hidden">
-                      <TabsFeatured tabs={modalities?.map((modality) => ({ label: modality?.labelModality || modality?.modality?.data?.attributes?.label || modality?.modality?.data?.attributes?.name }))} onActive={(active: number) => handleSetActiveTab(active)} />
+                      <TabsFeatured tabs={modalities?.map((modality) => ({ label: modality.modality.data.attributes.label ? modality.modality.data.attributes.label : modality?.modality?.data?.attributes?.name }))} onActive={(active: number) => handleSetActiveTab(active)} />
                     </section>
                   </div>
                 </ContentFullLayout>
