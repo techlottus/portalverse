@@ -14,7 +14,7 @@ async function createGeneralData() {
     const generalConfig = await getGeneralConfigData();
     scripts = generalConfig?.attributes?.scriptsPixels || [];
     sendWhatsapp = generalConfig?.attributes?.sendWhatsapp || null;
-    /*For robots file */
+    /*For robots file                                                     if accent is empty add a \n */
     generalConfig?.attributes?.robots.map((robotLine) => robotLine?.accent ? robotsLines += robotLine?.accent + '\n' : robotsLines += '\n')
 
   } catch (error) {
