@@ -124,15 +124,15 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
           </Aspect>
         </div>
       </ContentLayout>
-      <ContentLayout classNames="w-d-base:px-0">
+      <ContentFullLayout>
         {
           feedbackData ?
-            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6 mb-18 w-p:mb-6">
+            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 desktop:mb-18 mb-12">
               <Alert {...feedbackData} />
             </div>
             : null
         }
-      </ContentLayout>
+      </ContentFullLayout>
       <ContentFullLayout>
         <div className="w-d:hidden w-t:hidden col-span-4 mb-10 mt-6">
           <Aspect ratio={"4/3"}>
@@ -224,7 +224,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
       </ContentLayout>
       {
         bannerData?.desktopImage ?
-          <div className="order-last col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6">
+          <div className="order-last col-span-12 w-t:col-span-8 w-p:col-span-4 desktop:mb-18 mb-12">
             <Banner type={"ComponentSectionsBanner"} {...bannerData} />
           </div>
           : null
