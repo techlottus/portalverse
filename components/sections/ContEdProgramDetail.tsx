@@ -79,9 +79,9 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
         {/* metaViewport */}
         <meta name="viewport" content={seo?.metaViewport} />
         {/* canonicalURL */}
-        <meta property="og:url" content={seo?.canonicalURL} />
+        <link rel="canonical" href={seo?.canonicalURL} />
         {/* ogURL */}
-        <link rel="og:url" href={seo?.canonicalURL} />
+        <meta property="og:url" content={seo?.canonicalURL} />
         {/* structuredData */}
         <script type="application/ld+json">{structuredData}</script>
       </Head>
