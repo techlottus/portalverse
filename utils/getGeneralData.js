@@ -72,6 +72,9 @@ query GeneralConfig {
             phone
           }
         }
+        robots{
+          accent
+        }
       }
     }
   }
