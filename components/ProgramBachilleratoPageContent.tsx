@@ -135,7 +135,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
         {/* metaViewport */}
         <meta name="viewport" content={seo?.metaViewport} />
         {/* canonicalURL */}
-        <link rel="canonical" href={seo?.canonicalURL} />
+        <meta property="og:url" content={seo?.canonicalURL} />
         {/* ogURL */}
         <link rel="og:url" href={seo?.canonicalURL} />
         {/* structuredData */}

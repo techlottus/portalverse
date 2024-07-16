@@ -66,7 +66,7 @@ const BlogEntryPageContent = (props: BlogEntryPageData) => {
         {/* canonicalURL */}
         <link rel="canonical" href={blogPost?.seo?.canonicalURL} />
         {/* ogURL */}
-        <link rel="og:url" href={blogPost?.seo?.canonicalURL} />
+        <meta property="og:url" content={blogPost?.seo?.canonicalURL} />
         {/* structuredData */}
         <script type="application/ld+json">{structuredData}</script>
       </Head>
