@@ -730,7 +730,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
       </ContentLayout>
       {
         bannerData?.desktopImage ?
-          <div className="order-last col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6 w-d:mt-18">
+          <div className="order-last col-span-12 w-t:col-span-8 w-p:col-span-4 desktop:mb-18 mb-12">
             <Banner type={"ComponentSectionsBanner"} {...bannerData} />
           </div>
           : null
@@ -814,7 +814,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         selectedModalityName === "a tu ritmo" && price_list?.price?.length > 0
           ? <PaymentCardContainer
             title={"Nuestros planes"}
-            accent_title={""}
+            accent_title={""}            
             subtitle={"Empieza a estudiar hoy mismo"}
             price_list={{
               ...price_list
@@ -825,11 +825,12 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
       }
       {
         selectedModalityName === "a tu ritmo" ?
-          <div className="mt-20">
+          <div>
             <AtrProgramInfo checkoutUrl={checkoutUrl} level={levelProgram} modality={selectedModalityName} hideCards={!!price_list} />
           </div>
           : null
       }
+
       {
         selectedModalityName !== "a tu ritmo" ?
           <div className="w-d:mt-18 mt-12">
