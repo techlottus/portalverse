@@ -230,6 +230,8 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         <meta name="viewport" content={seo?.metaViewport} />
         {/* canonicalURL */}
         <link rel="canonical" href={seo?.canonicalURL} />
+        {/* ogURL */}
+        <link rel="og:url" href={seo?.canonicalURL} />
         {/* structuredData */}
         <script type="application/ld+json">{structuredData}</script>
       </Head>

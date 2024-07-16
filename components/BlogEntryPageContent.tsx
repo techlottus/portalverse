@@ -65,6 +65,8 @@ const BlogEntryPageContent = (props: BlogEntryPageData) => {
         <meta name="viewport" content={blogPost?.seo?.metaViewport} />
         {/* canonicalURL */}
         <link rel="canonical" href={blogPost?.seo?.canonicalURL} />
+        {/* ogURL */}
+        <link rel="og:url" href={blogPost?.seo?.canonicalURL} />
         {/* structuredData */}
         <script type="application/ld+json">{structuredData}</script>
       </Head>
