@@ -33,6 +33,8 @@ query BlogEntryBySlug($slug: String) {
           }
         }
         seo {
+          metaTitle
+          metaDescription
           metaImage {
             data {
               attributes {
@@ -40,8 +42,23 @@ query BlogEntryBySlug($slug: String) {
               }
             }
           }
-          metaTitle
-          metaDescription
+          keywords
+          metaRobots
+          metaViewport
+          canonicalURL
+          structuredData
+          metaSocial {
+            socialNetwork
+            title
+            description
+            image {
+              data {
+                attributes {
+                  url
+                }
+              }
+            }
+          }
         }
       }
     }

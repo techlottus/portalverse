@@ -54,6 +54,9 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
   const campusDetail = formattedModalityData?.curriculumsByCampus
   const hasCampuses = campusDetail?.some((option) => { return !!option?.campusName })
 
+  const structuredData = JSON.stringify(seo?.structuredData)
+
+
   //bandera para habilitar botón de descarga hasta que se seleccione un campus
   const isOptionSelected = !!selectedOption
 
@@ -98,13 +101,45 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
   return (
     <Fragment>
       <Head>
-        <title>{title}</title>
-        <meta property="og:title" content={seo?.metaTitle} />
-        <meta property="title" content={seo?.metaTitle} />
-        <meta property="og:description" content={seo?.metaDescription} />
-        <meta name="description" content={seo?.metaDescription} key="desc" />
-        <meta property="og:image" content={seo?.metaImage?.data?.attributes?.url} />
-        <meta property="image" content={seo?.metaImage?.data?.attributes?.url} />
+        {/* THIS DATA COMES FROM STRAPI SEO */}
+        <meta property="title" content={seo?.metaTitle} />{/* metaTitle */}
+        <meta name="description" content={seo?.metaDescription} key="desc" />{/* metaDescription */}
+        <meta property="image" content={seo?.metaImage?.data?.attributes?.url} />{/* metaImage */}
+        {/* metaSocial */}
+        {/* ARRAY COULD BRING FACEBOOK OR TWITTER */}
+        {
+          seo?.metaSocial?.map((metasocial) => {
+            if (metasocial?.socialNetwork === "Facebook") {
+              return (
+                <>
+                  <meta property="og:title" content={metasocial?.title} />
+                  <meta property="og:description" content={metasocial?.description} />
+                  <meta property="og:image" content={metasocial?.image?.data?.attributes?.url} />
+                </>
+              )
+            } if (metasocial?.socialNetwork === "Twitter") {
+              return (
+                <>
+                  <meta property="twitter:title" content={metasocial?.title} />
+                  <meta property="twitter:description" content={metasocial?.description} />
+                  <meta property="twitter:image" content={metasocial?.image?.data?.attributes?.url} />
+                </>
+              )
+            }
+          })
+        }
+        {/* keywords */}
+        <meta name="keywords" content={seo?.keywords} />
+        {/* metaRobots */}
+        <meta name="robots" content={seo?.metaRobots} />
+        {/* metaViewport */}
+        <meta name="viewport" content={seo?.metaViewport} />
+        {/* canonicalURL */}
+        <link rel="canonical" href={seo?.canonicalURL} />
+        {/* ogURL */}
+        <meta property="og:url" content={seo?.canonicalURL} />
+        {/* structuredData */}
+        <script type="application/ld+json">{structuredData}</script>
       </Head>
       <ContentLayout>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 flex flex-col w-d:justify-center">
