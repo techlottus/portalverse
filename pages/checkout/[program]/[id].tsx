@@ -82,20 +82,21 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
         // Check if the session was successful and confirm_url is present:
         if (result.success && result.confirm_url) {
           // The session was successful and the confirm_url has been returned
-          const confirm_url = result.confirm_url;
+          // const confirm_url = result.confirm_url;
 
           // Use the confirm_url to confirm the Checkout Session
+          // not used due to change of solution from tokenization and pay to recurring
           // console.log("Confirm URL:", confirm_url.url);
-          const postConfirm = async () => {
-            const response = await fetch("/api/confirmFw", {
-              method: "POST",
-              body: JSON.stringify({ url: confirm_url.url })
-            })
+          // const postConfirm = async () => {
+          //   const response = await fetch("/api/confirmFw", {
+          //     method: "POST",
+          //     body: JSON.stringify({ url: confirm_url.url })
+          //   })
 
-            const res = await response.json()
-          };
+          //   const res = await response.json()
+          // };
 
-          postConfirm()
+          // postConfirm()
 
           setActivePageIndex(2)
 
