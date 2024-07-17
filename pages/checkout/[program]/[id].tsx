@@ -80,7 +80,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
 
 
         // Check if the session was successful and confirm_url is present:
-        if (result.type === "recurring" && !!result.plan_id) {
+        if (result.type === "recurring" && !!result.planId) {
           // The session was successful and the confirm_url has been returned
           // const confirm_url = result.confirm_url;
 
