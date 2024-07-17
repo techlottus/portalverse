@@ -42,13 +42,13 @@ const CategoryAccordionList: FC<CategoryAccordionListData> = (props: CategoryAcc
                 <p className="font-headings font-bold text-6 leading-7.5">{subtitle}</p>
                 : null
             }
-            <div className="flex flex-col gap-4 py-4">
+            <div className="flex flex-col gap-y-4">
               {
                 CategoryList ?
                   CategoryList?.map((item, index) => {
                     const categoryTitle = item?.faq_category?.data?.attributes?.title || item?.label
                     return (
-                      <div className="flex justify-start mb-5 gap-2.5 items-center" key={index}>
+                      <div className="flex justify-start py-4 last:pb-0 gap-2.5 items-center" key={index}>
                         {
                           item?.iconName
                             ? <span className={cn("material-symbols-outlined flex-none !text-4.5 w-4", { "text-primary-500": index === optionSelect })}>{item?.iconName}</span>
