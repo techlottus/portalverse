@@ -80,7 +80,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
 
 
         // Check if the session was successful and confirm_url is present:
-        if (result.success) {
+        if (result.type === "recurring" && !!result.plan_id) {
           // The session was successful and the confirm_url has been returned
           // const confirm_url = result.confirm_url;
 
@@ -291,7 +291,13 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                     price?.config?.type == "recurring"
                       ? <>
                           <p className="font-texts font-bold text-base leading-6"> Parcialidad a pagar</p>
-                          <p className="text-base font-bold">{price.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN</p>
+                          <p className="text-base font-bold">
+                            {
+                              price?.discounted_price
+                                ? (price?.discounted_price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }))
+                                : (price?.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }))
+                            } MXN
+                          </p>
                         </>
                       : <>
                           <p className="font-texts font-bold text-base leading-6"> Total a pagar</p>
