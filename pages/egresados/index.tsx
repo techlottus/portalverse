@@ -30,8 +30,8 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
         <div className="head col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:hidden w-p:hidden">
           <BannerNumeralia data={sections.head.banner} />
         </div>
-        <div className="col-span-12 grid gap-6">
-          <div className="col-span-12 w-p:order-2">
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid grid-cols-2 w-p:gap-12 gap-6">
+          <div className="w-p:col-span-2 w-p:order-2">
             <p className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6 mb-6"> {sections.introduccion.title}</p>
             <RichtText data={{
               content: sections.introduccion.descripcion
