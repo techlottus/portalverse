@@ -86,7 +86,7 @@ const CardsStatistics: FC<CardsStatisticsData> = (props: CardsStatisticsData) =>
                   formattedCards?.length > 0 ?
                     <div>
                       {
-                        formattedCards?.map((item, i) => <div className="mb-6 w-full" key={`section-statistics-${i}`}>
+                        formattedCards?.map((item, i) => <div className="w-full" key={`section-statistics-${i}`}>
                           <CardWebsite data={item} />
                         </div>
                         )
