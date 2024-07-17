@@ -26,12 +26,12 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
       <title>{meta?.title}</title>
     </Head>
     <HeaderFooterLayout breadcrumbs={true}>
-      <ContentFullLayout classNames="gap-6 w-d:hidden mb-6">
+      <ContentFullLayout classNames="gap-6 w-d:hidden mb-12">
         <div className="head col-span-12 w-t:col-span-8 w-p:col-span-4">
           <BannerNumeralia data={sections?.head?.banner} />
         </div>
       </ContentFullLayout>
-      <ContentLayout classNames="gap-6">
+      <ContentLayout classNames="gap-x-6 desktop:gap-y-18 mobile:gap-y-12">
         <div className="head col-span-12 w-t:hidden w-p:hidden">
           <BannerNumeralia data={sections?.head?.banner} />
         </div>
@@ -84,22 +84,18 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
         }
         {
           sections?.someVacancies ?
-            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-18">
-              <p className="font-headings font-bold leading-tight w-d:text-10 text-6"> {sections?.someVacancies?.title}</p>
-            </div>
-            : null
-        }
-        {
-          sections?.someVacancies ?
-            <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mb-12 w-t:mb-6 w-p:mb-6">
+            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+              <p className="font-headings font-bold leading-tight w-d:text-10 text-6 mb-8"> {sections?.someVacancies?.title}</p>
+              <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 w-t:mb-6 w-p:mb-6">
               {
                 sections?.someVacancies?.vacancies.map((item: any, i: number) => <section key={`section-blog-${i}`}>
                   <CardWebsitePortalverse data={item} onClick={item?.redirect ? () => window.open(item.redirect, "_blank") : undefined} />
                 </section>)
               }
             </section>
+            </div>
             : null
-        }
+        }        
         {
           sections?.sliderNotices ?
             <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
@@ -114,7 +110,7 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
         }
         {
           sections?.vinculacionEmpresas ?
-            <ContentInsideLayout classNames="col-span-12 w-t:col-span-8 w-p:col-span-4">
+            <ContentInsideLayout classNames="col-span-12 w-t:col-span-8 w-p:col-span-4 gap-x-15">
               <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 mt-auto mb-auto">
                 <p className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6 mb-6">{sections?.vinculacionEmpresas?.title}</p>
                 <RichtText data={{ content: sections?.vinculacionEmpresas?.description?.content }} />
