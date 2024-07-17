@@ -25,8 +25,10 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
   const flywireAPI = process.env.NEXT_PUBLIC_FLYWIRE_API
   const flywireAPIKEY = process.env.NEXT_PUBLIC_FLYWIRE_API_KEY
   const [flywireLink, setFlywireLink] = useState('')
-  const priceAmount = Math.round(price?.discounted_price * 100) || Math.round(price?.price * 100);
 
+  const priceAmount = price?.discounted_price  || price?.price ;
+  const priceString = priceAmount?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })
+  const partialityString = price?.partiality_price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })
   const [residence, setResidence] = useState<any>()
   const [noResidence, setNoResidence] = useState<any>()
   const [hasCurp, setHasCurp] = useState<any>(false)
@@ -76,7 +78,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
         // Extract the data from the event
         const result = event.data;
         // console.log("event data:", result)
-        console.log('result: ', result);
+        // console.log('result: ', result);
 
 
         // Check if the session was successful and confirm_url is present:
@@ -186,7 +188,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
               "items": [
                 {
                   "id": "default",
-                  "amount": priceAmount,
+                  "amount": Math.round( priceAmount * 100 ),
                   "description": "My favourite item"
                 }
               ],
@@ -278,12 +280,12 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                 </div>
                 {price?.config?.type == "recurring" && <div className="flex justify-between my-1">
                   <p className="font-texts">Parcialidades:</p>
-                  <p className="text-surface-500 font-texts font-normal">{price.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN </p>
+                  <p className="text-surface-500 font-texts font-normal">{price?.partialities_number}</p>
                 </div>}
                 {price?.config?.type == "recurring" &&
                   <div className="flex justify-between mb-2">
                     <p className="font-texts">Costo total:</p>
-                    <p className="text-surface-500 font-texts font-normal">{price?.total_payment?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN</p>
+                    <p className="text-surface-500 font-texts font-normal">{priceString} MXN</p>
                   </div>}
                 <hr className="text-surface-300" />
                 <div className="flex justify-between mt-2">
@@ -292,24 +294,12 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                       ? <>
                           <p className="font-texts font-bold text-base leading-6"> Parcialidad a pagar</p>
                           <p className="text-base font-bold">
-                            {
-                              price?.discounted_price
-                                ? (price?.discounted_price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }))
-                                : (price?.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }))
-                            } MXN
+                            {partialityString} MXN
                           </p>
                         </>
                       : <>
                           <p className="font-texts font-bold text-base leading-6"> Total a pagar</p>
-                          <p className="text-base font-bold">
-                            {
-                                price?.total_payment
-                                  ? (price?.total_payment?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }))
-                                  : price?.discounted_price
-                                    ? (price?.discounted_price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }))
-                                    : (price?.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }))
-                            } MXN
-                          </p>
+                          <p className="text-base font-bold"> { priceString } MXN </p>
                         </>
                     }
                 </div>
