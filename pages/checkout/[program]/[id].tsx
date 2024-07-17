@@ -287,16 +287,25 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                   </div>}
                 <hr className="text-surface-300" />
                 <div className="flex justify-between mt-2">
-                  {price?.config?.type == "recurring" ? <><p className="font-texts font-bold text-base leading-6"> Parcialidad a pagar</p>
-                    <p className="text-base font-bold">{price.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN</p></>
-                    : <><p className="font-texts font-bold text-base leading-6"> Total a pagar</p>
-                      <p className="text-base font-bold">{
-                        price?.total_payment ?
-                          (price?.total_payment?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }))
-                          : price?.discounted_price ?
-                            (price?.discounted_price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })) :
-                            (price?.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }))
-                      } MXN</p></>}
+                  {
+                    price?.config?.type == "recurring"
+                      ? <>
+                          <p className="font-texts font-bold text-base leading-6"> Parcialidad a pagar</p>
+                          <p className="text-base font-bold">{price.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN</p>
+                        </>
+                      : <>
+                          <p className="font-texts font-bold text-base leading-6"> Total a pagar</p>
+                          <p className="text-base font-bold">
+                            {
+                                price?.total_payment
+                                  ? (price?.total_payment?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }))
+                                  : price?.discounted_price
+                                    ? (price?.discounted_price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }))
+                                    : (price?.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }))
+                            } MXN
+                          </p>
+                        </>
+                    }
                 </div>
               </div>
 
