@@ -76,11 +76,11 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
         // Extract the data from the event
         const result = event.data;
         // console.log("event data:", result)
-        // console.log('result: ', result);
+        console.log('result: ', result);
 
 
         // Check if the session was successful and confirm_url is present:
-        if (result.success && result.confirm_url) {
+        if (result.success) {
           // The session was successful and the confirm_url has been returned
           // const confirm_url = result.confirm_url;
 
