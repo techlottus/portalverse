@@ -13,6 +13,8 @@ export type PaymentCardData = {
   checkout_url?: string;
   price?: number;
   discounted_price?: number;
+  partiality_price?: number;
+  partiality_number?: number;
   total_payment?: number;
   periodicity?: string;
   featured_price?: boolean;
@@ -34,6 +36,8 @@ const PaymentCard = (props: PaymentCardData) => {
     price,
     discounted_price,
     total_payment,
+    partiality_price,
+    partiality_number,
     periodicity,
     featured_price,
     payment_provider_image, metadata, config } = props;
@@ -51,11 +55,11 @@ const PaymentCard = (props: PaymentCardData) => {
         }
         {
           payment_provider_image
-            ? <img className="w-11 mb-1 rounded-md" src={payment_provider_image?.data?.attributes?.url} alt="" />
+            ? <img className="w-11 my-1 rounded-md" src={payment_provider_image?.data?.attributes?.url} alt="" />
             : null
         }
         {
-          payment_provider_image
+          title
             ? <p className="font-headings text-xl font-bold">{title}</p>
             : null
         }
@@ -92,21 +96,28 @@ const PaymentCard = (props: PaymentCardData) => {
             </div>
             : null
         }
-        {
-          price && !discounted_price
+        
+        {/** add case with discount and recurring (discounted_price) */
+          price && !discounted_price && !periodicity
             ? <p className="font-headings font-bold text-xl">${price.toLocaleString('en-US')} MXN <span className="text-surface-500 font-normal text-xs">{periodicity}</span></p>
             : null
         }
         {
-          discounted_price
+          partiality_price && periodicity
+            ? <p className="font-headings font-bold text-xl">${partiality_price.toLocaleString('en-US')} MXN <span className="text-surface-500 font-normal text-xs">{periodicity}</span></p>
+            : null
+        }
+        {
+          discounted_price && !partiality_price
             ? <p className="font-headings font-bold text-xl">${discounted_price.toLocaleString('en-US')} MXN <span className="line-through text-surface-500 font-normal text-xs">${price}</span></p>
             : null
         }
         {
-          total_payment
-            ? <p className="font-normal text-xs text-surface-500">Pago total: ${total_payment.toLocaleString('en-US')}</p>
+          price && partiality_price
+            ? <p className="font-normal text-xs text-surface-500">Pago total: ${price?.toLocaleString('en-US')}</p>
             : null
         }
+
       </div>
       {checkout_url ? <div className="flex items-end justify-center">
         <Button
