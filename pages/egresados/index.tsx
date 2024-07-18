@@ -21,18 +21,18 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
       <title>{meta.title}</title>
     </Head>
     <HeaderFooterLayout>
-      <ContentFullLayout classNames="gap-6 w-d:hidden mb-6">
+      <ContentFullLayout classNames="gap-y-12 w-d:hidden mb-12">
         <div className="head col-span-12 w-t:col-span-8 w-p:col-span-4">
           <BannerNumeralia data={sections.head.banner} />
         </div>
       </ContentFullLayout>
-      <ContentLayout>
+      <ContentLayout classNames="desktop:gap-y-18 gap-y-12">
         <div className="head col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:hidden w-p:hidden">
           <BannerNumeralia data={sections.head.banner} />
         </div>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid grid-cols-2 w-p:gap-12 gap-6">
+        <div className="col-span-12 grid grid-cols-2 w-p:gap-12 gap-6">
           <div className="w-p:col-span-2 w-p:order-2">
-            <p className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6 mb-6"> { sections.introduccion.title}</p>
+            <p className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6 mb-6"> {sections.introduccion.title}</p>
             <RichtText data={{
               content: sections.introduccion.descripcion
             }} />
@@ -47,41 +47,43 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
             )
           }
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 h-80">
+        <div className="desktop:col-span-6 col-span-12 h-80">
           <Video data={sections.video.video} />
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
+        <div className="desktop:col-span-6 col-span-12">
           <p className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6 mb-6"> {sections.video.title}</p>
           <RichtText data={{
             content: sections.video.descripcion
           }} />
-        {sections?.video?.button ?
-          <Button dark data={sections.video.button} onClick={() => {
-            router.push(`${router.pathname}/talento`)
-          }} />
-          : null
-        }
+          {sections?.video?.button ?
+            <Button dark data={sections.video.button} onClick={() => {
+              router.push(`${router.pathname}/talento`)
+            }} />
+            : null
+          }
         </div>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:hidden">
-          <BannerPortalverse data={sections.bannerEmpleabilidad}
-            onClick={() => {
-              router.push(`${sections.bannerEmpleabilidad.redirect}`)
-            }}
-          />
-        </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-t:hidden">
-          <BannerPortalverse data={sections.bannerOfertaEducativa}
-            onClick={() => {
-              router.push(`${sections.bannerOfertaEducativa.redirect}`)
-            }}
-          />
-        </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-t:hidden">
-          <BannerPortalverse data={sections.bannerTramites}
-            onClick={() => {
-              window.open(`${sections.bannerTramites.redirect}`)
-            }}
-          />
+        <div className="col-span-12 grid gap-6">
+          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:hidden">
+            <BannerPortalverse data={sections.bannerEmpleabilidad}
+              onClick={() => {
+                router.push(`${sections.bannerEmpleabilidad.redirect}`)
+              }}
+            />
+          </div>
+          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-t:hidden">
+            <BannerPortalverse data={sections.bannerOfertaEducativa}
+              onClick={() => {
+                router.push(`${sections.bannerOfertaEducativa.redirect}`)
+              }}
+            />
+          </div>
+          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-t:hidden">
+            <BannerPortalverse data={sections.bannerTramites}
+              onClick={() => {
+                window.open(`${sections.bannerTramites.redirect}`)
+              }}
+            />
+          </div>
         </div>
       </ContentLayout>
       <ContentFullLayout classNames="gap-6">
@@ -124,7 +126,7 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
           </div>
         </ContentLayout>
       </ContentFullLayout> */}
-      <ContentLayout classNames="mt-8 w-t:my-6 w-p:my-6">
+      <ContentLayout classNames="desktop:mt-18 mt-12">
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           <Cintillo
             classNames="h-auto"
