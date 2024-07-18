@@ -17,7 +17,7 @@ import { LogLevel, PublicClientApplication } from "@azure/msal-browser";
 export const msalConfig = {
     auth: {
         clientId: process.env.NEXT_PUBLIC_CLIENT_ID,
-        authority: `https://login.microsoftonline.com/common`,
+        authority: `https://login.microsoftonline.com/${process.env.NEXT_PUBLIC_MSAL_TENANT_ID}`,
         clientSecret: process.env.NEXT_PUBLIC_CLIENT_SECRET
     },
     cache: {
