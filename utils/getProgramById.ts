@@ -281,6 +281,8 @@ query ProgramById($id: ID!) {
             checkout_url
             price
             discounted_price
+            partiality_price
+            partialities_number
             total_payment
             periodicity
             featured_price
