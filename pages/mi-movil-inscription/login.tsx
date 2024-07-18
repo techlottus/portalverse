@@ -56,11 +56,11 @@ const MiMovilLogin: NextPageWithLayout<any> = (props: any) => {
   return (
     <MsalProvider instance={msalInstance}>
       <ContentFullLayout>
-        <section className="w-full bg-surface-0 z-15 transition-transform shadow-15 flex">
+        <section className="w-full bg-surface-0 z-15 transition-transform shadow-15 flex justify-between">
           <div className="p-6 border-0 border-solid border-surface-200 border-r-2">
             <div className="w-36 h-9 bg-logo bg-cover bg-center mobile:mx-auto"> </div>
           </div>
-          <div>
+          <div className="p-3">
             <SignInButton />  
           </div>
         </section>
