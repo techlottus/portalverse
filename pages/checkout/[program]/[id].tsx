@@ -25,8 +25,10 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
   const flywireAPI = process.env.NEXT_PUBLIC_FLYWIRE_API
   const flywireAPIKEY = process.env.NEXT_PUBLIC_FLYWIRE_API_KEY
   const [flywireLink, setFlywireLink] = useState('')
-  const priceAmount = Math.round(price?.discounted_price * 100) || Math.round(price?.price * 100);
 
+  const priceAmount = price?.discounted_price  || price?.price ;
+  const priceString = priceAmount?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })
+  const partialityString = price?.partiality_price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })
   const [residence, setResidence] = useState<any>()
   const [noResidence, setNoResidence] = useState<any>()
   const [hasCurp, setHasCurp] = useState<any>(false)
@@ -80,22 +82,23 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
 
 
         // Check if the session was successful and confirm_url is present:
-        if (result.success && result.confirm_url) {
+        if (result.type === "recurring" && !!result.planId) {
           // The session was successful and the confirm_url has been returned
-          const confirm_url = result.confirm_url;
+          // const confirm_url = result.confirm_url;
 
           // Use the confirm_url to confirm the Checkout Session
+          // not used due to change of solution from tokenization and pay to recurring
           // console.log("Confirm URL:", confirm_url.url);
-          const postConfirm = async () => {
-            const response = await fetch("/api/confirmFw", {
-              method: "POST",
-              body: JSON.stringify({ url: confirm_url.url })
-            })
+          // const postConfirm = async () => {
+          //   const response = await fetch("/api/confirmFw", {
+          //     method: "POST",
+          //     body: JSON.stringify({ url: confirm_url.url })
+          //   })
 
-            const res = await response.json()
-          };
+          //   const res = await response.json()
+          // };
 
-          postConfirm()
+          // postConfirm()
 
           setActivePageIndex(2)
 
@@ -185,7 +188,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
               "items": [
                 {
                   "id": "default",
-                  "amount": priceAmount,
+                  "amount": Math.round( priceAmount * 100 ),
                   "description": "My favourite item"
                 }
               ],
@@ -275,27 +278,30 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                   <p className="font-texts">Opción de pago:</p>
                   <p className="text-surface-500 font-texts font-normal">{price?.title}</p>
                 </div>
-                {price?.config?.type == "tokenization_and_pay" && <div className="flex justify-between my-1">
+                {price?.config?.type == "recurring" && <div className="flex justify-between my-1">
                   <p className="font-texts">Parcialidades:</p>
-                  <p className="text-surface-500 font-texts font-normal">{price.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN </p>
+                  <p className="text-surface-500 font-texts font-normal">{price?.partialities_number}</p>
                 </div>}
-                {price?.config?.type == "tokenization_and_pay" &&
+                {price?.config?.type == "recurring" &&
                   <div className="flex justify-between mb-2">
                     <p className="font-texts">Costo total:</p>
-                    <p className="text-surface-500 font-texts font-normal">{price?.total_payment?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN</p>
+                    <p className="text-surface-500 font-texts font-normal">{priceString} MXN</p>
                   </div>}
                 <hr className="text-surface-300" />
                 <div className="flex justify-between mt-2">
-                  {price?.config?.type == "tokenization_and_pay" ? <><p className="font-texts font-bold text-base leading-6"> Parcialidad a pagar</p>
-                    <p className="text-base font-bold">{price.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })} MXN</p></>
-                    : <><p className="font-texts font-bold text-base leading-6"> Total a pagar</p>
-                      <p className="text-base font-bold">{
-                        price?.total_payment ?
-                          (price?.total_payment?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }))
-                          : price?.discounted_price ?
-                            (price?.discounted_price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })) :
-                            (price?.price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }))
-                      } MXN</p></>}
+                  {
+                    price?.config?.type == "recurring"
+                      ? <>
+                          <p className="font-texts font-bold text-base leading-6"> Parcialidad a pagar</p>
+                          <p className="text-base font-bold">
+                            {partialityString} MXN
+                          </p>
+                        </>
+                      : <>
+                          <p className="font-texts font-bold text-base leading-6"> Total a pagar</p>
+                          <p className="text-base font-bold"> { priceString } MXN </p>
+                        </>
+                    }
                 </div>
               </div>
 
