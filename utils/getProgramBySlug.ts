@@ -334,6 +334,8 @@ query ProgramBySlug($slug: String!) {
             price
             discounted_price
             total_payment
+            partiality_price
+            partialities_number
             periodicity
             featured_price
             metadata
