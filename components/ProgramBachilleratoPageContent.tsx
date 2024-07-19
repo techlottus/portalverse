@@ -18,7 +18,6 @@ import Banner from "@/components/sections/Banner";
 import { formatModalityDataBachillerato } from "@/utils/programDetail";
 import type { DynamicProgramDetailData } from "@/utils/pages";
 import type { ProgramDetailBachilleratoData } from "@/utils/getProgramDetailBachillerato";
-import { Heading } from "@lottuseducation/atoms";
 
 const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
 
