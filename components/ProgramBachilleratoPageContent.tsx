@@ -141,14 +141,14 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
         {/* structuredData */}
         <script type="application/ld+json">{structuredData}</script>
       </Head>
-      <ContentLayout>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 flex flex-col w-d:justify-center">
-          <h1 className="text-13 font-bold font-headings leading-13 w-t:semi-tight w-p:leading-tight w-t:text-8.5 w-p:text-7.5 mb-6">{title}</h1>
+      <ContentLayout classNames=" desktop:mb-18 mb-12">
+        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 flex flex-col w-d:justify-center">
+          <h1 className="text-13 font-bold font-headings leading-13 w-t:semi-tight w-p:leading-tight w-t:text-8.5 w-p:text-7.5">{title}</h1>
           <RichtText data={{
             content: description
           }} />
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 w-p:hidden mb-10 mt-6 flex flex-col w-d:justify-center">
+        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-p:hidden flex flex-col w-d:justify-center">
           <Aspect ratio={"2/1"}>
             <Image
               alt={title || "Programa de Bachillerato"}
@@ -159,10 +159,10 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
           </Aspect>
         </div>
       </ContentLayout>
-      <ContentFullLayout>
+      <ContentFullLayout classNames="desktop:mb-18 mb-12">
         {
           feedbackData ?
-            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 desktop:mb-18 mb-12">
+            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
               <Alert {...feedbackData} />
             </div>
             : null
@@ -181,7 +181,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
         </div>
       </ContentFullLayout>
       <ContentLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6">
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           <p className="text-6.5 font-headings font-semibold leading-tight w-t:leading-tight w-p:leading-tight w-t:text-6 w-p:text-6">{`Para cursar ${title} necesitas: `} </p>
         </div>
         <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center">
@@ -196,7 +196,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
         </div>
       </ContentFullLayout>
       <ContentLayout>
-        <ContentInsideLayout classNames="gap-6 col-span-12 w-t:col-span-8 w-p:col-span-4">
+        <ContentInsideLayout classNames="gap-x-6 gap-y-12 desktop:gap-y-18 col-span-12 w-t:col-span-8 w-p:col-span-4 desktop:mb-18 mb-12">
           {
             formattedModalityData?.cards?.map((items, i: number) => {
               return <Fragment key={`section-${i}`}>
@@ -219,8 +219,8 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
           }
         </ContentInsideLayout>
       </ContentLayout>
-      <ContentLayout classNames="mt-6">
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6">
+      <ContentLayout classNames="mb-12 desktop:mb-18">
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           <h4 className="text-6.5 font-headings font-semibold leading-tight w-t:leading-tight w-p:leading-tight w-t:text-6 w-p:text-6">{"Plan de estudios"}</h4>
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 leading-tight w-d:order-1 w-t:order-1">
@@ -240,11 +240,11 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
                   </div>
                   <Select onClick={(option: CustomEvent) => handleSelectOption(option)} data={{ ...SelectInit, textDefault: `Elige el ${campusLabel} de tu interés` }} options={optionsSelect} flagHeight={true} />
                 </div>
-                <div className="my-6">
+                <div className="mt-6">
                   <Button dark data={{ ...ButtonInit, title: "Descarga el plan de estudios", disabled: !isOptionSelected }} onClick={downloadFileProgram} />
                 </div>
               </>
-              : <div className="my-6">
+              : <div className="mt-6">
                 <Button dark data={{ ...ButtonInit, title: "Descarga el plan de estudios" }} onClick={downloadFileProgram} />
               </div>
           }
