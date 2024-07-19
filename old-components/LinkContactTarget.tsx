@@ -7,7 +7,7 @@ const LinkContactTarget: FC<LinkContactTargetComponentData> = ({ type, info, alt
   const [ manage, setManage ] = useState("mailto:")
 
   useEffect(() => {
-    setManage(type === "email" ? "mailto:" : "tel:+")
+    setManage(type === "email" ? "mailto:" : "tel:")
   }, [type])
 
   const text = alternativeText ? alternativeText : info;
