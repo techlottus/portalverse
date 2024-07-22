@@ -94,42 +94,39 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
             { <SignOutButton/> }
           </div>
         </section>
-        <section>
+        <section className="w-full flex justify-center mt-20">
           <section>
-            <div className="desktop:w-1/2">
-              <div className={cn("mobile:w-full")}>
-                <MiMovilInscriptionForm
-                  submit={submit}
-                  setStatus={setStatus}
-                  residence={residence}
-                  noResidence={noResidence}
-                  hasCurp={hasCurp}
-                  noCurp={noCurp}
-                  setResidence={setResidence}
-                  setNoResidence={setNoResidence}
-                  setHasCurp={setHasCurp}
-                  setNoCurp={setNoCurp}
-                  personalData={personalData}
-                  setPersonalData={setPersonalData}
-                  curp={curp}
-                  setCurp={setCurp}
-                  isValidCurp={isValidCurp}
-                  setIsValidCurp={setIsValidCurp}
-                  curpError={curpError}
-                  setCurpError={setCurpError}
-                />
-                <div className={cn("flex flex-col my-6")}>
-                  <Button
-                    dark
-                    data={{
-                      type: "primary",
-                      title: "Inscribirme ahora",
-                      isExpand: true,
-                      disabled: !isValid
-                    }}
-                  />
-                </div>
-              </div>
+
+            <MiMovilInscriptionForm
+              submit={submit}
+              setStatus={setStatus}
+              residence={residence}
+              noResidence={noResidence}
+              hasCurp={hasCurp}
+              noCurp={noCurp}
+              setResidence={setResidence}
+              setNoResidence={setNoResidence}
+              setHasCurp={setHasCurp}
+              setNoCurp={setNoCurp}
+              personalData={personalData}
+              setPersonalData={setPersonalData}
+              curp={curp}
+              setCurp={setCurp}
+              isValidCurp={isValidCurp}
+              setIsValidCurp={setIsValidCurp}
+              curpError={curpError}
+              setCurpError={setCurpError}
+            />
+            <div className={cn("flex flex-col my-6")}>
+              <Button
+                dark
+                data={{
+                  type: "primary",
+                  title: "Inscribirme ahora",
+                  isExpand: true,
+                  disabled: !isValid
+                }}
+              />
             </div>
           </section>
         </section>
