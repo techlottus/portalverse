@@ -18,7 +18,7 @@ export const msalConfig = {
         clientId: process.env.NEXT_PUBLIC_MSAL_CLIENT_ID,
         authority: `https://login.microsoftonline.com/${process.env.NEXT_PUBLIC_MSAL_TENANT_ID}`,
         clientSecret: process.env.NEXT_PUBLIC_MSAL_CLIENT_SECRET,
-        redirectUri: "/mi-movil-inscription/",
+        redirectUri: "/mi-movil-inscription",
 
     },
     cache: {
