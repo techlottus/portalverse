@@ -17,7 +17,9 @@ export const msalConfig = {
     auth: {
         clientId: process.env.NEXT_PUBLIC_MSAL_CLIENT_ID,
         authority: `https://login.microsoftonline.com/${process.env.NEXT_PUBLIC_MSAL_TENANT_ID}`,
-        clientSecret: process.env.NEXT_PUBLIC_MSAL_CLIENT_SECRET
+        clientSecret: process.env.NEXT_PUBLIC_MSAL_CLIENT_SECRET,
+        redirectUri: "/mi-movil-inscription/",
+
     },
     cache: {
         cacheLocation: "sessionStorage", // This configures where your cache will be stored
@@ -57,7 +59,7 @@ export const msalConfig = {
  * https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-permissions-and-consent#openid-connect-scopes
  */
 export const loginRequest = {
-    scopes: ["User.Read"]
+    scopes: []
 };
 
 /**
