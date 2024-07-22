@@ -3,6 +3,8 @@ import { loginRequest, msalInstance } from "@/utils/authConfig";
 import ContentFullLayout from "@/layouts/ContentFull.layout"
 import NextPageWithLayout from "@/types/Layout.types"
 import { MsalProvider } from "@azure/msal-react";
+import { useIsAuthenticated } from "@azure/msal-react";
+
 
 /**
  * Renders a drop down button with child buttons for logging in with a popup or redirect
@@ -52,7 +54,7 @@ const SignOutButton = () => {
 };
 
 const MiMovilLogin: NextPageWithLayout<any> = (props: any) => {
-
+  const isAuthenticated = useIsAuthenticated()
   return (
     <MsalProvider instance={msalInstance}>
       <ContentFullLayout>
@@ -61,7 +63,7 @@ const MiMovilLogin: NextPageWithLayout<any> = (props: any) => {
             <div className="w-36 h-9 bg-logo bg-cover bg-center mobile:mx-auto"> </div>
           </div>
           <div className="p-3">
-            <SignInButton />  
+            { isAuthenticated ? <SignOutButton/> : <SignInButton /> } 
           </div>
         </section>
       </ContentFullLayout>
