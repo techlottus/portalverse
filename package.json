@@ -14,6 +14,8 @@
     "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
+    "@azure/msal-browser": "^3.19.1",
+    "@azure/msal-react": "^2.0.21",
     "@editorjs/checklist": "^1.4.0",
     "@editorjs/delimiter": "^1.3.0",
     "@editorjs/editorjs": "^2.26.4",
