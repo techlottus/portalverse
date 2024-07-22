@@ -3,6 +3,7 @@ import { GoogleMapSection } from "@/utils/strapi/sections/GoogleMap";
 import Aspect from "@/components/Aspect";
 import cn from "classnames";
 import Container from "@/layouts/Container.layout";
+import { Heading } from "@lottuseducation/atoms";
 const GoogleMap: FC<GoogleMapSection> = (props: GoogleMapSection) => {
   const {
     title,
@@ -33,8 +34,11 @@ const GoogleMap: FC<GoogleMapSection> = (props: GoogleMapSection) => {
     <section>
       <Container>
         <div className="flex flex-col space-y-6">
-          {
+          {/* {
             title ? <h3 className="font-headings text-10 font-bold leading-tight text-center w-t:text-8.5 w-p:text-6">{title}</h3> : null
+          } */}
+          {
+            title ? <Heading variant="h3" as="h2">{title}</Heading> : null
           }
           {
             variant === 'map' ?
@@ -45,7 +49,8 @@ const GoogleMap: FC<GoogleMapSection> = (props: GoogleMapSection) => {
               variant === 'tour' && detailPosition !== 'top' ?
                 (<div className={cn("flex w-d:flex-row flex-col my-auto px-16 w-p:px-0", { 'w-d:flex-row-reverse': detailPosition === "right" })}>
                   <div className={cn("flex flex-col items-start w-d:w-3/6 w-t:w-4/5 mx-auto pb-4 my-auto w-d:px-12", { "": detailPosition === 'right' })}>
-                    <h1>{name}</h1>
+                    {/* <h1>{name}</h1> */}
+                    <Heading variant="h3">{name}</Heading>
                     {address && <div className="flex flex-col items-start">
                       <div className="flex">
                         <span className="material-symbols-outlined font-normal select-none mr-1">location_on</span>
@@ -93,7 +98,8 @@ const GoogleMap: FC<GoogleMapSection> = (props: GoogleMapSection) => {
                 :
                 <div className="w-d:px-16 flex flex-col space-y-4">
                   <div className="flex place-content-between w-d:flex-row flex-col ">
-                    <h1 className="font-Poppins text-10 pb-4 font-bold leading-[125%] w-t:text-8.5 w-p:text-6">{name}</h1>
+                    {/* <h1 className="font-Poppins text-10 pb-4 font-bold leading-[125%] w-t:text-8.5 w-p:text-6">{name}</h1> */}
+                    <Heading variant="h3" className="font-Poppins pb-4">{name}</Heading>
                     <div className="flex flex-col items-start space-y-4 w-d:w-2/5 right-0">
                       {address && <div className="flex items-center space-y-2 space-x-2 ">
                         <span className="material-symbols-outlined font-normal select-none">location_on</span>

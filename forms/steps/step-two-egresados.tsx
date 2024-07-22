@@ -91,7 +91,7 @@ const StepTwo: FC<EgresadosStepComponentData> = ({ data, classNames, enrollment,
   }
 
   return <section className={cn(classNames)}>
-    <h1 className="font-headings font-semibold text-5.5 leading-7">{ config.title }</h1>
+    <h3 className="font-headings font-semibold text-5.5 leading-7">{ config.title }</h3>
     <p className="font-texts font-normal text-base leading-4 mt-6">{ config.subtitleStep2 }</p>
     <div className="mt-6">
       <p className="  text-surface-500 text-3.5">{ `${config.messageEnrollment}${enrollment}`}</p>
