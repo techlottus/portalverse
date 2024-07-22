@@ -2,7 +2,6 @@
  * Copyright (c) Microsoft Corporation. All rights reserved.
  * Licensed under the MIT License.
  */
-// require('dotenv').config();
 
 import { LogLevel, PublicClientApplication } from "@azure/msal-browser";
 
@@ -16,9 +15,9 @@ import { LogLevel, PublicClientApplication } from "@azure/msal-browser";
 
 export const msalConfig = {
     auth: {
-        clientId: process.env.NEXT_PUBLIC_CLIENT_ID,
-        authority: `https://login.microsoftonline.com/common`,
-        clientSecret: process.env.NEXT_PUBLIC_CLIENT_SECRET
+        clientId: process.env.NEXT_PUBLIC_MSAL_CLIENT_ID,
+        authority: `https://login.microsoftonline.com/${process.env.NEXT_PUBLIC_MSAL_TENANT_ID}`,
+        clientSecret: process.env.NEXT_PUBLIC_MSAL_CLIENT_SECRET
     },
     cache: {
         cacheLocation: "sessionStorage", // This configures where your cache will be stored
