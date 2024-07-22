@@ -123,39 +123,46 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
       </section>
     </Modal>
     <HeaderFooterLayout>
-      <ContentLayout>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12">
+      <ContentLayout classNames="desktop:gap-y-18 gap-y-12">
+        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
           <h1 className="text-13 font-bold font-headings leading-13 w-t:semi-tight w-p:leading-tight w-t:text-8.5 w-p:text-7.5 w-d:mb-6 w-t:mb-4 w-p:mb-3">{sections.head.title}</h1>
           <p className="text-5.5  font-bold font-headings leading-tight w-t:leading-tight w-p:leading-tight w-t:text-4.5 w-p:text-4.5 w-d:mb-6 w-t:mb-4 w-p:mb-3">{sections.head.subtitle}</p>
           <RichtText data={{
             content: sections.head.description
           }} />
-        </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12">
+          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 desktop:hidden">
           <Image
             alt={sections.head.image.desk.alt}
             src={sections.head.image.desk.src}
             classNames="aspect-2/1 w-t:aspect-2/1 w-p:aspect-2/1"
           />
         </div>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:col-start-2 w-t:col-end-8 mb-6 w-t:mb-6 w-p:mb-6">
-          <NumbersComponent data={sections.estadisticas} />
+        </div>
+        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 hidden desktop:block">
+          <Image
+            alt={sections.head.image.desk.alt}
+            src={sections.head.image.desk.src}
+            classNames="aspect-2/1 w-t:aspect-2/1 w-p:aspect-2/1"
+          />
+        </div>
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:col-start-2 w-t:col-end-8">
+          <NumbersComponent classNames="desktop:!mt-0" data={sections.estadisticas} />
         </div>
         {
           sections?.becas?.tabs?.items ?
-            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-12">
+            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 desktop:mb-18 mb-12">
               <div id="becas" className="flex justify-center w-d:mb-2">
                 <TabsFeatured active={tabActive} tabs={sections.becas.tabs.items} onActive={(active: number) => setTabActive(active)} />
               </div>
               <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-                <ContentInsideLayout classNames="gap-6">
+                <ContentInsideLayout>
                   {
                     contentTabs.map(({ image: { src, alt }, content: { title, description, action = null } }: any, i: number) => <Fragment key={`description-beca-${i}`}>
                       <DescriptionSection
                         mode="light"
                         title={title}
                         description={description}
-                        classNames={cn("col-span-7 grid grid-cols-7 gap-6 w-t:col-span-8 w-t:grid-cols-8 w-p:col-span-4 py-[40px] w-t:py-[94px] w-p:flex w-p:flex-col w-p:p-6", { "hidden w-p:hidden": tabActive !== i })}
+                        classNames={cn("col-span-7 grid grid-cols-7 w-t:col-span-8 w-t:grid-cols-8 w-p:col-span-4 w-t:py-[48px] w-p:flex w-p:flex-col w-p:p-6", { "hidden w-p:hidden": tabActive !== i })}
                         titleStyles="col-start-2 col-end-7 w-t:col-end-8"
                         descriptionStyles="col-start-2 col-end-7 w-t:col-end-8"
                         action={
@@ -206,8 +213,8 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
       </ContentLayout>
       : null
       }
-      <ContentLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-12 w-t:mb-6 w-p:mb-6">
+      <ContentLayout classNames="desktop:gap-y-18 gap-y-12">
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           <Feedback data={sections.feedback.feedback} >
             <h1 className="font-texts font-normal text-base leading-6 text-surface-800 mb-3">{sections.feedback.title}</h1>
             <p className="font-texts font-normal text-sm text-surface-800">{sections.feedback.text}</p>

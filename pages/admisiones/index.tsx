@@ -160,7 +160,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
       </ContentLayout>
       {sections?.AtrProgramPerks?.tabs ?
         <>
-          <Container classNames="mt-16">
+          <Container classNames="desktop:mt-18 mt-12">
             <div className="col-span-12 flex flex-col gap-1 items-center justify-center mb-4">
               <h3 className="font-headings font-bold text-surface-900 text-7 leading-9 text-center"><span className="text-secondary-500">Requisitos </span> de admisión </h3>
               <p className="font-texts font-normal text-surface-500 text-lg leading-6 text-center">Toda la documentación requerida deberá ser entregada en original, dos copias y en buen estado. </p>
@@ -174,8 +174,8 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
               <TabsFeatured tabs={sections?.AtrProgramPerks?.tabs?.items} onActive={(active: number) => setTabActive(active)} />
             </div>
           </Container>
-          <div className="col-span-12 w-t:col-span-12 w-p:col-span-4 w-p:mb-6 w-t:mb-12 w-d:mb-12">
-            <ContentInsideLayout classNames="gap-5">
+          <div className="col-span-12 w-t:col-span-12 w-p:col-span-4 mb-12 desktop:mb-18">
+            <ContentInsideLayout classNames="gap-y-12 desktop:gap-y-18">
               {
                 contentTabsIcons?.map(({ content: { requirementsList, desktopBgImage, tabletBgImage, mobileBgImage, action = null }, cards }: any, i: number) =>
                   <Fragment key={`description-beca-${i}`}>
@@ -204,7 +204,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
                         </div>
                       </Container>
                     </section>
-                    <section className={cn("col-span-12 max-w-d-base mx-auto w-d-base:px-6 mt-18", { "hidden w-p:hidden": tabActive !== i })}>
+                    <section className={cn("col-span-12 max-w-d-base mx-auto w-d-base:px-6", { "hidden w-p:hidden": tabActive !== i })}>
                       {
                         sections?.AtrProgramPerks?.titleCards ?
                           <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6 mb-6">{sections?.AtrProgramPerks?.titleCards}</p>

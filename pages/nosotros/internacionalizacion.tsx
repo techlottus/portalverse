@@ -113,17 +113,17 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
       </section>
     </Modal>
     <HeaderFooterLayout breadcrumbs={true}>
-      <ContentFullLayout classNames="gap-6 w-d:hidden">
+      <ContentFullLayout classNames="gap-6 w-d:hidden mb-12">
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           <Slider data={{ ...sections?.head.slider }} mobile = {true}/>
         </div>
       </ContentFullLayout>
-      <ContentLayout>
+      <ContentLayout classNames="desktop:mb-18">
         <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4">
           <Slider data={{ ...sections?.head.slider, height: "600px" }} mobile = {false}/>
         </div>
       </ContentLayout>
-      <ContentLayout classNames="mt-6 w-d:mt-18">
+      <ContentLayout classNames="desktop:mb-13 mb-12">
         <div className="col-span-8 w-t:col-span-8 w-p:col-span-4">
           <p className="font-headings font-bold text-10 w-t:text.8.5 w-p:text-6 mb-6 leading-tight w-t:semi-tight">{sections?.head.title}</p>
           <p className="font-headings font-bold text-5.5 w-t:text-4.5 w-p:text-base mb-6 leading-tight w-t:leading-tight">{sections?.head.subtitle}</p>
@@ -132,7 +132,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
           }} />
         </div>
       </ContentLayout>
-      <ContentLayout classNames="hidden w-d:grid mt-12 w-d:mt-18">
+      <ContentLayout classNames="hidden w-d:grid">
         <div className="font-headings w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4">
           <Rainbow classNamesTitle="font-bold" sections={sections.rainbow.sections} title={sections.rainbow.title} contentVariant={sections?.rainbow?.contentVariant}/>
         </div>
@@ -262,7 +262,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
           : null
       }
       {
-        sections?.videoSection && <ContentLayout classNames="mt-12 w-d:mt-18">
+        sections?.videoSection && <ContentLayout>
           <section className="col-span-12">
             <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6 w-d:mb-">{sections?.videoSection.title}</p>
             <div className="grid w-d:grid-cols-2 w-p:grid-cols-1 gap-6">
@@ -275,7 +275,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
           </section>
         </ContentLayout>
       }
-      <ContentLayout classNames="mt-6 w-d:mt-18">
+      <ContentLayout classNames="mt-12 desktop:mt-18">
         <div className="col-span-12">
           <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight">{sections?.alliances.title}</p>
           <section className="grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mt-6">

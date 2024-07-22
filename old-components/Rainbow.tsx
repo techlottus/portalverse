@@ -21,7 +21,7 @@ const Rainbow: FC<RainbowComponentConfig> = ({ sections, title, classNamesTitle,
         sections?.map((section, i) => {
           return (
             <section key={`section-container${i}`} className="relative">
-              <div className="relative flex flex-col space-y-12 py-12 z-10">
+              <div className="relative flex flex-col desktop:space-y-18 space-y-12 desktop:mb-18 mb-12 z-10">
                 {
                   section?.sections?.map((section, i ) => {
                     const { title, description, image } = section;
