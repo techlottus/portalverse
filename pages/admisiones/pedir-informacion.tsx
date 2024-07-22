@@ -14,13 +14,14 @@ const PedirInformacion: NextPageWithLayout<PedirInformacionPage> = ({ sections, 
       <title>{ meta.title }</title>
     </Head>
     <HeaderFooterLayout>
-      <ContentLayout>
-        <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:col-start-3 w-d:col-end-11 text-13.5 w-t:text-8.5 w-p:text-6 font-headings font-bold leading-tight w-t:semi-tight">{ sections.head.title }</section>
+      <ContentLayout classNames="gap-y-12 desktop:gap-y-18">
+        <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:col-start-3 w-d:col-end-11 text-13.5 w-t:text-8.5 w-p:text-6 font-headings font-bold leading-tight w-t:semi-tight">{ sections.head.title }
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:col-start-3 w-d:col-end-11 text-base w-t:text-3.5 w-p:text-3.5 font-texts leading-tight">
           <RichtText data={{
             content: sections.head.description
           }} />
         </div>
+        </section>
         <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:col-start-3 w-d:col-end-11">
           <OpenForm data={sections.form} pathThankyou={`/thank-you`} image={{ src: "https://assets.staging.bedu.org/UTEG/admisiones_pedir_informacion_avatar_6738c707b5.jpg", alt:"image-person" }} />
         </section>
