@@ -368,7 +368,7 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
       </div>
       <div className="">
         <Input data={{
-          label: 'Celular*',
+          label: 'Celular Mi movil*',
           name: 'phone',
           type: 'text',
           typeButton: 'classic',
@@ -385,43 +385,8 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
         />
       </div>
       <div className="col-span-2 flex items-center">
-        <Checkbox data={{
-          name: "adviser",
-          disabled: false,
-          label: "*",
-          selected: false,
-          tagOnCheck: undefined,
-          value: ""
-        }} onCheck={() => {
-          setAdviser(!adviser)
-        }} />
-        <p className="font-texts font-bold">¿Tuviste ayuda de algún asesor? <span className="font-normal text-surface-500">(Opcional)</span></p>
+        {/* add program select */}
       </div>
-      {
-        adviser &&
-        <div className="col-span-2">
-          <Input data={{
-            label: 'Nombre del asesor*',
-            name: 'residence',
-            type: 'text',
-            typeButton: 'classic',
-            maxlength: '',
-            onPaste: true,
-            placeholder: '',
-            autocomplete: 'off',
-            disabled: false,
-            alphanumeric: false,
-            alphabetical: true,
-            onlyNumbers: false,
-            upperCase: false,
-            pattern: '',
-            isRequired: true
-          }} 
-          eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "adviser")}
-          eventFocus={() => handleTouchedControl("adviser")}
-          />
-        </div>
-      }
     </div>
   </div>
   const formEmpty = <div >

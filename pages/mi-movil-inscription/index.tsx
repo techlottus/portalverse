@@ -2,12 +2,11 @@ import React, { useEffect, useState } from "react";
 import ContentFullLayout from "@/layouts/ContentFull.layout"
 import NextPageWithLayout from "@/types/Layout.types"
 import cn from "classnames";
-import { InscriptionForm } from "@/forms/container/InscriptionForm";
 import Button from "@/old-components/Button/Button";
-import { AuthenticatedTemplate, MsalProvider } from "@azure/msal-react";
-import { loginRequest, msalInstance } from "@/utils/authConfig";
+import { msalInstance } from "@/utils/authConfig";
 import { useIsAuthenticated } from "@azure/msal-react";
 import { useRouter } from "next/router";
+import { MiMovilInscriptionForm } from "@/forms/container/MiMovilInscriptionForm";
 
 
 
@@ -34,34 +33,15 @@ const SignOutButton = () => {
   );
 };
 
-const SignInButton = () => {
-
-  const handleLogin = (loginType: any) => {
-    if (loginType === "popup") {
-      msalInstance.loginPopup(loginRequest).catch((e: any) => {
-        console.log(e);
-      });
-    } else if (loginType === "redirect") {
-      msalInstance.loginRedirect(loginRequest).catch((e: any) => {
-        console.log(e);
-      });
-    }
-  };
-  return (
-    <button className="bg-surface-900 text-surface-100 font-texts p-4 rounded-md" onClick={() => handleLogin("redirect")}>
-      Iniciar sesión
-    </button>
-  );
-};
 
 
 const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
-  const [residence, setResidence] = useState<any>()
-  const [noResidence, setNoResidence] = useState<any>()
+  const [residence, setResidence] = useState<any>('')
+  const [noResidence, setNoResidence] = useState<any>('')
   const [hasCurp, setHasCurp] = useState<any>(false)
   const [noCurp, setNoCurp] = useState<any>(true)
   const [isValid, setIsValid] = useState<boolean>(false);
-  const [curp, setCurp] = useState<boolean>();
+  const [curp, setCurp] = useState<string>('');
   const [submit, setSubmit] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
@@ -98,13 +78,13 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
   useEffect(() => {
     if (!isAuthenticated) {
         // go to an authenticated-only place
-        router.push('/mi-movil-inscription/login')
+        // uncomment when ready to avoid redirect issues
+        // router.push('/mi-movil-inscription/login')
     }
   }, [isAuthenticated]);
   
 
   return (
-    <AuthenticatedTemplate>
       <ContentFullLayout>
         <section className="w-full bg-surface-0 z-15 transition-transform shadow-15 flex justify-between">
           <div className="p-6 border-0 border-solid border-surface-200 border-r-2">
@@ -118,7 +98,7 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
           <section>
             <div className="desktop:w-1/2">
               <div className={cn("mobile:w-full")}>
-                <MiMovilInscription
+                <MiMovilInscriptionForm
                   submit={submit}
                   setStatus={setStatus}
                   residence={residence}
@@ -154,7 +134,6 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
           </section>
         </section>
       </ContentFullLayout>
-    </AuthenticatedTemplate>
   )
 }
 export default MiMovilInscription
