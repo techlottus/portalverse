@@ -144,8 +144,8 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
       </Head>
       <ContentLayout>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 flex flex-col w-d:justify-center">
-          {/* <h1 className="desktop:text-7xl font-bold font-headings leading-13 tablet:semi-tight mobile:leading-tight tablet:text-8.5 mobile:text-7.5 mb-6">{title}</h1> */}
-          <Heading variant="h1" className="desktop:text-7xl font-bold font-headings leading-13 tablet:semi-tight mobile:leading-tight tablet:text-8.5 mobile:text-7.5 mb-6">{title}</Heading>
+          <h1 className="desktop:text-7xl font-bold font-headings leading-13 tablet:semi-tight mobile:leading-tight tablet:text-8.5 mobile:text-7.5 mb-6">{title}</h1>
+          {/* <Heading variant="h1" className="desktop:text-7xl font-bold font-headings leading-13 tablet:semi-tight mobile:leading-tight tablet:text-8.5 mobile:text-7.5 mb-6">{title}</Heading> */}
           <RichtText data={{
             content: description
           }} />
@@ -184,8 +184,8 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
       </ContentFullLayout>
       <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6">
-          {/* <h2 className="text-6.5 font-headings font-semibold leading-tight w-t:leading-tight w-p:leading-tight w-t:text-6 w-p:text-6">{`Para cursar ${title} necesitas: `} </h2> */}
-          <Heading variant="h4" as="h2">{`Para cursar ${title} necesitas: `}</Heading>
+          <h2 className="text-6.5 font-headings font-semibold leading-tight w-t:leading-tight w-p:leading-tight w-t:text-6 w-p:text-6">{`Para cursar ${title} necesitas: `} </h2>
+          {/* <Heading variant="h4" as="h2">{`Para cursar ${title} necesitas: `}</Heading> */}
         </div>
         <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center">
           <TabsFeatured tabs={modalities?.map((modality) => ({ label: modality?.labelModality || modality?.modality?.data?.attributes?.label || modality?.modality?.data?.attributes?.name }))} onActive={(active: number) => handleSetActiveTab(active)} />
@@ -224,8 +224,8 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
       </ContentLayout>
       <ContentLayout classNames="mt-6">
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6">
-          {/* <h2 className="text-6.5 font-headings font-semibold leading-tight w-t:leading-tight w-p:leading-tight w-t:text-6 w-p:text-6">{"Plan de estudios"}</h2> */}
-          <Heading variant="h4" as="h2">{"Plan de estudios"}</Heading>
+          <h2 className="text-6.5 font-headings font-semibold leading-tight w-t:leading-tight w-p:leading-tight w-t:text-6 w-p:text-6">{"Plan de estudios"}</h2>
+          {/* <Heading variant="h4" as="h2">{"Plan de estudios"}</Heading> */}
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 leading-tight w-d:order-1 w-t:order-1">
           {
