@@ -1203,6 +1203,14 @@
   resolved "https://registry.npmjs.org/@lottus23/lottus-elements-uane/-/lottus-elements-uane-3.8.9.tgz"
   integrity sha512-EaTTGThAXgWRut9yJiKFokFP+dqd/WrkxCRxSXBXUR+MFEkborz042F1EeWg2zXx26FMgFe4yYpYwRc6OCG9Hw==
 
+"@lottuseducation/atoms@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@lottuseducation/atoms/-/atoms-0.1.1.tgz#98e3f335dd878d303921f2f85d47fa03a9990ef3"
+  integrity sha512-ixigzDRYQkipKdrpafBLSIjMb81nifc+/PnY00iJa8LI9bEaQlNdGVRrbYqNjIdySEZIHJhZhlQFuwabydxDyw==
+  dependencies:
+    classnames "^2.3.1"
+    react-lottie-player "^1.5.4"
+
 "@lottuseducation/tailwind-base@^0.1.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@lottuseducation/tailwind-base/-/tailwind-base-0.1.0.tgz#1ff5e0eb5713c76a72ab89ae80b1a80a35226d7d"
@@ -1913,6 +1921,11 @@ chalk@^4.0.0, chalk@^4.1.0:
     readdirp "~3.6.0"
   optionalDependencies:
     fsevents "~2.3.2"
+
+classnames@^2.3.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.5.1.tgz#ba774c614be0f016da105c858e7159eae8e7687b"
+  integrity sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==
 
 classnames@^2.3.2:
   version "2.3.2"
@@ -3228,6 +3241,11 @@ loose-envify@^1.1.0, loose-envify@^1.4.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
+lottie-web@^5.7.6:
+  version "5.12.2"
+  resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.12.2.tgz#579ca9fe6d3fd9e352571edd3c0be162492f68e5"
+  integrity sha512-uvhvYPC8kGPjXT3MyKMrL3JitEAmDMp30lVkuq/590Mw9ok6pWcFCwXJveo0t5uqYw1UREQHofD+jVpdjBv8wg==
+
 lru-cache@^5.1.1:
   version "5.1.1"
   resolved "https://registry.npmjs.org/lru-cache/-/lru-cache-5.1.1.tgz"
@@ -3680,6 +3698,15 @@ react-leaflet@^4.1.0:
   dependencies:
     "@react-leaflet/core" "^2.1.0"
 
+react-lottie-player@^1.5.4:
+  version "1.5.6"
+  resolved "https://registry.yarnpkg.com/react-lottie-player/-/react-lottie-player-1.5.6.tgz#13d43fb4b4506f25fe647ccde8cc0fcbe788bc1f"
+  integrity sha512-t0GdTYbml0Ihski8ZPx+1WjpjM/EQlTqTcuGm5yeZGJAgFXTmoqrHbSX8bcREIxrHjibWAyIWnLVUK/iHLcqAQ==
+  dependencies:
+    fast-deep-equal "^3.1.3"
+    lottie-web "^5.7.6"
+    rfdc "^1.3.0"
+
 react-player@^2.11.0:
   version "2.12.0"
   resolved "https://registry.npmjs.org/react-player/-/react-player-2.12.0.tgz"
@@ -3810,6 +3837,11 @@ reusify@^1.0.4:
   version "1.0.4"
   resolved "https://registry.npmjs.org/reusify/-/reusify-1.0.4.tgz"
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
+
+rfdc@^1.3.0:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/rfdc/-/rfdc-1.4.1.tgz#778f76c4fb731d93414e8f925fbecf64cce7f6ca"
+  integrity sha512-q1b3N5QkRUWUl7iyylaaj3kOpIT0N2i9MqIEQXP73GVsN9cw3fdx8X63cEmWhJGi2PPCF23Ijp7ktmd39rawIA==
 
 rimraf@^3.0.2:
   version "3.0.2"
