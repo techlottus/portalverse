@@ -203,7 +203,7 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
                       {item?.title}
                     </p>
                   </div>
-                  <section className="col-span-12 grid grid-cols-2 gap-6 w-t:grid-cols-1 w-p:grid-cols-1 w-d:mb-[72px] w-t:mb-[72px] w-p:mb-[32px]">
+                  <section className="col-span-12 grid grid-cols-2 gap-6 w-t:grid-cols-1 w-p:grid-cols-1 w-d:mb-[60px] w-t:mb-[72px] w-p:mb-[32px]">
                     {item?.campus?.map(
                       (
                         { title, coords, description, images: items }: any,
