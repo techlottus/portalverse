@@ -56,6 +56,41 @@ const SignInButton = () => {
 
 
 const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
+  const [residence, setResidence] = useState<any>()
+  const [noResidence, setNoResidence] = useState<any>()
+  const [hasCurp, setHasCurp] = useState<any>(false)
+  const [noCurp, setNoCurp] = useState<any>(true)
+  const [isValid, setIsValid] = useState<boolean>(false);
+  const [curp, setCurp] = useState<boolean>();
+  const [submit, setSubmit] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isValidCurp, setIsValidCurp] = useState(false);
+  const [curpError, setCurpError] = useState(false);
+  
+  const setStatus = ({ loading, valid, success }: { loading: boolean, valid: boolean, success: boolean }) => {
+    setIsVisible(!loading && !error)
+    setIsLoading(loading)
+    setIsValid(valid)
+    setIsSuccess(success)
+  }
+  const initialData = {
+    name: "",
+    last_name: "",
+    second_last_name: "",
+    email: "",
+    phone: "",
+    birthdate: "",
+    gender: "",
+    residence: "",
+    adviser: ""
+  }
+
+  const [personalData, setPersonalData] = useState(initialData);
+
+
 
   const isAuthenticated = useIsAuthenticated();
   const router = useRouter()
@@ -79,7 +114,45 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
             { <SignOutButton/> }
           </div>
         </section>
-
+        <section>
+          <section>
+            <div className="desktop:w-1/2">
+              <div className={cn("mobile:w-full")}>
+                <MiMovilInscription
+                  submit={submit}
+                  setStatus={setStatus}
+                  residence={residence}
+                  noResidence={noResidence}
+                  hasCurp={hasCurp}
+                  noCurp={noCurp}
+                  setResidence={setResidence}
+                  setNoResidence={setNoResidence}
+                  setHasCurp={setHasCurp}
+                  setNoCurp={setNoCurp}
+                  personalData={personalData}
+                  setPersonalData={setPersonalData}
+                  curp={curp}
+                  setCurp={setCurp}
+                  isValidCurp={isValidCurp}
+                  setIsValidCurp={setIsValidCurp}
+                  curpError={curpError}
+                  setCurpError={setCurpError}
+                />
+                <div className={cn("flex flex-col my-6")}>
+                  <Button
+                    dark
+                    data={{
+                      type: "primary",
+                      title: "Inscribirme ahora",
+                      isExpand: true,
+                      disabled: !isValid
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
       </ContentFullLayout>
     </AuthenticatedTemplate>
   )
