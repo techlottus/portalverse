@@ -124,7 +124,7 @@ const Empleabilidad: NextPageWithLayout = ({ sections, meta }: any) => {
       </ContentLayout>
       {
         sections?.RichTextImageBgImage ?
-          <ContentFullLayout classNames="my-18 w-t:my-6 w-p:my-6">
+          <ContentFullLayout classNames="desktop:my-18 my-12">
             <RichTextImageBgImage type={"ComponentSectionsRichTextImageBgImage"} desktopBgImage={{ data: { attributes: { url: sections?.RichTextImageBgImage?.desktopBgImage?.data?.attributes?.url } } }} tabletBgImage={{ data: { attributes: { url: sections?.RichTextImageBgImage?.tabletBgImage?.data?.attributes?.url } } }} mobileBgImage={{ data: { attributes: { url: sections?.RichTextImageBgImage?.tabletBgImage?.data?.attributes?.url } } }} RichTextImageComponent={{
               type: "ComponentSectionsRichTextImage",
               title: sections?.RichTextImageBgImage?.RichTextImage?.title,
