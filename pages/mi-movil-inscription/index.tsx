@@ -90,7 +90,7 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
       ...personalData,
       metadata: program
     }
-    console.log(data);
+    console.log('data final:',data);
     
   }
   

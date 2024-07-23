@@ -333,7 +333,7 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
 
 
   useEffect(() => {
-    console.log(personalData)
+    // console.log(personalData)
     Validate()
   }, [personalData]);
 
@@ -349,7 +349,7 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
       return { value: program.name, text: program.name, active: program.name === detail }
     });
     setSelectData(options)
-    console.log('programData: ', programData);
+    // console.log('programData: ', programData);
     setProgram(programData)
     
   }
