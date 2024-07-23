@@ -770,7 +770,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
       }
       {
         selectedModalityName !== "a tu ritmo" ?
-          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mt-18 w-p:mt-6 w-t:mt-12">
+          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 desktop:mt-18 mt-12">
             {
               RichtTextImageData ?
                 <RichTextImage type={"ComponentSectionsRichTextImage"} title={RichtTextImageData?.title} image={{
@@ -866,7 +866,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
 
       {
         selectedModalityName !== "a tu ritmo" ?
-          <div className="w-d:mt-18 mt-12">
+          <div className="desktop:mt-18 mt-12">
             <RichTextImage {...generalCertifications} />
           </div>
           : null
