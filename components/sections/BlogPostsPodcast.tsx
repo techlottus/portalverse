@@ -144,7 +144,7 @@ const BlogPostsPodcast = (props: BlogPostsPodcastSection) => {
 
                       return (
                         <section
-                          className="mt-12 first:mt-0 w-t:mb-6 w-p:mb-6 w-t:hidden"
+                          className="mt-12 first:mt-0 w-t:hidden"
                           key={`section-podcast-${i}`}
                         >
                           <BannerWrapper
@@ -204,7 +204,7 @@ const BlogPostsPodcast = (props: BlogPostsPodcastSection) => {
 
                       return (
                         <section                        
-                          className="mb-12 w-t:mb-6 w-p:mb-6 w-d:hidden w-p:hidden"
+                          className="mb-6 last:mb-0 w-d:hidden w-p:hidden"
                           key={`section-podcast-${i}`}
                         >
                           <BannerWrapper
