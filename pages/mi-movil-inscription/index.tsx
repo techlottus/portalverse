@@ -49,6 +49,8 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isValidCurp, setIsValidCurp] = useState(false);
   const [curpError, setCurpError] = useState(false);
+  const [ program, setProgram ] = useState<any>(null);
+
   
   const setStatus = ({ loading, valid, success }: { loading: boolean, valid: boolean, success: boolean }) => {
     setIsVisible(!loading && !error)
@@ -82,6 +84,15 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
         // router.push('/mi-movil-inscription/login')
     }
   }, [isAuthenticated]);
+
+  const onSubmit = () => {
+    const data = {
+      ...personalData,
+      metadata: program
+    }
+    console.log('data final:',data);
+    
+  }
   
 
   return (
@@ -116,6 +127,7 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
               setIsValidCurp={setIsValidCurp}
               curpError={curpError}
               setCurpError={setCurpError}
+              setProgram={setProgram}
             />
             <div className={cn("flex flex-col my-6")}>
               <Button
@@ -125,6 +137,9 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
                   title: "Inscribirme ahora",
                   isExpand: true,
                   disabled: !isValid
+                }}
+                onClick={() => {
+                  onSubmit()
                 }}
               />
             </div>

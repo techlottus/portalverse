@@ -1,7 +1,7 @@
 import { createRef, FC, useEffect } from "react"
 import SelectComponentData from "@/types/Select.types"
 
-const Select: FC<SelectComponentData> = ({ data, options, onClick, flagHeight }: SelectComponentData) => {
+const Select: FC<SelectComponentData> = ({ data, options, onClick, flagHeight, classname }: SelectComponentData) => {
   const selectRef = createRef();
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const Select: FC<SelectComponentData> = ({ data, options, onClick, flagHeight }:
     }
   }, [onClick]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  return <lottus-select class="font-texts font-semibold" ref={selectRef}></lottus-select>
+  return <lottus-select class={`font-texts font-semibold ${classname}`} ref={selectRef}></lottus-select>
 }
 
 export default Select
