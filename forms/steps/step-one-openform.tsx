@@ -129,7 +129,7 @@ const StepOne: FC<any> = ({
   return <section className={cn(classNames)}>
     <div className="flex gap-6">
       <div className="flex flex-col gap-6">
-        <h3 className="font-texts font-bold text-5 leading-6">{ config.title }</h3>
+        <h4 className="font-texts font-bold text-5 leading-6">{ config.title }</h4>
         <p className="font-texts font-normal text-3.5 leading-4">{ config.subtitle }</p>
       </div>
       <div className={cn("w-p:hidden", { "hidden": !config?.image })}>

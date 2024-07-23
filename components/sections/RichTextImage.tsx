@@ -46,7 +46,7 @@ const RichTextImage: FC<RichTextImageSection> = (props: RichTextImageSection) =>
       <Container>
         <div className="flex flex-col space-y-6">
           {
-            title ? <h3 className="font-headings text-10 font-bold leading-tight w-t:text-8.5 w-p:text-6">{title}</h3> : null
+            title ? <h2 className="font-headings text-10 font-bold leading-tight w-t:text-8.5 w-p:text-6">{title}</h2> : null
           }
           <div className="grid w-p:grid-cols-1 w-t:grid-cols-1 grid-cols-2 gap-6">
             <div

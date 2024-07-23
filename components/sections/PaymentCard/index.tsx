@@ -60,7 +60,7 @@ const PaymentCard = (props: PaymentCardData) => {
         }
         {
           title
-            ? <p className="font-headings text-xl font-bold">{title}</p>
+            ? <h5 className="font-headings text-xl font-bold">{title}</h5>
             : null
         }
         {

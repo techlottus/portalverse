@@ -113,7 +113,7 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
                 : <section>
                   <div className="flex gap-6">
                     <div className="flex flex-col gap-6">
-                      {!!title && <h3 className="font-texts font-bold text-5 leading-6">{title}</h3>}
+                      {!!title && <h4 className="font-texts font-bold text-5 leading-6">{title}</h4>}
                       {!!description && <p className="font-texts font-normal text-3.5 leading-4">{description}</p>}
                     </div>
                     {

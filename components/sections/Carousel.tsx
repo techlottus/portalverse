@@ -91,7 +91,7 @@ const Carousel = (props: CarouselSection) => {
             <div className="navigation-wrapper">
               <div>
                 {
-                  title ? <p className="font-headings font-bold text-10 w-p:text-6 w-d:mb-6 mb-3">{title}</p> : null
+                  title ? <h2 className="font-headings font-bold text-10 w-p:text-6 w-d:mb-6 mb-3">{title}</h2> : null
                 }
                 {
                   description ? <div className="mb-6">

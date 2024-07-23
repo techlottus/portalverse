@@ -13,9 +13,9 @@ const TextContent = (props: TextContentSection) => {
         <div className="w-p:col-span-4 w-t:col-span-8 w-d:col-span-8 flex flex-col space-y-4">
           {
             title
-              ? <h3 className="font-headings font-bold leading-tight w-p:text-6 w-t:text-8.5 text-10">
+              ? <h2 className="font-headings font-bold leading-tight w-p:text-6 w-t:text-8.5 text-10">
                   {title}
-                </h3>
+                </h2>
               : null}
           {
             subtitle
