@@ -171,7 +171,17 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
           throw new Error();
         }
         // router.push(`/mi-movil-inscription`);
-        
+        setPersonalData({
+          name: "",
+          last_name: "",
+          second_last_name: "",
+          email: "",
+          phone: "",
+          birthdate: "",
+          gender: "",
+          residence: ""
+        })
+        setProgram({})
         window.location.reload()
       })
       .catch((err: any) => {
