@@ -5,6 +5,8 @@ import OptionPill from "@/old-components/OptionPill";
 import Checkbox from "@/old-components/Checkbox";
 import configControls from "@/forms/fixtures/controls"
 import Select from "@/old-components/Select/Select";
+import { SelectInit } from "@/old-components/fixture"
+
 import cn from "classnames";
 
 import Image from "@/old-components/Image"
@@ -30,7 +32,65 @@ type MiMovilInscriptionFormData = {
   setIsValidCurp: any;
   curpError: any;
   setCurpError: any;
+  setProgram: any;
 }
+
+  const programs = [
+    {
+      BNRcharge: 1007,
+      BNRprogram: 'LRADME',
+      SFcampus: '0014X00002d0CyEQAU',
+      SFcreditCode: 4157,
+      SFdebitCode: 4158,
+      SFlevel: 'Licenciatura',
+      SFline: 'UTC',
+      SFmodality: 'Online',
+      SFprogram: 'a0B4X000017NMkLUAW',
+      backup_email: 'campus.virtual@utc.mx',
+      concepto: 'Administración de empresas',
+      flow: 'ATR',
+      invoice_template: 7,
+      name: 'Licenciatura en Administración de Empresas',
+      payment_template: 3,
+      provider: 'UTC',
+    },
+    {
+      BNRcharge: 1007,
+      BNRprogram: 'LRMERC',
+      SFcampus: '0014X00002d0CyEQAU',
+      SFcreditCode: 4157,
+      SFdebitCode: 4158,
+      SFlevel: 'Licenciatura',
+      SFline: 'UTC',
+      SFmodality: 'Online',
+      SFprogram: 'a0B4X000017NNVTUA4',
+      backup_email: 'campus.virtual@utc.mx',
+      concepto: 'Mercadotecnia',
+      flow: 'ATR',
+      invoice_template: 7,
+      name: 'Mercadotecnia',
+      payment_template: 3,
+      provider: 'UTC'
+    },
+    {
+      BNRcharge: 1007,
+      BNRprogram: 'LRCOFI',
+      SFcampus: '0014X00002d0CyEQAU',
+      SFcreditCode: 4157,
+      SFdebitCode: 4158,
+      SFlevel: 'Licenciatura',
+      SFline: 'UTC',
+      SFmodality: 'Online',
+      SFprogram: 'a0B4X000017NNPnUAO',
+      backup_email: 'campus.virtual@utc.mx',
+      concepto: 'Contaduría y finanzas',
+      flow: 'ATR',
+      invoice_template: 7,
+      name: 'Contaduría y finanzas',
+      payment_template: 3,
+      provider: 'UTC'
+    }
+  ]
 
 const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
 
@@ -52,7 +112,8 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
     isValidCurp,
     setIsValidCurp,
     curpError,
-    setCurpError
+    setCurpError,
+    setProgram
   } = props
 
   const [isLoading, setIsLoading] = useState(true);
@@ -61,19 +122,47 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
   const [adviser, setAdviser] = useState<boolean>()
   const [curpTouched, setCurpTouched] = useState<boolean>(false)
 
-  const [optionsGender, setOptionsGender] = useState([{
-    value: "Hombre",
-    text: "Masculino",
-    active: false
-  }, {
-    value: "Mujer",
-    text: "Femenino",
-    active: false
-  }, {
-    value: "other",
-    text: "Otro",
-    active: false
-  }]);
+  const [optionsGender, setOptionsGender] = useState(
+    [
+      {
+        value: "Hombre",
+        text: "Masculino",
+        active: false
+      }, {
+        value: "Mujer",
+        text: "Femenino",
+        active: false
+      }, {
+        value: "other",
+        text: "Otro",
+        active: false
+      }
+    ]
+  );
+  const [ selectData, setSelectData ] = useState<any>([
+    {
+      value: programs[0].name,
+      text: programs[0].name,
+      active: false
+    },
+    {
+      value: programs[1].name,
+      text: programs[1].name,
+      active: false
+    },
+    {
+      value: programs[2].name,
+      text: programs[2].name,
+      active: false
+    },
+  ]);
+
+  
+  // useEffect(() => {
+    // const options = programs.map(program => {
+    //   return { value: program.name, text: program.name, active: false }
+    // });
+  // }, [])
 
   const [personalDataTouched, setPersonalDataTouched] = useState<{ [key: string]: boolean }>({
     name: false,
@@ -244,7 +333,7 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
 
 
   useEffect(() => {
-    console.log(personalData)
+    // console.log(personalData)
     Validate()
   }, [personalData]);
 
@@ -253,6 +342,19 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
     validateCurp()
 
   }, [curp]);
+
+  const handleSelectOption = async ({ detail }: CustomEvent) => {
+    const programData = programs.filter(program => program.name === detail)[0]
+    const options = programs.map(program => {	
+      return { value: program.name, text: program.name, active: program.name === detail }
+    });
+    setSelectData(options)
+    // console.log('programData: ', programData);
+    setProgram(programData)
+    
+  }
+
+
   const formCurp = <div >
     <div className="grid grid-cols-2 gap-x-6 gap-y-3">
       <div className="col-span-2">
@@ -385,7 +487,8 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
         />
       </div>
       <div className="col-span-2 flex items-center">
-        {/* add program select */}
+        <Select classname="w-full" onClick={(option: CustomEvent) => handleSelectOption(option)} data={{...SelectInit, textDefault: ""}} options={selectData} flagHeight={true}/>
+
       </div>
     </div>
   </div>
@@ -513,12 +616,13 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
       </div>
       <div className="col-span-2 flex items-center">
         {/* add program select */}
+        <Select onClick={(option: CustomEvent) => handleSelectOption(option)} data={{...SelectInit, textDefault: ""}} options={selectData} flagHeight={true}/>
+
       </div>
     </div>
   </div>
 
   return (
-
     <Container>
       <div className="gap-x-20">
         <div className="mobile:col-span-2 mb-4">
@@ -619,6 +723,7 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
             />
             <p className="font-texts font-normal text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p>
           </div>
+
           
             {
               isLoading
