@@ -191,8 +191,6 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
       })
   }
 
-  
-
   return (
       <ContentFullLayout>
         <section className="w-full bg-surface-0 z-15 transition-transform shadow-15 flex justify-between">
