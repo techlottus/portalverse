@@ -21,7 +21,7 @@ const CardWebsitePortalverse: FC<CardWebsitePortalverseData> = ({ data, classNam
           </div>
           <div className={cn("px-3 flex flex-col h-full", classNames, { "bg-surface-0": data?.background })}>
             <p className="pt-3 mb-2 font-texts font-normal text-surface-500 text-xs">{data?.subtitle?.toLocaleUpperCase()}</p>
-            <h5 className="mb-2 font-texts font-bold text-base">{data?.title}</h5>
+            <h3 className="mb-2 font-texts font-bold text-base">{data?.title}</h3>
             <RichtText data={{
               content: data?.text
             }} classNames="mb-2" />
@@ -57,7 +57,7 @@ const CardWebsitePortalverse: FC<CardWebsitePortalverseData> = ({ data, classNam
             {/* <Image classNames="w-full h-full aspect-3/4" src={data.image} alt="image" /> */}
             <div className={cn("px-2 flex flex-col break-words h-auto w-full", classNames)}>
               <p className="pt-3 mb-2 font-texts font-normal text-surface-500 text-xs">{data?.subtitle?.toLocaleUpperCase()}</p>
-              <h5 className="mb-2 font-texts font-bold text-base">{data?.title}</h5>
+              <h3 className="mb-2 font-texts font-bold text-base">{data?.title}</h3>
               <RichtText data={{
                 content: data?.text
               }} classNames="mb-2 pb-2 text-surface-500" />
