@@ -95,7 +95,9 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
 
   useEffect(() => {
     if (!isAuthenticated) {
-        router.push('/mi-movil-inscription/login')
+        // uncomment befor closing branch
+
+        // router.push('/mi-movil-inscription/login')
     }
   }, [isAuthenticated]);
   const getLeadModality = (modality: string) => {
@@ -182,8 +184,7 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
           residence: ""
         })
         setProgram({})
-        // uncomment befor closing branch
-        // window.location.reload()
+        window.location.reload()
       })
       .catch((err: any) => {
         setIsLoading(false);
