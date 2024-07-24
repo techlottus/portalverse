@@ -182,7 +182,8 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
           residence: ""
         })
         setProgram({})
-        window.location.reload()
+        // uncomment befor closing branch
+        // window.location.reload()
       })
       .catch((err: any) => {
         setIsLoading(false);
