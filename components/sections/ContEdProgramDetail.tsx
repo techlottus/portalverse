@@ -45,6 +45,7 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
   return (
     <ContentFullLayout>
       <Head>
+      <title>{name}</title>
         {/* THIS DATA COMES FROM STRAPI SEO */}
         <meta property="title" content={seo?.metaTitle} />{/* metaTitle */}
         <meta name="description" content={seo?.metaDescription} key="desc" />{/* metaDescription */}
