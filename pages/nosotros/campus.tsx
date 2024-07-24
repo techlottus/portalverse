@@ -221,7 +221,7 @@ const Campus = ({ sections, meta, prefilledData, options, program }: any) => {
                                   <a href={description?.redirect} rel="noreferrer noopener" className={cn("font-headings font-semibold underline text-4.5 leading-5.625", {
                                     "hover:underline": description?.redirect,
                                   })}>
-                                    <h5>{description?.name}</h5>
+                                    <h3>{description?.name}</h3>
                                   </a>
                                   <span className="text-primary-400 material-symbols-outlined select-non !text-lg ms-1">open_in_new</span>
                                 </div>
