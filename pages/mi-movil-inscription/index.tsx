@@ -77,9 +77,7 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
 
   useEffect(() => {
     if (!isAuthenticated) {
-        // go to an authenticated-only place
-        // uncomment when ready to avoid redirect issues
-        // router.push('/mi-movil-inscription/login')
+        router.push('/mi-movil-inscription/login')
     }
   }, [isAuthenticated]);
   
