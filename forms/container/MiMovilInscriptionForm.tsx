@@ -34,18 +34,73 @@ type MiMovilInscriptionFormData = {
   setCurpError: any;
   setProgram: any;
 }
+// programas staging
+    // {
+    //   BNRcharge: 1007,
+    //   BNRprogram: 'LRADME',
+    //   SFcampus: '001VC00000lJW47YAG',
+    //   SFcreditCode: 4157,
+    //   SFdebitCode: 4158,
+    //   SFlevel: 'Licenciatura',
+    //   SFline: 'UTC',
+    //   SFmodality: 'Online',
+    //   SFprogram: 'a0BVC0000010d7u2AA',
+    //   backup_email: 'campus.virtual@utc.mx',
+    //   concepto: 'Administración de empresas',
+    //   flow: 'ATR',
+    //   invoice_template: 7,
+    //   name: 'Licenciatura en Administración de Empresas',
+    //   payment_template: 3,
+    //   provider: 'UTC',
+    // },
+    // {
+    //   BNRcharge: 1007,
+    //   BNRprogram: 'LRMERC',
+    //   SFcampus: '001VC00000lJW47YAG',
+    //   SFcreditCode: 4157,
+    //   SFdebitCode: 4158,
+    //   SFlevel: 'Licenciatura',
+    //   SFline: 'UTC',
+    //   SFmodality: 'Online',
+    //   SFprogram: 'a0BVC0000010d7w2AA',
+    //   backup_email: 'campus.virtual@utc.mx',
+    //   concepto: 'Mercadotecnia',
+    //   flow: 'ATR',
+    //   invoice_template: 7,
+    //   name: 'Mercadotecnia',
+    //   payment_template: 3,
+    //   provider: 'UTC'
+    // },
+    // {
+    //   BNRcharge: 1007,
+    //   BNRprogram: 'LRCOFI',
+    //   SFcampus: '001VC00000lJW47YAG',
+    //   SFcreditCode: 4157,
+    //   SFdebitCode: 4158,
+    //   SFlevel: 'Licenciatura',
+    //   SFline: 'UTC',
+    //   SFmodality: 'Online',
+    //   SFprogram: 'a0BVC0000010d7v2AA',
+    //   backup_email: 'campus.virtual@utc.mx',
+    //   concepto: 'Contaduría y finanzas',
+    //   flow: 'ATR',
+    //   invoice_template: 7,
+    //   name: 'Contaduría y finanzas',
+    //   payment_template: 3,
+    //   provider: 'UTC'
+    // }
 
   const programs = [
     {
       BNRcharge: 1007,
       BNRprogram: 'LRADME',
-      SFcampus: '0014X00002d0CyEQAU',
+      SFcampus: '001VC00000lJW47YAG',
       SFcreditCode: 4157,
       SFdebitCode: 4158,
       SFlevel: 'Licenciatura',
       SFline: 'UTC',
       SFmodality: 'Online',
-      SFprogram: 'a0B4X000017NMkLUAW',
+      SFprogram: 'a0BVC0000010d7u2AA',
       backup_email: 'campus.virtual@utc.mx',
       concepto: 'Administración de empresas',
       flow: 'ATR',
@@ -57,13 +112,13 @@ type MiMovilInscriptionFormData = {
     {
       BNRcharge: 1007,
       BNRprogram: 'LRMERC',
-      SFcampus: '0014X00002d0CyEQAU',
+      SFcampus: '001VC00000lJW47YAG',
       SFcreditCode: 4157,
       SFdebitCode: 4158,
       SFlevel: 'Licenciatura',
       SFline: 'UTC',
       SFmodality: 'Online',
-      SFprogram: 'a0B4X000017NNVTUA4',
+      SFprogram: 'a0BVC0000010d7w2AA',
       backup_email: 'campus.virtual@utc.mx',
       concepto: 'Mercadotecnia',
       flow: 'ATR',
@@ -75,13 +130,13 @@ type MiMovilInscriptionFormData = {
     {
       BNRcharge: 1007,
       BNRprogram: 'LRCOFI',
-      SFcampus: '0014X00002d0CyEQAU',
+      SFcampus: '001VC00000lJW47YAG',
       SFcreditCode: 4157,
       SFdebitCode: 4158,
       SFlevel: 'Licenciatura',
       SFline: 'UTC',
       SFmodality: 'Online',
-      SFprogram: 'a0B4X000017NNPnUAO',
+      SFprogram: 'a0BVC0000010d7v2AA',
       backup_email: 'campus.virtual@utc.mx',
       concepto: 'Contaduría y finanzas',
       flow: 'ATR',
@@ -230,7 +285,8 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
             phone: "",
             birthdate: "",
             gender: "",
-            residence: "",adviser:""
+            residence: "",
+            adviser:""
           })
 
         }
