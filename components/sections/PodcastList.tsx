@@ -9,9 +9,9 @@ const PodcastList = (props: PodcastListSection) => {
     <section>
       <Container>
         {title ? (
-          <p className="font-headings font-bold text-10 w-t:text-7.5 w-p:text-7.5 leading-tight mb-6">
+          <h2 className="font-headings font-bold text-10 w-t:text-7.5 w-p:text-7.5 leading-tight mb-6">
             {title}
-          </p>
+          </h2>
         ) : null}
         {podcastItems?.length > 0
           ? <div className="flex flex-col space-y-6">

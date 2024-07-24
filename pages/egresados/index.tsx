@@ -32,7 +32,7 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid grid-cols-2 w-p:gap-12 gap-6">
           <div className="w-p:col-span-2 w-p:order-2">
-            <p className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6 mb-6"> { sections.introduccion.title}</p>
+            <h1 className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6 mb-6"> { sections.introduccion.title}</h1>
             <RichtText data={{
               content: sections.introduccion.descripcion
             }} />
@@ -51,7 +51,7 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
           <Video data={sections.video.video} />
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6 mb-6"> {sections.video.title}</p>
+          <h2 className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6 mb-6"> {sections.video.title}</h2>
           <RichtText data={{
             content: sections.video.descripcion
           }} />

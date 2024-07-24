@@ -20,8 +20,8 @@ const BannerNumeralia: FC<any> = ({ data: { image, title, subtitle, statics, ove
       "text-surface-0": overlay === "dark",
       "text-surface-950" : overlay === "white"
     })}>
-      <h2 className="font-headings font-bold w-d:leading-13 w-t:leading-7.5 w-p:leading-7.5 w-d:text-13 w-t:text-8.5 w-p:text-7.5">{title}</h2>
-      <h3 className="font-texts font-normal w-d:text-base w-t:text-6 w-p:text-6 w-d:leading-12.5 w-t:leading-4 w-p:leading-4"><b>{subtitle}</b></h3>
+      <h3 className="font-headings font-bold w-d:leading-13 w-t:leading-7.5 w-p:leading-7.5 w-d:text-13 w-t:text-8.5 w-p:text-7.5">{title}</h3>
+      <p className="font-texts font-normal w-d:text-base w-t:text-6 w-p:text-6 w-d:leading-12.5 w-t:leading-4 w-p:leading-4"><b>{subtitle}</b></p>
       <div className="w-d:flex w-t:flex w-p:grid w-p:grid-cols-2 gap-4 w-p:gap-3">
         {
           statics?.map((item:any, i:number) => <section className={cn("max-w-72", "w-p:mt-6")} key={`section-numbers-${i}`}>
