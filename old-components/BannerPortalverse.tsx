@@ -198,7 +198,7 @@ const BannerContent = (props: BannerPortalverseComponentData) => {
           data?.title
             ? <h3
                 className={cn(
-                  "font-headings font-bold",
+                  "font-headings font-bold text-wrap",
                   classNames,
                   {
                     "text-surface-0": data.overlayDak || data.font === "light",
