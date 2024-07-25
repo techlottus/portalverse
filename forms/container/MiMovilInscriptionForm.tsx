@@ -376,10 +376,11 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
     if (control === "birthdate") {
       setPersonalDataTouched({ ...personalDataTouched, [control]: true });
       setPersonalData({ ...personalData, [control]: new Date(value) });
+    } else {
+      setPersonalDataTouched({ ...personalDataTouched, [control]: true });
+      setPersonalData({ ...personalData, [control]: value, ["residence"]: residence ? "Nacional" : "Extranjero", ["adviser"]:value });
     }
     
-    setPersonalDataTouched({ ...personalDataTouched, [control]: true });
-    setPersonalData({ ...personalData, [control]: value, ["residence"]: residence ? "Nacional" : "Extranjero", ["adviser"]:value });
   };
 
   const handleTouchedControl = (control: string) => {
