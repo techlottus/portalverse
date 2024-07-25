@@ -99,7 +99,7 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
 
         // router.push('/mi-movil-inscription/login')
     }
-  }, [isAuthenticated]);
+  }, [isAuthenticated])
   const getLeadModality = (modality: string) => {
   switch (modality) {
     case "Presencial": return "Presencial";
@@ -249,8 +249,11 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
             />
             <div className={cn("flex flex-col w-full")}>
               <button
-                className="bg-primary-500 text-surface-0 rounded-lg py-3 font-bold text-lg"
-                disabled={!isValid}
+                className={cn({
+                  "bg-surface-200 text-surface-0 rounded-lg py-3 font-bold text-lg": !isValid || !program,
+                  "bg-primary-500 text-surface-0 rounded-lg py-3 font-bold text-lg": isValid && !!program, 
+                })}
+                disabled={!isValid || !program}
                 onClick={() => {
                   onSubmit()
                 }}
