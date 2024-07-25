@@ -172,6 +172,15 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
         if(res?.data?.Exitoso !== "TRUE") {
           throw new Error(res.data.Error);
         }
+        toast.success('¡Registro exitoso! :buzón_con_cartas: La inscripción ha sido completada', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          progress: undefined,
+          theme: "colored",
+        });
         // router.push(`/mi-movil-inscription`);
         setPersonalData({
           name: "",
