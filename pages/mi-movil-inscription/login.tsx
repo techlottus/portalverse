@@ -44,8 +44,9 @@ const MiMovilLogin: NextPageWithLayout<any> = (props: any) => {
   }, [isAuthenticated]);
 
   return (
-      <section className="w-full flex h-full items-center justify-between">
-        <Image width="610" height="700" src="https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTC/Frame_195_9eabdd4fcd.png" alt="utc" />
+      <section className="w-full flex h-full items-center justify-between overflow-hidden">
+        <section className="flex w-1/2 bg-[url('https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTC/Frame_195_9eabdd4fcd.png')] bg-cover bg-center h-screen">
+        </section>
         <section className="w-1/2 flex justify-center">
           <section className="h-full flex flex-col items-center justify-center gap-2">
             <Image width={180} height={41} src="https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTC/image_9_dccaab79ed.png" alt="logo mimovil" />
