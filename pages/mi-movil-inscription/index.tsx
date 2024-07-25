@@ -10,9 +10,8 @@ import { MiMovilInscriptionForm } from "@/forms/container/MiMovilInscriptionForm
 import axios from "axios";
 import { getTokenForms } from "@/utils/getTokenForms";
 import Image from "next/image";
-
-
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignOutButton = () => {
 
@@ -190,6 +189,16 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
       .catch((err: any) => {
         setIsLoading(false);
         setError(err.message);
+        toast.error(err.message, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
       })
   }
 
@@ -204,6 +213,15 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
           </div>
         </section>
         <section className="w-full flex justify-center mt-6">
+          <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            newestOnTop={true}
+            closeOnClick
+            pauseOnFocusLoss
+            pauseOnHover
+            theme="colored"
+          />
           <section className="flex flex-col justify-center items-center">
             <Image className="mb-6" width={180} height={41} src="https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTC/image_9_dccaab79ed.png" alt="logo mimovil" />
 
