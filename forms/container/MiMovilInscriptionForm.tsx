@@ -373,6 +373,11 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
 
   const handleKeyPress = (e: CustomEvent, control: string) => {
     const { detail: { value } } = e;
+    if (control === "birthdate") {
+      setPersonalDataTouched({ ...personalDataTouched, [control]: true });
+      setPersonalData({ ...personalData, [control]: new Date(value) });
+    }
+    
     setPersonalDataTouched({ ...personalDataTouched, [control]: true });
     setPersonalData({ ...personalData, [control]: value, ["residence"]: residence ? "Nacional" : "Extranjero", ["adviser"]:value });
   };
@@ -671,9 +676,7 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
         />
       </div>
       <div className="col-span-2 flex items-center">
-        {/* add program select */}
-        <Select onClick={(option: CustomEvent) => handleSelectOption(option)} data={{...SelectInit, textDefault: "Programa Educativo"}} options={selectData} flagHeight={true}/>
-
+        <Select classname="w-full" onClick={(option: CustomEvent) => handleSelectOption(option)} data={{...SelectInit, textDefault: "Programa Educativo"}} options={selectData} flagHeight={true}/>
       </div>
     </div>
   </div>
