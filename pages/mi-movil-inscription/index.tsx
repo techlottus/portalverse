@@ -170,7 +170,7 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
       .then((res: any) => {
         console.log('res?.data: ', res?.data);
         if(res?.data?.Exitoso !== "TRUE") {
-          throw new Error();
+          throw new Error(res.data.Error);
         }
         // router.push(`/mi-movil-inscription`);
         setPersonalData({
@@ -187,15 +187,16 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
         window.location.reload()
       })
       .catch((err: any) => {
+        console.log(err);
+        
         setIsLoading(false);
         setError(err.message);
         toast.error(err.message, {
           position: "top-right",
-          autoClose: 5000,
+          autoClose: 10000,
           hideProgressBar: false,
-          closeOnClick: true,
+          closeOnClick: false,
           pauseOnHover: true,
-          draggable: true,
           progress: undefined,
           theme: "colored",
         });
