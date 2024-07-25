@@ -412,7 +412,7 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
 
 
   const formCurp = <div >
-    <div className="grid grid-cols-2 gap-x-6 gap-y-3">
+    <div className="grid grid-cols-2 gap-x-6 ">
       <div className="col-span-2">
         <Input value={personalData?.name} data={{
           label: 'Nombre(s)*',
@@ -543,13 +543,13 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
         />
       </div>
       <div className="col-span-2 flex items-center">
-        <Select classname="w-full" onClick={(option: CustomEvent) => handleSelectOption(option)} data={{...SelectInit, textDefault: ""}} options={selectData} flagHeight={true}/>
+        <Select classname="w-full" onClick={(option: CustomEvent) => handleSelectOption(option)} data={{...SelectInit, textDefault: "Programa Educativo"}} options={selectData} flagHeight={true}/>
 
       </div>
     </div>
   </div>
   const formEmpty = <div >
-    <div className="grid grid-cols-2 gap-x-6 gap-y-3">
+    <div className="grid grid-cols-2 gap-x-3 gap-y-1">
       <div className="col-span-2">
         <Input data={{
           label: 'Nombre(s)*',
@@ -672,7 +672,7 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
       </div>
       <div className="col-span-2 flex items-center">
         {/* add program select */}
-        <Select onClick={(option: CustomEvent) => handleSelectOption(option)} data={{...SelectInit, textDefault: ""}} options={selectData} flagHeight={true}/>
+        <Select onClick={(option: CustomEvent) => handleSelectOption(option)} data={{...SelectInit, textDefault: "Programa Educativo"}} options={selectData} flagHeight={true}/>
 
       </div>
     </div>
@@ -680,18 +680,18 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
 
   return (
     <Container>
-      <div className="gap-x-20">
+      <div className="gap-x-10">
         <div className="mobile:col-span-2 mb-4">
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-2">
             <div>
-              <h3 className="font-headings font-bold text-3xl text-surface-900  mobile:text-lg">Estás a punto de iniciar tu curso</h3>
-              <p className="text-surface-500 font-texts text-base mt-3">Te pedimos llenar tus datos como estudiante para inscribirte</p>
+              <h3 className="font-headings font-bold text-3xl text-surface-900  mobile:text-lg text-center">Registra un nuevo alumno</h3>
+              <p className="text-surface-500 font-texts text-base mt-3  text-center">Te pedimos llenar los datos del estudiante para generar su inscripción</p>
             </div>
             <div>
               <p className="font-texts text-base font-bold text-surface-950">
-                1. ¿Eres mexicano? <span className="text-error-500">*</span>
+                1. ¿Es mexicano? <span className="text-error-500">*</span>
               </p>
-              <div className="flex space-x-3 mb-5 my-3">
+              <div className="flex space-x-3 my-3">
                 <OptionPill
                   data={{
                     name: "Si",
@@ -721,11 +721,11 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
           </div>
           {
             noResidence && <>
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-3">
                 <p className="font-headings text-4 font-bold">
-                  2. ¿Tienes CURP?
+                  2. ¿Tiene CURP?
                 </p>
-                <div className="flex gap-3 mb-5">
+                <div className="flex gap-1 mb-5">
                   <OptionPill
                     data={{
                       name: "Si",
@@ -777,7 +777,7 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
               eventFocus={() => setCurpTouched(true)}
               hasError={curpError}
             />
-            <p className="font-texts font-normal text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p>
+            <p className="font-texts font-normal text-surface-500 mb-3">¿No conoces su CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p>
           </div>
 
           

@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 import { MiMovilInscriptionForm } from "@/forms/container/MiMovilInscriptionForm";
 import axios from "axios";
 import { getTokenForms } from "@/utils/getTokenForms";
+import Image from "next/image";
 
 
 
@@ -202,8 +203,10 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
             { <SignOutButton/> }
           </div>
         </section>
-        <section className="w-full flex justify-center mt-20">
-          <section>
+        <section className="w-full flex justify-center mt-6">
+          <section className="flex flex-col justify-center items-center">
+            <Image className="mb-6" width={180} height={41} src="https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTC/image_9_dccaab79ed.png" alt="logo mimovil" />
+
             <MiMovilInscriptionForm
               submit={submit}
               setStatus={setStatus}
@@ -225,19 +228,16 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
               setCurpError={setCurpError}
               setProgram={setProgram}
             />
-            <div className={cn("flex flex-col my-6")}>
-              <Button
-                dark
-                data={{
-                  type: "primary",
-                  title: "Inscribirme ahora",
-                  isExpand: true,
-                  disabled: !isValid
-                }}
+            <div className={cn("flex flex-col w-full")}>
+              <button
+                className="bg-primary-500 text-surface-0 rounded-lg py-3 font-bold text-lg"
+                disabled={!isValid}
                 onClick={() => {
                   onSubmit()
                 }}
-              />
+              >
+                Completar registro
+              </button>
             </div>
           </section>
         </section>
