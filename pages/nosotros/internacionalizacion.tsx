@@ -262,7 +262,8 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
           : null
       }
       {
-        sections?.videoSection && <ContentLayout>
+        sections?.videoSection && 
+        <ContentLayout classNames="desktop:mt-18 mt-12">
           <section className="col-span-12">
             <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6 w-d:mb-">{sections?.videoSection.title}</p>
             <div className="grid w-d:grid-cols-2 w-p:grid-cols-1 gap-6">
