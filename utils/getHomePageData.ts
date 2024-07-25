@@ -1,5 +1,6 @@
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
 import { BANNER } from "@/utils/strapi/sections/Banner";
+import { TEXT_CONTENT } from "@/utils/strapi/sections/TextContent";
 import { CAROUSEL_SECTION } from "@/utils/strapi/sections/Carousel";
 import { FORM_VIDEO } from "@/utils/strapi/sections/FormVideo";
 import { HERO_SLIDER } from "@/utils/strapi/sections/HeroSlider";
@@ -15,6 +16,7 @@ import type { ListconfigSection } from "@/utils/strapi/sections/Listconfig";
 import type { OverlayCardListSection } from "@/utils/strapi/sections/OverlayCardList";
 import type { SeoData } from "@/utils/strapi/sections/SEO";
 import type { StatisticsCardListSection } from "@/utils/strapi/sections/StatisticsCardList";
+import { TextContentSection } from "@/utils/strapi/sections/TextContent";
 
 export type HomeComponentSection =
   | BannerSection
@@ -24,6 +26,7 @@ export type HomeComponentSection =
   | OverlayCardListSection
   | StatisticsCardListSection
   | FormVideoSection
+  | TextContentSection
 
 type HomePageResponse = {
   homePage: {
@@ -76,6 +79,7 @@ sections {
   ${STATISTICS_CARD_LIST}
   ${FORM_VIDEO}
   ${CAROUSEL_SECTION}
+  ${TEXT_CONTENT}
 }
 `;
 
