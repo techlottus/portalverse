@@ -102,6 +102,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
   return (
     <Fragment>
       <Head>
+      <title>{title}</title>
         {/* THIS DATA COMES FROM STRAPI SEO */}
         <meta property="title" content={seo?.metaTitle} />{/* metaTitle */}
         <meta name="description" content={seo?.metaDescription} key="desc" />{/* metaDescription */}

@@ -6,6 +6,9 @@ import Pixel from "@/components/Pixel"
 import { ScriptsPixels } from "@/utils/strapi/sections/ScriptPixel"
 import { scripts } from "@/general-config"
 import { sendWhatsapp } from "@/general-config"
+import { MsalProvider } from "@azure/msal-react";
+import { msalInstance } from "@/utils/authConfig";
+
 
 import WhatsappButton from "@/components/WhatsappButton"
 
@@ -34,9 +37,12 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
           )
         })
       }
-      <Component {...pageProps} />
-      {
-        pageProps?.program?.attributes?.price_list
+      <MsalProvider instance={msalInstance}>
+
+        <Component {...pageProps} />
+      </MsalProvider>
+      
+      { router.pathname.includes('mi-movil-inscription') || pageProps?.program?.attributes?.price_list
         ? null 
         : (sendWhatsapp && !sendWhatsapp?.hidden) && <WhatsappButton phone={sendWhatsapp?.phone}></WhatsappButton>
       }
