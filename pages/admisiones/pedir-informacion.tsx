@@ -12,6 +12,7 @@ const PedirInformacion: NextPageWithLayout<PedirInformacionPage> = ({ sections, 
   return <>
     <Head>
       <title>{ meta.title }</title>
+      <meta property="title" content={meta?.title} />
     </Head>
     <HeaderFooterLayout>
       <ContentLayout>

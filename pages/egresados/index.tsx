@@ -15,10 +15,10 @@ import BannerPortalverse from "@/old-components/BannerPortalverse"
 
 const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
   const router = useRouter();
-
   return <>
     <Head>
       <title>{meta.title}</title>
+      <meta property="title" content={meta?.title} />
     </Head>
     <HeaderFooterLayout>
       <ContentFullLayout classNames="gap-6 w-d:hidden mb-6">
