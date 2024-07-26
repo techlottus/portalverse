@@ -143,7 +143,7 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
       "apellidoPaterno": data.last_name,
       "apellidoMaterno": data.second_last_name,
       "genero": data.gender,
-      "fechaNacimiento": data.birthdate,
+      "fechaNacimiento": new Date(data.birthdate).toLocaleString('es-MX', { day: "2-digit", month: "2-digit", year: "numeric"}),
       "estadoCivil": "Soltero",
       "telefono": data.phone,
       "celular": data.phone,
