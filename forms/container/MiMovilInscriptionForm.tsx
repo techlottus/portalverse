@@ -378,10 +378,6 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
 
   const handleKeyPress = (e: CustomEvent, control: string) => {
     const { detail: { value } } = e;
-    if (control === "birthdate") {
-      setPersonalDataTouched({ ...personalDataTouched, [control]: true });
-      setPersonalData({ ...personalData, [control]: new Date(value) });
-    } else {
       setPersonalDataTouched({ ...personalDataTouched, [control]: true });
       setPersonalData({ ...personalData, [control]: value, ["residence"]: residence ? "Nacional" : "Extranjero", ["adviser"]:value });
   };
