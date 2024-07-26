@@ -52,6 +52,7 @@ type SelectComponentData = {
   data: SelectConfig;
   flagHeight?: boolean;
   onClick: (value: CustomEvent) => void
+  classname?: string;
 }
 
 export default SelectComponentData
