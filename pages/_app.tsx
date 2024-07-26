@@ -42,8 +42,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
         <Component {...pageProps} />
       </MsalProvider>
       
-      {
-        pageProps?.program?.attributes?.price_list
+      { router.pathname.includes('mi-movil-inscription') || pageProps?.program?.attributes?.price_list
         ? null 
         : (sendWhatsapp && !sendWhatsapp?.hidden) && <WhatsappButton phone={sendWhatsapp?.phone}></WhatsappButton>
       }

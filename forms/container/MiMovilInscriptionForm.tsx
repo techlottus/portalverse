@@ -10,6 +10,8 @@ import { SelectInit } from "@/old-components/fixture"
 import cn from "classnames";
 
 import Image from "@/old-components/Image"
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const axios = require('axios');
 
@@ -291,12 +293,16 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
 
         }
         if (response.data.curp) {
+          const rawBirthdate = response?.data?.fechaNacimiento.split('/')
+          const date = `${[rawBirthdate[2], rawBirthdate[1], rawBirthdate[0]]. join('-')}T00:00:00-06:00`
+          const birthdate = new Date(date)
+          
           setPersonalData({
             ...personalData,
             name: response?.data?.nombre,
             last_name: response?.data?.apellidoPaterno,
             second_last_name: response?.data?.apellidoMaterno,
-            birthdate: response?.data?.fechaNacimiento,
+            birthdate: birthdate,
             gender: response?.data?.sexo,
           })
           setIsSuccess(true)
@@ -331,6 +337,9 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
     }
     if (control === 'phone') {
       return value.trim().length === 10
+    }
+    if (control === 'birthdate') {
+      return  !!value && !!(new Date(value))
     }
     return !!value?.trim()
   };
@@ -373,8 +382,19 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
 
   const handleKeyPress = (e: CustomEvent, control: string) => {
     const { detail: { value } } = e;
-    setPersonalDataTouched({ ...personalDataTouched, [control]: true });
-    setPersonalData({ ...personalData, [control]: value, ["residence"]: residence ? "Nacional" : "Extranjero", ["adviser"]:value });
+      setPersonalDataTouched({ ...personalDataTouched, [control]: true });
+      setPersonalData({ ...personalData, [control]: value, ["residence"]: residence ? "Nacional" : "Extranjero", ["adviser"]:value });
+  };
+
+  const handleDateChange = (value: Date | null, control: string) => {
+    if (value) {
+      const date = new Date(value).toLocaleString('en-us', { day: "2-digit", month: "2-digit", year: "numeric"})
+      // console.log(date);
+      
+      setPersonalDataTouched({ ...personalDataTouched, [control]: true });
+      setPersonalData({ ...personalData, [control]: date});
+    }
+    
   };
 
   const handleTouchedControl = (control: string) => {
@@ -412,7 +432,7 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
 
 
   const formCurp = <div >
-    <div className="grid grid-cols-2 gap-x-6 gap-y-3">
+    <div className="grid grid-cols-2 gap-x-6 ">
       <div className="col-span-2">
         <Input value={personalData?.name} data={{
           label: 'Nombre(s)*',
@@ -471,21 +491,19 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
         />
       </div>
       <div className="">
-        <Input value={personalData?.birthdate} data={{
-          label: 'Fecha de Nacimiento',
-          name: 'birthdate',
-          type: 'text',
-          typeButton: 'classic',
-          onPaste: true,
-          pattern: '',
-          isRequired: true,
-          disabled: hasCurp && !!personalData.birthdate && isValidCurp
-        }}
-          eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "birthdate")}
-          eventFocus={() => handleTouchedControl("birthdate")}
-          errorMessage={configControls.errorMessagesInscriptionForm.birthdate}
-          hasError={personalDataErrors.birthdate}
+        <DatePicker
+          className={cn("w-full h-full pl-3 pr-13 py-3 rounded-t-lg border-b border-surface-400 outline-none bg-surface-100 placeholder:text-surface-500", {
+            "border-error-500": personalDataErrors.birthdate,
+            "text-surface-400": hasCurp && !!personalData.birthdate && isValidCurp,
+          })}
+          selected={personalData.birthdate}
+          onChange={(date) => handleDateChange(date, "birthdate")}
+          onFocus={() => handleTouchedControl("birthdate")}
+          placeholderText="Fecha de Nacimiento*"
+          dateFormat={'dd/MM/yy'}
+          disabled={hasCurp && !!personalData.birthdate && isValidCurp}
         />
+        { personalDataErrors.birthdate && <p className="text-error-500 font-texts text-xs ml-2 mt-4">{configControls.errorMessagesInscriptionForm.birthdate}</p>}
       </div>
       <div >
         <Input value={personalData?.gender} data={{
@@ -543,13 +561,13 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
         />
       </div>
       <div className="col-span-2 flex items-center">
-        <Select classname="w-full" onClick={(option: CustomEvent) => handleSelectOption(option)} data={{...SelectInit, textDefault: ""}} options={selectData} flagHeight={true}/>
+        <Select classname="w-full" onClick={(option: CustomEvent) => handleSelectOption(option)} data={{...SelectInit, textDefault: "Programa Educativo"}} options={selectData} flagHeight={true}/>
 
       </div>
     </div>
   </div>
   const formEmpty = <div >
-    <div className="grid grid-cols-2 gap-x-6 gap-y-3">
+    <div className="grid grid-cols-2 gap-x-3 gap-y-1">
       <div className="col-span-2">
         <Input data={{
           label: 'Nombre(s)*',
@@ -607,20 +625,18 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
         />
       </div>
       <div className="">
-        <Input data={{
-          label: 'Fecha de Nacimiento',
-          name: 'birthdate',
-          type: 'date',
-          typeButton: 'classic',
-          onPaste: true,
-          pattern: '',
-          isRequired: true,
-        }}
-          eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "birthdate")}
-          eventFocus={() => handleTouchedControl("birthdate")}
-          errorMessage={configControls.errorMessagesInscriptionForm.birthdate}
-          hasError={personalDataErrors.birthdate}
+       
+        <DatePicker
+          className={cn("w-full h-full pl-3 pr-13 py-3 rounded-t-lg border-b border-surface-400 outline-none bg-surface-100 placeholder:text-surface-500", {
+            "border-error-500": personalDataErrors.birthdate,
+          })}
+          selected={personalData.birthdate}
+          onChange={(date) => handleDateChange(date, "birthdate")}
+          onFocus={() => handleTouchedControl("birthdate")}
+          placeholderText="Fecha de Nacimiento*"
+          dateFormat={'dd/MM/yy'}
         />
+        { personalDataErrors.birthdate && <p className="text-error-500 font-texts text-xs ml-2 mt-4">{configControls.errorMessagesInscriptionForm.birthdate}</p>}
       </div>
       <div >
         <div className="mt-[-1em]"> <Select options={optionsGender} data={{
@@ -671,27 +687,25 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
         />
       </div>
       <div className="col-span-2 flex items-center">
-        {/* add program select */}
-        <Select onClick={(option: CustomEvent) => handleSelectOption(option)} data={{...SelectInit, textDefault: ""}} options={selectData} flagHeight={true}/>
-
+        <Select classname="w-full" onClick={(option: CustomEvent) => handleSelectOption(option)} data={{...SelectInit, textDefault: "Programa Educativo"}} options={selectData} flagHeight={true}/>
       </div>
     </div>
   </div>
 
   return (
     <Container>
-      <div className="gap-x-20">
+      <div className="gap-x-10">
         <div className="mobile:col-span-2 mb-4">
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-2">
             <div>
-              <h3 className="font-headings font-bold text-3xl text-surface-900  mobile:text-lg">Estás a punto de iniciar tu curso</h3>
-              <p className="text-surface-500 font-texts text-base mt-3">Te pedimos llenar tus datos como estudiante para inscribirte</p>
+              <h3 className="font-headings font-bold text-3xl text-surface-900  mobile:text-lg text-center">Registra un nuevo alumno</h3>
+              <p className="text-surface-500 font-texts text-base mt-3  text-center">Te pedimos llenar los datos del estudiante para generar su inscripción</p>
             </div>
             <div>
               <p className="font-texts text-base font-bold text-surface-950">
-                1. ¿Eres mexicano? <span className="text-error-500">*</span>
+                1. ¿Es mexicano? <span className="text-error-500">*</span>
               </p>
-              <div className="flex space-x-3 mb-5 my-3">
+              <div className="flex space-x-3 my-3">
                 <OptionPill
                   data={{
                     name: "Si",
@@ -721,11 +735,11 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
           </div>
           {
             noResidence && <>
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-3">
                 <p className="font-headings text-4 font-bold">
-                  2. ¿Tienes CURP?
+                  2. ¿Tiene CURP?
                 </p>
-                <div className="flex gap-3 mb-5">
+                <div className="flex gap-1 mb-5">
                   <OptionPill
                     data={{
                       name: "Si",
@@ -777,7 +791,7 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
               eventFocus={() => setCurpTouched(true)}
               hasError={curpError}
             />
-            <p className="font-texts font-normal text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p>
+            <p className="font-texts font-normal text-surface-500 mb-3">¿No conoces su CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p>
           </div>
 
           

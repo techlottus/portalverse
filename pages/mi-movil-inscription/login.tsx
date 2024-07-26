@@ -4,6 +4,7 @@ import ContentFullLayout from "@/layouts/ContentFull.layout"
 import NextPageWithLayout from "@/types/Layout.types"
 import { useIsAuthenticated } from "@azure/msal-react";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 
 /**
@@ -25,7 +26,7 @@ const SignInButton = () => {
     }
   };
   return (
-    <button className="bg-surface-900 text-surface-100 font-texts p-4 rounded-md" onClick={() => handleLogin("redirect")}>
+    <button className="bg-primary-500 text-surface-100 font-texts p-4 rounded-md font-bold px-8" onClick={() => handleLogin("redirect")}>
       Iniciar sesión
     </button>
   );
@@ -38,22 +39,23 @@ const MiMovilLogin: NextPageWithLayout<any> = (props: any) => {
 
   useEffect(() => {
     if (isAuthenticated) {
-        // go to an authenticated-only place
         router.push('/mi-movil-inscription')
     }
   }, [isAuthenticated]);
-  
+
   return (
-      <ContentFullLayout>
-        <section className="w-full bg-surface-0 z-15 transition-transform shadow-15 flex justify-between">
-          <div className="p-6 border-0 border-solid border-surface-200 border-r-2">
-            <div className="w-36 h-9 bg-logo bg-cover bg-center mobile:mx-auto"> </div>
-          </div>
-          <div className="p-3">
-            <SignInButton />
-          </div>
+      <section className="w-full flex h-full items-center justify-between overflow-hidden">
+        <section className="flex w-1/2 bg-[url('https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTC/Frame_195_9eabdd4fcd.png')] bg-cover bg-center h-screen">
         </section>
-      </ContentFullLayout>
+        <section className="w-1/2 flex justify-center">
+          <section className="h-full flex flex-col items-center justify-center gap-2">
+            <Image width={180} height={41} src="https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTC/image_9_dccaab79ed.png" alt="logo mimovil" />
+            <h1 className="font-headings text-2xl font-bold mt-6">Accede al formulario</h1>
+            <p className="font-texts mb-6">Utiliza el correo y contraseña de administrador para acceder</p>
+            <SignInButton />
+          </section>
+        </section> 
+      </section>
 
   )
 }

@@ -9,9 +9,9 @@ import { useRouter } from "next/router";
 import { MiMovilInscriptionForm } from "@/forms/container/MiMovilInscriptionForm";
 import axios from "axios";
 import { getTokenForms } from "@/utils/getTokenForms";
-
-
-
+import Image from "next/image";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignOutButton = () => {
 
@@ -97,7 +97,7 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
     if (!isAuthenticated) {
         router.push('/mi-movil-inscription/login')
     }
-  }, [isAuthenticated]);
+  }, [isAuthenticated])
   const getLeadModality = (modality: string) => {
   switch (modality) {
     case "Presencial": return "Presencial";
@@ -122,26 +122,13 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
 
   const sendInscriptionData = async (data: any) => {
     const endpoint = process.env.NEXT_PUBLIC_MI_MOVIL_INSCRIPTION;
-    //  https://lottus--develop.sandbox.my.salesforce.com/services/apexrest/alumno_convenio_empresarial_inscripcion
-
-    // const nombre = personalData?.name;
-    // const apellidoPaterno = personalData?.last_name;
-    // const telefono = personalData?.phone;
-    // const email = personalData?.email;
-    // const lineaNegocio = program?.lineaNegocio || process.env.NEXT_PUBLIC_BUSINESS_UNIT;
-    // const modalidad = getLeadModality(program?.modality);
-    // const nivel = program?.level;
-    // const campus = program?.campus;
-    // const programa = program?.program;
-    // const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&telefono=${telefono}&email=${email}&lineaNegocio=${lineaNegocio}&modalidad=${modalidad}&nivel=${nivel}&campus=${campus}&programa=${programa}`;
-
     setIsLoading(true);
     const body = {
       "nombre": data.name,
       "apellidoPaterno": data.last_name,
       "apellidoMaterno": data.second_last_name,
       "genero": data.gender,
-      "fechaNacimiento": data.birthdate,
+      "fechaNacimiento": new Date(data.birthdate).toLocaleString('es-MX', { day: "2-digit", month: "2-digit", year: "numeric"}),
       "estadoCivil": "Soltero",
       "telefono": data.phone,
       "celular": data.phone,
@@ -156,8 +143,7 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
       "claveCargoBanner": data.metadata.BNRcharge,
       "empresaConvenio": "MI MÓVIL"
     }
-    console.log('body: ', body);
-    
+    // console.log('body: ', body);
 
     await axios.post(`${endpoint}`, body,{
       headers: {
@@ -168,8 +154,17 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
       .then((res: any) => {
         console.log('res?.data: ', res?.data);
         if(res?.data?.Exitoso !== "TRUE") {
-          throw new Error();
+          throw new Error(res.data.Error);
         }
+        toast.success('¡Registro exitoso! 📬 La inscripción ha sido completada', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          progress: undefined,
+          theme: "colored",
+        });
         // router.push(`/mi-movil-inscription`);
         setPersonalData({
           name: "",
@@ -182,15 +177,26 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
           residence: ""
         })
         setProgram({})
-        window.location.reload()
+        setTimeout(() => {
+          window.location.reload()
+        }, 5000);
       })
       .catch((err: any) => {
+        console.log(err);
+        
         setIsLoading(false);
         setError(err.message);
+        toast.error(err.message, {
+          position: "top-right",
+          autoClose: 10000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          progress: undefined,
+          theme: "colored",
+        });
       })
   }
-
-  
 
   return (
       <ContentFullLayout>
@@ -202,8 +208,19 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
             { <SignOutButton/> }
           </div>
         </section>
-        <section className="w-full flex justify-center mt-20">
-          <section>
+        <section className="w-full flex justify-center mt-6">
+          <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            newestOnTop={true}
+            closeOnClick
+            pauseOnFocusLoss
+            pauseOnHover
+            theme="colored"
+          />
+          <section className="flex flex-col justify-center items-center">
+            <Image className="mb-6" width={180} height={41} src="https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTC/image_9_dccaab79ed.png" alt="logo mimovil" />
+
             <MiMovilInscriptionForm
               submit={submit}
               setStatus={setStatus}
@@ -225,19 +242,19 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
               setCurpError={setCurpError}
               setProgram={setProgram}
             />
-            <div className={cn("flex flex-col my-6")}>
-              <Button
-                dark
-                data={{
-                  type: "primary",
-                  title: "Inscribirme ahora",
-                  isExpand: true,
-                  disabled: !isValid
-                }}
+            <div className={cn("flex flex-col w-full")}>
+              <button
+                className={cn({
+                  "bg-surface-200 text-surface-0 rounded-lg py-3 font-bold text-lg": !isValid || !program || isLoading,
+                  "bg-primary-500 text-surface-0 rounded-lg py-3 font-bold text-lg": isValid && !!program, 
+                })}
+                disabled={!isValid || !program || isLoading}
                 onClick={() => {
                   onSubmit()
                 }}
-              />
+              >
+                Completar registro
+              </button>
             </div>
           </section>
         </section>
