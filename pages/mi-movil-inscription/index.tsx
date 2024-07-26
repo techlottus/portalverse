@@ -127,7 +127,7 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
 
   useEffect(() => {
     if (!isAuthenticated) {
-        // router.push('/mi-movil-inscription/login')
+        router.push('/mi-movil-inscription/login')
     }
   }, [isAuthenticated])
 
