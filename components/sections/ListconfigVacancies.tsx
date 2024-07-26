@@ -19,7 +19,7 @@ const ListconfigVacancies = (props: ListconfigData) => {
           {
             title
               ? <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-                <p className="font-headings font-bold text-8.5 w-t:text-6 w-p:text-6 semi-tight w-t:leading-tight w-p:leading-tight">
+                <p className="font-headings font-bold desktop:text-8.5 desktop:leading-8.5 text-6 leading-6 semi-tight">
                   {title}
                 </p>
               </div>
@@ -29,11 +29,11 @@ const ListconfigVacancies = (props: ListconfigData) => {
             vacancies?.length > 0
               ? <div className="grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
                 {
-                  vacancies?.map((vacant, i) => 
-                    
-                    (                    
+                  vacancies?.map((vacant, i) =>
+
+                  (
                     <div key={`section-blog-${i}`}>
-                      
+
                       <CardWebsitePortalverse
                         data={{
                           ...vacant,
@@ -55,20 +55,20 @@ const ListconfigVacancies = (props: ListconfigData) => {
                             iconSecond: "arrow_left"
                           },
                           aspect: "2/1"
-                        }}                        
-                         onClick={!!vacant?.attributes?.redirect ? () => {                          
-                            router.push(vacant?.attributes?.redirect)
+                        }}
+                        onClick={!!vacant?.attributes?.redirect ? () => {
+                          router.push(vacant?.attributes?.redirect)
                         } : undefined
-                        
+
                         }
-                        
+
                       />
                     </div>
                   ))
                 }
-                
+
               </div>
-              
+
               : null
           }
 
