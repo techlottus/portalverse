@@ -135,7 +135,7 @@ const GraduatesForm = () => {
             <img src={errors?.["404"]?.image} alt="error" />
           </div>
           <div className="text-center">
-            <h1>Ha ocurrido un error al procesar tu información</h1>
+            <h3>Ha ocurrido un error al procesar tu información</h3>
             <p>Lamentamos el inconveniente y te pedimos intentarlo de nuevo</p>
           </div>
           <Button

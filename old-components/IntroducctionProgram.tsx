@@ -45,7 +45,7 @@ const IntroductionProgram: FC<IntroductionProgramData> = (props: IntroductionPro
                   }
                   {
                     title ?
-                      <h3 className="text-10 font-bold font-headings leading-12 w-t:semi-tight w-p:leading-tight w-t:text-8.5 w-p:text-7.5">{title}</h3>
+                      <h1 className="text-10 font-bold font-headings leading-12 w-t:semi-tight w-p:leading-tight w-t:text-8.5 w-p:text-7.5">{title}</h1>
                       : null
                   }
                 </div>

@@ -53,9 +53,9 @@ const ExternalPostByCategoryList: FC<ExternalPostListData> = (
         <section className="flex flex-col">
           {title ? (
             <div className="mb-6">
-              <h3 className="font-headings text-10 font-bold leading-tight w-t:text-8.5 w-p:text-6">
+              <h2 className="font-headings text-10 font-bold leading-tight w-t:text-8.5 w-p:text-6">
                 {title}
-              </h3>
+              </h2>
             </div>
           ) : null}
           {description ? (

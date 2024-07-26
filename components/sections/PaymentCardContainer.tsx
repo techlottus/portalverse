@@ -57,7 +57,7 @@ const PaymentCardContainer = (props: PaymentCardContainerData) => {
       <ContentLayout>
         <div id="payment_cards" className="col-span-12 py-12 px-20 mobile:px-4">
           <div className="col-span-12 text-center">
-            <p className="font-headings text-2xl font-bold">{title}<span className="text-secondary-500">{accent_title}</span></p>
+            <h2 className="font-headings text-2xl font-bold">{title}<span className="text-secondary-500">{accent_title}</span></h2>
             <p className="font-texts text-surface-500">{subtitle}</p>
           </div>
           <div>

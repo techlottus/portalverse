@@ -207,7 +207,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
                     <section className={cn("col-span-12 max-w-d-base mx-auto w-d-base:px-6 mt-18", { "hidden w-p:hidden": tabActive !== i })}>
                       {
                         sections?.AtrProgramPerks?.titleCards ?
-                          <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6 mb-6">{sections?.AtrProgramPerks?.titleCards}</p>
+                          <h2 className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6 mb-6">{sections?.AtrProgramPerks?.titleCards}</h2>
                           : null
                       }
                       <section className="grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
@@ -229,7 +229,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
         : sections.requirements ?
           <ContentLayout>
             <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mt-18 w-p:my-6 w-t:my-6">
-              <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{sections?.requirements?.title}</p>
+              <h2 className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{sections?.requirements?.title}</h2>
             </div>
             <div className="w-d:hidden col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:flex w-t:justify-center">
               <div className="">
@@ -264,7 +264,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
                     {
                       titleCards ?
                         <div className={cn("col-span-12 w-t:col-span-8 w-p:col-span-4", { "hidden": tabActive !== i })}>
-                          <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{titleCards}</p>
+                          <h2 className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{titleCards}</h2>
                         </div>
                         : null
                     }
@@ -306,7 +306,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
       </ContentFullLayout>
       <ContentLayout classNames="mt-12 w-d:mt-18">
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6 mb-6">{sections?.egresados?.title}</p>
+          <h2 className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6 mb-6">{sections?.egresados?.title}</h2>
           <RichtText data={{
             content: sections?.egresados?.description
           }} />
@@ -358,7 +358,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
             : null
         }
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{sections?.FAQ?.title}</p>
+          <h2 className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{sections?.FAQ?.title}</h2>
         </div>
         {
           sections?.FAQ?.faqImage ?

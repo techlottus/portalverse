@@ -37,9 +37,9 @@ const FormVideo = (props: FormVideoSection) => {
             />
           </div>
           <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-            <p className="mb-6 font-headings font-semibold text-5.5 w-p:text-6">
+            <h4 className="mb-6 font-headings font-semibold text-5.5 w-p:text-6">
               {videoTitle}
-            </p>
+            </h4>
             {
               <div className="h-80">
                 <Video

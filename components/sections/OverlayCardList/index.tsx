@@ -14,9 +14,9 @@ const OverlayCardList = (props: OverlayCardListSection) => {
         <div className="flex flex-col space-y-4">
           {
             title
-              ? <h3 className="font-headings font-bold leading-tight w-p:text-6 w-t:text-8.5 text-10">
+              ? <h2 className="font-headings font-bold leading-tight w-p:text-6 w-t:text-8.5 text-10">
                   {title}
-                </h3>
+                </h2>
               : null
           }
           {
