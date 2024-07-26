@@ -3,7 +3,6 @@ import { GoogleMapSection } from "@/utils/strapi/sections/GoogleMap";
 import Aspect from "@/components/Aspect";
 import cn from "classnames";
 import Container from "@/layouts/Container.layout";
-import { Heading } from "@lottuseducation/atoms";
 const GoogleMap: FC<GoogleMapSection> = (props: GoogleMapSection) => {
   const {
     title,
