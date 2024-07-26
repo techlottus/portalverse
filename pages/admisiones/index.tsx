@@ -43,10 +43,10 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
   }, [sections?.requirements?.tabs, sections?.AtrProgramPerks?.tabs]);
 
   const navigate = (route: string) => router.push(route)
-
   return <>
     <Head>
       <title>{meta?.title}</title>
+      <meta property="title" content={meta?.title} />
     </Head>
     <HeaderFooterLayout breadcrumbs={true}>
       <ContentLayout>

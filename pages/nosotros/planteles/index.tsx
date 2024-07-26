@@ -56,6 +56,7 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
     <>
       <Head>
         <title>{meta?.title}</title>
+        <meta property="title" content={meta?.title} />
       </Head>
       <>
         <Transition appear show={!!campus} as={Fragment}>

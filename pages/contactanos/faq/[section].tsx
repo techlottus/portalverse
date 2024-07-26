@@ -31,6 +31,7 @@ const FAQ: NextPageWithLayout<any> = ({ info, meta, sections }: any) => {
   return <>
     <Head>
       <title>{ meta.title }</title>
+      <meta property="title" content={meta?.title} />
     </Head>
     <HeaderFooterLayout>
       <ContentLayout>
