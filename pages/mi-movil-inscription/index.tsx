@@ -35,9 +35,41 @@ const SignOutButton = () => {
   );
 };
 
-
+  const getBusinessLineToFetchFrom = (businessLine: string, modality: string) => {
+    switch(businessLine) {
+      case "UANE": {
+        switch(modality) {
+          case "Presencial": return "UANE";
+          case "Flex": return "ULA";
+          case "Online": return "UANE,ULA";
+          default: return "UANE"
+        }
+      }
+      case "UTEG": {
+        switch(modality) {
+          case "Presencial": return "UTEG";
+          case "Flex": return "ULA";
+          case "Online": return "ULA";
+          default: return "UTEG"
+        }
+      }
+      case "ULA": {
+        return "ULA"
+      }
+      case "UTC": {
+        switch(modality) {
+          case "Presencial": return "UTC";
+          case "Semipresencial": return "UTC,ULA";
+          case "Online": return "UTC";
+          default: return "UTC"
+        }
+      }
+      default: return ""
+    }
+  }
 
 const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
+
   const [residence, setResidence] = useState<any>('')
   const [noResidence, setNoResidence] = useState<any>('')
   const [hasCurp, setHasCurp] = useState<any>(false)
@@ -52,6 +84,7 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
   const [isValidCurp, setIsValidCurp] = useState(false);
   const [curpError, setCurpError] = useState(false);
   const [ program, setProgram ] = useState<any>(null);
+  const [ programs, setPrograms ] = useState<any>([]);
   const [tokenActive, setTokenActive] = useState<string>("");
 
 
@@ -86,8 +119,6 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
   const router = useRouter()
 
   useEffect(() => {
-    console.log(token);
-    
     if (!isLoadingToken && !isErrorToken && !!Object.keys(token).length) {
       setTokenActive(`${token.token_type} ${token.access_token}`);
     }
@@ -98,16 +129,12 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
         router.push('/mi-movil-inscription/login')
     }
   }, [isAuthenticated])
-  const getLeadModality = (modality: string) => {
-  switch (modality) {
-    case "Presencial": return "Presencial";
-    case "Online": return "Online";
-    case "Flex": return "Online"; // Applies to "UANE" and "UTEG" offer.
-    case "Semipresencial": return "Semipresencial"; // Applies to "ULA" offer.
-    default: return "";
-  }
-};
 
+  useEffect(() => {
+    if (tokenActive) {
+      handleFetchEducativeOffer('')
+    }
+  }, [tokenActive])
 
   const onSubmit = () => {
     const data = {
@@ -120,8 +147,59 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
     
   }
 
+
+  const handleFetchEducativeOffer = async (modality: string) => {
+    setPrograms([]);
+    const businessLineToFetchFrom = getBusinessLineToFetchFrom(process.env.NEXT_PUBLIC_BUSINESS_UNIT!, modality);
+
+    setIsLoading(true);
+    setError('');
+
+    await axios.get(
+      `${process.env.NEXT_PUBLIC_EDUCATIVE_OFFER_MANHATTAN!}`, {
+        params: {
+          linea: businessLineToFetchFrom,
+          campus: 'UTC A TU RITMO'
+        },
+        headers: {
+          'Authorization': tokenActive,
+          'Content-Type': 'application/json;charset=UTF-8'
+        }
+      }
+    )
+      .then( (res: any) => {
+        const { data: programs } = res;
+
+        const periods = programs?.reduce((acc: any, program: any, index: number, arr: any[]) => {
+          if (!acc.includes(program.nombrePeriodo)) {
+            acc = [...acc, program.nombrePeriodo]
+          }
+          return acc
+        }, [])
+        const currentPeriod = periods?.sort((a: any,b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[periods.length - 1]
+
+        const periodPrograms = programs?.filter((program: any) => {
+
+          return program.nombrePeriodo === currentPeriod
+        })
+        
+
+        if(!!periodPrograms && !!periodPrograms.length) {
+          setPrograms([ ...periodPrograms ])
+          setError('');
+        }
+        setIsLoading(false);
+      })
+      .catch( (err: any) => {
+        console.log("err", err);
+        setError(err)
+        setIsLoading(false);
+      })
+  }
+
   const sendInscriptionData = async (data: any) => {
     const endpoint = process.env.NEXT_PUBLIC_MI_MOVIL_INSCRIPTION;
+
     setIsLoading(true);
     const body = {
       "nombre": data.name,
@@ -133,14 +211,16 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
       "telefono": data.phone,
       "celular": data.phone,
       "email": data.email,
-      "modalidad": data.metadata.SFmodality,
-      "nivel": data.metadata.SFlevel,
-      "campus": data.metadata.SFcampus,
-      "programa": data.metadata.SFprogram,
-      "nacionalidad": data.residence,
       "curp": data.curp,
-      "lineaNegocio": data.metadata.SFline,
-      "claveCargoBanner": data.metadata.BNRcharge,
+      "nacionalidad": data.residence,
+
+      "modalidad": data.metadata.modalidad,
+      "nivel": data.metadata.nivel,
+      "campus": data.metadata.idCampus,
+      "programa": data.metadata.idPrograma,
+      "lineaNegocio": data.metadata.lineaNegocio,
+      "claveCargoBanner": 1007,
+
       "empresaConvenio": "MI MÓVIL"
     }
     // console.log('body: ', body);
@@ -152,7 +232,6 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
       }
     })
       .then((res: any) => {
-        console.log('res?.data: ', res?.data);
         if(res?.data?.Exitoso !== "TRUE") {
           throw new Error(res.data.Error);
         }
@@ -165,7 +244,6 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
           progress: undefined,
           theme: "colored",
         });
-        // router.push(`/mi-movil-inscription`);
         setPersonalData({
           name: "",
           last_name: "",
@@ -199,66 +277,67 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
   }
 
   return (
-      <ContentFullLayout>
-        <section className="w-full bg-surface-0 z-15 transition-transform shadow-15 flex justify-between">
-          <div className="p-6 border-0 border-solid border-surface-200 border-r-2">
-            <div className="w-36 h-9 bg-logo bg-cover bg-center mobile:mx-auto"> </div>
-          </div>
-          <div className="p-3">
-            { <SignOutButton/> }
-          </div>
-        </section>
-        <section className="w-full flex justify-center mt-6">
-          <ToastContainer
-            position="top-right"
-            autoClose={5000}
-            newestOnTop={true}
-            closeOnClick
-            pauseOnFocusLoss
-            pauseOnHover
-            theme="colored"
-          />
-          <section className="flex flex-col justify-center items-center">
-            <Image className="mb-6" width={180} height={41} src="https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTC/image_9_dccaab79ed.png" alt="logo mimovil" />
+    <ContentFullLayout>
+      <section className="w-full bg-surface-0 z-15 transition-transform shadow-15 flex justify-between">
+        <div className="p-6 border-0 border-solid border-surface-200 border-r-2">
+          <div className="w-36 h-9 bg-logo bg-cover bg-center mobile:mx-auto"> </div>
+        </div>
+        <div className="p-3">
+          { <SignOutButton/> }
+        </div>
+      </section>
+      <section className="w-full flex justify-center mt-6">
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          newestOnTop={true}
+          closeOnClick
+          pauseOnFocusLoss
+          pauseOnHover
+          theme="colored"
+        />
+        <section className="flex flex-col justify-center items-center">
+          <Image className="mb-6" width={180} height={41} src="https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTC/image_9_dccaab79ed.png" alt="logo mimovil" />
 
-            <MiMovilInscriptionForm
-              submit={submit}
-              setStatus={setStatus}
-              residence={residence}
-              noResidence={noResidence}
-              hasCurp={hasCurp}
-              noCurp={noCurp}
-              setResidence={setResidence}
-              setNoResidence={setNoResidence}
-              setHasCurp={setHasCurp}
-              setNoCurp={setNoCurp}
-              personalData={personalData}
-              setPersonalData={setPersonalData}
-              curp={curp}
-              setCurp={setCurp}
-              isValidCurp={isValidCurp}
-              setIsValidCurp={setIsValidCurp}
-              curpError={curpError}
-              setCurpError={setCurpError}
-              setProgram={setProgram}
-            />
-            <div className={cn("flex flex-col w-full")}>
-              <button
-                className={cn({
-                  "bg-surface-200 text-surface-0 rounded-lg py-3 font-bold text-lg": !isValid || !program || isLoading,
-                  "bg-primary-500 text-surface-0 rounded-lg py-3 font-bold text-lg": isValid && !!program, 
-                })}
-                disabled={!isValid || !program || isLoading}
-                onClick={() => {
-                  onSubmit()
-                }}
-              >
-                Completar registro
-              </button>
-            </div>
-          </section>
+          <MiMovilInscriptionForm
+            submit={submit}
+            setStatus={setStatus}
+            residence={residence}
+            noResidence={noResidence}
+            hasCurp={hasCurp}
+            noCurp={noCurp}
+            setResidence={setResidence}
+            setNoResidence={setNoResidence}
+            setHasCurp={setHasCurp}
+            setNoCurp={setNoCurp}
+            personalData={personalData}
+            setPersonalData={setPersonalData}
+            curp={curp}
+            setCurp={setCurp}
+            isValidCurp={isValidCurp}
+            setIsValidCurp={setIsValidCurp}
+            curpError={curpError}
+            setCurpError={setCurpError}
+            setProgram={setProgram}
+            programs={programs}
+          />
+          <div className={cn("flex flex-col w-full")}>
+            <button
+              className={cn({
+                "bg-surface-200 text-surface-0 rounded-lg py-3 font-bold text-lg": !isValid || !program,
+                "bg-primary-500 text-surface-0 rounded-lg py-3 font-bold text-lg": isValid && !!program, 
+              })}
+              disabled={!isValid || !program}
+              onClick={() => {
+                onSubmit()
+              }}
+            >
+              Completar registro
+            </button>
+          </div>
         </section>
-      </ContentFullLayout>
+      </section>
+    </ContentFullLayout>
   )
 }
 export default MiMovilInscription

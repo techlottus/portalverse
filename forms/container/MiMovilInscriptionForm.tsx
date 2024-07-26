@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Input from "@/old-components/Input/Input"
 import Container from "@/layouts/Container.layout";
 import OptionPill from "@/old-components/OptionPill";
-import Checkbox from "@/old-components/Checkbox";
 import configControls from "@/forms/fixtures/controls"
 import Select from "@/old-components/Select/Select";
 import { SelectInit } from "@/old-components/fixture"
@@ -35,119 +34,8 @@ type MiMovilInscriptionFormData = {
   curpError: any;
   setCurpError: any;
   setProgram: any;
+  programs: any[]
 }
-// programas staging
-    // {
-    //   BNRcharge: 1007,
-    //   BNRprogram: 'LRADME',
-    //   SFcampus: '001VC00000lJW47YAG',
-    //   SFcreditCode: 4157,
-    //   SFdebitCode: 4158,
-    //   SFlevel: 'Licenciatura',
-    //   SFline: 'UTC',
-    //   SFmodality: 'Online',
-    //   SFprogram: 'a0BVC0000010d7u2AA',
-    //   backup_email: 'campus.virtual@utc.mx',
-    //   concepto: 'Administración de empresas',
-    //   flow: 'ATR',
-    //   invoice_template: 7,
-    //   name: 'Licenciatura en Administración de Empresas',
-    //   payment_template: 3,
-    //   provider: 'UTC',
-    // },
-    // {
-    //   BNRcharge: 1007,
-    //   BNRprogram: 'LRMERC',
-    //   SFcampus: '001VC00000lJW47YAG',
-    //   SFcreditCode: 4157,
-    //   SFdebitCode: 4158,
-    //   SFlevel: 'Licenciatura',
-    //   SFline: 'UTC',
-    //   SFmodality: 'Online',
-    //   SFprogram: 'a0BVC0000010d7w2AA',
-    //   backup_email: 'campus.virtual@utc.mx',
-    //   concepto: 'Mercadotecnia',
-    //   flow: 'ATR',
-    //   invoice_template: 7,
-    //   name: 'Mercadotecnia',
-    //   payment_template: 3,
-    //   provider: 'UTC'
-    // },
-    // {
-    //   BNRcharge: 1007,
-    //   BNRprogram: 'LRCOFI',
-    //   SFcampus: '001VC00000lJW47YAG',
-    //   SFcreditCode: 4157,
-    //   SFdebitCode: 4158,
-    //   SFlevel: 'Licenciatura',
-    //   SFline: 'UTC',
-    //   SFmodality: 'Online',
-    //   SFprogram: 'a0BVC0000010d7v2AA',
-    //   backup_email: 'campus.virtual@utc.mx',
-    //   concepto: 'Contaduría y finanzas',
-    //   flow: 'ATR',
-    //   invoice_template: 7,
-    //   name: 'Contaduría y finanzas',
-    //   payment_template: 3,
-    //   provider: 'UTC'
-    // }
-
-  const programs = [
-    {
-      BNRcharge: 1007,
-      BNRprogram: 'LRADME',
-      SFcampus: '001VC00000lJW47YAG',
-      SFcreditCode: 4157,
-      SFdebitCode: 4158,
-      SFlevel: 'Licenciatura',
-      SFline: 'UTC',
-      SFmodality: 'Online',
-      SFprogram: 'a0BVC0000010d7u2AA',
-      backup_email: 'campus.virtual@utc.mx',
-      concepto: 'Administración de empresas',
-      flow: 'ATR',
-      invoice_template: 7,
-      name: 'Licenciatura en Administración de Empresas',
-      payment_template: 3,
-      provider: 'UTC',
-    },
-    {
-      BNRcharge: 1007,
-      BNRprogram: 'LRMERC',
-      SFcampus: '001VC00000lJW47YAG',
-      SFcreditCode: 4157,
-      SFdebitCode: 4158,
-      SFlevel: 'Licenciatura',
-      SFline: 'UTC',
-      SFmodality: 'Online',
-      SFprogram: 'a0BVC0000010d7w2AA',
-      backup_email: 'campus.virtual@utc.mx',
-      concepto: 'Mercadotecnia',
-      flow: 'ATR',
-      invoice_template: 7,
-      name: 'Mercadotecnia',
-      payment_template: 3,
-      provider: 'UTC'
-    },
-    {
-      BNRcharge: 1007,
-      BNRprogram: 'LRCOFI',
-      SFcampus: '001VC00000lJW47YAG',
-      SFcreditCode: 4157,
-      SFdebitCode: 4158,
-      SFlevel: 'Licenciatura',
-      SFline: 'UTC',
-      SFmodality: 'Online',
-      SFprogram: 'a0BVC0000010d7v2AA',
-      backup_email: 'campus.virtual@utc.mx',
-      concepto: 'Contaduría y finanzas',
-      flow: 'ATR',
-      invoice_template: 7,
-      name: 'Contaduría y finanzas',
-      payment_template: 3,
-      provider: 'UTC'
-    }
-  ]
 
 const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
 
@@ -170,13 +58,13 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
     setIsValidCurp,
     curpError,
     setCurpError,
-    setProgram
+    setProgram,
+    programs
   } = props
 
   const [isLoading, setIsLoading] = useState(true);
   const [isValid, setIsValid] = useState(false);
   const [isSuccess, setIsSuccess] = useState(true);
-  const [adviser, setAdviser] = useState<boolean>()
   const [curpTouched, setCurpTouched] = useState<boolean>(false)
 
   const [optionsGender, setOptionsGender] = useState(
@@ -196,30 +84,19 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
       }
     ]
   );
-  const [ selectData, setSelectData ] = useState<any>([
-    {
-      value: programs[0].name,
-      text: programs[0].name,
-      active: false
-    },
-    {
-      value: programs[1].name,
-      text: programs[1].name,
-      active: false
-    },
-    {
-      value: programs[2].name,
-      text: programs[2].name,
-      active: false
-    },
-  ]);
+  const [ selectData, setSelectData ] = useState<any>();
 
-  
-  // useEffect(() => {
-    // const options = programs.map(program => {
-    //   return { value: program.name, text: program.name, active: false }
-    // });
-  // }, [])
+  useEffect(() => {
+    const values = programs.map(program => {
+      return {
+        value: program.nombrePrograma,
+        text: program.nombrePrograma,
+        active: false
+      }
+    }) 
+    setSelectData(values)
+  }, [programs])
+
 
   const [personalDataTouched, setPersonalDataTouched] = useState<{ [key: string]: boolean }>({
     name: false,
@@ -388,8 +265,10 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
 
   const handleDateChange = (value: Date | null, control: string) => {
     if (value) {
-      const date = new Date(value).toLocaleString('en-us', { day: "2-digit", month: "2-digit", year: "numeric"})
-      // console.log(date);
+      const date = new Date(value)
+      console.log(date);
+      const newdate = date.toLocaleString('es-MX', { day: "2-digit", month: "2-digit", year: "numeric"})
+      console.log(newdate);
       
       setPersonalDataTouched({ ...personalDataTouched, [control]: true });
       setPersonalData({ ...personalData, [control]: date});
@@ -409,7 +288,6 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
 
 
   useEffect(() => {
-    // console.log(personalData)
     Validate()
   }, [personalData]);
 
@@ -420,9 +298,9 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
   }, [curp]);
 
   const handleSelectOption = async ({ detail }: CustomEvent) => {
-    const programData = programs.filter(program => program.name === detail)[0]
+    const programData = programs.filter(program => program.nombrePrograma === detail)[0]
     const options = programs.map(program => {	
-      return { value: program.name, text: program.name, active: program.name === detail }
+      return { value: program.nombrePrograma, text: program.nombrePrograma, active: program.nombrePrograma === detail }
     });
     setSelectData(options)
     // console.log('programData: ', programData);
