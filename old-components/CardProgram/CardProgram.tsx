@@ -23,7 +23,7 @@ const CardProgram: FC<CardProgramData> = memo(({ title, subtitle, link, image, c
         <p className="font-texts font-normal text-gray-500 text-base mt-2 mb-1 mx-3">{subtitle}</p>
         : null
       }
-      <p className={cn("font-texts font-normal text-4.5 mb-2 mx-3", { "mt-3": !subtitle })}>{title}</p>
+      <h3 className={cn("font-texts font-normal text-4.5 mb-2 mx-3", { "mt-3": !subtitle })}>{title}</h3>
       <div className="w-full h-full flex justify-end pb-3 pr-1 font-texts font-bold items-end">
         <div
           onClick={onClick}

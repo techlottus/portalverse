@@ -442,7 +442,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                     {
                       gralAdmissionProfile ?
                         <div className="font-headings font-semibold text-[18px] mb-4">
-                          <p className="mr-1 mb-4">Perfil de Ingreso</p>
+                          <h2 className="mr-1 mb-4">Perfil de Ingreso</h2>
                           <RichtText data={{
                             content: parseEditorRawData(gralAdmissionProfile)
                           }} />
@@ -452,7 +452,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                     {
                       gralGraduateProfile ?
                         <div className="font-headings font-semibold text-[18px] mb-4">
-                          <p className="mr-1 mb-4">Perfil de Egreso</p>
+                          <h2 className="mr-1 mb-4">Perfil de Egreso</h2>
                           <RichtText data={{
                             content: parseEditorRawData(gralGraduateProfile)
                           }} />
@@ -462,7 +462,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                     {
                       gralAdmissionRequirements ?
                         <div className="font-headings font-semibold text-[18px] mb-4">
-                          <p className="mr-1 mb-4">Requisitos de Admisión</p>
+                          <h2 className="mr-1 mb-4">Requisitos de Admisión</h2>
                           <RichtText data={{
                             content: parseEditorRawData(gralAdmissionRequirements)
                           }} />
@@ -477,7 +477,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                       {
                         laborfieldTitle ?
                           <div className="font-headings font-semibold text-[18px] mb-4">
-                            <p>{laborfieldTitle}</p>
+                            <h2>{laborfieldTitle}</h2>
                           </div>
                           : null
                       }
@@ -576,7 +576,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
               {
                 modalities?.length > 0 && titleTabs ?
                   <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6">
-                    <p className="text-6.5 font-headings font-semibold leading-tight w-t:leading-tight w-p:leading-tight w-t:text-6 w-p:text-6">{`${titleTabs} ${levelProgram}`}</p>
+                    <h2 className="text-6.5 font-headings font-semibold leading-tight w-t:leading-tight w-p:leading-tight w-t:text-6 w-p:text-6">{`${titleTabs} ${levelProgram}`}</h2>
                   </div>
                   : null
               }
@@ -671,7 +671,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                                       characteristicsInformativeIcons?.map((item: any, i: number) => <section className="text-center flex flex-col w-p:flex-row" key={`section-informativeIcons-${i}`}>
                                         <span className="material-symbols-outlined select-none text-surface-500 !text-16 w-p:!text-7 w-d:mb-2">{item?.iconName}</span>
                                         <div className="flex flex-col w-p:text-left w-p:ml-4">
-                                          <span className="font-headings font-semibold text-5 text-secondary-500 w-p:mb-2 mb-4">{item?.title}</span>
+                                          <h4 className="font-headings font-semibold text-5 text-secondary-500 w-p:mb-2 mb-4">{item?.title}</h4>
                                           <RichtText data={{
                                             content: parseEditorRawData(item?.description)
                                           }} />
@@ -692,7 +692,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                             {
                               summaries?.length > 0 ?
                                 <div className="my-6 text-center">
-                                  <p className="font-semibold font-headings text-6">Plan de estudios</p>
+                                  <h3 className="font-semibold font-headings text-6">Plan de estudios</h3>
                                 </div>
                                 : null
                             }
@@ -703,7 +703,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                                   {
                                     summaries.map((item: any, i: number) => <section className="pb-5 px-6" key={`section-summarieTitle-${i}`}>
                                       <div className="mb-6 w-t:mb-6">
-                                        <p className="font-headings font-semibold text-5 text-secondary-500">{item?.title}</p>
+                                        <h4 className="font-headings font-semibold text-5 text-secondary-500">{item?.title}</h4>
                                       </div>
                                       {
                                         item?.subjects?.slice(0, 4).map((subject: { title: string }, i: number) => <section key={`section-summarie-${i}`}>
@@ -821,9 +821,9 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                         </Aspect>
                       </div>
                       <div className="flex flex-col h-full">
-                        <p className="font-texts font-normal text-4.5 mt-3 mx-3">
+                        <h5 className="font-texts font-normal text-4.5 mt-3 mx-3">
                           {programAttributes?.name}
-                        </p>
+                        </h5>
                         <div className="w-full h-full flex justify-end pb-3 pr-1 font-texts font-bold items-end">
                           <Link
                             href={`${levelRoute}/${programAttributes?.slug}`}

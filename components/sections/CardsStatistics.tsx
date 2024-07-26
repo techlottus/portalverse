@@ -59,7 +59,7 @@ const CardsStatistics: FC<CardsStatisticsData> = (props: CardsStatisticsData) =>
         {
           title ?
             <div>
-              <h3 className="font-headings font-bold text-10 leading-12 w-p:text-6 w-p:leading-7 mb-6">{title}</h3>
+              <h2 className="font-headings font-bold text-10 leading-12 w-p:text-6 w-p:leading-7 mb-6">{title}</h2>
             </div>
           : null
         }

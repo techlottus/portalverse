@@ -32,8 +32,8 @@ const BannerWrapper: FC<BannerWrapperData> = memo(({ data: { urlImage, title, su
             "text-surface-0": font === "light",
             "text-surface-950": font === "dark" ,
             })}>
-              <h1 className="font-headings font-bold w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5 w-d:text-6 w-t:text-6 w-p:text-6">{ title }</h1>
-              <h3 className="font-texts font-normal w-d:leading-5 w-t:leading-4 w-p:leading-4 w-d:text-base w-t:text-3.5 w-p:text-3.5">{ subtitle }</h3>
+              <h3 className="font-headings font-bold w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5 w-d:text-6 w-t:text-6 w-p:text-6 text-wrap">{ title }</h3>
+              <p className="font-texts font-normal w-d:leading-5 w-t:leading-4 w-p:leading-4 w-d:text-base w-t:text-3.5 w-p:text-3.5">{ subtitle }</p>
               {
                 description && description !== "" ?
                 <RichtText classNames="mt-6" font="dark" data={{
