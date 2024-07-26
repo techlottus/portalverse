@@ -64,6 +64,7 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
   return <>
     <Head>
       <title>{meta.title}</title>
+      <meta property="title" content={meta?.title} />
     </Head>
     <Modal isShow={isShow} onClose={handleVisibilityModal} data={{ icon: 'close', title: "", tagOnClose: 'testOnClose', wrapper: true, }}>
       <section slot="areaModalContent" className="flex w-t:flex-col w-p:flex-col w-full h-auto">

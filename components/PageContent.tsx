@@ -5,7 +5,6 @@ import type { PageData } from "@/utils/getPageDataById";
 
 const PageContent = (props: PageData) => {
   const pageBlocks = props?.attributes?.sections;
-
   return (
     <Fragment>
       <Head>

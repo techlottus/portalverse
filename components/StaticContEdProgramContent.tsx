@@ -8,7 +8,6 @@ import Image from "@/old-components/Image"
 const DetalleCursoEducacionContinua = ({ sections, meta }: any) => {
 
   const router = useRouter()
-
   return <>
     <Head>
       <title>{ meta.title }</title>

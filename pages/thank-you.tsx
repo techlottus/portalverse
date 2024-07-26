@@ -39,6 +39,7 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
     {/* <script dangerouslySetInnerHTML={{ __html : `fbq('track', 'CompleteRegistration');`}}></script> */}
     <Head>
       <title>{ meta.title }</title>
+      <meta property="title" content={meta?.title} />
     </Head>
     <HeaderFooterLayout breadcrumbs={false}>
       <ContentFullLayout>
