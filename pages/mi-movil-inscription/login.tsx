@@ -5,6 +5,7 @@ import NextPageWithLayout from "@/types/Layout.types"
 import { useIsAuthenticated } from "@azure/msal-react";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import Head from "next/head";
 
 
 /**
@@ -44,6 +45,10 @@ const MiMovilLogin: NextPageWithLayout<any> = (props: any) => {
   }, [isAuthenticated]);
 
   return (
+    <>
+      <Head>
+        <meta name="robots" content="noindex,nofollow"></meta>
+      </Head>
       <section className="w-full flex h-full items-center justify-between overflow-hidden">
         <section className="flex w-1/2 bg-[url('https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTC/Frame_195_9eabdd4fcd.png')] bg-cover bg-center h-screen">
         </section>
@@ -56,6 +61,7 @@ const MiMovilLogin: NextPageWithLayout<any> = (props: any) => {
           </section>
         </section> 
       </section>
+    </>
 
   )
 }
