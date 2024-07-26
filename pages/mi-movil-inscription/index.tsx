@@ -193,7 +193,10 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
           residence: ""
         })
         setProgram({})
-        window.location.reload()
+        setTimeout(() => {
+          
+          window.location.reload()
+        }, 5000);
       })
       .catch((err: any) => {
         console.log(err);
