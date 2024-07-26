@@ -158,8 +158,7 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
       "claveCargoBanner": data.metadata.BNRcharge,
       "empresaConvenio": "MI MÓVIL"
     }
-    console.log('body: ', body);
-    
+    // console.log('body: ', body);
 
     await axios.post(`${endpoint}`, body,{
       headers: {
@@ -194,7 +193,6 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
         })
         setProgram({})
         setTimeout(() => {
-          
           window.location.reload()
         }, 5000);
       })

@@ -293,12 +293,16 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
 
         }
         if (response.data.curp) {
+          const rawBirthdate = response?.data?.fechaNacimiento.split('/')
+          const date = `${[rawBirthdate[2], rawBirthdate[1], rawBirthdate[0]]. join('-')}T00:00:00-06:00`
+          const birthdate = new Date(date)
+          
           setPersonalData({
             ...personalData,
             name: response?.data?.nombre,
             last_name: response?.data?.apellidoPaterno,
             second_last_name: response?.data?.apellidoMaterno,
-            birthdate: response?.data?.fechaNacimiento,
+            birthdate: birthdate,
             gender: response?.data?.sexo,
           })
           setIsSuccess(true)
@@ -487,21 +491,19 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
         />
       </div>
       <div className="">
-        <Input value={personalData?.birthdate} data={{
-          label: 'Fecha de Nacimiento',
-          name: 'birthdate',
-          type: 'text',
-          typeButton: 'classic',
-          onPaste: true,
-          pattern: '',
-          isRequired: true,
-          disabled: hasCurp && !!personalData.birthdate && isValidCurp
-        }}
-          eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "birthdate")}
-          eventFocus={() => handleTouchedControl("birthdate")}
-          errorMessage={configControls.errorMessagesInscriptionForm.birthdate}
-          hasError={personalDataErrors.birthdate}
+        <DatePicker
+          className={cn("w-full h-full pl-3 pr-13 py-3 rounded-t-lg border-b border-surface-400 outline-none bg-surface-100 placeholder:text-surface-500", {
+            "border-error-500": personalDataErrors.birthdate,
+            "text-surface-400": hasCurp && !!personalData.birthdate && isValidCurp,
+          })}
+          selected={personalData.birthdate}
+          onChange={(date) => handleDateChange(date, "birthdate")}
+          onFocus={() => handleTouchedControl("birthdate")}
+          placeholderText="Fecha de Nacimiento*"
+          dateFormat={'dd/MM/yy'}
+          disabled={hasCurp && !!personalData.birthdate && isValidCurp}
         />
+        { personalDataErrors.birthdate && <p className="text-error-500 font-texts text-xs ml-2 mt-4">{configControls.errorMessagesInscriptionForm.birthdate}</p>}
       </div>
       <div >
         <Input value={personalData?.gender} data={{
