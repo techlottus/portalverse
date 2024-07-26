@@ -12,6 +12,7 @@ import { getTokenForms } from "@/utils/getTokenForms";
 import Image from "next/image";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Head from "next/head";
 
 const SignOutButton = () => {
 
@@ -277,67 +278,72 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
   }
 
   return (
-    <ContentFullLayout>
-      <section className="w-full bg-surface-0 z-15 transition-transform shadow-15 flex justify-between">
-        <div className="p-6 border-0 border-solid border-surface-200 border-r-2">
-          <div className="w-36 h-9 bg-logo bg-cover bg-center mobile:mx-auto"> </div>
-        </div>
-        <div className="p-3">
-          { <SignOutButton/> }
-        </div>
-      </section>
-      <section className="w-full flex justify-center mt-6">
-        <ToastContainer
-          position="top-right"
-          autoClose={5000}
-          newestOnTop={true}
-          closeOnClick
-          pauseOnFocusLoss
-          pauseOnHover
-          theme="colored"
-        />
-        <section className="flex flex-col justify-center items-center">
-          <Image className="mb-6" width={180} height={41} src="https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTC/image_9_dccaab79ed.png" alt="logo mimovil" />
-
-          <MiMovilInscriptionForm
-            submit={submit}
-            setStatus={setStatus}
-            residence={residence}
-            noResidence={noResidence}
-            hasCurp={hasCurp}
-            noCurp={noCurp}
-            setResidence={setResidence}
-            setNoResidence={setNoResidence}
-            setHasCurp={setHasCurp}
-            setNoCurp={setNoCurp}
-            personalData={personalData}
-            setPersonalData={setPersonalData}
-            curp={curp}
-            setCurp={setCurp}
-            isValidCurp={isValidCurp}
-            setIsValidCurp={setIsValidCurp}
-            curpError={curpError}
-            setCurpError={setCurpError}
-            setProgram={setProgram}
-            programs={programs}
-          />
-          <div className={cn("flex flex-col w-full")}>
-            <button
-              className={cn({
-                "bg-surface-200 text-surface-0 rounded-lg py-3 font-bold text-lg": !isValid || !program,
-                "bg-primary-500 text-surface-0 rounded-lg py-3 font-bold text-lg": isValid && !!program, 
-              })}
-              disabled={!isValid || !program}
-              onClick={() => {
-                onSubmit()
-              }}
-            >
-              Completar registro
-            </button>
+    <>
+      <Head>
+        <meta name="robots" content="noindex,nofollow"></meta>
+      </Head>
+      <ContentFullLayout>
+        <section className="w-full bg-surface-0 z-15 transition-transform shadow-15 flex justify-between">
+          <div className="p-6 border-0 border-solid border-surface-200 border-r-2">
+            <div className="w-36 h-9 bg-logo bg-cover bg-center mobile:mx-auto"> </div>
+          </div>
+          <div className="p-3">
+            { <SignOutButton/> }
           </div>
         </section>
-      </section>
-    </ContentFullLayout>
+        <section className="w-full flex justify-center mt-6">
+          <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            newestOnTop={true}
+            closeOnClick
+            pauseOnFocusLoss
+            pauseOnHover
+            theme="colored"
+          />
+          <section className="flex flex-col justify-center items-center">
+            <Image className="mb-6" width={180} height={41} src="https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UTC/image_9_dccaab79ed.png" alt="logo mimovil" />
+
+            <MiMovilInscriptionForm
+              submit={submit}
+              setStatus={setStatus}
+              residence={residence}
+              noResidence={noResidence}
+              hasCurp={hasCurp}
+              noCurp={noCurp}
+              setResidence={setResidence}
+              setNoResidence={setNoResidence}
+              setHasCurp={setHasCurp}
+              setNoCurp={setNoCurp}
+              personalData={personalData}
+              setPersonalData={setPersonalData}
+              curp={curp}
+              setCurp={setCurp}
+              isValidCurp={isValidCurp}
+              setIsValidCurp={setIsValidCurp}
+              curpError={curpError}
+              setCurpError={setCurpError}
+              setProgram={setProgram}
+              programs={programs}
+            />
+            <div className={cn("flex flex-col w-full")}>
+              <button
+                className={cn({
+                  "bg-surface-200 text-surface-0 rounded-lg py-3 font-bold text-lg": !isValid || !program,
+                  "bg-primary-500 text-surface-0 rounded-lg py-3 font-bold text-lg": isValid && !!program, 
+                })}
+                disabled={!isValid || !program}
+                onClick={() => {
+                  onSubmit()
+                }}
+              >
+                Completar registro
+              </button>
+            </div>
+          </section>
+        </section>
+      </ContentFullLayout>
+    </>
   )
 }
 export default MiMovilInscription
