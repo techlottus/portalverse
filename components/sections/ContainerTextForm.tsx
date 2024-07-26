@@ -4,7 +4,7 @@ import { ContainerTextFormSection } from "../../utils/strapi/sections/ContainerT
 import ContainerForm from './ContainerForm';
 import RichtText from '@/old-components/Richtext/Richtext';
 import parseEditorRawData from '@/utils/parseEditorRawData';
-import classNames from 'classnames';
+import cn from 'classnames';
 
 const ContainerTextForm: React.FC<ContainerTextFormSection> = (props: ContainerTextFormSection) => {
   const {
@@ -43,12 +43,12 @@ const ContainerTextForm: React.FC<ContainerTextFormSection> = (props: ContainerT
     <Container classNames="mobile: !p-0">
       <div
         style={styles}
-        className={classNames(
+        className={cn(
           "flex items-center justify-around w-full p-16 mobile:flex-col mobile:py-12 mobile:px-6  bg-origin-border md:bg-center bg-no-repeat bg-cover tablet:block",
           "mobile:bg-[image:var(--image-mobile-url)]",
           "tablet:bg-[image:var(--image-tablet-url)]",
-          "desktop:bg-[image:var(--image-desk-url)]"
-        )}
+          "desktop:bg-[image:var(--image-desk-url)]",
+          {"!py-0": !desk?.data?.attributes?.url || !tab?.data?.attributes?.url || !mob?.data?.attributes?.url })}
       >
         <div className="w-6/12 desktop:px-11 mobile:w-full tablet:w-full">
           <h3 className='font-headings text-5xl mb-2 font-bold' dangerouslySetInnerHTML={{ __html: accentedTitle }}></h3>
