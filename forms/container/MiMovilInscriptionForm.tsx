@@ -10,6 +10,8 @@ import { SelectInit } from "@/old-components/fixture"
 import cn from "classnames";
 
 import Image from "@/old-components/Image"
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const axios = require('axios');
 
@@ -332,6 +334,9 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
     if (control === 'phone') {
       return value.trim().length === 10
     }
+    if (control === 'birthdate') {
+      return  !!value && !!(new Date(value))
+    }
     return !!value?.trim()
   };
 
@@ -379,6 +384,15 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
     } else {
       setPersonalDataTouched({ ...personalDataTouched, [control]: true });
       setPersonalData({ ...personalData, [control]: value, ["residence"]: residence ? "Nacional" : "Extranjero", ["adviser"]:value });
+  };
+
+  const handleDateChange = (value: Date | null, control: string) => {
+    if (value) {
+      const date = new Date(value).toLocaleString('en-us', { day: "2-digit", month: "2-digit", year: "numeric"})
+      // console.log(date);
+      
+      setPersonalDataTouched({ ...personalDataTouched, [control]: true });
+      setPersonalData({ ...personalData, [control]: date});
     }
     
   };
@@ -613,20 +627,18 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
         />
       </div>
       <div className="">
-        <Input data={{
-          label: 'Fecha de Nacimiento',
-          name: 'birthdate',
-          type: 'date',
-          typeButton: 'classic',
-          onPaste: true,
-          pattern: '',
-          isRequired: true,
-        }}
-          eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "birthdate")}
-          eventFocus={() => handleTouchedControl("birthdate")}
-          errorMessage={configControls.errorMessagesInscriptionForm.birthdate}
-          hasError={personalDataErrors.birthdate}
+       
+        <DatePicker
+          className={cn("w-full h-full pl-3 pr-13 py-3 rounded-t-lg border-b border-surface-400 outline-none bg-surface-100 placeholder:text-surface-500", {
+            "border-primary-500": personalDataTouched.birthdate,
+            "border-error-500": personalDataErrors.birthdate,
+          })}
+          selected={personalData.birthdate}
+          onChange={(date) => handleDateChange(date, "birthdate")}
+          onCalendarClose={() => handleTouchedControl("birthdate")}
+          placeholderText="Fecha de Nacimiento*"
         />
+        { personalDataErrors.birthdate && <p className="text-error-500 font-texts text-xs ml-2 mt-4">{configControls.errorMessagesInscriptionForm.birthdate}</p>}
       </div>
       <div >
         <div className="mt-[-1em]"> <Select options={optionsGender} data={{
