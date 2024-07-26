@@ -95,9 +95,7 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
 
   useEffect(() => {
     if (!isAuthenticated) {
-        // uncomment befor closing branch
-
-        // router.push('/mi-movil-inscription/login')
+        router.push('/mi-movil-inscription/login')
     }
   }, [isAuthenticated])
   const getLeadModality = (modality: string) => {
@@ -124,19 +122,6 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
 
   const sendInscriptionData = async (data: any) => {
     const endpoint = process.env.NEXT_PUBLIC_MI_MOVIL_INSCRIPTION;
-    //  https://lottus--develop.sandbox.my.salesforce.com/services/apexrest/alumno_convenio_empresarial_inscripcion
-
-    // const nombre = personalData?.name;
-    // const apellidoPaterno = personalData?.last_name;
-    // const telefono = personalData?.phone;
-    // const email = personalData?.email;
-    // const lineaNegocio = program?.lineaNegocio || process.env.NEXT_PUBLIC_BUSINESS_UNIT;
-    // const modalidad = getLeadModality(program?.modality);
-    // const nivel = program?.level;
-    // const campus = program?.campus;
-    // const programa = program?.program;
-    // const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&telefono=${telefono}&email=${email}&lineaNegocio=${lineaNegocio}&modalidad=${modalidad}&nivel=${nivel}&campus=${campus}&programa=${programa}`;
-
     setIsLoading(true);
     const body = {
       "nombre": data.name,
