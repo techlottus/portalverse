@@ -31,7 +31,6 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
     setInfoModal({...content})
     handleVisibilityModal();
   };
-  console.log(meta)
   return <>
     <Head>
       <title>{ meta.title }</title>
