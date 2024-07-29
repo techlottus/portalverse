@@ -19,6 +19,43 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
     <Head>
       <title>{meta.title}</title>
       <meta property="title" content={meta?.title} />
+      <meta name="description" content={meta?.metaDescription} key="desc" />{/* metaDescription */}
+      <meta property="image" content={meta?.metaImage?.data?.attributes?.url} />{/* metaImage */}
+      {/* metaSocial */}
+      {/* ARRAY COULD BRING FACEBOOK OR TWITTER */}
+      {
+        meta?.metaSocial?.map((metasocial: any) => {
+          if (metasocial?.socialNetwork === "Facebook") {
+            return (
+              <>
+                <meta property="og:title" content={metasocial?.title} />
+                <meta property="og:description" content={metasocial?.description} />
+                <meta property="og:image" content={metasocial?.image?.data?.attributes?.url} />
+              </>
+            )
+          } if (metasocial?.socialNetwork === "Twitter") {
+            return (
+              <>
+                <meta property="twitter:title" content={metasocial?.title} />
+                <meta property="twitter:description" content={metasocial?.description} />
+                <meta property="twitter:image" content={metasocial?.image?.data?.attributes?.url} />
+              </>
+            )
+          }
+        })
+      }
+      {/* keywords */}
+      <meta name="keywords" content={meta?.keywords} />
+      {/* metaRobots */}
+      <meta name="robots" content={meta?.metaRobots} />
+      {/* metaViewport */}
+      <meta name="viewport" content={meta?.metaViewport} />
+      {/* canonicalURL */}
+      <link rel="canonical" href={meta?.canonicalURL} />
+      {/* ogURL */}
+      <meta property="og:url" content={meta?.canonicalURL} />
+      {/* structuredData */}
+      <script type="application/ld+json">{JSON.stringify(meta?.structuredData)}</script>
     </Head>
     <HeaderFooterLayout>
       <ContentFullLayout classNames="gap-6 w-d:hidden mb-6">
@@ -32,7 +69,7 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid grid-cols-2 w-p:gap-12 gap-6">
           <div className="w-p:col-span-2 w-p:order-2">
-            <h1 className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6 mb-6"> { sections.introduccion.title}</h1>
+            <h1 className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6 mb-6"> {sections.introduccion.title}</h1>
             <RichtText data={{
               content: sections.introduccion.descripcion
             }} />
@@ -55,12 +92,12 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
           <RichtText data={{
             content: sections.video.descripcion
           }} />
-        {sections?.video?.button ?
-          <Button dark data={sections.video.button} onClick={() => {
-            router.push(`${router.pathname}/talento`)
-          }} />
-          : null
-        }
+          {sections?.video?.button ?
+            <Button dark data={sections.video.button} onClick={() => {
+              router.push(`${router.pathname}/talento`)
+            }} />
+            : null
+          }
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:hidden">
           <BannerPortalverse data={sections.bannerEmpleabilidad}

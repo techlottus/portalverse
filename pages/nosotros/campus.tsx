@@ -49,7 +49,7 @@ const Campus = ({ sections, meta, prefilledData, options, program }: any) => {
   }
 
   function openModal(SFcampus: string) {
-    setCampus(SFcampus)      
+    setCampus(SFcampus)
   }
 
   return (
@@ -57,6 +57,43 @@ const Campus = ({ sections, meta, prefilledData, options, program }: any) => {
       <Head>
         <title>{meta?.title}</title>
         <meta property="title" content={meta?.title} />
+        <meta name="description" content={meta?.metaDescription} key="desc" />{/* metaDescription */}
+        <meta property="image" content={meta?.metaImage?.data?.attributes?.url} />{/* metaImage */}
+        {/* metaSocial */}
+        {/* ARRAY COULD BRING FACEBOOK OR TWITTER */}
+        {
+          meta?.metaSocial?.map((metasocial: any) => {
+            if (metasocial?.socialNetwork === "Facebook") {
+              return (
+                <>
+                  <meta property="og:title" content={metasocial?.title} />
+                  <meta property="og:description" content={metasocial?.description} />
+                  <meta property="og:image" content={metasocial?.image?.data?.attributes?.url} />
+                </>
+              )
+            } if (metasocial?.socialNetwork === "Twitter") {
+              return (
+                <>
+                  <meta property="twitter:title" content={metasocial?.title} />
+                  <meta property="twitter:description" content={metasocial?.description} />
+                  <meta property="twitter:image" content={metasocial?.image?.data?.attributes?.url} />
+                </>
+              )
+            }
+          })
+        }
+        {/* keywords */}
+        <meta name="keywords" content={meta?.keywords} />
+        {/* metaRobots */}
+        <meta name="robots" content={meta?.metaRobots} />
+        {/* metaViewport */}
+        <meta name="viewport" content={meta?.metaViewport} />
+        {/* canonicalURL */}
+        <link rel="canonical" href={meta?.canonicalURL} />
+        {/* ogURL */}
+        <meta property="og:url" content={meta?.canonicalURL} />
+        {/* structuredData */}
+        <script type="application/ld+json">{JSON.stringify(meta?.structuredData)}</script>
       </Head>
       <>
         <Transition appear show={!!campus} as={Fragment}>
@@ -226,7 +263,7 @@ const Campus = ({ sections, meta, prefilledData, options, program }: any) => {
                                   </a>
                                   <span className="text-primary-400 material-symbols-outlined select-non !text-lg ms-1">open_in_new</span>
                                 </div>
-                                : <p className="font-headings font-bold text-4.5 leading-5.625">{description?.name}</p>
+                                : <h3 className="font-headings font-bold text-4.5 leading-5.625">{description?.name}</h3>
                             }
                             <ContentInsideLayout>
                               {/* 
