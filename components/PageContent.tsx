@@ -5,10 +5,51 @@ import type { PageData } from "@/utils/getPageDataById";
 
 const PageContent = (props: PageData) => {
   const pageBlocks = props?.attributes?.sections;
+  const seo = props?.attributes?.seo;
+  console.log(props)
   return (
     <Fragment>
       <Head>
-        <title>{props?.attributes?.title}</title>
+        <title>{props?.attributes?.title}</title> 
+        {/* THIS DATA COMES FROM STRAPI SEO */}
+        <meta property="title" content={seo?.metaTitle} />{/* metaTitle */}
+        <meta name="description" content={seo?.metaDescription} key="desc" />{/* metaDescription */}
+        <meta property="image" content={seo?.metaImage?.data?.attributes?.url} />{/* metaImage */}
+        {/* metaSocial */}
+        {/* ARRAY COULD BRING FACEBOOK OR TWITTER */}
+        {
+          seo?.metaSocial?.map((metasocial) => {
+            if (metasocial?.socialNetwork === "Facebook") {
+              return (
+                <>
+                  <meta property="og:title" content={metasocial?.title} />
+                  <meta property="og:description" content={metasocial?.description} />
+                  <meta property="og:image" content={metasocial?.image?.data?.attributes?.url} />
+                </>
+              )
+            } if (metasocial?.socialNetwork === "Twitter") {
+              return (
+                <>
+                  <meta property="twitter:title" content={metasocial?.title} />
+                  <meta property="twitter:description" content={metasocial?.description} />
+                  <meta property="twitter:image" content={metasocial?.image?.data?.attributes?.url} />
+                </>
+              )
+            }
+          })
+        }
+        {/* keywords */}
+        <meta name="keywords" content={seo?.keywords} />
+        {/* metaRobots */}
+        <meta name="robots" content={seo?.metaRobots} />
+        {/* metaViewport */}
+        <meta name="viewport" content={seo?.metaViewport} />
+        {/* canonicalURL */}
+        <link rel="canonical" href={seo?.canonicalURL} />
+        {/* ogURL */}
+        <meta property="og:url" content={seo?.canonicalURL} />
+        {/* structuredData */}
+        <script type="application/ld+json">{JSON.stringify(seo?.structuredData)}</script>       
       </Head>
       <div className="flex flex-col w-p:space-y-12 w-t:space-y-12 w-d:space-y-18">
         {pageBlocks?.length > 0 ? (
