@@ -18,7 +18,36 @@ export type PageData = {
     slug: string;
     breadcrumb: string;
     sections: Array<ComponentSection>;
+    seo: {
+      metaTitle:string;
+      metaDescription:string;
+      metaImage: {
+        data: {
+          attributes: {
+            url:string
+          }
+        }
+      };
+      keywords:string;
+      metaRobots:string;
+      metaViewport:string;
+      canonicalURL:string;
+      structuredData:JSON;
+      metaSocial: {
+        socialNetwork:string;
+        title:string;
+        description:string;
+        image: {
+          data: {
+            attributes: {
+              url:string
+            }
+          }
+        }
+      }[]
+    };
   };
+  
 };
 
 export type PageEntityResponse = {
@@ -89,7 +118,36 @@ query PageById($id: ID) {
           type: __typename
           ${SECTIONS}
         }
+        seo {
+          metaTitle
+          metaDescription
+          metaImage {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+          keywords
+          metaRobots
+          metaViewport
+          canonicalURL
+          structuredData
+          metaSocial {
+            socialNetwork
+            title
+            description
+            image {
+              data {
+                attributes {
+                  url
+                }
+              }
+            }
+          }
+        }
       }
+      
     }
   }
 }
