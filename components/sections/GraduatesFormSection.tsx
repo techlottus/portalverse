@@ -9,16 +9,16 @@ const GraduatesFormSection: React.FC<GraduatesFormData> = (props: GraduatesFormD
   const {
     title,
     subtitle,
-    goTopBanner
+    overFlowForm
   } = props;
 
   return <>
     <Container classNames="flex mobile:flex-col tablet:flex-col desktop:gap-6">
-      <div className={cn("desktop:w-1/2 my-auto mobile:w-full", { "desktop:mt-[-3.5em]": goTopBanner })}>
+      <div className={cn("desktop:w-1/2 my-auto mobile:w-full", { "desktop:mt-[-3.5em]": overFlowForm })}>
         <h3 className="font-headings text-5xl mb-2 font-bold">{title}</h3>
         <RichtText font="light" data={{ content: subtitle }} classNames="text-xl" />
       </div>
-      <div className={cn("desktop:w-1/2 mobile:w-full", { "desktop:mt-[-13em] desktop:pr-6": goTopBanner })}>
+      <div className={cn("desktop:w-1/2 mobile:w-full", { "desktop:mt-[-13em] desktop:pr-6": overFlowForm })}>
         <GraduatesForm />
       </div>
     </Container>
