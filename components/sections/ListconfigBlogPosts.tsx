@@ -19,30 +19,30 @@ const ListconfigBlogPosts = (props: ListconfigData) => {
           {
             title
               ? <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-                  <p className="font-headings font-bold text-8.5 w-t:text-6 w-p:text-6 semi-tight w-t:leading-tight w-p:leading-tight">
-                    {title}
-                  </p>
-                </div>
+                <p className="font-headings font-bold desktop:text-8.5 desktop:leading-8.5 text-6 leading-6 semi-tight">
+                  {title}
+                </p>
+              </div>
               : null
           }
           {
             blogPosts?.length > 0
               ? <div className="grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
-                  {
-                    blogPosts?.map((blogPost, i) => (
-                      <div key={`section-blog-${i}`}>
-                        <BlogPostCardWrapper
-                          onClick={() =>
-                            router.push(`${blogPageSlug}/${blogPost.attributes.slug}`)
-                          }
-                          data={{
-                            ...blogPost,
-                          }}
-                        />
-                      </div>
-                    ))
-                  }
-                </div>
+                {
+                  blogPosts?.map((blogPost, i) => (
+                    <div key={`section-blog-${i}`}>
+                      <BlogPostCardWrapper
+                        onClick={() =>
+                          router.push(`${blogPageSlug}/${blogPost.attributes.slug}`)
+                        }
+                        data={{
+                          ...blogPost,
+                        }}
+                      />
+                    </div>
+                  ))
+                }
+              </div>
               : null
           }
         </div>
