@@ -11,7 +11,7 @@ const Tabs: FC<TabList> = memo((props: TabList) => {
   const { tabs  } = props;
 
   const tabsLabelsArray : Array < { label : string } > = [];
-  tabs.map( (tab)=> tabsLabelsArray.push( { "label":tab.title } ) )
+  tabs.map( (tab)=> tabsLabelsArray.push( { "label":tab?.title } ) )
 
   // State that controls which tab is active and the renderOption
   const [tabActive, setTabActive] = useState<number>(0);
@@ -33,7 +33,7 @@ const Tabs: FC<TabList> = memo((props: TabList) => {
   /*-----------FUNCTION RENDER ACCORDING TO STATUS tabActive --------------------------------------------------*/
   const renderOption =()=>{
     //TODO: Add switch to manage more options
-    const option = tabs[tabActive].content == "richtextImage" ?
+    const option = tabs[tabActive]?.content == "richtextImage" ?
                    TextImageList(tabs[tabActive]?.richtextImage) :
                    TextVideoList(tabs[tabActive]?.richtextVideo)
     return option;
