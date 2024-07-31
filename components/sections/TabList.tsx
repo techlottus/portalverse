@@ -19,11 +19,11 @@ const Tabs: FC<TabList> = memo((props: TabList) => {
   /* ----------COMPONENT FUNCTIONS-----------------------------------------------------------------------------*/
   
   const TextVideoList = (dataList?:Array<RichTextVideoSection>)=>{
-    return (<>{dataList?.map((videoData)=><RichTextVideo {...videoData} />)}</>)
+    return (<>{dataList?.map((videoData,i)=><RichTextVideo {...videoData} key={i} />)}</>)
   }
 
   const TextImageList = (dataList?:Array<RichTextImageSection>)=>{
-    return (<>{dataList?.map((imageData)=><RichTextImage {...imageData} />)}</>)
+    return (<>{dataList?.map((imageData,i)=><RichTextImage {...imageData} key={i} />)}</>)
   }
   // Add here new component, then add it in renderOption function
   /*
