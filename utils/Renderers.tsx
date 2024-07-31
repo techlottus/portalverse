@@ -19,6 +19,7 @@ import ExternalPostByCategoryList from "@/components/sections/ExternalPostByCate
 import FAQ from "@/components/sections/FAQ";
 import FormVideo from "@/components/sections/FormVideo";
 import GoogleMap from "@/components/sections/GoogleMap";
+import GraduatesFormSection  from "@/components/sections/GraduatesFormSection";
 import HeroSlider from "@/components/sections/HeroSlider";
 import IconTextListImage from "@/components/sections/IconTextImageList";
 import IntroductionImage from "@/components/sections/IntroductionImage";
@@ -75,6 +76,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsFormContainer: ContainerForm,
   ComponentSectionsFormVideo: FormVideo,
   ComponentSectionsGoogleMap: GoogleMap,
+  ComponentSectionsGraduatesForm: GraduatesFormSection,
   ComponentSectionsHeroSlider: HeroSlider,
   ComponentSectionsIconTextListImage: IconTextListImage,
   ComponentSectionsIntroductionImage: IntroductionImage,

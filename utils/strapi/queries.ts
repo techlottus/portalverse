@@ -17,6 +17,7 @@ import { FAQ_SECTION } from "@/utils/strapi/sections/FAQ";
 import { FORM_CONTAINER } from "@/utils/strapi/sections/ContainerForm";
 import { FORM_VIDEO } from "@/utils/strapi/sections/FormVideo";
 import { GOOGLE_MAP } from "@/utils/strapi/sections/GoogleMap";
+import { GRADUATES_FORM } from "@/utils/strapi/sections/GraduatesFormData";
 import { HERO_SLIDER } from "@/utils/strapi/sections/HeroSlider";
 import { KNOWLEDGE_AREA_FILTER } from "@/utils/strapi/sections/KnowledgeAreaFilter";
 import { ICON_TEXT_LIST_IMAGE } from "@/utils/strapi/sections/IconTextListImage";
@@ -61,6 +62,7 @@ import type { ExternalPostListData } from "@/utils/strapi/sections/ExternalPostB
 import type { FAQSection } from "@/utils/strapi/sections/FAQ";
 import type { FormVideoSection } from "@/utils/strapi/sections/FormVideo";
 import type { GoogleMapSection } from "@/utils/strapi/sections/GoogleMap";
+import type { GraduatesFormData } from "@/utils/strapi/sections/GraduatesFormData";
 import type { HeroSliderSection } from "@/utils/strapi/sections/HeroSlider";
 import type { IconTextListImage } from "@/utils/strapi/sections/IconTextListImage";
 import type { IntroductionImageSection } from "@/utils/strapi/sections/IntroductionImage";
@@ -105,6 +107,7 @@ export type ComponentSection =
   | FAQSection
   | FormVideoSection
   | GoogleMapSection
+  | GraduatesFormData
   | HeroSliderSection
   | IconTextListImage
   | IntroductionImageSection
@@ -151,6 +154,7 @@ export type ComponentSection =
   ${CONTAINER_TEXT_FORM}
   ${FORM_VIDEO}
   ${GOOGLE_MAP}
+  ${GRADUATES_FORM}
   ${HERO_SLIDER}
   ${ICON_TEXT_LIST_IMAGE}
   ${INTRODUCTION_IMAGE_SECTION}
