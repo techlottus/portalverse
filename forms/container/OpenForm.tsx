@@ -249,12 +249,14 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
       return campus.idCampus === academicData?.campus;
     })[0];
     const validaRegistroBoot = setRegisterBot();
-    const source = `portal${businessUnit}`;
+    const source = router.asPath;
     const canal = process.env.NEXT_PUBLIC_CANAL;
     const medio = queryParams?.utm_medium;
     const campana = queryParams?.utm_campaign;
 
     console.log("queryParams: ", queryParams);
+    console.log("source: ", source);
+    
 
     const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&telefono=${telefono}&email=${email}&lineaNegocio=${lineaNegocio}&modalidad=${modalidad}&nivel=${nivel}&campus=${campus}&programa=${programa}&avisoPrivacidad=true&leadSource=Digital&validaRegistroBoot=${validaRegistroBoot}&source=${source}&canal=${canal}${medio ? `&medio=${medio}` : ""}${campana ? `&campana=${campana}` : ""}`;
 

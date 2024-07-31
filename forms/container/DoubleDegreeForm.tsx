@@ -206,11 +206,11 @@ const DoubleDegreeForm = (props: DoubleDegreeForm) => {
     const nivel = academicData?.level;
     const programa = academicData?.program;
     const validaRegistroBoot = setRegisterBot();
-    const source = `portal${businessUnit}`;
     const canal = process.env.NEXT_PUBLIC_CANAL;
     const medio = queryParams?.utm_medium;
     const campana = queryParams?.utm_campaign;
-
+    const source = router.asPath;
+    console.log("source: ", source);
     const body: any = {
       data: {
         names: nombre,
