@@ -14,7 +14,7 @@ const ContEdPrograms = (props: ContEdProgramsSection) => {
   return (
     <section>
       <Container>
-        <div className="flex flex-col space-y-12 w-d:space-y-18">
+        <div className="flex flex-col space-y-12 desktop:space-y-18">
           {
             categories?.map((category, i) => {
               const categoryName = category?.attributes?.name;
@@ -22,9 +22,9 @@ const ContEdPrograms = (props: ContEdProgramsSection) => {
               return categoryPrograms?.length > 0
                 ? <div key={i} className="flex flex-col space-y-6">
                     {
-                      categoryName ? <h2 className="font-headings text-10 font-bold leading-tight w-t:text-8.5 w-p:text-6">{categoryName}</h2> : null
+                      categoryName ? <h2 className="font-headings text-10 font-bold leading-tight tablet:text-8.5 mobile:text-6">{categoryName}</h2> : null
                     }
-                    <div className="grid w-p:grid-cols-1 w-t:grid-cols-2 w-d:grid-cols-4 gap-6 items-stretch">
+                    <div className="grid mobile:grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-4 gap-6 items-stretch">
                       {
                         categoryPrograms?.map((program, i) => {
                           return (

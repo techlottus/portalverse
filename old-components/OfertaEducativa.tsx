@@ -37,7 +37,7 @@ const OfertaEducativa: FC<any> = memo(({ data, classNames } : any) => {
   }, [changeDetect]);// eslint-disable-line react-hooks/exhaustive-deps
     
   return (
-    <section className={cn("col-span-12 grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-2", classNames)}>
+    <section className={cn("col-span-12 grid desktop:grid-cols-4 gap-6 tablet:grid-cols-2 mobile:grid-cols-2", classNames)}>
       {
         allPromos.map((content: any, i: number) => <section key={`section-oferta-${i}`}>
             <Link href={content?.url || "/"}>

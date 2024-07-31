@@ -25,21 +25,21 @@ const Leaderboard = (props: LeaderboardSection) => {
 
   return (
     <section>
-      <Container classNames="w-t:!p-0">
+      <Container classNames="tablet:!p-0">
         <div
-          className={cn("relative w-p:px-10 w-p:py-7 w-t:px-15 w-t:py-6 px-20 py-10 w-p:min-h-58 min-h-54", {
+          className={cn("relative mobile:px-10 mobile:py-7 tablet:px-15 tablet:py-6 px-20 py-10 mobile:min-h-58 min-h-54", {
             "text-surface-0": contentVariant === "light",
           })}
         >
           <div className="absolute top-0 left-0 w-full h-full">
             {/* Mobile Image */}
-            <Image classNames="w-full h-full w-t:hidden w-d:hidden" classNamesImg="object-cover" src={mobileImage?.data?.attributes?.url} alt="image" />
+            <Image classNames="w-full h-full tablet:hidden desktop:hidden" classNamesImg="object-cover" src={mobileImage?.data?.attributes?.url} alt="image" />
 
             {/* Tablet Image */}
-            <Image classNames="w-full h-full w-p:hidden w-d:hidden" classNamesImg="object-cover" src={tabletImage?.data?.attributes?.url} alt="image" />
+            <Image classNames="w-full h-full mobile:hidden desktop:hidden" classNamesImg="object-cover" src={tabletImage?.data?.attributes?.url} alt="image" />
 
             {/* Desktop Image */}
-            <Image classNames="w-full h-full w-p:hidden w-t:hidden" classNamesImg="object-cover" src={desktopImage?.data?.attributes?.url} alt="image" />
+            <Image classNames="w-full h-full mobile:hidden tablet:hidden" classNamesImg="object-cover" src={desktopImage?.data?.attributes?.url} alt="image" />
           </div>
           {
             overlayLeaderboard ?
@@ -55,8 +55,8 @@ const Leaderboard = (props: LeaderboardSection) => {
                 ? <h4
                   className={cn(
                     "font-headings font-bold",
-                    "w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5",
-                    "w-d:text-6.5 w-t:text-6 w-p:text-6", {
+                    "desktop:leading-15 tablet:leading-7.5 mobile:leading-7.5",
+                    "desktop:text-6.5 tablet:text-6 mobile:text-6", {
                     "text-surface-0": overlayLeaderboard === "dark",
                     "text-surface-950": overlayLeaderboard === "white"
                   }
@@ -80,8 +80,8 @@ const Leaderboard = (props: LeaderboardSection) => {
                   <span
                     className={cn(
                       "font-texts font-normal",
-                      "w-d:leading-5 w-t:leading-4 w-p:leading-4",
-                      "w-d:text-base w-t:text-3.5 w-p:text-3.5", {
+                      "desktop:leading-5 tablet:leading-4 mobile:leading-4",
+                      "desktop:text-base tablet:text-3.5 mobile:text-3.5", {
                       "text-surface-0": overlayLeaderboard === "dark",
                       "text-surface-950": overlayLeaderboard === "white"
                     }
@@ -106,7 +106,7 @@ const Leaderboard = (props: LeaderboardSection) => {
                 ? <div
                   className={
                     cn(
-                      "grid w-p:grid-cols-1 grid-cols-2 gap-x-12 w-p:gap-y-2 gap-y-4 w-fit"
+                      "grid mobile:grid-cols-1 grid-cols-2 gap-x-12 mobile:gap-y-2 gap-y-4 w-fit"
                     )
                   }
                 >
@@ -119,7 +119,7 @@ const Leaderboard = (props: LeaderboardSection) => {
                           target={link?.target === "blank" ? "_blank" : "_self"}
                           rel={link?.target === "blank" ? "noreferrer" : undefined}
                           className={cn("flex justify-self-start items-center space-x-2", {
-                            "w-p:hidden": !link?.text && !link?.iconName,
+                            "mobile:hidden": !link?.text && !link?.iconName,
                           })}
                         >
                           {

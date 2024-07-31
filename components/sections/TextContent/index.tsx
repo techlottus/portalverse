@@ -10,16 +10,16 @@ const TextContent = (props: TextContentSection) => {
   return (
     <section className="text-content-section overflow-hidden">
       <Container>
-        <div className="w-p:col-span-4 w-t:col-span-8 w-d:col-span-8 flex flex-col space-y-4">
+        <div className="mobile:col-span-4 tablet:col-span-8 desktop:col-span-8 flex flex-col space-y-4">
           {
             title
-              ? <h1 className="font-headings font-bold leading-tight w-p:text-6 w-t:text-8.5 text-13">
+              ? <h1 className="font-headings font-bold leading-tight mobile:text-6 tablet:text-8.5 text-13">
                   {title}
                 </h1>
               : null}
           {
             subtitle
-              ? <h2 className="font-headings font-bold leading-tight w-p:text-7.5 w-t:text-7.5 text-10">
+              ? <h2 className="font-headings font-bold leading-tight mobile:text-7.5 tablet:text-7.5 text-10">
                   {subtitle}
                 </h2>
               : null

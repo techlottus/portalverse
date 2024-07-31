@@ -17,19 +17,19 @@ const Cintillo: FC<CintilloData> = (props: CintilloData) => {
   return (
     <>
       {/** Desktop cintillo */}
-      <div className="w-t:hidden w-p:hidden">
+      <div className="tablet:hidden mobile:hidden">
         <Aspect ratio={desktopRatio}>
           <CintilloContent {...props} />
         </Aspect>
       </div>
       {/** Tablet cintillo */}
-      <div className="w-d:hidden w-p:hidden">
+      <div className="desktop:hidden mobile:hidden">
         <Aspect ratio={tabletRatio}>
           <CintilloContent {...props} />
         </Aspect>
       </div>
       {/** Mobile cintillo */}
-      <div className="w-d:hidden w-t:hidden">
+      <div className="desktop:hidden tablet:hidden">
         <Aspect ratio={mobileRatio}>
           <CintilloContent {...props} />
         </Aspect>
@@ -56,10 +56,10 @@ const CintilloContent = (props: CintilloData) => {
 
   return (
     <>
-      <div className={cn("col-span-12 w-t:col-span-8 w-p:col-span-4 relative flex shrink-0 w-full h-full", classNames)}>
-        <Image classNames="w-full h-full w-p:hidden w-t:hidden" src={image?.desktop!} alt="image" />
-        <Image classNames="w-full h-full w-d:hidden w-p:hidden" src={image?.tablet!} alt="image" />
-        <Image classNames="w-full h-full w-d:hidden w-t:hidden" src={image?.mobile!} alt="image" />
+      <div className={cn("col-span-12 tablet:col-span-8 mobile:col-span-4 relative flex shrink-0 w-full h-full", classNames)}>
+        <Image classNames="w-full h-full mobile:hidden tablet:hidden" src={image?.desktop!} alt="image" />
+        <Image classNames="w-full h-full desktop:hidden mobile:hidden" src={image?.tablet!} alt="image" />
+        <Image classNames="w-full h-full desktop:hidden tablet:hidden" src={image?.mobile!} alt="image" />
         {
           overlay ?
             <div className={cn("absolute w-full h-full top-0 left-0 ", {
@@ -72,9 +72,9 @@ const CintilloContent = (props: CintilloData) => {
           <h3
             className={cn(
               "font-headings font-bold",
-              "w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5",
-              "w-d:text-6.5 w-t:text-6 w-p:text-6",
-              "text-surface-950 w-p:text-surface-0",
+              "desktop:leading-15 tablet:leading-7.5 mobile:leading-7.5",
+              "desktop:text-6.5 tablet:text-6 mobile:text-6",
+              "text-surface-950 mobile:text-surface-0",
               {
                 "!text-surface-0": contentVariant === "light" || overlay === "dark",
                 "!text-surface-950": overlay === "white",
@@ -86,9 +86,9 @@ const CintilloContent = (props: CintilloData) => {
           <p
             className={cn(
               "font-texts font-normal",
-              "w-d:leading-5 w-t:leading-4 w-p:leading-4",
-              "w-d:text-base w-t:text-3.5 w-p:text-3.5",
-              "text-surface-950 w-p:text-surface-0",
+              "desktop:leading-5 tablet:leading-4 mobile:leading-4",
+              "desktop:text-base tablet:text-3.5 mobile:text-3.5",
+              "text-surface-950 mobile:text-surface-0",
               {
                 "!text-surface-0": contentVariant === "light" || overlay === "dark",
                 "!text-surface-950": overlay === "white",
@@ -102,7 +102,7 @@ const CintilloContent = (props: CintilloData) => {
               ? <div className="flex my-4 items-center">
                 <span
                   className={cn(
-                    "material-symbols-outlined pr-2 pt-1 text-2 text-surface-950 w-p:text-surface-0",
+                    "material-symbols-outlined pr-2 pt-1 text-2 text-surface-950 mobile:text-surface-0",
                     {
                       "!text-surface-0": contentVariant === "light" || overlay === "dark",
                       "!text-surface-950": overlay === "white"
@@ -111,7 +111,7 @@ const CintilloContent = (props: CintilloData) => {
                 >
                   mail
                 </span>
-                <LinkContactTarget classNames={cn("text-surface-950 w-p:text-surface-0 underline", {
+                <LinkContactTarget classNames={cn("text-surface-950 mobile:text-surface-0 underline", {
                   "!text-surface-0": contentVariant === "light" || overlay === "dark",
                   "!text-surface-950": overlay === "white"
                 })} type="email" info={email} />
@@ -123,7 +123,7 @@ const CintilloContent = (props: CintilloData) => {
               ? <div className="flex my-4 items-center">
                 <span
                   className={cn(
-                    "material-symbols-outlined pr-2 pt-1 text-2 text-surface-950 w-p:text-surface-0",
+                    "material-symbols-outlined pr-2 pt-1 text-2 text-surface-950 mobile:text-surface-0",
                     {
                       "!text-surface-0": contentVariant === "light" || overlay === "dark",
                       "!text-surface-950": overlay === "white"
@@ -132,13 +132,13 @@ const CintilloContent = (props: CintilloData) => {
                 >
                   phone
                 </span>
-                <LinkContactTarget classNames={cn("text-surface-950 w-p:text-surface-0 underline", { "!text-surface-0": contentVariant === "light" || overlay === "dark", "!text-surface-950": overlay === "white" })} type="phone" info={phone} />
+                <LinkContactTarget classNames={cn("text-surface-950 mobile:text-surface-0 underline", { "!text-surface-0": contentVariant === "light" || overlay === "dark", "!text-surface-950": overlay === "white" })} type="phone" info={phone} />
               </div>
               : null
           }
           {
             !!whatsApp
-              ? <div className={cn("flex align-middle items-center space-x-2 text-surface-950 w-p:text-surface-0", { "!text-surface-0": contentVariant === "light", "!text-surface-950": overlay === "white" })}>
+              ? <div className={cn("flex align-middle items-center space-x-2 text-surface-950 mobile:text-surface-0", { "!text-surface-0": contentVariant === "light", "!text-surface-950": overlay === "white" })}>
                 <span className="w-6 h-6">
                   <Icon name="whatsapp" />
                 </span>
@@ -148,7 +148,7 @@ const CintilloContent = (props: CintilloData) => {
           }
           {
             !!actionLink
-              ? <div className={cn("flex align-middle items-center space-x-2 text-surface-950 w-p:text-surface-0", { "!text-surface-0": contentVariant === "light" })}>
+              ? <div className={cn("flex align-middle items-center space-x-2 text-surface-950 mobile:text-surface-0", { "!text-surface-0": contentVariant === "light" })}>
                 <slot name="areaAction">{actionLink}</slot>
               </div>
               : null

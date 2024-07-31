@@ -17,10 +17,10 @@ const ContactTargetList: FC<ContactTargetListSection> = memo((props: ContactTarg
             title || subtitle || richTextMarkup ?
               <div className="flex flex-col space-y-4">
                 {
-                  title ? <h2 className="font-headings text-10 font-bold leading-tight w-t:text-8.5 w-p:text-6">{title}</h2> : null
+                  title ? <h2 className="font-headings text-10 font-bold leading-tight tablet:text-8.5 mobile:text-6">{title}</h2> : null
                 }
                 {
-                  subtitle ? <p className="font-headings font-semibold leading-tight text-5.5 w-t:text-4.5 w-p:text-4">{subtitle}</p> : null
+                  subtitle ? <p className="font-headings font-semibold leading-tight text-5.5 tablet:text-4.5 mobile:text-4">{subtitle}</p> : null
                 }
                 {
                   richTextMarkup
@@ -32,7 +32,7 @@ const ContactTargetList: FC<ContactTargetListSection> = memo((props: ContactTarg
           }
           {
             cards?.length > 0 ?
-              <div className="grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
+              <div className="grid desktop:grid-cols-3 gap-6 tablet:grid-cols-2 mobile:grid-cols-1">
                 {
                   cards?.map(({ title, email, phone, link = '', image, textLink }, j: number) =>
                     <ContactTargetCard

@@ -19,12 +19,12 @@ const BannerPortalverse: FC<BannerPortalverseComponentData> = memo((props: Banne
   return (
     <>
       {/** Desktop banner */}
-      <div className="w-t:hidden w-p:hidden">
+      <div className="tablet:hidden mobile:hidden">
         <Aspect ratio={desktopRatio}>
           <div className="w-full h-full">
             <div className={cn(`relative flex w-full h-full shrink-0`, classNames)} >
-              <Image classNamesImg="object-cover" classNames="w-full h-full w-t:hidden" src={data.image?.desktop!} alt="image" />
-              <Image classNamesImg="object-cover" classNames="w-full h-full w-d:hidden" src={data.image?.tablet!} alt="image" />
+              <Image classNamesImg="object-cover" classNames="w-full h-full tablet:hidden" src={data.image?.desktop!} alt="image" />
+              <Image classNamesImg="object-cover" classNames="w-full h-full desktop:hidden" src={data.image?.tablet!} alt="image" />
               {
                 data?.overlayDak || data?.overlayWhite ?
                   <div className={cn("absolute w-full h-full", classNames, {
@@ -39,7 +39,7 @@ const BannerPortalverse: FC<BannerPortalverseComponentData> = memo((props: Banne
         </Aspect>
       </div>
       {/** Tablet banner */}
-      <div className="w-d:hidden w-p:hidden">
+      <div className="desktop:hidden mobile:hidden">
         <Aspect ratio={tabletRatio}>
           <div className="w-full h-full">
             <div className={cn(`relative flex w-full h-full shrink-0`, classNames)} >
@@ -58,11 +58,11 @@ const BannerPortalverse: FC<BannerPortalverseComponentData> = memo((props: Banne
         </Aspect>
       </div>
       {/** Mobile banner */}
-      <div className="w-d:hidden w-t:hidden">
+      <div className="desktop:hidden tablet:hidden">
         <Aspect ratio={mobileRatio}>
           <div className="w-full h-full">
             <div className={cn(`relative flex w-full h-full shrink-0`, classNames)} >
-              <Image classNamesImg="object-cover" classNames="w-full h-full w-d:hidden w-t:hidden" src={data.image?.mobile!} alt="image" />
+              <Image classNamesImg="object-cover" classNames="w-full h-full desktop:hidden tablet:hidden" src={data.image?.mobile!} alt="image" />
               <div className={cn("absolute w-full h-full", classNames, {
                 "bg-surface-0 opacity-50": data.overlayWhite,
                 "bg-surface-950 opacity-50": data.overlayDak
@@ -72,13 +72,13 @@ const BannerPortalverse: FC<BannerPortalverseComponentData> = memo((props: Banne
                 <div className="p-10">
                   {
                     data?.title
-                      ? <h3 className={cn("font-headings font-bold w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5 w-d:text-6.5 w-t:text-6 w-p:text-6", classNames, { "text-surface-0": data.overlayDak || data.font === "light" })}>{data.title}</h3>
+                      ? <h3 className={cn("font-headings font-bold desktop:leading-15 tablet:leading-7.5 mobile:leading-7.5 desktop:text-6.5 tablet:text-6 mobile:text-6", classNames, { "text-surface-0": data.overlayDak || data.font === "light" })}>{data.title}</h3>
                       : null
                   }
                   {
                     data?.subtitle
                       ? <h3
-                          className={cn("font-texts font-normal w-d:leading-5 w-t:leading-4 w-p:leading-4 w-d:text-base w-t:text-3.5 w-p:text-3.5", classNames, { "text-surface-0": data.overlayDak || data.font === "light" })}
+                          className={cn("font-texts font-normal desktop:leading-5 tablet:leading-4 mobile:leading-4 desktop:text-base tablet:text-3.5 mobile:text-3.5", classNames, { "text-surface-0": data.overlayDak || data.font === "light" })}
                           dangerouslySetInnerHTML={{ __html: String(data.subtitle) }}
                         />
                       : null
@@ -202,9 +202,9 @@ const BannerContent = (props: BannerPortalverseComponentData) => {
                   classNames,
                   {
                     "text-surface-0": data.overlayDak || data.font === "light",
-                    "w-d:text-6.5 w-t:text-6 w-p:text-6 w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5": variant === "lg",
-                    "w-d:text-5.5 w-t:text-5.5 w-p:text-5.5 w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5": variant === "md",
-                    "w-d:text-4 w-t:text-4 w-p:text-4 w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5": variant === "sm"
+                    "desktop:text-6.5 tablet:text-6 mobile:text-6 desktop:leading-15 tablet:leading-7.5 mobile:leading-7.5": variant === "lg",
+                    "desktop:text-5.5 tablet:text-5.5 mobile:text-5.5 desktop:leading-15 tablet:leading-7.5 mobile:leading-7.5": variant === "md",
+                    "desktop:text-4 tablet:text-4 mobile:text-4 desktop:leading-15 tablet:leading-7.5 mobile:leading-7.5": variant === "sm"
                   }
                 )
                 }
@@ -221,9 +221,9 @@ const BannerContent = (props: BannerPortalverseComponentData) => {
                   classNames,
                   {
                     "text-surface-0": data.overlayDak || data.font === "light",
-                    "w-d:leading-6 w-t:leading-4 w-p:leading-4 w-d:text-base w-t:text-3.5 w-p:text-3.5": variant === "lg",
-                    "w-d:leading-5 w-t:leading-5 w-p:leading-4 w-d:text-sm w-t:text-3.5 w-p:text-3.5": variant === "md",
-                    "w-d:leading-5 w-t:leading-5 w-p:leading-4 w-d:text-xs w-t:text-3.5 w-p:text-3.5": variant === "sm"
+                    "desktop:leading-6 tablet:leading-4 mobile:leading-4 desktop:text-base tablet:text-3.5 mobile:text-3.5": variant === "lg",
+                    "desktop:leading-5 tablet:leading-5 mobile:leading-4 desktop:text-sm tablet:text-3.5 mobile:text-3.5": variant === "md",
+                    "desktop:leading-5 tablet:leading-5 mobile:leading-4 desktop:text-xs tablet:text-3.5 mobile:text-3.5": variant === "sm"
                   }
                 )
                 }

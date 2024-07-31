@@ -73,14 +73,14 @@ const BlogEntryPageContent = (props: BlogEntryPageData) => {
       <ContentLayout>
         {
           blogPost?.title
-            ? <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:col-start-1 w-d:col-end-8">
-              <h1 className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-6 leading-tight">
+            ? <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 desktop:col-start-1 desktop:col-end-8">
+              <h1 className="font-headings font-bold text-13 tablet:text-8.5 mobile:text-6 leading-tight">
                 {blogPost?.title}
               </h1>
             </div>
             : null
         }
-        <div className="col-span-8 w-t:col-span-0 w-p:col-span-4">
+        <div className="col-span-8 tablet:col-span-0 mobile:col-span-4">
           <div className="flex flex-col space-y-6">
             {
               blogPostImageUrl
@@ -105,7 +105,7 @@ const BlogEntryPageContent = (props: BlogEntryPageData) => {
 
           {/* TODO: Add related posts */}
 
-          <div className="w-p:hidden flex justify-center mt-12">
+          <div className="mobile:hidden flex justify-center mt-12">
             <Button
               dark
               data={{
@@ -120,7 +120,7 @@ const BlogEntryPageContent = (props: BlogEntryPageData) => {
               }}
             />
           </div>
-          <div className="w-d:hidden w-t:hidden mt-12">
+          <div className="desktop:hidden tablet:hidden mt-12">
             <Button
               dark
               data={{
@@ -142,7 +142,7 @@ const BlogEntryPageContent = (props: BlogEntryPageData) => {
           banners?.length > 0
             ? <Fragment>
               {/** Dental clínic banner: Desk */}
-              <div className="col-span-4 w-t:hidden w-p:hidden w-d:grid-cols-1 flex flex-col space-y-6">
+              <div className="col-span-4 tablet:hidden mobile:hidden desktop:grid-cols-1 flex flex-col space-y-6">
                 {
                   banners?.map((banner, i) => {
                     return (
@@ -162,7 +162,7 @@ const BlogEntryPageContent = (props: BlogEntryPageData) => {
               </div>
 
               {/** Dental clínic & CESEPCOM banner: Tablet & Mobile */}
-              <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-2 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 w-d:hidden">
+              <section className="col-span-12 tablet:col-span-8 mobile:col-span-4 grid desktop:grid-cols-2 gap-6 tablet:grid-cols-2 mobile:grid-cols-1 desktop:hidden">
                 {
                   banners?.map((banner, i) => {
                     return (

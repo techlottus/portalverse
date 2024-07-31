@@ -22,7 +22,7 @@ export default function HeaderFooterLayout({ children, breadcrumbs = true }: Hea
     <Header menus={menus} menusMobile={menuMobile} onClickLogo={logotypeClick} onClickCTA={clickCTA} />
     <div className="desktop:pt-24 pt-12">
       <ContentLayout>
-        <Breadcrumbs classNames="col-span-12 w-t:col-span-8 w-p:col-span-4" visible={breadcrumbs} />
+        <Breadcrumbs classNames="col-span-12 tablet:col-span-8 mobile:col-span-4" visible={breadcrumbs} />
       </ContentLayout>
       { children }
       <Footer onClickLogo={logotypeClick} privacyLink={privacyLink} certifications={certifications} logotype={logotipo} social={social} phone={phone} directorio={directorio} sections={sections} />

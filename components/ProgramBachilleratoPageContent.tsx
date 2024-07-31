@@ -143,14 +143,14 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
         <script type="application/ld+json">{structuredData}</script>
       </Head>
       <ContentLayout>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 flex flex-col w-d:justify-center">
+        <div className="col-span-6 tablet:col-span-8 mobile:col-span-4 desktop:mb-12 flex flex-col desktop:justify-center">
           <h1 className="desktop:text-7xl font-bold font-headings leading-13 tablet:semi-tight mobile:leading-tight tablet:text-8.5 mobile:text-7.5 mb-6">{title}</h1>
           {/* <Heading variant="h1" className="desktop:text-7xl font-bold font-headings leading-13 tablet:semi-tight mobile:leading-tight tablet:text-8.5 mobile:text-7.5 mb-6">{title}</Heading> */}
           <RichtText data={{
             content: description
           }} />
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 w-p:hidden mb-10 mt-6 flex flex-col w-d:justify-center">
+        <div className="col-span-6 tablet:col-span-8 mobile:col-span-4 desktop:mb-12 mobile:hidden mb-10 mt-6 flex flex-col desktop:justify-center">
           <Aspect ratio={"2/1"}>
             <Image
               alt={title || "Programa de Bachillerato"}
@@ -164,14 +164,14 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
       <ContentLayout classNames="w-d-base:px-0">
         {
           feedbackData ?
-            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6 mb-18 w-p:mb-6">
+            <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 mt-6 mb-18 mobile:mb-6">
               <Alert {...feedbackData} />
             </div>
             : null
         }
       </ContentLayout>
       <ContentFullLayout>
-        <div className="w-d:hidden w-t:hidden col-span-4 mb-10 mt-6">
+        <div className="desktop:hidden tablet:hidden col-span-4 mb-10 mt-6">
           <Aspect ratio={"4/3"}>
             <Image
               alt={title || "Programa de Bachillerato"}
@@ -183,23 +183,23 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
         </div>
       </ContentFullLayout>
       <ContentLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6">
-          <h2 className="text-6.5 font-headings font-semibold leading-tight w-t:leading-tight w-p:leading-tight w-t:text-6 w-p:text-6">{`Para cursar ${title} necesitas: `} </h2>
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 mb-6">
+          <h2 className="text-6.5 font-headings font-semibold leading-tight tablet:leading-tight mobile:leading-tight tablet:text-6 mobile:text-6">{`Para cursar ${title} necesitas: `} </h2>
           {/* <Heading variant="h4" as="h2">{`Para cursar ${title} necesitas: `}</Heading> */}
         </div>
-        <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center">
+        <div className="tablet:hidden mobile:hidden col-span-12 tablet:col-span-8 mobile:col-span-4 flex justify-center">
           <TabsFeatured tabs={modalities?.map((modality) => ({ label: modality?.labelModality || modality?.modality?.data?.attributes?.label || modality?.modality?.data?.attributes?.name }))} onActive={(active: number) => handleSetActiveTab(active)} />
         </div>
       </ContentLayout>
       <ContentFullLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:flex w-t:justify-center">
-          <section className="w-d:hidden">
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 tablet:flex tablet:justify-center">
+          <section className="desktop:hidden">
             <TabsFeatured tabs={modalities?.map((modality) => ({ label: modality?.labelModality || modality?.modality?.data?.attributes?.label || modality?.modality?.data?.attributes?.name }))} onActive={(active: number) => handleSetActiveTab(active)} />
           </section>
         </div>
       </ContentFullLayout>
       <ContentLayout>
-        <ContentInsideLayout classNames="gap-6 col-span-12 w-t:col-span-8 w-p:col-span-4">
+        <ContentInsideLayout classNames="gap-6 col-span-12 tablet:col-span-8 mobile:col-span-4">
           {
             formattedModalityData?.cards?.map((items, i: number) => {
               return <Fragment key={`section-${i}`}>
@@ -207,15 +207,15 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
                   mode="light"
                   title=""
                   description={items?.text}
-                  classNames={cn("col-span-7 grid grid-cols-7 gap-6 w-t:col-span-8 w-t:grid-cols-8 w-p:col-span-4 py-10 w-t:py-24 w-p:flex w-p:flex-col w-p:p-6", { "w-d:order-2 w-t:order-1 w-p:order-1": i === 1 })}
-                  titleStyles="col-start-2 col-end-7 w-t:col-end-8"
-                  descriptionStyles="col-start-2 col-end-7 w-t:col-end-8"
+                  classNames={cn("col-span-7 grid grid-cols-7 gap-6 tablet:col-span-8 tablet:grid-cols-8 mobile:col-span-4 py-10 tablet:py-24 mobile:flex mobile:flex-col mobile:p-6", { "desktop:order-2 tablet:order-1 mobile:order-1": i === 1 })}
+                  titleStyles="col-start-2 col-end-7 tablet:col-end-8"
+                  descriptionStyles="col-start-2 col-end-7 tablet:col-end-8"
                 />
                 <Image
                   alt={"image"}
                   src={items?.image?.desktop}
-                  classNames={cn("w-full h-fit col-span-5 w-t:col-span-8 w-p:col-span-4 w-t:col-start-2 w-t:col-end-8", { "w-d:order-1 w-t:order-2 w-p:order-2": i === 1 })}
-                  classNamesImg={cn("w-full !h-auto !relative col-span-5 w-t:col-span-8 w-p:col-span-4 w-t:col-start-2 w-t:col-end-8", { "w-d:order-1 w-t:order-2 w-p:order-2": i === 1 })}
+                  classNames={cn("w-full h-fit col-span-5 tablet:col-span-8 mobile:col-span-4 tablet:col-start-2 tablet:col-end-8", { "desktop:order-1 tablet:order-2 mobile:order-2": i === 1 })}
+                  classNamesImg={cn("w-full !h-auto !relative col-span-5 tablet:col-span-8 mobile:col-span-4 tablet:col-start-2 tablet:col-end-8", { "desktop:order-1 tablet:order-2 mobile:order-2": i === 1 })}
                 />
               </Fragment>
             })
@@ -223,11 +223,11 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
         </ContentInsideLayout>
       </ContentLayout>
       <ContentLayout classNames="mt-6">
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6">
-          <h2 className="text-6.5 font-headings font-semibold leading-tight w-t:leading-tight w-p:leading-tight w-t:text-6 w-p:text-6">{"Plan de estudios"}</h2>
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 mt-6">
+          <h2 className="text-6.5 font-headings font-semibold leading-tight tablet:leading-tight mobile:leading-tight tablet:text-6 mobile:text-6">{"Plan de estudios"}</h2>
           {/* <Heading variant="h4" as="h2">{"Plan de estudios"}</Heading> */}
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 leading-tight w-d:order-1 w-t:order-1">
+        <div className="col-span-6 tablet:col-span-8 mobile:col-span-4 leading-tight desktop:order-1 tablet:order-1">
           {
             formattedModalityData?.curriculumDescription
               ? <RichtText font="light" data={{ content: formattedModalityData?.curriculumDescription }} />
@@ -255,7 +255,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
         </div>
         {
           videoId ?
-            <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 w-d:order-1 w-t:order-2 h-100">
+            <div className="col-span-6 tablet:col-span-8 mobile:col-span-4 desktop:mb-12 desktop:order-1 tablet:order-2 h-100">
               <Video data={{ options: { id: videoId, type: 'single', controls: true } }} />
             </div>
             : null
@@ -263,7 +263,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
       </ContentLayout>
       {
         bannerData?.desktopImage ?
-          <div className="order-last col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6">
+          <div className="order-last col-span-12 tablet:col-span-8 mobile:col-span-4 mt-6">
             <Banner type={"ComponentSectionsBanner"} {...bannerData} />
           </div>
           : null

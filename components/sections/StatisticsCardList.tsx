@@ -11,7 +11,7 @@ const StatisticsCardList = (props: StatisticsCardListSection) => {
         {
           cards?.length > 0
             ? <div
-                className="grid w-p:!grid-cols-1 w-t:!grid-cols-2 gap-6"
+                className="grid mobile:!grid-cols-1 tablet:!grid-cols-2 gap-6"
                 style={{ gridTemplateColumns: "repeat(4, minmax(0, 1fr))" }}
               >
                 {

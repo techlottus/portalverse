@@ -67,9 +67,9 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
       <meta property="title" content={meta?.title} />
     </Head>
     <Modal isShow={isShow} onClose={handleVisibilityModal} data={{ icon: 'close', title: "", tagOnClose: 'testOnClose', wrapper: true, }}>
-      <section slot="areaModalContent" className="flex w-t:flex-col w-p:flex-col w-full h-auto">
+      <section slot="areaModalContent" className="flex tablet:flex-col mobile:flex-col w-full h-auto">
         <ContentInsideLayout classNames="gap-6">
-          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 bg-surface-800 p-6">
+          <div className="col-span-6 tablet:col-span-8 mobile:col-span-4 bg-surface-800 p-6">
             <p className="text-surface-0 font-headings font-bold text-8 leading-10 break-normal mb-16">{infoModal?.title?.title}</p>
             <span className="font-headings font-normal text-surface-0 mb-6">{infoModal?.redirectLabel}</span>
             {
@@ -115,7 +115,7 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
               })
             }
           </div>
-          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 bg-surface-0 overflow-y-auto">
+          <div className="col-span-6 tablet:col-span-8 mobile:col-span-4 bg-surface-0 overflow-y-auto">
             <RichtText data={{
               content: infoModal?.description?.content
             }} />
@@ -125,30 +125,30 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
     </Modal>
     <HeaderFooterLayout>
       <ContentLayout>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12">
-          <h1 className="text-13 font-bold font-headings leading-13 w-t:semi-tight w-p:leading-tight w-t:text-8.5 w-p:text-7.5 w-d:mb-6 w-t:mb-4 w-p:mb-3">{sections.head.title}</h1>
-          <h2 className="text-5.5  font-bold font-headings leading-tight w-t:leading-tight w-p:leading-tight w-t:text-4.5 w-p:text-4.5 w-d:mb-6 w-t:mb-4 w-p:mb-3">{sections.head.subtitle}</h2>
+        <div className="col-span-6 tablet:col-span-8 mobile:col-span-4 desktop:mb-12">
+          <h1 className="text-13 font-bold font-headings leading-13 tablet:semi-tight mobile:leading-tight tablet:text-8.5 mobile:text-7.5 desktop:mb-6 tablet:mb-4 mobile:mb-3">{sections.head.title}</h1>
+          <h2 className="text-5.5  font-bold font-headings leading-tight tablet:leading-tight mobile:leading-tight tablet:text-4.5 mobile:text-4.5 desktop:mb-6 tablet:mb-4 mobile:mb-3">{sections.head.subtitle}</h2>
           <RichtText data={{
             content: sections.head.description
           }} />
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12">
+        <div className="col-span-6 tablet:col-span-8 mobile:col-span-4 desktop:mb-12">
           <Image
             alt={sections.head.image.desk.alt}
             src={sections.head.image.desk.src}
-            classNames="aspect-2/1 w-t:aspect-2/1 w-p:aspect-2/1"
+            classNames="aspect-2/1 tablet:aspect-2/1 mobile:aspect-2/1"
           />
         </div>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:col-start-2 w-t:col-end-8 mb-6 w-t:mb-6 w-p:mb-6">
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 tablet:col-start-2 tablet:col-end-8 mb-6 tablet:mb-6 mobile:mb-6">
           <NumbersComponent data={sections.estadisticas} />
         </div>
         {
           sections?.becas?.tabs?.items ?
-            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-12">
-              <div id="becas" className="flex justify-center w-d:mb-2">
+            <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 mb-12">
+              <div id="becas" className="flex justify-center desktop:mb-2">
                 <TabsFeatured active={tabActive} tabs={sections.becas.tabs.items} onActive={(active: number) => setTabActive(active)} />
               </div>
-              <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+              <div className="col-span-12 tablet:col-span-8 mobile:col-span-4">
                 <ContentInsideLayout classNames="gap-6">
                   {
                     contentTabs.map(({ image: { src, alt }, content: { title, description, action = null } }: any, i: number) => <Fragment key={`description-beca-${i}`}>
@@ -156,9 +156,9 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
                         mode="light"
                         title={title}
                         description={description}
-                        classNames={cn("col-span-7 grid grid-cols-7 gap-6 w-t:col-span-8 w-t:grid-cols-8 w-p:col-span-4 py-[40px] w-t:py-[94px] w-p:flex w-p:flex-col w-p:p-6", { "hidden w-p:hidden": tabActive !== i })}
-                        titleStyles="col-start-2 col-end-7 w-t:col-end-8"
-                        descriptionStyles="col-start-2 col-end-7 w-t:col-end-8"
+                        classNames={cn("col-span-7 grid grid-cols-7 gap-6 tablet:col-span-8 tablet:grid-cols-8 mobile:col-span-4 py-[40px] tablet:py-[94px] mobile:flex mobile:flex-col mobile:p-6", { "hidden mobile:hidden": tabActive !== i })}
+                        titleStyles="col-start-2 col-end-7 tablet:col-end-8"
+                        descriptionStyles="col-start-2 col-end-7 tablet:col-end-8"
                         action={
                           !!action
                             ? <div slot="actionDescription" className="mt-4">
@@ -170,15 +170,15 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
                       <Image
                         alt={alt}
                         src={src}
-                        classNames={cn("aspect-4/3 col-span-5 w-t:col-start-2 w-t:col-end-8 w-p:col-span-4", { "hidden": tabActive !== i })}
+                        classNames={cn("aspect-4/3 col-span-5 tablet:col-start-2 tablet:col-end-8 mobile:col-span-4", { "hidden": tabActive !== i })}
                       />
                       {/* <DescriptionSection
                           mode="transparent"
                           title="hola proceso"
                           description="jejeje"
-                          classNames={cn("col-span-12 grid grid-cols-12 gap-6 w-t:col-span-8 w-t:grid-cols-8 w-p:col-span-4 py-[40px] w-t:py-[94px] w-p:flex w-p:flex-col w-p:p-6 hidden", { "hidden w-p:hidden": tabActive !== i })}
-                          titleStyles="col-start-2 col-end-12 w-t:col-end-8"
-                          descriptionStyles="col-start-2 col-end-12 w-t:col-end-8" /> */}
+                          classNames={cn("col-span-12 grid grid-cols-12 gap-6 tablet:col-span-8 tablet:grid-cols-8 mobile:col-span-4 py-[40px] tablet:py-[94px] mobile:flex mobile:flex-col mobile:p-6 hidden", { "hidden mobile:hidden": tabActive !== i })}
+                          titleStyles="col-start-2 col-end-12 tablet:col-end-8"
+                          descriptionStyles="col-start-2 col-end-12 tablet:col-end-8" /> */}
                     </Fragment>)
                   }
                 </ContentInsideLayout>
@@ -190,10 +190,10 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
       {
         sections?.becas?.scholarships  ?
         <ContentLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6 w-t:mb-12 w-p:mb-6">
-          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight">{sections?.becas?.title}</p>
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 mb-6 tablet:mb-12 mobile:mb-6">
+          <p className="font-headings font-bold text-10 tablet:text-6 mobile:text-6 leading-tight">{sections?.becas?.title}</p>
         </div>
-        <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mb-12 w-t:mb-12 w-p:mb-6">
+        <section className="col-span-12 tablet:col-span-8 mobile:col-span-4 grid desktop:grid-cols-3 gap-6 tablet:grid-cols-2 mobile:grid-cols-1 mb-12 tablet:mb-12 mobile:mb-6">
           {
             sections?.becas?.scholarships?.map((item: any, i: number) => <section key={`section-scholarships-${i}`}>
               <PromoLink
@@ -208,16 +208,16 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
       : null
       }
       <ContentLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-12 w-t:mb-6 w-p:mb-6">
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 mb-12 tablet:mb-6 mobile:mb-6">
           <Feedback data={sections.feedback.feedback} >
             <p className="font-texts font-normal text-base leading-6 text-surface-800 mb-3">{sections.feedback.title}</p>
             <p className="font-texts font-normal text-sm text-surface-800">{sections.feedback.text}</p>
           </Feedback>
         </div>
-        <div className="col-span-7 w-t:col-span-8 w-p:col-span-4">
+        <div className="col-span-7 tablet:col-span-8 mobile:col-span-4">
           <OpenForm pathThankyou={`/thank-you`} image={{ src: "https://assets.staging.bedu.org/UTEG/admisiones_pedir_informacion_avatar_6738c707b5.jpg", alt: "image-person" }} />
         </div>
-        <div className="col-span-5 w-t:col-span-8 w-p:col-span-4">
+        <div className="col-span-5 tablet:col-span-8 mobile:col-span-4">
           <h3 className="font-headings font-bold leading-tight text-5.5 mb-8">{sections.llamanos.title}</h3>
           <div>
           <CardWebsitePortalverse data={sections.llamanos.card} />

@@ -36,8 +36,8 @@ const ListconfigPodcastItems = (props: ListconfigSection) => {
         <div className="flex flex-col space-y-6">
           {
             title
-              ? <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-                  <h2 className="font-headings font-bold text-8.5 w-t:text-6 w-p:text-6 semi-tight w-t:leading-tight w-p:leading-tight">
+              ? <div className="col-span-12 tablet:col-span-8 mobile:col-span-4">
+                  <h2 className="font-headings font-bold text-8.5 tablet:text-6 mobile:text-6 semi-tight tablet:leading-tight mobile:leading-tight">
                     {title}
                   </h2>
                 </div>
@@ -58,7 +58,7 @@ const ListconfigPodcastItems = (props: ListconfigSection) => {
               </section>
             ))
           }
-          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center w-p:hidden">
+          <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 flex justify-center mobile:hidden">
             <PaginatorPortalverse items={podcastEpisodes?.length} currentPage={currentPage} pageSize={pageSize} onPageChange={onPageChange} iconNext={"chevron_right"} iconPrevious={"chevron_left"} /> 
           </div>
         </div>

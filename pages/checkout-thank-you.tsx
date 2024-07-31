@@ -43,12 +43,12 @@ const ThankYouPageInscription: NextPageWithLayout = ({ sections, meta }: any) =>
     <HeaderFooterLayout breadcrumbs={false}>
       <ContentFullLayout>
         <ContentInsideLayout>
-          <div className="col-span-5 w-t:col-span-8 w-p:col-span-4 bg-primary-500 text-surface-0 w-t:pb-6">
+          <div className="col-span-5 tablet:col-span-8 mobile:col-span-4 bg-primary-500 text-surface-0 tablet:pb-6">
             <ContentInsideLayout>
-              <h1 className="col-span-12 col-start-3 col-end-11 w-t:col-span-8 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 w-p:col-end-5 text-10 w-p:text-7?.5 w-p:m-6 font-bold font-headings mt-18 leading-tight">{ messages[flow]?.title }</h1>
-              <p className="col-span-12 col-start-3 col-end-11 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 text-base font-semibold font-texts w-d:mt-6 w-t:mt-6 w-p:mt-2 w-p:mx-6 leading-6 w-t:leading-tight w-p:leading-3[130%]">{ messages[flow]?.subtitle }</p>
-              <p className="col-span-12 col-start-3 col-end-11 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1  text-4?.5 font-semibold font-headings w-d:mt-12 w-t:mt-6 w-p:mt-6 w-p:ml-6 leading-tight">{ sections?.agradecimiento?.title }</p>
-              <section className="grid w-d:grid-cols-4 w-t:grid-cols-4 w-p:grid-cols-4 col-start-3 col-end-11 w-t:col-start-2 w-t:col-end-6 w-p:col-start-1 w-p:col-end-4 w-d:mt-10 w-t:mt-10 w-p:my-5 w-p:ml-6">
+              <h1 className="col-span-12 col-start-3 col-end-11 tablet:col-span-8 tablet:col-start-2 tablet:col-end-8 mobile:col-start-1 mobile:col-end-5 text-10 mobile:text-7?.5 mobile:m-6 font-bold font-headings mt-18 leading-tight">{ messages[flow]?.title }</h1>
+              <p className="col-span-12 col-start-3 col-end-11 tablet:col-start-2 tablet:col-end-8 mobile:col-start-1 text-base font-semibold font-texts desktop:mt-6 tablet:mt-6 mobile:mt-2 mobile:mx-6 leading-6 tablet:leading-tight mobile:leading-3[130%]">{ messages[flow]?.subtitle }</p>
+              <p className="col-span-12 col-start-3 col-end-11 tablet:col-start-2 tablet:col-end-8 mobile:col-start-1  text-4?.5 font-semibold font-headings desktop:mt-12 tablet:mt-6 mobile:mt-6 mobile:ml-6 leading-tight">{ sections?.agradecimiento?.title }</p>
+              <section className="grid desktop:grid-cols-4 tablet:grid-cols-4 mobile:grid-cols-4 col-start-3 col-end-11 tablet:col-start-2 tablet:col-end-6 mobile:col-start-1 mobile:col-end-4 desktop:mt-10 tablet:mt-10 mobile:my-5 mobile:ml-6">
                 {
                   sections?.agradecimiento?.social?.map((item: any, i: number) => <Link key={`social-${i}`} href={item?.link} passHref target={"_blank"}>
 
@@ -59,7 +59,7 @@ const ThankYouPageInscription: NextPageWithLayout = ({ sections, meta }: any) =>
               </section>
             </ContentInsideLayout>
           </div>
-          <div className="col-span-7 w-t:col-span-12 w-p:col-span-12 h-125">
+          <div className="col-span-7 tablet:col-span-12 mobile:col-span-12 h-125">
             <Video data={ sections?.video } />
           </div>
         </ContentInsideLayout>

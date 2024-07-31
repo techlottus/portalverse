@@ -31,7 +31,7 @@ const OutstandingContainer: FC<OutstandingContainerPortalverseComponentData> = (
   }, []);
 
   return (
-    <section className="flex flex-col w-t:grid w-t:gap-6 w-t:grid-cols-2 w-t:grid-rows-2 w-p:grid-cols-1 w-p:grid-rows-1 w-p:gap-6">
+    <section className="flex flex-col tablet:grid tablet:gap-6 tablet:grid-cols-2 tablet:grid-rows-2 mobile:grid-cols-1 mobile:grid-rows-1 mobile:gap-6">
       {
         items?.map((item: any, i: number) => (
           <article

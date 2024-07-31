@@ -56,8 +56,8 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
     </Head>
     <HeaderFooterLayout breadcrumbs={true}>
       <ContentLayout classNames="gap-12">
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-7.5 w-d:mb-6 w-d:leading-13">{sections.head.title}</p>
+        <div className="col-span-6 tablet:col-span-8 mobile:col-span-4">
+          <p className="font-headings font-bold text-13 tablet:text-8.5 mobile:text-7.5 desktop:mb-6 desktop:leading-13">{sections.head.title}</p>
           <p className="font-headings font-bold text-5.5 mb-6">{sections.head.subtitle}</p>
           <RichtText font="light" data={{
             content: sections.head.description
@@ -70,16 +70,16 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
             </div>
           </div>
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
+        <div className="col-span-6 tablet:col-span-8 mobile:col-span-4">
           <img
             alt={sections.head.image.desk.alt}
             src={sections.head.image.desk.src}
             className="w-full"
           />
         </div>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight w-d:mb-6">{sections.alliances.title}</p>
-          <div className="w-d:col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mb-6 ">
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4">
+          <p className="font-headings font-bold text-10 tablet:text-6 mobile:text-6 leading-tight desktop:mb-6">{sections.alliances.title}</p>
+          <div className="desktop:col-span-12 tablet:col-span-8 mobile:col-span-4 grid desktop:grid-cols-4 gap-6 tablet:grid-cols-2 mobile:grid-cols-1 mb-6 ">
             {
               sections?.alliances?.carrousel?.map((item: any, i: number) => <section key={`section-numbers-${i}`}>
                 <img
@@ -91,18 +91,18 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
             }
           </div>
         </div>
-        <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center">
+        <div className="tablet:hidden mobile:hidden col-span-12 tablet:col-span-8 mobile:col-span-4 flex justify-center">
           <TabsFeatured active={tabActive} tabs={sections.socialService.tabs.items} onActive={(active: number) => setTabActive(active)} />
         </div>
       </ContentLayout>
       <ContentFullLayout>
-        <section className="w-d:hidden">
+        <section className="desktop:hidden">
           <TabsFeatured active={tabActive} tabs={sections.socialService.tabs.items} onActive={(active: number) => setTabActive(active)} />
         </section>
       </ContentFullLayout>
       <ContentFullLayout classNames="bg-surface-0 py-6">
         <ContentLayout>
-          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+          <div className="col-span-12 tablet:col-span-8 mobile:col-span-4">
             <ContentInsideLayout classNames="gap-6">
               {
                 contentTabs.map(({ image: { src, alt }, content: { title, description }, process: { title: titleProcess, description: descripcionProcess, download } }: any, i: number) => <Fragment key={`description-serviceSocial-${i}`}>
@@ -111,17 +111,17 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
                     title={title}
                     description={description}
                     classNames={cn(
-                      "col-span-7 grid grid-cols-7 gap-6 w-t:col-span-8 w-t:grid-cols-8",
-                      "w-p:col-span-4 py-10 w-t:py-24 w-p:flex w-p:flex-col w-p:p-6",
-                      { "hidden w-p:hidden": tabActive !== i }
+                      "col-span-7 grid grid-cols-7 gap-6 tablet:col-span-8 tablet:grid-cols-8",
+                      "mobile:col-span-4 py-10 tablet:py-24 mobile:flex mobile:flex-col mobile:p-6",
+                      { "hidden mobile:hidden": tabActive !== i }
                     )}
-                    titleStyles="col-start-2 col-end-7 w-t:col-end-8 text-6.5 !leading-10"
-                    descriptionStyles="col-start-2 col-end-7 w-t:col-end-8"
+                    titleStyles="col-start-2 col-end-7 tablet:col-end-8 text-6.5 !leading-10"
+                    descriptionStyles="col-start-2 col-end-7 tablet:col-end-8"
                   />
                   <img
                     alt={alt}
                     src={src}
-                    className={cn("w-full col-span-5 w-t:col-start-2 w-t:col-end-8 w-p:col-span-4", { "hidden": tabActive !== i })}
+                    className={cn("w-full col-span-5 tablet:col-start-2 tablet:col-end-8 mobile:col-span-4", { "hidden": tabActive !== i })}
                   />
                 </Fragment>)
               }
@@ -130,7 +130,7 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
         </ContentLayout>
       </ContentFullLayout>
       <ContentLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 flex flex-col my-6">
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 flex flex-col my-6">
           <Feedback data={sections.head.feedback}>
             <div slot="areaFeedbackContent">
               <p className="font-normal font-texts text-base mb-6">{sections.head.feedback.title}</p>
@@ -146,15 +146,15 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
         </div>
       </ContentLayout>
       <ContentLayout classNames="mt-6">
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-7.5 mb-18 w-p:m-6  w-d:leading-13">{sections.descriptionSection.title}</p>
+        <div className="col-span-6 tablet:col-span-8 mobile:col-span-4">
+          <p className="font-headings font-bold text-13 tablet:text-8.5 mobile:text-7.5 mb-18 mobile:m-6  desktop:leading-13">{sections.descriptionSection.title}</p>
           {
             sections.descriptionSection.textIcons.map((item: any, i: number) =>
               <div key={`icon-${i}`} className="flex mt-4 gap-6">
-                <div className="col-span-2 w-t:col-span-1 w-p:col-span-1">
+                <div className="col-span-2 tablet:col-span-1 mobile:col-span-1">
                   <Icon name={item.name} className="w-14 h-14 text-red-500" />
                 </div>
-                <div className="col-span-10 w-t:col-span-7 w-p:col-span-3">
+                <div className="col-span-10 tablet:col-span-7 mobile:col-span-3">
                   <RichtText data={{
                     content: item.text
                   }} />
@@ -163,21 +163,21 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
             )
           }
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-          <div className="w-t:hidden w-p:hidden flex justify-end">
+        <div className="col-span-6 tablet:col-span-8 mobile:col-span-4">
+          <div className="tablet:hidden mobile:hidden flex justify-end">
             <img
               alt={sections.descriptionSection.image.desk.alt}
               src={sections.descriptionSection.image.desk.src}
             />
           </div>
-          <div className="w-d:hidden w-p:hidden">
+          <div className="desktop:hidden mobile:hidden">
             <img
               alt={sections.descriptionSection.image.tablet.alt}
               src={sections.descriptionSection.image.tablet.src}
               className="w-full h-full"
             />
           </div>
-          <div className="w-d:hidden w-t:hidden">
+          <div className="desktop:hidden tablet:hidden">
             <img
               alt={sections.descriptionSection.image.mobile.alt}
               src={sections.descriptionSection.image.mobile.src}
@@ -187,8 +187,8 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
         </div>
       </ContentLayout>
       <ContentLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-12 w-t:mt-6 w-p:mt-6">
-          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6">{sections.experiences.title}</p>
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 mt-12 tablet:mt-6 mobile:mt-6">
+          <p className="font-headings font-bold text-10 tablet:text-6 mobile:text-6 leading-tight mb-6">{sections.experiences.title}</p>
           <Mosaic data={sections.experiences.images} />
         </div>
       </ContentLayout>

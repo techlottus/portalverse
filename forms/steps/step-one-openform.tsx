@@ -132,7 +132,7 @@ const StepOne: FC<any> = ({
         <h4 className="font-texts font-bold text-5 leading-6">{ config.title }</h4>
         <p className="font-texts font-normal text-3.5 leading-4">{ config.subtitle }</p>
       </div>
-      <div className={cn("w-p:hidden", { "hidden": !config?.image })}>
+      <div className={cn("mobile:hidden", { "hidden": !config?.image })}>
         <Image classNamesImg="w-full h-full object-cover" classNames="w-28 h-28 rounded-full overflow-hidden" src={config?.image?.src} alt={config?.image?.alt} />
       </div>
     </div>
@@ -146,7 +146,7 @@ const StepOne: FC<any> = ({
       <ProgressBar data={{ progress }} />
     </div>
     <form>
-      <div className="mt-6 flex w-p:flex-col gap-6 font-normal">
+      <div className="mt-6 flex mobile:flex-col gap-6 font-normal">
         <div className="grow">
           <Input errorMessage={configControls.errorMessagesStepOneOpenForm.name} hasError={errorControls.name} eventFocus={() => handleTouchedControl("name")} data={ configControls.inputNameOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "name")} />
         </div>

@@ -85,13 +85,13 @@ const StaticProgramContent: NextPageWithLayout<any> = ({ level, program, meta, c
     </Head>
     <Fragment>
       <ContentLayout>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12">
-          <h1 className="text-13 font-bold font-headings leading-13 w-t:semi-tight w-p:leading-tight w-t:text-8.5 w-p:text-7.5 mb-6">{sections.head.title}</h1>
+        <div className="col-span-6 tablet:col-span-8 mobile:col-span-4 desktop:mb-12">
+          <h1 className="text-13 font-bold font-headings leading-13 tablet:semi-tight mobile:leading-tight tablet:text-8.5 mobile:text-7.5 mb-6">{sections.head.title}</h1>
           <RichtText data={{
             content: sections.head.description
           }} />
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 w-p:hidden mb-10 mt-6">
+        <div className="col-span-6 tablet:col-span-8 mobile:col-span-4 desktop:mb-12 mobile:hidden mb-10 mt-6">
           <Image
             alt={sections.head.image.alt}
             src={sections.head.image.src}
@@ -100,7 +100,7 @@ const StaticProgramContent: NextPageWithLayout<any> = ({ level, program, meta, c
           />
         </div>
       </ContentLayout>  
-      <ContentFullLayout classNames="w-d:hidden w-t:hidden mb-10 mt-6">
+      <ContentFullLayout classNames="desktop:hidden tablet:hidden mb-10 mt-6">
         <Image
           alt={sections.head.image.alt}
           src={sections.head.image.src}
@@ -108,20 +108,20 @@ const StaticProgramContent: NextPageWithLayout<any> = ({ level, program, meta, c
           classNamesImg="aspect-2/1"/>
       </ContentFullLayout>  
       <ContentLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6">
-          <p className="text-6.5 font-headings font-semibold leading-tight w-t:leading-tight w-p:leading-tight w-t:text-6 w-p:text-6">{sections.modalities.title}</p>
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 mb-6">
+          <p className="text-6.5 font-headings font-semibold leading-tight tablet:leading-tight mobile:leading-tight tablet:text-6 mobile:text-6">{sections.modalities.title}</p>
         </div>
-        <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center">
+        <div className="tablet:hidden mobile:hidden col-span-12 tablet:col-span-8 mobile:col-span-4 flex justify-center">
           <TabsFeatured tabs={sections.modalities.tabs.items} onActive={(active: number) => handleSetActiveTab(active)} />
         </div>
       </ContentLayout>
       <ContentFullLayout>
-        <section className="w-d:hidden">
+        <section className="desktop:hidden">
           <TabsFeatured tabs={sections.modalities.tabs.items} onActive={(active: number) => handleSetActiveTab(active)} />
         </section>
       </ContentFullLayout>
       <ContentLayout> 
-        <ContentInsideLayout classNames="gap-6 col-span-12 w-t:col-span-8 w-p:col-span-4">
+        <ContentInsideLayout classNames="gap-6 col-span-12 tablet:col-span-8 mobile:col-span-4">
         {
           level === 'bachillerato'
             ? contentTabs.map( ( items: any, i: number ) => {
@@ -129,19 +129,19 @@ const StaticProgramContent: NextPageWithLayout<any> = ({ level, program, meta, c
                   <DescriptionSection
                     title={contentTitle}
                     description={contentDescription}
-                    classNames={cn("col-span-7 grid grid-cols-7 gap-6 w-t:col-span-8 w-t:grid-cols-8 w-p:col-span-4 py-10 w-t:py-24 w-p:flex w-p:flex-col w-p:p-6", { "hidden w-p:hidden": tabActive !== i, "w-d:order-2 w-t:order-1 w-p:order-1": j === 1 })}
-                    titleStyles="col-start-2 col-end-7 w-t:col-end-8"
-                    descriptionStyles="col-start-2 col-end-7 w-t:col-end-8"
+                    classNames={cn("col-span-7 grid grid-cols-7 gap-6 tablet:col-span-8 tablet:grid-cols-8 mobile:col-span-4 py-10 tablet:py-24 mobile:flex mobile:flex-col mobile:p-6", { "hidden mobile:hidden": tabActive !== i, "desktop:order-2 tablet:order-1 mobile:order-1": j === 1 })}
+                    titleStyles="col-start-2 col-end-7 tablet:col-end-8"
+                    descriptionStyles="col-start-2 col-end-7 tablet:col-end-8"
                   />
                   <Image
                     alt={ image.alt }
                     src={ image.src }
-                    classNames={cn("aspect-4/3 col-span-5 w-t:col-span-8 w-p:col-span-4 w-t:col-start-2 w-t:col-end-8", { "hidden": tabActive !== i, "w-d:order-1 w-t:order-2 w-p:order-2": j === 1 })}
-                    classNamesImg={cn("aspect-4/3 col-span-5 w-t:col-span-8 w-p:col-span-4 w-t:col-start-2 w-t:col-end-8", { "hidden": tabActive !== i, "w-d:order-1 w-t:order-2 w-p:order-2": j === 1 })}
+                    classNames={cn("aspect-4/3 col-span-5 tablet:col-span-8 mobile:col-span-4 tablet:col-start-2 tablet:col-end-8", { "hidden": tabActive !== i, "desktop:order-1 tablet:order-2 mobile:order-2": j === 1 })}
+                    classNamesImg={cn("aspect-4/3 col-span-5 tablet:col-span-8 mobile:col-span-4 tablet:col-start-2 tablet:col-end-8", { "hidden": tabActive !== i, "desktop:order-1 tablet:order-2 mobile:order-2": j === 1 })}
                   />
                 </Fragment>)
               })
-            : contentTabs.map( (content: any, i: number) => <div key={`content-outstanding-${i}`} className={cn("col-span-12 w-t:col-span-8 w-p:col-span-4 text-surface-0", { "hidden": i !== tabActive })}><OutstandingContainer items={content.cards} /></div>)
+            : contentTabs.map( (content: any, i: number) => <div key={`content-outstanding-${i}`} className={cn("col-span-12 tablet:col-span-8 mobile:col-span-4 text-surface-0", { "hidden": i !== tabActive })}><OutstandingContainer items={content.cards} /></div>)
         }
         </ContentInsideLayout>
       </ContentLayout>
@@ -150,8 +150,8 @@ const StaticProgramContent: NextPageWithLayout<any> = ({ level, program, meta, c
         level !== 'bachillerato'
           ? <>
               <ContentLayout>
-                <ContentInsideLayout classNames="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6">
-                  <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+                <ContentInsideLayout classNames="col-span-12 tablet:col-span-8 mobile:col-span-4 mt-6">
+                  <div className="col-span-12 tablet:col-span-8 mobile:col-span-4">
                     <h3 className="font-headings">Selecciona un {campusLabel} para descargar tu plan de estudios en esta modalidad</h3>
                     <div className="my-6">
                       <p className="font-texts font-normal text-xs mb-0">Los planes de estudio pueden variar por {campusLabel}*</p>
@@ -172,10 +172,10 @@ const StaticProgramContent: NextPageWithLayout<any> = ({ level, program, meta, c
         {
           level === 'bachillerato'
             ? <>
-                <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6">
-                  <h4 className="text-6.5 font-headings font-semibold leading-tight w-t:leading-tight w-p:leading-tight w-t:text-6 w-p:text-6">{ sections.benefits.title }</h4>
+                <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 mt-6">
+                  <h4 className="text-6.5 font-headings font-semibold leading-tight tablet:leading-tight mobile:leading-tight tablet:text-6 mobile:text-6">{ sections.benefits.title }</h4>
                 </div>
-                <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 leading-tight w-d:order-1 w-t:order-1">
+                <div className="col-span-6 tablet:col-span-8 mobile:col-span-4 leading-tight desktop:order-1 tablet:order-1">
                   <RichtText font="light" data={{ content: sections.benefits.description }} />
                   <div className="my-6">
                   <p className="font-texts font-normal text-xs mb-0">Los planes de estudio pueden variar por {campusLabel}*</p>
@@ -183,20 +183,20 @@ const StaticProgramContent: NextPageWithLayout<any> = ({ level, program, meta, c
                   </div>
                   <Button dark data={{...sections.benefits.action , disabled: !fileSelected}} onClick={downloadFileProgram} />
                 </div>
-                <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 w-d:order-1 w-t:order-2 h-100">
+                <div className="col-span-6 tablet:col-span-8 mobile:col-span-4 desktop:mb-12 desktop:order-1 tablet:order-2 h-100">
                   <Video data={{ options: { id: sections.benefits.video, type: 'single', controls: true}, dimensions: { height: '330px', width: '100%'} }} />
                 </div>
               </>
             : null
         }
-        {/* <div className="order-last col-span-12 col-start-3 col-end-11 w-t:col-span-8 w-p:col-span-4">
+        {/* <div className="order-last col-span-12 col-start-3 col-end-11 tablet:col-span-8 mobile:col-span-4">
           {
             level === 'bachillerato'
               ? <OpenFormBachillerato copies={{ ...form.copies }} image={{ src: "https://drive.google.com/uc?export=view&id=1CxZzCcuuptzexZwBWNtktMbIT5Z9dB6B", alt:"image-person" }} pathThankyou={`/thank-you`} controls={{ ...form.config }} />
               : <OpenFormSuperior levelDefault={config.config.nivel[0]} programDefault={config.config.nombre} copies={{ ...form.copies }} image={{ src: "https://drive.google.com/uc?export=view&id=1CxZzCcuuptzexZwBWNtktMbIT5Z9dB6B", alt:"image-person" }} pathThankyou={`/thank-you`} controls={{ ...form.config }} />
           }
         </div> */}
-        <div className="order-last col-span-12 w-t:col-span-8 w-p:col-span-4">
+        <div className="order-last col-span-12 tablet:col-span-8 mobile:col-span-4">
           <BannerPortalverse data={bannerParche.sections.bannerParche } onClick={() => {
             window.location.pathname = bannerParche.sections.bannerParche.redirect
           }}/>

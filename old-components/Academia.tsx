@@ -21,39 +21,39 @@ const Academia: FC<AcademiaComponentData> = ({ data, result, classNames, select:
 
   return <section className={classNames}>
     <div>
-      <h3 className="text-5.5 w-t:text-base w-p:text-base font-headings font-bold leading-tight">{data.title}</h3>
-      <p className="text-base w-t:invisible w-p:invisible font-texts font-bold leading-tight">{data.subtitle}</p>
-      <p className="text-base w-t:text-3.5 w-p:text-3.5 font-texts leading-tight w-t:leading-5 mt-4">{data.select.title}</p>
+      <h3 className="text-5.5 tablet:text-base mobile:text-base font-headings font-bold leading-tight">{data.title}</h3>
+      <p className="text-base tablet:invisible mobile:invisible font-texts font-bold leading-tight">{data.subtitle}</p>
+      <p className="text-base tablet:text-3.5 mobile:text-3.5 font-texts leading-tight tablet:leading-5 mt-4">{data.select.title}</p>
       <Select onClick={(option: CustomEvent) => console.log("option", option)} data={newConfig} options={newOptions} />
     </div>
     <div className="opacity-25">
       <div className="grid gap-6">
         <div>
-          <p className="text-base w-t:text-3.5 w-p:text-3.5 font-texts leading-tight">{result.title}</p>
-          <p className="text-base w-t:text-3.5 w-p:text-3.5 font-texts font-bold leading-tight w-t:leading-tight w-p:leading-tight">{result.plan}</p>
+          <p className="text-base tablet:text-3.5 mobile:text-3.5 font-texts leading-tight">{result.title}</p>
+          <p className="text-base tablet:text-3.5 mobile:text-3.5 font-texts font-bold leading-tight tablet:leading-tight mobile:leading-tight">{result.plan}</p>
         </div>
         <div>
-          <span className="text-base w-t:text-3.5 w-p:text-3.5 leading[125%] font-texts">{result.initText}</span>
-          <span className="text-base w-t:text-3.5 w-p:text-3.5 leading[125%] font-texts font-bold">{result.initValue}</span>
-          <span className="text-base w-t:text-3.5 w-p:text-3.5 leading[125%] font-texts">{result.duracionText}</span>
-          <span className="text-base w-t:text-3.5 w-p:text-3.5 leading[125%] font-texts font-bold">{result.duracionValue}</span>
+          <span className="text-base tablet:text-3.5 mobile:text-3.5 leading[125%] font-texts">{result.initText}</span>
+          <span className="text-base tablet:text-3.5 mobile:text-3.5 leading[125%] font-texts font-bold">{result.initValue}</span>
+          <span className="text-base tablet:text-3.5 mobile:text-3.5 leading[125%] font-texts">{result.duracionText}</span>
+          <span className="text-base tablet:text-3.5 mobile:text-3.5 leading[125%] font-texts font-bold">{result.duracionValue}</span>
         </div>
       </div>
       <div>
         <ContentInsideLayout classNames="gap-6">
-          <Table classNames="col-span-6 w-t:col-span-4 w-p:col-span-4" data={{
+          <Table classNames="col-span-6 tablet:col-span-4 mobile:col-span-4" data={{
             head: "Semestre 1",
             rows: ['Materia 1', 'Materia 2', 'Materia 3'],
             icon: ""
           }} />
-          <Table classNames="col-span-6 w-t:col-span-4 w-p:col-span-4" data={{
+          <Table classNames="col-span-6 tablet:col-span-4 mobile:col-span-4" data={{
             head: "Semestre 1",
             rows: ['Materia 1', 'Materia 2', 'Materia 3'],
             icon: ""
           }} />
         </ContentInsideLayout>
       </div>
-      <div className="w-p:flex-col hidden">
+      <div className="mobile:flex-col hidden">
         <Button data={{
           id: undefined,
           type: undefined,

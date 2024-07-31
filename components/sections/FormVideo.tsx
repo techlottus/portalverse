@@ -17,8 +17,8 @@ const FormVideo = (props: FormVideoSection) => {
   return (
     <section>
       <Container>
-        <div className="grid grid-cols-12-gap w-t:grid-cols-8-gap w-p:grid-cols-4-gap gap-grid-gap">
-          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
+        <div className="grid grid-cols-12-gap tablet:grid-cols-8-gap mobile:grid-cols-4-gap gap-grid-gap">
+          <div className="col-span-6 tablet:col-span-8 mobile:col-span-4">
             <OpenForm
               config={{
                 title: formTitle,
@@ -36,8 +36,8 @@ const FormVideo = (props: FormVideoSection) => {
               }}
             />
           </div>
-          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-            <h4 className="mb-6 font-headings font-semibold text-5.5 w-p:text-6">
+          <div className="col-span-6 tablet:col-span-8 mobile:col-span-4">
+            <h4 className="mb-6 font-headings font-semibold text-5.5 mobile:text-6">
               {videoTitle}
             </h4>
             {

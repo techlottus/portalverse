@@ -16,12 +16,12 @@ const CardList: FC<CardListSection> = (props: CardListSection) => {
         <div className="flex flex-col space-y-6">
           {
             title
-              ? <h2 className="font-headings text-10 font-bold leading-tight w-t:text-8.5 w-p:text-6">{title}</h2>
+              ? <h2 className="font-headings text-10 font-bold leading-tight tablet:text-8.5 mobile:text-6">{title}</h2>
               : null
           }
           {
             cards?.length > 0 ?
-              <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 w-t:grid-cols-2 w-p:grid-cols-1 gap-6">
+              <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 grid desktop:grid-cols-3 tablet:grid-cols-2 mobile:grid-cols-1 gap-6">
                 {
                   cards?.map((card, index) => {
                     const urlImage = card?.image?.data?.attributes?.url;

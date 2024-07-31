@@ -5,7 +5,7 @@ import NumbersPortalverse from "../NumbersPortalverse/NumbersPortalverse"
 
 const NumbersComponent: FC<any> = memo(({ data, classNames } : any) => {
     
-  return <section className={cn("w-d:col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 w-d:mt-8 ", classNames)}>
+  return <section className={cn("desktop:col-span-12 tablet:col-span-8 mobile:col-span-4 grid desktop:grid-cols-4 gap-6 tablet:grid-cols-2 mobile:grid-cols-1 desktop:mt-8 ", classNames)}>
     {
       data.map((item:any, i:number) => <NumbersPortalverse key={`section-numbers-${i}`} data={item}/>)
     }

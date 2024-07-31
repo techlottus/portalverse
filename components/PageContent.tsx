@@ -50,7 +50,7 @@ const PageContent = (props: PageData) => {
         {/* structuredData */}
         <script type="application/ld+json">{JSON.stringify(seo?.structuredData)}</script>       
       </Head>
-      <div className="flex flex-col w-p:space-y-12 w-t:space-y-12 w-d:space-y-18">
+      <div className="flex flex-col mobile:space-y-12 tablet:space-y-12 desktop:space-y-18">
         {pageBlocks?.length > 0 ? (
           <ContentGenerator blocks={pageBlocks} />
         ) : null}

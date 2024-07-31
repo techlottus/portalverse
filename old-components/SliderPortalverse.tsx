@@ -27,7 +27,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
 ) => {
   const router = useRouter()
 
-  const stylesBaseControls = "w-p:hidden select-none absolute top-1/2 p-1 rounded-lg text-xs";
+  const stylesBaseControls = "mobile:hidden select-none absolute top-1/2 p-1 rounded-lg text-xs";
 
   const [active, setActive] = useState<number>(0);
   const [countItems, setCountItems] = useState<number>(0);
@@ -165,9 +165,9 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
 
   const activeBulletSlide = (position: number) => setActive(position);
 
-  return <section className="relative z-0 w-p:shadow-lg">
+  return <section className="relative z-0 mobile:shadow-lg">
     {/* desktop */}
-    <div className="w-p:hidden">
+    <div className="mobile:hidden">
       <Aspect ratio="2/1">
         <div className="w-full h-full">
           <div
@@ -191,8 +191,8 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
                 });
 
                 return (<div key={`slide-item-${i}`} style={{ "transition": "left 0.5s ease-out", "left": `${active === 0 ? 0 : `-${active * 100}%`}` }} className={cn("w-full h-full relative flex flex-col shrink-0")}>
-                  <Image classNames="w-t:hidden w-full h-full absolute z-1" classNamesImg="w-full h-full object-cover" src={item.urlImage.desktop} alt="image" />
-                  <Image classNames="w-d:hidden w-full h-full absolute z-1" classNamesImg="w-full h-full object-cover" src={item.urlImage.tablet} alt="image" />
+                  <Image classNames="tablet:hidden w-full h-full absolute z-1" classNamesImg="w-full h-full object-cover" src={item.urlImage.desktop} alt="image" />
+                  <Image classNames="desktop:hidden w-full h-full absolute z-1" classNamesImg="w-full h-full object-cover" src={item.urlImage.tablet} alt="image" />
                   <div className={cn("flex absolute z-10 pt-12 pb-16 px-32 w-full h-full", {
                     "text-surface-0": item?.contentVariant === "light",
                     ["justify-start items-start"]: item?.textPosition === "left_top",
@@ -205,10 +205,10 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
                     ["justify-center items-end"]: item?.textPosition === "center_bottom",
                     ["justify-end items-end"]: item?.textPosition === "right_bottom"
                   })}>
-                    <div className="flex flex-col z-10 w-d:w-125 w-t:w-96 space-y-4">
+                    <div className="flex flex-col z-10 desktop:w-125 tablet:w-96 space-y-4">
                       <h3
                         className={cn(
-                          "font-headings font-bold w-d:text-10 w-d:leading-12 w-t:text-7.5 w-t:leading-9",
+                          "font-headings font-bold desktop:text-10 desktop:leading-12 tablet:text-7.5 tablet:leading-9",
                           textPositionClasses
                         )}
                       >
@@ -216,7 +216,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
                       </h3>
                       <p
                         className={cn(
-                          "font-headings font-semibold w-d:text-4.5 w-d:leading-6 w-t:text-base w-t:leading-5",
+                          "font-headings font-semibold desktop:text-4.5 desktop:leading-6 tablet:text-base tablet:leading-5",
                           textPositionClasses
                         )}
                       >
@@ -273,7 +273,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
     {/* desktop */}
 
     {/* mobile */}
-    <section id="sectionRef" className={cn("w-full h-auto flex overflow-hidden w-d:hidden w-t:hidden")}>
+    <section id="sectionRef" className={cn("w-full h-auto flex overflow-hidden desktop:hidden tablet:hidden")}>
       {
         slides?.map((item: any, i: number) => <div key={`slide-item-${i}`} style={{ "transition": "left 0.5s ease-out", "left": `${active === 0 ? 0 : `-${active * 100}%`}` }} className={cn("w-full h-auto relative flex flex-col shrink-0")}>
           <Aspect ratio="1/1">
@@ -283,7 +283,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
             item?.title || item?.text ?
               <div className="p-4 flex flex-col space-y-6">
                 {item?.title ? <h3
-                  className="font-headings font-bold w-t:font-normal text-6 w-t:text-6.5 leading-8 w-t:leading-10"
+                  className="font-headings font-bold tablet:font-normal text-6 tablet:text-6.5 leading-8 tablet:leading-10"
                 >
                   {item.title}
                 </h3> : null}
@@ -301,7 +301,7 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
     </section>
     {
     slides.length > 1 ?
-      <div className={cn("w-full flex justify-center space-x-2 mt-4 pb-5 w-t:pb-4 w-d:hidden w-t:hidden")}>
+      <div className={cn("w-full flex justify-center space-x-2 mt-4 pb-5 tablet:pb-4 desktop:hidden tablet:hidden")}>
         {
           slides?.map((_: any, i: number) => <div key={`bullet-item-${i}`} onClick={() => activeBulletSlide(i)} className={cn("h-4 bg-surface-400 rounded-full cursor-pointer", { "w-4": i !== active, "w-8": i === active })} />)
         }

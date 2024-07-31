@@ -17,11 +17,11 @@ const TestimonialCard: FC<TestimonialCardData> = (props: TestimonialCardData) =>
 
   return (
     <div className="rounded-2xl bg-white">
-      <div className="flex w-p:flex-col w-p:items-center px-10 py-6 w-p:py-10 w-p:px-6">
+      <div className="flex mobile:flex-col mobile:items-center px-10 py-6 mobile:py-10 mobile:px-6">
         {
           testimonialImage ?
-            <div className="w-d:mr-6 w-t:mr-6 w-t: my-auto w-d:my-auto">
-              <div className="w-44 h-44 w-t:w-32 w-t:h-32 w-p:w-32 w-p:h-32 w-p:mb-6">
+            <div className="desktop:mr-6 tablet:mr-6 tablet: my-auto desktop:my-auto">
+              <div className="w-44 h-44 tablet:w-32 tablet:h-32 mobile:w-32 mobile:h-32 mobile:mb-6">
               <Aspect ratio={"1/1"}>
                 <Image
                   alt={"Programa de Nivel Superior"}
@@ -37,12 +37,12 @@ const TestimonialCard: FC<TestimonialCardData> = (props: TestimonialCardData) =>
         <div className="my-auto">
           {
             title ?
-              <p className="w-d:text-6 text-base font-headings leading-8 w-d:font-semibold mb-2 w-p:mb-6">{title}</p>
+              <p className="desktop:text-6 text-base font-headings leading-8 desktop:font-semibold mb-2 mobile:mb-6">{title}</p>
               : null
           }
           {
             subtitle ?
-              <p className="text-base font-texts leading-5 mb-3 text-surface-600 w-p:mb-6">{subtitle}</p>
+              <p className="text-base font-texts leading-5 mb-3 text-surface-600 mobile:mb-6">{subtitle}</p>
               : null
           }
           {

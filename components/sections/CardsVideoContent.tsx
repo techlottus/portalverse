@@ -59,7 +59,7 @@ const CardsVideoContent: FC<CardsVideoContentData> = (props: CardsVideoContentDa
     {
      title ?
       <div>
-       <h3 className="font-headings font-bold text-10 leading-12 w-p:text-6 w-p:leading-7 mb-6">{title}</h3>
+       <h3 className="font-headings font-bold text-10 leading-12 mobile:text-6 mobile:leading-7 mb-6">{title}</h3>
       </div>
       : null
     }
@@ -72,12 +72,12 @@ const CardsVideoContent: FC<CardsVideoContentData> = (props: CardsVideoContentDa
       </div>
       : null
     }
-    <div className={cn('w-d:flex gap-6', { "w-d:flex-row-reverse": textPositionCardsVideoContent === 'right' })}>
-     <div className="w-d:w-1/2 flex flex-col justify-center pb-4">
+    <div className={cn('desktop:flex gap-6', { "desktop:flex-row-reverse": textPositionCardsVideoContent === 'right' })}>
+     <div className="desktop:w-1/2 flex flex-col justify-center pb-4">
       <Video data={{ options: { id: videoItem.providerId, type: 'single', controls: true } }} />
      </div>
-     <div className="w-d:w-1/2 flex flex-col justify-center pb-4">
-      <section className="grid w-d:grid-cols-2 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
+     <div className="desktop:w-1/2 flex flex-col justify-center pb-4">
+      <section className="grid desktop:grid-cols-2 gap-6 tablet:grid-cols-2 mobile:grid-cols-1">
        {
         formattedCards?.map((item: any, i: number) => <section className="w-full mb-6" key={`section-blog-${i}`}>
          <CardWebsite data={item} />

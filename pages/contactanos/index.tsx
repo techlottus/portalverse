@@ -24,23 +24,23 @@ const PonteEnContacto: NextPageWithLayout = ({ sections, meta }: any) => {
     <HeaderFooterLayout breadcrumbs={false}>
       <ContentFullLayout>
         <ContentInsideLayout classNames="mb-12">
-          <div className="col-span-5 w-t:col-span-8 w-p:col-span-4 bg-surface-800 text-surface-0 w-t:pb-6">
-            <ContentInsideLayout classNames="grid-cols-5 w-t:grid-cols-8">
-              <div className="col-span-5 col-start-2 col-end-5 w-t:col-span-8 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 w-p:col-end-5">
+          <div className="col-span-5 tablet:col-span-8 mobile:col-span-4 bg-surface-800 text-surface-0 tablet:pb-6">
+            <ContentInsideLayout classNames="grid-cols-5 tablet:grid-cols-8">
+              <div className="col-span-5 col-start-2 col-end-5 tablet:col-span-8 tablet:col-start-2 tablet:col-end-8 mobile:col-start-1 mobile:col-end-5">
                 <Breadcrumbs />
               </div>
-              <h1 className="col-span-5 col-start-2 col-end-5 w-t:col-span-8 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 w-p:col-end-5 text-10 w-p:text-7.5 w-p:m-6 font-bold font-headings leading-tight">{ sections.head.title }</h1>
+              <h1 className="col-span-5 col-start-2 col-end-5 tablet:col-span-8 tablet:col-start-2 tablet:col-end-8 mobile:col-start-1 mobile:col-end-5 text-10 mobile:text-7.5 mobile:m-6 font-bold font-headings leading-tight">{ sections.head.title }</h1>
               {
-                sections.medios.map((medio: any, i: number) => <p key={`item-media-${i}`} className="col-span-5 col-start-2 col-end-5 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 text-base font-headings w-d:mt-6 w-t:mt-6 w-p:mt-2 w-p:mx-6 leading-6 w-t:leading-tight w-p:leading-3[130%] flex items-center font-normal"><span className="material-symbols-outlined mr-2 select-none">{ medio.icon }</span>{ medio.text }</p>)
+                sections.medios.map((medio: any, i: number) => <p key={`item-media-${i}`} className="col-span-5 col-start-2 col-end-5 tablet:col-start-2 tablet:col-end-8 mobile:col-start-1 text-base font-headings desktop:mt-6 tablet:mt-6 mobile:mt-2 mobile:mx-6 leading-6 tablet:leading-tight mobile:leading-3[130%] flex items-center font-normal"><span className="material-symbols-outlined mr-2 select-none">{ medio.icon }</span>{ medio.text }</p>)
               }
-              <section className="col-span-5 col-start-2 col-end-5 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1">
-                <p className="text-4.5 w-t:text-6 font-headings font-bold w-d:mt-6 w-t:mt-6 w-p:mt-2 w-p:mx-6 leading-tight">{sections.campus.title}</p>
+              <section className="col-span-5 col-start-2 col-end-5 tablet:col-start-2 tablet:col-end-8 mobile:col-start-1">
+                <p className="text-4.5 tablet:text-6 font-headings font-bold desktop:mt-6 tablet:mt-6 mobile:mt-2 mobile:mx-6 leading-tight">{sections.campus.title}</p>
               </section>
-              <section className="col-span-5 col-start-2 col-end-5 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1 w-d:mb-18 mt-6">
+              <section className="col-span-5 col-start-2 col-end-5 tablet:col-start-2 tablet:col-end-8 mobile:col-start-1 desktop:mb-18 mt-6">
                 <Button darkOutlined data={sections.campus.button} onClick={()=> router.push(sections.campus.button.redirect)}/>
               </section>
-              <p className="col-span-5 col-start-2 col-end-11 w-t:col-start-2 w-t:col-end-8 w-p:col-start-1  text-4.5 font-bold font-headings w-d:mt-12 w-t:mt-18 w-p:mt-16 w-p:ml-6 leading-tight">Síguenos en redes sociales</p>
-              <section className="grid w-d:grid-cols-4 w-t:grid-cols- w-p:grid-cols-4 col-start-2 col-end-5 w-t:col-start-2 w-t:col-end-6 w-p:col-start-1 w-p:col-end-4 w-d:mt-10 w-t:mt-10 w-p:my-5 w-p:ml-6 w-d:mb-7 w-t:mb-28 w-p:mb-13">
+              <p className="col-span-5 col-start-2 col-end-11 tablet:col-start-2 tablet:col-end-8 mobile:col-start-1  text-4.5 font-bold font-headings desktop:mt-12 tablet:mt-18 mobile:mt-16 mobile:ml-6 leading-tight">Síguenos en redes sociales</p>
+              <section className="grid desktop:grid-cols-4 tablet:grid-cols- mobile:grid-cols-4 col-start-2 col-end-5 tablet:col-start-2 tablet:col-end-6 mobile:col-start-1 mobile:col-end-4 desktop:mt-10 tablet:mt-10 mobile:my-5 mobile:ml-6 desktop:mb-7 tablet:mb-28 mobile:mb-13">
               {
                 sections.sociales.map((social: any, i:number) => <Link key={`span-icons-${i}`} href={social.link} passHref target={"_blank"}>
 
@@ -51,9 +51,9 @@ const PonteEnContacto: NextPageWithLayout = ({ sections, meta }: any) => {
               </section>
             </ContentInsideLayout>
           </div>
-          <div className="col-span-7 w-t:col-span-8 w-p:col-span-4">
-            <ContentInsideLayout classNames="w-t:grid-cols-8">
-              <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 col-start-3 col-end-11 w-t:col-start-1 w-t:col-end-8 w-p:col-start-1 w-p:col-end-5">
+          <div className="col-span-7 tablet:col-span-8 mobile:col-span-4">
+            <ContentInsideLayout classNames="tablet:grid-cols-8">
+              <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 col-start-3 col-end-11 tablet:col-start-1 tablet:col-end-8 mobile:col-start-1 mobile:col-end-5">
                 <div className="mt-18">
                   <ReasonsToContact image={{ src: "https://assets.staging.bedu.org/UTEG/admisiones_pedir_informacion_avatar_6738c707b5.jpg", alt:"image-person" }} pathThanyouOtherReason="/thank-you" pathThanyouOpenForm="/thank-you" />
                 </div>
@@ -61,7 +61,7 @@ const PonteEnContacto: NextPageWithLayout = ({ sections, meta }: any) => {
             </ContentInsideLayout>
           </div>
         </ContentInsideLayout>
-        <ContentFullLayout classNames="w-d:hidden">
+        <ContentFullLayout classNames="desktop:hidden">
           <BannerPortalverse
             data={sections.banner } 
             onClick={ () =>{
@@ -70,8 +70,8 @@ const PonteEnContacto: NextPageWithLayout = ({ sections, meta }: any) => {
             } />
         </ContentFullLayout>
       </ContentFullLayout>
-      <ContentLayout classNames="w-t:hidden w-p:hidden">
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+      <ContentLayout classNames="tablet:hidden mobile:hidden">
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4">
         <BannerPortalverse
             data={sections.banner } 
             onClick={ () =>{

@@ -46,7 +46,7 @@ const PersonalData: FC<any> = ({
 
   return <>
 
-    <div className="mt-2 flex w-p:flex-col w-p:gap-0 gap-6 font-normal">
+    <div className="mt-2 flex mobile:flex-col mobile:gap-0 gap-6 font-normal">
       <div className="grow">
         <Input errorMessage={configControls.errorMessagesStepOneOpenForm.name} hasError={errorControls.name} eventFocus={() => handleTouchedControl("name")} data={configControls.inputNameOpenFormStepOne} eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "name")} />
       </div>
@@ -54,7 +54,7 @@ const PersonalData: FC<any> = ({
         <Input errorMessage={configControls.errorMessagesStepOneOpenForm.surname} hasError={errorControls.last_name} eventFocus={() => handleTouchedControl("last_name")} data={configControls.inputSurnameOpenFormStepOne} eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "last_name")} />
       </div>
     </div>
-    <div className={cn({ "flex w-p:flex-col  w-p:gap-0 gap-6 font-normal": compact == true })}>
+    <div className={cn({ "flex mobile:flex-col  mobile:gap-0 gap-6 font-normal": compact == true })}>
       <div className={cn("mt-2", { "grow mt-5": compact == true })}>
         <Input errorMessage={configControls.errorMessagesStepOneOpenForm.phone} hasError={errorControls.phone} eventFocus={() => handleTouchedControl("phone")} data={phoneData} eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "phone")} />
       </div>

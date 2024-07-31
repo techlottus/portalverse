@@ -17,12 +17,12 @@ const IntroductionImage: FC<IntroductionImageSection> = (props: IntroductionImag
 			<Container>
 				{
 					title ?
-						<p className="font-headings text-10 leading-12 w-p:text-6 w-p:leading-7">{title}</p>
+						<p className="font-headings text-10 leading-12 mobile:text-6 mobile:leading-7">{title}</p>
 					: null
 				}
 				{
 					description ?
-						<div className="pb-14 w-p:pb-6">
+						<div className="pb-14 mobile:pb-6">
 							<RichtText data={{
 								content: formattedDescription
 							}} />
@@ -35,7 +35,7 @@ const IntroductionImage: FC<IntroductionImageSection> = (props: IntroductionImag
 							{
 								images?.map((item, i) => {
 									return (<div key={`section-image-${i}`} >
-										<div className="w-p:hidden w-t:hidden">
+										<div className="mobile:hidden tablet:hidden">
 											<Aspect ratio={item?.desktopRatio}>
 												<div className="absolute w-full h-full">
 													<Image
@@ -46,7 +46,7 @@ const IntroductionImage: FC<IntroductionImageSection> = (props: IntroductionImag
 												</div>
 											</Aspect>
 										</div>
-										<div className="w-p:hidden w-d:hidden">
+										<div className="mobile:hidden desktop:hidden">
 											<Aspect ratio={item?.tabletRatio}>
 												<div className="absolute w-full h-full">
 													<Image
@@ -57,7 +57,7 @@ const IntroductionImage: FC<IntroductionImageSection> = (props: IntroductionImag
 												</div>
 											</Aspect>
 										</div>
-										<div className="w-d:hidden w-t:hidden">
+										<div className="desktop:hidden tablet:hidden">
 											<Aspect ratio={item?.mobileRatio}>
 												<div className="absolute w-full h-full">
 													<Image

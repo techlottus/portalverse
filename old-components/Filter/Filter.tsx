@@ -51,7 +51,7 @@ const Filter: FC<FilterComponentConfig> = memo(({ data, color = "#000", onSelect
           <LinkIcons data={linkLottusConfig} onClick={clearAllFilters}/>
         </span>
       </div>
-      <section className="flex py-3 w-t:flex-col w-p:flex-col border-t border-b birder-solid border-surface-200">
+      <section className="flex py-3 tablet:flex-col mobile:flex-col border-t border-b birder-solid border-surface-200">
         {
           config.map( ({ key, config }: any, i: number) =>
             <div key={`filter-${i}`} className={cn("px-1 flex flex-col", { "border-solid border-surface-200 border-r": i < 2 })}>

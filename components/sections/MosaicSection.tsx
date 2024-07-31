@@ -24,7 +24,7 @@ const MosaicSection: FC<MosaicSection> = (props: MosaicSection) => {
       <Container>
         {
           title ?
-            <h2 className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6">{title}</h2>
+            <h2 className="font-headings font-bold text-10 tablet:text-6 mobile:text-6 leading-tight mb-6">{title}</h2>
             : null
         }
         {

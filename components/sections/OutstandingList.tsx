@@ -11,7 +11,7 @@ const Rainbow: FC<OutstandingListSection> = memo((props: OutstandingListSection)
         <div className="flex flex-col ">
           {
             title
-              ? <h2 className="font-headings text-10 font-bold leading-tight w-t:text-8.5 w-p:text-6 w-d:pb-10 pb-6">{title}</h2>
+              ? <h2 className="font-headings text-10 font-bold leading-tight tablet:text-8.5 mobile:text-6 desktop:pb-10 pb-6">{title}</h2>
               : null
           }
           <div className="flex flex-col items-start w-full">

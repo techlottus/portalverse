@@ -68,13 +68,13 @@ const RockstarInfo: FC<RockstarInfoSection> = (props: RockstarInfoSection) => {
   return (
     <>
       <div>
-        <div className="w-d:px-14">
+        <div className="desktop:px-14">
           <div className="border-surface-0 border-4 rounded-xl overflow-hidden">
             <RockstarImage imageURL={image?.data?.attributes?.url} />
           </div>
         </div>
         <div className="flex justify-center">
-          <p className="mt-2 font-headings text-center text-5 w-p:text-base font-semibold leading-6 w-p:leading-4">
+          <p className="mt-2 font-headings text-center text-5 mobile:text-base font-semibold leading-6 mobile:leading-4">
             {name}
           </p>
         </div>
@@ -101,17 +101,17 @@ const RockstarInfo: FC<RockstarInfoSection> = (props: RockstarInfoSection) => {
           >
             <section
               slot="areaModalContent"
-              className="flex w-p:flex-col w-t:flex-col w-full h-auto"
+              className="flex mobile:flex-col tablet:flex-col w-full h-auto"
             >
-              <div className="w-d:w-1/3 w-t:w-1/3 flex flex-col mb-6">
-                <div className="w-d:pr-14 w-p:w-1/3">
+              <div className="desktop:w-1/3 tablet:w-1/3 flex flex-col mb-6">
+                <div className="desktop:pr-14 mobile:w-1/3">
                   {
                     //@ts-ignore
                     <RockstarImage imageURL={image?.data?.attributes?.url} />
                   }
                 </div>
                 {name ? (
-                  <p className="mt-4 text-6.5 leading-10 w-p:leading-7 w-p:text-6 font-headings">
+                  <p className="mt-4 text-6.5 leading-10 mobile:leading-7 mobile:text-6 font-headings">
                     {name}
                   </p>
                 ) : null}
@@ -126,7 +126,7 @@ const RockstarInfo: FC<RockstarInfoSection> = (props: RockstarInfoSection) => {
                   </div>
                 ) : null}
               </div>
-              <div className="w-d:w-2/3 w-d:pl-11">
+              <div className="desktop:w-2/3 desktop:pl-11">
                 <RichtText
                   data={{
                     content: parseEditorRawData(detail),

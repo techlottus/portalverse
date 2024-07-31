@@ -15,8 +15,8 @@ const Directory: NextPageWithLayout<DirectoryComponentData> = ({ areas, meta }: 
       <title>{ meta.title }</title>
       <meta property="title" content={meta?.title} />
     </Head>
-    <section className="mx-auto mt-6 w-full col-span-12 w-t:col-span-8 w-p:col-span-4">
-      <h1 className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-6 leading-16.25 text-surface-800">Directorio Universitario</h1>
+    <section className="mx-auto mt-6 w-full col-span-12 tablet:col-span-8 mobile:col-span-4">
+      <h1 className="font-headings font-bold text-13 tablet:text-8.5 mobile:text-6 leading-16.25 text-surface-800">Directorio Universitario</h1>
       <RichtText data={{ content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"}} />
       {
         areas.map(({ name, contacts }: SectionData, i: number) => <section key={`section-directory-${i}`}>

@@ -59,8 +59,8 @@ const CardWebsite: FC<CardWebsiteComponentData> = memo(({ data, onClick }: CardW
       <Link data={linkTextData} onClick={onClick} />
     </div>
     <div className="flex flex-col gap-2" slot="areaContentCardWebsite">
-      <p className="font-texts font-normal w-d:text-base w-d:leading-5 w-t:text-sm w-t:leading-4 w-p:text-sm w-p:leading-4   text-surface-500">{ data.subtitle }</p>
-      <h2 className="font-headings font-semibold w-d:text-5.5 w-d:leading-7 w-t:text-base w-t:leading-5 w-p:text-base w-p:leading-5">{ data.title }</h2>
+      <p className="font-texts font-normal desktop:text-base desktop:leading-5 tablet:text-sm tablet:leading-4 mobile:text-sm mobile:leading-4   text-surface-500">{ data.subtitle }</p>
+      <h2 className="font-headings font-semibold desktop:text-5.5 desktop:leading-7 tablet:text-base tablet:leading-5 mobile:text-base mobile:leading-5">{ data.title }</h2>
       <RichtText data={{content}} classNames="font-normal"/>
     </div>
   </lottus-card-website-portalverse>
