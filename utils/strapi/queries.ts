@@ -40,6 +40,7 @@ import { RICH_TEXT_VIDEO } from "@/utils/strapi/sections/RichTextVideo";
 import { ROCKSTARINFO_LIST } from "@/utils/strapi/sections/RockstarInfloList";
 import { RVOE_ACCORDION_CONTENT } from "./sections/RvoeAccordionList";
 import { STATISTICS_CARD_LIST } from "@/utils/strapi/sections/StatisticsCardList";
+import { TABS_LIST } from "./sections/TabList";
 import { TEXT_CONTENT } from "@/utils/strapi/sections/TextContent";
 import { CONTAINER_TEXT_FORM } from "@/utils/strapi/sections/ContainerTextForm";
 import { VIDEOS_SECTION } from "@/utils/strapi/sections/Videos";
@@ -84,6 +85,7 @@ import type { RichTextVideoSection } from "@/utils/strapi/sections/RichTextVideo
 import type { RockstarInfoListSection } from "@/utils/strapi/sections/RockstarInfloList";
 import type { RvoeAccordionListData } from "./sections/RvoeAccordionList";
 import type { StatisticsCardListSection } from "@/utils/strapi/sections/StatisticsCardList";
+import type { TabList } from "@/utils/strapi/sections/TabList";
 import type { TextContentSection } from "@/utils/strapi/sections/TextContent";
 import type { ContainerTextFormSection } from "@/utils/strapi/sections/ContainerTextForm";
 import type { VideosSectionData } from "@/utils/strapi/sections/Videos";
@@ -129,6 +131,7 @@ export type ComponentSection =
   | RockstarInfoListSection
   | RvoeAccordionListData
   | StatisticsCardListSection
+  | TabList
   | TextContentSection
   | ContainerTextFormSection
   | VideosSectionData
@@ -177,6 +180,7 @@ export type ComponentSection =
   ${ROCKSTARINFO_LIST}
   ${RVOE_ACCORDION_CONTENT}
   ${STATISTICS_CARD_LIST}
+  ${TABS_LIST}
   ${TEXT_CONTENT}
   ${VIDEOS_SECTION}
   ${CAROUSEL_SECTION}
