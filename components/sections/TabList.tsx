@@ -7,7 +7,7 @@ import { RichTextVideoSection } from "@/utils/strapi/sections/RichTextVideo";
 import RichTextVideo from "./RichTextVideo";
 import { RichTextImageSection } from "@/utils/strapi/sections/RichTextImage";
 
-const Tabs: FC<TabList> = memo((props: TabList) => {
+const Tabs: FC<TabList> = (props: TabList) => {
   const { tabs  } = props;
 
   const tabsLabelsArray : Array < { label : string } > = [];
@@ -47,6 +47,6 @@ const Tabs: FC<TabList> = memo((props: TabList) => {
       </Container>
     </section>
   );
-})
+}
 
 export default Tabs
