@@ -64,8 +64,8 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
         <meta name="keywords" content={meta?.keywords} />
         {/* metaRobots */}
         <meta name="robots" content={meta?.metaRobots} />
-        {/* metaViewport */}
-        <meta name="viewport" content={meta?.metaViewport} />
+        {/* metaViewport */}        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         {/* canonicalURL */}
         <link rel="canonical" href={meta?.canonicalURL} />
         {/* ogURL */}
