@@ -227,7 +227,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         {/* metaRobots */}
         <meta name="robots" content={seo?.metaRobots} />
         {/* metaViewport */}
-        <meta name="viewport" content={seo?.metaViewport} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         {/* canonicalURL */}
         <link rel="canonical" href={seo?.canonicalURL} />
         {/* ogURL */}
