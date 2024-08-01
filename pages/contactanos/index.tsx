@@ -19,6 +19,7 @@ const PonteEnContacto: NextPageWithLayout = ({ sections, meta }: any) => {
   return <>
     <Head>
       <title>{ meta.title }</title>
+      <meta property="title" content={meta?.title} />
     </Head>
     <HeaderFooterLayout breadcrumbs={false}>
       <ContentFullLayout>

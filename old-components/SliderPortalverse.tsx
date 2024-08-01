@@ -206,14 +206,14 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
                     ["justify-end items-end"]: item?.textPosition === "right_bottom"
                   })}>
                     <div className="flex flex-col z-10 w-d:w-125 w-t:w-96 space-y-4">
-                      <h2
+                      <h3
                         className={cn(
                           "font-headings font-bold w-d:text-10 w-d:leading-12 w-t:text-7.5 w-t:leading-9",
                           textPositionClasses
                         )}
                       >
                         {item?.title}
-                      </h2>
+                      </h3>
                       <p
                         className={cn(
                           "font-headings font-semibold w-d:text-4.5 w-d:leading-6 w-t:text-base w-t:leading-5",
@@ -282,11 +282,11 @@ const SliderPortalverse: FC<SliderPortalverseProps> = (
           {
             item?.title || item?.text ?
               <div className="p-4 flex flex-col space-y-6">
-                {item?.title ? <h2
+                {item?.title ? <h3
                   className="font-headings font-bold w-t:font-normal text-6 w-t:text-6.5 leading-8 w-t:leading-10"
                 >
                   {item.title}
-                </h2> : null}
+                </h3> : null}
                 {item?.text ? <p className="font-texts font-normal text-base leading-5">{item.text}</p> : null}
                 {
                   !!item?.action?.title

@@ -128,9 +128,9 @@ const ModalityFilter = (props: ModalityFilterSection) => {
                                 </Aspect>
                               </div>
                               <div className="flex flex-col h-full">
-                                <p className="font-texts font-normal text-4.5 mt-3 mx-3">
+                                <h3 className="font-texts font-normal text-4.5 mt-3 mx-3">
                                   {programAttributes?.name}
-                                </p>
+                                </h3>
                                 <div className="w-full h-full flex justify-end pb-2 font-texts font-bold items-end">
                                   <Link
                                     href={`${levelRoute}/${programAttributes?.slug}`}

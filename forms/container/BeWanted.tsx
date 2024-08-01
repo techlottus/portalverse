@@ -54,7 +54,7 @@ const BeWanted: FC<any> = ({ classNames, copies, pathThankyou, pathBeWanted }: a
         isError
           ? isErrorRegister && responseStatus === 409 // user already registered for this job pool
             ? <div className="bg-surface-0 w-full h-full z-10 flex flex-col items-center space-y-6 aspect-2/1">
-                <h1 className="font-semibold text-6">Ya te registraste en la Bolsa de Talento</h1>
+                <h3 className="font-semibold text-6">Ya te registraste en la Bolsa de Talento</h3>
                 <p className="font-normal text-sm">Este correo ya está registrado en la bolsa de talento, si no recuerdas tu contraseña puedes restablecerla en la bolsa de talento de Bewanted y pulsar en la opción que dice: ¿Olvidaste tu contraseña?</p>
                 <div className="w-full max-w-96"> {/* Tailwind's 'max-w-sm' value isn't working for some reason u.u */}
                   <img src={errors?.["404"]?.image} className="w-full" alt="error" />
@@ -65,9 +65,9 @@ const BeWanted: FC<any> = ({ classNames, copies, pathThankyou, pathBeWanted }: a
                 </div>
               </div>
             : <div className="bg-surface-0 w-full h-full p-4 z-10 flex flex-col aspect-2/1 justify-center items-center">
-                <h1 className="font-bold text-10 text-center leading-12 mb-9">
+                <h2 className="font-bold text-10 text-center leading-12 mb-9">
                 Lo sentimos
-                </h1>
+                </h2>
                 <div className="w-full max-w-96"> {/* Tailwind's 'max-w-sm' value isn't working for some reason u.u */}
                   <img src={errors?.["404"]?.image} className="w-full" alt="error" />
                 </div>

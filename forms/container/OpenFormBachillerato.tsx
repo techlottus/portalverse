@@ -174,7 +174,7 @@ const OpenFormBachillerato: FC<any> = ({ classNames, image, pathThankyou, contro
       <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
     </div>
     <div className={cn("bg-surface-0 absolute w-full h-full z-10 flex flex-col aspect-2/1 justify-center items-center left-0 top-0", { "hidden": !errorLoader, "block": errorLoader })}>
-      <h1 className="font-bold text-10 text-center leading-12 mb-9">Lo sentimos</h1>
+      <h2 className="font-bold text-10 text-center leading-12 mb-9">Lo sentimos</h2>
       <Image src="https://assets.staging.bedu.org/UTEG/404_318781b8aa.jpg" alt="error" classNames={cn("w-1/2 h-1/2 top-0 left-0")} />
       <h2 className="text-surface-600 font-semibold text-5.5 my-6">Esta página no está disponible</h2>
       <Button dark onClick={() => location.reload()} data={{...ButtonInit, title: "Reintentar" }} />

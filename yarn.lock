@@ -1238,6 +1238,14 @@
   resolved "https://registry.npmjs.org/@lottus23/lottus-elements-uane/-/lottus-elements-uane-3.8.9.tgz"
   integrity sha512-EaTTGThAXgWRut9yJiKFokFP+dqd/WrkxCRxSXBXUR+MFEkborz042F1EeWg2zXx26FMgFe4yYpYwRc6OCG9Hw==
 
+"@lottuseducation/atoms@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@lottuseducation/atoms/-/atoms-0.1.1.tgz#98e3f335dd878d303921f2f85d47fa03a9990ef3"
+  integrity sha512-ixigzDRYQkipKdrpafBLSIjMb81nifc+/PnY00iJa8LI9bEaQlNdGVRrbYqNjIdySEZIHJhZhlQFuwabydxDyw==
+  dependencies:
+    classnames "^2.3.1"
+    react-lottie-player "^1.5.4"
+
 "@lottuseducation/molecules@^0.0.1-beta.0":
   version "0.0.1-beta.0"
   resolved "https://registry.yarnpkg.com/@lottuseducation/molecules/-/molecules-0.0.1-beta.0.tgz#a8749aa89f37cf9eb57a4bc7715222d4427a5a64"

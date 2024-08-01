@@ -13,6 +13,7 @@ const Directory: NextPageWithLayout<DirectoryComponentData> = ({ areas, meta }: 
   return <>
     <Head>
       <title>{ meta.title }</title>
+      <meta property="title" content={meta?.title} />
     </Head>
     <section className="mx-auto mt-6 w-full col-span-12 w-t:col-span-8 w-p:col-span-4">
       <h1 className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-6 leading-16.25 text-surface-800">Directorio Universitario</h1>

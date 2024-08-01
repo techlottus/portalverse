@@ -9,14 +9,14 @@ const Rainbow: FC<RainbowComponentConfig> = ({ sections, title, classNamesTitle,
   const colorVariant = contentVariant === "dark" || contentVariant === undefined ? "dark" : ""
   return (
     <section className="relative w-full z-0">
-      <h1
+      <h2
         className={cn(
           "mb-6 font-headings text-10 w-t:text-3xl w-p:text-6",
           classNamesTitle
         )}
       >
         {title}
-      </h1>
+      </h2>
       {
         sections?.map((section, i) => {
           return (
