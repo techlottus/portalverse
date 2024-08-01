@@ -26,15 +26,15 @@ const CategoryAccordionList: FC<CategoryAccordionListData> = (props: CategoryAcc
   return <>
     <section>
       <Container>
-        <div className="w-d:w-1/2 flex flex-col justify-center mb-8">
-          {
-            title ?
+        {
+          title ?
+            <div className="w-d:w-1/2 flex flex-col justify-center mb-8">
               <div>
                 <h3 className="font-headings font-bold text-10 leading-12 w-p:text-6 w-p:leading-7 mb-3">{title}</h3>
               </div>
-              : null
-          }
-        </div>
+            </div>
+            : null
+        }
         <div className="w-d:flex w-d:items-start gap-12">
           <div className="flex flex-col gap-6 max-w-72">
             {
@@ -72,7 +72,7 @@ const CategoryAccordionList: FC<CategoryAccordionListData> = (props: CategoryAcc
             {
               items?.length > 0 ?
                 <Accordion data={{ items: items }} />
-              : null
+                : null
             }
           </div>
         </div>

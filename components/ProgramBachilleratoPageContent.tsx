@@ -142,7 +142,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
         {/* structuredData */}
         <script type="application/ld+json">{structuredData}</script>
       </Head>
-      <ContentLayout classNames=" desktop:mb-18 mb-12">
+      <ContentLayout classNames="desktop:mb-18 mb-12">
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 flex flex-col w-d:justify-center">
           <h1 className="text-13 font-bold font-headings leading-13 w-t:semi-tight w-p:leading-tight w-t:text-8.5 w-p:text-7.5">{title}</h1>
           <RichtText data={{
@@ -205,14 +205,14 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
                   mode="light"
                   title=""
                   description={items?.text}
-                  classNames={cn("col-span-7 grid grid-cols-7 gap-6 w-t:col-span-8 w-t:grid-cols-8 w-p:col-span-4 py-10 w-t:py-24 w-p:flex w-p:flex-col w-p:p-6", { "w-d:order-2 w-t:order-1 w-p:order-1": i === 1 })}
+                  classNames={cn("col-span-7 grid grid-cols-7 w-t:col-span-8 w-t:grid-cols-8 w-p:col-span-4 w-t:py-24 w-p:flex w-p:flex-col w-p:px-6", { "w-d:order-2 w-t:order-1 w-p:order-1": i === 1 })}
                   titleStyles="col-start-2 col-end-7 w-t:col-end-8"
                   descriptionStyles="col-start-2 col-end-7 w-t:col-end-8"
                 />
                 <Image
                   alt={"image"}
                   src={items?.image?.desktop}
-                  classNames={cn("w-full h-fit col-span-5 w-t:col-span-8 w-p:col-span-4 w-t:col-start-2 w-t:col-end-8", { "w-d:order-1 w-t:order-2 w-p:order-2": i === 1 })}
+                  classNames={cn("w-full h-fit col-span-5 w-t:col-span-8 w-p:col-span-4 w-t:col-start-2 w-t:col-end-8 my-auto", { "w-d:order-1 w-t:order-2 w-p:order-2": i === 1 })}
                   classNamesImg={cn("w-full !h-auto !relative col-span-5 w-t:col-span-8 w-p:col-span-4 w-t:col-start-2 w-t:col-end-8", { "w-d:order-1 w-t:order-2 w-p:order-2": i === 1 })}
                 />
               </Fragment>
