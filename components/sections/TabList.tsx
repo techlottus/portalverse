@@ -31,11 +31,11 @@ const Tabs: FC<TabList> = (props: TabList) => {
   /*
 
   /*-----------FUNCTION RENDER ACCORDING TO STATUS tabActive --------------------------------------------------*/
-  const renderOption =()=>{
+  const renderOption = () => {
     //TODO: Add switch to manage more options
     const option = tabs[tabActive]?.content == "richtextImage" ?
-                   TextImageList(tabs[tabActive]?.richtextImage) :
-                   TextVideoList(tabs[tabActive]?.richtextVideo)
+      TextImageList(tabs[tabActive]?.richtextImage) :
+      TextVideoList(tabs[tabActive]?.richtextVideo)
     return option;
   }
 
