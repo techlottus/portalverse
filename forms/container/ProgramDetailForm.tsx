@@ -455,11 +455,12 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     const campus = academicData?.campus;
     const programa = academicData?.program;
     const validaRegistroBoot = setRegisterBot();
-    const source = `portal${businessUnit}`;
+    const source = router.asPath;
     const canal = process.env.NEXT_PUBLIC_CANAL;
     const medio = queryParams?.utm_medium;
     const campana = queryParams?.utm_campaign;
     const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&telefono=${telefono}&email=${email}&lineaNegocio=${lineaNegocio}&modalidad=${modalidad}&nivel=${nivel}&campus=${campus}&programa=${programa}&avisoPrivacidad=true&leadSource=Digital&validaRegistroBoot=${validaRegistroBoot}&source=${source}&canal=${canal}${medio ? `&medio=${medio}` : ""}${campana ? `&campana=${campana}` : ""}`;
+    console.log("source: ", source);
 
     setIsLoading(true);
 

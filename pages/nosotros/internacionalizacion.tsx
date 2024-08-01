@@ -31,10 +31,47 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
     setInfoModal({...content})
     handleVisibilityModal();
   };
-
   return <>
     <Head>
       <title>{ meta.title }</title>
+      <meta property="title" content={meta?.title} />
+        <meta name="description" content={meta?.metaDescription} key="desc" />{/* metaDescription */}
+        <meta property="image" content={meta?.metaImage?.data?.attributes?.url} />{/* metaImage */}
+        {/* metaSocial */}
+        {/* ARRAY COULD BRING FACEBOOK OR TWITTER */}
+        {
+          meta?.metaSocial?.map((metasocial:any) => {
+            if (metasocial?.socialNetwork === "Facebook") {
+              return (
+                <>
+                  <meta property="og:title" content={metasocial?.title} />
+                  <meta property="og:description" content={metasocial?.description} />
+                  <meta property="og:image" content={metasocial?.image?.data?.attributes?.url} />
+                </>
+              )
+            } if (metasocial?.socialNetwork === "Twitter") {
+              return (
+                <>
+                  <meta property="twitter:title" content={metasocial?.title} />
+                  <meta property="twitter:description" content={metasocial?.description} />
+                  <meta property="twitter:image" content={metasocial?.image?.data?.attributes?.url} />
+                </>
+              )
+            }
+          })
+        }
+        {/* keywords */}
+        <meta name="keywords" content={meta?.keywords} />
+        {/* metaRobots */}
+        <meta name="robots" content={meta?.metaRobots} />
+        {/* metaViewport */}
+        <meta name="viewport" content={meta?.metaViewport} />
+        {/* canonicalURL */}
+        <link rel="canonical" href={meta?.canonicalURL} />
+        {/* ogURL */}
+        <meta property="og:url" content={meta?.canonicalURL} />
+        {/* structuredData */}
+        <script type="application/ld+json">{JSON.stringify(meta?.structuredData)}</script> 
     </Head>
     <Modal isShow={isShow} onClose={handleVisibilityModal} data={{icon: 'close', title: "", tagOnClose: 'testOnClose', wrapper: true,}}>
       <section slot="areaModalContent" className="flex w-t:flex-col w-p:flex-col w-full h-auto">
@@ -125,8 +162,8 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
       </ContentLayout>
       <ContentLayout classNames="desktop:mb-13 mb-12">
         <div className="col-span-8 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings font-bold text-10 w-t:text.8.5 w-p:text-6 mb-6 leading-tight w-t:semi-tight">{sections?.head.title}</p>
-          <p className="font-headings font-bold text-5.5 w-t:text-4.5 w-p:text-base mb-6 leading-tight w-t:leading-tight">{sections?.head.subtitle}</p>
+          <h1 className="font-headings font-bold text-10 w-t:text.8.5 w-p:text-6 mb-6 leading-tight w-t:semi-tight">{sections?.head.title}</h1>
+          <h3 className="font-headings font-bold text-5.5 w-t:text-4.5 w-p:text-base mb-6 leading-tight w-t:leading-tight">{sections?.head.subtitle}</h3>
           <RichtText classNames="" data={{
             content: sections?.head.description
           }} />
@@ -147,7 +184,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
           <ContentFullLayout classNames="bg-primary-500 w-d:py-12 text-white mt-18 w-t:mt-3 w-p:mt-3">
             <ContentLayout classNames="flex items-center">
               <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-t:mt-6 w-p:mt-6 w-d:my-auto">
-                <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%]">{sections?.exchange?.title}</p>
+                <h2 className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%]">{sections?.exchange?.title}</h2>
                 <RichtText font="dark" classNames="w-t:hidden w-p:hidden" data={{
                   content: sections?.exchange?.description
                 }} />
@@ -265,7 +302,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
         sections?.videoSection && 
         <ContentLayout classNames="desktop:mt-18 mt-12">
           <section className="col-span-12">
-            <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6 w-d:mb-">{sections?.videoSection.title}</p>
+            <h2 className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6 w-d:mb-">{sections?.videoSection.title}</h2>
             <div className="grid w-d:grid-cols-2 w-p:grid-cols-1 gap-6">
               {
               sections?.videoSection.videos.map((item:any, i:number) => <section className="h-80" key={`section-alliances-${i}`}>
@@ -278,7 +315,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
       }
       <ContentLayout classNames="mt-12 desktop:mt-18">
         <div className="col-span-12">
-          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight">{sections?.alliances.title}</p>
+          <h2 className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight">{sections?.alliances.title}</h2>
           <section className="grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mt-6">
           {
             sections?.alliances.alliances.map((item:any, i:number) => <section key={`section-alliances-${i}`}>

@@ -52,6 +52,7 @@ const ConexionEducativa: NextPageWithLayout = ({ sections, meta }: any) => {
   return <>
     <Head>
       <title>{meta.title}</title>
+      <meta property="title" content={meta?.title} />
     </Head>
     <HeaderFooterLayout breadcrumbs={true}>
       <ContentLayout classNames="!gap-y-12 mb-12 desktop:mb-0 desktop:!gap-y-18">

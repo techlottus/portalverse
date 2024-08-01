@@ -69,7 +69,7 @@ const CintilloContent = (props: CintilloData) => {
             : null
         }
         <div className="absolute p-10">
-          <h1
+          <h3
             className={cn(
               "font-headings font-bold",
               "w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5",
@@ -82,8 +82,8 @@ const CintilloContent = (props: CintilloData) => {
             )}
           >
             {title}
-          </h1>
-          <h3
+          </h3>
+          <p
             className={cn(
               "font-texts font-normal",
               "w-d:leading-5 w-t:leading-4 w-p:leading-4",
@@ -96,7 +96,7 @@ const CintilloContent = (props: CintilloData) => {
             )}
           >
             {subtitle}
-          </h3>
+          </p>
           {
             !!email
               ? <div className="flex my-4 items-center">

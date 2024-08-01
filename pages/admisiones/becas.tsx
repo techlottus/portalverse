@@ -64,6 +64,7 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
   return <>
     <Head>
       <title>{meta.title}</title>
+      <meta property="title" content={meta?.title} />
     </Head>
     <Modal isShow={isShow} onClose={handleVisibilityModal} data={{ icon: 'close', title: "", tagOnClose: 'testOnClose', wrapper: true, }}>
       <section slot="areaModalContent" className="flex w-t:flex-col w-p:flex-col w-full h-auto">
@@ -126,7 +127,7 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
       <ContentLayout classNames="desktop:gap-y-18 gap-y-12">
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
           <h1 className="text-13 font-bold font-headings leading-13 w-t:semi-tight w-p:leading-tight w-t:text-8.5 w-p:text-7.5 w-d:mb-6 w-t:mb-4 w-p:mb-3">{sections.head.title}</h1>
-          <p className="text-5.5  font-bold font-headings leading-tight w-t:leading-tight w-p:leading-tight w-t:text-4.5 w-p:text-4.5 w-d:mb-6 w-t:mb-4 w-p:mb-3">{sections.head.subtitle}</p>
+          <h2 className="text-5.5  font-bold font-headings leading-tight w-t:leading-tight w-p:leading-tight w-t:text-4.5 w-p:text-4.5 w-d:mb-6 w-t:mb-4 w-p:mb-3">{sections.head.subtitle}</h2>
           <RichtText data={{
             content: sections.head.description
           }} />
@@ -216,7 +217,7 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
       <ContentLayout classNames="desktop:gap-y-18 gap-y-12">
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           <Feedback data={sections.feedback.feedback} >
-            <h1 className="font-texts font-normal text-base leading-6 text-surface-800 mb-3">{sections.feedback.title}</h1>
+            <p className="font-texts font-normal text-base leading-6 text-surface-800 mb-3">{sections.feedback.title}</p>
             <p className="font-texts font-normal text-sm text-surface-800">{sections.feedback.text}</p>
           </Feedback>
         </div>
@@ -224,7 +225,7 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
           <OpenForm pathThankyou={`/thank-you`} image={{ src: "https://assets.staging.bedu.org/UTEG/admisiones_pedir_informacion_avatar_6738c707b5.jpg", alt: "image-person" }} />
         </div>
         <div className="col-span-5 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings font-bold leading-tight text-5.5 mb-8">{sections.llamanos.title}</p>
+          <h3 className="font-headings font-bold leading-tight text-5.5 mb-8">{sections.llamanos.title}</h3>
           <div>
           <CardWebsitePortalverse data={sections.llamanos.card} />
           </div>

@@ -152,7 +152,7 @@ const StaticProgramContent: NextPageWithLayout<any> = ({ level, program, meta, c
               <ContentLayout>
                 <ContentInsideLayout classNames="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6">
                   <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-                    <h1 className="font-headings">Selecciona un {campusLabel} para descargar tu plan de estudios en esta modalidad</h1>
+                    <h3 className="font-headings">Selecciona un {campusLabel} para descargar tu plan de estudios en esta modalidad</h3>
                     <div className="my-6">
                       <p className="font-texts font-normal text-xs mb-0">Los planes de estudio pueden variar por {campusLabel}*</p>
                       <Select onClick={(option: CustomEvent) => handleSelectOption(option)} data={{...SelectInit, textDefault: `Elige el ${campusLabel} de tu interés`, icon: "apartment"}} options={selectData} flagHeight={true}/>

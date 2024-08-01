@@ -5,10 +5,45 @@ import ContentGenerator from "@/utils/ContentGenerator"
 import { getHomePageData } from "@/utils/getHomePageData"
 
 const Home: NextPageWithLayout = ({ data: { sections, meta } }: any) => {
-
   return <>
     <Head>
       <title>{meta?.metaTitle}</title>
+      <meta property="title" content={meta?.metaTitle} />
+      <meta name="description" content={meta?.metaDescription} key="desc" />
+      <meta property="image" content={meta?.metaImage?.data?.attributes?.url} />
+      {
+          meta?.metaSocial?.map((metasocial:any) => {
+            if (metasocial?.socialNetwork === "Facebook") {
+              return (
+                <>
+                  <meta property="og:title" content={metasocial?.title} />
+                  <meta property="og:description" content={metasocial?.description} />
+                  <meta property="og:image" content={metasocial?.image?.data?.attributes?.url} />
+                </>
+              )
+            } if (metasocial?.socialNetwork === "Twitter") {
+              return (
+                <>
+                  <meta property="twitter:title" content={metasocial?.title} />
+                  <meta property="twitter:description" content={metasocial?.description} />
+                  <meta property="twitter:image" content={metasocial?.image?.data?.attributes?.url} />
+                </>
+              )
+            }
+          })
+        }
+        {/* keywords */}
+        <meta name="keywords" content={meta?.keywords} />
+        {/* metaRobots */}
+        <meta name="robots" content={meta?.metaRobots} />
+        {/* metaViewport */}
+        <meta name="viewport" content={meta?.metaViewport} />
+        {/* canonicalURL */}
+        <link rel="canonical" href={meta?.canonicalURL} />
+        {/* ogURL */}
+        <meta property="og:url" content={meta?.canonicalURL} />
+        {/* structuredData */}
+        <script type="application/ld+json">{meta?.structuredData}</script>
     </Head>
     <HeaderFooterLayout breadcrumbs={false}>
       <div className="flex flex-col w-p:space-y-12 w-t:space-y-12 w-d:space-y-18 w-d:mt-18">

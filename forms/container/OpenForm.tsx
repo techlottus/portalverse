@@ -249,12 +249,14 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
       return campus.idCampus === academicData?.campus;
     })[0];
     const validaRegistroBoot = setRegisterBot();
-    const source = `portal${businessUnit}`;
+    const source = router.asPath;
     const canal = process.env.NEXT_PUBLIC_CANAL;
     const medio = queryParams?.utm_medium;
     const campana = queryParams?.utm_campaign;
 
     console.log("queryParams: ", queryParams);
+    console.log("source: ", source);
+    
 
     const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&telefono=${telefono}&email=${email}&lineaNegocio=${lineaNegocio}&modalidad=${modalidad}&nivel=${nivel}&campus=${campus}&programa=${programa}&avisoPrivacidad=true&leadSource=Digital&validaRegistroBoot=${validaRegistroBoot}&source=${source}&canal=${canal}${medio ? `&medio=${medio}` : ""}${campana ? `&campana=${campana}` : ""}`;
 
@@ -336,15 +338,15 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
         {
           isError
             ? <div className="bg-surface-0 w-full h-full p-4 z-10 flex flex-col aspect-2/1 justify-center items-center left-0 top-0">
-                <h1 className="font-bold text-10 text-center leading-12 mb-9">
+                <h3 className="font-bold text-10 text-center leading-12 mb-9">
                 Lo sentimos
-                </h1>
+                </h3>
                 <div className="w-full max-w-96"> {/* Tailwind's 'max-w-sm' value isn't working for some reason u.u */}
                   <img src={errors?.["404"]?.image} className="w-full" alt="error" />
                 </div>
-                <h2 className="text-surface-600 font-semibold text-5.5 my-6">
+                <h3 className="text-surface-600 font-semibold text-5.5 my-6">
                 Esta página no está disponible
-                </h2>
+                </h3>
                 <Button
                   dark
                   onClick={() => location.reload()}

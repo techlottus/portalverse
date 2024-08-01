@@ -144,7 +144,8 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
       </Head>
       <ContentLayout classNames="desktop:mb-18 mb-12">
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 flex flex-col w-d:justify-center">
-          <h1 className="text-13 font-bold font-headings leading-13 w-t:semi-tight w-p:leading-tight w-t:text-8.5 w-p:text-7.5">{title}</h1>
+          <h1 className="desktop:text-7xl font-bold font-headings leading-13 tablet:semi-tight mobile:leading-tight tablet:text-8.5 mobile:text-7.5 mb-6">{title}</h1>
+          {/* <Heading variant="h1" className="desktop:text-7xl font-bold font-headings leading-13 tablet:semi-tight mobile:leading-tight tablet:text-8.5 mobile:text-7.5">{title}</Heading> */}
           <RichtText data={{
             content: description
           }} />
@@ -182,7 +183,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
         </div>
       </ContentFullLayout>
       <ContentLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6">
           <p className="text-6.5 font-headings font-semibold leading-tight w-t:leading-tight w-p:leading-tight w-t:text-6 w-p:text-6">{`Para cursar ${title} necesitas: `} </p>
         </div>
         <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center">
@@ -220,8 +221,8 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
           }
         </ContentInsideLayout>
       </ContentLayout>
-      <ContentLayout classNames="mb-12 desktop:mb-18">
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+      <ContentLayout classNames="mt-6">
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6">
           <h4 className="text-6.5 font-headings font-semibold leading-tight w-t:leading-tight w-p:leading-tight w-t:text-6 w-p:text-6">{"Plan de estudios"}</h4>
         </div>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 leading-tight w-d:order-1 w-t:order-1">

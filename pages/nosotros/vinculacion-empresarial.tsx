@@ -52,6 +52,7 @@ const VinculacionEmpresarial: NextPageWithLayout = ({ sections, meta }: any) => 
   return <>
     <Head>
       <title>{meta.title}</title>
+      <meta property="title" content={meta?.title} />
     </Head>
     <HeaderFooterLayout breadcrumbs={true}>
       <ContentLayout classNames="gap-12">

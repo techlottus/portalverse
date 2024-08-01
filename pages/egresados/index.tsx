@@ -15,10 +15,47 @@ import BannerPortalverse from "@/old-components/BannerPortalverse"
 
 const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
   const router = useRouter();
-
   return <>
     <Head>
       <title>{meta.title}</title>
+      <meta property="title" content={meta?.title} />
+      <meta name="description" content={meta?.metaDescription} key="desc" />{/* metaDescription */}
+      <meta property="image" content={meta?.metaImage?.data?.attributes?.url} />{/* metaImage */}
+      {/* metaSocial */}
+      {/* ARRAY COULD BRING FACEBOOK OR TWITTER */}
+      {
+        meta?.metaSocial?.map((metasocial: any) => {
+          if (metasocial?.socialNetwork === "Facebook") {
+            return (
+              <>
+                <meta property="og:title" content={metasocial?.title} />
+                <meta property="og:description" content={metasocial?.description} />
+                <meta property="og:image" content={metasocial?.image?.data?.attributes?.url} />
+              </>
+            )
+          } if (metasocial?.socialNetwork === "Twitter") {
+            return (
+              <>
+                <meta property="twitter:title" content={metasocial?.title} />
+                <meta property="twitter:description" content={metasocial?.description} />
+                <meta property="twitter:image" content={metasocial?.image?.data?.attributes?.url} />
+              </>
+            )
+          }
+        })
+      }
+      {/* keywords */}
+      <meta name="keywords" content={meta?.keywords} />
+      {/* metaRobots */}
+      <meta name="robots" content={meta?.metaRobots} />
+      {/* metaViewport */}
+      <meta name="viewport" content={meta?.metaViewport} />
+      {/* canonicalURL */}
+      <link rel="canonical" href={meta?.canonicalURL} />
+      {/* ogURL */}
+      <meta property="og:url" content={meta?.canonicalURL} />
+      {/* structuredData */}
+      <script type="application/ld+json">{JSON.stringify(meta?.structuredData)}</script>
     </Head>
     <HeaderFooterLayout>
       <ContentFullLayout classNames="gap-y-12 w-d:hidden mb-12">
@@ -32,7 +69,7 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
         </div>
         <div className="col-span-12 grid grid-cols-2 w-p:gap-12 gap-6">
           <div className="w-p:col-span-2 w-p:order-2">
-            <p className="font-headings font-bold desktop:text-10 desktop:leading-10 text-6 leading-6 mb-6"> {sections.introduccion.title}</p>
+            <h1 className="font-headings font-bold desktop:text-10 desktop:leading-10 text-6 leading-6 mb-6"> {sections.introduccion.title}</h1>
             <RichtText data={{
               content: sections.introduccion.descripcion
             }} />
@@ -50,7 +87,7 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
         <div className="desktop:col-span-6 col-span-12 h-80">
           <Video data={sections.video.video} />
         </div>
-        <div className="desktop:col-span-6 col-span-12">
+        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
           <p className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6 mb-6"> {sections.video.title}</p>
           <RichtText data={{
             content: sections.video.descripcion

@@ -43,10 +43,47 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
   }, [sections?.requirements?.tabs, sections?.AtrProgramPerks?.tabs]);
 
   const navigate = (route: string) => router.push(route)
-
   return <>
     <Head>
       <title>{meta?.title}</title>
+      <meta property="title" content={meta?.title} />
+      <meta name="description" content={meta?.metaDescription} key="desc" />{/* metaDescription */}
+      <meta property="image" content={meta?.metaImage?.data?.attributes?.url} />{/* metaImage */}
+      {/* metaSocial */}
+      {/* ARRAY COULD BRING FACEBOOK OR TWITTER */}
+      {
+        meta?.metaSocial?.map((metasocial: any) => {
+          if (metasocial?.socialNetwork === "Facebook") {
+            return (
+              <>
+                <meta property="og:title" content={metasocial?.title} />
+                <meta property="og:description" content={metasocial?.description} />
+                <meta property="og:image" content={metasocial?.image?.data?.attributes?.url} />
+              </>
+            )
+          } if (metasocial?.socialNetwork === "Twitter") {
+            return (
+              <>
+                <meta property="twitter:title" content={metasocial?.title} />
+                <meta property="twitter:description" content={metasocial?.description} />
+                <meta property="twitter:image" content={metasocial?.image?.data?.attributes?.url} />
+              </>
+            )
+          }
+        })
+      }
+      {/* keywords */}
+      <meta name="keywords" content={meta?.keywords} />
+      {/* metaRobots */}
+      <meta name="robots" content={meta?.metaRobots} />
+      {/* metaViewport */}
+      <meta name="viewport" content={meta?.metaViewport} />
+      {/* canonicalURL */}
+      <link rel="canonical" href={meta?.canonicalURL} />
+      {/* ogURL */}
+      <meta property="og:url" content={meta?.canonicalURL} />
+      {/* structuredData */}
+      <script type="application/ld+json">{JSON.stringify(meta?.structuredData)}</script>
     </Head>
     <HeaderFooterLayout breadcrumbs={true}>
       <ContentLayout>
@@ -207,7 +244,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
                     <section className={cn("col-span-12 max-w-d-base mx-auto w-d-base:px-6", { "hidden w-p:hidden": tabActive !== i })}>
                       {
                         sections?.AtrProgramPerks?.titleCards ?
-                          <p className="font-headings text-10 font-bold leading-10 w-t:text-6 w-p:text-6 mb-6">{sections?.AtrProgramPerks?.titleCards}</p>
+                          <h2 className="font-headings text-10 font-bold leading-10 w-t:text-6 w-p:text-6 mb-6">{sections?.AtrProgramPerks?.titleCards}</h2>
                           : null
                       }
                       <section className="grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
@@ -227,9 +264,9 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
           </div>
         </>
         : sections.requirements ?
-          <ContentLayout classNames="desktop:mt-18 mt-12">
-            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-              <p className="font-headings text-10 font-bold leading-10 w-t:text-6 w-p:text-6">{sections?.requirements?.title}</p>
+          <ContentLayout>
+            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mt-18 w-p:my-6 w-t:my-6">
+              <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{sections?.requirements?.title}</p>
             </div>
             <div className="w-d:hidden col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:flex w-t:justify-center">
               <div className="">
@@ -264,17 +301,17 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
                     {
                       titleCards ?
                         <div className={cn("col-span-12 w-t:col-span-8 w-p:col-span-4", { "hidden": tabActive !== i })}>
-                          <p className="font-headings text-10 font-bold leading-10 w-t:text-6 w-p:text-6 mb-6">{titleCards}</p>
-                          <section className={cn("col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1", { "hidden w-p:hidden": tabActive !== i })}>
-                            {
-                              cards.map((item: any, i: number) => <section key={`section-blog-${i}`}>
-                                <CardWebsitePortalverse data={item} onClick={() => { router.push(item?.redirect) }} />
-                              </section>)
-                            }
-                          </section>
+                          <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{titleCards}</p>
                         </div>
                         : null
                     }
+                    <section className={cn("col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1", { "hidden w-p:hidden": tabActive !== i })}>
+                      {
+                        cards.map((item: any, i: number) => <section key={`section-blog-${i}`}>
+                          <CardWebsitePortalverse data={item} onClick={() => { router.push(item?.redirect) }} />
+                        </section>)
+                      }
+                    </section>
                   </Fragment>)
                 }
               </ContentInsideLayout>
@@ -306,7 +343,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
       </ContentFullLayout>
       <ContentLayout classNames="mt-12 w-d:mt-18">
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings text-10 font-bold leading-10 w-t:text-6 w-p:text-6 mb-6">{sections?.egresados?.title}</p>
+          <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6 mb-6">{sections?.egresados?.title}</p>
           <RichtText data={{
             content: sections?.egresados?.description
           }} />
@@ -358,7 +395,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
             : null
         }
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings text-10 font-bold leading-10 w-t:text-6 w-p:text-6">{sections?.FAQ?.title}</p>
+          <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{sections?.FAQ?.title}</p>
         </div>
         {
           sections?.FAQ?.faqImage ?
