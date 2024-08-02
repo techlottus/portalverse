@@ -37,7 +37,7 @@ const Home: NextPageWithLayout = ({ data: { sections, meta } }: any) => {
         {/* metaRobots */}
         <meta name="robots" content={meta?.metaRobots} />
         {/* metaViewport */}
-        <meta name="viewport" content={meta?.metaViewport} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         {/* canonicalURL */}
         <link rel="canonical" href={meta?.canonicalURL} />
         {/* ogURL */}

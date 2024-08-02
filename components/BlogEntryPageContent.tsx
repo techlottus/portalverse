@@ -61,8 +61,8 @@ const BlogEntryPageContent = (props: BlogEntryPageData) => {
         <meta name="keywords" content={blogPost?.seo?.keywords} />
         {/* metaRobots */}
         <meta name="robots" content={blogPost?.seo?.metaRobots} />
-        {/* metaViewport */}
-        <meta name="viewport" content={blogPost?.seo?.metaViewport} />
+        {/* metaViewport valor estático porque si lo trae de strapi en null deja de funcionar mobile */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         {/* canonicalURL */}
         <link rel="canonical" href={blogPost?.seo?.canonicalURL} />
         {/* ogURL */}
