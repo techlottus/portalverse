@@ -46,6 +46,7 @@ import RvoeAccordionList from "@/components/sections/RvoeAccordionList";
 import StatisticsCardList from "@/components/sections/StatisticsCardList";
 import TextContent from "@/components/sections/TextContent";
 import VideosSection from "@/components/sections/VideosSection";
+import VideoImage from "@/components/sections/VideoImage";
 import WebError from "@/components/sections/WebError";
 import type { FC } from "react";
 import Carousel from "@/components/sections/Carousel";
@@ -102,6 +103,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsStatisticsCardList: StatisticsCardList,
   ComponentSectionsTextContent: TextContent,
   ComponentSectionsVideos: VideosSection,
+  ComponentSectionsVideoImage: VideoImage,
   ComponentSectionsWebError: WebError,
   ComponentSectionsCarousel: Carousel,
   ComponentSectionsContainerTextForm: ContainerTextForm
