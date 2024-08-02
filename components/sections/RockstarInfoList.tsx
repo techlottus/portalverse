@@ -40,11 +40,11 @@ const RockstarInfoList: FC<RockstarInfoListSection> = (props: RockstarInfoListSe
     <section className="bg-surface-200 pb-14">
       <Container>
         {
-          title ? <div className="py-14 w-p:py-6"><h3 className="font-headings font-bold text-10 leading-12 w-p:text-6 w-p:leading-7">{title}</h3></div> : null
+          title ? <div className="py-14 mobile:py-6"><h3 className="font-headings font-bold text-10 leading-12 mobile:text-6 mobile:leading-7">{title}</h3></div> : null
         }
         {
           description ?
-            <div className="pb-14 w-p:pb-6">
+            <div className="pb-14 mobile:pb-6">
               <RichtText data={{
                 content: parseEditorRawData(description)
               }} />
@@ -53,8 +53,8 @@ const RockstarInfoList: FC<RockstarInfoListSection> = (props: RockstarInfoListSe
         }
         {
           rockstars?.length > 0 ?
-            <div className="flex flex-col gap-4 w-d:hidden w-t:hidden">
-              <section className="grid w-p:grid-cols-2 w-p:gap-7">
+            <div className="flex flex-col gap-4 desktop:hidden tablet:hidden">
+              <section className="grid mobile:grid-cols-2 mobile:gap-7">
                 {
                   rockstarsData?.map((item: any, i: number) => <div key={`section-blog-${i}`}>
                     <RockstarInfo {...item} type={"ComponentSectionsRockstarInfo"} />
@@ -66,15 +66,15 @@ const RockstarInfoList: FC<RockstarInfoListSection> = (props: RockstarInfoListSe
         }
         {
           rockstars?.length > 0 ?
-            <div className="flex flex-col gap-4 w-p:hidden">
-              <section className="col-span-12 grid w-d:grid-cols-4 w-t:grid-cols-2 w-p:grid-cols-2 w-p:gap-7 w-t:gap-10 w-d:gap-10">
+            <div className="flex flex-col gap-4 mobile:hidden">
+              <section className="col-span-12 grid desktop:grid-cols-4 tablet:grid-cols-2 mobile:grid-cols-2 mobile:gap-7 tablet:gap-10 desktop:gap-10">
                 {
                   paginatedItems?.map((item: any, i: number) => <div key={`section-blog-${i}`}>
                     <RockstarInfo {...item} type={"ComponentSectionsRockstarInfo"} />
                   </div>)
                 }
               </section>
-              <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 my-6 flex justify-center w-p:hidden">
+              <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 my-6 flex justify-center mobile:hidden">
                 <PaginatorPortalverse items={rockstars?.length} currentPage={currentPage} pageSize={pageSize} onPageChange={onPageChange} iconNext={"chevron_right"} iconPrevious={"chevron_left"} />
               </div>
             </div>

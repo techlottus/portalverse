@@ -91,7 +91,7 @@ const StepOne = ( { onNext, copies }: any ) => {
     <h4 className="font-headings font-semibold text-5.5 leading-7 mb-6">{ copies?.title }</h4>
     <p className="font-texts font-normal text-sm leading-4">{ copies?.description }</p>
     <form>
-      <div className="mt-6 flex w-p:flex-col gap-6">
+      <div className="mt-6 flex mobile:flex-col gap-6">
         <div className="grow">
           <Input errorMessage={configControls.errorMessagesBeWantedForm.name} hasError={errorControls.name} eventFocus={() => handleTouchedControl("name")} data={ configControls.inputNameOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "name")} />
         </div>

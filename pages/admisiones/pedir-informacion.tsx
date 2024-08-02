@@ -16,16 +16,16 @@ const PedirInformacion: NextPageWithLayout<PedirInformacionPage> = ({ sections, 
     </Head>
     <HeaderFooterLayout>
       <ContentLayout>
-        <h1 className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:col-start-3 w-d:col-end-11 text-13.5 w-t:text-8.5 w-p:text-6 font-headings font-bold leading-tight w-t:semi-tight">{ sections.head.title }</h1>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:col-start-3 w-d:col-end-11 text-base w-t:text-3.5 w-p:text-3.5 font-texts leading-tight">
+        <h1 className="col-span-12 tablet:col-span-8 mobile:col-span-4 desktop:col-start-3 desktop:col-end-11 text-13.5 tablet:text-8.5 mobile:text-6 font-headings font-bold leading-tight tablet:semi-tight">{ sections.head.title }</h1>
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 desktop:col-start-3 desktop:col-end-11 text-base tablet:text-3.5 mobile:text-3.5 font-texts leading-tight">
           <RichtText data={{
             content: sections.head.description
           }} />
         </div>
-        <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:col-start-3 w-d:col-end-11">
+        <section className="col-span-12 tablet:col-span-8 mobile:col-span-4 desktop:col-start-3 desktop:col-end-11">
           <OpenForm data={sections.form} pathThankyou={`/thank-you`} image={{ src: "https://assets.staging.bedu.org/UTEG/admisiones_pedir_informacion_avatar_6738c707b5.jpg", alt:"image-person" }} />
         </section>
-        <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:col-start-3 w-d:col-end-11 h-100">
+        <section className="col-span-12 tablet:col-span-8 mobile:col-span-4 desktop:col-start-3 desktop:col-end-11 h-100">
           <Video data={sections.video}/>
         </section>
       </ContentLayout>

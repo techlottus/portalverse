@@ -86,7 +86,7 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
         "justify-start": position === 'left',
         "justify-end": position === 'right',
       })}>
-        <div className={cn('w-p:w-full', {
+        <div className={cn('mobile:w-full', {
           "w-12/12": width === 'w_12_12',
           "w-11/12": width === 'w_11_12',
           "w-10/12": width === 'w_10_12',
@@ -117,7 +117,7 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
                       {!!description && <p className="font-texts font-normal text-3.5 leading-4">{description}</p>}
                     </div>
                     {
-                      !!image?.data && <div className="w-p:hidden">
+                      !!image?.data && <div className="mobile:hidden">
                         <Image classNamesImg="w-full h-full object-cover" classNames="w-28 h-28 rounded-full overflow-hidden" src={image.data?.attributes?.url} alt={image.data.attributes.alternativeText || ''} />
                       </div>
                     }

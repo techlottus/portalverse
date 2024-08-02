@@ -126,7 +126,7 @@ const StepOne: FC<any> = ({ classNames, data, image, onNext, programs }: any) =>
       <h4 className="font-texts font-bold text-5 leading-6">{ config.title }</h4>
       <p className="font-texts font-normal text-3.5 leading-4">{ config.subtitle }</p>
     </div>
-    <div className={"aspect-1/1 w-t:hidden w-p:hidden"} >
+    <div className={"aspect-1/1 tablet:hidden mobile:hidden"} >
       <Image classNamesImg="rounded-full" classNames="w-28 h-28" src={image.src} alt={image.alt} />
     </div>
   </div>
@@ -138,7 +138,7 @@ const StepOne: FC<any> = ({ classNames, data, image, onNext, programs }: any) =>
       </Link>
     </p>
   </div>
-  <div className="mt-6 flex w-p:flex-col gap-6">
+  <div className="mt-6 flex mobile:flex-col gap-6">
     <div className="grow">
       <Input errorMessage={configControls.errorMessagesStepOneOpenFormContinuous.name} hasError={errorControls.name} eventFocus={() => handleTouchedControl("name")} data={ configControls.inputNameOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "name")} />
     </div>

@@ -129,10 +129,10 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
                   {
                     sectionTitle
                       ? <h1 className={cn(
-                            "font-headings font-bold w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5 w-t:text-6 w-p:text-6",
+                            "font-headings font-bold desktop:leading-15 tablet:leading-7.5 mobile:leading-7.5 tablet:text-6 mobile:text-6",
                             {
-                              "w-d:text-13": !isOnlyATuRitmoModality,
-                              "w-d:text-10": isOnlyATuRitmoModality
+                              "desktop:text-13": !isOnlyATuRitmoModality,
+                              "desktop:text-10": isOnlyATuRitmoModality
                             }
                           )}
                         >
@@ -162,7 +162,7 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
         </div>
         {
           filteredPrograms?.length > 0
-            ? <div className="grid grid-cols-12 w-t:grid-cols-8 w-p:grid-cols-4 gap-6 mt-12">
+            ? <div className="grid grid-cols-12 tablet:grid-cols-8 mobile:grid-cols-4 gap-6 mt-12">
                 {
                   filteredPrograms?.map((program, i) => {      
                     const programAttributes = program?.attributes;
@@ -172,9 +172,9 @@ const ProgramsFilter: FC<ProgramsFilterSection> = (props: ProgramsFilterSection)
                       <div onClick={()=>{router.push(`${levelRoute}/${programAttributes?.slug}`)}}
                         key={`program-${i}`}
                         className={cn("flex hover:shadow-30 rounded-lg h-full border border-solid border-surface-200 overflow-hidden", {
-                          "flex-col w-d:col-span-3 w-t:col-span-4 w-p:col-span-4 cursor-pointer":
+                          "flex-col desktop:col-span-3 tablet:col-span-4 mobile:col-span-4 cursor-pointer":
                             mosaicActive,
-                          "w-d:col-span-12 w-t:col-span-8 w-p:col-span-4":
+                          "desktop:col-span-12 tablet:col-span-8 mobile:col-span-4":
                             !mosaicActive,
                         })}
                       >

@@ -19,7 +19,7 @@ const TabsFeatured: FC<TabsComponentConfig> = ({ tabs, onActive, active }: TabsC
   }, [active])
 
   return <section className="w-full overflow-x-auto justify-center mb-4">
-    <ul className={cn("flex gap-1 w-d:justify-center items-baseline", { "w-p:justify-start": tabs.length > 1, "w-p:justify-center": tabs.length === 1 })}>
+    <ul className={cn("flex gap-1 desktop:justify-center items-baseline", { "mobile:justify-start": tabs.length > 1, "mobile:justify-center": tabs.length === 1 })}>
       {
         tabs.map(({ label }: any, i: number) => <li key={`tab-${i}`} className={cn("w-auto  flex flex-col justify-center")} onClick={() => activeTab(i)}>
           <div className={cn("py-4 px-6 flex flex-col justify-center cursor-pointer border border-solid border-b-2 border-surface-200", { "bg-surface-950 text-surface-0 ": tabActive === i, "border-b-primary-500 border-solid": tabActive !== i })}>

@@ -49,11 +49,11 @@ const TestimonialSlider: React.FC<TestimonialSliderData> = memo((props: Testimon
       <section
         //@ts-ignore
         style={{ "--image-desk-url": `url(${bgImageDesktop?.data?.attributes?.url})`, "--image-tablet-url": `url(${bgImageTablet?.data?.attributes?.url})`, "--image-mobile-url": `url(${bgImageMobile?.data?.attributes?.url})` }}
-        className={cn("col-span-12 w-full justify-center bg-origin-border md:bg-center bg-no-repeat bg-cover w-d:py-16 py-12 w-d:px-32 px-6", "bg-[image:var(--image-mobile-url)]", "md:bg-[image:var(--image-tablet-url)]", "lg:bg-[image:var(--image-desk-url)]")}
+        className={cn("col-span-12 w-full justify-center bg-origin-border md:bg-center bg-no-repeat bg-cover desktop:py-16 py-12 desktop:px-32 px-6", "bg-[image:var(--image-mobile-url)]", "md:bg-[image:var(--image-tablet-url)]", "lg:bg-[image:var(--image-desk-url)]")}
       >
         {
           title ?
-            <div className={cn("title font-headings font-bold w-d:text-7 leading-9 w-t:text-6 text-center",{
+            <div className={cn("title font-headings font-bold desktop:text-7 leading-9 tablet:text-6 text-center",{
               "mb-6": !description,
               "mb-4": description
             })}>

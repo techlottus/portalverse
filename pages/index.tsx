@@ -46,7 +46,7 @@ const Home: NextPageWithLayout = ({ data: { sections, meta } }: any) => {
         <script type="application/ld+json">{meta?.structuredData}</script>
     </Head>
     <HeaderFooterLayout breadcrumbs={false}>
-      <div className="flex flex-col w-p:space-y-12 w-t:space-y-12 w-d:space-y-18 w-d:mt-18">
+      <div className="flex flex-col mobile:space-y-12 tablet:space-y-12 desktop:space-y-18 desktop:mt-18">
         {sections?.length > 0 ? (
           <ContentGenerator blocks={sections} />
         ) : null}

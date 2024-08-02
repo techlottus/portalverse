@@ -15,7 +15,7 @@ const RepeatableBannerSection: FC<RepeatableBanner> = (props: RepeatableBanner) 
         <div>
           {
             title ?
-              <div className="mb-6"><p className="font-headings text-10 leading-12 w-p:text-6 w-p:leading-7 ">{title}</p></div>
+              <div className="mb-6"><p className="font-headings text-10 leading-12 mobile:text-6 mobile:leading-7 ">{title}</p></div>
               : null
           }
           {
@@ -29,7 +29,7 @@ const RepeatableBannerSection: FC<RepeatableBanner> = (props: RepeatableBanner) 
           }
           {
             banners?.length > 0 ?
-              <div className="grid w-d:grid-cols-2 gap-6 w-t:grid-cols-1 w-p:grid-cols-1">
+              <div className="grid desktop:grid-cols-2 gap-6 tablet:grid-cols-1 mobile:grid-cols-1">
                 {
                   banners?.map((item: any, i: number) => <div key={`section-banners-${i}`}>
                     <BannerPortalverseWrapper data={item} onClick={() => {

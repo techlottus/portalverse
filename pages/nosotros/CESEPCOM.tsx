@@ -19,22 +19,22 @@ const CESEPCOM: NextPageWithLayout = ({ sections, meta }: any) => {
     </Head>
     <HeaderFooterLayout breadcrumbs={true}>
       <ContentLayout>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-7.5">{sections.head.title}</p>
+        <div className="col-span-6 tablet:col-span-8 mobile:col-span-4">
+          <p className="font-headings font-bold text-13 tablet:text-8.5 mobile:text-7.5">{sections.head.title}</p>
         </div>
       </ContentLayout>
       <ContentLayout classNames="">
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{sections.Acordion.title}</p>
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4">
+          <p className="font-headings text-10 font-bold leading-tight tablet:text-6 mobile:text-6">{sections.Acordion.title}</p>
         </div>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 flex-grow overflow-y-auto mb-12 w-t:mb-6 w-p:mb-6">
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 flex-grow overflow-y-auto mb-12 tablet:mb-6 mobile:mb-6">
           {
             !!sections.Acordion.items.length
               ? <Accordion data={{ items: sections.Acordion.items }} />
               : null
           }
         </div>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4">
             <BannerPortalverse data={ sections.bannerInternacional } onClick={() => router.push(sections.bannerInternacional.redirect)}/>
         </div>
       </ContentLayout>

@@ -26,7 +26,7 @@ const BannerNumeraliaSection: FC<BannerNumeraliaData> = (props: BannerNumeraliaD
 
   return (
     <section>
-      <Container classNames="w-p:!p-0 w-t:!p-0">
+      <Container classNames="mobile:!p-0 tablet:!p-0">
         <BannerNumeralia data={dataNumeralia}/>
       </Container>
     </section>

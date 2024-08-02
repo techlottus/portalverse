@@ -21,7 +21,7 @@ const ContactTarget: FC<ContactTargetComponentData> = (props: ContactTargetCompo
           <Image
             classNames={cn(
               "min-w-24 min-h-22",
-              "w-d:min-w-130 w-d:min-h-26",
+              "desktop:min-w-130 desktop:min-h-26",
               "h-full flex shrink-0"
               )
             }
@@ -33,7 +33,7 @@ const ContactTarget: FC<ContactTargetComponentData> = (props: ContactTargetCompo
       }
       <div className="w-full flex flex-col justify-center p-3 overflow-hidden">
         <p className="font-texts font-bold text-sm leading-5">{name}</p>
-        <a className="font-texts font-normal text-sm leading-5 text-surface-500 w-p:w-56 w-60 break-words" target="_blank" rel="noreferrer noopener" href={link}>{link}</a>
+        <a className="font-texts font-normal text-sm leading-5 text-surface-500 mobile:w-56 w-60 break-words" target="_blank" rel="noreferrer noopener" href={link}>{link}</a>
         <LinkContactTarget type="email" info={email} />
         <LinkContactTarget type="phone" info={phone} />
       </div>

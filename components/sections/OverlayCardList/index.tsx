@@ -14,7 +14,7 @@ const OverlayCardList = (props: OverlayCardListSection) => {
         <div className="flex flex-col space-y-4">
           {
             title
-              ? <h2 className="font-headings font-bold leading-tight w-p:text-6 w-t:text-8.5 text-10">
+              ? <h2 className="font-headings font-bold leading-tight mobile:text-6 tablet:text-8.5 text-10">
                   {title}
                 </h2>
               : null
@@ -22,9 +22,9 @@ const OverlayCardList = (props: OverlayCardListSection) => {
           {
             overlayCards?.length > 0
               ? <div
-                  className={cn("grid w-p:gap-3 gap-6 w-t:grid-cols-2", {
-                    "w-p:grid-cols-1 grid-cols-3": overlayCards?.length === 3,
-                    "w-p:grid-cols-2 grid-cols-4": overlayCards?.length !== 3,
+                  className={cn("grid mobile:gap-3 gap-6 tablet:grid-cols-2", {
+                    "mobile:grid-cols-1 grid-cols-3": overlayCards?.length === 3,
+                    "mobile:grid-cols-2 grid-cols-4": overlayCards?.length !== 3,
                   })}
                 >
                   {

@@ -42,18 +42,18 @@ const RichTextVideo: FC<RichTextVideoSection> = (props: RichTextVideoSection) =>
     <section
       style={{ backgroundColor }}
       className={cn({
-        "w-p:py-10 w-t:py-6 w-d:py-10": !!backgroundColor,
+        "mobile:py-10 tablet:py-6 desktop:py-10": !!backgroundColor,
         "text-white": contentVariant === "light",
       })}
     >
       <Container>
         <div className="flex flex-col space-y-6">
           
-          <div className="grid w-p:grid-cols-1 w-t:grid-cols-1 grid-cols-2 gap-6  items-center">
+          <div className="grid mobile:grid-cols-1 tablet:grid-cols-1 grid-cols-2 gap-6  items-center">
             <div
               className={cn({
-                "w-d:hidden": videoPosition !== "left",
-                "w-p:hidden w-t:hidden": !!title
+                "desktop:hidden": videoPosition !== "left",
+                "mobile:hidden tablet:hidden": !!title
               })}
             >
               {renderVideo()}
@@ -61,11 +61,11 @@ const RichTextVideo: FC<RichTextVideoSection> = (props: RichTextVideoSection) =>
             {
               richTextMarkup
                 && ( <div className="dark ">
-                  { title && <h3 className="font-headings text-10 pb-4 font-bold leading-tight w-t:text-8.5 w-p:text-6">{title}</h3>}
+                  { title && <h3 className="font-headings text-10 pb-4 font-bold leading-tight tablet:text-8.5 mobile:text-6">{title}</h3>}
                    <RichtText font={contentVariant === "light" ? "dark" : "light"} data={{content: richTextMarkup}}/>
                    {
                     buttons && buttons?.length > 0 ?
-                    <div className="grid gap-6 w-d:grid-cols-2 w-t:grid-cols-2">
+                    <div className="grid gap-6 desktop:grid-cols-2 tablet:grid-cols-2">
                     {
                       buttons?.map((item, i) => {
                         return (
@@ -92,8 +92,8 @@ const RichTextVideo: FC<RichTextVideoSection> = (props: RichTextVideoSection) =>
             }
             <div 
               className={cn({
-                "w-d:hidden": videoPosition !== "right",
-                "w-p:hidden w-t:hidden": !title
+                "desktop:hidden": videoPosition !== "right",
+                "mobile:hidden tablet:hidden": !title
               })}
             >
               {renderVideo()}

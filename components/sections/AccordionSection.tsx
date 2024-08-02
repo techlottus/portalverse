@@ -31,13 +31,13 @@ const AccordionComponent = (props: AccordionSection) => {
         <div className="flex flex-col space-y-6">
           {
             title
-              ? <h3 className="font-headings font-bold leading-[125%] w-p:text-6 w-t:text-8.5 text-10">
+              ? <h3 className="font-headings font-bold leading-[125%] mobile:text-6 tablet:text-8.5 text-10">
                 {title}
               </h3>
               : null}
           {
             subtitle
-              ? <p className="font-headings font-semibold leading-[130%] w-p:text-4 w-t:text-4.5 text-5.5">
+              ? <p className="font-headings font-semibold leading-[130%] mobile:text-4 tablet:text-4.5 text-5.5">
                 {subtitle}
               </p>
               : null

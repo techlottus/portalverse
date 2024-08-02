@@ -87,7 +87,7 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
         <script type="application/ld+json">{structuredData}</script>
       </Head>
       <ContentLayout classNames="gap-6">
-        {/* <div className="col-span-6 w-t:col-span-4 w-p:col-span-4 ">
+        {/* <div className="col-span-6 tablet:col-span-4 mobile:col-span-4 ">
         {
           programCategory?.data?.attributes?.name ?
           <div className="mb-4">
@@ -98,7 +98,7 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
         <div className="flex flex-col gap-6">
           {
             name ?
-              <h1 className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-7.5 leading-13 w-t:semi-tight w-p:leading-tight">{name}</h1>
+              <h1 className="font-headings font-bold text-13 tablet:text-8.5 mobile:text-7.5 leading-13 tablet:semi-tight mobile:leading-tight">{name}</h1>
               : null
           }
           {
@@ -110,7 +110,7 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
           }
         </div>
       </div>
-      <div className="col-span-6 w-t:col-span-4 w-p:col-span-4">
+      <div className="col-span-6 tablet:col-span-4 mobile:col-span-4">
         {
           programImage?.url ?
           <Aspect ratio="2/1">
@@ -158,7 +158,7 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
           }
         </div>
       </div> */}
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4">
           <IntroductionProgram
             title={name}
             brands={brands?.data}
@@ -185,7 +185,7 @@ const ContinuousEducationProgramDetail: FC<ProgramAttributes> = (props: ProgramA
 
         {
           programDetail ?
-            <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
+            <div className="col-span-6 tablet:col-span-8 mobile:col-span-4">
               <RichtText data={{
                 content: programDetail
               }} />

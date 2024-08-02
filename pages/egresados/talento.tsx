@@ -46,22 +46,22 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
     </Head>
     <HeaderFooterLayout breadcrumbs={true}>
       <ContentLayout>
-        {/* <div className="col-span-8 w-p:col-span-4 w-d:mb-12 w-t:mb-6 w-p:mb-6">
-          <h1 className="text-13 w-t:text-8.25 w-p:text-6 font-headings font-bold leading-tight w-t:semi-tight ">{sections.head.title}</h1>
+        {/* <div className="col-span-8 mobile:col-span-4 desktop:mb-12 tablet:mb-6 mobile:mb-6">
+          <h1 className="text-13 tablet:text-8.25 mobile:text-6 font-headings font-bold leading-tight tablet:semi-tight ">{sections.head.title}</h1>
           <RichtText data={{
             content: sections.head.description
           }} />
         </div> */}
         <div className="col-span-12">
           <ContentInsideLayout>
-            <div className="col-span-8 w-p:col-span-4 w-d:mb-10 w-p:mb-3 mb-6">
-              <h1 className="text-13 w-t:text-8.25 w-p:text-6 font-headings font-bold leading-tight w-t:semi-tight mb-4">{sections.head.title}</h1>
+            <div className="col-span-8 mobile:col-span-4 desktop:mb-10 mobile:mb-3 mb-6">
+              <h1 className="text-13 tablet:text-8.25 mobile:text-6 font-headings font-bold leading-tight tablet:semi-tight mb-4">{sections.head.title}</h1>
               <RichtText data={{
                 content: sections.head.description
               }} />
             </div>
             {
-              <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
+              <section className="col-span-12 tablet:col-span-8 mobile:col-span-4 grid desktop:grid-cols-3 gap-6 tablet:grid-cols-2 mobile:grid-cols-1">
                 {
                   sections.experiencias.cards.map((item: any, i: number) => <section key={`section-blog-${i}`}>
                     <CardWebsitePortalverse classNames="h-59" data={item} onClick={item?.video ? () => handleClickTalent(item.video) : undefined} />
@@ -69,7 +69,7 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
                 }
               </section>
             }
-            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 wd:mb-18 w-t:mb-20 w-p:mb-4 w-d:mt-18 w-p:mt-12">
+            <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 wd:mb-18 tablet:mb-20 mobile:mb-4 desktop:mt-18 mobile:mt-12">
               <Cintillo
                 classNames="auto"
                 {...sections?.aplica?.banner}
@@ -87,7 +87,7 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
         <Modal isShow={isShow} onClose={() => handleVisibilityModal('close')} data={{ icon: 'close', title: 'Video de egresado', tagOnClose: 'testOnClose', wrapper: true, }}>
           <Youtube data={{ options: { ...youtubeConfig }, dimensions: { height: "383px" } }} />
         </Modal>
-        {/* <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
+        {/* <section className="col-span-12 tablet:col-span-8 mobile:col-span-4 grid desktop:grid-cols-3 gap-6 tablet:grid-cols-2 mobile:grid-cols-1">
           {
             sections.experiencias.cards.map((item: any, i: number) => <section key={`section-blog-${i}`}>
               <CardWebsitePortalverse classNames="h-59" data={item} onClick={item?.video ? () => handleClickTalent(item.video) : undefined} />

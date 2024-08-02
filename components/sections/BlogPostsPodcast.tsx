@@ -26,13 +26,13 @@ const BlogPostsPodcast = (props: BlogPostsPodcastSection) => {
   return (
     <section>
       <Container>
-        <div className="grid grid-cols-12-gap w-t:grid-cols-8-gap w-p:grid-cols-4-gap gap-grid-gap">
+        <div className="grid grid-cols-12-gap tablet:grid-cols-8-gap mobile:grid-cols-4-gap gap-grid-gap">
           {/* Blog Posts */}
-          <div className="col-span-8 w-t:col-span-8 w-p:col-span-4">
+          <div className="col-span-8 tablet:col-span-8 mobile:col-span-4">
             {
               listConfigData?.title
                 ? <div className="mb-6">
-                    <h1 className="font-headings font-bold text-10 w-t:text-7.5 w-p:text-7.5 leading-tight">
+                    <h1 className="font-headings font-bold text-10 tablet:text-7.5 mobile:text-7.5 leading-tight">
                       {listConfigData?.title}
                     </h1>
                   </div> 
@@ -40,8 +40,8 @@ const BlogPostsPodcast = (props: BlogPostsPodcastSection) => {
             }
             {
               blogPosts?.length > 0
-                ? <div className="col-span-8 w-t:col-span-8 w-p:col-span-4 mb-6">
-                    <div className="grid w-d:grid-cols-2 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
+                ? <div className="col-span-8 tablet:col-span-8 mobile:col-span-4 mb-6">
+                    <div className="grid desktop:grid-cols-2 gap-6 tablet:grid-cols-2 mobile:grid-cols-1">
                       {
                         blogPosts?.map((blogPost, i) => (
                           <div key={`section-blog-${i}`}>
@@ -62,7 +62,7 @@ const BlogPostsPodcast = (props: BlogPostsPodcastSection) => {
             }
             {
               ctaText && ctaUrl
-                ? <div className="col-span-8 w-t:col-span-8 w-p:col-span-4 flex justify-center">
+                ? <div className="col-span-8 tablet:col-span-8 mobile:col-span-4 flex justify-center">
                     <Button
                       dark
                       data={{
@@ -83,7 +83,7 @@ const BlogPostsPodcast = (props: BlogPostsPodcastSection) => {
           </div>
 
           {/* Sidebar */}
-          <div className="col-span-4 w-t:col-span-8 w-p:col-span-4 flex flex-col space-y-6">
+          <div className="col-span-4 tablet:col-span-8 mobile:col-span-4 flex flex-col space-y-6">
             
             {/* Podcast Items */}
             {
@@ -144,7 +144,7 @@ const BlogPostsPodcast = (props: BlogPostsPodcastSection) => {
 
                       return (
                         <section
-                          className="mb-12 w-t:mb-6 w-p:mb-6 w-t:hidden"
+                          className="mb-12 tablet:mb-6 mobile:mb-6 tablet:hidden"
                           key={`section-podcast-${i}`}
                         >
                           <BannerWrapper
@@ -204,7 +204,7 @@ const BlogPostsPodcast = (props: BlogPostsPodcastSection) => {
 
                       return (
                         <section
-                          className="mb-12 w-t:mb-6 w-p:mb-6 w-d:hidden w-p:hidden"
+                          className="mb-12 tablet:mb-6 mobile:mb-6 desktop:hidden mobile:hidden"
                           key={`section-podcast-${i}`}
                         >
                           <BannerWrapper

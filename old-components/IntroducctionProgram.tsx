@@ -32,9 +32,9 @@ const IntroductionProgram: FC<IntroductionProgramData> = (props: IntroductionPro
   
   return (
     <section className="my-0 mb-4 md:my-6">
-      <Container classNames="w-p:!p-0 w-t:!p-0 w-d-base:!px-0">
-        <div className="flex w-p:flex-col w-t:flex-col gap-18">
-          <div className="flex flex-col w-d:w-2/3 w-full my-auto gap-6">
+      <Container classNames="mobile:!p-0 tablet:!p-0 w-d-base:!px-0">
+        <div className="flex mobile:flex-col tablet:flex-col gap-18">
+          <div className="flex flex-col desktop:w-2/3 w-full my-auto gap-6">
             <div className="flex flex-col gap-6 md:gap-8">
               <div className="flex flex-col gap-4">
                 <div className="flex flex-col gap-1">
@@ -45,7 +45,7 @@ const IntroductionProgram: FC<IntroductionProgramData> = (props: IntroductionPro
                   }
                   {
                     title ?
-                      <h1 className="text-10 font-bold font-headings leading-12 w-t:semi-tight w-p:leading-tight w-t:text-8.5 w-p:text-7.5">{title}</h1>
+                      <h1 className="text-10 font-bold font-headings leading-12 tablet:semi-tight mobile:leading-tight tablet:text-8.5 mobile:text-7.5">{title}</h1>
                       : null
                   }
                 </div>
@@ -63,7 +63,7 @@ const IntroductionProgram: FC<IntroductionProgramData> = (props: IntroductionPro
                 }
                 {
                   image ?
-                    <div className="w-d:w-1/3 w-full flex items-center w-d:hidden">
+                    <div className="desktop:w-1/3 w-full flex items-center desktop:hidden">
                       <Aspect ratio={"2/1"}>
                         <Image
                           alt={"title"}
@@ -105,7 +105,7 @@ const IntroductionProgram: FC<IntroductionProgramData> = (props: IntroductionPro
               <div className="flex flex-row gap-6">
                 {
                   price || offerPrice || brands ?
-                    <div className="flex w-p:flex-col w-t:flex-col gap-6 mb:gap-0 w-full">
+                    <div className="flex mobile:flex-col tablet:flex-col gap-6 mb:gap-0 w-full">
                       {
                         price || offerPrice ?
                           <div className={cn({ "flex flex-col gap-0.5 mr-12": offerPrice !== 0 && price !== 0 })}>
@@ -188,7 +188,7 @@ const IntroductionProgram: FC<IntroductionProgramData> = (props: IntroductionPro
             </div>
             {
               checkoutUrl ?
-                <div className="w-p:hidden w-t:hidden">
+                <div className="mobile:hidden tablet:hidden">
                   <Button dark data={{
                     id: "",
                     type: "primary",
@@ -213,7 +213,7 @@ const IntroductionProgram: FC<IntroductionProgramData> = (props: IntroductionPro
             }
             {
               checkoutUrl ?
-                <div className="w-d:hidden">
+                <div className="desktop:hidden">
                   <Button dark data={{
                     id: "",
                     type: "primary",
@@ -238,7 +238,7 @@ const IntroductionProgram: FC<IntroductionProgramData> = (props: IntroductionPro
           </div>
           {
             image ?
-              <div className="w-d:w-1/2 w-full flex items-center w-p:hidden w-t:hidden">
+              <div className="desktop:w-1/2 w-full flex items-center mobile:hidden tablet:hidden">
                 <Aspect ratio={"2/1"}>
                   <Image
                     alt={"title"}

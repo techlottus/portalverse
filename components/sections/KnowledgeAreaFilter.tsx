@@ -98,7 +98,7 @@ const KnowledgeAreaFilter = (props: KnowledgeAreaFilterSection) => {
               onSelectionItems={onFilterChange}
             />
           </div>
-          <div className="flex flex-col space-y-12 w-d:space-y-18">
+          <div className="flex flex-col space-y-12 desktop:space-y-18">
             {
               AVAILABLE_EDUCATIONAL_LEVELS?.map((currentLevel, i) => {
                 const programsByLevel = programs?.filter((program) => program?.attributes?.level?.data?.attributes?.title === currentLevel?.name);
@@ -116,11 +116,11 @@ const KnowledgeAreaFilter = (props: KnowledgeAreaFilterSection) => {
 
                 return (
                   <div key={`level-${i}`} className="flex flex-col space-y-6">
-                    <h3 className="font-headings font-bold w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5 w-d:text-13 w-t:text-6 w-p:text-6">
+                    <h3 className="font-headings font-bold desktop:leading-15 tablet:leading-7.5 mobile:leading-7.5 desktop:text-13 tablet:text-6 mobile:text-6">
                       {currentLevel?.pluralLabel} del área {knowledgeArea?.name}
                     </h3>
 
-                    <div className="grid grid-cols-12 w-t:grid-cols-8 w-p:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-12 tablet:grid-cols-8 mobile:grid-cols-4 gap-6">
                       {
                         filteredPrograms?.map((program, i) => {
                           const programAttributes = program?.attributes;
@@ -129,7 +129,7 @@ const KnowledgeAreaFilter = (props: KnowledgeAreaFilterSection) => {
                           return (
                             <div
                               key={`program-${i}`}
-                              className="flex flex-col w-d:col-span-3 w-t:col-span-4 w-p:col-span-4 hover:shadow-30 h-full border border-solid border-surface-200 cursor-pointer overflow-hidden rounded-lg"
+                              className="flex flex-col desktop:col-span-3 tablet:col-span-4 mobile:col-span-4 hover:shadow-30 h-full border border-solid border-surface-200 cursor-pointer overflow-hidden rounded-lg"
                               onClick={()=>{router.push(`${levelRoute}/${programAttributes?.slug}`)}}
                             >
                               <div>

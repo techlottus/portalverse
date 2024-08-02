@@ -245,7 +245,7 @@ const DoubleDegreeData: FC<any> = ({
   }
 
   return <>
-    <div className="flex w-p:flex-col w-p:gap-0 gap-6 font-normal">
+    <div className="flex mobile:flex-col mobile:gap-0 gap-6 font-normal">
       <div className="grow w-full hidden">
         <Input
           eventFocus={() => handleTouchedControl("level")}

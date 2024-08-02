@@ -93,7 +93,7 @@ const StepOtherReason: FC<any> = ({ classNames, step, pathThankyou }: any) => {
     <div className="mb-6">
       <ProgressBar data={{ progress }} />
     </div>
-    <div className="mt-6 flex gap-6 w-p:flex-col">
+    <div className="mt-6 flex gap-6 mobile:flex-col">
       <div className="grow">
         <Input errorMessage={configControls.errorMessagesStepOneOpenForm.name} hasError={errorControls.name} data={ configControls.inputNameOpenFormStepOne } eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "name")} />
       </div>

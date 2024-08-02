@@ -13,17 +13,17 @@ const BannerWrapper: FC<BannerWrapperData> = memo(({ data: { urlImage, title, su
       typeBanner === "sm"
         ? <>
         <div className={cn("w-full h-full relative flex flex-col grow")}>
-          <div className="w-t:hidden w-p:hidden">
+          <div className="tablet:hidden mobile:hidden">
             <Aspect ratio="4/3">
               <Image classNames="w-full h-full" classNamesImg="w-full h-full object-cover" alt="image" src={urlImage.desktop} />
             </Aspect>
           </div>
-          <div className="w-d:hidden w-t:hidden">
+          <div className="desktop:hidden tablet:hidden">
             <Aspect ratio="4/3">
               <Image classNames="w-full h-full" classNamesImg="w-full h-full object-cover" alt="image" src={urlImage.mobile}/>
             </Aspect>
           </div>
-          <div className="w-d:hidden w-p:hidden">
+          <div className="desktop:hidden mobile:hidden">
             <Aspect ratio="4/3">
               <Image classNames="w-full h-full" classNamesImg="w-full h-full object-cover" alt="image" src={urlImage.mobile}/>
             </Aspect>
@@ -32,8 +32,8 @@ const BannerWrapper: FC<BannerWrapperData> = memo(({ data: { urlImage, title, su
             "text-surface-0": font === "light",
             "text-surface-950": font === "dark" ,
             })}>
-              <h3 className="font-headings font-bold w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5 w-d:text-6 w-t:text-6 w-p:text-6 text-wrap">{ title }</h3>
-              <p className="font-texts font-normal w-d:leading-5 w-t:leading-4 w-p:leading-4 w-d:text-base w-t:text-3.5 w-p:text-3.5">{ subtitle }</p>
+              <h3 className="font-headings font-bold desktop:leading-15 tablet:leading-7.5 mobile:leading-7.5 desktop:text-6 tablet:text-6 mobile:text-6 text-wrap">{ title }</h3>
+              <p className="font-texts font-normal desktop:leading-5 tablet:leading-4 mobile:leading-4 desktop:text-base tablet:text-3.5 mobile:text-3.5">{ subtitle }</p>
               {
                 description && description !== "" ?
                 <RichtText classNames="mt-6" font="dark" data={{
@@ -51,13 +51,13 @@ const BannerWrapper: FC<BannerWrapperData> = memo(({ data: { urlImage, title, su
             <Button dark data={{...action, isExpand: true}} onClick={onBtn} />
           </div>
         
-          {/* <div style={{"backgroundImage":`url(${urlImage?.desktop})`}} className={cn("mt-6 col-span-12 w-t:col-span-8 w-p:col-span-4 bg-cover p-10 relative" , classNames)}>
+          {/* <div style={{"backgroundImage":`url(${urlImage?.desktop})`}} className={cn("mt-6 col-span-12 tablet:col-span-8 mobile:col-span-4 bg-cover p-10 relative" , classNames)}>
             <div className={cn("relative", classNames, {
             "text-surface-0": font === "light",
             "text-surface-950": font === "dark" ,
             })}>
-              <h1 className="font-headings font-bold w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5 w-d:text-6 w-t:text-6 w-p:text-6">{ title }</h1>
-              <h3 className="font-texts font-normal w-d:leading-5 w-t:leading-4 w-p:leading-4 w-d:text-base w-t:text-3.5 w-p:text-3.5">{ subtitle }</h3>
+              <h1 className="font-headings font-bold desktop:leading-15 tablet:leading-7.5 mobile:leading-7.5 desktop:text-6 tablet:text-6 mobile:text-6">{ title }</h1>
+              <h3 className="font-texts font-normal desktop:leading-5 tablet:leading-4 mobile:leading-4 desktop:text-base tablet:text-3.5 mobile:text-3.5">{ subtitle }</h3>
               {
                 description && description !== "" ?
                 <RichtText classNames="mt-6" font="dark" data={{

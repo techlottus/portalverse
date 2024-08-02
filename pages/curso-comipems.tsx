@@ -27,7 +27,7 @@ const CursoComipems: NextPageWithLayout = ({ sections, meta }: any) => {
     </Head>
     <HeaderFooterLayout breadcrumbs={true}>
       <ContentLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6 w-d:mb-12">
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 mb-6 desktop:mb-12">
           <IntroductionProgram {...sections?.IntroductionProgram} />
         </div>
       </ContentLayout>
@@ -35,12 +35,12 @@ const CursoComipems: NextPageWithLayout = ({ sections, meta }: any) => {
         <section
           //@ts-ignore
           style={{ "--image-desk-url": `url(${sections?.bgImageSection?.desktopBgImage})`, "--image-tablet-url": `url(${sections?.bgImageSection?.tabletBgImage})`, "--image-mobile-url": `url(${sections?.bgImageSection?.mobileBgImage})` }}
-          className={cn("mb-12 w-d:mb-18 col-span-12 w-full justify-center bg-origin-border md:bg-center bg-no-repeat bg-cover py-16", "bg-[image:var(--image-mobile-url)]", "md:bg-[image:var(--image-tablet-url)]", "lg:bg-[image:var(--image-desk-url)]")}
+          className={cn("mb-12 desktop:mb-18 col-span-12 w-full justify-center bg-origin-border md:bg-center bg-no-repeat bg-cover py-16", "bg-[image:var(--image-mobile-url)]", "md:bg-[image:var(--image-tablet-url)]", "lg:bg-[image:var(--image-desk-url)]")}
         >
           <Container>
-            <div className="flex flex-col w-d:gap-12 gap-6 items-center justify-center">
+            <div className="flex flex-col desktop:gap-12 gap-6 items-center justify-center">
               <div className="text-center">
-                <h3 className="font-headings font-semibold text-7 w-p:text-8"><span className="font-headings font-semibold text-7 w-p:text-8 text-secondary-500 mr-2">{sections?.bgImageSection?.colorTitle}</span>{sections?.bgImageSection?.title}</h3>
+                <h3 className="font-headings font-semibold text-7 mobile:text-8"><span className="font-headings font-semibold text-7 mobile:text-8 text-secondary-500 mr-2">{sections?.bgImageSection?.colorTitle}</span>{sections?.bgImageSection?.title}</h3>
                 <RichtText data={{
                   content: sections?.bgImageSection?.subtitle
                 }} />
@@ -48,7 +48,7 @@ const CursoComipems: NextPageWithLayout = ({ sections, meta }: any) => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-6">
                 {
                   sections?.bgImageSection?.cards?.map((perk: any, i: number) => (
-                    <div key={i} className="flex justify-center items-center gap-2 px-2.5 py-3 min-h-20	w-p:min-h-16 bg-white shadow-lg rounded-lg md:max-w-78">
+                    <div key={i} className="flex justify-center items-center gap-2 px-2.5 py-3 min-h-20	mobile:min-h-16 bg-white shadow-lg rounded-lg md:max-w-78">
                       <span className="material-symbols-outlined select-none !text-7" style={{ color: perk?.colorIcon }}>{perk?.icon}</span>
                       <div className="-mb-5 grow mr-2">
                         <RichtText data={{ content: parseEditorRawData(perk?.content) }} />
@@ -57,20 +57,20 @@ const CursoComipems: NextPageWithLayout = ({ sections, meta }: any) => {
                   ))
                 }
               </div>
-              <div className="w-p:w-full bg-black rounded-lg justify-center flex">
+              <div className="mobile:w-full bg-black rounded-lg justify-center flex">
                 <Button dark onClick={() => window.open(sections?.bgImageSection?.button?.redirect)} data={sections?.bgImageSection?.button} />
               </div>
             </div>
           </Container>
         </section>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-12 w-d:mb-18">
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 mb-12 desktop:mb-18">
           <RichTextImage {...sections?.RichTextImageAulaSection} />
         </div>
       </ContentFullLayout>
       <ContentLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6 w-d:mb-18">
-          <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6 ">{sections?.videosCourseSection.title}</p>
-          <div className="grid w-d:grid-cols-2 w-p:grid-cols-1 gap-6">
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 mb-6 desktop:mb-18">
+          <p className="font-headings font-bold text-10 tablet:text-6 mobile:text-6 leading-tight mb-6 ">{sections?.videosCourseSection.title}</p>
+          <div className="grid desktop:grid-cols-2 mobile:grid-cols-1 gap-6">
             {
               sections?.videosCourseSection.videos.map((item: any, i: number) => <div key={`section-videoCourses-${i}`}>
                 {
@@ -99,13 +99,13 @@ const CursoComipems: NextPageWithLayout = ({ sections, meta }: any) => {
         </div>
       </ContentLayout>
       <ContentFullLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6 w-d:mb-18">
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 mb-6 desktop:mb-18">
           <RichTextVideo {...sections?.richTextVideoOpinionsSection} />
         </div>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-12 w-d:mb-18">
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 mb-12 desktop:mb-18">
           <RichTextImage {...sections?.RichTextImageHowDoYouHelpSection} />
         </div>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4">
           <RichTextVideo {...sections?.richTextVideoEncourageYourselfSection} />
         </div>
       </ContentFullLayout>

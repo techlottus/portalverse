@@ -11,7 +11,7 @@ const Rainbow: FC<RainbowComponentConfig> = ({ sections, title, classNamesTitle,
     <section className="relative w-full z-0">
       <h2
         className={cn(
-          "mb-6 font-headings text-10 w-t:text-3xl w-p:text-6",
+          "mb-6 font-headings text-10 tablet:text-3xl mobile:text-6",
           classNamesTitle
         )}
       >
@@ -27,12 +27,12 @@ const Rainbow: FC<RainbowComponentConfig> = ({ sections, title, classNamesTitle,
                     const { title, description, image } = section;
 
                     return (
-                      <div className="flex flex-col items-center justify-center w-d:flex-row space-y-6 w-d:space-y-0 w-d:space-x-6 px-12 w-d:px-0" key={`section-detail${i}`}>
-                        <div className="w-full w-d:w-1/2 flex flex-col space-y-6 w-d:pl-24">
-                          <h3 className={cn("font-headings text-8 w-t:text-3xl w-p:text-6 font-bold", {"text-surface-0" : contentVariant === "dark" || contentVariant === undefined})}>{title}</h3>
+                      <div className="flex flex-col items-center justify-center desktop:flex-row space-y-6 desktop:space-y-0 desktop:space-x-6 px-12 desktop:px-0" key={`section-detail${i}`}>
+                        <div className="w-full desktop:w-1/2 flex flex-col space-y-6 desktop:pl-24">
+                          <h3 className={cn("font-headings text-8 tablet:text-3xl mobile:text-6 font-bold", {"text-surface-0" : contentVariant === "dark" || contentVariant === undefined})}>{title}</h3>
                           <RichtText font={colorVariant} classNames="font-headings" data={{ content: description }} />
                         </div>
-                        <div className="w-full w-d:w-1/2 max-w-147">
+                        <div className="w-full desktop:w-1/2 max-w-147">
                           <Aspect ratio="2/1">
                             <Image src={image?.src} alt={image?.alt} classNames="w-full h-full" />
                           </Aspect>
@@ -49,7 +49,7 @@ const Rainbow: FC<RainbowComponentConfig> = ({ sections, title, classNamesTitle,
                   className="w-full h-full"
                   style={{ backgroundColor: section?.color || "white" }}
                 ></div>
-                <div className="w-d:w-1/3 h-full bg-surface-0"></div>
+                <div className="desktop:w-1/3 h-full bg-surface-0"></div>
               </div>
             </section>
           );

@@ -29,12 +29,12 @@ const RvoeAccordionList: FC<RvoeAccordionListData> = (props: RvoeAccordionListDa
   return <>
     <section>
       <Container>
-        <div className={cn("w-d:w-1/2 flex flex-col justify-center", {
+        <div className={cn("desktop:w-1/2 flex flex-col justify-center", {
           "mb-8": !description
         })}>
           {
             title ?
-              <h3 className="font-headings font-bold text-10 leading-12 w-p:text-6 w-p:leading-7">{title}</h3>
+              <h3 className="font-headings font-bold text-10 leading-12 mobile:text-6 mobile:leading-7">{title}</h3>
               : null
           }
         </div>
@@ -45,7 +45,7 @@ const RvoeAccordionList: FC<RvoeAccordionListData> = (props: RvoeAccordionListDa
             }} />
           </div>
         }
-        <div className='w-d:flex gap-12 w-d:items-start'>
+        <div className='desktop:flex gap-12 desktop:items-start'>
           {
             <div className="flex flex-col gap-6 w-72 max-w-72">
               {
@@ -94,10 +94,10 @@ const RvoeAccordionList: FC<RvoeAccordionListData> = (props: RvoeAccordionListDa
                               <table className="w-full bg-white table-auto">
                                 <thead className="text-xs md:text-base lg:text-base">
                                   <tr className="bg-gray-100">
-                                    <th className="text-left font-texts font-normal w-1/4 w-d:w-2/6 pt-5 pb-8 md:pl-4">Programa</th>
-                                    <th className="text-left font-texts font-normal w-1/4 w-d:w-1/6 pt-5 pb-8">Fecha</th>
-                                    <th className="text-left font-texts font-normal w-1/4 w-d:w-1/6 pt-5 pb-8">RVOE</th>
-                                    <th className="text-left font-texts font-normal w-1/4 w-d:w-2/6 pt-5 pb-8 md:pr-4">Área de conocimiento</th>
+                                    <th className="text-left font-texts font-normal w-1/4 desktop:w-2/6 pt-5 pb-8 md:pl-4">Programa</th>
+                                    <th className="text-left font-texts font-normal w-1/4 desktop:w-1/6 pt-5 pb-8">Fecha</th>
+                                    <th className="text-left font-texts font-normal w-1/4 desktop:w-1/6 pt-5 pb-8">RVOE</th>
+                                    <th className="text-left font-texts font-normal w-1/4 desktop:w-2/6 pt-5 pb-8 md:pr-4">Área de conocimiento</th>
                                   </tr>
                                   {
                                     items ?

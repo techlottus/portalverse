@@ -9,7 +9,7 @@ const Banner = (props: BannerSection) => {
 
   return (
     <section>
-      <Container classNames={!ctaText ? "w-p:!p-0 w-t:!p-0" : ""}>
+      <Container classNames={!ctaText ? "mobile:!p-0 tablet:!p-0" : ""}>
         <BannerPortalverseWrapper
           data={props}
           onClick={() => {

@@ -294,7 +294,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         </div>
       </Modal>
       <ContentLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4">
           {
             selectedModalityName === "online" || selectedModalityName === "a tu ritmo" ?
               <IntroductionProgram
@@ -337,7 +337,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         {
           selectedModalityName !== "a tu ritmo" && brands ?
             <>
-              <div className="col-span-7 w-t:col-span-8 w-p:col-span-4 w-d:mb-18">
+              <div className="col-span-7 tablet:col-span-8 mobile:col-span-4 desktop:mb-18">
                 {
                   brands?.data?.length > 0 ?
                     brands?.data?.map((item, index) => <section className="mb-6" key={`section-aboutBrand-${index}`}>
@@ -382,7 +382,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                     }
                     {
                       rvoeImages && rvoeImages?.length > 0 ?
-                        <section className="w-full grid w-d:grid-cols-2 w-d:gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
+                        <section className="w-full grid desktop:grid-cols-2 desktop:gap-6 tablet:grid-cols-2 mobile:grid-cols-1">
                           {
                             rvoeImages?.map((item, i: number) => <section key={`section-rvoeImages-${i}`}>
                               <img src={item?.image?.data?.attributes?.url}></img>
@@ -411,7 +411,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                       }
                       {
                         certifications?.data?.length > 0 ?
-                          <section className="w-full grid w-d:grid-cols-8 gap-6 w-t:grid-cols-8 w-p:grid-cols-4">
+                          <section className="w-full grid desktop:grid-cols-8 gap-6 tablet:grid-cols-8 mobile:grid-cols-4">
                             {
                               certifications?.data?.map((item, i) => <div key={`section-informativeIcons-${i}`}>
                                 <Aspect ratio={"1/1"}>
@@ -497,8 +497,8 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         }
         {
           selectedModalityName !== "a tu ritmo" ?
-            <div className="col-span-5 mb-6 w-p:col-span-2 w-p:order-1 w-t:hidden w-p:hidden">
-              <div className="w-p:-mt-56 -mt-20 sticky top-10">
+            <div className="col-span-5 mb-6 mobile:col-span-2 mobile:order-1 tablet:hidden mobile:hidden">
+              <div className="mobile:-mt-56 -mt-20 sticky top-10">
                 <div className="mt-16 mb-8">
                   {
                     !!SFprogram && <ContainerForm
@@ -557,8 +557,8 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         }
       </ContentLayout>
       {/* <ProgramDetailForm></ProgramDetailForm> */}
-      {/* <ContentFullLayout classNames="w-d:hidden w-t:hidden mb-10 mt-6">
-        <div className="w-d:hidden w-t:hidden col-span-4 mb-10 mt-6">
+      {/* <ContentFullLayout classNames="desktop:hidden tablet:hidden mb-10 mt-6">
+        <div className="desktop:hidden tablet:hidden col-span-4 mb-10 mt-6">
           <Aspect ratio={"4/3"}>
             <Image
               alt={title || "Programa de Nivel Superior"}
@@ -575,14 +575,14 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
             <ContentLayout>
               {
                 modalities?.length > 0 && titleTabs ?
-                  <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6">
-                    <h2 className="text-6.5 font-headings font-semibold leading-tight w-t:leading-tight w-p:leading-tight w-t:text-6 w-p:text-6">{`${titleTabs} ${levelProgram}`}</h2>
+                  <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 mb-6">
+                    <h2 className="text-6.5 font-headings font-semibold leading-tight tablet:leading-tight mobile:leading-tight tablet:text-6 mobile:text-6">{`${titleTabs} ${levelProgram}`}</h2>
                   </div>
                   : null
               }
               {
                 modalities?.length > 1 ?
-                  <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8' w-p:col-span-4 flex justify-center">
+                  <div className="tablet:hidden mobile:hidden col-span-12 tablet:col-span-8' mobile:col-span-4 flex justify-center">
                     <TabsFeatured tabs={modalities?.map((modality) => ({ label: modality.modality.data.attributes.label ? modality.modality.data.attributes.label : modality?.modality?.data?.attributes?.name }))} onActive={(active: number) => handleSetActiveTab(active)} />
                   </div>
                   : null
@@ -591,8 +591,8 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
             {
               modalities?.length > 1 ?
                 <ContentFullLayout>
-                  <div className="col-span-12 w-t:col-span-8' w-p:col-span-4 flex justify-center">
-                    <section className="w-d:hidden">
+                  <div className="col-span-12 tablet:col-span-8' mobile:col-span-4 flex justify-center">
+                    <section className="desktop:hidden">
                       <TabsFeatured tabs={modalities?.map((modality) => ({ label: modality.modality.data.attributes.label ? modality.modality.data.attributes.label : modality?.modality?.data?.attributes?.name }))} onActive={(active: number) => handleSetActiveTab(active)} />
                     </section>
                   </div>
@@ -603,15 +603,15 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
           : null
       }
       <ContentLayout>
-        <div className="gap-6 col-span-12 w-t:col-span-8 w-p:col-span-4">
+        <div className="gap-6 col-span-12 tablet:col-span-8 mobile:col-span-4">
           {
             selectedModalityName === "a tu ritmo" ?
               <>
                 <OutstandingContainer items={formattedModalityData?.cards} reverse={selectedModalityName === "a tu ritmo"} />
-                <div className="w-d:mt-18 mt-6 gap-6 grid w-d:grid-cols-2 grid-cols-1">
+                <div className="desktop:mt-18 mt-6 gap-6 grid desktop:grid-cols-2 grid-cols-1">
                   {
                     hasCampuses ?
-                      <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+                      <div className="col-span-12 tablet:col-span-8 mobile:col-span-4">
                         <div className="flex gap-1">
                           <span className="font-headings">Selecciona un</span>
                           <span className="font-headings">{campusLabel}</span>
@@ -630,7 +630,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                         </div> */}
                       </div> :
                       <>
-                        {/* <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center">
+                        {/* <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 flex justify-center">
                           <Button dark data={{ ...ButtonInit, title: "Descarga el plan de estudios" }} onClick={downloadFileProgram} />
                         </div> */}
                       </>
@@ -654,9 +654,9 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                             className={cn("col-span-12 w-full justify-center bg-origin-border md:bg-center bg-no-repeat bg-cover py-16", "bg-[image:var(--image-mobile-url)]", "md:bg-[image:var(--image-tablet-url)]", "lg:bg-[image:var(--image-desk-url)]")}
                           >
                             <Container classNames="p-6">
-                              <div className="flex flex-col w-d:gap-8 items-center justify-center">
+                              <div className="flex flex-col desktop:gap-8 items-center justify-center">
                                 <div className="text-center flex flex-col items-center">
-                                  <h3 className="font-headings font-semibold text-7 w-p:text-6 w-p:w-2/3 leading-9">{characteristicsTitle}<span className="font-headings font-semibold text-7 w-p:text-6 text-secondary-500 mr-2 leading-9">{characteristicsModalityTitle}?</span></h3>
+                                  <h3 className="font-headings font-semibold text-7 mobile:text-6 mobile:w-2/3 leading-9">{characteristicsTitle}<span className="font-headings font-semibold text-7 mobile:text-6 text-secondary-500 mr-2 leading-9">{characteristicsModalityTitle}?</span></h3>
                                   <div className="flex justify-center">
                                     <div className="w-2/3">
                                       <RichtText classNames="text-red-500!" data={{
@@ -666,12 +666,12 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                                   </div>
                                 </div>
                                 {characteristicsInformativeIcons && characteristicsInformativeIcons?.length > 0 ?
-                                  <section className="w-full grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
+                                  <section className="w-full grid desktop:grid-cols-3 gap-6 tablet:grid-cols-2 mobile:grid-cols-1">
                                     {
-                                      characteristicsInformativeIcons?.map((item: any, i: number) => <section className="text-center flex flex-col w-p:flex-row" key={`section-informativeIcons-${i}`}>
-                                        <span className="material-symbols-outlined select-none text-surface-500 !text-16 w-p:!text-7 w-d:mb-2">{item?.iconName}</span>
-                                        <div className="flex flex-col w-p:text-left w-p:ml-4">
-                                          <h4 className="font-headings font-semibold text-5 text-secondary-500 w-p:mb-2 mb-4">{item?.title}</h4>
+                                      characteristicsInformativeIcons?.map((item: any, i: number) => <section className="text-center flex flex-col mobile:flex-row" key={`section-informativeIcons-${i}`}>
+                                        <span className="material-symbols-outlined select-none text-surface-500 !text-16 mobile:!text-7 desktop:mb-2">{item?.iconName}</span>
+                                        <div className="flex flex-col mobile:text-left mobile:ml-4">
+                                          <h4 className="font-headings font-semibold text-5 text-secondary-500 mobile:mb-2 mb-4">{item?.title}</h4>
                                           <RichtText data={{
                                             content: parseEditorRawData(item?.description)
                                           }} />
@@ -698,16 +698,16 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                             }
                             {
                               summaries?.length > 0 ?
-                                <div className="grid w-d:grid-cols-3 gap-6 w-t:grid-cols-1 w-p:grid-cols-1 px-6 relative">
-                                  <div className="w-p:hidden w-t:hidden absolute w-full h-full bg-gradient-to-t from-surface-0 from-15% z-10"></div>
+                                <div className="grid desktop:grid-cols-3 gap-6 tablet:grid-cols-1 mobile:grid-cols-1 px-6 relative">
+                                  <div className="mobile:hidden tablet:hidden absolute w-full h-full bg-gradient-to-t from-surface-0 from-15% z-10"></div>
                                   {
                                     summaries.map((item: any, i: number) => <section className="pb-5 px-6" key={`section-summarieTitle-${i}`}>
-                                      <div className="mb-6 w-t:mb-6">
+                                      <div className="mb-6 tablet:mb-6">
                                         <h4 className="font-headings font-semibold text-5 text-secondary-500">{item?.title}</h4>
                                       </div>
                                       {
                                         item?.subjects?.slice(0, 4).map((subject: { title: string }, i: number) => <section key={`section-summarie-${i}`}>
-                                          <div className="mb-3 relative before:absolute before:w-[1px] before:h-[150%] w-p:before:h-[120%] before:bg-secondary-500 before:left-[-16px] before:top-2 after:absolute after:w-2 after:h-2 after:rounded-[50%] after:bg-secondary-500 after:left-[-19px] after:top-[5px]">
+                                          <div className="mb-3 relative before:absolute before:w-[1px] before:h-[150%] mobile:before:h-[120%] before:bg-secondary-500 before:left-[-16px] before:top-2 after:absolute after:w-2 after:h-2 after:rounded-[50%] after:bg-secondary-500 after:left-[-19px] after:top-[5px]">
                                             <p>{subject?.title}</p>
                                           </div>
                                         </section>)
@@ -733,10 +733,10 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
               </div>
               : null
           }
-          {/* <div className="w-d:mt-18 mt-6 gap-6 grid w-d:grid-cols-2 grid-cols-1">
+          {/* <div className="desktop:mt-18 mt-6 gap-6 grid desktop:grid-cols-2 grid-cols-1">
             {
               hasCampuses ?
-                <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+                <div className="col-span-12 tablet:col-span-8 mobile:col-span-4">
                   <div className="flex gap-1">
                     <span className="font-headings">Selecciona un</span>
                     <span className="font-headings">{campusLabel}</span>
@@ -755,7 +755,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                   </div>
                 </div> :
                 <>
-                  <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center">
+                  <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 flex justify-center">
                     <Button dark data={{ ...ButtonInit, title: "Descarga el plan de estudios" }} onClick={downloadFileProgram} />
                   </div></>
             }
@@ -764,14 +764,14 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
       </ContentLayout>
       {
         bannerData?.desktopImage ?
-          <div className="order-last col-span-12 w-t:col-span-8 w-p:col-span-4 mt-6 w-d:mt-18">
+          <div className="order-last col-span-12 tablet:col-span-8 mobile:col-span-4 mt-6 desktop:mt-18">
             <Banner type={"ComponentSectionsBanner"} {...bannerData} />
           </div>
           : null
       }
       {
         selectedModalityName !== "a tu ritmo" ?
-          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mt-18 w-p:mt-6 w-t:mt-12">
+          <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 desktop:mt-18 mobile:mt-6 tablet:mt-12">
             {
               RichtTextImageData ?
                 <RichTextImage type={"ComponentSectionsRichTextImage"} title={RichtTextImageData?.title} image={{
@@ -791,7 +791,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         selectedModalityName === "a tu ritmo" && relatedPrograms?.length > 0 ?
           <Container classNames="mt-20">
             <h3 className="font-headings font-bold text-8 leading-10 md:text-10 md:leading-12">Programas académicos</h3>
-            <div className="grid grid-cols-12 w-t:grid-cols-8 w-p:grid-cols-4 gap-6 mt-12">
+            <div className="grid grid-cols-12 tablet:grid-cols-8 mobile:grid-cols-4 gap-6 mt-12">
               {
                 relatedPrograms?.map((relatedProgram, index) => {
                   const programAttributes = relatedProgram?.attributes;
@@ -803,9 +803,9 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                     <div
                       key={`program-${index}`}
                       className={cn("flex hover:shadow-30 rounded-lg h-full border border-solid border-surface-200 overflow-hidden", {
-                        "flex-col w-d:col-span-3 w-t:col-span-4 w-p:col-span-4":
+                        "flex-col desktop:col-span-3 tablet:col-span-4 mobile:col-span-4":
                           mosaicActive,
-                        "w-d:col-span-12 w-t:col-span-8 w-p:col-span-4":
+                        "desktop:col-span-12 tablet:col-span-8 mobile:col-span-4":
                           !mosaicActive,
                       })}
                     >
@@ -866,7 +866,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
       }
       {
         selectedModalityName !== "a tu ritmo" ?
-          <div className="w-d:mt-18 mt-12">
+          <div className="desktop:mt-18 mt-12">
             <RichTextImage {...generalCertifications} />
           </div>
           : null
@@ -874,7 +874,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
       {
         selectedModalityName !== "a tu ritmo" && testimonials?.testimonialsCards ?
           <ContentFullLayout>
-            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mt-18 mt-12">
+            <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 desktop:mt-18 mt-12">
               {
                 testimonials?.testimonialsCards?.length > 0 ?
                   <TestimonialSlider {...testimonials} />

@@ -35,14 +35,14 @@ const FAQ: NextPageWithLayout<any> = ({ info, meta, sections }: any) => {
     </Head>
     <HeaderFooterLayout>
       <ContentLayout>
-        <h1 className="col-span-12 w-t:col-span-8 w-p:col-span-4 font-headings w-d:text-13 w-t:text-8.5 w-p:text-6 w-t:leading-9.435 font-bold leading-16.25">{sections.head.title}</h1>
-        <div className="col-span-3 w-t:col-span-8 w-p:col-span-4 flex-grow-0">
-          <h2 className="col-span-12 w-t:col-span-8 w-p:col-span-4 font-semibold font-headings leading-7.5 text-6 w-t:text-4.5 w-p:leading-5.625 mt-1 mb-10 w-t:mb-6 w-p:mb-6">{sections.head.subtitle}</h2>
-          <div className="col-span-3 w-t:col-span-8 w-p:col-span-4">
+        <h1 className="col-span-12 tablet:col-span-8 mobile:col-span-4 font-headings desktop:text-13 tablet:text-8.5 mobile:text-6 tablet:leading-9.435 font-bold leading-16.25">{sections.head.title}</h1>
+        <div className="col-span-3 tablet:col-span-8 mobile:col-span-4 flex-grow-0">
+          <h2 className="col-span-12 tablet:col-span-8 mobile:col-span-4 font-semibold font-headings leading-7.5 text-6 tablet:text-4.5 mobile:leading-5.625 mt-1 mb-10 tablet:mb-6 mobile:mb-6">{sections.head.subtitle}</h2>
+          <div className="col-span-3 tablet:col-span-8 mobile:col-span-4">
             {
               info.map((section: any, i:number) => <Link key={`section-item${i}`} href={`${section.route}`}>
 
-                <li className={cn("font-headings font-bold flex py-2 w-t:py-4 w-p:py-4 w-t:px-6 w-p:px-6 w-t:border-solid border-surface-200 w-t:border w-p:border-solid w-p:border items-center", { "text-primary-500": section.status, "text-surface-950": !section.status })}>
+                <li className={cn("font-headings font-bold flex py-2 tablet:py-4 mobile:py-4 tablet:px-6 mobile:px-6 tablet:border-solid border-surface-200 tablet:border mobile:border-solid mobile:border items-center", { "text-primary-500": section.status, "text-surface-950": !section.status })}>
                   <span className="material-symbols-outlined icon pr-3 select-none">{section.icon}</span>
                   <p>{ section.title }</p>
                 </li>
@@ -53,8 +53,8 @@ const FAQ: NextPageWithLayout<any> = ({ info, meta, sections }: any) => {
           </div>
           
         </div>
-        <div className="col-span-9 w-t:col-span-8 w-p:col-span-4 flex-grow overflow-y-auto">
-          <h2 className="font-headings font-bold text-6.5 text-primary-500 w-t:text-6 w-p:text-base w-p:my-6">{ sectionTitle }</h2>
+        <div className="col-span-9 tablet:col-span-8 mobile:col-span-4 flex-grow overflow-y-auto">
+          <h2 className="font-headings font-bold text-6.5 text-primary-500 tablet:text-6 mobile:text-base mobile:my-6">{ sectionTitle }</h2>
           {
             info.map(({ questions }: any, i: number) => {
               if (!!questions.length) {
@@ -64,13 +64,13 @@ const FAQ: NextPageWithLayout<any> = ({ info, meta, sections }: any) => {
             }) 
           }
         </div>
-        <div className="col-span-12 w-t:hidden w-p:hidden w-p:col-span-4 mt-18 w-p:mt-12">
+        <div className="col-span-12 tablet:hidden mobile:hidden mobile:col-span-4 mt-18 mobile:mt-12">
          {/* <Banner data={sections.banner} onBtn={()=> handleRedirect(sections.banner.redirect)}/> */}
          <BannerPortalverse data={sections?.banner} onClick={()=> handleRedirect(sections.banner.redirect)} />
         </div>
       </ContentLayout>
       <ContentFullLayout classNames="mt-12">
-        <div className="w-d:hidden">
+        <div className="desktop:hidden">
          {/* <Banner data={sections.banner} onBtn={()=> handleRedirect(sections.banner.redirect)}/> */}
          <BannerPortalverse data={sections?.banner} onClick={()=> handleRedirect(sections.banner.redirect)} />
         </div>

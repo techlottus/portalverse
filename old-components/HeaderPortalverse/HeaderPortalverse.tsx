@@ -132,7 +132,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, o
   }, []);
   return <>
     {/* desktop menu */}
-    <section ref={navbarRef} className={cn("fixed w-t:hidden w-p:hidden w-full bg-surface-0 z-15 transition-transform", { "shadow-15": !activeMenu }, classNames)}>
+    <section ref={navbarRef} className={cn("fixed tablet:hidden mobile:hidden w-full bg-surface-0 z-15 transition-transform", { "shadow-15": !activeMenu }, classNames)}>
       <div className="flex p-1">
         <div className={cn("p-6 cursor-pointer border-0 border-solid border-surface-200 border-r-2")} onClick={onClickLogo}>
           <div className="w-36 h-9 bg-logo bg-cover bg-center"> </div>
@@ -183,7 +183,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, o
         </div>
       </div>
       {/* menu suboptions */}
-      <div onMouseLeave={handleHoverOutOption} className={cn("w-full p-2 flex justify-center divide-x-2 divide-surface-200 w-t:hidden w-p:hidden bg-surface-0 z-15 min-h-14", { "hidden": !activeMenu, "block shadow-15": activeMenu })}>
+      <div onMouseLeave={handleHoverOutOption} className={cn("w-full p-2 flex justify-center divide-x-2 divide-surface-200 tablet:hidden mobile:hidden bg-surface-0 z-15 min-h-14", { "hidden": !activeMenu, "block shadow-15": activeMenu })}>
         {
           activeOptionMenu?.map((item: any, i: number) => (
             <Link key={`submenu-${i}`} href={item.route} passHref className={cn("group py-1 px-8 z-20 border-0 flex items-center")}>
@@ -196,7 +196,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, o
     </section>
 
     {/* tablet & mobile */}
-    <section ref={navbarRef} className={cn("bg-white fixed top-0 w-full w-d:hidden transition-transform z-15 flex p-1 shadow-md", classNames)}>
+    <section ref={navbarRef} className={cn("bg-white fixed top-0 w-full desktop:hidden transition-transform z-15 flex p-1 shadow-md", classNames)}>
       <div className="p-3  border-0 border-solid border-surface-200 border-r-2" onClick={handleMenuMobile}>
         <Icon name="sort" className="w-6 h-6" />
       </div>
@@ -208,7 +208,7 @@ const Header: FC<HeaderPortalverseComponentData> = ({ classNames, onClickLogo, o
       </div> */}
     </section>
     {/* tablet & mobile */}
-    <section ref={menuRef} className={cn("w-d:hidden w-full fixed left-0 top-0 bottom-0 h-screen bg-surface-0 flex flex-col px-2 pb-2 pt-14 z-10", { "hidden": menuInvisible })}>
+    <section ref={menuRef} className={cn("desktop:hidden w-full fixed left-0 top-0 bottom-0 h-screen bg-surface-0 flex flex-col px-2 pb-2 pt-14 z-10", { "hidden": menuInvisible })}>
       <div className="h-screen overflow-auto">
         <div className="overflow-y-auto h-full">
           {

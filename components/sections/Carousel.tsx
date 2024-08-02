@@ -84,14 +84,14 @@ const Carousel = (props: CarouselSection) => {
     <>
       <div style={{ backgroundColor }}
         className={cn({
-          "w-p:py-10 w-t:py-6 w-d:py-10": !!backgroundColor
+          "mobile:py-10 tablet:py-6 desktop:py-10": !!backgroundColor
         })}>
         <Container>
           <div className="">
             <div className="navigation-wrapper">
               <div>
                 {
-                  title ? <h2 className="font-headings font-bold text-10 w-p:text-6 w-d:mb-6 mb-3">{title}</h2> : null
+                  title ? <h2 className="font-headings font-bold text-10 mobile:text-6 desktop:mb-6 mb-3">{title}</h2> : null
                 }
                 {
                   description ? <div className="mb-6">
@@ -103,7 +103,7 @@ const Carousel = (props: CarouselSection) => {
                 {
                   typeCarousel === "card" ?
                     <>
-                      <div className="w-d:px-18">
+                      <div className="desktop:px-18">
                         <div ref={sliderRef} className="keen-slider">
                           {
                             cards && cards?.length > 0 ?
@@ -124,12 +124,12 @@ const Carousel = (props: CarouselSection) => {
                 }
                 {
                   typeCarousel === "image" ?
-                    <div className="w-d:px-18">
+                    <div className="desktop:px-18">
                       <div ref={sliderRef} className="keen-slider">
                         {
                           images && images?.length > 0 ?
                             images?.map((image, i) => <div key={`carouselImage-${i}`} className="keen-slider__slide">
-                              <div className="w-t:hidden w-p:hidden">
+                              <div className="tablet:hidden mobile:hidden">
                                 <Aspect ratio={image?.desktopRatio}>
                                   <Image
                                     alt={image?.desktopImage?.data?.attributes?.url || ""}
@@ -139,7 +139,7 @@ const Carousel = (props: CarouselSection) => {
                                   />
                                 </Aspect>
                               </div>
-                              <div className="w-d:hidden w-p:hidden">
+                              <div className="desktop:hidden mobile:hidden">
                                 <Aspect ratio={image?.tabletRatio}>
                                   <Image
                                     alt={image?.tabletImage?.data?.attributes?.url || ""}
@@ -149,7 +149,7 @@ const Carousel = (props: CarouselSection) => {
                                   />
                                 </Aspect>
                               </div>
-                              <div className="w-d:hidden w-t:hidden">
+                              <div className="desktop:hidden tablet:hidden">
                                 <Aspect ratio={image?.mobileRatio}>
                                   <Image
                                     alt={image?.mobileImage?.data?.attributes?.url || ""}
@@ -217,7 +217,7 @@ const Carousel = (props: CarouselSection) => {
             {
               button?.CTA ?
                 <div>
-                  <div className="flex justify-center w-p:hidden mt-6">
+                  <div className="flex justify-center mobile:hidden mt-6">
                     <Button dark data={{
                       id: button?.id,
                       type: button?.variant,
@@ -234,7 +234,7 @@ const Carousel = (props: CarouselSection) => {
                       return null
                     } : undefined} />
                   </div>
-                  <div className="w-d:hidden w-t:hidden mt-6">
+                  <div className="desktop:hidden tablet:hidden mt-6">
                     <Button dark data={{
                       id: button?.id,
                       type: button?.variant,

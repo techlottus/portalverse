@@ -15,7 +15,7 @@ const VideoSection: FC<VideosSectionData> = (props: VideosSectionData) => {
       <Container>
         {
           title ?
-            <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6">{title}</p>
+            <p className="font-headings font-bold text-10 tablet:text-6 mobile:text-6 leading-tight mb-6">{title}</p>
           : null
         }
         {
@@ -29,7 +29,7 @@ const VideoSection: FC<VideosSectionData> = (props: VideosSectionData) => {
         }
         {
           videos ?
-            <div className="grid w-d:grid-cols-2 w-t:grid-cols-1 gap-6 w-p:grid-cols-1 w-p:gap-7">
+            <div className="grid desktop:grid-cols-2 tablet:grid-cols-1 gap-6 mobile:grid-cols-1 mobile:gap-7">
               {
                 videos?.length > 0 ?
                   videos?.map((item, i) => {

@@ -59,25 +59,25 @@ const CardsStatistics: FC<CardsStatisticsData> = (props: CardsStatisticsData) =>
         {
           title ?
             <div>
-              <h2 className="font-headings font-bold text-10 leading-12 w-p:text-6 w-p:leading-7 mb-6">{title}</h2>
+              <h2 className="font-headings font-bold text-10 leading-12 mobile:text-6 mobile:leading-7 mb-6">{title}</h2>
             </div>
           : null
         }
         {
           description ?
-            <div className="pb-14 w-p:pb-6">
+            <div className="pb-14 mobile:pb-6">
               <RichtText data={{
                 content: formattedDescription
               }} />
             </div>
           : null
         }
-        <div className={cn('w-d:flex gap-6', { "w-d:flex-row-reverse": cardsPosition === 'right' })}>
+        <div className={cn('desktop:flex gap-6', { "desktop:flex-row-reverse": cardsPosition === 'right' })}>
           {
             cards ?
-              <div className="w-d:w-1/2 flex flex-col justify-center">
+              <div className="desktop:w-1/2 flex flex-col justify-center">
                 {
-                  titleCards ? <h3 className="font-headings font-bold text-10 leading-12 w-p:text-6 w-p:leading-7 mb-6">{titleCards}</h3> : null
+                  titleCards ? <h3 className="font-headings font-bold text-10 leading-12 mobile:text-6 mobile:leading-7 mb-6">{titleCards}</h3> : null
                 }
                 {
                   descriptionCards ? <div className="pb-6"><RichtText data={{ content: formattedDescriptionCards }} /></div> : null
@@ -99,16 +99,16 @@ const CardsStatistics: FC<CardsStatisticsData> = (props: CardsStatisticsData) =>
           }
           {
             statistics ?
-              <div className="w-d:w-1/2 flex flex-col justify-center">
+              <div className="desktop:w-1/2 flex flex-col justify-center">
                 {
-                  titleStatistics ? <h3 className="font-headings font-bold text-10 leading-12 w-p:text-6 w-p:leading-7 mb-6">{titleStatistics}</h3> : null
+                  titleStatistics ? <h3 className="font-headings font-bold text-10 leading-12 mobile:text-6 mobile:leading-7 mb-6">{titleStatistics}</h3> : null
                 }
                 {
                   descriptionStatistics ? <div className="pb-6"><RichtText data={{ content: formattedDescriptionStatistics }} /></div> : null
                 }
                 {
                   statistics?.length > 0 ?
-                    <div className="grid w-d:grid-cols-2 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 w-full">
+                    <div className="grid desktop:grid-cols-2 gap-6 tablet:grid-cols-2 mobile:grid-cols-1 w-full">
                       {
                         statistics.map((item: any, i: number) => <div key={`section-statistics-${i}`}>
                           <NumbersPortalverse data={{ ...item, boxShadow: true, icon: item?.iconName }} classNames="p-2 justify-center text-center" />

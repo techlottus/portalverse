@@ -18,8 +18,8 @@ const ListconfigBlogPosts = (props: ListconfigData) => {
         <div className="flex flex-col space-y-6">
           {
             title
-              ? <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:mt-6 w-p:mt-6">
-                  <h1 className="font-headings font-bold text-8.5 w-t:text-6 w-p:text-6 semi-tight w-t:leading-tight w-p:leading-tight">
+              ? <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 tablet:mt-6 mobile:mt-6">
+                  <h1 className="font-headings font-bold text-8.5 tablet:text-6 mobile:text-6 semi-tight tablet:leading-tight mobile:leading-tight">
                     {title} 
                   </h1>
                 </div>
@@ -27,7 +27,7 @@ const ListconfigBlogPosts = (props: ListconfigData) => {
           }
           {
             blogPosts?.length > 0
-              ? <div className="grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
+              ? <div className="grid desktop:grid-cols-3 gap-6 tablet:grid-cols-2 mobile:grid-cols-1">
                   {
                     blogPosts?.map((blogPost, i) => (
                       <div key={`section-blog-${i}`}>

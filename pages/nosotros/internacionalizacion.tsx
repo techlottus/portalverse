@@ -74,9 +74,9 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
         <script type="application/ld+json">{JSON.stringify(meta?.structuredData)}</script> 
     </Head>
     <Modal isShow={isShow} onClose={handleVisibilityModal} data={{icon: 'close', title: "", tagOnClose: 'testOnClose', wrapper: true,}}>
-      <section slot="areaModalContent" className="flex w-t:flex-col w-p:flex-col w-full h-auto">
+      <section slot="areaModalContent" className="flex tablet:flex-col mobile:flex-col w-full h-auto">
       <ContentInsideLayout classNames="gap-6">
-          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 bg-surface-800 p-6">
+          <div className="col-span-6 tablet:col-span-8 mobile:col-span-4 bg-surface-800 p-6">
             <p className="text-surface-0 font-headings font-bold text-6 break-normal mb-16">{infoModal?.title?.title}</p>
             <div className="flex flex-col space-y-12">
               {
@@ -141,7 +141,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
               }
             </div>
           </div>
-          <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 bg-surface-0 overflow-y-auto">
+          <div className="col-span-6 tablet:col-span-8 mobile:col-span-4 bg-surface-0 overflow-y-auto">
             <RichtText data={{
               content: infoModal?.description?.content
             }} />
@@ -150,45 +150,45 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
       </section>
     </Modal>
     <HeaderFooterLayout breadcrumbs={true}>
-      <ContentFullLayout classNames="gap-6 w-d:hidden">
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+      <ContentFullLayout classNames="gap-6 desktop:hidden">
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4">
           <Slider data={{ ...sections?.head.slider }} mobile = {true}/>
         </div>
       </ContentFullLayout>
       <ContentLayout>
-        <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4">
+        <div className="tablet:hidden mobile:hidden col-span-12 tablet:col-span-8 mobile:col-span-4">
           <Slider data={{ ...sections?.head.slider, height: "600px" }} mobile = {false}/>
         </div>
       </ContentLayout>
-      <ContentLayout classNames="mt-6 w-d:mt-18">
-        <div className="col-span-8 w-t:col-span-8 w-p:col-span-4">
-          <h1 className="font-headings font-bold text-10 w-t:text.8.5 w-p:text-6 mb-6 leading-tight w-t:semi-tight">{sections?.head.title}</h1>
-          <h3 className="font-headings font-bold text-5.5 w-t:text-4.5 w-p:text-base mb-6 leading-tight w-t:leading-tight">{sections?.head.subtitle}</h3>
+      <ContentLayout classNames="mt-6 desktop:mt-18">
+        <div className="col-span-8 tablet:col-span-8 mobile:col-span-4">
+          <h1 className="font-headings font-bold text-10 tablet:text.8.5 mobile:text-6 mb-6 leading-tight tablet:semi-tight">{sections?.head.title}</h1>
+          <h3 className="font-headings font-bold text-5.5 tablet:text-4.5 mobile:text-base mb-6 leading-tight tablet:leading-tight">{sections?.head.subtitle}</h3>
           <RichtText classNames="" data={{
             content: sections?.head.description
           }} />
         </div>
       </ContentLayout>
-      <ContentLayout classNames="hidden w-d:grid mt-12 w-d:mt-18">
-        <div className="font-headings w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4">
+      <ContentLayout classNames="hidden desktop:grid mt-12 desktop:mt-18">
+        <div className="font-headings mobile:hidden col-span-12 tablet:col-span-8 mobile:col-span-4">
           <Rainbow classNamesTitle="font-bold" sections={sections.rainbow.sections} title={sections.rainbow.title} contentVariant={sections?.rainbow?.contentVariant}/>
         </div>
       </ContentLayout>
-      <ContentFullLayout classNames="w-d:hidden mt-12 w-d:mt-18">
-        <div className="font-headings col-span-12 w-t:col-span-8 w-p:col-span-4">
+      <ContentFullLayout classNames="desktop:hidden mt-12 desktop:mt-18">
+        <div className="font-headings col-span-12 tablet:col-span-8 mobile:col-span-4">
           <Rainbow classNamesTitle="ml-6" sections={sections.rainbow.sections} title={sections.rainbow.title} contentVariant={sections?.rainbow?.contentVariant} />
         </div>
       </ContentFullLayout>
       {
         sections?.exchange ?
-          <ContentFullLayout classNames="bg-primary-500 w-d:py-12 text-white mt-18 w-t:mt-3 w-p:mt-3">
+          <ContentFullLayout classNames="bg-primary-500 desktop:py-12 text-white mt-18 tablet:mt-3 mobile:mt-3">
             <ContentLayout classNames="flex items-center">
-              <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-t:mt-6 w-p:mt-6 w-d:my-auto">
-                <h2 className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-[125%]">{sections?.exchange?.title}</h2>
-                <RichtText font="dark" classNames="w-t:hidden w-p:hidden" data={{
+              <div className="col-span-6 tablet:col-span-8 mobile:col-span-4 tablet:mt-6 mobile:mt-6 desktop:my-auto">
+                <h2 className="font-headings font-bold text-10 tablet:text-6 mobile:text-6 leading-[125%]">{sections?.exchange?.title}</h2>
+                <RichtText font="dark" classNames="tablet:hidden mobile:hidden" data={{
                   content: sections?.exchange?.description
                 }} />
-                <div className="w-t:hidden w-p:hidden">
+                <div className="tablet:hidden mobile:hidden">
                   {
                     sections?.exchange?.downloadables?.length > 0
                       ? <div className="mb-6">
@@ -232,25 +232,25 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
                   }
                 </div>
               </div>
-              <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:hidden">
+              <div className="col-span-6 tablet:col-span-8 mobile:col-span-4 desktop:hidden">
                 <Image
                   alt={sections?.exchange?.image?.desk?.alt}
                   src={sections?.exchange?.image?.desk?.src}
-                  classNames="aspect-2/1 w-t:aspect-2/1 w-p:aspect-2/1"
+                  classNames="aspect-2/1 tablet:aspect-2/1 mobile:aspect-2/1"
                 />
               </div>
-              <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-t:hidden w-p:hidden w-d:my-20">
+              <div className="col-span-6 tablet:col-span-8 mobile:col-span-4 tablet:hidden mobile:hidden desktop:my-20">
                 <Image
                   alt={sections?.exchange?.image?.desk?.alt}
                   src={sections?.exchange?.image?.desk?.src}
-                  classNames="aspect-2/1 w-t:aspect-2/1 w-p:aspect-2/1"
+                  classNames="aspect-2/1 tablet:aspect-2/1 mobile:aspect-2/1"
                 />
               </div>
-              <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:hidden">
+              <div className="col-span-6 tablet:col-span-8 mobile:col-span-4 desktop:hidden">
                 <RichtText font="dark" data={{
                   content: sections?.exchange?.description
                 }} />
-                <div className="w-d:hidden">
+                <div className="desktop:hidden">
                   {
                     sections?.exchange?.downloadables?.length > 0
                       ? <div className="mb-6">
@@ -299,10 +299,10 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
           : null
       }
       {
-        sections?.videoSection && <ContentLayout classNames="mt-12 w-d:mt-18">
+        sections?.videoSection && <ContentLayout classNames="mt-12 desktop:mt-18">
           <section className="col-span-12">
-            <h2 className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6 w-d:mb-">{sections?.videoSection.title}</h2>
-            <div className="grid w-d:grid-cols-2 w-p:grid-cols-1 gap-6">
+            <h2 className="font-headings font-bold text-10 tablet:text-6 mobile:text-6 leading-tight mb-6 desktop:mb-">{sections?.videoSection.title}</h2>
+            <div className="grid desktop:grid-cols-2 mobile:grid-cols-1 gap-6">
               {
               sections?.videoSection.videos.map((item:any, i:number) => <section className="h-80" key={`section-alliances-${i}`}>
                 <Video data={ item } />
@@ -312,10 +312,10 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
           </section>
         </ContentLayout>
       }
-      <ContentLayout classNames="mt-6 w-d:mt-18">
+      <ContentLayout classNames="mt-6 desktop:mt-18">
         <div className="col-span-12">
-          <h2 className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight">{sections?.alliances.title}</h2>
-          <section className="grid w-d:grid-cols-4 gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mt-6">
+          <h2 className="font-headings font-bold text-10 tablet:text-6 mobile:text-6 leading-tight">{sections?.alliances.title}</h2>
+          <section className="grid desktop:grid-cols-4 gap-6 tablet:grid-cols-2 mobile:grid-cols-1 mt-6">
           {
             sections?.alliances.alliances.map((item:any, i:number) => <section key={`section-alliances-${i}`}>
               <PromoLink data={item} onClick={() => {
@@ -326,7 +326,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
           </section>
         </div>
       </ContentLayout>
-      <div className="w-p:mt-12 w-t:mt-12 w-d:mt-18">
+      <div className="mobile:mt-12 tablet:mt-12 desktop:mt-18">
         <BlogPosts {...blogPostsSection} />
       </div>
     </HeaderFooterLayout>

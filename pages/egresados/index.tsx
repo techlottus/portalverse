@@ -59,37 +59,37 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
       <script type="application/ld+json">{JSON.stringify(meta?.structuredData)}</script>
     </Head>
     <HeaderFooterLayout>
-      <ContentFullLayout classNames="gap-6 w-d:hidden mb-6">
-        <div className="head col-span-12 w-t:col-span-8 w-p:col-span-4">
+      <ContentFullLayout classNames="gap-6 desktop:hidden mb-6">
+        <div className="head col-span-12 tablet:col-span-8 mobile:col-span-4">
           <BannerNumeralia data={sections.head.banner} />
         </div>
       </ContentFullLayout>
       <ContentLayout>
-        <div className="head col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:hidden w-p:hidden">
+        <div className="head col-span-12 tablet:col-span-8 mobile:col-span-4 tablet:hidden mobile:hidden">
           <BannerNumeralia data={sections.head.banner} />
         </div>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid grid-cols-2 w-p:gap-12 gap-6">
-          <div className="w-p:col-span-2 w-p:order-2">
-            <h1 className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6 mb-6"> {sections.introduccion.title}</h1>
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 grid grid-cols-2 mobile:gap-12 gap-6">
+          <div className="mobile:col-span-2 mobile:order-2">
+            <h1 className="font-headings font-bold leading-tight text-10 tablet:text-6 mobile:text-6 mb-6"> {sections.introduccion.title}</h1>
             <RichtText data={{
               content: sections.introduccion.descripcion
             }} />
           </div>
           {
             !sections?.form?.hidden && (
-              <div className="w-p:col-span-2 w-p:order-1">
-                <div className="w-p:-mt-56 -mt-40 w-t:mr-6 w-d:mr-6">
+              <div className="mobile:col-span-2 mobile:order-1">
+                <div className="mobile:-mt-56 -mt-40 tablet:mr-6 desktop:mr-6">
                   <GraduatesForm />
                 </div>
               </div>
             )
           }
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 h-80">
+        <div className="col-span-6 tablet:col-span-8 mobile:col-span-4 h-80">
           <Video data={sections.video.video} />
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
-          <h2 className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6 mb-6"> {sections.video.title}</h2>
+        <div className="col-span-6 tablet:col-span-8 mobile:col-span-4">
+          <h2 className="font-headings font-bold leading-tight text-10 tablet:text-6 mobile:text-6 mb-6"> {sections.video.title}</h2>
           <RichtText data={{
             content: sections.video.descripcion
           }} />
@@ -100,21 +100,21 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
             : null
           }
         </div>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:hidden">
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 tablet:hidden">
           <BannerPortalverse data={sections.bannerEmpleabilidad}
             onClick={() => {
               router.push(`${sections.bannerEmpleabilidad.redirect}`)
             }}
           />
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-t:hidden">
+        <div className="col-span-6 tablet:col-span-8 mobile:col-span-4 tablet:hidden">
           <BannerPortalverse data={sections.bannerOfertaEducativa}
             onClick={() => {
               router.push(`${sections.bannerOfertaEducativa.redirect}`)
             }}
           />
         </div>
-        <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-t:hidden">
+        <div className="col-span-6 tablet:col-span-8 mobile:col-span-4 tablet:hidden">
           <BannerPortalverse data={sections.bannerTramites}
             onClick={() => {
               window.open(`${sections.bannerTramites.redirect}`)
@@ -123,13 +123,13 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
         </div>
       </ContentLayout>
       <ContentFullLayout classNames="gap-6">
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:hidden w-p:hidden my-6">
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 desktop:hidden mobile:hidden my-6">
           <BannerPortalverse data={sections.bannerEmpleabilidad}
             onClick={() => {
               router.push(`${sections.bannerEmpleabilidad.redirect}`)
             }} />
         </div>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:hidden w-p:hidden mb-6">
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 desktop:hidden mobile:hidden mb-6">
           <BannerPortalverse
             data={sections.bannerOfertaEducativa}
             onClick={() => {
@@ -137,7 +137,7 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
             }}
           />
         </div>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:hidden w-p:hidden">
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 desktop:hidden mobile:hidden">
           <BannerPortalverse
             data={sections.bannerTramites}
             onClick={() => {
@@ -146,12 +146,12 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
           />
         </div>
       </ContentFullLayout>
-      {/* <ContentFullLayout classNames="bg-surface-100 w-t:bg-surface-200 w-p:bg-surface-200 mt-12">
+      {/* <ContentFullLayout classNames="bg-surface-100 tablet:bg-surface-200 mobile:bg-surface-200 mt-12">
         <ContentLayout>
           <div className="col-span-12 pt-6 pb-14">
-            <p className="font-headings font-bold leading-tight text-10 w-t:text-6 w-p:text-6 mb-6">{ sections.noticias.title }</p>
+            <p className="font-headings font-bold leading-tight text-10 tablet:text-6 mobile:text-6 mb-6">{ sections.noticias.title }</p>
             {
-              <section className="col-span-12 w-t:col-span-8 w-p:col-span-4 grid w-d:grid-cols-2 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
+              <section className="col-span-12 tablet:col-span-8 mobile:col-span-4 grid desktop:grid-cols-2 gap-6 tablet:grid-cols-2 mobile:grid-cols-1">
               {
                sections.noticias.news.map((item:any, i:number) => <section key={`section-blog-${i}`}>
                 <CardWebsite data={item}/>
@@ -162,8 +162,8 @@ const Egresados: NextPageWithLayout = ({ sections, meta }: any) => {
           </div>
         </ContentLayout>
       </ContentFullLayout> */}
-      <ContentLayout classNames="mt-8 w-t:my-6 w-p:my-6">
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+      <ContentLayout classNames="mt-8 tablet:my-6 mobile:my-6">
+        <div className="col-span-12 tablet:col-span-8 mobile:col-span-4">
           <Cintillo
             classNames="h-auto"
             {...sections.dudas.banner}

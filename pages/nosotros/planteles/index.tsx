@@ -147,13 +147,13 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
         </Transition>
       </>
       <HeaderFooterLayout>
-        <ContentFullLayout classNames="w-d:hidden w-t:col-span-8 w-p:col-span-4">
-          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:hidden">
+        <ContentFullLayout classNames="desktop:hidden tablet:col-span-8 mobile:col-span-4">
+          <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 desktop:hidden">
             <BannerPortalverse data={sections?.head?.banner} />
           </div>
         </ContentFullLayout>
         <ContentLayout>
-          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:hidden w-p:hidden">
+          <div className="col-span-12 tablet:col-span-8 mobile:col-span-4 tablet:hidden mobile:hidden">
             <BannerPortalverse data={sections?.head?.banner} />
           </div>
           <Modal
@@ -171,7 +171,7 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
                 coords={coordsMap}
                 zoom={15}
                 scroll
-                classNamesMap="w-d:h-[583px] w-t:h-[581px] w-p:h-[355px] w-[100%]"
+                classNamesMap="desktop:h-[583px] tablet:h-[581px] mobile:h-[355px] w-[100%]"
               >
                 {({ TileLayer, Marker, Popup }: any) => (
                   <>
@@ -189,29 +189,29 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
               </Map>
             ) : null}
           </Modal>
-          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+          <div className="col-span-12 tablet:col-span-8 mobile:col-span-4">
             <Image
               alt="campus"
               src="https://viveloensaltillo.com/wp-content/uploads/2021/11/1254x851usne-768x521.png"
             ></Image>
           </div>
-          <section className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+          <section className="col-span-12 tablet:col-span-8 mobile:col-span-4">
             {sections?.planteles?.sections?.map((item: any, i: number) => (
               <>
                 <ContentLayout>
                   <div className="col-span-12 ">
-                    <h2 className="font-headings font-bold text-center text-10 w-t:text-6 w-p:text-6 leading-[125%]">
+                    <h2 className="font-headings font-bold text-center text-10 tablet:text-6 mobile:text-6 leading-[125%]">
                       {item?.title}
                     </h2>
                   </div>
-                  <section className="col-span-12 grid grid-cols-2 gap-6 w-t:grid-cols-1 w-p:grid-cols-1 w-d:mb-[72px] w-t:mb-[72px] w-p:mb-[32px]">
+                  <section className="col-span-12 grid grid-cols-2 gap-6 tablet:grid-cols-1 mobile:grid-cols-1 desktop:mb-[72px] tablet:mb-[72px] mobile:mb-[32px]">
                     {item?.campus?.map(
                       (
                         { title, coords, description, images: items }: any,
                         i: number
                       ) => (
-                        <div className="flex w-p:flex-col" key={item.name}>
-                          <div className="p-6 w-3/5 grid gap-y-2 border border-surface-300 w-d:rounded-l-lg w-t:rounded-l-lg w-p:rounded-t-lg w-p:w-full">
+                        <div className="flex mobile:flex-col" key={item.name}>
+                          <div className="p-6 w-3/5 grid gap-y-2 border border-surface-300 desktop:rounded-l-lg tablet:rounded-l-lg mobile:rounded-t-lg mobile:w-full">
                             <p className="font-texts font-bold text-sm leading-5 text-surface-500">
                               {description?.state}
                             </p>
@@ -232,10 +232,10 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
                               {/* 
                               <IconComponent
                                 name="marker"
-                                className="col-span-1 w-t:col-span-1 w-p:col-span-1"
+                                className="col-span-1 tablet:col-span-1 mobile:col-span-1"
                               /> 
                               */}
-                              <p className="col-span-11  w-t:col-span-7 font-texts font-normal text-sm text-surface-500">
+                              <p className="col-span-11  tablet:col-span-7 font-texts font-normal text-sm text-surface-500">
                                 {description?.address}
                               </p>
                             </ContentInsideLayout>
@@ -245,7 +245,7 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
                                   {/* <IconComponent
                                     name="phone"
                                     className={cn(
-                                      "col-span-1 w-t:col-span-1 w-p:col-span-1 w-4 mt-2",
+                                      "col-span-1 tablet:col-span-1 mobile:col-span-1 w-4 mt-2",
                                       { hidden: !description?.phone }
                                     )}
                                   /> */}
@@ -253,7 +253,7 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
                                     type="phone"
                                     info={description?.phone}
                                     alternativeText={"Tel. " + description?.phone}
-                                    classNames="col-span-11 text-sm w-t:col-span-7 w-p:col-span-3 underline text-surface-900"
+                                    classNames="col-span-11 text-sm tablet:col-span-7 mobile:col-span-3 underline text-surface-900"
                                   />
                                 </ContentInsideLayout>
                                 : null
@@ -264,7 +264,7 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
                                   <IconComponent
                                     name="email"
                                     className={cn(
-                                      "col-span-1 w-t:col-span-1 w-p:col-span-1 w-4 mt-2",
+                                      "col-span-1 tablet:col-span-1 mobile:col-span-1 w-4 mt-2",
                                       { hidden: !description?.email }
                                     )}
                                   />
@@ -272,7 +272,7 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
                                     type="email"
                                     alternativeText={description?.alternativeText}
                                     info={description?.email}
-                                    classNames="col-span-11 w-t:col-span-7 w-p:col-span-3 mt-2"
+                                    classNames="col-span-11 tablet:col-span-7 mobile:col-span-3 mt-2"
                                   />
                                 </ContentInsideLayout>
                                 : null */
@@ -280,8 +280,8 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
                             {/* {
                               description?.link ?
                                 <ContentInsideLayout classNames="items-center">
-                                  <span className="material-symbols-outlined col-span-1 w-t:col-span-1 w-p:col-span-1 w-4 mt-2 text-surface-500 select-none">{description?.link?.icon}</span>
-                                  <span className="col-span-11 w-t:col-span-7 w-p:col-span-3 mt-2 font-texts font-normal text-base leading-5 text-surface-500"><a className="hover:underline" target="_blank" rel="noreferrer noopener" href={description?.link?.redirect}>{description?.link?.text}</a></span>
+                                  <span className="material-symbols-outlined col-span-1 tablet:col-span-1 mobile:col-span-1 w-4 mt-2 text-surface-500 select-none">{description?.link?.icon}</span>
+                                  <span className="col-span-11 tablet:col-span-7 mobile:col-span-3 mt-2 font-texts font-normal text-base leading-5 text-surface-500"><a className="hover:underline" target="_blank" rel="noreferrer noopener" href={description?.link?.redirect}>{description?.link?.text}</a></span>
                                 </ContentInsideLayout>
                                 : null
                             } */}
@@ -301,8 +301,8 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
                               <IconComponent name="eye" className="ml-1 w-4" />
                             </div>
                           </div>
-                          <div className="w-2/5 h-full w-p:w-full">
-                            <img className="w-full h-full w-d:rounded-r-lg w-t:rounded-r-lg w-d:aspect-1/1 object-cover w-t:object-fill aspect-3/2 w-p:rounded-b-lg" alt={items[0]?.alt}
+                          <div className="w-2/5 h-full mobile:w-full">
+                            <img className="w-full h-full desktop:rounded-r-lg tablet:rounded-r-lg desktop:aspect-1/1 object-cover tablet:object-fill aspect-3/2 mobile:rounded-b-lg" alt={items[0]?.alt}
                               src={items[0]?.src} />
                           </div>
                         </div>
@@ -314,7 +314,7 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
             ))}
           </section>
 
-          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+          <div className="col-span-12 tablet:col-span-8 mobile:col-span-4">
             <Cintillo
               {...sections?.banner}
             />

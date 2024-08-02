@@ -52,12 +52,12 @@ const CardsDetailContent: FC<CardsDetailContentData> = (props: CardsDetailConten
  return <>
   <section>
    <Container>
-    <div className={cn('w-d:flex gap-6', { "w-d:flex-row-reverse": textPositionCardsDetailGroup === 'right' })}>
-     <div className="w-d:w-1/2 flex flex-col justify-center pb-4">
+    <div className={cn('desktop:flex gap-6', { "desktop:flex-row-reverse": textPositionCardsDetailGroup === 'right' })}>
+     <div className="desktop:w-1/2 flex flex-col justify-center pb-4">
       {
        title ?
         <div>
-         <h3 className="font-headings font-bold text-10 leading-12 w-p:text-6 w-p:leading-7 mb-6">{title}</h3>
+         <h3 className="font-headings font-bold text-10 leading-12 mobile:text-6 mobile:leading-7 mb-6">{title}</h3>
         </div>
         : null
       }
@@ -104,7 +104,7 @@ const CardsDetailContent: FC<CardsDetailContentData> = (props: CardsDetailConten
      </div>
      {
       cards ?
-       <div className="w-d:w-1/2 flex flex-col justify-center">
+       <div className="desktop:w-1/2 flex flex-col justify-center">
         {
          formattedCards?.length > 0 ?
           <div>
