@@ -1,6 +1,7 @@
 import { ACCORDION_SECTION } from "@/utils/strapi/sections/Accordion";
 import { ALERT } from "@/utils/strapi/sections/Alert";
 import { BANNER } from "@/utils/strapi/sections/Banner";
+import { BANNER_CARDS } from "@/utils/strapi/sections/BannerCards";
 import { BANNER_NUMERALIA } from "@/utils/strapi/sections/BannerNumeralia";
 import { BLOG_POSTS_PODCAST } from "@/utils/strapi/sections/BlogPostsPodcast";
 import { CARD_LIST } from "@/utils/strapi/sections/CardList";
@@ -46,6 +47,7 @@ import { VIDEOS_SECTION } from "@/utils/strapi/sections/Videos";
 import type { AccordionSection } from "@/utils/strapi/sections/Accordion";
 import type { AlertSection } from "@/utils/strapi/sections/Alert";
 import type { BannerSection } from "@/utils/strapi/sections/Banner";
+import type { BannerCardsData } from "@/utils/strapi/sections/BannerCards";
 import type { BannerNumeraliaData } from "@/utils/strapi/sections/BannerNumeralia";
 import type { BlogPostsPodcastSection } from "@/utils/strapi/sections/BlogPostsPodcast";
 import type { CardListSection } from "@/utils/strapi/sections/CardList";
@@ -91,6 +93,7 @@ import type { VideosSectionData } from "@/utils/strapi/sections/Videos";
 export type ComponentSection =
   | AccordionSection
   | AlertSection
+  | BannerCardsData
   | BannerSection
   | BannerNumeraliaData
   | BlogPostsPodcastSection
@@ -138,6 +141,7 @@ export type ComponentSection =
   ${ACCORDION_SECTION}
   ${ALERT}
   ${BANNER}
+  ${BANNER_CARDS}
   ${BANNER_NUMERALIA}
   ${BLOG_POSTS_PODCAST}
   ${CARD_LIST} 
