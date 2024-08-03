@@ -4,6 +4,7 @@ export type CardIconData= {
   IconName?:string;
   iconColor?:string;
   RichText?: string; 
+
 }
 export type BannerCardsData = {
   type: "ComponentSectionsBannerCards"
