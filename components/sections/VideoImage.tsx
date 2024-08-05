@@ -1,11 +1,11 @@
 import React from 'react'
 import { VideoImageData } from "../../utils/strapi/sections/VideoImageSection";
 import Aspect from "../Aspect";
-import Image from "@/old-components/Image";
 import Button from "@/old-components/Button/Button";
 import { useRouter } from "next/router";
 import ContentLayout from "@/layouts/Content.layout";
 import RichtText from '@/old-components/Richtext/Richtext';
+import cn from "classnames";
 
 const VideoImage: React.FC<VideoImageData> = (props: VideoImageData) => {
   const {
@@ -18,9 +18,6 @@ const VideoImage: React.FC<VideoImageData> = (props: VideoImageData) => {
 
   const router = useRouter();
 
-  console.log("props", props)
-  console.log("video", props?.video)
-
   return <>
     <ContentLayout classNames="w-full">
       <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
@@ -32,31 +29,37 @@ const VideoImage: React.FC<VideoImageData> = (props: VideoImageData) => {
       {
         images.length > 0
           ? <>
-            <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 flex items-center">
-              <section className="grid w-d:grid-cols-2 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
+            <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 flex items-center mx-auto my-auto">
+              <section className={cn("grid w-d:grid-cols-2 gap-6 w-t:grid-cols-2 w-p:grid-cols-1", { "!grid-cols-1": images.length <= 1 })}>
                 {
-                  images?.map((image: any, i: number) => <section key={`section-blog-${i}`}>
-                    <img className="h-auto" src={image?.image?.data?.attributes?.url} alt={image?.image?.data?.attributes?.alternativeText} />
-                  </section>)
+                  images?.map((image: any, i: number) =>
+                    <section key={`section-blog-${i}`}>
+                      <img className="h-auto max-h-72" src={image?.image?.data?.attributes?.url} alt={image?.image?.data?.attributes?.alternativeText} />
+                    </section>)
                 }
               </section>
             </div>
           </>
           : null
       }
-      <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-p:hidden w-t:hidden h-80">
-        <Aspect ratio="2/1">
-          <iframe
-            className="w-full h-full"
-            src={video?.provider === 'youtube' ? `https://www.youtube.com/embed/${video?.providerId}` : video?.provider === 'vimeo' ? `https://player.vimeo.com/video/${video?.providerId}` : ''}
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen>
-          </iframe></Aspect>
-      </div>
+      {
+        video
+          ? <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 max-h-72 my-auto">
+            <Aspect ratio="2/1">
+              <iframe
+                className="w-full h-full"
+                src={video?.provider === 'youtube' ? `https://www.youtube.com/embed/${video?.providerId}` : video?.provider === 'vimeo' ? `https://player.vimeo.com/video/${video?.providerId}` : ''}
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen>
+              </iframe></Aspect>
+          </div>
+          : null
+      }
+
       {
         button
-          ? <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 object-center flex justify-center mb-18 w-t:mb-6 w-p:mb-6">
+          ? <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 object-center flex justify-center tablet:mt-18">
             <Button dark data={{
               type: button?.variant,
               title: button?.label,
