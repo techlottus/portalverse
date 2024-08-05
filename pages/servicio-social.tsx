@@ -27,7 +27,7 @@ const ServicioSocial = ({ sections, meta }: any) => {
         <meta property="title" content={meta?.title} />
       </Head>
       <HeaderFooterLayout>
-        <ContentLayout>
+        <ContentLayout classNames="gap-y-12 desktop:gap-y-18">
           <section className="col-span-6 w-t:col-span-8 w-p:col-span-4">
             <h3 className="text-13 font-bold font-headings leading-13 w-t:semi-tight w-p:leading-tight w-t:text-8.5 w-p:text-7.5 mb-6">{sections?.head?.title}</h3>
             <p className="text-5.5 font-semibold font-headings leading-tight w-t:leading-tight w-p:leading-tight w-t:text-4.5 w-p:text-4.5 w-d:mb-6 w-t:mb-4 w-p:mb-3">{sections?.head?.subtitle}</p>
@@ -35,7 +35,7 @@ const ServicioSocial = ({ sections, meta }: any) => {
               content: sections?.head?.description
             }} />
           </section>
-          <section className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12">
+          <section className="col-span-6 w-t:col-span-8 w-p:col-span-4">
             <Image
               alt={sections?.head?.image?.alt}
               src={sections?.head?.image?.src}
@@ -68,12 +68,12 @@ const ServicioSocial = ({ sections, meta }: any) => {
               : null
           }
         </ContentFullLayout>
-        <ContentLayout>
-          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-12">
+        <ContentLayout classNames="gap-y-12 desktop:gap-y-18">
+          <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
             {
               selectedTab?.steps?.length > 0 ?
                 <div className="rounded-lg shadow-15 bg-surface-100">
-                  <ContentInsideLayout classNames="gap-6 flex w-p:flex-col w-d:mb-12 w-t:mb-6 w-p:mb-6">
+                  <ContentInsideLayout classNames="gap-6 flex w-p:flex-col mb-12 desktop:mb-18">
                     {
                       selectedTab?.image ?
                         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 px-6 my-auto pt-6">
@@ -159,7 +159,7 @@ const ServicioSocial = ({ sections, meta }: any) => {
               selectedTab?.alerts?.length > 0 ?
                 <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
                   {
-                    selectedTab?.alerts?.map((item: { title: string, text: string }, i:number) => <section key={`section-alerts-${i}`} className="grid grid-cols-1 mb-6">
+                    selectedTab?.alerts?.map((item: { title: string, text: string }, i:number) => <section key={`section-alerts-${i}`} className="grid grid-cols-1 desktop:mb-18 mb-12">
                       <Feedback data={selectedTab?.feedback}>
                         <div slot="areaFeedbackContent">
                           <p className="font-normal font-texts text-base mb-6">{item?.title}</p>

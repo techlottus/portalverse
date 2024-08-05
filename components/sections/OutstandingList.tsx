@@ -18,7 +18,7 @@ const Rainbow: FC<OutstandingListSection> = memo((props: OutstandingListSection)
             {
               outstandings?.map((outs, i) => {
                 return (
-                  <div key={i} className="w-full">
+                  <div key={i} className="w-full desktop:mb-18 mb-12 last:mb-0">
                     <Outstanding
                       {...outs} />
                   </div>

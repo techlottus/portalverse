@@ -30,7 +30,7 @@ const NumbersPortalverse: FC<NumbersPortalverseData> = memo(({data, classNames }
       "shadow-pastelGrayShadowRight": data.isShadowColor === true && data.typeShadowColor === 'gray-pastel-right',
       "shadow-blueShadowRight": data.isShadowColor === true && data.typeShadowColor === 'blue-right'
     })}>
-      <div className= {cn("content-number flex items-center pt-4 wrapperNumbers", classNames, {
+      <div className= {cn("content-number flex items-center wrapperNumbers", classNames, {
         "pt-0 px-0" : data.isShadowColor === false && data.container === false && data.bordered === false && data.boxShadow === false
       })}>
         {
@@ -66,7 +66,7 @@ const NumbersPortalverse: FC<NumbersPortalverseData> = memo(({data, classNames }
         </CountUp>
         <p className="font-headings text-10 w-t:text-6 w-p:text-6 font-bold leading-tight pr-2">{data.suffix}</p>
       </div>
-      <div className= {cn("pb-4 wrapperNumbers", classNames, {
+      <div className= {cn("wrapperNumbers", classNames, {
         "pt-0" : data.isShadowColor === false && data.container === false && data.bordered === false && data.boxShadow === false
     })}>
         {
