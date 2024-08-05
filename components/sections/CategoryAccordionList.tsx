@@ -26,15 +26,15 @@ const CategoryAccordionList: FC<CategoryAccordionListData> = (props: CategoryAcc
   return <>
     <section>
       <Container>
-        <div className="w-d:w-1/2 flex flex-col justify-center mb-8">
-          {
-            title ?
+        {
+          title ?
+            <div className="w-d:w-1/2 flex flex-col justify-center mb-8">
               <div>
                 <h3 className="font-headings font-bold text-10 leading-12 w-p:text-6 w-p:leading-7 mb-3">{title}</h3>
               </div>
-              : null
-          }
-        </div>
+            </div>
+            : null
+        }
         <div className="w-d:flex w-d:items-start gap-12">
           <div className="flex flex-col gap-6 max-w-72">
             {
@@ -42,13 +42,13 @@ const CategoryAccordionList: FC<CategoryAccordionListData> = (props: CategoryAcc
                 <p className="font-headings font-bold text-6 leading-7.5">{subtitle}</p>
                 : null
             }
-            <div className="flex flex-col gap-4 py-4">
+            <div className="flex flex-col gap-y-4">
               {
                 CategoryList ?
                   CategoryList?.map((item, index) => {
                     const categoryTitle = item?.faq_category?.data?.attributes?.title || item?.label
                     return (
-                      <div className="flex justify-start mb-5 gap-2.5 items-center" key={index}>
+                      <div className="flex justify-start py-4 last:pb-0 gap-2.5 items-center" key={index}>
                         {
                           item?.iconName
                             ? <span className={cn("material-symbols-outlined flex-none !text-4.5 w-4", { "text-primary-500": index === optionSelect })}>{item?.iconName}</span>
@@ -72,7 +72,7 @@ const CategoryAccordionList: FC<CategoryAccordionListData> = (props: CategoryAcc
             {
               items?.length > 0 ?
                 <Accordion data={{ items: items }} />
-              : null
+                : null
             }
           </div>
         </div>
