@@ -77,7 +77,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
       {/* metaRobots */}
       <meta name="robots" content={meta?.metaRobots} />
       {/* metaViewport */}
-      <meta name="viewport" content={meta?.metaViewport} />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       {/* canonicalURL */}
       <link rel="canonical" href={meta?.canonicalURL} />
       {/* ogURL */}
