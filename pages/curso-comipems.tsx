@@ -27,15 +27,15 @@ const CursoComipems: NextPageWithLayout = ({ sections, meta }: any) => {
     </Head>
     <HeaderFooterLayout breadcrumbs={true}>
       <ContentLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6 w-d:mb-12">
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           <IntroductionProgram {...sections?.IntroductionProgram} />
         </div>
       </ContentLayout>
-      <ContentFullLayout classNames="">
+      <ContentFullLayout>
         <section
           //@ts-ignore
           style={{ "--image-desk-url": `url(${sections?.bgImageSection?.desktopBgImage})`, "--image-tablet-url": `url(${sections?.bgImageSection?.tabletBgImage})`, "--image-mobile-url": `url(${sections?.bgImageSection?.mobileBgImage})` }}
-          className={cn("mb-12 w-d:mb-18 col-span-12 w-full justify-center bg-origin-border md:bg-center bg-no-repeat bg-cover py-16", "bg-[image:var(--image-mobile-url)]", "md:bg-[image:var(--image-tablet-url)]", "lg:bg-[image:var(--image-desk-url)]")}
+          className={cn("mb-12 desktop:mb-18 col-span-12 w-full justify-center bg-origin-border md:bg-center bg-no-repeat bg-cover py-16", "bg-[image:var(--image-mobile-url)]", "md:bg-[image:var(--image-tablet-url)]", "lg:bg-[image:var(--image-desk-url)]")}
         >
           <Container>
             <div className="flex flex-col w-d:gap-12 gap-6 items-center justify-center">
@@ -63,12 +63,12 @@ const CursoComipems: NextPageWithLayout = ({ sections, meta }: any) => {
             </div>
           </Container>
         </section>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-12 w-d:mb-18">
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-12 desktop:mb-18">
           <RichTextImage {...sections?.RichTextImageAulaSection} />
         </div>
       </ContentFullLayout>
       <ContentLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6 w-d:mb-18">
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-12 desktop:mb-18">
           <p className="font-headings font-bold text-10 w-t:text-6 w-p:text-6 leading-tight mb-6 ">{sections?.videosCourseSection.title}</p>
           <div className="grid w-d:grid-cols-2 w-p:grid-cols-1 gap-6">
             {
@@ -99,10 +99,10 @@ const CursoComipems: NextPageWithLayout = ({ sections, meta }: any) => {
         </div>
       </ContentLayout>
       <ContentFullLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-6 w-d:mb-18">
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-12 desktop:mb-18">
           <RichTextVideo {...sections?.richTextVideoOpinionsSection} />
         </div>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-12 w-d:mb-18">
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 mb-12 desktop:mb-18">
           <RichTextImage {...sections?.RichTextImageHowDoYouHelpSection} />
         </div>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">

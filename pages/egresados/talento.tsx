@@ -53,8 +53,8 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
           }} />
         </div> */}
         <div className="col-span-12">
-          <ContentInsideLayout>
-            <div className="col-span-8 w-p:col-span-4 w-d:mb-10 w-p:mb-3 mb-6">
+          <ContentInsideLayout classNames="gap-y-12 desktop:gap-y-18">
+            <div className="col-span-8 w-p:col-span-4">
               <h1 className="text-13 w-t:text-8.25 w-p:text-6 font-headings font-bold leading-tight w-t:semi-tight mb-4">{sections.head.title}</h1>
               <RichtText data={{
                 content: sections.head.description
@@ -69,7 +69,7 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
                 }
               </section>
             }
-            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 wd:mb-18 w-t:mb-20 w-p:mb-4 w-d:mt-18 w-p:mt-12">
+            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
               <Cintillo
                 classNames="auto"
                 {...sections?.aplica?.banner}
