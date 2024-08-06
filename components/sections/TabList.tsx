@@ -6,6 +6,8 @@ import RichTextImage from "./RichTextImage";
 import { RichTextVideoSection } from "@/utils/strapi/sections/RichTextVideo";
 import RichTextVideo from "./RichTextVideo";
 import { RichTextImageSection } from "@/utils/strapi/sections/RichTextImage";
+import { BannerCardsData } from "@/utils/strapi/sections/BannerCards";
+import BannerCardsSection from "./BannerCards";
 
 const Tabs: FC<TabList> = (props: TabList) => {
   const { tabs  } = props;
@@ -19,11 +21,15 @@ const Tabs: FC<TabList> = (props: TabList) => {
   /* ----------COMPONENT FUNCTIONS-----------------------------------------------------------------------------*/
   
   const TextVideoList = (dataList?:Array<RichTextVideoSection>)=>{
-    return (<>{dataList?.map((videoData,i)=><RichTextVideo {...videoData} key={i} />)}</>)
+    return (<Container>{dataList?.map((videoData,i)=><RichTextVideo {...videoData} key={i} />)}</Container>)
   }
 
   const TextImageList = (dataList?:Array<RichTextImageSection>)=>{
-    return (<>{dataList?.map((imageData,i)=><RichTextImage {...imageData} key={i} />)}</>)
+    return (<Container>{dataList?.map((imageData,i)=><RichTextImage {...imageData} key={i} />)}</Container>)
+  }
+
+  const BannerCards = (data?:any) =>{
+    return <BannerCardsSection {...data}/>
   }
   // Add here new component, then add it in renderOption function
   /*
@@ -34,8 +40,8 @@ const Tabs: FC<TabList> = (props: TabList) => {
   const renderOption = () => {
     //TODO: Add switch to manage more options
     const option = tabs[tabActive]?.content == "richtextImage" ?
-      TextImageList(tabs[tabActive]?.richtextImage) :
-      TextVideoList(tabs[tabActive]?.richtextVideo)
+      TextImageList(tabs[tabActive]?.richtextImage) : tabs[tabActive]?.content == "richtextVideo" ?
+      TextVideoList(tabs[tabActive]?.richtextVideo): BannerCards(tabs[tabActive]?.bannerIconCard)
     return option;
   }
 
@@ -43,8 +49,8 @@ const Tabs: FC<TabList> = (props: TabList) => {
     <section>
       <Container>
         <TabsFeatured tabs={tabsLabelsArray} onActive={(active: number) => setTabActive(active)}/> 
-          {renderOption()}
       </Container>
+          {renderOption()}
     </section>
   );
 }
