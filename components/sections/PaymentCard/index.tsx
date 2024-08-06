@@ -46,6 +46,7 @@ const PaymentCard = (props: PaymentCardData) => {
   } = props;
 
   const router = useRouter();
+  
   return (
     <div className={cn("keen-slider__slide gap-y-3 flex flex-col justify-between rounded-lg border border-surface-200 p-4 bg-white w-68 h-72 mobile:mx-auto", { "opacity-40": !checkout_url && (!metadata && !config), "!border-primary-400": featured_price })}>
       <div className="">
@@ -117,41 +118,41 @@ const PaymentCard = (props: PaymentCardData) => {
         }
 
       </div>
-       <div className="flex flex-col justify">
+       <div className="">
         {
           payment_provider_image
-            ? <img className="w-3/4 mb-3" src={payment_provider_image?.data?.attributes?.url} alt="" />
+            ? <img className="h-6  mb-3" src={payment_provider_image?.data?.attributes?.url} alt="" />
             : null
         }
-      {checkout_url ?
-        <Button
-            variant="darkOutlined"
-            className="p-4 !bg-primary-500 text-surface-0 !text-sm hover:!bg-surface-0 hover:!text-primary-500"
-            color="primary"
-            onClick={() => {
-              router.push(`/checkout/${program}/${id}`);
-            }
-            }
-          >
-            <p>Inscribirme ahora</p>
-          </Button>
-        : metadata && config ? (
-          <Button
-            variant="darkOutlined"
-            className="p-4 !bg-primary-500 text-surface-0 !text-sm hover:!bg-surface-0 hover:!text-primary-500"
-            color="primary"
-            onClick={() => {
-              router.push(`/checkout/${program}/${id}`);
-            }
-            }
-          >
-            <p>Inscribirme ahora</p>
-          </Button>
-          ) :
-          (<div className="flex items-center">
-            <p className="text-6 font-bold">Próximamente</p>
-          </div>)
-      }
+        {
+          checkout_url
+            ? <Button
+                variant="darkOutlined"
+                className="p-4 !bg-primary-500 text-surface-0 !text-sm hover:!bg-surface-0 hover:!text-primary-500 w-full"
+                color="primary"
+                onClick={() => {
+                  router.push(`/checkout/${program}/${id}`);
+                }
+                }
+              >
+                <p>Inscribirme ahora</p>
+              </Button>
+            : metadata && config
+              ? <Button
+                  variant="darkOutlined"
+                  className="p-4 !bg-primary-500 text-surface-0 !text-sm hover:!bg-surface-0 hover:!text-primary-500 w-full"
+                  color="primary"
+                  onClick={() => {
+                    router.push(`/checkout/${program}/${id}`);
+                  }
+                  }
+                >
+                  <p>Inscribirme ahora</p>
+                </Button>
+              : <div className="flex items-center">
+                  <p className="text-xl font-bold m-4">Próximamente</p>
+                </div>
+        }
       </div>
     </div>
   )
