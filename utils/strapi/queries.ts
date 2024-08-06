@@ -43,6 +43,7 @@ import { STATISTICS_CARD_LIST } from "@/utils/strapi/sections/StatisticsCardList
 import { TEXT_CONTENT } from "@/utils/strapi/sections/TextContent";
 import { CONTAINER_TEXT_FORM } from "@/utils/strapi/sections/ContainerTextForm";
 import { VIDEOS_SECTION } from "@/utils/strapi/sections/Videos";
+import { VIDEO_IMAGE } from "@/utils/strapi/sections/VideoImageSection";
 import type { AccordionSection } from "@/utils/strapi/sections/Accordion";
 import type { AlertSection } from "@/utils/strapi/sections/Alert";
 import type { BannerSection } from "@/utils/strapi/sections/Banner";
@@ -87,6 +88,7 @@ import type { StatisticsCardListSection } from "@/utils/strapi/sections/Statisti
 import type { TextContentSection } from "@/utils/strapi/sections/TextContent";
 import type { ContainerTextFormSection } from "@/utils/strapi/sections/ContainerTextForm";
 import type { VideosSectionData } from "@/utils/strapi/sections/Videos";
+import type { VideoImageData } from "@/utils/strapi/sections/VideoImageSection";
 
 export type ComponentSection =
   | AccordionSection
@@ -132,6 +134,7 @@ export type ComponentSection =
   | TextContentSection
   | ContainerTextFormSection
   | VideosSectionData
+  | VideoImageData
   | CarouselSection
 
   export const SECTIONS = `
@@ -179,5 +182,6 @@ export type ComponentSection =
   ${STATISTICS_CARD_LIST}
   ${TEXT_CONTENT}
   ${VIDEOS_SECTION}
+  ${VIDEO_IMAGE}
   ${CAROUSEL_SECTION}
   `;
