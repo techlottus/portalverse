@@ -73,10 +73,10 @@ const CardsVideoContent: FC<CardsVideoContentData> = (props: CardsVideoContentDa
       : null
     }
     <div className={cn('w-d:flex gap-6', { "w-d:flex-row-reverse": textPositionCardsVideoContent === 'right' })}>
-     <div className="w-d:w-1/2 flex flex-col justify-center pb-4">
+     <div className="w-d:w-1/2 flex flex-col justify-center">
       <Video data={{ options: { id: videoItem.providerId, type: 'single', controls: true } }} />
      </div>
-     <div className="w-d:w-1/2 flex flex-col justify-center pb-4">
+     <div className="w-d:w-1/2 flex flex-col justify-center">
       <section className="grid w-d:grid-cols-2 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
        {
         formattedCards?.map((item: any, i: number) => <section className="w-full mb-6" key={`section-blog-${i}`}>

@@ -77,7 +77,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
       {/* metaRobots */}
       <meta name="robots" content={meta?.metaRobots} />
       {/* metaViewport */}
-      <meta name="viewport" content={meta?.metaViewport} />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       {/* canonicalURL */}
       <link rel="canonical" href={meta?.canonicalURL} />
       {/* ogURL */}
@@ -92,7 +92,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
             <>
               <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
                 {
-                  sections?.head?.textIcons?.map((item: any, i: number) => <div key={`icon-${i}`} className="flex items-center my-6">
+                  sections?.head?.textIcons?.map((item: any, i: number) => <div key={`icon-${i}`} className="flex items-center my-6 last:mb-0 first:mt-0">
                     <div className="w-14 h-14 shrink-0">
                       <Icon name={item?.name} className="w-full h-full" />
                     </div>
@@ -108,7 +108,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
                     : null
                 }
               </div>
-              <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mt-20">
+              <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 desktop:my-auto">
                 <Image
                   alt={sections?.head?.image?.desk?.alt}
                   src={sections?.head?.image?.desk?.src}
@@ -197,7 +197,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
       </ContentLayout>
       {sections?.AtrProgramPerks?.tabs ?
         <>
-          <Container classNames="mt-16">
+          <Container classNames="desktop:mt-18 mt-12">
             <div className="col-span-12 flex flex-col gap-1 items-center justify-center mb-4">
               <h3 className="font-headings font-bold text-surface-900 text-7 leading-9 text-center"><span className="text-secondary-500">Requisitos </span> de admisión </h3>
               <p className="font-texts font-normal text-surface-500 text-lg leading-6 text-center">Toda la documentación requerida deberá ser entregada en original, dos copias y en buen estado. </p>
@@ -211,8 +211,8 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
               <TabsFeatured tabs={sections?.AtrProgramPerks?.tabs?.items} onActive={(active: number) => setTabActive(active)} />
             </div>
           </Container>
-          <div className="col-span-12 w-t:col-span-12 w-p:col-span-4 w-p:mb-6 w-t:mb-12 w-d:mb-12">
-            <ContentInsideLayout classNames="gap-5">
+          <div className="col-span-12 w-t:col-span-12 w-p:col-span-4 mb-12 desktop:mb-18">
+            <ContentInsideLayout classNames="gap-y-12 desktop:gap-y-18">
               {
                 contentTabsIcons?.map(({ content: { requirementsList, desktopBgImage, tabletBgImage, mobileBgImage, action = null }, cards }: any, i: number) =>
                   <Fragment key={`description-beca-${i}`}>
@@ -241,10 +241,10 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
                         </div>
                       </Container>
                     </section>
-                    <section className={cn("col-span-12 max-w-d-base mx-auto w-d-base:px-6 mt-18", { "hidden w-p:hidden": tabActive !== i })}>
+                    <section className={cn("col-span-12 max-w-d-base mx-auto w-d-base:px-6", { "hidden w-p:hidden": tabActive !== i })}>
                       {
                         sections?.AtrProgramPerks?.titleCards ?
-                          <h2 className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6 mb-6">{sections?.AtrProgramPerks?.titleCards}</h2>
+                          <h2 className="font-headings text-10 font-bold leading-10 w-t:text-6 w-p:text-6 mb-6">{sections?.AtrProgramPerks?.titleCards}</h2>
                           : null
                       }
                       <section className="grid w-d:grid-cols-3 gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
@@ -266,7 +266,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
         : sections.requirements ?
           <ContentLayout>
             <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:mt-18 w-p:my-6 w-t:my-6">
-              <h2 className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{sections?.requirements?.title}</h2>
+              <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{sections?.requirements?.title}</p>
             </div>
             <div className="w-d:hidden col-span-12 w-t:col-span-8 w-p:col-span-4 w-t:flex w-t:justify-center">
               <div className="">
@@ -276,19 +276,19 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
             <div className="w-t:hidden w-p:hidden col-span-12 w-t:col-span-8 w-p:col-span-4 flex justify-center w-d:mb-2">
               <TabsFeatured tabs={sections?.requirements?.tabs?.items} onActive={(active: number) => setTabActive(active)} />
             </div>
-            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-p:mb-6 w-t:mb-12 w-d:mb-12">
-              <ContentInsideLayout classNames="gap-6">
+            <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 desktop:mb-18 mb-12">
+              <ContentInsideLayout classNames="gap-y-12 desktop:gap-y-18">
                 {
                   contentTabs?.map(({ image: { src, alt }, content: { title, description, action = null }, cards, titleCards }: any, i: number) => <Fragment key={`description-beca-${i}`}>
                     <DescriptionSection
                       mode="light"
                       title={title}
                       description={description}
-                      classNames={cn("col-span-7 grid grid-cols-7 gap-6 w-t:col-span-8 w-t:grid-cols-8 w-p:col-span-4 w-p:flex w-p:flex-col w-p:p-6", { "hidden w-p:hidden": tabActive !== i })}
+                      classNames={cn("col-span-7 grid grid-cols-7 gap-6 w-t:col-span-8 w-t:grid-cols-8 w-p:col-span-4 w-p:flex w-p:flex-col", { "hidden w-p:hidden": tabActive !== i })}
                       titleStyles="col-start-1 col-end-7 w-t:col-end-8 hidden"
                       descriptionStyles="col-start-1 col-end-7 w-t:col-end-8"
                       action={
-                        <div slot="actionDescription" className="w-t:hidden w-p:hidden mt-6 mb-12">
+                        <div slot="actionDescription" className="w-t:hidden w-p:hidden mt-6">
                           <Button dark onClick={() => navigate(action?.route)} data={action} />
                         </div>
                       }
@@ -296,12 +296,12 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
                     <Image
                       alt={alt}
                       src={src}
-                      classNames={cn("aspect-2/1 w-t:aspect-2/1 w-p:aspect-2/1 col-span-5 w-t:col-start-2 w-t:col-end-8 w-p:col-span-4", { "hidden": tabActive !== i })}
+                      classNames={cn("aspect-2/1 w-t:aspect-2/1 w-p:aspect-2/1 col-span-5 w-t:col-start-2 w-t:col-end-8 w-p:col-span-4 my-auto", { "hidden": tabActive !== i })}
                     />
                     {
                       titleCards ?
                         <div className={cn("col-span-12 w-t:col-span-8 w-p:col-span-4", { "hidden": tabActive !== i })}>
-                          <h2 className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{titleCards}</h2>
+                          <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{titleCards}</p>
                         </div>
                         : null
                     }
@@ -343,7 +343,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
       </ContentFullLayout>
       <ContentLayout classNames="mt-12 w-d:mt-18">
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <h2 className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6 mb-6">{sections?.egresados?.title}</h2>
+          <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6 mb-6">{sections?.egresados?.title}</p>
           <RichtText data={{
             content: sections?.egresados?.description
           }} />
@@ -395,7 +395,7 @@ const LandindAdmissions: NextPageWithLayout = ({ sections, meta }: any) => {
             : null
         }
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
-          <h2 className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{sections?.FAQ?.title}</h2>
+          <p className="font-headings text-10 font-bold leading-tight w-t:text-6 w-p:text-6">{sections?.FAQ?.title}</p>
         </div>
         {
           sections?.FAQ?.faqImage ?

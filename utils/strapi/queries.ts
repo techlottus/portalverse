@@ -1,6 +1,7 @@
 import { ACCORDION_SECTION } from "@/utils/strapi/sections/Accordion";
 import { ALERT } from "@/utils/strapi/sections/Alert";
 import { BANNER } from "@/utils/strapi/sections/Banner";
+import { BANNER_CARDS } from "@/utils/strapi/sections/BannerCards";
 import { BANNER_NUMERALIA } from "@/utils/strapi/sections/BannerNumeralia";
 import { BLOG_POSTS_PODCAST } from "@/utils/strapi/sections/BlogPostsPodcast";
 import { CARD_LIST } from "@/utils/strapi/sections/CardList";
@@ -44,9 +45,11 @@ import { TABS_LIST } from "./sections/TabList";
 import { TEXT_CONTENT } from "@/utils/strapi/sections/TextContent";
 import { CONTAINER_TEXT_FORM } from "@/utils/strapi/sections/ContainerTextForm";
 import { VIDEOS_SECTION } from "@/utils/strapi/sections/Videos";
+import { VIDEO_IMAGE } from "@/utils/strapi/sections/VideoImageSection";
 import type { AccordionSection } from "@/utils/strapi/sections/Accordion";
 import type { AlertSection } from "@/utils/strapi/sections/Alert";
 import type { BannerSection } from "@/utils/strapi/sections/Banner";
+import type { BannerCardsData } from "@/utils/strapi/sections/BannerCards";
 import type { BannerNumeraliaData } from "@/utils/strapi/sections/BannerNumeralia";
 import type { BlogPostsPodcastSection } from "@/utils/strapi/sections/BlogPostsPodcast";
 import type { CardListSection } from "@/utils/strapi/sections/CardList";
@@ -89,10 +92,12 @@ import type { TabList } from "@/utils/strapi/sections/TabList";
 import type { TextContentSection } from "@/utils/strapi/sections/TextContent";
 import type { ContainerTextFormSection } from "@/utils/strapi/sections/ContainerTextForm";
 import type { VideosSectionData } from "@/utils/strapi/sections/Videos";
+import type { VideoImageData } from "@/utils/strapi/sections/VideoImageSection";
 
 export type ComponentSection =
   | AccordionSection
   | AlertSection
+  | BannerCardsData
   | BannerSection
   | BannerNumeraliaData
   | BlogPostsPodcastSection
@@ -135,12 +140,14 @@ export type ComponentSection =
   | TextContentSection
   | ContainerTextFormSection
   | VideosSectionData
+  | VideoImageData
   | CarouselSection
 
   export const SECTIONS = `
   ${ACCORDION_SECTION}
   ${ALERT}
   ${BANNER}
+  ${BANNER_CARDS}
   ${BANNER_NUMERALIA}
   ${BLOG_POSTS_PODCAST}
   ${CARD_LIST} 
@@ -183,5 +190,6 @@ export type ComponentSection =
   ${TABS_LIST}
   ${TEXT_CONTENT}
   ${VIDEOS_SECTION}
+  ${VIDEO_IMAGE}
   ${CAROUSEL_SECTION}
   `;

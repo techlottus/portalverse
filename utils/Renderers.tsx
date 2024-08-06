@@ -3,6 +3,7 @@ import Alert from "@/components/sections/Alert";
 import AtrProgramInfo from "@/components/sections/AtrProgramInfo";
 import AtrProgramPerks from "@/components/sections/AtrProgramPerks";
 import Banner from "@/components/sections/Banner";
+import BannerCardsSection from "@/components/sections/BannerCards";
 import BannerNumeraliaSection from "@/components/sections/BannerNumeraliaSection";
 import BlogPostsPodcast from "@/components/sections/BlogPostsPodcast";
 import CardList from "@/components/sections/CardList";
@@ -47,6 +48,7 @@ import StatisticsCardList from "@/components/sections/StatisticsCardList";
 import Tabs from "@/components/sections/TabList";
 import TextContent from "@/components/sections/TextContent";
 import VideosSection from "@/components/sections/VideosSection";
+import VideoImage from "@/components/sections/VideoImage";
 import WebError from "@/components/sections/WebError";
 import type { FC } from "react";
 import Carousel from "@/components/sections/Carousel";
@@ -62,6 +64,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsAtrProgramInfo: AtrProgramInfo,
   ComponentSectionsAtrProgramPerks: AtrProgramPerks,
   ComponentSectionsBanner: Banner,
+  ComponentSectionsBannerCards: BannerCardsSection,
   ComponentSectionsBannerNumeralia: BannerNumeraliaSection,
   ComponentSectionsBlogPostsPodcast: BlogPostsPodcast,
   ComponentSectionsCardList: CardList,
@@ -104,6 +107,7 @@ const defaultRenderers: Renderer = {
   ComponentOrganismsTabList : Tabs,
   ComponentSectionsTextContent: TextContent,
   ComponentSectionsVideos: VideosSection,
+  ComponentSectionsVideoImage: VideoImage,
   ComponentSectionsWebError: WebError,
   ComponentSectionsCarousel: Carousel,
   ComponentSectionsContainerTextForm: ContainerTextForm
