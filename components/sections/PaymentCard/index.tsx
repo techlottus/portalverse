@@ -1,7 +1,7 @@
 import cn from "classnames";
 import { StrapiImage } from "@/types/strapi/common";
 import { useRouter } from "next/router";
-import Button from "@/old-components/Button/Button";
+import { Button } from "@lottuseducation/molecules";
 
 export type PaymentCardData = {
   id?: string | null;
@@ -40,27 +40,26 @@ const PaymentCard = (props: PaymentCardData) => {
     partiality_number,
     periodicity,
     featured_price,
-    payment_provider_image, metadata, config } = props;
+    payment_provider_image,
+    metadata,
+    config
+  } = props;
 
   const router = useRouter();
+  
   return (
-    <div className={cn("keen-slider__slide gap-y-4 grid rounded-lg border border-surface-200 p-4 bg-white w-72 h-72 mobile:mx-auto", { "opacity-40": !checkout_url && (!metadata && !config), "!border-primary-400": featured_price })}>
+    <div className={cn("keen-slider__slide gap-y-3 flex flex-col justify-between rounded-lg border border-surface-200 p-4 bg-white w-68 h-72 mobile:mx-auto", { "opacity-40": !checkout_url && (!metadata && !config), "!border-primary-400": featured_price })}>
       <div className="">
         {
           featured_price
-            ? <div className="w-28 p-1 bg-primary-400 rounded-full">
+            ? <div className="w-28 p-1 mb-1 bg-primary-400 rounded-full">
               <p className="text-center text-white text-xs font-bold">MÁS POPULAR</p>
             </div>
             : null
         }
         {
-          payment_provider_image
-            ? <img className="w-11 my-1 rounded-md" src={payment_provider_image?.data?.attributes?.url} alt="" />
-            : null
-        }
-        {
           title
-            ? <h3 className="font-headings text-xl font-bold">{title}</h3>
+            ? <h3 className="font-headings mb-1 text-xl font-bold">{title}</h3>
             : null
         }
         {
@@ -119,41 +118,42 @@ const PaymentCard = (props: PaymentCardData) => {
         }
 
       </div>
-      {checkout_url ? <div className="flex items-end justify-center">
-        <Button
-          dark
-          data={{
-            type: "primary",
-            title: "Inscribirme ahora",
-            isExpand: true,
-          }}
-          onClick={() => {
-            if (checkout_url) {
-              router.push(checkout_url);
-            } else {
-              return
-            }
-          }}
-        />
+       <div className="">
+        {
+          payment_provider_image
+            ? <img className="h-6  mb-3" src={payment_provider_image?.data?.attributes?.url} alt="" />
+            : null
+        }
+        {
+          checkout_url
+            ? <Button
+                variant="darkOutlined"
+                className="p-4 !bg-primary-500 text-surface-0 !text-sm hover:!bg-surface-0 hover:!text-primary-500 w-full"
+                color="primary"
+                onClick={() => {
+                  router.push(`/checkout/${program}/${id}`);
+                }
+                }
+              >
+                <p>Inscribirme ahora</p>
+              </Button>
+            : metadata && config
+              ? <Button
+                  variant="darkOutlined"
+                  className="p-4 !bg-primary-500 text-surface-0 !text-sm hover:!bg-surface-0 hover:!text-primary-500 w-full"
+                  color="primary"
+                  onClick={() => {
+                    router.push(`/checkout/${program}/${id}`);
+                  }
+                  }
+                >
+                  <p>Inscribirme ahora</p>
+                </Button>
+              : <div className="flex items-center">
+                  <p className="text-xl font-bold m-4">Próximamente</p>
+                </div>
+        }
       </div>
-        : metadata && config ? (<div className="flex items-end justify-center">
-          <Button
-            dark
-            data={{
-              type: "primary",
-              title: "Inscribirme ahora",
-              isExpand: true,
-            }}
-            onClick={() => {
-              router.push(`/checkout/${program}/${id}`);
-            }
-            }
-          />
-        </div>) :
-          (<div className="flex items-center">
-            <p className="text-6 font-bold">Próximamente</p>
-          </div>)
-      }
     </div>
   )
 }
