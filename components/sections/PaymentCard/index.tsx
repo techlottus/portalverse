@@ -120,7 +120,7 @@ const PaymentCard = (props: PaymentCardData) => {
       </div>
        <div className="">
         {
-          payment_provider_image
+          payment_provider_image?.data?.attributes?.url
             ? <img className="h-6  mb-3" src={payment_provider_image?.data?.attributes?.url} alt="" />
             : null
         }
