@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 
 const BannerCardsSection: FC<BannerCardsData> = (props: BannerCardsData) => {
 
-  const { deskImage, tabletImage, mobileImage, backgroundColor, cardIconItems, button } = props;
+  const { deskImage, tabletImage, mobileImage, cardIconItems, button } = props;
 
   const router = useRouter();
 
@@ -28,7 +28,6 @@ const BannerCardsSection: FC<BannerCardsData> = (props: BannerCardsData) => {
     "--img-desk": `url(${deskImage?.data?.attributes?.url})`,
     "--img-tablet": `url(${tabletImage?.data?.attributes?.url})`,
     "--img-mobile": `url(${mobileImage?.data?.attributes?.url})`,
-    "--bg-color": backgroundColor
   }
 
   return (
@@ -36,11 +35,7 @@ const BannerCardsSection: FC<BannerCardsData> = (props: BannerCardsData) => {
       <div
         //@ts-ignore
         style={bgStyles}
-        className={cn("bg-origin-border md:bg-center bg-no-repeat bg-cover py-16 ",
-          {
-            ["mobile:bg-[image:var(--img-mobile)] tablet:bg-[image:var(--img-tablet)] bg-[image:var(--img-desk)]"]: !backgroundColor,
-            ["bg-[--bg-color]"]: backgroundColor
-          })}
+        className="bg-origin-border md:bg-center bg-no-repeat bg-cover py-16 mobile:bg-[image:var(--img-mobile)] tablet:bg-[image:var(--img-tablet)] bg-[image:var(--img-desk)]"
       >
         <div className="w-full h-full flex justify-center items-center mx-auto mobile:px-4 tablet:px-20 desktop:px-45 ">
           <div id="container-cards-button" className="flex flex-col gap-12 items-center justify-center">

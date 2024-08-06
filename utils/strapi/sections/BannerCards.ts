@@ -19,7 +19,6 @@ export type BannerCardsData = {
   deskImage?: StrapiImage;
   tabletImage?: StrapiImage;
   mobileImage?: StrapiImage;
-  backgroundColor?: string;
   button?: ButtonType
 }
 
@@ -46,7 +45,6 @@ export const BANNER_CARDS = `
       }
     }
   }
-  backgroundColor
   cardIconItems: cardIconItem(pagination: {start: 0, limit: -1}){
     IconName
     iconColor
