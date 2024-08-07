@@ -53,6 +53,7 @@ export const getEducativeOffer = () => {
   const [ filterPrograms, setFilterPrograms ] = useState<any>(null);
   const [ _, setAllPrograms ] = useState<Array<any>>([]);
   const [ sourceData, setSourceData ] = useState<any>({});
+  const [ modalityPrograms, setModalityPrograms ] = useState<any>({})
 
   const fetchData = async (url: string, modalidad: string, linea: string, Authorization: string) => {
     setIsLoading(true);
@@ -71,8 +72,13 @@ export const getEducativeOffer = () => {
     )
       .then( (res: any) => {
         const { data: programs } = res;
-        let dataPrograms: Array<any> = [];
-
+        let dataPrograms: Array<any>;
+        let filteredPrograms: {
+          onsite: any[],
+          online: any[],
+          flex: any[],
+          hybrid: any[],
+        };
         if(!!programs && !!programs.length) {
           setAllPrograms([ ...programs ])
           switch(modalidad) {
@@ -90,6 +96,17 @@ export const getEducativeOffer = () => {
             }
             case 'Semipresencial': { // Applies to "ULA" offer
               dataPrograms = filterHybridPrograms(programs);
+              break;
+            }
+            case 'All': { // returns filtered programs in object
+              filteredPrograms = {
+                onsite: filterOnSitePrograms(programs),
+                online: filterOnlinePrograms(programs),
+                flex: filterFlexPrograms(programs),
+                hybrid: filterHybridPrograms(programs),
+              }
+              setModalityPrograms(filteredPrograms)
+              dataPrograms = [ ...filteredPrograms.onsite, ...filteredPrograms.online, ...filteredPrograms.flex, ...filteredPrograms.hybrid]
               break;
             }
             default: {
@@ -163,6 +180,7 @@ export const getEducativeOffer = () => {
     fetchData,
     filterByLevel,
     filterByProgram,
-    getDataByProgramEC
+    getDataByProgramEC,
+    modalityPrograms
   } as const
 }
