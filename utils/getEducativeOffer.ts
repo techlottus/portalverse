@@ -5,7 +5,8 @@ const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
 
 const CAMPUS_LIST: {[key: string]: Array<string>} = {
   "UANE": ["MATAMOROS", "PIEDRAS NEGRAS", "SABINAS", "REYNOSA", "MONTERREY", "SALTILLO", "TORREÓN", "TORREÓN", "MONCLOVA"],
-  "UTEG": ["RIO NILO", "LAZARO CARDENAS", "OLIMPICA", "AMERICAS", "CAMPUS", "CAMPUS ZAPOPAN", "TLAJOMULCO", "PEDRO MORENO"]
+  "UTEG": ["RIO NILO", "LAZARO CARDENAS", "OLIMPICA", "AMERICAS", "CAMPUS", "CAMPUS ZAPOPAN", "TLAJOMULCO", "PEDRO MORENO", "TEPATITLAN"],
+  "UTC": ["ATIZAPÁN", "ECATEPEC", "IXTAPALUCA", "NEZA", "TLALNEPANTLA", "TLALPAN", "TOLUCA", "TOREO", "ZONA ROSA"]
 }
 
 const getCampusList = (businessUnit: string) => {
@@ -14,7 +15,7 @@ const getCampusList = (businessUnit: string) => {
 
 // Modalidad Presencial (UANE, UTEG, ULA)
 const filterOnSitePrograms = (programs: any) => {
-  return programs?.reduce((prev: any, item: any) => item?.modalidad === "Presencial" ? [...prev, item] : [...prev], []);
+  return programs?.reduce((prev: any, item: any) => item?.lineaNegocio === process.env.NEXT_PUBLIC_LINEA && item?.modalidad === "Presencial" ? [...prev, item] : [...prev], []);
 }
 
 const filterOnlinePrograms = (programs: any) => {
@@ -41,7 +42,8 @@ const filterHybridPrograms = (programs: any) => {
       return programs.reduce((prev: any, item: any) => ((item?.lineaNegocio === "ULA" && item?.nombreCampus === "ZONA ROSA") || item?.lineaNegocio === "UTC") && item?.modalidad === "Semipresencial" ? [...prev, item] : [...prev], [])
     }
     default: {
-      return programs.reduce((prev: any, item: any) => (item?.lineaNegocio === "ULA" || item?.lineaNegocio === "UTC") && item?.modalidad === "Semipresencial" && !["NEZA", "TLALPAN", "ECATEPEC", "TLALNEPANTLA", "ZONA ROSA"]?.includes(item?.nombreCampus) ? [...prev, item] : [...prev], [])
+      const campusList = getCampusList(businessUnit);
+      return programs.reduce((prev: any, item: any) => (item?.lineaNegocio === "ULA" || item?.lineaNegocio === "UTC") && item?.modalidad === "Semipresencial" && !["NEZA", "TLALPAN", "ECATEPEC", "TLALNEPANTLA", "ZONA ROSA"]?.includes(item?.nombreCampus) && campusList?.includes(item?.nombreCampus) ? [...prev, item] : [...prev], [])
     }
   }
 }
@@ -53,6 +55,7 @@ export const getEducativeOffer = () => {
   const [ filterPrograms, setFilterPrograms ] = useState<any>(null);
   const [ _, setAllPrograms ] = useState<Array<any>>([]);
   const [ sourceData, setSourceData ] = useState<any>({});
+  const [ modalityPrograms, setModalityPrograms ] = useState<any>({})
 
   const fetchData = async (url: string, modalidad: string, linea: string, Authorization: string) => {
     setIsLoading(true);
@@ -71,8 +74,13 @@ export const getEducativeOffer = () => {
     )
       .then( (res: any) => {
         const { data: programs } = res;
-        let dataPrograms: Array<any> = [];
-
+        let dataPrograms: Array<any>;
+        let filteredPrograms: {
+          onsite: any[],
+          online: any[],
+          flex: any[],
+          hybrid: any[],
+        };
         if(!!programs && !!programs.length) {
           setAllPrograms([ ...programs ])
           switch(modalidad) {
@@ -90,6 +98,17 @@ export const getEducativeOffer = () => {
             }
             case 'Semipresencial': { // Applies to "ULA" offer
               dataPrograms = filterHybridPrograms(programs);
+              break;
+            }
+            case 'All': { // returns filtered programs in object
+              filteredPrograms = {
+                onsite: filterOnSitePrograms(programs),
+                online: filterOnlinePrograms(programs),
+                flex: filterFlexPrograms(programs),
+                hybrid: filterHybridPrograms(programs),
+              }
+              setModalityPrograms(filteredPrograms)
+              dataPrograms = [ ...filteredPrograms.onsite, ...filteredPrograms.online, ...filteredPrograms.flex, ...filteredPrograms.hybrid]
               break;
             }
             default: {
@@ -163,6 +182,7 @@ export const getEducativeOffer = () => {
     fetchData,
     filterByLevel,
     filterByProgram,
-    getDataByProgramEC
+    getDataByProgramEC,
+    modalityPrograms
   } as const
 }

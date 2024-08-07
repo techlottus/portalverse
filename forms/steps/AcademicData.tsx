@@ -22,19 +22,32 @@ const AcademicData: FC<any> = ({
   validateControl,
   academicData,
   setAcademicData,
-  options
+  options,
+  modalities,
+  levels,
+  campuses
 }: any) => {
 
   const [config, setConfig] = useState<any>(stepOneConfig ? { ...stepOneConfig } : { ...OpenFormInit.stepone });
 
   const [Options, setOptions] = useState<{campuses: [], modalities: [], levels: []}>({campuses: [], modalities: [], levels: []});
 
+  const [optModalities, setOptModalitites] = useState([])
+  const [optCampuses, setOptCampuses] = useState([])
+  const [optLevels, setOptLevels] = useState([])
+
   useEffect(() => {
     setConfig({ ...config, ...data });
   }, [data]);
   useEffect(() => {
-    setOptions(options);
-  }, [options]);
+    setOptModalitites( modalities);
+  }, [modalities]);
+  useEffect(() => {
+    setOptLevels(levels);
+  }, [levels]);
+  useEffect(() => {
+    setOptCampuses(campuses);
+  }, [campuses]);
 
 
   const handleKeyPress = (e: CustomEvent, control: string) => {
@@ -54,7 +67,7 @@ const AcademicData: FC<any> = ({
     // console.log('detail: ', detail);
     if (control === 'campus') {
       
-      const option = Options?.campuses?.map((option: any) => {
+      const option = optCampuses?.map((option: any) => {
         // console.log(option);
         option.active = option.value === detail
 
@@ -65,7 +78,7 @@ const AcademicData: FC<any> = ({
     }
     if (control === 'modality') {
       
-      const option = Options?.modalities?.map((option: any) => {
+      const option = optModalities?.map((option: any) => {
         // console.log(option);
         option.active = option.value === detail
 
@@ -77,7 +90,7 @@ const AcademicData: FC<any> = ({
     }
     if (control === 'level') {
       
-      const option = Options?.levels?.map((option: any) => {
+      const option = optLevels?.map((option: any) => {
         // console.log(option);
         option.active = option.value === detail
 
@@ -101,41 +114,45 @@ const AcademicData: FC<any> = ({
   }
 
   return <>
-    <div className="grow mt-2 hidden">
-      <Input
-        eventFocus={() => handleTouchedControl("program")}
-        data={configControls.inputProgram}
-        eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "program")}
-        value={academicData.program}
-      />
-    </div>
-    <div className={cn("flex flex-col", {'hidden': Options?.modalities.length > 0 && Options?.modalities.length < 2 })}>
-      <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-2 capitalize">Modalidad</p>
-      <Select
-        onClick={(option: CustomEvent) => handleSelect(option, "modality")}
-        options={Options?.modalities || []}
-        data={{ ...SelectInit, textDefault: `Elige una modalidad`, icon: "school" }}
-      />
-      <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> 
-    </div> 
-    <div className={cn("flex flex-col", {'hidden': Options?.levels?.length > 0 && Options?.levels?.length < 2 })}>
-      <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-2 capitalize">Nivel</p>
-      <Select
-        onClick={(option: CustomEvent) => handleSelect(option, "level")}
-        options={Options?.levels || []}
-        data={{ ...SelectInit, textDefault: `Elige un nivel`, icon: "", disabled: !academicData.modality }}
-      />
-      <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.level })}>{configControls.errorMessagesStepTwoOpenForm.level}</p>
-    </div> 
-    <div className="flex flex-col">
-      <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-2 capitalize">{campusLabel || config?.campus}</p>
-      <Select
-        onClick={(option: CustomEvent) => handleSelect(option, "campus")}
-        options={Options?.campuses || []}
-        data={{ ...SelectInit, textDefault: `Elige un ${campusLabel}`, icon: "apartment", disabled: !academicData.level && !academicData.modality }}
-      />
-      <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p> 
-    </div>
+    {
+      optModalities && <>
+        <div className="grow mt-2 hidden">
+        <Input
+          eventFocus={() => handleTouchedControl("program")}
+          data={configControls.inputProgram}
+          eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "program")}
+          value={academicData.program}
+        />
+      </div>
+      <div className={cn("flex flex-col", {'hidden': optModalities?.length > 0 && optModalities?.length < 2 })}>
+        <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-2 capitalize">Modalidad</p>
+        <Select
+          onClick={(option: CustomEvent) => handleSelect(option, "modality")}
+          options={optModalities || []}
+          data={{ ...SelectInit, textDefault: `Elige una modalidad`, icon: "school" }}
+        />
+        <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> 
+      </div> 
+      <div className={cn("flex flex-col", {'hidden': optLevels?.length > 0 && optLevels?.length < 2 })}>
+        <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-2 capitalize">Nivel</p>
+        <Select
+          onClick={(option: CustomEvent) => handleSelect(option, "level")}
+          options={optLevels || []}
+          data={{ ...SelectInit, textDefault: `Elige un nivel`, icon: "", disabled: !academicData.modality }}
+        />
+        <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.level })}>{configControls.errorMessagesStepTwoOpenForm.level}</p>
+      </div> 
+      <div className="flex flex-col">
+        <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-2 capitalize">{campusLabel || config?.campus}</p>
+        <Select
+          onClick={(option: CustomEvent) => handleSelect(option, "campus")}
+          options={optCampuses || []}
+          data={{ ...SelectInit, textDefault: `Elige un ${campusLabel}`, icon: "apartment", disabled: !academicData.level && !academicData.modality }}
+        />
+        <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p> 
+      </div>
+      </>
+    }
 
   </>
 }
