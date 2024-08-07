@@ -69,7 +69,9 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   const [ SFlevels, setSFlevels ] = useState<any>([]);
   const [ SFmodalities, setSFmodalities ] = useState<any>([]);
   const [ SFcampuses, setSFcampuses ] = useState<any>([]);
-  const [ options, setOptions ] = useState<any>(null);
+  const [ modalities, setModalities ] = useState<any>([]);
+  const [ campuses, setCampuses ] = useState<any>([]);
+  const [ levels, setLevels ] = useState<any>([]);
 
   const [personalData, setPersonalData] = useState({
     name: "",
@@ -182,7 +184,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [tokenActive])
 
   useEffect(() => {
-    if (modalityPrograms) {
+    if (modalityPrograms.onsite || modalityPrograms.online || modalityPrograms.flex || modalityPrograms.hybrid) {
       const modPrograms: any = Object.keys(modalityPrograms).reduce((acc, key: string) => {
         acc = {
           ...acc,
@@ -241,10 +243,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   useEffect(() => {
     if (SFmodalities?.length > 0) {
-      setOptions({
-        ...options,
-        modalities: SFmodalities,
-      })
+      setModalities(SFmodalities)
       setAcademicData({
         ...academicData,
         modality: SFmodalities?.length === 1 ? SFmodalities[0].value : academicData.modality
@@ -260,10 +259,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   useEffect(() => {
     if (SFcampuses?.length > 0) {
-      setOptions({
-        ...options,
-        campuses: SFcampuses
-      })
+      setCampuses(SFcampuses)
       setAcademicDataTouched({
         ...academicDataTouched,
         campus: SFcampuses?.length === 1 || academicDataTouched.campus
@@ -278,10 +274,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   useEffect(() => {
     if (SFlevels?.length > 0) {
-      setOptions({
-        ...options,
-        levels: SFlevels
-      })
+      setLevels(SFlevels)
       setAcademicData({
         ...academicData,
         level: SFlevels?.length === 1 ? SFlevels[0].value : academicData.level
@@ -295,10 +288,10 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [SFlevels])
 
   useEffect(() => {
-    if (options && (options?.modalities) && (options?.modalities[0])) {
+    if (modalities&& modalities[0]) {
       setIsLoading(false)
     }
-  }, [options])
+  }, [modalities])
   useEffect(() => {
 
     setPersonalData({
@@ -371,7 +364,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [academicData.campus]);
   useEffect(() => {
     
-    if (!!academicData.level) {
+    if (!!academicData.level && !!academicData.modality) {
       const keyTranslate: any = {
         Presencial: 'onsite',
         Online: 'online',
@@ -404,7 +397,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       })))
     }
 
-  }, [academicData.level]);
+  }, [academicData.level, academicData.modality]);
 
   useEffect(() => {
     if (!!selectedProgram) {
@@ -546,7 +539,9 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       errorControls={academicDataErrors}
       setErrorControls={setAcademicDataErrors}
       validateControl={validateAcademicDataControl}
-      options={options}
+      modalities={modalities}
+      levels={levels}
+      campuses={campuses}
     ></AcademicData>
   </form>
 };
