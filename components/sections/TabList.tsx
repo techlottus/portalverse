@@ -48,7 +48,11 @@ const Tabs: FC<TabList> = (props: TabList) => {
   return (
     <section>
       <Container>
-        <TabsFeatured tabs={tabsLabelsArray} onActive={(active: number) => setTabActive(active)}/> 
+        <div className="flex w-full justify-center ">
+          <div className="w-fit">
+           <TabsFeatured tabs={tabsLabelsArray} onActive={(active: number) => setTabActive(active)}/> 
+          </div>
+        </div>
       </Container>
           {renderOption()}
     </section>
