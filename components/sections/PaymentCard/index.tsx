@@ -2,6 +2,7 @@ import cn from "classnames";
 import { StrapiImage } from "@/types/strapi/common";
 import { useRouter } from "next/router";
 import { Button } from "@lottuseducation/molecules";
+import Link from "next/link";
 
 export type PaymentCardData = {
   id?: string | null;
@@ -130,12 +131,10 @@ const PaymentCard = (props: PaymentCardData) => {
                 variant="darkOutlined"
                 className="p-4 !bg-primary-500 text-surface-0 !text-sm hover:!bg-surface-0 hover:!text-primary-500 w-full"
                 color="primary"
-                onClick={() => {
-                  router.push(`/checkout/${program}/${id}`);
-                }
-                }
               >
-                <p>Inscribirme ahora</p>
+                <Link className="no-underline" href={checkout_url}>
+                  <p>Inscribirme ahora</p>
+                </Link>
               </Button>
             : metadata && config
               ? <Button
