@@ -45,6 +45,7 @@ import RockstarInfo from "@/components/sections/RockstarInfo";
 import RockstarInfoList from "@/components/sections/RockstarInfoList";
 import RvoeAccordionList from "@/components/sections/RvoeAccordionList";
 import StatisticsCardList from "@/components/sections/StatisticsCardList";
+import Tabs from "@/components/sections/TabList";
 import TextContent from "@/components/sections/TextContent";
 import VideosSection from "@/components/sections/VideosSection";
 import VideoImage from "@/components/sections/VideoImage";
@@ -103,6 +104,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsRockstarInfoList: RockstarInfoList,
   ComponentSectionsRvoeAccordionList: RvoeAccordionList,
   ComponentSectionsStatisticsCardList: StatisticsCardList,
+  ComponentOrganismsTabList : Tabs,
   ComponentSectionsTextContent: TextContent,
   ComponentSectionsVideos: VideosSection,
   ComponentSectionsVideoImage: VideoImage,
