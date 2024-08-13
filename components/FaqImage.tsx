@@ -26,11 +26,11 @@ const FaqImage: FC<FaqImageSection> = (props: FaqImageSection) => {
         {title}
       </h2>
       <div id="faq-image-content" className="flex-col">
-        <div className={cn("flex mobile:flex-col tablet:flex-col space-x-6 ",{["flex-row-reverse "]:imgPosition=="right"})}>
+        <div className={cn("flex mobile:flex-col tablet:flex-col ",{["flex-row-reverse "]:imgPosition=="right"})}>
           <div className={ cn("tablet:hidden mobile:hidden desktop:w-1/2")}>
             <img className="w-full" src={image?.data?.attributes?.url} />
           </div>
-          <div className="desktop:w-1/2">
+          <div className={cn("desktop:w-1/2",{["ml-6"]:imgPosition=="left", ["mr-6"]:imgPosition=="right"})}>
             {faq && <FAQ {...faq} />}
           </div>
         </div>
