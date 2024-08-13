@@ -305,6 +305,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                 description={description}
                 periodicity={periodicity}
                 certificationMessage={certificationMessage}
+                price_list={price_list}
                 price={price}
                 offerPrice={offerPrice}
                 discount={discount}
