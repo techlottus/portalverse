@@ -187,7 +187,7 @@ const IntroductionProgram: FC<IntroductionProgramData> = (props: IntroductionPro
               </div>
             </div>
             {
-              checkoutUrl ?
+              checkoutUrl || price_list?
                 <div className="w-p:hidden w-t:hidden">
                   <Button dark data={{
                     id: "",
@@ -203,7 +203,7 @@ const IntroductionProgram: FC<IntroductionProgramData> = (props: IntroductionPro
                   }} onClick={() => {         
                     if(price_list){
                       router.push("#payment_cards")
-                    } else {
+                    } else if (checkoutUrl) {
                       router.push(checkoutUrl)
                     }
                     
@@ -212,7 +212,7 @@ const IntroductionProgram: FC<IntroductionProgramData> = (props: IntroductionPro
                 : null
             }
             {
-              checkoutUrl ?
+              checkoutUrl || price_list?
                 <div className="w-d:hidden">
                   <Button dark data={{
                     id: "",
@@ -228,7 +228,7 @@ const IntroductionProgram: FC<IntroductionProgramData> = (props: IntroductionPro
                   }} onClick={() => {
                     if(price_list){
                       router.push("#payment_cards")
-                    } else {
+                    } else if (checkoutUrl) {
                       router.push(checkoutUrl)
                     }
                   }} />
