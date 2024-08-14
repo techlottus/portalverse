@@ -37,7 +37,6 @@ const FAQ = (props: FAQSection) => {
 
   return (
     <section>
-      <Container>
         <div className="flex flex-col space-y-6">
           {
             title
@@ -68,7 +67,6 @@ const FAQ = (props: FAQSection) => {
               : null
           }
         </div>
-      </Container>
     </section>
   );
 }
