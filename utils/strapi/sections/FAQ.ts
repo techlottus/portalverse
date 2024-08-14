@@ -7,7 +7,7 @@ type FaqItem = {
 
 export type FAQSection = {
   type: "ComponentSectionsFaqSection";
-  title: string;
+  title?: string;
   ctaText: string;
   ctaUrl: string;
   component: "accordion" | "card" | "list";

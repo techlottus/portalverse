@@ -52,6 +52,7 @@ import VideoImage from "@/components/sections/VideoImage";
 import WebError from "@/components/sections/WebError";
 import type { FC } from "react";
 import Carousel from "@/components/sections/Carousel";
+import FaqImage from "@/components/FaqImage";
 
 type Renderer = {
   [key: string]: FC<any>;
@@ -77,6 +78,7 @@ const defaultRenderers: Renderer = {
   ComponentSectionsContEdPrograms: ContEdPrograms,
   ComponentSectionsExternalPostByCategoryList: ExternalPostByCategoryList,
   ComponentSectionsFaqSection: FAQ,
+  ComponentSectionsFaqImage: FaqImage,
   ComponentSectionsFormContainer: ContainerForm,
   ComponentSectionsFormVideo: FormVideo,
   ComponentSectionsGoogleMap: GoogleMap,
