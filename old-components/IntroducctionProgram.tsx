@@ -31,7 +31,7 @@ const IntroductionProgram: FC<IntroductionProgramData> = (props: IntroductionPro
   } = props
   
   return (
-    <section className="desktop:mb-18 mb-12">
+    <section className="desktop:mb-18 mb-12 mobile:mb-2">
       <Container classNames="w-p:!p-0 w-t:!p-0 w-d-base:!px-0">
         <div className="flex w-p:flex-col w-t:flex-col gap-18">
           <div className="flex flex-col w-d:w-2/3 w-full my-auto gap-6">
