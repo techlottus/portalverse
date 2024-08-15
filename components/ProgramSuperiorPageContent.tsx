@@ -344,7 +344,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                     brands?.data?.map((item, index) => <section className="mb-6" key={`section-aboutBrand-${index}`}>
                       {
                         item?.attributes?.name ?
-                          <div className="flex font-headings font-semibold text-[18px] mb-4">
+                          <div className="flex mobile:flex-col font-headings font-semibold text-[18px] mb-4">
                             <p className="mr-1">Acerca de</p>
                             <p>{item?.attributes?.name}</p>
                           </div>
@@ -359,7 +359,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                       }
                       {
                         item?.attributes?.website ?
-                          <Link target="_blank" className="underline text-primary-500" href={item?.attributes?.website}>Conocer más sobre {item?.attributes?.name}</Link>
+                          <Link target="_blank" className="underline text-primary-500" href={item?.attributes?.website}>Conocer más sobre ...</Link>
                           : null
                       }
                     </section>)
@@ -383,7 +383,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                     }
                     {
                       rvoeImages && rvoeImages?.length > 0 ?
-                        <section className="w-full grid w-d:grid-cols-2 w-d:gap-6 w-t:grid-cols-2 w-p:grid-cols-1">
+                        <section className="w-full grid w-d:grid-cols-2 w-d:gap-6 w-t:grid-cols-2 w-p:grid-cols-1 mobile:gap-4">
                           {
                             rvoeImages?.map((item, i: number) => <section key={`section-rvoeImages-${i}`}>
                               <img src={item?.image?.data?.attributes?.url}></img>
@@ -765,7 +765,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
       </ContentLayout>
       {
         bannerData?.desktopImage ?
-          <div className="order-last col-span-12 w-t:col-span-8 w-p:col-span-4 desktop:mb-18 mb-12">
+          <div className="order-last col-span-12 w-t:col-span-8 w-p:col-span-4 desktop:mb-18 mb-12 mobile:mb-6">
             <Banner type={"ComponentSectionsBanner"} {...bannerData} />
           </div>
           : null
