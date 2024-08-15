@@ -345,7 +345,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                       {
                         item?.attributes?.name ?
                           <div className="flex mobile:flex-col font-headings font-semibold text-[18px] mb-4">
-                            <p className="mr-1">Acerca de</p>
+                            <p className="mr-1">Acerca de </p>
                             <p>{item?.attributes?.name}</p>
                           </div>
                           : null
@@ -359,7 +359,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                       }
                       {
                         item?.attributes?.website ?
-                          <Link target="_blank" className="underline text-primary-500" href={item?.attributes?.website}>Conocer más sobre ...</Link>
+                          <Link target="_blank" className="underline text-primary-500" href={item?.attributes?.website}>Conoce más sobre {item?.attributes?.name}</Link>
                           : null
                       }
                     </section>)
