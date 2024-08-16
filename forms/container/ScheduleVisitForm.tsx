@@ -16,7 +16,7 @@ const getLeadModality = (modality: string) => {
   switch (modality) {
     case "Presencial": return "Presencial";
     case "Online": return "Online";
-    case "Flex": return "Online"; // Applies to "UANE" and "UTEG" offer.
+    case "Flex": return "Semipresencial"; // Applies to "UANE" and "UTEG" offer.
     case "Semipresencial": return "Semipresencial"; // Applies to "ULA" offer.
     default: return "";
   }
@@ -184,7 +184,7 @@ const ScheduleVisitForm = (props: ScheduleVisitForm) => {
   useEffect(() => {
     if (filteredPrograms) {
       const programs = filteredPrograms.map((program: any) => {
-        return businessUnit !== 'ULA' && program.lineaNegocio === 'ULA' && program.modalidad === 'Online'
+        return businessUnit !== 'ULA' && program.lineaNegocio === 'ULA' && program.modalidad === 'Semipresencial'
           ? { ...program, modalidad: 'Flex' }
           : program
       })
