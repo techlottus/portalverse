@@ -109,7 +109,7 @@ const ProgramPageForm = (props: ProgramPageForm) => {
     switch (modality) {
       case "Presencial": return "Presencial";
       case "Online": return "Online";
-      case "Flex": return "Online"; // Applies to "UANE" and "UTEG" offer.
+      case "Flex": return "Semipresencial"; // Applies to "UANE" and "UTEG" offer.
       case "Semipresencial": return "Semipresencial"; // Applies to "ULA" offer.
       default: return "";
     }

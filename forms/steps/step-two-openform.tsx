@@ -52,7 +52,21 @@ const getAvailableModalities = (): Array<SelectOptionConfig> => {
         },
       ];
     }
-    default: { // cases "UANE" and "UTEG"
+    case "UANE": {
+      return [
+        {
+          value: "Presencial",
+          active: false,
+          text: "Presencial",
+        },
+        {
+          value: "Online",
+          active: false,
+          text: "Online",
+        },
+      ];
+    }
+    default: { // case "UTEG"
       return [
         {
           value: "Presencial",
@@ -187,6 +201,8 @@ const StepTwo: FC<any> = ({
                   <OptionPill
                     onClick={() => {
                       const modality = modalityData?.value;
+                      console.log('modality: ', modality);
+                      
                       setAcademicData({ ...academicData, modality, level: "", program: "", campus: "" });
                       setDataModalities(dataModalities?.map((item: any) => ({ ...item, active: item.value === modality })));
                       onChangeModality(modality);
