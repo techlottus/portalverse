@@ -104,7 +104,7 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
                           text: 'Al llenar tus datos aceptas nuestro ',
                           linkText: 'Aviso de privacidad',
                           file: null,
-                          href: '/aviso-privacidad'
+                          href: '/aviso-de-privacidad'
                         }}
                         errors={[{
                           type: 'ComponentSectionsWebError',
