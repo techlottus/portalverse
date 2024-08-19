@@ -251,7 +251,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                 text: 'Al llenar tus datos aceptas nuestro ',
                 linkText: 'Aviso de privacidad',
                 file: null,
-                href: '/aviso-privacidad'
+                href: '/aviso-de-privacidad'
               }}
               errors={[{
                 type: 'ComponentSectionsWebError',
@@ -515,7 +515,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
                         text: 'Al llenar tus datos aceptas nuestro ',
                         linkText: 'Aviso de privacidad',
                         file: null,
-                        href: '/aviso-privacidad'
+                        href: '/aviso-de-privacidad'
                       }}
                       errors={[{
                         type: 'ComponentSectionsWebError',
