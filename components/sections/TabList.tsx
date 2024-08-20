@@ -1,4 +1,4 @@
-import { FC, memo, useState } from "react";
+import { FC, useState } from "react";
 import Container from "@/layouts/Container.layout";
 import { TabList } from "@/utils/strapi/sections/TabList";
 import TabsFeatured from "@/old-components/TabsFeatured";
@@ -6,11 +6,11 @@ import RichTextImage from "./RichTextImage";
 import { RichTextVideoSection } from "@/utils/strapi/sections/RichTextVideo";
 import RichTextVideo from "./RichTextVideo";
 import { RichTextImageSection } from "@/utils/strapi/sections/RichTextImage";
-import { BannerCardsData } from "@/utils/strapi/sections/BannerCards";
 import BannerCardsSection from "./BannerCards";
+import cn from "classnames";
 
 const Tabs: FC<TabList> = (props: TabList) => {
-  const { tabs, title, accent_title, subtitle } = props;
+  const { tabs, title, accent_title, subtitle , textAlign} = props;
 
   const tabsLabelsArray: Array<{ label: string }> = [];
   tabs.map((tab) => tabsLabelsArray.push({ "label": tab?.title }))
@@ -48,9 +48,19 @@ const Tabs: FC<TabList> = (props: TabList) => {
   return (
     <section>
       <Container>
-        <div className="flex-col space-y-2 mb-4">
-          <h2 className="font-headings font-bold text-surface-900 text-7 leading-9 text-center"><span className="text-secondary-500">{accent_title} </span> {title} </h2>
-          <p className="font-texts font-normal text-surface-500 text-lg leading-6 text-center">{subtitle} </p>
+        <div className="flex-col space-y-2 mb-4 ">
+          <h2 className={cn("font-headings font-bold text-surface-900 text-7 leading-9",{
+            ["text-center"]:textAlign=="center",
+            ["text-left"]:textAlign=="left",
+          })
+            }>
+            <span className="text-secondary-500">{accent_title} </span> 
+            {title} 
+          </h2>
+          <p className={cn("font-texts font-normal text-surface-500 text-lg leading-6",{
+            ["text-center"]:textAlign=="center",
+            ["text-left"]:textAlign=="left",
+          })}>{subtitle}</p>
         </div>
         <div className="flex tablet:justify-center desktop:justify-center mobile:justify-start overflow-x-auto ">
           <div className="w-fit">
