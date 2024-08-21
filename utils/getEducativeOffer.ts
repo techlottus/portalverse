@@ -42,9 +42,12 @@ const filterHybridPrograms = (programs: any) => {
     case "UTC": {
       return programs.reduce((prev: any, item: any) => ((item?.lineaNegocio === "ULA" && item?.nombreCampus === "ZONA ROSA") || item?.lineaNegocio === "UTC") && item?.modalidad === "Semipresencial" ? [...prev, item] : [...prev], [])
     }
-    default: {
+    case "ULA":  {
       const campusList = getCampusList(businessUnit);
       return programs.reduce((prev: any, item: any) => (item?.lineaNegocio === "ULA" || item?.lineaNegocio === "UTC") && item?.modalidad === "Semipresencial" && !["NEZA", "TLALPAN", "ECATEPEC", "TLALNEPANTLA", "ZONA ROSA"]?.includes(item?.nombreCampus) && campusList?.includes(item?.nombreCampus) ? [...prev, item] : [...prev], [])
+    }
+    default: {
+      return []
     }
   }
 }
