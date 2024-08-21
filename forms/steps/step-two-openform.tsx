@@ -52,21 +52,21 @@ const getAvailableModalities = (): Array<SelectOptionConfig> => {
         },
       ];
     }
-    case "UANE": {
-      return [
-        {
-          value: "Presencial",
-          active: false,
-          text: "Presencial",
-        },
-        {
-          value: "Online",
-          active: false,
-          text: "Online",
-        },
-      ];
-    }
-    default: { // case "UTEG"
+    // case "UANE": {
+    //   return [
+    //     {
+    //       value: "Presencial",
+    //       active: false,
+    //       text: "Presencial",
+    //     },
+    //     {
+    //       value: "Online",
+    //       active: false,
+    //       text: "Online",
+    //     },
+    //   ];
+    // }
+    default: { // case "UTEG" and "UANE"
       return [
         {
           value: "Presencial",
