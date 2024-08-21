@@ -4,9 +4,10 @@ import axios from "axios"
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
 
 const CAMPUS_LIST: {[key: string]: Array<string>} = {
-  "UANE": ["MATAMOROS", "PIEDRAS NEGRAS", "SABINAS", "REYNOSA", "MONTERREY", "SALTILLO", "TORREÓN", "TORREÓN", "MONCLOVA"],
+  "UANE": ["MATAMOROS", "PIEDRAS NEGRAS", "SABINAS", "REYNOSA", "MONTERREY", "SALTILLO", "TORREÓN", "MONCLOVA"],
   "UTEG": ["RIO NILO", "LAZARO CARDENAS", "OLIMPICA", "AMERICAS", "CAMPUS", "CAMPUS ZAPOPAN", "TLAJOMULCO", "PEDRO MORENO", "TEPATITLAN"],
-  "UTC": ["ATIZAPÁN", "ECATEPEC", "IXTAPALUCA", "NEZA", "TLALNEPANTLA", "TLALPAN", "TOLUCA", "TOREO", "ZONA ROSA"]
+  "UTC": ["ATIZAPÁN", "ECATEPEC", "IXTAPALUCA", "NEZA", "TLALNEPANTLA", "TLALPAN", "TOLUCA", "TOREO", "ZONA ROSA"],
+  "ULA": ['CUAUTITLÁN IZCALLI', 'CUERNAVACA', 'FLORIDA', 'NORTE', 'VALLE' ]
 }
 
 const getCampusList = (businessUnit: string) => {
@@ -32,7 +33,7 @@ const filterOnlinePrograms = (programs: any) => {
 // Modalidad Flex (UANE, UTEG)
 const filterFlexPrograms = (programs: any) => {
   const campusList = getCampusList(businessUnit);
-  return programs.reduce((prev: any, item: any) => item?.lineaNegocio === "ULA" && item?.modalidad === 'Semipresencial' && campusList?.includes(item?.nombreCampus) ? [...prev, item] : [...prev], [])
+  return programs.reduce((prev: any, item: any) => ['UTEG', 'UANE'].includes(businessUnit) && item?.lineaNegocio === "ULA" && item?.modalidad === 'Semipresencial' && campusList?.includes(item?.nombreCampus) ? [...prev, item] : [...prev], [])
 }
 
 // Modalidad Semipresencial (ULA, UTEG)
