@@ -114,14 +114,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     program: false,
     campus: false
   })
-  const ulaCampuses = [
-    'ONLINE',
-    'CUAUTITLÁN IZCALLI',
-    'CUERNAVACA',
-    'FLORIDA',
-    'NORTE',
-    'VALLE',
-  ]
+ 
   useEffect(() => {
     if (submit) handleSubmit()
   }, [submit]);
@@ -202,7 +195,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       }
    
       const prefilledLevels = prefilledData?.levels?.map(level => level.level)
-      const offerByProgram =Object.keys(modPrograms).reduce((acc, key: string) => {
+      const offerByProgram = Object.keys(modPrograms).reduce((acc, key: string) => {
         const programs = !!prefilledLevels && prefilledLevels.length > 0
           ?  modPrograms[key]?.filter((program: any)=> {
               return prefilledLevels.includes(program.nivel)
