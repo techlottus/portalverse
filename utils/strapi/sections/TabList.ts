@@ -12,11 +12,19 @@ export type Tab = {
 
 export type TabList = {
   type: "ComponentOrganismsTabList",
+  title: string;
+  accent_title: string;
+  textAlign: "center" | "left";
+  subtitle: string;
   tabs: Array<Tab>;
 };
 
 export const TABS_LIST = `
 ... on ComponentOrganismsTabList{
+  title
+  accent_title
+  subtitle
+  textAlign
   tabs(pagination: {start: 0, limit: -1}){
     title
     content
