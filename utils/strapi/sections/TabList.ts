@@ -4,7 +4,7 @@ import { BannerCardsData } from "./BannerCards";
 
 export type Tab = {
   title: string;
-  content:string;
+  content?:string;
   richtextImage?: Array<RichTextImageSection>
   richtextVideo?: Array<RichTextVideoSection>
   bannerIconCard?: Array<BannerCardsData>
@@ -12,10 +12,10 @@ export type Tab = {
 
 export type TabList = {
   type: "ComponentOrganismsTabList",
-  title: string;
-  accent_title: string;
-  textAlign: "center" | "left";
-  subtitle: string;
+  title?: string;
+  accent_title?: string;
+  textAlign?: "center" | "left";
+  subtitle?: string;
   tabs: Array<Tab>;
 };
 
