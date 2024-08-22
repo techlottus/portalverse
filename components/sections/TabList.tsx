@@ -8,6 +8,7 @@ import RichTextVideo from "./RichTextVideo";
 import { RichTextImageSection } from "@/utils/strapi/sections/RichTextImage";
 import BannerCardsSection from "./BannerCards";
 import cn from "classnames";
+import ContentLayout from "@/layouts/Content.layout";
 
 const Tabs: FC<TabList> = (props: TabList) => {
   const { tabs, title, accent_title, subtitle , textAlign} = props;
@@ -46,7 +47,7 @@ const Tabs: FC<TabList> = (props: TabList) => {
   }
 
   return (
-    <section>
+    <ContentLayout>
       <Container>
         <div className="flex-col space-y-2 mb-4 ">
           <h2 className={cn("font-headings font-bold text-surface-900 text-7 leading-9",{
@@ -54,7 +55,7 @@ const Tabs: FC<TabList> = (props: TabList) => {
             ["text-left"]:textAlign=="left",
           })
             }>
-            <span className="text-secondary-500">{accent_title} </span> 
+            <span className="text-secondary-500 font-headings">{accent_title} </span> 
             {title} 
           </h2>
           <p className={cn("font-texts font-normal text-surface-500 text-lg leading-6",{
@@ -69,7 +70,7 @@ const Tabs: FC<TabList> = (props: TabList) => {
         </div>
       </Container>
       {renderOption()}
-    </section>
+    </ContentLayout>
   );
 }
 
