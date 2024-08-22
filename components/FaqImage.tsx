@@ -4,6 +4,8 @@ import Button from "@/old-components/Button/Button";
 import { useRouter } from "next/router";
 import { FaqImageSection } from "@/utils/strapi/sections/FaqImage";
 import FAQ from "./sections/FAQ";
+import Aspect from "./Aspect";
+import ContentLayout from "@/layouts/Content.layout";
 
 const FaqImage: FC<FaqImageSection> = (props: FaqImageSection) => {
   const {
@@ -17,14 +19,16 @@ const FaqImage: FC<FaqImageSection> = (props: FaqImageSection) => {
   const router = useRouter();
 
   return (
-    <section id="faq-image-section" className="desktop:px-6  mobile:mx-0">
+    <ContentLayout classNames="w-full">
+    <section id="faq-image-section" className="desktop:px-6  mobile:mx-0 col-span-12 w-t:col-span-8 w-p:col-span-4">
+
       <h2 id="faq-image-title" className="font-headings font-bold leading-tight text-10 tablet:text-6 mobile:text-6 mobile:px-6 tablet:px-6 mb-6">
         {title}
       </h2>
       <div id="faq-image-content" className="flex-col space-y-10">
         <div className={ cn( "flex mobile:flex-col tablet:flex-col ",{ ["flex-row-reverse "]: imgPosition=="right" } ) }>
           <div className={ cn( "tablet:hidden mobile:hidden desktop:w-1/2" ) }>
-            <img className="w-full" src={image?.data?.attributes?.url} />
+            <Aspect ratio="1/2"><img className="w-full" src={image?.data?.attributes?.url} /></Aspect>
           </div>
           <div className={ cn( "desktop:w-1/2",{ ["ml-6"]: imgPosition=="left", ["mr-6"]: imgPosition=="right" } ) }>
             {faq && <FAQ {...faq} />}
@@ -35,6 +39,7 @@ const FaqImage: FC<FaqImageSection> = (props: FaqImageSection) => {
         </div>
       </div>
     </section>
+    </ContentLayout>
   )
 }
 

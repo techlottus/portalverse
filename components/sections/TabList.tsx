@@ -13,7 +13,7 @@ const Tabs: FC<TabList> = (props: TabList) => {
   const { tabs, title, accent_title, subtitle , textAlign} = props;
 
   const tabsLabelsArray: Array<{ label: string }> = [];
-  tabs.map((tab) => tabsLabelsArray.push({ "label": tab?.title }))
+  tabs.map((tab) => tabsLabelsArray.push({ "label": tab.title }))
 
   // State that controls which tab is active and the renderOption
   const [tabActive, setTabActive] = useState<number>(0);
@@ -54,7 +54,7 @@ const Tabs: FC<TabList> = (props: TabList) => {
             ["text-left"]:textAlign=="left",
           })
             }>
-            <span className="text-secondary-500">{accent_title} </span> 
+            <span className="text-secondary-500 font-headings">{accent_title} </span> 
             {title} 
           </h2>
           <p className={cn("font-texts font-normal text-surface-500 text-lg leading-6",{
