@@ -8,13 +8,12 @@ import RichTextVideo from "./RichTextVideo";
 import { RichTextImageSection } from "@/utils/strapi/sections/RichTextImage";
 import BannerCardsSection from "./BannerCards";
 import cn from "classnames";
-import ContentLayout from "@/layouts/Content.layout";
 
 const Tabs: FC<TabList> = (props: TabList) => {
   const { tabs, title, accent_title, subtitle , textAlign} = props;
 
   const tabsLabelsArray: Array<{ label: string }> = [];
-  tabs.map((tab) => tabsLabelsArray.push({ "label": tab?.title }))
+  tabs.map((tab) => tabsLabelsArray.push({ "label": tab.title }))
 
   // State that controls which tab is active and the renderOption
   const [tabActive, setTabActive] = useState<number>(0);
@@ -47,7 +46,7 @@ const Tabs: FC<TabList> = (props: TabList) => {
   }
 
   return (
-    <ContentLayout>
+    <section>
       <Container>
         <div className="flex-col space-y-2 mb-4 ">
           <h2 className={cn("font-headings font-bold text-surface-900 text-7 leading-9",{
@@ -70,7 +69,7 @@ const Tabs: FC<TabList> = (props: TabList) => {
         </div>
       </Container>
       {renderOption()}
-    </ContentLayout>
+    </section>
   );
 }
 
