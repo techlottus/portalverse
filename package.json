@@ -33,7 +33,6 @@
     "@lottuseducation/atoms": "^0.1.1",
     "@lottuseducation/molecules": "^0.0.1-beta.0",
     "@lottuseducation/tailwind-base": "^0.1.0",
-    "@next/font": "^13.4.19",
     "@svgr/webpack": "^6.4.0",
     "@types/editorjs__header": "^2.6.0",
     "axios": "^1.2.2",
