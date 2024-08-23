@@ -32,8 +32,20 @@ const filterOnlinePrograms = (programs: any) => {
 
 // Modalidad Flex (UANE, UTEG)
 const filterFlexPrograms = (programs: any) => {
-  const campusList = getCampusList(businessUnit);
-  return programs.reduce((prev: any, item: any) => ['UTEG', 'UANE'].includes(businessUnit) && item?.lineaNegocio === "ULA" && item?.modalidad === 'Semipresencial' && campusList?.includes(item?.nombreCampus) ? [...prev, item] : [...prev], [])
+  switch(businessUnit) {
+    case "UTEG": {
+      const campusList = getCampusList(businessUnit);
+      return programs.reduce((prev: any, item: any) => (item?.lineaNegocio === "ULA" && item?.modalidad === 'Online' && campusList?.includes(item?.nombreCampus)) || (item?.lineaNegocio === businessUnit && item?.modalidad === 'Semipresencial') ? [...prev, item] : [...prev], [])
+    }
+    case "UANE": {
+      const campusList = getCampusList(businessUnit);
+      const  p = programs.reduce((prev: any, item: any) => (item?.lineaNegocio === "ULA" && item?.modalidad === 'Online' && campusList?.includes(item?.nombreCampus)) || (item?.lineaNegocio === businessUnit && item?.modalidad === 'Semipresencial') ? [...prev, item] : [...prev], [])
+      return p
+    }
+    default: {
+      return []
+    }
+  }
 }
 
 // Modalidad Semipresencial (ULA, UTEG)
