@@ -4,7 +4,7 @@ import ContentFullLayout from "@/layouts/ContentFull.layout"
 import NextPageWithLayout from "@/types/Layout.types"
 import { useIsAuthenticated } from "@azure/msal-react";
 import { useRouter } from "next/router";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Head from "next/head";
 
 

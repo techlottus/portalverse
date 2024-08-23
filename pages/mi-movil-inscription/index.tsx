@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 import { MiMovilInscriptionForm } from "@/forms/container/MiMovilInscriptionForm";
 import axios from "axios";
 import { getTokenForms } from "@/utils/getTokenForms";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Head from "next/head";

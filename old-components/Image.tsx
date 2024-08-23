@@ -1,5 +1,5 @@
 import { FC, memo } from "react"
-import Imagen from "next/image"
+import Imagen from "next/legacy/image"
 import cn from "classnames"
 import ImageComponentData from "@/types/Image.types"
 
