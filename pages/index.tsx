@@ -12,10 +12,10 @@ const Home: NextPageWithLayout = ({ data: { sections, meta } }: any) => {
       <meta name="description" content={meta?.metaDescription} key="desc" />
       <meta property="image" content={meta?.metaImage?.data?.attributes?.url} />
       {
-          meta?.metaSocial?.map((metasocial:any) => {
+          meta?.metaSocial?.forEach((metasocial:any) => {
             if (metasocial?.socialNetwork === "Facebook") {
               return (
-                <>
+                < >
                   <meta property="og:title" content={metasocial?.title} />
                   <meta property="og:description" content={metasocial?.description} />
                   <meta property="og:image" content={metasocial?.image?.data?.attributes?.url} />
