@@ -178,7 +178,10 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   useEffect(() => {
     if (modalityPrograms.onsite || modalityPrograms.online || modalityPrograms.flex || modalityPrograms.hybrid) {
+
+      
       const modPrograms: any = Object.keys(modalityPrograms).reduce((acc, key: string) => {
+
         acc = {
           ...acc,
           [key]: modalityPrograms[key].filter((program: any) => {
@@ -196,11 +199,13 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
    
       const prefilledLevels = prefilledData?.levels?.map(level => level.level)
       const offerByProgram = Object.keys(modPrograms).reduce((acc, key: string) => {
+        
         const programs = !!prefilledLevels && prefilledLevels.length > 0
           ?  modPrograms[key]?.filter((program: any)=> {
               return prefilledLevels.includes(program.nivel)
             })
           :  modPrograms[key]
+
         acc = {
           ...acc,
           [key]: programs
@@ -217,6 +222,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         }
         return acc 
       }, { modalities: [], hasPrograms: false })
+      
       setSFmodalities(modalities?.map((mod: string) => {
         return  {
           value: mod,
@@ -370,16 +376,17 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
           return program.nivel === academicData.level
       })
       
-
-      const periods = programsByLevel?.reduce((acc: any, program: any, index: number, arr: any[]) => {
+      
+      const periods:  number[] = programsByLevel?.reduce((acc: any, program: any, index: number, arr: any[]) => {
         if (!acc.includes(program.nombrePeriodo)) {
-          acc = [...acc, program.nombrePeriodo]
+          acc = [...acc, Number(program.nombrePeriodo)]
         }
         return acc
       }, [])
-      const currentPeriod = periods?.sort((a: any,b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[periods.length - 1]
+      const sortedPeriods =  periods?.sort((a: any,b: any) => a - b)
+      const currentPeriod = sortedPeriods[periods.length - 1]
       const periodPrograms = programsByLevel?.filter((program: any) => {
-        return program.nombrePeriodo === currentPeriod
+        return program.nombrePeriodo === String(currentPeriod)
       })
       const camps = filterByField(periodPrograms,'nombreCampus', ['nombreCampus', 'idCampus'])
 
@@ -458,7 +465,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     const medio = queryParams?.utm_medium;
     const campana = queryParams?.utm_campaign;
     const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&telefono=${telefono}&email=${email}&lineaNegocio=${lineaNegocio}&modalidad=${modalidad}&nivel=${nivel}&campus=${campus}&programa=${programa}&avisoPrivacidad=true&leadSource=Digital&validaRegistroBoot=${validaRegistroBoot}&source=${source}&canal=${canal}${medio ? `&medio=${medio}` : ""}${campana ? `&campana=${campana}` : ""}`;
-    console.log("source: ", source);
 
     setIsLoading(true);
 
