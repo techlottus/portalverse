@@ -11,6 +11,7 @@ import cn from "classnames";
 import { date } from "yup";
 
 import Image from "@/old-components/Image"
+import Button from "@/old-components/Button/Button";
 
 const axios = require('axios');
 
@@ -58,9 +59,9 @@ const InscriptionForm = (props: InscriptionFormData) => {
     setCurpError
   } = props
 
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [isValid, setIsValid] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(true);
+  const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [adviser, setAdviser] = useState<boolean>()
   const [curpTouched, setCurpTouched] = useState<boolean>(false)
 
@@ -161,9 +162,12 @@ const InscriptionForm = (props: InscriptionFormData) => {
           setIsValidCurp(true)
           setIsLoading(false)
         }
-      }).catch((err: any) => { console.log("Error en el curp: ", err) })
-
-    }
+      }).catch((err: any) => { 
+        console.log("Error en el curp: ", err)
+        setIsLoading(false)
+        setCurpError(err)
+       })
+           }
     else {
       setPersonalData({
         name: "",
@@ -238,7 +242,16 @@ const InscriptionForm = (props: InscriptionFormData) => {
   const handleTouchedControl = (control: string) => {
     setPersonalDataTouched({ ...personalDataTouched, [control]: true });
   }
+  
+  useEffect( () =>{
+    if (isLoading){
+      setTimeout(()=> {
+        setIsLoading(false)
+        setCurpError(true)
+      }, 20000);
+    }
 
+  }, [isLoading])
 
 
   useEffect(() => {
@@ -251,11 +264,10 @@ const InscriptionForm = (props: InscriptionFormData) => {
     Validate()
   }, [personalData]);
 
-  useEffect(() => {
+  const handleValidateCurp = () => {
     setIsLoading(true)
     validateCurp()
-
-  }, [curp]);
+  }
   const formCurp = <div >
     <div className="grid grid-cols-2 gap-x-6 gap-y-3">
       <div className="col-span-2">
@@ -440,7 +452,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
           alphabetical: true,
           pattern: '',
           isRequired: true,
-          disabled: hasCurp && !!personalData.name
+          disabled: false
         }}
           eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "name")}
           eventFocus={() => handleTouchedControl("name")}
@@ -667,7 +679,9 @@ const InscriptionForm = (props: InscriptionFormData) => {
             </>
           }
           <div className={cn({ ["hidden"]: noCurp })}>
-            <Input data={{
+            <div className="flex space-x-4 ">
+              <div className="flex-grow">
+                <Input data={{
               label: 'CURP*',
               name: 'curp',
               type: 'text',
@@ -688,19 +702,47 @@ const InscriptionForm = (props: InscriptionFormData) => {
               errorMessage={configControls.errorMessagesInscriptionForm.curp}
               eventFocus={() => setCurpTouched(true)}
               hasError={curpError}
-            />
+            /> 
+              </div>
+              
+            {isLoading ? 
+            <button className="cursor-pointer px-8 py-2 rounded bg-primary-50 h-full align-middle">
+              <span className="material-symbols-outlined animate-spin text-primary-200 text-sm align-middle">progress_activity</span>
+            </button>
+            : curpError && !isLoading ?
+            <button className="cursor-pointer px-8 py-2 rounded bg-primary-500 h-full align-middle" onClick={() => {
+              handleValidateCurp()
+            }}><span className="material-symbols-outlined text-surface-100 text-sm align-middle">refresh</span></button>
+            : isSuccess ? 
+            <button className="cursor-pointer px-8 py-2 rounded bg-success-0 h-full align-middle">
+              <span className="material-symbols-outlined text-success-500 text-sm align-middle">check</span>
+            </button>
+            :
+            <Button data={{
+              id: "validateButton",
+              type: 'primary',
+              title: "Validar",
+              size: 'small',
+              disabled: isSuccess}}
+              onClick={() => {
+                handleValidateCurp()
+              }}
+              />}
+            </div>
+            
             <p className="font-texts font-normal text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p>
           </div>
           
-            {
-              isLoading
-                ? <section className={cn("p-6 shadow-15 bg-surface-0 relative")}><div className="absolute w-full h-full z-10 flex justify-center items-center left-0 top-0 bg-surface-0">
-                  <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
-                </div></section>
+            {/* {
+              isLoading?
+                
+                // ? <section className={cn("p-6 shadow-15 bg-surface-0 relative")}><div className="absolute w-full h-full z-10 flex justify-center items-center left-0 top-0 bg-surface-0">
+                //   <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
+                // </div></section>
                 : null
-            }  
-          {!isLoading && isValidCurp && formCurp}
-          {!isLoading && curp && !isValidCurp && formEmpty}
+            }   */}
+          {isSuccess && formCurp}
+          {curpError && !isLoading && formEmpty}
           {
             noCurp && noResidence && !isValidCurp && formEmpty
           }

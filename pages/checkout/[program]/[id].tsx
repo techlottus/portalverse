@@ -119,8 +119,6 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
 
     if (activePageIndex === 1) {
       const postData = async () => {
-
-
         if (flywireAPI && flywireAPIKEY) {
           const response = await fetch("/api/generateFwLink", {
             method: 'POST',
@@ -213,6 +211,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
   }, [activePageIndex])
   useEffect(() => {
   }, [flywireLink])
+
 
   return (
     <>
