@@ -138,7 +138,7 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
     }
   }, [tokenActive])
   const onSubmit = () => {
-    // setIsLoading(true);
+    setIsLoading(true);
 
     clearTimeout(timeout);
     timeout = setTimeout(() => {
@@ -148,7 +148,7 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
         curp,
         metadata: program
       }
-      console.log('data final:',data);
+      // console.log('data final:',data);
       sendInscriptionData(data)
     }, 1000);
   }
