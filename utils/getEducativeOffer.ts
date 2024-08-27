@@ -35,7 +35,7 @@ const filterFlexPrograms = (programs: any) => {
   switch(businessUnit) {
     case "UTEG": {
       const campusList = getCampusList(businessUnit);
-      return programs.reduce((prev: any, item: any) => (item?.lineaNegocio === "ULA" && item?.modalidad === 'Online' && campusList?.includes(item?.nombreCampus)) || (item?.lineaNegocio === businessUnit && item?.modalidad === 'Semipresencial') ? [...prev, item] : [...prev], [])
+      return programs.reduce((prev: any, item: any) => (item?.lineaNegocio === "ULA" && item?.modalidad === 'Semipresencial' && campusList?.includes(item?.nombreCampus)) )
     }
     case "UANE": {
       const campusList = getCampusList(businessUnit);
