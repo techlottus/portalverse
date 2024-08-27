@@ -70,6 +70,7 @@ const SignOutButton = () => {
   }
 
 const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
+  let timeout: NodeJS.Timeout;
 
   const [residence, setResidence] = useState<any>('')
   const [noResidence, setNoResidence] = useState<any>('')
@@ -127,7 +128,7 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
 
   useEffect(() => {
     if (!isAuthenticated) {
-        router.push('/mi-movil-inscription/login')
+        // router.push('/mi-movil-inscription/login')
     }
   }, [isAuthenticated])
 
@@ -136,16 +137,20 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
       handleFetchEducativeOffer('')
     }
   }, [tokenActive])
-
   const onSubmit = () => {
-    const data = {
-      ...personalData,
-      curp,
-      metadata: program
-    }
-    console.log('data final:',data);
-    sendInscriptionData(data)
-    
+    // setIsLoading(true);
+
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      
+      const data = {
+        ...personalData,
+        curp,
+        metadata: program
+      }
+      console.log('data final:',data);
+      sendInscriptionData(data)
+    }, 1000);
   }
 
 
@@ -199,9 +204,9 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
   }
 
   const sendInscriptionData = async (data: any) => {
-    const endpoint = process.env.NEXT_PUBLIC_MI_MOVIL_INSCRIPTION;
-
     setIsLoading(true);
+
+    const endpoint = process.env.NEXT_PUBLIC_MI_MOVIL_INSCRIPTION;
     const body = {
       "nombre": data.name,
       "apellidoPaterno": data.last_name,
