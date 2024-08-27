@@ -11,7 +11,7 @@ import cn from "classnames";
 import { date } from "yup";
 
 import Image from "@/old-components/Image"
-import Button from "@/old-components/Button/Button";
+import Button from "@/old-components/Button/Button"
 
 const axios = require('axios');
 
@@ -718,7 +718,9 @@ const InscriptionForm = (props: InscriptionFormData) => {
               <span className="material-symbols-outlined text-success-500 text-sm align-middle">check</span>
             </button>
             :
-            <Button data={{
+            <Button 
+            dark
+            data={{
               id: "validateButton",
               type: 'primary',
               title: "Validar",
