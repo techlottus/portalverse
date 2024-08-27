@@ -329,10 +329,10 @@ const MiMovilInscription: NextPageWithLayout<any> = (props: any) => {
             <div className={cn("flex flex-col w-full")}>
               <button
                 className={cn({
-                  "bg-surface-200 text-surface-0 rounded-lg py-3 font-bold text-lg": !isValid || !program,
-                  "bg-primary-500 text-surface-0 rounded-lg py-3 font-bold text-lg": isValid && !!program, 
+                  "bg-surface-200 text-surface-0 rounded-lg py-3 font-bold text-lg": !isValid || !program || isLoading,
+                  "bg-primary-500 text-surface-0 rounded-lg py-3 font-bold text-lg": isValid && !!program && !isLoading, 
                 })}
-                disabled={!isValid || !program}
+                disabled={!isValid || !program || isLoading}
                 onClick={() => {
                   onSubmit()
                 }}
