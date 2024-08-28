@@ -269,6 +269,9 @@ const InscriptionForm = (props: InscriptionFormData) => {
   }
   const formCurp = <div >
     <div className="grid grid-cols-2 gap-x-6 gap-y-3">
+    <div className="">
+            <p className="font-heading font-bold text-md">Datos de estudiante</p>
+          </div>
       <div className="col-span-2">
         <Input value={personalData?.name} data={{
           label: 'Nombre(s)*',
@@ -607,8 +610,8 @@ const InscriptionForm = (props: InscriptionFormData) => {
         <div className="mobile:col-span-2 mb-4">
           <div className="flex flex-col gap-6">
             <div>
-              <h3 className="font-headings font-bold text-3xl text-surface-900  mobile:text-lg">Estás a punto de iniciar tu curso</h3>
-              <p className="text-surface-500 font-texts text-base mt-3">Te pedimos llenar tus datos como estudiante para inscribirte</p>
+              <h3 className="font-headings font-bold text-3xl text-surface-900  mobile:text-lg">Completa los datos del alumno</h3>
+              <p className="text-surface-500 font-texts text-base mt-3">Proporcione los datos del estudiante a inscirbir. La información de acceso de enviará a su correo electrónico.</p>
             </div>
             <div>
               <p className="font-texts text-base font-bold text-surface-950">
@@ -642,6 +645,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
               </div>
             </div>
           </div>
+         
           {
             noResidence && <>
               <div className="flex flex-col gap-6">
