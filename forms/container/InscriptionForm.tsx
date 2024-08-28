@@ -64,6 +64,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [adviser, setAdviser] = useState<boolean>()
   const [curpTouched, setCurpTouched] = useState<boolean>(false)
+  const [curpErrorMesage, setcurpErrorMesage] = useState<string>("")
 
   const [optionsGender, setOptionsGender] = useState([{
     value: "Hombre",
@@ -165,7 +166,8 @@ const InscriptionForm = (props: InscriptionFormData) => {
       }).catch((err: any) => { 
         console.log("Error en el curp: ", err)
         setIsLoading(false)
-        setCurpError(err)
+        setCurpError(true)
+        setcurpErrorMesage("No fue posible validar los datos. Continua manualmente.")
        })
            }
     else {
@@ -181,6 +183,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
         adviser:""
       })
       setIsLoading(false)
+      setcurpErrorMesage("Ingresa un curp válido")
 
     }
 
@@ -702,7 +705,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                 setCurpTouched(true);
                 setCurp(value);
               }}
-              errorMessage={configControls.errorMessagesInscriptionForm.curp}
+              errorMessage={curpErrorMesage}
               eventFocus={() => setCurpTouched(true)}
               hasError={curpError}
             /> 
