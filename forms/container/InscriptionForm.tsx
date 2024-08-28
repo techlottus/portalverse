@@ -260,7 +260,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
 
 
   useEffect(() => {
-    console.log(personalData)
+    // console.log(personalData)
     Validate()
   }, [personalData]);
 
@@ -744,9 +744,9 @@ const InscriptionForm = (props: InscriptionFormData) => {
                 : null
             }   */}
           {isSuccess && formCurp}
-          {curpError && !isLoading && formEmpty}
+          {!isSuccess && curpError && !isLoading && formEmpty}
           {
-            noCurp && noResidence && !isValidCurp && formEmpty
+            noCurp && noResidence && formEmpty
           }
         </div>
       </div>
