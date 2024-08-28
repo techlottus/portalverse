@@ -743,7 +743,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
                 // </div></section>
                 : null
             }   */}
-          {isSuccess && formCurp}
+          {isSuccess && (hasCurp || residence) && formCurp}
           {!isSuccess && curpError && !isLoading && (hasCurp || residence) && formEmpty}
           {
             noCurp && noResidence && formEmpty
