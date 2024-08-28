@@ -247,7 +247,6 @@ const InscriptionForm = (props: InscriptionFormData) => {
     if (isLoading && !isSuccess){
       setTimeout(()=> {
         setIsLoading(false)
-        setCurpError(true)
       }, 20000);
     }
 
@@ -705,11 +704,11 @@ const InscriptionForm = (props: InscriptionFormData) => {
             /> 
               </div>
               
-            {isLoading ? 
+            {isLoading && !isSuccess? 
             <button className="cursor-pointer px-8 py-2 rounded bg-primary-50 h-full align-middle">
               <span className="material-symbols-outlined animate-spin text-primary-200 text-sm align-middle">progress_activity</span>
             </button>
-            : curpError && !isLoading ?
+            : curpError && !isLoading && !isSuccess ?
             <button className="cursor-pointer px-8 py-2 rounded bg-primary-500 h-full align-middle" onClick={() => {
               handleValidateCurp()
             }}><span className="material-symbols-outlined text-surface-100 text-sm align-middle">refresh</span></button>
