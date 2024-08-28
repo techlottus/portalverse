@@ -139,7 +139,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
       }).then(function (response: any) {
         if (response.data.errorMessage) {
           setCurpError(true)
-          setcurpErrorMesage("No se ha encontrado el curp")
+          setcurpErrorMesage("No fue posible validar los datos. Continua manualmente.")
           setIsSuccess(false)
           setPersonalData({
             name: "",
