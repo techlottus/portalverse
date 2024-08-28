@@ -261,7 +261,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                     ? <WebError title="Error" message="Error al conectar a flywire" errorCode="400"></WebError>
                     : <div className=" flex w-[500px] mobile:px-4 h-[690px] overflow-hidden overscroll-none">
                       <iframe className="mobile:hidden tablet:hidden w-[500px] h-[200%] overflow-hidden overscroll-none -mt-[64px]" src={flywireLink} title="Flywire form"></iframe>
-                      <iframe className="desktop:hidden w-full h-full" src={flywireLink} title="Flywire form"></iframe>
+                      <iframe className="desktop:hidden w-full h-[200%] overflow-hidden overscroll-none -mt-[64px]" src={flywireLink} title="Flywire form"></iframe>
                     </div>
               }
             </div>
