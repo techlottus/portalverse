@@ -244,7 +244,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
   }
   
   useEffect( () =>{
-    if (isLoading){
+    if (isLoading && !isSuccess){
       setTimeout(()=> {
         setIsLoading(false)
         setCurpError(true)
