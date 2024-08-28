@@ -107,6 +107,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
 
   useEffect(() => {
     if (!isValidCurp) {
+      setcurpErrorMesage("No fue posible validar los datos. Continua manualmente.")
       setPersonalData({
         name: "",
         last_name: "",
@@ -127,6 +128,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
     const newCurpError = !validateCurpControl() && curpTouched
 
     setCurpError(newCurpError);
+    setcurpErrorMesage(newCurpError ? "Ingresa un curp válido" : "")
 
     const isValidCurp = validateCurpControl();
 
@@ -137,6 +139,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
       }).then(function (response: any) {
         if (response.data.errorMessage) {
           setCurpError(true)
+          setcurpErrorMesage("No se ha encontrado el curp")
           setIsSuccess(false)
           setPersonalData({
             name: "",
