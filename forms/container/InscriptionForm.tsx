@@ -633,7 +633,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
           <div className="flex flex-col gap-6">
             <div>
               <h3 className="font-headings font-bold text-3xl text-surface-900  mobile:text-lg">Completa los datos del alumno</h3>
-              <p className="text-surface-500 font-texts text-base mt-3">Proporcione los datos del estudiante a inscirbir. La información de acceso de enviará a su correo electrónico.</p>
+              <p className="text-surface-500 font-texts text-base mt-3">Proporcione los datos del estudiante a inscrIbir. La información de acceso de enviará a su correo electrónico.</p>
             </div>
             <div>
               <p className="font-texts text-base font-bold text-surface-950">
