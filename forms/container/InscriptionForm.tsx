@@ -715,11 +715,11 @@ const InscriptionForm = (props: InscriptionFormData) => {
               </div>
               
             {isLoading && !isSuccess? 
-            <button className="cursor-pointer px-8 py-2 rounded bg-primary-50 h-full align-middle">
+            <button className="cursor-pointer px-8 py-2 rounded bg-primary-50 h-full align-middle ">
               <span className="material-symbols-outlined animate-spin text-primary-200 text-sm align-middle">progress_activity</span>
             </button>
             : curpError && !isLoading && !isSuccess ?
-            <button className="cursor-pointer px-8 py-2 rounded bg-primary-500 h-full align-middle" onClick={() => {
+            <button className="cursor-pointer px-8 py-2 rounded bg-primary-500 active:bg-primary-600 active:border-primary-600 h-full align-middle" onClick={() => {
               handleValidateCurp()
             }}><span className="material-symbols-outlined text-surface-100 text-sm align-middle">refresh</span></button>
             : isSuccess ? 
