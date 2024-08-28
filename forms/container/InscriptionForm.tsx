@@ -7,6 +7,8 @@ import Checkbox from "@/old-components/Checkbox";
 import configControls from "@/forms/fixtures/controls"
 import Select from "@/old-components/Select/Select";
 import { getTokenForms } from "@/utils/getTokenForms";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import cn from "classnames";
 import { date } from "yup";
 
@@ -137,8 +139,9 @@ const InscriptionForm = (props: InscriptionFormData) => {
       axios.post(`${process.env.NEXT_PUBLIC_PAYMENT_WEBHOOK}/curp/validate`, {
         curp
       }).then(function (response: any) {
-        if (response.data.errorMessage) {
+        if (response.data.errorMessage && !response.data.curp) {
           setCurpError(true)
+          setIsLoading(false)
           setcurpErrorMesage("No fue posible validar los datos. Continua manualmente.")
           setIsSuccess(false)
           setPersonalData({
@@ -154,12 +157,15 @@ const InscriptionForm = (props: InscriptionFormData) => {
 
         }
         if (response.data.curp) {
+          const rawBirthdate = response?.data?.fechaNacimiento.split('/')
+          const date = `${[rawBirthdate[2], rawBirthdate[1], rawBirthdate[0]]. join('-')}T00:00:00-06:00`
+          const birthdate = new Date(date)
           setPersonalData({
             ...personalData,
             name: response?.data?.nombre,
             last_name: response?.data?.apellidoPaterno,
             second_last_name: response?.data?.apellidoMaterno,
-            birthdate: response?.data?.fechaNacimiento,
+            birthdate: birthdate,
             gender: response?.data?.sexo,
           })
           setIsSuccess(true)
@@ -189,9 +195,19 @@ const InscriptionForm = (props: InscriptionFormData) => {
       setcurpErrorMesage("Ingresa un curp válido")
 
     }
-
-
   }
+  const handleDateChange = (value: Date | null, control: string) => {
+    if (value) {
+      const date = new Date(value)
+      console.log(date);
+      const newdate = date.toLocaleString('es-MX', { day: "2-digit", month: "2-digit", year: "numeric"})
+      console.log(newdate);
+      
+      setPersonalDataTouched({ ...personalDataTouched, [control]: true });
+      setPersonalData({ ...personalData, [control]: date});
+    }
+    
+  };
 
   const validatePersonalDataControl = (control: string, value: string) => {
     if (control === 'email') {
@@ -199,6 +215,9 @@ const InscriptionForm = (props: InscriptionFormData) => {
     }
     if (control === 'phone') {
       return value.trim().length === 10
+    }
+    if (control === 'birthdate') {
+      return  !!value && !!(new Date(value))
     }
     return !!value?.trim()
   };
@@ -250,13 +269,13 @@ const InscriptionForm = (props: InscriptionFormData) => {
   }
   
   useEffect( () =>{
-    if (isLoading && !isSuccess){
+    if (isLoading && !isSuccess && !curpErrorMesage){
       setTimeout(()=> {
         setIsLoading(false)
       }, 20000);
     }
 
-  }, [isLoading])
+  }, [isLoading,isSuccess,curpErrorMesage])
 
 
   useEffect(() => {
@@ -336,21 +355,19 @@ const InscriptionForm = (props: InscriptionFormData) => {
         />
       </div>
       <div className="">
-        <Input value={personalData?.birthdate} data={{
-          label: 'Fecha de Nacimiento',
-          name: 'birthdate',
-          type: 'text',
-          typeButton: 'classic',
-          onPaste: true,
-          pattern: '',
-          isRequired: true,
-          disabled: hasCurp && !!personalData.birthdate && isValidCurp
-        }}
-          eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "birthdate")}
-          eventFocus={() => handleTouchedControl("birthdate")}
-          errorMessage={configControls.errorMessagesInscriptionForm.birthdate}
-          hasError={personalDataErrors.birthdate}
+        <DatePicker
+          className={cn("w-full h-full pl-3 pr-13 py-3 rounded-t-lg border-b border-surface-400 outline-none bg-surface-100 placeholder:text-surface-400 text-surface-500 placeholder:font-texts font-texts font-normal", {
+            "border-error-500": personalDataErrors.birthdate,
+            "text-surface-400": hasCurp && !!personalData.birthdate && isValidCurp,
+          })}
+          selected={personalData.birthdate}
+          onChange={(date) => handleDateChange(date, "birthdate")}
+          onFocus={() => handleTouchedControl("birthdate")}
+          placeholderText="Fecha de Nacimiento*"
+          dateFormat={'dd/MM/yy'}
+          disabled={hasCurp && !!personalData.birthdate && isValidCurp}
         />
+        { personalDataErrors.birthdate && <p className="text-error-500 font-texts text-xs ml-2 mt-4">{configControls.errorMessagesInscriptionForm.birthdate}</p>}
       </div>
       <div >
         <Input value={personalData?.gender} data={{
@@ -506,20 +523,19 @@ const InscriptionForm = (props: InscriptionFormData) => {
         />
       </div>
       <div className="">
-        <Input data={{
-          label: 'Fecha de Nacimiento',
-          name: 'birthdate',
-          type: 'date',
-          typeButton: 'classic',
-          onPaste: true,
-          pattern: '',
-          isRequired: true,
-        }}
-          eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "birthdate")}
-          eventFocus={() => handleTouchedControl("birthdate")}
-          errorMessage={configControls.errorMessagesInscriptionForm.birthdate}
-          hasError={personalDataErrors.birthdate}
+        <DatePicker
+          className={cn("w-full h-full pl-3 pr-13 py-3 rounded-t-lg border-b border-surface-400 outline-none bg-surface-100 placeholder:text-surface-500 text-surface-500 placeholder:font-texts font-texts font-normal", {
+            "border-error-500": personalDataErrors.birthdate,
+            "text-surface-400": hasCurp && !!personalData.birthdate && isValidCurp,
+          })}
+          selected={personalData.birthdate}
+          onChange={(date) => handleDateChange(date, "birthdate")}
+          onFocus={() => handleTouchedControl("birthdate")}
+          placeholderText="Fecha de Nacimiento*"
+          dateFormat={'dd/MM/yy'}
+          disabled={hasCurp && !!personalData.birthdate && isValidCurp}
         />
+        { personalDataErrors.birthdate && <p className="text-error-500 font-texts text-xs ml-2 mt-4">{configControls.errorMessagesInscriptionForm.birthdate}</p>}
       </div>
       <div >
         <div className="mt-[-1em]"> <Select options={optionsGender} data={{
