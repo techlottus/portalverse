@@ -137,6 +137,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
     if (isValidCurp) {
       setIsLoading(true)
       axios.post(`${process.env.NEXT_PUBLIC_PAYMENT_WEBHOOK}/curp/validate`, {
+        timeout: 20000,
         curp
       }).then(function (response: any) {
         if (response.data.errorMessage && !response.data.curp) {
@@ -267,16 +268,6 @@ const InscriptionForm = (props: InscriptionFormData) => {
   const handleTouchedControl = (control: string) => {
     setPersonalDataTouched({ ...personalDataTouched, [control]: true });
   }
-  
-  useEffect( () =>{
-    if (isLoading && !isSuccess && !curpErrorMesage){
-      setTimeout(()=> {
-        setIsLoading(false)
-      }, 20000);
-    }
-
-  }, [isLoading,isSuccess,curpErrorMesage])
-
 
   useEffect(() => {
     setStatus({ loading: isLoading, valid: isValid, success: isSuccess })
