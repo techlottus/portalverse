@@ -119,8 +119,6 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
 
     if (activePageIndex === 1) {
       const postData = async () => {
-
-
         if (flywireAPI && flywireAPIKEY) {
           const response = await fetch("/api/generateFwLink", {
             method: 'POST',
@@ -214,6 +212,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
   useEffect(() => {
   }, [flywireLink])
 
+
   return (
     <>
       <Head>
@@ -260,15 +259,15 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                   </section>
                   : flywireLink === "error"
                     ? <WebError title="Error" message="Error al conectar a flywire" errorCode="400"></WebError>
-                    : <div className="w-full mobile:px-4">
-                      <iframe className="mobile:hidden tablet:hidden w-full h-full" src={flywireLink} title="Flywire form"></iframe>
-                      <iframe className="desktop:hidden w-full h-full" src={flywireLink} title="Flywire form"></iframe>
+                    : <div className=" flex w-[500px] mobile:px-4 h-[800px] mobile:h-[800px] overflow-hidden overscroll-y-auto ">
+                      <iframe className="mobile:hidden tablet:hidden w-[500px] h-[200%] overflow-hidden overscroll-none -mt-[64px] " src={flywireLink} title="Flywire form"></iframe>
+                      <iframe className="desktop:hidden w-full h-[200%] overflow-hidden overscroll-none -mt-[64px]" src={flywireLink} title="Flywire form"></iframe>
                     </div>
               }
             </div>
           </div>
-          <div className="desktop:w-1/2 mobile:mt-7">
-            <div className={cn("mobile:w-full mobile:px-6 mobile:mb-7", { "mobile:hidden tablet:hidden": flywireLink })}>
+          <div className="desktop:w-1/2 ">
+            <div className={cn("flex mobile:w-full mobile:px-6 mobile:mb-7 flex-col mobile:flex-col-reverse ", { "mobile:hidden tablet:hidden": flywireLink })}>
               <div className="w-full border border-surface-300 rounded-lg p-4">
                 <h3 className="font-headings font-bold text-5.5 leading-6 mb-3">{program?.attributes?.name}</h3>
                 {/* se deja pendiente este badge, ya que cada programa cuenta con varias posibles modalidades y aqui solo podríamos elegir una */}
@@ -304,8 +303,8 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                     }
                 </div>
               </div>
-
-              <div className={cn("flex flex-col my-6", { ["hidden"]: activePageIndex !== 0 })}>
+              <div id="btn-inscribir" className="mobile:mb-4">
+                <div className={cn("flex flex-col  my-6", { ["hidden"]: activePageIndex !== 0 })}>
                 <Button
                   dark
                   data={{
@@ -328,6 +327,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                   </a>
                 </span>
               </div>
+              </div>              
             </div>
           </div>
         </Container>

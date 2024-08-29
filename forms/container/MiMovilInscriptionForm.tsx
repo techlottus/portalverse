@@ -266,9 +266,7 @@ const MiMovilInscriptionForm = (props: MiMovilInscriptionFormData) => {
   const handleDateChange = (value: Date | null, control: string) => {
     if (value) {
       const date = new Date(value)
-      console.log(date);
       const newdate = date.toLocaleString('es-MX', { day: "2-digit", month: "2-digit", year: "numeric"})
-      console.log(newdate);
       
       setPersonalDataTouched({ ...personalDataTouched, [control]: true });
       setPersonalData({ ...personalData, [control]: date});

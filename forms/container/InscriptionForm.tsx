@@ -7,10 +7,13 @@ import Checkbox from "@/old-components/Checkbox";
 import configControls from "@/forms/fixtures/controls"
 import Select from "@/old-components/Select/Select";
 import { getTokenForms } from "@/utils/getTokenForms";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import cn from "classnames";
 import { date } from "yup";
 
 import Image from "@/old-components/Image"
+import Button from "@/old-components/Button/Button"
 
 const axios = require('axios');
 
@@ -58,11 +61,12 @@ const InscriptionForm = (props: InscriptionFormData) => {
     setCurpError
   } = props
 
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [isValid, setIsValid] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(true);
+  const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [adviser, setAdviser] = useState<boolean>()
   const [curpTouched, setCurpTouched] = useState<boolean>(false)
+  const [curpErrorMesage, setcurpErrorMesage] = useState<string>("")
 
   const [optionsGender, setOptionsGender] = useState([{
     value: "Hombre",
@@ -105,6 +109,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
 
   useEffect(() => {
     if (!isValidCurp) {
+      setcurpErrorMesage("No fue posible validar los datos. Continua manualmente.")
       setPersonalData({
         name: "",
         last_name: "",
@@ -125,16 +130,20 @@ const InscriptionForm = (props: InscriptionFormData) => {
     const newCurpError = !validateCurpControl() && curpTouched
 
     setCurpError(newCurpError);
+    setcurpErrorMesage(newCurpError ? "Ingresa un curp válido" : "")
 
     const isValidCurp = validateCurpControl();
 
     if (isValidCurp) {
       setIsLoading(true)
       axios.post(`${process.env.NEXT_PUBLIC_PAYMENT_WEBHOOK}/curp/validate`, {
+        timeout: 20000,
         curp
       }).then(function (response: any) {
-        if (response.data.errorMessage) {
+        if (response.data.errorMessage && !response.data.curp) {
           setCurpError(true)
+          setIsLoading(false)
+          setcurpErrorMesage("No fue posible validar los datos. Continua manualmente.")
           setIsSuccess(false)
           setPersonalData({
             name: "",
@@ -149,21 +158,28 @@ const InscriptionForm = (props: InscriptionFormData) => {
 
         }
         if (response.data.curp) {
+          const rawBirthdate = response?.data?.fechaNacimiento.split('/')
+          const date = `${[rawBirthdate[2], rawBirthdate[1], rawBirthdate[0]]. join('-')}T00:00:00-06:00`
+          const birthdate = new Date(date)
           setPersonalData({
             ...personalData,
             name: response?.data?.nombre,
             last_name: response?.data?.apellidoPaterno,
             second_last_name: response?.data?.apellidoMaterno,
-            birthdate: response?.data?.fechaNacimiento,
+            birthdate: birthdate,
             gender: response?.data?.sexo,
           })
           setIsSuccess(true)
           setIsValidCurp(true)
           setIsLoading(false)
         }
-      }).catch((err: any) => { console.log("Error en el curp: ", err) })
-
-    }
+      }).catch((err: any) => { 
+        console.log("Error en el curp: ", err)
+        setIsLoading(false)
+        setCurpError(true)
+        setcurpErrorMesage("No fue posible validar los datos. Continua manualmente.")
+       })
+           }
     else {
       setPersonalData({
         name: "",
@@ -177,11 +193,22 @@ const InscriptionForm = (props: InscriptionFormData) => {
         adviser:""
       })
       setIsLoading(false)
+      setcurpErrorMesage("Ingresa un curp válido")
 
     }
-
-
   }
+  const handleDateChange = (value: Date | null, control: string) => {
+    if (value) {
+      const date = new Date(value)
+      // console.log(date);
+      const newdate = date.toLocaleString('es-MX', { day: "2-digit", month: "2-digit", year: "numeric"})
+      // console.log(newdate);
+      
+      setPersonalDataTouched({ ...personalDataTouched, [control]: true });
+      setPersonalData({ ...personalData, [control]: date});
+    }
+    
+  };
 
   const validatePersonalDataControl = (control: string, value: string) => {
     if (control === 'email') {
@@ -189,6 +216,9 @@ const InscriptionForm = (props: InscriptionFormData) => {
     }
     if (control === 'phone') {
       return value.trim().length === 10
+    }
+    if (control === 'birthdate') {
+      return  !!value && !!(new Date(value))
     }
     return !!value?.trim()
   };
@@ -239,25 +269,25 @@ const InscriptionForm = (props: InscriptionFormData) => {
     setPersonalDataTouched({ ...personalDataTouched, [control]: true });
   }
 
-
-
   useEffect(() => {
     setStatus({ loading: isLoading, valid: isValid, success: isSuccess })
   }, [isLoading, isValid, isSuccess]);
 
 
   useEffect(() => {
-    console.log(personalData)
+    // console.log(personalData)
     Validate()
   }, [personalData]);
 
-  useEffect(() => {
+  const handleValidateCurp = () => {
     setIsLoading(true)
     validateCurp()
-
-  }, [curp]);
+  }
   const formCurp = <div >
     <div className="grid grid-cols-2 gap-x-6 gap-y-3">
+    <div className="">
+            <p className="font-heading font-bold text-md">Datos de estudiante</p>
+          </div>
       <div className="col-span-2">
         <Input value={personalData?.name} data={{
           label: 'Nombre(s)*',
@@ -316,21 +346,19 @@ const InscriptionForm = (props: InscriptionFormData) => {
         />
       </div>
       <div className="">
-        <Input value={personalData?.birthdate} data={{
-          label: 'Fecha de Nacimiento',
-          name: 'birthdate',
-          type: 'text',
-          typeButton: 'classic',
-          onPaste: true,
-          pattern: '',
-          isRequired: true,
-          disabled: hasCurp && !!personalData.birthdate && isValidCurp
-        }}
-          eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "birthdate")}
-          eventFocus={() => handleTouchedControl("birthdate")}
-          errorMessage={configControls.errorMessagesInscriptionForm.birthdate}
-          hasError={personalDataErrors.birthdate}
+        <DatePicker
+          className={cn("w-full h-full pl-3 pr-13 py-3 rounded-t-lg border-b border-surface-400 outline-none bg-surface-100 placeholder:text-surface-400 text-surface-500 placeholder:font-texts font-texts font-normal", {
+            "border-error-500": personalDataErrors.birthdate,
+            "text-surface-400": hasCurp && !!personalData.birthdate && isValidCurp,
+          })}
+          selected={personalData.birthdate}
+          onChange={(date) => handleDateChange(date, "birthdate")}
+          onFocus={() => handleTouchedControl("birthdate")}
+          placeholderText="Fecha de Nacimiento*"
+          dateFormat={'dd/MM/yy'}
+          disabled={hasCurp && !!personalData.birthdate && isValidCurp}
         />
+        { personalDataErrors.birthdate && <p className="text-error-500 font-texts text-xs ml-2 mt-4">{configControls.errorMessagesInscriptionForm.birthdate}</p>}
       </div>
       <div >
         <Input value={personalData?.gender} data={{
@@ -440,7 +468,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
           alphabetical: true,
           pattern: '',
           isRequired: true,
-          disabled: hasCurp && !!personalData.name
+          disabled: false
         }}
           eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "name")}
           eventFocus={() => handleTouchedControl("name")}
@@ -486,20 +514,19 @@ const InscriptionForm = (props: InscriptionFormData) => {
         />
       </div>
       <div className="">
-        <Input data={{
-          label: 'Fecha de Nacimiento',
-          name: 'birthdate',
-          type: 'date',
-          typeButton: 'classic',
-          onPaste: true,
-          pattern: '',
-          isRequired: true,
-        }}
-          eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "birthdate")}
-          eventFocus={() => handleTouchedControl("birthdate")}
-          errorMessage={configControls.errorMessagesInscriptionForm.birthdate}
-          hasError={personalDataErrors.birthdate}
+        <DatePicker
+          className={cn("w-full h-full pl-3 pr-13 py-3 rounded-t-lg border-b border-surface-400 outline-none bg-surface-100 placeholder:text-surface-500 text-surface-500 placeholder:font-texts font-texts font-normal", {
+            "border-error-500": personalDataErrors.birthdate,
+            "text-surface-400": hasCurp && !!personalData.birthdate && isValidCurp,
+          })}
+          selected={personalData.birthdate}
+          onChange={(date) => handleDateChange(date, "birthdate")}
+          onFocus={() => handleTouchedControl("birthdate")}
+          placeholderText="Fecha de Nacimiento*"
+          dateFormat={'dd/MM/yy'}
+          disabled={hasCurp && !!personalData.birthdate && isValidCurp}
         />
+        { personalDataErrors.birthdate && <p className="text-error-500 font-texts text-xs ml-2 mt-4">{configControls.errorMessagesInscriptionForm.birthdate}</p>}
       </div>
       <div >
         <div className="mt-[-1em]"> <Select options={optionsGender} data={{
@@ -596,8 +623,8 @@ const InscriptionForm = (props: InscriptionFormData) => {
         <div className="mobile:col-span-2 mb-4">
           <div className="flex flex-col gap-6">
             <div>
-              <h3 className="font-headings font-bold text-3xl text-surface-900  mobile:text-lg">Estás a punto de iniciar tu curso</h3>
-              <p className="text-surface-500 font-texts text-base mt-3">Te pedimos llenar tus datos como estudiante para inscribirte</p>
+              <h3 className="font-headings font-bold text-3xl text-surface-900  mobile:text-lg">Completa los datos del alumno</h3>
+              <p className="text-surface-500 font-texts text-base mt-3 font-normal">Proporcione los datos del estudiante a inscribir. La información de acceso se enviará a su correo electrónico.</p>
             </div>
             <div>
               <p className="font-texts text-base font-bold text-surface-950">
@@ -631,6 +658,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
               </div>
             </div>
           </div>
+         
           {
             noResidence && <>
               <div className="flex flex-col gap-6">
@@ -667,7 +695,9 @@ const InscriptionForm = (props: InscriptionFormData) => {
             </>
           }
           <div className={cn({ ["hidden"]: noCurp })}>
-            <Input data={{
+            <div className="flex space-x-4 ">
+              <div className="flex-grow">
+                <Input data={{
               label: 'CURP*',
               name: 'curp',
               type: 'text',
@@ -685,24 +715,54 @@ const InscriptionForm = (props: InscriptionFormData) => {
                 setCurpTouched(true);
                 setCurp(value);
               }}
-              errorMessage={configControls.errorMessagesInscriptionForm.curp}
+              errorMessage={curpErrorMesage}
               eventFocus={() => setCurpTouched(true)}
               hasError={curpError}
-            />
+            /> 
+              </div>
+              
+            {isLoading && !isSuccess? 
+            <button className="cursor-pointer px-8 py-2 rounded bg-info-50 h-full align-middle ">
+              <span className="material-symbols-outlined animate-spin text-info-300 text-sm align-middle">progress_activity</span>
+            </button>
+            : curpError && !isLoading && !isSuccess ?
+            <button className="cursor-pointer px-8 py-2 rounded bg-primary-500 active:bg-primary-600 active:border-primary-600 h-full align-middle" onClick={() => {
+              handleValidateCurp()
+            }}><span className="material-symbols-outlined text-surface-100 text-sm align-middle">refresh</span></button>
+            : isSuccess ? 
+            <button className="cursor-pointer px-8 py-2 rounded bg-success-0 h-full align-middle">
+              <span className="material-symbols-outlined text-success-500 text-sm align-middle">check</span>
+            </button>
+            :
+            <Button 
+            dark
+            data={{
+              id: "validateButton",
+              type: 'primary',
+              title: "Validar",
+              size: 'small',
+              disabled: isSuccess}}
+              onClick={() => {
+                handleValidateCurp()
+              }}
+              />}
+            </div>
+            
             <p className="font-texts font-normal text-surface-500 mb-3">¿No conoces tu CURP? Obtenlo desde <a className="text-primary-500" href="https://www.gob.mx/curp/" target="_blank">aquí</a></p>
           </div>
           
-            {
-              isLoading
-                ? <section className={cn("p-6 shadow-15 bg-surface-0 relative")}><div className="absolute w-full h-full z-10 flex justify-center items-center left-0 top-0 bg-surface-0">
-                  <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
-                </div></section>
+            {/* {
+              isLoading?
+                
+                // ? <section className={cn("p-6 shadow-15 bg-surface-0 relative")}><div className="absolute w-full h-full z-10 flex justify-center items-center left-0 top-0 bg-surface-0">
+                //   <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
+                // </div></section>
                 : null
-            }  
-          {!isLoading && isValidCurp && formCurp}
-          {!isLoading && curp && !isValidCurp && formEmpty}
+            }   */}
+          {isSuccess && (hasCurp || residence) && formCurp}
+          {!isSuccess && curpError && !isLoading && (hasCurp || residence) && formEmpty}
           {
-            noCurp && noResidence && !isValidCurp && formEmpty
+            noCurp && noResidence && formEmpty
           }
         </div>
       </div>
