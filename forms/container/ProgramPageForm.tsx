@@ -122,7 +122,7 @@ const ProgramPageForm = (props: ProgramPageForm) => {
         return "UANE,ULA"
       }
       case "UTEG": {
-        return "UTEG,ULA"
+        return "UTEG,ULA,UANE"
       }
       case "ULA": {
         return "ULA"
