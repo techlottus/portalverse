@@ -150,7 +150,7 @@ const ScheduleVisitForm = (props: ScheduleVisitForm) => {
         return "UANE,ULA"
       }
       case "UTEG": {
-        return "UTEG,ULA"
+        return "UTEG,ULA,UANE"
       }
       case "ULA": {
         return "ULA"

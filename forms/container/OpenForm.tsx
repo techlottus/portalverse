@@ -29,7 +29,7 @@ const getBusinessLineToFetchFrom = (businessLine: string, modality: string) => {
     case "UTEG": {
       switch(modality) {
         case "Presencial": return "UTEG";
-        case "Flex": return "UTEG,ULA";
+        case "Flex": return "UTEG,ULA,UANE";
         case "Online": return "ULA";
         default: return "UTEG"
       }
