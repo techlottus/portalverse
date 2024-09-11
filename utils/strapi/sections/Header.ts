@@ -9,36 +9,36 @@ import { ButtonConfig } from "@/types/Button.types";
 
 
 export type SubitemType = {
-  id: string;
-  label: string;
-  bold: boolean;
-  href: string;
+  id?: string;
+  label?: string;
+  bold?: boolean;
+  href?: string;
 }
 export  type ItemsType = SubitemType & {
-  subitems : SubitemType;
+  subitems?: SubitemType;
 }
 export type SubitemsType = SubitemType & {
-  items: ItemsType[];
+  items?: ItemsType[];
 }
 export type AlertInfoType = {
-  title: string;
-  subtitle: string;
-  image: StrapiImage;
-  link: LinkConfig;
+  title?: string;
+  subtitle?: string;
+  image?: StrapiImage;
+  link?: LinkConfig;
 }
 export type MenuItemsType = {
-  id: string;
-  label: string;
-  subitems: SubitemsType[];
+  id?: string;
+  label?: string;
+  subitems?: SubitemsType[];
   }
 export type MenuType = {
-  id: string;
-  show_logo: boolean;
-  name: string;
-  links_button: LinkListSection| ButtonConfig;
-  menu_items: MenuItemsType[];
-  banners:  BannerPortalverseConfig;
-  alert: AlertInfoType;
+  id?: string;
+  show_logo?: boolean;
+  name?: string;
+  links_button?: LinkListSection| ButtonConfig;
+  menu_items?: MenuItemsType[];
+  banners?:  BannerPortalverseConfig;
+  alert?: AlertInfoType;
 };
 
 export const HEADER = `
