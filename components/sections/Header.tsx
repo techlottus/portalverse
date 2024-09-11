@@ -97,16 +97,16 @@ const Header = (props: MenuType) => {
   );
 };
 
-const ListItem = React.forwardRef(({ className, children, title, ...props }: any, forwardedRef) => (
+const ListItem = ({ className, children, title, ...props }: any) => (
   <li className="px-3">
     <NavigationMenu.Link asChild>
-      <a ref={forwardedRef}>
+      <a >
         <div className="font-heading text-surface-950 font-semibold">{title}</div>
         <p className="font-texts text-surface-400 pl-2 font-normal">{children}</p>
       </a>
     </NavigationMenu.Link>
   </li>
-));
+);
 
 
 export default Header;
