@@ -286,36 +286,27 @@ const Header = (props: MenuType) => {
   const SubItems = ({subitems}: {subitems:SubitemsType[]}) => {
     return (
       <ul className="flex-col">
-        {
-          subitems?.map((item:any) => {
-            if (item?.items.length > 0) {
-              return (
+        { subitems?.map((item:any) => 
+          item?.items.length > 0 ? 
                 <button className="group hover:border hover:border-surface-400 rounded hover:text-primary-500 px-2 py-2" onMouseEnter={() => setItems(true)} >
                   <Link href={item?.href ? item.href:""} passHref>
                     <div className="flex items-center  ">
-                      <p className="group-hover:underline font-normal group-hover:text-primary-500 text-surface-400">
+                      <p className="group-hover:underline font-normal group-hover:text-primary-500 text-surface-400 font-texts">
                         {item?.label}
                       </p>
-                      <span className="font-icons-solid text-lg group-hover:text-primary-500 text-surface-400 font-bold ml-3 ">arrow_forward_ios</span>
+                      <span className="font-icons-outlined text-lg group-hover:text-primary-500 text-surface-400 font-bold ml-3 ">arrow_forward_ios</span>
                     </div>
                   </Link>
                 </button>
-              )
-            }
-            else {
-              item.bold ?
+              : item.bold ?
                 <Link href={item?.href ? item.href:""} passHref><p className="font-heading text-surface-950 font-semibold py-2">{item.label}</p></Link>
                 :
                 <Link href={item?.href ? item.href:""} passHref><p className="font-texts text-surface-400 pl-2 font-normal py-2">{item.label}</p></Link>
-
-            }
-          }
-
+    
           )
         }
 
       </ul>
-
     )
   }
 
