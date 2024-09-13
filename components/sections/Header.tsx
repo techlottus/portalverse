@@ -270,8 +270,8 @@ const Header = (props: MenuType) => {
     return (
       <NavigationMenu.List className="flex w-full items-center justify-end last:border-none ">
         {/*TODO map function to list items */}
-        {data?.links_button.map((link: any) =>
-          <NavigationMenu.Item className=" border-r border-surface-300 px-3 ">
+        {data?.links_button.map((link: any,i:number) =>
+          <NavigationMenu.Item key={i} className=" border-r border-surface-300 px-3 ">
             <Link href={link.href ? link.href : ""} passHref >
               <p className="font-headings font-normal text-xs text-surface-400 hover:underline cursor-pointer">
                 {link?.text}
