@@ -357,7 +357,7 @@ const Header = (props: MenuType) => {
 
   const SubItems = ({ subitems , isSub=false}: { subitems: SubitemsType[] | undefined ,isSub?:boolean}) => {
     return (
-      <ul className="flex-col w-full h-full pr-4" tabIndex = {-1} onMouseEnter={()=>setItems(isSub)}>
+      <ul className={classNames("flex-col w-full h-full pr-4",{["w-280"]:isSub})} tabIndex = {-1} onMouseEnter={()=>setItems(isSub)}>
         {subitems && subitems?.map((item: any, i: number) =>
           item?.items?.length > 0 ?
             <button key={i} className="group hover:border hover:border-surface-400 rounded hover:text-primary-500 px-2 py-2 w-full" onMouseEnter={() => handleMouseEnter(item?.items) } onMouseLeave={()=>setItems(false)}>
@@ -380,12 +380,12 @@ const Header = (props: MenuType) => {
   }
   const SubItemsCols = ({ subitems }: { subitems: SubitemsType[] | undefined }) => {
     return (
-      <ul className="grid grid-rows-10 grid-flow-col gap-1 pr-4 w-280" tabIndex={-1} onMouseEnter={()=>setItems(true)} onMouseLeave={()=>setItems(false)}>
+      <ul className="grid grid-rows-12 grid-flow-col grid-cols-3" tabIndex={-1} onMouseEnter={()=>setItems(true)} onMouseLeave={()=>setItems(false)}>
         {subitems && subitems?.map((item: any, i: number) =>
          item.bold ?
-              <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-heading text-surface-950 font-semibold">{item.label}</p></Link>
+              <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-heading text-surface-950 font-semibold text-base">{item.label}</p></Link>
               :
-              <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-texts text-surface-400 pl-2 font-normal ">{item.label}</p></Link>
+              <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-texts text-surface-400 hover:text-primary-500 pl-2 font-normal text-base ">{item.label}</p></Link>
         )}
       </ul>
     )
@@ -428,7 +428,7 @@ const Header = (props: MenuType) => {
                           <SubItems subitems={menu_item?.subitems} />
                         </div>
                         <div className="w-3/4 px-3" >
-                          {(items && itemList.length < 11) && <SubItems subitems={itemList} isSub/>}
+                          {(items && itemList.length < 11) && <SubItems subitems={itemList} isSub={true}/>}
                           {(items && itemList.length > 10) && <SubItemsCols subitems={itemList}/>}
                           {!items && <LayoutHome/>}
                         </div>
