@@ -286,9 +286,9 @@ const Header = (props: MenuType) => {
   const SubItems = ({subitems}: {subitems:SubitemsType[]}) => {
     return (
       <ul className="flex-col">
-        { subitems?.map((item:any) => 
+        { subitems?.map((item:any,i:number) => 
           item?.items.length > 0 ? 
-                <button className="group hover:border hover:border-surface-400 rounded hover:text-primary-500 px-2 py-2" onMouseEnter={() => setItems(true)} >
+                <button key={i} className="group hover:border hover:border-surface-400 rounded hover:text-primary-500 px-2 py-2" onMouseEnter={() => setItems(true)} >
                   <Link href={item?.href ? item.href:""} passHref>
                     <div className="flex items-center  ">
                       <p className="group-hover:underline font-normal group-hover:text-primary-500 text-surface-400 font-texts">
@@ -299,9 +299,9 @@ const Header = (props: MenuType) => {
                   </Link>
                 </button>
               : item.bold ?
-                <Link href={item?.href ? item.href:""} passHref><p className="font-heading text-surface-950 font-semibold py-2">{item.label}</p></Link>
+                <Link key={i} href={item?.href ? item.href:""} passHref><p className="font-heading text-surface-950 font-semibold py-2">{item.label}</p></Link>
                 :
-                <Link href={item?.href ? item.href:""} passHref><p className="font-texts text-surface-400 pl-2 font-normal py-2">{item.label}</p></Link>
+                <Link key={i} href={item?.href ? item.href:""} passHref><p className="font-texts text-surface-400 pl-2 font-normal py-2">{item.label}</p></Link>
     
           )
         }
@@ -329,8 +329,8 @@ const Header = (props: MenuType) => {
       </NavigationMenu.Root>
       <NavigationMenu.Root className="h-11 border-b border-surface-300 shadow">
         <NavigationMenu.List className="flex px-21  w-full items-center ">
-          {data.menu_items.map((menu_item: any) =>
-            <NavigationMenu.Item>
+          {data.menu_items.map((menu_item: any,i:number) =>
+            <NavigationMenu.Item key={i}>
               <NavigationMenu.Trigger className="group flex space-x-4 font-headings font-semibold text-surface-900 items-center text-sm border-surface-300 px-3 data-[state=open]:border-b-4 data-[state=open]:border-primary-300 data-[state=open]:text-primary-300 py-3">
                 {menu_item.label} <CaretDownIcon className="relative transition duration-150 ease-out hover:ease-in group-data-[state=open]:rotate-180 group-data-[state=open]:text-primary-300 ml-1" aria-hidden />
               </NavigationMenu.Trigger>
