@@ -269,7 +269,7 @@ const Header = (props: MenuType) => {
         {
           "title": "Banner 1",
           "subtitle": "contenido de banner 1",
-          "desktopRatio": "7/2",
+          "desktopRatio": "2/1",
           "desktopImage": {
             "data": {
               "attributes": {
@@ -287,7 +287,7 @@ const Header = (props: MenuType) => {
         {
           "title": "Banner 2",
           "subtitle": "contenido de banner 2",
-          "desktopRatio": "7/2",
+          "desktopRatio": "2/1",
           "desktopImage": {
             "data": {
               "attributes": {
@@ -357,7 +357,7 @@ const Header = (props: MenuType) => {
 
   const SubItems = ({ subitems , isSub=false}: { subitems: SubitemsType[] | undefined ,isSub?:boolean}) => {
     return (
-      <ul className="flex-col w-full h-full pr-4" onMouseEnter={()=>setItems(isSub)} onMouseLeave={()=>setItems(false)}>
+      <ul className="flex-col w-full h-full pr-4" tabIndex = {-1} onMouseEnter={()=>setItems(isSub)}>
         {subitems && subitems?.map((item: any, i: number) =>
           item?.items?.length > 0 ?
             <button key={i} className="group hover:border hover:border-surface-400 rounded hover:text-primary-500 px-2 py-2 w-full" onMouseEnter={() => handleMouseEnter(item?.items) } onMouseLeave={()=>setItems(false)}>
@@ -366,7 +366,7 @@ const Header = (props: MenuType) => {
                   <p className="group-hover:underline font-normal group-hover:text-primary-500 text-surface-400 font-texts">
                     {item?.label}
                   </p>
-                  <span className="font-icons-outlined text-lg group-hover:text-primary-500 text-surface-400 font-bold ml-3 ">people</span>
+                  <span className="material-symbols-outlined  text-lg group-hover:text-primary-500 text-surface-400 font-bold ml-3 ">arrow_forward_ios</span>
                 </div>
               </Link>
             </button >
@@ -427,11 +427,10 @@ const Header = (props: MenuType) => {
                         <div className="w-1/4 border-r border-surface-400">
                           <SubItems subitems={menu_item?.subitems} />
                         </div>
-                        <div className="w-3/4 px-3">
+                        <div className="w-3/4 px-3" >
                           {(items && itemList.length < 11) && <SubItems subitems={itemList} isSub/>}
                           {(items && itemList.length > 10) && <SubItemsCols subitems={itemList}/>}
                           {!items && <LayoutHome/>}
-
                         </div>
 
                       </div>
