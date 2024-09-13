@@ -35,7 +35,7 @@ export type MenuType = {
   id?: string;
   show_logo?: boolean;
   name?: string;
-  links_button?: LinkListSection| ButtonConfig;
+  links_button?: LinkListSection| ButtonConfig; //TODO cambiar tipado en este prop
   menu_items?: MenuItemsType[];
   banners?:  BannerPortalverseConfig;
   alert?: AlertInfoType;
