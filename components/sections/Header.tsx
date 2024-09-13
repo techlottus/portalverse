@@ -23,7 +23,7 @@ const Header = (props: MenuType) => {
   } = props;
 
   const router = useRouter()
-  const data: any = {
+  const data: any =  {
     "show_logo": true,
     "name": "header-demo",
     "links_button": [
@@ -45,7 +45,7 @@ const Header = (props: MenuType) => {
       },
       {
         "label": "Pedir info",
-        "CTA": '/pedir-informacion',
+        "CTA": "/pedir-informacion",
         "size": null,
         "id": "24",
         "variant": "primary",
@@ -56,12 +56,68 @@ const Header = (props: MenuType) => {
       {
         "id": "1",
         "label": "Admisiones",
-        "subitems": []
+        "subitems": [
+          {
+            "id": "4",
+            "label": "Salud",
+            "bold": true,
+            "href": "/salud",
+            "items": []
+          },
+          {
+            "id": "5",
+            "label": "Licenciatura en Psicología",
+            "bold": false,
+            "href": "/licenciatura",
+            "items": [
+              {
+                "id": "20",
+                "label": "Licenciatura en Contaduría y Finanzas",
+                "bold": true,
+                "href": null,
+                "items": [
+                  {
+                    "id": "1",
+                    "label": "Licenciatura en Psicología",
+                    "href": null,
+                    "bold": true
+                  },
+                  {
+                    "id": "2",
+                    "label": "Licenciatura en Nutrición",
+                    "href": null,
+                    "bold": false
+                  },
+                  {
+                    "id": "3",
+                    "label": "Licenciatura en Fisioterapia",
+                    "href": null,
+                    "bold": false
+                  }
+                ]
+              },
+              {
+                "id": "19",
+                "label": "Licenciatura en Cirujano Dentista",
+                "bold": false,
+                "href": null,
+                "items": []
+              },
+              {
+                "id": "18",
+                "label": "Licenciatura en Derecho",
+                "bold": false,
+                "href": null,
+                "items": []
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "2",
         "label": "Oferta Academica",
-        subitems: [
+        "subitems": [
           {
             "id": "2",
             "label": "Nivel Educativo",
@@ -213,7 +269,7 @@ const Header = (props: MenuType) => {
         {
           "title": "Banner 1",
           "subtitle": "contenido de banner 1",
-          "desktopRatio": "2/1",
+          "desktopRatio": "7/2",
           "desktopImage": {
             "data": {
               "attributes": {
@@ -231,7 +287,7 @@ const Header = (props: MenuType) => {
         {
           "title": "Banner 2",
           "subtitle": "contenido de banner 2",
-          "desktopRatio": "2/1",
+          "desktopRatio": "7/2",
           "desktopImage": {
             "data": {
               "attributes": {
@@ -268,6 +324,7 @@ const Header = (props: MenuType) => {
     }
   }
   const [items, setItems] = useState(false)
+  const [itemList,setItemList] = useState<any[]>([])
 
   const Links = () => {
     return (
@@ -286,35 +343,51 @@ const Header = (props: MenuType) => {
     )
   }
 
-  const SubItems = ({ subitems }: { subitems: SubitemsType[] }) => {
-    return (
-      <div className="flex relative h-full ">
-        <div className="flex w-full h-full pr-4 ">
-          <ul className="flex-col  w-full h-full">
-            {subitems?.map((item: any, i: number) =>
-              item?.items?.length > 0 ?
-                <>
-                  <button key={i} className="group hover:border hover:border-surface-400 rounded hover:text-primary-500 px-2 py-2 w-full" onMouseEnter={() => setItems(true)} >
-                    <Link href={item?.href ? item.href : ""} passHref>
-                      <div className="flex items-center justify-between ">
-                        <p className="group-hover:underline font-normal group-hover:text-primary-500 text-surface-400 font-texts">
-                          {item?.label}
-                        </p>
-                        <span className="font-icons-outlined text-lg group-hover:text-primary-500 text-surface-400 font-bold ml-3 ">people</span>
-                      </div>
-                    </Link>
-                  </button >
-                  {/* <div className={classNames("px-6 absolute top-0 left-50 w-full", { ["hidden"]: !items })} tabIndex={-1} onMouseEnter={() => setItems(true)} onMouseLeave={() => setItems(false)}>
-                    <SubItems subitems={item?.items} />
-                  </div> */}
-                </>
-                : item.bold ?
-                  <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-heading text-surface-950 font-semibold py-2 w-full">{item.label}</p></Link>
-                  :
-                  <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-texts text-surface-400 pl-2 font-normal py-2 w-full">{item.label}</p></Link>
-            )}</ul></div>
+  const LayoutHome = () => <div className="flex-col space-y-3 w-full justify-between">
+    <RepeatableBannerSection {...data?.banners} />
+    <div className="border-t border-surface-400 py-2">
+      <AlertInfo {...data?.alert} />
+    </div>
+  </div>
 
-      </div >
+  const handleMouseEnter = (list:any)=>{
+    setItems(true)
+    setItemList(list)
+  }
+
+  const SubItems = ({ subitems , isSub=false}: { subitems: SubitemsType[] | undefined ,isSub?:boolean}) => {
+    return (
+      <ul className="flex-col w-full h-full pr-4" onMouseEnter={()=>setItems(isSub)} onMouseLeave={()=>setItems(false)}>
+        {subitems && subitems?.map((item: any, i: number) =>
+          item?.items?.length > 0 ?
+            <button key={i} className="group hover:border hover:border-surface-400 rounded hover:text-primary-500 px-2 py-2 w-full" onMouseEnter={() => handleMouseEnter(item?.items) } onMouseLeave={()=>setItems(false)}>
+              <Link href={item?.href ? item.href : ""} passHref>
+                <div className="flex items-center justify-between ">
+                  <p className="group-hover:underline font-normal group-hover:text-primary-500 text-surface-400 font-texts">
+                    {item?.label}
+                  </p>
+                  <span className="font-icons-outlined text-lg group-hover:text-primary-500 text-surface-400 font-bold ml-3 ">people</span>
+                </div>
+              </Link>
+            </button >
+            : item.bold ?
+              <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-heading text-surface-950 font-semibold py-2 w-full" onMouseEnter={() => setItems(false) } >{item.label}</p></Link>
+              :
+              <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-texts text-surface-400 pl-2 font-normal py-2 w-full" onMouseEnter={() => setItems(false) }>{item.label}</p></Link>
+        )}
+      </ul>
+    )
+  }
+  const SubItemsCols = ({ subitems }: { subitems: SubitemsType[] | undefined }) => {
+    return (
+      <ul className="grid grid-rows-10 grid-flow-col gap-1 pr-4 w-280" tabIndex={-1} onMouseEnter={()=>setItems(true)} onMouseLeave={()=>setItems(false)}>
+        {subitems && subitems?.map((item: any, i: number) =>
+         item.bold ?
+              <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-heading text-surface-950 font-semibold">{item.label}</p></Link>
+              :
+              <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-texts text-surface-400 pl-2 font-normal ">{item.label}</p></Link>
+        )}
+      </ul>
     )
   }
 
@@ -352,15 +425,12 @@ const Header = (props: MenuType) => {
                       {/* items and subitems */}
                       <div className="flex w-full">
                         <div className="w-1/4 border-r border-surface-400">
-                        <SubItems subitems={menu_item?.subitems} />
+                          <SubItems subitems={menu_item?.subitems} />
                         </div>
                         <div className="w-3/4 px-3">
-                          <div className="flex-col space-y-3 w-full justify-between">
-                            <RepeatableBannerSection {...data?.banners} />
-                            <div className="border-t border-surface-400 py-2">
-                              <AlertInfo {...data?.alert} />
-                            </div>
-                          </div>
+                          {(items && itemList.length < 11) && <SubItems subitems={itemList} isSub/>}
+                          {(items && itemList.length > 10) && <SubItemsCols subitems={itemList}/>}
+                          {!items && <LayoutHome/>}
 
                         </div>
 
