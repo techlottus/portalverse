@@ -357,7 +357,7 @@ const Header = (props: MenuType) => {
 
   const SubItems = ({ subitems , isSub=false}: { subitems: SubitemsType[] | undefined ,isSub?:boolean}) => {
     return (
-      <ul className={classNames("flex-col w-full h-full pr-4",{["w-280"]:isSub})} tabIndex = {-1} onMouseEnter={()=>setItems(isSub)}>
+      <ul className={classNames("flex-col w-full h-full pr-4",{["w-70"]:isSub})} tabIndex={-1} onMouseEnter={()=>setItems(isSub)}>
         {subitems && subitems?.map((item: any, i: number) =>
           item?.items?.length > 0 ?
             <button key={i} className="group hover:border hover:border-surface-400 rounded hover:text-primary-500 px-2 py-2 w-full" onMouseEnter={() => handleMouseEnter(item?.items) } onMouseLeave={()=>setItems(false)}>
@@ -373,7 +373,7 @@ const Header = (props: MenuType) => {
             : item.bold ?
               <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-heading text-surface-950 font-semibold py-2 w-full" onMouseEnter={() => setItems(false) } >{item.label}</p></Link>
               :
-              <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-texts text-surface-400 pl-2 font-normal py-2 w-full" onMouseEnter={() => setItems(false) }>{item.label}</p></Link>
+              <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-texts text-surface-400 hover:text-primary-500 pl-2 font-normal py-2 w-full" onMouseEnter={() => setItems(false) }>{item.label}</p></Link>
         )}
       </ul>
     )
