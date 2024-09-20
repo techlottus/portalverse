@@ -1,7 +1,7 @@
 import Head from "next/head"
 import ContentFullLayout from "@/layouts/ContentFull.layout"
 import NextPageWithLayout from "@/types/Layout.types"
-import { useEffect, useState } from "react"
+import { ReactElement, useEffect, useState } from "react"
 import getProgramById, { ProgramData } from "@/utils/getProgramById"
 import { InscriptionForm } from "@/forms/container/InscriptionForm"
 import Link from "next/link"
@@ -219,12 +219,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
         Checkout
       </Head>
 
-      <ContentFullLayout>
-        <section className="w-full bg-surface-0 z-15 transition-transform shadow-15">
-          <div className="p-6 border-0 border-solid border-surface-200 border-r-2">
-            <div className="w-36 h-9 bg-logo bg-cover bg-center mobile:mx-auto"> </div>
-          </div>
-        </section>
+      
         <Container classNames="flex mobile:!px-0 mobile:flex-col tablet:flex-col tablet:!px-0 desktop:gap-30 desktop:mt-12 mobile:mt-6 tablet:mt-6">
           <div className="desktop:w-1/2">
             <div className={cn("mobile:w-full", { 'hidden': activePageIndex !== 0 })}>
@@ -331,11 +326,22 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
             </div>
           </div>
         </Container>
-      </ContentFullLayout>
+      
     </>);
 }
 
-
+CheckoutPage.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <ContentFullLayout>
+      <section className="w-full bg-surface-0 z-15 transition-transform shadow-15">
+        <div className="p-6 border-0 border-solid border-surface-200 border-r-2">
+          <div className="w-36 h-9 bg-logo bg-cover bg-center mobile:mx-auto"> </div>
+        </div>
+      </section>
+      {page}
+    </ContentFullLayout>
+  )
+}
 
 export async function getStaticPaths() {
 
