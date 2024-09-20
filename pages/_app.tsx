@@ -29,16 +29,15 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     <>
       {
         scripts && scripts?.map((props: ScriptsPixels, i: number) => {
-          return (
-            <Pixel
-              key={i}
-              {...props}
-            />
-          )
+          return (router.pathname.includes('mi-movil-inscription') || pageProps?.program?.attributes?.price_list) && props.name.includes('Webchat')
+            ? null 
+            : <Pixel
+                key={i}
+                {...props}
+              />
         })
       }
       <MsalProvider instance={msalInstance}>
-
         <Component {...pageProps} />
       </MsalProvider>
       
