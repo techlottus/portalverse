@@ -385,7 +385,7 @@ const Header = (props: MenuType) => {
   }
   const SubItemsCols = ({ subitems }: { subitems: SubitemsType[] | undefined }) => {
     return (
-      <ul className="flex flex-col flex-wrap w-1/3 " tabIndex={-1} onMouseEnter={() => setItems(true)} onMouseLeave={() => setItems(true)}>
+      <ul className="flex flex-col flex-wrap h-100 w-1/3 " tabIndex={-1} onMouseEnter={() => setItems(true)} onMouseLeave={() => setItems(true)}>
         {subitems && subitems?.map((item: any, i: number) =>
           item.bold ?
             <li className=""><Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-heading text-surface-950 font-semibold text-base mr-3 mb-3">{item.label}</p></Link>
