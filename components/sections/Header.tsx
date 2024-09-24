@@ -23,7 +23,7 @@ const Header = (props: MenuType) => {
   } = props;
 
   const router = useRouter()
-  const data: any =  {
+  const data: any = {
     "show_logo": true,
     "name": "header-demo",
     "links_button": [
@@ -324,7 +324,7 @@ const Header = (props: MenuType) => {
     }
   }
   const [items, setItems] = useState(false)
-  const [itemList,setItemList] = useState<any[]>([])
+  const [itemList, setItemList] = useState<any[]>([])
 
   const Links = () => {
     return (
@@ -350,43 +350,48 @@ const Header = (props: MenuType) => {
     </div>
   </div>
 
-  const handleMouseEnter = (list:any)=>{
+  const handleMouseEnter = (list: any) => {
     setItems(true)
     setItemList(list)
   }
 
-  const SubItems = ({ subitems , isSub=false}: { subitems: SubitemsType[] | undefined ,isSub?:boolean}) => {
+  const SubItems = ({ subitems, isSub = false }: { subitems: SubitemsType[] | undefined, isSub?: boolean }) => {
     return (
-      <ul className={classNames("flex-col w-full h-full pr-4",{["w-70"]:isSub})} tabIndex={-1} onMouseEnter={()=>setItems(isSub)}>
-        {subitems && subitems?.map((item: any, i: number) =>
-          item?.items?.length > 0 ?
-            <button key={i} className="group hover:border hover:border-surface-400 rounded hover:text-primary-500 px-2 py-2 w-full" onMouseEnter={() => handleMouseEnter(item?.items) } onMouseLeave={()=>setItems(false)}>
-              <Link href={item?.href ? item.href : ""} passHref>
-                <div className="flex items-center justify-between ">
-                  <p className="group-hover:underline font-normal group-hover:text-primary-500 text-surface-400 font-texts">
-                    {item?.label}
-                  </p>
-                  <span className="material-symbols-outlined  text-lg group-hover:text-primary-500 text-surface-400 font-bold ml-3 ">arrow_forward_ios</span>
-                </div>
-              </Link>
-            </button >
-            : item.bold ?
-              <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-heading text-surface-950 font-semibold py-2 w-full" onMouseEnter={() => setItems(false) } >{item.label}</p></Link>
-              :
-              <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-texts text-surface-400 hover:text-primary-500 pl-2 font-normal py-2 w-full" onMouseEnter={() => setItems(false) }>{item.label}</p></Link>
-        )}
-      </ul>
+      <div className="w-75 border-r border-surface-400">
+        <ul className={classNames("flex-col w-full h-full pr-4", { ["w-70"]: isSub })} tabIndex={-1}>
+          {subitems && subitems?.map((item: any, i: number) =>
+            item?.items?.length > 0 ?
+              <button key={i} className="group hover:border hover:border-surface-400 rounded hover:text-primary-500 px-2 py-2 w-full"
+                onMouseEnter={() => handleMouseEnter(item?.items)}
+                onMouseLeave={() => setItems(false)}>
+                <Link href={item?.href ? item.href : ""} passHref>
+                  <div className="flex items-center justify-between ">
+                    <p className="group-hover:underline font-normal group-hover:text-primary-500 text-surface-400 font-texts text-wrap text-left">
+                      {item?.label}
+                    </p>
+                    <span className="material-symbols-outlined  text-lg group-hover:text-primary-500 text-surface-400 font-bold ml-3 ">arrow_forward_ios</span>
+                  </div>
+                </Link>
+              </button >
+              : item.bold ?
+                <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-heading text-surface-950 font-semibold py-2 w-full"  >{item.label}</p></Link>
+                :
+                <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-texts text-surface-400 hover:text-primary-500 pl-2 font-normal py-2 w-full" >{item.label}</p></Link>
+          )}
+        </ul>
+      </div>
+
     )
   }
   const SubItemsCols = ({ subitems }: { subitems: SubitemsType[] | undefined }) => {
     return (
-      <ul className="grid grid-rows-12 grid-flow-col grid-cols-3" tabIndex={-1} onMouseEnter={()=>setItems(true)} onMouseLeave={()=>setItems(false)}>
+      <ul className="flex flex-col flex-wrap w-1/3 " tabIndex={-1} onMouseEnter={() => setItems(true)} onMouseLeave={() => setItems(true)}>
         {subitems && subitems?.map((item: any, i: number) =>
-         item.bold ?
-              <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-heading text-surface-950 font-semibold text-base">{item.label}</p></Link>
-              :
-              <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-texts text-surface-400 hover:text-primary-500 pl-2 font-normal text-base ">{item.label}</p></Link>
-        )}
+          item.bold ?
+            <li className=""><Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-heading text-surface-950 font-semibold text-base mr-3 mb-3">{item.label}</p></Link>
+            </li> :
+            <li className=""><Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-texts text-surface-400 hover:text-primary-500 pl-2 font-normal text-base text-wrap text-left mr-3 mb-3">{item.label}</p></Link>
+            </li>)}
       </ul>
     )
   }
@@ -421,39 +426,22 @@ const Header = (props: MenuType) => {
                 menu_item.subitems ?
                   <NavigationMenu.Content className="h-full bg-transparent shadow-none">
                     <div className="w-full h-[1000px] bg-surface-950/30 absolute -z-20 blur-md my-20 overscroll-none overflow-y-hidden "></div>
-                    <div className="bg-surface-0 max-h-[1000px] px-21 py-6 h-full w-full" >
+                    <div className="bg-surface-50 h-full max-h-[600px] px-21 py-6  w-full flex justify-center" >
                       {/* items and subitems */}
-                      <div className="flex w-full">
-                        <div className="w-1/4 border-r border-surface-400">
-                          <SubItems subitems={menu_item?.subitems} />
-                        </div>
+                      <div className="flex w-full max-w-[1200px] ">
+                        <SubItems subitems={menu_item?.subitems} />
                         <div className="w-3/4 px-3" >
-                          {(items && itemList.length < 11) && <SubItems subitems={itemList} isSub={true}/>}
-                          {(items && itemList.length > 10) && <SubItemsCols subitems={itemList}/>}
-                          {!items && <LayoutHome/>}
+                          {(items && itemList.length < 11) && <SubItems subitems={itemList} isSub={true} />}
+                          {(items && itemList.length > 10) && <SubItemsCols subitems={itemList} />}
+                          {!items && <LayoutHome />}
                         </div>
-
                       </div>
-
-
-                      {/* <div className="flex h-full ">
-                        <SubItems subitems={menu_item?.subitems} />  {
-                          !items ?
-                            <div className="flex-col space-y-3 w-3/4 justify-between">
-                               <RepeatableBannerSection {...data?.banners} />
-                               <div className="border-t border-surface-400 py-2">
-                               <AlertInfo {...data?.alert}/> 
-                               </div>
-                            </div>
-                            : null
-                        }                      
-                      </div> */}
-
                     </div>
                   </NavigationMenu.Content> : null
               }
             </NavigationMenu.Item>
           )}
+
 
           <NavigationMenu.Indicator className="NavigationMenuIndicator">
             <div className="Arrow" />
