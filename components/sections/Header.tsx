@@ -341,7 +341,7 @@ const Header = (props: MenuType) => {
           "ctaUrl": null,
           "ctaText": null,
           "textPosition": "left_top",
-          "overlay": null,
+          "overlay": "dark",
           "contentVariant": "light"
         }
       ]
