@@ -133,6 +133,48 @@ const Header = (props: MenuType) => {
             "items": []
           },
           {
+            "id": "1",
+            "label": "Bachillerato",
+            "bold": false,
+            "href": null,
+            "items": []
+          },
+          {
+            "id": "1",
+            "label": "Bachillerato",
+            "bold": false,
+            "href": null,
+            "items": []
+          },
+          {
+            "id": "1",
+            "label": "Bachillerato",
+            "bold": false,
+            "href": null,
+            "items": []
+          },
+          {
+            "id": "1",
+            "label": "Bachillerato",
+            "bold": false,
+            "href": null,
+            "items": []
+          },
+          {
+            "id": "1",
+            "label": "Bachillerato",
+            "bold": false,
+            "href": null,
+            "items": []
+          },
+          {
+            "id": "1",
+            "label": "Bachillerato",
+            "bold": false,
+            "href": null,
+            "items": []
+          },
+          {
             "id": "3",
             "label": "Licenciaturas",
             "bold": false,
@@ -282,7 +324,7 @@ const Header = (props: MenuType) => {
           "ctaText": null,
           "textPosition": "left_top",
           "overlay": null,
-          "contentVariant": "light"
+          "contentVariant": "dark"
         },
         {
           "title": "Banner 2",
@@ -343,9 +385,9 @@ const Header = (props: MenuType) => {
     )
   }
 
-  const LayoutHome = () => <div className="flex-col space-y-3 w-full justify-between">
+  const LayoutHome = () => <div className="flex flex-col space-y-3 w-full justify-between h-full">
     <RepeatableBannerSection {...data?.banners} />
-    <div className="border-t border-surface-400 py-2">
+    <div className="border-t border-surface-200 py-2">
       <AlertInfo {...data?.alert} />
     </div>
   </div>
@@ -357,26 +399,26 @@ const Header = (props: MenuType) => {
 
   const SubItems = ({ subitems, isSub = false }: { subitems: SubitemsType[] | undefined, isSub?: boolean }) => {
     return (
-      <div className="w-75 border-r border-surface-400">
-        <ul className={classNames("flex-col w-full h-full pr-4", { ["w-70"]: isSub })} tabIndex={-1}>
+      <div className="w-75 border-r border-surface-200">
+        <ul className={classNames("flex-col w-full h-full pr-6", { ["w-70"]: isSub })} tabIndex={-1}>
           {subitems && subitems?.map((item: any, i: number) =>
             item?.items?.length > 0 ?
-              <button key={i} className="group hover:border hover:border-surface-400 rounded hover:text-primary-500 px-2 py-2 w-full"
+              <button key={i} className="group hover:border hover:border-surface-200 rounded hover:text-primary-500 px-3 py-2 w-full"
                 onMouseEnter={() => handleMouseEnter(item?.items)}
                 onMouseLeave={() => setItems(false)}>
                 <Link href={item?.href ? item.href : ""} passHref>
                   <div className="flex items-center justify-between ">
-                    <p className="group-hover:underline font-normal group-hover:text-primary-500 text-surface-400 font-texts text-wrap text-left">
+                    <p className="group-hover:underline font-normal group-hover:text-primary-500 text-surface-500 font-texts text-wrap text-left">
                       {item?.label}
                     </p>
-                    <span className="material-symbols-outlined  text-lg group-hover:text-primary-500 text-surface-400 font-bold ml-3 ">arrow_forward_ios</span>
+                    <span className="material-symbols-outlined text-2xl group-hover:text-primary-500 text-surface-400 font-bold ml-3 ">chevron_right</span>
                   </div>
                 </Link>
               </button >
               : item.bold ?
-                <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-heading text-surface-950 font-semibold py-2 w-full"  >{item.label}</p></Link>
+                <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-heading text-surface-950 font-semibold py-2 w-full "  >{item.label}</p></Link>
                 :
-                <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-texts text-surface-400 hover:text-primary-500 pl-2 font-normal py-2 w-full" >{item.label}</p></Link>
+                <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-texts text-surface-400 hover:text-primary-500 font-normal py-2 px-3 w-full" >{item.label}</p></Link>
           )}
         </ul>
       </div>
@@ -415,11 +457,11 @@ const Header = (props: MenuType) => {
         </div>
       </NavigationMenu.Root>
       {/* Segundo Nivel delMenu */}
-      <NavigationMenu.Root className="h-11 border-b border-surface-300 shadow">
+      <NavigationMenu.Root className="h-9.5 border-b border-surface-300 shadow">
         <NavigationMenu.List className="flex px-21  w-full items-center ">
           {data.menu_items.map((menu_item: any, i: number) =>
             <NavigationMenu.Item key={i}>
-              <NavigationMenu.Trigger className="group flex space-x-4 font-headings font-semibold text-surface-900 items-center text-sm border-surface-300 px-3 data-[state=open]:border-b-4 data-[state=open]:border-primary-300 data-[state=open]:text-primary-300 py-3">
+              <NavigationMenu.Trigger className="group flex h-9.5 space-x-4 font-headings font-normal text-surface-900 items-center text-sm border-surface-300 px-3 data-[state=open]:border-b-4 data-[state=open]:border-primary-300 data-[state=open]:text-primary-300 py-3">
                 {menu_item.label} <CaretDownIcon className="relative transition duration-150 ease-out hover:ease-in group-data-[state=open]:rotate-180 group-data-[state=open]:text-primary-300 ml-1" aria-hidden />
               </NavigationMenu.Trigger>
               {
@@ -428,9 +470,9 @@ const Header = (props: MenuType) => {
                     <div className="w-full h-[1000px] bg-surface-950/30 absolute -z-20 blur-md my-20 overscroll-none overflow-y-hidden "></div>
                     <div className="bg-surface-50 h-full max-h-[600px] px-21 py-6  w-full flex justify-center" >
                       {/* items and subitems */}
-                      <div className="flex w-full max-w-[1200px] ">
+                      <div className="flex w-full max-w-[1200px] min-h-fit ">
                         <SubItems subitems={menu_item?.subitems} />
-                        <div className="w-3/4 px-3" >
+                        <div className="w-3/4 px-6 h-full" >
                           {(items && itemList.length < 11) && <SubItems subitems={itemList} isSub={true} />}
                           {(items && itemList.length > 10) && <SubItemsCols subitems={itemList} />}
                           {!items && <LayoutHome />}
