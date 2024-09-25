@@ -388,10 +388,10 @@ const Header = (props: MenuType) => {
       <ul className="flex flex-col flex-wrap h-100 w-1/3 " tabIndex={-1} onMouseEnter={() => setItems(true)} onMouseLeave={() => setItems(true)}>
         {subitems && subitems?.map((item: any, i: number) =>
           item.bold ?
-            <li className=""><Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-heading text-surface-950 font-semibold text-base mr-3 mb-3">{item.label}</p></Link>
-            </li> :
-            <li className=""><Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-texts text-surface-400 hover:text-primary-500 pl-2 font-normal text-base text-wrap text-left mr-3 mb-3">{item.label}</p></Link>
-            </li>)}
+            <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-heading text-surface-950 font-semibold text-base mr-3 mb-3">{item.label}</p></Link>
+          :
+            <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-texts text-surface-400 hover:text-primary-500 pl-2 font-normal text-base text-wrap text-left mr-3 mb-3">{item.label}</p></Link>
+           )}
       </ul>
     )
   }
