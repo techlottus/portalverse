@@ -1,5 +1,3 @@
-import cn from "classnames";
-import Button from "@/old-components/Button/Button";
 import { MenuType, SubitemsType } from "@/utils/strapi/sections/Header";
 import React, { useState } from 'react';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
@@ -7,7 +5,6 @@ import classNames from 'classnames';
 import { CaretDownIcon } from '@radix-ui/react-icons';
 import Link from "next/link"
 import { useRouter } from "next/router";
-import Banner from "./Banner";
 import RepeatableBannerSection from "./RepeatableBannerSection";
 import AlertInfo from "./AlertInfo";
 
@@ -341,7 +338,7 @@ const Header = (props: MenuType) => {
           "ctaUrl": null,
           "ctaText": null,
           "textPosition": "left_top",
-          "overlay": "dark",
+          "overlay": "black",
           "contentVariant": "light"
         }
       ]
@@ -367,15 +364,15 @@ const Header = (props: MenuType) => {
   }
   const [items, setItems] = useState(false)
   const [itemList, setItemList] = useState<any[]>([])
+  const [SubItemList, setSubItemList] = useState<any[]>([])
 
   const Links = () => {
     return (
-      <NavigationMenu.List className="flex w-full items-center justify-end last:border-none ">
-        {/*TODO map function to list items */}
+      <NavigationMenu.List className="flex w-full items-center justify-end last:border-none">
         {data?.links_button.map((link: any, i: number) =>
-          <NavigationMenu.Item key={i} className=" border-r border-surface-300 px-3 ">
+          <NavigationMenu.Item key={i} className="px-3 border-r border-surface-300">
             <Link href={link.href ? link.href : ""} passHref >
-              <p className="font-headings font-normal text-xs text-surface-400 hover:underline cursor-pointer">
+              <p className="font-headings font-normal text-xs text-surface-400 cursor-pointer hover:underline">
                 {link?.text}
               </p>
             </Link>
@@ -384,19 +381,23 @@ const Header = (props: MenuType) => {
       </NavigationMenu.List>
     )
   }
+  const LayoutHome = () => (
+    <div className="flex flex-col space-y-3 w-full justify-between h-full">
+      <RepeatableBannerSection {...data?.banners} />
+      <div className="border-t border-surface-200 py-2">
+        <AlertInfo {...data?.alert} />
+      </div>
+    </div>)
+  const handleMouseEnter = (list: any, isSub: boolean) => {
+    if (!isSub) {
+      setItems(true)
+      setItemList(list)
+    }
+    else {
+      setSubItemList(list)
+    }
 
-  const LayoutHome = () => <div className="flex flex-col space-y-3 w-full justify-between h-full">
-    <RepeatableBannerSection {...data?.banners} />
-    <div className="border-t border-surface-200 py-2">
-      <AlertInfo {...data?.alert} />
-    </div>
-  </div>
-
-  const handleMouseEnter = (list: any) => {
-    setItems(true)
-    setItemList(list)
   }
-
   const SubItems = ({ subitems, isSub = false }: { subitems: SubitemsType[] | undefined, isSub?: boolean }) => {
     return (
       <div className="w-75 border-r border-surface-200">
@@ -404,7 +405,7 @@ const Header = (props: MenuType) => {
           {subitems && subitems?.map((item: any, i: number) =>
             item?.items?.length > 0 ?
               <button key={i} className="group hover:border hover:border-surface-200 rounded hover:text-primary-500 px-3 py-2 w-full"
-                onMouseEnter={() => handleMouseEnter(item?.items)}
+                onMouseEnter={() => handleMouseEnter(item?.items, isSub)}
                 onMouseLeave={() => setItems(false)}>
                 <Link href={item?.href ? item.href : ""} passHref>
                   <div className="flex items-center justify-between ">
@@ -427,22 +428,22 @@ const Header = (props: MenuType) => {
   }
   const SubItemsCols = ({ subitems }: { subitems: SubitemsType[] | undefined }) => {
     return (
-      <ul className="flex flex-col flex-wrap h-100 w-1/3 " tabIndex={-1} onMouseEnter={() => setItems(true)} onMouseLeave={() => setItems(true)}>
+      <ul className="flex flex-col flex-wrap max-h-100 w-1/3 " tabIndex={-1} onMouseEnter={() => setItems(true)} onMouseLeave={() => setItems(true)}>
         {subitems && subitems?.map((item: any, i: number) =>
           item.bold ?
             <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-heading text-surface-950 font-semibold text-base mr-3 mb-3">{item.label}</p></Link>
-          :
+            :
             <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-texts text-surface-400 hover:text-primary-500 pl-2 font-normal text-base text-wrap text-left mr-3 mb-3">{item.label}</p></Link>
-           )}
+        )}
       </ul>
     )
   }
 
   return (
-    <div className="absolute top-0 z-20 flex flex-col w-full ">
+    <div className="flex flex-col absolute top-0 z-20 w-full">
       {/* Primer nivel del menú */}
-      <NavigationMenu.Root className="flex py-4 px-21  border-b border-surface-300 w-full justify-between">
-        <div className="w-18 h-10 bg-logo bg-cover bg-center "></div>
+      <NavigationMenu.Root className="flex w-full justify-between py-4 px-21 border-b border-surface-300">
+        <div className="w-18 h-10 bg-logo bg-cover bg-center"></div>
         <div className="flex items-center">
           <Links />
           <button
@@ -466,15 +467,26 @@ const Header = (props: MenuType) => {
               </NavigationMenu.Trigger>
               {
                 menu_item.subitems ?
+                  // Tercer nivel
                   <NavigationMenu.Content className="h-full bg-transparent shadow-none">
                     <div className="w-full h-[1000px] bg-surface-950/30 absolute -z-20 blur-md my-20 overscroll-none overflow-y-hidden "></div>
                     <div className="bg-surface-50 h-full max-h-[600px] px-21 py-6  w-full flex justify-center" >
                       {/* items and subitems */}
                       <div className="flex w-full max-w-[1200px] min-h-fit ">
                         <SubItems subitems={menu_item?.subitems} />
-                        <div className="w-3/4 px-6 h-full" >
-                          {(items && itemList.length < 11) && <SubItems subitems={itemList} isSub={true} />}
+                        <div className="w-3/4 px-6 h-full flex" >
+                          {(items && itemList.length < 11) &&
+                            <div className="flex space-x-3">
+                              <SubItems subitems={itemList} isSub={true} />
+                              {SubItemList && SubItemList.length < 10 ?
+                                <SubItems subitems={SubItemList} isSub={false} />
+                                : <SubItemsCols subitems={SubItemList} />
+                              }
+                            </div>
+                          }
+
                           {(items && itemList.length > 10) && <SubItemsCols subitems={itemList} />}
+
                           {!items && <LayoutHome />}
                         </div>
                       </div>
@@ -483,15 +495,13 @@ const Header = (props: MenuType) => {
               }
             </NavigationMenu.Item>
           )}
-
-
           <NavigationMenu.Indicator className="NavigationMenuIndicator">
             <div className="Arrow" />
           </NavigationMenu.Indicator>
         </NavigationMenu.List>
-        <div className="ViewportPosition">
+        {/* <div className="ViewportPosition">
           <NavigationMenu.Viewport className="NavigationMenuViewport" />
-        </div>
+        </div> */}
       </NavigationMenu.Root>
     </div>
   );
