@@ -1,512 +1,155 @@
 import { MenuType, SubitemsType } from "@/utils/strapi/sections/Header";
 import React, { useState } from 'react';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
-import classNames from 'classnames';
 import { CaretDownIcon } from '@radix-ui/react-icons';
-import Link from "next/link"
+import Link from "next/link";
 import { useRouter } from "next/router";
 import RepeatableBannerSection from "./RepeatableBannerSection";
 import AlertInfo from "./AlertInfo";
+import classNames from "classnames";
 
+// Componente principal Header
 const Header = (props: MenuType) => {
-  const {
-    id,
-    show_logo,
-    name,
-    links_button,
-    menu_items,
-    banners,
-    alert
-  } = props;
+  const { id, show_logo, name, links_button, menu_items, banners, alert } = props;
+  const router = useRouter();
 
-  const router = useRouter()
-  const data: any = {
-    "show_logo": true,
-    "name": "header-demo",
-    "links_button": [
-      {
-        "id": "15",
-        "text": "Alumnos",
-        "target": "blank",
-        "href": "/alumnos",
-        "iconName": null,
-        "iconPosition": "left"
-      },
-      {
-        "id": "16",
-        "text": "Egresados",
-        "target": "blank",
-        "href": "/egresados",
-        "iconName": null,
-        "iconPosition": "left"
-      },
-      {
-        "label": "Pedir info",
-        "CTA": "/pedir-informacion",
-        "size": null,
-        "id": "24",
-        "variant": "primary",
-        "iconName": null
-      }
-    ],
-    "menu_items": [
-      {
-        "id": "1",
-        "label": "Admisiones",
-        "subitems": [
-          {
-            "id": "4",
-            "label": "Salud",
-            "bold": true,
-            "href": "/salud",
-            "items": []
-          },
-          {
-            "id": "5",
-            "label": "Licenciatura en Psicología",
-            "bold": false,
-            "href": "/licenciatura",
-            "items": [
-              {
-                "id": "20",
-                "label": "Licenciatura en Contaduría y Finanzas",
-                "bold": true,
-                "href": null,
-                "items": [
-                  {
-                    "id": "1",
-                    "label": "Licenciatura en Psicología",
-                    "href": null,
-                    "bold": true
-                  },
-                  {
-                    "id": "2",
-                    "label": "Licenciatura en Nutrición",
-                    "href": null,
-                    "bold": false
-                  },
-                  {
-                    "id": "3",
-                    "label": "Licenciatura en Fisioterapia",
-                    "href": null,
-                    "bold": false
-                  }
-                ]
-              },
-              {
-                "id": "19",
-                "label": "Licenciatura en Cirujano Dentista",
-                "bold": false,
-                "href": null,
-                "items": []
-              },
-              {
-                "id": "18",
-                "label": "Licenciatura en Derecho",
-                "bold": false,
-                "href": null,
-                "items": []
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "2",
-        "label": "Oferta Academica",
-        "subitems": [
-          {
-            "id": "2",
-            "label": "Nivel Educativo",
-            "bold": true,
-            "href": null,
-            "items": []
-          },
-          {
-            "id": "1",
-            "label": "Bachillerato",
-            "bold": false,
-            "href": null,
-            "items": []
-          },
-          {
-            "id": "1",
-            "label": "Bachillerato",
-            "bold": false,
-            "href": null,
-            "items": []
-          },
-          {
-            "id": "1",
-            "label": "Bachillerato",
-            "bold": false,
-            "href": null,
-            "items": []
-          },
-          {
-            "id": "1",
-            "label": "Bachillerato",
-            "bold": false,
-            "href": null,
-            "items": []
-          },
-          {
-            "id": "1",
-            "label": "Bachillerato",
-            "bold": false,
-            "href": null,
-            "items": []
-          },
-          {
-            "id": "1",
-            "label": "Bachillerato",
-            "bold": false,
-            "href": null,
-            "items": []
-          },
-          {
-            "id": "1",
-            "label": "Bachillerato",
-            "bold": false,
-            "href": null,
-            "items": []
-          },
-          {
-            "id": "3",
-            "label": "Licenciaturas",
-            "bold": false,
-            "href": null,
-            "items": [
-              {
-                "id": "3",
-                "label": "Negocios y Empresariales",
-                "bold": true,
-                "href": null,
-                "items": []
-              },
-              {
-                "id": "2",
-                "label": "Licenciatura en Administración de Empresas",
-                "bold": false,
-                "href": null,
-                "items": []
-              },
-              {
-                "id": "1",
-                "label": "Licenciatura Ejecutiva en Comercio Internacional",
-                "bold": false,
-                "href": null,
-                "items": []
-              },
-              {
-                "id": "4",
-                "label": "Licenciatura en Contaduría y Finanzas",
-                "bold": false,
-                "href": null,
-                "items": []
-              },
-              {
-                "id": "6",
-                "label": "Licenciatura en Mercadotecnia",
-                "bold": false,
-                "href": null,
-                "items": []
-              },
-              {
-                "id": "5",
-                "label": "Licenciatura en Turismo",
-                "bold": false,
-                "href": null,
-                "items": []
-              },
-              {
-                "id": "7",
-                "label": "Salud",
-                "bold": true,
-                "href": null,
-                "items": []
-              },
-              {
-                "id": "8",
-                "label": "Licenciatura en Psicología",
-                "bold": false,
-                "href": null,
-                "items": []
-              },
-              {
-                "id": "9",
-                "label": "Licenciatura en Nutrición",
-                "bold": false,
-                "href": null,
-                "items": []
-              },
-              {
-                "id": "11",
-                "label": "Licenciatura en Fisioterapia",
-                "bold": false,
-                "href": null,
-                "items": []
-              },
-              {
-                "id": "10",
-                "label": "Licenciatura en Cirujano Dentista",
-                "bold": false,
-                "href": null,
-                "items": []
-              },
-              {
-                "id": "12",
-                "label": "Ingeniería y Tecnologías",
-                "bold": true,
-                "href": null,
-                "items": []
-              },
-              {
-                "id": "13",
-                "label": "Licenciatura en Ingeniería en Sistemas Computacionales",
-                "bold": false,
-                "href": null,
-                "items": []
-              },
-              {
-                "id": "14",
-                "label": "Licenciatura Ejecutiva en Comercio Internacional",
-                "bold": false,
-                "href": null,
-                "items": []
-              },
-              {
-                "id": "17",
-                "label": "Licenciatura en Contaduría y Finanzas",
-                "bold": false,
-                "href": null,
-                "items": []
-              },
-              {
-                "id": "16",
-                "label": "Licenciatura en Mercadotecnia",
-                "bold": false,
-                "href": null,
-                "items": []
-              },
-              {
-                "id": "15",
-                "label": "Licenciatura en Turismo",
-                "bold": false,
-                "href": null,
-                "items": []
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "banners": {
-      "title": null,
-      "description": null,
-      "banners": [
-        {
-          "title": "Banner 1",
-          "subtitle": "contenido de banner 1",
-          "desktopRatio": "2/1",
-          "desktopImage": {
-            "data": {
-              "attributes": {
-                "url": "https://bedu-staging-assets.s3.us-west-2.amazonaws.com/ULA/ULA_Desktop_Background_Image_f7aa20c49e.png",
-                "alternativeText": null
-              }
-            }
-          },
-          "ctaUrl": null,
-          "ctaText": null,
-          "textPosition": "left_top",
-          "overlay": null,
-          "contentVariant": "dark"
-        },
-        {
-          "title": "Banner 2",
-          "subtitle": "contenido de banner 2",
-          "desktopRatio": "2/1",
-          "desktopImage": {
-            "data": {
-              "attributes": {
-                "url": "https://bedu-staging-assets.s3.us-west-2.amazonaws.com/ULA/ULA_Desktop_Background_Image_f7aa20c49e.png",
-                "alternativeText": null
-              }
-            }
-          },
-          "ctaUrl": null,
-          "ctaText": null,
-          "textPosition": "left_top",
-          "overlay": "black",
-          "contentVariant": "light"
-        }
-      ]
-    },
-    "alert": {
-      "title": "¿Necesitas orientación personalizada?",
-      "subtitle": "Resuelve todas tus dudas",
-      "image": {
-        "data": {
-          "attributes": {
-            "url": "https://bedu-staging-assets.s3.us-west-2.amazonaws.com/ULA/Icon_a110cef675.svg"
-          }
-        }
-      },
-      "link": {
-        "text": "Pedir información",
-        "target": "blank",
-        "iconName": "arrow_forward",
-        "iconPosition": "right",
-        "href": "/pedir-informacion"
-      }
-    }
-  }
-  const [items, setItems] = useState(false)
-  const [itemList, setItemList] = useState<any[]>([])
-  const [SubItemList, setSubItemList] = useState<any[]>([])
+  const [items, setItems] = useState(false);
+  const [itemList, setItemList] = useState<SubitemsType[]>([]);
+  const [subItemList, setSubItemList] = useState<SubitemsType[]>([]);
 
-  const Links = () => {
-    return (
-      <NavigationMenu.List className="flex w-full items-center justify-end last:border-none">
-        {data?.links_button.map((link: any, i: number) =>
-          <NavigationMenu.Item key={i} className="px-3 border-r border-surface-300">
-            <Link href={link.href ? link.href : ""} passHref >
-              <p className="font-headings font-normal text-xs text-surface-400 cursor-pointer hover:underline">
-                {link?.text}
-              </p>
+  // Componente de enlaces
+  const Links = ({ links }: { links?: (MenuType['links_button']) }) => (
+    <NavigationMenu.List className="flex w-full items-center justify-end last:border-none">
+      {links?.map((link?: any, i?: number) => (
+        <NavigationMenu.Item key={i} className="px-3 border-r border-surface-300">
+          <Link href={link?.href ?? ""} passHref>
+            <p className="font-headings font-normal text-xs text-surface-400 cursor-pointer hover:underline">
+              {link?.text}
+            </p>
+          </Link>
+        </NavigationMenu.Item>
+      ))}
+    </NavigationMenu.List>
+  );
+
+  // Componente de subitems
+  const SubItems = ({ subitems, isSub = false }: { subitems: SubitemsType[], isSub?: boolean }) => (
+    <div className="w-75 border-r border-surface-200">
+      <ul className={classNames("flex-col w-full h-full pr-6", { ["w-70"]: isSub })} tabIndex={-1}>
+        {subitems.map((item: any, i: number) =>
+          item?.items?.length > 0 ? (
+            <button key={i} className="group hover:border hover:border-surface-200 rounded hover:text-primary-500 px-3 py-2 w-full"
+              onMouseEnter={() => handleMouseEnter(item.items, isSub)}
+              onMouseLeave={() => setItems(false)}>
+              <Link href={item.href ?? ""} passHref>
+                <div className="flex items-center justify-between">
+                  <p className="group-hover:underline font-normal group-hover:text-primary-500 text-surface-500 font-texts text-wrap text-left">
+                    {item.label}
+                  </p>
+                  <span className="material-symbols-outlined text-2xl group-hover:text-primary-500 text-surface-400 font-bold ml-3">chevron_right</span>
+                </div>
+              </Link>
+            </button>
+          ) : (
+            <Link key={i} href={item.href ?? ""} passHref>
+              <p className={classNames("py-2 w-full", { ["font-heading text-surface-950 font-semibold"]: item.bold, ["font-texts text-surface-500 hover:text-primary-500 font-normal px-3"]: !item.bold })}>{item.label}</p>
             </Link>
-          </NavigationMenu.Item>
-        )}
-      </NavigationMenu.List>
-    )
-  }
-  const LayoutHome = () => (
-    <div className="flex flex-col space-y-3 w-full justify-between h-full">
-      <RepeatableBannerSection {...data?.banners} />
-      <div className="border-t border-surface-200 py-2">
-        <AlertInfo {...data?.alert} />
-      </div>
-    </div>)
-  const handleMouseEnter = (list: any, isSub: boolean) => {
-    if (!isSub) {
-      setItems(true)
-      setItemList(list)
-    }
-    else {
-      setSubItemList(list)
-    }
-
-  }
-  const SubItems = ({ subitems, isSub = false }: { subitems: SubitemsType[] | undefined, isSub?: boolean }) => {
-    return (
-      <div className="w-75 border-r border-surface-200">
-        <ul className={classNames("flex-col w-full h-full pr-6", { ["w-70"]: isSub })} tabIndex={-1}>
-          {subitems && subitems?.map((item: any, i: number) =>
-            item?.items?.length > 0 ?
-              <button key={i} className="group hover:border hover:border-surface-200 rounded hover:text-primary-500 px-3 py-2 w-full"
-                onMouseEnter={() => handleMouseEnter(item?.items, isSub)}
-                onMouseLeave={() => setItems(false)}>
-                <Link href={item?.href ? item.href : ""} passHref>
-                  <div className="flex items-center justify-between ">
-                    <p className="group-hover:underline font-normal group-hover:text-primary-500 text-surface-500 font-texts text-wrap text-left">
-                      {item?.label}
-                    </p>
-                    <span className="material-symbols-outlined text-2xl group-hover:text-primary-500 text-surface-400 font-bold ml-3 ">chevron_right</span>
-                  </div>
-                </Link>
-              </button >
-              : item.bold ?
-                <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-heading text-surface-950 font-semibold py-2 w-full "  >{item.label}</p></Link>
-                :
-                <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-texts text-surface-400 hover:text-primary-500 font-normal py-2 px-3 w-full" >{item.label}</p></Link>
-          )}
-        </ul>
-      </div>
-
-    )
-  }
-  const SubItemsCols = ({ subitems }: { subitems: SubitemsType[] | undefined }) => {
-    return (
-      <ul className="flex flex-col flex-wrap max-h-100 w-1/3 " tabIndex={-1} onMouseEnter={() => setItems(true)} onMouseLeave={() => setItems(true)}>
-        {subitems && subitems?.map((item: any, i: number) =>
-          item.bold ?
-            <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-heading text-surface-950 font-semibold text-base mr-3 mb-3">{item.label}</p></Link>
-            :
-            <Link key={i} href={item?.href ? item.href : ""} passHref><p className="font-texts text-surface-400 hover:text-primary-500 pl-2 font-normal text-base text-wrap text-left mr-3 mb-3">{item.label}</p></Link>
+          )
         )}
       </ul>
-    )
-  }
+    </div>
+  );
+
+  const SubItemsCols = ({ subitems }: { subitems: SubitemsType[] }) => (
+    <ul className="flex flex-col flex-wrap max-h-100 w-1/3" tabIndex={-1} onMouseEnter={() => setItems(true)} onMouseLeave={() => setItems(true)}>
+      {subitems.map((item, i) => (
+        <Link key={i} href={item.href ?? ""} passHref>
+          <p className={classNames("font-text text-base mr-3 mb-3",
+            {
+              ["font-heading text-surface-950 font-semibold"]: item.bold,
+              ["font-texts text-surface-400 hover:text-primary-500 pl-2 font-normal text-wrap text-left"]: !item.bold
+            })}>
+            {item.label}
+          </p>
+        </Link>
+      ))}
+    </ul>
+  );
+
+  // Layout para la página de inicio
+  const LayoutHome = ({ banners, alert }: { banners: any, alert: any }) => (
+    <div className="flex flex-col space-y-3 w-full justify-between h-full">
+      <RepeatableBannerSection {...banners} />
+      <div className="border-t border-surface-200 py-2">
+        <AlertInfo {...alert} />
+      </div>
+    </div>
+  );
+
+  const handleMouseEnter = (list: SubitemsType[], isSub: boolean) => {
+    if (!isSub) {
+      setItems(true);
+      setItemList(list);
+    } else {
+      setSubItemList(list);
+    }
+  };
 
   return (
-    <div className="flex flex-col absolute top-0 z-20 w-full">
+    <div className="absolute top-0 z-20 flex flex-col w-full">
       {/* Primer nivel del menú */}
-      <NavigationMenu.Root className="flex w-full justify-between py-4 px-21 border-b border-surface-300">
+      <NavigationMenu.Root className="flex py-4 px-21 border-b border-surface-300 w-full justify-between">
         <div className="w-18 h-10 bg-logo bg-cover bg-center"></div>
         <div className="flex items-center">
-          <Links />
+          <Links links={links_button} />
           <button
-            onClick={() => {
-              if (data?.links_button[2].CTA) {
-                router?.push(data.links_button[-1].CTA);
-              }
-            }}
+            onClick={() => { links_button[2].CTA ? router.push(links_button[2].CTA) : null }}
             className="px-4 py-3 rounded bg-surface-950 border border-surface-950 text-sm text-surface-100 font-texts hover:bg-surface-50 hover:text-surface-950">
-            {data?.links_button[2]?.label}
+            {links_button[2]?.label}
           </button>
         </div>
       </NavigationMenu.Root>
-      {/* Segundo Nivel delMenu */}
+
+      {/* Segundo nivel del menú */}
       <NavigationMenu.Root className="h-9.5 border-b border-surface-300 shadow">
-        <NavigationMenu.List className="flex px-21  w-full items-center ">
-          {data.menu_items.map((menu_item: any, i: number) =>
+        <NavigationMenu.List className="px-21 w-full flex items-center">
+          {menu_items?.map((menu_item, i) => (
             <NavigationMenu.Item key={i}>
               <NavigationMenu.Trigger className="group flex h-9.5 space-x-4 font-headings font-normal text-surface-900 items-center text-sm border-surface-300 px-3 data-[state=open]:border-b-4 data-[state=open]:border-primary-300 data-[state=open]:text-primary-300 py-3">
                 {menu_item.label} <CaretDownIcon className="relative transition duration-150 ease-out hover:ease-in group-data-[state=open]:rotate-180 group-data-[state=open]:text-primary-300 ml-1" aria-hidden />
               </NavigationMenu.Trigger>
-              {
-                menu_item.subitems ?
-                  // Tercer nivel
-                  <NavigationMenu.Content className="h-full bg-transparent shadow-none">
-                    <div className="w-full h-[1000px] bg-surface-950/30 absolute -z-20 blur-md my-20 overscroll-none overflow-y-hidden "></div>
-                    <div className="bg-surface-50 h-full max-h-[600px] px-21 py-6  w-full flex justify-center" >
-                      {/* items and subitems */}
-                      <div className="flex w-full max-w-[1200px] min-h-fit ">
-                        <SubItems subitems={menu_item?.subitems} />
-                        <div className="w-3/4 px-6 h-full flex" >
-                          {(items && itemList.length < 11) &&
-                            <div className="flex space-x-3">
-                              <SubItems subitems={itemList} isSub={true} />
-                              {SubItemList && SubItemList.length < 10 ?
-                                <SubItems subitems={SubItemList} isSub={false} />
-                                : <SubItemsCols subitems={SubItemList} />
-                              }
-                            </div>
-                          }
-
-                          {(items && itemList.length > 10) && <SubItemsCols subitems={itemList} />}
-
-                          {!items && <LayoutHome />}
-                        </div>
+              {menu_item.subitems && (
+                <NavigationMenu.Content className="h-full bg-transparent shadow-none">
+                  <div className="w-full h-[1000px] bg-surface-950/30 absolute -z-20 blur-md my-20 overscroll-none overflow-y-hidden"></div>
+                  <div className="bg-surface-50 h-full max-h-[600px] px-21 py-6 w-full flex justify-center">
+                    <div className="flex w-full max-w-[1200px] min-h-fit">
+                      <SubItems subitems={menu_item.subitems} />
+                      <div className="w-3/4 px-6 h-full flex">
+                        {(items && itemList.length < 11) &&
+                          <div className="flex space-x-3">
+                            <SubItems subitems={itemList} isSub={true} />
+                            {subItemList && subItemList.length < 10 ?
+                              <SubItems subitems={subItemList} isSub={false} />
+                              : <SubItemsCols subitems={subItemList} />
+                            }
+                          </div>
+                        }
+                        {(items && itemList.length > 10) && <SubItemsCols subitems={itemList} />}
+                        {!items && <LayoutHome banners={banners} alert={alert} />}
                       </div>
                     </div>
-                  </NavigationMenu.Content> : null
-              }
+                  </div>
+                </NavigationMenu.Content>
+              )}
             </NavigationMenu.Item>
-          )}
-          <NavigationMenu.Indicator className="NavigationMenuIndicator">
-            <div className="Arrow" />
-          </NavigationMenu.Indicator>
+          ))}
         </NavigationMenu.List>
-        {/* <div className="ViewportPosition">
+        <div className="ViewportPosition">
           <NavigationMenu.Viewport className="NavigationMenuViewport" />
-        </div> */}
+        </div>
       </NavigationMenu.Root>
     </div>
   );
 };
-
-
 
 export default Header;

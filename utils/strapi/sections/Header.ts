@@ -1,10 +1,8 @@
-import { LinkConfig } from "@/types/Link.types";
 import type {
   StrapiImage,
 } from "@/types/strapi/common";
-import { LinkListSection } from "./LinkList";
+import { Link } from "./LinkList";
 import { BannerPortalverseConfig } from "@/types/BannerPortalverse.types";
-import { ButtonConfig } from "@/types/Button.types";
 
 
 
@@ -24,7 +22,7 @@ export type AlertInfoType = {
   title?: string;
   subtitle?: string;
   image?: StrapiImage;
-  link?: LinkConfig;
+  link?: Link;
 }
 export type MenuItemsType = {
   id?: string;
@@ -35,7 +33,7 @@ export type MenuType = {
   id?: string;
   show_logo?: boolean;
   name?: string;
-  links_button?: LinkListSection| ButtonConfig; //TODO cambiar tipado en este prop
+  links_button: (any)[]; 
   menu_items?: MenuItemsType[];
   banners?:  BannerPortalverseConfig;
   alert?: AlertInfoType;
