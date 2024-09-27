@@ -10,7 +10,7 @@ import classNames from "classnames";
 
 // Componente principal Header
 const Header = (props: MenuType) => {
-  const { id, show_logo, name, links_button, menu_items, banners, alert } = props;
+  const { id, show_logo=true, name, links_button, menu_items, banners, alert } = props;
   const router = useRouter();
 
   const [items, setItems] = useState(false);
@@ -118,7 +118,7 @@ const Header = (props: MenuType) => {
                 {menu_item.label} <CaretDownIcon className="relative transition duration-150 ease-out hover:ease-in group-data-[state=open]:rotate-180 group-data-[state=open]:text-primary-300 ml-1" aria-hidden />
               </NavigationMenu.Trigger>
               {menu_item.subitems && (
-                <NavigationMenu.Content className="h-full bg-transparent shadow-none">
+                <NavigationMenu.Content className="h-full bg-transparent shadow-none w-full">
                   <div className="w-full h-[1000px] bg-surface-950/30 absolute -z-20 blur-md my-20 overscroll-none overflow-y-hidden"></div>
                   <div className="bg-surface-50 h-full max-h-[600px] px-21 py-6 w-full flex justify-center">
                     <div className="flex w-full max-w-[1200px] min-h-fit">
