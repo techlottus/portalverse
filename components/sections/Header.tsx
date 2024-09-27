@@ -39,8 +39,7 @@ const Header = (props: MenuType) => {
         {subitems.map((item: any, i: number) =>
           item?.items?.length > 0 ? (
             <button key={i} className="group hover:border hover:border-surface-200 rounded hover:text-primary-500 px-3 py-2 w-full"
-              onMouseEnter={() => handleMouseEnter(item.items, isSub)}
-              onMouseLeave={() => setItems(false)}>
+              onMouseEnter={() => handleMouseEnter(item.items, isSub)}>
               <Link href={item.href ?? ""} passHref>
                 <div className="flex items-center justify-between">
                   <p className="group-hover:underline font-normal group-hover:text-primary-500 text-surface-500 font-texts text-wrap text-left">
@@ -51,7 +50,7 @@ const Header = (props: MenuType) => {
               </Link>
             </button>
           ) : (
-            <Link key={i} href={item.href ?? ""} passHref>
+              <Link key={i} href={item.href ?? ""} passHref onMouseEnter={()=>setItems(false)}>
               <p className={classNames("py-2 w-full", { ["font-heading text-surface-950 font-semibold"]: item.bold, ["font-texts text-surface-500 hover:text-primary-500 font-normal px-3"]: !item.bold })}>{item.label}</p>
             </Link>
           )
