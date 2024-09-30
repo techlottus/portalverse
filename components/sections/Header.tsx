@@ -36,7 +36,7 @@ const Header = (props: MenuType) => {
   // Componente de subitems
   const SubItems = ({ subitems, isSub = false }: { subitems: SubitemsType[], isSub?: boolean }) => (
     <div className="w-75 border-r border-surface-200">
-      <ul className={classNames("flex-col w-full h-full pr-6", { ["w-70"]: isSub })} tabIndex={-1}>
+      <ul className={classNames("flex-col w-full h-full pr-6", { ["w-70"]: isSub })} tabIndex={-1} onMouseEnter={()=>{isSub? setSubItems(true):setItems(true)}} >
         {subitems.map((item: any, i: number) =>
           item?.items?.length > 0 ? (
             <button key={i} className="group hover:border hover:border-surface-200 rounded hover:text-primary-500 px-3 py-2 w-full"
@@ -60,8 +60,8 @@ const Header = (props: MenuType) => {
     </div>
   );
 
-  const SubItemsCols = ({ subitems }: { subitems: SubitemsType[] }) => (
-    <ul className="flex flex-col flex-wrap max-h-100 w-1/3" tabIndex={-1} onMouseEnter={() => setItems(true)} onMouseLeave={() => setItems(true)}>
+  const SubItemsCols = ({ subitems ,isSub=false}: { subitems: SubitemsType[] ; isSub?:boolean}) => (
+    <ul className={classNames("flex flex-col flex-wrap max-h-100", {["w-1/3"]:!isSub, ["w-75"]:isSub})} tabIndex={-1} onMouseEnter={() => setItems(true)} onMouseLeave={() => setItems(true)}>
       {subitems.map((item, i) => (
         <Link key={i} href={item.href ?? ""} passHref>
           <p className={classNames("font-text text-base mr-3 mb-3",
@@ -127,11 +127,9 @@ const Header = (props: MenuType) => {
                       <SubItems subitems={menu_item.subitems} />
                       <div className="w-3/4 px-6 h-full flex">
                         {(items && itemList.length < 11) &&
-                          <div className="flex space-x-3">
+                          <div className="flex space-x-6">
                             <SubItems subitems={itemList} isSub={true} />
-                            {subItems && subItemList.length < 10 ?
-                              <SubItems subitems={subItemList} isSub={false} />
-                              : subItems &&<SubItemsCols subitems={subItemList} />
+                            {subItems && <SubItemsCols subitems={subItemList} isSub />
                             }
                           </div>
                         }
