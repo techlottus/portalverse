@@ -1,11 +1,14 @@
-import getLayout from "@/utils/getLayout";
+import Header from "@/components/sections/Header";
+import {getLayout, Layout} from "@/utils/getLayout";
 
 
 
 const Layouts = ({ data: { layoutData } }: any) => {
   console.log('layoutData: ', layoutData);
   
+  
   return <>
+    <Header {...layoutData.attributes.header.data.attributes} />
     <p>hellos world!!</p>
   </>
 }
