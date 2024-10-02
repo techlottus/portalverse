@@ -123,9 +123,9 @@ const Header = (props: MenuType) => {
   return (
     <div className="absolute top-0 z-20 flex flex-col w-full">
       {/* Primer nivel del menú */}
-      <NavigationMenu.Root className="flex py-4 px-21 border-b border-surface-300 w-full justify-between">
-        <div className="w-36 h-10 bg-logo bg-cover bg-center"></div>
-        <div className="flex items-center">
+      <NavigationMenu.Root className="flex py-4 px-21 border-b border-surface-300 w-full justify-between mobile:justify-center">
+        <div className="w-36 h-10 bg-logo bg-cover bg-center mobile:h-6"></div>
+        <div className="flex items-center mobile:hidden">
           <Links links={links} />
           <button
             onClick={() => { button?.CTA ? router.push(button?.CTA) : null }}
