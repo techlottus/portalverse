@@ -1,9 +1,6 @@
-import Head from "next/head"
-import NextPageWithLayout from "@/types/Layout.types"
-import HeaderFooterLayout from "@/layouts/HeaderFooter.layout"
-import ContentGenerator from "@/utils/ContentGenerator"
-import { getHomePageData } from "@/utils/getHomePageData"
-import getLayout from "@/utils/getLayout"
+import getLayout from "@/utils/getLayout";
+
+
 
 const Layouts = ({ data: { layoutData } }: any) => {
   console.log('layoutData: ', layoutData);
@@ -14,20 +11,23 @@ const Layouts = ({ data: { layoutData } }: any) => {
 }
 
 export async function getStaticProps(context: any) {
+    try {
+      const layoutData = await getLayout(1);
+      // const sections = homePageData?.homePage?.data?.attributes?.sections;
+      // const meta = homePageData?.homePage?.data?.attributes?.seo;
 
-
-    const layoutData = await getLayout(1);
-    // const sections = homePageData?.homePage?.data?.attributes?.sections;
-    // const meta = homePageData?.homePage?.data?.attributes?.seo;
-
-    return {
-      props: {
-        data: {
-          layoutData: layoutData
+      return {
+        props: {
+          data: {
+            layoutData: layoutData
+          },
         },
-      },
-    };
- 
+      };
+    } catch {
+      return {
+        notFound: true,
+      };
+    }
 }
 
 export default Layouts;

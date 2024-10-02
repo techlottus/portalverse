@@ -2,16 +2,16 @@ import { LinkComponentConfig } from "@/types/LinkListComponentS";
 import { SocialMedias, StrapiImage } from "@/types/strapi/common";
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
 
-type FooterColumnItem = {
+export type FooterColumnItem = {
   label: string;
   href: string;
   bold: string;
   target: string;
 }
-type FooterColumn = {
+export type FooterColumn = {
   items : Array<FooterColumnItem>
 }
-type FooterSection = {
+export type FooterSection = {
   title: string;
   logo: boolean;
   images: Array<StrapiImage>;
@@ -21,7 +21,7 @@ type FooterSection = {
   columns: Array<FooterColumn>
 
 }
-type Footer = {
+export type Footer = {
   attributes: {
     name: string;
     footerSection: Array<FooterSection>
@@ -34,7 +34,7 @@ export type Footers = {
   };
 };
 
-const getFooters = async () => {
+export const getFooters = async () => {
   const response = await fetchStrapiGraphQL<Footers>(
     FOOTERS
   );

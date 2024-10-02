@@ -1,14 +1,18 @@
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
+import { Footer } from "./getFooters";
 
 type Layout = {
   layouts: {
     data: Array< {
-      name: string
+      attributes: {
+        name: string
+        footer : Footer
+      }
     }>
   }
 }
 
-const getLayout = async (id = 1) => {
+export const getLayout = async (id = 1) => {
   const response = await fetchStrapiGraphQL<Layout>(
     LAYOUTS,
     { id }
@@ -17,7 +21,7 @@ const getLayout = async (id = 1) => {
   return response?.layouts?.data[0];
 };
 
-const LAYOUTS = `
+export const LAYOUTS = `
 query Layouts($id: ID) {
   layouts(
     filters: { id: { eq :$id} }
