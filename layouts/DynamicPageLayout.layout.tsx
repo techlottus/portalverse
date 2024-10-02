@@ -163,11 +163,131 @@ export default function DynamicPageLayout({ children, breadcrumbs = true }: Head
             "items": []
           },
           {
-            "id": "1",
-            "label": "Bachillerato",
+            "id": "3",
+            "label": "Licenciaturas",
             "bold": false,
             "href": null,
-            "items": []
+            "items": [
+              {
+                "id": "3",
+                "label": "Negocios y Empresariales",
+                "bold": true,
+                "href": null,
+                "items": []
+              },
+              {
+                "id": "2",
+                "label": "Licenciatura en Administración de Empresas",
+                "bold": false,
+                "href": null,
+                "items": []
+              },
+              {
+                "id": "1",
+                "label": "Licenciatura Ejecutiva en Comercio Internacional",
+                "bold": false,
+                "href": null,
+                "items": []
+              },
+              {
+                "id": "4",
+                "label": "Licenciatura en Contaduría y Finanzas",
+                "bold": false,
+                "href": null,
+                "items": []
+              },
+              {
+                "id": "6",
+                "label": "Licenciatura en Mercadotecnia",
+                "bold": false,
+                "href": null,
+                "items": []
+              },
+              {
+                "id": "5",
+                "label": "Licenciatura en Turismo",
+                "bold": false,
+                "href": null,
+                "items": []
+              },
+              {
+                "id": "7",
+                "label": "Salud",
+                "bold": true,
+                "href": null,
+                "items": []
+              },
+              {
+                "id": "8",
+                "label": "Licenciatura en Psicología",
+                "bold": false,
+                "href": null,
+                "items": []
+              },
+              {
+                "id": "9",
+                "label": "Licenciatura en Nutrición",
+                "bold": false,
+                "href": null,
+                "items": []
+              },
+              {
+                "id": "11",
+                "label": "Licenciatura en Fisioterapia",
+                "bold": false,
+                "href": null,
+                "items": []
+              },
+              {
+                "id": "10",
+                "label": "Licenciatura en Cirujano Dentista",
+                "bold": false,
+                "href": null,
+                "items": []
+              },
+              {
+                "id": "12",
+                "label": "Ingeniería y Tecnologías",
+                "bold": true,
+                "href": null,
+                "items": []
+              },
+              {
+                "id": "13",
+                "label": "Licenciatura en Ingeniería en Sistemas Computacionales",
+                "bold": false,
+                "href": null,
+                "items": []
+              },
+              {
+                "id": "14",
+                "label": "Licenciatura Ejecutiva en Comercio Internacional",
+                "bold": false,
+                "href": null,
+                "items": []
+              },
+              {
+                "id": "17",
+                "label": "Licenciatura en Contaduría y Finanzas",
+                "bold": false,
+                "href": null,
+                "items": []
+              },
+              {
+                "id": "16",
+                "label": "Licenciatura en Mercadotecnia",
+                "bold": false,
+                "href": null,
+                "items": []
+              },
+              {
+                "id": "15",
+                "label": "Licenciatura en Turismo",
+                "bold": false,
+                "href": null,
+                "items": []
+              }
+            ]
           },
           {
             "id": "3",
@@ -306,7 +426,7 @@ export default function DynamicPageLayout({ children, breadcrumbs = true }: Head
         {
           "title": "Banner 1",
           "subtitle": "contenido de banner 1",
-          "desktopRatio": "2/1",
+          "desktopRatio": "4/3",
           "desktopImage": {
             "data": {
               "attributes": {
@@ -324,7 +444,7 @@ export default function DynamicPageLayout({ children, breadcrumbs = true }: Head
         {
           "title": "Banner 2",
           "subtitle": "contenido de banner 2",
-          "desktopRatio": "2/1",
+          "desktopRatio": "4/3",
           "desktopImage": {
             "data": {
               "attributes": {
@@ -361,7 +481,7 @@ export default function DynamicPageLayout({ children, breadcrumbs = true }: Head
     }
   }
   return <>
-    <Header links_button={data.links_button} menu_items={data.menu_items} banners={data.banners} alert={data.alert} />
+    <Header links={data.links} button={data.button} menu_items={data.menu_items} banners={data.banners} alert={data.alert} />
     <div className="w-d:pt-24">
       { children }
       <Footer onClickLogo={logotypeClick} privacyLink={privacyLink} certifications={certifications} logotype={logotipo} social={social} phone={phone} directorio={directorio} sections={sections} />

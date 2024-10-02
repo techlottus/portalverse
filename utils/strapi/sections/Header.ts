@@ -1,10 +1,10 @@
 import type {
+  StrapiButton,
   StrapiImage,
 } from "@/types/strapi/common";
 import { Link } from "./LinkList";
 import { BannerPortalverseConfig } from "@/types/BannerPortalverse.types";
-
-
+import ButtonComponentData from "@/types/Button.types";
 
 export type SubitemType = {
   id?: string;
@@ -13,7 +13,7 @@ export type SubitemType = {
   href?: string;
 }
 export  type ItemsType = SubitemType & {
-  subitems?: SubitemType;
+  items?: SubitemType;
 }
 export type SubitemsType = SubitemType & {
   items?: ItemsType[];
@@ -27,13 +27,14 @@ export type AlertInfoType = {
 export type MenuItemsType = {
   id?: string;
   label?: string;
-  subitems?: SubitemsType[];
+  linkText?:string;
+  items?: SubitemsType[];
   }
 export type MenuType = {
   id?: string;
-  show_logo?: boolean;
   name?: string;
-  links_button: (any)[]; 
+  links?: Link[];
+  button?: StrapiButton; 
   menu_items?: MenuItemsType[];
   banners?:  BannerPortalverseConfig;
   alert?: AlertInfoType;
