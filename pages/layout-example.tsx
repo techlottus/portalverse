@@ -19,7 +19,7 @@ export async function getStaticProps(context: any) {
       return {
         props: {
           data: {
-            layoutData: layoutData
+            layoutData: layoutData || null
           },
         },
       };
