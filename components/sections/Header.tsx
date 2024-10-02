@@ -71,7 +71,7 @@ const Header = (props: MenuType) => {
 
   const SubItemsCols = ({ subitems, isSub = false, linkText }: { subitems: SubitemsType[]; isSub?: boolean, linkText?: string }) => (
     <div className="flex flex-col">
-      <ul className={classNames("flex flex-col flex-wrap max-h-100", { ["w-1/3"]: !isSub, ["w-75"]: isSub })} tabIndex={-1} onMouseEnter={() => setItems(true)} onMouseLeave={() => setItems(true)}>
+      <ul className={classNames("flex flex-col flex-wrap max-h-100", { ["w-1/3"]: !isSub, ["w-75"]: isSub })} tabIndex={-1} onMouseEnter={() => setItems(true)}>
         {subitems.map((item, i) => (
           <Link key={i} href={item.href ?? ""} passHref>
             <p className={classNames("font-text text-base mr-3 mb-3",
@@ -139,7 +139,10 @@ const Header = (props: MenuType) => {
       <NavigationMenu.Root className="h-9.5 border-b border-surface-300 shadow">
         <NavigationMenu.List className="px-21 w-full flex items-center">
           {menu_items?.map((menu_item, i) => (
-            <NavigationMenu.Item key={i}onMouseEnter={()=>setItems(false)}>
+            <NavigationMenu.Item key={i}onMouseEnter={()=>{
+              setItems(false)
+              setSubItems(false)
+              }}>
               <NavigationMenu.Trigger className="group flex h-9.5 space-x-4 font-headings font-normal text-surface-900 items-center text-sm border-surface-300 px-3 data-[state=open]:border-b-4 data-[state=open]:border-primary-300 data-[state=open]:text-primary-300 py-3">
                 {menu_item.label} <CaretDownIcon className="relative transition duration-150 ease-out hover:ease-in group-data-[state=open]:rotate-180 group-data-[state=open]:text-primary-300 ml-1" aria-hidden />
               </NavigationMenu.Trigger>
