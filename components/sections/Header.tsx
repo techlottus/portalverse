@@ -70,7 +70,7 @@ const Header = (props: MenuType) => {
 
   const SubItemsCols = ({ subitems, isSub = false, linkText }: { subitems: SubitemsType[]; isSub?: boolean, linkText?: string }) => (
     <div className="flex flex-col">
-      <ul className={classNames("flex flex-col flex-wrap max-h-100", { ["w-1/3"]: !isSub, ["w-75"]: isSub })} tabIndex={-1} onMouseEnter={() => setItems(true)}>
+      <ul className={classNames("flex flex-col flex-wrap max-h-100 max-w-75")} tabIndex={-1} onMouseEnter={() => setItems(true)}>
         {subitems.map((item, i) => (
           <Link key={i} href={item.href ?? ""} passHref>
             <p className={classNames("font-text text-sm mr-3 mb-3",
