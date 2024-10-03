@@ -123,7 +123,7 @@ const Header = (props: MenuType) => {
     <div className="absolute top-0 z-20 flex flex-col w-full ">
       {/* Primer nivel del menú */}
       <NavigationMenu.Root className="flex py-4 desktop:px-21 tablet:px-21 mobile:px-3 border-b border-surface-300 w-full desktop:justify-between tablet:justify-between mobile:justify-center">
-        <button className="p-3 border-0 border-solid border-surface-200 border-r-2">
+        <button className="p-3 border-0 border-solid border-surface-200 border-r-2 hidden mobile:block">
         <Icon name="sort" className="w-6 h-6" />
       </button>
         <div className="w-36 h-10 bg-logo bg-cover bg-center mobile:h-8 mobile:w-28"></div>
