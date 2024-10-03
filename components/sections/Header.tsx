@@ -73,11 +73,10 @@ const Header = (props: MenuType) => {
       <ul className={classNames("flex flex-col flex-wrap max-h-100", { ["w-1/3"]: !isSub, ["w-75"]: isSub })} tabIndex={-1} onMouseEnter={() => setItems(true)}>
         {subitems.map((item, i) => (
           <Link key={i} href={item.href ?? ""} passHref>
-            <p className={classNames("font-text text-base mr-3 mb-3",
+            <p className={classNames("font-text text-sm mr-3 mb-3",
               {
                 ["font-heading text-surface-950 font-semibold"]: item.bold,
                 ["font-texts text-surface-400 hover:text-primary-500 pl-2 font-normal text-wrap text-left"]: !item.bold,
-                ["text-sm"]:isSub
               })}>
               {item.label}
             </p>
@@ -86,7 +85,7 @@ const Header = (props: MenuType) => {
       </ul>
       <div className="w-full border-t border-surface-200 ">
         <div className="py-2 w-full font-texts text-primary-500 font-normal px-3 flex align-middle">
-          <p className={classNames("font-normal hover:underline",{["texts-sm"]:isSub})}>
+          <p className={classNames("font-normal hover:underline text-sm")}>
             {linkText} »</p>
         </div>
       </div></div>
