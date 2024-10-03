@@ -154,7 +154,7 @@ const Header = (props: MenuType) => {
                   <div className="bg-surface-50 h-full max-h-[600px] px-21 py-6 w-full flex justify-center">
                     <div className="flex w-full max-w-[1200px] min-h-fit">
                       <SubItems subitems={menu_item.items} linkText={menu_item.linkText} />
-                      <div className="px-6 h-full flex">
+                      <div className="px-6 h-full flex w-full">
                         {(items && itemList.length < 11) &&
                           <div className="flex space-x-6">
                             <SubItems subitems={itemList} isSub={true} linkText={menu_item.linkText} />
