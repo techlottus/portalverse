@@ -35,7 +35,7 @@ const Header = (props: MenuType) => {
   );
 
   // Componente de subitems
-  const SubItems = ({ subitems, isSub = false, linkText, linkHref='/' }: { subitems: SubitemsType[], isSub?: boolean, linkText?: string, linkHref?:string }) => (
+  const SubItems = ({ subitems, isSub = false, linkText, linkHref='' }: { subitems: SubitemsType[], isSub?: boolean, linkText?: string, linkHref?:string }) => (
     <div className="w-75 border-r border-surface-200">
       <ul className={classNames("flex-col w-full h-full pr-6", { ["w-70"]: isSub })} tabIndex={-1} onMouseEnter={() => { isSub ? setSubItems(true) : setItems(true) }} >
         {subitems.map((item: any, i: number) =>
@@ -68,7 +68,7 @@ const Header = (props: MenuType) => {
     </div>
   );
 
-  const SubItemsCols = ({ subitems, isSub = false, linkText, linkHref="/" }: { subitems: SubitemsType[]; isSub?: boolean, linkText?: string , linkHref?:string}) => (
+  const SubItemsCols = ({ subitems, isSub = false, linkText, linkHref="" }: { subitems: SubitemsType[]; isSub?: boolean, linkText?: string , linkHref?:string}) => (
     <div className="flex flex-col w-full">
       <ul className={classNames("flex flex-col flex-wrap max-h-100 max-w-75")} tabIndex={-1} onMouseEnter={() => setItems(true)}>
         {subitems.map((item, i) => (
