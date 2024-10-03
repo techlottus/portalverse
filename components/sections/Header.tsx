@@ -76,7 +76,7 @@ const Header = (props: MenuType) => {
             <p className={classNames("font-text text-sm mr-3 mb-3",
               {
                 ["font-heading text-surface-950 font-semibold"]: item.bold,
-                ["font-texts text-surface-400 hover:text-primary-500 pl-2 font-normal text-wrap text-left"]: !item.bold,
+                ["font-texts text-surface-400 hover:text-primary-500 font-normal text-wrap text-left"]: !item.bold,
               })}>
               {item.label}
             </p>
