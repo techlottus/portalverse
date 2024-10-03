@@ -44,7 +44,7 @@ const Header = (props: MenuType) => {
               onMouseEnter={() => handleMouseEnter(item.items, isSub)}>
               <Link href={item.href ?? ""} passHref>
                 <div className="flex items-center justify-between">
-                  <p className="group-hover:underline font-normal group-hover:text-primary-500 text-surface-500 font-texts text-wrap text-left">
+                  <p className={classNames("group-hover:underline font-normal group-hover:text-primary-500 text-surface-500 font-texts text-wrap text-left text-base",{["text-sm"]:isSub})}>
                     {item.label}
                   </p>
                   <span className="material-symbols-outlined text-2xl group-hover:text-primary-500 text-surface-400 font-bold ml-3">chevron_right</span>
@@ -53,13 +53,13 @@ const Header = (props: MenuType) => {
             </button>
           ) : (
             <Link key={i} href={item.href ?? ""} passHref onMouseEnter={() => { isSub ? setSubItems(false) : setItems(false) }}>
-              <p className={classNames("py-2 w-full", { ["font-heading text-surface-950 font-semibold"]: item.bold, ["font-texts text-surface-500 hover:text-primary-500 font-normal px-3"]: !item.bold })}>{item.label}</p>
+              <p className={classNames("py-2 w-full ", { ["font-heading text-surface-950 font-semibold"]: item.bold, ["font-texts text-surface-500 hover:text-primary-500 font-normal px-3"]: !item.bold, ["text-sm"]:isSub })}>{item.label}</p>
             </Link>
           )
         )}
         <Link href={""} passHref onMouseEnter={() => { isSub ? setSubItems(false) : setItems(false) }}>
           <div className="py-2 w-full font-texts text-primary-500 font-normal px-3 flex align-middle">
-            <p className={classNames("font-normal hover:underline")}>
+            <p className={classNames("font-normal hover:underline",{["text-sm"]:isSub})}>
               {linkText} »</p>
           </div>
 
@@ -76,7 +76,8 @@ const Header = (props: MenuType) => {
             <p className={classNames("font-text text-base mr-3 mb-3",
               {
                 ["font-heading text-surface-950 font-semibold"]: item.bold,
-                ["font-texts text-surface-400 hover:text-primary-500 pl-2 font-normal text-wrap text-left"]: !item.bold
+                ["font-texts text-surface-400 hover:text-primary-500 pl-2 font-normal text-wrap text-left"]: !item.bold,
+                ["text-sm"]:isSub
               })}>
               {item.label}
             </p>
@@ -85,7 +86,7 @@ const Header = (props: MenuType) => {
       </ul>
       <div className="w-full border-t border-surface-200 ">
         <div className="py-2 w-full font-texts text-primary-500 font-normal px-3 flex align-middle">
-          <p className={classNames("font-normal hocer:underline")}>
+          <p className={classNames("font-normal hover:underline",{["texts-sm"]:isSub})}>
             {linkText} »</p>
         </div>
       </div></div>
