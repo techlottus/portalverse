@@ -8,7 +8,7 @@ const Layouts = ({ data: { layoutData } }: any) => {
   
   
   return <>
-    <Header {...layoutData.attributes.header.data.attributes} />
+    <Header {...layoutData?.attributes?.header?.data?.attributes} />
     <p>hellos world!!</p>
   </>
 }
