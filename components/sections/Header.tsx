@@ -4,11 +4,10 @@ import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import { CaretDownIcon } from '@radix-ui/react-icons';
 import Link from "next/link";
 import { useRouter } from "next/router";
-import RepeatableBannerSection from "./RepeatableBannerSection";
 import AlertInfo from "./AlertInfo";
 import classNames from "classnames";
 import BannerPortalverseWrapper from "../BannerPortalverseWrapper";
-import { BannerData } from "@/utils/strapi/sections/Banner";
+import Icon from "@/old-components/Icon"
 
 // Componente principal Header
 const Header = (props: MenuType) => {
@@ -61,7 +60,7 @@ const Header = (props: MenuType) => {
         <Link href={""} passHref onMouseEnter={() => { isSub ? setSubItems(false) : setItems(false) }}>
           <div className="py-2 w-full font-texts text-primary-500 font-normal px-3 flex align-middle">
             <p className={classNames("font-normal hover:underline")}>
-              {linkText}</p><span className="material-symbols-outlined font-normal text-sm">double_arrow</span>
+              {linkText} »</p>
           </div>
 
         </Link>
@@ -87,7 +86,7 @@ const Header = (props: MenuType) => {
       <div className="w-full border-t border-surface-200 ">
         <div className="py-2 w-full font-texts text-primary-500 font-normal px-3 flex align-middle">
           <p className={classNames("font-normal hocer:underline")}>
-            {linkText}</p><span className="material-symbols-outlined font-normal text-sm">double_arrow</span>
+            {linkText} »</p>
         </div>
       </div></div>
   );
@@ -95,7 +94,7 @@ const Header = (props: MenuType) => {
   // Layout para la página de inicio
   const LayoutHome = ({ banners, alert }: { banners: any, alert: any }) => (
     <div className="flex flex-col space-y-3 w-full justify-between h-full">
-      <div className="grid w-d:grid-cols-2 gap-6 w-t:grid-cols-1 w-p:grid-cols-1">
+      <div className="grid desktop:grid-cols-2 gap-6 tablet:grid-cols-1 mobile:grid-cols-1">
         {
           banners?.map((item: any, i: number) => <div key={`section-banners-${i}`}>
             <BannerPortalverseWrapper data={item} onClick={() => {
@@ -121,10 +120,13 @@ const Header = (props: MenuType) => {
   };
 
   return (
-    <div className="absolute top-0 z-20 flex flex-col w-full">
+    <div className="absolute top-0 z-20 flex flex-col w-full ">
       {/* Primer nivel del menú */}
-      <NavigationMenu.Root className="flex py-4 px-21 border-b border-surface-300 w-full justify-between mobile:justify-center">
-        <div className="w-36 h-10 bg-logo bg-cover bg-center mobile:h-6"></div>
+      <NavigationMenu.Root className="flex py-4 desktop:px-21 tablet:px-21 mobile:px-3 border-b border-surface-300 w-full desktop:justify-between tablet:justify-between mobile:justify-center">
+        <button className="p-3 border-0 border-solid border-surface-200 border-r-2">
+        <Icon name="sort" className="w-6 h-6" />
+      </button>
+        <div className="w-36 h-10 bg-logo bg-cover bg-center mobile:h-8 mobile:w-28"></div>
         <div className="flex items-center mobile:hidden">
           <Links links={links} />
           <button
@@ -136,7 +138,7 @@ const Header = (props: MenuType) => {
       </NavigationMenu.Root>
 
       {/* Segundo nivel del menú */}
-      <NavigationMenu.Root className="h-9.5 border-b border-surface-300 shadow">
+      <NavigationMenu.Root className="h-9.5 border-b border-surface-300 shadow mobile:hidden">
         <NavigationMenu.List className="px-21 w-full flex items-center">
           {menu_items?.map((menu_item, i) => (
             <NavigationMenu.Item key={i}onMouseEnter={()=>{
