@@ -84,7 +84,7 @@ const Header = (props: MenuType) => {
         ))}
       </ul>
       <div className="w-full border-t border-surface-200 ">
-        <div className="py-2 w-full font-texts text-primary-500 font-normal px-3 flex align-middle">
+        <div className="py-2 w-full font-texts text-primary-500 font-normal flex align-middle">
           <p className={classNames("font-normal hover:underline text-sm")}>
             {linkText} »</p>
         </div>
@@ -154,7 +154,7 @@ const Header = (props: MenuType) => {
                   <div className="bg-surface-50 h-full max-h-[600px] px-21 py-6 w-full flex justify-center">
                     <div className="flex w-full max-w-[1200px] min-h-fit">
                       <SubItems subitems={menu_item.items} linkText={menu_item.linkText} />
-                      <div className="w-3/4 px-6 h-full flex">
+                      <div className="px-6 h-full flex">
                         {(items && itemList.length < 11) &&
                           <div className="flex space-x-6">
                             <SubItems subitems={itemList} isSub={true} linkText={menu_item.linkText} />
