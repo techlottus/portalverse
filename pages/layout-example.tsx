@@ -1,5 +1,5 @@
 import Header from "@/components/sections/Header";
-import {getLayout, Layout} from "@/utils/getLayout";
+import {getLayout} from "@/utils/getLayout";
 
 
 
