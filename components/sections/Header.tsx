@@ -35,7 +35,7 @@ const Header = (props: MenuType) => {
   );
 
   // Componente de subitems
-  const SubItems = ({ subitems, isSub = false, linkText }: { subitems: SubitemsType[], isSub?: boolean, linkText?: string }) => (
+  const SubItems = ({ subitems, isSub = false, linkText, linkHref='/' }: { subitems: SubitemsType[], isSub?: boolean, linkText?: string, linkHref?:string }) => (
     <div className="w-75 border-r border-surface-200">
       <ul className={classNames("flex-col w-full h-full pr-6", { ["w-70"]: isSub })} tabIndex={-1} onMouseEnter={() => { isSub ? setSubItems(true) : setItems(true) }} >
         {subitems.map((item: any, i: number) =>
@@ -57,7 +57,7 @@ const Header = (props: MenuType) => {
             </Link>
           )
         )}
-        <Link href={""} passHref onMouseEnter={() => { isSub ? setSubItems(false) : setItems(false) }}>
+        <Link href={linkHref} passHref onMouseEnter={() => { isSub ? setSubItems(false) : setItems(false) }}>
           <div className="py-2 w-full font-texts text-primary-500 font-normal px-3 flex align-middle">
             <p className={classNames("font-normal hover:underline",{["text-sm"]:isSub})}>
               {linkText} »</p>
@@ -68,8 +68,8 @@ const Header = (props: MenuType) => {
     </div>
   );
 
-  const SubItemsCols = ({ subitems, isSub = false, linkText }: { subitems: SubitemsType[]; isSub?: boolean, linkText?: string }) => (
-    <div className="flex flex-col">
+  const SubItemsCols = ({ subitems, isSub = false, linkText, linkHref="/" }: { subitems: SubitemsType[]; isSub?: boolean, linkText?: string , linkHref?:string}) => (
+    <div className="flex flex-col w-full">
       <ul className={classNames("flex flex-col flex-wrap max-h-100 max-w-75")} tabIndex={-1} onMouseEnter={() => setItems(true)}>
         {subitems.map((item, i) => (
           <Link key={i} href={item.href ?? ""} passHref>
@@ -85,10 +85,13 @@ const Header = (props: MenuType) => {
       </ul>
       <div className="w-full border-t border-surface-200 ">
         <div className="py-2 w-full font-texts text-primary-500 font-normal flex align-middle">
-          <p className={classNames("font-normal hover:underline text-sm")}>
-            {linkText} »</p>
+        <Link  href={linkHref} passHref>
+        <p className={classNames("font-normal hover:underline text-sm")}>
+            {linkText} »</p></Link>
+          
         </div>
-      </div></div>
+      </div>
+    </div>
   );
 
   // Layout para la página de inicio
@@ -158,11 +161,11 @@ const Header = (props: MenuType) => {
                         {(items && itemList.length < 11) &&
                           <div className="flex space-x-6">
                             <SubItems subitems={itemList} isSub={true} linkText={menu_item.linkText} />
-                            {subItems && <SubItemsCols subitems={subItemList} isSub linkText={menu_item.linkText} />
+                            {subItems && <SubItemsCols subitems={subItemList} isSub linkText={menu_item.linkText} linkHref={menu_item?.href}/>
                             }
                           </div>
                         }
-                        {(items && itemList.length > 10) && <SubItemsCols subitems={itemList} linkText={menu_item.linkText} />}
+                        {(items && itemList.length > 10) && <SubItemsCols subitems={itemList} linkText={menu_item.linkText} linkHref={menu_item?.href}/>}
                         {!items && <LayoutHome banners={banners} alert={alert} />}
                       </div>
                     </div>
