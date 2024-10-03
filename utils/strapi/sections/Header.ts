@@ -11,6 +11,7 @@ export type SubitemType = {
   label?: string;
   bold?: boolean;
   href?: string;
+  linkText?:string;
 }
 export  type ItemsType = SubitemType & {
   items?: SubitemType;
@@ -28,6 +29,7 @@ export type MenuItemsType = {
   id?: string;
   label?: string;
   linkText?:string;
+  href?:string;
   items?: SubitemsType[];
   }
 export type MenuType = {
