@@ -21,21 +21,25 @@ const Header = (props: MenuType) => {
 
   // Componente de enlaces
   const Links = ({ links }: { links?: (MenuType['links']) }) => (
-    <NavigationMenu.List className="flex w-full items-center justify-end last:border-none">
+    <div className="w-full">
+      <NavigationMenu.List className="flex mobile:space-x-3 w-full desktop:items-center desktop:justify-end desktop:last:border-none">
       {links?.map((link?: any, i?: number) => (
-        <NavigationMenu.Item key={i} className="px-3 border-r border-surface-300">
+        <NavigationMenu.Item key={i} className="mobile:w-1/2 desktop:px-3 mobile:p-4 desktop:border-r mobile:border-2 mobile:rounded desktop:border-surface-300">
           <Link href={link?.href ?? ""} passHref>
-            <p className="font-headings font-normal text-xs text-surface-400 cursor-pointer hover:underline">
+            <p className="font-headings font-normal text-xs desktop:text-surface-400 cursor-pointer hover:underline w-full">
               {link?.text}
             </p>
+            <span className="material-symbols-outlined text-2xl font-bold text-end w-full desktop:hidden">arrow_forward</span>
           </Link>
         </NavigationMenu.Item>
       ))}
     </NavigationMenu.List>
+    </div>
+    
   );
 
   // Componente de subitems
-  const SubItems = ({ subitems, isSub = false, linkText, linkHref='' }: { subitems: SubitemsType[], isSub?: boolean, linkText?: string, linkHref?:string }) => (
+  const SubItems = ({ subitems, isSub = false, linkText, linkHref = '' }: { subitems: SubitemsType[], isSub?: boolean, linkText?: string, linkHref?: string }) => (
     <div className="w-75 border-r border-surface-200">
       <ul className={classNames("flex-col w-full h-full pr-6", { ["w-70"]: isSub })} tabIndex={-1} onMouseEnter={() => { isSub ? setSubItems(true) : setItems(true) }} >
         {subitems.map((item: any, i: number) =>
@@ -44,7 +48,7 @@ const Header = (props: MenuType) => {
               onMouseEnter={() => handleMouseEnter(item.items, isSub)}>
               <Link href={item.href ?? ""} passHref>
                 <div className="flex items-center justify-between">
-                  <p className={classNames("group-hover:underline font-normal group-hover:text-primary-500 text-surface-500 font-texts text-wrap text-left text-base",{["text-sm"]:isSub})}>
+                  <p className={classNames("group-hover:underline font-normal group-hover:text-primary-500 text-surface-500 font-texts text-wrap text-left text-base", { ["text-sm"]: isSub })}>
                     {item.label}
                   </p>
                   <span className="material-symbols-outlined text-2xl group-hover:text-primary-500 text-surface-400 font-bold ml-3">chevron_right</span>
@@ -53,13 +57,13 @@ const Header = (props: MenuType) => {
             </button>
           ) : (
             <Link key={i} href={item.href ?? ""} passHref onMouseEnter={() => { isSub ? setSubItems(false) : setItems(false) }}>
-              <p className={classNames("py-2 w-full ", { ["font-heading text-surface-950 font-semibold"]: item.bold, ["font-texts text-surface-500 hover:text-primary-500 font-normal px-3"]: !item.bold, ["text-sm"]:isSub })}>{item.label}</p>
+              <p className={classNames("py-2 w-full ", { ["font-heading text-surface-950 font-semibold"]: item.bold, ["font-texts text-surface-500 hover:text-primary-500 font-normal px-3"]: !item.bold, ["text-sm"]: isSub })}>{item.label}</p>
             </Link>
           )
         )}
         <Link href={linkHref} passHref onMouseEnter={() => { isSub ? setSubItems(false) : setItems(false) }}>
           <div className="py-2 w-full font-texts text-primary-500 font-normal px-3 flex align-middle">
-            <p className={classNames("font-normal hover:underline",{["text-sm"]:isSub})}>
+            <p className={classNames("font-normal hover:underline", { ["text-sm"]: isSub })}>
               {linkText} »</p>
           </div>
 
@@ -68,7 +72,7 @@ const Header = (props: MenuType) => {
     </div>
   );
 
-  const SubItemsCols = ({ subitems, isSub = false, linkText, linkHref="" }: { subitems: SubitemsType[]; isSub?: boolean, linkText?: string , linkHref?:string}) => (
+  const SubItemsCols = ({ subitems, isSub = false, linkText, linkHref = "" }: { subitems: SubitemsType[]; isSub?: boolean, linkText?: string, linkHref?: string }) => (
     <div className="flex flex-col w-full">
       <ul className={classNames("flex flex-col flex-wrap max-h-100 max-w-75")} tabIndex={-1} onMouseEnter={() => setItems(true)}>
         {subitems.map((item, i) => (
@@ -85,10 +89,10 @@ const Header = (props: MenuType) => {
       </ul>
       <div className="w-full border-t border-surface-200 ">
         <div className="py-2 w-full font-texts text-primary-500 font-normal flex align-middle">
-        <Link  href={linkHref} passHref>
-        <p className={classNames("font-normal hover:underline text-sm")}>
-            {linkText} »</p></Link>
-          
+          <Link href={linkHref} passHref>
+            <p className={classNames("font-normal hover:underline text-sm")}>
+              {linkText} »</p></Link>
+
         </div>
       </div>
     </div>
@@ -122,12 +126,12 @@ const Header = (props: MenuType) => {
     }
   };
 
-  const [open,setOpen] = useState(false)
-  const handleHamburguer = ()=>{
-    if(open){
+  const [open, setOpen] = useState(false)
+  const handleHamburguer = () => {
+    if (open) {
       setOpen(false)
     }
-    else{
+    else {
       setOpen(true)
     }
   }
@@ -135,11 +139,11 @@ const Header = (props: MenuType) => {
   return (
     <div className="absolute top-0 z-20 flex flex-col w-full ">
       {/* Primer nivel del menú */}
-      <NavigationMenu.Root className="flex mobile:h-fit desktop:py-4 tablet:py-1 mobile:py-3 desktop:px-21 tablet:px-21 mobile:px-3 desktop:border-b desktop:border-surface-300 w-full desktop:justify-between tablet:justify-between mobile:justify-center mobile:align-middle">
-        <button className="absolute top-0 left-0 px-3 py-3 hidden mobile:flex items-center h-full" onClick={()=>handleHamburguer()}>
-        {open && <Icon name="sort" className="w-6 h-6" />}
-        {!open && <span className="flex align-middle items-center"><Icon name="close" className="w-3 h-3 mr-1" /> <p className="font-texts font-normal text-sm">Cerrar</p></span>}
-      </button>
+      <NavigationMenu.Root className="relative flex mobile:h-fit desktop:py-4 tablet:py-1 mobile:py-3 desktop:px-21 tablet:px-21 mobile:px-3 desktop:border-b desktop:border-surface-300 w-full desktop:justify-between tablet:justify-between mobile:justify-center mobile:align-middle">
+        <button className="absolute top-0 left-0 px-3 py-3 hidden mobile:flex items-center h-full" onClick={() => handleHamburguer()}>
+          {open && <Icon name="sort" className="w-6 h-6" />}
+          {!open && <span className="flex align-middle items-center"><Icon name="close" className="w-3 h-3 mr-1" /> <p className="font-texts font-normal text-sm">Cerrar</p></span>}
+        </button>
         <div className="w-36 h-10 bg-logo bg-cover bg-center mobile:h-6 mobile:w-24"></div>
         <div className="flex items-center mobile:hidden">
           <Links links={links} />
@@ -149,18 +153,19 @@ const Header = (props: MenuType) => {
             {button?.label}
           </button>
         </div>
+
       </NavigationMenu.Root>
 
       {/* Segundo nivel del menú */}
-      <NavigationMenu.Root className="h-9.5 border-b border-surface-300 shadow mobile:hidden">
-        <NavigationMenu.List className="px-21 w-full flex items-center">
+      <NavigationMenu.Root className={classNames("desktop:h-9.5 mobile:h-screen tablet:h-auto desktop:border-b desktop:border-surface-300 desktop:shadow mobile:bg-surface-50 mobile:overscroll-none", { ["mobile:hidden"]: open })}>
+        <NavigationMenu.List className="desktop:px-21 desktop:w-full flex mobile:flex-col desktop:items-center mobile:py-4">
           {menu_items?.map((menu_item, i) => (
-            <NavigationMenu.Item key={i}onMouseEnter={()=>{
+            <NavigationMenu.Item key={i} onMouseEnter={() => {
               setItems(false)
               setSubItems(false)
-              }}>
-              <NavigationMenu.Trigger className="group flex h-9.5 space-x-4 font-headings font-normal text-surface-900 items-center text-sm border-surface-300 px-3 data-[state=open]:border-b-4 data-[state=open]:border-primary-300 data-[state=open]:text-primary-300 py-3">
-                {menu_item.label} <CaretDownIcon className="relative transition duration-150 ease-out hover:ease-in group-data-[state=open]:rotate-180 group-data-[state=open]:text-primary-300 ml-1" aria-hidden />
+            }} className=" mobile:px-6">
+              <NavigationMenu.Trigger className="group flex mobile:border-b mobile:w-full items-center h-9.5 desktop:space-x-4 font-headings font-normal text-surface-900 text-sm border-surface-300 desktop:data-[state=open]:border-b-4 desktop:data-[state=open]:border-primary-300 desktop:data-[state=open]:text-primary-300 py-3 mobile:py-4 desktop:px-3 ">
+                {menu_item.label} <CaretDownIcon className="relative mobile:hidden transition duration-150 ease-out hover:ease-in group-data-[state=open]:rotate-180 desktop:group-data-[state=open]:text-primary-300 ml-1" aria-hidden />
               </NavigationMenu.Trigger>
               {menu_item.items && (
                 <NavigationMenu.Content className="h-full bg-transparent shadow-none w-full">
@@ -172,11 +177,11 @@ const Header = (props: MenuType) => {
                         {(items && itemList.length < 11) &&
                           <div className="flex space-x-6">
                             <SubItems subitems={itemList} isSub={true} linkText={menu_item.linkText} />
-                            {subItems && <SubItemsCols subitems={subItemList} isSub linkText={menu_item.linkText} linkHref={menu_item?.href}/>
+                            {subItems && <SubItemsCols subitems={subItemList} isSub linkText={menu_item.linkText} linkHref={menu_item?.href} />
                             }
                           </div>
                         }
-                        {(items && itemList.length > 10) && <SubItemsCols subitems={itemList} linkText={menu_item.linkText} linkHref={menu_item?.href}/>}
+                        {(items && itemList.length > 10) && <SubItemsCols subitems={itemList} linkText={menu_item.linkText} linkHref={menu_item?.href} />}
                         {!items && <LayoutHome banners={banners} alert={alert} />}
                       </div>
                     </div>
@@ -185,10 +190,20 @@ const Header = (props: MenuType) => {
               )}
             </NavigationMenu.Item>
           ))}
+          <div className="desktop:hidden p-6 flex flex-col w-full">
+            <button
+              onClick={() => { button?.CTA ? router.push(button?.CTA) : null }}
+              className="px-4 py-3 rounded bg-surface-950 border border-surface-950 text-sm text-surface-100 font-texts hover:bg-surface-50 hover:text-surface-950 w-full">
+              {button?.label}
+            </button>
+            <div className="desktop:hidden py-3 flex mx-auto w-full">
+              <Links links={links} />
+            </div>
+          </div>
         </NavigationMenu.List>
-        <div className="ViewportPosition">
+        {/* <div className="ViewportPosition">
           <NavigationMenu.Viewport className="NavigationMenuViewport" />
-        </div>
+        </div> */}
       </NavigationMenu.Root>
     </div>
   );
