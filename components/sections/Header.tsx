@@ -122,14 +122,25 @@ const Header = (props: MenuType) => {
     }
   };
 
+  const [open,setOpen] = useState(false)
+  const handleHamburguer = ()=>{
+    if(open){
+      setOpen(false)
+    }
+    else{
+      setOpen(true)
+    }
+  }
+
   return (
     <div className="absolute top-0 z-20 flex flex-col w-full ">
       {/* Primer nivel del menú */}
-      <NavigationMenu.Root className="flex py-4 desktop:px-21 tablet:px-21 mobile:px-3 border-b border-surface-300 w-full desktop:justify-between tablet:justify-between mobile:justify-center">
-        <button className="p-3 border-0 border-solid border-surface-200 border-r-2 hidden mobile:block">
-        <Icon name="sort" className="w-6 h-6" />
+      <NavigationMenu.Root className="flex mobile:h-fit desktop:py-4 tablet:py-1 mobile:py-3 desktop:px-21 tablet:px-21 mobile:px-3 desktop:border-b desktop:border-surface-300 w-full desktop:justify-between tablet:justify-between mobile:justify-center mobile:align-middle">
+        <button className="absolute top-0 left-0 px-3 py-3 hidden mobile:flex items-center h-full" onClick={()=>handleHamburguer()}>
+        {open && <Icon name="sort" className="w-6 h-6" />}
+        {!open && <span className="flex align-middle items-center"><Icon name="close" className="w-3 h-3 mr-1" /> <p className="font-texts font-normal text-sm">Cerrar</p></span>}
       </button>
-        <div className="w-36 h-10 bg-logo bg-cover bg-center mobile:h-8 mobile:w-28"></div>
+        <div className="w-36 h-10 bg-logo bg-cover bg-center mobile:h-6 mobile:w-24"></div>
         <div className="flex items-center mobile:hidden">
           <Links links={links} />
           <button
