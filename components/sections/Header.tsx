@@ -29,7 +29,7 @@ const Header = (props: MenuType) => {
             <p className="font-headings font-normal text-xs desktop:text-surface-400 cursor-pointer hover:underline w-full">
               {link?.text}
             </p>
-            <span className="material-symbols-outlined text-2xl font-bold text-end w-full desktop:hidden">arrow_forward</span>
+            <span className="mobile:material-symbols-outlined mobile:text-2xl mobile:font-bold mobile:text-end mobile:w-full desktop:hidden block">arrow_forward</span>
           </Link>
         </NavigationMenu.Item>
       ))}
