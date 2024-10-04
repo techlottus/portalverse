@@ -29,7 +29,7 @@ const Header = (props: MenuType) => {
             <p className="font-headings font-normal text-xs desktop:text-surface-400 cursor-pointer hover:underline w-full">
               {link?.text}
             </p>
-            <span className="hidden mobile:inline-block material-symbols-outlined mobile:text-2xl mobile:font-bold mobile:text-end mobile:w-full">arrow_forward</span>
+            <span className="mobile:inline-block material-symbols-outlined !hidden mobile:text-2xl mobile:font-bold mobile:text-end mobile:w-full">arrow_forward</span>
           </Link>
         </NavigationMenu.Item>
       ))}
@@ -100,7 +100,7 @@ const Header = (props: MenuType) => {
 
   // Layout para la página de inicio
   const LayoutHome = ({ banners, alert }: { banners: any, alert: any }) => (
-    <div className="flex flex-col space-y-3 w-full justify-between h-full">
+    <div className="flex flex-col space-y-3 w-full justify-between h-full mobile:hidden">
       <div className="grid desktop:grid-cols-2 gap-6 tablet:grid-cols-1 mobile:grid-cols-1">
         {
           banners?.map((item: any, i: number) => <div key={`section-banners-${i}`}>
@@ -149,7 +149,7 @@ const Header = (props: MenuType) => {
           <Links links={links} />
           <button
             onClick={() => { button?.CTA ? router.push(button?.CTA) : null }}
-            className="px-4 py-3 rounded bg-surface-950 border border-surface-950 text-sm text-surface-100 font-texts hover:bg-surface-50 hover:text-surface-950">
+            className="px-4 py-3 rounded bg-surface-950 border border-surface-950 text-sm text-surface-100 font-texts hover:bg-surface-50 hover:text-surface-950 text-nowrap">
             {button?.label}
           </button>
         </div>
@@ -163,17 +163,17 @@ const Header = (props: MenuType) => {
               setItems(false)
               setSubItems(false)
               }}
-              className=" mobile:px-6">
+              className="mobile:relative mobile:px-6">
               <NavigationMenu.Trigger className="group flex mobile:border-b mobile:w-full items-center h-9.5 desktop:space-x-4 font-headings font-normal text-surface-900 text-sm border-surface-300 desktop:data-[state=open]:border-b-4 desktop:data-[state=open]:border-primary-300 desktop:data-[state=open]:text-primary-300 py-3 mobile:py-4 desktop:px-3 ">
                 {menu_item.label} <CaretDownIcon className="relative mobile:hidden transition duration-150 ease-out hover:ease-in group-data-[state=open]:rotate-180 desktop:group-data-[state=open]:text-primary-300 ml-1" aria-hidden />
               </NavigationMenu.Trigger>
               {menu_item.items && (
-                <NavigationMenu.Content className="h-full bg-transparent shadow-none w-full">
-                  <div className="w-full h-[1000px] bg-surface-950/30 absolute -z-20 blur-md my-20 overscroll-none overflow-y-hidden"></div>
+                <NavigationMenu.Content className="h-full bg-transparent shadow-none w-full mobile:absolute mobile:top-12 mobile:left-full mobile:transition-transform mobile:ease-in mobile:duration-700 mobile:-translate-x-full">
+                  <div className="w-full h-[1000px] bg-surface-950/30 absolute -z-20 blur-md my-20 overscroll-none overflow-y-hidden mobile:hidden "></div>
                   <div className="bg-surface-50 h-full max-h-[600px] px-21 py-6 w-full flex justify-center">
                     <div className="flex w-full max-w-[1200px] min-h-fit">
                       <SubItems subitems={menu_item.items} linkText={menu_item.linkText} />
-                      <div className="px-6 h-full flex w-full">
+                      <div className="px-6 h-full flex w-full mobile:hidden">
                         {(items && itemList.length < 11) &&
                           <div className="flex space-x-6">
                             <SubItems subitems={itemList} isSub={true} linkText={menu_item.linkText} />
