@@ -29,7 +29,7 @@ const Header = (props: MenuType) => {
             <p className="font-headings font-normal text-xs desktop:text-surface-400 cursor-pointer hover:underline w-full">
               {link?.text}
             </p>
-            <span className="mobile:inline-block material-symbols-outlined !hidden mobile:text-2xl mobile:font-bold mobile:text-end mobile:w-full">arrow_forward</span>
+            <span className=" material-symbols-outlined desktop:!hidden  mobile:inline-block mobile:text-2xl mobile:font-bold mobile:text-end mobile:w-full">arrow_forward</span>
           </Link>
         </NavigationMenu.Item>
       ))}
@@ -46,9 +46,8 @@ const Header = (props: MenuType) => {
           item?.items?.length > 0 ? (
             <button key={i} className="group hover:border hover:border-surface-200 rounded hover:text-primary-500 px-3 py-2 w-full"
               onMouseEnter={() => handleMouseEnter(item.items, isSub)}>
-              
                 <div className="flex items-center justify-between">
-                  <p className={classNames("group-hover:underline font-normal group-hover:text-primary-500 text-surface-500 font-texts text-wrap text-left text-base",{["text-sm"]:isSub})}>
+                  <p className={classNames("group-hover:underline font-normal mobile:font-semibold group-hover:text-primary-500 text-surface-500 font-texts text-wrap text-left text-base",{["text-sm"]:isSub})}>
                     {item.label}
                   </p>
                   <span className="material-symbols-outlined text-2xl group-hover:text-primary-500 text-surface-400 font-bold ml-3">chevron_right</span>
@@ -139,7 +138,7 @@ const Header = (props: MenuType) => {
   return (
     <div className="absolute top-0 z-20 flex flex-col w-full ">
       {/* Primer nivel del menú */}
-      <NavigationMenu.Root className="relative flex mobile:h-fit desktop:py-4 tablet:py-1 mobile:py-3 desktop:px-21 tablet:px-21 mobile:px-3 desktop:border-b desktop:border-surface-300 w-full desktop:justify-between tablet:justify-between mobile:justify-center mobile:align-middle border">
+      <NavigationMenu.Root className="relative flex mobile:h-fit desktop:py-4 tablet:py-1 mobile:py-3 desktop:px-21 tablet:px-21 mobile:px-3 desktop:border-b desktop:border-surface-300 w-full desktop:justify-between tablet:justify-between mobile:justify-center mobile:align-middle ">
         <button className="absolute top-0 left-0 px-3 py-3 hidden mobile:flex items-center h-full" onClick={()=>handleHamburguer()}>
         {!open && <Icon name="sort" className="w-6 h-6" />}
         {open && <span className="flex align-middle items-center"><Icon name="close" className="w-3 h-3 mr-1" /> <p className="font-texts font-normal text-sm">Cerrar</p></span>}
