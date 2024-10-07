@@ -40,20 +40,20 @@ const Header = (props: MenuType) => {
 
   // Componente de subitems
   const SubItems = ({ subitems, isSub = false, linkText, linkHref='' }: { subitems: SubitemsType[], isSub?: boolean, linkText?: string, linkHref?:string }) => (
-    <div className="w-75 border-r border-surface-200">
-      <ul className={classNames("flex-col w-full h-full pr-6", { ["w-70"]: isSub })} tabIndex={-1} onMouseEnter={() => { isSub ? setSubItems(true) : setItems(true) }} >
+    <div className="w-75 tablet:w-full mobile:w-full mobile:border-none border-r border-surface-200">
+      <ul className={classNames("flex-col w-full h-full pr-6 mobile:pr-0", { ["w-70"]: isSub })} tabIndex={-1} onMouseEnter={() => { isSub ? setSubItems(true) : setItems(true) }} >
         {subitems.map((item: any, i: number) =>
           item?.items?.length > 0 ? (
             <button key={i} className="group hover:border hover:border-surface-200 rounded hover:text-primary-500 px-3 py-2 w-full"
               onMouseEnter={() => handleMouseEnter(item.items, isSub)}>
-              <Link href={item.href ?? ""} passHref>
+              
                 <div className="flex items-center justify-between">
                   <p className={classNames("group-hover:underline font-normal group-hover:text-primary-500 text-surface-500 font-texts text-wrap text-left text-base",{["text-sm"]:isSub})}>
                     {item.label}
                   </p>
                   <span className="material-symbols-outlined text-2xl group-hover:text-primary-500 text-surface-400 font-bold ml-3">chevron_right</span>
                 </div>
-              </Link>
+
             </button>
           ) : (
             <Link key={i} href={item.href ?? ""} passHref onMouseEnter={() => { isSub ? setSubItems(false) : setItems(false) }}>
@@ -139,10 +139,10 @@ const Header = (props: MenuType) => {
   return (
     <div className="absolute top-0 z-20 flex flex-col w-full ">
       {/* Primer nivel del menú */}
-      <NavigationMenu.Root className="relative flex mobile:h-fit desktop:py-4 tablet:py-1 mobile:py-3 desktop:px-21 tablet:px-21 mobile:px-3 desktop:border-b desktop:border-surface-300 w-full desktop:justify-between tablet:justify-between mobile:justify-center mobile:align-middle">
+      <NavigationMenu.Root className="relative flex mobile:h-fit desktop:py-4 tablet:py-1 mobile:py-3 desktop:px-21 tablet:px-21 mobile:px-3 desktop:border-b desktop:border-surface-300 w-full desktop:justify-between tablet:justify-between mobile:justify-center mobile:align-middle border">
         <button className="absolute top-0 left-0 px-3 py-3 hidden mobile:flex items-center h-full" onClick={()=>handleHamburguer()}>
-        {open && <Icon name="sort" className="w-6 h-6" />}
-        {!open && <span className="flex align-middle items-center"><Icon name="close" className="w-3 h-3 mr-1" /> <p className="font-texts font-normal text-sm">Cerrar</p></span>}
+        {!open && <Icon name="sort" className="w-6 h-6" />}
+        {open && <span className="flex align-middle items-center"><Icon name="close" className="w-3 h-3 mr-1" /> <p className="font-texts font-normal text-sm">Cerrar</p></span>}
       </button>
         <div className="w-36 h-10 bg-logo bg-cover bg-center mobile:h-6 mobile:w-24"></div>
         <div className="flex items-center mobile:hidden">
@@ -156,7 +156,7 @@ const Header = (props: MenuType) => {
       </NavigationMenu.Root>
 
       {/* Segundo nivel del menú */}
-      <NavigationMenu.Root className={classNames("desktop:h-9.5 mobile:h-screen tablet:h-auto desktop:border-b desktop:border-surface-300 desktop:shadow mobile:bg-surface-50 mobile:overscroll-none", { ["mobile:hidden"]: open })}>
+      <NavigationMenu.Root className={classNames("desktop:h-9.5 mobile:h-screen tablet:h-auto desktop:border-b desktop:border-surface-300 desktop:shadow mobile:bg-surface-50 mobile:overscroll-none", { ["mobile:hidden"]: !open })}>
         <NavigationMenu.List className="desktop:px-21 desktop:w-full flex mobile:flex-col desktop:items-center mobile:py-4">
           {menu_items?.map((menu_item, i) => (
             <NavigationMenu.Item key={i}onMouseEnter={()=>{
@@ -170,7 +170,7 @@ const Header = (props: MenuType) => {
               {menu_item.items && (
                 <NavigationMenu.Content className="h-full bg-transparent shadow-none w-full mobile:absolute mobile:top-12 mobile:left-full mobile:transition-transform mobile:ease-in mobile:duration-700 mobile:-translate-x-full">
                   <div className="w-full h-[1000px] bg-surface-950/30 absolute -z-20 blur-md my-20 overscroll-none overflow-y-hidden mobile:hidden "></div>
-                  <div className="bg-surface-50 h-full max-h-[600px] px-21 py-6 w-full flex justify-center">
+                  <div className="bg-surface-50 h-full max-h-[600px] px-21 mobile:px-3 py-6 mobile:py-3 w-full flex justify-center">
                     <div className="flex w-full max-w-[1200px] min-h-fit">
                       <SubItems subitems={menu_item.items} linkText={menu_item.linkText} />
                       <div className="px-6 h-full flex w-full mobile:hidden">
@@ -201,6 +201,7 @@ const Header = (props: MenuType) => {
             </div>
           </div>
         </NavigationMenu.List>
+        {/* si borran este ya no se ve el contenido a w-full */}
         <div className="ViewportPosition">
           <NavigationMenu.Viewport className="NavigationMenuViewport" />
         </div>
