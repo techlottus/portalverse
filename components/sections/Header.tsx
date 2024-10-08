@@ -40,7 +40,7 @@ const Header = (props: MenuType) => {
 
   // Componente de subitems
   const SubItems = ({ subitems, isSub = false, linkText, linkHref = '' }: { subitems: SubitemsType[], isSub?: boolean, linkText?: string, linkHref?: string }) => (
-    <div className="max-w-[292px] tablet:w-full mobile:w-full mobile:border-none border-r border-surface-200 ">
+    <div className="max-w-[692px] tablet:w-full mobile:w-full mobile:border-none border-r border-surface-200 ">
       <ul className={classNames("flex-col w-full h-full pr-6 mobile:pr-0", { ["w-70"]: isSub })} tabIndex={-1} onMouseEnter={() => { isSub ? setSubItems(true) : setItems(true) }} >
         {subitems.map((item: any, i: number) =>
           item?.items?.length > 0 ? (
