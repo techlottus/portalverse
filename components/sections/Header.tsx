@@ -133,6 +133,18 @@ const Header = (props: MenuType) => {
     }
   }
 
+  const [itemsBack, setItemsBack] = useState([{}]);
+  const [isback, setisBack] = useState(false);
+  const handleBack = (isSub: boolean, items?: any) => {
+    if (isSub) {
+      setItemsBack(itemList)
+      setItemList(items)
+    }
+    else{
+      setisBack(true)
+    }
+  }
+
   return (
     <div className="absolute top-0 z-20 flex flex-col w-full ">
       {/* Primer nivel del menú */}
@@ -151,7 +163,6 @@ const Header = (props: MenuType) => {
           </button>
         </div>
       </NavigationMenu.Root>
-
       {/* Segundo nivel del menú */}
       <NavigationMenu.Root className={classNames("desktop:h-9.5 mobile:h-screen tablet:h-auto desktop:border-b desktop:border-surface-300 desktop:shadow mobile:bg-surface-50 mobile:overscroll-none", { ["mobile:hidden"]: !open })}>
         <NavigationMenu.List className="desktop:px-21 desktop:w-full flex mobile:flex-col desktop:items-center mobile:py-4">
@@ -161,19 +172,20 @@ const Header = (props: MenuType) => {
               setSubItems(false)
             }}
               className="mobile:relative mobile:px-6">
-              <NavigationMenu.Trigger className="group flex mobile:justify-between mobile:border-b mobile:w-full items-center h-9.5 desktop:space-x-4 font-headings font-normal mobile:font-semibold text-surface-900 text-sm border-surface-300 desktop:data-[state=open]:border-b-4 desktop:data-[state=open]:border-primary-300 desktop:data-[state=open]:text-primary-300 py-3 mobile:py-4 desktop:px-3 ">
+              <NavigationMenu.Trigger
+                className="group flex mobile:justify-between mobile:border-b mobile:w-full items-center h-9.5 desktop:space-x-4 font-headings font-normal mobile:font-semibold text-surface-900 text-sm border-surface-300 desktop:data-[state=open]:border-b-4 desktop:data-[state=open]:border-primary-300 desktop:data-[state=open]:text-primary-300 py-3 mobile:py-4 desktop:px-3 ">
                 {menu_item.label}
                 <span className="material-symbols-outlined text-2xl  text-surface-800 font-bold ml-3 desktop:hidden">chevron_right</span>
                 <CaretDownIcon className="relative mobile:hidden transition duration-150 ease-out hover:ease-in group-data-[state=open]:rotate-180 desktop:group-data-[state=open]:text-primary-300 ml-1" aria-hidden />
               </NavigationMenu.Trigger>
               {menu_item.items && (
-                <NavigationMenu.Content className="h-full bg-transparent shadow-none w-full mobile:absolute mobile:top-12 mobile:left-full mobile:transition-transform mobile:ease-in mobile:duration-700 mobile:-translate-x-full">
+                <NavigationMenu.Content aria-hidden={isback? "true":"false"} className={classNames("h-full bg-transparent shadow-none w-full mobile:absolute mobile:top-12 mobile:left-full mobile:transition-transform mobile:ease-in mobile:duration-700 mobile:-translate-x-full")}>
                   <div className="w-full h-[1000px] mobile:h-fit bg-surface-950/30 absolute -z-20 blur-md my-20 overscroll-none overflow-y-hidden mobile:hidden "></div>
                   <div className="bg-surface-50 h-full max-h-[600px] px-21 mobile:px-3 py-6 mobile:py-3 w-full flex mobile:flex-col desktop:justify-center">
                     <div className="flex w-full max-w-[1200px] min-h-fit mobile:flex-col">
                       <div className="hidden mobile:flex flex-col border-b border-surface-300">
                         <div className="flex py-2 space-x-2 align-middle items-center">
-                          <span className="material-symbols-outlined text-2xl rounded p-2 bg-surface-300 font-bold ml-3">arrow_back</span>
+                          <button onClick={()=>handleBack(false)}><span className="material-symbols-outlined text-2xl rounded p-2 bg-surface-300 font-bold ml-3">arrow_back</span></button>
                           <p className="font-semibold font-texts text-lg">{menu_item.label}</p>
                         </div>
                         <Link href={menu_item?.href || ""} passHref >
@@ -183,7 +195,9 @@ const Header = (props: MenuType) => {
                           </div>
                         </Link>
                       </div>
-                      <SubItems subitems={menu_item.items} linkText={menu_item.linkText} />
+                      {!items && <SubItems subitems={menu_item.items} linkText={menu_item.linkText} />}
+                      {subItems && <SubItemsCols subitems={subItemList} />}
+
                       <div className="px-6 h-full flex w-full mobile:hidden">
                         {(items && itemList.length < 11) &&
                           <div className="flex space-x-6">
