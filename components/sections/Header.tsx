@@ -59,20 +59,20 @@ const Header = (props: MenuType) => {
         <ul className={classNames("flex-col w-full h-full mobile:h-fit tablet:h-fit desktop:pr-6", { ["desktop:w-[273px] "]: isSub })} tabIndex={-1} onMouseEnter={() => { isSub ? setSubItems(true) : setItems(true) }} >
           {subitems.map((item: any, i: number) =>
             item?.items?.length > 0 ? (
-              <button key={i} className={classNames("group rounded desktop:px-3 py-2 w-full hover:border hover:border-surface-200 text-primary-500 hover:pt-[7px] hover:pb-[8px] hover:px-[11px]")}
+              <button key={i} className={classNames("group rounded desktop:px-3 py-2 w-full desktop:hover:border desktop:hover:border-surface-200 text-primary-500 desktop:hover:pt-[7px] desktop:hover:pb-[8px] desktop:hover:px-[11px]")}
                 onMouseEnter={() => {
                   handleMouseEnter(item, isSub, true, item)
                 }}>
                 <div className="flex items-center justify-between">
-                  <p className={classNames("group-hover:underline group-hover:underline-offset-1 font-normal  group-hover:text-primary-500 text-surface-500 font-texts text-wrap text-left text-base", { ["desktop:text-sm"]: isSub })}>
+                  <p className={classNames("desktop:group-hover:underline desktop:group-hover:underline-offset-1 font-normal  desktop:group-hover:text-primary-500 text-surface-500 font-texts text-wrap text-left text-base", { ["desktop:text-sm"]: isSub })}>
                     {item.label}
                   </p>
-                  <span className="material-symbols-outlined text-2xl group-hover:text-primary-500 text-surface-400 font-bold ml-3">chevron_right</span>
+                  <span className="material-symbols-outlined text-2xl desktop:group-hover:text-primary-500 text-surface-400 font-bold ml-3">chevron_right</span>
                 </div>
               </button>
             ) : (
               <Link key={i} href={item.href ?? ""} passHref onMouseEnter={() => { isSub ? setSubItems(false) : setItems(false) }} >
-                <p className={classNames("py-2 w-full rounded hover:border hover:border-surface-200 hover:pt-[7px] hover:pb-[8px] hover:px-[11px] hover:underline hover:underline-offset-1", { ["font-heading text-surface-950 font-semibold"]: item.bold, ["font-texts text-surface-500 hover:text-primary-500 font-normal desktop:px-3"]: !item.bold, ["desktop:text-sm"]: isSub })}>{item.label}</p>
+                <p className={classNames("py-2 w-full rounded desktop:hover:border desktop:hover:border-surface-200 desktop:hover:pt-[7px] desktop:hover:pb-[8px] desktop:hover:px-[11px] desktop:hover:underline desktop:hover:underline-offset-1", { ["font-heading text-surface-950 font-semibold"]: item.bold, ["font-texts text-surface-500 desktop:hover:text-primary-500 font-normal desktop:px-3"]: !item.bold, ["desktop:text-sm"]: isSub })}>{item.label}</p>
               </Link>
             )
           )}
