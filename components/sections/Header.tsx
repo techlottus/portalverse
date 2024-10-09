@@ -44,7 +44,7 @@ const Header = (props: MenuType) => {
   const SubItems = ({ subitems, isSub = false, linkText, linkHref = '',label }: { subitems: any[], isSub?: boolean, linkText?: string, linkHref?: string, label?: string }) => {
     return (
       <div className={classNames("desktop:w-[282px] tablet:max-w-100 mobile:w-full mobile:border-none tablet:border-none desktop:border-r border-surface-200 mobile:overflow-y-auto tablet:overflow-y-auto",{["mobile:px-3 tablet:px-3"]:isSub} )}>
-        {isSub && <div className="desktop:hidden flex flex-col border-b border-surface-300 px-3">
+        {isSub && <div className="desktop:hidden flex flex-col border-b border-surface-300">
           <div className="flex py-2 space-x-2 align-middle items-center">
             <button onClick={() => setOpenContent('closed')} ><span className="material-symbols-outlined text-2xl rounded p-2 bg-surface-300 font-bold">arrow_back</span></button>
             <p className="font-semibold font-texts text-lg">{label}</p>
@@ -59,7 +59,7 @@ const Header = (props: MenuType) => {
         <ul className={classNames("flex-col w-full h-full desktop:pr-6", { ["desktop:w-[273px] "]: isSub })} tabIndex={-1} onMouseEnter={() => { isSub ? setSubItems(true) : setItems(true) }} >
           {subitems.map((item: any, i: number) =>
             item?.items?.length > 0 ? (
-              <button key={i} className={classNames("group rounded px-3 py-2 w-full hover:border hover:border-surface-200 text-primary-500 hover:pt-[7px] hover:pb-[8px] hover:px-[11px]")}
+              <button key={i} className={classNames("group rounded desktop:px-3 py-2 w-full hover:border hover:border-surface-200 text-primary-500 hover:pt-[7px] hover:pb-[8px] hover:px-[11px]")}
                 onMouseEnter={() => {
                   handleMouseEnter(item, isSub, true, item)
                 }}>
@@ -72,12 +72,12 @@ const Header = (props: MenuType) => {
               </button>
             ) : (
               <Link key={i} href={item.href ?? ""} passHref onMouseEnter={() => { isSub ? setSubItems(false) : setItems(false) }}>
-                <p className={classNames("py-2 w-full ", { ["font-heading text-surface-950 font-semibold mobile:px-3 tablet:px-3"]: item.bold, ["font-texts text-surface-500 hover:text-primary-500 font-normal px-3"]: !item.bold, ["desktop:text-sm"]: isSub })}>{item.label}</p>
+                <p className={classNames("py-2 w-full ", { ["font-heading text-surface-950 font-semibold"]: item.bold, ["font-texts text-surface-500 hover:text-primary-500 font-normal desktop:px-3"]: !item.bold, ["desktop:text-sm"]: isSub })}>{item.label}</p>
               </Link>
             )
           )}
           <Link href={linkHref? linkHref : ""} passHref onMouseEnter={() => { isSub ? setSubItems(false) : setItems(false) }} className="mobile:hidden">
-            <div className="py-2 w-full font-texts text-primary-500 font-normal px-3 flex align-middle">
+            <div className="py-2 w-full font-texts text-primary-500 font-normal desktop:px-3 flex align-middle">
               <p className={classNames("font-normal hover:underline", { ["desktop:text-sm"]: isSub })}>
                 {linkText? linkText + " »":null} </p>
             </div>
@@ -162,7 +162,7 @@ const Header = (props: MenuType) => {
         TODO:
         tablet 
         */}
-      <NavigationMenu.Root className="relative flex h-fit desktop:py-4 py-3 desktop:px-21 px-6 desktop:border-b desktop:border-surface-300 w-full justify-center align-middle bg-surface-0">
+      <NavigationMenu.Root className="relative flex h-auto desktop:py-4 py-3 desktop:px-21 px-6 desktop:border-b desktop:border-surface-300 w-full justify-center align-middle bg-surface-0">
         <button className="absolute top-0 left-6 px-3 py-3 desktop:hidden flex items-center h-full" onClick={() => handleHamburguer()}>
           {!open && <Icon name="sort" className="w-6 h-6" />}
           {open && <span className="flex align-middle items-center"><Icon name="close" className="w-3 h-3 mr-1" /> <p className="font-texts font-normal text-sm">Cerrar</p></span>}
@@ -185,10 +185,10 @@ const Header = (props: MenuType) => {
        MANEJO DE ERRORES 
       
       */}
-      <div className={classNames(" desktop:flex w-full desktop:min-w-[1024px] h-full bg-surface-0 mobile:px-0 tablet:px-0  desktop:px-21 desktop:justify-center desktop:border-b desktop:border-surface-300 desktop:shadow tablet:fixed mobile:fixed tablet:top-12 mobile:top-14 tablet:overscroll-none mobile:overscroll-none  ", { ["mobile:-translate-x-full "]: !open , [" tablet:transition-colors tablet:duration-1000 tablet:bg-surface-950/30 tablet:ease-in-out"]:open})}>
+      <div className={classNames(" desktop:flex w-full desktop:min-w-[1024px] h-full bg-surface-0 mobile:px-0 tablet:px-0  desktop:px-21 desktop:justify-center desktop:border-b desktop:border-surface-300 desktop:shadow tablet:fixed mobile:fixed tablet:top-14 mobile:top-14 tablet:overscroll-none mobile:overscroll-none  ", { ["mobile:-translate-x-full "]: !open , [" tablet:transition-colors tablet:duration-1000 tablet:bg-surface-950/30 tablet:ease-in-out"]:open})}>
         <NavigationMenu.Root value={openContent} onValueChange={setOpenContent} className={classNames("desktop:h-9.5 desktop:w-full  desktop:max-w-[1200px] h-screen overscroll-none desktop:flex tablet:data-[state=closed]:hidden tablet:transition-transform mobile:transition-transform tablet:duration-1000 mobile:duration-1000 mobile:ease-in-out",{ ["tablet:-translate-x-full mobile:-translate-x-full "]: !open })}>
-          <NavigationMenu.List className="mobile:w-full  h-screen desktop:h-fit desktop:w-auto flex flex-col justify-between  desktop:flex-row desktop:items-start py-3 desktop:py-0 tablet:max-w-100 bg-surface-0 ">
-            <div className="tablet:overflow-y-auto tablet:overscroll-y-auto mobile:overflow-y-auto mobile:overscroll-y-auto desktop:flex desktop:w-full desktop:max-w-[1200px] ">
+          <NavigationMenu.List className="mobile:w-full  h-screen mobile:overflow-y-auto mobile:overscroll-auto desktop:h-fit desktop:w-auto flex flex-col desktop:justify-between  desktop:flex-row desktop:items-start py-3 desktop:py-0 tablet:max-w-100 bg-surface-0 ">
+            <div className=" desktop:flex desktop:w-full desktop:max-w-[1200px] ">
               {menu_items?.map((menu_item, i) => (
                 <NavigationMenu.Item key={i} onMouseEnter={() => {
                   setItems(false)
@@ -204,16 +204,16 @@ const Header = (props: MenuType) => {
                     // TODO QUE SE QUEDEN ESTILOS MARCADOS CUANDO ESTA DENTRO DE UNA OPCION
                     <NavigationMenu.Content className="mobile:z-20 tablet:max-w-100 desktop:min-h-[440px] desktop:max-h-[724px]">
                       <div tabIndex={-1} onClick={() => setOpenContent('closed')} className={classNames("fixed top-0 w-full h-full mobile:hidden bg-surface-950/30 -z-20 tablet:-z-10 overscroll-none overflow-y-hidden")}></div>
-                      <div className="bg-surface-50 boder h-full desktop:px-21 px-3  desktop:py-6 py-3 w-full tablet:max-w-100 flex desktop:flex-row flex-col desktop:justify-center tablet:z-20">
-                        <div className="flex w-full desktop:max-w-[1200px] desktop:min-h-fit mobile:h-screen tablet:h-screen mobile:flex-col tablet:flex-col mobile:justify-between tablet:justify-between">
+                      <div className="bg-surface-50 boder h-full desktop:px-21 px-6 desktop:py-6 py-3 w-full tablet:max-w-100 flex desktop:flex-row flex-col desktop:justify-center tablet:z-20 mobile:overflow-y-auto mobile:overscroll-y-auto">
+                        <div className="flex w-full desktop:max-w-[1200px] desktop:min-h-fit mobile:h-screen tablet:h-screen mobile:flex-col tablet:flex-col ">
                           <div className="">
                             <div className="desktop:hidden flex flex-col border-b border-surface-300">
                               <div className="flex py-2 space-x-2 align-middle items-center">
-                                <button onClick={() => setOpenContent('closed')} ><span className="material-symbols-outlined text-2xl rounded p-2 bg-surface-300 font-bold ml-3">arrow_back</span></button>
+                                <button onClick={() => setOpenContent('closed')} ><span className="material-symbols-outlined text-2xl rounded p-2 bg-surface-300 font-bold">arrow_back</span></button>
                                 <p className="font-semibold font-texts text-lg">{menu_item?.label}</p>
                               </div>
                               <Link href={menu_item?.href? menu_item?.href: ""} passHref >
-                                <div className="py-2 w-full font-texts text-primary-500 font-normal px-3 flex align-middle">
+                                <div className="py-2 w-full font-texts text-primary-500 font-normal desktop:px-3 flex align-middle">
                                   <p className={classNames("font-normal hover:underline")}>
                                     {menu_item?.linkText? menu_item?.linkText+ '»' :null } </p>
                                 </div>
@@ -235,7 +235,7 @@ const Header = (props: MenuType) => {
                             {!items && <LayoutHome banners={banners} alert={alert} />}
                           </div>
 
-                          <div className="desktop:hidden py-6 px-2 flex flex-col w-full tablet:max-w-100 absolute bottom-1 left-0">
+                          <div className="desktop:hidden py-6 flex flex-col w-full tablet:max-w-100 mt-6">
                             <button
                               onClick={() => { button?.CTA ? router.push(button?.CTA) : null }}
                               className="px-4 py-3 rounded bg-surface-950 border border-surface-950 text-sm text-surface-100 font-texts hover:bg-surface-50 hover:text-surface-950 w-full">
