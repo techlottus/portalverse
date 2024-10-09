@@ -186,8 +186,8 @@ const Header = (props: MenuType) => {
        ALINEACIÓN ITEMS EN DESK 
       
       */}
-      <div className={classNames(" desktop:flex w-full h-full bg-surface-0 mobile:px-0 tablet:px-0 desktop:border-b desktop:border-surface-300 desktop:shadow tablet:fixed mobile:fixed tablet:top-12 mobile:top-12 tablet:overscroll-none mobile:overscroll-none tablet:bg-surface-950/30 ", { ["hidden"]: !open })}>
-        <NavigationMenu.Root value={openContent} onValueChange={setOpenContent} className={classNames("desktop:h-9.5 h-screen overscroll-none desktop:block tablet:data-[state=closed]:hidden", { ["hidden"]: !open })}>
+      <div className={classNames(" desktop:flex w-full h-full bg-surface-0 mobile:px-0 tablet:px-0 desktop:border-b desktop:border-surface-300 desktop:shadow tablet:fixed mobile:fixed tablet:top-12 mobile:top-12 tablet:overscroll-none mobile:overscroll-none tablet:bg-surface-950/30 tablet:transition-transform mobile:transition-transform", { ["tablet:-translate-x-full mobile:-translate-x-full"]: !open })}>
+        <NavigationMenu.Root value={openContent} onValueChange={setOpenContent} className={classNames("desktop:h-9.5 h-screen overscroll-none desktop:block tablet:data-[state=closed]:hidden tablet:transition-transform mobile:transition-transform",{ ["tablet:-translate-x-full mobile:-translate-x-full"]: !open })}>
           <NavigationMenu.List className="mobile:w-full h-screen desktop:h-fit desktop:min-w-[1024px] desktop:max-w-[1200px] flex flex-col justify-between desktop:flex-row desktop:items-start py-3 desktop:py-0 desktop:px-21 tablet:max-w-100 bg-surface-0">
             <div className="tablet:overflow-y-auto tablet:overscroll-y-auto mobile:overflow-y-auto mobile:overscroll-y-auto desktop:flex">
               {menu_items?.map((menu_item, i) => (
@@ -271,7 +271,7 @@ const Header = (props: MenuType) => {
 
           </NavigationMenu.List>
           {/* si borran este ya no se ve el contenido a w-full */}
-          <div className="absolute w-full desktop:top-28 desktop:left-0 top-0 left-full mobile:transition-transform mobile:ease-in mobile:duration-700 mobile:-translate-x-full tablet:transition-transform tablet:ease-in tablet:duration-700 tablet:-translate-x-full">
+          <div className="absolute w-full desktop:top-28 desktop:left-0 top-0 left-full mobile:transition-transform mobile:ease-in-out mobile:duration-2000 mobile:-translate-x-full tablet:transition-transform tablet:ease-in-out tablet:duration-2000 tablet:-translate-x-full">
             <NavigationMenu.Viewport className="relative w-full bg-surface-0 overflow-hidden tablet:max-w-100" />
           </div>
         </NavigationMenu.Root>
