@@ -59,7 +59,7 @@ const Header = (props: MenuType) => {
         <ul className={classNames("flex-col w-full h-full desktop:pr-6", { ["desktop:w-[273px] "]: isSub })} tabIndex={-1} onMouseEnter={() => { isSub ? setSubItems(true) : setItems(true) }} >
           {subitems.map((item: any, i: number) =>
             item?.items?.length > 0 ? (
-              <button key={i} className={classNames("group rounded px-3 py-2 w-full hover:border hover:border-surface-200 text-primary-500 hover:py-1")}
+              <button key={i} className={classNames("group rounded px-3 py-2 w-full hover:border hover:border-surface-200 text-primary-500 hover:pt-[7px] hover:pb-[8px] hover:px-[11px]")}
                 onMouseEnter={() => {
                   handleMouseEnter(item, isSub, true, item)
                 }}>
