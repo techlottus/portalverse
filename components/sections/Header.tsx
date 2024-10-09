@@ -89,7 +89,7 @@ const Header = (props: MenuType) => {
 
   const SubItemsCols = ({ subitems, isSub = false, linkText, linkHref = "" }: { subitems: SubitemsType[]; isSub?: boolean, linkText?: string, linkHref?: string }) => (
     <div className="flex flex-col w-full overflow-x-auto overscroll-x-auto">
-      <ul className={classNames("flex flex-col flex-wrap max-h-100 max-w-75")} tabIndex={-1} onMouseEnter={() => setItems(true)}>
+      <ul className={classNames("flex flex-col flex-wrap max-h-100 max-w-[273px]")} tabIndex={-1} onMouseEnter={() => setItems(true)}>
         {subitems?.map((item, i) => (
           <Link key={i} href={item?.href ?? ""} passHref>
             <p className={classNames("font-text text-sm mr-3 mb-3",
@@ -203,9 +203,9 @@ const Header = (props: MenuType) => {
                   </NavigationMenu.Trigger>
                   {menu_item?.items && (
                     // TODO QUE SE QUEDEN ESTILOS MARCADOS CUANDO ESTA DENTRO DE UNA OPCION
-                    <NavigationMenu.Content className="mobile:z-20 tablet:max-w-100">
+                    <NavigationMenu.Content className="mobile:z-20 tablet:max-w-100 desktop:min-h-[440px] desktop:max-h-[724px]">
                       <div tabIndex={-1} onClick={() => setOpenContent('closed')} className={classNames("fixed top-0 w-full h-full mobile:hidden bg-surface-950/30 -z-20 tablet:-z-10 overscroll-none overflow-y-hidden")}></div>
-                      <div className="bg-surface-50 boder h-full max-h-[600px] desktop:px-21 px-3  desktop:py-6 py-3 w-full tablet:max-w-100 flex desktop:flex-row flex-col desktop:justify-center tablet:z-20">
+                      <div className="bg-surface-50 boder h-full desktop:px-21 px-3  desktop:py-6 py-3 w-full tablet:max-w-100 flex desktop:flex-row flex-col desktop:justify-center tablet:z-20">
                         <div className="flex w-full desktop:max-w-[1200px] desktop:min-h-fit mobile:h-screen tablet:h-screen mobile:flex-col tablet:flex-col mobile:justify-between tablet:justify-between">
                           <div className="">
                             <div className="desktop:hidden flex flex-col border-b border-surface-300">
@@ -225,14 +225,14 @@ const Header = (props: MenuType) => {
                             </div>
                           </div>
                           <div className="px-6 h-full flex w-full mobile:hidden tablet:hidden">
-                            {(items && itemList.items.length < 11) &&
+                            {(items && itemList?.items.length < 11) &&
                               <div className="flex space-x-6">
-                                <SubItems subitems={itemList?.items} isSub={true} linkText={menu_item.linkText} />
-                                {subItems && <SubItemsCols subitems={subItemList} isSub linkText={menu_item.linkText} linkHref={menu_item?.href} />
+                                <SubItems subitems={itemList?.items} isSub={true} linkText={menu_item?.linkText} />
+                                {subItems && <SubItemsCols subitems={subItemList} isSub linkText={menu_item?.linkText} linkHref={menu_item?.href} />
                                 }
                               </div>
                             }
-                            {(items && itemList.items.length > 10) && <SubItemsCols subitems={itemList.items} linkText={menu_item.linkText} linkHref={menu_item?.href} />}
+                            {(items && itemList?.items.length > 10) && <SubItemsCols subitems={itemList?.items} linkText={menu_item?.linkText} linkHref={menu_item?.href} />}
                             {!items && <LayoutHome banners={banners} alert={alert} />}
                           </div>
 
