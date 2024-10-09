@@ -43,7 +43,7 @@ const Header = (props: MenuType) => {
   // Componente de subitems
   const SubItems = ({ subitems, isSub = false, linkText, linkHref = '',label }: { subitems: any[], isSub?: boolean, linkText?: string, linkHref?: string, label?: string }) => {
     return (
-      <div className={classNames("desktop:w-[284px] tablet:max-w-100 mobile:w-full mobile:border-none tablet:border-none desktop:border-r border-surface-200 mobile:overflow-y-auto tablet:overflow-y-auto",{["mobile:px-3 tablet:px-3"]:isSub} )}>
+      <div className={classNames("desktop:w-[282px] tablet:max-w-100 mobile:w-full mobile:border-none tablet:border-none desktop:border-r border-surface-200 mobile:overflow-y-auto tablet:overflow-y-auto",{["mobile:px-3 tablet:px-3"]:isSub} )}>
         {isSub && <div className="desktop:hidden flex flex-col border-b border-surface-300 px-3">
           <div className="flex py-2 space-x-2 align-middle items-center">
             <button onClick={() => setOpenContent('closed')} ><span className="material-symbols-outlined text-2xl rounded p-2 bg-surface-300 font-bold">arrow_back</span></button>
@@ -56,10 +56,10 @@ const Header = (props: MenuType) => {
             </div>
           </Link>
         </div>}
-        <ul className={classNames("flex-col w-full h-full desktop:pr-6", { ["desktop:w-70 "]: isSub })} tabIndex={-1} onMouseEnter={() => { isSub ? setSubItems(true) : setItems(true) }} >
+        <ul className={classNames("flex-col w-full h-full desktop:pr-6", { ["desktop:w-[273px] "]: isSub })} tabIndex={-1} onMouseEnter={() => { isSub ? setSubItems(true) : setItems(true) }} >
           {subitems.map((item: any, i: number) =>
             item?.items?.length > 0 ? (
-              <button key={i} className={classNames("group rounded px-3 py-2 w-full", { ["hover:border hover:border-surface-200 text-primary-500"]: selected })}
+              <button key={i} className={classNames("group rounded px-3 py-2 w-full hover:border hover:border-surface-200 text-primary-500 hover:py-1")}
                 onMouseEnter={() => {
                   handleMouseEnter(item, isSub, true, item)
                 }}>
@@ -186,10 +186,10 @@ const Header = (props: MenuType) => {
        ALINEACIÓN ITEMS EN DESK 
       
       */}
-      <div className={classNames(" desktop:flex w-full h-full bg-surface-0 mobile:px-0 tablet:px-0 desktop:border-b desktop:border-surface-300 desktop:shadow tablet:fixed mobile:fixed tablet:top-12 mobile:top-12 tablet:overscroll-none mobile:overscroll-none  ", { ["mobile:-translate-x-full "]: !open , [" tablet:transition-colors tablet:duration-1000 tablet:bg-surface-950/30 tablet:ease-in-out"]:open})}>
-        <NavigationMenu.Root value={openContent} onValueChange={setOpenContent} className={classNames("desktop:h-9.5 h-screen overscroll-none desktop:block tablet:data-[state=closed]:hidden tablet:transition-transform mobile:transition-transform tablet:duration-1000 mobile:duration-1000 mobile:ease-in-out",{ ["tablet:-translate-x-full mobile:-translate-x-full "]: !open })}>
-          <NavigationMenu.List className="mobile:w-full h-screen desktop:h-fit desktop:min-w-[1024px] desktop:max-w-[1200px] flex flex-col justify-between desktop:flex-row desktop:items-start py-3 desktop:py-0 desktop:px-21 tablet:max-w-100 bg-surface-0">
-            <div className="tablet:overflow-y-auto tablet:overscroll-y-auto mobile:overflow-y-auto mobile:overscroll-y-auto desktop:flex">
+      <div className={classNames(" desktop:flex w-full desktop:min-w-[1024px] h-full bg-surface-0 mobile:px-0 tablet:px-0   desktop:px-21 desktop:justify-center desktop:border-b desktop:border-surface-300 desktop:shadow tablet:fixed mobile:fixed tablet:top-12 mobile:top-12 tablet:overscroll-none mobile:overscroll-none  ", { ["mobile:-translate-x-full "]: !open , [" tablet:transition-colors tablet:duration-1000 tablet:bg-surface-950/30 tablet:ease-in-out"]:open})}>
+        <NavigationMenu.Root value={openContent} onValueChange={setOpenContent} className={classNames("desktop:h-9.5 desktop:w-full  desktop:max-w-[1200px] h-screen overscroll-none desktop:flex tablet:data-[state=closed]:hidden tablet:transition-transform mobile:transition-transform tablet:duration-1000 mobile:duration-1000 mobile:ease-in-out",{ ["tablet:-translate-x-full mobile:-translate-x-full "]: !open })}>
+          <NavigationMenu.List className="mobile:w-full  h-screen desktop:h-fit desktop:w-auto flex flex-col justify-between  desktop:flex-row desktop:items-start py-3 desktop:py-0 tablet:max-w-100 bg-surface-0 border-error-600">
+            <div className="tablet:overflow-y-auto tablet:overscroll-y-auto mobile:overflow-y-auto mobile:overscroll-y-auto desktop:flex desktop:w-full desktop:max-w-[1200px] border-primary-700">
               {menu_items?.map((menu_item, i) => (
                 <NavigationMenu.Item key={i} onMouseEnter={() => {
                   setItems(false)
