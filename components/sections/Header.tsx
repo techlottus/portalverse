@@ -156,10 +156,11 @@ const Header = (props: MenuType) => {
       </NavigationMenu.Root>
 
       {/* Segundo nivel del menú */}
-      <div className={classNames(" desktop:flex w-full h-full justify-center desktop:border-b desktop:border-surface-300 desktop:shadow   tablet:fixed mobile:fixed tablet:top-12 mobile:top-12 tablet:overscroll-none mobile:overscroll-none",{["tablet:bg-surface-950/30"]:open,["hidden"]: !open})}>
+      <div className={classNames(" desktop:flex w-full h-full  mobile:px-0 tablet:px-0 desktop:border-b desktop:border-surface-300 desktop:shadow   tablet:fixed mobile:fixed tablet:top-12 mobile:top-12 tablet:overscroll-none mobile:overscroll-none",{["tablet:bg-surface-950/30"]:open,["hidden"]: !open})}>
         <NavigationMenu.Root className={classNames("desktop:h-9.5 h-screen overscroll-none desktop:block ", { ["hidden"]: !open })}>
-        <NavigationMenu.List className="w-full h-screen desktop:h-fit desktop:min-w-[1024px] flex flex-col desktop:flex-row desktop:items-start py-3 desktop:py-0 desktop:px-21 tablet:max-w-100 bg-surface-0">
-          {menu_items?.map((menu_item, i) => (
+        <NavigationMenu.List className="mobile:w-full h-screen desktop:h-fit desktop:min-w-[1024px] desktop:max-w-[1200px] flex flex-col justify-between desktop:flex-row desktop:items-start py-3 desktop:py-0 desktop:px-21 tablet:max-w-100 bg-surface-0">
+          <div className="tablet:overflow-y-auto tablet:overscroll-y-auto mobile:overflow-y-auto mbbile::overscroll-y-auto desktop:flex">
+            {menu_items?.map((menu_item, i) => (
             <NavigationMenu.Item key={i} onMouseEnter={() => {
               setItems(false)
               setSubItems(false)
@@ -219,7 +220,8 @@ const Header = (props: MenuType) => {
               )}
             </NavigationMenu.Item>
           ))}
-          <div className="desktop:hidden p-6 flex flex-col w-full tablet:max-w-100 fixed bottom-0">
+          </div>
+          <div className="desktop:hidden p-6 flex flex-col w-full tablet:max-w-100  ">
             <button
               onClick={() => { button?.CTA ? router.push(button?.CTA) : null }}
               className="px-4 py-3 rounded bg-surface-950 border border-surface-950 text-sm text-surface-100 font-texts hover:bg-surface-50 hover:text-surface-950 w-full">
@@ -229,6 +231,8 @@ const Header = (props: MenuType) => {
               <Links links={links} />
             </div>
           </div>
+          
+          
         </NavigationMenu.List>
         {/* si borran este ya no se ve el contenido a w-full */}
         <div className="absolute w-full top-29 left-0 ">
