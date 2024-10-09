@@ -79,7 +79,7 @@ const Header = (props: MenuType) => {
           <Link href={linkHref? linkHref : ""} passHref onMouseEnter={() => { isSub ? setSubItems(false) : setItems(false) }} className="mobile:hidden">
             <div className="py-2 w-full font-texts text-primary-500 font-normal px-3 flex align-middle">
               <p className={classNames("font-normal hover:underline", { ["desktop:text-sm"]: isSub })}>
-                {linkText? linkText + "»":null} </p>
+                {linkText? linkText + " »":null} </p>
             </div>
           </Link>
         </ul>
@@ -106,7 +106,7 @@ const Header = (props: MenuType) => {
         <div className="py-2 w-full font-texts text-primary-500 font-normal flex align-middle">
           <Link href={linkHref ?? ""} passHref>
             <p className={classNames("font-normal hover:underline text-sm")}>
-              {linkText ? linkText + "»" : null} </p></Link>
+              {linkText ? linkText + " »" : null} </p></Link>
 
         </div>
       </div>
