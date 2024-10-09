@@ -24,7 +24,7 @@ const Header = (props: MenuType) => {
     <div className="w-full">
       <NavigationMenu.List className="flex space-x-3 desktop:space-x-0 w-full desktop:items-center desktop:justify-end ">
         {links?.map((link?: any, i?: number) => (
-          <NavigationMenu.Item key={i} className="w-1/2 desktop:w-full desktop:px-3 desktop:py-0 p-4 border-2 desktop:border-none desktop:border-r desktop:last:border-r-0 rounded-lg desktop:rounded-none desktop:border-surface-900">
+          <NavigationMenu.Item key={i} className="w-1/2 desktop:w-full desktop:px-3 desktop:py-0 p-4 mobile:border-2 tablet:border-2  desktop:border-r desktop:last:border-r-0 rounded-lg desktop:rounded-none desktop:border-surface-900">
             <Link href={link?.href ?? ""} passHref>
               <p className="font-headings desktop:font-normal font-semibold text-xs desktop:text-surface-500 cursor-pointer hover:text-primary-500 w-full">
                 {link?.text}
@@ -134,7 +134,8 @@ const Header = (props: MenuType) => {
   }
 
   return (
-    <div className="absolute top-0 z-20 flex flex-col w-full ">
+    // todo desktop sticky
+    <div className="absolute desktop:fixed top-0 z-20 flex flex-col w-full tablet:fixed mobile:fixed bg-surface-0 ">
       {/* Primer nivel del menú */}
       <NavigationMenu.Root className="relative flex h-fit desktop:py-4 py-3 desktop:px-21 px-3 desktop:border-b desktop:border-surface-300 w-full justify-center align-middle ">
         <button className="absolute top-0 left-0 px-3 py-3 desktop:hidden flex items-center h-full" onClick={() => handleHamburguer()}>
@@ -155,28 +156,28 @@ const Header = (props: MenuType) => {
       </NavigationMenu.Root>
 
       {/* Segundo nivel del menú */}
-      <div className=" desktop:flex w-full justify-center desktop:border-b desktop:border-surface-300 desktop:shadow">
-        <NavigationMenu.Root className={classNames("desktop:h-9.5 h-screen overscroll-none desktop:block", { ["hidden"]: !open })}>
-        <NavigationMenu.List className="w-full desktop:min-w-[1024px] flex flex-col desktop:flex-row desktop:items-start py-4 desktop:py-0 desktop:px-21 ">
+      <div className={classNames(" desktop:flex w-full h-full justify-center desktop:border-b desktop:border-surface-300 desktop:shadow   tablet:fixed mobile:fixed tablet:top-12 mobile:top-12 tablet:overscroll-none mobile:overscroll-none",{["tablet:bg-surface-950/30"]:open,["hidden"]: !open})}>
+        <NavigationMenu.Root className={classNames("desktop:h-9.5 h-screen overscroll-none desktop:block ", { ["hidden"]: !open })}>
+        <NavigationMenu.List className="w-full h-screen desktop:h-fit desktop:min-w-[1024px] flex flex-col desktop:flex-row desktop:items-start py-3 desktop:py-0 desktop:px-21 tablet:max-w-100 bg-surface-0">
           {menu_items?.map((menu_item, i) => (
             <NavigationMenu.Item key={i} onMouseEnter={() => {
               setItems(false)
               setSubItems(false)
             }}
               className="relative px-6 desktop:block desktop:px-0">
-              <NavigationMenu.Trigger className="group flex justify-between desktop:justify-normal border-b desktop:border-b-none w-full items-center desktop:h-9.5 desktop:space-x-4 font-headings desktop:font-normal font-semibold text-surface-900 text-sm border-surface-300 desktop:border-none desktop:data-[state=open]:border-b-4 desktop:data-[state=open]:border-primary-300 desktop:data-[state=open]:text-primary-300 desktop:py-3 py-4 desktop:px-3 ">
+              <NavigationMenu.Trigger className="group z-20 flex justify-between desktop:justify-normal mobile:border-b tablet:border-b  w-full  items-center desktop:h-9.5 desktop:space-x-4 font-headings desktop:font-normal font-semibold text-surface-900 text-sm border-surface-300  desktop:data-[state=open]:border-b-4 desktop:data-[state=open]:border-primary-300 desktop:data-[state=open]:text-primary-300 desktop:py-3 desktop:data-[state=open]:pb-2 py-4 desktop:px-3 ">
                 {menu_item.label}
                 <span className="material-symbols-outlined text-2xl  text-surface-800 font-bold ml-3 desktop:hidden">chevron_right</span>
-                <CaretDownIcon className="relative hidden desktop:block transition duration-150 ease-out hover:ease-in group-data-[state=open]:rotate-180 desktop:group-data-[state=open]:text-primary-300 ml-1" aria-hidden />
+                <CaretDownIcon className="relative hidden desktop:block transition duration-300 ease-out hover:ease-in group-data-[state=open]:rotate-180 desktop:group-data-[state=open]:text-primary-300 ml-1" aria-hidden />
               </NavigationMenu.Trigger>
               {menu_item.items && (
-                <NavigationMenu.Content className="h-full bg-transparent shadow-none w-full mobile:absolute mobile:top-12 mobile:left-full mobile:transition-transform mobile:ease-in mobile:duration-700 mobile:-translate-x-full">
-                  <div className="w-full h-[1000px] mobile:h-fit bg-surface-950/30 absolute -z-20 blur-md my-20 overscroll-none overflow-y-hidden mobile:hidden "></div>
-                  <div className="bg-surface-50 h-full max-h-[600px] px-21 mobile:px-3 py-6 mobile:py-3 w-full flex mobile:flex-col desktop:justify-center">
+                <NavigationMenu.Content className="mobile:absolute tablet:absolute -z-20 ">
+                  <div className="w-full h-[1000px] mobile:h-fit bg-surface-950/30 absolute -z-20 blur-md my-20 overscroll-none overflow-y-hidden mobile:hidden"></div>
+                  <div className="bg-surface-50 boder h-full max-h-[600px] px-21 mobile:px-3 desktop:py-6 py-3 w-full flex desktop:flex-row flex-col desktop:justify-center">
                     <div className="flex w-full max-w-[1200px] min-h-fit mobile:flex-col">
                       <div className="hidden mobile:flex flex-col border-b border-surface-300">
                         <div className="flex py-2 space-x-2 align-middle items-center">
-                          <button onClick={()=>setItems(false) }><span className="material-symbols-outlined text-2xl rounded p-2 bg-surface-300 font-bold ml-3">arrow_back</span></button>
+                          <button ><span className="material-symbols-outlined text-2xl rounded p-2 bg-surface-300 font-bold ml-3">arrow_back</span></button>
                           <p className="font-semibold font-texts text-lg">{menu_item.label}</p>
                         </div>
                         <Link href={menu_item?.href || ""} passHref >
@@ -186,8 +187,8 @@ const Header = (props: MenuType) => {
                           </div>
                         </Link>
                       </div>
-                      {!items && <SubItems subitems={menu_item.items} linkText={menu_item.linkText} />}
-                      {subItems && <SubItemsCols subitems={subItemList} />}
+                      {!items && <SubItems subitems={menu_item.items} linkText={menu_item.linkText} linkHref={menu_item.href} />}
+                      {subItems && <SubItemsCols subitems={subItemList} linkHref={menu_item.href}  />}
 
                       <div className="px-6 h-full flex w-full mobile:hidden">
                         {(items && itemList.length < 11) &&
@@ -218,7 +219,7 @@ const Header = (props: MenuType) => {
               )}
             </NavigationMenu.Item>
           ))}
-          <div className="desktop:hidden p-6 flex flex-col w-full">
+          <div className="desktop:hidden p-6 flex flex-col w-full tablet:max-w-100 fixed bottom-0">
             <button
               onClick={() => { button?.CTA ? router.push(button?.CTA) : null }}
               className="px-4 py-3 rounded bg-surface-950 border border-surface-950 text-sm text-surface-100 font-texts hover:bg-surface-50 hover:text-surface-950 w-full">
