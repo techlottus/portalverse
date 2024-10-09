@@ -46,7 +46,7 @@ const Header = (props: MenuType) => {
       <div className={classNames("desktop:w-[282px] tablet:max-w-100 mobile:w-full tablet:h-full mobile:border-none tablet:border-none desktop:border-r border-surface-200 mobile:overflow-y-auto tablet:overflow-y-auto mobile:mb-6", { ["mobile:px-6 tablet:px-6"]: isSub })}>
         {isSub && <div className="desktop:hidden flex flex-col border-b border-surface-300">
           <div className="flex py-2 space-x-2 align-middle items-center">
-            <button onClick={() => setOpenContent('closed')} ><span className="material-symbols-outlined text-2xl rounded p-2 bg-surface-300 font-bold">arrow_back</span></button>
+            <button onClick={() =>setItems(false) } ><span className="material-symbols-outlined text-2xl rounded p-2 bg-surface-300 font-bold">arrow_back</span></button>
             <p className="font-semibold font-texts text-lg">{label}</p>
           </div>
           <Link href={linkHref || ""} passHref >
