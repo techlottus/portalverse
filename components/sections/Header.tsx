@@ -8,6 +8,7 @@ import AlertInfo from "./AlertInfo";
 import classNames from "classnames";
 import BannerPortalverseWrapper from "../BannerPortalverseWrapper";
 import Icon from "@/old-components/Icon"
+import { link } from "fs/promises";
 
 // Componente principal Header
 const Header = (props: MenuType) => {
@@ -75,10 +76,10 @@ const Header = (props: MenuType) => {
               </Link>
             )
           )}
-          <Link href={linkHref} passHref onMouseEnter={() => { isSub ? setSubItems(false) : setItems(false) }} className="mobile:hidden">
+          <Link href={linkHref? linkHref : ""} passHref onMouseEnter={() => { isSub ? setSubItems(false) : setItems(false) }} className="mobile:hidden">
             <div className="py-2 w-full font-texts text-primary-500 font-normal px-3 flex align-middle">
               <p className={classNames("font-normal hover:underline", { ["desktop:text-sm"]: isSub })}>
-                {linkText} »</p>
+                {linkText? linkText + "»":null} </p>
             </div>
           </Link>
         </ul>
@@ -89,23 +90,23 @@ const Header = (props: MenuType) => {
   const SubItemsCols = ({ subitems, isSub = false, linkText, linkHref = "" }: { subitems: SubitemsType[]; isSub?: boolean, linkText?: string, linkHref?: string }) => (
     <div className="flex flex-col w-full overflow-x-auto overscroll-x-auto">
       <ul className={classNames("flex flex-col flex-wrap max-h-100 max-w-75")} tabIndex={-1} onMouseEnter={() => setItems(true)}>
-        {subitems.map((item, i) => (
-          <Link key={i} href={item.href ?? ""} passHref>
+        {subitems?.map((item, i) => (
+          <Link key={i} href={item?.href ?? ""} passHref>
             <p className={classNames("font-text text-sm mr-3 mb-3",
               {
-                ["font-heading text-surface-950 font-semibold"]: item.bold,
-                ["font-texts text-surface-400 hover:text-primary-500 font-normal text-wrap text-left"]: !item.bold,
+                ["font-heading text-surface-950 font-semibold"]: item?.bold,
+                ["font-texts text-surface-400 hover:text-primary-500 font-normal text-wrap text-left"]: !item?.bold,
               })}>
-              {item.label}
+              {item?.label}
             </p>
           </Link>
         ))}
       </ul>
       <div className="w-full border-t border-surface-200 ">
         <div className="py-2 w-full font-texts text-primary-500 font-normal flex align-middle">
-          <Link href={linkHref} passHref>
+          <Link href={linkHref ?? ""} passHref>
             <p className={classNames("font-normal hover:underline text-sm")}>
-              {linkText} »</p></Link>
+              {linkText ? linkText + "»" : null} </p></Link>
 
         </div>
       </div>
@@ -179,7 +180,12 @@ const Header = (props: MenuType) => {
         </div>
       </NavigationMenu.Root>
 
-      {/* Segundo nivel del menú */}
+      {/* Segundo nivel del menú 
+       TODO 
+       MANEJO DE ERRORES 
+       ALINEACIÓN ITEMS EN DESK 
+      
+      */}
       <div className={classNames(" desktop:flex w-full h-full bg-surface-0 mobile:px-0 tablet:px-0 desktop:border-b desktop:border-surface-300 desktop:shadow tablet:fixed mobile:fixed tablet:top-12 mobile:top-12 tablet:overscroll-none mobile:overscroll-none tablet:bg-surface-950/30 ", { ["hidden"]: !open })}>
         <NavigationMenu.Root value={openContent} onValueChange={setOpenContent} className={classNames("desktop:h-9.5 h-screen overscroll-none desktop:block tablet:data-[state=closed]:hidden", { ["hidden"]: !open })}>
           <NavigationMenu.List className="mobile:w-full h-screen desktop:h-fit desktop:min-w-[1024px] desktop:max-w-[1200px] flex flex-col justify-between desktop:flex-row desktop:items-start py-3 desktop:py-0 desktop:px-21 tablet:max-w-100 bg-surface-0">
@@ -191,11 +197,12 @@ const Header = (props: MenuType) => {
                 }}
                   className="relative px-6 desktop:block desktop:px-0">
                   <NavigationMenu.Trigger className="group z-20 flex justify-between desktop:justify-normal mobile:border-b tablet:border-b  w-full  items-center desktop:h-9.5 desktop:space-x-4 font-headings desktop:font-normal font-semibold text-surface-900 text-sm border-surface-300  desktop:data-[state=open]:border-b-4 desktop:data-[state=open]:border-primary-500 desktop:data-[state=open]:text-primary-500 desktop:py-3 desktop:data-[state=open]:pb-2 py-4 desktop:px-3 ">
-                    {menu_item.label}
+                    {menu_item?.label}
                     <div className="desktop:hidden"><span className="material-symbols-outlined text-2xl  text-surface-800 font-bold ml-3 desktop:hidden">chevron_right</span></div>
                     <CaretDownIcon className="relative hidden desktop:block transition duration-300 ease-out hover:ease-in group-data-[state=open]:rotate-180 desktop:group-data-[state=open]:text-primary-300 ml-1" aria-hidden />
                   </NavigationMenu.Trigger>
-                  {menu_item.items && (
+                  {menu_item?.items && (
+                    // TODO QUE SE QUEDEN ESTILOS MARCADOS CUANDO ESTA DENTRO DE UNA OPCION
                     <NavigationMenu.Content className="mobile:z-20 tablet:max-w-100">
                       <div tabIndex={-1} onClick={() => setOpenContent('closed')} className={classNames("fixed top-0 w-full h-full mobile:hidden bg-surface-950/30 -z-20 tablet:-z-10 overscroll-none overflow-y-hidden")}></div>
                       <div className="bg-surface-50 boder h-full max-h-[600px] desktop:px-21 px-3  desktop:py-6 py-3 w-full tablet:max-w-100 flex desktop:flex-row flex-col desktop:justify-center tablet:z-20">
@@ -204,17 +211,17 @@ const Header = (props: MenuType) => {
                             <div className="desktop:hidden flex flex-col border-b border-surface-300">
                               <div className="flex py-2 space-x-2 align-middle items-center">
                                 <button onClick={() => setOpenContent('closed')} ><span className="material-symbols-outlined text-2xl rounded p-2 bg-surface-300 font-bold ml-3">arrow_back</span></button>
-                                <p className="font-semibold font-texts text-lg">{menu_item.label}</p>
+                                <p className="font-semibold font-texts text-lg">{menu_item?.label}</p>
                               </div>
-                              <Link href={menu_item?.href || ""} passHref >
+                              <Link href={menu_item?.href? menu_item?.href: ""} passHref >
                                 <div className="py-2 w-full font-texts text-primary-500 font-normal px-3 flex align-middle">
                                   <p className={classNames("font-normal hover:underline")}>
-                                    {menu_item.linkText} »</p>
+                                    {menu_item?.linkText? menu_item?.linkText+ '»' :null } </p>
                                 </div>
                               </Link>
                             </div>
                             <div className="flex overflow-y-auto overscroll-auto h-full">
-                              <SubItems subitems={menu_item.items} linkText={menu_item.linkText} linkHref={menu_item.href} />
+                              <SubItems subitems={menu_item?.items} linkText={menu_item?.linkText} linkHref={menu_item?.href} />
                             </div>
                           </div>
                           <div className="px-6 h-full flex w-full mobile:hidden tablet:hidden">
@@ -241,7 +248,7 @@ const Header = (props: MenuType) => {
                           </div>
                         </div>
                         {items && <div className="desktop:hidden flex absolute top:0 w-full bg-surface-0 overflow-y-auto overscroll-auto h-full left-full  transition-transform ease-in duration-700 -translate-x-full z-30 ">
-                          <SubItems subitems={itemList.items} isSub linkText={itemList?.linkText} linkHref={itemList?.href} label={itemList?.label} />
+                          <SubItems subitems={itemList?.items} isSub linkText={itemList?.linkText} linkHref={itemList?.href} label={itemList?.label} />
                         </div>}
 
                       </div>
