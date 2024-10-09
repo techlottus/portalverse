@@ -167,7 +167,7 @@ const Header = (props: MenuType) => {
               className="relative px-6 desktop:block desktop:px-0">
               <NavigationMenu.Trigger className="group z-20 flex justify-between desktop:justify-normal mobile:border-b tablet:border-b  w-full  items-center desktop:h-9.5 desktop:space-x-4 font-headings desktop:font-normal font-semibold text-surface-900 text-sm border-surface-300  desktop:data-[state=open]:border-b-4 desktop:data-[state=open]:border-primary-300 desktop:data-[state=open]:text-primary-300 desktop:py-3 desktop:data-[state=open]:pb-2 py-4 desktop:px-3 ">
                 {menu_item.label}
-                <span className="material-symbols-outlined text-2xl  text-surface-800 font-bold ml-3 desktop:hidden">chevron_right</span>
+                <div className="desktop:hidden"><span className="material-symbols-outlined text-2xl  text-surface-800 font-bold ml-3 desktop:hidden">chevron_right</span></div>
                 <CaretDownIcon className="relative hidden desktop:block transition duration-300 ease-out hover:ease-in group-data-[state=open]:rotate-180 desktop:group-data-[state=open]:text-primary-300 ml-1" aria-hidden />
               </NavigationMenu.Trigger>
               {menu_item.items && (
