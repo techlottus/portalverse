@@ -162,13 +162,13 @@ const Header = (props: MenuType) => {
         TODO:
         tablet 
         */}
-      <NavigationMenu.Root className="relative flex h-fit desktop:py-4 py-3 desktop:px-21 px-3 desktop:border-b desktop:border-surface-300 w-full justify-center align-middle bg-surface-0">
-        <button className="absolute top-0 left-0 px-3 py-3 desktop:hidden flex items-center h-full" onClick={() => handleHamburguer()}>
+      <NavigationMenu.Root className="relative flex h-fit desktop:py-4 py-3 desktop:px-21 px-6 desktop:border-b desktop:border-surface-300 w-full justify-center align-middle bg-surface-0">
+        <button className="absolute top-0 left-6 px-3 py-3 desktop:hidden flex items-center h-full" onClick={() => handleHamburguer()}>
           {!open && <Icon name="sort" className="w-6 h-6" />}
           {open && <span className="flex align-middle items-center"><Icon name="close" className="w-3 h-3 mr-1" /> <p className="font-texts font-normal text-sm">Cerrar</p></span>}
         </button>
         <div className="w-full max-w-[1200px] flex desktop:justify-between justify-center">
-          <div className="h-6 w-24 desktop:w-36 desktop:h-10 bg-logo bg-cover bg-center "></div>
+          <div className="h-[45px] w-[104px] desktop:w-36 desktop:h-10 bg-logo bg-cover bg-center "></div>
           <div className="hidden desktop:flex items-center  space-x-11">
             <Links links={links} />
             <button
@@ -183,10 +183,9 @@ const Header = (props: MenuType) => {
       {/* Segundo nivel del menú 
        TODO 
        MANEJO DE ERRORES 
-       ALINEACIÓN ITEMS EN DESK 
       
       */}
-      <div className={classNames(" desktop:flex w-full desktop:min-w-[1024px] h-full bg-surface-0 mobile:px-0 tablet:px-0   desktop:px-21 desktop:justify-center desktop:border-b desktop:border-surface-300 desktop:shadow tablet:fixed mobile:fixed tablet:top-12 mobile:top-12 tablet:overscroll-none mobile:overscroll-none  ", { ["mobile:-translate-x-full "]: !open , [" tablet:transition-colors tablet:duration-1000 tablet:bg-surface-950/30 tablet:ease-in-out"]:open})}>
+      <div className={classNames(" desktop:flex w-full desktop:min-w-[1024px] h-full bg-surface-0 mobile:px-0 tablet:px-0  desktop:px-21 desktop:justify-center desktop:border-b desktop:border-surface-300 desktop:shadow tablet:fixed mobile:fixed tablet:top-12 mobile:top-14 tablet:overscroll-none mobile:overscroll-none  ", { ["mobile:-translate-x-full "]: !open , [" tablet:transition-colors tablet:duration-1000 tablet:bg-surface-950/30 tablet:ease-in-out"]:open})}>
         <NavigationMenu.Root value={openContent} onValueChange={setOpenContent} className={classNames("desktop:h-9.5 desktop:w-full  desktop:max-w-[1200px] h-screen overscroll-none desktop:flex tablet:data-[state=closed]:hidden tablet:transition-transform mobile:transition-transform tablet:duration-1000 mobile:duration-1000 mobile:ease-in-out",{ ["tablet:-translate-x-full mobile:-translate-x-full "]: !open })}>
           <NavigationMenu.List className="mobile:w-full  h-screen desktop:h-fit desktop:w-auto flex flex-col justify-between  desktop:flex-row desktop:items-start py-3 desktop:py-0 tablet:max-w-100 bg-surface-0 ">
             <div className="tablet:overflow-y-auto tablet:overscroll-y-auto mobile:overflow-y-auto mobile:overscroll-y-auto desktop:flex desktop:w-full desktop:max-w-[1200px] ">
