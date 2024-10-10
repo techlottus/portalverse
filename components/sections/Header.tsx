@@ -47,7 +47,7 @@ const Header = (props: MenuType) => {
   const SubItems = ({ list, isSub = false, linkText, linkHref = '', label }: { list: any, isSub?: boolean, linkText?: string, linkHref?: string, label?: string }) => {
     
     return (
-      <div className={classNames("desktop:w-[282px] tablet:max-w-100 mobile:w-full tablet:h-full mobile:border-none tablet:border-none desktop:border-r border-surface-200 mobile:overflow-y-auto tablet:overflow-y-auto mobile:mb-6", { ["mobile:px-6 tablet:px-6"]: isSub })}>
+      <div className={classNames("desktop:w-[282px] tablet:w-full tablet:max-w-100 mobile:w-full tablet:h-full mobile:border-none tablet:border-none desktop:border-r border-surface-200 mobile:overflow-y-auto tablet:overflow-y-auto mobile:mb-6", { ["mobile:px-6 tablet:px-6"]: isSub })}>
         {isSub && <div className="desktop:hidden flex flex-col border-b border-surface-300">
           <div className="flex py-2 space-x-2 align-middle items-center">
             <button onClick={() =>{
