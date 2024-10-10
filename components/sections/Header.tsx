@@ -48,7 +48,7 @@ const Header = (props: MenuType) => {
     
     return (
       <div className={classNames("desktop:w-[282px] tablet:w-full tablet:max-w-100 mobile:w-full tablet:h-full mobile:border-none tablet:border-none desktop:border-r border-surface-200 mobile:overflow-y-auto tablet:overflow-y-auto mobile:mb-6", { ["mobile:px-6 tablet:px-6 tablet:py-3 mobile:py-3"]: isSub })}>
-        {isSub && <div className="desktop:hidden flex flex-col border-b border-surface-300">
+        {isSub && <div className="desktop:hidden flex flex-col border-b border-surface-300 mobile:mb-3 tablet:mb-3">
           <div className="flex py-2 space-x-2 align-middle items-center">
             <button onClick={() =>{
               subItems ? setSubItems(false):
@@ -214,18 +214,18 @@ const Header = (props: MenuType) => {
                   setSubItems(false)
                 }}
                   className="relative px-6 desktop:block desktop:px-0">
-                  <NavigationMenu.Trigger className="group z-20 flex justify-between desktop:justify-normal mobile:border-b tablet:border-b  w-full  items-center desktop:h-9.5 desktop:space-x-4 font-headings desktop:font-normal font-semibold text-surface-900 text-sm border-surface-300  desktop:data-[state=open]:border-b-4 desktop:data-[state=open]:border-primary-500 desktop:data-[state=open]:text-primary-500 desktop:py-3 desktop:data-[state=open]:pb-2 py-4 desktop:px-3 ">
+                  <NavigationMenu.Trigger className={classNames("group z-20 flex justify-between desktop:justify-normal mobile:border-b tablet:border-b  w-full  items-center desktop:h-9.5 desktop:space-x-4 font-headings desktop:font-normal font-semibold text-surface-900 text-sm border-surface-300  desktop:data-[state=open]:border-b-4 desktop:data-[state=open]:border-primary-500 desktop:data-[state=open]:text-primary-500 desktop:py-3 desktop:data-[state=open]:pb-2 py-4 desktop:px-3 ")}>
                     {menu_item?.label}
-                    <div className="desktop:hidden"><span className="material-symbols-outlined text-2xl  text-surface-800 font-bold ml-3 desktop:hidden">chevron_right</span></div>
-                    <CaretDownIcon className="relative hidden desktop:block transition duration-300 ease-out hover:ease-in group-data-[state=open]:rotate-180 desktop:group-data-[state=open]:text-primary-500 ml-1" aria-hidden />
+                    {menu_item?.items.length>0 &&<div className="desktop:hidden"><span className="material-symbols-outlined text-2xl  text-surface-800 font-bold ml-3 desktop:hidden">chevron_right</span></div>}
+                    {menu_item?.items.length>0 && <CaretDownIcon className="relative hidden desktop:block transition duration-300 ease-out hover:ease-in group-data-[state=open]:rotate-180 desktop:group-data-[state=open]:text-primary-500 ml-1" aria-hidden />}
                   </NavigationMenu.Trigger>
-                  {menu_item?.items && (
+                  {menu_item?.items.length>0 && (
                     <NavigationMenu.Content className="mobile:z-20 tablet:max-w-100 desktop:min-h-[440px] desktop:max-h-[724px] mobile:bg-surface-0 tablet:min-h-screen mobile:min-h-screen mobile:h-full">
                       <div tabIndex={-1} onClick={() => setOpenContent('closed')} className={classNames("fixed top-0 w-full h-full mobile:hidden bg-surface-950/30 -z-20 tablet:-z-10 overscroll-none overflow-y-hidden")}></div>
                       <div className="bg-surface-50 h-full desktop:px-21 px-6 desktop:py-6 py-3 w-full tablet:max-w-100 flex desktop:flex-row flex-col desktop:justify-center tablet:z-20 mobile:overflow-y-auto mobile:overscroll-y-auto">
                         <div className="flex w-full desktop:max-w-[1200px] desktop:min-h-fit mobile:h-full tablet:h-full mobile:flex-col tablet:flex-col ">
                           <div className="">
-                            <div className="desktop:hidden flex flex-col border-b border-surface-300">
+                            <div className="desktop:hidden flex flex-col border-b border-surface-300 mobile:mb-3 tablet:mb-3">
                               <div className="flex py-2 space-x-2 align-middle items-center">
                                 <button onClick={() => setOpenContent('closed')} ><span className="material-symbols-outlined text-2xl rounded p-2 bg-surface-300 font-bold">arrow_back</span></button>
                                 <p className="font-semibold font-texts text-lg">{menu_item?.label}</p>
