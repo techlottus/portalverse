@@ -123,14 +123,13 @@ const Header = (props: MenuType) => {
           </Link>
         ))}
       </ul>
-      <div className="w-full border-t border-surface-200 ">
+      {linkText &&<div className="w-full border-t border-surface-200 ">
         <div className="py-2 w-full font-texts text-primary-500 font-normal flex align-middle">
           <Link href={linkHref ?? ""} passHref>
             <p className={classNames("font-normal hover:underline text-sm")}>
               {linkText ? linkText + " »" : null} </p></Link>
-
         </div>
-      </div>
+      </div>}
     </div>
   );
 
