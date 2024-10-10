@@ -294,7 +294,7 @@ const Header = (props: MenuType) => {
 
           </NavigationMenu.List>
           {/* si borran este ya no se ve el contenido a w-full */}
-          <div className="absolute w-full desktop:top-28 desktop:left-0 top-0 left-full mobile:transition-transform mobile:ease-in-out mobile:duration-2000 mobile:-translate-x-full tablet:transition-transform tablet:ease-in-out tablet:duration-2000 tablet:-translate-x-full">
+          <div className="absolute w-full desktop:top-[113px] desktop:left-0 top-0 left-full mobile:transition-transform mobile:ease-in-out mobile:duration-2000 mobile:-translate-x-full tablet:transition-transform tablet:ease-in-out tablet:duration-2000 tablet:-translate-x-full">
             <NavigationMenu.Viewport className="relative w-full bg-surface-0 overflow-hidden tablet:max-w-100 tablet:min-h-full" />
           </div>
         </NavigationMenu.Root>
