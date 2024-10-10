@@ -222,7 +222,7 @@ const Header = (props: MenuType) => {
                   {menu_item?.items.length>0 && (
                     <NavigationMenu.Content className="mobile:z-20 tablet:max-w-100 desktop:min-h-[440px] desktop:max-h-[724px] mobile:bg-surface-0 tablet:min-h-screen mobile:min-h-screen mobile:h-full">
                       <div tabIndex={-1} onClick={() => setOpenContent('closed')} className={classNames("fixed top-0 w-full h-full mobile:hidden bg-surface-950/30 -z-20 tablet:-z-10 overscroll-none overflow-y-hidden")}></div>
-                      <div className="bg-surface-50 h-full desktop:px-21 px-6 desktop:py-6 py-3 w-full tablet:max-w-100 flex desktop:flex-row flex-col desktop:justify-center tablet:z-20 mobile:overflow-y-auto mobile:overscroll-y-auto">
+                      <div className="desktop:bg-surface-50 bg-surface-0 h-full desktop:px-21 px-6 desktop:py-6 py-3 w-full tablet:max-w-100 flex desktop:flex-row flex-col desktop:justify-center tablet:z-20 mobile:overflow-y-auto mobile:overscroll-y-auto">
                         <div className="flex w-full desktop:max-w-[1200px] desktop:min-h-fit mobile:h-full tablet:h-full mobile:flex-col tablet:flex-col ">
                           <div className="">
                             <div className="desktop:hidden flex flex-col border-b border-surface-300 mobile:mb-3 tablet:mb-3">
