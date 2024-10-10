@@ -21,9 +21,9 @@ const Header = (props: MenuType) => {
   const [subItems, setSubItems] = useState(false);
   const [itemList, setItemList] = useState<any>([]);
   const [subItemList, setSubItemList] = useState<any>([]);
-  
 
-  
+
+
   // Componente de enlaces
   const Links = ({ links }: { links?: (MenuType['links']) }) => (
     <div className="w-full">
@@ -45,56 +45,56 @@ const Header = (props: MenuType) => {
 
   // Componente de subitems
   const SubItems = ({ list, isSub = false, linkText, linkHref = '', label }: { list: any, isSub?: boolean, linkText?: string, linkHref?: string, label?: string }) => {
-    
+
     return (
       <div className={classNames("desktop:w-[282px] tablet:w-full tablet:max-w-100 mobile:w-full tablet:h-full mobile:border-none tablet:border-none desktop:border-r border-surface-200 mobile:overflow-y-auto tablet:overflow-y-auto mobile:mb-6", { ["mobile:px-6 tablet:px-6 tablet:py-3 mobile:py-3"]: isSub })}>
         {isSub && <div className="desktop:hidden flex flex-col border-b border-surface-300 mobile:mb-3 tablet:mb-3">
           <div className="flex py-2 space-x-2 align-middle items-center">
-            <button onClick={() =>{
-              subItems ? setSubItems(false):
-              items && setItems(false)
-            } 
-              } ><span className="material-symbols-outlined text-2xl rounded p-2 bg-surface-300 font-bold">arrow_back</span></button>
+            <button onClick={() => {
+              subItems ? setSubItems(false) :
+                items && setItems(false)
+            }
+            } ><span className="material-symbols-outlined text-2xl rounded p-2 bg-surface-300 font-bold">arrow_back</span></button>
             <p className="font-semibold font-texts text-lg">{label}</p>
           </div>
           <Link href={linkHref || ""} passHref >
             <div className="py-2 w-full font-texts text-primary-500 font-normal flex align-middle">
               <p className={classNames("font-normal hover:underline")}>
-                {linkText && linkText + ' »' } </p>
+                {linkText && linkText + ' »'} </p>
             </div>
           </Link>
         </div>}
         <ul className={classNames("flex flex-col w-full h-full mobile:h-fit tablet:h-fit desktop:pr-6 mobile:space-y-2 tablet:space-y-2", { ["desktop:w-[273px] "]: isSub })} tabIndex={-1} onMouseEnter={() => { isSub ? setSubItems(true) : setItems(true) }} >
           {list.map((item: any, i: number) =>
             item?.items?.length > 0 ? (
-              <button key={i} className={classNames("group rounded desktop:px-3 py-2 w-full desktop:hover:border desktop:hover:border-surface-200 text-primary-500 desktop:hover:pt-[7px] desktop:hover:pb-[8px] desktop:hover:px-[11px]",{["desktop:pt-[7px] desktop:pb-[8px] desktop:px-[11px] desktop:border desktop:border-surface-200"]:(!isSub && item.id===itemSelected && items)||(isSub && item.id===itemSubSelected && subItems)})}
+              <button key={i} className={classNames("group rounded desktop:px-3 py-2 w-full desktop:hover:border desktop:hover:border-surface-200 text-primary-500 desktop:hover:pt-[7px] desktop:hover:pb-[8px] desktop:hover:px-[11px]", { ["desktop:pt-[7px] desktop:pb-[8px] desktop:px-[11px] desktop:border desktop:border-surface-200"]: (!isSub && item.id === itemSelected && items) || (isSub && item.id === itemSubSelected && subItems) })}
                 onMouseEnter={() => {
                   handleMouseEnter(item, isSub, true, item)
-                  isSub ? setSubItemSelected(subItemList.id) :setItemSelected(itemList.id)  
+                  isSub ? setSubItemSelected(subItemList.id) : setItemSelected(itemList.id)
                 }}>
                 <div className="flex items-center justify-between">
-                  <p className={classNames("font-normal  desktop:group-hover:text-primary-500 text-surface-500 font-texts text-wrap text-left text-base", { ["desktop:text-sm"]: isSub ,["desktop:text-primary-500 desktop:underline desktop:underline-offset-1"]:(!isSub && item.id===itemSelected && items)||(isSub && item.id===itemSubSelected && subItems)})}>
+                  <p className={classNames("font-normal  desktop:group-hover:text-primary-500 text-surface-500 font-texts text-wrap text-left text-base", { ["desktop:text-sm"]: isSub, ["desktop:text-primary-500 desktop:underline desktop:underline-offset-1"]: (!isSub && item.id === itemSelected && items) || (isSub && item.id === itemSubSelected && subItems) })}>
                     {item.label}
                   </p>
-                  <span className={classNames("material-symbols-outlined text-2xl desktop:group-hover:text-primary-500 text-surface-400 font-bold ml-3",{["desktop:text-primary-500"]:(!isSub && item.id===itemSelected && items)||(isSub && item.id===itemSubSelected && subItems)})}>chevron_right</span>
+                  <span className={classNames("material-symbols-outlined text-2xl desktop:group-hover:text-primary-500 text-surface-400 font-bold ml-3", { ["desktop:text-primary-500"]: (!isSub && item.id === itemSelected && items) || (isSub && item.id === itemSubSelected && subItems) })}>chevron_right</span>
                 </div>
               </button>
             ) : (
-              <Link key={i} href={item.href ?? ""} passHref onMouseEnter={() => { 
+              <Link key={i} href={item.href ?? ""} passHref onMouseEnter={() => {
                 isSub ? setSubItems(false) : setItems(false)
-                 }} >
+              }} >
                 <p className={classNames("py-2 w-full rounded desktop:hover:border desktop:hover:border-surface-200 desktop:hover:pt-[7px] desktop:hover:pb-[8px] desktop:hover:px-[11px]", { ["font-heading text-surface-950 font-semibold"]: item.bold, ["font-texts text-surface-500 desktop:hover:text-primary-500 font-normal desktop:px-3"]: !item.bold, ["desktop:text-sm"]: isSub })}>{item.label}</p>
               </Link>
             )
           )}
-          <Link href={linkHref ? linkHref : ""} passHref onMouseEnter={() => { isSub ? setSubItems(false)  : setItems(false) }} className="mobile:hidden">
+          <Link href={linkHref ? linkHref : ""} passHref onMouseEnter={() => { isSub ? setSubItems(false) : setItems(false) }} className="mobile:hidden">
             <div className="py-2 w-full font-texts text-primary-500 font-normal desktop:px-3 flex align-middle">
               <p className={classNames("font-normal hover:underline text-base")}>
                 {linkText ? linkText + " »" : null} </p>
             </div>
           </Link>
         </ul>
-        {isSub &&<div className="desktop:hidden mt-6 flex flex-col w-full tablet:max-w-100">
+        {isSub && <div className="desktop:hidden mt-6 flex flex-col w-full tablet:max-w-100">
           <button
             onClick={() => { button?.CTA ? router.push(button?.CTA) : null }}
             className="px-4 py-3 rounded bg-surface-950 border border-surface-950 text-sm text-surface-100 font-texts hover:bg-surface-50 hover:text-surface-950 w-full">
@@ -214,15 +214,18 @@ const Header = (props: MenuType) => {
                   setSubItems(false)
                 }}
                   className="relative px-6 desktop:block desktop:px-0">
-                  <NavigationMenu.Trigger className={classNames("group z-20 flex justify-between desktop:justify-normal mobile:border-b tablet:border-b  w-full  items-center desktop:h-9.5 desktop:space-x-4 font-headings desktop:font-normal font-semibold text-surface-900 text-sm border-surface-300  desktop:data-[state=open]:border-b-4 desktop:data-[state=open]:border-primary-500 desktop:data-[state=open]:text-primary-500 desktop:py-3 desktop:data-[state=open]:pb-2 py-4 desktop:px-3 ")}>
-                    {menu_item?.label}
-                    {menu_item?.items.length>0 &&<div className="desktop:hidden"><span className="material-symbols-outlined text-2xl  text-surface-800 font-bold ml-3 desktop:hidden">chevron_right</span></div>}
-                    {menu_item?.items.length>0 && <CaretDownIcon className="relative hidden desktop:block transition duration-300 ease-out hover:ease-in group-data-[state=open]:rotate-180 desktop:group-data-[state=open]:text-primary-500 ml-1" aria-hidden />}
+                  <NavigationMenu.Trigger className={classNames("group z-20  flex justify-between desktop:justify-normal mobile:border-b tablet:border-b  w-full  items-center desktop:h-9.5 desktop:space-x-4 font-headings desktop:font-normal font-semibold tex border-surface-300  desktop:data-[state=open]:border-b-4 desktop:data-[state=open]:border-primary-500 desktop:data-[state=open]:text-primary-500 desktop:py-3 desktop:data-[state=open]:pb-2 py-4 desktop:px-3 ")}>
+                    {menu_item?.items.length > 0 ? menu_item?.label :
+                      <Link href={menu_item?.href ? menu_item.href : ""} passHref >
+                        <p className="font-normal text-sm">{menu_item?.label }</p>
+                      </Link>}
+                    {menu_item?.items.length > 0 && <div className="desktop:hidden"><span className="material-symbols-outlined text-2xl  text-surface-800 font-bold ml-3 desktop:hidden">chevron_right</span></div>}
+                    {menu_item?.items.length > 0 && <CaretDownIcon className="relative hidden desktop:block transition duration-300 ease-out hover:ease-in group-data-[state=open]:rotate-180 desktop:group-data-[state=open]:text-primary-500 ml-1" aria-hidden />}
                   </NavigationMenu.Trigger>
-                  {menu_item?.items.length>0 && (
+                  {menu_item?.items.length > 0 && (
                     <NavigationMenu.Content className="mobile:z-20 tablet:max-w-100 desktop:min-h-[440px] desktop:max-h-[724px] mobile:bg-surface-0 tablet:min-h-screen mobile:min-h-screen mobile:h-full">
-                      <div tabIndex={-1} onClick={() => setOpenContent('closed')}  className={classNames("fixed top-0 w-full h-full mobile:hidden bg-surface-950/30 -z-20 tablet:-z-10 overscroll-none overflow-y-hidden")}></div>
-                      <div tabIndex={-1} onMouseLeave={()=> setOpenContent('closed')} className="desktop:bg-surface-50 bg-surface-0 h-full desktop:px-21 px-6 desktop:py-6 py-3 w-full tablet:max-w-100 flex desktop:flex-row flex-col desktop:justify-center tablet:z-20 mobile:overflow-y-auto mobile:overscroll-y-auto">
+                      <div tabIndex={-1} onClick={() => setOpenContent('closed')} className={classNames("fixed top-0 w-full h-full mobile:hidden bg-surface-950/30 -z-20 tablet:-z-10 overscroll-none overflow-y-hidden")}></div>
+                      <div tabIndex={-1} onMouseLeave={() => setOpenContent('closed')} className="desktop:bg-surface-50 bg-surface-0 h-full desktop:px-21 px-6 desktop:py-6 py-3 w-full tablet:max-w-100 flex desktop:flex-row flex-col desktop:justify-center tablet:z-20 mobile:overflow-y-auto mobile:overscroll-y-auto">
                         <div className="flex w-full desktop:max-w-[1200px] desktop:min-h-fit mobile:h-full tablet:h-full mobile:flex-col tablet:flex-col ">
                           <div className="">
                             <div className="desktop:hidden flex flex-col border-b border-surface-300 mobile:mb-3 tablet:mb-3">
