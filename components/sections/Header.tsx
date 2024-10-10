@@ -50,13 +50,17 @@ const Header = (props: MenuType) => {
       <div className={classNames("desktop:w-[282px] tablet:max-w-100 mobile:w-full tablet:h-full mobile:border-none tablet:border-none desktop:border-r border-surface-200 mobile:overflow-y-auto tablet:overflow-y-auto mobile:mb-6", { ["mobile:px-6 tablet:px-6"]: isSub })}>
         {isSub && <div className="desktop:hidden flex flex-col border-b border-surface-300">
           <div className="flex py-2 space-x-2 align-middle items-center">
-            <button onClick={() =>setItems(false) } ><span className="material-symbols-outlined text-2xl rounded p-2 bg-surface-300 font-bold">arrow_back</span></button>
+            <button onClick={() =>{
+              subItems ? setSubItems(false):
+              items && setItems(false)
+            } 
+              } ><span className="material-symbols-outlined text-2xl rounded p-2 bg-surface-300 font-bold">arrow_back</span></button>
             <p className="font-semibold font-texts text-lg">{label}</p>
           </div>
           <Link href={linkHref || ""} passHref >
             <div className="py-2 w-full font-texts text-primary-500 font-normal flex align-middle">
               <p className={classNames("font-normal hover:underline")}>
-                {linkText} »</p>
+                {linkText && linkText + ' »' } </p>
             </div>
           </Link>
         </div>}
@@ -66,7 +70,7 @@ const Header = (props: MenuType) => {
               <button key={i} className={classNames("group rounded desktop:px-3 py-2 w-full desktop:hover:border desktop:hover:border-surface-200 text-primary-500 desktop:hover:pt-[7px] desktop:hover:pb-[8px] desktop:hover:px-[11px]")}
                 onMouseEnter={() => {
                   handleMouseEnter(item, isSub, true, item)
-                  isSub ? setSubItemSelected(subItemList.id) :setItemSelected(itemList.id)                  
+                  isSub ? setSubItemSelected(subItemList.id) :setItemSelected(itemList.id)  
                 }}>
                 <div className="flex items-center justify-between">
                   <p className={classNames("desktop:group-hover:underline desktop:group-hover:underline-offset-1 font-normal  desktop:group-hover:text-primary-500 text-surface-500 font-texts text-wrap text-left text-base", { ["desktop:text-sm"]: isSub ,["desktop:text-primary-500"]:(!isSub && item.id===itemSelected && items)||(isSub && item.id===itemSubSelected && subItems)})}>
@@ -216,7 +220,6 @@ const Header = (props: MenuType) => {
                     <CaretDownIcon className="relative hidden desktop:block transition duration-300 ease-out hover:ease-in group-data-[state=open]:rotate-180 desktop:group-data-[state=open]:text-primary-500 ml-1" aria-hidden />
                   </NavigationMenu.Trigger>
                   {menu_item?.items && (
-                    // TODO QUE SE QUEDEN ESTILOS MARCADOS CUANDO ESTA DENTRO DE UNA OPCION
                     <NavigationMenu.Content className="mobile:z-20 tablet:max-w-100 desktop:min-h-[440px] desktop:max-h-[724px] mobile:bg-surface-0 tablet:min-h-screen mobile:min-h-screen mobile:h-full">
                       <div tabIndex={-1} onClick={() => setOpenContent('closed')} className={classNames("fixed top-0 w-full h-full mobile:hidden bg-surface-950/30 -z-20 tablet:-z-10 overscroll-none overflow-y-hidden")}></div>
                       <div className="bg-surface-50 h-full desktop:px-21 px-6 desktop:py-6 py-3 w-full tablet:max-w-100 flex desktop:flex-row flex-col desktop:justify-center tablet:z-20 mobile:overflow-y-auto mobile:overscroll-y-auto">
@@ -263,7 +266,9 @@ const Header = (props: MenuType) => {
                         </div>
                         {items && <div className="desktop:hidden flex flex-col absolute top-0 w-full bg-surface-0 overflow-y-auto overscroll-auto h-full left-full  transition-transform ease-in duration-700 -translate-x-full z-30 ">
                           <SubItems list={itemList?.items} isSub linkText={itemList?.linkText} linkHref={itemList?.href} label={itemList?.label} />
-
+                        </div>}
+                        {subItems && <div className="desktop:hidden flex flex-col absolute top-0 w-full bg-surface-0 overflow-y-auto overscroll-auto h-full left-full  transition-transform ease-in duration-700 -translate-x-full z-30 ">
+                          <SubItems list={subItemList?.items} isSub linkText={subItemList?.linkText} linkHref={subItemList?.href} label={subItemList?.label} />
                         </div>}
 
                       </div>
