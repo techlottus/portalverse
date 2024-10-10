@@ -1,5 +1,5 @@
 import { MenuType, SubitemsType } from "@/utils/strapi/sections/Header";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import { CaretDownIcon } from '@radix-ui/react-icons';
 import Link from "next/link";
@@ -16,11 +16,14 @@ const Header = (props: MenuType) => {
   const router = useRouter();
 
   const [items, setItems] = useState(false);
-  const [selected, setSelected] = useState<boolean>();
+  const [itemSelected, setItemSelected] = useState(false);
+  const [itemSubSelected, setSubItemSelected] = useState(false);
   const [subItems, setSubItems] = useState(false);
   const [itemList, setItemList] = useState<any>([]);
   const [subItemList, setSubItemList] = useState<any>([]);
+  
 
+  
   // Componente de enlaces
   const Links = ({ links }: { links?: (MenuType['links']) }) => (
     <div className="w-full">
@@ -41,7 +44,8 @@ const Header = (props: MenuType) => {
   );
 
   // Componente de subitems
-  const SubItems = ({ subitems, isSub = false, linkText, linkHref = '', label }: { subitems: any[], isSub?: boolean, linkText?: string, linkHref?: string, label?: string }) => {
+  const SubItems = ({ list, isSub = false, linkText, linkHref = '', label }: { list: any, isSub?: boolean, linkText?: string, linkHref?: string, label?: string }) => {
+    
     return (
       <div className={classNames("desktop:w-[282px] tablet:max-w-100 mobile:w-full tablet:h-full mobile:border-none tablet:border-none desktop:border-r border-surface-200 mobile:overflow-y-auto tablet:overflow-y-auto mobile:mb-6", { ["mobile:px-6 tablet:px-6"]: isSub })}>
         {isSub && <div className="desktop:hidden flex flex-col border-b border-surface-300">
@@ -57,26 +61,29 @@ const Header = (props: MenuType) => {
           </Link>
         </div>}
         <ul className={classNames("flex-col w-full h-full mobile:h-fit tablet:h-fit desktop:pr-6", { ["desktop:w-[273px] "]: isSub })} tabIndex={-1} onMouseEnter={() => { isSub ? setSubItems(true) : setItems(true) }} >
-          {subitems.map((item: any, i: number) =>
+          {list.map((item: any, i: number) =>
             item?.items?.length > 0 ? (
               <button key={i} className={classNames("group rounded desktop:px-3 py-2 w-full desktop:hover:border desktop:hover:border-surface-200 text-primary-500 desktop:hover:pt-[7px] desktop:hover:pb-[8px] desktop:hover:px-[11px]")}
                 onMouseEnter={() => {
                   handleMouseEnter(item, isSub, true, item)
+                  isSub ? setSubItemSelected(subItemList.id) :setItemSelected(itemList.id)                  
                 }}>
                 <div className="flex items-center justify-between">
-                  <p className={classNames("desktop:group-hover:underline desktop:group-hover:underline-offset-1 font-normal  desktop:group-hover:text-primary-500 text-surface-500 font-texts text-wrap text-left text-base", { ["desktop:text-sm"]: isSub })}>
+                  <p className={classNames("desktop:group-hover:underline desktop:group-hover:underline-offset-1 font-normal  desktop:group-hover:text-primary-500 text-surface-500 font-texts text-wrap text-left text-base", { ["desktop:text-sm"]: isSub ,["desktop:text-primary-500"]:(!isSub && item.id===itemSelected && items)||(isSub && item.id===itemSubSelected && subItems)})}>
                     {item.label}
                   </p>
-                  <span className="material-symbols-outlined text-2xl desktop:group-hover:text-primary-500 text-surface-400 font-bold ml-3">chevron_right</span>
+                  <span className={classNames("material-symbols-outlined text-2xl desktop:group-hover:text-primary-500 text-surface-400 font-bold ml-3",{["desktop:text-primary-500"]:(!isSub && item.id===itemSelected && items)||(isSub && item.id===itemSubSelected && subItems)})}>chevron_right</span>
                 </div>
               </button>
             ) : (
-              <Link key={i} href={item.href ?? ""} passHref onMouseEnter={() => { isSub ? setSubItems(false) : setItems(false) }} >
+              <Link key={i} href={item.href ?? ""} passHref onMouseEnter={() => { 
+                isSub ? setSubItems(false) : setItems(false)
+                 }} >
                 <p className={classNames("py-2 w-full rounded desktop:hover:border desktop:hover:border-surface-200 desktop:hover:pt-[7px] desktop:hover:pb-[8px] desktop:hover:px-[11px] desktop:hover:underline desktop:hover:underline-offset-1", { ["font-heading text-surface-950 font-semibold"]: item.bold, ["font-texts text-surface-500 desktop:hover:text-primary-500 font-normal desktop:px-3"]: !item.bold, ["desktop:text-sm"]: isSub })}>{item.label}</p>
               </Link>
             )
           )}
-          <Link href={linkHref ? linkHref : ""} passHref onMouseEnter={() => { isSub ? setSubItems(false) : setItems(false) }} className="mobile:hidden">
+          <Link href={linkHref ? linkHref : ""} passHref onMouseEnter={() => { isSub ? setSubItems(false)  : setItems(false) }} className="mobile:hidden">
             <div className="py-2 w-full font-texts text-primary-500 font-normal desktop:px-3 flex align-middle">
               <p className={classNames("font-normal hover:underline text-base")}>
                 {linkText ? linkText + " »" : null} </p>
@@ -145,12 +152,10 @@ const Header = (props: MenuType) => {
     if (!isSub) {
       setItems(true);
       setItemList(list);
-      setSelected(id)
     } else {
       setSubItemList(list);
       setSubItems(true)
     }
-    console.log("subs", list, isSub)
 
   };
 
@@ -230,13 +235,13 @@ const Header = (props: MenuType) => {
                               </Link>
                             </div>
                             <div className="flex overflow-y-auto overscroll-auto h-full">
-                              <SubItems subitems={menu_item?.items} linkText={menu_item?.linkText} linkHref={menu_item?.href} />
+                              <SubItems list={menu_item?.items} linkText={menu_item?.linkText} linkHref={menu_item?.href} />
                             </div>
                           </div>
                           <div className="px-6 h-full flex w-full mobile:hidden tablet:hidden">
                             {(items && itemList?.items.length < 11) &&
                               <div className="flex space-x-6">
-                                <SubItems subitems={itemList?.items} isSub={true} linkText={menu_item?.linkText} />
+                                <SubItems list={itemList?.items} isSub={true} linkText={menu_item?.linkText} />
                                 {subItems && <SubItemsCols subitems={subItemList} isSub linkText={subItemList?.linkText} linkHref={subItemList?.href} />
                                 }
                               </div>
@@ -257,7 +262,7 @@ const Header = (props: MenuType) => {
                           </div>
                         </div>
                         {items && <div className="desktop:hidden flex flex-col absolute top-0 w-full bg-surface-0 overflow-y-auto overscroll-auto h-full left-full  transition-transform ease-in duration-700 -translate-x-full z-30 ">
-                          <SubItems subitems={itemList?.items} isSub linkText={itemList?.linkText} linkHref={itemList?.href} label={itemList?.label} />
+                          <SubItems list={itemList?.items} isSub linkText={itemList?.linkText} linkHref={itemList?.href} label={itemList?.label} />
 
                         </div>}
 
