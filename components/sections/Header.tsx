@@ -67,7 +67,7 @@ const Header = (props: MenuType) => {
         <ul className={classNames("flex flex-col w-full h-full mobile:h-fit tablet:h-fit desktop:pr-6 mobile:space-y-2 tablet:space-y-2", { ["desktop:w-[273px] "]: isSub })} tabIndex={-1} onMouseEnter={() => { isSub ? setSubItems(true) : setItems(true) }} >
           {list.map((item: any, i: number) =>
             item?.items?.length > 0 ? (
-              <button key={i} className={classNames("group rounded desktop:px-3 py-2 w-full desktop:hover:border desktop:hover:border-surface-200 text-primary-500 desktop:hover:pt-[7px] desktop:hover:pb-[8px] desktop:hover:px-[11px]", { ["desktop:pt-[7px] desktop:pb-[8px] desktop:px-[11px] desktop:border desktop:border-surface-200"]: (!isSub && item.id === itemSelected && items) || (isSub && item.id === itemSubSelected && subItems) })}
+              <button key={i} className={classNames("group rounded desktop:px-3 py-2 w-full desktop:hover-border desktop:hover-border-surface-200 text-primary-500 desktop-hover:pt-[7px] desktop:hover:pb-[8px] desktop:hover:px-[11px]", { ["desktop:pt-[7px] desktop:pb-[8px] desktop:px-[11px] desktop:border desktop:border-surface-200"]: (!isSub && item.id === itemSelected && items) || (isSub && item.id === itemSubSelected && subItems) })}
                 onMouseEnter={() => {
                   handleMouseEnter(item, isSub, true, item)
                   isSub ? setSubItemSelected(subItemList.id) : setItemSelected(itemList.id)
@@ -83,7 +83,7 @@ const Header = (props: MenuType) => {
               <Link key={i} href={item.href ?? ""} passHref onMouseEnter={() => {
                 isSub ? setSubItems(false) : setItems(false)
               }} >
-                <p className={classNames("py-2 w-full rounded desktop:hover:border desktop:hover:border-surface-200 desktop:hover:pt-[7px] desktop:hover:pb-[8px] desktop:hover:px-[11px]", { ["font-heading text-surface-950 font-semibold"]: item.bold, ["font-texts text-surface-500 desktop:hover:text-primary-500 font-normal desktop:px-3"]: !item.bold, ["desktop:text-sm"]: isSub })}>{item.label}</p>
+                <p className={classNames("py-2 w-full rounded desktop:hover:border desktop:hover:border-surface-200 desktop:hover:pt-[7px] desktop:hover:pb-[7px] desktop:hover:px-[11px]", { ["font-heading text-surface-950 font-semibold"]: item.bold, ["font-texts text-surface-500 desktop:hover:text-primary-500 font-normal desktop:px-3"]: !item.bold, ["desktop:text-sm"]: isSub })}>{item.label}</p>
               </Link>
             )
           )}
@@ -294,7 +294,7 @@ const Header = (props: MenuType) => {
 
           </NavigationMenu.List>
           {/* si borran este ya no se ve el contenido a w-full */}
-          <div className="absolute w-full desktop:top-[113px] desktop:left-0 top-0 left-full mobile:transition-transform mobile:ease-in-out mobile:duration-2000 mobile:-translate-x-full tablet:transition-transform tablet:ease-in-out tablet:duration-2000 tablet:-translate-x-full">
+          <div className="absolute w-full desktop:-z-10 desktop:overflow-y-hidden desktop:top-[113px] desktop:left-0 top-0 left-full mobile:transition-transform mobile:ease-in-out mobile:duration-2000 mobile:-translate-x-full tablet:transition-transform tablet:ease-in-out tablet:duration-2000 tablet:-translate-x-full">
             <NavigationMenu.Viewport className="relative w-full bg-surface-0 overflow-hidden tablet:max-w-100 tablet:min-h-full" />
           </div>
         </NavigationMenu.Root>
