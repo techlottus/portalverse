@@ -303,7 +303,7 @@ const Header = (props: MenuType) => {
                           </div>
                         </div>
                         {items && <div className="desktop:hidden flex flex-col absolute top-0 w-full bg-surface-0 overflow-y-auto overscroll-auto h-full left-full  transition-transform ease-in duration-700 -translate-x-full z-30 ">
-                          <SubItems list={itemList?.items} isSub linkText={itemList?.linkText} linkHref={itemList?.href} label={itemList?.label} />
+                          <SubItems list={itemList?.items} isSub linkText={menu_items[i-1].label} linkHref={menu_items[i-1].href} label={itemList?.label} />
                         </div>}
                         {subItems && <div className="desktop:hidden flex flex-col absolute top-0 w-full bg-surface-0 overflow-y-auto overscroll-auto h-full left-full  transition-transform ease-in duration-700 -translate-x-full z-30 ">
                           <SubItems list={subItemList?.items} isSub linkText={subItemList?.linkText} linkHref={subItemList?.href} label={subItemList?.label} />
