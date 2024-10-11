@@ -30,7 +30,7 @@ export type MenuItemsType = {
   label?: string;
   linkText?:string;
   href?:string;
-  items: SubitemsType[];
+  items?: SubitemsType[];
   }
 export type MenuType = {
   id?: string;
