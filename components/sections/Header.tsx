@@ -235,7 +235,11 @@ const Header = (props: MenuType) => {
         </div>
       </NavigationMenu.Root>
 
-      {/* Segundo nivel del menú */}
+      {/* Segundo nivel del menú 
+       TODO 
+       MANEJO DE ERRORES 
+      
+      */}
       <div className={classNames(" desktop:flex w-full desktop:min-w-[1024px] h-full bg-surface-0 mobile:px-0 tablet:px-0  desktop:px-21 desktop:justify-center desktop:border-b desktop:border-surface-300 desktop:shadow tablet:fixed mobile:fixed tablet:top-[69px] mobile:top-[69px] tablet:overflow-y-scroll mobile:overflow-y-scroll ", { ["mobile:-translate-x-full "]: !open, [" tablet:transition-colors tablet:duration-1000 tablet:bg-surface-950/30 tablet:ease-in-out"]: open })}>
         <NavigationMenu.Root value={openContent} onValueChange={setOpenContent} className={classNames("desktop:h-9.5 desktop:w-full  desktop:max-w-[1200px] h-screen overscroll-none desktop:flex tablet:data-[state=closed]:hidden tablet:transition-transform mobile:transition-transform tablet:duration-1000 mobile:duration-1000 mobile:ease-in-out", { ["tablet:-translate-x-full mobile:-translate-x-full "]: !open })}>
           <NavigationMenu.List className="mobile:w-full h-screen mobile:overflow-y-auto mobile:overscroll-y-auto desktop:h-fit desktop:w-auto flex flex-col desktop:justify-between  desktop:flex-row desktop:items-start py-3 desktop:py-0 tablet:max-w-100 bg-surface-0 ">
@@ -246,15 +250,14 @@ const Header = (props: MenuType) => {
                   setSubItems(false)
                 }}
                   className="relative px-6 desktop:block desktop:px-0">
-                  <NavigationMenu.Trigger 
-                   className={classNames("group z-20  flex justify-between desktop:justify-normal mobile:border-b tablet:border-b  w-full  items-center desktop:h-9.5 desktop:space-x-4 font-headings desktop:font-normal font-semibold tex border-surface-300  desktop:data-[state=open]:border-b-4  desktop:data-[state=open]:border-primary-500 desktop:data-[state=open]:text-primary-500 desktop:py-3 desktop:data-[state=open]:pb-2 py-4 desktop:px-3 ")}>
-                    {menu_item?.items && menu_item?.items?.length > 0 ? menu_item?.label :
-                      <Link href={menu_item?.href ?? ""} passHref >
-                        <p className="desktop:font-normal font-semibold font-headings text-base">{menu_item?.label}</p>
+                  {menu_item?.items && menu_item?.items?.length > 0 ?
+                  <NavigationMenu.Trigger className={classNames("group z-20  flex justify-between desktop:justify-normal mobile:border-b tablet:border-b  w-full  items-center desktop:h-9.5 desktop:space-x-4 font-headings desktop:font-normal font-semibold  border-surface-300  desktop:data-[state=open]:border-b-4 desktop:data-[state=open]:border-primary-500 desktop:data-[state=open]:text-primary-500 desktop:py-3 desktop:data-[state=open]:pb-2 py-4 desktop:px-3 ")}>
+                     {menu_item?.label} 
+                     <div className="desktop:hidden"><span className="material-symbols-outlined text-2xl  text-surface-800 font-bold ml-3 desktop:hidden">chevron_right</span></div>
+                    <CaretDownIcon className="relative hidden desktop:block transition duration-300 ease-out hover:ease-in group-data-[state=open]:rotate-180 desktop:group-data-[state=open]:text-primary-500 ml-1" aria-hidden />
+                  </NavigationMenu.Trigger>:<Link href={menu_item?.href ?? ""} passHref >
+                        <p className="desktop:font-normal font-semibold font-headings text-base group z-20  flex justify-between desktop:justify-normal mobile:border-b tablet:border-b  w-full  items-center desktop:h-9.5 desktop:space-x-4  border-surface-300  desktop:hover:border-b-4 desktop:hover:border-primary-500 desktop:hover:text-primary-500 desktop:py-3 desktop:hover:pb-2 py-4 desktop:px-3 ">{menu_item?.label}</p>
                       </Link>}
-                    {menu_item?.items && menu_item?.items?.length > 0 && <div className="desktop:hidden"><span className="material-symbols-outlined text-2xl  text-surface-800 font-bold ml-3 desktop:hidden">chevron_right</span></div>}
-                    {menu_item?.items && menu_item?.items?.length > 0 && <CaretDownIcon className="relative hidden desktop:block transition duration-300 ease-out hover:ease-in group-data-[state=open]:rotate-180 desktop:group-data-[state=open]:text-primary-500 ml-1" aria-hidden />}
-                  </NavigationMenu.Trigger>
                   {menu_item?.items && menu_item?.items?.length > 0 && (
                     <NavigationMenu.Content className="mobile:z-20 tablet:max-w-100 desktop:min-h-[440px] desktop:max-h-[724px] mobile:bg-surface-0 bg-surface-50 tablet:min-h-screen mobile:min-h-screen mobile:h-full mobile:overflow-y-auto mobile:overscroll-y-auto">
                       <div tabIndex={-1} onClick={() => setOpenContent('closed')} className={classNames("fixed top-0 w-full h-full mobile:hidden bg-surface-950/30 -z-20 tablet:-z-10 overscroll-none overflow-y-hidden")}></div>
@@ -279,7 +282,7 @@ const Header = (props: MenuType) => {
                             </div>
                             <div tabIndex={-1} onMouseLeave={() => {
                               setSubItems(false)
-                              console.log(menu_item.linkText, menu_item.href, menu_item)
+                              // console.log(menu_item.linkText, menu_item.href)
                             }
                             } className="flex overflow-y-auto overscroll-auto h-full">
                               <SubItems list={menu_item?.items} linkText={menu_item?.linkText} linkHref={menu_item?.href} />
@@ -342,7 +345,7 @@ const Header = (props: MenuType) => {
           </NavigationMenu.List>
           {/* si borran este ya no se ve el contenido a w-full */}
           <div className="absolute w-full desktop:-z-10 desktop:overflow-y-hidden desktop:top-[113px] desktop:left-0 top-0 left-full mobile:transition-transform mobile:ease-in-out mobile:duration-2000 mobile:-translate-x-full tablet:transition-transform tablet:ease-in-out tablet:duration-2000 tablet:-translate-x-full">
-            <NavigationMenu.Viewport className="relative w-full desktop:data-[state=open]:min-h-[440px] desktop:data-[state=open]:max-h-[724px] desktop:bg-transparent bg-surface-0 overflow-hidden tablet:max-w-100 tablet:min-h-full" />
+            <NavigationMenu.Viewport className="relative w-full desktop:data-[state=open]:min-h-[440px] desktop:data-[state=open]:max-h-[724px] bg-surface-0 overflow-hidden tablet:max-w-100 tablet:min-h-full" />
           </div>
         </NavigationMenu.Root>
       </div>
