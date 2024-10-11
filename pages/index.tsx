@@ -3,8 +3,10 @@ import NextPageWithLayout from "@/types/Layout.types"
 import HeaderFooterLayout from "@/layouts/HeaderFooter.layout"
 import ContentGenerator from "@/utils/ContentGenerator"
 import { getHomePageData } from "@/utils/getHomePageData"
+import getLayout from "@/utils/getLayout"
 
-const Home: NextPageWithLayout = ({ data: { sections, meta } }: any) => {
+const Home: NextPageWithLayout = ({ data: { sections, meta , layoutData} }: any) => {
+  console.log('layoutData: ', layoutData);
   return <>
     <Head>
       <title>{meta?.metaTitle}</title>
@@ -45,7 +47,7 @@ const Home: NextPageWithLayout = ({ data: { sections, meta } }: any) => {
         {/* structuredData */}
         <script type="application/ld+json">{meta?.structuredData}</script>
     </Head>
-    <HeaderFooterLayout breadcrumbs={false}>
+    <HeaderFooterLayout breadcrumbs={false} layoutData={layoutData} >
       <div className="flex flex-col w-p:space-y-12 w-t:space-y-12 w-d:space-y-18 w-d:mt-18">
         {sections?.length > 0 ? (
           <ContentGenerator blocks={sections} />
@@ -60,13 +62,15 @@ export async function getStaticProps(context: any) {
   try {
     const homePageData = await getHomePageData();
     const sections = homePageData?.homePage?.data?.attributes?.sections;
-    const meta = homePageData?.homePage?.data?.attributes?.seo;
+    const meta = homePageData?.homePage?.data?.attributes?.seo;    
+    const layoutData = await getLayout(1);
 
     return {
       props: {
         data: {
           sections,
-          meta
+          meta,
+          layoutData: layoutData || null
         },
       },
     };
