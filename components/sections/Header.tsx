@@ -282,7 +282,7 @@ const Header = (props: MenuType) => {
                             </div>
                             <div tabIndex={-1} onMouseLeave={() => {
                               setSubItems(false)
-                              console.log(menu_item.linkText, menu_item.href)
+                              console.log(menu_item.linkText, menu_item.href, menu_item)
                             }
                             } className="flex overflow-y-auto overscroll-auto h-full">
                               <SubItems list={menu_item?.items} linkText={menu_item?.linkText} linkHref={menu_item?.href} />
