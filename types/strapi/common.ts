@@ -10,7 +10,7 @@ export type SocialMedias = {
     data: {
       attributes: {
         name: string
-        icon: string;
+        icon: StrapiImage;
         href: string
       }
     }

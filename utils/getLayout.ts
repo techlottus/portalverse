@@ -1,12 +1,12 @@
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
-import { Footer } from "./getFooters";
+import { FooterData } from "./getFooters";
 
 type Layout = {
   layouts: {
     data: Array< {
       attributes: {
         name: string
-        footer : Footer
+        footer : FooterData
       }
     }>
   }
@@ -41,6 +41,8 @@ query Layouts($id: ID) {
                   data {
                     attributes {
                       name
+                      url
+                      alternativeText
                     }
                   }
                 }
@@ -61,6 +63,7 @@ query Layouts($id: ID) {
                         data {
                           attributes {
                             name
+                            url
                           }
                         }
                       }

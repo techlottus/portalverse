@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import getLayout from "@/utils/getLayout";
 
 
@@ -7,6 +8,7 @@ const Layouts = ({ data: { layoutData } }: any) => {
   
   return <>
     <p>hellos world!!</p>
+    <Footer {...layoutData.attributes.footer.data }></Footer>
   </>
 }
 

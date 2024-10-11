@@ -14,14 +14,18 @@ export type FooterColumn = {
 export type FooterSection = {
   title: string;
   logo: boolean;
-  images: Array<StrapiImage>;
-  links: LinkComponentConfig
+  images: {
+    data: Array<StrapiImage>;
+  }
+  links: Array<LinkComponentConfig>
   position: string;
-  socialMedias: Array<SocialMedias>
+  social_medias: {
+    data: Array<SocialMedias>
+  }
   columns: Array<FooterColumn>
 
 }
-export type Footer = {
+export type FooterData = {
   attributes: {
     name: string;
     footerSection: Array<FooterSection>
@@ -30,7 +34,7 @@ export type Footer = {
 
 export type Footers = {
   footers: {
-    data: Array<Footer>;
+    data: Array<FooterData>;
   };
 };
 
@@ -49,7 +53,14 @@ query Footers() {
       footerSection {
         title
         logo
-        images
+        images {
+          data {
+            attributes {
+              url
+              alternativeText
+            }
+          }
+        }
         links {
           text
           href
@@ -59,10 +70,12 @@ query Footers() {
           disabled
         }
         position
-        socialMedias {
-          name
-          icon
-          href
+        social_medias {
+          data {
+            name
+            icon
+            href
+          }
         }
         columns {
           items {
