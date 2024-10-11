@@ -240,23 +240,23 @@ const Header = (props: MenuType) => {
        MANEJO DE ERRORES 
       
       */}
-      <div className={classNames(" desktop:flex w-full desktop:min-w-[1024px] h-full bg-surface-0 mobile:px-0 tablet:px-0  desktop:px-21 desktop:justify-center desktop:border-b desktop:border-surface-300 desktop:shadow tablet:fixed mobile:fixed tablet:top-[69px] mobile:top-[69px] tablet:overflow-y-scroll mobile:overflow-y-scroll ", { ["mobile:-translate-x-full "]: !open, [" tablet:transition-colors tablet:duration-1000 tablet:bg-surface-950/30 tablet:ease-in-out"]: open })}>
-        <NavigationMenu.Root value={openContent} onValueChange={setOpenContent} className={classNames("desktop:h-9.5 desktop:w-full  desktop:max-w-[1200px] h-screen overscroll-none desktop:flex tablet:data-[state=closed]:hidden tablet:transition-transform mobile:transition-transform tablet:duration-1000 mobile:duration-1000 mobile:ease-in-out", { ["tablet:-translate-x-full mobile:-translate-x-full "]: !open })}>
-          <NavigationMenu.List className="mobile:w-full h-screen mobile:overflow-y-auto mobile:overscroll-y-auto desktop:h-fit desktop:w-auto flex flex-col desktop:justify-between  desktop:flex-row desktop:items-start py-3 desktop:py-0 tablet:max-w-100 bg-surface-0 ">
-            <div className=" desktop:flex desktop:w-full desktop:max-w-[1200px] ">
+      <div className={classNames(" desktop:flex w-full desktop:min-w-[1024px] h-full desktop:h-[45px] bg-surface-0 mobile:px-0 tablet:px-0  desktop:px-21 desktop:justify-center desktop:border-b desktop:border-surface-300 desktop:shadow tablet:fixed mobile:fixed tablet:top-[69px] mobile:top-[69px] tablet:overflow-y-scroll mobile:overflow-y-scroll ", { ["mobile:-translate-x-full "]: !open, [" tablet:transition-colors tablet:duration-1000 tablet:bg-surface-950/30 tablet:ease-in-out"]: open })}>
+        <NavigationMenu.Root value={openContent} onValueChange={setOpenContent} className={classNames("desktop:h-[45px] desktop:w-full  desktop:max-w-[1200px] h-screen overscroll-none desktop:flex tablet:data-[state=closed]:hidden tablet:transition-transform mobile:transition-transform tablet:duration-1000 mobile:duration-1000 mobile:ease-in-out", { ["tablet:-translate-x-full mobile:-translate-x-full "]: !open })}>
+          <NavigationMenu.List className="mobile:w-full h-screen mobile:overflow-y-auto mobile:overscroll-y-auto desktop:h-fit desktop:w-auto flex flex-col desktop:justify-between  desktop:flex-row desktop:items-start py-3 desktop:py-0 tablet:max-w-100 bg-surface-0 desktop:bg-transparent">
+            <div className=" desktop:flex desktop:w-full desktop:max-w-[1200px] align-middle ">
               {menu_items?.map((menu_item, i) => (
                 <NavigationMenu.Item key={i} onMouseEnter={() => {
                   setItems(false)
                   setSubItems(false)
                 }}
-                  className="relative px-6 desktop:block desktop:px-0">
+                  className="relative px-6 desktop:flex desktop:px-0 align-middle">
                   {menu_item?.items && menu_item?.items?.length > 0 ?
-                  <NavigationMenu.Trigger className={classNames("group z-20  flex justify-between desktop:justify-normal mobile:border-b tablet:border-b  w-full  items-center desktop:h-9.5 desktop:space-x-4 font-headings desktop:font-normal font-semibold  border-surface-300  desktop:data-[state=open]:border-b-4 desktop:data-[state=open]:border-primary-500 desktop:data-[state=open]:text-primary-500 desktop:py-3 desktop:data-[state=open]:pb-2 py-4 desktop:px-3 ")}>
+                  <NavigationMenu.Trigger className={classNames("group z-20 flex justify-between desktop:justify-normal mobile:border-b tablet:border-b  w-full  items-center desktop:h-[45px] desktop:space-x-4 font-headings desktop:font-normal font-semibold  border-surface-300  desktop:data-[state=open]:border-b-4 desktop:data-[state=open]:border-primary-500 desktop:data-[state=open]:text-primary-500 desktop:py-3 desktop:data-[state=open]:pb-2 py-4 desktop:px-3 ")}>
                      {menu_item?.label} 
                      <div className="desktop:hidden"><span className="material-symbols-outlined text-2xl  text-surface-800 font-bold ml-3 desktop:hidden">chevron_right</span></div>
                     <CaretDownIcon className="relative hidden desktop:block transition duration-300 ease-out hover:ease-in group-data-[state=open]:rotate-180 desktop:group-data-[state=open]:text-primary-500 ml-1" aria-hidden />
                   </NavigationMenu.Trigger>:<Link href={menu_item?.href ?? ""} passHref >
-                        <p className="desktop:font-normal font-semibold font-headings text-base group z-20  flex justify-between desktop:justify-normal mobile:border-b tablet:border-b  w-full  items-center desktop:h-9.5 desktop:space-x-4  border-surface-300  desktop:hover:border-b-4 desktop:hover:border-primary-500 desktop:hover:text-primary-500 desktop:py-3 desktop:hover:pb-2 py-4 desktop:px-3 ">{menu_item?.label}</p>
+                        <p className="desktop:font-normal font-semibold font-headings text-base group z-20  flex justify-between desktop:justify-normal mobile:border-b tablet:border-b  w-full  items-center desktop:h-[45px] desktop:space-x-4  border-surface-300  desktop:hover:border-b-4 desktop:hover:border-primary-500 desktop:hover:text-primary-500 desktop:py-3 desktop:hover:pb-2 py-4 desktop:px-3 ">{menu_item?.label}</p>
                       </Link>}
                   {menu_item?.items && menu_item?.items?.length > 0 && (
                     <NavigationMenu.Content className="mobile:z-20 tablet:max-w-100 desktop:min-h-[440px] desktop:max-h-[724px] mobile:bg-surface-0 bg-surface-50 tablet:min-h-screen mobile:min-h-screen mobile:h-full mobile:overflow-y-auto mobile:overscroll-y-auto">
