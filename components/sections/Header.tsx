@@ -282,7 +282,7 @@ const Header = (props: MenuType) => {
                           <div className="px-6 h-full flex w-full mobile:hidden tablet:hidden" >
                             {(items && itemList?.items && itemList?.items.length < 11) &&
                               <div className="flex space-x-6">
-                                <SubItems list={itemList?.items} isSub={true} linkText={menu_item?.linkText} />
+                                <SubItems list={itemList?.items} isSub={true} linkText={menu_item?.linkText} linkHref={menu_item.href}/>
                                 {subItems && <SubItemsCols subitems={subItemList} isSub linkText={subItemList?.linkText} linkHref={subItemList?.href} />
                                 }
                               </div>
@@ -306,7 +306,7 @@ const Header = (props: MenuType) => {
                           <SubItems list={itemList?.items} isSub linkText={menu_item?.label} linkHref={menu_item?.href} label={itemList?.label} />
                         </div>}
                         {subItems && <div className="desktop:hidden flex flex-col absolute top-0 w-full bg-surface-0 overflow-y-auto overscroll-auto h-full left-full  transition-transform ease-in duration-700 -translate-x-full z-30 ">
-                          <SubItems list={subItemList?.items} isSub linkText={subItemList?.linkText} linkHref={subItemList?.href} label={subItemList?.label} />
+                          <SubItems list={subItemList?.items} isSub linkText={menu_item?.label} linkHref={menu_item?.href} label={subItemList?.label} />
                         </div>}
 
                       </div>
