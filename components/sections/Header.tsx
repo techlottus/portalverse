@@ -57,7 +57,7 @@ const Header = (props: MenuType) => {
             } ><span className="material-symbols-outlined text-2xl rounded p-2 bg-surface-300 font-bold">arrow_back</span></button>
             <p className="font-semibold font-texts text-lg">{label}</p>
           </div>
-          <Link href={linkHref || ""} passHref >
+          <Link href={linkHref ?? ""} passHref >
             <div className="py-2 w-full font-texts text-primary-500 font-normal flex align-middle">
               <p className={classNames("font-normal hover:underline")}>
                 {linkText && linkText + ' »'} </p>
@@ -87,7 +87,7 @@ const Header = (props: MenuType) => {
               </Link>
             )
           )}
-          <Link href={linkHref ? linkHref : ""} passHref onMouseEnter={() => { isSub ? setSubItems(false) : setItems(false) }} className="mobile:hidden">
+          <Link href={linkHref ?? ""} passHref onMouseEnter={() => { isSub ? setSubItems(false) : setItems(false) }} className="mobile:hidden">
             <div className="py-2 w-full font-texts text-primary-500 font-normal desktop:px-3 flex align-middle">
               <p className={classNames("font-normal hover:underline text-base")}>
                 {linkText ? linkText + " »" : null} </p>
@@ -240,7 +240,7 @@ const Header = (props: MenuType) => {
                   className="relative px-6 desktop:block desktop:px-0">
                   <NavigationMenu.Trigger className={classNames("group z-20  flex justify-between desktop:justify-normal mobile:border-b tablet:border-b  w-full  items-center desktop:h-9.5 desktop:space-x-4 font-headings desktop:font-normal font-semibold tex border-surface-300  desktop:data-[state=open]:border-b-4 desktop:data-[state=open]:border-primary-500 desktop:data-[state=open]:text-primary-500 desktop:py-3 desktop:data-[state=open]:pb-2 py-4 desktop:px-3 ")}>
                     {menu_item?.items && menu_item?.items?.length > 0 ? menu_item?.label :
-                      <Link href={menu_item?.href?menu_item?.href:""} passHref >
+                      <Link href={menu_item?.href ?? ""} passHref >
                         <p className="desktop:font-normal font-semibold font-headings text-base">{menu_item?.label }</p>
                       </Link>}
                     {menu_item?.items && menu_item?.items?.length > 0 && <div className="desktop:hidden"><span className="material-symbols-outlined text-2xl  text-surface-800 font-bold ml-3 desktop:hidden">chevron_right</span></div>}
