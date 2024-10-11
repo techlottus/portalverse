@@ -160,9 +160,9 @@ const Header = (props: MenuType) => {
           </div>)
         }
       </div>
-      <div className="border-t border-surface-200 py-2">
+      {alert && <div className="border-t border-surface-200 py-2">
         <AlertInfo {...alert} />
-      </div>
+      </div>}
     </div>
   );
 
@@ -277,7 +277,7 @@ const Header = (props: MenuType) => {
                                 <p className="font-semibold font-texts text-lg">{menu_item?.label}</p>
                               </div>
                               <Link href={menu_item?.href ?? ""} passHref >
-                                <div className="py-2 w-full font-texts text-primary-500 font-normal desktop:px-3 flex align-middle">
+                                <div className="py-4 w-full font-texts text-primary-500 font-normal desktop:px-3 flex align-middle">
                                   <p className={classNames("font-normal hover:underline")}>
                                     {menu_item?.linkText ? menu_item?.linkText + '»' : null} </p>
                                 </div>
