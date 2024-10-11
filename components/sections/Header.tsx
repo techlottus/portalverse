@@ -235,11 +235,7 @@ const Header = (props: MenuType) => {
         </div>
       </NavigationMenu.Root>
 
-      {/* Segundo nivel del menú 
-       TODO 
-       MANEJO DE ERRORES 
-      
-      */}
+      {/* Segundo nivel del menú */}
       <div className={classNames(" desktop:flex w-full desktop:min-w-[1024px] h-full bg-surface-0 mobile:px-0 tablet:px-0  desktop:px-21 desktop:justify-center desktop:border-b desktop:border-surface-300 desktop:shadow tablet:fixed mobile:fixed tablet:top-[69px] mobile:top-[69px] tablet:overflow-y-scroll mobile:overflow-y-scroll ", { ["mobile:-translate-x-full "]: !open, [" tablet:transition-colors tablet:duration-1000 tablet:bg-surface-950/30 tablet:ease-in-out"]: open })}>
         <NavigationMenu.Root value={openContent} onValueChange={setOpenContent} className={classNames("desktop:h-9.5 desktop:w-full  desktop:max-w-[1200px] h-screen overscroll-none desktop:flex tablet:data-[state=closed]:hidden tablet:transition-transform mobile:transition-transform tablet:duration-1000 mobile:duration-1000 mobile:ease-in-out", { ["tablet:-translate-x-full mobile:-translate-x-full "]: !open })}>
           <NavigationMenu.List className="mobile:w-full h-screen mobile:overflow-y-auto mobile:overscroll-y-auto desktop:h-fit desktop:w-auto flex flex-col desktop:justify-between  desktop:flex-row desktop:items-start py-3 desktop:py-0 tablet:max-w-100 bg-surface-0 ">
@@ -250,7 +246,8 @@ const Header = (props: MenuType) => {
                   setSubItems(false)
                 }}
                   className="relative px-6 desktop:block desktop:px-0">
-                  <NavigationMenu.Trigger className={classNames("group z-20  flex justify-between desktop:justify-normal mobile:border-b tablet:border-b  w-full  items-center desktop:h-9.5 desktop:space-x-4 font-headings desktop:font-normal font-semibold tex border-surface-300  desktop:data-[state=open]:border-b-4 desktop:data-[state=open]:border-primary-500 desktop:data-[state=open]:text-primary-500 desktop:py-3 desktop:data-[state=open]:pb-2 py-4 desktop:px-3 ")}>
+                  <NavigationMenu.Trigger 
+                   className={classNames("group z-20  flex justify-between desktop:justify-normal mobile:border-b tablet:border-b  w-full  items-center desktop:h-9.5 desktop:space-x-4 font-headings desktop:font-normal font-semibold tex border-surface-300  desktop:data-[state=open]:border-b-4  desktop:data-[state=open]:border-primary-500 desktop:data-[state=open]:text-primary-500 desktop:py-3 desktop:data-[state=open]:pb-2 py-4 desktop:px-3 ")}>
                     {menu_item?.items && menu_item?.items?.length > 0 ? menu_item?.label :
                       <Link href={menu_item?.href ?? ""} passHref >
                         <p className="desktop:font-normal font-semibold font-headings text-base">{menu_item?.label}</p>
@@ -345,7 +342,7 @@ const Header = (props: MenuType) => {
           </NavigationMenu.List>
           {/* si borran este ya no se ve el contenido a w-full */}
           <div className="absolute w-full desktop:-z-10 desktop:overflow-y-hidden desktop:top-[113px] desktop:left-0 top-0 left-full mobile:transition-transform mobile:ease-in-out mobile:duration-2000 mobile:-translate-x-full tablet:transition-transform tablet:ease-in-out tablet:duration-2000 tablet:-translate-x-full">
-            <NavigationMenu.Viewport className="relative w-full desktop:data-[state=open]:min-h-[440px] desktop:data-[state=open]:max-h-[724px] bg-surface-0 overflow-hidden tablet:max-w-100 tablet:min-h-full" />
+            <NavigationMenu.Viewport className="relative w-full desktop:data-[state=open]:min-h-[440px] desktop:data-[state=open]:max-h-[724px] desktop:bg-transparent bg-surface-0 overflow-hidden tablet:max-w-100 tablet:min-h-full" />
           </div>
         </NavigationMenu.Root>
       </div>
