@@ -240,7 +240,7 @@ const Header = (props: MenuType) => {
                   className="relative px-6 desktop:block desktop:px-0">
                   <NavigationMenu.Trigger className={classNames("group z-20  flex justify-between desktop:justify-normal mobile:border-b tablet:border-b  w-full  items-center desktop:h-9.5 desktop:space-x-4 font-headings desktop:font-normal font-semibold tex border-surface-300  desktop:data-[state=open]:border-b-4 desktop:data-[state=open]:border-primary-500 desktop:data-[state=open]:text-primary-500 desktop:py-3 desktop:data-[state=open]:pb-2 py-4 desktop:px-3 ")}>
                     {menu_item?.items && menu_item?.items?.length > 0 ? menu_item?.label :
-                      <Link href={menu_item?.href ?? ""} passHref >
+                      <Link href={menu_item?.href?menu_item?.href:""} passHref >
                         <p className="desktop:font-normal font-semibold font-headings text-base">{menu_item?.label }</p>
                       </Link>}
                     {menu_item?.items && menu_item?.items?.length > 0 && <div className="desktop:hidden"><span className="material-symbols-outlined text-2xl  text-surface-800 font-bold ml-3 desktop:hidden">chevron_right</span></div>}
