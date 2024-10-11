@@ -22,7 +22,7 @@ const Header = (props: MenuType) => {
   const [itemList, setItemList] = useState<any>([]);
   const [subItemList, setSubItemList] = useState<any>([]);
 
-
+  
 
   // Componente de enlaces
   const Links = ({ links }: { links?: (MenuType['links']) }) => (
@@ -159,11 +159,11 @@ const Header = (props: MenuType) => {
       setSubItemList(list);
       setSubItems(true)
     }
-    console.log("handle: ", items,subItems, itemList, subItemList)
+    // console.log("handle: ", items,subItems, itemList, subItemList)
 
   };
   const clearStates = () =>{
-    console.log("clean")
+    // console.log("clean")
     setItems(false);
     setSubItems(false)
     setItemList({});
@@ -181,6 +181,22 @@ const Header = (props: MenuType) => {
       setOpen(true)
     }
   }
+
+  useEffect(()=>{
+    // console.log("subitems: ",subItems)
+    if(!subItems){
+       setSubItemList({})
+       setSubItemSelected(false)
+    }
+  },[subItems])
+  useEffect( ()=>{
+    // console.log("items: ",items)
+    if(!items){
+      setSubItems(false)
+      setSubItemList({})
+      setSubItemSelected(false)
+    }
+  },[items])
 
   return (
     // todo desktop sticky
