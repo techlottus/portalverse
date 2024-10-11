@@ -64,8 +64,8 @@ const Header = (props: MenuType) => {
             </div>
           </Link>
         </div>}
-        <ul className={classNames("flex flex-col w-full h-full mobile:h-fit tablet:h-fit desktop:pr-6 mobile:space-y-2 tablet:space-y-2", { ["desktop:w-[273px] "]: isSub })} tabIndex={-1} onMouseEnter={() => { isSub ? setSubItems(true) : setItems(true) }} >
-          {list.map((item: any, i: number) =>
+        <ul className={classNames("flex flex-col w-full h-full mobile:h-fit tablet:h-fit desktop:pr-6 mobile:space-y-2 tablet:space-y-2", { ["desktop:w-[273px] "]: isSub })} tabIndex={-1}  >
+          {list?.map((item: any, i: number) =>
             item?.items?.length > 0 ? (
               <button key={i} className={classNames("group rounded desktop:px-3 py-2 w-full desktop:hover:border desktop:hover:border-surface-200 text-primary-500 desktop:hover:pt-[7px] desktop:hover:pb-[8px] desktop:hover:px-[11px]", { ["desktop:pt-[7px] desktop:pb-[8px] desktop:px-[11px] desktop:border desktop:border-surface-200"]: (!isSub && item.id === itemSelected && items) || (isSub && item.id === itemSubSelected && subItems) })}
                 onMouseEnter={() => {
@@ -94,7 +94,7 @@ const Header = (props: MenuType) => {
             </div>
           </Link>
         </ul>
-        {isSub && <div className="desktop:hidden mt-6 flex flex-col w-full tablet:max-w-100">
+        {isSub && <div className="desktop:hidden mt-6 flex flex-col w-full tablet:max-w-100 mb-50">
           <button
             onClick={() => { button?.CTA ? router.push(button?.CTA) : null }}
             className="px-4 py-3 rounded bg-surface-950 border border-surface-950 text-sm text-surface-100 font-texts hover:bg-surface-50 hover:text-surface-950 w-full">
@@ -159,8 +159,17 @@ const Header = (props: MenuType) => {
       setSubItemList(list);
       setSubItems(true)
     }
+    console.log("handle: ", items,subItems, itemList, subItemList)
 
   };
+  const clearStates = () =>{
+    console.log("clean")
+    setItems(false);
+    setSubItems(false)
+    setItemList({});
+    setSubItemList({});
+
+  }
 
   const [open, setOpen] = useState(false)
   const [openContent, setOpenContent] = useState('')
@@ -205,7 +214,7 @@ const Header = (props: MenuType) => {
       */}
       <div className={classNames(" desktop:flex w-full desktop:min-w-[1024px] h-full bg-surface-0 mobile:px-0 tablet:px-0  desktop:px-21 desktop:justify-center desktop:border-b desktop:border-surface-300 desktop:shadow tablet:fixed mobile:fixed tablet:top-[69px] mobile:top-[69px] tablet:overscroll-none mobile:overscroll-none  ", { ["mobile:-translate-x-full "]: !open, [" tablet:transition-colors tablet:duration-1000 tablet:bg-surface-950/30 tablet:ease-in-out"]: open })}>
         <NavigationMenu.Root value={openContent} onValueChange={setOpenContent} className={classNames("desktop:h-9.5 desktop:w-full  desktop:max-w-[1200px] h-screen overscroll-none desktop:flex tablet:data-[state=closed]:hidden tablet:transition-transform mobile:transition-transform tablet:duration-1000 mobile:duration-1000 mobile:ease-in-out", { ["tablet:-translate-x-full mobile:-translate-x-full "]: !open })}>
-          <NavigationMenu.List className="mobile:w-full h-screen mobile:overflow-y-auto mobile:overscroll-auto desktop:h-fit desktop:w-auto flex flex-col desktop:justify-between  desktop:flex-row desktop:items-start py-3 desktop:py-0 tablet:max-w-100 bg-surface-0 ">
+          <NavigationMenu.List className="mobile:w-full h-screen mobile:overflow-y-auto mobile:overscroll-y-auto desktop:h-fit desktop:w-auto flex flex-col desktop:justify-between  desktop:flex-row desktop:items-start py-3 desktop:py-0 tablet:max-w-100 bg-surface-0 ">
             <div className=" desktop:flex desktop:w-full desktop:max-w-[1200px] ">
               {menu_items?.map((menu_item, i) => (
                 <NavigationMenu.Item key={i} onMouseEnter={() => {
@@ -222,9 +231,13 @@ const Header = (props: MenuType) => {
                     {menu_item?.items && menu_item?.items?.length > 0 && <CaretDownIcon className="relative hidden desktop:block transition duration-300 ease-out hover:ease-in group-data-[state=open]:rotate-180 desktop:group-data-[state=open]:text-primary-500 ml-1" aria-hidden />}
                   </NavigationMenu.Trigger>
                   {menu_item?.items && menu_item?.items?.length > 0 && (
-                    <NavigationMenu.Content className="mobile:z-20 tablet:max-w-100 desktop:min-h-[440px] desktop:max-h-[724px] mobile:bg-surface-0 tablet:min-h-screen mobile:min-h-screen mobile:h-full">
+                    <NavigationMenu.Content className="mobile:z-20 tablet:max-w-100 desktop:min-h-[440px] desktop:max-h-[724px] mobile:bg-surface-0 bg-surface-50 tablet:min-h-screen mobile:min-h-screen mobile:h-full mobile:overflow-y-auto mobile:overscroll-y-auto">
                       <div tabIndex={-1} onClick={() => setOpenContent('closed')} className={classNames("fixed top-0 w-full h-full mobile:hidden bg-surface-950/30 -z-20 tablet:-z-10 overscroll-none overflow-y-hidden")}></div>
-                      <div tabIndex={-1} onMouseLeave={() => setOpenContent('closed')} className="desktop:bg-surface-50 bg-surface-0 h-full desktop:px-21 px-6 desktop:py-6 py-3 w-full tablet:max-w-100 flex desktop:flex-row flex-col desktop:justify-center tablet:z-20 mobile:overflow-y-auto mobile:overscroll-y-auto">
+                      <div tabIndex={-1} onMouseLeave={() => {
+                        setOpenContent('closed')
+                        clearStates()
+                      }
+                      } className=" bg-surface-0 h-full desktop:min-h-[440px] desktop:max-h-[724px] desktop:px-21 px-6 desktop:py-6 py-3 w-full tablet:max-w-100 flex desktop:flex-row flex-col desktop:justify-center tablet:z-20 mobile:overflow-y-auto mobile:overscroll-y-auto">
                         <div className="flex w-full desktop:max-w-[1200px] desktop:min-h-fit mobile:h-full tablet:h-full mobile:flex-col tablet:flex-col ">
                           <div className="">
                             <div className="desktop:hidden flex flex-col border-b border-surface-300 mobile:mb-3 tablet:mb-3">
@@ -239,23 +252,26 @@ const Header = (props: MenuType) => {
                                 </div>
                               </Link>
                             </div>
-                            <div className="flex overflow-y-auto overscroll-auto h-full">
+                            <div tabIndex={-1} onMouseLeave={() => {
+                                setSubItems(false)
+                            }
+                              } className="flex overflow-y-auto overscroll-auto h-full">
                               <SubItems list={menu_item?.items} linkText={menu_item?.linkText} linkHref={menu_item?.href} />
                             </div>
                           </div>
-                          <div className="px-6 h-full flex w-full mobile:hidden tablet:hidden">
-                            {(items && itemList?.items.length < 11) &&
+                          <div className="px-6 h-full flex w-full mobile:hidden tablet:hidden" >
+                            {(items && itemList?.items && itemList?.items.length < 11) &&
                               <div className="flex space-x-6">
                                 <SubItems list={itemList?.items} isSub={true} linkText={menu_item?.linkText} />
                                 {subItems && <SubItemsCols subitems={subItemList} isSub linkText={subItemList?.linkText} linkHref={subItemList?.href} />
                                 }
                               </div>
                             }
-                            {(items && itemList?.items.length > 10) && <SubItemsCols subitems={itemList} linkText={itemList?.linkText} linkHref={itemList?.href} />}
+                            {(items && itemList?.items && itemList?.items.length > 10) && <SubItemsCols subitems={itemList} linkText={itemList?.linkText} linkHref={itemList?.href} />}
                             {!items && <LayoutHome banners={banners} alert={alert} />}
                           </div>
 
-                          <div className="desktop:hidden py-6 flex flex-col w-full tablet:max-w-100">
+                          <div className="desktop:hidden py-6 flex flex-col w-full tablet:max-w-100 mb-100">
                             <button
                               onClick={() => { button?.CTA ? router.push(button?.CTA) : null }}
                               className="px-4 py-3 rounded bg-surface-950 border border-surface-950 text-sm text-surface-100 font-texts hover:bg-surface-50 hover:text-surface-950 w-full">
@@ -294,7 +310,7 @@ const Header = (props: MenuType) => {
           </NavigationMenu.List>
           {/* si borran este ya no se ve el contenido a w-full */}
           <div className="absolute w-full desktop:-z-10 desktop:overflow-y-hidden desktop:top-[113px] desktop:left-0 top-0 left-full mobile:transition-transform mobile:ease-in-out mobile:duration-2000 mobile:-translate-x-full tablet:transition-transform tablet:ease-in-out tablet:duration-2000 tablet:-translate-x-full">
-            <NavigationMenu.Viewport className="relative w-full bg-surface-0 overflow-hidden tablet:max-w-100 tablet:min-h-full" />
+            <NavigationMenu.Viewport className="relative w-full desktop:data-[state=open]:min-h-[440px] desktop:data-[state=open]:max-h-[724px] bg-surface-0 overflow-hidden tablet:max-w-100 tablet:min-h-full" />
           </div>
         </NavigationMenu.Root>
       </div>
