@@ -262,13 +262,13 @@ const Header = (props: MenuType) => {
                       <p className="desktop:font-normal font-semibold font-headings text-base group z-20  flex justify-between desktop:justify-normal mobile:border-b tablet:border-b  w-full  items-center desktop:h-[45px] desktop:space-x-4  border-surface-300  desktop:hover:border-b-4 desktop:hover:border-primary-500 desktop:hover:text-primary-500 desktop:py-3 desktop:hover:pb-2 py-4 desktop:px-3  ">{menu_item?.label}</p>
                     </Link>}
                   {menu_item?.items && menu_item?.items?.length > 0 && (
-                    <NavigationMenu.Content className="mobile:z-20 tablet:max-w-100 desktop:min-h-[440px] desktop:max-h-[724px] mobile:bg-surface-0 bg-surface-50 tablet:min-h-screen mobile:min-h-screen mobile:h-full mobile:overflow-y-auto mobile:overscroll-y-auto">
+                    <NavigationMenu.Content className="mobile:z-20 tablet:max-w-100 desktop:min-h-[440px] desktop:max-h-[724px] mobile:bg-surface-0 bg-surface-50 desktop:rounded-xl tablet:min-h-screen mobile:min-h-screen mobile:h-full mobile:overflow-y-auto mobile:overscroll-y-auto desktop:rounded-b-xl">
                       <div tabIndex={-1} onClick={() => setOpenContent('closed')} className={classNames("fixed top-0 w-full h-full mobile:hidden bg-surface-950/30 -z-20 tablet:-z-10 overscroll-none overflow-y-hidden")}></div>
                       <div tabIndex={-1} onMouseLeave={() => {
                         setOpenContent('closed')
                         clearStates()
                       }
-                      } className=" bg-surface-0 h-full desktop:min-h-[440px] desktop:max-h-[724px] desktop:px-21 px-6 desktop:py-6 py-3 w-full tablet:max-w-100 flex desktop:flex-row flex-col desktop:justify-center tablet:z-20 mobile:overflow-y-auto mobile:overscroll-y-auto">
+                      } className=" bg-surface-0 desktop:bg-surface-50 desktop:rounded-b-xl h-full desktop:min-h-[440px] desktop:max-h-[724px] desktop:px-21 px-6 desktop:py-6 py-3 w-full tablet:max-w-100 flex desktop:flex-row flex-col desktop:justify-center tablet:z-20 mobile:overflow-y-auto mobile:overscroll-y-auto">
                         <div className="flex w-full desktop:max-w-[1200px] desktop:min-h-fit mobile:h-full tablet:h-full mobile:flex-col tablet:flex-col ">
                           <div className="">
                             <div className="desktop:hidden flex flex-col border-b border-surface-300 mobile:mb-3 tablet:mb-3">
@@ -354,7 +354,7 @@ const Header = (props: MenuType) => {
           </NavigationMenu.List>
           {/* si borran este ya no se ve el contenido a w-full */}
           <div className="absolute w-full desktop:-z-10 desktop:overflow-y-hidden desktop:top-[113px] desktop:left-0 top-0 left-full mobile:transition-transform mobile:ease-in-out mobile:duration-2000 mobile:-translate-x-full tablet:transition-transform tablet:ease-in-out tablet:duration-2000 tablet:-translate-x-full">
-            <NavigationMenu.Viewport className="relative w-full desktop:data-[state=open]:min-h-[440px] desktop:data-[state=open]:max-h-[724px] bg-surface-0 overflow-hidden tablet:max-w-100 tablet:min-h-full" />
+            <NavigationMenu.Viewport className="relative w-full desktop:data-[state=open]:min-h-[440px] desktop:data-[state=open]:max-h-[724px] bg-surface-0 desktop:bg-transparent overflow-hidden tablet:max-w-100 tablet:min-h-full " />
           </div>
         </NavigationMenu.Root>
       </div>
