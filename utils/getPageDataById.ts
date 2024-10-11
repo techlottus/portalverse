@@ -197,6 +197,7 @@ query PageById($id: ID) {
                 id
                 label
                 linkText
+                href
                 items(pagination: {start: 0, limit: -1}){
                   id
                   label
