@@ -112,7 +112,7 @@ const Header = (props: MenuType) => {
             <div className="desktop:hidden py-6 flex mx-auto w-full">
               <Links links={links} />
             </div>
-            <div id='social-media' className="flex w-full justify-center space-x-3">
+            <div id='social-media' className="flex w-full justify-center space-x-3 h-10 py-6">
                               {/* todo add icons */}
             </div>
           </div>}
@@ -240,7 +240,7 @@ const Header = (props: MenuType) => {
        MANEJO DE ERRORES 
       
       */}
-      <div className={classNames(" desktop:flex w-full desktop:min-w-[1024px] h-full bg-surface-0 mobile:px-0 tablet:px-0  desktop:px-21 desktop:justify-center desktop:border-b desktop:border-surface-300 desktop:shadow tablet:fixed mobile:fixed tablet:top-[69px] mobile:top-[69px] tablet:overscroll-none mobile:overscroll-none  ", { ["mobile:-translate-x-full "]: !open, [" tablet:transition-colors tablet:duration-1000 tablet:bg-surface-950/30 tablet:ease-in-out"]: open })}>
+      <div className={classNames(" desktop:flex w-full desktop:min-w-[1024px] h-full bg-surface-0 mobile:px-0 tablet:px-0  desktop:px-21 desktop:justify-center desktop:border-b desktop:border-surface-300 desktop:shadow tablet:fixed mobile:fixed tablet:top-[69px] mobile:top-[69px] tablet:overscroll-none mobile:overflow-y-scroll ", { ["mobile:-translate-x-full "]: !open, [" tablet:transition-colors tablet:duration-1000 tablet:bg-surface-950/30 tablet:ease-in-out"]: open })}>
         <NavigationMenu.Root value={openContent} onValueChange={setOpenContent} className={classNames("desktop:h-9.5 desktop:w-full  desktop:max-w-[1200px] h-screen overscroll-none desktop:flex tablet:data-[state=closed]:hidden tablet:transition-transform mobile:transition-transform tablet:duration-1000 mobile:duration-1000 mobile:ease-in-out", { ["tablet:-translate-x-full mobile:-translate-x-full "]: !open })}>
           <NavigationMenu.List className="mobile:w-full h-screen mobile:overflow-y-auto mobile:overscroll-y-auto desktop:h-fit desktop:w-auto flex flex-col desktop:justify-between  desktop:flex-row desktop:items-start py-3 desktop:py-0 tablet:max-w-100 bg-surface-0 ">
             <div className=" desktop:flex desktop:w-full desktop:max-w-[1200px] ">
@@ -309,7 +309,7 @@ const Header = (props: MenuType) => {
                             <div className="desktop:hidden py-6 flex mx-auto w-full">
                               <Links links={links} />
                             </div>
-                            <div id='social-media' className="flex w-full justify-center space-x-3">
+                            <div id='social-media' className="flex w-full justify-center space-x-3 h-10 py-6">
                               {/* todo add icons */}
                             </div>
                           </div>
@@ -327,7 +327,7 @@ const Header = (props: MenuType) => {
                 </NavigationMenu.Item>
               ))}
             </div>
-            <div id='button-links-mobile' className="desktop:hidden p-6 flex flex-col w-full tablet:max-w-100  ">
+            <div id='button-links-mobile' className="desktop:hidden p-6 flex flex-col w-full tablet:max-w-100">
               <button
                 onClick={() => { button?.CTA ? router.push(button?.CTA) : null }}
                 className="px-4 py-3 rounded bg-surface-950 border border-surface-950 text-sm text-surface-100 font-texts hover:bg-surface-50 hover:text-surface-950 w-full">
@@ -336,7 +336,7 @@ const Header = (props: MenuType) => {
               <div className="desktop:hidden py-6 flex mx-auto w-full">
                 <Links links={links} />
               </div>
-              <div id='social-media' className="flex w-full justify-center space-x-3">
+              <div id='social-media' className="flex w-full justify-center space-x-3 h-10 py-6">
                 {/* todo add icons */}
               </div>
             </div>
