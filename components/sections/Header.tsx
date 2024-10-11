@@ -45,7 +45,6 @@ const Header = (props: MenuType) => {
 
   // Componente de subitems
   const SubItems = ({ list, isSub = false, linkText, linkHref = '', label }: { list: any, isSub?: boolean, linkText?: string, linkHref?: string, label?: string }) => {
-    console.log("href: ",linkHref)
     return (
       <div className={classNames("desktop:w-[282px] tablet:w-full tablet:max-w-100 mobile:w-full tablet:h-full mobile:border-none tablet:border-none desktop:border-r border-surface-200 mobile:overflow-y-auto tablet:overflow-y-auto mobile:mb-6", { ["mobile:px-6 tablet:px-6 tablet:py-3 mobile:py-3"]: isSub })}>
         {isSub && <div className="desktop:hidden flex flex-col border-b border-surface-300 mobile:mb-3 tablet:mb-3">
@@ -87,7 +86,11 @@ const Header = (props: MenuType) => {
               </Link>
             )
           )}
-          <Link href={linkHref ?? ""} passHref onMouseEnter={() => { isSub ? setSubItems(false) : setItems(false) }} className="mobile:hidden">
+          <Link href={linkHref ?? ""} passHref onMouseEnter={() => {
+             isSub ? setSubItems(false) : setItems(false) 
+             console.log(linkHref)
+            }
+             } className="mobile:hidden">
             <div className="py-2 w-full font-texts text-primary-500 font-normal desktop:px-3 flex align-middle">
               <p className={classNames("font-normal hover:underline text-base")}>
                 {linkText ? linkText + " »" : null} </p>
