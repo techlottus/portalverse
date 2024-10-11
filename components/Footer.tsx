@@ -11,7 +11,6 @@ const Footer: FC<Footer> = ({
   attributes,
   onClickLogo
 }: Footer ) => {
-  console.log(attributes?.footerSection);
   
   return (
     <section className="w-full border-t border-0 border-solid border-surface-800 mt-18 w-t:mt-12 w-p:mt-12">

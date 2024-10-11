@@ -22,7 +22,6 @@ const FooterSection: FC<FooterSect> = ({
   social_medias,
   onClickLogo
 }: FooterSect ) => {
-  console.log('links: ', links);
   
   return (
 
