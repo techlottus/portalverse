@@ -292,14 +292,14 @@ const Header = (props: MenuType) => {
                             </div>
                           </div>
                           <div className="px-6 h-full flex w-full mobile:hidden tablet:hidden" >
-                            {(items && itemList?.items && itemList?.items.length < 11) &&
+                            {(items && itemList?.items && itemList?.items.length < 13) &&
                               <div className="flex space-x-6">
                                 <SubItems list={itemList?.items} isSub={true} linkText={itemList?.linkText} linkHref={itemList?.href} />
                                 {subItems && <SubItemsCols subitems={subItemList} isSub linkText={subItemList?.linkText} linkHref={subItemList?.href} />
                                 }
                               </div>
                             }
-                            {(items && itemList?.items && itemList?.items.length > 10) && <SubItemsCols subitems={itemList} linkText={itemList?.linkText} linkHref={itemList?.href} />}
+                            {(items && itemList?.items && itemList?.items.length > 12) && <SubItemsCols subitems={itemList} linkText={itemList?.linkText} linkHref={itemList?.href} />}
                             {!items && <LayoutHome banners={banners} alert={alert} />}
                           </div>
 
