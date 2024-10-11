@@ -22,7 +22,7 @@ const Header = (props: MenuType) => {
   const [itemList, setItemList] = useState<any>([]);
   const [subItemList, setSubItemList] = useState<any>([]);
 
-  
+
 
   // Componente de enlaces
   const Links = ({ links }: { links?: (MenuType['links']) }) => (
@@ -43,9 +43,13 @@ const Header = (props: MenuType) => {
 
   );
 
+  // const buttonLinks=()=>{
+  //   return
+  // }
+
   // Componente de subitems
   const SubItems = ({ list, isSub = false, linkText, linkHref = '', label }: { list: any, isSub?: boolean, linkText?: string, linkHref?: string, label?: string }) => {
-  
+
     return (
       <div className={classNames("desktop:w-[282px] tablet:w-full tablet:max-w-100 mobile:w-full tablet:h-full mobile:border-none tablet:border-none desktop:border-r border-surface-200 mobile:overflow-y-auto tablet:overflow-y-auto mobile:mb-6", { ["mobile:px-6 tablet:px-6 tablet:py-3 mobile:py-3"]: isSub })}>
         {isSub && <div className="desktop:hidden flex flex-col border-b border-surface-300 mobile:mb-3 tablet:mb-3">
@@ -88,26 +92,30 @@ const Header = (props: MenuType) => {
             )
           )}
           {linkHref && <Link href={linkHref ?? ""} passHref onMouseEnter={() => {
-             isSub ? setSubItems(false) : setItems(false) 
-             console.log(linkHref)
-            }
-             } className="mobile:hidden">
+            isSub ? setSubItems(false) : setItems(false)
+            console.log(linkHref)
+          }
+          } className="mobile:hidden">
             <div className="py-2 w-full font-texts text-primary-500 font-normal desktop:px-3 flex align-middle">
               <p className={classNames("font-normal hover:underline text-base")}>
                 {linkText ? linkText + " »" : null} </p>
             </div>
           </Link>}
         </ul>
-        {isSub && <div className="desktop:hidden mt-6 flex flex-col w-full tablet:max-w-100 mb-50">
-          <button
-            onClick={() => { button?.CTA ? router.push(button?.CTA) : null }}
-            className="px-4 py-3 rounded bg-surface-950 border border-surface-950 text-sm text-surface-100 font-texts hover:bg-surface-50 hover:text-surface-950 w-full">
-            {button?.label}
-          </button>
-          <div className="desktop:hidden py-6 flex mx-auto w-full">
-            <Links links={links} />
-          </div>
-        </div>}
+        {isSub &&
+          <div id='button-links-mobile' className="desktop:hidden mt-6 flex flex-col w-full tablet:max-w-100 mb-50">
+            <button
+              onClick={() => { button?.CTA ? router.push(button?.CTA) : null }}
+              className="px-4 py-3 rounded bg-surface-950 border border-surface-950 text-sm text-surface-100 font-texts hover:bg-surface-50 hover:text-surface-950 w-full">
+              {button?.label}
+            </button>
+            <div className="desktop:hidden py-6 flex mx-auto w-full">
+              <Links links={links} />
+            </div>
+            <div id='social-media' className="flex w-full justify-center space-x-3">
+                              {/* todo add icons */}
+            </div>
+          </div>}
       </div>
     );
   }
@@ -127,7 +135,7 @@ const Header = (props: MenuType) => {
           </Link>
         ))}
       </ul>
-      {linkText &&<div className="w-full border-t border-surface-200 ">
+      {linkText && <div className="w-full border-t border-surface-200 ">
         <div className="py-2 w-full font-texts text-primary-500 font-normal flex align-middle">
           <Link href={linkHref ?? ""} passHref>
             <p className={classNames("font-normal hover:underline text-sm")}>
@@ -166,7 +174,7 @@ const Header = (props: MenuType) => {
     // console.log("handle: ", items,subItems, itemList, subItemList)
 
   };
-  const clearStates = () =>{
+  const clearStates = () => {
     // console.log("clean")
     setItems(false);
     setSubItems(false)
@@ -186,21 +194,21 @@ const Header = (props: MenuType) => {
     }
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     // console.log("subitems: ",subItems)
-    if(!subItems){
-       setSubItemList({})
-       setSubItemSelected(false)
+    if (!subItems) {
+      setSubItemList({})
+      setSubItemSelected(false)
     }
-  },[subItems])
-  useEffect( ()=>{
+  }, [subItems])
+  useEffect(() => {
     // console.log("items: ",items)
-    if(!items){
+    if (!items) {
       setSubItems(false)
       setSubItemList({})
       setSubItemSelected(false)
     }
-  },[items])
+  }, [items])
 
   return (
     // todo desktop sticky
@@ -245,7 +253,7 @@ const Header = (props: MenuType) => {
                   <NavigationMenu.Trigger className={classNames("group z-20  flex justify-between desktop:justify-normal mobile:border-b tablet:border-b  w-full  items-center desktop:h-9.5 desktop:space-x-4 font-headings desktop:font-normal font-semibold tex border-surface-300  desktop:data-[state=open]:border-b-4 desktop:data-[state=open]:border-primary-500 desktop:data-[state=open]:text-primary-500 desktop:py-3 desktop:data-[state=open]:pb-2 py-4 desktop:px-3 ")}>
                     {menu_item?.items && menu_item?.items?.length > 0 ? menu_item?.label :
                       <Link href={menu_item?.href ?? ""} passHref >
-                        <p className="desktop:font-normal font-semibold font-headings text-base">{menu_item?.label }</p>
+                        <p className="desktop:font-normal font-semibold font-headings text-base">{menu_item?.label}</p>
                       </Link>}
                     {menu_item?.items && menu_item?.items?.length > 0 && <div className="desktop:hidden"><span className="material-symbols-outlined text-2xl  text-surface-800 font-bold ml-3 desktop:hidden">chevron_right</span></div>}
                     {menu_item?.items && menu_item?.items?.length > 0 && <CaretDownIcon className="relative hidden desktop:block transition duration-300 ease-out hover:ease-in group-data-[state=open]:rotate-180 desktop:group-data-[state=open]:text-primary-500 ml-1" aria-hidden />}
@@ -273,17 +281,17 @@ const Header = (props: MenuType) => {
                               </Link>
                             </div>
                             <div tabIndex={-1} onMouseLeave={() => {
-                                setSubItems(false)
-                                console.log(menu_item.linkText,menu_item.href)
+                              setSubItems(false)
+                              console.log(menu_item.linkText, menu_item.href)
                             }
-                              } className="flex overflow-y-auto overscroll-auto h-full">
+                            } className="flex overflow-y-auto overscroll-auto h-full">
                               <SubItems list={menu_item?.items} linkText={menu_item?.linkText} linkHref={menu_item?.href} />
                             </div>
                           </div>
                           <div className="px-6 h-full flex w-full mobile:hidden tablet:hidden" >
                             {(items && itemList?.items && itemList?.items.length < 11) &&
                               <div className="flex space-x-6">
-                                <SubItems list={itemList?.items} isSub={true} linkText={itemList?.linkText} linkHref={itemList?.href}/>
+                                <SubItems list={itemList?.items} isSub={true} linkText={itemList?.linkText} linkHref={itemList?.href} />
                                 {subItems && <SubItemsCols subitems={subItemList} isSub linkText={subItemList?.linkText} linkHref={subItemList?.href} />
                                 }
                               </div>
@@ -292,7 +300,7 @@ const Header = (props: MenuType) => {
                             {!items && <LayoutHome banners={banners} alert={alert} />}
                           </div>
 
-                          <div className="desktop:hidden py-6 flex flex-col w-full tablet:max-w-100 mb-100">
+                          <div id='button-links-mobile' className="desktop:hidden py-6 flex flex-col w-full tablet:max-w-100 mb-100">
                             <button
                               onClick={() => { button?.CTA ? router.push(button?.CTA) : null }}
                               className="px-4 py-3 rounded bg-surface-950 border border-surface-950 text-sm text-surface-100 font-texts hover:bg-surface-50 hover:text-surface-950 w-full">
@@ -300,6 +308,9 @@ const Header = (props: MenuType) => {
                             </button>
                             <div className="desktop:hidden py-6 flex mx-auto w-full">
                               <Links links={links} />
+                            </div>
+                            <div id='social-media' className="flex w-full justify-center space-x-3">
+                              {/* todo add icons */}
                             </div>
                           </div>
                         </div>
@@ -316,7 +327,7 @@ const Header = (props: MenuType) => {
                 </NavigationMenu.Item>
               ))}
             </div>
-            <div className="desktop:hidden p-6 flex flex-col w-full tablet:max-w-100  ">
+            <div id='button-links-mobile' className="desktop:hidden p-6 flex flex-col w-full tablet:max-w-100  ">
               <button
                 onClick={() => { button?.CTA ? router.push(button?.CTA) : null }}
                 className="px-4 py-3 rounded bg-surface-950 border border-surface-950 text-sm text-surface-100 font-texts hover:bg-surface-50 hover:text-surface-950 w-full">
@@ -324,6 +335,9 @@ const Header = (props: MenuType) => {
               </button>
               <div className="desktop:hidden py-6 flex mx-auto w-full">
                 <Links links={links} />
+              </div>
+              <div id='social-media' className="flex w-full justify-center space-x-3">
+                {/* todo add icons */}
               </div>
             </div>
 
