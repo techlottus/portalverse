@@ -17,8 +17,8 @@ const Footer: FC<Footer> = ({
 
       <>
         {
-          attributes?.footerSection.map(section => {
-            return <FooterSection {...section} onClickLogo={onClickLogo}></FooterSection>
+          attributes?.footerSection.map((section, i) => {
+            return <FooterSection {...section} onClickLogo={onClickLogo} key={i}></FooterSection>
           })
         }
       </>
