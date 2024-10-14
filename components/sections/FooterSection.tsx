@@ -20,6 +20,7 @@ const FooterSection: FC<FooterSect> = ({
   logo,
   position,
   social_medias,
+  phone,
   onClickLogo
 }: FooterSect ) => {
   
@@ -43,11 +44,13 @@ const FooterSection: FC<FooterSect> = ({
                 <img src={item.attributes.icon.data.attributes.url} className=" bg-cover bg-center" alt="" />
               </Link>)
             }
-            {/* phone
-            <div className="flex items-center gap-1">
-              <Icon name="phone" className="w-3 h-3" />
-              <LinkContactTarget type="tel" info={phone}/>
-            </div> */}
+            {
+              phone &&
+              <div className="flex items-center gap-1">
+                <Icon name={phone.icon_name} className="w-3 h-3" />
+                <LinkContactTarget type="tel" info={`${phone.phone}`}/>
+              </div>
+            }
           </div>
         </div>
       </div>
