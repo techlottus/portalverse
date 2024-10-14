@@ -40,8 +40,7 @@ const FooterSection: FC<FooterSect> = ({
             {
               social_medias.data && social_medias.data.map((item: any, i: number) => <Link key={`social-${i}`} href={item.attributes.href} passHref target={"_blank"}>
 
-                {/* <Icon name={item.attributes.icon} className="w-8 h-8 text-surface-500 w-p:text-balck" /> */}
-                <img src={item.attributes.icon.data.attributes.url} className=" bg-cover bg-center" alt="" />
+                <Icon name={item.attributes.icon_name} className="w-8 h-8 text-surface-500 w-p:text-balck" />
               </Link>)
             }
             {
