@@ -14,6 +14,10 @@ export type FooterColumn = {
 export type FooterSection = {
   title: string;
   logo: boolean;
+  phone: {
+    phone: number;
+    icon_name: string;
+  }
   images: {
     data: Array<StrapiImage>;
   }

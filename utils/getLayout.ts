@@ -37,6 +37,10 @@ query Layouts($id: ID) {
               footerSection {
                 title
                 logo
+                phone {
+                  phone
+                  icon_name
+                }
                 images {
                   data {
                     attributes {
