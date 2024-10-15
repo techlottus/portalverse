@@ -21,6 +21,9 @@ const Header = (props: MenuType) => {
   const [subItems, setSubItems] = useState(false);
   const [itemList, setItemList] = useState<any>([]);
   const [subItemList, setSubItemList] = useState<any>([]);
+  const [open, setOpen] = useState(false)
+  const [openContent, setOpenContent] = useState('')
+  const [openContentMobile, setOpenContentMobile] = useState('closed')
 
 
 
@@ -43,16 +46,16 @@ const Header = (props: MenuType) => {
 
   );
 
-  // const buttonLinks=()=>{
-  //   return
-  // }
-
   // Componente de subitems
   const SubItems = ({ list, isSub = false, linkText, linkHref = '', label }: { list: any, isSub?: boolean, linkText?: string, linkHref?: string, label?: string }) => {
 
     return (
-      <div className={classNames("desktop:w-[282px] tablet:w-full tablet:max-w-100 mobile:w-full tablet:h-full mobile:border-none tablet:border-none desktop:border-r border-surface-200 mobile:overflow-y-auto tablet:overflow-y-auto mobile:mb-6", { ["mobile:px-6 tablet:px-6 tablet:py-3 mobile:py-3"]: isSub })}>
-        {isSub && <div className="desktop:hidden flex flex-col border-b border-surface-300 mobile:mb-3 tablet:mb-3">
+      <div className={classNames("desktop:w-[282px] tablet:w-full tablet:max-w-100 mobile:w-full tablet:h-full mobile:border-none tablet:border-none desktop:border-r border-surface-200 mobile:overflow-y-auto tablet:overflow-y-auto mobile:mb-6",
+        { 
+        ["mobile:px-6 tablet:px-6 tablet:py-3 mobile:py-3"]: isSub,
+         })}>
+        {isSub && 
+        <div className="desktop:hidden flex flex-col border-b border-surface-300 mobile:mb-3 tablet:mb-3">
           <div className="flex py-2 space-x-2 align-middle items-center">
             <button onClick={() => {
               subItems ? setSubItems(false) :
@@ -110,7 +113,7 @@ const Header = (props: MenuType) => {
             </div>
           </Link>}
         </ul>
-        {isSub &&
+        {isSub && 
           <div id='button-links-mobile' className="desktop:hidden mt-6 flex flex-col w-full tablet:max-w-100 mb-50">
             <button
               onClick={() => { button?.CTA ? router.push(button?.CTA) : null }}
@@ -156,7 +159,7 @@ const Header = (props: MenuType) => {
     </div>
   );
 
-  // Layout para la página de inicio
+  // Layout para el contenido de inicio
   const LayoutHome = ({ banners, alert }: { banners: any, alert: any }) => (
     <div className="flex flex-col space-y-3 w-full justify-between h-full mobile:hidden">
       <div className="grid desktop:grid-cols-2 gap-6 tablet:grid-cols-1 mobile:grid-cols-1">
@@ -185,6 +188,7 @@ const Header = (props: MenuType) => {
     // console.log("handle: ", items,subItems, itemList, subItemList)
 
   };
+
   const clearStates = () => {
     // console.log("clean")
     setItems(false);
@@ -194,9 +198,6 @@ const Header = (props: MenuType) => {
 
   }
 
-  const [open, setOpen] = useState(false)
-  const [openContent, setOpenContent] = useState('')
-  const [openContentMobile, setOpenContentMobile] = useState('closed')
   const handleHamburguer = () => {
     if (open) {
       setOpen(false)
@@ -225,10 +226,7 @@ const Header = (props: MenuType) => {
   return (
     // todo desktop sticky
     <div className="absolute desktop:fixed top-0 z-20 flex flex-col w-full tablet:fixed mobile:fixed bg-surface-0 ">
-      {/* Primer nivel del menú 
-        TODO:
-        tablet 
-        */}
+      {/* Primer nivel del menú */}
       <NavigationMenu.Root className="relative flex h-auto desktop:py-4 py-3 desktop:px-21 px-6 desktop:border-b desktop:border-surface-300 w-full justify-center align-middle bg-surface-0 tablet:z-10">
         <button className="absolute top-0 left-6 pr-3 py-3 desktop:hidden flex items-center h-full" onClick={() => handleHamburguer()}>
           {!open && <Icon name="sort" className="w-7.5 h-7.5" />}
@@ -247,11 +245,7 @@ const Header = (props: MenuType) => {
         </div>
       </NavigationMenu.Root>
 
-      {/* Segundo nivel del menú 
-       TODO 
-       MANEJO DE ERRORES 
-      
-      */}
+      {/* Segundo nivel del menú */}
       <div className={classNames(" desktop:flex w-full desktop:min-w-[1024px] h-full desktop:h-[45px] bg-surface-0 mobile:px-0 tablet:px-0  desktop:px-21 desktop:justify-center desktop:border-b desktop:border-surface-300 desktop:shadow tablet:fixed mobile:fixed tablet:top-[69px] mobile:top-[69px] tablet:overflow-y-scroll mobile:overflow-y-scroll ",
         {
           ["mobile:-translate-x-full tablet:hidden"]: !open,
@@ -277,7 +271,7 @@ const Header = (props: MenuType) => {
                   {menu_item?.items && menu_item?.items?.length > 0 && (
                     <NavigationMenu.Content id="content" className={classNames("mobile:z-20 tablet:max-w-100 desktop:min-h-[440px] desktop:max-h-[724px] mobile:bg-surface-0 bg-surface-50 desktop:rounded-xl tablet:min-h-screen mobile:min-h-screen mobile:h-full mobile:overflow-y-auto mobile:overscroll-y-auto desktop:rounded-b-xl ")}
                     >
-                      <div tabIndex={-1} onClick={() => setOpenContent('closed')} className={classNames("fixed top-0 w-full h-full mobile:hidden bg-surface-950/30 -z-20 tablet:-z-20 overscroll-none overflow-y-hidden")}></div>
+                      <div tabIndex={-1} onClick={() => setOpenContent('closed')} className={classNames("fixed top-0 w-full h-full mobile:hidden bg-surface-950/30 -z-20 tablet:-z-30 overscroll-none overflow-y-hidden")}></div>
                       <div tabIndex={-1} onMouseLeave={() => {
                         setOpenContent('closed')
                         clearStates()
