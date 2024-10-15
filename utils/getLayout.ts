@@ -63,14 +63,7 @@ query Layouts($id: ID) {
                   data {
                     attributes {
                       name
-                      icon {
-                        data {
-                          attributes {
-                            name
-                            url
-                          }
-                        }
-                      }
+                      icon_name
                       href
                     }
                   }
