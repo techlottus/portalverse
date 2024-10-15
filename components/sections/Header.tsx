@@ -196,7 +196,7 @@ const Header = (props: MenuType) => {
 
   const [open, setOpen] = useState(false)
   const [openContent, setOpenContent] = useState('')
-  const [openContentMobile, setOpenContentMobile] = useState('')
+  const [openContentMobile, setOpenContentMobile] = useState('closed')
   const handleHamburguer = () => {
     if (open) {
       setOpen(false)
