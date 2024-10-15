@@ -7,6 +7,7 @@ import { formatModalityFilterSection } from "@/utils/strapi/sections/ModalityFil
 import { formatProgramsFilterSection } from "@/utils/strapi/sections/ProgramsFilter";
 import { formatOfferAccordionListSection } from "@/utils/strapi/sections/ProgramAccordionItems";
 import type { ComponentSection } from "@/utils/strapi/queries";
+import { LayoutAttributes } from "./getLayout";
 
 type PageVariables = {
   id: number;
@@ -46,6 +47,7 @@ export type PageData = {
         }
       }[]
     };
+    layout?: LayoutAttributes
   };
   
 };
@@ -149,13 +151,7 @@ query PageById($id: ID) {
                   data {
                     attributes {
                       name
-                      icon {
-                        data {
-                          attributes {
-                            name
-                          }
-                        }
-                      }
+                      icon_name
                       href
                     }
                   }
@@ -255,6 +251,15 @@ query PageById($id: ID) {
                   href
                 }
                 
+              }
+              social_medias {
+                data {
+                  attributes {
+                    name
+                    icon_name
+                    href
+                  }
+                }
               }
             }
           }

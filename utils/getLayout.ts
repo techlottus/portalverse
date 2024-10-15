@@ -4,29 +4,34 @@ import { MenuType } from "./strapi/sections/Header";
 
 export type Layout = {
   layouts: {
-    data: Array<{
-      attributes: {
-        name: string
-        footer: Footer
-        header: MenuType
-      }
-    }>
+    data: Array<LayoutAttributes>
+  }
+}
+export type LayoutAttributes = {
+  data: {
+    attributes: {
+      name: string
+      footer: Footer
+      header: MenuType
+    }
+    
   }
 }
 
-export const getLayout = async (id = 1) => {
+
+export const getLayout = async (name = "Default") => {
   const response = await fetchStrapiGraphQL<Layout>(
     LAYOUTS,
-    { id }
+    { name }
   );
 
   return response?.layouts?.data[0];
 };
 
 export const LAYOUTS = `
-query Layouts($id: ID) {
+query Layouts($name: String) {
   layouts(
-    filters: { id: { eq :$id} }
+    filters: { name: { eq :$name} }
     pagination: { start: 0, limit: -1 }
   ) {
     data {
@@ -59,13 +64,7 @@ query Layouts($id: ID) {
                   data {
                     attributes {
                       name
-                      icon {
-                        data {
-                          attributes {
-                            name
-                          }
-                        }
-                      }
+                      icon_name 
                       href
                     }
                   }
@@ -165,6 +164,15 @@ query Layouts($id: ID) {
                   href
                 }
                 
+              }
+              social_medias(pagination: {start: 0, limit: -1}){
+                data{
+                  attributes{
+                    name
+                    icon_name
+                    href
+                  }
+                }
               }
             }
           }

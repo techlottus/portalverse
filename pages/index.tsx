@@ -63,7 +63,7 @@ export async function getStaticProps(context: any) {
     const homePageData = await getHomePageData();
     const sections = homePageData?.homePage?.data?.attributes?.sections;
     const meta = homePageData?.homePage?.data?.attributes?.seo;    
-    const layoutData = await getLayout(1);
+    const layoutData = await getLayout();
 
     return {
       props: {

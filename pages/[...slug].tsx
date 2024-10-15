@@ -33,7 +33,6 @@ type PageProps = {
 
 const Page = (props: PageProps) => {
   const { page, breadcrumbs,layoutData } = props;
-
   const renderContent = () => {
     switch (page?.type) {
       case "BlogEntryPageEntityResponse":
@@ -51,8 +50,11 @@ const Page = (props: PageProps) => {
     }
   };
 
+  // const layout = (page.data?.attributes as PageEntityResponse | BlogEntryPageEntityResponse) ? 
+
+  
   return (
-    <DynamicPageLayout layoutData={layoutData}>
+    <DynamicPageLayout layoutData={page.data?.attributes?.layout?.data || layoutData}>
     <Fragment>
       <Container>
         <Breadcrumbs visible breadcrumbs={breadcrumbs} />
@@ -103,7 +105,7 @@ export async function getStaticProps(context: any): Promise<{props: PageProps}> 
     const pageType = await getPageType(path);
 
     const breadcrumbs = await getDynamicPagesBreadcrumbs();
-    const layoutData = await getLayout(1);
+    const layoutData = await getLayout();
     switch (pageType) {
       case "programDetail": {
         const programDetailPage = await getProgramDetailPageData(path);
@@ -111,10 +113,9 @@ export async function getStaticProps(context: any): Promise<{props: PageProps}> 
         if (programDetailPage?.type === "DynamicProgramDetail") {
           // Add program breadcrumb. Static program breadcrumbs already exist in the Routes.ts file
           const programAttributes =
-            programDetailPage?.data?.program?.attributes;
+            programDetailPage?.data?.attributes;
           const programSlug = programAttributes?.slug;
           const programName = programAttributes?.name;
-
           breadcrumbs[programSlug] = programName;
         }
 
