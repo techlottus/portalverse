@@ -14,7 +14,7 @@ const Layouts = ({ data: { layoutData } }: any) => {
 
 export async function getStaticProps(context: any) {
     try {
-      const layoutData = await getLayout(1);
+      const layoutData = await getLayout();
       // const sections = homePageData?.homePage?.data?.attributes?.sections;
       // const meta = homePageData?.homePage?.data?.attributes?.seo;
 
