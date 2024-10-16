@@ -122,7 +122,7 @@ const Header = (props: MenuType) => {
                 isSub ? setSubItems(false) : setItems(false)
               }} >
                 <p className={classNames("py-2 w-full", {
-                  ["desktop:px-3 rounded desktop:border desktop:border-surface-50 desktop:hover:border-surface-200 desktop:hover:bg-surface-0"]: !isSub,
+                  ["desktop:px-3 rounded-lg desktop:border desktop:border-surface-50 desktop:hover:border-surface-200 desktop:hover:bg-surface-0"]: !isSub,
                   ["font-texts text-surface-950 font-semibold"]: item.bold,
                   ["font-texts text-surface-500 desktop:hover:text-primary-500 font-normal "]: !item.bold,
                 })}>{item.label}</p>
