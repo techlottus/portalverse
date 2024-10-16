@@ -203,7 +203,7 @@ const Header = (props: MenuType) => {
                   {
                     title && <h3
                       className={classNames(
-                        "font-headings font-bold text-wrap w-d:text-5.5 w-t:text-5.5 w-p:text-5.5 w-d:leading-15 w-t:leading-7.5 w-p:leading-7.5",
+                        "font-headings font-bold text-wrap text-2xl  ",
                         {
                           "text-surface-0": overlay === "black",
                         }
@@ -215,7 +215,7 @@ const Header = (props: MenuType) => {
                   {
                     subtitle && <p
                       className={classNames(
-                        "font-texts font-normal",
+                        "font-texts font-normal text-base",
                         {
                           "text-surface-0": overlay === "black"
                         }
