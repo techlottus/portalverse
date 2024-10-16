@@ -6,7 +6,7 @@ import Icon from "@/old-components/Icon"
 import LinkContactTarget from "@/old-components/LinkContactTarget"
 import FooterPortalverseComponentData from "@/types/FooterPortalverse.types"
 import FooterLogo from "@/components/sections/footer/logo"
-import { FooterData, FooterSection as Footersection } from "@/utils/getFooters"
+import { FooterColumnItem, FooterData, FooterGroup, FooterSection as Footersection } from "@/utils/getFooters"
 
 interface FooterSect extends  Footersection {
   onClickLogo: ( ()=> void ) | undefined
@@ -59,20 +59,32 @@ const FooterSection: FC<FooterSect> = ({
         columns.length > 0 && <div className="w-full p-6 w-t:hidden w-p:hidden flex gap-24 border-b  border-0 border-solid border-surface-300">
         {
           columns?.map((column: any, i: number) => <div key={`footer-column-${i}`} className="flex flex-col gap-6 w-64">
-              {
-                  column?.items?.map((item: any, j: number) => {
-                    return (
-                      <Fragment key={`column-link-${j}`}>
-                        {
-                          !!item?.href
-                            ? <Link href={item.href} passHref target={`_${item.target}`}><p className={cn({ "font-headings font-bold": item?.bold, "font-texts font-normal": !item?.bold })}>{item?.label}</p></Link>
-                            : <p className={cn({ "font-headings font-bold": item.bold, "font-texts font-normal": !item.bold})}>{item.label}</p>
-                        }
-                      </Fragment>
-                    );
-                  })
-              }
-            </div>)
+            {
+              column.groups.map((group: FooterGroup, i: number) => { 
+                return <section key={`column-group-${i}`} className="flex flex-col gap-6">
+                    {
+                      !!group?.href
+                        ? <Link href={group.href} passHref target={`_${group.target}`}><p className="font-headings font-bold">{group.title}</p></Link>
+                        : <p className="font-headings font-bold">{group.title}</p>
+                    }
+                    {
+                      group?.items?.map((item: FooterColumnItem, j: number) => {
+                        return (
+                          <Fragment key={`column-link-${j}`}>
+                            {
+                              !!item?.href
+                                ? <Link href={item.href} passHref target={`_${item.target}`}><p className={cn({ "font-headings font-bold": item?.bold, "font-texts font-normal": !item?.bold })}>{item?.label}</p></Link>
+                                : <p className={cn({ "font-headings font-bold": item.bold, "font-texts font-normal": !item.bold})}>{item.label}</p>
+                            }
+                          </Fragment>
+                        );
+                      })
+                    }
+              
+                </section>
+              })
+            }
+          </div>)
         }
       </div>
       }

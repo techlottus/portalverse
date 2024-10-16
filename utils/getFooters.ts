@@ -8,8 +8,14 @@ export type FooterColumnItem = {
   bold: string;
   target: string;
 }
-export type FooterColumn = {
+export type FooterGroup = {
+  title: string;
+  href: string;
+  target: string;
   items : Array<FooterColumnItem>
+}
+export type FooterColumn = {
+  groups: Array<FooterGroup>
 }
 export type FooterSection = {
   title: string;
@@ -82,11 +88,16 @@ query Footers() {
           }
         }
         columns {
-          items {
+          groups {
             label
             href
-            bold
             target
+            items {
+              label
+              href
+              bold
+              target
+            }
           }
         }
       }

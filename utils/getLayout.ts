@@ -69,11 +69,16 @@ query Layouts($id: ID) {
                   }
                 }
                 columns {
-                  items {
-                    label
+                  groups {
+                    title
                     href
-                    bold
                     target
+                    items {
+                      label
+                      href
+                      bold
+                      target
+                    }
                   }
                 }
               }
