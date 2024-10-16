@@ -152,7 +152,42 @@ module.exports = {
    },
    "minWidth": {
       "130": "7.5rem"
-   }
+   },
+   keyframes: {
+      enterFromLeft: {
+        '0%': { transform: 'translateY(-100%)', opacity: '0' },
+        '100%': { transform: 'translateY(0)', opacity: '1' },
+      },
+      enterFromRight: {
+        '0%': { transform: 'translateY(-100%)', opacity: '0' },
+        '100%': { transform: 'translateY(0)', opacity: '1' },
+      },
+      exitToLeft: {
+        '0%': { transform: 'translateY(0)', opacity: '1' },
+        '100%': { transform: 'translateY(-100%)', opacity: '0' },
+      },
+      exitToRight: {
+        '0%': { transform: 'translateY(0)', opacity: '1' },
+        '100%': { transform: 'translateY(-100%)', opacity: '0' },
+      },
+      scaleIn: {
+         '0%': { opacity: '0' },
+         '100%': { opacity: '1' },
+       },
+       scaleOut: {
+         '0%': {  opacity: '1' },
+         '100%': { opacity: '0' },
+       },
+    },
+    animation: {
+      enterFromLeft: 'enterFromLeft 0.5s ease-in-out',
+      enterFromRight: 'enterFromRight 0.5s ease-in-out',
+      exitToLeft: 'exitToLeft 0.5s ease-in-out',
+      exitToRight: 'exitToRight 0.5s ease-in-out',
+      scaleIn: 'scaleIn 300ms ease',
+      scaleOut: 'scaleOut 300ms ease',
+    },
+
 }
   },
   plugins: [],
