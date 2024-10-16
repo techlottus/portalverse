@@ -97,11 +97,11 @@ const Header = (props: MenuType) => {
               </div>
             </Link>
           </div>}
-        <ul className={classNames("flex flex-col w-full h-full mobile:h-fit tablet:h-fit desktop:pr-6 mobile:space-y-2 tablet:space-y-2", { ["desktop:w-[273px] "]: isSub })} tabIndex={-1}  >
+        <ul className={classNames("flex flex-col w-full h-full mobile:h-fit tablet:h-fit desktop:pr-6 mobile:space-y-2 tablet:space-y-2", { ["desktop:w-[273px] desktop:space-y-3 "]: isSub })} tabIndex={-1}  >
           {list?.map((item: any, i: number) =>
             item?.items?.length > 0 ? (
-              <button key={i} className={classNames("group py-2 w-full", {
-                [" rounded-lg desktop:px-3 desktop:border desktop:border-surface-50 desktop:hover:border-surface-200 desktop:hover:bg-surface-0"]: !isSub,
+              <button key={i} className={classNames("group w-full", {
+                [" rounded-lg desktop:px-3 desktop:border desktop:border-surface-50 desktop:hover:border-surface-200 desktop:hover:bg-surface-0 py-2"]: !isSub,
                 ["desktop:border desktop:!border-surface-200 desktop:bg-surface-0 "]: (!isSub && item.id === itemSelected && items)
               })}
                 onMouseEnter={() => {
@@ -203,7 +203,7 @@ const Header = (props: MenuType) => {
                   {
                     title && <h3
                       className={classNames(
-                        "font-headings font-bold text-wrap text-2xl  ",
+                        "font-headings font-bold text-wrap text-[24px]  ",
                         {
                           "text-surface-0": overlay === "black",
                         }
