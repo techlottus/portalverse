@@ -155,7 +155,7 @@ const Header = (props: MenuType) => {
             <p className={classNames("font-text text-sm mr-3 mb-3",
               {
                 ["font-texts text-surface-950 font-semibold"]: item?.bold,
-                ["font-texts text-surface-400 hover:text-primary-500 font-normal text-wrap text-left"]: !item?.bold,
+                ["font-texts text-surface-500 hover:text-primary-500 font-normal text-wrap text-left"]: !item?.bold,
               })}>
               {item?.label}
             </p>
@@ -353,7 +353,7 @@ const Header = (props: MenuType) => {
                   {menu_item?.items && menu_item?.items?.length > 0 ?
                     <NavigationMenu.Trigger onClick={() => setOpenContentMobile('open')} className={classNames("group z-20 flex justify-between desktop:justify-normal mobile:border-b tablet:border-b  w-full  items-center desktop:h-[45px]  font-texts desktop:font-normal font-semibold  border-surface-300  desktop:data-[state=open]:border-b-4 desktop:data-[state=open]:border-primary-500 desktop:data-[state=open]:text-primary-500 desktop:py-3 desktop:data-[state=open]:pb-2 py-4 desktop:px-3 ")}>
                       {menu_item?.label}
-                      <div className="desktop:hidden"><span className="material-symbols-outlined text-2xl  text-surface-800 font-bold ml-3 desktop:hidden">chevron_right</span></div>
+                      <div className="desktop:hidden flex items-center align-middle"><span className="material-symbols-outlined text-2xl  text-surface-800 font-bold ml-3 desktop:hidden">chevron_right</span></div>
                       <CaretDownIcon className="relative hidden desktop:block transition duration-300 ease-out hover:ease-in group-data-[state=open]:rotate-180 desktop:group-data-[state=open]:text-primary-500 ml-1" aria-hidden />
                     </NavigationMenu.Trigger> : <Link href={menu_item?.href ?? ""} passHref >
                       <p className="desktop:font-normal font-semibold font-texts text-base group z-20  flex justify-between desktop:justify-normal mobile:border-b tablet:border-b  w-full  items-center desktop:h-[45px] desktop:space-x-4  border-surface-300  desktop:hover:border-b-4 desktop:hover:border-primary-500 desktop:hover:text-primary-500 desktop:py-3 desktop:hover:pb-2 py-4 desktop:px-3  ">{menu_item?.label}</p>
