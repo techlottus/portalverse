@@ -101,7 +101,7 @@ const Header = (props: MenuType) => {
           {list?.map((item: any, i: number) =>
             item?.items?.length > 0 ? (
               <button key={i} className={classNames("group py-2 w-full", {
-                [" rounded desktop:px-3 desktop:border desktop:border-surface-50 desktop:hover:border-surface-200 desktop:hover:bg-surface-0"]: !isSub,
+                [" rounded-lg desktop:px-3 desktop:border desktop:border-surface-50 desktop:hover:border-surface-200 desktop:hover:bg-surface-0"]: !isSub,
                 ["desktop:border desktop:!border-surface-200 desktop:bg-surface-0 "]: (!isSub && item.id === itemSelected && items)
               })}
                 onMouseEnter={() => {
