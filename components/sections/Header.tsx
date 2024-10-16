@@ -361,7 +361,7 @@ const Header = (props: MenuType) => {
                   {menu_item?.items && menu_item?.items?.length > 0 && (
                     <NavigationMenu.Content id="content" className={classNames("desktop:absolute desktop:top-0 desktop:left-0 desktop:w-full desktop:data-[motion=from-start]:animate-enterFromLeft desktop:data-[motion=from-end]:animate-enterFromRight desktop:data-[motion=to-start]:animate-exitToLeft desktop:data-[motion=to-end]:animate-exitToRight mobile:z-20 tablet:max-w-100 desktop:min-h-[440px]  mobile:bg-surface-0 desktop:rounded-xl tablet:min-h-screen mobile:min-h-screen mobile:h-full mobile:overflow-y-auto mobile:overscroll-y-auto desktop:rounded-b-xl ")}
                     >
-                      <div tabIndex={-1} onClick={() => setOpenContent('closed')} className={classNames("fixed top-0 w-full h-full mobile:hidden bg-surface-950/30 -z-20 tablet:-z-30 overscroll-none overflow-y-hidden")}></div>
+                      <div tabIndex={-1} onClick={() => setOpenContent('closed')} className={classNames("fixed top-0 w-full h-full mobile:hidden bg-surface-950/30 -z-10 tablet:-z-30 overscroll-none overflow-y-hidden")}></div>
                       <div tabIndex={-1} onMouseLeave={() => {
                         setOpenContent('closed')
                         clearStates()
@@ -432,8 +432,8 @@ const Header = (props: MenuType) => {
           })}>
             <NavigationMenu.Viewport 
             //@ts-ignore
-            style= {{"--radix-navigation-menu-viewport-height":"",height:"100%"}}
-              className={classNames("relative w-full desktop:data-[state=open]:min-h-[1000px] desktop:data-[state=open]:!h-full desktop:max-h-[1000px] bg-surface-0 desktop:bg-transparent desktop:overflow-visible overflow-hidden tablet:max-w-100 tablet:min-h-full desktop:data-[state=open]:animate-scaleIn desktop:data-[state=closed]:animate-scaleOut")} />
+            style= {{"--radix-navigation-menu-viewport-height":"",height:"100%"}} 
+              className={classNames("relative w-full  desktop:data-[state=open]:min-h-[600px] desktop:data-[state=closed]:h-0 desktop:max-h-[1000px] bg-surface-0 desktop:bg-transparent desktop:overflow-visible overflow-hidden tablet:max-w-100 tablet:min-h-full desktop:data-[state=open]:animate-scaleIn desktop:data-[state=closed]:animate-scaleOut")} />
           </div>
         </NavigationMenu.Root>
       </div>
