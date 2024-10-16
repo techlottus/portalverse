@@ -12,9 +12,8 @@ import { link } from "fs/promises";
 
 // Componente principal Header
 const Header = (props: MenuType) => {
-  const { name, links, button, menu_items, banners, alert, social_medias = [] } = props;
+  const { name, links, button, menu_items, banners, alert, social_medias={data:[]} } = props;
   const router = useRouter();
-
   const [items, setItems] = useState(false);
   const [itemSelected, setItemSelected] = useState(false);
   const [itemSubSelected, setSubItemSelected] = useState(false);
@@ -58,15 +57,13 @@ const Header = (props: MenuType) => {
           <Links links={links} />
         </div>
         <div id='social-media' className="flex w-full justify-center space-x-3 pb-6">
-          {/* {
-            social_medias?.map((sm:any,i:number)=>(
-              <a href={sm.href}><img id={sm.name} src={sm.href} width={24} height={24} /></a>
-              
-            ))
-          } */}
-          <img src="https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UANE/Instagram_9a5c595b0e.svg" width={24} height={24} />
-          <img src="https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UANE/twitter_0578eb0533.svg" width={24} height={24} />
-          <img src="https://bedu-staging-assets.s3.us-west-2.amazonaws.com/UANE/Tik_Tok_54b3009338.svg" width={24} height={24} />
+        {social_medias?.data.length>0 &&
+            social_medias?.data.map((item: any, i: number) => <Link key={`social-${item?.attributes?.name}`} href={item?.attributes?.href} passHref target={"_blank"}>
+
+              <Icon name={item?.attributes?.icon_name} className="w-8 h-8 text-balck" />
+
+            </Link>)
+          }
         </div>
       </div>
     )

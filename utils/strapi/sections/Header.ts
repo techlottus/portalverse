@@ -41,10 +41,14 @@ export type MenuType = {
   banners?:  BannerPortalverseConfig;
   alert?: AlertInfoType;
   social_medias?:{
-    name?:string;
-    icon_name?:string;
-    href?:string
-      }[]
+    data:{
+      attributes:{
+        name?:string;
+        icon_name?:string;
+        href?:string
+      }
+    }[]    
+      }
 };
 
 export const HEADER = `
