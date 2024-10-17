@@ -17,8 +17,9 @@ import BlogPosts from "@/components/sections/BlogPosts"
 import { formatBlogPostsSection } from "@/utils/strapi/sections/BlogPosts"
 import type { BlogPostsSection } from "@/utils/strapi/sections/BlogPosts"
 import Image from "@/old-components/Image";
+import getLayout from "@/utils/getLayout"
 
-const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: any, meta: any, blogPostsSection: BlogPostsSection}) => {
+const Internacionalizacion = ({ sections, meta, blogPostsSection,layoutData }: {sections: any, meta: any, blogPostsSection: BlogPostsSection, layoutData:any}) => {
 
   const router = useRouter();
   // Modal functionality begin
@@ -149,7 +150,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
         </ContentInsideLayout>
       </section>
     </Modal>
-    <HeaderFooterLayout breadcrumbs={true}>
+    <HeaderFooterLayout breadcrumbs={true} layoutData = {layoutData}>
       <ContentFullLayout classNames="gap-6 w-d:hidden mb-12">
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           <Slider data={{ ...sections?.head.slider }} mobile = {true}/>
@@ -338,6 +339,7 @@ const Internacionalizacion = ({ sections, meta, blogPostsSection }: {sections: a
 export async function getStaticProps(context: any) {
   try {
     const { sections, meta } = await getDataPageFromJSON('internacionalizacion.json');
+    const layoutData = await getLayout()
 
     /**
      * This is a representation of the section data that will come from Strapi once
@@ -370,7 +372,7 @@ export async function getStaticProps(context: any) {
     }
 
     return {
-      props: { sections, meta, blogPostsSection: formattedBlogPostsSection }
+      props: { sections, meta, blogPostsSection: formattedBlogPostsSection, layoutData }
     }
   } catch {
     return {

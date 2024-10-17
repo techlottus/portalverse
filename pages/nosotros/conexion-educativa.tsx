@@ -15,9 +15,10 @@ import Mosaic from "@/old-components/Mosaic";
 import TabsFeatured from "@/old-components/TabsFeatured";
 import Feedback from "@/old-components/Feedback";
 import Icon from "@/old-components/Icon";
+import getLayout from "@/utils/getLayout";
 
 
-const ConexionEducativa: NextPageWithLayout = ({ sections, meta }: any) => {
+const ConexionEducativa: NextPageWithLayout = ({ sections, meta, layoutData }: any) => {
 
   const router = useRouter();
 
@@ -54,7 +55,7 @@ const ConexionEducativa: NextPageWithLayout = ({ sections, meta }: any) => {
       <title>{meta.title}</title>
       <meta property="title" content={meta?.title} />
     </Head>
-    <HeaderFooterLayout breadcrumbs={true}>
+    <HeaderFooterLayout breadcrumbs={true} layoutData = {layoutData}>
       <ContentLayout classNames="!gap-y-12 mb-12 desktop:mb-0 desktop:!gap-y-18">
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
           <p className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-7.5 w-d:mb-6 w-d:leading-13">{sections.head.title}</p>
@@ -200,6 +201,7 @@ const ConexionEducativa: NextPageWithLayout = ({ sections, meta }: any) => {
 export async function getStaticProps(context: any) {
   try {
     const { sections, meta } = await getDataPageFromJSON('conexion-educativa.json');
+    const layoutData = await getLayout()
 
     // redirect not avaliable page
     if (!!meta.hidden) {
@@ -209,7 +211,7 @@ export async function getStaticProps(context: any) {
     }
 
     return {
-      props: { sections, meta }
+      props: { sections, meta,layoutData }
     }
   } catch {
     return {

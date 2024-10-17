@@ -16,6 +16,7 @@ import type {
   StaticContinuousEducationCategory,
   StaticContinuousEducationProgram,
 } from "@/utils/strapi/sections/ContEdPrograms";
+import { LayoutAttributes } from "./getLayout";
 
 type PageType = "programDetail" | "blogEntry" | "dynamic";
 
@@ -45,28 +46,41 @@ export const getPageType = async (path: string): Promise<PageType> => {
  */
 
 export type DynamicProgramDetailData = {
-  program: ProgramData;
-  layout?: any;
-};
+  attributes:{
+    layout?: LayoutAttributes;
+    levelLayout?: any;
+  } & ProgramData['attributes']
+} & ProgramData;;
+
+export type ProgramDetailPageResponse = {
+  layout?: LayoutAttributes;
+  type: "DynamicProgramDetail";
+} & ProgramDetailPage
 
 export type ProgramDetailPage =
   | {
       type: "StaticProgramDetail";
       data: {
-        level: any;
-        program: any;
-        meta: any;
-        config: any;
-        sections: any;
-        form: any;
-        bannerParche: any;
+        attributes: { 
+          level: any;
+          program: any;
+          meta: any;
+          config: any;
+          sections: any;
+          form: any;
+          bannerParche: any;
+          layout?: LayoutAttributes;
+        }
       };
     }
   | {
       type: "StaticContinuousEducationProgramDetail";
       data: {
-        sections: any;
-        meta: any;
+        attributes: {
+          sections: any;
+          meta: any;
+          layout?: LayoutAttributes;
+        }        
       };
     }
   | {
@@ -119,7 +133,12 @@ export const getProgramDetailPageData = async (path: string): Promise<ProgramDet
 
       return {
         type: "StaticContinuousEducationProgramDetail",
-        data: { sections, meta }
+        data: { 
+          attributes:{
+            sections,
+            meta
+          }
+        }
       };
 
     } else {
@@ -128,7 +147,8 @@ export const getProgramDetailPageData = async (path: string): Promise<ProgramDet
 
       return {
         type: "StaticProgramDetail",
-        data: {
+        data:{
+          attributes: {
           level: levelSlug,
           program: programSlug,
           meta,
@@ -137,6 +157,7 @@ export const getProgramDetailPageData = async (path: string): Promise<ProgramDet
           form,
           bannerParche,
         }
+        } 
       };
 
     }
@@ -149,8 +170,11 @@ export const getProgramDetailPageData = async (path: string): Promise<ProgramDet
       // TODO
       type: "DynamicProgramDetail",
       data: {
-        program: { ...programData },
-        layout: programLevel === "Bachillerato" ? {...programDetailBachillerato} : {...programDetailSuperior}
+        ...programData,
+        attributes: { 
+          ...programData.attributes,
+          levelLayout: programLevel === "Bachillerato" ? {...programDetailBachillerato} : {...programDetailSuperior}
+        }
       },
     };
 

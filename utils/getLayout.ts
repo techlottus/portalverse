@@ -1,30 +1,37 @@
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
 import { Footer } from "./getFooters";
+import { MenuType } from "./strapi/sections/Header";
 
-type Layout = {
+export type Layout = {
   layouts: {
-    data: Array< {
-      attributes: {
-        name: string
-        footer : Footer
-      }
-    }>
+    data: Array<LayoutAttributes>
+  }
+}
+export type LayoutAttributes = {
+  data: {
+    attributes: {
+      name: string
+      footer: Footer
+      header: MenuType
+    }
+    
   }
 }
 
-export const getLayout = async (id = 1) => {
+
+export const getLayout = async (name = "Default") => {
   const response = await fetchStrapiGraphQL<Layout>(
     LAYOUTS,
-    { id }
+    { name }
   );
-  
+
   return response?.layouts?.data[0];
 };
 
 export const LAYOUTS = `
-query Layouts($id: ID) {
+query Layouts($name: String) {
   layouts(
-    filters: { id: { eq :$id} }
+    filters: { name: { eq :$name} }
     pagination: { start: 0, limit: -1 }
   ) {
     data {
@@ -57,23 +64,9 @@ query Layouts($id: ID) {
                   data {
                     attributes {
                       name
-                      icon {
-                        data {
-                          attributes {
-                            name
-                          }
-                        }
-                      }
+                      icon_name 
                       href
                     }
-                  }
-                }
-                columns {
-                  items {
-                    label
-                    href
-                    bold
-                    target
                   }
                 }
               }
@@ -84,6 +77,95 @@ query Layouts($id: ID) {
           data {
             attributes {
               name
+              links(pagination: {start: 0, limit: -1}){
+                  id
+                  text
+                  target
+                  href
+                  iconName
+                  iconPosition         
+                }  
+              button{
+                label
+                CTA
+                size
+                id
+                variant
+                iconName
+              }
+              
+              menu_items(pagination: {start: 0, limit: -1}) {
+                id
+                label
+                linkText
+                href
+                items(pagination: {start: 0, limit: -1}){
+                  id
+                  label
+                  bold
+                  href
+                  linkText
+                  items(pagination: {start: 0, limit: -1}){
+                    id
+                    label
+                    bold
+                    href
+                    items(pagination: {start: 0, limit: -1}){
+                      id
+                      label
+                      href
+                      bold              
+                    }
+                  }
+                } 
+              }  
+              banners(pagination: {start: 0, limit: -1}){
+                  title
+                  subtitle
+                  desktopRatio
+                  desktopImage{
+                    data{
+                      attributes{
+                        url
+                        alternativeText
+                      }
+                    }
+                  }
+                  ctaUrl
+                  ctaText
+                  textPosition
+                  overlay
+                  contentVariant 
+                }
+          
+              alert{
+                title
+                subtitle
+                image{
+                  data{
+                    attributes{
+                      url
+                    }
+                  }
+                }
+                link{
+                  text
+                  target
+                  iconName
+                  iconPosition
+                  href
+                }
+                
+              }
+              social_medias(pagination: {start: 0, limit: -1}){
+                data{
+                  attributes{
+                    name
+                    icon_name
+                    href
+                  }
+                }
+              }
             }
           }
         }

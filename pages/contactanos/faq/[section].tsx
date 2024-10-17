@@ -11,8 +11,9 @@ import NextPageWithLayout from "@/types/Layout.types";
 import { getDataPageFromJSON } from "@/utils/getDataPage";
 import ContentFullLayout from "@/layouts/ContentFull.layout";
 import BannerPortalverse from "@/old-components/BannerPortalverse";
+import getLayout from "@/utils/getLayout";
 
-const FAQ: NextPageWithLayout<any> = ({ info, meta, sections }: any) => {
+const FAQ: NextPageWithLayout<any> = ({ info, meta, sections, layoutData }: any) => {
   const router = useRouter()
 
   const [ sectionTitle, setSectionTitle ] = useState('Questions') 
@@ -33,7 +34,7 @@ const FAQ: NextPageWithLayout<any> = ({ info, meta, sections }: any) => {
       <title>{ meta.title }</title>
       <meta property="title" content={meta?.title} />
     </Head>
-    <HeaderFooterLayout>
+    <HeaderFooterLayout layoutData={layoutData}>
       <ContentLayout>
         <h1 className="col-span-12 w-t:col-span-8 w-p:col-span-4 font-headings w-d:text-13 w-t:text-8.5 w-p:text-6 w-t:leading-9.435 font-bold leading-16.25">{sections.head.title}</h1>
         <div className="col-span-3 w-t:col-span-8 w-p:col-span-4 flex-grow-0">
@@ -89,11 +90,12 @@ export function getStaticPaths() {
 export async function getStaticProps(context: any) {
   try {
     const { sections, meta } = await getDataPageFromJSON('faq.json');
+    const layoutData = await getLayout()
     const { params: { section } } = context;
     const { questions }: any = sections.temas.filter((tema: any) => tema.id === section)[0]
     const info = sections.temas.reduce((prev: any[], curr: any, i: number) => [ ...prev, { ...curr, questions: section === Routes["faq"][i].params.section ? [ ...questions ] : [], route: Routes["faq"][i].params.section, status: section === Routes["faq"][i].params.section } ], []);
     return {
-      props: { sections, meta, info }
+      props: { sections, meta, info, layoutData }
     }    
   } catch {
     return {

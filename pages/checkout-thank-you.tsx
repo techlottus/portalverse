@@ -9,8 +9,9 @@ import NextPageWithLayout from "@/types/Layout.types"
 import { getDataPageFromJSON } from "@/utils/getDataPage"
 import Icon from "@/old-components/Icon"
 import Video from "@/old-components/Video"
+import getLayout from "@/utils/getLayout"
 
-const ThankYouPageInscription: NextPageWithLayout = ({ sections, meta }: any) => {
+const ThankYouPageInscription: NextPageWithLayout = ({ sections, meta, layoutData }: any) => {
 
   const router = useRouter()
 
@@ -40,7 +41,7 @@ const ThankYouPageInscription: NextPageWithLayout = ({ sections, meta }: any) =>
     <Head>
       <title>{ meta?.title }</title>
     </Head>
-    <HeaderFooterLayout breadcrumbs={false}>
+    <HeaderFooterLayout breadcrumbs={false} layoutData = {layoutData}>
       <ContentFullLayout>
         <ContentInsideLayout>
           <div className="col-span-5 w-t:col-span-8 w-p:col-span-4 bg-primary-500 text-surface-0 w-t:pb-6">
@@ -72,6 +73,7 @@ const ThankYouPageInscription: NextPageWithLayout = ({ sections, meta }: any) =>
 export async function getStaticProps(context: any) {
   try {
     const { sections, meta } = await getDataPageFromJSON('checkout-thank-you.json');
+    const layoutData =  await getLayout()
 
     // redirect not avaliable page
     if (!!meta.hidden) {
@@ -81,7 +83,7 @@ export async function getStaticProps(context: any) {
     }
 
     return {
-      props: { sections, meta }
+      props: { sections, meta, layoutData }
     }
   } catch {
     return {

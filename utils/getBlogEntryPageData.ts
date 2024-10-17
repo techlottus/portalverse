@@ -2,6 +2,7 @@ import { fetchStrapiGraphQL } from "@/utils/getStrapi";
 import { BANNER } from "@/utils/strapi/sections/Banner";
 import type { BlogPost } from "@/utils/getBlogPosts";
 import type { BannerSection } from "@/utils/strapi/sections/Banner";
+import { LayoutAttributes } from "./getLayout";
 
 type BlogEntryPageComponentSections = Array<BannerSection>;
 
@@ -10,6 +11,7 @@ export type BlogEntryPageData = {
     slug: string;
     sections: BlogEntryPageComponentSections;
     blogPost?: BlogPost;
+    layout?: LayoutAttributes
   };
 }
 
@@ -40,6 +42,7 @@ query BlogEntryPage {
       }
     }
   }
+  
 }
 `;
 

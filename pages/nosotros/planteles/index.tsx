@@ -16,8 +16,9 @@ import { getDataPageFromJSON } from "@/utils/getDataPage";
 import { Dialog, Transition } from '@headlessui/react'
 import { WebErrorComponent } from "@/components/sections/WebError";
 import ContainerForm from "@/components/sections/ContainerForm";
+import getLayout from "@/utils/getLayout";
 
-const Planteles = ({ sections, meta, prefilledData, options, program }: any) => {
+const Planteles = ({ sections, meta, prefilledData, options, program, layoutData }: any) => {
 
   const SFprogram = program?.attributes?.nombreProgramaSalesforce
   const modalities = program?.attributes?.programModalities
@@ -146,7 +147,7 @@ const Planteles = ({ sections, meta, prefilledData, options, program }: any) => 
           </Dialog>
         </Transition>
       </>
-      <HeaderFooterLayout>
+      <HeaderFooterLayout layoutData = {layoutData}>
         <ContentFullLayout classNames="w-d:hidden w-t:col-span-8 w-p:col-span-4">
           <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 w-d:hidden">
             <BannerPortalverse data={sections?.head?.banner} />
@@ -330,9 +331,10 @@ export async function getStaticProps(context: any) {
 
   try {
     const { sections, meta } = await getDataPageFromJSON("planteles.json");
+    const layoutData = await getLayout()
 
     return {
-      props: { sections, meta },
+      props: { sections, meta, layoutData },
     };
   } catch {
     return {

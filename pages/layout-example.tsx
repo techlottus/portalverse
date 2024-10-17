@@ -1,18 +1,20 @@
-import getLayout from "@/utils/getLayout";
+import Header from "@/components/sections/Header";
+import {getLayout} from "@/utils/getLayout";
 
 
 
 const Layouts = ({ data: { layoutData } }: any) => {
   console.log('layoutData: ', layoutData);
   
+  
   return <>
-    <p>hellos world!!</p>
+    <Header {...layoutData?.attributes?.header?.data?.attributes} />
   </>
 }
 
 export async function getStaticProps(context: any) {
     try {
-      const layoutData = await getLayout(1);
+      const layoutData = await getLayout();
       // const sections = homePageData?.homePage?.data?.attributes?.sections;
       // const meta = homePageData?.homePage?.data?.attributes?.seo;
 

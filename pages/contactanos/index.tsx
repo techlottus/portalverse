@@ -12,8 +12,9 @@ import { getDataPageFromJSON } from "@/utils/getDataPage"
 import Icon from "@/old-components/Icon"
 import BannerPortalverse from "@/old-components/BannerPortalverse"
 import ContentLayout from "@/layouts/Content.layout"
+import getLayout from "@/utils/getLayout"
 
-const PonteEnContacto: NextPageWithLayout = ({ sections, meta }: any) => {
+const PonteEnContacto: NextPageWithLayout = ({ sections, meta, layoutData }: any) => {
   const router = useRouter();
 
   return <>
@@ -21,7 +22,7 @@ const PonteEnContacto: NextPageWithLayout = ({ sections, meta }: any) => {
       <title>{ meta.title }</title>
       <meta property="title" content={meta?.title} />
     </Head>
-    <HeaderFooterLayout breadcrumbs={false}>
+    <HeaderFooterLayout breadcrumbs={false} layoutData={layoutData}>
       <ContentFullLayout>
         <ContentInsideLayout classNames="mb-12">
           <div className="col-span-5 w-t:col-span-8 w-p:col-span-4 bg-surface-800 text-surface-0 w-t:pb-6">
@@ -88,6 +89,7 @@ const PonteEnContacto: NextPageWithLayout = ({ sections, meta }: any) => {
 export async function getStaticProps(context: any) {
   try {
     const { sections, meta } = await getDataPageFromJSON('ponte-en-contacto.json');
+    const layoutData = await getLayout()
 
     // redirect not avaliable page
     if (!!meta.hidden) {
@@ -97,7 +99,7 @@ export async function getStaticProps(context: any) {
     }
 
     return {
-      props: { sections, meta }
+      props: { sections, meta, layoutData }
     }
   } catch {
     return {
