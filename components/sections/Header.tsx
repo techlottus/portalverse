@@ -94,7 +94,7 @@ const Header = (props: MenuType) => {
               </div>
             </Link>
           </div>}
-        <ul className={classNames("flex flex-col w-full h-full mobile:h-fit tablet:h-fit desktop:pr-6 mobile:space-y-2 tablet:space-y-3 desktop:space-y-2", { ["desktop:w-[273px] "]: isSub })} tabIndex={-1}  >
+        <ul className={classNames("flex flex-col w-full h-full mobile:h-fit tablet:h-fit desktop:pr-6 mobile:space-y-3 tablet:space-y-3 ", { ["desktop:w-[273px] desktop:space-y-3 "]: isSub,["desktop:space-y-2"]:!isSub })} tabIndex={-1}  >
           {list?.map((item: any, i: number) =>
             item?.items?.length > 0 ? (
               <button key={i} className={classNames("group w-full", {
@@ -148,7 +148,7 @@ const Header = (props: MenuType) => {
       <ul className={classNames("flex flex-col flex-wrap max-h-100 max-w-[273px]")} tabIndex={-1} onMouseEnter={() => setItems(true)}>
         {subitems.items?.map((item: any, i: number) => (
           <Link key={i} href={item?.href ?? ""} passHref>
-            <p className={classNames("font-text text-sm mr-3 mb-3",
+            <p className={classNames("font-text mr-3 mb-3",
               {
                 ["font-texts text-surface-950 font-semibold"]: item?.bold,
                 ["font-texts text-surface-500 hover:text-primary-500 font-normal text-wrap text-left"]: !item?.bold,
@@ -161,7 +161,7 @@ const Header = (props: MenuType) => {
       {linkText && <div className="w-full border-t border-surface-200 ">
         <div className="py-2 w-full font-texts text-primary-500 font-normal flex align-middle">
           <Link href={linkHref ?? ""} passHref>
-            <p className={classNames("font-normal hover:underline text-sm")}>
+            <p className={classNames("font-normal hover:underline")}>
               {linkText ? linkText + " »" : null} </p></Link>
         </div>
       </div>}
