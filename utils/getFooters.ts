@@ -18,7 +18,6 @@ export type FooterSection = {
   links: LinkComponentConfig
   position: string;
   socialMedias: Array<SocialMedias>
-  columns: Array<FooterColumn>
 
 }
 export type Footer = {

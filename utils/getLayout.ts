@@ -69,14 +69,6 @@ query Layouts($name: String) {
                     }
                   }
                 }
-                columns {
-                  items {
-                    label
-                    href
-                    bold
-                    target
-                  }
-                }
               }
             }
           }
