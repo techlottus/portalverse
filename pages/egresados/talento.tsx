@@ -15,8 +15,9 @@ import CardWebsitePortalverse from "@/old-components/CardWebsitePortalverse"
 import Link from "next/link"
 import Icon from "@/old-components/Icon"
 import ContentInsideLayout from "@/layouts/ContentInside.layout"
+import getLayout from "@/utils/getLayout"
 
-const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
+const ThankYouPage: NextPageWithLayout = ({ sections, meta, layoutData }: any) => {
 
   const [youtubeConfig, setYoutubeConfig] = useState<YoutubeOptions>({
     id: '',
@@ -44,7 +45,7 @@ const ThankYouPage: NextPageWithLayout = ({ sections, meta }: any) => {
       <title>{meta.title}</title>
       <meta property="title" content={meta?.title} />
     </Head>
-    <HeaderFooterLayout breadcrumbs={true}>
+    <HeaderFooterLayout breadcrumbs={true} layoutData = {layoutData}>
       <ContentLayout>
         {/* <div className="col-span-8 w-p:col-span-4 w-d:mb-12 w-t:mb-6 w-p:mb-6">
           <h1 className="text-13 w-t:text-8.25 w-p:text-6 font-headings font-bold leading-tight w-t:semi-tight ">{sections.head.title}</h1>
@@ -106,9 +107,10 @@ export async function getStaticProps(context: any) {
     const { sections, meta } = await getDataPageFromJSON(
       "egresados-talento.json"
     );
+    const layoutData = await getLayout()
 
     return {
-      props: { sections, meta },
+      props: { sections, meta, layoutData },
     };
   } catch {
     return {
