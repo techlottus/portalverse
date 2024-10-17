@@ -102,7 +102,7 @@ const Header = (props: MenuType) => {
                 ["desktop:border desktop:!border-surface-200 desktop:bg-surface-0 "]: (!isSub && item.id === itemSelected && items)
               })}
                 onMouseEnter={() => {
-                  handleMouseEnter(item, isSub, true, item)
+                  handleMouseEnter(item, isSub)
                   isSub ? setSubItemSelected(subItemList.id) : setItemSelected(itemList.id)
                 }}>
                 <div className="flex items-center justify-between">
@@ -262,7 +262,7 @@ const Header = (props: MenuType) => {
     </div>
   );
 
-  const handleMouseEnter = (list: any[], isSub: boolean, id?: boolean, item?: any) => {
+  const handleMouseEnter = (list: any[], isSub: boolean) => {
     if (!isSub) {
       setItems(true);
       setItemList(list);
@@ -287,17 +287,18 @@ const Header = (props: MenuType) => {
 
   useEffect(() => {
     if (!subItems) {
-      setSubItemList({})
-      setSubItemSelected(false)
+      setSubItemList((prev:any) => Object.keys(prev).length !== 0 && {});
+      setSubItemSelected(prev => prev !== false && false);
     }
-  }, [subItems])
+  }, [subItems]);
+
   useEffect(() => {
     if (!items) {
-      setSubItems(false)
-      setSubItemList({})
-      setSubItemSelected(false)
-    }
-  }, [items])
+      setSubItems(prev => prev !== false && false);
+      setSubItemList((prev:any) => Object?.keys(prev).length !== 0 && {});
+      setSubItemSelected(prev => prev !== false && false);    }
+  }, [items]);
+  
 
 
   return (
