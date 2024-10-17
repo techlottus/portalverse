@@ -1,12 +1,11 @@
-import { FC, Fragment, useEffect, useState } from "react"
+import { FC, Fragment } from "react"
 import Link from "next/link"
 import cn from "classnames"
 import Image from "@/old-components/Image"
 import Icon from "@/old-components/Icon"
 import LinkContactTarget from "@/old-components/LinkContactTarget"
-import FooterPortalverseComponentData from "@/types/FooterPortalverse.types"
 import FooterLogo from "@/components/sections/footer/logo"
-import { FooterColumnItem, FooterData, FooterGroup, FooterSection as Footersection } from "@/utils/getFooters"
+import { FooterColumnItem, FooterGroup, FooterSection as Footersection } from "@/utils/getFooters"
 
 interface FooterSect extends  Footersection {
   onClickLogo: ( ()=> void ) | undefined
