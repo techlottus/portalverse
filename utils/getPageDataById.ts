@@ -156,14 +156,6 @@ query PageById($id: ID) {
                     }
                   }
                 }
-                columns {
-                  items {
-                    label
-                    href
-                    bold
-                    target
-                  }
-                }
               }
             }
           }
