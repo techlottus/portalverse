@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import Footer from "@/old-components/FooterPortalverse"
+// import Footer from "@/old-components/FooterPortalverse"
 // import Header from "@/old-components/HeaderPortalverse/HeaderPortalverse"
 import HeaderFooterLayoutProps from "@/types/HeaderFooterLayout.types"
 import Breadcrumbs from "@/old-components/Breadcrumbs/BreadcrumbPortalverse"
@@ -7,6 +7,7 @@ import ContentLayout from "@/layouts/Content.layout"
 import HeaderConf from "@/config/header.json"
 import FooterConf from "@/config/footer.json"
 import Header from "@/components/sections/Header"
+import Footer from "@/components/Footer"
 
 export default function DynamicPageLayout({ children, breadcrumbs = true,layoutData }: HeaderFooterLayoutProps &any) {
 
@@ -23,7 +24,7 @@ export default function DynamicPageLayout({ children, breadcrumbs = true,layoutD
     <Header {...layoutData?.attributes?.header?.data?.attributes} />
     <div className="desktop:pt-30">
       { children }
-      <Footer onClickLogo={logotypeClick} privacyLink={privacyLink} certifications={certifications} logotype={logotipo} social={social} phone={phone} directorio={directorio} sections={sections} />
+      <Footer onClickLogo={logotypeClick} {...layoutData?.attributes?.footer?.data}/>
     </div>
   </>
 }
