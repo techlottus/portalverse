@@ -18,8 +18,9 @@ import cn from "classnames";
 import TabsFeatured from "@/old-components/TabsFeatured";
 import DescriptionSection from "@/old-components/DescriptionSection";
 import Button from "@/old-components/Button/Button";
+import getLayout from "@/utils/getLayout";
 
-const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
+const ModeloEducativo: NextPageWithLayout = ({ sections, meta,layoutData }: any) => {
   const router = useRouter()
   const [tabActive, setTabActive] = useState<number>(0);
   const [contentTabs, setContentTabs] = useState<any>([]);
@@ -123,7 +124,7 @@ const ModeloEducativo: NextPageWithLayout = ({ sections, meta }: any) => {
         </ContentInsideLayout>
       </section>
     </Modal>
-    <HeaderFooterLayout>
+    <HeaderFooterLayout layoutData={layoutData}>
       <ContentLayout classNames="desktop:gap-y-18 gap-y-12">
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
           <h1 className="text-13 font-bold font-headings leading-13 w-t:semi-tight w-p:leading-tight w-t:text-8.5 w-p:text-7.5 w-d:mb-6 w-t:mb-4 w-p:mb-3">{sections.head.title}</h1>
@@ -240,6 +241,7 @@ export async function getStaticProps(context: any) {
 
   try {
     const { sections, meta } = await getDataPageFromJSON("becas.json");
+    const layoutData = await getLayout()
 
     // redirect not avaliable page
     if (!!meta.hidden) {
@@ -249,7 +251,7 @@ export async function getStaticProps(context: any) {
     }
 
     return {
-      props: { sections, meta },
+      props: { sections, meta, layoutData },
     };
   } catch {
     return {
