@@ -21,9 +21,6 @@ const Header = (props: MenuType) => {
   const [subItemList, setSubItemList] = useState<any>([]);
   const [open, setOpen] = useState(false)
   const [openContent, setOpenContent] = useState('')
-  const [openContentMobile, setOpenContentMobile] = useState('closed')
-
-
 
   // Componente de enlaces
   const Links = ({ links }: { links?: (MenuType['links']) }) => (
@@ -97,7 +94,7 @@ const Header = (props: MenuType) => {
               </div>
             </Link>
           </div>}
-        <ul className={classNames("flex flex-col w-full h-full mobile:h-fit tablet:h-fit desktop:pr-6 mobile:space-y-2 tablet:space-y-3", { ["desktop:w-[273px] desktop:space-y-3"]: isSub })} tabIndex={-1}  >
+        <ul className={classNames("flex flex-col w-full h-full mobile:h-fit tablet:h-fit desktop:pr-6 mobile:space-y-2 tablet:space-y-3 desktop:space-y-2", { ["desktop:w-[273px] "]: isSub })} tabIndex={-1}  >
           {list?.map((item: any, i: number) =>
             item?.items?.length > 0 ? (
               <button key={i} className={classNames("group w-full", {
@@ -284,14 +281,9 @@ const Header = (props: MenuType) => {
 
   }
 
-  const handleHamburguer = () => {
-    if (open) {
-      setOpen(false)
-    }
-    else {
-      setOpen(true)
-    }
-  }
+  const handleHamburger = () => {
+    setOpen(prevState => !prevState);
+  };
 
   useEffect(() => {
     if (!subItems) {
@@ -313,7 +305,7 @@ const Header = (props: MenuType) => {
     <div className="absolute desktop:fixed top-0 z-20 flex flex-col w-full tablet:fixed mobile:fixed bg-surface-0 ">
       {/* Primer nivel del menú */}
       <NavigationMenu.Root className="relative flex h-auto desktop:py-4 py-3 desktop:px-21 px-6 desktop:border-b desktop:border-surface-300 w-full justify-center align-middle bg-surface-0 tablet:z-10">
-        <button className="absolute top-0 left-6 pr-3 py-3 desktop:hidden flex items-center h-full" onClick={() => handleHamburguer()}>
+        <button className="absolute top-0 left-6 pr-3 py-3 desktop:hidden flex items-center h-full" onClick={() => handleHamburger()}>
           {!open && <Icon name="sort" className="w-7.5 h-7.5" />}
           {open && <span className="flex align-middle items-center"><span className="mr-1 material-symbols-outlined">close</span> <p className="font-texts font-normal text-sm">Cerrar</p></span>}
         </button>
@@ -346,7 +338,7 @@ const Header = (props: MenuType) => {
                 }}
                   className="relative px-6 desktop:flex desktop:px-0 align-middle ">
                   {menu_item?.items && menu_item?.items?.length > 0 ?
-                    <NavigationMenu.Trigger onClick={() => setOpenContentMobile('open')} className={classNames("group z-20 flex justify-between desktop:justify-normal mobile:border-b tablet:border-b  w-full  items-center desktop:h-[45px]  font-texts desktop:font-normal font-semibold  border-surface-300  desktop:data-[state=open]:border-b-4 desktop:data-[state=open]:border-primary-500 desktop:data-[state=open]:text-primary-500 desktop:py-3 desktop:data-[state=open]:pb-2 py-4 desktop:px-3 ")}>
+                    <NavigationMenu.Trigger className={classNames("group z-20 flex justify-between desktop:justify-normal mobile:border-b tablet:border-b  w-full  items-center desktop:h-[45px]  font-texts desktop:font-normal font-semibold  border-surface-300  desktop:data-[state=open]:border-b-4 desktop:data-[state=open]:border-primary-500 desktop:data-[state=open]:text-primary-500 desktop:py-3 desktop:data-[state=open]:pb-2 py-4 desktop:px-3 ")}>
                       {menu_item?.label}
                       <div className="desktop:hidden flex items-center align-middle"><span className="material-symbols-outlined text-2xl  text-surface-800 font-bold ml-3 desktop:hidden">chevron_right</span></div>
                       <CaretDownIcon className="relative hidden desktop:block transition duration-300 ease-out hover:ease-in group-data-[state=open]:rotate-180 desktop:group-data-[state=open]:text-primary-500 ml-1" aria-hidden />
@@ -356,7 +348,7 @@ const Header = (props: MenuType) => {
                   {menu_item?.items && menu_item?.items?.length > 0 && (
                     <NavigationMenu.Content id="content" className={classNames("desktop:absolute desktop:top-0 desktop:left-0 desktop:w-full desktop:data-[motion=from-start]:animate-enterFromLeft desktop:data-[motion=from-end]:animate-enterFromRight desktop:data-[motion=to-start]:animate-exitToLeft desktop:data-[motion=to-end]:animate-exitToRight mobile:z-20 tablet:max-w-100 desktop:min-h-[440px]  mobile:bg-surface-0 desktop:rounded-xl tablet:min-h-screen mobile:min-h-screen mobile:h-full mobile:overflow-y-auto mobile:overscroll-y-auto desktop:rounded-b-xl ")}
                     >
-                      <div tabIndex={-1} onClick={() => setOpenContent('closed')} className={classNames("fixed top-0 w-full h-full mobile:hidden bg-surface-950/80 -z-10 tablet:-z-30 overscroll-none overflow-y-hidden")}></div>
+                      <div tabIndex={-1} onClick={() => setOpenContent('closed')} className={classNames("fixed top-0 w-full h-full mobile:hidden bg-surface-950/50 -z-10 tablet:-z-30 overscroll-none overflow-y-hidden")}></div>
                       <div tabIndex={-1} onMouseLeave={() => {
                         setOpenContent('closed')
                         clearStates()
@@ -368,8 +360,6 @@ const Header = (props: MenuType) => {
                               <div className="flex py-2 space-x-2 align-middle items-center">
                                 <button onClick={() => {
                                   setOpenContent('closed')
-                                  setOpenContentMobile('closed')
-
                                 }} ><span className="material-symbols-outlined text-2xl rounded p-2 bg-surface-300 font-bold">arrow_back</span></button>
                                 <p className="font-semibold font-texts text-lg">{menu_item?.label}</p>
                               </div>
