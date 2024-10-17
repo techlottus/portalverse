@@ -380,7 +380,7 @@ const Header = (props: MenuType) => {
                           </div>
                           <div className="px-6 h-full flex w-full mobile:hidden tablet:hidden" >
                             {(items && itemList?.items && itemList?.items.length < 12) &&
-                              <div className="flex space-x-6">
+                              <div className="flex space-x-6 w-full">
                                 <SubItems list={itemList?.items} isSub={true} linkText={itemList?.linkText} linkHref={itemList?.href} />
                                 {subItems && <SubItemsCols subitems={subItemList} isSub linkText={subItemList?.linkText} linkHref={subItemList?.href} />
                                 }
