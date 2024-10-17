@@ -1,4 +1,4 @@
-import { MenuType, SubitemsType } from "@/utils/strapi/sections/Header";
+import { MenuType } from "@/utils/strapi/sections/Header";
 import React, { useEffect, useState } from 'react';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import { CaretDownIcon } from '@radix-ui/react-icons';
@@ -6,17 +6,13 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import AlertInfo from "./AlertInfo";
 import classNames from "classnames";
-import BannerPortalverseWrapper from "../BannerPortalverseWrapper";
 import Icon from "@/old-components/Icon"
-import { link } from "fs/promises";
 import Aspect from "../Aspect";
-import { AnyARecord } from "dns";
 
 // Componente principal Header
 const Header = (props: MenuType) => {
-  const { name, links, button, menu_items, banners, alert, social_medias = { data: [] } } = props;
+  const { links, button, menu_items, banners, alert, social_medias = { data: [] } } = props;
   const router = useRouter();
-  console.log("banners: ", banners)
   const [items, setItems] = useState(false);
   const [itemSelected, setItemSelected] = useState(false);
   const [itemSubSelected, setSubItemSelected] = useState(false);
@@ -76,7 +72,6 @@ const Header = (props: MenuType) => {
       </div>
     )
   }
-
   // Componente de subitems
   const SubItems = ({ list, isSub = false, linkText, linkHref = '', label }: { list: any, isSub?: boolean, linkText?: string, linkHref?: string, label?: string }) => {
 
@@ -136,7 +131,6 @@ const Header = (props: MenuType) => {
           )}
           {linkText && <Link href={linkHref ?? ""} passHref onMouseEnter={() => {
             isSub ? setSubItems(false) : setItems(false)
-            console.log(linkHref)
           }
           } className="mobile:hidden">
             <div className={classNames("py-2 w-full font-texts text-primary-500 font-normal flex align-middle", { ["desktop:px-3"]: !isSub })}>
@@ -279,12 +273,10 @@ const Header = (props: MenuType) => {
       setSubItemList(list);
       setSubItems(true)
     }
-    // console.log("handle: ", items,subItems, itemList, subItemList)
 
   };
 
   const clearStates = () => {
-    // console.log("clean")
     setItems(false);
     setSubItems(false)
     setItemList({});
@@ -302,14 +294,12 @@ const Header = (props: MenuType) => {
   }
 
   useEffect(() => {
-    console.log("subitems: ",subItemList)
     if (!subItems) {
       setSubItemList({})
       setSubItemSelected(false)
     }
   }, [subItems])
   useEffect(() => {
-    console.log("items: ",itemList)
     if (!items) {
       setSubItems(false)
       setSubItemList({})
@@ -392,7 +382,6 @@ const Header = (props: MenuType) => {
                             </div>
                             <div tabIndex={-1} onMouseLeave={() => {
                               setSubItems(false)
-                              // console.log(menu_item.linkText, menu_item.href)
                             }
                             } className="flex overflow-y-auto overscroll-auto h-full">
                               <SubItems list={menu_item?.items} linkText={menu_item?.linkText} linkHref={menu_item?.href} />
