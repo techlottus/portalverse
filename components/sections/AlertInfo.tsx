@@ -24,12 +24,12 @@ const AlertInfo: FC<AlertInfoType> = (props: AlertInfoType) => {
         <div className="flex-col space-y-1">
           {
             title
-              ? <p className="font-bold font-texts text-sm text-surface-600">{title}</p>
+              ? <p className="font-bold font-texts text-sm text-surface-900">{title}</p>
               : null
           }
           {
             subtitle
-              ? <p className="font-texts font-normal text-surface-400 text-sm " >{subtitle}</p>
+              ? <p className="font-texts font-normal text-surface-600 text-sm " >{subtitle}</p>
               : null
           }
         </div>

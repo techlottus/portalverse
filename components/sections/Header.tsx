@@ -177,7 +177,7 @@ const Header = (props: MenuType) => {
     </div>
   );
 
-  const Banner = ({ textPosition, desktopRatio, desktopImage, overlay, title, subtitle,ctaUrl,ctaText }: { textPosition: string, desktopRatio: string, desktopImage: any, overlay: string, title: string, subtitle: string, ctaUrl:string,ctaText:string}) => {
+  const Banner = ({ textPosition, desktopRatio, desktopImage, overlay, title, subtitle,ctaUrl,ctaText ,contentVariant}: { textPosition: string, desktopRatio: string, desktopImage: any, overlay: string, title: string, subtitle: string, ctaUrl:string,ctaText:string,contentVariant:string}) => {
     return (
       <div className="w-t:hidden w-p:hidden rounded">
         <Aspect ratio={desktopRatio}>
@@ -210,7 +210,7 @@ const Header = (props: MenuType) => {
                       className={classNames(
                         "font-headings font-bold text-wrap text-[24px]  ",
                         {
-                          "text-surface-0": overlay === "black",
+                          "text-surface-0": contentVariant === "light",
                         }
                       )
                       }
@@ -222,7 +222,7 @@ const Header = (props: MenuType) => {
                       className={classNames(
                         "font-texts font-normal text-base",
                         {
-                          "text-surface-0": overlay === "black"
+                          "text-surface-0": contentVariant === "light"
                         }
                       )
                       }
@@ -231,8 +231,8 @@ const Header = (props: MenuType) => {
                   }
                   {ctaUrl && 
                   <Link passHref
-                  href={ ctaUrl? ctaUrl : "" }>
-                    <div className={classNames("font-texts text-base flex align-middle items-center",{"text-surface-0": overlay === "black"})}>
+                  href={ ctaUrl? ctaUrl : "" } className="w-fit">
+                    <div className={classNames("font-texts text-base flex align-middle items-center w-fit",{"text-surface-0": contentVariant === "light"})}>
                       <p className="underline">{ctaText}</p> 
                       <span className="ml-1 material-symbols-outlined">arrow_forward</span>
                     </div>
