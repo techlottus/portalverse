@@ -312,7 +312,7 @@ const Header = (props: MenuType) => {
           {open && <span className="flex align-middle items-center"><span className="mr-1 material-symbols-outlined">close</span> <p className="font-texts font-normal text-sm">Cerrar</p></span>}
         </button>
         <div className="w-full max-w-[1200px] flex desktop:justify-between justify-center">
-          <div className="h-[45px] w-[104px] desktop:w-36 desktop:h-10 bg-logo bg-cover bg-center " onClick={logotypeClick}></div>
+          <div className="h-[45px] w-[104px] desktop:w-36 desktop:h-10 bg-logo bg-cover bg-center cursor-pointer " onClick={logotypeClick}></div>
           <div className="hidden desktop:flex items-center space-x-6">
             <Links links={links} />
             <button
