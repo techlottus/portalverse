@@ -4,29 +4,82 @@ import NextPageWithLayout from "@/types/Layout.types"
 import { useEffect, useState } from "react"
 import getProgramById, { ProgramData } from "@/utils/getProgramById"
 import { InscriptionForm } from "@/forms/container/InscriptionForm"
-import Link from "next/link"
 import Button from "@/old-components/Button/Button"
 import cn from "classnames"
 import React from "react"
 import { useRouter } from "next/router";
-import Image from "@/old-components/Image"
 import WebError from "@/components/sections/WebError";
 import Container from "@/layouts/Container.layout"
+import { AddressElement, Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+import { PaymentElement, useStripe, useElements } from "@stripe/react-stripe-js";
+import { json } from "stream/consumers"
+import PersonalData from "@/forms/steps/PersonalData"
 
 type PageProps = {
   program?: ProgramData | null;
   price: any;
 };
 
+const stripePublicKey = process.env.NEXT_PUBLIC_STRIPE_KEY?.toString()
+//@ts-ignore
+const stripePromise = loadStripe(stripePublicKey);
+
+const PaymentForm = () => {
+  const stripe = useStripe();
+  const elements = useElements();
+
+
+  const handleSubmit = async (event: any) => {
+    event.preventDefault();
+
+    if (!stripe || !elements) {
+      return;
+    }
+
+    const { error } = await stripe.confirmPayment({
+      elements,
+      confirmParams: {
+        return_url: 'https://example.com/order/complete', // URL para redirigir cuando el pago esté completo
+        payment_method_data: {
+          billing_details: {
+            email: 'test@gmail.com',
+            
+          }
+        },
+      }
+    });
+
+    if (error) {
+      console.log(error.message);
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <AddressElement
+        options={{
+          mode: 'billing', // También puede ser 'shiping'
+          allowedCountries: ['US', 'CA','MX'], // Configura los países permitidos
+          fields: {
+            phone: 'always', // Otros valores posibles: 'always', 'auto'
+          }
+        }} />
+      <PaymentElement options={
+        {layout:'accordion'}
+      }/>
+      <button type="submit" disabled={!stripe}>
+        Pagar
+      </button>
+    </form>
+  );
+};
+
 const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
 
   const { program = null, price = {} } = props;
 
-  const flywireAPI = process.env.NEXT_PUBLIC_FLYWIRE_API
-  const flywireAPIKEY = process.env.NEXT_PUBLIC_FLYWIRE_API_KEY
-  const [flywireLink, setFlywireLink] = useState('')
-
-  const priceAmount = price?.discounted_price  || price?.price ;
+  const priceAmount = price?.discounted_price || price?.price;
   const priceString = priceAmount?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })
   const partialityString = price?.partiality_price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })
   const [residence, setResidence] = useState<any>()
@@ -36,21 +89,13 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
   const [isValid, setIsValid] = useState<boolean>(false);
   const [curp, setCurp] = useState<boolean>();
   const [submit, setSubmit] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
   const [isValidCurp, setIsValidCurp] = useState(false);
   const [curpError, setCurpError] = useState(false);
   const [activePageIndex, setActivePageIndex] = useState(0);
-  const [errorResponse, setErrorResponse] = useState();
-  const router = useRouter();
+  // const router = useRouter();
 
-  const setStatus = ({ loading, valid, success }: { loading: boolean, valid: boolean, success: boolean }) => {
-    setIsVisible(!loading && !error)
-    setIsLoading(loading)
+  const setStatus = ({ valid }: { valid: boolean }) => {
     setIsValid(valid)
-    setIsSuccess(success)
   }
   const initialData = {
     name: "",
@@ -65,153 +110,21 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
   }
 
   const [personalData, setPersonalData] = useState(initialData);
+  const [clientSecret, setClientSecret] = useState('');
 
   useEffect(() => {
-
-
-    window.addEventListener("message", (event) => {
-      // console.log("event: ",event)
-      // IMPORTANT: Verify the origin of the data to ensure it is from Flywire
-      // The use of indexOf ensures that the origin ends with ".flywire.com"
-      if (event.origin.indexOf(".flywire.com") > 0) {
-        // If the message was sent from Flywire:
-        // Extract the data from the event
-        const result = event.data;
-        // console.log("event data:", result)
-        // console.log('result: ', result);
-
-
-        // Check if the session was successful and confirm_url is present:
-        if (result.type === "recurring" && !!result.planId) {
-          // The session was successful and the confirm_url has been returned
-          // const confirm_url = result.confirm_url;
-
-          // Use the confirm_url to confirm the Checkout Session
-          // not used due to change of solution from tokenization and pay to recurring
-          // console.log("Confirm URL:", confirm_url.url);
-          // const postConfirm = async () => {
-          //   const response = await fetch("/api/confirmFw", {
-          //     method: "POST",
-          //     body: JSON.stringify({ url: confirm_url.url })
-          //   })
-
-          //   const res = await response.json()
-          // };
-
-          // postConfirm()
-
-          setActivePageIndex(2)
-
-        } else if (result.status === "success") {
-          setActivePageIndex(2)
-          // console.log("status", result.status)
-        }
-        // Handle failure accordingly
-        // setActivePageIndex(3)
-        else {
-          // console.error("Session unsuccessful or confirm_url missing.");
-        }
-      }
-    });
-  }, [])
-
-  useEffect(() => {
-
-    if (activePageIndex === 1) {
-      const postData = async () => {
-        if (flywireAPI && flywireAPIKEY) {
-          const response = await fetch("/api/generateFwLink", {
-            method: 'POST',
-            body: JSON.stringify({
-              ...price?.config,
-              "payor_id": personalData?.email,
-              "options": {
-                "form": {
-                  "action_button": "save",
-                  "locale": "es-ES"
-                }
-              },
-              "recipient": {
-                "fields": [
-                  {
-                    "id": "program_name",
-                    "value": program?.attributes?.name
-                  },
-                  {
-                    "id": "metadatalottus",
-                    "value": JSON.stringify(price?.metadata)
-                  },
-                  {
-                    "id": "student_first_name",
-                    "value": personalData?.name,
-                    "read_only": true
-                  },
-                  {
-                    "id": "student_middle_name",
-                    "value": personalData?.last_name,
-                    "read_only": true
-                  },
-                  {
-                    "id": "student_last_name",
-                    "value": personalData?.second_last_name,
-                    "read_only": true
-                  },
-                  {
-                    "id": "curp",
-                    "value": curp,
-                    "read_only": true
-                  },
-                  {
-                    "id": "student_email",
-                    "value": personalData?.email,
-                    "read_only": true
-                  },
-                  {
-                    "id": "student_phone",
-                    "value": personalData?.phone,
-                    "read_only": true
-                  },
-                  {
-                    "id": "residence",
-                    "value": personalData?.residence,
-                    "read_only": true
-                  },
-                  {
-                    "id": "assessor_name",
-                    "value": personalData?.adviser,
-                    "read_only": true
-                  },
-                ]
-              },
-              "items": [
-                {
-                  "id": "default",
-                  "amount": Math.round( priceAmount * 100 ),
-                  "description": "My favourite item"
-                }
-              ],
-              "notifications_url": `${process.env.NEXT_PUBLIC_PAYMENT_WEBHOOK}/flywire/webhook`,
-            })
-          });
-          const regExpLink = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
-          const res = await response.json()
-          if (regExpLink.test(res)) {
-            setFlywireLink(await res)
-          } else {
-            setFlywireLink("error")
-          }
-          setIsSuccess(true)
-        }
-      }
-      postData()
-    }
-    if (activePageIndex === 2) {
-      router.push(`/checkout-thank-you`);
-    }
-  }, [activePageIndex])
-  useEffect(() => {
-  }, [flywireLink])
-
+    // Llamada a la API Route para obtener el clientSecret
+    fetch('/api/create-payment-intent', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        "amount": priceAmount
+      })
+    })
+      .then((res) => res.json())
+      .then((data) => setClientSecret(data.clientSecret))
+      .catch((err) => console.error(err));
+  }, []);
 
   return (
     <>
@@ -220,13 +133,13 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
       </Head>
 
       <ContentFullLayout>
-        <section className="w-full bg-surface-0 z-15 transition-transform shadow-15">
+        <section id="Navbar" className="w-full bg-surface-0 z-15 transition-transform shadow-15">
           <div className="p-6 border-0 border-solid border-surface-200 border-r-2">
             <div className="w-36 h-9 bg-logo bg-cover bg-center mobile:mx-auto"> </div>
           </div>
         </section>
         <Container classNames="flex mobile:!px-0 mobile:flex-col tablet:flex-col tablet:!px-0 desktop:gap-30 desktop:mt-12 mobile:mt-6 tablet:mt-6">
-          <div className="desktop:w-1/2">
+          <div id="forms" className="desktop:w-1/2">
             <div className={cn("mobile:w-full", { 'hidden': activePageIndex !== 0 })}>
               <InscriptionForm
                 submit={submit}
@@ -249,25 +162,27 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                 setCurpError={setCurpError}
               />
             </div>
-            <div className={cn("mobile:w-full flex justify-center min-h-[512px]", { 'hidden': activePageIndex !== 1 }, { 'w-full': flywireLink === "error" })}>
-              {
-                !flywireLink
-                  ? <section className={cn("bg-surface-0")}>
-                    <div className="w-full h-full bg-surface-0">
-                      <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
-                    </div>
-                  </section>
-                  : flywireLink === "error"
-                    ? <WebError title="Error" message="Error al conectar a flywire" errorCode="400"></WebError>
-                    : <div className=" flex w-[500px] mobile:px-4 min-h-[900px] mobile:min-h-[800px] overflow-hidden overscroll-y-auto ">
-                      <iframe className="mobile:hidden tablet:hidden w-[500px] h-[200%] overflow-hidden overscroll-none -mt-[64px] " src={flywireLink} title="Flywire form"></iframe>
-                      <iframe className="desktop:hidden w-full h-[200%] overflow-hidden overscroll-none -mt-[64px]" src={flywireLink} title="Flywire form"></iframe>
-                    </div>
-              }
-            </div>
+            {clientSecret &&
+              <div className={cn("p-4")}>
+                <Elements stripe={stripePromise} options={{
+                  clientSecret: clientSecret,
+                  appearance: {
+                    theme: 'flat',    // Other themes: 'stripe', 'night', 'none'
+                    variables: {
+                      colorPrimary: '#0570de',
+                      colorBackground: '#f6f9fc',
+                      colorText: '#30313d',
+                      fontFamily: 'Ideal Sans, system-ui, sans-serif',
+                    }
+                  },             
+                  
+                }}>
+                  <PaymentForm />
+                </Elements>
+              </div>}
           </div>
-          <div className="desktop:w-1/2 ">
-            <div className={cn("flex mobile:w-full mobile:px-6 mobile:mb-7 flex-col mobile:flex-col-reverse ", { "mobile:hidden tablet:hidden": flywireLink })}>
+          <div id="payment-card" className="desktop:w-1/2 ">
+            <div className={cn("flex mobile:w-full mobile:px-6 mobile:mb-7 flex-col mobile:flex-col-reverse ")}>
               <div className="w-full border border-surface-300 rounded-lg p-4">
                 <h3 className="font-headings font-bold text-5.5 leading-6 mb-3">{program?.attributes?.name}</h3>
                 {/* se deja pendiente este badge, ya que cada programa cuenta con varias posibles modalidades y aqui solo podríamos elegir una */}
@@ -291,43 +206,43 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                   {
                     price?.config?.type == "recurring"
                       ? <>
-                          <p className="font-texts font-bold text-base leading-6"> Parcialidad a pagar</p>
-                          <p className="text-base font-bold">
-                            {partialityString} MXN
-                          </p>
-                        </>
+                        <p className="font-texts font-bold text-base leading-6"> Parcialidad a pagar</p>
+                        <p className="text-base font-bold">
+                          {partialityString} MXN
+                        </p>
+                      </>
                       : <>
-                          <p className="font-texts font-bold text-base leading-6"> Total a pagar</p>
-                          <p className="text-base font-bold"> { priceString } MXN </p>
-                        </>
-                    }
+                        <p className="font-texts font-bold text-base leading-6"> Total a pagar</p>
+                        <p className="text-base font-bold"> {priceString} MXN </p>
+                      </>
+                  }
                 </div>
               </div>
               <div id="btn-inscribir" className="mobile:mb-4">
                 <div className={cn("flex flex-col  my-6", { ["hidden"]: activePageIndex !== 0 })}>
-                <Button
-                  dark
-                  data={{
-                    type: "primary",
-                    title: "Inscribirme ahora",
-                    isExpand: true,
-                    disabled: !isValid
-                  }}
-                  onClick={() => {
-                    setActivePageIndex(activePageIndex + 1)
-                  }}
-                />
+                  <Button
+                    dark
+                    data={{
+                      type: "primary",
+                      title: "Inscribirme ahora",
+                      isExpand: true,
+                      disabled: !isValid
+                    }}
+                    onClick={() => {
+                      setActivePageIndex(activePageIndex + 1)
+                    }}
+                  />
+                </div>
+                <div className="flex mt-3">
+                  <span className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">
+                    Al llenar tus datos aceptas nuestro <a className="text-3.5 font-texts font-normal text-sm text-surface-800 underline"
+                      href="/terminos-y-condiciones"
+                      target="_blank">
+                      Aviso de Privacidad
+                    </a>
+                  </span>
+                </div>
               </div>
-              <div className="flex mt-3">
-                <span className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">
-                  Al llenar tus datos aceptas nuestro <a className="text-3.5 font-texts font-normal text-sm text-surface-800 underline"
-                    href="/terminos-y-condiciones"
-                    target="_blank">
-                    Aviso de Privacidad
-                  </a>
-                </span>
-              </div>
-              </div>              
             </div>
           </div>
         </Container>
