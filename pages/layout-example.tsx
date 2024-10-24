@@ -1,5 +1,6 @@
 import Header from "@/components/sections/Header";
-import {getLayout} from "@/utils/getLayout";
+import Footer from "@/components/Footer";
+import getLayout from "@/utils/getLayout";
 
 
 
@@ -9,6 +10,8 @@ const Layouts = ({ data: { layoutData } }: any) => {
   
   return <>
     <Header {...layoutData?.attributes?.header?.data?.attributes} />
+    <p>hellos world!!</p>
+    <Footer {...layoutData.attributes.footer.data }></Footer>
   </>
 }
 

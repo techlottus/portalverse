@@ -1,5 +1,4 @@
 import { useRouter } from "next/router"
-import Footer from "@/old-components/FooterPortalverse"
 // import Header from "@/old-components/HeaderPortalverse/HeaderPortalverse"
 import HeaderFooterLayoutProps from "@/types/HeaderFooterLayout.types"
 import Breadcrumbs from "@/old-components/Breadcrumbs/BreadcrumbPortalverse"
@@ -7,6 +6,7 @@ import ContentLayout from "@/layouts/Content.layout"
 import HeaderConf from "@/config/header.json"
 import FooterConf from "@/config/footer.json"
 import Header from "@/components/sections/Header"
+import Footer from "@/components/Footer"
 
 export default function HeaderFooterLayout({ children, breadcrumbs = true , layoutData}: HeaderFooterLayoutProps & any) {
 
@@ -27,7 +27,8 @@ export default function HeaderFooterLayout({ children, breadcrumbs = true , layo
         <Breadcrumbs classNames="col-span-12 w-t:col-span-8 w-p:col-span-4" visible={breadcrumbs} />
       </ContentLayout>
       { children }
-      <Footer onClickLogo={logotypeClick} privacyLink={privacyLink} certifications={certifications} logotype={logotipo} social={social} phone={phone} directorio={directorio} sections={sections} />
+      <Footer onClickLogo={logotypeClick} {...layoutData?.attributes?.footer?.data}/>
+
     </div>
   </>
 }

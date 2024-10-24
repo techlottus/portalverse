@@ -1,6 +1,7 @@
 import { fetchStrapiGraphQL } from "@/utils/getStrapi";
-import { Footer } from "./getFooters";
+
 import { MenuType } from "./strapi/sections/Header";
+import { FooterData } from "./getFooters";
 
 export type Layout = {
   layouts: {
@@ -11,10 +12,16 @@ export type LayoutAttributes = {
   data: {
     attributes: {
       name: string
-      footer: Footer
+      footer: FooterData
       header: MenuType
     }
     
+    data: Array< {
+      attributes: {
+        name: string
+        footer : FooterData
+      }
+    }>
   }
 }
 
@@ -44,10 +51,16 @@ query Layouts($name: String) {
               footerSection {
                 title
                 logo
+                phone {
+                  phone
+                  icon_name
+                }
                 images {
                   data {
                     attributes {
                       name
+                      url
+                      alternativeText
                     }
                   }
                 }
@@ -64,8 +77,21 @@ query Layouts($name: String) {
                   data {
                     attributes {
                       name
-                      icon_name 
+                      icon_name
                       href
+                    }
+                  }
+                }
+                columns {
+                  groups {
+                    title
+                    href
+                    target
+                    items {
+                      label
+                      href
+                      bold
+                      target
                     }
                   }
                 }

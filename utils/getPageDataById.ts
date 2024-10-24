@@ -121,143 +121,157 @@ query PageById($id: ID) {
           ${SECTIONS}
         }
         layout{
-        data {
-      attributes {
-        name
-        footer {
           data {
             attributes {
               name
-              footerSection {
-                title
-                logo
-                images {
-                  data {
-                    attributes {
-                      name
-                    }
-                  }
-                }
-                links {
-                  text
-                  href
-                  target
-                  iconName
-                  iconPosition
-                  disabled
-                }
-                position
-                social_medias {
-                  data {
-                    attributes {
-                      name
-                      icon_name
-                      href
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-        header {
-          data {
-            attributes {
-              name
-              links(pagination: {start: 0, limit: -1}){
-                  id
-                  text
-                  target
-                  href
-                  iconName
-                  iconPosition         
-                }  
-              button{
-                label
-                CTA
-                size
-                id
-                variant
-                iconName
-              }
-              
-              menu_items(pagination: {start: 0, limit: -1}) {
-                id
-                label
-                linkText
-                href
-                items(pagination: {start: 0, limit: -1}){
-                  id
-                  label
-                  bold
-                  href
-                  linkText
-                  items(pagination: {start: 0, limit: -1}){
-                    id
-                    label
-                    bold
-                    href
-                    items(pagination: {start: 0, limit: -1}){
-                      id
-                      label
-                      href
-                      bold              
-                    }
-                  }
-                } 
-              }  
-              banners(pagination: {start: 0, limit: -1}){
-                  title
-                  subtitle
-                  desktopRatio
-                  desktopImage{
-                    data{
-                      attributes{
-                        url
-                        alternativeText
-                      }
-                    }
-                  }
-                  ctaUrl
-                  ctaText
-                  textPosition
-                  overlay
-                  contentVariant 
-                }
-          
-              alert{
-                title
-                subtitle
-                image{
-                  data{
-                    attributes{
-                      url
-                    }
-                  }
-                }
-                link{
-                  text
-                  target
-                  iconName
-                  iconPosition
-                  href
-                }
-                
-              }
-              social_medias {
+              footer {
                 data {
                   attributes {
                     name
-                    icon_name
-                    href
+                    footerSection {
+                      title
+                      logo
+                      images {
+                        data {
+                          attributes {
+                            name
+                          }
+                        }
+                      }
+                      links {
+                        text
+                        href
+                        target
+                        iconName
+                        iconPosition
+                        disabled
+                      }
+                      position
+                      social_medias {
+                        data {
+                          attributes {
+                            name
+                            icon_name
+                            href
+                          }
+                        }
+                      }
+                      columns {
+                        groups {
+                          title
+                          href
+                          target
+                          items {
+                            label
+                            href
+                            bold
+                            target
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              header {
+                data {
+                  attributes {
+                    name
+                    links(pagination: {start: 0, limit: -1}){
+                        id
+                        text
+                        target
+                        href
+                        iconName
+                        iconPosition         
+                      }  
+                    button{
+                      label
+                      CTA
+                      size
+                      id
+                      variant
+                      iconName
+                    }
+                    
+                    menu_items(pagination: {start: 0, limit: -1}) {
+                      id
+                      label
+                      linkText
+                      href
+                      items(pagination: {start: 0, limit: -1}){
+                        id
+                        label
+                        bold
+                        href
+                        linkText
+                        items(pagination: {start: 0, limit: -1}){
+                          id
+                          label
+                          bold
+                          href
+                          items(pagination: {start: 0, limit: -1}){
+                            id
+                            label
+                            href
+                            bold              
+                          }
+                        }
+                      } 
+                    }  
+                    banners(pagination: {start: 0, limit: -1}){
+                        title
+                        subtitle
+                        desktopRatio
+                        desktopImage{
+                          data{
+                            attributes{
+                              url
+                              alternativeText
+                            }
+                          }
+                        }
+                        ctaUrl
+                        ctaText
+                        textPosition
+                        overlay
+                        contentVariant 
+                      }
+                
+                    alert{
+                      title
+                      subtitle
+                      image{
+                        data{
+                          attributes{
+                            url
+                          }
+                        }
+                      }
+                      link{
+                        text
+                        target
+                        iconName
+                        iconPosition
+                        href
+                      }
+                      
+                    }
+                    social_medias {
+                      data {
+                        attributes {
+                          name
+                          icon_name
+                          href
+                        }
+                      }
+                    }
                   }
                 }
               }
             }
           }
         }
-      }
-    }}
         seo {
           metaTitle
           metaDescription
