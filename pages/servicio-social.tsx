@@ -13,8 +13,9 @@ import Feedback from "@/old-components/Feedback";
 import CardWebsitePortalverse from "@/old-components/CardWebsitePortalverse";
 import type { CardWebsitePortalverseConfig } from "@/types/CardWebsitePortalverse.types";
 import Cintillo from "@/old-components/Cintillo";
+import getLayout from "@/utils/getLayout";
 
-const ServicioSocial = ({ sections, meta }: any) => {
+const ServicioSocial = ({ sections, meta, layoutData }: any) => {
 
   const [tabActive, setTabActive] = useState<number>(0);
 
@@ -26,7 +27,7 @@ const ServicioSocial = ({ sections, meta }: any) => {
         <title>{meta?.title}</title>
         <meta property="title" content={meta?.title} />
       </Head>
-      <HeaderFooterLayout>
+      <HeaderFooterLayout layoutData = {layoutData}>
         <ContentLayout classNames="gap-y-12 desktop:gap-y-18">
           <section className="col-span-6 w-t:col-span-8 w-p:col-span-4">
             <h3 className="text-13 font-bold font-headings leading-13 w-t:semi-tight w-p:leading-tight w-t:text-8.5 w-p:text-7.5 mb-6">{sections?.head?.title}</h3>
@@ -218,9 +219,10 @@ export async function getStaticProps(context: any) {
 
   try {
     const { sections, meta } = await getDataPageFromJSON("servicio-social.json");
+    const layoutData = await getLayout()
 
     return {
-      props: { sections, meta },
+      props: { sections, meta, layoutData },
     };
   } catch {
     return {
