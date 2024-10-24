@@ -35,10 +35,10 @@ type SelectItem = {
 
 const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
 
-  const program = props?.program;
+  const program = props;
   const SFprogram = program.attributes.nombreProgramaSalesforce
-  const layout = props?.layout as ProgramDetailSuperiorData;
-  const seo = props?.program?.attributes?.seo
+  const layout = props?.attributes.levelLayout as ProgramDetailSuperiorData;
+  const seo = props?.attributes?.seo
   const structuredData = JSON.stringify(seo?.structuredData)
   const title = program?.attributes?.name;
   const description = program?.attributes?.description;

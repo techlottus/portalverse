@@ -6,8 +6,9 @@ import HeaderFooterLayout from "@/layouts/HeaderFooter.layout";
 import Accordion from "@/old-components/Accordion/Accordion";
 import { getDataPageFromJSON } from "utils/getDataPage";
 import BannerPortalverse from "@/old-components/BannerPortalverse";
+import getLayout from "@/utils/getLayout";
 
-const CESEPCOM: NextPageWithLayout = ({ sections, meta }: any) => {
+const CESEPCOM: NextPageWithLayout = ({ sections, meta, layoutData }: any) => {
 
   const router = useRouter();
   const navigate = (route: string) => router.push(route)
@@ -17,7 +18,7 @@ const CESEPCOM: NextPageWithLayout = ({ sections, meta }: any) => {
       <title>{meta.title}</title>
       <meta property="title" content={meta?.title} />
     </Head>
-    <HeaderFooterLayout breadcrumbs={true}>
+    <HeaderFooterLayout breadcrumbs={true} layoutData = {layoutData}>
       <ContentLayout>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4">
           <p className="font-headings font-bold text-13 w-t:text-8.5 w-p:text-7.5">{sections.head.title}</p>
@@ -47,6 +48,7 @@ export async function getStaticProps(context: any) {
 
   try {
     const { sections, meta } = await getDataPageFromJSON("CESEPCOM.json");
+    const layoutData = await getLayout()
 
     // redirect not avaliable page
     if (!!meta.hidden) {
@@ -56,7 +58,7 @@ export async function getStaticProps(context: any) {
     }
 
     return {
-      props: { sections, meta },
+      props: { sections, meta, layoutData },
     };
   } catch {
     return {
