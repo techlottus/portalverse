@@ -6,7 +6,7 @@ import type { DynamicProgramDetailData } from "@/utils/pages";
 
 const DynamicProgramContent = (props: DynamicProgramDetailData) => {
 
-  const programAttributes = {id: props.program.id, ...props?.program?.attributes};
+  const programAttributes = {id: props.id, ...props?.attributes};
   const level = programAttributes?.level?.data?.attributes?.title;
 
   const renderContent = () => {

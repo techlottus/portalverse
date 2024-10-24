@@ -21,9 +21,9 @@ import type { ProgramDetailBachilleratoData } from "@/utils/getProgramDetailBach
 
 const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
 
-  const program = props?.program;
-  const layout = props?.layout as ProgramDetailBachilleratoData;
-  const seo = props?.program?.attributes?.seo
+  const program = props;
+  const layout = props?.attributes.levelLayout as ProgramDetailBachilleratoData;
+  const seo = props?.attributes?.seo
   const title = program?.attributes?.name;
   const description = program?.attributes?.description;
   const imageProgram = program?.attributes?.image?.data?.attributes?.url;

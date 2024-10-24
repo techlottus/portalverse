@@ -23,15 +23,16 @@ import type { ReactElement } from "react";
 import type { BlogEntryPageEntityResponse } from "@/utils/getBlogEntryPageData";
 import type { PageEntityResponse } from "@/utils/getPageDataById";
 import type { ProgramDetailPage } from "@/utils/pages";
+import { getLayout } from "@/utils/getLayout";
 
 type PageProps = {
-  page: PageEntityResponse | BlogEntryPageEntityResponse | ProgramDetailPage;
+  page: PageEntityResponse | BlogEntryPageEntityResponse | ProgramDetailPage ;
   breadcrumbs: Record<string, string>;
+  layoutData?:any;
 };
 
 const Page = (props: PageProps) => {
-  const { page, breadcrumbs } = props;
-
+  const { page, breadcrumbs,layoutData } = props;
   const renderContent = () => {
     switch (page?.type) {
       case "BlogEntryPageEntityResponse":
@@ -49,7 +50,11 @@ const Page = (props: PageProps) => {
     }
   };
 
+  // const layout = (page.data?.attributes as PageEntityResponse | BlogEntryPageEntityResponse) ? 
+
+  
   return (
+    <DynamicPageLayout layoutData={page.data?.attributes?.layout?.data || layoutData}>
     <Fragment>
       <Container>
         <Breadcrumbs visible breadcrumbs={breadcrumbs} />
@@ -57,13 +62,15 @@ const Page = (props: PageProps) => {
       {
         renderContent()
       }
-    </Fragment>
+    </Fragment></DynamicPageLayout>
   );
 };
 
-Page.getLayout = (page: ReactElement) => {
-  return <DynamicPageLayout>{page}</DynamicPageLayout>;
-};
+// Page.getLayout = (page: ReactElement) => {
+  
+//   console.log("prop",page.props, "page: ", page)
+//   return < >{page}</>;
+// };
 
 export default Page;
 
@@ -98,7 +105,7 @@ export async function getStaticProps(context: any): Promise<{props: PageProps}> 
     const pageType = await getPageType(path);
 
     const breadcrumbs = await getDynamicPagesBreadcrumbs();
-
+    const layoutData = await getLayout();
     switch (pageType) {
       case "programDetail": {
         const programDetailPage = await getProgramDetailPageData(path);
@@ -106,10 +113,9 @@ export async function getStaticProps(context: any): Promise<{props: PageProps}> 
         if (programDetailPage?.type === "DynamicProgramDetail") {
           // Add program breadcrumb. Static program breadcrumbs already exist in the Routes.ts file
           const programAttributes =
-            programDetailPage?.data?.program?.attributes;
+            programDetailPage?.data?.attributes;
           const programSlug = programAttributes?.slug;
           const programName = programAttributes?.name;
-
           breadcrumbs[programSlug] = programName;
         }
 
@@ -117,6 +123,7 @@ export async function getStaticProps(context: any): Promise<{props: PageProps}> 
           props: {
             page: { ...programDetailPage },
             breadcrumbs,
+            layoutData: layoutData || null
           },
         };
       }
@@ -135,6 +142,7 @@ export async function getStaticProps(context: any): Promise<{props: PageProps}> 
               data: blogEntryPageData?.data,
             },
             breadcrumbs,
+            layoutData: layoutData || null
           },
         };
       }
@@ -145,6 +153,7 @@ export async function getStaticProps(context: any): Promise<{props: PageProps}> 
           props: {
             page: { ...pageData },
             breadcrumbs,
+            layoutData: layoutData || null
           },
         };
       }
@@ -153,6 +162,7 @@ export async function getStaticProps(context: any): Promise<{props: PageProps}> 
           props: {
             page: {} as PageEntityResponse,
             breadcrumbs: {},
+            layoutData: layoutData || null
           },
         };
       }
