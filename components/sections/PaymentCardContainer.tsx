@@ -19,11 +19,12 @@ export type PaymentCardContainerData = {
   subtitle: string;
   price_list: PriceListData;
   text: string;
+  disabled?: boolean
 }
 
 const PaymentCardContainer = (props: PaymentCardContainerData) => {
 
-  const { title, accent_title, subtitle, price_list, text, program } = props;
+  const { title, accent_title, subtitle, price_list, text, program, disabled } = props;
 
   const [currentSlide, setCurrentSlide] = React.useState(0)
   const [loaded, setLoaded] = useState(false)
@@ -85,7 +86,7 @@ const PaymentCardContainer = (props: PaymentCardContainerData) => {
                   {
                     price_list?.price?.map((price: PaymentCardData, i: Number) => {
                       return (
-                        <PaymentCard key={`carouselCard-${i}`} {...{ program, ...price }}/>
+                        <PaymentCard disabled={true} key={`carouselCard-${i}`} {...{ program, ...price }}/>
                       )
                     })
                   }
@@ -94,7 +95,7 @@ const PaymentCardContainer = (props: PaymentCardContainerData) => {
                   {
                     price_list?.price?.map((price: PaymentCardData, i: any) => {
                       return (
-                        <PaymentCard key={i} {...{ program, ...price }}/>
+                        <PaymentCard disabled={true} key={i} {...{ program, ...price }}/>
                       )
                     })
                   }
