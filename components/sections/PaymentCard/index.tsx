@@ -22,6 +22,7 @@ export type PaymentCardData = {
   payment_provider_image?: StrapiImage;
   metadata?: any;
   config?: any;
+  disabled?: boolean;
 }
 
 const PaymentCard = (props: PaymentCardData) => {
@@ -43,7 +44,8 @@ const PaymentCard = (props: PaymentCardData) => {
     featured_price,
     payment_provider_image,
     metadata,
-    config
+    config,
+    disabled
   } = props;
 
   const router = useRouter();
@@ -126,7 +128,7 @@ const PaymentCard = (props: PaymentCardData) => {
             : null
         }
         {
-          checkout_url
+          checkout_url && !disabled
             ? <Button
                 variant="darkOutlined"
                 className="p-4 !bg-primary-500 text-surface-0 !text-sm hover:!bg-surface-0 hover:!text-primary-500 w-full"
@@ -136,7 +138,7 @@ const PaymentCard = (props: PaymentCardData) => {
                   <p>Inscribirme ahora</p>
                 </Link>
               </Button>
-            : metadata && config
+            : metadata && config && !disabled
               ? <Button
                   variant="darkOutlined"
                   className="p-4 !bg-primary-500 text-surface-0 !text-sm hover:!bg-surface-0 hover:!text-primary-500 w-full"
