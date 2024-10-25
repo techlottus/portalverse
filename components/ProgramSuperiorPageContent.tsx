@@ -851,6 +851,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
             title={"Nuestros planes"}
             accent_title={""}            
             subtitle={"Empieza a estudiar hoy mismo"}
+            disabled={true}
             price_list={{
               ...price_list
             }}
