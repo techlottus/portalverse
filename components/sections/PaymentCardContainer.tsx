@@ -86,7 +86,7 @@ const PaymentCardContainer = (props: PaymentCardContainerData) => {
                   {
                     price_list?.price?.map((price: PaymentCardData, i: Number) => {
                       return (
-                        <PaymentCard disabled={true} key={`carouselCard-${i}`} {...{ program, ...price }}/>
+                        <PaymentCard disabled={false} key={`carouselCard-${i}`} {...{ program, ...price }}/>
                       )
                     })
                   }
@@ -95,7 +95,7 @@ const PaymentCardContainer = (props: PaymentCardContainerData) => {
                   {
                     price_list?.price?.map((price: PaymentCardData, i: any) => {
                       return (
-                        <PaymentCard disabled={true} key={i} {...{ program, ...price }}/>
+                        <PaymentCard disabled={false} key={i} {...{ program, ...price }}/>
                       )
                     })
                   }
