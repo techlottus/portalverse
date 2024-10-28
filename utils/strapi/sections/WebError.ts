@@ -1,5 +1,6 @@
 import { LinkConfig } from "@/types/Link.types";
 import { SeoData } from "./SEO";
+import { Layout } from "@/utils/getLayout";
 
 
 export type WebErrorSection = {
@@ -11,7 +12,8 @@ export type WebErrorSection = {
 };
 export type WebErrorPage = {
   sections: Array<WebErrorSection>; 
-  meta: SeoData
+  meta: SeoData,
+  layoutData:Layout
 };
 
 export const WEB_ERROR = `
