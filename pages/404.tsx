@@ -12,25 +12,24 @@ import getLayout from "@/utils/getLayout";
 
 const NotFound: NextPageWithLayout<WebErrorPage> = ( props: WebErrorPage ) => {
 
-  const { sections, meta } = props
+  const { sections, meta,layoutData } = props
   return <>
     <Head>
       <title>{ meta.metaTitle }</title>
     </Head>
-    {sections?.length > 0 ? (
+    <HeaderFooterLayout layoutData={layoutData}>
+       {sections?.length > 0 ? (
       <ContentGenerator blocks={sections} />
     ) : null}
+    </HeaderFooterLayout>
+   
   </>;
 };
 
 NotFound.getLayout = function getLayout(page: ReactElement) {
-  return <HeaderFooterLayout layoutData={page.props.layoutData}>
-    <ContentFullLayout classNames="bg-surface-100">
-      <ContentLayout>
+  return (<ContentFullLayout classNames="bg-surface-100">
         { page }
-      </ContentLayout>
-    </ContentFullLayout>
-  </HeaderFooterLayout>
+    </ContentFullLayout>)
 };
 
 export async function getStaticProps(context: any) {
