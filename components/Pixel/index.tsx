@@ -1,7 +1,6 @@
 
 import React, { useEffect } from "react";
 import Script from "next/script";
-import Head from "next/head";
 import { useRouter } from "next/router";
 import * as gtag from "@/lib/gtag";
 import * as fbq from "@/lib/fb-pixel";
