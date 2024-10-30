@@ -103,9 +103,9 @@ const FooterSection: FC<FooterSect> = ({
       {
         links.length > 0 && <div className="w-full p-6 w-t:p-2 w-p:p-4 flex justify-center">
           {
-            links.map(link => {
+            links.map((link, i) => {
               return <>
-                <Link href={link.href} passHref target={link.target}>
+                <Link key={`link-${i}`} href={link.href} passHref target={link.target}>
                   <p className="font-texts font-normal italic text-sm leading-4 text-surface-800 ">{link.text}</p>
                 </Link>
               </>
