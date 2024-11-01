@@ -141,7 +141,7 @@ const ProgramBachilleratoPageContent = (props: DynamicProgramDetailData) => {
         {/* ogURL */}
         <meta property="og:url" content={seo?.canonicalURL} />
         {/* structuredData */}
-        <script type="application/ld+json">{structuredData}</script>
+        <script type="application/ld+json">{`${seo?.structuredData}`}</script>
       </Head>
       <ContentLayout>
         <div className="col-span-6 w-t:col-span-8 w-p:col-span-4 w-d:mb-12 flex flex-col w-d:justify-center">

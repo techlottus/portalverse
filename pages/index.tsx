@@ -6,7 +6,8 @@ import { getHomePageData } from "@/utils/getHomePageData"
 import getLayout from "@/utils/getLayout"
 
 const Home: NextPageWithLayout = ({ data: { sections, meta , layoutData} }: any) => {
-  console.log('layoutData: ', layoutData);
+  console.log('meta: ', meta);
+  console.log('meta.structuredData: ', meta.structuredData);
   return <>
     <Head>
       <title>{meta?.metaTitle}</title>
@@ -45,7 +46,7 @@ const Home: NextPageWithLayout = ({ data: { sections, meta , layoutData} }: any)
         {/* ogURL */}
         <meta property="og:url" content={meta?.canonicalURL} />
         {/* structuredData */}
-        <script type="application/ld+json">{meta?.structuredData}</script>
+        <script type="application/ld+json">{`${meta?.structuredData}`}</script>
     </Head>
     <HeaderFooterLayout breadcrumbs={false} layoutData={layoutData} >
       <div className="flex flex-col w-p:space-y-12 w-t:space-y-12 w-d:space-y-18 w-d:mt-18">

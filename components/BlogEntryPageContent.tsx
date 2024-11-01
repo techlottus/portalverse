@@ -24,7 +24,8 @@ const BlogEntryPageContent = (props: BlogEntryPageData) => {
 
   const banners = attributes?.sections;
 
-  const structuredData = JSON.stringify(blogPost?.seo?.structuredData)
+  const structuredData = `${blogPost?.seo?.structuredData}`
+  // const structuredData = JSON.stringify(blogPost?.seo?.structuredData)
 
   return (
     <Fragment>

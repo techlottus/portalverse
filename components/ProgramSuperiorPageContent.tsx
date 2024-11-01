@@ -190,6 +190,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   // console.log('modalities: ', modalities);
   // console.log('campuses: ', campuses);
   // console.log('program.attributes: ', program.attributes);
+  console.log('seo?.structuredData: ', seo?.structuredData);
 
   return (
     <Fragment>
@@ -233,7 +234,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         {/* ogURL */}
         <meta property="og:url" content={seo?.canonicalURL} />
         {/* structuredData */}
-        <script type="application/ld+json">{structuredData}</script>
+        <script type="application/ld+json">{`${seo?.structuredData}`}</script>
       </Head>
       <Modal isShow={isShow} onClose={() => handleVisibilityModal('close')} data={{ icon: 'close', title: "", tagOnClose: 'testOnClose', wrapper: true, }}>
         <div className="mt-16">
