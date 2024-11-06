@@ -7,35 +7,37 @@ import ContentLayout from "@/layouts/Content.layout";
 import { WebErrorPage } from "@/utils/strapi/sections/WebError";
 import { getNotFoundPageData } from "@/utils/getNotFoundPageData";
 import ContentGenerator from "@/utils/ContentGenerator";
+import getLayout from "@/utils/getLayout";
 
 
 const NotFound: NextPageWithLayout<WebErrorPage> = ( props: WebErrorPage ) => {
 
-  const { sections, meta } = props
+  const { sections, meta,layoutData } = props
   return <>
     <Head>
       <title>{ meta.metaTitle }</title>
     </Head>
-    {sections?.length > 0 ? (
+    <HeaderFooterLayout layoutData={layoutData}>
+       {sections?.length > 0 ? (
       <ContentGenerator blocks={sections} />
     ) : null}
+    </HeaderFooterLayout>
+   
   </>;
 };
 
 NotFound.getLayout = function getLayout(page: ReactElement) {
-  return <HeaderFooterLayout breadcrumbs={false}>
-    <ContentFullLayout classNames="bg-surface-100">
-      <ContentLayout>
+  return (<ContentFullLayout classNames="bg-surface-100">
         { page }
-      </ContentLayout>
-    </ContentFullLayout>
-  </HeaderFooterLayout>
+    </ContentFullLayout>)
 };
 
 export async function getStaticProps(context: any) {
 
   try {
     const notFoundPageData = await getNotFoundPageData();
+    const layoutData = await getLayout();
+
     const sections = notFoundPageData?.notFoundPage?.data?.attributes?.sections || [];
     const meta = notFoundPageData?.notFoundPage?.data?.attributes?.seo || {
       metaTitle: 'Not Found'
@@ -44,7 +46,8 @@ export async function getStaticProps(context: any) {
     return {
       props: {
         sections,
-        meta
+        meta,
+        layoutData: layoutData || null
       },
     };
   } catch(err) {

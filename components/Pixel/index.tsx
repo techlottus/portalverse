@@ -1,7 +1,6 @@
 
 import React, { useEffect } from "react";
 import Script from "next/script";
-import Head from "next/head";
 import { useRouter } from "next/router";
 import * as gtag from "@/lib/gtag";
 import * as fbq from "@/lib/fb-pixel";
@@ -45,6 +44,18 @@ const Pixel = (props: ScriptsPixels) => {
 
   return (
     <>
+      {enabled && !!pixel &&
+        <noscript>
+          {
+            !!pixel.element &&
+            (
+              pixel.element === 'img' && <img height="1" width="1" style={{ display: 'none' }} src={pixel.src} />
+              ||
+              pixel.element === 'iframe' && <iframe src={pixel.src} height="0" width="0" style={{ "display": "none", "visibility": "hidden" }}></iframe>
+            )
+          }
+        </noscript>
+      }
       {
         enabled && (!!src && !script) &&
         <Script
@@ -81,20 +92,6 @@ const Pixel = (props: ScriptsPixels) => {
           //@ts-ignore
           integrity={integrity}
         />
-      }
-      {enabled && !!pixel &&
-        <Head>
-          <noscript>
-            {
-              !!pixel.element &&
-              (
-                pixel.element === 'img' && <img height="1" width="1" style={{ display: 'none' }} src={pixel.src} />
-                ||
-                pixel.element === 'iframe' && <iframe src={pixel.src} height="0" width="0" style={{ "display": "none", "visibility": "hidden" }}></iframe>
-              )
-            }
-          </noscript>
-        </Head>
       }
     </>
   )

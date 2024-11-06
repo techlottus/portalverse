@@ -15,8 +15,9 @@ import RichTextVideo from "@/components/sections/RichTextVideo"
 import RichTextImage from "@/components/sections/RichTextImage"
 import Image from "@/old-components/Image"
 import type NextPageWithLayout from "@/types/Layout.types"
+import getLayout from "@/utils/getLayout"
 
-const CursoComipems: NextPageWithLayout = ({ sections, meta }: any) => {
+const CursoComipems: NextPageWithLayout = ({ sections, meta, layoutData }: any) => {
 
   const router = useRouter()
 
@@ -25,7 +26,7 @@ const CursoComipems: NextPageWithLayout = ({ sections, meta }: any) => {
     <Head>
       <title>{meta.title}</title>
     </Head>
-    <HeaderFooterLayout breadcrumbs={true}>
+    <HeaderFooterLayout breadcrumbs={true} layoutData = {layoutData}>
       <ContentLayout>
         <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
           <IntroductionProgram {...sections?.IntroductionProgram} />
@@ -117,6 +118,7 @@ const CursoComipems: NextPageWithLayout = ({ sections, meta }: any) => {
 export async function getStaticProps(context: any) {
   try {
     const { sections, meta } = await getDataPageFromJSON('curso-comipems.json');
+    const layoutData = await getLayout()
 
     // redirect not avaliable page
     if (!!meta.hidden) {
@@ -126,7 +128,7 @@ export async function getStaticProps(context: any) {
     }
 
     return {
-      props: { sections, meta }
+      props: { sections, meta, layoutData }
     }
   } catch {
     return {
