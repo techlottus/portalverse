@@ -9,7 +9,7 @@ const PageContent = (props: PageData) => {
   return (
     <Fragment>
       <Head>
-        <title>{props?.attributes?.title}</title> 
+        <title>{seo?.metaTitle}</title> 
         {/* THIS DATA COMES FROM STRAPI SEO */}
         <meta property="title" content={seo?.metaTitle} />{/* metaTitle */}
         <meta name="description" content={seo?.metaDescription} key="desc" />{/* metaDescription */}

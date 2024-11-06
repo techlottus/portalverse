@@ -194,7 +194,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
   return (
     <Fragment>
       <Head>
-      <title>{title}</title>
+      <title>{seo?.metaTitle}</title>
         {/* THIS DATA COMES FROM STRAPI SEO */}
         <meta property="title" content={seo?.metaTitle} />{/* metaTitle */}
         <meta name="description" content={seo?.metaDescription} key="desc" />{/* metaDescription */}
