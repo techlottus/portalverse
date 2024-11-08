@@ -29,7 +29,7 @@ const BlogEntryPageContent = (props: BlogEntryPageData) => {
   return (
     <Fragment>
       <Head>
-        <title>{blogPost?.title}</title>
+        <title>{blogPost?.seo?.metaTitle}</title>
         {/* THIS DATA COMES FROM STRAPI SEO */}
         <meta property="title" content={blogPost?.seo?.metaTitle} />{/* metaTitle */}
         <meta name="description" content={blogPost?.seo?.metaDescription} key="desc" />{/* metaDescription */}
