@@ -29,10 +29,8 @@ type PageProps = {
 
 const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
   const stripePublicKey = `${process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY}`
-  console.log('process env: ',process.env)
-  console.log('stripe: ', process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY!.toString())
   //@ts-ignore
-  const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY!.toString());
+  const stripePromise = loadStripe(stripePublicKey);
 
   const { program = null, price = {} } = props;
   console.log(price)
