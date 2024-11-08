@@ -256,8 +256,8 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
 
               </Stepper.Item>
 
-              <Stepper.Item title="Método de pago" completed={isSuccessPayment} id="2" >
-                {/* {activeStep == 2 && clientSecret && !isSuccessPayment && (
+              {/* <Stepper.Item title="Método de pago" completed={isSuccessPayment} id="2" >
+                {activeStep == 2 && clientSecret && !isSuccessPayment && (
                   <div className="desktop:w-full">
                     <Elements stripe={stripePromise} options={{
                       appearance: {
@@ -282,8 +282,8 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                     </div>
 
                   )
-                } */}
-              </Stepper.Item>
+                }
+              </Stepper.Item> */}
             </Stepper.Root>
 
           </div>

@@ -42,7 +42,6 @@ const Root = ({
       {React.Children?.map(children, (child:React.ReactNode, index:number) => {
         if (React.isValidElement(child)) {
           const itemId = child?.props?.id || `${index}`;
-          console.log('last:',  index === (length - 1))
           return (
             <React.Fragment key={index}>
               <StepperItemPrivate
