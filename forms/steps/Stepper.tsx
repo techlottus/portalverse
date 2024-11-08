@@ -72,7 +72,7 @@ Root.displayName = 'Stepper';
 interface StepperItemProps extends CommonProps {
   id?: string;
   completed?: boolean;
-  title: string;
+  title?: string;
   subtitle?: string;
   rightElement?: React.ReactNode;
 }
