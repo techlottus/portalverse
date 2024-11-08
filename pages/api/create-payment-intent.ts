@@ -1,27 +1,40 @@
-// Importa Stripe y configura tu clave secreta
-const stripe = require('stripe')(process.env.NEXT_SECRET_STRIPE_KEY);
+// pages/api/create-checkout-session.js
+import Stripe from 'stripe';
 import type { NextApiRequest, NextApiResponse } from "next";
 
-export default async function handler(  
-  req: NextApiRequest ,
+const stripe = new Stripe(`${process.env.STRIPE_SECRET_KEY}`);
+console.log('secret stripe: ',`${process.env.STRIPE_SECRET_KEY}`)
+
+export default async function handler(req: NextApiRequest ,
   res: NextApiResponse) {
-  const amount = req.body.amount * 100;
-  console.log("amount",amount)
   if (req.method === 'POST') {
     try {
-      // Aquí defines el monto, la moneda y cualquier otra configuración
-      const paymentIntent = await stripe.paymentIntents.create({
-        amount: amount, // El monto en centavos (1099 = 10.99 USD)
-        currency: 'mxn',
-        automatic_payment_methods: {
-          enabled: true,
-        },
+      const session = await stripe.checkout.sessions.create({
+        ui_mode:'embedded',
+        payment_method_types: ['card','oxxo'],
+        line_items: [
+          {
+            price: 'price_1OXTusF5JHugNzfe91Kg3gPI', // Usa el Price ID especificado en el backend
+            quantity: 1,
+          }
+        ],
+        mode: 'payment',
+        return_url: `${req.headers.origin}/thank-you`,
+        metadata:{},
+        allow_promotion_codes: true
+    
+        
+        // cancel_url: `${req.headers.origin}/cancel`,
+        // billing_address_collection: 'required', 
+        // discounts: [
+        //   { coupon: 'coupon_xxxxxxx' },
+        // ],
       });
 
-      // Devuelve el client_secret al frontend
-      res.status(200).json({ clientSecret: paymentIntent.client_secret });
-    } catch (error:any) {
-      res.status(500).json({ error: error.message });
+      res.status(200).json({ clientSecret: session.client_secret });
+    } catch (error) {
+      //@ts-ignore
+      res.status(500).json({ error: error?.message });
     }
   } else {
     res.setHeader('Allow', 'POST');
