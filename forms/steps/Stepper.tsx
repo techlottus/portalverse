@@ -39,12 +39,14 @@ const Root = ({
       
     )}
     >
-      {React.Children?.map(children, (child:React.ReactNode, index:number) => {
+      {React.Children?.map(children, (child:any, index:number) => {
         if (React.isValidElement(child)) {
+          //@ts-ignore
           const itemId = child?.props?.id || `${index}`;
           return (
             <React.Fragment key={index}>
               <StepperItemPrivate
+              //@ts-ignore
                 {...child?.props}
                 id={itemId}
                 active={activeId?.toString() === itemId}
