@@ -313,7 +313,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                     <p className="text-surface-600 font-texts font-normal">{priceString} MXN</p>
                   </div>}
                 <div id='coupons' className="flex space-x-2 h-11 mb-2">
-                  <Input value={personalData?.gender} data={{
+                  <Input  data={{
                     label: 'Inserta Cupón',
                     name: 'cupon',
                     type: 'text',
