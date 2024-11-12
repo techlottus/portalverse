@@ -1,26 +1,18 @@
 import Head from "next/head"
 import ContentFullLayout from "@/layouts/ContentFull.layout"
 import NextPageWithLayout from "@/types/Layout.types"
-import { useContext, useEffect, useState } from "react"
 import getProgramById, { ProgramData } from "@/utils/getProgramById"
 import { InscriptionForm } from "@/forms/container/InscriptionForm"
-import Button from "@/old-components/Button/Button"
 import cn from "classnames"
-import React from "react"
+import React, { use, useEffect, useState,Fragment } from "react"
 import { useRouter } from "next/router";
 import WebError from "@/components/sections/WebError";
 import Container from "@/layouts/Container.layout"
-import { AddressElement, CardElement, Elements, EmbeddedCheckout, EmbeddedCheckoutProvider, useCustomCheckout } from "@stripe/react-stripe-js";
+import { EmbeddedCheckout, EmbeddedCheckoutProvider } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-import { PaymentElement, useStripe, useElements } from "@stripe/react-stripe-js";
-import { json } from "stream/consumers"
 import PersonalData from "@/forms/steps/PersonalData"
-import { CustomCheckoutProvider } from '@stripe/react-stripe-js';
 import * as Stepper from '@/forms/steps/Stepper'
-import { createContext } from "vm"
-import PaymentForm from "@/forms/container/paymentForm"
-import Stripe from "stripe"
-import Input from "@/old-components/Input/Input"
+import { Dialog, Transition  } from '@headlessui/react'
 type PageProps = {
   program?: ProgramData | null;
   price: any;
@@ -51,6 +43,8 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
   const [isSuccessPayment, setIsSuccessPayment] = useState(false)
   const [oxxoVoucherUrl, setOxxoVoucherUrl] = useState('/')
 
+  const [stripeView, setstripeView] = useState('')
+
   const router = useRouter();
 
   const setStatus = ({ valid }: { valid: boolean }) => {
@@ -78,11 +72,19 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
   const [personalData, setPersonalData] = useState(initialData);
   const [payerData, setPayerData] = useState(initialDataPayer)
   const [clientSecret, setClientSecret] = useState('');
-  const [activeStep, setActiveStep] = useState<number>(0);
+  const [activeStep, setActiveStep] = useState<number>(1);
   const onChangeStep = (step: number) => {
     setActiveStep(step);
   }
 
+  let [isOpen, setIsOpen] = useState(false)
+  function closeModal() {
+    setIsOpen(false)
+  }
+
+  function openModal() {
+    setIsOpen(true)
+  }
 
   useEffect(() => {
     fetch('/api/create-payment-intent', {
@@ -141,9 +143,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
 
         <Container classNames="flex mobile:!px-0 mobile:flex-col tablet:gap-20 tablet:mt-12  desktop:gap-30 desktop:mt-12 h-screen w-full ">
           <div id="steps" className={cn("desktop:w-1/2 tablet:w-1/2 mobile:p-6 h-fit", { 'hidden': isLoadingPayment && !isSuccessPayment })}>
-            {/* <PaymentForm/> */}
-
-
+            
             <Stepper.Root direction="vertical" activeId={activeStep}>
               <Stepper.Item title="Información del alumno" completed={activeStep > 0} rightElement={
                 <button className={cn({ 'hidden font-normal': activeStep == 0 || isSuccessPayment })} onClick={() => onChangeStep(0)}><p className="font-normal text-surface-600 text-sm">Editar</p></button>
@@ -199,48 +199,83 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                 <button className={cn({ 'hidden font-normal': activeStep <= 1 || isSuccessPayment })} onClick={() => onChangeStep(1)}><p className="font-normal text-surface-600 text-sm">Editar</p></button>
               }>
                 {activeStep == 1 &&
-                  // <div className="my-3 flex-col space-y-3 desktop:w-full">
-                  //   <h3 className="text-surface-950 font-bold font-texts text-base mb-3">Dirección</h3>
-                  //   {clientSecret && <Elements stripe={stripePromise} options={{
-                  //     appearance: {
-                  //       theme: 'flat',    // Other themes: 'stripe', 'night', 'none'
-                  //       variables: {
-                  //         colorPrimary: '#0570de',
-                  //         colorBackground: '#f6f9fc',
-                  //         colorText: '#30313d',
-                  //         fontFamily: 'Ideal Sans, system-ui, sans-serif',
-                  //       }
-                  //     },
-                  //     clientSecret: clientSecret
+                  <div className="flex flex-col">
+                    <button className="px-2 py-2 bg-primary-300 text-surface-0 mb-3" onClick={()=>setstripeView('step')}>Stripe dentro del paso</button>
+                    <button className="px-2 py-2 bg-primary-300 text-surface-0 mb-3" onClick={()=>setstripeView('modal')}>Stripe dentro de modal</button>
+                    <button className="px-2 py-2 bg-primary-300 text-surface-0 mb-3" onClick={()=>setstripeView('full')}>Stripe full width</button>
+                    {stripeView=='step' && <EmbeddedCheckoutProvider stripe={stripePromise} options={{ clientSecret: clientSecret }} >
+                      <EmbeddedCheckout className="" />
+                    </EmbeddedCheckoutProvider>}
 
-                  //   }}>
-                  //     <AddressElement onChange={(e: any) => setPayerData({
-                  //       name: e?.value?.name,
-                  //       email: e?.Value?.email,
-                  //       phone: e?.value?.phone,
-                  //       address: e?.value?.address?.line1 + ', ' + e?.value?.address?.postal_code + ', ' + e?.value?.address?.city + ', ' + e?.value?.address?.state,
-                  //     })}
-                  //       options={{
-                  //         mode: 'billing', // También puede ser 'shiping'
-                  //         allowedCountries: ['US', 'CA', 'MX'], // Configura los países permitidos
-                  //         fields: {
-                  //           phone: 'always', // Otros valores posibles: 'always', 'auto'
-                  //         }
-                  //       }} />
-                  //   </Elements>}
-                  //   <button disabled={personalData.email === ''} className={cn("rounded w-fit  px-3 py-2  text-surface-0 font-text text-sm font-bold", {
-                  //     ['bg-primary-300']: personalData.email == '',
-                  //     ['bg-primary-500']: personalData.email !== '',
-                  //   })} onClick={() => onChangeStep(2)}>Continuar</button>
-                  // </div>
-                  // <PaymentForm/>
-                  <EmbeddedCheckoutProvider stripe={stripePromise} options={{ clientSecret: clientSecret }} >
-                    <EmbeddedCheckout className="" />
-                  </EmbeddedCheckoutProvider>
+                   {stripeView=='modal' && 
+                   <>
+                   <div className="">
+                     <button
+                       type="button"
+                       onClick={openModal}
+                       className="rounded-md bg-surface-900 px-4 py-2 text-sm font-text text-white hover:bg-surface-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
+                     >
+                       Pagar con modal
+                     </button>
+                   </div>
+             
+                   <Transition appear show={isOpen} as={Fragment}>
+                     <Dialog as="div" className="relative z-10" onClose={closeModal}>
+                       <Transition.Child
+                         as={Fragment}
+                         enter="ease-out duration-300"
+                         enterFrom="opacity-0"
+                         enterTo="opacity-100"
+                         leave="ease-in duration-200"
+                         leaveFrom="opacity-100"
+                         leaveTo="opacity-0"
+                       >
+                         <div className="fixed inset-0 bg-surface-900/25" />
+                       </Transition.Child>
+             
+                       <div className="fixed inset-0 overflow-y-auto !w-full">
+                         <div className="flex min-h-full items-center justify-center p-4 text-center !w-full">
+                           <Transition.Child
+                             as={Fragment}
+                             enter="ease-out duration-300"
+                             enterFrom="opacity-0 scale-95"
+                             enterTo="opacity-100 scale-100"
+                             leave="ease-in duration-200"
+                             leaveFrom="opacity-100 scale-100"
+                             leaveTo="opacity-0 scale-95"
+                           >
+                             <Dialog.Panel className="w-screen transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                               <Dialog.Title
+                                 as="h3"
+                                 className="text-lg font-medium leading-6 text-gray-900 mb-2"
+                               >
+                                 Pago con stripe titulo del modal
+                               </Dialog.Title>
+                               <EmbeddedCheckoutProvider stripe={stripePromise} options={{ clientSecret: clientSecret }} >
+                      <EmbeddedCheckout className="w-full" />
+                    </EmbeddedCheckoutProvider>
+             
+                               <div className="mt-4">
+                                 <button
+                                   type="button"
+                                   className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                                   onClick={closeModal}
+                                 >
+                                   cerrar modal
+                                 </button>
+                               </div>
+                             </Dialog.Panel>
+                           </Transition.Child>
+                         </div>
+                       </div>
+                     </Dialog>
+                   </Transition>
+                 </>
+             
+
+                      }
+                    </div>
                 }
-
-
-
                 {
                   activeStep > 1 && (
                     <div className="font-text text-sm font-semibold text-surface-300 pl-2.5 flex flex-col space-y-1">
@@ -253,35 +288,6 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                 }
 
               </Stepper.Item>
-
-              {/* <Stepper.Item title="Método de pago" completed={isSuccessPayment} id="2" >
-                {activeStep == 2 && clientSecret && !isSuccessPayment && (
-                  <div className="desktop:w-full">
-                    <Elements stripe={stripePromise} options={{
-                      appearance: {
-                        theme: 'flat',    // Other themes: 'stripe', 'night', 'none'
-                        variables: {
-                          colorPrimary: '#0570de',
-                          colorBackground: '#f6f9fc',
-                          colorText: '#30313d',
-                          fontFamily: 'Ideal Sans, system-ui, sans-serif',
-                        }
-                      },
-                      clientSecret: clientSecret
-
-                    }}>
-                      <PaymentForm amount={priceAmount} setIsSuccessPayment={setIsSuccessPayment} setIsLoadingPayment={setIsLoadingPayment} setOxxoVoucherUrl={setOxxoVoucherUrl} />
-                    </Elements></div>)}
-                {
-                  isSuccessPayment && (
-                    <div className="font-text text-sm font-semibold text-surface-300 mobile:pl-12 flex flex-col space-y-1">
-                      <p className="font-text text-sm font-semibold text-surface-400 pl-2.5">Recuerda que tu ficha de pago tiene una vigencia de 2 días. Al vencer tendrás que volver a solicitar una nueva ficha de pago</p>
-                      {oxxoVoucherUrl !== '/' && <button className="mobile:w-full rounded bg-primary-500  text-surface-0 mt-3 py-3 px-4" onClick={() => router.push(oxxoVoucherUrl)}>Descargar ficha de Pago</button>}
-                    </div>
-
-                  )
-                }
-              </Stepper.Item> */}
             </Stepper.Root>
 
           </div>
@@ -312,7 +318,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                     <p className="font-texts font-semibold">Costo total:</p>
                     <p className="text-surface-600 font-texts font-normal">{priceString} MXN</p>
                   </div>}
-                <div id='coupons' className="flex space-x-2 h-11 mb-2">
+                {/* <div id='coupons' className="flex space-x-2 h-11 mb-2">
                   <Input  data={{
                     label: 'Inserta Cupón',
                     name: 'cupon',
@@ -333,7 +339,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                   <button className={cn("rounded w-fit h-11 px-3 py-2  text-surface-0 font-text text-sm font-bold bg-primary-400")}
                     onClick={() => console.log('aplicar cupon')}>Aplicar</button>
 
-                </div>
+                </div> */}
                 <div className="flex items-end justify-end text-success-600 font-text text-sm mb-3">AHORRO {`$ ${0.00}`}</div>
                 <hr className="text-surface-200" />
                 <div className="flex justify-between mt-3">
@@ -402,7 +408,13 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
             </div>
           </div>
 
+
         </Container>
+        {stripeView === 'full' && <div className="w-full flex border">
+          <EmbeddedCheckoutProvider stripe={stripePromise} options={{ clientSecret: clientSecret }} >
+            <EmbeddedCheckout className=" border w-full" />
+          </EmbeddedCheckoutProvider>
+        </div>}
       </ContentFullLayout>
     </>);
 }
