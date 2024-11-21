@@ -136,7 +136,7 @@ const Header = (props: MenuType) => {
           {linkText && <Link href={linkHref ?? ""} passHref onClick={() => handleCloseOnClick} onMouseEnter={() => {
             isSub ? setSubItems(false) : setItems(false)
           }
-          } className="mobile:hidden">
+          } className="mobile:hidden tablet:hidden">
             <div className={classNames("py-2 w-full font-texts text-primary-500 font-normal flex align-middle", { ["desktop:px-3"]: !isSub })}>
               <p className={classNames("font-normal hover:underline text-base")}>
                 {linkText ? linkText + " »" : null} </p>
