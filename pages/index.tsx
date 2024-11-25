@@ -6,7 +6,6 @@ import { getHomePageData } from "@/utils/getHomePageData"
 import getLayout from "@/utils/getLayout"
 
 const Home: NextPageWithLayout = ({ data: { sections, meta , layoutData} }: any) => {
-  console.log('layoutData: ', layoutData);
   return <>
     <Head>
       <title>{meta?.metaTitle}</title>
