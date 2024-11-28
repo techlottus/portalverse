@@ -343,9 +343,9 @@ const InscriptionForm = (props: InscriptionFormData) => {
       </div>
       <div className="mobile:col-span-2 mobile:w-full">
         <DatePicker
-          className={cn("w-full mobile:col-span-2 h-full pl-3 pr-13 py-3 rounded-t-lg border-b border-surface-400 outline-none bg-surface-100 placeholder:text-surface-400 text-surface-500 placeholder:font-texts font-texts font-normal", {
+          className={cn("w-full pl-3 pr-13 py-3 z-10 rounded border overflow-hidden border-surface-400 outline-none  transition-colors h-10 placeholder:text-surface-500 text-surface-500 placeholder:font-texts font-texts font-normal", {
             "border-error-500": personalDataErrors.birthdate,
-            "text-surface-400": hasCurp && !!personalData.birthdate && isValidCurp,
+            "text-surface-100 bg-surface-50 !border-surface-100": hasCurp && !!personalData.birthdate && isValidCurp,
           })}
           selected={personalData.birthdate}
           onChange={(date) => handleDateChange(date, "birthdate")}
@@ -496,9 +496,9 @@ const InscriptionForm = (props: InscriptionFormData) => {
       </div>
       <div className="mobile:w-full mobile:col-span-2">
         <DatePicker
-          className={cn("w-full h-full pl-3 pr-13 py-3 rounded-t-lg border-b border-surface-400 outline-none bg-surface-100 placeholder:text-surface-500 text-surface-500 placeholder:font-texts font-texts font-normal", {
+          className={cn("w-full pl-3 pr-13 py-3 rounded border overflow-hidden border-surface-400 outline-none bg-surface-50 transition-colors h-10 placeholder:text-surface-500 text-surface-500 placeholder:font-texts font-texts font-normal", {
             "border-error-500": personalDataErrors.birthdate,
-            "text-surface-400": hasCurp && !!personalData.birthdate && isValidCurp,
+            "text-surface-100 border-surface-100": hasCurp && !!personalData.birthdate && isValidCurp,
           })}
           selected={personalData.birthdate}
           onChange={(date) => handleDateChange(date, "birthdate")}
