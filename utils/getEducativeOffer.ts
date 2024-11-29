@@ -16,7 +16,7 @@ const getCampusList = (businessUnit: string) => {
 
 // Modalidad Presencial (UANE, UTEG, ULA)
 const filterOnSitePrograms = (programs: any) => {
-  return programs?.reduce((prev: any, item: any) => item?.lineaNegocio === process.env.NEXT_PUBLIC_LINEA && item?.modalidad === "Presencial" ? [...prev, item] : [...prev], []);
+  return programs?.reduce((prev: any, item: any) => item?.lineaNegocio === process.env.NEXT_PUBLIC_LINEA && item?.modalidad === "Presencial" && item?.nivel !== "Licenciatura Ejecutiva" ? [...prev, item] : [...prev], []);
 }
 
 const filterOnlinePrograms = (programs: any) => {
@@ -53,7 +53,7 @@ const filterFlexPrograms = (programs: any) => {
 const filterHybridPrograms = (programs: any) => {
   switch(businessUnit) {
     case "UTC": {
-      return programs.reduce((prev: any, item: any) => ((item?.lineaNegocio === "ULA" && item?.nombreCampus === "ZONA ROSA") || item?.lineaNegocio === "UTC") && item?.modalidad === "Semipresencial" ? [...prev, item] : [...prev], [])
+      return programs.reduce((prev: any, item: any) => item?.lineaNegocio === "UTC" && item?.modalidad === "Presencial"  && item?.nivel === "Licenciatura Ejecutiva" ? [...prev, item] : [...prev], [])
     }
     case "ULA":  {
       const campusList = getCampusList(businessUnit);
