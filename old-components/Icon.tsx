@@ -24,7 +24,6 @@ import mejorarCurriculum from "@/icons/mejorarCurriculum.svg";
 import nuevasCompetencias from "@/icons/nuevasCompetencias.svg"
 import graduate from "@/icons/graduate.svg";
 import student from "@/icons/student.svg";
-import trophy from "@/icons/trophy.svg";
 import work from "@/icons/work.svg";
 import Whatsapp from "@/icons/Whatsapp.svg";
 import Aniversario56 from "@/icons/56_anos.svg";
@@ -36,7 +35,6 @@ import Convenio from "@/icons/icono-convenio.svg";
 import PersonaFirma from "@/icons/icono-persona-que-firma.svg";
 import FirmaUteg from "@/icons/icono-firma.svg";
 import DocumentoFirma from "@/icons/documento-firma-uteg.svg";
-import ula47 from "@/icons/ula-admisiones-icono-47.svg";
 import ulaAlumnos from "@/icons/ula-admisiones-icono-alumnos.svg";
 import ulaConvenios from "@/icons/ula-admisiones-icono-convenios.svg";
 import ulaEgresados from "@/icons/ula-admisiones-icono-egresados.svg";
@@ -92,7 +90,6 @@ const iconTypes: any = {
   personafirma: PersonaFirma,
   firmauteg: FirmaUteg,
   documentofirma: DocumentoFirma,
-  ULAAniversario47: ula47,
   ULAConvenios: ulaConvenios,
   ULAAlumnos: ulaAlumnos,
   ULAEgresados: ulaEgresados,
