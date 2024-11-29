@@ -3,13 +3,13 @@ import Input from "@/components/lottus-education/Input"
 import OptionPill from "@/old-components/OptionPill";
 import Checkbox from "@/old-components/Checkbox";
 import configControls from "@/forms/fixtures/controls"
-import Select from "@/old-components/Select/Select";
+// import Select from "@/old-components/Select/Select";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import cn from "classnames";
 import * as Field from "@/components/lottus-education/Field";
 import Button from "@/old-components/Button/Button"
-
+import * as Select from "@/components/lottus-education/Select"
 
 const axios = require('axios');
 
@@ -510,7 +510,17 @@ const InscriptionForm = (props: InscriptionFormData) => {
         {personalDataErrors.birthdate && <p className="text-error-500 font-texts text-xs ml-2 mt-4">{configControls.errorMessagesInscriptionForm.birthdate}</p>}
       </div>
       <div className="mobile:w-full mobile:col-span-2 ">
-        <div className=""> <Select options={optionsGender} data={{
+        <div className="">
+        <Select.Root>
+              <Select.Trigger>
+                <Select.Value placeholder="Género" />
+              </Select.Trigger>
+              <Select.Content>
+                <Select.Item value="Atizapán" onClick={(option: any) => handleSelect(option)}>Atizapán</Select.Item>
+                <Select.Item value="Coacalco" onClick={(option: any) => handleSelect(option)}>Coacalco</Select.Item>
+              </Select.Content>
+            </Select.Root>
+       {/* <Select options={optionsGender} data={{
           textDefault: "Género",
           disabled: false,
           icon: " ",
@@ -519,7 +529,8 @@ const InscriptionForm = (props: InscriptionFormData) => {
           zindexOptions: 0,
           tagOnClickList: 'testOnClickList',
           tagOnClickOption: 'testOnClickOption',
-        }} onClick={(option: any) => handleSelect(option)} /></div>
+        }} onClick={(option: any) => handleSelect(option)} /> */}
+        </div>
       </div>
       <div className="mobile:col-span-2">
         <Field.Root hasError={personalDataErrors.email}>

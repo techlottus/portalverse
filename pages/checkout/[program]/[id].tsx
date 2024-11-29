@@ -207,28 +207,6 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                     <p className="font-texts font-semibold">Costo total:</p>
                     <p className="text-surface-600 font-texts font-normal">{priceString} MXN</p>
                   </div>}
-                {/* <div id='coupons' className="flex space-x-2 h-11 mb-2">
-                  <Input  data={{
-                    label: 'Inserta Cupón',
-                    name: 'cupon',
-                    type: 'text',
-                    typeButton: 'classic',
-                    maxlength: '',
-                    onPaste: true,
-                    alphanumeric: false,
-                    pattern: '',
-                    isRequired: true,
-                    disabled: false
-                  }}
-                    eventKeyPress={(e: CustomEvent) => { console.log('cupon keypress') }}
-                    eventFocus={() => { console.log('focus cupon') }}
-                    errorMessage={'Ingresa cupón válido'}
-                    hasError={false}
-                  />
-                  <button className={cn("rounded w-fit h-11 px-3 py-2  text-surface-0 font-text text-sm font-bold bg-primary-400")}
-                    onClick={() => console.log('aplicar cupon')}>Aplicar</button>
-
-                </div> */}
                 <div className="flex items-end justify-end text-success-600 font-text text-sm mb-3">AHORRO {`$ ${0.00}`}</div>
                 <hr className="text-surface-200" />
                 <div className="flex justify-between mt-3">
