@@ -418,9 +418,8 @@ const Header = (props: MenuType) => {
 
           </NavigationMenu.List>
           {/* si borran este ya no se ve el contenido a w-full */}
-          <div className={classNames(" w-full desktop:-z-10 desktop:overflow-y-hidden desktop:top-[113px] mobile:top-0 tablet:top-0 desktop:left-0 tablet:left-0 ", {
+          <div className={classNames("absolute w-full desktop:-z-10 desktop:overflow-y-hidden desktop:top-[113px] mobile:top-0 tablet:top-0 desktop:left-0 tablet:left-0 ", {
             ["hidden"]: openContent == 'closed',
-            ["absolute"]: openContent !== 'closed',
           })}>
             <NavigationMenu.Viewport
               //@ts-ignore
