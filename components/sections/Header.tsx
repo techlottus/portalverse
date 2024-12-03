@@ -311,7 +311,7 @@ const Header = (props: MenuType) => {
 
   return (
     // todo desktop sticky
-    <div className="absolute desktop:fixed top-0 z-20 flex flex-col w-full tablet:fixed mobile:fixed bg-surface-0 ">
+    <div className="absolute top-0 z-20 flex flex-col w-full bg-surface-0 ">
       {/* Primer nivel del menú */}
       <NavigationMenu.Root className="relative flex h-auto desktop:py-4 py-3 desktop:px-21 px-6 desktop:border-b desktop:border-surface-300 w-full justify-center align-middle bg-surface-0 tablet:z-10">
         <button className="absolute top-0 left-6 pr-3 py-3 desktop:hidden flex items-center h-full" onClick={() => handleHamburger()}>
