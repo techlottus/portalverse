@@ -332,10 +332,10 @@ const Header = (props: MenuType) => {
       </NavigationMenu.Root>
 
       {/* Segundo nivel del menú */}
-      <div className={classNames(" desktop:flex w-full desktop:min-w-[1024px] h-full desktop:h-[45px] bg-surface-0 mobile:px-0 tablet:px-0  desktop:px-21 desktop:justify-center desktop:border-b desktop:border-surface-300 desktop:shadow tablet:fixed mobile:fixed tablet:top-[69px] mobile:top-[69px] tablet:overflow-y-scroll mobile:overflow-y-scroll ",
+      <div className={classNames(" desktop:flex w-full desktop:min-w-[1024px] h-full desktop:h-[45px] bg-surface-0 mobile:px-0 tablet:px-0  desktop:px-21 desktop:justify-center desktop:border-b desktop:border-surface-300 desktop:shadow  tablet:top-[69px] mobile:top-[69px] tablet:overflow-y-scroll mobile:overflow-y-scroll ",
         {
           ["mobile:hidden tablet:hidden"]: !open,
-          [" tablet:transition-colors tablet:duration-1000 tablet:bg-surface-950/30 tablet:ease-in-out"]: open
+          [" tablet:fixed mobile:fixed tablet:transition-colors tablet:duration-1000 tablet:bg-surface-950/30 tablet:ease-in-out"]: open
         })}>
         <NavigationMenu.Root value={openContent} onValueChange={setOpenContent} className={classNames("desktop:h-[45px] desktop:w-full  desktop:max-w-[1200px] h-screen overscroll-none desktop:flex tablet:data-[state=closed]:hidden")}>
           <NavigationMenu.List className="mobile:w-full h-screen mobile:overflow-y-auto mobile:overscroll-y-auto desktop:h-fit desktop:w-auto flex flex-col desktop:justify-between  desktop:flex-row desktop:items-start  desktop:py-0 tablet:max-w-100 bg-surface-0  desktop:bg-transparent">
@@ -399,10 +399,10 @@ const Header = (props: MenuType) => {
                           </div>
                           <ButtonLinks className="mb-100 py-6" />
                         </div>
-                        {items && <div className="desktop:hidden flex flex-col absolute top-0 left-0 w-full bg-surface-0 overflow-y-auto overscroll-auto h-full  z-30 ">
+                        {items && openContent!=='closed' && <div className="desktop:hidden flex flex-col absolute top-0 left-0 w-full bg-surface-0 overflow-y-auto overscroll-auto h-full  z-30 ">
                           <SubItems list={itemList?.items} isSub linkText={itemList?.linkText} linkHref={itemList?.href} label={itemList?.label} />
                         </div>}
-                        {subItems && <div className="desktop:hidden flex flex-col absolute top-0 left-0 w-full bg-surface-0 overflow-y-auto overscroll-auto h-full  z-30 ">
+                        {subItems && openContent!=='closed' && <div className="desktop:hidden flex flex-col absolute top-0 left-0 w-full bg-surface-0 overflow-y-auto overscroll-auto h-full  z-30 ">
                           <SubItems list={subItemList?.items} isSub linkText={subItemList?.linkText} linkHref={subItemList?.href} label={subItemList?.label} />
                         </div>}
 
