@@ -125,17 +125,14 @@ const Header = (props: MenuType) => {
             ) : (
               <Link key={i} href={item.href ?? ""} passHref 
               onClick={() => {
-                setOpenContent("closed")
+                item.href? router.push(item.href): null
                 setOpen(false)
+                setOpenContent("closed")
                 setItems(false)
                 setSubItems(false)
-                item.href? router.push(item.href): null
               }
               }
-              onTouchEnd={()=>{
-                if(openContent ==="closed"){
-                setOpen(false)}
-              } }
+            
                 onMouseEnter={() => {
                   isSub ? setSubItems(false) : setItems(false)
                 }} >
