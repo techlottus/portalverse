@@ -27,6 +27,7 @@ const Header = (props: MenuType) => {
     setOpen(false)
     setOpenContent('closed')
     setSubItems(false)
+    setItems(false)
   }
 
   // Componente de enlaces
