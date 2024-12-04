@@ -123,7 +123,7 @@ const Header = (props: MenuType) => {
                 </div>
               </button>
             ) : (
-              <Link key={i} href={item.href ?? ""} passHref 
+              <span tabIndex={-1} key={i} 
               onClick={() => {
                 item.href? router.push(item.href): null
                 setOpen(false)
@@ -141,7 +141,7 @@ const Header = (props: MenuType) => {
                   ["font-texts text-surface-950 font-bold"]: item.bold,
                   ["font-texts text-surface-500 desktop:hover:text-primary-500 font-normal "]: !item.bold,
                 })}>{item.label} </p>
-              </Link>
+              </span>
             )
           )}
           {linkText && <Link href={linkHref ?? ""} passHref onClick={() => handleCloseOnClick()} onMouseEnter={() => {
