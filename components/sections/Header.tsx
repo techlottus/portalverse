@@ -125,6 +125,7 @@ const Header = (props: MenuType) => {
             ) : (
               <Link key={i} href={item.href ?? ""} passHref onClick={() => {
                 handleCloseOnClick()
+                console.log("clickeo aqui: ", item.href)
                 setOpen(false)}
               }
                 onMouseEnter={() => {
@@ -134,7 +135,7 @@ const Header = (props: MenuType) => {
                   ["desktop:px-3 rounded-lg desktop:border desktop:border-surface-50 desktop:hover:border-surface-200 desktop:hover:bg-surface-0 py-2"]: !isSub,
                   ["font-texts text-surface-950 font-bold"]: item.bold,
                   ["font-texts text-surface-500 desktop:hover:text-primary-500 font-normal "]: !item.bold,
-                })}>{item.label}</p>
+                })}>{item.label} es este</p>
               </Link>
             )
           )}
@@ -294,7 +295,7 @@ const Header = (props: MenuType) => {
   }
 
   const handleHamburger = () => {
-    setOpen(prevState => !prevState);
+    setOpen(!open);
   };
 
   useEffect(() => {
@@ -405,10 +406,10 @@ const Header = (props: MenuType) => {
                           </div>
                           <ButtonLinks className="mb-100 py-6" />
                         </div>
-                        {items && openContent!=='closed' && <div className="desktop:hidden flex flex-col absolute top-0 left-0 w-full bg-surface-0 overflow-y-auto overscroll-auto h-full  z-30 mobile:bg-error-500">
+                        {items && openContent!=='closed' && open && <div className="desktop:hidden flex flex-col absolute top-0 left-0 w-full bg-surface-0 overflow-y-auto overscroll-auto h-full  z-30 mobile:bg-error-500">
                           <SubItems list={itemList?.items} isSub linkText={itemList?.linkText} linkHref={itemList?.href} label={itemList?.label} />
                         </div>}
-                        {subItems && openContent!=='closed' && <div className="desktop:hidden flex flex-col absolute top-0 left-0 w-full bg-surface-0 overflow-y-auto overscroll-auto h-full  z-30 mobile:bg-primary-500 ">
+                        {subItems && openContent!=='closed' && open && <div className="desktop:hidden flex flex-col absolute top-0 left-0 w-full bg-surface-0 overflow-y-auto overscroll-auto h-full  z-30 mobile:bg-primary-500 ">
                           <SubItems list={subItemList?.items} isSub linkText={subItemList?.linkText} linkHref={subItemList?.href} label={subItemList?.label} />
                         </div>}
 
