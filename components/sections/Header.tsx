@@ -123,7 +123,7 @@ const Header = (props: MenuType) => {
                 </div>
               </button>
             ) : (
-              <span tabIndex={-1} key={i} 
+              <span role="button" tabIndex={-1} key={i} 
               onClick={() => {
                 item.href? router.push(item.href): null
                 setOpen(false)
