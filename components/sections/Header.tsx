@@ -127,6 +127,8 @@ const Header = (props: MenuType) => {
               onClick={() => {
                 setOpenContent("closed")
                 setOpen(false)
+                setItems(false)
+                setSubItems(false)
               }
               }
                 onMouseEnter={() => {
