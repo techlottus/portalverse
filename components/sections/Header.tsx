@@ -311,7 +311,7 @@ const Header = (props: MenuType) => {
 
   return (
     // todo desktop sticky
-    <div className="absolute top-0 z-20 flex flex-col w-full bg-surface-0 ">
+    <div className="absolute  top-0 z-20 flex flex-col w-full bg-surface-0 ">
       {/* Primer nivel del menú */}
       <NavigationMenu.Root className="relative flex h-auto desktop:py-4 py-3 desktop:px-21 px-6 desktop:border-b desktop:border-surface-300 w-full justify-center align-middle bg-surface-0 tablet:z-10">
         <button className="absolute top-0 left-6 pr-3 py-3 desktop:hidden flex items-center h-full" onClick={() => handleHamburger()}>
@@ -334,8 +334,8 @@ const Header = (props: MenuType) => {
       {/* Segundo nivel del menú */}
       <div className={classNames(" desktop:flex w-full desktop:min-w-[1024px] h-full desktop:h-[45px] bg-surface-0 mobile:px-0 tablet:px-0  desktop:px-21 desktop:justify-center desktop:border-b desktop:border-surface-300 desktop:shadow  tablet:top-[69px] mobile:top-[69px] tablet:overflow-y-scroll mobile:overflow-y-scroll ",
         {
-          ["mobile:hidden tablet:hidden"]: !open && openContent==="closed",
-          [" tablet:fixed mobile:fixed tablet:transition-colors tablet:duration-1000 tablet:bg-surface-950/30 tablet:ease-in-out"]: open && openContent!=='closed'
+          ["mobile:hidden tablet:hidden"]: !open ,
+          [" tablet:fixed mobile:fixed tablet:transition-colors tablet:duration-1000 tablet:bg-surface-950/30 tablet:ease-in-out"]: open 
         })}>
         <NavigationMenu.Root value={openContent} onValueChange={setOpenContent} className={classNames("desktop:h-[45px] desktop:w-full  desktop:max-w-[1200px] h-screen overscroll-none desktop:flex tablet:data-[state=closed]:hidden")}>
           <NavigationMenu.List className="mobile:w-full h-screen mobile:overflow-y-auto mobile:overscroll-y-auto desktop:h-fit desktop:w-auto flex flex-col desktop:justify-between  desktop:flex-row desktop:items-start  desktop:py-0 tablet:max-w-100 bg-surface-0  desktop:bg-transparent">
