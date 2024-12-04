@@ -131,7 +131,10 @@ const Header = (props: MenuType) => {
                 setSubItems(false)
               }
               }
-              onTouchEnd={()=>setOpen(false)}
+              onTouchEnd={()=>{
+                setOpen(false)
+                item.href? router.push(item.href): null
+              } }
                 onMouseEnter={() => {
                   isSub ? setSubItems(false) : setItems(false)
                 }} >
@@ -139,7 +142,7 @@ const Header = (props: MenuType) => {
                   ["desktop:px-3 rounded-lg desktop:border desktop:border-surface-50 desktop:hover:border-surface-200 desktop:hover:bg-surface-0 py-2"]: !isSub,
                   ["font-texts text-surface-950 font-bold"]: item.bold,
                   ["font-texts text-surface-500 desktop:hover:text-primary-500 font-normal "]: !item.bold,
-                })}>{item.label} es este</p>
+                })}>{item.label} </p>
               </Link>
             )
           )}
