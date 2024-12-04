@@ -132,10 +132,10 @@ const Header = (props: MenuType) => {
                 item.href? router.push(item.href): null
               }
               }
-              // onTouchEnd={()=>{
-              //   setOpen(false)
-              //   item.href? router.push(item.href): null
-              // } }
+              onTouchEnd={()=>{
+                if(openContent ==="closed"){
+                setOpen(false)}
+              } }
                 onMouseEnter={() => {
                   isSub ? setSubItems(false) : setItems(false)
                 }} >
