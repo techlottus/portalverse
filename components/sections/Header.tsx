@@ -23,14 +23,12 @@ const Header = (props: MenuType) => {
   const [open, setOpen] = useState(false)
   const [openContent, setOpenContent] = useState('')
 
-  const handleCloseOnClick = (callback:any) => {
-    setOpen(false);
-    setOpenContent('closed');
-    setSubItems(false);
-    setItems(false);
-    if (callback) callback();
-  };
-  
+  const handleCloseOnClick = () => {
+    setOpen(false)
+    setOpenContent('closed')
+    setSubItems(false)
+    setItems(false)
+  }
 
   // Componente de enlaces
   const Links = ({ links }: { links?: (MenuType['links']) }) => (
@@ -97,7 +95,7 @@ const Header = (props: MenuType) => {
               } ><span className="material-symbols-outlined text-2xl rounded p-2 bg-surface-300 font-bold">arrow_back</span></button>
               <p className="font-semibold font-texts text-lg">{label}</p>
             </div>
-            <Link href={linkHref ?? ""} passHref onClick={() => handleCloseOnClick(()=>{})}>
+            <Link href={linkHref ?? ""} passHref onClick={() => handleCloseOnClick()}>
               <div className="w-full font-texts text-primary-500 font-normal flex align-middle">
                 <p className={classNames("font-normal hover:underline")}>
                   {linkText && linkText + ' »'} </p>
@@ -125,7 +123,12 @@ const Header = (props: MenuType) => {
                 </div>
               </button>
             ) : (
-              <Link key={i} href={item.href ?? ""} passHref onClick={() => handleCloseOnClick(() => console.log("Navigating to:", item.href))}
+              <Link key={i} href={item.href ?? ""} passHref 
+              onClick={() => {
+                setOpenContent("closed")
+                setOpen(false)
+              }
+              }
                 onMouseEnter={() => {
                   isSub ? setSubItems(false) : setItems(false)
                 }} >
@@ -137,7 +140,7 @@ const Header = (props: MenuType) => {
               </Link>
             )
           )}
-          {linkText && <Link href={linkHref ?? ""} passHref onClick={() => handleCloseOnClick(()=>{})} onMouseEnter={() => {
+          {linkText && <Link href={linkHref ?? ""} passHref onClick={() => handleCloseOnClick()} onMouseEnter={() => {
             isSub ? setSubItems(false) : setItems(false)
           }
           } className="mobile:hidden tablet:hidden">
@@ -158,7 +161,7 @@ const Header = (props: MenuType) => {
     <div className="flex flex-col w-full overflow-x-auto overscroll-x-auto desktop:max-h-[724px]">
       <ul className={classNames("flex flex-col flex-wrap max-h-100 max-w-[273px]")} tabIndex={-1} onMouseEnter={() => setItems(true)}>
         {subitems.items?.map((item: any, i: number) => (
-          <Link key={i} href={item?.href ?? ""} passHref onClick={() => handleCloseOnClick(()=>{})}>
+          <Link key={i} href={item?.href ?? ""} passHref onClick={() => handleCloseOnClick()}>
             <p className={classNames("font-text mr-3 mb-3 text-base",
               {
                 ["font-texts text-surface-950 font-bold"]: item?.bold,
@@ -171,7 +174,7 @@ const Header = (props: MenuType) => {
       </ul>
       {linkText && <div className="w-full border-t border-surface-200 ">
         <div className="py-2 w-full font-texts text-primary-500 font-normal flex align-middle">
-          <Link href={linkHref ?? ""} passHref onClick={() => handleCloseOnClick(()=>{})}>
+          <Link href={linkHref ?? ""} passHref onClick={() => handleCloseOnClick()}>
             <p className={classNames("font-normal hover:underline")}>
               {linkText ? linkText + " »" : null} </p></Link>
         </div>
@@ -377,7 +380,7 @@ const Header = (props: MenuType) => {
                                 }} ><span className="material-symbols-outlined text-2xl rounded p-2 bg-surface-300 font-bold">arrow_back</span></button>
                                 <p className="font-semibold font-texts text-lg">{menu_item?.label}</p>
                               </div>
-                              <Link href={menu_item?.href ?? ""} passHref onClick={() => handleCloseOnClick(()=>{})}>
+                              <Link href={menu_item?.href ?? ""} passHref onClick={() => handleCloseOnClick()}>
                                 <div className="w-full font-texts text-primary-500 font-normal desktop:px-3 flex align-middle">
                                   <p className={classNames("font-normal hover:underline")}>
                                     {menu_item?.linkText ? menu_item?.linkText + '»' : null} </p>
