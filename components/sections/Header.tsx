@@ -411,14 +411,12 @@ const Header = (props: MenuType) => {
                           </div>
                           <ButtonLinks className="mb-100 py-6" />
                         </div>
-                        <div className={classNames("desktop:hidden flex flex-col  top-0 left-0 w-full bg-surface-0 overflow-y-auto overscroll-auto h-full  ",{["hidden"]:!open, ["absolute z-20"]:open})}>
-                           {items && openContent!=='closed' && open && 
+                        {items && openContent!=='closed' && open && <div className={classNames("desktop:hidden flex flex-col  top-0 left-0 w-full bg-surface-0 overflow-y-auto overscroll-auto h-full  ",{["hidden"]:!open, ["absolute z-20"]:open})}>
                           <SubItems list={itemList?.items} isSub linkText={itemList?.linkText} linkHref={itemList?.href} label={itemList?.label} />
-                        }
-                        {subItems && openContent!=='closed' && open && 
+                        </div>}
+                        {subItems && openContent!=='closed' && open && <div className={classNames("desktop:hidden flex flex-col top-0 left-0 w-full bg-surface-0 overflow-y-auto overscroll-auto h-full    ",{["hidden"]:!open, ["absolute z-30"]:open})}>
                           <SubItems list={subItemList?.items} isSub linkText={subItemList?.linkText} linkHref={subItemList?.href} label={subItemList?.label} />
-                        }</div>
-                       
+                        </div>}
 
                       </div>
                     </NavigationMenu.Content>
