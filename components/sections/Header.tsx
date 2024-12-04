@@ -122,7 +122,10 @@ const Header = (props: MenuType) => {
                 </div>
               </button>
             ) : (
-              <Link key={i} href={item.href ?? ""} passHref onClick={() => handleCloseOnClick()}
+              <Link key={i} href={item.href ?? ""} passHref onClick={() => {
+                handleCloseOnClick()
+                setOpen(false)}
+              }
                 onMouseEnter={() => {
                   isSub ? setSubItems(false) : setItems(false)
                 }} >
