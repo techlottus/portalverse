@@ -369,7 +369,7 @@ const Header = (props: MenuType) => {
                         setOpenContent('closed')
                         clearStates()
                       }
-                      } className="bg-surface-0  desktop:bg-surface-50 desktop:rounded-b-xl h-full desktop:min-h-[440px]  desktop:px-21 px-6 desktop:py-6 w-full tablet:max-w-100 flex desktop:flex-row flex-col desktop:justify-center tablet:z-20 mobile:overflow-y-auto mobile:overscroll-y-auto">
+                      } className="bg-surface-0 mobile:relative  desktop:bg-surface-50 desktop:rounded-b-xl h-full desktop:min-h-[440px]  desktop:px-21 px-6 desktop:py-6 w-full tablet:max-w-100 flex desktop:flex-row flex-col desktop:justify-center tablet:z-20 mobile:overflow-y-auto mobile:overscroll-y-auto">
                         <div className="flex w-full desktop:max-w-[1200px] desktop:min-h-fit mobile:h-full tablet:h-full mobile:flex-col tablet:flex-col ">
                           <div className="">
                             {/* nivel 2 de opciones */}
@@ -407,12 +407,13 @@ const Header = (props: MenuType) => {
                           </div>
                           <ButtonLinks className="mb-100 py-6" />
                         </div>
-                        {items && openContent!=='closed' && open &&
-                         <div className={classNames("desktop:hidden flex flex-col  top-0 left-0 w-full bg-surface-0 overflow-y-auto overscroll-auto h-full  mobile:bg-error-500",{["hidden"]:!open, ["absolute z-20"]:open})}>
-                          items && openContent!=='closed' && open ? <SubItems list={itemList?.items} isSub linkText={itemList?.linkText} linkHref={itemList?.href} label={itemList?.label} />
-                         : subItems && openContent!=='closed' && open && 
-                         <SubItems list={subItemList?.items} isSub linkText={subItemList?.linkText} linkHref={subItemList?.href} label={subItemList?.label} />
+                        {items && openContent!=='closed' && open && <div className={classNames("desktop:hidden flex flex-col  top-0 left-0 w-full bg-surface-0 overflow-y-auto overscroll-auto h-full  mobile:bg-error-500",{["hidden"]:!open, ["absolute z-20"]:open})}>
+                          <SubItems list={itemList?.items} isSub linkText={itemList?.linkText} linkHref={itemList?.href} label={itemList?.label} />
                         </div>}
+                        {subItems && openContent!=='closed' && open && <div className={classNames("desktop:hidden flex flex-col absolute top-0 left-0 w-full bg-surface-0 overflow-y-auto overscroll-auto h-full   mobile:bg-primary-500 ",{["hidden"]:!open, ["absolute z-30"]:open})}>
+                          <SubItems list={subItemList?.items} isSub linkText={subItemList?.linkText} linkHref={subItemList?.href} label={subItemList?.label} />
+                        </div>}
+
                       </div>
                     </NavigationMenu.Content>
                   )}
