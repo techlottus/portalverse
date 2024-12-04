@@ -37,6 +37,8 @@ html {
   user-select: none;
 
   -webkit-font-smoothing: antialiased;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   /* Support for Safari and Chrome. */
   text-rendering: optimizeLegibility;
 
