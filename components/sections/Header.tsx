@@ -131,6 +131,7 @@ const Header = (props: MenuType) => {
                 setSubItems(false)
               }
               }
+              onTouchEnd={()=>setOpen(false)}
                 onMouseEnter={() => {
                   isSub ? setSubItems(false) : setItems(false)
                 }} >
