@@ -22,7 +22,7 @@ export default function DynamicPageLayout({ children, breadcrumbs = true,layoutD
 
   return <>
     <Header {...layoutData?.attributes?.header?.data?.attributes} />
-    <div className="desktop:pt-30">
+    <div className="">
       { children }
       <Footer onClickLogo={logotypeClick} {...layoutData?.attributes?.footer?.data}/>
     </div>
