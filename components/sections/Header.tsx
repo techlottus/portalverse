@@ -30,7 +30,7 @@ const Header = (props: MenuType) => {
     setItems(false)
   }
 
-  // Componente de enlaces
+  // Componente de enlaces (egresados y alumnos)
   const Links = ({ links }: { links?: (MenuType['links']) }) => (
     <div className="w-full">
       <NavigationMenu.List className="flex space-x-3 desktop:space-x-0 w-full desktop:items-center desktop:justify-end ">
@@ -131,11 +131,10 @@ const Header = (props: MenuType) => {
                 setItems(false)
                 setSubItems(false)
               }
-              }
-            
-                onMouseEnter={() => {
-                  isSub ? setSubItems(false) : setItems(false)
-                }} >
+              }            
+              onMouseEnter={() => {
+                isSub ? setSubItems(false) : setItems(false)
+              }} >
                 <p className={classNames("mobile:py-2 tablet:py-2 w-full text-base", {
                   ["desktop:px-3 rounded-lg desktop:border desktop:border-surface-50 desktop:hover:border-surface-200 desktop:hover:bg-surface-0 py-2"]: !isSub,
                   ["font-texts text-surface-950 font-bold"]: item.bold,
@@ -247,10 +246,7 @@ const Header = (props: MenuType) => {
                       </div>
                     </Link>
                   }
-
                 </div>
-
-
               </div>
             </div>
           </div>
@@ -266,11 +262,7 @@ const Header = (props: MenuType) => {
       <div className="grid desktop:grid-cols-2 gap-6 tablet:grid-cols-1 mobile:grid-cols-1">
         {
           banners?.map((item: any, i: number) => <div key={`section-banners-${i}`}>
-            {/* <BannerPortalverseWrapper data={item} onClick={() => {
-              router.push(item?.ctaUrl);
-            }} /> */}
             <Banner {...item} />
-
           </div>)
         }
       </div>
