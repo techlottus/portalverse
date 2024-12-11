@@ -10,7 +10,7 @@ import cn from "classnames";
 import * as Field from "@/components/lottus-education/Field";
 import Button from "@/old-components/Button/Button"
 
-import { Root, Trigger, Value, Content, Item } from '@/components/lottus-education/Select';
+import * as Select from '@/components/lottus-education/Select';
 
 const axios = require('axios');
 
@@ -65,20 +65,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
   const [adviser, setAdviser] = useState<boolean>()
   const [curpTouched, setCurpTouched] = useState<boolean>(false)
   const [curpErrorMesage, setcurpErrorMesage] = useState<string>("")
-
-  const [optionsGender, setOptionsGender] = useState([{
-    value: "Hombre",
-    text: "Masculino",
-    active: false
-  }, {
-    value: "Mujer",
-    text: "Femenino",
-    active: false
-  }, {
-    value: "other",
-    text: "Otro",
-    active: false
-  }]);
+  const [gender, setGender] = useState<string>("")
 
   const [personalDataTouched, setPersonalDataTouched] = useState<{ [key: string]: boolean }>({
     name: false,
@@ -247,15 +234,15 @@ const InscriptionForm = (props: InscriptionFormData) => {
 
   }
 
-  const handleSelect = async ({ detail }: any) => {
-    const selectedGender = detail;
-    const selectOptions = optionsGender?.map(option => {
-      return { ...option, active: option?.value === selectedGender }
-    })
-    setOptionsGender(selectOptions)
-    setPersonalDataTouched({ ...personalDataTouched, ["gender"]: true });
-    setPersonalData({ ...personalData, ["gender"]: selectedGender, ["residence"]: residence ? "Nacional" : "Extranjero" });
-  };
+  // const handleSelect = async ({ detail }: any) => {
+  //   const selectedGender = detail;
+  //   const selectOptions = optionsGender?.map(option => {
+  //     return { ...option, active: option?.value === selectedGender }
+  //   })
+  //   setOptionsGender(selectOptions)
+  //   setPersonalDataTouched({ ...personalDataTouched, ["gender"]: true });
+  //   setPersonalData({ ...personalData, ["gender"]: selectedGender, ["residence"]: residence ? "Nacional" : "Extranjero" });
+  // };
 
   const handleKeyPress = (e: any, control: string) => {
     setPersonalDataTouched({ ...personalDataTouched, [control]: true });
@@ -278,7 +265,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
 
 
   useEffect(() => {
-    // console.log(personalData)
+   console.log(personalData)
     Validate()
   }, [personalData]);
 
@@ -512,26 +499,16 @@ const InscriptionForm = (props: InscriptionFormData) => {
       </div>
       <div className="mobile:w-full mobile:col-span-2 ">
         <div className="">
-        <Root>
-        <Trigger>
-          <Value placeholder="Selecciona una opción" />
-        </Trigger>
-        <Content>
-          <Item value="opcion1">Opción 1</Item>
-          <Item value="opcion2">Opción 2</Item>
-          <Item value="opcion3">Opción 3</Item>
-        </Content>
-      </Root>
-       {/* <Select options={optionsGender} data={{
-          textDefault: "Género",
-          disabled: false,
-          icon: " ",
-          isLabel: false,
-          reset: false,
-          zindexOptions: 0,
-          tagOnClickList: 'testOnClickList',
-          tagOnClickOption: 'testOnClickOption',
-        }} onClick={(option: any) => handleSelect(option)} /> */}
+        <Select.Root onValueChange={(value)=>setPersonalData({...personalData,["gender"]: value, ["residence"]: residence ? "Nacional" : "Extranjero" })}>
+        <Select.Trigger>
+          <Select.Value placeholder="Género" />
+        </Select.Trigger>
+        <Select.Content>
+              <Select.Item value="Hombre" >Masculino</Select.Item>
+              <Select.Item value="Mujer" >Femenino</Select.Item>
+              <Select.Item value="other" >Otro</Select.Item> 
+        </Select.Content>
+      </Select.Root>
         </div>
       </div>
       <div className="mobile:col-span-2">
