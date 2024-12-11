@@ -45,7 +45,7 @@ const Trigger = React.forwardRef<
     {children}
     <SelectPrimitive.Icon asChild>
       <div className="h-10 w-10 flex-shrink-0 inline-flex items-center justify-center bg-neutral-100 border-l border-neutral-400 group-focus:border-neutral-700 group-data-[state=open]:border-neutral-700 group-data-[error=true]:border-error-500 group-data-[error=true]:bg-[rgba(213,13,25,0.2)] group-hover:border-neutral-900 group-disabled:border-neutral-200">
-        <IconComponent iconName="keyboard_arrow_down"  />
+        <span className='material-symbols-outlined'>keyboard_arrow_down</span> 
       </div>
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
@@ -107,7 +107,7 @@ const Item = React.forwardRef<
     </SelectPrimitive.ItemText>
     <span className="flex flex-shrink-0 h-3.5 w-3.5 items-center justify-center">
       <SelectPrimitive.ItemIndicator>
-        <IconComponent iconName="check" />
+      <span className='material-symbols-outlined'>check</span> 
       </SelectPrimitive.ItemIndicator>
     </span>
   </SelectPrimitive.Item>

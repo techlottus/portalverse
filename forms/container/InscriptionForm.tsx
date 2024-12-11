@@ -9,7 +9,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import cn from "classnames";
 import * as Field from "@/components/lottus-education/Field";
 import Button from "@/old-components/Button/Button"
-import * as Select from "@/components/lottus-education/Select"
+
+import { Root, Trigger, Value, Content, Item } from '@/components/lottus-education/Select';
 
 const axios = require('axios');
 
@@ -511,15 +512,16 @@ const InscriptionForm = (props: InscriptionFormData) => {
       </div>
       <div className="mobile:w-full mobile:col-span-2 ">
         <div className="">
-        <Select.Root>
-              <Select.Trigger>
-                <Select.Value placeholder="Género" />
-              </Select.Trigger>
-              <Select.Content>
-                <Select.Item value="Atizapán" onClick={(option: any) => handleSelect(option)}>Atizapán</Select.Item>
-                <Select.Item value="Coacalco" onClick={(option: any) => handleSelect(option)}>Coacalco</Select.Item>
-              </Select.Content>
-            </Select.Root>
+        <Root>
+        <Trigger>
+          <Value placeholder="Selecciona una opción" />
+        </Trigger>
+        <Content>
+          <Item value="opcion1">Opción 1</Item>
+          <Item value="opcion2">Opción 2</Item>
+          <Item value="opcion3">Opción 3</Item>
+        </Content>
+      </Root>
        {/* <Select options={optionsGender} data={{
           textDefault: "Género",
           disabled: false,
