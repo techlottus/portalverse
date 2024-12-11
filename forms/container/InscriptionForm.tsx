@@ -65,7 +65,6 @@ const InscriptionForm = (props: InscriptionFormData) => {
   const [adviser, setAdviser] = useState<boolean>()
   const [curpTouched, setCurpTouched] = useState<boolean>(false)
   const [curpErrorMesage, setcurpErrorMesage] = useState<string>("")
-  const [gender, setGender] = useState<string>("")
 
   const [personalDataTouched, setPersonalDataTouched] = useState<{ [key: string]: boolean }>({
     name: false,
@@ -233,16 +232,6 @@ const InscriptionForm = (props: InscriptionFormData) => {
 
 
   }
-
-  // const handleSelect = async ({ detail }: any) => {
-  //   const selectedGender = detail;
-  //   const selectOptions = optionsGender?.map(option => {
-  //     return { ...option, active: option?.value === selectedGender }
-  //   })
-  //   setOptionsGender(selectOptions)
-  //   setPersonalDataTouched({ ...personalDataTouched, ["gender"]: true });
-  //   setPersonalData({ ...personalData, ["gender"]: selectedGender, ["residence"]: residence ? "Nacional" : "Extranjero" });
-  // };
 
   const handleKeyPress = (e: any, control: string) => {
     setPersonalDataTouched({ ...personalDataTouched, [control]: true });
