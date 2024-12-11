@@ -11,6 +11,7 @@ import * as Field from "@/components/lottus-education/Field";
 import Button from "@/old-components/Button/Button"
 
 import * as Select from '@/components/lottus-education/Select';
+import Radio from "@/components/lottus-education/Radio";
 
 const axios = require('axios');
 
@@ -572,10 +573,10 @@ const InscriptionForm = (props: InscriptionFormData) => {
               <p className="text-surface-500 font-texts text-base mt-3 font-normal">Proporcione los datos del estudiante a inscribir. La información de acceso se enviará a su correo electrónico.</p>
             </div> */}
           <p className="font-texts text-base font-bold text-surface-950">
-            1. ¿Eres mexicano? <span className="text-error-500">*</span>
+          ¿Eres mexicano? <span className="text-error-500">*</span>
           </p>
           <div className="flex space-x-2 desktop:mb-6">
-            <OptionPill
+            {/* <OptionPill
               data={{
                 name: "Si",
                 search: "",
@@ -588,9 +589,20 @@ const InscriptionForm = (props: InscriptionFormData) => {
                 setHasCurp(true)
                 setNoCurp(false)
               }}
-            />
-            <p className="mt-2"></p>
-            <OptionPill data={{
+            /> */}
+             <div className="flex items-center gap-4" >
+            <Radio name="residence" value="Si" onFocus={()=>{setResidence(true)
+                setNoResidence(false)
+                setHasCurp(true)
+                setNoCurp(false)}} checked={residence === true}>
+              Si
+            </Radio>
+            <Radio name="residence" value="No" onFocus={()=>{setResidence(false)
+              setNoResidence(true)}} checked={noResidence === true}>
+              No
+            </Radio>
+          </div>
+            {/* <OptionPill data={{
               name: "No",
               search: "",
               disabled: false
@@ -598,7 +610,7 @@ const InscriptionForm = (props: InscriptionFormData) => {
               setResidence(false)
               setNoResidence(true)
             }}
-            />
+            /> */}
           </div>
         </div>
 
