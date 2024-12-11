@@ -36,7 +36,7 @@ const Header = (props: MenuType) => {
       <NavigationMenu.List className="flex space-x-3 desktop:space-x-0 w-full desktop:items-center desktop:justify-end ">
         {links?.map((link?: any, i?: number) => (
           <NavigationMenu.Item key={i} className="w-1/2 desktop:w-full desktop:px-3 desktop:py-0 p-4 mobile:border-2 tablet:border-2  desktop:border-r desktop:last:border-r-0 rounded-lg desktop:rounded-none desktop:border-surface-900">
-            <Link href={link?.href ?? ""} passHref>
+            <Link href={link?.href ?? ""} passHref onClick={() => handleCloseOnClick()}>
               <p className="font-texts desktop:font-normal font-semibold text-sm desktop:text-surface-500 cursor-pointer hover:text-primary-500 w-full">
                 {link?.text}
               </p>
