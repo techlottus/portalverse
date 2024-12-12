@@ -1,32 +1,29 @@
 import Head from "next/head"
 import ContentFullLayout from "@/layouts/ContentFull.layout"
 import NextPageWithLayout from "@/types/Layout.types"
-import { useEffect, useState } from "react"
 import getProgramById, { ProgramData } from "@/utils/getProgramById"
 import { InscriptionForm } from "@/forms/container/InscriptionForm"
-import Link from "next/link"
-import Button from "@/old-components/Button/Button"
 import cn from "classnames"
-import React from "react"
+import React, { use, useEffect, useState, Fragment } from "react"
 import { useRouter } from "next/router";
-import Image from "@/old-components/Image"
 import WebError from "@/components/sections/WebError";
 import Container from "@/layouts/Container.layout"
-
+import { EmbeddedCheckout, EmbeddedCheckoutProvider } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+import PersonalData from "@/forms/steps/PersonalData"
+import * as Stepper from '@/components/lottus-education/Stepper'
+import { Dialog, Transition } from '@headlessui/react'
 type PageProps = {
   program?: ProgramData | null;
   price: any;
 };
 
+
 const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
-
+  //@ts-ignore
+  const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY?.toString());
   const { program = null, price = {} } = props;
-
-  const flywireAPI = process.env.NEXT_PUBLIC_FLYWIRE_API
-  const flywireAPIKEY = process.env.NEXT_PUBLIC_FLYWIRE_API_KEY
-  const [flywireLink, setFlywireLink] = useState('')
-
-  const priceAmount = price?.discounted_price  || price?.price ;
+  const priceAmount = price?.discounted_price || price?.price;
   const priceString = priceAmount?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })
   const partialityString = price?.partiality_price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })
   const [residence, setResidence] = useState<any>()
@@ -36,21 +33,16 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
   const [isValid, setIsValid] = useState<boolean>(false);
   const [curp, setCurp] = useState<boolean>();
   const [submit, setSubmit] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
   const [isValidCurp, setIsValidCurp] = useState(false);
   const [curpError, setCurpError] = useState(false);
-  const [activePageIndex, setActivePageIndex] = useState(0);
-  const [errorResponse, setErrorResponse] = useState();
+  const [isLoadingPayment, setIsLoadingPayment] = useState(false)
+  const [isSuccessPayment, setIsSuccessPayment] = useState(false)
+
+
   const router = useRouter();
 
-  const setStatus = ({ loading, valid, success }: { loading: boolean, valid: boolean, success: boolean }) => {
-    setIsVisible(!loading && !error)
-    setIsLoading(loading)
+  const setStatus = ({ valid }: { valid: boolean }) => {
     setIsValid(valid)
-    setIsSuccess(success)
   }
   const initialData = {
     name: "",
@@ -63,155 +55,49 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
     residence: "",
     adviser: ""
   }
+  const initialDataPayer = {
+    name: "",
+    email: "",
+    phone: "",
+    address: "",
+  }
+
 
   const [personalData, setPersonalData] = useState(initialData);
+  const [clientSecret, setClientSecret] = useState('');
+  const [activeStep, setActiveStep] = useState<number>(0);
+  const onChangeStep = (step: number) => {
+    setActiveStep(step);
+  }
+
 
   useEffect(() => {
-
-
-    window.addEventListener("message", (event) => {
-      // console.log("event: ",event)
-      // IMPORTANT: Verify the origin of the data to ensure it is from Flywire
-      // The use of indexOf ensures that the origin ends with ".flywire.com"
-      if (event.origin.indexOf(".flywire.com") > 0) {
-        // If the message was sent from Flywire:
-        // Extract the data from the event
-        const result = event.data;
-        // console.log("event data:", result)
-        // console.log('result: ', result);
-
-
-        // Check if the session was successful and confirm_url is present:
-        if (result.type === "recurring" && !!result.planId) {
-          // The session was successful and the confirm_url has been returned
-          // const confirm_url = result.confirm_url;
-
-          // Use the confirm_url to confirm the Checkout Session
-          // not used due to change of solution from tokenization and pay to recurring
-          // console.log("Confirm URL:", confirm_url.url);
-          // const postConfirm = async () => {
-          //   const response = await fetch("/api/confirmFw", {
-          //     method: "POST",
-          //     body: JSON.stringify({ url: confirm_url.url })
-          //   })
-
-          //   const res = await response.json()
-          // };
-
-          // postConfirm()
-
-          setActivePageIndex(2)
-
-        } else if (result.status === "success") {
-          setActivePageIndex(2)
-          // console.log("status", result.status)
+    // TODO: Conect to prod
+    if(price.config){
+    fetch('https://app-cv-webhook-payments-qa.azurewebsites.net/service/api/v1/portal/sessions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(
+        {
+          "session_config": {
+            "return_url": "https://example.com/success",
+            "payment_method_types": JSON.parse(JSON.stringify(price.config["payment_method_types"])),
+            "line_items": [{ "price": price?.config["price_id"], "quantity": 1 }],
+            "mode": price.config["mode"],
+            "ui_mode": "embedded",
+            "allow_promotion_codes": price.config["allow_promotion_codes"],
+            "billing_address_collection": "required",
+            "metadata":{...price?.metadata,"extra_fields": JSON.stringify(personalData)}
+          },
+          "school": "UTC"
         }
-        // Handle failure accordingly
-        // setActivePageIndex(3)
-        else {
-          // console.error("Session unsuccessful or confirm_url missing.");
-        }
-      }
-    });
-  }, [])
-
-  useEffect(() => {
-
-    if (activePageIndex === 1) {
-      const postData = async () => {
-        if (flywireAPI && flywireAPIKEY) {
-          const response = await fetch("/api/generateFwLink", {
-            method: 'POST',
-            body: JSON.stringify({
-              ...price?.config,
-              "payor_id": personalData?.email,
-              "options": {
-                "form": {
-                  "action_button": "save",
-                  "locale": "es-ES"
-                }
-              },
-              "recipient": {
-                "fields": [
-                  {
-                    "id": "program_name",
-                    "value": program?.attributes?.name
-                  },
-                  {
-                    "id": "metadatalottus",
-                    "value": JSON.stringify(price?.metadata)
-                  },
-                  {
-                    "id": "student_first_name",
-                    "value": personalData?.name,
-                    "read_only": true
-                  },
-                  {
-                    "id": "student_middle_name",
-                    "value": personalData?.last_name,
-                    "read_only": true
-                  },
-                  {
-                    "id": "student_last_name",
-                    "value": personalData?.second_last_name,
-                    "read_only": true
-                  },
-                  {
-                    "id": "curp",
-                    "value": curp,
-                    "read_only": true
-                  },
-                  {
-                    "id": "student_email",
-                    "value": personalData?.email,
-                    "read_only": true
-                  },
-                  {
-                    "id": "student_phone",
-                    "value": personalData?.phone,
-                    "read_only": true
-                  },
-                  {
-                    "id": "residence",
-                    "value": personalData?.residence,
-                    "read_only": true
-                  },
-                  {
-                    "id": "assessor_name",
-                    "value": personalData?.adviser,
-                    "read_only": true
-                  },
-                ]
-              },
-              "items": [
-                {
-                  "id": "default",
-                  "amount": Math.round( priceAmount * 100 ),
-                  "description": "My favourite item"
-                }
-              ],
-              "notifications_url": `${process.env.NEXT_PUBLIC_PAYMENT_WEBHOOK}/flywire/webhook`,
-            })
-          });
-          const regExpLink = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
-          const res = await response.json()
-          if (regExpLink.test(res)) {
-            setFlywireLink(await res)
-          } else {
-            setFlywireLink("error")
-          }
-          setIsSuccess(true)
-        }
-      }
-      postData()
-    }
-    if (activePageIndex === 2) {
-      router.push(`/checkout-thank-you`);
-    }
-  }, [activePageIndex])
-  useEffect(() => {
-  }, [flywireLink])
-
+      )
+    })
+      .then((res) => res.json())
+      .then((data) => setClientSecret(data.data.client_secret))
+      .catch((err) => console.error(err));}
+    console.log("price ", price)
+  }, [priceAmount, price]);
 
   return (
     <>
@@ -219,118 +105,155 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
         Checkout
       </Head>
 
-      <ContentFullLayout>
-        <section className="w-full bg-surface-0 z-15 transition-transform shadow-15">
-          <div className="p-6 border-0 border-solid border-surface-200 border-r-2">
-            <div className="w-36 h-9 bg-logo bg-cover bg-center mobile:mx-auto"> </div>
+      <ContentFullLayout classNames="min-h-screen">
+        <section id="Navbar" className={cn("w-full flex align-middle items-center bg-surface-0 z-15 shadow-lg h-fit px-6 py-4")}>
+          <div className="w-36 h-9 bg-logo bg-cover bg-center mx-auto"> </div>
+          <div className="w-full flex items-center justify-center">
+            <div id="steps" className={cn("w-[400px] mobile:p-6 h-fit", { 'hidden': isLoadingPayment && !isSuccessPayment })}>
+            <Stepper.Root direction="horizontal" activeId={activeStep}>
+              <Stepper.Item title="Información del alumno" completed={activeStep > 0} />
+              <Stepper.Item title="Método de pago" completed={activeStep > 1} />
+            </Stepper.Root>
           </div>
+          </div>
+          
         </section>
-        <Container classNames="flex mobile:!px-0 mobile:flex-col tablet:flex-col tablet:!px-0 desktop:gap-30 desktop:mt-12 mobile:mt-6 tablet:mt-6">
-          <div className="desktop:w-1/2">
-            <div className={cn("mobile:w-full", { 'hidden': activePageIndex !== 0 })}>
-              <InscriptionForm
-                submit={submit}
-                setStatus={setStatus}
-                residence={residence}
-                noResidence={noResidence}
-                hasCurp={hasCurp}
-                noCurp={noCurp}
-                setResidence={setResidence}
-                setNoResidence={setNoResidence}
-                setHasCurp={setHasCurp}
-                setNoCurp={setNoCurp}
-                personalData={personalData}
-                setPersonalData={setPersonalData}
-                curp={curp}
-                setCurp={setCurp}
-                isValidCurp={isValidCurp}
-                setIsValidCurp={setIsValidCurp}
-                curpError={curpError}
-                setCurpError={setCurpError}
-              />
-            </div>
-            <div className={cn("mobile:w-full flex justify-center min-h-[512px]", { 'hidden': activePageIndex !== 1 }, { 'w-full': flywireLink === "error" })}>
-              {
-                !flywireLink
-                  ? <section className={cn("bg-surface-0")}>
-                    <div className="w-full h-full bg-surface-0">
-                      <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
-                    </div>
-                  </section>
-                  : flywireLink === "error"
-                    ? <WebError title="Error" message="Error al conectar a flywire" errorCode="400"></WebError>
-                    : <div className=" flex w-[500px] mobile:px-4 min-h-[900px] mobile:min-h-[800px] overflow-hidden overscroll-y-auto ">
-                      <iframe className="mobile:hidden tablet:hidden w-[500px] h-[200%] overflow-hidden overscroll-none -mt-[64px] " src={flywireLink} title="Flywire form"></iframe>
-                      <iframe className="desktop:hidden w-full h-[200%] overflow-hidden overscroll-none -mt-[64px]" src={flywireLink} title="Flywire form"></iframe>
-                    </div>
-              }
-            </div>
+        <div className="flex space-x-0 h-0 w-full">
+          <div className={cn("border-[3px] border-solid w-1/2 h-0", {
+            ['border-primary-500']: activeStep >= 0,
+            ['border-primary-50']: activeStep < 0
+          })}>
           </div>
-          <div className="desktop:w-1/2 ">
-            <div className={cn("flex mobile:w-full mobile:px-6 mobile:mb-7 flex-col mobile:flex-col-reverse ", { "mobile:hidden tablet:hidden": flywireLink })}>
-              <div className="w-full border border-surface-300 rounded-lg p-4">
-                <h3 className="font-headings font-bold text-5.5 leading-6 mb-3">{program?.attributes?.name}</h3>
-                {/* se deja pendiente este badge, ya que cada programa cuenta con varias posibles modalidades y aqui solo podríamos elegir una */}
-                {/* <p className="text-white bg-primary-500 w-23 px-2 py-1 rounded-full text-center my-3">En línea</p> */}
-                <hr className="text-surface-300" />
-                <div className="flex justify-between mt-2">
-                  <p className="font-texts">Opción de pago:</p>
-                  <p className="text-surface-500 font-texts font-normal">{price?.title}</p>
-                </div>
-                {price?.config?.type == "recurring" && <div className="flex justify-between my-1">
-                  <p className="font-texts">Parcialidades:</p>
-                  <p className="text-surface-500 font-texts font-normal">{price?.partialities_number}</p>
-                </div>}
-                {price?.config?.type == "recurring" &&
-                  <div className="flex justify-between mb-2">
-                    <p className="font-texts">Costo total:</p>
-                    <p className="text-surface-500 font-texts font-normal">{priceString} MXN</p>
-                  </div>}
-                <hr className="text-surface-300" />
-                <div className="flex justify-between mt-2">
-                  {
-                    price?.config?.type == "recurring"
-                      ? <>
-                          <p className="font-texts font-bold text-base leading-6"> Parcialidad a pagar</p>
-                          <p className="text-base font-bold">
-                            {partialityString} MXN
-                          </p>
-                        </>
-                      : <>
-                          <p className="font-texts font-bold text-base leading-6"> Total a pagar</p>
-                          <p className="text-base font-bold"> { priceString } MXN </p>
-                        </>
-                    }
-                </div>
-              </div>
-              <div id="btn-inscribir" className="mobile:mb-4">
-                <div className={cn("flex flex-col  my-6", { ["hidden"]: activePageIndex !== 0 })}>
-                <Button
-                  dark
-                  data={{
-                    type: "primary",
-                    title: "Inscribirme ahora",
-                    isExpand: true,
-                    disabled: !isValid
-                  }}
-                  onClick={() => {
-                    setActivePageIndex(activePageIndex + 1)
-                  }}
-                />
-              </div>
-              <div className="flex mt-3">
-                <span className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">
-                  Al llenar tus datos aceptas nuestro <a className="text-3.5 font-texts font-normal text-sm text-surface-800 underline"
+          <div className={cn("border-[3px] border-solid w-1/2 h-0", {
+            ['border-primary-500']: activeStep >= 1,
+            ['border-primary-50']: activeStep < 1
+          })}>
+          </div>
+
+        </div>
+
+        <Container classNames="flex space-x-40 mobile:!px-0 mobile:flex-col tablet:gap-20 tablet:mt-12 desktop:mt-12 h-screen w-full ">
+          {activeStep == 0 && <div className={cn("w-1/2 flex flex-col justify-normal desktop:mx-2 tablet:mx-2 mobile:mb-6 ")}>
+            <InscriptionForm
+              submit={submit}
+              setStatus={setStatus}
+              residence={residence}
+              noResidence={noResidence}
+              hasCurp={hasCurp}
+              noCurp={noCurp}
+              setResidence={setResidence}
+              setNoResidence={setNoResidence}
+              setHasCurp={setHasCurp}
+              setNoCurp={setNoCurp}
+              personalData={personalData}
+              setPersonalData={setPersonalData}
+              curp={curp}
+              setCurp={setCurp}
+              isValidCurp={isValidCurp}
+              setIsValidCurp={setIsValidCurp}
+              curpError={curpError}
+              setCurpError={setCurpError}
+            />
+            {(hasCurp || (noResidence && noCurp)) && <div><button disabled={personalData.email === ''} className={cn("rounded w-fit px-3 py-2  text-surface-0 font-text text-sm font-bold", {
+              ['bg-primary-300']: personalData.email == '',
+              ['bg-primary-500']: personalData.email !== '',
+            })} onClick={() => onChangeStep(1)}>Continuar</button>
+              <div className={cn("flex mt-3 text-wrap")}>
+                <span className={cn("text-xs leading-5 text-surface-900 font-texts font-normal")}>
+                  Al llenar tus datos aceptas nuestro <a className="text-xs font-texts font-normal text-surface-900 underline"
                     href="/terminos-y-condiciones"
                     target="_blank">
                     Aviso de Privacidad
                   </a>
                 </span>
               </div>
-              </div>              
+              <button id='return' className="py-2.5 flex align-middle items-center text-primary-500 " onClick={() => router.back()}>
+                <span className="material-symbols-outlined font-bold !text-base">chevron_left</span>
+                <span className="ml-2 font-texts font-bold text-base">Salir</span>
+              </button>
+            </div>}
+
+          </div>}
+          {activeStep == 1 &&
+            <div className="flex w-full">
+              <EmbeddedCheckoutProvider stripe={stripePromise} options={{ clientSecret: clientSecret }} >
+                <EmbeddedCheckout className="w-full" />
+              </EmbeddedCheckoutProvider>
+            </div>}
+          {!isSuccessPayment && isLoadingPayment &&
+            <div className="h-screen flex flex-col justify-center items-center align-middle">
+              <span className="material-symbols-outlined text-info-300 !text-[80px] align-middle animate-spin">progress_activity</span>
+              <p className="text-center font-text ">¡Ya casi listo! </p>
+              <p className="text-center font-text" >Estamos procesando tu pago</p>
+            </div>
+          }
+          {!isLoadingPayment && activeStep == 0 && <div id="payment-card" className={cn("desktop:w-1/2 flex flex-col", { 'hidden': isSuccessPayment })}>
+            <div className={cn("flex mobile:w-full mobile:px-6 flex-col mobile:flex-col-reverse ")}>
+              <div className="w-full border border-surface-200 rounded p-4">
+                <h3 className="font-headings font-bold text-base leading-6 mb-3">{program?.attributes?.name}</h3>
+                {/* se deja pendiente este badge, ya que cada programa cuenta con varias posibles modalidades y aqui solo podríamos elegir una */}
+                {/* <p className="text-white bg-primary-500 w-23 px-2 py-1 rounded-full text-center my-3">En línea</p> */}
+                <hr className="text-surface-200" />
+                <div className="flex justify-between my-3">
+                  <p className="font-texts font-semibold text-sm">Opción de pago:</p>
+                  <p className="text-surface-600 font-texts font-normal text-sm">{price?.title}</p>
+                </div>
+                {price?.config?.type == "recurring" && <div className="flex justify-between my-1">
+                  <p className="font-texts font-semibold text-sm">Parcialidades:</p>
+                  <p className="text-surface-500 font-texts font-normal text-sm">{price?.partialities_number}</p>
+                </div>}
+                {price?.config?.type == "recurring" &&
+                  <div className="flex justify-between mb-2">
+                    <p className="font-texts font-semibold">Costo total:</p>
+                    <p className="text-surface-600 font-texts font-normal">{priceString} MXN</p>
+                  </div>}
+                <div className="flex items-end justify-end text-success-600 font-text text-sm mb-3">AHORRO {`$ ${0.00}`}</div>
+                <hr className="text-surface-200" />
+                <div className="flex justify-between mt-3">
+                  {
+                    price?.config?.type == "recurring"
+                      ? <>
+                        <p className="font-texts font-bold text-base leading-6"> Parcialidad a pagar:</p>
+                        <p className="text-base font-bold">
+                          {partialityString} MXN
+                        </p>
+                      </>
+                      : <>
+                        <p className="font-texts font-bold text-base leading-6"> Total a pagar: </p>
+                        <p className="text-base font-bold"> {priceString} MXN </p>
+                      </>
+                  }
+                </div>
+              </div>
+            </div>
+            <div id='Pago-seguro' className={cn("flex flex-col space-y-1 my-6 px-6")}>
+            <span className="w-6 h-6 material-symbols-outlined text-lg text-info-700">
+              encrypted
+            </span>
+            <p className="font-text text-base font-bold text-surface-950">Pago 100% seguro</p>
+            <p className="font-texts text-xs font-normal text-surface-950">Tu información está protegida con encriptación avanzada.</p>
+            <div id='img-payment-methods' className="flex h-[25px]">
+              <img src={price?.payment_provider_image?.data?.attributes?.url} className="h-[25px] w-fit mt-3" />
             </div>
           </div>
+          </div>}
+         
+          <div className="flex flex-grow items-end pb-[69px] mt-2 desktop:hidden tablet:hidden">
+            <div id='legal-links' className=" px-6 py-2 flex justify-between w-full items-end">
+              <div><p className="text-xs font-texts font-normal  text-surface-400">
+                Universidad
+              </p></div>
+              <a className="text-xs font-texts font-normal text-surface-400 "
+                href="/terminos-y-condiciones"
+                target="_blank">
+                Aviso de Privacidad
+              </a>
+            </div>
+          </div>
+
+
         </Container>
+
       </ContentFullLayout>
     </>);
 }
