@@ -82,7 +82,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>((
 
     const renderIcon = (icon: string | React.ReactNode) => {
       if (typeof icon === 'string') {
-        return <IconComponent iconName={icon} size="md" />;
+        return <span className='material-symbols-outlined'>{icon}</span>
       }
 
       return React.cloneElement(icon as React.ReactElement, {

@@ -1,11 +1,11 @@
-import { FC, useEffect, useState } from "react"
-import OpenFormInit from "@/forms/fixtures/openform"
-import Input from "@/old-components/Input/Input"
-import configControls from "@/forms/fixtures/controls"
-import { InputInit } from "@/old-components/fixture"
-import cn from "classnames";
+import React, { Children, FC, useEffect, useState, createContext, useContext } from "react"
 
-const PersonalData: FC<any> = ({
+import Input from "@/components/lottus-education/Input"
+import configControls from "@/forms/fixtures/controls"
+
+const PersonalDataContext = createContext<any>(null); 
+
+const Root: FC<any> = ({
   personalData,
   setPersonalData,
   infoControlsTouched,
@@ -13,17 +13,12 @@ const PersonalData: FC<any> = ({
   errorControls,
   setErrorControls,
   validateControl,
-  compact
+  compact,
+  children
 }: any) => {
 
-  // const [ config, setConfig ] = useState<any>( stepOneConfig ? {...stepOneConfig} : {...OpenFormInit.stepone });
-
-  // useEffect(() => {
-  //   setConfig({ ...config, ...data });
-  // }, [data]);
-
-  const handleKeyPress = (e: CustomEvent, control: string) => {
-    const { detail: { value } } = e;
+  const handleKeyPress = (e: any, control: string) => {
+    const value = e.target.value;
     setInfoControlsTouched({ ...infoControlsTouched, [control]: true });
     setPersonalData({ ...personalData, [control]: value });
     setErrorControls({ ...errorControls, [control]: !validateControl(control, value, infoControlsTouched[control]) });
@@ -34,35 +29,96 @@ const PersonalData: FC<any> = ({
     setErrorControls({ ...errorControls, [control]: !validateControl(control, personalData[control], true) && infoControlsTouched[control] });
   }
 
-  const phoneData = {
-    ...InputInit,
-    iconLeft: "call",
-    label: "Celular",
-    alphanumeric: false,
-    alphabetical: false,
-    onlyNumbers: true,
-    maxlength: '10',
+  const contextValue = {
+    personalData,
+    setPersonalData,
+    infoControlsTouched,
+    setInfoControlsTouched,
+    errorControls,
+    setErrorControls,
+    validateControl,
+    compact,
+    handleKeyPress,
+    handleTouchedControl,
   };
 
-  return <>
-
-    <div className="mt-2 flex w-p:flex-col w-p:gap-0 gap-6 font-normal">
-      <div className="grow">
-        <Input errorMessage={configControls.errorMessagesStepOneOpenForm.name} hasError={errorControls.name} eventFocus={() => handleTouchedControl("name")} data={configControls.inputNameOpenFormStepOne} eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "name")} />
-      </div>
-      <div className="grow mobile:mt-3">
-        <Input errorMessage={configControls.errorMessagesStepOneOpenForm.surname} hasError={errorControls.last_name} eventFocus={() => handleTouchedControl("last_name")} data={configControls.inputSurnameOpenFormStepOne} eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "last_name")} />
-      </div>
-    </div>
-    <div className={cn({ "flex w-p:flex-col  w-p:gap-0 gap-6 font-normal": compact == true })}>
-      <div className={cn("mt-2", { "grow mt-5": compact == true })}>
-        <Input errorMessage={configControls.errorMessagesStepOneOpenForm.phone} hasError={errorControls.phone} eventFocus={() => handleTouchedControl("phone")} data={phoneData} eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "phone")} />
-      </div>
-      <div className={cn("mt-2", { "grow mt-5": compact == true })}>
-        <Input errorMessage={configControls.errorMessagesStepOneOpenForm.email} hasError={errorControls.email} eventFocus={() => handleTouchedControl("email")} data={configControls.inputEmailOpenFormStepOne} eventKeyPress={(e: CustomEvent) => handleKeyPress(e, "email")} />
-      </div>
-    </div>
-  </>
+  return (
+    
+    <PersonalDataContext.Provider value={contextValue}>
+      {children}
+    </PersonalDataContext.Provider>
+    )
+  
 }
+Root.displayName = 'PersonalData';
 
-export default PersonalData
+const Name: FC<any> = React.forwardRef<any>(({className=""}:{className?:string},ref) => {
+  const { handleKeyPress, handleTouchedControl, personalData, errorControls } = useContext(PersonalDataContext);
+  return (
+  <Input
+    className={className}
+    ref = {ref}
+    placeholder="Nombre(s)"
+    icon="person"
+    name="name"
+    errorMessage={configControls.errorMessagesStepOneOpenForm.name}
+    hasError={errorControls.name}
+    onFocus={() => handleTouchedControl("name")}
+    onKeyUp={(e: any) => handleKeyPress(e, "name")}
+    onChange={(e: any) => handleKeyPress(e, "name")} />
+  )
+})
+Name.displayName = "PersonalDataName"
+
+const SurName: FC<any> = React.forwardRef<any>(({className=""}:{className?:string},ref) => {
+  const { handleKeyPress, handleTouchedControl, personalData, errorControls } = useContext(PersonalDataContext);
+  return (
+  <Input
+    className={className}
+    ref = {ref}
+    placeholder="Apellidos"
+    icon="person"
+    name="surname"
+    errorMessage={configControls.errorMessagesStepOneOpenForm.surname}
+    hasError={errorControls.last_name}
+    onFocus={() => handleTouchedControl("last_name")}
+    onKeyUp={(e: any) => handleKeyPress(e, "last_name")} />
+
+)})
+SurName.displayName = "PersonalDataSurname"
+
+const Phone: FC<any> = React.forwardRef<any>(({className=""}:{className?:string},ref) => {
+  const { handleKeyPress, handleTouchedControl, personalData, errorControls } = useContext(PersonalDataContext);
+  return (
+  <Input
+    className={className}
+    ref = {ref}
+    placeholder="Celular"
+    icon="call"
+    name="phone"
+    maxLength={10}
+    errorMessage={configControls.errorMessagesStepOneOpenForm.phone}
+    hasError={errorControls.phone}
+    onFocus={() => handleTouchedControl("phone")}
+    onKeyUp={(e: any) => handleKeyPress(e, "phone")} />
+)})
+Phone.displayName = "PersonalDataPhone"
+
+const Email: FC<any> = React.forwardRef<any>(({className=""}:{className?:string},ref) => {
+  const { handleKeyPress, handleTouchedControl, personalData, errorControls } = useContext(PersonalDataContext);
+  return (
+  <Input
+    className={className}
+    ref = {ref}
+    placeholder="Correo Electrónico"
+    icon="mail"
+    name="mail"
+    errorMessage={configControls.errorMessagesStepOneOpenForm.email}
+    hasError={errorControls.email}
+    onFocus={() => handleTouchedControl("email")}
+    onKeyUp={(e: any) => handleKeyPress(e, "email")} />
+
+)})
+Email.displayName = "PersonalDataEmail"
+
+export { Root, PersonalDataContext , Name, SurName, Phone, Email }
