@@ -102,7 +102,7 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
           <section className={cn("p-6 shadow-15 bg-surface-0 relative", { "shadow-none": shadow == false })}>
             {
               isLoading
-                ? <div className="absolute w-full h-full z-10 flex justify-center items-center left-0 top-0 bg-surface-0">
+                ? <div className="absolute w-full h-full z-20 flex justify-center items-center left-0 top-0 bg-surface-0">
                   <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
                 </div>
                 : null
