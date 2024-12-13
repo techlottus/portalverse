@@ -76,10 +76,10 @@ const Root: FC<any> = ({
     setPersonalDataValid({ ...personalDataValid, [control]: validateControl(control, value) && infoControlsTouched[control] });
   };
 
-  const handleTouchedControl = (control: string) => {
+  const handleTouchedControl = (control: string, value:string) => {
     setInfoControlsTouched({ ...infoControlsTouched, [control]: true });
-    setErrorControls({ ...errorControls, [control]: !validateControl(control, personalData[control]) && infoControlsTouched[control] });
-    setPersonalDataValid({ ...personalDataValid, [control]: validateControl(control, personalData[control]) && infoControlsTouched[control] });
+    setErrorControls({ ...errorControls, [control]: !validateControl(control, value) && infoControlsTouched[control] });
+    setPersonalDataValid({ ...personalDataValid, [control]: validateControl(control, value) && infoControlsTouched[control] });
   }
 
   const [personalDataValid, setPersonalDataValid] = useState({
@@ -134,7 +134,7 @@ const Name = React.forwardRef<any>(({className=""}:{className?:string},ref) => {
     name="name"
     errorMessage={configControls.errorMessagesStepOneOpenForm.name}
     hasError={errorControls.name}
-    onFocus={() => handleTouchedControl("name")}
+    onFocus={(e:any) => handleTouchedControl("name",e.target.value)}
     onKeyUp={(e: any) => handleKeyPress(e, "name")}
     onChange={(e: any) => handleKeyPress(e, "name")} />
     {errorControls.name && <Field.Helper>{configControls.errorMessagesStepOneOpenForm.name}</Field.Helper>}
@@ -161,7 +161,7 @@ const SurName = React.forwardRef<any>(({className=""}:{className?:string},ref) =
     name="surname"
     errorMessage={configControls.errorMessagesStepOneOpenForm.surname}
     hasError={errorControls.last_name}
-    onFocus={() => handleTouchedControl("last_name")}
+    onFocus={(e:any) => handleTouchedControl("last_name",e.target.value)}
     onKeyUp={(e: any) => handleKeyPress(e, "last_name")}
     onChange={(e: any) => handleKeyPress(e, "last_name")}
      />
@@ -189,7 +189,7 @@ const Phone = React.forwardRef<any>(({className=""}:{className?:string},ref) => 
     maxLength={10}
     errorMessage={configControls.errorMessagesStepOneOpenForm.phone}
     hasError={errorControls.phone}
-    onFocus={() => handleTouchedControl("phone")}
+    onFocus={(e:any) => handleTouchedControl("phone", e.target.value)}
     onKeyUp={(e: any) => handleKeyPress(e, "phone")} 
     onChange={(e: any) => handleKeyPress(e, "phone")} 
     />
@@ -216,7 +216,7 @@ const Email = React.forwardRef<any>(({className=""}:{className?:string},ref) => 
     name="mail"
     errorMessage={configControls.errorMessagesStepOneOpenForm.email}
     hasError={errorControls.email}
-    onFocus={() => handleTouchedControl("email")}
+    onFocus={(e:any) => handleTouchedControl("email", e.target.value)}
     onKeyUp={(e: any) => handleKeyPress(e, "email")} 
     onChange={(e: any) => handleKeyPress(e, "email")}/>
     {errorControls.email && <Field.Helper>{configControls.errorMessagesStepOneOpenForm.email}</Field.Helper>}
