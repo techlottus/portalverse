@@ -2,7 +2,7 @@
 
 import  cn  from 'classnames';
 import { Label as InternalLabel, LabelProps } from './Label';
-import React, { Children, createContext, useContext } from 'react';
+import React, { createContext, useContext } from 'react';
 import IconComponent from '@/old-components/Icon'; 
 
 type FieldContextProps = {

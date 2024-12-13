@@ -4,7 +4,6 @@ import * as React from 'react';
 import * as SelectPrimitive from '@radix-ui/react-select';
 import * as ScrollArea from '@radix-ui/react-scroll-area';
 import  cn  from 'classnames';
-import IconComponent from '@/old-components/Icon';
 
 const Root = SelectPrimitive.Root;
 
