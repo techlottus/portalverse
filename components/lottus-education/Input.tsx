@@ -124,7 +124,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>((
             }}
             value={value}
             className={cn(
-              'block pt-3.5 w-full text-surface-700 appearance-none focus:outline-none focus:ring-0 peer',
+              'block pt-3.5 w-full text-surface-700 appearance-none focus:outline-none focus:ring-0 peer autofill:bg-primary-0',
               {
                 'bg-surface-50 !text-surface-400 ': props.disabled,
               }

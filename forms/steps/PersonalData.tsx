@@ -1,6 +1,7 @@
-import React, {  FC, createContext, useContext } from "react"
+import React, {  FC, createContext, useContext, useState } from "react"
 import Input from "@/components/lottus-education/Input"
 import configControls from "@/forms/fixtures/controls"
+import * as Field from "@/components/lottus-education/Field"
 
 /**
  * Contexto para manejar los datos personales.
@@ -27,9 +28,27 @@ const usePersonalDataContext = () => {
 };
 
 /** *********************************** Types *********************************
- * TODO Propiedades del componente `<PersonalData.Root>`.
+ *  Propiedades del componente `<PersonalData.Root>`.
  */
-
+type PersonalDataState = {
+    name: string;
+    last_name: string;
+    phone: string;
+    email: string;
+  };
+type ValidationState = {
+    [key: string]: boolean;
+  };
+interface PersonaDataTypes {
+  personalData : PersonalDataState;
+  setPersonalData : React.Dispatch<React.SetStateAction<PersonalDataState>>;
+  infoControlsTouched : ValidationState;
+  setInfoControlsTouched : React.Dispatch<React.SetStateAction<ValidationState>>;
+  errorControls : ValidationState;
+  setErrorControls : React.Dispatch<React.SetStateAction<ValidationState>>;
+  validateControl : (control: string, value: string)=> boolean;
+  children ?: React.ReactNode;
+}
 
 /**
  * Componente principal que proporciona el contexto de datos personales.
@@ -47,19 +66,29 @@ const Root: FC<any> = ({
   setErrorControls,
   validateControl,
   children
-}: any) => {
+}: PersonaDataTypes) => {
 
   const handleKeyPress = (e: any, control: string) => {
     const value = e.target.value;
     setInfoControlsTouched({ ...infoControlsTouched, [control]: true });
     setPersonalData({ ...personalData, [control]: value });
-    setErrorControls({ ...errorControls, [control]: !validateControl(control, value, infoControlsTouched[control]) });
+    setErrorControls({ ...errorControls, [control]: !validateControl(control, value) });
+    setPersonalDataValid({ ...personalDataValid, [control]: validateControl(control, value) && infoControlsTouched[control] });
   };
 
   const handleTouchedControl = (control: string) => {
     setInfoControlsTouched({ ...infoControlsTouched, [control]: true });
-    setErrorControls({ ...errorControls, [control]: !validateControl(control, personalData[control], true) && infoControlsTouched[control] });
+    setErrorControls({ ...errorControls, [control]: !validateControl(control, personalData[control]) && infoControlsTouched[control] });
+    setPersonalDataValid({ ...personalDataValid, [control]: validateControl(control, personalData[control]) && infoControlsTouched[control] });
   }
+
+  const [personalDataValid, setPersonalDataValid] = useState({
+    name: false,
+    last_name: false,
+    phone: false,
+    email: false,
+  })
+
 
   const contextValue = {
     personalData,
@@ -71,6 +100,8 @@ const Root: FC<any> = ({
     validateControl,
     handleKeyPress,
     handleTouchedControl,
+    personalDataValid,
+    setPersonalDataValid
   };
 
   return (
@@ -91,9 +122,11 @@ Root.displayName = 'PersonalData';
  */
 
 const Name = React.forwardRef<any>(({className=""}:{className?:string},ref) => {
-  const { handleKeyPress, handleTouchedControl, personalData, errorControls } = usePersonalDataContext();
+  const { handleKeyPress, handleTouchedControl, personalDataValid, errorControls } = usePersonalDataContext();
   return (
+    <Field.Root hasError={errorControls.name}>
   <Input
+    isValid = {personalDataValid.name}
     className={className}
     ref = {ref}
     placeholder="Nombre(s)"
@@ -104,6 +137,8 @@ const Name = React.forwardRef<any>(({className=""}:{className?:string},ref) => {
     onFocus={() => handleTouchedControl("name")}
     onKeyUp={(e: any) => handleKeyPress(e, "name")}
     onChange={(e: any) => handleKeyPress(e, "name")} />
+    {errorControls.name && <Field.Helper>{configControls.errorMessagesStepOneOpenForm.name}</Field.Helper>}
+    </Field.Root>
   )
 })
 Name.displayName = "PersonalDataName"
@@ -114,9 +149,11 @@ Name.displayName = "PersonalDataName"
  */
 
 const SurName = React.forwardRef<any>(({className=""}:{className?:string},ref) => {
-  const { handleKeyPress, handleTouchedControl, personalData, errorControls } = usePersonalDataContext();
+  const { handleKeyPress, handleTouchedControl, personalDataValid, errorControls } = usePersonalDataContext();
   return (
+    <Field.Root hasError={errorControls.last_name}>
   <Input
+    isValid = {personalDataValid.last_name}
     className={className}
     ref = {ref}
     placeholder="Apellidos"
@@ -125,8 +162,11 @@ const SurName = React.forwardRef<any>(({className=""}:{className?:string},ref) =
     errorMessage={configControls.errorMessagesStepOneOpenForm.surname}
     hasError={errorControls.last_name}
     onFocus={() => handleTouchedControl("last_name")}
-    onKeyUp={(e: any) => handleKeyPress(e, "last_name")} />
-
+    onKeyUp={(e: any) => handleKeyPress(e, "last_name")}
+    onChange={(e: any) => handleKeyPress(e, "last_name")}
+     />
+     {errorControls.last_name && <Field.Helper>{configControls.errorMessagesStepOneOpenForm.surname}</Field.Helper>}
+</Field.Root>
 )})
 SurName.displayName = "PersonalDataSurname"
 
@@ -136,9 +176,11 @@ SurName.displayName = "PersonalDataSurname"
  */
 
 const Phone = React.forwardRef<any>(({className=""}:{className?:string},ref) => {
-  const { handleKeyPress, handleTouchedControl, personalData, errorControls } = usePersonalDataContext();
+  const { handleKeyPress, handleTouchedControl, personalDataValid, errorControls } = usePersonalDataContext();
   return (
-  <Input
+    <Field.Root hasError={errorControls.phone}>
+    <Input
+    isValid = {personalDataValid.phone}
     className={className}
     ref = {ref}
     placeholder="Celular"
@@ -148,7 +190,12 @@ const Phone = React.forwardRef<any>(({className=""}:{className?:string},ref) => 
     errorMessage={configControls.errorMessagesStepOneOpenForm.phone}
     hasError={errorControls.phone}
     onFocus={() => handleTouchedControl("phone")}
-    onKeyUp={(e: any) => handleKeyPress(e, "phone")} />
+    onKeyUp={(e: any) => handleKeyPress(e, "phone")} 
+    onChange={(e: any) => handleKeyPress(e, "phone")} 
+    />
+    {errorControls.phone && <Field.Helper>{configControls.errorMessagesStepOneOpenForm.phone}</Field.Helper>}
+  </Field.Root>
+  
 )})
 Phone.displayName = "PersonalDataPhone"
 
@@ -157,9 +204,11 @@ Phone.displayName = "PersonalDataPhone"
  */
  
 const Email = React.forwardRef<any>(({className=""}:{className?:string},ref) => {
-  const { handleKeyPress, handleTouchedControl, personalData, errorControls } = usePersonalDataContext();
+  const { handleKeyPress, handleTouchedControl, errorControls, personalDataValid } = usePersonalDataContext();
   return (
+    <Field.Root hasError={errorControls.email}>
   <Input
+    isValid = {personalDataValid.email}
     className={className}
     ref = {ref}
     placeholder="Correo Electrónico"
@@ -168,7 +217,10 @@ const Email = React.forwardRef<any>(({className=""}:{className?:string},ref) => 
     errorMessage={configControls.errorMessagesStepOneOpenForm.email}
     hasError={errorControls.email}
     onFocus={() => handleTouchedControl("email")}
-    onKeyUp={(e: any) => handleKeyPress(e, "email")} />
+    onKeyUp={(e: any) => handleKeyPress(e, "email")} 
+    onChange={(e: any) => handleKeyPress(e, "email")}/>
+    {errorControls.email && <Field.Helper>{configControls.errorMessagesStepOneOpenForm.email}</Field.Helper>}
+    </Field.Root>
 
 )})
 Email.displayName = "PersonalDataEmail"
