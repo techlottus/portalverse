@@ -1,8 +1,6 @@
-import React, { createRef, useEffect } from 'react';
+import React from 'react';
 import  {cva}  from 'class-variance-authority';
 import  cn  from 'classnames';
-import IconComponent from '@/old-components/Icon';
-import { isValid } from 'react-datepicker/dist/date_utils';
 
 interface InputProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'placeholder'> {
@@ -82,7 +80,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>((
 
     const renderIcon = (icon: string | React.ReactNode) => {
       if (typeof icon === 'string') {
-        return <IconComponent iconName={icon} size="md" />;
+        return <span className='material-symbols-outlined'>{icon}</span>
       }
 
       return React.cloneElement(icon as React.ReactElement, {
