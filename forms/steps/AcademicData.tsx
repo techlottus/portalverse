@@ -51,12 +51,7 @@ const AcademicData: FC<any> = ({
 
 
   const handleKeyPress = (e: any, control: string) => {
-    const value = e;
-    
-    // console.log('value: ', value);
-    // console.log('errorControls: ', errorControls);
-    // console.log(`errorControls[${control}]: `, errorControls[control]);
-    
+    const value = e;    
     setInfoControlsTouched({ ...infoControlsTouched, [control]: true });
     setAcademicData({ ...academicData, [control]: value });
     setErrorControls({ ...errorControls, [control]: !validateControl(control, value, infoControlsTouched[control]) });
@@ -67,40 +62,28 @@ const AcademicData: FC<any> = ({
     if (control === 'campus') {
       
       const option = optCampuses?.map((option: any) => {
-        // console.log(option);
         option.active = option.value === e
 
         return option
       })
 
-    //   // console.log(option);
     }
     if (control === 'modality') {
       
       const option = optModalities?.map((option: any) => {
-        // console.log(option);
         option.active = option.value === e
 
         return option
       })
-      // console.log(option);
-      
-      // option.active = true
     }
     if (control === 'level') {
       
       const option = optLevels?.map((option: any) => {
-        // console.log(option);
         option.active = option.value === e
 
         return option
       })
-      // console.log(option);
-      
-      // option.active = true
     }
-    // console.log('errorControls: ', errorControls);
-    // console.log(`errorControls[${control}]: `, errorControls[control]);
     
     setInfoControlsTouched({ ...infoControlsTouched, [control]: true });
     setAcademicData({ ...academicData, [control]: e });
@@ -125,12 +108,6 @@ const AcademicData: FC<any> = ({
       </div>
       <div className={cn("flex flex-col", {'hidden': optModalities?.length > 0 && optModalities?.length < 2 })}>
         <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-2 capitalize">Modalidad</p>
-        {/* <Select
-          onClick={(option: CustomEvent) => handleSelect(option, "modality")}
-          options={optModalities || []}
-          data={{ ...SelectInit, textDefault: `Elige una modalidad`, icon: "school" }}
-        /> */}
-          
       <Select.Root onValueChange={(option:any)=>handleSelect(option, "modality")}>
         <Select.Trigger >
         <Select.Value placeholder="Elige una modalidad"  />
@@ -143,12 +120,7 @@ const AcademicData: FC<any> = ({
       </div> 
       <div className={cn("flex flex-col", {'hidden': optLevels?.length > 0 && optLevels?.length < 2 })}>
         <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-2 capitalize">Nivel</p>
-        {/* <Select
-          onClick={(option: CustomEvent) => handleSelect(option, "level")}
-          options={optLevels || []}
-          data={{ ...SelectInit, textDefault: `Elige un nivel`, icon: "", disabled: !academicData.modality }}
-        /> */}
-         <Select.Root onValueChange={(option)=>handleSelect(option, "level")}>
+         <Select.Root onValueChange={(option:any)=>handleSelect(option, "level")}>
         <Select.Trigger >
         <Select.Value placeholder="Elige un nivel"  />
         </Select.Trigger>
@@ -160,12 +132,7 @@ const AcademicData: FC<any> = ({
       </div> 
       <div className="flex flex-col">
         <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-2 capitalize">{campusLabel || config?.campus}</p>
-        {/* <Select
-          onClick={(option: CustomEvent) => handleSelect(option, "campus")}
-          options={optCampuses || []}
-          data={{ ...SelectInit, textDefault: `Elige un ${campusLabel}`, icon: "apartment", disabled: !academicData.level && !academicData.modality }}
-        /> */}
-        <Select.Root onValueChange={(option)=>handleSelect(option, "campus")}>
+        <Select.Root onValueChange={(option:any)=>handleSelect(option, "campus")}>
         <Select.Trigger >
         <Select.Value placeholder={`Elige un ${campusLabel}`}  />
         </Select.Trigger>

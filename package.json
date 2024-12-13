@@ -39,6 +39,7 @@
     "@svgr/webpack": "^6.4.0",
     "@types/editorjs__header": "^2.6.0",
     "axios": "^1.2.2",
+    "class-variance-authority": "^0.7.1",
     "classnames": "^2.3.2",
     "dotenv": "^16.3.1",
     "editorjs-parser": "^1.5.3",
