@@ -1,9 +1,42 @@
-import React, { Children, FC, useEffect, useState, createContext, useContext } from "react"
-
+import React, {  FC, createContext, useContext } from "react"
 import Input from "@/components/lottus-education/Input"
 import configControls from "@/forms/fixtures/controls"
 
+/**
+ * Contexto para manejar los datos personales.
+ * Proporciona acceso a las funciones y estados relacionados con los datos personales en un formulario.
+ */
+
 const PersonalDataContext = createContext<any>(null); 
+
+/**
+ * Hook personalizado para acceder al contexto de datos personales.
+ * Lanza un error si el componente no está envuelto dentro de `<PersonalData.Root>`.
+ * 
+ * @throws {Error} Si se usa fuera de `<PersonalData.Root>`.
+ */
+
+const usePersonalDataContext = () => {
+  const context = useContext(PersonalDataContext);
+  if (context === undefined) {
+    throw new Error(
+      'This component must be used within a <PersonalData.Root> component'
+    );
+  }
+  return context;
+};
+
+/** *********************************** Types *********************************
+ * TODO Propiedades del componente `<PersonalData.Root>`.
+ */
+
+
+/**
+ * Componente principal que proporciona el contexto de datos personales.
+ * 
+ * @param {PersonalDataProps} props Propiedades del componente.
+ * @returns {JSX.Element} Proveedor del contexto con los elementos hijos.
+ */
 
 const Root: FC<any> = ({
   personalData,
@@ -13,7 +46,6 @@ const Root: FC<any> = ({
   errorControls,
   setErrorControls,
   validateControl,
-  compact,
   children
 }: any) => {
 
@@ -37,7 +69,6 @@ const Root: FC<any> = ({
     errorControls,
     setErrorControls,
     validateControl,
-    compact,
     handleKeyPress,
     handleTouchedControl,
   };
@@ -52,8 +83,15 @@ const Root: FC<any> = ({
 }
 Root.displayName = 'PersonalData';
 
-const Name: FC<any> = React.forwardRef<any>(({className=""}:{className?:string},ref) => {
-  const { handleKeyPress, handleTouchedControl, personalData, errorControls } = useContext(PersonalDataContext);
+/**
+ * Componente para el campo de nombre.
+ * 
+ * @param {string} className Clases CSS adicionales para el componente.
+ * @returns {JSX.Element} Input configurado para el nombre.
+ */
+
+const Name = React.forwardRef<any>(({className=""}:{className?:string},ref) => {
+  const { handleKeyPress, handleTouchedControl, personalData, errorControls } = usePersonalDataContext();
   return (
   <Input
     className={className}
@@ -70,8 +108,13 @@ const Name: FC<any> = React.forwardRef<any>(({className=""}:{className?:string},
 })
 Name.displayName = "PersonalDataName"
 
-const SurName: FC<any> = React.forwardRef<any>(({className=""}:{className?:string},ref) => {
-  const { handleKeyPress, handleTouchedControl, personalData, errorControls } = useContext(PersonalDataContext);
+/**
+ * Componente para el campo de apellidos.
+ * Similar a Name, pero ajustado para apellidos.
+ */
+
+const SurName = React.forwardRef<any>(({className=""}:{className?:string},ref) => {
+  const { handleKeyPress, handleTouchedControl, personalData, errorControls } = usePersonalDataContext();
   return (
   <Input
     className={className}
@@ -87,8 +130,13 @@ const SurName: FC<any> = React.forwardRef<any>(({className=""}:{className?:strin
 )})
 SurName.displayName = "PersonalDataSurname"
 
-const Phone: FC<any> = React.forwardRef<any>(({className=""}:{className?:string},ref) => {
-  const { handleKeyPress, handleTouchedControl, personalData, errorControls } = useContext(PersonalDataContext);
+/**
+ * Componente para el campo de teléfono.
+ * Incluye un límite de caracteres (10 dígitos).
+ */
+
+const Phone = React.forwardRef<any>(({className=""}:{className?:string},ref) => {
+  const { handleKeyPress, handleTouchedControl, personalData, errorControls } = usePersonalDataContext();
   return (
   <Input
     className={className}
@@ -104,8 +152,12 @@ const Phone: FC<any> = React.forwardRef<any>(({className=""}:{className?:string}
 )})
 Phone.displayName = "PersonalDataPhone"
 
-const Email: FC<any> = React.forwardRef<any>(({className=""}:{className?:string},ref) => {
-  const { handleKeyPress, handleTouchedControl, personalData, errorControls } = useContext(PersonalDataContext);
+/**
+ * Componente para el campo de correo electrónico.
+ */
+ 
+const Email = React.forwardRef<any>(({className=""}:{className?:string},ref) => {
+  const { handleKeyPress, handleTouchedControl, personalData, errorControls } = usePersonalDataContext();
   return (
   <Input
     className={className}
