@@ -94,7 +94,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>((
           inputVariants({ hasError }),
           {
             '!border-surface-100 hover:border-surface-100 !text-surface-200': props.disabled,
-            '!border-success-500':props.isValid && !props.disabled
+            '!border-success-500 focus:border-info-500':props.isValid && !props.disabled
           },
           className
         )}
@@ -137,7 +137,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>((
             htmlFor={props.id}
             className={cn(labelVariants({ hasError }), {
               '!text-surface-400': props.disabled,
-              '!text-success-500': props.isValid && !props.disabled,
+              '!text-success-500 focus:!text-surface-900': props.isValid && !props.disabled,
             })}
           >
             {placeholder} {props.required && <span>*</span>}
@@ -147,7 +147,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>((
           <div
             className={cn(iconVariants({ hasError }), {
               'text-surface-300': props.disabled,
-              'text-success-500': props.isValid,
+              'text-success-500 focus:text-surface-900': props.isValid,
             })}
           >
             {renderIcon(endIcon)}
