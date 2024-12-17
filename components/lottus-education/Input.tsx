@@ -37,7 +37,7 @@ const inputVariants = cva(
 );
 
 const labelVariants = cva(
-  'absolute text-base duration-300 transform -translate-y-2.5 scale-75 top-2 z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-2.5',
+  'absolute text-base cursor-not-allowed pointer-events-none duration-300 transform -translate-y-2.5 scale-75 top-2 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-2.5 focus:scale-75 focus:-translate-y-2.5',
   {
     variants: {
       hasError: {
