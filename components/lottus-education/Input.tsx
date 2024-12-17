@@ -20,8 +20,8 @@ const inputVariants = cva(
       hasError: {
         false: [
           'border-surface-400',
-          'hover:border-surface-900',
-          'has-[input:focus]:border-surface-800 has-[input:focus]:ring-2 has-[input:focus]:ring-info-200',
+          'hover:border-info-500',
+          'has-[input:focus]:border-info-500 has-[input:focus]:ring-2 has-[input:focus]:ring-info-200',
         ],
         true: [
           'border-error-500',
