@@ -14,7 +14,7 @@ interface InputProps
 }
 
 const inputVariants = cva(
-  'flex items-center gap-2 px-3 py-1 rounded w-full border overflow-hidden bg-surface-50 transition-colors h-10',
+  'flex items-center gap-2 px-3 py-1 rounded w-full border overflow-hidden bg-surface-0 transition-colors h-10',
   {
     variants: {
       hasError: {
@@ -124,7 +124,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>((
             }}
             value={value}
             className={cn(
-              'block pt-3.5 w-full text-surface-700 appearance-none focus:outline-none focus:ring-0 peer autofill:bg-primary-0',
+              'block pt-3.5 w-full text-surface-700 appearance-none focus:outline-none focus:ring-0 peer',
               {
                 'bg-surface-50 !text-surface-400 ': props.disabled,
               }
