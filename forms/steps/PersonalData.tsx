@@ -132,6 +132,7 @@ const Name = React.forwardRef<any>(({className=""}:{className?:string},ref) => {
     placeholder="Nombre(s)"
     icon="person"
     name="name"
+    id="name"
     errorMessage={configControls.errorMessagesStepOneOpenForm.name}
     hasError={errorControls.name}
     onFocus={(e:any) => handleTouchedControl("name",e.target.value)}
@@ -159,6 +160,7 @@ const SurName = React.forwardRef<any>(({className=""}:{className?:string},ref) =
     placeholder="Apellidos"
     icon="person"
     name="surname"
+    id="surname"
     errorMessage={configControls.errorMessagesStepOneOpenForm.surname}
     hasError={errorControls.last_name}
     onFocus={(e:any) => handleTouchedControl("last_name",e.target.value)}
@@ -186,6 +188,7 @@ const Phone = React.forwardRef<any>(({className=""}:{className?:string},ref) => 
     placeholder="Celular"
     icon="call"
     name="phone"
+    id="phone"
     maxLength={10}
     errorMessage={configControls.errorMessagesStepOneOpenForm.phone}
     hasError={errorControls.phone}
@@ -214,6 +217,7 @@ const Email = React.forwardRef<any>(({className=""}:{className?:string},ref) => 
     placeholder="Correo Electrónico"
     icon="mail"
     name="mail"
+    id="mail"
     errorMessage={configControls.errorMessagesStepOneOpenForm.email}
     hasError={errorControls.email}
     onFocus={(e:any) => handleTouchedControl("email", e.target.value)}
