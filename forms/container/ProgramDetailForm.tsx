@@ -531,7 +531,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       setErrorControls={setPersonalDataErrors}
       validateControl={validatePersonalDataControl}
     >
-      <div className="mt-2 flex w-p:flex-col w-p:gap-0 gap-6 font-normal">
+      <div className="mt-3 flex w-p:flex-col w-p:gap-0 gap-3 font-normal">
         <div className="grow">
           <PersonalData.Name />
         </div>
@@ -540,10 +540,10 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         </div>
       </div>
       <div>
-        <div className={cn("mt-2" )}>
+        <div className={cn("mt-3" )}>
           <PersonalData.Phone />
         </div>
-        <div className={cn("mt-2")}>
+        <div className={cn("mt-3")}>
           <PersonalData.Email />
         </div>
       </div>
