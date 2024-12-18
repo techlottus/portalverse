@@ -68,8 +68,7 @@ const Root: FC<any> = ({
   children
 }: PersonaDataTypes) => {
 
-  const handleKeyPress = (e: any, control: string) => {
-    const value = e.target.value;
+  const handleKeyPress = (value: any, control: string) => {    
     setInfoControlsTouched({ ...infoControlsTouched, [control]: true });
     setPersonalData({ ...personalData, [control]: value });
     setErrorControls({ ...errorControls, [control]: !validateControl(control, value) });
@@ -123,6 +122,7 @@ Root.displayName = 'PersonalData';
 
 const Name = React.forwardRef<any>(({className=""}:{className?:string},ref) => {
   const { handleKeyPress, handleTouchedControl, personalDataValid, errorControls } = usePersonalDataContext();
+
   return (
     <Field.Root hasError={errorControls.name}>
   <Input
@@ -136,9 +136,11 @@ const Name = React.forwardRef<any>(({className=""}:{className?:string},ref) => {
     errorMessage={configControls.errorMessagesStepOneOpenForm.name}
     hasError={errorControls.name}
     onFocus={(e:any) => handleTouchedControl("name",e.target.value)}
-    onKeyUp={(e: any) => handleKeyPress(e, "name")}
-    onChange={(e: any) => handleKeyPress(e, "name")}
-    onBlur={(e: any) => handleKeyPress(e, "name")}
+    onKeyUp={(e: any) => handleKeyPress(e.target.value, "name")}
+    onChange={(e: any) => {
+      handleKeyPress(e.target.value, "name")
+    }}
+    onBlur={(e: any) => handleKeyPress(e.target.value, "name")}
      />
     {errorControls.name && <Field.Helper>{configControls.errorMessagesStepOneOpenForm.name}</Field.Helper>}
     </Field.Root>
@@ -166,9 +168,9 @@ const SurName = React.forwardRef<any>(({className=""}:{className?:string},ref) =
     errorMessage={configControls.errorMessagesStepOneOpenForm.surname}
     hasError={errorControls.last_name}
     onFocus={(e:any) => handleTouchedControl("last_name",e.target.value)}
-    onKeyUp={(e: any) => handleKeyPress(e, "last_name")}
-    onChange={(e: any) => handleKeyPress(e, "last_name")}
-    onBlur={(e: any) => handleKeyPress(e, "last_name")}
+    onKeyUp={(e: any) => handleKeyPress(e.target.value, "last_name")}
+    onChange={(e: any) => handleKeyPress(e.target.value, "last_name")}
+    onBlur={(e: any) => handleKeyPress(e.target.value, "last_name")}
      />
      {errorControls.last_name && <Field.Helper>{configControls.errorMessagesStepOneOpenForm.surname}</Field.Helper>}
 </Field.Root>
@@ -182,6 +184,16 @@ SurName.displayName = "PersonalDataSurname"
 
 const Phone = React.forwardRef<any>(({className=""}:{className?:string},ref) => {
   const { handleKeyPress, handleTouchedControl, personalDataValid, errorControls } = usePersonalDataContext();
+  const [phone, setPhone] = useState("")
+  const handleInputChange = (e:any) => {
+    // Remover caracteres no numéricos
+    let value = e.target.value.replace(/[^0-9+]/g, '');
+    if (value.startsWith('+')) {
+      value = value.slice(3);
+    }
+    value = value.replace(/\D/g, '').slice(0, 10);
+    setPhone(value);
+  };
   return (
     <Field.Root hasError={errorControls.phone}>
     <Input
@@ -189,17 +201,20 @@ const Phone = React.forwardRef<any>(({className=""}:{className?:string},ref) => 
     className={className}
     ref = {ref}
     placeholder="Celular"
+    value={phone}
     name="phone"
     id="phone"
     required
-    maxLength={10}
+    maxLength={13}
     pattern="^\+?(\d{1,3})?[-.\s]?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$"
     errorMessage={configControls.errorMessagesStepOneOpenForm.phone}
     hasError={errorControls.phone}
-    onFocus={(e:any) => handleTouchedControl("phone", e.target.value)}
-    onKeyUp={(e: any) => handleKeyPress(e, "phone")} 
-    onChange={(e: any) => handleKeyPress(e, "phone")} 
-    onBlur={(e: any) => handleKeyPress(e, "phone")} 
+    onFocus={() => handleTouchedControl("phone", phone)}
+    onKeyUp={() => handleKeyPress(phone, "phone")} 
+    onChange={(e: any) =>{ 
+      handleInputChange(e)
+      handleKeyPress(phone, "phone")}} 
+    onBlur={(e: any) => handleKeyPress(phone, "phone")} 
     />
     {errorControls.phone && <Field.Helper>{configControls.errorMessagesStepOneOpenForm.phone}</Field.Helper>}
   </Field.Root>
@@ -226,9 +241,9 @@ const Email = React.forwardRef<any>(({className=""}:{className?:string},ref) => 
     errorMessage={configControls.errorMessagesStepOneOpenForm.email}
     hasError={errorControls.email}
     onFocus={(e:any) => handleTouchedControl("email", e.target.value)}
-    onKeyUp={(e: any) => handleKeyPress(e, "email")} 
-    onChange={(e: any) => handleKeyPress(e, "email")}
-    onBlur={(e: any) => handleKeyPress(e, "email")}/>
+    onKeyUp={(e: any) => handleKeyPress(e.target.value, "email")} 
+    onChange={(e: any) => handleKeyPress(e.target.value, "email")}
+    onBlur={(e: any) => handleKeyPress(e.target.value, "email")}/>
     {errorControls.email && <Field.Helper>{configControls.errorMessagesStepOneOpenForm.email}</Field.Helper>}
     </Field.Root>
 
