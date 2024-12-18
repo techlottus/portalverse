@@ -499,7 +499,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         {
           selectedModalityName !== "a tu ritmo" ?
             <div className="col-span-5 mb-6 w-p:col-span-2 w-p:order-1 w-t:hidden w-p:hidden">
-              <div className="w-p:-mt-56 -mt-20 sticky top-32 border">
+              <div className="w-p:-mt-56 -mt-20 sticky top-32">
                 <div className="mt-16 mb-8">
                   {
                     !!SFprogram && <ContainerForm
