@@ -94,7 +94,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>((
           inputVariants({ hasError }),
           {
             '!border-surface-100 hover:border-surface-100 !text-surface-200': props.disabled,
-            '!border-success-500 focus:!border-info-500':props.isValid && !props.disabled
+            'border-success-500 focus:border-info-500':props.isValid && !props.disabled
           },
           className
         )}
