@@ -14,18 +14,15 @@ interface InputProps
 }
 
 const inputVariants = cva(
-  'flex items-center gap-2 px-3 py-1 rounded w-full border overflow-hidden bg-surface-0 transition-colors h-10',
+  ' flex items-center gap-2 px-3 py-1 rounded w-full border overflow-hidden bg-surface-0 transition-colors h-10 has-[input:focus]:border-info-500 has-[input:focus]:ring-2 has-[input:focus]:ring-info-200 hover:border-info-500 ',
   {
     variants: {
       hasError: {
         false: [
           'border-surface-400',
-          'hover:border-info-500',
-          'has-[input:focus]:border-info-500 has-[input:focus]:ring-2 has-[input:focus]:ring-info-200',
         ],
         true: [
-          'border-error-500',
-          'has-[:focus]:border-info-500 has-[:focus]:ring-2 has-[:focus]:ring-info-50',
+          'border-error-500 focus:border-info-500',
           'has-[input:invalid]:border-error-500',
         ],
       },
@@ -37,12 +34,12 @@ const inputVariants = cva(
 );
 
 const labelVariants = cva(
-  'absolute text-base font-texts font-normal cursor-not-allowed pointer-events-none duration-300 transform -translate-y-2.5 scale-75 top-2 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-2.5 focus:scale-75 focus:-translate-y-2.5',
+  'absolute text-base font-texts font-normal cursor-not-allowed pointer-events-none duration-300 transform -translate-y-2.5 scale-75 top-2 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-2.5 focus:scale-75 focus:-translate-y-2.5 peer-focus:text-surface-900',
   {
     variants: {
       hasError: {
         false: ['text-surface-900'],
-        true: ['text-error-500'],
+        true: ['text-error-500 peer-focus:text-surface-900'],
       },
     },
     defaultVariants: {
@@ -94,7 +91,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>((
           inputVariants({ hasError }),
           {
             '!border-surface-100 hover:border-surface-100 !text-surface-200': props.disabled,
-            'border-success-500 focus:border-info-500':props.isValid && !props.disabled
+            'border-success-500 ':props.isValid && !props.disabled
           },
           className
         )}
