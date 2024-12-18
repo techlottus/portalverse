@@ -137,10 +137,10 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>((
             htmlFor={props.id}
             className={cn(labelVariants({ hasError }), {
               '!text-surface-400': props.disabled,
-              '!text-success-500 focus:!text-surface-900': props.isValid && !props.disabled,
+              '!text-success-500 peer-focus:!text-surface-900': props.isValid && !props.disabled,
             })}
           >
-            {placeholder} {props.required && <span>*</span>}
+            {placeholder} {props.required && <span className='font-texts font-normal'>*</span>}
           </label>
         </div>
         {endIcon && (
