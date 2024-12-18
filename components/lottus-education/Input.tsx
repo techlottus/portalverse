@@ -25,7 +25,7 @@ const inputVariants = cva(
         ],
         true: [
           'border-error-500',
-          'has-[:focus]:border-error-500 has-[:focus]:ring-2 has-[:focus]:ring-error-100',
+          'has-[:focus]:border-info-500 has-[:focus]:ring-2 has-[:focus]:ring-info-50',
           'has-[input:invalid]:border-error-500',
         ],
       },
