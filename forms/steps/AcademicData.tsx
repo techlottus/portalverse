@@ -118,7 +118,7 @@ const AcademicData: FC<any> = ({
       </Select.Root>
         <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> 
       </div> 
-      <div className={cn("flex flex-col mb-2", {'hidden': optLevels?.length > 0 && optLevels?.length < 2 })}>
+      <div className={cn("flex flex-col mb-2 ", {'hidden': optLevels?.length > 0 && optLevels?.length < 2 })}>
         {/* <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-3 mb-2 capitalize">Nivel</p> */}
          <Select.Root onValueChange={(option:any)=>handleSelect(option, "level")}>
         <Select.Trigger >

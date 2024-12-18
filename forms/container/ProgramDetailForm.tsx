@@ -549,7 +549,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       </div>
     </PersonalData.Root>
 
-    <AcademicData
+    <AcademicData className="mt-3"
       academicData={academicData}
       setAcademicData={setAcademicData}
       infoControlsTouched={academicDataTouched}
