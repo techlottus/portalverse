@@ -37,7 +37,7 @@ const inputVariants = cva(
 );
 
 const labelVariants = cva(
-  'absolute text-base cursor-not-allowed pointer-events-none duration-300 transform -translate-y-2.5 scale-75 top-2 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-2.5 focus:scale-75 focus:-translate-y-2.5',
+  'absolute text-base font-texts font-normal cursor-not-allowed pointer-events-none duration-300 transform -translate-y-2.5 scale-75 top-2 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-2.5 focus:scale-75 focus:-translate-y-2.5',
   {
     variants: {
       hasError: {
@@ -124,7 +124,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>((
             }}
             value={value}
             className={cn(
-              'block pt-3.5 w-full text-surface-700 appearance-none focus:outline-none focus:ring-0 peer',
+              'block pt-3.5 w-full text-surface-700 font-texts font-normal appearance-none focus:outline-none focus:ring-0 peer',
               {
                 'bg-surface-50 !text-surface-400 ': props.disabled,
               }

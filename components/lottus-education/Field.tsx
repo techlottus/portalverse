@@ -73,7 +73,7 @@ const Helper = ({ className, children }: {className?:string, children?: React.Re
   const context = useFieldContext();
   return (
     <div
-      className={cn('text-sm px-2', className, {
+      className={cn('text-sm px-2 font-texts font-normal', className, {
         'text-error-600': context.hasError,
       })}
     >
