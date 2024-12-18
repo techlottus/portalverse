@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import configControls from "@/forms/fixtures/controls"
-import PersonalData from "@/forms/steps/PersonalData"
+import PersonalData from "@/forms/steps/PersonalDataTemplate"
 import DentalAppointment from "@/forms/steps/DentalAppointment"
 import axios from "axios";
 
