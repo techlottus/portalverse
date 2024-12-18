@@ -137,7 +137,9 @@ const Name = React.forwardRef<any>(({className=""}:{className?:string},ref) => {
     hasError={errorControls.name}
     onFocus={(e:any) => handleTouchedControl("name",e.target.value)}
     onKeyUp={(e: any) => handleKeyPress(e, "name")}
-    onChange={(e: any) => handleKeyPress(e, "name")} />
+    onChange={(e: any) => handleKeyPress(e, "name")}
+    onBlur={(e: any) => handleKeyPress(e, "name")}
+     />
     {errorControls.name && <Field.Helper>{configControls.errorMessagesStepOneOpenForm.name}</Field.Helper>}
     </Field.Root>
   )
@@ -166,6 +168,7 @@ const SurName = React.forwardRef<any>(({className=""}:{className?:string},ref) =
     onFocus={(e:any) => handleTouchedControl("last_name",e.target.value)}
     onKeyUp={(e: any) => handleKeyPress(e, "last_name")}
     onChange={(e: any) => handleKeyPress(e, "last_name")}
+    onBlur={(e: any) => handleKeyPress(e, "last_name")}
      />
      {errorControls.last_name && <Field.Helper>{configControls.errorMessagesStepOneOpenForm.surname}</Field.Helper>}
 </Field.Root>
@@ -195,6 +198,7 @@ const Phone = React.forwardRef<any>(({className=""}:{className?:string},ref) => 
     onFocus={(e:any) => handleTouchedControl("phone", e.target.value)}
     onKeyUp={(e: any) => handleKeyPress(e, "phone")} 
     onChange={(e: any) => handleKeyPress(e, "phone")} 
+    onBlur={(e: any) => handleKeyPress(e, "phone")} 
     />
     {errorControls.phone && <Field.Helper>{configControls.errorMessagesStepOneOpenForm.phone}</Field.Helper>}
   </Field.Root>
@@ -222,7 +226,8 @@ const Email = React.forwardRef<any>(({className=""}:{className?:string},ref) => 
     hasError={errorControls.email}
     onFocus={(e:any) => handleTouchedControl("email", e.target.value)}
     onKeyUp={(e: any) => handleKeyPress(e, "email")} 
-    onChange={(e: any) => handleKeyPress(e, "email")}/>
+    onChange={(e: any) => handleKeyPress(e, "email")}
+    onBlur={(e: any) => handleKeyPress(e, "email")}/>
     {errorControls.email && <Field.Helper>{configControls.errorMessagesStepOneOpenForm.email}</Field.Helper>}
     </Field.Root>
 
