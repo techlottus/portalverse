@@ -23,7 +23,6 @@ const inputVariants = cva(
         ],
         true: [
           'border-error-500 focus:border-info-500',
-          'has-[input:invalid]:border-error-500',
         ],
       },
     },
