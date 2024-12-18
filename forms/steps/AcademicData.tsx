@@ -106,8 +106,8 @@ const AcademicData: FC<any> = ({
           value={academicData.program}
         />
       </div>
-      <div className={cn("flex flex-col", {'hidden': optModalities?.length > 0 && optModalities?.length < 2 })}>
-        <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-3 mb-2 capitalize">Modalidad</p>
+      <div className={cn("flex flex-col space-y-2 mt-3", {'hidden': optModalities?.length > 0 && optModalities?.length < 2 })}>
+        {/* <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-3 mb-2 capitalize">Modalidad</p> */}
       <Select.Root onValueChange={(option:any)=>handleSelect(option, "modality")}>
         <Select.Trigger >
         <Select.Value placeholder="Elige una modalidad"  />
@@ -119,7 +119,7 @@ const AcademicData: FC<any> = ({
         <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> 
       </div> 
       <div className={cn("flex flex-col", {'hidden': optLevels?.length > 0 && optLevels?.length < 2 })}>
-        <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-3 mb-2 capitalize">Nivel</p>
+        {/* <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-3 mb-2 capitalize">Nivel</p> */}
          <Select.Root onValueChange={(option:any)=>handleSelect(option, "level")}>
         <Select.Trigger >
         <Select.Value placeholder="Elige un nivel"  />
@@ -131,7 +131,7 @@ const AcademicData: FC<any> = ({
         <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.level })}>{configControls.errorMessagesStepTwoOpenForm.level}</p>
       </div> 
       <div className="flex flex-col">
-        <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-3 mb-2 capitalize">{campusLabel || config?.campus}</p>
+        {/* <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-3 mb-2 capitalize">{campusLabel || config?.campus}</p> */}
         <Select.Root onValueChange={(option:any)=>handleSelect(option, "campus")}>
         <Select.Trigger >
         <Select.Value placeholder={`Elige un ${campusLabel}`}  />
