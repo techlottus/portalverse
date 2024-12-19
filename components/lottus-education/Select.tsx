@@ -4,6 +4,26 @@ import * as React from 'react';
 import * as SelectPrimitive from '@radix-ui/react-select';
 import * as ScrollArea from '@radix-ui/react-scroll-area';
 import  cn  from 'classnames';
+import  {cva}  from 'class-variance-authority';
+
+const selectVariants = cva(
+  '',
+  {
+    variants: {
+      hasError: {
+        false: [
+          'border-surface-400',
+        ],
+        true: [
+          'border-error-500 focus:border-info-500',
+        ],
+      },
+    },
+    defaultVariants: {
+      hasError: false,
+    },
+  }
+);
 
 const Root = SelectPrimitive.Root;
 
@@ -19,6 +39,7 @@ const Value = React.forwardRef<
           <span className="hidden group-aria-[required=true]:block font-normal font-texts">*</span>
         </p>
       }
+      
       {...props}
       ref={ref}
     />
