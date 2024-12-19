@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import PersonalData from "@/forms/steps/PersonalData";
+import PersonalData from "@/forms/steps/PersonalDataTemplate";
 import configControls from "@/forms/fixtures/controls"
 import axios from "axios";
 import { getTokenForms } from "@/utils/getTokenForms"
