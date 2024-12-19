@@ -48,7 +48,7 @@ const AcademicData: FC<any> = ({
   useEffect(() => {
     setOptCampuses(campuses);
   }, [campuses]);
-
+  useEffect(()=> console.log("academicData: ", academicData), [academicData])
 
   const handleKeyPress = (e: any, control: string) => {
     const value = e;    
@@ -56,40 +56,39 @@ const AcademicData: FC<any> = ({
     setAcademicData({ ...academicData, [control]: value });
     setErrorControls({ ...errorControls, [control]: !validateControl(control, value, infoControlsTouched[control]) });
   };
+
   const handleSelect = (e: any, control: string) => {
     
      console.log("handleselect:",e, control)
-    // if (control === 'campus') {
+    if (control === 'campus') {
       
-    //   const option = optCampuses?.map((option: any) => {
-    //     option.active = option.value === e
+      const option = optCampuses?.map((option: any) => {
+        option.active = option.value === e
 
-    //     return option
-    //   })
+        return option
+      })
 
-    // }
-    // if (control === 'modality') {
+    }
+    if (control === 'modality') {
       
-    //   const option = optModalities?.map((option: any) => {
-    //     option.active = option.value === e
+      const option = optModalities?.map((option: any) => {
+        option.active = option.value === e
 
-    //     return option
-    //   })
-    // }
-    // if (control === 'level') {
+        return option
+      })
+    }
+    if (control === 'level') {
       
-    //   const option = optLevels?.map((option: any) => {
-    //     option.active = option.value === e
+      const option = optLevels?.map((option: any) => {
+        option.active = option.value === e
 
-    //     return option
-    //   })
-    // }
+        return option
+      })
+    }
+    if(e !== academicData[control]){
+      setAcademicData({ ...academicData, [control]: e });
+    }
     
-    setInfoControlsTouched({ ...infoControlsTouched, [control]: true });
-    setAcademicData({ ...academicData, [control]: e });
-    console.log("academic: " ,academicData)
-
-    setErrorControls({ ...errorControls, [control]: !validateControl(control, e, infoControlsTouched[control]) });
   };
 
   const handleTouchedControl = (control: string) => {
@@ -110,36 +109,36 @@ const AcademicData: FC<any> = ({
       </div>
       <div className={cn("flex flex-col mt-3", {'hidden': optModalities?.length > 0 && optModalities?.length < 2 })}>
         {/* <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-3 mb-2 capitalize">Modalidad</p> */}
-      <Select.Root onValueChange={(option:any)=>handleSelect(option, "modality")} value={academicData?.modality}>
-        <Select.Trigger >
+      <Select.Root onValueChange={(option:any)=>handleSelect(option, "modality")} value={academicData?.modality }>
+        <Select.Trigger value={academicData?.modality}>
         <Select.Value placeholder="Elige una modalidad"  />
         </Select.Trigger>
         <Select.Content>
-          {optModalities?.map((opt:any,i:number)=>( <Select.Item key={i} value={opt?.value} >{opt?.text}</Select.Item>))}             
+          {optModalities?.map((opt:any,i:number)=>( <Select.Item onClick={()=>handleTouchedControl("modality")}key={i} value={opt?.value} >{opt?.text}</Select.Item>))}             
         </Select.Content>
       </Select.Root>
         <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> 
       </div> 
       <div className={cn("flex flex-col mt-3 ")}>
         {/* <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-3 mb-2 capitalize">Nivel</p> */}
-         <Select.Root onValueChange={(option:any)=>handleSelect(option, "level")} value={academicData?.level}>
-        <Select.Trigger  >
+         <Select.Root onValueChange={(option:any)=>handleSelect(option, "level")} value={academicData?.level } disabled={!academicData.modality} >
+        <Select.Trigger value={academicData?.level } >
         <Select.Value placeholder="Elige un nivel"  />
         </Select.Trigger>
         <Select.Content>
-          {optLevels?.map((opt:any,i:number)=>( <Select.Item key={i} value={opt?.value}  >{opt?.text}</Select.Item>))}             
+          {optLevels?.map((opt:any,i:number)=>( <Select.Item onClick={()=>handleTouchedControl("level")}key={i} value={opt?.value}  >{opt?.text}</Select.Item>))}             
         </Select.Content>
       </Select.Root>
         <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.level })}>{configControls.errorMessagesStepTwoOpenForm.level}</p>
       </div> 
       <div className="flex flex-col mt-3">
         {/* <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-3 mb-2 capitalize">{campusLabel || config?.campus}</p> */}
-        <Select.Root onValueChange={(option:any)=>handleSelect(option, "campus")} value={academicData?.campus}>
-        <Select.Trigger >
+        <Select.Root onValueChange={(option:any)=>handleSelect(option, "campus")} value={academicData?.campus } disabled={!academicData.level}>
+        <Select.Trigger value={academicData?.campus } >
         <Select.Value placeholder={`Elige un ${campusLabel}`}  />
         </Select.Trigger>
         <Select.Content>
-          {optCampuses?.map((opt:any,i:number)=>( <Select.Item key={i} value={opt?.value} >{opt?.text}</Select.Item>))}             
+          {optCampuses?.map((opt:any,i:number)=>( <Select.Item onClick={()=>handleTouchedControl("campus")} key={i} value={opt?.value} >{opt?.text}</Select.Item>))}             
         </Select.Content>
       </Select.Root>
         <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p> 
