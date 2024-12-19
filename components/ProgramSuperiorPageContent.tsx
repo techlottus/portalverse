@@ -236,7 +236,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         <script type="application/ld+json">{structuredData}</script>
       </Head>
       <Modal isShow={isShow} onClose={() => handleVisibilityModal('close')} data={{ icon: 'close', title: "", tagOnClose: 'testOnClose', wrapper: true, }}>
-        <div className="mt-16">
+        <div className="desktop:mt-16">
           {
             !!SFprogram && <ContainerForm
               type="ComponentSectionsFormContainer"
@@ -498,8 +498,8 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         }
         {
           selectedModalityName !== "a tu ritmo" ?
-            <div className="col-span-5 mb-6 w-p:col-span-2 w-p:order-1 w-t:hidden w-p:hidden">
-              <div className="w-p:-mt-56 -mt-20 sticky top-32">
+            <div className="col-span-5 mb-6 ">
+              <div className="-mt-20 desktop:sticky desktop:top-32">
                 <div className="mt-16 mb-8">
                   {
                     !!SFprogram && <ContainerForm
