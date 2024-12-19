@@ -37,9 +37,10 @@ const Trigger = React.forwardRef<
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
-      'flex h-10 w-full items-center justify-between rounded-md border border-surface-400 hover:border-info-500 disabled:border-surface-200 focus:border-info-500 bg-white placeholder:text-surface-700 focus:outline-none focus:ring-2 focus:ring-info-200 disabled:cursor-not-allowed [&>span]:line-clamp-1 overflow-hidden group data-[state=open]:border-info-500 data-[state=open]:ring-0  data-[error=true]:border-error-500 transition-colors group disabled:text-surface-400' ,
+      'flex h-10 w-full items-center justify-between rounded-md border  hover:border-info-500 disabled:border-surface-200 focus:border-info-500 bg-white placeholder:text-surface-700 focus:outline-none focus:ring-2 focus:ring-info-200 disabled:cursor-not-allowed [&>span]:line-clamp-1 overflow-hidden group data-[state=open]:border-info-500 data-[state=open]:ring-0  data-[error=true]:border-error-500 transition-colors group disabled:text-surface-400' ,
       {
-        ['border-success-500']: isValid
+        ['border-success-500']: isValid && !hasError,
+        ['border-surface-400']: !isValid && !hasError,
       },
       className
     )}
@@ -49,7 +50,7 @@ const Trigger = React.forwardRef<
     {children}
     <SelectPrimitive.Icon asChild>
       <div className={cn("h-10 w-10 flex-shrink-0 inline-flex items-center justify-center  border-l  group-focus:border-info-500 group-hover:border-info-500 group-hover:bg-info-50 group-focus:bg-info-50 group-data-[state=open]:border-info-500 group-data-[state=open]:bg-info-50 group-data-[error=true]:border-error-500 group-data-[error=true]:bg-[rgba(213,13,25,0.2)]  group-disabled:border-surface-200",{
-        ["bg-success-50 border-success-500"]: isValid,
+        ["bg-success-50 border-success-500"]: isValid && !hasError,
         ["bg-surface-100 border-surface-400"]:!isValid && !hasError
       })}>
         <span className='material-symbols-outlined font-normal'>keyboard_arrow_down</span> 
