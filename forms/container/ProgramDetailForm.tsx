@@ -348,30 +348,16 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [programsByModality])
 
   useEffect(() => {
-    console.log("entro a level")
     if (!!academicData.level) {
-
-      const keyTranslate: any = {
-        Presencial: 'onsite',
-        Online: 'online',
-        Flex: 'flex',
-        Semipresencial: 'hybrid',
-      }
-      console.log("academicData.modality", academicData.modality)
-      console.log("programsByModality: ", programsByModality)
-
       const programsByLevel = programsByModality?.filter((program: any) => {
-        console.log("academicData.level:", academicData.level)
         return program.nivel === academicData.level
       })
       setProgramsByLevel(programsByLevel)
-
     }
 
   }, [academicData.level]);
 
   useEffect(()=>{
-    console.log("entro a programsbylevel")
     setAcademicData({
       ...academicData,
       campus: ""
@@ -388,16 +374,12 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       return program.nombrePeriodo === String(currentPeriod)
     })
     const camps = filterByField(periodPrograms, 'nombreCampus', ['nombreCampus', 'idCampus'])
-    console.log("camps: ", camps)
     setSFcampuses(camps?.map((campus: any) => ({
       value: campus?.idCampus,
       text: campus?.nombreCampus,
       active: camps?.length === 1 || campus.idCampus === academicData.campus
     })))
-    console.table(camps)
-    console.log(camps[0], camps.length)
     if(camps.length === 1){
-    console.log("Seteo ", camps[0].idCampus)
     setAcademicData({
       ...academicData,
       campus: camps[0].idCampus 
