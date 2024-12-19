@@ -206,7 +206,6 @@ const Phone = React.forwardRef<any>(({className=""}:{className?:string},ref) => 
     id="phone"
     required
     maxLength={13}
-    pattern="^\+?(\d{1,3})?[-.\s]?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$"
     errorMessage={configControls.errorMessagesStepOneOpenForm.phone}
     hasError={errorControls.phone}
     onFocus={() => handleTouchedControl("phone", phone)}

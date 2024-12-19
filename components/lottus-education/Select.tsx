@@ -4,26 +4,6 @@ import * as React from 'react';
 import * as SelectPrimitive from '@radix-ui/react-select';
 import * as ScrollArea from '@radix-ui/react-scroll-area';
 import  cn  from 'classnames';
-import  {cva}  from 'class-variance-authority';
-
-const selectVariants = cva(
-  '',
-  {
-    variants: {
-      hasError: {
-        false: [
-          'border-surface-400',
-        ],
-        true: [
-          'border-error-500 focus:border-info-500',
-        ],
-      },
-    },
-    defaultVariants: {
-      hasError: false,
-    },
-  }
-);
 
 const Root = SelectPrimitive.Root;
 
@@ -51,12 +31,16 @@ const Trigger = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger> & {
     hasError?: boolean;
+    isValid?: boolean;
   }
->(({ className, children, hasError, ...props }, ref) => (
+>(({ className, children, hasError, isValid, ...props }, ref) => (
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
-      'flex h-10 w-full items-center justify-between rounded-md border border-surface-400 hover:border-info-500 disabled:border-surface-200 focus:border-info-500 bg-white placeholder:text-surface-700 focus:outline-none focus:ring-2 focus:ring-info-200 disabled:cursor-not-allowed [&>span]:line-clamp-1 overflow-hidden group data-[state=open]:border-info-500 data-[state=open]:ring-0  data-[error=true]:border-error-500 transition-colors group disabled:text-surface-400',
+      'flex h-10 w-full items-center justify-between rounded-md border border-surface-400 hover:border-info-500 disabled:border-surface-200 focus:border-info-500 bg-white placeholder:text-surface-700 focus:outline-none focus:ring-2 focus:ring-info-200 disabled:cursor-not-allowed [&>span]:line-clamp-1 overflow-hidden group data-[state=open]:border-info-500 data-[state=open]:ring-0  data-[error=true]:border-error-500 transition-colors group disabled:text-surface-400' ,
+      {
+        ['border-success-500']: isValid
+      },
       className
     )}
     data-error={hasError}
@@ -64,7 +48,10 @@ const Trigger = React.forwardRef<
   >
     {children}
     <SelectPrimitive.Icon asChild>
-      <div className="h-10 w-10 flex-shrink-0 inline-flex items-center justify-center bg-surface-100 border-l border-surface-400 group-focus:border-info-500 group-hover:border-info-500 group-hover:bg-info-50 group-focus:bg-info-50 group-data-[state=open]:border-info-500 group-data-[state=open]:bg-info-50 group-data-[error=true]:border-error-500 group-data-[error=true]:bg-[rgba(213,13,25,0.2)]  group-disabled:border-surface-200">
+      <div className={cn("h-10 w-10 flex-shrink-0 inline-flex items-center justify-center  border-l  group-focus:border-info-500 group-hover:border-info-500 group-hover:bg-info-50 group-focus:bg-info-50 group-data-[state=open]:border-info-500 group-data-[state=open]:bg-info-50 group-data-[error=true]:border-error-500 group-data-[error=true]:bg-[rgba(213,13,25,0.2)]  group-disabled:border-surface-200",{
+        ["bg-success-50 border-success-500"]: isValid,
+        ["bg-surface-100 border-surface-400"]:!isValid && !hasError
+      })}>
         <span className='material-symbols-outlined font-normal'>keyboard_arrow_down</span> 
       </div>
     </SelectPrimitive.Icon>

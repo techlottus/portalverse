@@ -59,7 +59,6 @@ const AcademicData: FC<any> = ({
 
   const handleSelect = (e: any, control: string) => {
     
-     console.log("handleselect:",e, control)
     if (control === 'campus') {      
       const option = optCampuses?.map((option: any) => {
         option.active = option.value === e
@@ -103,7 +102,7 @@ const AcademicData: FC<any> = ({
       <div className={cn("flex flex-col mt-3", {'hidden': optModalities?.length > 0 && optModalities?.length < 2 })}>
         {/* <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-3 mb-2 capitalize">Modalidad</p> */}
       <Select.Root onValueChange={(option:any)=>handleSelect(option, "modality")} value={academicData?.modality }>
-        <Select.Trigger value={academicData?.modality} hasError={errorControls.modality}>
+        <Select.Trigger value={academicData?.modality} hasError={errorControls.modality} isValid = {validateControl("modality", academicData.modality, true)}>
         <Select.Value placeholder="Elige una modalidad"  />
         </Select.Trigger>
         <Select.Content>
@@ -115,7 +114,7 @@ const AcademicData: FC<any> = ({
       <div className={cn("flex flex-col mt-3 ")}>
         {/* <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-3 mb-2 capitalize">Nivel</p> */}
          <Select.Root onValueChange={(option:any)=>handleSelect(option, "level")} value={academicData?.level } disabled={!academicData.modality} >
-        <Select.Trigger value={academicData?.level } hasError = {errorControls.level} >
+        <Select.Trigger value={academicData?.level } hasError = {errorControls.level} isValid = {validateControl("level", academicData.level, true)} >
         <Select.Value placeholder="Elige un nivel"  />
         </Select.Trigger>
         <Select.Content>
@@ -127,7 +126,7 @@ const AcademicData: FC<any> = ({
       <div className="flex flex-col mt-3">
         {/* <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-3 mb-2 capitalize">{campusLabel || config?.campus}</p> */}
         <Select.Root onValueChange={(option:any)=>handleSelect(option, "campus")} value={academicData?.campus } disabled={!academicData.level}>
-        <Select.Trigger value={academicData?.campus } hasError = {errorControls.campus}>
+        <Select.Trigger value={academicData?.campus } hasError = {errorControls.campus} isValid = {validateControl("campus", academicData.campus, true)}>
         <Select.Value placeholder={`Elige un ${campusLabel}`}  />
         </Select.Trigger>
         <Select.Content>
