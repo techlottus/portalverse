@@ -59,7 +59,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   const queryParams = router?.query;
   const { setStatus, submit, prefilledData } = props
 
-
+  
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState('');
   const [isValid, setIsValid] = useState(false);
@@ -77,12 +77,13 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   const [programsByModality, setProgramsByModality] = useState<any>([])
   const [programsByLevel, setProgramsByLevel] = useState<any>([])
 
-  const [personalData, setPersonalData] = useState({
+  const personalDatainit = {
     name: "",
     last_name: "",
     phone: "",
     email: "",
-  });
+  }
+  const [personalData, setPersonalData] = useState(personalDatainit);
 
   const [personalDataTouched, setPersonalDataTouched] = useState<{ [key: string]: boolean }>({
     name: false,
@@ -97,13 +98,13 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     phone: false,
     email: false,
   })
-
-  const [academicData, setAcademicData] = useState({
+  const initAcademicData = {
     modality: "",
     level: "",
     program: "",
     campus: "",
-  });
+  }
+  const [academicData, setAcademicData] = useState(initAcademicData);
 
   const [academicDataTouched, setAcademicDataTouched] = useState({
     modality: false,
@@ -173,12 +174,49 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       default: return ""
     }
   }
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setAcademicData(initAcademicData);
+      setAcademicDataTouched({
+        modality: false,
+        level: false,
+        program: false,
+        campus: false
+      })
+      setAcademicDataErrors({
+        modality: false,
+        level: false,
+        program: false,
+        campus: false
+      })
+      setPersonalData(personalDatainit)
+      setPersonalDataErrors({
+        name: false,
+        last_name: false,
+        phone: false,
+        email: false,
+      })
+      setPersonalDataTouched({
+        name: false,
+        last_name: false,
+        phone: false,
+        email: false,
+      })
+    };
+
+    router.events.on('routeChangeStart', handleRouteChange);
+
+    // Cleanup para evitar fugas de memoria
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange);
+    };
+  }, [router]);
 
   useEffect(() => {
     if (!!tokenActive) {
       handleFetchEducativeOffer()
     }
-  }, [tokenActive])
+  }, [tokenActive, router])
 
   useEffect(() => {
     if (modalityPrograms.onsite || modalityPrograms.online || modalityPrograms.flex || modalityPrograms.hybrid) {
@@ -229,7 +267,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         return {
           value: mod,
           text: mod,
-          active: modalities?.length === 1 || mod === academicData.modality
+          active: mod === academicData.modality
         }
       }))
       if (!hasPrograms) {
@@ -249,7 +287,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       //   ...academicData,
       //   modality: SFmodalities?.length === 1 ? SFmodalities[0].value : academicData.modality
       // })
-      const modality = SFmodalities?.length === 1
+      // const modality = SFmodalities?.length === 1
       // const newAcademicDataTouched = {
       //   ...academicDataTouched,
       //   modality
@@ -312,7 +350,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   useEffect(() => {
 
     if (academicData.modality!=="") {
-      console.log("entro")
       setAcademicData({
         ...academicData,
         level: ""
