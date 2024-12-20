@@ -498,7 +498,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         }
         {
           selectedModalityName !== "a tu ritmo" ?
-            <div className="col-span-5 mb-6 desktop:order-3 order-2">
+            <div className="col-span-5 desktop:mb-6 desktop:order-3 order-2">
               <div className="-mt-20 desktop:sticky desktop:top-32">
                 <div className="mt-16 mb-8">
                   {
