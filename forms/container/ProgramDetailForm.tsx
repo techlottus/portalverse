@@ -182,8 +182,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   useEffect(() => {
     if (modalityPrograms.onsite || modalityPrograms.online || modalityPrograms.flex || modalityPrograms.hybrid) {
-
-
       const modPrograms: any = Object.keys(modalityPrograms).reduce((acc, key: string) => {
 
         acc = {
@@ -247,16 +245,16 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   useEffect(() => {
     if (SFmodalities?.length > 0) {
       setModalities(SFmodalities)
-      setAcademicData({
-        ...academicData,
-        modality: SFmodalities?.length === 1 ? SFmodalities[0].value : academicData.modality
-      })
+      // setAcademicData({
+      //   ...academicData,
+      //   modality: SFmodalities?.length === 1 ? SFmodalities[0].value : academicData.modality
+      // })
       const modality = SFmodalities?.length === 1
-      const newAcademicDataTouched = {
-        ...academicDataTouched,
-        modality
-      }
-      setAcademicDataTouched(newAcademicDataTouched)
+      // const newAcademicDataTouched = {
+      //   ...academicDataTouched,
+      //   modality
+      // }
+      // setAcademicDataTouched(newAcademicDataTouched)
     }
   }, [SFmodalities])
 
@@ -313,7 +311,8 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   useEffect(() => {
 
-    if (!!academicData.modality) {
+    if (academicData.modality!=="") {
+      console.log("entro")
       setAcademicData({
         ...academicData,
         level: ""
@@ -327,8 +326,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       }
       const programsByModality = filteredPrograms[keyTranslate[academicData.modality]]
       setProgramsByModality(programsByModality)
-
-
     }
   }, [academicData.modality]);
 
