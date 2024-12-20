@@ -1,20 +1,58 @@
-import { FC, useEffect, useState } from "react"
-import OpenFormInit from "@/forms/fixtures/openform"
+import React, { FC, createContext, useContext, useEffect, useState } from "react"
 import configControls from "@/forms/fixtures/controls"
 import * as Select from "@/components/lottus-education/Select"
-import { SelectInit } from "@/old-components/fixture"
+import * as Field from "@/components/lottus-education/Field"
 import cn from "classnames"
-import Input from "@/components/lottus-education/Input"
 
-const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
-const campusLabel = BUSINESS_UNIT === "UTEG" || BUSINESS_UNIT === "UTC" ? "plantel" : "campus";
+/**
+ * Contexto para manejar los datos personales.
+ * Proporciona acceso a las funciones y estados relacionados con los datos personales en un formulario.
+ */
 
-const commonLevels = ["Preparatoria", "Licenciatura", "Maestría"];
-const defaultLevels = BUSINESS_UNIT === "UTC" ? commonLevels : BUSINESS_UNIT === "ULA" ? [...commonLevels, "Doctorado", "Educación Continua"] : [...commonLevels, "Doctorado"]
+const AcademicDataContext = createContext<any>(null);
 
-const AcademicData: FC<any> = ({
-  data,
-  config: stepOneConfig,
+/**
+ * Hook personalizado para acceder al contexto de datos academicos.
+ * Lanza un error si el componente no está envuelto dentro de `<AcademicData.Root>`.
+ * 
+ * @throws {Error} Si se usa fuera de `<AcademicData.Root>`.
+ */
+
+const useAcademicDataContext = () => {
+  const context = useContext(AcademicDataContext);
+  if (context === undefined) {
+    throw new Error(
+      'This component must be used within a <AcademicData.Root> component'
+    );
+  }
+  return context;
+};
+
+/** *********************************** Types *********************************
+ *  Propiedades del componente `<AcademicData.Root>`.
+ */
+interface AcademicDataProps {
+  infoControlsTouched: Record<string, boolean>;
+  setInfoControlsTouched: React.Dispatch<React.SetStateAction<any>>;
+  errorControls: Record<string, boolean>;
+  setErrorControls: React.Dispatch<React.SetStateAction<any>>;
+  validateControl: (control: string, value: any, touched: boolean) => boolean;
+  academicData: Record<string, any>;
+  setAcademicData: React.Dispatch<React.SetStateAction<any>>;
+  modalities: Array<{ value: string; text: string; active?: boolean }>;
+  levels: Array<{ value: string; text: string; active?: boolean }>;
+  campuses: Array<{ value: string; text: string; active?: boolean }>;
+  children?: React.ReactNode;
+}
+
+/**
+ * Componente principal que proporciona el contexto de datos academicos.
+ * 
+ * @param {AcademicDataProps} props Propiedades del componente.
+ * @returns {JSX.Element} Proveedor del contexto con los elementos hijos.
+ */
+
+const Root: FC<AcademicDataProps> = ({
   infoControlsTouched,
   setInfoControlsTouched,
   errorControls,
@@ -22,123 +60,116 @@ const AcademicData: FC<any> = ({
   validateControl,
   academicData,
   setAcademicData,
-  options,
   modalities,
   levels,
-  campuses
-}: any) => {
+  campuses,
+  children
+}: AcademicDataProps) => {
 
-  const [config, setConfig] = useState<any>(stepOneConfig ? { ...stepOneConfig } : { ...OpenFormInit.stepone });
-
-  const [Options, setOptions] = useState<{campuses: [], modalities: [], levels: []}>({campuses: [], modalities: [], levels: []});
-
-  const [optModalities, setOptModalitites] = useState([])
-  const [optCampuses, setOptCampuses] = useState([])
-  const [optLevels, setOptLevels] = useState([])
+  const [options, setOptions] = useState({
+    modality: modalities,
+    level:levels,
+    campus:campuses,
+  });
 
   useEffect(() => {
-    setConfig({ ...config, ...data });
-  }, [data]);
-  useEffect(() => {
-    setOptModalitites( modalities);
-  }, [modalities]);
-  useEffect(() => {
-    setOptLevels(levels);
-  }, [levels]);
-  useEffect(() => {
-    setOptCampuses(campuses);
-  }, [campuses]);
-  useEffect(()=> console.log("academicData: ", academicData), [academicData])
+    setOptions({...{modality:modalities, level:levels ,campus:campuses}});
+  }, [modalities, levels, campuses]);
 
-  // const handleKeyPress = (e: any, control: string) => {
-  //   const value = e;    
-  //   setInfoControlsTouched({ ...infoControlsTouched, [control]: true });
-  //   setAcademicData({ ...academicData, [control]: value });
-  //   setErrorControls({ ...errorControls, [control]: !validateControl(control, value, infoControlsTouched[control]) });
-  // };
+  const handleSelect = (value: string, control: string) => {
+    setOptions((prev: any) => ({
+      ...prev,
+      [control]: prev[control]?.map((option: any) => ({
+        ...option,
+        active: option.value === value,
+      })),
+    }));
 
-  const handleSelect = (e: any, control: string) => {
-    
-    if (control === 'campus') {      
-      const option = optCampuses?.map((option: any) => {
-        option.active = option.value === e
-        return option
-      })
+    if (value !== academicData[control]) {
+      setAcademicData({ ...academicData, [control]: value });
     }
-    if (control === 'modality') {      
-      const option = optModalities?.map((option: any) => {
-        option.active = option.value === e
-        return option
-      })
-    }
-    if (control === 'level') {
-        const option = optLevels?.map((option: any) => {
-        option.active = option.value === e
-        return option
-      })
-    }
-    if(e !== academicData[control]){
-      setAcademicData({ ...academicData, [control]: e });
-    }
-    
   };
 
   const handleTouchedControl = (control: string) => {
     setInfoControlsTouched({ ...infoControlsTouched, [control]: true });
-    setErrorControls({ ...errorControls, [control]: !validateControl(control, academicData[control], true) && infoControlsTouched[control] });
-  }
-  return <>
-    {
-      optModalities && <>
-        {/* <div className="grow mt-2 hidden">
-        <Input
-          placeholder= "Programa"
-          name = "program"
-          onFocus={() => handleTouchedControl("program")}
-          onKeyUp={(e: any) => handleKeyPress(e, "program")}
-          value={academicData.program}
-        />
-      </div> */}
-      <div className={cn("flex flex-col mt-3", {'hidden': optModalities?.length > 0 && optModalities?.length < 2 })}>
-        {/* <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-3 mb-2 capitalize">Modalidad</p> */}
-      <Select.Root onValueChange={(option:any)=>handleSelect(option, "modality")} value={academicData?.modality }>
-        <Select.Trigger value={academicData?.modality} hasError={errorControls.modality} isValid = {validateControl("modality", academicData.modality, true)}>
-        <Select.Value placeholder="Elige una modalidad"  />
-        </Select.Trigger>
-        <Select.Content>
-          {optModalities?.map((opt:any,i:number)=>( <Select.Item onClick={()=>handleTouchedControl("modality")}key={i} value={opt?.value} >{opt?.text}</Select.Item>))}             
-        </Select.Content>
-      </Select.Root>
-        <p className={cn("text-error-400 font-texts font-normal text-xs px-3 mt-2", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> 
-      </div> 
-      <div className={cn("flex flex-col mt-3 ")}>
-        {/* <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-3 mb-2 capitalize">Nivel</p> */}
-         <Select.Root onValueChange={(option:any)=>handleSelect(option, "level")} value={academicData?.level } disabled={!academicData.modality} >
-        <Select.Trigger value={academicData?.level } hasError = {errorControls.level} isValid = {validateControl("level", academicData.level, true)} >
-        <Select.Value placeholder="Elige un nivel"  />
-        </Select.Trigger>
-        <Select.Content>
-          {optLevels?.map((opt:any,i:number)=>( <Select.Item onClick={()=>handleTouchedControl("level")}key={i} value={opt?.value}  >{opt?.text}</Select.Item>))}             
-        </Select.Content>
-      </Select.Root>
-        <p className={cn("text-error-400 text-xs font-texts font-normal px-3 mt-2", { "hidden": !errorControls.level })}>{configControls.errorMessagesStepTwoOpenForm.level}</p>
-      </div> 
-      <div className="flex flex-col mt-3">
-        {/* <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-3 mb-2 capitalize">{campusLabel || config?.campus}</p> */}
-        <Select.Root onValueChange={(option:any)=>handleSelect(option, "campus")} value={academicData?.campus } disabled={!academicData.level}>
-        <Select.Trigger value={academicData?.campus } hasError = {errorControls.campus} isValid = {validateControl("campus", academicData.campus, true)}>
-        <Select.Value placeholder={`Elige un ${campusLabel}`}  />
-        </Select.Trigger>
-        <Select.Content>
-          {optCampuses?.map((opt:any,i:number)=>( <Select.Item onClick={()=>handleTouchedControl("campus")} key={i} value={opt?.value} >{opt?.text}</Select.Item>))}             
-        </Select.Content>
-      </Select.Root>
-        <p className={cn("text-error-400 text-xs px-3 mt-2 font-texts font-normal", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p> 
-      </div>
-      </>
-    }
+    const isValid = validateControl(control, academicData[control], true);
+    setErrorControls({
+      ...errorControls,
+      [control]: !isValid && infoControlsTouched[control],
+    });
+  };
+  const contextValue = {
+    academicData,
+    setAcademicData,
+    infoControlsTouched,
+    setInfoControlsTouched,
+    errorControls,
+    setErrorControls,
+    validateControl,
+    handleSelect,
+    handleTouchedControl,
+    options,
+    modalities,
+    levels,
+    campuses
+  };
+  return (
 
-  </>
+    <AcademicDataContext.Provider value={contextValue}>
+      {children}
+    </AcademicDataContext.Provider>
+  )
+
 }
+Root.displayName = 'AcademicData';
 
-export default AcademicData
+
+/**
+ * Componente para opciones de datos academicos en forma de selects .
+ * 
+ * recibe control: ( "modality" | "level" | "campus"), placeholder: " ", isDisabled (boolean opcional)
+ * @returns {JSX.Element} Input configurado para el nombre.
+ */
+
+const Item = React.forwardRef(({ control, placeholder, isDisabled = false }: { control: "modality" | "level" | "campus", placeholder: string, isDisabled?: boolean }, ref) => {
+  const { academicData,
+    errorControls,
+    validateControl,
+    handleSelect,
+    handleTouchedControl,
+    options,
+    modalities } = useAcademicDataContext();
+  return <Field.Root hasError={errorControls[control]}>
+    {
+      modalities?.length > 0 &&
+      <div className={cn("flex flex-col mt-3", { 'hidden': options.modalities?.length > 0 && options.modalities?.length < 2 })}>
+        <Select.Root 
+          disabled = {isDisabled}
+          onValueChange={(value: string) => handleSelect(value, control)}
+          value={academicData[control]}>
+          <Select.Trigger
+            value={academicData[control]}
+            hasError={errorControls[control]}
+            isValid={validateControl(control, academicData[control], true)}>
+            <Select.Value placeholder={placeholder} />
+          </Select.Trigger>
+          <Select.Content>
+            {options[control]?.map((opt: any, i: number) => (
+              <Select.Item
+                onClick={() => handleTouchedControl(control)}
+                key={i}
+                value={opt?.value} >
+                {opt?.text}
+              </Select.Item>
+            ))
+            }
+          </Select.Content>
+        </Select.Root>
+         {errorControls[control] && <Field.Helper className="mt-2">{configControls.errorMessagesStepTwoOpenForm[control]}</Field.Helper>}
+      </div> }
+      </Field.Root>
+})
+
+Item.displayName = "AcademicDataItem"
+
+export { Root, Item }

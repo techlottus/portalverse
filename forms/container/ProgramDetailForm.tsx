@@ -4,13 +4,14 @@ import configControls from "@/forms/fixtures/controls"
 import axios from "axios";
 import { getTokenForms } from "@/utils/getTokenForms"
 import { getEducativeOffer } from "@/utils/getEducativeOffer"
-import AcademicData from "@/forms/steps/AcademicData";
+import * as AcademicData from "@/forms/steps/AcademicData";
 import { setRegisterBot } from "@/utils/saveDataForms"
 import { useRouter } from "next/router";
 import { env } from "process";
 import cn from "classnames"
 
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
+const campusLabel = businessUnit === "UTEG" || businessUnit === "UTC" ? "plantel" : "campus";
 
 
 // available modalities for prop modality = "Presencial" | "Online" | "Flex" | "Semipresencial"
@@ -567,7 +568,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       </div>
     </PersonalData.Root>
 
-    <AcademicData
+    <AcademicData.Root
       academicData={academicData}
       setAcademicData={setAcademicData}
       infoControlsTouched={academicDataTouched}
@@ -578,7 +579,11 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       modalities={modalities}
       levels={levels}
       campuses={campuses}
-    ></AcademicData>
+    >
+    <AcademicData.Item control = "modality" placeholder="Elige una modalidad"  />
+    <AcademicData.Item control = "level" placeholder="Elige un nivel" isDisabled = {!academicData.modality} />
+    <AcademicData.Item control = "campus" placeholder={`Elige un ${campusLabel}`} isDisabled = {!academicData.level} />
+    </AcademicData.Root>
   </form>
 };
 
