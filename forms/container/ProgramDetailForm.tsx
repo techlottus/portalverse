@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
-import * as PersonalData from "@/forms/steps/PersonalData";
+import * as PersonalData from "@/forms/components/PersonalData";
 import configControls from "@/forms/fixtures/controls"
 import axios from "axios";
 import { getTokenForms } from "@/utils/getTokenForms"
 import { getEducativeOffer } from "@/utils/getEducativeOffer"
-import * as AcademicData from "@/forms/steps/AcademicData";
+import * as AcademicData from "@/forms/components/AcademicData";
 import { setRegisterBot } from "@/utils/saveDataForms"
 import { useRouter } from "next/router";
 import { env } from "process";
