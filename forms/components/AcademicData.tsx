@@ -66,10 +66,10 @@ const Root: FC<AcademicDataProps> = ({
   children
 }: AcademicDataProps) => {
 
-  const [options, setOptions] = useState({
-    modality: modalities,
-    level:levels,
-    campus:campuses,
+  const [options, setOptions] = useState<any>({
+    modality: [],
+    level:[],
+    campus:[],
   });
 
   useEffect(() => {
