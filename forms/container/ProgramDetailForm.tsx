@@ -1,15 +1,17 @@
 import { useEffect, useState } from "react"
-import PersonalData from "@/forms/steps/PersonalData";
+import * as PersonalData from "@/forms/components/PersonalData";
 import configControls from "@/forms/fixtures/controls"
 import axios from "axios";
 import { getTokenForms } from "@/utils/getTokenForms"
 import { getEducativeOffer } from "@/utils/getEducativeOffer"
-import AcademicData from "@/forms/steps/AcademicData";
+import * as AcademicData from "@/forms/components/AcademicData";
 import { setRegisterBot } from "@/utils/saveDataForms"
 import { useRouter } from "next/router";
 import { env } from "process";
+import cn from "classnames"
 
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
+const campusLabel = businessUnit === "UTEG" || businessUnit === "UTC" ? "plantel" : "campus";
 
 
 // available modalities for prop modality = "Presencial" | "Online" | "Flex" | "Semipresencial"
@@ -31,7 +33,7 @@ type ProgramDetailForm = {
     last_name?: string;
     phone?: string;
     email?: string;
-    levels: [{level:string}];
+    levels: [{ level: string }];
     program: string;
     modality?: string;
     campus?: string;
@@ -56,7 +58,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   const router = useRouter();
   const queryParams = router?.query;
   const { setStatus, submit, prefilledData } = props
-  
+
 
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState('');
@@ -66,12 +68,14 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   const [selectedProgram, setselectedProgram] = useState<any>();
   const [tokenActive, setTokenActive] = useState<string>("");
   const [filteredPrograms, setFilteredPrograms] = useState<any>([]);
-  const [ SFlevels, setSFlevels ] = useState<any>([]);
-  const [ SFmodalities, setSFmodalities ] = useState<any>([]);
-  const [ SFcampuses, setSFcampuses ] = useState<any>([]);
-  const [ modalities, setModalities ] = useState<any>([]);
-  const [ campuses, setCampuses ] = useState<any>([]);
-  const [ levels, setLevels ] = useState<any>([]);
+  const [SFlevels, setSFlevels] = useState<any>([]);
+  const [SFmodalities, setSFmodalities] = useState<any>([]);
+  const [SFcampuses, setSFcampuses] = useState<any>([]);
+  const [modalities, setModalities] = useState<any>([]);
+  const [campuses, setCampuses] = useState<any>([]);
+  const [levels, setLevels] = useState<any>([]);
+  const [programsByModality, setProgramsByModality] = useState<any>([])
+  const [programsByLevel, setProgramsByLevel] = useState<any>([])
 
   const [personalData, setPersonalData] = useState({
     name: "",
@@ -114,7 +118,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     program: false,
     campus: false
   })
- 
+
   useEffect(() => {
     if (submit) handleSubmit()
   }, [submit]);
@@ -130,7 +134,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     token,
   } = getTokenForms();
 
-  const filterByField = (data:any, filter: any, fields?: string[]) => {
+  const filterByField = (data: any, filter: any, fields?: string[]) => {
     return data?.reduce((acc: any[], curr: any) => {
       if (!fields) {
         if (!acc.includes(curr[filter])) {
@@ -146,14 +150,14 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         acc = [...acc, fieldsResult]
       }
       return acc
-      
+
     }, [])
   }
 
 
   const getBusinessLineToFetchFrom = (businessLine: string) => {
-    
-    switch(businessLine) {
+
+    switch (businessLine) {
       case "UANE": {
         return "UANE,ULA"
       }
@@ -172,14 +176,14 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   useEffect(() => {
     if (!!tokenActive) {
-        handleFetchEducativeOffer()
-      }
+      handleFetchEducativeOffer()
+    }
   }, [tokenActive])
 
   useEffect(() => {
     if (modalityPrograms.onsite || modalityPrograms.online || modalityPrograms.flex || modalityPrograms.hybrid) {
 
-      
+
       const modPrograms: any = Object.keys(modalityPrograms).reduce((acc, key: string) => {
 
         acc = {
@@ -187,7 +191,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
           [key]: modalityPrograms[key].filter((program: any) => {
             return program.nombrePrograma === prefilledData.program
           })
-        } 
+        }
         return acc
       }, { onsite: [], online: [], flex: [], hybrid: [] })
       const keyTranslate: any = {
@@ -196,35 +200,35 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         flex: 'Flex',
         hybrid: 'Semipresencial',
       }
-   
+
       const prefilledLevels = prefilledData?.levels?.map(level => level.level)
       const offerByProgram = Object.keys(modPrograms).reduce((acc, key: string) => {
-        
+
         const programs = !!prefilledLevels && prefilledLevels.length > 0
-          ?  modPrograms[key]?.filter((program: any)=> {
-              return prefilledLevels.includes(program.nivel)
-            })
-          :  modPrograms[key]
+          ? modPrograms[key]?.filter((program: any) => {
+            return prefilledLevels.includes(program.nivel)
+          })
+          : modPrograms[key]
 
         acc = {
           ...acc,
           [key]: programs
-        } 
+        }
         return acc
       }, { onsite: [], online: [], flex: [], hybrid: [] })
 
-      const { modalities, hasPrograms } = Object.keys(modPrograms).reduce((acc: any,key: string) => {
+      const { modalities, hasPrograms } = Object.keys(modPrograms).reduce((acc: any, key: string) => {
         if (modPrograms[key].length > 0) {
           acc.modalities = [...acc.modalities, keyTranslate[key]]
           acc.hasPrograms = true
         } else {
           acc.hasPrograms = acc.hasPrograms || false
         }
-        return acc 
+        return acc
       }, { modalities: [], hasPrograms: false })
-      
+
       setSFmodalities(modalities?.map((mod: string) => {
-        return  {
+        return {
           value: mod,
           text: mod,
           active: modalities?.length === 1 || mod === academicData.modality
@@ -268,7 +272,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         campus: SFcampuses?.length === 1 ? SFcampuses[0].value : academicData.campus
       })
     }
-      
+
   }, [SFcampuses])
 
   useEffect(() => {
@@ -283,11 +287,11 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         level: SFlevels?.length === 1 || academicDataTouched.level
       })
     }
-      
+
   }, [SFlevels])
 
   useEffect(() => {
-    if (modalities&& modalities[0]) {
+    if (modalities && modalities[0]) {
       setIsLoading(false)
     }
   }, [modalities])
@@ -295,10 +299,10 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
     setPersonalData({
       ...personalData,
-      'name':  prefilledData?.name || "",
-      'last_name':  prefilledData?.last_name || "",
-      'phone':  prefilledData?.phone || "",
-      'email':  prefilledData?.email || "",
+      'name': prefilledData?.name || "",
+      'last_name': prefilledData?.last_name || "",
+      'phone': prefilledData?.phone || "",
+      'email': prefilledData?.email || "",
     })
 
   }, [prefilledData])
@@ -308,12 +312,13 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }, [personalData, academicData]);
 
   useEffect(() => {
+
     if (!!academicData.modality) {
-      setSFcampuses([])
       setAcademicData({
         ...academicData,
-        level: ''
+        level: ""
       })
+      setSFcampuses([])
       const keyTranslate: any = {
         Presencial: 'onsite',
         Online: 'online',
@@ -321,87 +326,102 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         Semipresencial: 'hybrid',
       }
       const programsByModality = filteredPrograms[keyTranslate[academicData.modality]]
+      setProgramsByModality(programsByModality)
 
-      const levels = filterByField(programsByModality,'nivel')
-      if (levels?.length === 1) {
-        setAcademicData({
-          ...academicData,
-          level: levels[0]
-        })
-      }
-      
-      setSFlevels(levels?.map((level: any) => ({
-        value: level,
-        text: level,
-        active: levels?.length === 1 || level.idCampus === academicData.level
-      })))
+
     }
   }, [academicData.modality]);
 
   useEffect(() => {
+    const levels = filterByField(programsByModality, 'nivel')
+    if (levels?.length === 1) {
+      setAcademicData({
+        ...academicData,
+        level: levels[0]
+      })
+    }
+
+    setSFlevels(levels?.map((level: any) => ({
+      value: level,
+      text: level,
+      active: levels?.length === 1 || level.idCampus === academicData.level
+    })))
+  }, [programsByModality])
+
+  useEffect(() => {
+    if (!!academicData.level) {
+      const programsByLevel = programsByModality?.filter((program: any) => {
+        return program.nivel === academicData.level
+      })
+      setProgramsByLevel(programsByLevel)
+    }
+
+  }, [academicData.level]);
+
+  useEffect(()=>{
+    setAcademicData({
+      ...academicData,
+      campus: ""
+    })
+    const periods: number[] = programsByLevel?.reduce((acc: any, program: any, index: number, arr: any[]) => {
+      if (!acc.includes(program.nombrePeriodo)) {
+        acc = [...acc, Number(program.nombrePeriodo)]
+      }
+      return acc
+    }, [])
+    const sortedPeriods = periods?.sort((a: any, b: any) => a - b)
+    const currentPeriod = sortedPeriods[periods.length - 1]
+    const periodPrograms = programsByLevel?.filter((program: any) => {
+      return program.nombrePeriodo === String(currentPeriod)
+    })
+    const camps = filterByField(periodPrograms, 'nombreCampus', ['nombreCampus', 'idCampus'])
+    setSFcampuses(camps?.map((campus: any) => ({
+      value: campus?.idCampus,
+      text: campus?.nombreCampus,
+      active: camps?.length === 1 || campus.idCampus === academicData.campus
+    })))
+    if(camps.length === 1){
+    setAcademicData({
+      ...academicData,
+      campus: camps[0].idCampus 
+    })}
+
+  },[programsByLevel])
+
+  useEffect(() => {
     if (!!academicData.campus) {
-  
+
       const keyTranslate: any = {
         Presencial: 'onsite',
         Online: 'online',
         Flex: 'flex',
         Semipresencial: 'hybrid',
       }
-      const programsByModality = filteredPrograms[keyTranslate[academicData.modality]]
-      const programsByLevel = programsByModality?.filter((program: any) => {
-          return program.nivel === academicData.level
-      })
       const programsByCampus = programsByLevel?.filter((program: any) => {
         return program.idCampus === academicData.campus
       })
-      
-      const selectedProgramData = programsByCampus.sort((a: any,b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[programsByCampus.length - 1];
+
+      const selectedProgramData = programsByCampus.sort((a: any, b: any) => Number(a.nombrePeriodo) - Number(b.nombrePeriodo))[programsByCampus.length - 1];
 
       setselectedProgram(selectedProgramData)
     }
 
   }, [academicData.campus]);
-  useEffect(() => {
-    
-    if (!!academicData.level && !!academicData.modality) {
-      const keyTranslate: any = {
-        Presencial: 'onsite',
-        Online: 'online',
-        Flex: 'flex',
-        Semipresencial: 'hybrid',
-      }
-      const programsByModality = filteredPrograms[keyTranslate[academicData.modality]]
 
-      const programsByLevel = programsByModality?.filter((program: any) => {
-          return program.nivel === academicData.level
-      })
-      
-      
-      const periods:  number[] = programsByLevel?.reduce((acc: any, program: any, index: number, arr: any[]) => {
-        if (!acc.includes(program.nombrePeriodo)) {
-          acc = [...acc, Number(program.nombrePeriodo)]
-        }
-        return acc
-      }, [])
-      const sortedPeriods =  periods?.sort((a: any,b: any) => a - b)
-      const currentPeriod = sortedPeriods[periods.length - 1]
-      const periodPrograms = programsByLevel?.filter((program: any) => {
-        return program.nombrePeriodo === String(currentPeriod)
-      })
-      const camps = filterByField(periodPrograms,'nombreCampus', ['nombreCampus', 'idCampus'])
-
-      setSFcampuses(camps?.map((campus: any) => ({
-        value: campus?.idCampus,
-        text: campus?.nombreCampus,
-        active: camps?.length === 1 || campus.idCampus === academicData.campus
-      })))
-    }
-
-  }, [academicData.level, academicData.modality]);
+  // useEffect(()=>{
+  //   console.log("SFcampuses: ", SFcampuses)
+  //   if (SFcampuses?.length === 1) {
+  //     console.log(SFcampuses[0])
+  //     setAcademicData({
+  //       ...academicData,
+  //       campus: SFcampuses[0].value
+  //     })
+  //   }
+  // },[SFcampuses])
 
   useEffect(() => {
     if (!!selectedProgram) {
-      setAcademicData({...academicData, program: selectedProgram?.idOfertaPrograma})
+      setAcademicData({ ...academicData, program: selectedProgram?.idOfertaPrograma })
     }
   }, [selectedProgram]);
   useEffect(() => {
@@ -435,14 +455,14 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
   const validateAcademicDataControls = () => !Object.entries(academicData).map(([key, value]: any) => {
     const validity = validateAcademicDataControl(key, value);
-    return validity 
+    return validity
   }).includes(false)
 
   const handleFetchEducativeOffer = () => {
     setIsLoading(true)
     setFilteredPrograms([]);
     const businessLineToFetchFrom = getBusinessLineToFetchFrom(businessUnit)
-    
+
     fetchEducativeOffer(process.env.NEXT_PUBLIC_EDUCATIVE_OFFER!, 'All', businessLineToFetchFrom, tokenActive);
   }
 
@@ -468,14 +488,14 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
 
     setIsLoading(true);
 
-    await axios.post(`${endpoint}?${params}`,{},{
+    await axios.post(`${endpoint}?${params}`, {}, {
       headers: {
         Authorization: tokenActive,
         'Content-Type': 'application/json;charset=UTF-8'
       }
     })
       .then((res: any) => {
-        if(res?.data?.Exitoso !== "TRUE") {
+        if (res?.data?.Exitoso !== "TRUE") {
           throw new Error();
         }
         router.push(`/thank-you`);
@@ -498,10 +518,10 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
     setPersonalDataErrors({ ...newPersonalDataErrors });
 
     const newAcademicDataErrors = {
-      program: !validateAcademicDataControl( 'program', academicData.program) && academicDataTouched.program,
-      level: !validateAcademicDataControl( 'level', academicData.level) && academicDataTouched.level,
-      campus: !validateAcademicDataControl( 'campus', academicData.campus) && academicDataTouched.campus,
-      modality: !validateAcademicDataControl( 'modality', academicData.modality) && academicDataTouched.modality
+      program: !validateAcademicDataControl('program', academicData.program) && academicDataTouched.program,
+      level: !validateAcademicDataControl('level', academicData.level) && academicDataTouched.level,
+      campus: !validateAcademicDataControl('campus', academicData.campus) && academicDataTouched.campus,
+      modality: !validateAcademicDataControl('modality', academicData.modality) && academicDataTouched.modality
     }
 
     setAcademicDataErrors({ ...newAcademicDataErrors });
@@ -521,7 +541,7 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   }
 
   return <form>
-    <PersonalData
+    <PersonalData.Root
       personalData={personalData}
       setPersonalData={setPersonalData}
       infoControlsTouched={personalDataTouched}
@@ -529,8 +549,26 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       errorControls={personalDataErrors}
       setErrorControls={setPersonalDataErrors}
       validateControl={validatePersonalDataControl}
-    ></PersonalData>
-    <AcademicData
+    >
+      <div className="mt-3 flex w-p:flex-col w-p:gap-0 gap-3 font-normal">
+        <div className="grow">
+          <PersonalData.Name />
+        </div>
+        <div className="grow mobile:mt-3">
+          <PersonalData.SurName />
+        </div>
+      </div>
+      <div>
+        <div className={cn("mt-3")}>
+          <PersonalData.Phone />
+        </div>
+        <div className={cn("mt-3")}>
+          <PersonalData.Email />
+        </div>
+      </div>
+    </PersonalData.Root>
+
+    <AcademicData.Root
       academicData={academicData}
       setAcademicData={setAcademicData}
       infoControlsTouched={academicDataTouched}
@@ -541,7 +579,11 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
       modalities={modalities}
       levels={levels}
       campuses={campuses}
-    ></AcademicData>
+    >
+    <AcademicData.Item control = "modality" placeholder="Elige una modalidad"  />
+    <AcademicData.Item control = "level" placeholder="Elige un nivel" isDisabled = {!academicData.modality} />
+    <AcademicData.Item control = "campus" placeholder={`Elige un ${campusLabel}`} isDisabled = {!academicData.level} />
+    </AcademicData.Root>
   </form>
 };
 
