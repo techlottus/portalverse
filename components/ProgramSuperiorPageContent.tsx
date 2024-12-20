@@ -294,7 +294,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         </div>
       </Modal>
       <ContentLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 order-1">
           {
             selectedModalityName === "online" || selectedModalityName === "a tu ritmo" ?
               <IntroductionProgram
@@ -338,7 +338,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         {
           selectedModalityName !== "a tu ritmo" && brands ?
             <>
-              <div className="col-span-7 w-t:col-span-8 w-p:col-span-4 w-d:mb-18">
+              <div className="col-span-7 w-t:col-span-8 w-p:col-span-4 w-d:mb-18 desktop:order-2 order-3">
                 {
                   brands?.data?.length > 0 ?
                     brands?.data?.map((item, index) => <section className="mb-6" key={`section-aboutBrand-${index}`}>
@@ -498,7 +498,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         }
         {
           selectedModalityName !== "a tu ritmo" ?
-            <div className="col-span-5 mb-6 ">
+            <div className="col-span-5 mb-6 desktop:order-3 order-2">
               <div className="-mt-20 desktop:sticky desktop:top-32">
                 <div className="mt-16 mb-8">
                   {
