@@ -189,19 +189,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         program: false,
         campus: false
       })
-      setPersonalData(personalDatainit)
-      setPersonalDataErrors({
-        name: false,
-        last_name: false,
-        phone: false,
-        email: false,
-      })
-      setPersonalDataTouched({
-        name: false,
-        last_name: false,
-        phone: false,
-        email: false,
-      })
     };
 
     router.events.on('routeChangeStart', handleRouteChange);
@@ -283,16 +270,16 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   useEffect(() => {
     if (SFmodalities?.length > 0) {
       setModalities(SFmodalities)
-      // setAcademicData({
-      //   ...academicData,
-      //   modality: SFmodalities?.length === 1 ? SFmodalities[0].value : academicData.modality
-      // })
-      // const modality = SFmodalities?.length === 1
-      // const newAcademicDataTouched = {
-      //   ...academicDataTouched,
-      //   modality
-      // }
-      // setAcademicDataTouched(newAcademicDataTouched)
+      setAcademicData({
+        ...academicData,
+        modality: SFmodalities?.length === 1 ? SFmodalities[0].value : academicData.modality
+      })
+      const modality = SFmodalities?.length === 1
+      const newAcademicDataTouched = {
+        ...academicDataTouched,
+        modality
+      }
+      setAcademicDataTouched(newAcademicDataTouched)
     }
   }, [SFmodalities])
 
