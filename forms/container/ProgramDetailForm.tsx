@@ -283,16 +283,16 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
   useEffect(() => {
     if (SFmodalities?.length > 0) {
       setModalities(SFmodalities)
-      // setAcademicData({
-      //   ...academicData,
-      //   modality: SFmodalities?.length === 1 ? SFmodalities[0].value : academicData.modality
-      // })
-      // const modality = SFmodalities?.length === 1
-      // const newAcademicDataTouched = {
-      //   ...academicDataTouched,
-      //   modality
-      // }
-      // setAcademicDataTouched(newAcademicDataTouched)
+      setAcademicData({
+        ...academicData,
+        modality: SFmodalities?.length === 1 ? SFmodalities[0].value : academicData.modality
+      })
+      const modality = SFmodalities?.length === 1
+      const newAcademicDataTouched = {
+        ...academicDataTouched,
+        modality
+      }
+      setAcademicDataTouched(newAcademicDataTouched)
     }
   }, [SFmodalities])
 
