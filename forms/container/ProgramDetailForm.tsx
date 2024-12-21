@@ -189,19 +189,6 @@ const ProgramDetailForm = (props: ProgramDetailForm) => {
         program: false,
         campus: false
       })
-      setPersonalData(personalDatainit)
-      setPersonalDataErrors({
-        name: false,
-        last_name: false,
-        phone: false,
-        email: false,
-      })
-      setPersonalDataTouched({
-        name: false,
-        last_name: false,
-        phone: false,
-        email: false,
-      })
     };
 
     router.events.on('routeChangeStart', handleRouteChange);
