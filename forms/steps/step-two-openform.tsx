@@ -198,8 +198,8 @@ const StepTwo: FC<any> = ({
   return <section className={cn(classNames)}>
     <div className={cn("flex flex-col", { "hidden": controlsConfig?.modality?.hidden })}>
       <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 mb-2">{config.modality}</p>
-      <div className="flex justify-start gap-4 flex-wrap">
         <Field.Root hasError={errorControls.modality}>
+      <div className="flex justify-start gap-4 flex-wrap">
         {
           dataModalities?.map((modalityData, i) => {
             return (
@@ -226,8 +226,8 @@ const StepTwo: FC<any> = ({
           })
         }
         {errorControls.modality && <Field.Helper className="">{configControls.errorMessagesStepTwoOpenForm.modality}</Field.Helper>}
-        </Field.Root>
       </div>
+        </Field.Root>
       {/* <p className={cn("text-error-400 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> */}
     </div>
     <div className={cn("flex flex-col", { "hidden": controlsConfig?.level?.hidden })}>
