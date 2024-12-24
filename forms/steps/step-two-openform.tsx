@@ -234,7 +234,7 @@ const StepTwo: FC<any> = ({
       <p className="font-texts font-normal text-3.5 leading-5 text-surface-800 mt-6 mb-1">{config.level}</p>
       <div className="w-full flex flex-col mt-1">
         <div className="flex justify-start gap-4 flex-wrap">
-        <Field.Root hasError={errorControls.levels}>
+        <Field.Root hasError={errorControls.level}>
           {
             levels?.length < 1
               ? defaultLevels?.map((level, i) => (
