@@ -31,7 +31,7 @@ type RadioProps = ControlledProps | UncontrolledProps;
 const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
   ({ children, hasError, className, ...props }: RadioProps, ref) => {
     return (
-      <label className="inline-flex gap-2 align-top items-center cursor-pointer select-none group">
+      <label className="inline-flex gap-2 align-top items-center cursor-pointer select-none group rounded bg-surface-100 px-3 py-2">
         <div className="relative flex items-center align-middle justify-center">
           <HiddenInput
             {...props}
@@ -50,7 +50,7 @@ const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
             <div className="w-1.5 h-1.5 rounded-full top-1/2 left-1/2 absolute transform -translate-x-1/2 -translate-y-1/2 bg-surface-50" />
           </div>
         </div>
-        {children && <span className="text-base">{children}</span>}
+        {children && <span className="text-base font-texts font-normal">{children}</span>}
       </label>
     );
   }
