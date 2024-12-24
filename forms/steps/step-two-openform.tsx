@@ -257,7 +257,7 @@ const StepTwo: FC<any> = ({
               ))
           }
         </div>
-        <p className={cn("text-error-500 text-xs mt-2", { "hidden": !errorControls.level })}>{configControls.errorMessagesStepTwoOpenForm.level}</p>
+        <p className={cn("text-error-500 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.level })}>{configControls.errorMessagesStepTwoOpenForm.level}</p>
       </div>
     </div>
     <div className={cn("flex flex-col", { "hidden": controlsConfig?.program?.hidden })}>
