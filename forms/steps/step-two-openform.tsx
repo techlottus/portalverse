@@ -6,6 +6,7 @@ import { OpenFormControls } from "@/types/OpenFormControls.types"
 import { SelectOptionConfig } from "@/types/Select.types"
 import Radio from "@/components/lottus-education/Radio"
 import * as Select from "@/components/lottus-education/Select"
+import * as Field from "@/components/lottus-education/Field"
 
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
 
@@ -198,6 +199,7 @@ const StepTwo: FC<any> = ({
     <div className={cn("flex flex-col", { "hidden": controlsConfig?.modality?.hidden })}>
       <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 mb-2">{config.modality}</p>
       <div className="flex justify-start gap-4 flex-wrap">
+        <Field.Root hasError={errorControls.modality}>
         {
           dataModalities?.map((modalityData, i) => {
             return (
@@ -223,13 +225,16 @@ const StepTwo: FC<any> = ({
             );
           })
         }
+        {errorControls.modality && <Field.Helper className="mt-2">{configControls.errorMessagesStepTwoOpenForm.modality}</Field.Helper>}
+        </Field.Root>
       </div>
-      <p className={cn("text-error-400 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p>
+      {/* <p className={cn("text-error-400 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> */}
     </div>
     <div className={cn("flex flex-col", { "hidden": controlsConfig?.level?.hidden })}>
       <p className="font-texts font-normal text-3.5 leading-5 text-surface-800 mt-6 mb-1">{config.level}</p>
       <div className="w-full flex flex-col mt-1">
         <div className="flex justify-start gap-4 flex-wrap">
+        <Field.Root hasError={errorControls.levels}>
           {
             levels?.length < 1
               ? defaultLevels?.map((level, i) => (
@@ -256,12 +261,15 @@ const StepTwo: FC<any> = ({
                 </Radio>
               ))
           }
+          {errorControls.level && <Field.Helper className="mt-2">{configControls.errorMessagesStepTwoOpenForm.level}</Field.Helper>}
+          </Field.Root>
         </div>
-        <p className={cn("text-error-500 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.level })}>{configControls.errorMessagesStepTwoOpenForm.level}</p>
+        {/* <p className={cn("text-error-500 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.level })}>{configControls.errorMessagesStepTwoOpenForm.level}</p> */}
       </div>
     </div>
     <div className={cn("flex flex-col", { "hidden": controlsConfig?.program?.hidden })}>
       <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6">{config.program}</p>
+      <Field.Root hasError={errorControls.program}>
       <Select.Root
         disabled={!dataPrograms.length}
         onValueChange={(option: any) => handleChangeProgram(option)}
@@ -284,10 +292,13 @@ const StepTwo: FC<any> = ({
           }
         </Select.Content>
       </Select.Root>
-      <p className={cn("text-error-400 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.program })}>{configControls.errorMessagesStepTwoOpenForm.program}</p>
+      {errorControls.program && <Field.Helper className="mt-2">{configControls.errorMessagesStepTwoOpenForm.program}</Field.Helper>}
+          </Field.Root>
+      {/* <p className={cn("text-error-400 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.program })}>{configControls.errorMessagesStepTwoOpenForm.program}</p> */}
     </div>
     <div className={cn("flex flex-col", { "hidden": controlsConfig?.campus?.hidden })}>
       <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">{campusLabel || config?.campus}</p>
+      <Field.Root hasError={errorControls.campus}>
       <Select.Root
         disabled={!dataCampus.length}
         onValueChange={(option: any) => handleChangeCampus(option)}
@@ -310,7 +321,9 @@ const StepTwo: FC<any> = ({
           }
         </Select.Content>
       </Select.Root>
-      <p className={cn("text-error-400 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p>
+      {errorControls.campus && <Field.Helper className="mt-2">{configControls.errorMessagesStepTwoOpenForm.campus}</Field.Helper>}
+      </Field.Root>
+      {/* <p className={cn("text-error-400 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p> */}
     </div>
   </section>
 }
