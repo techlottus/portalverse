@@ -225,7 +225,7 @@ const StepTwo: FC<any> = ({
             );
           })
         }
-        {errorControls.modality && <Field.Helper className="mt-2">{configControls.errorMessagesStepTwoOpenForm.modality}</Field.Helper>}
+        {errorControls.modality && <Field.Helper className="">{configControls.errorMessagesStepTwoOpenForm.modality}</Field.Helper>}
         </Field.Root>
       </div>
       {/* <p className={cn("text-error-400 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> */}
@@ -261,7 +261,7 @@ const StepTwo: FC<any> = ({
                 </Radio>
               ))
           }
-          {errorControls.level && <Field.Helper className="mt-2">{configControls.errorMessagesStepTwoOpenForm.level}</Field.Helper>}
+          {errorControls.level && <Field.Helper className="">{configControls.errorMessagesStepTwoOpenForm.level}</Field.Helper>}
           </Field.Root>
         </div>
         {/* <p className={cn("text-error-500 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.level })}>{configControls.errorMessagesStepTwoOpenForm.level}</p> */}
@@ -292,7 +292,7 @@ const StepTwo: FC<any> = ({
           }
         </Select.Content>
       </Select.Root>
-      {errorControls.program && <Field.Helper className="mt-2">{configControls.errorMessagesStepTwoOpenForm.program}</Field.Helper>}
+      {errorControls.program && <Field.Helper className="">{configControls.errorMessagesStepTwoOpenForm.program}</Field.Helper>}
           </Field.Root>
       {/* <p className={cn("text-error-400 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.program })}>{configControls.errorMessagesStepTwoOpenForm.program}</p> */}
     </div>
@@ -321,7 +321,7 @@ const StepTwo: FC<any> = ({
           }
         </Select.Content>
       </Select.Root>
-      {errorControls.campus && <Field.Helper className="mt-2">{configControls.errorMessagesStepTwoOpenForm.campus}</Field.Helper>}
+      {errorControls.campus && <Field.Helper className="">{configControls.errorMessagesStepTwoOpenForm.campus}</Field.Helper>}
       </Field.Root>
       {/* <p className={cn("text-error-400 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p> */}
     </div>
