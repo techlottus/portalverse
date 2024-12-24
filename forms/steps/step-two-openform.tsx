@@ -233,8 +233,8 @@ const StepTwo: FC<any> = ({
     <div className={cn("flex flex-col", { "hidden": controlsConfig?.level?.hidden })}>
       <p className="font-texts font-normal text-3.5 leading-5 text-surface-800 mt-6 mb-1">{config.level}</p>
       <div className="w-full flex flex-col mt-1">
-        <div className="flex justify-start gap-4 flex-wrap">
         <Field.Root hasError={errorControls.level}>
+        <div className="flex justify-start gap-4 flex-wrap">
           {
             levels?.length < 1
               ? defaultLevels?.map((level, i) => (
@@ -262,8 +262,8 @@ const StepTwo: FC<any> = ({
               ))
           }
           {errorControls.level && <Field.Helper className="">{configControls.errorMessagesStepTwoOpenForm.level}</Field.Helper>}
-          </Field.Root>
         </div>
+          </Field.Root>
         {/* <p className={cn("text-error-500 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.level })}>{configControls.errorMessagesStepTwoOpenForm.level}</p> */}
       </div>
     </div>
