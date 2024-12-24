@@ -224,7 +224,7 @@ const StepTwo: FC<any> = ({
           })
         }
       </div>
-      <p className={cn("text-error-400  text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p>
+      <p className={cn("text-error-400 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p>
     </div>
     <div className={cn("flex flex-col", { "hidden": controlsConfig?.level?.hidden })}>
       <p className="font-texts font-normal text-3.5 leading-5 text-surface-800 mt-6 mb-1">{config.level}</p>
@@ -257,7 +257,7 @@ const StepTwo: FC<any> = ({
               ))
           }
         </div>
-        <p className={cn("text-error-500 text-xs px-3 mt-4", { "hidden": !errorControls.level })}>{configControls.errorMessagesStepTwoOpenForm.level}</p>
+        <p className={cn("text-error-500 text-xs mt-2", { "hidden": !errorControls.level })}>{configControls.errorMessagesStepTwoOpenForm.level}</p>
       </div>
     </div>
     <div className={cn("flex flex-col", { "hidden": controlsConfig?.program?.hidden })}>
@@ -284,7 +284,7 @@ const StepTwo: FC<any> = ({
           }
         </Select.Content>
       </Select.Root>
-      <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.program })}>{configControls.errorMessagesStepTwoOpenForm.program}</p>
+      <p className={cn("text-error-400 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.program })}>{configControls.errorMessagesStepTwoOpenForm.program}</p>
     </div>
     <div className={cn("flex flex-col", { "hidden": controlsConfig?.campus?.hidden })}>
       <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">{campusLabel || config?.campus}</p>
@@ -310,7 +310,7 @@ const StepTwo: FC<any> = ({
           }
         </Select.Content>
       </Select.Root>
-      <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p>
+      <p className={cn("text-error-400 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p>
     </div>
   </section>
 }
