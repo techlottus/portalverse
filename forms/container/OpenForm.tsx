@@ -123,19 +123,6 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
     email: "",
   });
 
-  const [personalDataTouched, setPersonalDataTouched] = useState({
-    name: false,
-    surname: false,
-    phone: false,
-    email: false,
-  })
-
-  const [personalDataErrors, setPersonalDataErrors] = useState({
-    name: false,
-    surname: false,
-    phone: false,
-    email: false,
-  })
 
   const [academicData, setAcademicData] = useState({
     modality: "",
@@ -215,20 +202,6 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
     setFilteredCampus([...campusByProgram]);
   }
 
-
-  /**
-   * Input Validations
-   */
-  const validatePersonalDataControl = (control: string, value: string, touched: boolean) => {
-    if (control === 'email') {
-      return touched ? !value.match(configControls.patternEmail) : false;
-    }
-    if (control === 'phone') {
-      return touched ? !(value.trim() && value.trim().length === 10) : false;
-    }
-    return touched ? !value.trim() : false;
-  };
-
   const validateAcademicDataControl = (value: string, touched: boolean) => {
     return touched ? !value : false;
   };
@@ -306,13 +279,6 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
   }
 
   const handleSubmit = async () => {
-    setPersonalDataTouched({
-      name: true,
-      surname: true,
-      phone: true,
-      email: true,
-    });
-
     setAcademicDataTouched({
       modality: true,
       level: true,
@@ -320,21 +286,13 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
       campus: true
     });
 
-    const newPersonalDataValidation = {
-      name: validatePersonalDataControl("name", personalData.name, true),
-      surname: validatePersonalDataControl("surname", personalData.surname, true),
-      phone: validatePersonalDataControl("phone", personalData.phone, true),
-      email: validatePersonalDataControl("email", personalData.email, true),
-    }
-
     const newAcademicDataValidation = {
       modality: validateAcademicDataControl(academicData.modality, true),
       level: validateAcademicDataControl(academicData.level, true),
       program: validateAcademicDataControl(academicData.program, true),
       campus: validateAcademicDataControl(academicData.campus, true)
     };
-
-    setPersonalDataErrors({ ...newPersonalDataValidation });
+    
     setAcademicDataErrors({ ...newAcademicDataValidation });
 
     const isValidPersonalData = validatePersonalDataControls();
