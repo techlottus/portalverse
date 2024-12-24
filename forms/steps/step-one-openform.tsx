@@ -14,22 +14,16 @@ const StepOne: FC<any> = ({
   config: stepOneConfig,
   personalData,
   setPersonalData,
+  validatePersonalDataControls,
+  personalDataErrors,
+  setPersonalDataErrors,
+  personalDataTouched,
+  setPersonalDataTouched
 }: any) => {
 
   const [config, setConfig] = useState<any>(stepOneConfig ? { ...OpenFormInit.stepone, ...stepOneConfig } : { ...OpenFormInit.stepone });
   const [progress, setProgress] = useState<number>(0);
-  const [personalDataTouched, setPersonalDataTouched] = useState<{ [key: string]: boolean }>({
-    name: false,
-    last_name: false,
-    phone: false,
-    email: false,
-  })
-  const [personalDataErrors, setPersonalDataErrors] = useState({
-    name: false,
-    last_name: false,
-    phone: false,
-    email: false,
-  })
+
 
   useEffect(() => {
     setConfig({ ...config, ...data });
@@ -50,8 +44,8 @@ const StepOne: FC<any> = ({
   };
 
   return <section className={cn(classNames)}>
-    <div className="flex gap-6">
-      <div className="flex flex-col gap-6">
+    <div className="flex gap-6 mobile:gap-4">
+      <div className="flex flex-col gap-6 mobile:gap-4">
         <h4 className="font-texts font-bold text-5 leading-6">{config.title}</h4>
         <p className="font-texts font-normal text-3.5 leading-4">{config.subtitle}</p>
       </div>

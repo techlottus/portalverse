@@ -145,6 +145,19 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
     campus: false
   })
 
+  const [personalDataTouched, setPersonalDataTouched] = useState<{ [key: string]: boolean }>({
+    name: false,
+    last_name: false,
+    phone: false,
+    email: false,
+  })
+  const [personalDataErrors, setPersonalDataErrors] = useState({
+    name: false,
+    last_name: false,
+    phone: false,
+    email: false,
+  })
+
   const {
     isLoading: isLoadingToken,
     isError: isErrorToken,
@@ -297,9 +310,16 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
       program: validateAcademicDataControl(academicData.program, true),
       campus: validateAcademicDataControl(academicData.campus, true)
     };
+    const newPersonalDataValidation = {
+      name: !validatePersonalDataControl("name", personalData.name),
+      last_name: !validatePersonalDataControl("surname", personalData.last_name),
+      phone: !validatePersonalDataControl("phone", personalData.phone),
+      email: !validatePersonalDataControl("email", personalData.email),
+    }
 
     setAcademicDataErrors({ ...newAcademicDataValidation });
-    console.log(personalData)
+    setPersonalDataErrors({...newPersonalDataValidation})
+    console.log("personaldataerrors: ", personalDataErrors)
 
     const isValidPersonalData = validatePersonalDataControls();
     const isValidAcademicData = validateAcademicDataControls();
@@ -328,6 +348,11 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
                 config={config}
                 data={data}
                 step={30}
+                personalDataErrors = {personalDataErrors}
+                setPersonalDataErrors = {setPersonalDataErrors}
+                personalDataTouched = {personalDataTouched}
+                setPersonalDataTouched = {setPersonalDataTouched}
+                validatePersonalDataControls={validatePersonalDataControls()}
               />
               <StepTwo
                 isLoading={isLoading}
@@ -350,7 +375,7 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
                 errorControls={academicDataErrors}
                 setErrorControls={setAcademicDataErrors}
               />
-              <div className="mt-6">
+              <div className="mt-4">
                 <Button dark onClick={handleSubmit} data={configControls.buttonConfigOpenFormStepThree} />
               </div>
             </>
