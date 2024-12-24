@@ -225,8 +225,8 @@ const StepTwo: FC<any> = ({
             );
           })
         }
-        {errorControls.modality && <Field.Helper className="">{configControls.errorMessagesStepTwoOpenForm.modality}</Field.Helper>}
       </div>
+        {errorControls.modality && <Field.Helper className="">{configControls.errorMessagesStepTwoOpenForm.modality}</Field.Helper>}
         </Field.Root>
       {/* <p className={cn("text-error-400 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> */}
     </div>
