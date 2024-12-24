@@ -118,7 +118,7 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
 
   const [personalData, setPersonalData] = useState({
     name: "",
-    surname: "",
+    last_name: "",
     phone: "",
     email: "",
   });
@@ -206,14 +206,19 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
     return touched ? !value : false;
   };
 
-  const validatePersonalDataControls = () => !Object.entries(personalData).map((value: any) => {
-    if (value[0] === 'email') {
-      return !!value[1].match(configControls.patternEmail) ? !!value[1].match(configControls.patternEmail).length : true
+  const validatePersonalDataControl = (control: string, value: string) => {
+    if (control === 'email') {
+      return !!value.match(configControls.patternEmail)
     }
-    if (value[0] === 'phone') {
-      return value[1].trim().length === 10
+    if (control === 'phone') {
+      return value.trim().length === 10
     }
-    return !!value[1].trim();
+    return !!value.trim()
+  };
+
+  const validatePersonalDataControls = () => !Object.entries(personalData).map(([key, value]: any) => {
+    const validity = validatePersonalDataControl(key, value)
+    return validity
   }).includes(false)
 
   const validateAcademicDataControls = () => !Object.entries(academicData).map((value: any) => {
@@ -234,7 +239,7 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
 
     // query params
     const nombre = personalData?.name;
-    const apellidoPaterno = personalData?.surname;
+    const apellidoPaterno = personalData?.last_name;
     const telefono = personalData?.phone;
     const email = personalData?.email;
     const lineaNegocio = selectedProgramData?.lineaNegocio || "";
@@ -292,13 +297,14 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
       program: validateAcademicDataControl(academicData.program, true),
       campus: validateAcademicDataControl(academicData.campus, true)
     };
-    
+
     setAcademicDataErrors({ ...newAcademicDataValidation });
+    console.log(personalData)
 
     const isValidPersonalData = validatePersonalDataControls();
     const isValidAcademicData = validateAcademicDataControls();
 
-    if (!isValidPersonalData || !isValidAcademicData) return;
+    if (!isValidPersonalData || !isValidAcademicData) return console.log("No ", isValidPersonalData, isValidAcademicData);
 
     sendLeadData();
   }
