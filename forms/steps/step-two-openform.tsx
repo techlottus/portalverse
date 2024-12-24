@@ -1,7 +1,6 @@
 import { FC, useEffect, useState } from "react"
 import cn from "classnames"
 import OpenFormInit from "@/forms/fixtures/openform"
-// import Select from "@/old-components/Select/Select"
 import configControls from "@/forms/fixtures/controls"
 import { OpenFormControls } from "@/types/OpenFormControls.types"
 import { SelectOptionConfig } from "@/types/Select.types"

@@ -1,14 +1,10 @@
 import { FC, useEffect, useState } from "react"
 import cn from "classnames"
-import OpenFormInit, { Modalities } from "@/forms/fixtures/openform"
+import OpenFormInit from "@/forms/fixtures/openform"
 import Image from "@/old-components/Image"
 import ProgressBar from "@/old-components/ProgressBar/ProgressBar"
-// import Input from "@/old-components/Input/Input"
 import configControls from "@/forms/fixtures/controls"
 import * as PersonalData from "@/forms/components/PersonalData"
-import Select from "@/old-components/Select/Select"
-import Button from "@/old-components/Button/Button"
-import { SelectInit } from "@/old-components/fixture"
 import Link from "next/link"
 
 const StepOne: FC<any> = ({
