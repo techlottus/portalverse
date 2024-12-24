@@ -17,9 +17,9 @@ import errors from "@/multitenant-errors"
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
 
 const getBusinessLineToFetchFrom = (businessLine: string, modality: string) => {
-  switch(businessLine) {
+  switch (businessLine) {
     case "UANE": {
-      switch(modality) {
+      switch (modality) {
         case "Presencial": return "UANE";
         case "Flex": return "UANE,ULA";
         case "Online": return "UANE,ULA";
@@ -27,7 +27,7 @@ const getBusinessLineToFetchFrom = (businessLine: string, modality: string) => {
       }
     }
     case "UTEG": {
-      switch(modality) {
+      switch (modality) {
         case "Presencial": return "UTEG";
         case "Flex": return "UTEG,ULA,UANE";
         case "Online": return "ULA";
@@ -38,7 +38,7 @@ const getBusinessLineToFetchFrom = (businessLine: string, modality: string) => {
       return "ULA"
     }
     case "UTC": {
-      switch(modality) {
+      switch (modality) {
         case "Presencial": return "UTC,ULA";
         case "Semipresencial": return "UTC,ULA";
         case "Online": return "UTC";
@@ -82,37 +82,47 @@ type OpenForm = {
   config?: OpenFormConfig
 }
 
+const Loader = () => (<div className="absolute w-full h-full z-10 flex justify-center items-center left-0 top-0">
+  <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
+</div>)
+
+const ErrorLayOut = () => (
+  <div className="bg-surface-0 w-full h-full p-4 z-10 flex flex-col aspect-2/1 justify-center items-center left-0 top-0">
+    <h3 className="font-bold text-10 text-center leading-12 mb-9">
+      Lo sentimos
+    </h3>
+    <div className="w-full max-w-96"> {/* Tailwind's 'max-w-sm' value isn't working for some reason u.u */}
+      <img src={errors?.["404"]?.image} className="w-full" alt="error" />
+    </div>
+    <h3 className="text-surface-600 font-semibold text-5.5 my-6">
+      Esta página no está disponible
+    </h3>
+    <Button
+      dark
+      onClick={() => location.reload()}
+      data={{ ...ButtonInit, title: "Reintentar" }}
+    />
+  </div>
+)
+
 const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm) => {
 
   const router = useRouter();
   const queryParams = router?.query;
 
-  const [ controlsConfig, setControlsConfig ] = useState({ ...FormConfig });
-  const [ tokenActive, setTokenActive ] = useState<string>("");
-  const [ levelsOffer, setLevelsOffer ] = useState<any>([]);
-  const [ filteredPrograms, setFilteredPrograms ] = useState<any>([]);
-  const [ filteredCampus, setFilteredCampus ] = useState<any>([]);
+  const [controlsConfig, setControlsConfig] = useState({ ...FormConfig });
+  const [tokenActive, setTokenActive] = useState<string>("");
+  const [levelsOffer, setLevelsOffer] = useState<any>([]);
+  const [filteredPrograms, setFilteredPrograms] = useState<any>([]);
+  const [filteredCampus, setFilteredCampus] = useState<any>([]);
 
   const [personalData, setPersonalData] = useState({
     name: "",
-    surname: "",
+    last_name: "",
     phone: "",
     email: "",
   });
 
-  const [personalDataTouched, setPersonalDataTouched] = useState({
-    name: false,
-    surname: false,
-    phone: false,
-    email: false,
-  })
-
-  const [personalDataErrors, setPersonalDataErrors] = useState({
-    name: false,
-    surname: false,
-    phone: false,
-    email: false,
-  })
 
   const [academicData, setAcademicData] = useState({
     modality: "",
@@ -133,6 +143,19 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
     level: false,
     program: false,
     campus: false
+  })
+
+  const [personalDataTouched, setPersonalDataTouched] = useState<{ [key: string]: boolean }>({
+    name: false,
+    last_name: false,
+    phone: false,
+    email: false,
+  })
+  const [personalDataErrors, setPersonalDataErrors] = useState({
+    name: false,
+    last_name: false,
+    phone: false,
+    email: false,
   })
 
   const {
@@ -167,7 +190,7 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
 
   useEffect(() => {
     if (!isLoadingEO && !isErrorEO) {
-      setLevelsOffer(Object.entries(educativeOfferData).map(([_ , level]: any) => level))
+      setLevelsOffer(Object.entries(educativeOfferData).map(([_, level]: any) => level))
     }
   }, [isLoadingEO, isErrorEO, educativeOfferData]);
 
@@ -189,42 +212,33 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
   const handleProgramSelected = (program: string) => {
     setFilteredCampus([]);
     const campusByProgram = filterByProgram(program);
-    setFilteredCampus([ ...campusByProgram ]);
+    setFilteredCampus([...campusByProgram]);
   }
-
-
-  /**
-   * Input Validations
-   */
-  const validatePersonalDataControl = (control: string, value: string, touched: boolean) => {
-    if (control === 'email') {
-      return touched ? !value.match(configControls.patternEmail) : false;
-    }
-    if (control === 'phone') {
-      return touched ? !(value.trim() && value.trim().length === 10) : false;
-    }
-    return touched ? !value.trim() : false;
-  };
 
   const validateAcademicDataControl = (value: string, touched: boolean) => {
     return touched ? !value : false;
   };
 
-  const validatePersonalDataControls = () => !Object.entries(personalData).map((value: any) => {
-    if(value[0] === 'email') {
-      return !!value[1].match(configControls.patternEmail) ? !!value[1].match(configControls.patternEmail).length : true
+  const validatePersonalDataControl = (control: string, value: string) => {
+    if (control === 'email') {
+      return !!value.match(configControls.patternEmail)
     }
-    if(value[0] === 'phone') {
-      return value[1].trim().length === 10
+    if (control === 'phone') {
+      return value.trim().length === 10
     }
-    return !!value[1].trim();
+    return !!value.trim()
+  };
+
+  const validatePersonalDataControls = () => !Object.entries(personalData).map(([key, value]: any) => {
+    const validity = validatePersonalDataControl(key, value)
+    return validity
   }).includes(false)
 
   const validateAcademicDataControls = () => !Object.entries(academicData).map((value: any) => {
     return !!value[1];
   }).includes(false)
 
-  
+
   /**
    * Form Submission
    */
@@ -238,7 +252,7 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
 
     // query params
     const nombre = personalData?.name;
-    const apellidoPaterno = personalData?.surname;
+    const apellidoPaterno = personalData?.last_name;
     const telefono = personalData?.phone;
     const email = personalData?.email;
     const lineaNegocio = selectedProgramData?.lineaNegocio || "";
@@ -256,7 +270,7 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
 
     console.log("queryParams: ", queryParams);
     console.log("source: ", source);
-    
+
 
     const params = `nombre=${nombre}&apellidoPaterno=${apellidoPaterno}&telefono=${telefono}&email=${email}&lineaNegocio=${lineaNegocio}&modalidad=${modalidad}&nivel=${nivel}&campus=${campus}&programa=${programa}&avisoPrivacidad=true&leadSource=Digital&validaRegistroBoot=${validaRegistroBoot}&source=${source}&canal=${canal}${medio ? `&medio=${medio}` : ""}${campana ? `&campana=${campana}` : ""}`;
 
@@ -264,14 +278,14 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
 
     setIsLoadingLead(true);
 
-    await axios.post(`${endpoint}?${params}`,{},{
+    await axios.post(`${endpoint}?${params}`, {}, {
       headers: {
         Authorization: tokenActive,
         'Content-Type': 'application/json;charset=UTF-8'
       }
     })
       .then((res: any) => {
-        if(res?.data?.Exitoso !== "TRUE") {
+        if (res?.data?.Exitoso !== "TRUE") {
           throw new Error();
         }
         router.push(pathThankyou);
@@ -283,13 +297,6 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
   }
 
   const handleSubmit = async () => {
-    setPersonalDataTouched({
-      name: true,
-      surname: true,
-      phone: true,
-      email: true,
-    });
-
     setAcademicDataTouched({
       modality: true,
       level: true,
@@ -297,27 +304,27 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
       campus: true
     });
 
-    const newPersonalDataValidation = {
-      name: validatePersonalDataControl("name", personalData.name, true),
-      surname: validatePersonalDataControl("surname", personalData.surname, true),
-      phone: validatePersonalDataControl("phone", personalData.phone, true),
-      email: validatePersonalDataControl("email", personalData.email, true),
-    }
-
     const newAcademicDataValidation = {
       modality: validateAcademicDataControl(academicData.modality, true),
       level: validateAcademicDataControl(academicData.level, true),
       program: validateAcademicDataControl(academicData.program, true),
       campus: validateAcademicDataControl(academicData.campus, true)
     };
+    const newPersonalDataValidation = {
+      name: !validatePersonalDataControl("name", personalData.name),
+      last_name: !validatePersonalDataControl("surname", personalData.last_name),
+      phone: !validatePersonalDataControl("phone", personalData.phone),
+      email: !validatePersonalDataControl("email", personalData.email),
+    }
 
-    setPersonalDataErrors({ ...newPersonalDataValidation });
     setAcademicDataErrors({ ...newAcademicDataValidation });
+    setPersonalDataErrors({...newPersonalDataValidation})
+    console.log("personaldataerrors: ", personalDataErrors)
 
     const isValidPersonalData = validatePersonalDataControls();
     const isValidAcademicData = validateAcademicDataControls();
 
-    if(!isValidPersonalData || !isValidAcademicData) return;
+    if (!isValidPersonalData || !isValidAcademicData) return console.log("No ", isValidPersonalData, isValidAcademicData);
 
     sendLeadData();
   }
@@ -326,70 +333,52 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
   const isError = isErrorToken || isErrorEO || isErrorLead;
 
   return (
-    <section className={cn("p-6 shadow-15 bg-surface-0 relative", classNames)}>
+    <section className={cn("p-6 shadow-15 bg-surface-0 relative rounded-lg", classNames)}>
       <div>
         {
-          isLoading
-            ? <div className="absolute w-full h-full z-10 flex justify-center items-center left-0 top-0">
-                <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
-              </div>
-            : null
+          isLoading && <Loader />
         }
         {
           isError
-            ? <div className="bg-surface-0 w-full h-full p-4 z-10 flex flex-col aspect-2/1 justify-center items-center left-0 top-0">
-                <h3 className="font-bold text-10 text-center leading-12 mb-9">
-                Lo sentimos
-                </h3>
-                <div className="w-full max-w-96"> {/* Tailwind's 'max-w-sm' value isn't working for some reason u.u */}
-                  <img src={errors?.["404"]?.image} className="w-full" alt="error" />
-                </div>
-                <h3 className="text-surface-600 font-semibold text-5.5 my-6">
-                Esta página no está disponible
-                </h3>
-                <Button
-                  dark
-                  onClick={() => location.reload()}
-                  data={{ ...ButtonInit, title: "Reintentar" }}
-                />
-              </div>
+            ? <ErrorLayOut/>
             : <>
-                <StepOne
-                  personalData={personalData}
-                  setPersonalData={setPersonalData}
-                  config={config}
-                  data={data}
-                  step={30}
-                  infoControlsTouched={personalDataTouched}
-                  setInfoControlsTouched={setPersonalDataTouched}
-                  errorControls={personalDataErrors}
-                  setErrorControls={setPersonalDataErrors}
-                />
-                <StepTwo
-                  isLoading={isLoading}
-                  academicData={academicData}
-                  setAcademicData={setAcademicData}
-                  campus={filteredCampus}
-                  programs={filteredPrograms}
-                  onChangeProgram={(program: string) =>
-                    handleProgramSelected(program)
-                  }
-                  onLevelSelected={(level: string) => handleLevelSelected(level)}
-                  onChangeModality={(modality: string) =>
-                    handleFetchEducativeOffer(modality)
-                  }
-                  levels={levelsOffer}
-                  step={60}
-                  controls={{ ...controlsConfig }}
-                  infoControlsTouched={academicDataTouched}
-                  setInfoControlsTouched={setAcademicDataTouched}
-                  errorControls={academicDataErrors}
-                  setErrorControls={setAcademicDataErrors}
-                />
-                <div className="mt-6">
-                  <Button dark onClick={handleSubmit} data={ configControls.buttonConfigOpenFormStepThree } />
-                </div>
-              </>
+              <StepOne
+                personalData={personalData}
+                setPersonalData={setPersonalData}
+                config={config}
+                data={data}
+                step={30}
+                personalDataErrors = {personalDataErrors}
+                setPersonalDataErrors = {setPersonalDataErrors}
+                personalDataTouched = {personalDataTouched}
+                setPersonalDataTouched = {setPersonalDataTouched}
+                validatePersonalDataControls={validatePersonalDataControls()}
+              />
+              <StepTwo
+                isLoading={isLoading}
+                academicData={academicData}
+                setAcademicData={setAcademicData}
+                campus={filteredCampus}
+                programs={filteredPrograms}
+                onChangeProgram={(program: string) =>
+                  handleProgramSelected(program)
+                }
+                onLevelSelected={(level: string) => handleLevelSelected(level)}
+                onChangeModality={(modality: string) =>
+                  handleFetchEducativeOffer(modality)
+                }
+                levels={levelsOffer}
+                step={60}
+                controls={{ ...controlsConfig }}
+                infoControlsTouched={academicDataTouched}
+                setInfoControlsTouched={setAcademicDataTouched}
+                errorControls={academicDataErrors}
+                setErrorControls={setAcademicDataErrors}
+              />
+              <div className="mt-4">
+                <Button dark onClick={handleSubmit} data={configControls.buttonConfigOpenFormStepThree} />
+              </div>
+            </>
         }
       </div>
     </section>
