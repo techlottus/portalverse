@@ -261,8 +261,8 @@ const StepTwo: FC<any> = ({
                 </Radio>
               ))
           }
-          {errorControls.level && <Field.Helper className="">{configControls.errorMessagesStepTwoOpenForm.level}</Field.Helper>}
         </div>
+          {errorControls.level && <Field.Helper className="">{configControls.errorMessagesStepTwoOpenForm.level}</Field.Helper>}
           </Field.Root>
         {/* <p className={cn("text-error-500 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.level })}>{configControls.errorMessagesStepTwoOpenForm.level}</p> */}
       </div>
