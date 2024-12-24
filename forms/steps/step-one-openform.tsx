@@ -59,11 +59,10 @@ const StepOne: FC<any> = ({
         <Image classNamesImg="w-full h-full object-cover" classNames="w-28 h-28 rounded-full overflow-hidden" src={config?.image?.src} alt={config?.image?.alt} />
       </div>
     </div>
-    <div className="flex align-middle items-center mt-8 mb-6">
-      <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">{config.conditions}</p>
-      <Link href={config?.privacyLink?.link} passHref target={"_blank"}>
-        <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">{config.privacyLink.label}</p>
-      </Link>
+    <div className="flex align-middle items-center mt-8 mb-6 flex-wrap">
+      <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1 block text-wrap">{config.conditions} <Link href={config?.privacyLink?.link} passHref target={"_blank"}>
+        <span className="text-3.5 font-texts font-normal text-sm text-surface-800 underline text-wrap">{config.privacyLink.label}</span>
+      </Link></p>
     </div>
     <div className="mb-6">
       <ProgressBar data={{ progress }} />

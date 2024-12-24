@@ -313,7 +313,7 @@ const OpenForm = ({ config, classNames, pathThankyou, controls, data }: OpenForm
   const isError = isErrorToken || isErrorEO || isErrorLead;
 
   return (
-    <section className={cn("p-6 shadow-15 bg-surface-0 relative", classNames)}>
+    <section className={cn("p-6 shadow-15 bg-surface-0 relative rounded-lg", classNames)}>
       <div>
         {
           isLoading && <Loader />
