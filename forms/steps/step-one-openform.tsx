@@ -44,8 +44,8 @@ const StepOne: FC<any> = ({
   };
 
   return <section className={cn(classNames)}>
-    <div className="flex gap-6 mobile:gap-4">
-      <div className="flex flex-col gap-6 mobile:gap-4">
+    <div className="flex gap-4 ">
+      <div className="flex flex-col gap-4">
         <h4 className="font-texts font-bold text-5 leading-6">{config.title}</h4>
         <p className="font-texts font-normal text-3.5 leading-4">{config.subtitle}</p>
       </div>
@@ -53,7 +53,7 @@ const StepOne: FC<any> = ({
         <Image classNamesImg="w-full h-full object-cover" classNames="w-28 h-28 rounded-full overflow-hidden" src={config?.image?.src} alt={config?.image?.alt} />
       </div>
     </div>
-    <div className="flex align-middle items-center my-6 flex-wrap">
+    <div className="flex align-middle items-center my-4 flex-wrap">
       <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1 block text-wrap">{config.conditions} <Link href={config?.privacyLink?.link} passHref target={"_blank"}>
         <span className="text-3.5 font-texts font-normal text-sm text-surface-800 underline text-wrap">{config.privacyLink.label}</span>
       </Link></p>
@@ -71,7 +71,7 @@ const StepOne: FC<any> = ({
         setErrorControls={setPersonalDataErrors}
         validateControl={validatePersonalDataControl}
       >
-        <div className="mt-6 flex w-p:flex-col gap-6 font-normal">
+        <div className=" flex w-p:flex-col gap-6 font-normal">
           <div className="grow">
             <PersonalData.Name />
           </div>
@@ -79,10 +79,10 @@ const StepOne: FC<any> = ({
             <PersonalData.SurName />
           </div>
         </div>
-        <div className="mt-6">
+        <div className="mt-4">
           <PersonalData.Phone />
         </div>
-        <div className="mt-6">
+        <div className="mt-4">
           <PersonalData.Email />
         </div>
       </PersonalData.Root>

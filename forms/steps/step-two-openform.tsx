@@ -197,7 +197,7 @@ const StepTwo: FC<any> = ({
 
   return <section className={cn(classNames)}>
     <div className={cn("flex flex-col", { "hidden": controlsConfig?.modality?.hidden })}>
-      <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 mb-2">{config.modality}</p>
+      <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-4 mb-2">{config.modality}</p>
         <Field.Root hasError={errorControls.modality}>
       <div className="flex justify-start gap-4 flex-wrap">
         {
@@ -205,7 +205,7 @@ const StepTwo: FC<any> = ({
             return (
               <Radio
                 name={modalityData?.text}
-                disabled={false}
+                disabled={false} 
                 hasError={false}
                 value={modalityData?.value}
                 checked={i === activeModalityPill}
@@ -231,7 +231,7 @@ const StepTwo: FC<any> = ({
       {/* <p className={cn("text-error-400 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> */}
     </div>
     <div className={cn("flex flex-col", { "hidden": controlsConfig?.level?.hidden })}>
-      <p className="font-texts font-normal text-3.5 leading-5 text-surface-800 mt-6 mb-1">{config.level}</p>
+      <p className="font-texts font-normal text-3.5 leading-5 text-surface-800 mt-4 mb-2">{config.level}</p>
       <div className="w-full flex flex-col mt-1">
         <Field.Root hasError={errorControls.level}>
         <div className="flex justify-start gap-4 flex-wrap">
@@ -267,8 +267,8 @@ const StepTwo: FC<any> = ({
         {/* <p className={cn("text-error-500 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.level })}>{configControls.errorMessagesStepTwoOpenForm.level}</p> */}
       </div>
     </div>
-    <div className={cn("flex flex-col", { "hidden": controlsConfig?.program?.hidden })}>
-      <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6">{config.program}</p>
+    <div className={cn("flex flex-col mt-4", { "hidden": controlsConfig?.program?.hidden })}>
+      {/* <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6">{config.program}</p> */}
       <Field.Root hasError={errorControls.program}>
       <Select.Root
         disabled={!dataPrograms.length}
@@ -296,8 +296,8 @@ const StepTwo: FC<any> = ({
           </Field.Root>
       {/* <p className={cn("text-error-400 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.program })}>{configControls.errorMessagesStepTwoOpenForm.program}</p> */}
     </div>
-    <div className={cn("flex flex-col", { "hidden": controlsConfig?.campus?.hidden })}>
-      <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">{campusLabel || config?.campus}</p>
+    <div className={cn("flex flex-col mt-4", { "hidden": controlsConfig?.campus?.hidden })}>
+      {/* <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">{campusLabel || config?.campus}</p> */}
       <Field.Root hasError={errorControls.campus}>
       <Select.Root
         disabled={!dataCampus.length}
