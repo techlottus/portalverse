@@ -71,7 +71,7 @@ const StepOne: FC<any> = ({
         setErrorControls={setPersonalDataErrors}
         validateControl={validatePersonalDataControl}
       >
-        <div className=" flex w-p:flex-col gap-6 font-normal">
+        <div className=" flex w-p:flex-col gap-4 font-normal">
           <div className="grow">
             <PersonalData.Name />
           </div>
