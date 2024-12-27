@@ -1,14 +1,12 @@
 import { FC, useEffect, useState } from "react"
 import cn from "classnames"
 import OpenFormInit from "@/forms/fixtures/openform"
-import Select from "@/old-components/Select/Select"
-import { SelectInit } from "@/old-components/fixture"
-import Button from "@/old-components/Button/Button"
 import configControls from "@/forms/fixtures/controls"
-import ProgressBar from "@/old-components/ProgressBar/ProgressBar"
-import OptionPill from "@/old-components/OptionPill"
 import { OpenFormControls } from "@/types/OpenFormControls.types"
 import { SelectOptionConfig } from "@/types/Select.types"
+import Radio from "@/components/lottus-education/Radio"
+import * as Select from "@/components/lottus-education/Select"
+import * as Field from "@/components/lottus-education/Field"
 
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
 
@@ -110,24 +108,24 @@ const StepTwo: FC<any> = ({
   setErrorControls
 }: any) => {
 
-  const [ config, setConfig ] = useState<any>({ ...OpenFormInit.steptwo });
-  const [ controlsConfig, setControlsConfig ] = useState<OpenFormControls | null>(null);
-  const [ activeLevelPill, setActiveLevelPill ] = useState<number>(-1);
-  const [ activeModalityPill, setActiveModalityPill ] = useState<number>(-1);
+  const [config, setConfig] = useState<any>({ ...OpenFormInit.steptwo });
+  const [controlsConfig, setControlsConfig] = useState<OpenFormControls | null>(null);
+  const [activeLevelPill, setActiveLevelPill] = useState<number>(-1);
+  const [activeModalityPill, setActiveModalityPill] = useState<number>(-1);
 
-  const [ dataModalities, setDataModalities ] = useState<Array<any>>([]);
-  const [ dataPrograms, setDataPrograms ] = useState<Array<any>>([]);
-  const [ dataCampus, setDataCampus ] = useState<Array<any>>([]);
-  const [ defaultValues, setDefaultValues ] = useState<any>({});
+  const [dataModalities, setDataModalities] = useState<Array<any>>([]);
+  const [dataPrograms, setDataPrograms] = useState<Array<any>>([]);
+  const [dataCampus, setDataCampus] = useState<Array<any>>([]);
+  const [defaultValues, setDefaultValues] = useState<any>({});
 
   useEffect(() => {
     setDataModalities(getAvailableModalities());
   }, [])
 
   useEffect(() => {
-    setDataPrograms([ ...programs ]);
+    setDataPrograms([...programs]);
   }, [programs])
-  
+
   useEffect(() => {
     if (!!programDefault && !!dataPrograms.length && !academicData.program) {
       setDefaultValues({ ...defaultValues, program: programDefault });
@@ -144,13 +142,13 @@ const StepTwo: FC<any> = ({
       setInfoControlsTouched({ ...infoControlsTouched, level: true });
     }
   }, [levelDefault])
-  
+
   useEffect(() => {
-    setDataCampus([ ...campus ]);
+    setDataCampus([...campus]);
   }, [campus])
 
   useEffect(() => {
-    setControlsConfig({...controls});
+    setControlsConfig({ ...controls });
   }, [controls])
 
   useEffect(() => {
@@ -166,23 +164,29 @@ const StepTwo: FC<any> = ({
     }
   }
 
-  const handleChangeProgram = (option: CustomEvent) => {
-    const { detail: program } = option;
-    setAcademicData({ ...academicData, program, campus: "" });
-    setDataPrograms(dataPrograms.map((item: any) => ({ ...item, active: item.value === program })));
-    onChangeProgram(program);
-    setErrorControls((state: any) => ({ ...state, program: validateControl(program, infoControlsTouched.program) }));
+  const handleChangeProgram = (option: any) => {
+    setAcademicData({ ...academicData, program: option, campus: "" });
+    setDataPrograms(dataPrograms.map((item: any) => ({ ...item, active: item.value === option })));
+    onChangeProgram(option);
+    setErrorControls((state: any) => ({ ...state, program: validateControl(option, infoControlsTouched.program) }));
   }
 
-  const handleChangeCampus = (option: CustomEvent) => {
-    const { detail: campus } = option;
-    setAcademicData({ ...academicData, campus });
-    setDataCampus(dataCampus.map((item: any) => ({ ...item, active: item.value === campus })))
-    setErrorControls({ ...errorControls, campus: validateControl(campus, infoControlsTouched.campus) });
+  const handleChangeCampus = (option: any) => {
+    setAcademicData({ ...academicData, campus:option });
+    setDataCampus(dataCampus.map((item: any) => ({ ...item, active: item.value === option })))
+    setErrorControls({ ...errorControls, campus: validateControl(option, infoControlsTouched.campus) });
   }
 
   const validateControl = (value: string, touched: boolean) => {
     return touched ? !value : false;
+  };
+  const handleTouchedControl = (control: string) => {
+    setInfoControlsTouched({ ...infoControlsTouched, [control]: true });
+    const isValid = validateControl(academicData[control], true);
+    setErrorControls({
+      ...errorControls,
+      [control]: !isValid && infoControlsTouched[control],
+    });
   };
 
   const BUSINESS_UNIT = process.env.NEXT_PUBLIC_BUSINESS_UNIT;
@@ -192,71 +196,135 @@ const StepTwo: FC<any> = ({
   const defaultLevels = BUSINESS_UNIT === "UTC" ? commonLevels : BUSINESS_UNIT === "ULA" ? [...commonLevels, "Doctorado", "Educación Continua"] : [...commonLevels, "Doctorado"]
 
   return <section className={cn(classNames)}>
-      <div className={cn("flex flex-col", { "hidden": controlsConfig?.modality?.hidden })}>
-        <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 mb-2">{ config.modality }</p>
-          <div className="flex justify-start gap-6 flex-wrap">
-            {
-              dataModalities?.map((modalityData, i) => {
-                return (
-                  <OptionPill
-                    onClick={() => {
-                      const modality = modalityData?.value;
-                      console.log('modality: ', modality);
-                      
-                      setAcademicData({ ...academicData, modality, level: "", program: "", campus: "" });
-                      setDataModalities(dataModalities?.map((item: any) => ({ ...item, active: item.value === modality })));
-                      onChangeModality(modality);
-                      setActiveModalityPill(i);
-                      setActiveLevelPill(-1)
-                      setErrorControls({ ...errorControls, modality: validateControl(modality, infoControlsTouched.modality) });
-                    }}
-                    key={`pill-${i}`}
-                    data={{ name: modalityData?.text, search: "", disabled: false }}
-                    active={i === activeModalityPill}
-                  />
-                );
-              })
-            }
-          </div>
-        <p className={cn("text-error-400  text-xs px-3 mt-4", { "hidden": !errorControls.modality })}>{ configControls.errorMessagesStepTwoOpenForm.modality }</p>
+    <div className={cn("flex flex-col", { "hidden": controlsConfig?.modality?.hidden })}>
+      <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-4 mb-2">{config.modality}</p>
+        <Field.Root hasError={errorControls.modality}>
+      <div className="flex justify-start gap-4 flex-wrap">
+        {
+          dataModalities?.map((modalityData, i) => {
+            return (
+              <Radio
+                name={modalityData?.text}
+                disabled={false} 
+                hasError={false}
+                value={modalityData?.value}
+                checked={i === activeModalityPill}
+                onChange={() => {
+                  const modality = modalityData?.value;
+                  setAcademicData({ ...academicData, modality, level: "", program: "", campus: "" });
+                  setDataModalities(dataModalities?.map((item: any) => ({ ...item, active: item.value === modality })));
+                  onChangeModality(modality);
+                  setActiveModalityPill(i);
+                  setActiveLevelPill(-1)
+                  setErrorControls({ ...errorControls, modality: validateControl(modality, infoControlsTouched.modality) });
+                }}
+                key={`pill-${i}`}>
+                {modalityData?.text}
+              </Radio>
+
+            );
+          })
+        }
       </div>
-      <div className={cn("flex flex-col", { "hidden": controlsConfig?.level?.hidden })}>
-        <p className="font-texts font-normal text-3.5 leading-5 text-surface-800 mt-6 mb-1">{ config.level }</p>
-        <div className="w-full flex flex-col mt-1">
-          <div className="flex justify-start gap-6 flex-wrap">
-            {
-              levels?.length < 1
-                ? defaultLevels?.map((level, i) => (
-                    <OptionPill
-                      onClick={() => {}}
-                      key={`pill-${i}`}
-                      data={{ name: level, search: "", disabled: true }}
-                      active={false}
-                    />
-                  ))
-                : levels?.map((level: any, i: number) => (
-                    <OptionPill
-                      onClick={(value: string) => handleSelect(i, level.disabled, value)}
-                      key={`pill-${i}`}
-                      data={{ ...level, disabled: !!isLoading }}
-                      active={i === activeLevelPill}
-                    />
-                  ))
-            }
-          </div>
-          <p className={cn("text-error-500 text-xs px-3 mt-4", { "hidden": !errorControls.level })}>{ configControls.errorMessagesStepTwoOpenForm.level }</p>
+        {errorControls.modality && <Field.Helper className="">{configControls.errorMessagesStepTwoOpenForm.modality}</Field.Helper>}
+        </Field.Root>
+      {/* <p className={cn("text-error-400 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.modality })}>{configControls.errorMessagesStepTwoOpenForm.modality}</p> */}
+    </div>
+    <div className={cn("flex flex-col", { "hidden": controlsConfig?.level?.hidden })}>
+      <p className="font-texts font-normal text-3.5 leading-5 text-surface-800 mt-4 mb-2">{config.level}</p>
+      <div className="w-full flex flex-col mt-1">
+        <Field.Root hasError={errorControls.level}>
+        <div className="flex justify-start gap-4 flex-wrap">
+          {
+            levels?.length < 1
+              ? defaultLevels?.map((level, i) => (
+                <Radio
+                  name={level}
+                  disabled={true}
+                  hasError={false}
+                  value={level}
+                  checked={false}
+                  key={`pill-${i}`}>
+                  {level}
+                </Radio>
+              ))
+              : levels?.map((level: any, i: number) => (
+                <Radio
+                  onChange={(value: any) => handleSelect(i, level.disabled, value.target.value)}
+                  name={level.name}
+                  disabled={!!isLoading}
+                  hasError={false}
+                  value={level.name}
+                  checked={i === activeLevelPill}
+                  key={`pill-${i}`}>
+                  {level.name}
+                </Radio>
+              ))
+          }
         </div>
+          {errorControls.level && <Field.Helper className="">{configControls.errorMessagesStepTwoOpenForm.level}</Field.Helper>}
+          </Field.Root>
+        {/* <p className={cn("text-error-500 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.level })}>{configControls.errorMessagesStepTwoOpenForm.level}</p> */}
       </div>
-      <div className={cn("flex flex-col", { "hidden": controlsConfig?.program?.hidden })}>
-        <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6">{ config.program }</p>
-        <Select onClick={(option: CustomEvent) => handleChangeProgram(option)} options={[...dataPrograms]} data={{ ...SelectInit, textDefault: !!academicData.program ? " " : "Elige un programa", disabled: !dataPrograms.length, icon: "school" }}  />
-        <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.program })}>{ configControls.errorMessagesStepTwoOpenForm.program }</p>
-      </div>
-      <div className={cn("flex flex-col", { "hidden": controlsConfig?.campus?.hidden })}>
-        <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">{ campusLabel || config?.campus }</p>
-        <Select onClick={(option: CustomEvent) => handleChangeCampus(option)} options={[...dataCampus]} data={{ ...SelectInit, textDefault: !!academicData.campus ? " " : `Elige un ${campusLabel}`, disabled: !dataCampus.length, icon: "apartment" }}  />
-        <p className={cn("text-error-400 text-xs px-3 mt-4", { "hidden": !errorControls.campus })}>{ configControls.errorMessagesStepTwoOpenForm.campus }</p>
-      </div>
+    </div>
+    <div className={cn("flex flex-col mt-4", { "hidden": controlsConfig?.program?.hidden })}>
+      {/* <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6">{config.program}</p> */}
+      <Field.Root hasError={errorControls.program}>
+      <Select.Root
+        disabled={!dataPrograms.length}
+        onValueChange={(option: any) => handleChangeProgram(option)}
+        value={academicData.program}>
+        <Select.Trigger
+          value={academicData.program}
+          hasError={errorControls["program"]}
+          isValid={!!academicData.program?.trim()}>
+          <Select.Value placeholder={"Elige un programa"} />
+        </Select.Trigger>
+        <Select.Content>
+          {dataPrograms?.map((opt: any, i: number) => (
+            <Select.Item
+              onClick={() => handleTouchedControl("program")}
+              key={i}
+              value={opt?.value} >
+              {opt?.text}
+            </Select.Item>
+          ))
+          }
+        </Select.Content>
+      </Select.Root>
+      {errorControls.program && <Field.Helper className="">{configControls.errorMessagesStepTwoOpenForm.program}</Field.Helper>}
+          </Field.Root>
+      {/* <p className={cn("text-error-400 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.program })}>{configControls.errorMessagesStepTwoOpenForm.program}</p> */}
+    </div>
+    <div className={cn("flex flex-col mt-4", { "hidden": controlsConfig?.campus?.hidden })}>
+      {/* <p className="font-texts font-normal text-sm leading-5 text-surface-800 mt-6 capitalize">{campusLabel || config?.campus}</p> */}
+      <Field.Root hasError={errorControls.campus}>
+      <Select.Root
+        disabled={!dataCampus.length}
+        onValueChange={(option: any) => handleChangeCampus(option)}
+        value={academicData.campus}>
+        <Select.Trigger
+          value={academicData.campus}
+          hasError={errorControls.campus}
+          isValid={!!academicData.campus?.trim()}>
+          <Select.Value placeholder={!!academicData.campus ? " " : `Elige un ${campusLabel}`} />
+        </Select.Trigger>
+        <Select.Content>
+          {dataCampus?.map((opt: any, i: number) => (
+            <Select.Item
+              onClick={() => handleTouchedControl("campus")}
+              key={i}
+              value={opt?.value} >
+              {opt?.text}
+            </Select.Item>
+          ))
+          }
+        </Select.Content>
+      </Select.Root>
+      {errorControls.campus && <Field.Helper className="">{configControls.errorMessagesStepTwoOpenForm.campus}</Field.Helper>}
+      </Field.Root>
+      {/* <p className={cn("text-error-400 font-normal font-texts text-xs mt-2", { "hidden": !errorControls.campus })}>{configControls.errorMessagesStepTwoOpenForm.campus}</p> */}
+    </div>
   </section>
 }
 
