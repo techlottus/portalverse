@@ -100,7 +100,7 @@ const PaymentCard = (props: PaymentCardData) => {
         }
         
         {/** add case with discount and recurring (discounted_price) */
-          price && !discounted_price && !periodicity
+          price && !discounted_price && !!periodicity
             ? <p className="font-headings font-bold text-xl">${price.toLocaleString('en-US')} MXN <span className="text-surface-500 font-normal text-xs">{periodicity}</span></p>
             : null
         }
