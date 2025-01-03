@@ -26,15 +26,17 @@ const Header = (props: MenuType) => {
   const handleCloseOnClick = () => {
     setOpen(false)
     setOpenContent('closed')
+    setSubItems(false)
+    setItems(false)
   }
 
-  // Componente de enlaces
+  // Componente de enlaces (egresados y alumnos)
   const Links = ({ links }: { links?: (MenuType['links']) }) => (
     <div className="w-full">
       <NavigationMenu.List className="flex space-x-3 desktop:space-x-0 w-full desktop:items-center desktop:justify-end ">
         {links?.map((link?: any, i?: number) => (
           <NavigationMenu.Item key={i} className="w-1/2 desktop:w-full desktop:px-3 desktop:py-0 p-4 mobile:border-2 tablet:border-2  desktop:border-r desktop:last:border-r-0 rounded-lg desktop:rounded-none desktop:border-surface-900">
-            <Link href={link?.href ?? ""} passHref>
+            <Link href={link?.href ?? ""} passHref onClick={() => handleCloseOnClick()}>
               <p className="font-texts desktop:font-normal font-semibold text-sm desktop:text-surface-500 cursor-pointer hover:text-primary-500 w-full">
                 {link?.text}
               </p>
@@ -121,16 +123,24 @@ const Header = (props: MenuType) => {
                 </div>
               </button>
             ) : (
-              <Link key={i} href={item.href ?? ""} passHref onClick={() => handleCloseOnClick()}
-                onMouseEnter={() => {
-                  isSub ? setSubItems(false) : setItems(false)
-                }} >
+              <span role="button" tabIndex={-1} key={i} 
+              onClick={() => {
+                item.href? router.push(item.href): null
+                setOpen(false)
+                setOpenContent("closed")
+                setItems(false)
+                setSubItems(false)
+              }
+              }            
+              onMouseEnter={() => {
+                isSub ? setSubItems(false) : setItems(false)
+              }} >
                 <p className={classNames("mobile:py-2 tablet:py-2 w-full text-base", {
                   ["desktop:px-3 rounded-lg desktop:border desktop:border-surface-50 desktop:hover:border-surface-200 desktop:hover:bg-surface-0 py-2"]: !isSub,
                   ["font-texts text-surface-950 font-bold"]: item.bold,
                   ["font-texts text-surface-500 desktop:hover:text-primary-500 font-normal "]: !item.bold,
-                })}>{item.label}</p>
-              </Link>
+                })}>{item.label} </p>
+              </span>
             )
           )}
           {linkText && <Link href={linkHref ?? ""} passHref onClick={() => handleCloseOnClick()} onMouseEnter={() => {
@@ -236,10 +246,7 @@ const Header = (props: MenuType) => {
                       </div>
                     </Link>
                   }
-
                 </div>
-
-
               </div>
             </div>
           </div>
@@ -255,11 +262,7 @@ const Header = (props: MenuType) => {
       <div className="grid desktop:grid-cols-2 gap-6 tablet:grid-cols-1 mobile:grid-cols-1">
         {
           banners?.map((item: any, i: number) => <div key={`section-banners-${i}`}>
-            {/* <BannerPortalverseWrapper data={item} onClick={() => {
-              router.push(item?.ctaUrl);
-            }} /> */}
             <Banner {...item} />
-
           </div>)
         }
       </div>
@@ -289,7 +292,7 @@ const Header = (props: MenuType) => {
   }
 
   const handleHamburger = () => {
-    setOpen(prevState => !prevState);
+    setOpen(!open);
   };
 
   useEffect(() => {
@@ -311,7 +314,7 @@ const Header = (props: MenuType) => {
 
   return (
     // todo desktop sticky
-    <div className="absolute desktop:fixed top-0 z-20 flex flex-col w-full tablet:fixed mobile:fixed bg-surface-0 ">
+    <div className="sticky top-0 z-20 flex flex-col w-full bg-surface-0 ">
       {/* Primer nivel del menú */}
       <NavigationMenu.Root className="relative flex h-auto desktop:py-4 py-3 desktop:px-21 px-6 desktop:border-b desktop:border-surface-300 w-full justify-center align-middle bg-surface-0 tablet:z-10">
         <button className="absolute top-0 left-6 pr-3 py-3 desktop:hidden flex items-center h-full" onClick={() => handleHamburger()}>
@@ -332,10 +335,10 @@ const Header = (props: MenuType) => {
       </NavigationMenu.Root>
 
       {/* Segundo nivel del menú */}
-      <div className={classNames(" desktop:flex w-full desktop:min-w-[1024px] h-full desktop:h-[45px] bg-surface-0 mobile:px-0 tablet:px-0  desktop:px-21 desktop:justify-center desktop:border-b desktop:border-surface-300 desktop:shadow tablet:fixed mobile:fixed tablet:top-[69px] mobile:top-[69px] tablet:overflow-y-scroll mobile:overflow-y-scroll ",
+      <div className={classNames(" desktop:flex w-full desktop:min-w-[1024px] h-full desktop:h-[45px] bg-surface-0 mobile:px-0 tablet:px-0  desktop:px-21 desktop:justify-center desktop:border-b desktop:border-surface-300 desktop:shadow  tablet:top-[69px] mobile:top-[69px] tablet:overflow-y-scroll mobile:overflow-y-scroll ",
         {
-          ["mobile:hidden tablet:hidden"]: !open,
-          [" tablet:transition-colors tablet:duration-1000 tablet:bg-surface-950/30 tablet:ease-in-out"]: open
+          ["mobile:hidden tablet:hidden"]: !open ,
+          [" tablet:sticky mobile:sticky tablet:transition-colors tablet:duration-1000 tablet:bg-surface-950/30 tablet:ease-in-out"]: open 
         })}>
         <NavigationMenu.Root value={openContent} onValueChange={setOpenContent} className={classNames("desktop:h-[45px] desktop:w-full  desktop:max-w-[1200px] h-screen overscroll-none desktop:flex tablet:data-[state=closed]:hidden")}>
           <NavigationMenu.List className="mobile:w-full h-screen mobile:overflow-y-auto mobile:overscroll-y-auto desktop:h-fit desktop:w-auto flex flex-col desktop:justify-between  desktop:flex-row desktop:items-start  desktop:py-0 tablet:max-w-100 bg-surface-0  desktop:bg-transparent">
@@ -362,9 +365,10 @@ const Header = (props: MenuType) => {
                         setOpenContent('closed')
                         clearStates()
                       }
-                      } className="bg-surface-0  desktop:bg-surface-50 desktop:rounded-b-xl h-full desktop:min-h-[440px]  desktop:px-21 px-6 desktop:py-6 w-full tablet:max-w-100 flex desktop:flex-row flex-col desktop:justify-center tablet:z-20 mobile:overflow-y-auto mobile:overscroll-y-auto">
+                      } className="bg-surface-0 mobile:relative  desktop:bg-surface-50 desktop:rounded-b-xl h-full desktop:min-h-[440px]  desktop:px-21 px-6 desktop:py-6 w-full tablet:max-w-100 flex desktop:flex-row flex-col desktop:justify-center tablet:z-20 mobile:overflow-y-auto mobile:overscroll-y-auto">
                         <div className="flex w-full desktop:max-w-[1200px] desktop:min-h-fit mobile:h-full tablet:h-full mobile:flex-col tablet:flex-col ">
                           <div className="">
+                            {/* nivel 2 de opciones */}
                             <div className="desktop:hidden flex flex-col space-y-2 border-b border-surface-300 mobile:mt-3 tablet:mt-3 mobile:pb-3 tablet:pb-3">
                               <div className="flex space-x-2 align-middle items-center">
                                 <button onClick={() => {
@@ -399,10 +403,10 @@ const Header = (props: MenuType) => {
                           </div>
                           <ButtonLinks className="mb-100 py-6" />
                         </div>
-                        {items && <div className="desktop:hidden flex flex-col absolute top-0 left-0 w-full bg-surface-0 overflow-y-auto overscroll-auto h-full  z-30 ">
+                        {items && openContent!=='closed' && open && <div className={classNames("desktop:hidden flex flex-col  top-0 left-0 w-full bg-surface-0 overflow-y-auto overscroll-auto h-full  ",{["hidden"]:!open, ["absolute z-20"]:open})}>
                           <SubItems list={itemList?.items} isSub linkText={itemList?.linkText} linkHref={itemList?.href} label={itemList?.label} />
                         </div>}
-                        {subItems && <div className="desktop:hidden flex flex-col absolute top-0 left-0 w-full bg-surface-0 overflow-y-auto overscroll-auto h-full  z-30 ">
+                        {subItems && openContent!=='closed' && open && <div className={classNames("desktop:hidden flex flex-col top-0 left-0 w-full bg-surface-0 overflow-y-auto overscroll-auto h-full    ",{["hidden"]:!open, ["absolute z-30"]:open})}>
                           <SubItems list={subItemList?.items} isSub linkText={subItemList?.linkText} linkHref={subItemList?.href} label={subItemList?.label} />
                         </div>}
 
@@ -418,8 +422,9 @@ const Header = (props: MenuType) => {
 
           </NavigationMenu.List>
           {/* si borran este ya no se ve el contenido a w-full */}
-          <div className={classNames("absolute w-full desktop:-z-10 desktop:overflow-y-hidden desktop:top-[113px] mobile:top-0 tablet:top-0 desktop:left-0 tablet:left-0 ", {
+          <div className={classNames(" w-full desktop:-z-10 desktop:overflow-y-hidden desktop:top-[113px] mobile:top-0 tablet:top-0 desktop:left-0 tablet:left-0 ", {
             ["hidden"]: openContent == 'closed',
+            ["absolute"]: openContent !== 'closed',
           })}>
             <NavigationMenu.Viewport
               //@ts-ignore

@@ -2,7 +2,7 @@
 
 import  cn  from 'classnames';
 import { Label as InternalLabel, LabelProps } from './Label';
-import React, { Children, createContext, useContext } from 'react';
+import React, { createContext, useContext } from 'react';
 import IconComponent from '@/old-components/Icon'; 
 
 type FieldContextProps = {
@@ -73,7 +73,7 @@ const Helper = ({ className, children }: {className?:string, children?: React.Re
   const context = useFieldContext();
   return (
     <div
-      className={cn('text-sm text-surface-900 px-2', className, {
+      className={cn('text-sm px-2 font-texts font-normal', className, {
         'text-error-600': context.hasError,
       })}
     >

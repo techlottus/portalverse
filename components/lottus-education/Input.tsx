@@ -1,8 +1,6 @@
-import React, { createRef, useEffect } from 'react';
+import React from 'react';
 import  {cva}  from 'class-variance-authority';
 import  cn  from 'classnames';
-import IconComponent from '@/old-components/Icon';
-import { isValid } from 'react-datepicker/dist/date_utils';
 
 interface InputProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'placeholder'> {
@@ -16,19 +14,15 @@ interface InputProps
 }
 
 const inputVariants = cva(
-  'flex items-center gap-2 px-3 py-1 rounded w-full border overflow-hidden bg-surface-50 transition-colors h-10',
+  ' flex items-center gap-2 px-3 py-1 rounded w-full border overflow-hidden bg-surface-0 transition-colors h-10 has-[input:focus]:border-info-500 has-[input:focus]:ring-2 has-[input:focus]:ring-info-200 hover:border-info-500 ',
   {
     variants: {
       hasError: {
         false: [
-          'border-surface-400',
-          'hover:border-surface-900',
-          'has-[input:focus]:border-surface-800 has-[input:focus]:ring-2 has-[input:focus]:ring-info-200',
+          '',
         ],
         true: [
-          'border-error-500',
-          'has-[:focus]:border-error-500 has-[:focus]:ring-2 has-[:focus]:ring-error-100',
-          'has-[input:invalid]:border-error-500',
+          'border-error-500 focus:border-info-500',
         ],
       },
     },
@@ -39,12 +33,12 @@ const inputVariants = cva(
 );
 
 const labelVariants = cva(
-  'absolute text-base duration-300 transform -translate-y-2.5 scale-75 top-2 z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-2.5',
+  'absolute text-base font-texts font-normal cursor-not-allowed pointer-events-none duration-300 transform -translate-y-2.5 scale-75 top-2 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-2.5 focus:scale-75 focus:-translate-y-2.5 peer-focus:text-surface-900',
   {
     variants: {
       hasError: {
         false: ['text-surface-900'],
-        true: ['text-error-500'],
+        true: ['text-error-500 peer-focus:text-surface-900'],
       },
     },
     defaultVariants: {
@@ -82,7 +76,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>((
 
     const renderIcon = (icon: string | React.ReactNode) => {
       if (typeof icon === 'string') {
-        return <IconComponent iconName={icon} size="md" />;
+        return <span className='material-symbols-outlined'>{icon}</span>
       }
 
       return React.cloneElement(icon as React.ReactElement, {
@@ -96,7 +90,8 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>((
           inputVariants({ hasError }),
           {
             '!border-surface-100 hover:border-surface-100 !text-surface-200': props.disabled,
-            '!border-success-500':props.isValid && !props.disabled
+            'border-success-500 hover:border-info-500 focus:border-info-500':props.isValid && !props.disabled && !hasError,
+            'border-surface-400 hover:border-info-500 focus:border-info-500': !props.isValid && !props.disabled && !hasError
           },
           className
         )}
@@ -126,7 +121,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>((
             }}
             value={value}
             className={cn(
-              'block pt-3.5 w-full text-surface-700 appearance-none focus:outline-none focus:ring-0 peer',
+              'block pt-3.5 w-full text-surface-700 font-texts font-normal appearance-none focus:outline-none focus:ring-0 peer',
               {
                 'bg-surface-50 !text-surface-400 ': props.disabled,
               }
@@ -139,17 +134,17 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>((
             htmlFor={props.id}
             className={cn(labelVariants({ hasError }), {
               '!text-surface-400': props.disabled,
-              '!text-success-500': props.isValid && !props.disabled,
+              '!text-success-500 peer-focus:!text-surface-900 peer-hover:!text-surface-900 hover:text-surface-900': props.isValid && !props.disabled && !hasError,
             })}
           >
-            {placeholder} {props.required && <span>*</span>}
+            {placeholder} {props.required && <span className='font-texts font-normal'>*</span>}
           </label>
         </div>
         {endIcon && (
           <div
             className={cn(iconVariants({ hasError }), {
               'text-surface-300': props.disabled,
-              'text-success-500': props.isValid,
+              'text-success-500 focus:text-surface-900': props.isValid,
             })}
           >
             {renderIcon(endIcon)}

@@ -236,7 +236,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         <script type="application/ld+json">{structuredData}</script>
       </Head>
       <Modal isShow={isShow} onClose={() => handleVisibilityModal('close')} data={{ icon: 'close', title: "", tagOnClose: 'testOnClose', wrapper: true, }}>
-        <div className="mt-16">
+        <div className="desktop:mt-16">
           {
             !!SFprogram && <ContainerForm
               type="ComponentSectionsFormContainer"
@@ -294,7 +294,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         </div>
       </Modal>
       <ContentLayout>
-        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4">
+        <div className="col-span-12 w-t:col-span-8 w-p:col-span-4 order-1">
           {
             selectedModalityName === "online" || selectedModalityName === "a tu ritmo" ?
               <IntroductionProgram
@@ -338,7 +338,7 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         {
           selectedModalityName !== "a tu ritmo" && brands ?
             <>
-              <div className="col-span-7 w-t:col-span-8 w-p:col-span-4 w-d:mb-18">
+              <div className="col-span-7 w-t:col-span-8 w-p:col-span-4 w-d:mb-18 desktop:order-2 order-3">
                 {
                   brands?.data?.length > 0 ?
                     brands?.data?.map((item, index) => <section className="mb-6" key={`section-aboutBrand-${index}`}>
@@ -498,8 +498,8 @@ const ProgramSuperiorPageContent = (props: DynamicProgramDetailData) => {
         }
         {
           selectedModalityName !== "a tu ritmo" ?
-            <div className="col-span-5 mb-6 w-p:col-span-2 w-p:order-1 w-t:hidden w-p:hidden">
-              <div className="w-p:-mt-56 -mt-20 sticky top-10">
+            <div className="col-span-5 desktop:mb-6 desktop:order-3 order-2">
+              <div className="-mt-20 desktop:sticky desktop:top-32">
                 <div className="mt-16 mb-8">
                   {
                     !!SFprogram && <ContainerForm
