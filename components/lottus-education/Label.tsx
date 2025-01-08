@@ -8,7 +8,7 @@ export interface LabelProps {
 const Label = ({ id, htmlFor, children, testId }: LabelProps) => {
   return (
     <label
-      className="font-sans text-sm flex items-center justify-between text-neutral-900"
+      className="font-texts text-base flex items-center justify-between text-surface-900"
       id={id}
       htmlFor={htmlFor}
       data-testid={testId}

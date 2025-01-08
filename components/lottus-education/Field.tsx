@@ -29,7 +29,7 @@ interface FieldProps {
 const Root = ({ name, className, hasError = false, children }: FieldProps) => {
   return (
     <FieldContext.Provider value={{ hasError }}>
-      <div className={cn('flex flex-col gap-2', className)} aria-label={name}>
+      <div className={cn('flex flex-col gap-2 w-full', className)} aria-label={name}>
         {children}
       </div>
     </FieldContext.Provider>
@@ -61,7 +61,7 @@ const Label = ({ children, ...props }: FieldLabelProps) => {
 
   return (
     <InternalLabel {...props}>
-      <span className="flex w-full">{children}</span>
+      <span className="flex w-full font-texts">{children}</span>
       {props.endIcon && renderIcon()}
     </InternalLabel>
   );
