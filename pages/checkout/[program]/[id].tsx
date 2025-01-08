@@ -25,30 +25,33 @@ type PageProps = {
 const businessUnit = process.env.NEXT_PUBLIC_BUSINESS_UNIT!;
 
 const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
+  const { program = null, price = {} } = props;
+
   //@ts-ignore
   const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY?.toString());
-  const { program = null, price = {} } = props;
+
   const priceAmount = price?.discounted_price || price?.price;
   const priceString = priceAmount?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })
   const partialityString = price?.partiality_price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })
+
   const [residence, setResidence] = useState<any>(null)
   const [hasCurp, setHasCurp] = useState<any>(false)
   const [adviser, setAdviser] = useState<any>(false)
-  const [isValid, setIsValid] = useState<boolean>(false);
+  // const [isValid, setIsValid] = useState<boolean>(false);
   const [curp, setCurp] = useState<boolean>();
-  const [submit, setSubmit] = useState(false);
+  // const [submit, setSubmit] = useState(false);
   const [isValidCurp, setIsValidCurp] = useState(false);
   const [curpError, setCurpError] = useState(false);
   const [isLoadingPayment, setIsLoadingPayment] = useState(false)
-  const [isSuccessPayment, setIsSuccessPayment] = useState(false)
+  // const [isSuccessPayment, setIsSuccessPayment] = useState(false)
 
 
 
   const router = useRouter();
 
-  const setStatus = ({ valid }: { valid: boolean }) => {
-    setIsValid(valid)
-  }
+  // const setStatus = ({ valid }: { valid: boolean }) => {
+  //   setIsValid(valid)
+  // }
   const initialData = {
     name: "",
     last_name: "",
@@ -60,12 +63,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
     residence: "",
     adviser: ""
   }
-  const initialDataPayer = {
-    name: "",
-    email: "",
-    phone: "",
-    address: "",
-  }
+
   const [personalDataTouched, setPersonalDataTouched] = useState<{ [key: string]: boolean }>({
     name: false,
     last_name: false,
@@ -93,18 +91,14 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
   const [origin, setOrigin] = useState('');
 
   useEffect(() => {
-    // Solo se ejecuta en el cliente
     setOrigin(window.location.origin);
-
   }, []);
-  useEffect(() => {
-    console.log(personalData)
 
-  }, [personalData]);
+
   const onChangeStep = (step: number) => {
     setActiveStep(step);
   }
-
+  // todo pasar a una funcion general exportable
   const validatePersonalDataControl = (control: string, value: string) => {
     if (control === 'birthdate') {
       return true
@@ -122,7 +116,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
 
   useEffect(() => {
     // TODO: Conect to prod
-    console.log("personalData: ", personalData)
+    // console.log("bu: ", businessUnit)
     if (price.config && activeStep == 1) {
       fetch('https://app-cv-webhook-payments-qa.azurewebsites.net/service/api/v1/portal/sessions', {
         method: 'POST',
@@ -139,7 +133,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
               "billing_address_collection": "auto",
               "metadata": { ...price?.metadata, "extra_fields": JSON.stringify(personalData) }
             },
-            "school": businessUnit
+            "school": "UTC"
           }
         )
       })
@@ -160,14 +154,13 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
         <section id="Navbar" className={cn("w-full flex align-middle items-center bg-surface-0 z-15 shadow-lg h-fit px-6 py-4")}>
           <div className="w-36 h-9 bg-logo bg-cover bg-center mx-auto"> </div>
           <div className="w-full flex items-center justify-center">
-            <div id="steps" className={cn("w-[400px] mobile:p-6 h-fit", { 'hidden': isLoadingPayment && !isSuccessPayment })}>
+            <div id="steps" className={cn("w-[400px] mobile:p-6 h-fit")}>
               <Stepper.Root direction="horizontal" activeId={activeStep}>
                 <Stepper.Item title="Información del alumno" completed={activeStep > 0} />
                 <Stepper.Item title="Método de pago" completed={activeStep > 1} />
               </Stepper.Root>
             </div>
           </div>
-
         </section>
         <div className="flex space-x-0 h-0 w-full">
           <div className={cn("border-[3px] border-solid w-1/2 h-0", {
@@ -356,8 +349,6 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                 </a>
               </span>
             </div>}
-
-
             {/* ********************************************************************************
               * Boton de continuar
              ***********************************************************************************/}
@@ -378,14 +369,14 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
              ***********************************************************************************/}
           {activeStep == 1 &&
             <div className="flex w-full">
-              <EmbeddedCheckoutProvider stripe={stripePromise} options={{ clientSecret: clientSecret }} >
+              <EmbeddedCheckoutProvider stripe={stripePromise} options={{ clientSecret: clientSecret , onComplete: () =>setIsLoadingPayment(true)}} >
                 <EmbeddedCheckout className="w-full" />
               </EmbeddedCheckoutProvider>
             </div>}
           {/* ********************************************************************************
               * Loading iframe
              ***********************************************************************************/}
-          {!isSuccessPayment && isLoadingPayment &&
+          { isLoadingPayment &&
             <div className="h-screen flex flex-col justify-center items-center align-middle">
               <span className="material-symbols-outlined text-info-300 !text-[80px] align-middle animate-spin">progress_activity</span>
               <p className="text-center font-text ">¡Ya casi listo! </p>
@@ -395,7 +386,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
           {/* ********************************************************************************
               * Payment card
           ***********************************************************************************/}
-          {!isLoadingPayment && activeStep == 0 && <div id="payment-card" className={cn("desktop:w-1/2 flex flex-col", { 'hidden': isSuccessPayment })}>
+          { activeStep == 0 && <div id="payment-card" className={cn("desktop:w-1/2 flex flex-col")}>
             <div className={cn("flex mobile:w-full mobile:px-6 flex-col mobile:flex-col-reverse ")}>
               <div className="w-full border border-surface-200 rounded p-4">
                 <h3 className="font-headings font-bold text-base leading-6 mb-3">{program?.attributes?.name}</h3>
