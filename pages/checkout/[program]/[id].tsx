@@ -133,7 +133,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
               "billing_address_collection": "auto",
               "metadata": { ...price?.metadata, "extra_fields": JSON.stringify(personalData) }
             },
-            "school": "UTC"
+            "school": businessUnit
           }
         )
       })
