@@ -176,8 +176,8 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
 
         </div>
 
-        <Container classNames="flex space-x-40 mobile:!px-0 mobile:flex-col tablet:gap-20 tablet:mt-12 desktop:mt-12 h-screen w-full ">
-          {activeStep == 0 && <div className={cn("w-1/2 flex flex-col justify-normal desktop:mx-2 tablet:mx-2 mobile:mb-6 gap-3 ")}>
+        <Container classNames="flex desktop:space-x-40 mobile:flex-col tablet:gap-20 tablet:mt-12 desktop:mt-12 h-screen w-full mobile:p-6">
+          {activeStep == 0 && <div className={cn("mobile:w-full w-1/2 flex flex-col justify-normal desktop:mx-2 tablet:mx-2 mobile:mb-6 gap-3 ")}>
             <h3 className="text-surface-950 font-bold font-texts text-base">Información del alumno</h3>
 
             <Field.Root >
@@ -386,8 +386,8 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
           {/* ********************************************************************************
               * Payment card
           ***********************************************************************************/}
-          { activeStep == 0 && <div id="payment-card" className={cn("desktop:w-1/2 flex flex-col")}>
-            <div className={cn("flex mobile:w-full mobile:px-6 flex-col mobile:flex-col-reverse ")}>
+          { activeStep == 0 && <div id="payment-card" className={cn("desktop:w-1/2 mobile:w-full flex flex-col")}>
+            <div className={cn("flex mobile:w-full  flex-col mobile:flex-col-reverse ")}>
               <div className="w-full border border-surface-200 rounded p-4">
                 <h3 className="font-headings font-bold text-base leading-6 mb-3">{program?.attributes?.name}</h3>
                 <hr className="text-surface-200" />
@@ -423,7 +423,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                 </div>
               </div>
             </div>
-            <div id='Pago-seguro' className={cn("flex flex-col space-y-1 my-6 px-6")}>
+            <div id='Pago-seguro' className={cn("flex flex-col space-y-1 my-6 desktop:px-6")}>
               <span className="w-6 h-6 material-symbols-outlined text-lg text-info-700">
                 encrypted
               </span>
