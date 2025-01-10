@@ -193,7 +193,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                   onChange={() => {
                     setResidence(true)
                     setHasCurp(true)
-                    setPersonalData({ ...personalData, residence: residence })
+                    setPersonalData({ ...personalData, residence: "Nacional" })
                   }}
                 >
                   Si
@@ -206,7 +206,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                   checked={!residence && residence !== null}
                   onChange={() => {
                     setResidence(false)
-                    setPersonalData({ ...personalData, residence: residence })
+                    setPersonalData({ ...personalData, residence: "Extranjero" })
                   }}
                 >
                   No
