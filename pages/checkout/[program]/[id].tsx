@@ -133,6 +133,9 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
               "ui_mode": "embedded",
               "allow_promotion_codes": price.config["allow_promotion_codes"],
               "billing_address_collection": "auto",
+              "phone_number_collection": {
+                "enabled": true
+              },
               "metadata": { ...price?.metadata, "extra_fields": JSON.stringify({...personalData, residence: residence? "Nacional" : "Extranjero"}) }
             },
             "school": businessUnit
@@ -315,7 +318,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
             {/* ********************************************************************************
               * Adviser
              ***********************************************************************************/}
-            {(hasCurp && isValidCurp) ||(!hasCurp && residence!==null) && <div className="flex">
+            {(hasCurp && isValidCurp)  && <div className="flex">
               <Checkbox data={{
                 name: "adviser",
                 disabled: false,
