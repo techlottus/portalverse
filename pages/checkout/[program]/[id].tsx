@@ -53,6 +53,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
   //   setIsValid(valid)
   // }
   const initialData = {
+    curp: "",
     name: "",
     last_name: "",
     second_last_name: "",

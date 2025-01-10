@@ -106,6 +106,7 @@ const CurpData = (props: CurpDataType) => {
       const birthdate = parseBirthdate(fechaNacimiento);
       setPersonalData({
         ...personalData,
+        curp: curp,
         name: nombre,
         last_name: apellidoPaterno ,
         second_last_name: apellidoMaterno ,
