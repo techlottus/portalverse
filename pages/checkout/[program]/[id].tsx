@@ -117,7 +117,8 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
 
   useEffect(() => {
     // TODO: Conect to prod
-    // console.log("bu: ", businessUnit)
+    // setPersonalData({...personalData, residence: residence? "Nacional" : "Extranjero"})
+    // console.log(personalData)
     if (price.config && activeStep == 1) {
       fetch('https://app-cv-webhook-payments-qa.azurewebsites.net/service/api/v1/portal/sessions', {
         method: 'POST',
@@ -132,7 +133,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
               "ui_mode": "embedded",
               "allow_promotion_codes": price.config["allow_promotion_codes"],
               "billing_address_collection": "auto",
-              "metadata": { ...price?.metadata, "extra_fields": JSON.stringify(personalData) }
+              "metadata": { ...price?.metadata, "extra_fields": JSON.stringify({...personalData, residence: residence? "Nacional" : "Extranjero"}) }
             },
             "school": businessUnit
           }
