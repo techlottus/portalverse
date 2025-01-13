@@ -55,7 +55,7 @@ const AtrProgramInfo = (props: AtrProgramInfoProps) => {
                       </div>
                     </div>
                     <div className=" flex justify-center flex-col">
-                      <p className="font-headings font-bold text-xl">$399 MXN <span className="text-surface-500 font-normal text-sm">/por mes</span></p>
+                      <p className="font-headings font-bold text-xl">$439 MXN <span className="text-surface-500 font-normal text-sm">/por mes</span></p>
                     </div>
                     <div className="flex items-end">
                     </div>
@@ -85,7 +85,7 @@ const AtrProgramInfo = (props: AtrProgramInfoProps) => {
                       <p className="text-white font-normal text-xs mb-0">Ahorra 10%</p>
                     </div>
                     <div className=" flex justify-center flex-col">
-                      <p className="font-headings font-bold text-xl">$4,310 MXN <span className="line-through text-surface-500 font-normal text-sm">$4,788</span></p>
+                      <p className="font-headings font-bold text-xl">$4,741 MXN <span className="line-through text-surface-500 font-normal text-sm">$4,788</span></p>
                     </div>
                     <div className="flex items-end">
                     </div>
