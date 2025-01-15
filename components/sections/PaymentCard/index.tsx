@@ -99,14 +99,19 @@ const PaymentCard = (props: PaymentCardData) => {
             : null
         }
         
-        {/** add case with discount and recurring (discounted_price) */
+        {
           price && !discounted_price && !periodicity
-            ? <p className="font-headings font-bold text-xl">${price.toLocaleString('en-US')} MXN <span className="text-surface-500 font-normal text-xs">{periodicity}</span></p>
+            ? <p className="font-headings font-bold text-xl">${price.toLocaleString('en-US')} MXN</p>
             : null
         }
         {
-          partiality_price && periodicity
+          partiality_price && periodicity && !discounted_price
             ? <p className="font-headings font-bold text-xl">${partiality_price.toLocaleString('en-US')} MXN <span className="text-surface-500 font-normal text-xs">{periodicity}</span></p>
+            : null
+        }
+        {
+          partiality_price && discounted_price && periodicity
+            ? <p className="font-headings font-bold text-xl">${discounted_price.toLocaleString('en-US')} MXN <span className="line-through text-surface-500 font-normal text-xs">${partiality_price}</span> <span className="text-surface-500 font-normal text-xs">{periodicity}</span></p>
             : null
         }
         {

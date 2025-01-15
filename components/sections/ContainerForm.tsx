@@ -99,10 +99,10 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
           "w-3/12": width === 'w_3_12',
           "w-2/12": width === 'w_2_12',
         })}>
-          <section className={cn("p-6 shadow-15 bg-surface-0 relative", { "shadow-none": shadow == false })}>
+          <section className={cn("mobile:p-3 p-6 shadow-15 bg-surface-0 relative rounded-lg", { "shadow-none": shadow == false })}>
             {
               isLoading
-                ? <div className="absolute w-full h-full z-10 flex justify-center items-center left-0 top-0 bg-surface-0">
+                ? <div className="absolute w-full h-full z-20 flex justify-center items-center left-0 top-0 bg-surface-0">
                   <Image src="/images/loader.gif" alt="loader" classNames={cn("w-10 h-10 top-0 left-0")} />
                 </div>
                 : null
@@ -123,11 +123,11 @@ const ContainerForm: FC<ContainerFormType> = (props: ContainerFormType) => {
                     }
                   </div>
                   {
-                    !!privacyPolicy && <div className="flex align-middle items-center mt-8 mb-6">
-                      <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1">{privacyPolicy.text}</p>
-                      <Link href={privacyPolicy.file ? privacyPolicy.file.data.attributes.url : privacyPolicy.href} passHref target={"_blank"}>
-                        <p className="text-3.5 font-texts font-normal text-sm text-surface-800 underline">{privacyPolicy.linkText}</p>
-                      </Link>
+                    !!privacyPolicy && <div className="flex align-middle items-center mt-8 mb-6 flex-wrap">
+                      <p className="text-3.5 leading-5 text-surface-800 font-texts font-normal mr-1 block text-wrap">{privacyPolicy.text}  <Link href={privacyPolicy.file ? privacyPolicy.file.data.attributes.url : privacyPolicy.href} passHref target={"_blank"}>
+                        <span className="text-3.5 font-texts font-normal text-sm text-surface-800 underline text-wrap">{privacyPolicy.linkText}</span>
+                      </Link></p>
+                     
                     </div>
                   }
                   {
