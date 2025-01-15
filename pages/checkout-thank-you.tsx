@@ -16,22 +16,22 @@ const ThankYouPageInscription: NextPageWithLayout = ({ sections, meta, layoutDat
   const router = useRouter()
 
   const [messages] = useState<any>({
-    egresados:{
+    egresados: {
       title: sections?.titleEgresados,
       subtitle: sections?.subtitleEgresados,
-    }, 
-    gral:{
+    },
+    gral: {
       title: sections?.titleGral,
       subtitle: sections?.subtitleGral,
-      description:sections?.descriptionGral
+      description: sections?.descriptionGral
     }
   })
 
   const [flow, setFlow] = useState<string>('gral')
 
   useEffect(() => {
-    if(!!Object.keys(router.query).length && router.query.hasOwnProperty('type')){
-      const {type} = (router.query as any)
+    if (!!Object.keys(router.query).length && router.query.hasOwnProperty('type')) {
+      const { type } = (router.query as any)
       setFlow(type)
       return
     }
@@ -40,18 +40,18 @@ const ThankYouPageInscription: NextPageWithLayout = ({ sections, meta, layoutDat
   return <>
     {/* <script dangerouslySetInnerHTML={{ __html : `fbq('track', 'CompleteRegistration');`}}></script> */}
     <Head>
-      <title>{ meta?.title }</title>
+      <title>{meta?.title}</title>
     </Head>
-    <HeaderFooterLayout breadcrumbs={false} layoutData = {layoutData}>
+    <HeaderFooterLayout breadcrumbs={false} layoutData={layoutData}>
       <ContentFullLayout>
         <ContentInsideLayout>
           <div className="col-span-6 tablet:col-span-8 mobile:col-span-4  tablet:pb-6">
             <ContentInsideLayout>
-              <h1 className="text-primary-500 col-span-12 col-start-3 col-end-11 tablet:col-span-8 tablet:col-start-2 tablet:col-end-8 mobile:col-start-1 mobile:col-end-5 text-5xl mobile:text-7?.5 mobile:m-6 font-bold font-headings mt-18 leading-tight">{ messages[flow]?.title }</h1>
+              <h1 className="text-primary-500 col-span-12 col-start-3 col-end-11 tablet:col-span-8 tablet:col-start-2 tablet:col-end-8 mobile:col-start-1 mobile:col-end-5 text-5xl mobile:text-7?.5 mobile:m-6 font-bold font-headings mt-18 leading-tight">{messages[flow]?.title}</h1>
               {/* <p className="text-surface-900 col-span-12 col-start-3 col-end-11 tablet:col-start-2 tablet:col-end-8 mobile:col-start-1 text-base font-semibold font-texts desktop:mt-6 tablet:mt-6 mobile:mt-2 mobile:mx-6 leading-6 tablet:leading-tight mobile:leading-3[130%]">{ messages[flow]?.description }</p> */}
-              <p className="text-surface-900 col-span-12 col-start-3 col-end-11 tablet:col-start-2 tablet:col-end-8 mobile:col-start-1 text-base font-semibold font-texts desktop:mt-6 tablet:mt-6 mobile:mt-2 mobile:mx-6 leading-6 tablet:leading-tight mobile:leading-3[130%]">{ messages[flow]?.subtitle }</p>
-              
-              <p className="text-surface-900 col-span-12 col-start-3 col-end-11 tablet:col-start-2 tablet:col-end-8 mobile:col-start-1  text-lg font-semibold font-headings desktop:mt-12 tablet:mt-6 mobile:mt-6 mobile:ml-6 leading-tight">{ sections?.agradecimiento?.title }</p>
+              <p className="text-surface-900 col-span-12 col-start-3 col-end-11 tablet:col-start-2 tablet:col-end-8 mobile:col-start-1 text-base font-semibold font-texts desktop:mt-6 tablet:mt-6 mobile:mt-2 mobile:mx-6 leading-6 tablet:leading-tight mobile:leading-3[130%]">{messages[flow]?.subtitle}</p>
+
+              <p className="text-surface-900 col-span-12 col-start-3 col-end-11 tablet:col-start-2 tablet:col-end-8 mobile:col-start-1  text-lg font-semibold font-headings desktop:mt-12 tablet:mt-6 mobile:mt-6 mobile:ml-6 leading-tight">{sections?.agradecimiento?.title}</p>
               <section className="grid desktop:grid-cols-4 tablet:grid-cols-4 mobile:grid-cols-4 col-start-3 col-end-11 tablet:col-start-2 tablet:col-end-6 mobile:col-start-1 mobile:col-end-4 desktop:mt-10 tablet:mt-10 mobile:my-5 mobile:ml-6 w-1/2">
                 {
                   sections?.agradecimiento?.social?.map((item: any, i: number) => <Link key={`social-${i}`} href={item?.link} passHref target={"_blank"}>
@@ -61,10 +61,17 @@ const ThankYouPageInscription: NextPageWithLayout = ({ sections, meta, layoutDat
                   </Link>)
                 }
               </section>
+              <div className="col-span-12 col-start-3 col-end-11 tablet:col-span-8 tablet:col-start-2 tablet:col-end-8 mobile:col-start-1 mobile:col-end-5 text-5xl mobile:text-7?.5 mobile:m-6 ">
+                <button id='return' className="flex align-middle items-center text-primary-500 mt-6" onClick={() => router.push("/")}>
+                  <span className="material-symbols-outlined font-bold !text-base">chevron_left</span>
+                  <span className="ml-2 font-texts font-bold text-base">Volver</span>
+                </button>
+              </div>
+
             </ContentInsideLayout>
           </div>
           <div className="col-span-6 tablet:col-span-12 mobile:col-span-12 h-125">
-            <Video data={ sections?.video } />
+            <Video data={sections?.video} />
           </div>
         </ContentInsideLayout>
       </ContentFullLayout>
@@ -76,7 +83,7 @@ const ThankYouPageInscription: NextPageWithLayout = ({ sections, meta, layoutDat
 export async function getStaticProps(context: any) {
   try {
     const { sections, meta } = await getDataPageFromJSON('checkout-thank-you.json');
-    const layoutData =  await getLayout()
+    const layoutData = await getLayout()
 
     // redirect not avaliable page
     if (!!meta.hidden) {
