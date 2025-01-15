@@ -292,7 +292,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
             {/* ********************************************************************************
               * Personal Data no filled
              ***********************************************************************************/}
-            {(hasCurp && !isValidCurp) || (!hasCurp && residence !== null) && <PersonalData.Root
+            {(hasCurp && curpError) || (!hasCurp && residence !== null)  && <PersonalData.Root
               personalData={personalData}
               setPersonalData={setPersonalData}
               infoControlsTouched={personalDataTouched}

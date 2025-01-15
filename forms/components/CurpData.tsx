@@ -45,6 +45,7 @@ const CurpData = (props: CurpDataType) => {
 
   useEffect(() => {
     if (!isValidCurp) {
+      setCurpError(true)
       setcurpErrorMesage("No fue posible validar los datos. Continua manualmente.")
       resetPersonalData()
     }
