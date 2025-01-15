@@ -32,7 +32,7 @@ const Root = ({
   
   return (
     <div
-    className={cn('flex flex-row justify-between',
+    className={cn('flex justify-between h-full items-center',
       {
         ['flex-col gap-3']: vertical
       },{className}
@@ -115,7 +115,7 @@ const StepperItemPrivate = ({
         })}
       >
         <span
-          className={cn('inline-block font-bold font-texts text-center text-nowrap text-base', {
+          className={cn('inline-block font-bold font-texts text-center mobile:text-wrap desktop:text-nowrap tablet:text-nowrap text-base mobile:text-xs', {
             'text-primary-500': active,
             'text-surface-400': !active,
           })}
@@ -148,7 +148,7 @@ const StepperItemPrivate = ({
           'inline-block h-full w-full appearance-none outline-none cursor-default',
           {
             '-mt-2': !first && vertical,
-            'max-w-[8.25rem] w-[8.25rem]': !vertical,
+            'max-w-[8.25rem] w-[8.25rem] mobile:w-16': !vertical,
           }
         )}
       >
@@ -166,7 +166,7 @@ const StepperItemPrivate = ({
           >
             <div
               className={cn(
-                'relative z-10 flex items-center justify-center rounded-full border-2 w-9 h-9 ',
+                'relative z-10 flex items-center justify-center rounded-full border-2 w-9 h-9 mobile:h-6 mobile:w-6 ',
                 {
                   'bg-surface-400 text-surface-0': completed,
                   'border-surface-400  text-surface-400 bg-surface-0': !active,
@@ -197,11 +197,11 @@ const StepperItemPrivate = ({
       {last? null: (
         <div id='line'
           className={cn(
-            'absolute  border-0 margin-0  inline-block top-4 ',
+            'absolute  border-0 margin-0  inline-block desktop:top-4 ',
             {
               'bg-primary-500': active,
               'bg-surface-400 ': !active,
-              'h-px w-[98%] top-4.5 left-[4.75rem]': !vertical,
+              'h-px w-[98%] top-4.5 left-[4.75rem] mobile:top-3 mobile:left-[2.5rem]': !vertical,
               'top-8 h-full w-px': vertical,
             }
           )}

@@ -48,21 +48,11 @@ const ThankYouPageInscription: NextPageWithLayout = ({ sections, meta, layoutDat
           <div className="col-span-6 tablet:col-span-8 mobile:col-span-4  tablet:pb-6">
             <ContentInsideLayout>
               <h1 className="text-primary-500 col-span-12 col-start-3 col-end-11 tablet:col-span-8 tablet:col-start-2 tablet:col-end-8 mobile:col-start-1 mobile:col-end-5 text-5xl mobile:text-7?.5 mobile:m-6 font-bold font-headings mt-18 leading-tight">{ messages[flow]?.title }</h1>
-              <p className="text-surface-900 col-span-12 col-start-3 col-end-11 tablet:col-start-2 tablet:col-end-8 mobile:col-start-1 text-base font-semibold font-texts desktop:mt-6 tablet:mt-6 mobile:mt-2 mobile:mx-6 leading-6 tablet:leading-tight mobile:leading-3[130%]">{ messages[flow]?.description }</p>
-              <ul className="col-span-12 col-start-3 col-end-11 tablet:col-start-2 tablet:col-end-8 mobile:col-start-1 desktop:mt-6 tablet:mt-6 mobile:mt-2 mobile:mx-6 gap-2" >
-                <li >
-                  <p className="text-surface-900   text-base font-semibold font-texts leading-6 tablet:leading-tight mobile:leading-3[130%]">
-                   <span className="font-bold font-texts">• Si pagaste con tarjeta:</span> Tu compra ha sido procesada.
-                </p></li>
-
-                <li><p className="text-surface-900  text-base font-semibold font-texts  leading-6 tablet:leading-tight mobile:leading-3[130%]">
-                <span className="font-bold font-texts">• Si elegiste pagar en OXXO: </span>Tienes 2 días para completar el pago. Te notificaremos cuando se confirme.
-                </p></li>
-              </ul>
+              {/* <p className="text-surface-900 col-span-12 col-start-3 col-end-11 tablet:col-start-2 tablet:col-end-8 mobile:col-start-1 text-base font-semibold font-texts desktop:mt-6 tablet:mt-6 mobile:mt-2 mobile:mx-6 leading-6 tablet:leading-tight mobile:leading-3[130%]">{ messages[flow]?.description }</p> */}
               <p className="text-surface-900 col-span-12 col-start-3 col-end-11 tablet:col-start-2 tablet:col-end-8 mobile:col-start-1 text-base font-semibold font-texts desktop:mt-6 tablet:mt-6 mobile:mt-2 mobile:mx-6 leading-6 tablet:leading-tight mobile:leading-3[130%]">{ messages[flow]?.subtitle }</p>
               
               <p className="text-surface-900 col-span-12 col-start-3 col-end-11 tablet:col-start-2 tablet:col-end-8 mobile:col-start-1  text-lg font-semibold font-headings desktop:mt-12 tablet:mt-6 mobile:mt-6 mobile:ml-6 leading-tight">{ sections?.agradecimiento?.title }</p>
-              <section className="grid desktop:grid-cols-4 tablet:grid-cols-4 mobile:grid-cols-4 col-start-3 col-end-11 tablet:col-start-2 tablet:col-end-6 mobile:col-start-1 mobile:col-end-4 desktop:mt-10 tablet:mt-10 mobile:my-5 mobile:ml-6">
+              <section className="grid desktop:grid-cols-4 tablet:grid-cols-4 mobile:grid-cols-4 col-start-3 col-end-11 tablet:col-start-2 tablet:col-end-6 mobile:col-start-1 mobile:col-end-4 desktop:mt-10 tablet:mt-10 mobile:my-5 mobile:ml-6 w-1/2">
                 {
                   sections?.agradecimiento?.social?.map((item: any, i: number) => <Link key={`social-${i}`} href={item?.link} passHref target={"_blank"}>
 

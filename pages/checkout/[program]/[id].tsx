@@ -35,7 +35,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
   const partialityString = price?.partiality_price?.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })
 
   const [residence, setResidence] = useState<any>(null)
-  const [hasCurp, setHasCurp] = useState<any>(false)
+  const [hasCurp, setHasCurp] = useState<any>(null)
   const [adviser, setAdviser] = useState<any>(false)
   // const [isValid, setIsValid] = useState<boolean>(false);
   const [curp, setCurp] = useState<boolean>();
@@ -156,13 +156,13 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
       </Head>
 
       <ContentFullLayout classNames="min-h-screen">
-        <section id="Navbar" className={cn("w-full flex align-middle items-center bg-surface-0 z-15 shadow-lg h-fit px-6 py-4")}>
-          <div className="w-36 h-9 bg-logo bg-cover bg-center mx-auto"> </div>
+        <section id="Navbar" className={cn("w-full flex align-middle items-center bg-surface-0 z-15 shadow-lg h-fit desktop:px-6 desktop:py-4 tablet:px-6 tablet:py-4")}>
+          <div className="w-36 h-9 bg-logo bg-cover bg-center mx-auto mobile:hidden"> </div>
           <div className="w-full flex items-center justify-center">
-            <div id="steps" className={cn("w-[400px] mobile:p-6 h-fit")}>
+            <div id="steps" className={cn("w-[400px] mobile:w-50  desktop:h-fit mobile:h-[81px] ")}>
               <Stepper.Root direction="horizontal" activeId={activeStep}>
-                <Stepper.Item title="Información del alumno" completed={activeStep > 0} />
-                <Stepper.Item title="Método de pago" completed={activeStep > 1} />
+                <Stepper.Item title="Datos del alumno" completed={activeStep > 0} />
+                <Stepper.Item title="Datos de pago" completed={activeStep > 1} />
               </Stepper.Root>
             </div>
           </div>
@@ -318,7 +318,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
             {/* ********************************************************************************
               * Adviser
              ***********************************************************************************/}
-            {(hasCurp && isValidCurp)  && <div className="flex">
+            {((isValidCurp) || (hasCurp===false ))  && <div className="flex items-center">
               <Checkbox data={{
                 name: "adviser",
                 disabled: false,
@@ -328,7 +328,7 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
               }} onCheck={() => {
                 setAdviser(!adviser)
               }} />
-              <p className="font-texts font-bold text-base text-surface-950 ml-2">¿Recibiste ayuda de un asesor? (opcional)</p>
+              <p className="font-texts font-bold text-base text-surface-950 ml-2">¿Recibiste ayuda de un asesor? <span className="font-texts text-sm text-surface-500 font-semibold">(Opcional)</span></p>
             </div>}
             {adviser && <div className="col-span-2">
               <Input
@@ -391,29 +391,32 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
           {/* ********************************************************************************
               * Payment card
           ***********************************************************************************/}
-          { activeStep == 0 && <div id="payment-card" className={cn("desktop:w-1/2 mobile:w-full flex flex-col")}>
+          { activeStep == 0 && <div id="payment-card" className={cn("desktop:max-w-96 mobile:w-full flex flex-col")}>
             <div className={cn("flex mobile:w-full  flex-col mobile:flex-col-reverse ")}>
               <div className="w-full border border-surface-200 rounded p-4">
-                <h3 className="font-headings font-bold text-base leading-6 mb-3">{program?.attributes?.name}</h3>
+                <h3 className="font-texts font-bold text-lg mobile:text-base leading-6 mb-3">{program?.attributes?.name}</h3>
                 <hr className="text-surface-200" />
                 <div className="flex justify-between my-3">
                   <p className="font-texts font-semibold text-sm">Opción de pago:</p>
-                  <p className="text-surface-600 font-texts font-normal text-sm">{price?.title}</p>
+                  <p className="text-surface-600 font-texts font-semibold text-sm">{price?.title}</p>
                 </div>
-                {price?.config?.type == "recurring" && <div className="flex justify-between my-1">
+                {price?.config?.mode == "subscription" ? <div className="flex justify-between my-1">
                   <p className="font-texts font-semibold text-sm">Parcialidades:</p>
                   <p className="text-surface-500 font-texts font-normal text-sm">{price?.partialities_number}</p>
+                </div>: <div className="flex justify-between my-1">
+                  <p className="font-texts font-semibold text-sm">Precio:</p>
+                  <p className="text-surface-500 font-texts font-normal text-sm">{priceString} MXN</p>
                 </div>}
-                {price?.config?.type == "recurring" &&
+                {price?.config?.mode == "subscription" &&
                   <div className="flex justify-between mb-2">
                     <p className="font-texts font-semibold">Costo total:</p>
                     <p className="text-surface-600 font-texts font-normal">{priceString} MXN</p>
                   </div>}
-                <div className="flex items-end justify-end text-success-600 font-text text-sm mb-3">AHORRO {`$ ${0.00}`}</div>
-                <hr className="text-surface-200" />
+                {/* <div className="flex items-end justify-end text-success-600 font-text text-sm mb-3">AHORRO {`$ ${0.00}`}</div> */}
+                <hr className="text-surface-200 mt-3" />
                 <div className="flex justify-between mt-3">
                   {
-                    price?.config?.type == "recurring"
+                    price?.config?.mode == "subscription"
                       ? <>
                         <p className="font-texts font-bold text-base leading-6"> Parcialidad a pagar:</p>
                         <p className="text-base font-bold">
@@ -422,13 +425,13 @@ const CheckoutPage: NextPageWithLayout<PageProps> = (props: PageProps) => {
                       </>
                       : <>
                         <p className="font-texts font-bold text-base leading-6"> Total a pagar: </p>
-                        <p className="text-base font-bold"> {priceString} MXN </p>
+                        <p className="font-texts text-base font-bold"> {priceString} MXN </p>
                       </>
                   }
                 </div>
               </div>
             </div>
-            <div id='Pago-seguro' className={cn("flex flex-col space-y-1 my-6 desktop:px-6")}>
+            <div id='Pago-seguro' className={cn("flex flex-col space-y-1 my-6 ")}>
               <span className="w-6 h-6 material-symbols-outlined text-lg text-info-700">
                 encrypted
               </span>
